@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/dialog_time_picker_0" android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:stretchColumns="0, 1" android:columnCount="2">
+    <TableRow>
+        <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pref_night_mode_start_time"/>
+        <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:paddingTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pref_night_mode_end_time"/>
+    </TableRow>
+    <TableRow>
+        <com.lany.picker.HourMinutePicker android:layout_gravity="center" android:id="@+id/start_time_picker" android:paddingTop="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.lany.picker.HourMinutePicker android:layout_gravity="center" android:id="@+id/end_time_picker" android:paddingTop="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </TableRow>
+</TableLayout>

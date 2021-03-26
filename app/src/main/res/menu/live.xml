@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_view" android:title="@string/str_view_source_url" app:showAsAction="always"/>
+    <item android:id="@+id/action_floating_window" android:title="小窗播放" app:showAsAction="always"/>
+    <item android:id="@+id/action_live_status" android:title="开始直播" app:showAsAction="always"/>
+    <item android:id="@+id/action_ban_post" android:title="开启/关闭讨论" app:showAsAction="always"/>
+    <item android:id="@+id/action_ban_post_pic" android:title="开启/关闭讨论发图" app:showAsAction="always"/>
+    <item android:id="@+id/action_ban_user_manager" android:title="禁言用户管理" app:showAsAction="always"/>
+</menu>

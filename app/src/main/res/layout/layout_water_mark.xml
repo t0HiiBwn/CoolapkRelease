@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/layout_water_mark_0" android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="20sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+    <RadioGroup android:orientation="vertical" android:id="@+id/radio_group" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+        <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <RadioButton android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/radio_fi" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@drawable/ic_radio_button_seletor"/>
+        <Space android:textColor="?android:attr/textColorPrimary" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"/>
+        <RadioButton android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/radio_se" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@drawable/ic_radio_button_seletor"/>
+        <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <RadioButton android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/radio_th" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@drawable/ic_radio_button_seletor"/>
+        <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <RadioButton android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/radio_fo" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@drawable/ic_radio_button_seletor"/>
+        <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+    </RadioGroup>
+</LinearLayout>

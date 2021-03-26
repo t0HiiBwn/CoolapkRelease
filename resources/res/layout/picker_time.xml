@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <com.lany.picker.NumberPicker android:id="@+id/picker_time_hour" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4dp"/>
+    <TextView android:layout_gravity="center_vertical" android:id="@+id/picker_time_first_divider" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no"/>
+    <com.lany.picker.NumberPicker android:id="@+id/picker_time_minute" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4dp"/>
+    <TextView android:layout_gravity="center_vertical" android:id="@+id/picker_time_second_divider" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no"/>
+    <com.lany.picker.NumberPicker android:id="@+id/picker_time_second" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4dp"/>
+</LinearLayout>

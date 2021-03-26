@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.widget.DrawSystemBarFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:tag="layout/layout_privacy_clause_0" android:background="#66000000" android:layout_width="match_parent" android:layout_height="match_parent" app:drawNavigationBar="true" app:drawStatusBar="true">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/content_view" android:tag="binding_1" android:background="?attr/contentBackgroundColor" android:paddingBottom="36dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="20sp" android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center_horizontal" android:id="@+id/title_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:paddingStart="24dp" android:paddingEnd="24dp"/>
+        <TextView android:textSize="12sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/description_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:lineSpacingMultiplier="1.2" android:paddingStart="24dp" android:paddingEnd="24dp"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/list_view" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="12dp" android:layout_weight="1"/>
+        <LinearLayout android:orientation="vertical" android:paddingTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+            <TextView android:textSize="12sp" android:textColor="#757575" android:id="@+id/description_view2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp">
+                <TextView android:gravity="center" android:id="@+id/only_view" android:tag="binding_2" android:padding="14dp" android:layout_width="0dp" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground" android:text="仅浏览" android:layout_weight="1"/>
+                <TextView android:textColor="@color/light_text" android:gravity="center" android:id="@+id/agree_view" android:tag="binding_3" android:paddingTop="14dp" android:paddingBottom="14dp" android:layout_width="0dp" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground" android:text="同意并继续" android:layout_weight="2" android:paddingStart="65dp" android:paddingEnd="65dp" android:layout_marginStart="12dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.coolapk.market.widget.DrawSystemBarFrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/live_introduce_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/container_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+        <LinearLayout android:orientation="vertical" android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <TextView android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="主持人:" android:drawableLeft="@drawable/ic_microphone_outline_white_18dp" android:drawablePadding="6dp"/>
+                <FrameLayout android:id="@+id/presenter_frame" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <TextView android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="直播时间:" android:drawableLeft="@drawable/ic_clock_outline_white_18dp" android:drawablePadding="6dp"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/live_time" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <TextView android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="直播类型:" android:drawableLeft="@drawable/ic_classification_outline_white_18dp" android:drawablePadding="6dp"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/live_type" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+            <TextView android:textColor="?android:attr/textColorPrimary" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="直播简介"/>
+            <ImageView android:layout_width="match_parent" android:layout_height="@dimen/thin_divider_size" android:src="?attr/mainBackgroundColor"/>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/live_introduce_view" android:tag="binding_3" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_edit_goods_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/card_view" android:tag="binding_1" android:background="?android:attr/selectableItemBackground" android:paddingTop="12dp" android:paddingBottom="12dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <LinearLayout android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <CheckBox android:layout_gravity="center_vertical" android:id="@+id/check_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <ImageView android:id="@+id/icon_view" android:tag="binding_2" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginStart="16dp"/>
+            <com.coolapk.market.widget.view.CoolEllipsizeTextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center_vertical" android:id="@+id/title_view" android:tag="binding_3" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1" android:layout_marginStart="8dp"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/note_edit" android:tag="binding_4" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp" android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/ic_mode_edit_white_24dp" android:tint="?android:attr/textColorSecondary"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/drag_view" android:padding="4dp" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginLeft="8dp" android:src="@drawable/ic_menu_white_24dp" android:tint="?android:attr/textColorSecondary"/>
+        </LinearLayout>
+        <View android:background="?attr/contentBackgroundDividerColor" android:layout_width="match_parent" android:layout_height="1dp" android:layout_margin="12dp"/>
+        <com.coolapk.market.widget.view.CoolEllipsizeTextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/version_view" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="10"/>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

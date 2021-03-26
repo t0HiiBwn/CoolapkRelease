@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/item_view" android:tag="layout/item_live_message_0" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/avatar_view" android:layout_width="32dp" android:layout_height="32dp" android:src="@drawable/ic_avatar_placeholder_48dp" app:riv_oval="true"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/message_layout" android:background="@drawable/live_message_white_bg" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp">
+        <TableLayout android:id="@+id/header_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shrinkColumns="0">
+            <TableRow>
+                <TextView android:textSize="14sp" android:ellipsize="end" android:id="@+id/name_view" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="match_parent" android:singleLine="true"/>
+                <TextView android:textSize="14sp" android:textColor="?android:attr/textColorTertiary" android:id="@+id/time_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp"/>
+            </TableRow>
+        </TableLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.hanks.htextview.rainbow.RainbowTextView android:textSize="15sp" android:id="@+id/rainbow_message_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:lineSpacingMultiplier="1.2" app:colorSpace="150dp" app:colorSpeed="1dp"/>
+            <TextView android:textSize="15sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/message_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:lineSpacingMultiplier="1.2"/>
+        </LinearLayout>
+        <Space android:id="@+id/nine_image_space_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:id="@+id/source_view" android:background="@drawable/live_message_source_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+            <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/source_text_view" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

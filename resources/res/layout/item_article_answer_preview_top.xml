@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/card_view" android:tag="layout/item_article_answer_preview_top_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/title_container" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="12dp" android:layout_marginRight="16dp" android:layout_marginBottom="8dp" android:maxLines="2" android:lineSpacingMultiplier="1.2"/>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:orientation="vertical" android:id="@+id/count_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <TextView android:textSize="12sp" android:orientation="vertical" android:id="@+id/other_view" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查看其他回答"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@+id/divider_view" android:background="?attr/commentLayoutBackground" android:layout_width="match_parent" android:layout_height="9dp"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/user_view_container" android:tag="binding_3" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.coolapk.market.widget.UserAvatarView android:id="@+id/user_avatar_view" android:tag="binding_4" android:layout_width="32dp" android:layout_height="32dp" android:scaleType="centerCrop"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_weight="1">
+            <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/name_view" android:tag="binding_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="10sp" android:textColor="#9e9e9e" android:ellipsize="end" android:id="@+id/time_view" android:tag="binding_6" android:paddingRight="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+                <TextView android:textSize="10sp" android:textColor="#9e9e9e" android:ellipsize="end" android:id="@+id/from_where_view" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="12sp" android:gravity="center" android:id="@+id/action_view" android:tag="binding_8" android:background="@drawable/follow_btn_border_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackground" android:minWidth="56dp" android:minHeight="26dp" android:text="+关注"/>
+    </LinearLayout>
+</LinearLayout>

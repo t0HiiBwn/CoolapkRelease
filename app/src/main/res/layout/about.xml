@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/base_view" android:tag="layout/about_0" android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="12">
+        <ImageView android:id="@+id/logo_view" android:tag="binding_1" android:layout_width="96dp" android:layout_height="96dp" android:layout_marginTop="8dp" android:src="@drawable/launch_circle"/>
+        <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/app_name"/>
+        <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/slogan_view" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/str_coolapk_slogan"/>
+        <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/version" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <LinearLayout android:id="@+id/check_upgrade_layout" android:tag="binding_5" android:background="?attr/mainBackgroundColor" android:layout_width="180dp" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground">
+            <TextView android:textSize="15sp" android:gravity="center" android:id="@+id/check_upgrade_view" android:tag="binding_6" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView android:textSize="10sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/open_source" android:tag="binding_7" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/str_related_open_soure_project"/>
+        <TextView android:textSize="10sp" android:textColor="?android:attr/textColorSecondary" android:gravity="center_horizontal" android:id="@+id/info_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="© 2010-2017 Coolapk.com All rights reserved."/>
+    </LinearLayout>
+</LinearLayout>

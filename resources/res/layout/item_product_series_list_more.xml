@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/item_product_series_list_more_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14sp" android:ellipsize="end" android:gravity="center" android:id="@+id/title_view" android:tag="binding_1" android:background="?attr/selectableItemBackground" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:maxLines="1" android:lines="1"/>
+</LinearLayout>

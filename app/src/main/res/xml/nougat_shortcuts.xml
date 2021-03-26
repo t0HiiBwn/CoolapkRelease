@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@drawable/ic_saoyisao_white_24dp_green" android:enabled="true">
+        <intent android:targetPackage="com.coolapk.market" android:action="android.intent.action.VIEW" android:data="coolmarket://com.coolapk.market/qr_scan" android:targetClass="com.coolapk.market.view.main.MainActivity"/>
+    </shortcut>
+    <shortcut android:icon="@drawable/ic_search_green_24dp" android:enabled="true">
+        <intent android:targetPackage="com.coolapk.market" android:action="android.intent.action.VIEW" android:data="coolmarket://com.coolapk.market/search" android:targetClass="com.coolapk.market.view.main.MainActivity"/>
+    </shortcut>
+    <shortcut android:icon="@drawable/ic_comment_text_outline_green_24dp" android:enabled="true">
+        <intent android:targetPackage="com.coolapk.market" android:action="android.intent.action.VIEW" android:data="coolmarket://com.coolapk.market/new_feed" android:targetClass="com.coolapk.market.view.main.MainActivity"/>
+    </shortcut>
+    <shortcut android:icon="@drawable/ic_image_green_24dp" android:enabled="true">
+        <intent android:targetPackage="com.coolapk.market" android:action="android.intent.action.VIEW" android:data="coolmarket://com.coolapk.market/page?url=V9_HOME_TAB_COOLPIC&amp;title=酷图" android:targetClass="com.coolapk.market.view.main.MainActivity"/>
+    </shortcut>
+    <shortcut android:icon="@drawable/ic_app_management_green_24dp" android:enabled="true">
+        <intent android:targetPackage="com.coolapk.market" android:action="android.intent.action.VIEW" android:data="coolmarket://com.coolapk.market/app_manager" android:targetClass="com.coolapk.market.view.main.MainActivity"/>
+    </shortcut>
+</shortcuts>

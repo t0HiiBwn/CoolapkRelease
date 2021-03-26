@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:tag="layout/node_picker_0" android:background="?attr/mainBackgroundColor" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952175_themeoverlay_appcompat_actionbar" android:id="@+id/app_bar" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/disable_elevation_app_bar_state_list_anim" app:layout_behavior="com.coolapk.market.widget.FixAppBarLayoutBehavior"/>
+    <com.coolapk.market.widget.slidr.ScrollStateViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

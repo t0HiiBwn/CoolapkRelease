@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:id="@+id/order_view" android:tag="layout/item_login_user_node_rating_selector_0" android:background="?attr/mainBackgroundColor" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14sp" android:textColor="?android:attr/textColorSecondary" android:gravity="center_vertical" android:id="@+id/order_text" android:layout_width="0dp" android:layout_height="match_parent" android:text="按照PSYCHO-PASS数值排序" android:layout_weight="1"/>
+    <ImageView android:id="@+id/order_image" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/ic_sort_white_24dp" android:tint="?android:attr/textColorSecondary"/>
+</LinearLayout>

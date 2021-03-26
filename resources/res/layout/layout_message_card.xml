@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/layout_message_card_0" android:background="?attr/contentBackgroundColor" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:paddingStart="20dp" android:paddingEnd="20dp">
+    <LinearLayout android:orientation="vertical" android:id="@+id/content_layout" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+        <LinearLayout android:id="@+id/content_card" android:tag="binding_2" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/content_pic_view" android:tag="binding_3" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="centerCrop"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_message" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="8dp"/>
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/contact_message" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLines="3" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:background="?attr/contentBackgroundDividerColor" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:paddingStart="12dp" android:paddingEnd="12dp">
+            <ImageView android:id="@+id/contact_author_avatar" android:tag="binding_6" android:layout_width="16dp" android:layout_height="16dp"/>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center_vertical" android:id="@+id/contact_author_des" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

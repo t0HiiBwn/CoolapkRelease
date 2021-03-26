@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/item_photo_view_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.coolapk.market.widget.subsamplingview.SubsamplingScaleImageView android:id="@+id/image_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.coolapk.market.widget.view.PhotoViewCompat android:id="@+id/gif_image_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.coolapk.market.widget.view.PhotoViewCompat android:id="@+id/thumbnail_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.coolapk.market.widget.view.ImageLoadProgressBar android:layout_gravity="center" android:id="@+id/progress_bar" android:visibility="gone" android:layout_width="40dp" android:layout_height="40dp" app:max="100" app:ringColor="@android:color/darker_gray" app:ringWidth="3dp" app:style="0" app:textIsShow="true" app:textSize="12sp"/>
+    <TextView android:textSize="14sp" android:textColor="#fff" android:gravity="center" android:layout_gravity="bottom|left|center_vertical|center_horizontal|center|start" android:id="@+id/load_source_button" android:background="@drawable/photo_source_button_bg" android:paddingLeft="12dp" android:paddingTop="4dp" android:paddingRight="12dp" android:paddingBottom="4dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32dp" android:layout_marginBottom="16dp" android:text="@string/str_photo_view_source" android:alpha="0.5"/>
+</FrameLayout>

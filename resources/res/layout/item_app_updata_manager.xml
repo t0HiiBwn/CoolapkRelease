@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_app_updata_manager_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:id="@+id/item_view" android:tag="binding_1" android:background="?attr/selectableItemBackground" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center_vertical" android:id="@+id/title_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp"/>
+        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/icon_view1" android:tag="binding_2" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_image_placeholder_64dp" android:scaleType="centerCrop"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/icon_view2" android:tag="binding_3" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_image_placeholder_64dp" android:scaleType="centerCrop" android:layout_marginStart="2dp"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/icon_view3" android:tag="binding_4" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_image_placeholder_64dp" android:scaleType="centerCrop" android:layout_marginStart="2dp"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/icon_view4" android:tag="binding_5" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_image_placeholder_64dp" android:scaleType="centerCrop" android:layout_marginStart="2dp"/>
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_chevron_right_grey600_18dp" android:tint="@color/grey_600"/>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

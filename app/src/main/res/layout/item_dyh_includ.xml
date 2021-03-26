@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_dyh_includ_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:id="@+id/root_view" android:tag="binding_1" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/logo_view" android:tag="binding_2" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="centerCrop"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="12dp" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="24dp">
+                <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_marginEnd="12dp"/>
+                <TextView android:textSize="8sp" android:textColor="@color/light_text" android:layout_gravity="center_vertical" android:id="@+id/edit_type_view" android:tag="binding_4" android:background="@drawable/edit_type_bg" android:paddingLeft="4dp" android:paddingTop="2dp" android:paddingRight="4dp" android:paddingBottom="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textSize="8sp" android:textColor="?android:attr/textColorSecondaryInverseNoDisable" android:layout_gravity="center_vertical" android:id="@+id/edit_status_view" android:tag="binding_5" android:background="@drawable/action_btn_border_gery_bg" android:paddingLeft="4dp" android:paddingTop="2dp" android:paddingRight="4dp" android:paddingBottom="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:text="待审中" android:maxLines="1"/>
+            </LinearLayout>
+            <TextView android:textSize="14sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/description_view" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="24dp" android:maxLines="1" android:lines="1"/>
+        </LinearLayout>
+        <CheckBox android:layout_gravity="center" android:id="@+id/check_box" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

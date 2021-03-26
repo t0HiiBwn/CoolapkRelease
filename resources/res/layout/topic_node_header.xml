@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/topic_node_header_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/background_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <Space android:id="@+id/background_placeholder_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="203dp"/>
+        <View android:id="@+id/background_top_view" android:background="@color/node_content_background" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        <View android:id="@+id/background_bottom_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/item_view" android:paddingTop="0dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.coolapk.market.widget.view.MaxWidthFrameLayout android:id="@+id/cover_view_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.viewpager.widget.ViewPager android:id="@+id/image_view_pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <View android:layout_gravity="bottom" android:id="@+id/mask_view" android:layout_width="match_parent" android:layout_height="102dp"/>
+            <com.coolapk.market.widget.view.IndicatorView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/indicator_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:minWidth="10dp" android:minHeight="10dp"/>
+        </com.coolapk.market.widget.view.MaxWidthFrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/header_container" android:paddingTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/node_item_padding" android:layout_marginEnd="@dimen/node_item_padding">
+            <ImageView android:id="@+id/logo_view" android:tag="binding_1" android:layout_width="56dp" android:layout_height="56dp" android:transitionName="@string/transition_name_logo"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="12dp">
+                <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/white_primary_text" android:ellipsize="end" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+                <TextView android:textSize="12sp" android:textColor="@color/white_secondary_text" android:id="@+id/hot_num_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="88066热度 5233425讨论"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginStart="@dimen/node_item_padding" android:layout_marginEnd="@dimen/node_item_padding">
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/more_follower_view" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="match_parent">
+                <Space android:id="@+id/triple_avatar_space_holder" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textSize="12sp" android:textColor="@color/white_secondary_text" android:gravity="center" android:id="@+id/follow_num_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12345关注"/>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.5dp" android:src="@drawable/ic_chevron_right_grey600_18dp" android:tint="@color/white_secondary_text"/>
+            </LinearLayout>
+            <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/action_view" android:tag="binding_4" android:layout_width="56dp" android:layout_height="28dp"/>
+        </LinearLayout>
+        <TextView android:textColor="@color/white_primary_text" android:id="@+id/description_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:lineSpacingMultiplier="1.5" android:layout_marginStart="@dimen/node_item_padding" android:layout_marginEnd="@dimen/node_item_padding"/>
+        <com.coolapk.market.widget.LinearAdapterLayout android:orientation="vertical" android:id="@+id/linear_view" android:tag="binding_5" android:background="@color/node_translucent_background" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginStart="@dimen/node_item_padding" android:layout_marginEnd="@dimen/node_item_padding"/>
+    </LinearLayout>
+</FrameLayout>

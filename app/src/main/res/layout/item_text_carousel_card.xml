@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_text_carousel_card_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:gravity="center_vertical" android:paddingLeft="16dp" android:paddingTop="6dp" android:paddingRight="16dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="48dp" android:divider="@drawable/divider_content_background_vertical_1dp" android:showDividers="middle" android:dividerPadding="12dp">
+        <ImageView android:id="@+id/image_view" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="32dp" android:layout_marginRight="12dp" android:scaleType="centerInside"/>
+        <com.gongwen.marqueen.MarqueeView android:id="@+id/marquee_view" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_weight="1"/>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

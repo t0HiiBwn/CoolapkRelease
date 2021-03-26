@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/root_view" android:tag="layout/item_cover_view_0" android:paddingLeft="@dimen/feed_list_item_padding" android:paddingTop="8dp" android:paddingRight="@dimen/feed_list_item_padding" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/extra_image_view" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="112dp" android:scaleType="centerCrop"/>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/item_view" android:tag="layout/item_colorful_scroll_card_child_0" android:background="@color/grey" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="126dp" android:layout_height="match_parent" android:foreground="?attr/selectableItemBackground" android:paddingStart="12dp" android:paddingEnd="12dp">
+    <ImageView android:id="@+id/icon_view" android:tag="binding_1" android:layout_width="66dp" android:layout_height="66dp" android:scaleType="centerCrop"/>
+    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/white_pure_text" android:ellipsize="end" android:gravity="center_horizontal" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_marginTop="16dp" android:maxLines="2" android:layout_weight="1"/>
+    <TextView android:textSize="12sp" android:textColor="@color/white_pure_text" android:ellipsize="end" android:id="@+id/info_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:maxLines="1"/>
+</LinearLayout>

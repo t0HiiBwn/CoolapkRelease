@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/introduce_view" android:tag="layout/album_base_info_0" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.coolapk.market.widget.AutoLinkTextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:gravity="left" android:id="@+id/introduce_shadow_view" android:tag="binding_1" android:paddingLeft="16dp" android:paddingTop="14dp" android:paddingRight="16dp" android:paddingBottom="14dp" android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2"/>
+        <ImageView android:layout_gravity="right" android:id="@+id/recommend_view" android:visibility="gone" android:layout_width="44dp" android:layout_height="32dp" android:scaleType="centerCrop"/>
+    </FrameLayout>
+</LinearLayout>

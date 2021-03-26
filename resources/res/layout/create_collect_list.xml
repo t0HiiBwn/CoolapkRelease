@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.widget.view.KeyBoardLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/key_board_interact_layout" android:tag="layout/create_collect_list_0" android:background="?attr/contentBackgroundColor" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="?attr/mainBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/toolbar_layout" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height">
+            <ImageView android:id="@+id/close_view" android:tag="binding_1" android:background="?attr/actionBarItemBackground" android:layout_width="?attr/actionBarSize" android:layout_height="match_parent" android:src="@drawable/ic_close_white_24dp" android:scaleType="centerInside" android:tint="?android:attr/textColorSecondary" android:tintMode="src_in"/>
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_weight="1"/>
+            <TextView android:textStyle="bold" android:ellipsize="end" android:gravity="center" android:id="@+id/submit_view" android:tag="binding_3" android:layout_width="64dp" android:layout_height="32dp" android:maxLines="1" android:lines="1" android:layout_marginStart="8dp" android:layout_marginEnd="16dp"/>
+        </LinearLayout>
+        <View android:background="?attr/commentLayoutDivider" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <FrameLayout android:id="@+id/content_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:id="@+id/lv_top" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/relative_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <FrameLayout android:id="@+id/cover_view" android:background="?attr/commentLayoutBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="12dp" android:layout_marginRight="16dp">
+                    <com.coolapk.market.widget.AspectRatioImageView android:id="@+id/iv_cover" android:tag="binding_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="fitCenter" app:aspectRatio="0.3" app:aspectRatioEnabled="true"/>
+                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/pic_add_ph" android:tag="binding_5" android:background="@color/night_translucent" android:padding="16dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ProgressBar android:layout_width="24dp" android:layout_height="24dp" android:indeterminateTint="@color/light_text"/>
+                        <TextView android:textSize="16sp" android:textColor="@color/light_text" android:gravity="center" android:id="@+id/pic_add_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="封面上传中..."/>
+                    </LinearLayout>
+                    <ImageView android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/pic_close_view" android:tag="binding_6" android:background="#ccdb4437" android:padding="2dp" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_close_white_24dp"/>
+                </FrameLayout>
+                <EditText android:textSize="20sp" android:textStyle="bold" android:gravity="center_vertical" android:id="@+id/et_title" android:background="@null" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="标题" android:maxLength="120" android:imeOptions="actionNext"/>
+                <View android:background="?attr/contentBackgroundDeepDividerColor" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="12dp" android:layout_marginRight="12dp"/>
+                <EditText android:textSize="16sp" android:gravity="top" android:id="@+id/et_des" android:background="@null" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="180dp" android:hint="简介" android:maxLines="10" android:maxLength="120" android:imeOptions="actionNext"/>
+                <View android:background="?attr/commentLayoutDivider" android:layout_width="match_parent" android:layout_height="8dp"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/add_pic_view" android:tag="binding_7" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="48dp">
+                    <ImageView android:id="@+id/image_view" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:src="@drawable/ic_image_grey600_24dp" android:scaleType="centerInside" android:tint="@color/grey"/>
+                    <TextView android:textSize="16sp" android:textColor="@color/grey_600" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="添加封面" android:layout_marginStart="0dp"/>
+                    <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                    <LinearLayout android:gravity="center_vertical" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+                        <TextView android:textSize="14sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/description_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="小标题"/>
+                        <ImageView android:id="@+id/arrow_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_keyboard_arrow_right_white_24dp" android:tint="@color/grey"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="?attr/commentLayoutDivider" android:layout_width="match_parent" android:layout_height="8dp"/>
+                <LinearLayout android:orientation="horizontal" android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设置为私密收藏单"/>
+                        <TextView android:textSize="12sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="该收藏单未来有关注者后，将无法设为私密"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.SwitchCompat android:layout_gravity="center_vertical" android:id="@+id/switch_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@+id/fake_keyboard_view" android:layout_width="match_parent" android:layout_height="0dp">
+        <FrameLayout android:id="@+id/fake_keyboard_extra_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+</com.coolapk.market.widget.view.KeyBoardLayout>

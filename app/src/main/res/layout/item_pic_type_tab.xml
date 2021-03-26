@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:tag="layout/item_pic_type_tab_0" android:paddingLeft="2dp" android:paddingTop="12dp" android:paddingRight="2dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+    <CheckedTextView android:textColor="@drawable/pic_tab_text_color" android:layout_gravity="center" android:id="@+id/text_view" android:tag="binding_1" android:background="@drawable/pic_tab_bg" android:layout_width="wrap_content" android:layout_height="match_parent" style="@style/switch_pic_tab"/>
+</LinearLayout>

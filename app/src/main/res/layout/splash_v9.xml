@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root_view" android:tag="layout/splash_v9_0" android:background="@color/launch_window_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/sloganView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ad_splash_slogan3" app:layout_constraintBottom_toTopOf="@+id/bottom_container" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <FrameLayout android:id="@+id/ad_container" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/bottom_container" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <FrameLayout android:id="@+id/bottom_container" android:layout_width="match_parent" android:layout_height="@dimen/splash_slogan_height" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+        <ImageView android:layout_gravity="center" android:id="@+id/logo_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ad_coolapk_logo"/>
+    </FrameLayout>
+    <com.coolapk.market.view.splash.CountdownView android:id="@+id/skip_button" android:background="@drawable/splash_skip_btn_bg" android:layout_width="54dp" android:layout_height="26dp" android:layout_marginTop="40dp" android:layout_marginRight="24dp" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/item_search_extend_header_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textColor="?android:attr/textColorPrimary" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/str_hotkeywords_search"/>
+    <com.coolapk.market.widget.TagsView android:id="@+id/keywords_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:layout_marginRight="7dp" android:layout_marginBottom="12dp" app:lineSpacing="10dp"/>
+    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/divider_content_background_horizontal_1dp"/>
+</LinearLayout>

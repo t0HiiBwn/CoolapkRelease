@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/new_album_view_0" android:background="?attr/mainBackgroundColor" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131951629_apptheme_appbaroverlay" android:id="@+id/app_bar" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/auto_elevation_app_bar_state_list_anim">
+            <com.coolapk.market.widget.view.CollapsingToolbarFixLayout android:id="@+id/toolbar_layout" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" app:contentScrim="?attr/colorPrimary" app:layout_scrollFlags="13" app:titleEnabled="false">
+                <ImageView android:id="@+id/header_image_view" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:alpha="0" app:layout_collapseMode="2"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/header_view" android:paddingTop="@dimen/toolbar_height" android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_collapseMode="2">
+                    <LinearLayout android:orientation="vertical" android:id="@+id/action_view" android:paddingLeft="28dp" android:paddingTop="24dp" android:paddingRight="28dp" android:paddingBottom="48dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20sp" android:textColor="#ffffff" android:ellipsize="end" android:gravity="left" android:id="@+id/album_title_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="36dp" android:text=" "/>
+                    </LinearLayout>
+                </LinearLayout>
+                <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="#00000000" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" app:contentInsetStartWithNavigation="0dp" app:layout_collapseMode="1" app:navigationContentDescription="@string/acc_back" app:navigationIcon="@drawable/ic_back_white_24dp" app:popupTheme="@style/res_2131951647_apptheme_popupoverlay"/>
+            </com.coolapk.market.widget.view.CollapsingToolbarFixLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.cardview.widget.CardView android:id="@+id/user_info_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="12dp" app:cardBackgroundColor="?attr/contentBackgroundColor" app:contentPaddingBottom="12dp" app:contentPaddingLeft="16dp" app:contentPaddingRight="16dp" app:contentPaddingTop="12dp" app:layout_anchor="@+id/app_bar" app:layout_anchorGravity="50">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/user_logo_view" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_avatar_placeholder_48dp"/>
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="8dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:gravity="center_vertical" android:id="@+id/user_name_view" android:layout_width="wrap_content" android:layout_height="0dp" android:text="黄福林" android:layout_weight="1"/>
+                    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:gravity="center_vertical" android:id="@+id/album_info_view" android:layout_width="wrap_content" android:layout_height="0dp" android:text="s%分钟前 共%d个应用" android:layout_weight="1"/>
+                </LinearLayout>
+                <TextView android:textSize="12sp" android:layout_gravity="right|center_vertical|center_horizontal|center" android:id="@+id/user_follow_action_button" android:tag="binding_1" android:paddingLeft="16dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_user_follow"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <FrameLayout android:id="@+id/album_list_content" android:background="?attr/contentBackgroundColor" android:paddingTop="32dp" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <View android:id="@+id/fix_status_bar" android:tag="binding_2" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="0dp"/>
+</FrameLayout>

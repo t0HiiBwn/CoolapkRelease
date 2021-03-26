@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/item_article_detail_top_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.coolapk.market.widget.view.ScalingImageView android:id="@+id/top_image_view" android:tag="binding_1" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="@drawable/img_shade_cover" android:contentDescription="封面"/>
+        <View android:id="@+id/cover_view_mask" android:background="#80ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <include layout="@layout/item_feed_target_view"/>
+    <View android:tag="binding_2" android:background="?attr/contentBackgroundDividerColor" android:layout_width="match_parent" android:layout_height="8dp"/>
+    <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_3" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2"/>
+    <Space android:id="@+id/header_space_view" android:layout_width="0dp" android:layout_height="0dp"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/score_view_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_marginBottom="8dp" android:layout_marginStart="@dimen/feed_detail_item_padding">
+        <TextView android:textSize="13sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/rating_tags_view" android:background="@color/orange" android:layout_width="wrap_content" android:layout_height="20dp" android:text="评分" android:paddingStart="7dp" android:paddingEnd="9dp" android:backgroundTint="@color/orange"/>
+        <com.coolapk.market.widget.view.BadBadRatingBar android:id="@+id/rating_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:rating="3.5" android:stepSize="0.1" android:isIndicator="true" android:layout_marginStart="8dp" android:progressTint="@color/orange" android:progressBackgroundTint="@color/orange" android:secondaryProgressTint="@color/orange"/>
+        <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/score_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="9.8分" android:maxLines="1" android:lines="1" android:layout_marginStart="8dp"/>
+        <LinearLayout android:gravity="center" android:id="@+id/buy_view" android:tag="binding_4" android:background="#a671ff" android:layout_width="50dp" android:layout_height="20dp" android:layout_marginStart="8dp">
+            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_tag_outline"/>
+            <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="买过"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/recycler_view" android:tag="layout/search_scene_list_0" android:paddingLeft="16dp" android:paddingRight="16dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"/>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:padding="5dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <ImageView android:id="@+id/tt_bu_icon" android:layout_width="45dp" android:layout_height="45dp" android:layout_marginRight="10dp" android:scaleType="fitXY"/>
+        <TextView android:textSize="12sp" android:textColor="#ff333333" android:ellipsize="end" android:id="@+id/tt_bu_title" android:layout_width="145dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_toRightOf="@+id/tt_bu_icon"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/tt_bu_icon" android:layout_below="@+id/tt_bu_title">
+            <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="#ff333333" android:ellipsize="end" android:id="@+id/tt_bu_score" android:paddingRight="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+            <com.bytedance.sdk.openadsdk.core.widget.TTRatingBar android:layout_gravity="center" android:id="@+id/tt_bu_score_bar" android:layout_width="wrap_content" android:layout_height="14dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" layout="@layout/tt_backup_ad1"/>
+    <TextView android:textSize="12sp" android:textColor="#fff" android:gravity="center" android:id="@+id/tt_bu_download" android:background="@drawable/tt_backup_btn_1" android:layout_width="70dp" android:layout_height="23dp" android:layout_marginRight="25dp" android:text="@string/tt_video_download_apk" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_marginEnd="25dp" android:layout_alignParentEnd="true"/>
+    <ImageView android:id="@+id/tt_bu_close" android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/tt_dislike_icon" android:scaleType="fitXY" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

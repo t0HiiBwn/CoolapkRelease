@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/content_view" android:tag="layout/video_simple_controller_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ProgressBar android:layout_gravity="bottom" android:id="@+id/progress_bar" android:focusable="false" android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginLeft="4dp" android:layout_marginRight="4dp" android:progressDrawable="@drawable/video_progress_bar" android:splitTrack="false" style="@style/res_2131951844_base_widget_appcompat_progressbar_horizontal"/>
+    <TextView android:textSize="12sp" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/remain_time_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:text="00:00:00" android:shadowColor="#4a000000" android:shadowDy="4" android:shadowRadius="1" android:layout_marginEnd="16dp"/>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:orientation="horizontal" android:id="@+id/live_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:layout_marginEnd="16dp">
+        <View android:background="@drawable/theme_pick_circle_background" android:layout_width="6dp" android:layout_height="6dp" android:layout_marginEnd="4dp" android:backgroundTint="@color/red"/>
+        <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/live_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="直播"/>
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="bottom|left|center_vertical|center_horizontal|center" android:id="@+id/volume_view" android:tag="binding_1" android:background="#66000000" android:layout_width="34dp" android:layout_height="28dp" android:layout_marginLeft="8dp" android:layout_marginBottom="10dp">
+        <ImageView android:layout_gravity="center" android:id="@+id/volume_icon_view" android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_volume_up_white_24dp" android:scaleType="fitCenter"/>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/mask_view" android:background="#66000000" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center" android:id="@+id/play_view" android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_play_white_24dp"/>
+    </FrameLayout>
+</FrameLayout>

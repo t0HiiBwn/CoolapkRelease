@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="56dp">
+        <ImageView android:id="@+id/iv_privacy_back" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ttdownloader_icon_back_arrow" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="#222222" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="隐私政策" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <View android:id="@+id/line" android:background="#f2f2f2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_below="@+id/title_bar"/>
+    <WebView android:id="@+id/privacy_webview" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never"/>
+</LinearLayout>

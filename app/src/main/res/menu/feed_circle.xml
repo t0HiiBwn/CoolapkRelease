@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/feed_type_all" android:title="@string/feed_type_all" app:showAsAction="always"/>
+    <item android:id="@+id/feed_type_followed_user" android:title="@string/feed_type_circle" app:showAsAction="always"/>
+    <item android:id="@+id/feed_type_followed_apps" android:title="@string/feed_type_apk" app:showAsAction="always"/>
+    <item android:id="@+id/feed_type_followed_topic" android:title="@string/feed_type_topic" app:showAsAction="always"/>
+</menu>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:tag="layout/item_link_card_tab_0" android:paddingLeft="6dp" android:paddingRight="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@+id/text_view" android:background="@drawable/link_card_tab_bg" android:paddingLeft="10dp" android:paddingRight="10dp" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/submit_pick_color_0" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/content_view_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="18sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正方颜色"/>
+            <View android:id="@+id/color_view_1" android:background="@drawable/theme_pick_circle_background" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginTop="8dp"/>
+        </LinearLayout>
+        <Space android:layout_width="40dp" android:layout_height="match_parent"/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="18sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="反方颜色"/>
+            <View android:id="@+id/color_view_2" android:background="@drawable/theme_pick_circle_background" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="8dp">
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <Button android:id="@+id/action_cancel" android:tag="binding_1" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginTop="8dp" android:layout_marginRight="8dp" android:text="@android:string/cancel" style="?android:attr/borderlessButtonStyle"/>
+        <Button android:textColor="@color/light_text" android:id="@+id/action_next" android:tag="binding_2" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginTop="8dp" android:text="@android:string/ok"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.florent37.shapeofview.shapes.RoundRectView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/shapeView" android:tag="layout/item_app_node_thumbnail_0" android:layout_width="wrap_content" android:layout_height="wrap_content" app:shape_roundRect_bottomLeftRadius="8dp" app:shape_roundRect_bottomRightRadius="8dp" app:shape_roundRect_topLeftRadius="8dp" app:shape_roundRect_topRightRadius="8dp">
+    <ImageView android:id="@+id/imageView" android:layout_width="104dp" android:layout_height="185dp"/>
+    <TextView android:textSize="10sp" android:textColor="@color/white_pure_text" android:layout_gravity="bottom|right|center_vertical|center_horizontal|center" android:id="@+id/long_pic_text_view" android:tag="binding_1" android:paddingLeft="2dp" android:paddingRight="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="长图"/>
+</com.github.florent37.shapeofview.shapes.RoundRectView>

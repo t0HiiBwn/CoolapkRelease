@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/search_history_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_clock_time_24" app:tint="#ffb712"/>
+        <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:text="搜索历史" android:layout_weight="1"/>
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/close_view" android:background="?android:attr/selectableItemBackground" android:padding="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_close_white_24dp" android:tint="?android:attr/textColorSecondary"/>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:text="清除"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:tag="binding_1" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:paddingLeft="6dp" android:paddingTop="6dp" android:paddingRight="6dp" android:paddingBottom="6dp" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@+id/toggle_history_view" android:background="?android:attr/selectableItemBackground" android:paddingLeft="8dp" android:paddingRight="8dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="32dp">
+            <ImageView android:id="@+id/chevron_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chevron_down_grey600_18dp" android:tint="?android:attr/textColorSecondary"/>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/toggle_history_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:text="展开更多搜索历史"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

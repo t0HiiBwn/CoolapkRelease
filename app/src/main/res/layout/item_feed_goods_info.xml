@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:id="@+id/item_view" android:tag="layout/item_feed_goods_info_0" android:background="?attr/commentLayoutBackground" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground" android:paddingStart="12dp" android:paddingEnd="12dp">
+    <ImageView android:tag="binding_1" android:layout_width="60dp" android:layout_height="60dp" android:layout_marginTop="12dp"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:minHeight="62dp" android:layout_weight="1" android:layout_marginStart="10dp">
+        <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2"/>
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+            <TextView android:textColor="@color/red" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="12dp"/>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+            <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <TextView android:textSize="10sp" android:textColor="@color/white_primary_text" android:ellipsize="end" android:gravity="center" android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/action_view" android:tag="binding_5" android:background="@color/red" android:layout_width="60dp" android:layout_height="20dp" android:foreground="?attr/selectableItemBackground" android:text="前往购买" android:maxLines="1" android:includeFontPadding="false"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

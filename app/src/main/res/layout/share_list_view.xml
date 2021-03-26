@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/share_list_view_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="分享到"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <View android:background="?attr/contentBackgroundDividerColor" android:layout_width="match_parent" android:layout_height="1dp"/>
+    <TextView android:gravity="center" android:id="@+id/dialog_cancel_view" android:tag="binding_1" android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground" android:text="取消"/>
+</LinearLayout>

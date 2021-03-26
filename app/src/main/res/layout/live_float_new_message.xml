@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:tag="layout/live_float_new_message_0" android:background="@drawable/live_float_new_message_bg" android:paddingLeft="8dp" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="32dp">
+    <TextView android:textSize="12sp" android:id="@+id/new_message_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

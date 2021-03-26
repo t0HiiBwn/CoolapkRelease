@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/item_coolpic_fall_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <FrameLayout android:id="@+id/item_view" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackground">
+            <com.coolapk.market.widget.view.ShapedImageView android:id="@+id/image_view" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.coolapk.market.widget.view.CoolEllipsizeTextView android:textSize="12sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/title_view" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2"/>
+                    <LinearLayout android:gravity="center_vertical" android:id="@+id/user_info_view" android:tag="binding_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                        <com.coolapk.market.widget.UserAvatarView android:layout_gravity="center_vertical" android:id="@+id/user_avatar_view" android:tag="binding_5" android:layout_width="16dp" android:layout_height="16dp" android:scaleType="centerCrop"/>
+                        <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/time_view" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/multi_pic_view" android:background="@drawable/theme_pick_circle_background" android:padding="2dp" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginTop="8dp" android:layout_marginRight="8dp" android:src="@drawable/ic_kutuduotu_18dp" android:tint="@color/white" android:backgroundTint="#22000000"/>
+    </FrameLayout>
+</com.coolapk.market.design.CoolapkCardView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:id="@+id/item_view" android:tag="layout/item_card_manager_title_0" android:paddingTop="2dp" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="12dp" android:paddingEnd="12dp">
+    <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的卡片"/>
+    <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/sub_title_view" android:tag="binding_1" android:layout_width="80dp" android:layout_height="match_parent" android:text="卡片管理"/>
+</LinearLayout>

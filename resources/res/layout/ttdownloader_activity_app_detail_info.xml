@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/title_bar" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="56dp">
+        <ImageView android:id="@+id/iv_detail_back" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ttdownloader_icon_back_arrow" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <TextView android:textSize="16dp" android:textStyle="bold" android:textColor="#222222" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="权限详情" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <View android:id="@+id/line" android:background="#f2f2f2" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_below="@+id/title_bar"/>
+    <TextView android:textSize="16dp" android:textColor="#999999" android:id="@+id/tv_empty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="233dp" android:text="应用信息正在完善中..." android:layout_below="@+id/line" android:layout_centerInParent="true"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_download" android:background="@drawable/ttdownloader_bg_appinfo_btn" android:layout_width="match_parent" android:layout_height="44dp" android:layout_margin="16dp" android:layout_alignParentBottom="true">
+        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="6dp" android:src="@drawable/ttdownloader_icon_download"/>
+        <TextView android:textSize="16dp" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="立即下载"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/permission_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/ll_download" android:layout_below="@+id/line" android:overScrollMode="never"/>
+</RelativeLayout>

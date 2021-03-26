@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/itemView" android:tag="layout/item_scene_related_0" android:background="?attr/commentLayoutBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:paddingLeft="12dp" android:paddingRight="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+        <TextView android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <ImageView android:id="@+id/close_view" android:background="?android:attr/selectableItemBackgroundBorderless" android:padding="3dp" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_close_white_24dp" android:tint="?android:attr/textColorTertiary"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:paddingLeft="12dp" android:paddingRight="12dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+</LinearLayout>

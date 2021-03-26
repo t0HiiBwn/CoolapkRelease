@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/content_view" android:tag="layout/dialog_edit_submit_0" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/title_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="8dp" android:maxLines="1"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="8dp">
+        <EditText android:textSize="14sp" android:textColor="?android:attr/textColorSecondary" android:gravity="start" android:id="@+id/edit_text" android:background="?attr/commentLayoutBackground" android:padding="8dp" android:layout_width="match_parent" android:layout_height="100dp" android:hint="请输入要修改的内容" android:maxLines="8" android:minLines="4"/>
+    </LinearLayout>
+    <TextView android:textSize="14sp" android:textColor="@color/red" android:id="@+id/error_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:lineSpacingMultiplier="1.2" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+        <TextView android:id="@+id/paste_button" android:tag="binding_1" android:background="?attr/selectableItemBackground" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="粘贴摘要"/>
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <TextView android:id="@+id/cancel_button" android:tag="binding_2" android:background="?attr/selectableItemBackground" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/cancel"/>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp">
+            <TextView android:id="@+id/ok_button" android:tag="binding_3" android:background="?attr/selectableItemBackground" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_confirm"/>
+            <ProgressBar android:layout_gravity="center" android:id="@+id/progress_bar" android:tag="binding_4" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

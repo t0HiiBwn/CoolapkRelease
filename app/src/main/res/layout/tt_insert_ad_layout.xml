@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/tt_insert_express_ad_fl" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="32dp"/>
+    <ImageView android:id="@+id/tt_insert_ad_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:scaleType="fitXY"/>
+    <ImageView android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/tt_insert_dislike_icon_img" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginTop="10dp" android:src="@drawable/tt_dislike_icon" android:scaleType="fitXY"/>
+    <ImageView android:layout_gravity="bottom|left|center_vertical|center_horizontal|center|start" android:id="@+id/tt_insert_ad_logo" android:background="@drawable/tt_ad_logo_small" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="10dp" android:layout_marginBottom="15dp" android:layout_marginEnd="10dp"/>
+    <TextView android:textColor="@color/tt_white" android:gravity="center" android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/tt_insert_ad_text" android:background="@drawable/tt_circle_solid_mian" android:layout_width="wrap_content" android:layout_height="20dp" android:layout_marginLeft="10dp" android:layout_marginBottom="15dp" android:text="@string/tt_reward_feedback" android:layout_marginStart="10dp"/>
+</FrameLayout>

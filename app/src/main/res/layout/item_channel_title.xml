@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/item_channel_title_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:padding="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textSize="12sp" android:textColor="?android:attr/textColorTertiary" android:id="@+id/subtitle_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+    <TextView android:textSize="12sp" android:gravity="center" android:id="@+id/action_view" android:tag="binding_1" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="编辑"/>
+</LinearLayout>

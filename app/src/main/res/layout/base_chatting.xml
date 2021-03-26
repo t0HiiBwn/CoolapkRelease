@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/main_content" android:tag="layout/base_chatting_0" android:background="?attr/mainBackgroundColor" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952177_themeoverlay_appcompat_dark_actionbar" android:id="@+id/app_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/auto_elevation_app_bar_state_list_anim">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" app:contentInsetStartWithNavigation="0dp" app:navigationContentDescription="@string/acc_back" app:popupTheme="@style/res_2131952182_themeoverlay_appcompat_light"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/content_view" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:id="@+id/toolbar_content_fragment" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        <LinearLayout android:orientation="vertical" android:background="?attr/contentBackgroundColor" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="8dp">
+            <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@+id/action_menu_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/menu_emotion" android:tag="binding_2" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:foreground="?android:attr/selectableItemBackground" android:src="@drawable/ic_emoticon_grey600_48dp" android:tint="@color/grey_600"/>
+                <EditText android:textSize="14sp" android:gravity="start" android:layout_gravity="center" android:id="@+id/edit_text" android:tag="binding_3" android:background="@null" android:padding="8dp" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="4" android:layout_weight="1"/>
+                <ImageView android:id="@+id/menu_post" android:tag="binding_4" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp" android:foreground="?android:attr/selectableItemBackground" android:src="@drawable/ic_send_grey600_24dp"/>
+                <ProgressBar android:id="@+id/progress_bar" android:tag="binding_5" android:padding="8dp" android:layout_width="40dp" android:layout_height="40dp"/>
+            </LinearLayout>
+            <View android:background="?attr/mainBackgroundColor" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            <com.coolapk.market.widget.emotion.EmotionPanel android:layout_gravity="bottom" android:id="@+id/emotion_panel" android:paddingTop="0dp" android:visibility="gone" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

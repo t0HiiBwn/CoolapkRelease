@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/item_dyharticle_action_0" android:layout_width="wrap_content" android:layout_height="32dp">
+    <LinearLayout android:gravity="center" android:id="@+id/forward_view" android:tag="binding_1" android:background="?attr/selectableItemBackground" android:paddingLeft="8dp" android:paddingTop="4dp" android:paddingRight="8dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <ImageView android:id="@+id/forward_icon" android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_zhuanfa_white_18dp" android:tint="@color/grey_600"/>
+        <TextView android:textSize="12sp" android:textColor="@color/grey_600" android:ellipsize="end" android:gravity="center" android:id="@+id/forward_num" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="4dp" android:tint="#9e9e9e" android:maxLines="1" android:lines="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@+id/like_view" android:tag="binding_3" android:background="?attr/selectableItemBackground" android:paddingLeft="8dp" android:paddingTop="4dp" android:paddingRight="8dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <ImageView android:id="@+id/like_icon" android:tag="binding_4" android:layout_width="18dp" android:layout_height="18dp" android:tint="@color/grey_600"/>
+        <TextView android:textSize="12sp" android:textColor="@color/grey_600" android:ellipsize="end" android:gravity="center" android:id="@+id/like_num" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="4dp" android:tint="#9e9e9e" android:maxLines="1" android:lines="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@+id/comment_view" android:tag="binding_6" android:background="?attr/selectableItemBackground" android:paddingLeft="8dp" android:paddingTop="4dp" android:paddingRight="8dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <ImageView android:id="@+id/comment_icon" android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_pinglun_white_18dp" android:tint="@color/grey_600"/>
+        <TextView android:textSize="12sp" android:textColor="@color/grey_600" android:ellipsize="end" android:gravity="center" android:id="@+id/comment_num" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="4dp" android:maxLines="1" android:lines="1"/>
+    </LinearLayout>
+</LinearLayout>

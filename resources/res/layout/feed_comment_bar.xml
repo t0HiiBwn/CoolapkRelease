@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/feed_comment_bar_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/root_view" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/comment_box" android:tag="binding_1" android:background="?android:attr/selectableItemBackground" android:paddingLeft="@dimen/feed_comment_bar_view_padding" android:paddingRight="@dimen/feed_comment_bar_view_padding" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1">
+            <ImageView android:id="@+id/image_view" android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_write_outline_white_24dp" android:tint="?android:attr/textColorSecondary"/>
+            <TextView android:textSize="14sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/comment_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:text="@string/action_write_comment"/>
+        </LinearLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@+id/comment_view" android:tag="binding_2" android:background="?android:attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="48dp" android:paddingStart="@dimen/feed_comment_bar_view_padding" android:paddingEnd="@dimen/feed_comment_bar_view_padding">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/comment_icon" android:tag="binding_3" android:layout_width="18dp" android:layout_height="18dp" android:src="@mipmap/ic_comment_outline_white_24dp"/>
+            <TextView android:textSize="@dimen/feed_comment_bar_num_text_size" android:gravity="start" android:id="@+id/comment_count" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="18dp"/>
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@+id/like_view" android:tag="binding_5" android:background="?android:attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="48dp" android:paddingStart="@dimen/feed_comment_bar_view_padding" android:paddingEnd="@dimen/feed_comment_bar_view_padding">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/like_icon" android:tag="binding_6" android:layout_width="18dp" android:layout_height="18dp" android:src="@mipmap/ic_thumb_up_outline_white_24dp"/>
+            <TextView android:textSize="@dimen/feed_comment_bar_num_text_size" android:gravity="start" android:id="@+id/like_count" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="18dp"/>
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@+id/star_view" android:tag="binding_8" android:background="?android:attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="48dp" android:paddingStart="@dimen/feed_comment_bar_view_padding" android:paddingEnd="@dimen/feed_comment_bar_view_padding">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/star_icon" android:tag="binding_9" android:layout_width="18dp" android:layout_height="18dp" android:src="@mipmap/ic_collection_outline_white_24dp"/>
+            <TextView android:textSize="@dimen/feed_comment_bar_num_text_size" android:gravity="start" android:id="@+id/star_count" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="" android:layout_marginStart="18dp"/>
+        </FrameLayout>
+        <FrameLayout android:gravity="center_vertical" android:id="@+id/share_view" android:tag="binding_11" android:background="?android:attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="48dp" android:paddingStart="@dimen/feed_comment_bar_view_padding" android:paddingEnd="@dimen/feed_comment_bar_view_padding">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/share_icon" android:tag="binding_12" android:layout_width="18dp" android:layout_height="18dp" android:src="@mipmap/ic_share_outline_white_24dp"/>
+            <TextView android:textSize="@dimen/feed_comment_bar_num_text_size" android:gravity="start" android:id="@+id/share_count" android:tag="binding_13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="18dp"/>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

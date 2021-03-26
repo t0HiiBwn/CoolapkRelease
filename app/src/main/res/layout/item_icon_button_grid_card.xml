@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_icon_button_grid_card_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="1">
+    <LinearLayout android:id="@+id/item_view" android:paddingLeft="@dimen/data_list_item_margin" android:paddingRight="@dimen/data_list_item_margin" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@+id/card_view_0" android:tag="binding_1" android:layout_width="0dp" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground" android:layout_weight="1">
+            <com.coolapk.market.widget.AspectRatioImageView android:id="@+id/img_0" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:aspectRatio="0.41" app:aspectRatioEnabled="true"/>
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/icon_view_0_layout" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/icon_view_0" android:layout_width="18dp" android:layout_height="18dp" android:scaleType="centerCrop"/>
+                <TextView android:textStyle="bold" android:textColor="@color/light_text" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </FrameLayout>
+        <com.coolapk.market.widget.SpaceView android:layout_width="12dp" android:layout_height="wrap_content"/>
+        <FrameLayout android:id="@+id/card_view_1" android:tag="binding_4" android:layout_width="0dp" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground" android:layout_weight="1">
+            <com.coolapk.market.widget.AspectRatioImageView android:id="@+id/img_1" android:tag="binding_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:aspectRatio="0.41" app:aspectRatioEnabled="true"/>
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/icon_view_1_layout" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/icon_view_1" android:layout_width="18dp" android:layout_height="18dp" android:scaleType="centerCrop"/>
+                <TextView android:textStyle="bold" android:textColor="@color/light_text" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

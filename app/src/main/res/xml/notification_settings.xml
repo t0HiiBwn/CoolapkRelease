@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_push_service_enabled" android:key="push_service_enabled" android:summary="@string/pref_description_push_service_enabled"/>
+    <com.coolapk.market.widget.preference.PreferenceGroup android:title="通知栏">
+        <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_show_notice_notification_enabled" android:key="show_notice_notification_enabled" android:summary="@string/pref_description_show_notice_notification_enabled" android:dependency="push_service_enabled"/>
+        <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_show_upgrade_notification_enabled" android:key="show_upgrade_notification_enabled" android:summary="@string/pref_title_show_upgrade_notification_enabled_content"/>
+        <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_show_installed_notification_enabled" android:key="show_installed_notification_enabled" android:dependency="push_service_enabled"/>
+    </com.coolapk.market.widget.preference.PreferenceGroup>
+    <com.coolapk.market.widget.preference.PreferenceGroup android:title="提醒方式">
+        <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_floating_notification" android:key="floating_notification"/>
+        <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_enable_notification_sound" android:key="notification_sound"/>
+        <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_enable_notification_vibrate" android:key="notification_vibrate"/>
+    </com.coolapk.market.widget.preference.PreferenceGroup>
+</PreferenceScreen>

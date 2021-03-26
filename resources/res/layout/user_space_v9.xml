@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.widget.DrawSystemBarFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:tag="layout/user_space_v9_0" android:background="?attr/contentBackgroundColor" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" app:drawNavigationBar="true" app:drawStatusBar="true">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:id="@+id/coordinator" android:tag="binding_1" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_drawNavigationBar="true" app:layout_drawStatusBar="true">
+        <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:background="@null" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/auto_elevation_app_bar_state_list_anim" app:layout_behavior="com.coolapk.market.view.userv9.UserSpaceAppBarBehavior">
+            <com.coolapk.market.widget.view.IgnoreInsetFrameLayout android:id="@+id/app_bar_holder" android:layout_width="match_parent" android:layout_height="120dp" app:layout_scrollFlags="3"/>
+        </com.google.android.material.appbar.AppBarLayout>
+        <com.coolapk.market.widget.slidr.ScrollStateViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.coolapk.market.widget.view.IgnoreInsetFrameLayout android:id="@+id/tab_container" android:tag="binding_2" android:background="#22000000" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/auto_elevation_app_bar_state_list_anim" app:layout_drawStatusBar="true">
+        <FrameLayout android:id="@+id/background_view_container" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@+id/background_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="40dp" android:scaleType="centerCrop" android:contentDescription="主页背景图"/>
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Space android:id="@+id/space_holder" android:layout_width="0dp" android:layout_height="0dp"/>
+            <FrameLayout android:id="@+id/logo_view_container" android:layout_width="match_parent" android:layout_height="128dp" android:layout_marginTop="60dp" android:layout_marginBottom="8dp">
+                <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:id="@+id/action_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:layout_marginEnd="16dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="end" android:id="@+id/action_view" android:tag="binding_3" android:layout_width="100dp" android:layout_height="36dp" android:foreground="?attr/selectableItemBackground"/>
+                    <ImageView android:id="@+id/qrcode_view" android:tag="binding_4" android:background="#4dffffff" android:layout_width="36dp" android:layout_height="36dp" android:foreground="?attr/selectableItemBackground" android:src="@drawable/ic_qrcode_outline_white_24dp" android:scaleType="centerInside" android:tint="@color/white" android:contentDescription="我的二维码名片" android:layout_marginStart="10dp"/>
+                </LinearLayout>
+                <com.coolapk.market.widget.UserAvatarView android:id="@+id/user_avatar_view" android:tag="binding_5" android:layout_width="80dp" android:layout_height="80dp" android:scaleType="centerCrop" android:contentDescription="用户头像" android:layout_marginStart="16dp" android:transitionName="@string/transition_name_logo"/>
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/name_view_container" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layoutDirection="rtl" android:layout_marginEnd="16dp">
+                    <include android:id="@+id/user_info_view" layout="@layout/item_user_info_part"/>
+                    <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/name_view" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/info_view_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <com.coolapk.market.widget.view.TabLayout android:id="@+id/tabs" android:layout_width="match_parent" android:layout_height="48dp" app:tabIndicatorHeight="2.5dp" app:tabMinWidth="60dp" app:tabMode="0" app:tabPaddingBottom="0dp" app:tabPaddingEnd="10dp" app:tabPaddingStart="10dp" app:tabPaddingTop="0dp" app:tabSelectedTextColor="?android:attr/textColorPrimary" app:tabTextAppearance="@style/GroupTabLayoutTextAppearance"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" app:contentInsetStartWithNavigation="0dp" app:layout_collapseMode="1" app:navigationContentDescription="@string/acc_back" app:navigationIcon="@drawable/ic_back_white_24dp" app:popupTheme="@style/res_2131952178_themeoverlay_appcompat_daynight"/>
+        <include android:id="@+id/user_toolbar" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" android:layout_marginStart="60dp" android:layout_marginEnd="116dp" layout="@layout/user_toolbar"/>
+        <FrameLayout android:id="@+id/refresh_view" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height">
+            <TextView android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/refresh_text_view" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="松开立即刷新" android:paddingStart="12dp" android:paddingEnd="12dp"/>
+        </FrameLayout>
+        <View android:layout_gravity="bottom" android:id="@+id/divider" android:background="?attr/mainBackgroundColor" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    </com.coolapk.market.widget.view.IgnoreInsetFrameLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="48dp" android:layout_marginRight="48dp">
+        <ProgressBar android:id="@+id/loading_view" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyle"/>
+        <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:id="@+id/textView3" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.3"/>
+    </LinearLayout>
+</com.coolapk.market.widget.DrawSystemBarFrameLayout>

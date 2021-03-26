@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TableLayout android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:shrinkColumns="1">
+        <TableRow>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:gravity="right" android:text="@string/str_view_package_dialog_title"/>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:layout_marginLeft="4dp"/>
+        </TableRow>
+        <TableRow android:layout_marginTop="8dp">
+            <TextView android:textColor="?android:attr/textColorPrimary" android:gravity="right" android:text="@string/str_view_package_dialog_version"/>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/version_view" android:layout_marginLeft="4dp"/>
+        </TableRow>
+        <TableRow android:layout_marginTop="8dp">
+            <TextView android:textColor="?android:attr/textColorPrimary" android:gravity="right" android:text="@string/str_view_package_dialog_package"/>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/package_name_view" android:layout_marginLeft="4dp"/>
+        </TableRow>
+        <TableRow android:layout_marginTop="8dp">
+            <TextView android:textColor="?android:attr/textColorPrimary" android:gravity="right" android:text="API:"/>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/target_api_view" android:layout_marginLeft="4dp"/>
+        </TableRow>
+        <TableRow android:visibility="gone" android:layout_marginTop="8dp">
+            <TextView android:textColor="?android:attr/textColorPrimary" android:gravity="right" android:text="64位:"/>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/arm64b_view" android:layout_marginLeft="4dp"/>
+        </TableRow>
+        <TableRow android:layout_marginTop="8dp">
+            <TextView android:textColor="?android:attr/textColorPrimary" android:gravity="right" android:text="MD5:"/>
+            <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/md5_view" android:layout_marginLeft="4dp"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

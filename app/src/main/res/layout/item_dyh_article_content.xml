@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/root_view" android:tag="layout/item_dyh_article_content_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/content_layout" android:paddingRight="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:id="@+id/real_title_view" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_list_item_padding" android:layout_marginRight="@dimen/feed_list_item_padding" android:layout_marginBottom="4dp" android:maxLines="2" android:lineSpacingMultiplier="1.2"/>
+        <com.coolapk.market.widget.AutoLinkTextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_list_item_padding" android:layout_marginRight="@dimen/feed_list_item_padding" android:lineSpacingMultiplier="1.2"/>
+    </LinearLayout>
+</LinearLayout>

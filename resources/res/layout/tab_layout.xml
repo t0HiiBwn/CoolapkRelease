@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.widget.DrawSystemBarFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/base_view" android:tag="layout/tab_layout_0" android:layout_width="match_parent" android:layout_height="match_parent" app:drawNavigationBar="true" app:drawStatusBar="true">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@+id/main_content" android:background="?attr/mainBackgroundColor" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_drawNavigationBar="true">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952177_themeoverlay_appcompat_dark_actionbar" android:id="@+id/app_bar" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/enable_elevation_app_bar_state_list_anim" app:layout_behavior="com.coolapk.market.widget.FixAppBarLayoutBehavior">
+            <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" app:contentInsetStartWithNavigation="0dp" app:layout_scrollFlags="15" app:navigationContentDescription="@string/acc_back" app:navigationIcon="@drawable/ic_back_white_24dp" app:popupTheme="@style/res_2131952182_themeoverlay_appcompat_light" app:title="应用管理"/>
+            <Space android:id="@+id/tabs" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </com.google.android.material.appbar.AppBarLayout>
+        <com.coolapk.market.widget.slidr.ScrollStateViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</com.coolapk.market.widget.DrawSystemBarFrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_video_view_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <FrameLayout android:orientation="vertical" android:id="@+id/holder_view" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@+id/video_container" android:background="?attr/contentBackgroundColor" android:paddingLeft="16dp" android:paddingTop="6dp" android:paddingRight="16dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Space android:id="@+id/video_player_space_view" android:layout_width="0dp" android:layout_height="0dp"/>
+        </FrameLayout>
+    </FrameLayout>
+</com.coolapk.market.design.CoolapkCardView>

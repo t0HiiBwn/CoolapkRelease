@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/album_action_bar_0" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/star_layout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/star_view" android:layout_width="wrap_content" android:layout_height="20dp" android:src="@drawable/ic_collection_outline_white_narrow_margin_24dp" android:tint="@color/light_text"/>
+        <TextView android:textSize="12sp" android:textColor="@color/light_text" android:layout_gravity="center_horizontal" android:id="@+id/star_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:text="@string/action_collect"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/like_layout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/like_view" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_thumb_up_outline_white_narrow_margin_24dp" android:tint="@color/light_text"/>
+        <TextView android:textSize="12sp" android:textColor="@color/light_text" android:layout_gravity="center_horizontal" android:id="@+id/like_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:text="@string/str_feed_item_like"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/comment_layout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/comment_view" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_comment_outline_white_narrow_margin_24dp" android:tint="@color/light_text"/>
+        <TextView android:textSize="12sp" android:textColor="@color/light_text" android:layout_gravity="center_horizontal" android:id="@+id/comment_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:text="@string/str_comment"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/download_layout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/download_view" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_download_outline_white_narrow_margin_24dp" android:tint="@color/light_text"/>
+        <TextView android:textSize="12sp" android:textColor="@color/light_text" android:layout_gravity="center_horizontal" android:id="@+id/download_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:text="@string/action_download"/>
+    </LinearLayout>
+</LinearLayout>

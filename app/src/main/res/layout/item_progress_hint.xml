@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/empty_view" android:tag="layout/item_progress_hint_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="15sp" android:textColor="?android:attr/textColorTertiary" android:gravity="center" android:layout_gravity="center" android:id="@+id/title_view" android:paddingLeft="16dp" android:paddingTop="56dp" android:paddingRight="16dp" android:paddingBottom="56dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/progress_bar" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</FrameLayout>

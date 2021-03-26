@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.widget.DrawSystemBarFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:tag="layout/tip_layout_0" android:background="#aa000000" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" app:drawNavigationBar="true" app:drawStatusBar="true">
+    <ImageView android:layout_gravity="center" android:id="@+id/vertical_guide_view" android:visibility="gone" android:layout_width="80dp" android:layout_height="224dp" android:src="@drawable/ic_guide"/>
+    <ImageView android:layout_gravity="center" android:id="@+id/horizontal_guide_view" android:visibility="gone" android:layout_width="225dp" android:layout_height="60dp" android:src="@drawable/ic_scroll"/>
+</com.coolapk.market.widget.DrawSystemBarFrameLayout>

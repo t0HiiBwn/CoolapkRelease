@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="dialog_min_width_major">65%</fraction>
+    <fraction name="dialog_min_width_minor">95%</fraction>
+    <fraction name="left_in_out_fraction">-20%p</fraction>
+</resources>

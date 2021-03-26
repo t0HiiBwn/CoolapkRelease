@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_clear_cache_on_exit" android:key="clear_cache_on_exit" android:summary="@string/pref_description_clear_cache_on_exit"/>
+    <com.coolapk.market.widget.preference.Preference android:title="@string/pref_title_clear_cache" android:key="clear_cache" android:summary="@string/pref_description_clear_cache"/>
+    <com.coolapk.market.widget.preference.Preference android:title="清除广告记录" android:key="clear_closed_ad" android:summary="清除已禁止显示的广告的记录"/>
+    <com.coolapk.market.widget.preference.Preference android:title="@string/pref_title_reset_preferences" android:key="reset_preferences" android:summary="@string/pref_description_reset_preferences"/>
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_tab_view_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:orientation="vertical" android:id="@+id/item_view" android:layout_width="match_parent" android:layout_height="40dp">
+        <FrameLayout android:id="@+id/tab_container" android:layout_width="match_parent" android:layout_height="40dp">
+            <View android:layout_gravity="bottom" android:background="@drawable/divider_content_background_horizontal_1dp" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            <com.coolapk.market.widget.view.TabLayout android:id="@+id/tabs" android:layout_width="match_parent" android:layout_height="40dp" app:tabIndicatorHeight="2.5dp" app:tabMinWidth="60dp" app:tabMode="0" app:tabPaddingBottom="0dp" app:tabPaddingEnd="10dp" app:tabPaddingStart="10dp" app:tabPaddingTop="0dp" app:tabSelectedTextColor="?android:attr/textColorPrimary" app:tabTextAppearance="@style/GroupTabLayoutTextAppearance"/>
+        </FrameLayout>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

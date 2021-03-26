@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#fff">
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="20dp"/>
+            <solid android:color="?attr/colorAccent"/>
+            <corners android:topLeftRadius="10dp" android:topRightRadius="10dp" android:bottomLeftRadius="10dp" android:bottomRightRadius="10dp"/>
+        </shape>
+    </item>
+</ripple>

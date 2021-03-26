@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/card_view" android:tag="layout/item_feed_discovery_detail_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <Space android:id="@+id/header_space_view" android:layout_width="0dp" android:layout_height="0dp"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/content_container" android:tag="binding_1" android:background="?attr/commentLayoutBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/info_view" android:tag="binding_2" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/icon_view" android:tag="binding_3" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="centerCrop"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_weight="1">
+                <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/title_view" android:tag="binding_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+                <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:id="@+id/from_where_view" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:maxLines="1" android:lines="1"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="@color/light_text" android:gravity="center" android:id="@+id/action_button" android:tag="binding_6" android:layout_width="60dp" android:layout_height="26dp" android:foreground="?attr/selectableItemBackground"/>
+        </LinearLayout>
+        <Space android:id="@+id/nine_image_space_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/text_view_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+        <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/text_view" android:tag="binding_7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:lineSpacingMultiplier="1.5"/>
+    </FrameLayout>
+    <Space android:id="@+id/relative_space_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Space android:layout_width="0dp" android:layout_height="12dp"/>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_create_goods_list_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <FrameLayout android:orientation="vertical" android:id="@+id/item_view" android:tag="binding_1" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground">
+        <com.coolapk.market.widget.AspectRatioImageView android:id="@+id/cover_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:aspectRatio="0.43" app:aspectRatioEnabled="true"/>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="创建好物单" android:lineSpacingMultiplier="1.4"/>
+            <TextView android:textSize="12sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="创建好物单，展示生活方式"/>
+        </LinearLayout>
+    </FrameLayout>
+</com.coolapk.market.design.CoolapkCardView>

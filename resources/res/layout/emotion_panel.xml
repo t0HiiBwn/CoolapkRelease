@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/emotion_panel_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="8dp">
+    <FrameLayout android:id="@+id/emotion_panel_header" android:padding="8dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="41dp">
+        <com.coolapk.market.widget.slidr.ScrollStateViewPager android:layout_gravity="center" android:id="@+id/emotion_panel_view_pager" android:layout_width="match_parent" android:layout_height="160dp"/>
+        <LinearLayout android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/emotion_panel_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/emotion_panel_bottom" android:background="?attr/mainBackgroundColor" android:paddingTop="1dp" android:layout_width="match_parent" android:layout_height="41dp"/>
+</FrameLayout>

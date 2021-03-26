@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@+id/content_view" android:tag="layout/user_qrcode_0" android:background="#000000" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/qr_view_container" android:tag="binding_1" android:background="@color/white" android:layout_width="268dp" android:layout_height="wrap_content" android:layout_marginStart="48dp" android:layout_marginEnd="48dp">
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/top_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+            <com.coolapk.market.widget.UserAvatarView android:id="@+id/user_avatar_view" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="centerCrop"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp">
+                <TextView android:textSize="16sp" android:textColor="#212121" android:ellipsize="end" android:id="@+id/user_name_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+                <TextView android:textSize="12sp" android:textColor="#757575" android:ellipsize="end" android:id="@+id/description_view" android:paddingTop="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@drawable/qr_code_line" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp"/>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp">
+            <com.coolapk.market.widget.SquareImageView android:layout_gravity="center" android:id="@+id/qr_code_view" android:layout_width="192dp" android:layout_height="wrap_content" android:scaleType="centerCrop"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/logo_view" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/coolapk_logo" android:scaleType="centerCrop"/>
+        </FrameLayout>
+        <TextView android:textSize="12sp" android:textColor="#757575" android:ellipsize="end" android:paddingTop="8dp" android:paddingBottom="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="扫一扫，来酷安找我" android:maxLines="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="42dp">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="96dp" android:layout_height="wrap_content" android:contentDescription="保存到相册">
+            <ImageView android:id="@+id/action_save" android:tag="binding_2" android:background="#4d4d4d" android:layout_width="48dp" android:layout_height="48dp" android:foreground="?attr/selectableItemBackground" android:src="@drawable/ic_content_save_outline_white_24dp" android:scaleType="centerInside" android:tint="@color/white" android:importantForAccessibility="no"/>
+            <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="保存到相册"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="96dp" android:layout_height="wrap_content" android:contentDescription="分享二维码">
+            <ImageView android:id="@+id/action_share" android:tag="binding_3" android:background="#4d4d4d" android:layout_width="48dp" android:layout_height="48dp" android:foreground="?attr/selectableItemBackground" android:src="@mipmap/ic_share_outline_white_24dp" android:scaleType="centerInside" android:tint="@color/white" android:importantForAccessibility="no"/>
+            <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="分享二维码"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="96dp" android:layout_height="wrap_content" android:contentDescription="扫一扫">
+            <ImageView android:id="@+id/action_qr_scan" android:tag="binding_4" android:background="#4d4d4d" android:layout_width="48dp" android:layout_height="48dp" android:foreground="?attr/selectableItemBackground" android:src="@drawable/ic_saoyisao_white_24dp" android:scaleType="centerInside" android:tint="@color/white" android:importantForAccessibility="no"/>
+            <TextView android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="扫一扫"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

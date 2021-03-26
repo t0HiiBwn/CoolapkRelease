@@ -1,0 +1,60 @@
+package com.coolapk.market.view.search;
+
+import android.text.TextUtils;
+import com.coolapk.market.manager.DataManager;
+import com.coolapk.market.model.Entity;
+import com.coolapk.market.model.HolderItem;
+import com.coolapk.market.network.Result;
+import com.coolapk.market.view.category.RankingAppContract;
+import java.util.List;
+import rx.Observable;
+import rx.functions.Action1;
+
+public class SearchAppRankingPresenter extends RankingAppContract.Presenter {
+    private String apkType;
+    private boolean hasRankHolder;
+    private String rankType;
+    private String tagKeyword;
+    private RankingAppContract.View view;
+
+    public SearchAppRankingPresenter(RankingAppContract.View view2, String str, String str2) {
+        super(view2);
+        this.apkType = str2;
+        this.view = view2;
+        this.tagKeyword = str;
+    }
+
+    @Override // com.coolapk.market.view.category.RankingAppContract.Presenter
+    public String getRankType() {
+        if (this.rankType == null) {
+            this.rankType = "default";
+        }
+        return this.rankType;
+    }
+
+    @Override // com.coolapk.market.view.category.RankingAppContract.Presenter
+    public void resetRankType(String str) {
+        if (!TextUtils.equals(str, this.rankType)) {
+            this.rankType = str;
+            this.view.clearCardData();
+            this.hasRankHolder = false;
+            setPage(1);
+            reloadData();
+        }
+    }
+
+    @Override // com.coolapk.market.view.base.asynclist.AsyncListPresenter
+    protected Observable<Result<List<Entity>>> onCreateRequest(boolean z, int i) {
+        return DataManager.getInstance().getAppListWithKeyword(this.tagKeyword, this.apkType, getRankType(), i, this.view.findFirstItem(), this.view.findLastItem()).doOnNext(new Action1<Result<List<Entity>>>() {
+            /* class com.coolapk.market.view.search.SearchAppRankingPresenter.AnonymousClass1 */
+
+            public void call(Result<List<Entity>> result) {
+                List<Entity> data = result.getData();
+                if (data != null && !data.isEmpty() && !SearchAppRankingPresenter.this.hasRankHolder) {
+                    data.add(0, HolderItem.newBuilder().entityType("holder_order_selector").build());
+                    SearchAppRankingPresenter.this.hasRankHolder = true;
+                }
+            }
+        });
+    }
+}

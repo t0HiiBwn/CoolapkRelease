@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/dyh_header_view_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.github.florent37.arclayout.ArcLayout android:id="@+id/arc_layout" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="136dp" app:arc_cropDirection="2" app:arc_height="9dp" app:arc_position="1">
+            <ImageView android:id="@+id/cover_view" android:tag="binding_1" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" app:layout_collapseMode="2"/>
+        </com.github.florent37.arclayout.ArcLayout>
+        <TextView android:textSize="20sp" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/title_view" android:tag="binding_2" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:maxLines="2"/>
+        <TextView android:textSize="14sp" android:gravity="center" android:id="@+id/description_view" android:tag="binding_3" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <TextView android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/edit_view" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12dp" android:minWidth="64dp" android:minHeight="28dp" android:text="管理"/>
+            <com.coolapk.market.widget.ActionButtonFrameLayout android:id="@+id/action_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="64dp" android:minHeight="28dp">
+                <TextView android:textSize="14sp" android:layout_gravity="center" android:id="@+id/action_button" android:tag="binding_5" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </com.coolapk.market.widget.ActionButtonFrameLayout>
+        </LinearLayout>
+        <LinearLayout android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondaryInverseNoDisable" android:id="@+id/dyh_num_view" android:tag="binding_6" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textSize="8sp" android:textColor="?android:attr/textColorSecondaryInverseNoDisable" android:layout_gravity="center_vertical" android:id="@+id/edit_type_view" android:tag="binding_7" android:background="@drawable/action_btn_border_gery_bg" android:paddingLeft="2dp" android:paddingRight="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp"/>
+            <View android:layout_width="0dp" android:layout_height="0.5dp" android:layout_weight="1"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/user_avatar_view" android:tag="binding_8" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginRight="4dp" android:scaleType="centerCrop"/>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondaryInverseNoDisable" android:layout_gravity="center_vertical" android:id="@+id/info_view" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <com.makeramen.roundedimageview.RoundedImageView android:layout_gravity="center_horizontal" android:id="@+id/logo_view" android:tag="binding_10" android:layout_width="78dp" android:layout_height="78dp" android:layout_marginTop="80dp" android:scaleType="centerCrop" android:transitionName="@string/transition_name_logo" app:riv_border_color="?attr/contentBackgroundColor" app:riv_border_width="3dp" app:riv_oval="true"/>
+</FrameLayout>

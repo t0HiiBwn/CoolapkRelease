@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/item_view" android:tag="layout/item_small_scroll_card_item_0" android:background="?attr/selectableItemBackground" android:paddingLeft="2dp" android:paddingTop="6dp" android:paddingRight="2dp" android:paddingBottom="6dp" android:layout_width="84dp" android:layout_height="wrap_content">
+    <com.coolapk.market.widget.UserAvatarView android:id="@+id/icon_view" android:tag="binding_1" android:layout_width="56dp" android:layout_height="56dp" android:scaleType="centerCrop"/>
+    <TextView android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:gravity="center_horizontal" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+    <LinearLayout android:gravity="center_vertical" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp">
+        <TextView android:textSize="12sp" android:gravity="center_horizontal" android:id="@+id/score_view" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <ImageView android:id="@+id/score_view_icon" android:layout_width="15dp" android:layout_height="15dp" android:layout_marginLeft="2dp" android:layout_marginTop="0.6dp" android:src="@drawable/ic_star_white_24dp" android:scaleType="centerInside"/>
+    </LinearLayout>
+    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:id="@+id/info_view" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:maxLines="1" android:lines="1"/>
+    <com.coolapk.market.widget.ActionButton android:textSize="12sp" android:layout_gravity="center" android:id="@+id/action_container" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:minWidth="56dp" android:minHeight="28dp" android:text="下载" app:ab_style="1"/>
+</LinearLayout>

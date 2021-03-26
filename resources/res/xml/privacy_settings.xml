@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="在个人主页显示我点赞过的内容" android:key="user_space_show_recent_like"/>
+    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="读取剪贴板" android:key="read_clipboard" android:summary="酷安会读取剪贴板以便于实现快速粘贴链接等快捷功能"/>
+    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="分享到酷安好物" android:key="share_goods_dialog" android:summary="复制第三方商品链接后，并打开好物首页，会弹出「分享到酷安好物」弹窗"/>
+    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="开启浏览历史记录" android:key="record_hit_history" android:summary="关闭后将不再记录您的浏览历史，并关闭浏览历史卡片"/>
+    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="开启我的常去记录" android:key="record_recent_history" android:summary="关闭后将不再记录您常去的节点，并关闭我的常去卡片"/>
+</PreferenceScreen>

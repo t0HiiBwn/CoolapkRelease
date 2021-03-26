@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_goods_v10_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <Space android:id="@+id/goods_space_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</com.coolapk.market.design.CoolapkCardView>

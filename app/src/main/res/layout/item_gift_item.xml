@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/item_view" android:tag="layout/item_gift_item_0" android:background="?android:attr/selectableItemBackground" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="top" android:id="@+id/gift_logo_view" android:tag="binding_1" android:layout_width="48dp" android:layout_height="48dp" android:src="@mipmap/ic_launcher"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_game_view" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            <TextView android:textSize="12sp" android:gravity="top" android:id="@+id/gift_date_line" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ProgressBar android:layout_gravity="center_vertical" android:id="@+id/gift_progress_view" android:layout_width="0dp" android:layout_height="wrap_content" android:max="100" android:indeterminate="false" android:layout_weight="1" style="?android:attr/progressBarStyleHorizontal"/>
+                <TextView android:textSize="12sp" android:layout_gravity="center_vertical" android:id="@+id/progress_bar_text" android:paddingLeft="6dp" android:paddingRight="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="48dp"/>
+                <TextView android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/gift_get_text" android:tag="binding_2" android:background="?android:attr/selectableItemBackground" android:layout_width="48dp" android:layout_height="24dp" android:text="@string/str_get_gift"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:layout_gravity="center_vertical" android:id="@+id/gift_content" android:paddingTop="6dp" android:paddingRight="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

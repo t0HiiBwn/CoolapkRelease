@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_menu_item_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/root_view" android:tag="binding_1" android:paddingLeft="16dp" android:paddingRight="12dp" android:layout_width="match_parent" android:layout_height="48dp">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/logo_view" android:tag="binding_2" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="12dp" android:scaleType="centerCrop"/>
+        <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/title_view" android:tag="binding_3" android:layout_width="0dp" android:layout_height="wrap_content" android:minHeight="24dp" android:maxLines="1" android:lines="1" android:layout_weight="1" android:paddingStart="0dp" android:paddingEnd="8dp"/>
+        <TextView android:textSize="13sp" android:id="@+id/more_text_view" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <ImageView android:id="@+id/enter_view" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_keyboard_arrow_right_white_24dp" android:tint="@color/grey_location"/>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

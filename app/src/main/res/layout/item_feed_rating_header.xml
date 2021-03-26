@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/item_feed_rating_header_0" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/set_top_view" android:tag="binding_1" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_top_outline_white_24dp" android:tint="#f44336"/>
+        <TextView android:textColor="#f44336" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="置顶" android:layout_marginStart="4dp" android:layout_marginEnd="4dp"/>
+    </LinearLayout>
+    <View android:tag="binding_2" android:background="?attr/currencyColorDivider" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="16dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="64dp">
+        <com.coolapk.market.widget.UserAvatarView android:id="@+id/user_avatar_view" android:tag="binding_3" android:layout_width="32dp" android:layout_height="32dp" android:scaleType="centerCrop"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_weight="1">
+            <TextView android:textSize="15sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/name_view" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp">
+                <RatingBar android:id="@+id/rating_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:progressDrawable="@drawable/ration_bar_18dp" android:numStars="5" android:rating="3.5" android:stepSize="0.1" android:isIndicator="true" android:layout_marginEnd="4dp" android:progressTint="@color/orange" android:progressBackgroundTint="@color/orange" android:secondaryProgressTint="@color/orange" style="@style/RatingBar"/>
+                <TextView android:textSize="12sp" android:textColor="?android:attr/textColorTertiary" android:ellipsize="end" android:id="@+id/score_view" android:paddingRight="6dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+                <TextView android:textSize="12sp" android:textColor="?android:attr/textColorTertiary" android:ellipsize="end" android:id="@+id/time_view" android:tag="binding_5" android:paddingRight="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+                <ImageView android:tag="binding_6" android:layout_width="12dp" android:layout_height="12dp" android:src="@drawable/ic_cellphone_grey600_24dp" android:tint="@color/grey_location" android:tintMode="src_in"/>
+                <TextView android:textSize="12sp" android:textColor="?android:attr/textColorTertiary" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:tag="binding_7" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:maxEms="10"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="top" android:id="@+id/more_view" android:tag="binding_8" android:background="?android:attr/actionBarItemBackground" android:padding="12dp" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_keyboard_arrow_right_white_24dp" android:scaleType="fitCenter" android:tint="@color/grey_location" android:rotation="90"/>
+    </LinearLayout>
+</LinearLayout>

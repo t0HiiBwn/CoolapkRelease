@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/item_view" android:tag="layout/item_single_rating_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:layout_marginStart="12dp" android:layout_marginEnd="10dp">
+        <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/user_avatar_view" android:tag="binding_1" android:layout_width="32dp" android:layout_height="32dp" android:scaleType="centerCrop" app:riv_oval="true"/>
+        <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/score_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的打分" android:layout_marginStart="10dp"/>
+        <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="10sp" android:textColor="@color/white" android:gravity="center" android:tag="binding_2" android:background="#a671ff" android:layout_width="30dp" android:layout_height="16dp" android:text="买过"/>
+        <com.coolapk.market.widget.view.BadBadRatingBar android:id="@+id/rating_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:progressDrawable="@drawable/ration_bar_18dp" android:numStars="5" android:rating="5" android:stepSize="1" android:isIndicator="true" android:progressTint="#ffb712" android:progressBackgroundTint="#ffb712" android:secondaryProgressTint="#ffb712"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_keyboard_arrow_right_white_24dp" android:tint="@color/grey_location"/>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

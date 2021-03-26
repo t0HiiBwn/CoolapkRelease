@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/item_search_ask_filter_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RadioGroup android:orientation="horizontal" android:id="@+id/radio_group" android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_content_background_vertical_1dp" android:showDividers="middle" android:dividerPadding="12dp">
+        <RadioButton android:gravity="center" android:id="@+id/feed_type_all" android:layout_width="0dp" android:layout_height="40dp" android:button="@null" android:text="全部问答" android:layout_weight="1"/>
+        <RadioButton android:gravity="center" android:id="@+id/feed_type_question" android:layout_width="0dp" android:layout_height="40dp" android:button="@null" android:text="只看提问" android:layout_weight="1"/>
+        <RadioButton android:gravity="center" android:id="@+id/feed_type_answer" android:layout_width="0dp" android:layout_height="40dp" android:button="@null" android:text="只看回答" android:layout_weight="1"/>
+    </RadioGroup>
+</LinearLayout>

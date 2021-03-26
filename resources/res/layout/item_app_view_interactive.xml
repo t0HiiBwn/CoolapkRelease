@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/item_app_view_interactive_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:paddingLeft="16dp" android:paddingTop="16dp" android:paddingRight="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="43sp" android:textColor="?android:attr/textColorPrimary" android:layout_gravity="bottom" android:id="@+id/rating_average" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false"/>
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp">
+            <RatingBar android:id="@+id/rating_bar_average" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxHeight="18dp" android:indeterminateOnly="false" android:indeterminateDrawable="@drawable/ration_bar_18dp" android:progressDrawable="@drawable/ration_bar_18dp" android:minHeight="18dp" android:numStars="5" android:stepSize="0.1" android:isIndicator="true"/>
+            <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/rating_count" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <View android:id="@+id/rate_5" android:background="@color/rate_color_5" android:layout_width="wrap_content" android:layout_height="10dp" android:layout_centerVertical="true"/>
+                <TextView android:textSize="8sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/rate_num_5" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:includeFontPadding="false" android:layout_toRightOf="@+id/rate_5"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <View android:id="@+id/rate_4" android:background="@color/rate_color_4" android:layout_width="wrap_content" android:layout_height="10dp" android:layout_centerVertical="true"/>
+                <TextView android:textSize="8sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/rate_num_4" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:includeFontPadding="false" android:layout_toRightOf="@+id/rate_4"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <View android:id="@+id/rate_3" android:background="@color/rate_color_3" android:layout_width="wrap_content" android:layout_height="10dp" android:layout_centerVertical="true"/>
+                <TextView android:textSize="8sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/rate_num_3" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:includeFontPadding="false" android:layout_toRightOf="@+id/rate_3"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <View android:id="@+id/rate_2" android:background="@color/rate_color_2" android:layout_width="wrap_content" android:layout_height="10dp" android:layout_centerVertical="true"/>
+                <TextView android:textSize="8sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/rate_num_2" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:includeFontPadding="false" android:layout_toRightOf="@+id/rate_2"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <View android:id="@+id/rate_1" android:background="@color/rate_color_1" android:layout_width="wrap_content" android:layout_height="10dp" android:layout_centerVertical="true"/>
+                <TextView android:textSize="8sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/rate_num_1" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:includeFontPadding="false" android:layout_toRightOf="@+id/rate_1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@+id/rating_view" android:background="?android:attr/selectableItemBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="32dp">
+        <TextView android:textSize="13sp" android:textStyle="italic" android:textColor="?android:attr/textColorSecondary" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textSize="13sp" android:textStyle="italic" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textSize="13sp" android:textStyle="italic" android:tag="binding_11" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <ImageView android:paddingLeft="16dp" android:paddingRight="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/divider_content_background_horizontal_1dp" android:scaleType="fitXY"/>
+    <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:tag="binding_12" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/divider_content_background_horizontal_1dp" android:scaleType="fitXY"/>
+        <com.coolapk.market.widget.InteractivePeopleView android:id="@+id/rating_of_theirs_view" android:tag="binding_13" android:background="?android:attr/selectableItemBackground" android:paddingLeft="16dp" android:paddingTop="10dp" android:paddingRight="16dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <ImageView android:tag="binding_14" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/divider_content_background_horizontal_1dp" android:scaleType="fitXY"/>
+        <com.coolapk.market.widget.InteractivePeopleView android:id="@+id/discovery_of_theirs_view" android:tag="binding_15" android:background="?android:attr/selectableItemBackground" android:paddingLeft="16dp" android:paddingTop="10dp" android:paddingRight="16dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

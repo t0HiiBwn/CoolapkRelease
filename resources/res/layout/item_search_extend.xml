@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/main_content" android:tag="layout/item_search_extend_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/content_layout" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_history_white_24dp" android:scaleType="centerInside" android:tint="?android:attr/textColorTertiary"/>
+        <TextView android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@android:id/text1" android:tag="binding_1" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_weight="1"/>
+        <ImageView android:id="@+id/delete_view" android:background="?android:attr/selectableItemBackground" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_close_white_24dp" android:scaleType="centerInside" android:tint="?android:attr/textColorTertiary"/>
+    </LinearLayout>
+</LinearLayout>

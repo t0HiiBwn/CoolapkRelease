@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="60dp">
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/tt_app_detail_back_tv" android:background="@drawable/tt_app_detail_back_btn" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="22dp" android:singleLine="true" android:layout_centerVertical="true" android:lineSpacingExtra="2sp"/>
+        <TextView android:textSize="16sp" android:textColor="#222222" android:gravity="center" android:layout_width="70dp" android:layout_height="30dp" android:text="@string/tt_common_download_app_detail" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <ImageView android:background="@color/tt_app_detail_line_bg" android:layout_width="match_parent" android:layout_height="1dp"/>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ListView android:id="@+id/tt_privacy_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="20dp" android:listSelector="@android:color/transparent" android:divider="@null" android:dividerHeight="24dp" android:layout_weight="1"/>
+        <Button android:id="@+id/tt_download_app_btn" android:background="@drawable/tt_open_app_detail_download_btn_bg" android:layout_width="match_parent" android:layout_height="44dp" android:layout_margin="16dp"/>
+    </LinearLayout>
+</LinearLayout>

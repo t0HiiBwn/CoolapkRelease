@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/picture_detail_wrap_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/cover_view" android:layout_width="match_parent" android:layout_height="360dp" android:scaleType="centerCrop"/>
+    <View android:id="@+id/cover_mask_view" android:layout_width="match_parent" android:layout_height="24dp"/>
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952177_themeoverlay_appcompat_dark_actionbar" android:id="@+id/app_bar" android:background="#0000" android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/auto_elevation_app_bar_state_list_anim">
+        <com.coolapk.market.widget.view.CollapsingToolbarFixLayout android:id="@+id/toolbar_layout" android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="match_parent" android:layout_height="360dp" app:layout_scrollFlags="3" app:statusBarScrim="@android:color/transparent" app:titleEnabled="false">
+            <FrameLayout android:id="@+id/bottom_view" android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="match_parent" android:layout_height="360dp" app:layout_collapseMode="2">
+                <LinearLayout android:layout_gravity="bottom" android:id="@+id/action_info_view" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="10sp" android:textColor="#eeeeee" android:tag="binding_1" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:textSize="8sp" android:textColor="#eeeeee" android:id="@+id/recommend_view" android:tag="binding_2" android:background="@drawable/text_pic_bg" android:paddingLeft="4dp" android:paddingTop="2dp" android:paddingRight="4dp" android:paddingBottom="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="精选"/>
+                    <TextView android:textSize="8sp" android:textColor="#eeeeee" android:id="@+id/recommend_splash_view" android:tag="binding_3" android:background="@drawable/text_pic_bg" android:paddingLeft="4dp" android:paddingTop="2dp" android:paddingRight="4dp" android:paddingBottom="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:text="启动页"/>
+                    <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/white" android:id="@+id/set_wallpaper_view" android:background="@drawable/text_space_bg" android:paddingLeft="8dp" android:paddingTop="4dp" android:paddingRight="8dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_wallpaper_set"/>
+                </LinearLayout>
+                <ProgressBar android:layout_gravity="center" android:id="@+id/progress_bar" android:tag="binding_4" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@+id/holder_view" android:layout_width="match_parent" android:layout_height="0dp" app:layout_collapseMode="1" app:navigationContentDescription="@string/acc_back"/>
+        </com.coolapk.market.widget.view.CollapsingToolbarFixLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@+id/coolpic_content" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <View android:id="@+id/fake_bg_view" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

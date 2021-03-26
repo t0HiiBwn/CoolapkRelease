@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.widget.DrawSystemBarFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/main_content" android:tag="layout/product_coupon_activity_0" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" app:drawStatusBar="true">
+    <com.coolapk.market.widget.view.SlideUpView android:id="@+id/bottom_sheet" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/head_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/close_view" android:background="?attr/selectableItemBackgroundBorderless" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_close_white_24dp" android:tint="@color/grey_600"/>
+                    <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center_vertical" android:id="@+id/create_view" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="选择优惠券"/>
+                </LinearLayout>
+                <View android:id="@+id/search_view_divider" android:background="?attr/contentBackgroundDividerColor" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                <FrameLayout android:id="@+id/content_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </LinearLayout>
+        </FrameLayout>
+    </com.coolapk.market.widget.view.SlideUpView>
+</com.coolapk.market.widget.DrawSystemBarFrameLayout>

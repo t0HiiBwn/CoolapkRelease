@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:tag="layout/user_pick_0" android:background="?attr/mainBackgroundColor" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952175_themeoverlay_appcompat_actionbar" android:id="@+id/app_bar" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/disable_elevation_app_bar_state_list_anim" app:layout_behavior="com.coolapk.market.widget.FixAppBarLayoutBehavior">
+        <include android:id="@+id/search_header" layout="@layout/search_back_header"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@+id/search_content_fragment" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/search_popup_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <ImageView android:layout_width="match_parent" android:layout_height="@dimen/thin_divider_size" android:src="?attr/currencyColorDivider"/>
+        <FrameLayout android:id="@+id/search_popup_fragment" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <include android:id="@+id/fab" layout="@layout/fab"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

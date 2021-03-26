@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/album_user_info_0" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="center_vertical" android:id="@+id/user_logo_view" android:tag="binding_1" android:layout_width="48dp" android:layout_height="48dp"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="8dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+        <TextView android:textColor="?android:attr/textColorPrimary" android:gravity="center_vertical" android:id="@+id/user_name_view" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1"/>
+        <TextView android:textSize="13sp" android:textColor="?android:attr/textColorSecondary" android:gravity="center_vertical" android:id="@+id/album_info_view" android:layout_width="wrap_content" android:layout_height="0dp" android:text="s%分钟前 共%d个应用" android:layout_weight="1"/>
+    </LinearLayout>
+    <com.coolapk.market.widget.ActionButtonFrameLayout android:layout_gravity="center" android:id="@+id/action_container" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="56dp" android:minHeight="28dp" android:stateListAnimator="@animator/action_btn_state_list_anim">
+        <TextView android:textSize="12sp" android:textColor="@color/material_design_text_color_dark" android:layout_gravity="center" android:id="@+id/user_follow_action_button" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_user_follow"/>
+    </com.coolapk.market.widget.ActionButtonFrameLayout>
+</LinearLayout>

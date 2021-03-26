@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.widget.view.WeUIItem xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/item_text" android:tag="layout/item_text_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:canEdit="false"/>

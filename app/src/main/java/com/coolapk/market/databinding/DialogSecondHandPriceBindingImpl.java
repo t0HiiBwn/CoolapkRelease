@@ -1,0 +1,137 @@
+package com.coolapk.market.databinding;
+
+import android.util.SparseIntArray;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.RadioButton;
+import android.widget.TextView;
+import androidx.databinding.DataBindingComponent;
+import androidx.databinding.ViewDataBinding;
+import com.coolapk.market.binding.ThemeBindingAdapters;
+
+public class DialogSecondHandPriceBindingImpl extends DialogSecondHandPriceBinding {
+    private static final ViewDataBinding.IncludedLayouts sIncludes = null;
+    private static final SparseIntArray sViewsWithIds;
+    private long mDirtyFlags;
+    private final LinearLayout mboundView0;
+
+    @Override // androidx.databinding.ViewDataBinding
+    protected boolean onFieldChange(int i, Object obj, int i2) {
+        return false;
+    }
+
+    static {
+        SparseIntArray sparseIntArray = new SparseIntArray();
+        sViewsWithIds = sparseIntArray;
+        sparseIntArray.put(2131363582, 4);
+        sparseIntArray.put(2131363023, 5);
+        sparseIntArray.put(2131363022, 6);
+        sparseIntArray.put(2131362441, 7);
+        sparseIntArray.put(2131362945, 8);
+        sparseIntArray.put(2131362944, 9);
+        sparseIntArray.put(2131362943, 10);
+        sparseIntArray.put(2131362949, 11);
+        sparseIntArray.put(2131362948, 12);
+        sparseIntArray.put(2131362947, 13);
+        sparseIntArray.put(2131362371, 14);
+        sparseIntArray.put(2131362369, 15);
+        sparseIntArray.put(2131362504, 16);
+    }
+
+    public DialogSecondHandPriceBindingImpl(DataBindingComponent dataBindingComponent, View view) {
+        this(dataBindingComponent, view, mapBindings(dataBindingComponent, view, 17, sIncludes, sViewsWithIds));
+    }
+
+    private DialogSecondHandPriceBindingImpl(DataBindingComponent dataBindingComponent, View view, Object[] objArr) {
+        super(dataBindingComponent, view, 0, (TextView) objArr[1], (RadioButton) objArr[15], (LinearLayout) objArr[14], (EditText) objArr[7], (EditText) objArr[16], (EditText) objArr[10], (RadioButton) objArr[9], (LinearLayout) objArr[8], (EditText) objArr[13], (RadioButton) objArr[12], (LinearLayout) objArr[11], (RadioButton) objArr[6], (LinearLayout) objArr[5], (ProgressBar) objArr[3], (TextView) objArr[2], (TextView) objArr[4]);
+        this.mDirtyFlags = -1;
+        this.cacelView.setTag(null);
+        LinearLayout linearLayout = (LinearLayout) objArr[0];
+        this.mboundView0 = linearLayout;
+        linearLayout.setTag(null);
+        this.progressBar.setTag(null);
+        this.submitView.setTag(null);
+        setRootTag(view);
+        invalidateAll();
+    }
+
+    @Override // androidx.databinding.ViewDataBinding
+    public void invalidateAll() {
+        synchronized (this) {
+            this.mDirtyFlags = 2;
+        }
+        requestRebind();
+    }
+
+    @Override // androidx.databinding.ViewDataBinding
+    public boolean hasPendingBindings() {
+        synchronized (this) {
+            if (this.mDirtyFlags != 0) {
+                return true;
+            }
+            return false;
+        }
+    }
+
+    @Override // androidx.databinding.ViewDataBinding
+    public boolean setVariable(int i, Object obj) {
+        if (186 != i) {
+            return false;
+        }
+        setLoading(((Boolean) obj).booleanValue());
+        return true;
+    }
+
+    @Override // com.coolapk.market.databinding.DialogSecondHandPriceBinding
+    public void setLoading(boolean z) {
+        this.mLoading = z;
+        synchronized (this) {
+            this.mDirtyFlags |= 1;
+        }
+        notifyPropertyChanged(186);
+        super.requestRebind();
+    }
+
+    @Override // androidx.databinding.ViewDataBinding
+    protected void executeBindings() {
+        long j;
+        int i;
+        long j2;
+        long j3;
+        synchronized (this) {
+            j = this.mDirtyFlags;
+            this.mDirtyFlags = 0;
+        }
+        boolean z = this.mLoading;
+        int i2 = 0;
+        int i3 = ((j & 3) > 0 ? 1 : ((j & 3) == 0 ? 0 : -1));
+        if (i3 != 0) {
+            if (i3 != 0) {
+                if (z) {
+                    j3 = j | 8;
+                    j2 = 32;
+                } else {
+                    j3 = j | 4;
+                    j2 = 16;
+                }
+                j = j3 | j2;
+            }
+            i = z ? 4 : 0;
+            if (!z) {
+                i2 = 8;
+            }
+        } else {
+            i = 0;
+        }
+        if ((2 & j) != 0) {
+            ThemeBindingAdapters.setTextColor(this.cacelView, "colorAccent");
+            ThemeBindingAdapters.setTextColor(this.submitView, "colorAccent");
+        }
+        if ((j & 3) != 0) {
+            this.progressBar.setVisibility(i2);
+            this.submitView.setVisibility(i);
+        }
+    }
+}

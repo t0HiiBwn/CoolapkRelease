@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/item_view" android:tag="layout/item_feed_video_detail_view_part_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/video_top_view" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:id="@+id/video_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@+id/top_container" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/navigation_view" android:tag="binding_1" android:layout_width="56dp" android:layout_height="52dp" android:src="@drawable/ic_back_white_24dp" android:scaleType="centerInside" android:tint="@color/white"/>
+            <RelativeLayout android:layout_gravity="center" android:id="@+id/feed_content_view" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="0dp" android:layout_height="36dp" android:layout_marginLeft="8dp" android:layout_weight="1">
+                <com.coolapk.market.widget.UserAvatarView android:id="@+id/user_avatar_view" android:layout_width="36dp" android:layout_height="36dp" android:scaleType="centerCrop"/>
+                <TextView android:textSize="14sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/user_name_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:maxLines="1" android:layout_toEndOf="@+id/user_avatar_view"/>
+                <TextView android:textSize="12sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/feed_time_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:maxLines="1" android:layout_alignParentBottom="true" android:alpha="0.7" android:layout_toEndOf="@+id/user_avatar_view"/>
+            </RelativeLayout>
+            <TextView android:textSize="16sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/title_view" android:layout_width="0dp" android:layout_height="52dp" android:maxLines="1" android:layout_weight="1"/>
+            <ImageView android:id="@+id/volume_view" android:tag="binding_2" android:layout_width="56dp" android:layout_height="52dp" android:src="@drawable/ic_volume_off_white_24dp" android:scaleType="centerInside"/>
+            <ImageView android:id="@+id/pip_view" android:tag="binding_3" android:layout_width="56dp" android:layout_height="52dp" android:src="@drawable/ic_resizevideo_outline_white_24dp" android:scaleType="centerInside"/>
+            <ImageView android:id="@+id/more_view" android:tag="binding_4" android:layout_width="56dp" android:layout_height="52dp" android:src="@drawable/ic_more_white_24dp" android:scaleType="centerInside"/>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@+id/bottom_container" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="48dp">
+                <ImageView android:id="@+id/play_view" android:tag="binding_5" android:paddingLeft="4dp" android:paddingRight="4dp" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginLeft="4dp" android:layout_marginRight="4dp" android:src="@drawable/ic_play_white_24dp" android:scaleType="centerInside"/>
+                <TextView android:textSize="12sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/current_time_view" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="00:00:00"/>
+                <SeekBar android:id="@+id/seek_bar" android:focusable="false" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:layout_marginRight="4dp" android:maxHeight="4dp" android:progressDrawable="@drawable/video_seek_bar" android:minHeight="4dp" android:layout_weight="1" android:splitTrack="false"/>
+                <TextView android:textSize="12sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/total_time_view" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="16dp" android:text="00:00:00"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/live_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp">
+                    <View android:background="@drawable/theme_pick_circle_background" android:layout_width="6dp" android:layout_height="6dp" android:layout_marginEnd="4dp" android:backgroundTint="@color/red"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/live_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="直播"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/full_screen_view" android:tag="binding_6" android:paddingLeft="4dp" android:paddingRight="4dp" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginLeft="-12dp" android:layout_marginRight="4dp" android:src="@drawable/baseline_fullscreen_24" android:scaleType="centerInside" android:tint="@color/white"/>
+            </LinearLayout>
+            <TextView android:textColor="@color/white" android:ellipsize="end" android:id="@+id/text_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:maxLines="2"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/action_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/like_view" android:background="?attr/selectableItemBackground" android:padding="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:id="@+id/like_image_view" android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/ic_thumb_up_outline_white_24dp"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/white" android:id="@+id/like_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/str_feed_item_like"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/comment_view" android:background="?attr/selectableItemBackground" android:padding="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/ic_comment_outline_white_24dp"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/white" android:id="@+id/comment_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/str_feed_item_reply"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/favorite_view" android:background="?attr/selectableItemBackground" android:padding="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:id="@+id/favorite_image_view" android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/ic_collection_outline_white_24dp"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/white" android:id="@+id/favorite_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/str_feed_item_collect"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/share_view" android:background="?attr/selectableItemBackground" android:padding="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/ic_share_outline_white_24dp"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/white" android:id="@+id/share_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/str_feed_item_share"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="bottom" android:id="@+id/progress_bar" android:focusable="false" android:visibility="gone" android:layout_width="match_parent" android:layout_height="2dp" android:progressDrawable="@drawable/video_progress_bar" android:splitTrack="false" style="@style/res_2131951844_base_widget_appcompat_progressbar_horizontal"/>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/replay_view" android:tag="binding_7" android:padding="16dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_repeat_outline_white_36dp"/>
+            <TextView android:textSize="16sp" android:textColor="#ffffff" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="重播"/>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/comment_container" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="0dp"/>
+</FrameLayout>

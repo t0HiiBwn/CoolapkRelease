@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/item_view" android:tag="layout/item_live_image_text_card_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.coolapk.market.design.CoolapkCardView android:id="@+id/coolapk_card_view" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+        <LinearLayout android:gravity="center_vertical" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/image_view" android:tag="binding_1" android:layout_width="128dp" android:layout_height="72dp" android:scaleType="centerCrop" app:aspectRatio="0.564" app:aspectRatioEnabled="true"/>
+                <TextView android:textSize="10sp" android:textColor="#fff" android:gravity="center" android:layout_gravity="bottom|left|center_vertical|center_horizontal|center" android:id="@+id/status_view" android:background="@drawable/live_status_bg" android:paddingLeft="6dp" android:paddingTop="3dp" android:paddingRight="6dp" android:paddingBottom="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="6dp"/>
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="12dp">
+                <TextView android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2"/>
+                <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:layout_gravity="center_vertical" android:id="@+id/num_view" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                    <TextView android:textSize="12sp" android:textColor="?attr/colorAccent" android:gravity="center" android:id="@+id/action_button" android:background="@drawable/live_action_btn_start_bg" android:layout_width="56dp" android:layout_height="28dp" android:layout_marginLeft="12dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.coolapk.market.design.CoolapkCardView>
+</FrameLayout>

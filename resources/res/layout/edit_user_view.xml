@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/edit_user_view_0" android:background="?attr/contentBackgroundDividerColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp">
+            <com.coolapk.market.widget.view.WeUIItem android:id="@+id/head_container" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" app:editType="COUNTRY"/>
+            <View android:id="@+id/diver_view_1" android:tag="binding_2" android:background="?attr/contentBackgroundDividerColor" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="16dp"/>
+            <com.coolapk.market.widget.view.WeUIItem android:id="@+id/main_input_container" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="wrap_content" app:canEdit="true"/>
+            <View android:id="@+id/diver_view_2" android:tag="binding_4" android:background="?attr/contentBackgroundDividerColor" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="16dp"/>
+            <com.coolapk.market.widget.view.WeUIItem android:id="@+id/img_code_container" android:tag="binding_5" android:layout_width="match_parent" android:layout_height="wrap_content" app:canEdit="true" app:editType="IMG_CODE" app:hasEndImg="true"/>
+            <View android:id="@+id/diver_view_3" android:tag="binding_6" android:background="?attr/contentBackgroundDividerColor" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="16dp"/>
+            <com.coolapk.market.widget.view.WeUIItem android:id="@+id/code_input_container" android:tag="binding_7" android:layout_width="match_parent" android:layout_height="wrap_content" app:canEdit="true"/>
+        </LinearLayout>
+        <TextView android:textSize="16sp" android:gravity="center" android:id="@+id/edit_user_save" android:background="@drawable/ok_button_bg" android:layout_width="match_parent" android:layout_height="40dp" android:layout_margin="16dp" android:foreground="?attr/selectableItemBackground" android:text="确认"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/info_view_container" android:tag="binding_8" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14sp" android:textStyle="bold" android:id="@+id/tip_view" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp"/>
+        <TextView android:textSize="14sp" android:id="@+id/other_info" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:lineSpacingMultiplier="1.5"/>
+    </LinearLayout>
+</LinearLayout>

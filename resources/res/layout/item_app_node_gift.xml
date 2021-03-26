@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:id="@+id/item_view" android:tag="layout/item_app_node_gift_0" android:background="@color/node_translucent_background" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="10dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_card_giftcard_white_24dp"/>
+    <TextView android:textColor="@color/white_primary_text" android:tag="binding_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:lines="1" android:layout_weight="1"/>
+    <LinearLayout android:gravity="center" android:id="@+id/fetch_gift_view" android:tag="binding_2" android:background="?android:attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="32dp">
+        <TextView android:textColor="@color/white_primary_text" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:alpha="0.6"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_keyboard_arrow_right_white_24dp" android:alpha="0.6"/>
+    </LinearLayout>
+</LinearLayout>

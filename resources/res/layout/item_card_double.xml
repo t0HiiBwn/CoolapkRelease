@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/item_card_double_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/card_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:showDividers="middle">
+        <LinearLayout android:gravity="center_vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="48dp">
+            <TextView android:textSize="18sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_1" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_weight="1"/>
+            <TextView android:gravity="center" android:id="@+id/more_view" android:tag="binding_2" android:background="?android:attr/selectableItemBackground" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/str_more"/>
+        </LinearLayout>
+        <LinearLayout android:tag="binding_3" android:paddingLeft="14dp" android:paddingRight="14dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include android:id="@+id/item_view_1" layout="@layout/item_card_double_item"/>
+            <Space android:layout_width="12dp" android:layout_height="wrap_content"/>
+            <include android:id="@+id/item_view_2" layout="@layout/item_card_double_item"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

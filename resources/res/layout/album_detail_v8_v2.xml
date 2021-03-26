@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:tag="layout/album_detail_v8_v2_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952177_themeoverlay_appcompat_dark_actionbar" android:id="@+id/app_bar" android:tag="binding_1" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/disable_elevation_app_bar_state_list_anim">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/collapsing_toolbar" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" app:contentScrim="@android:color/transparent" app:layout_scrollFlags="13" app:statusBarScrim="@android:color/transparent" app:titleEnabled="false">
+            <ImageView android:id="@+id/cover_view" android:tag="binding_2" android:visibility="gone" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" app:layout_collapseMode="2"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/user_bgimage" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/text_container" android:paddingTop="90dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="22sp" android:textColor="@color/light_text" android:ellipsize="end" android:gravity="center" android:id="@+id/title_view" android:tag="binding_3" android:paddingLeft="32dp" android:paddingRight="32dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingMultiplier="1.1"/>
+                    <LinearLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="15dp">
+                        <TextView android:textSize="12sp" android:textColor="@color/light_text" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/info_view" android:tag="binding_4" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <com.coolapk.market.widget.AlbumActionView android:id="@+id/album_action" android:tag="binding_5" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" app:contentInsetStartWithNavigation="0dp" app:layout_collapseMode="1" app:navigationContentDescription="@string/acc_back" app:navigationIcon="@drawable/ic_back_white_24dp" app:popupTheme="@style/res_2131952182_themeoverlay_appcompat_light"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@+id/album_list" android:tag="binding_6" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/mask_view" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="48dp" android:layout_marginRight="48dp">
+            <ProgressBar android:id="@+id/loading_view" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyle"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/mask_back_view" android:background="?attr/selectableItemBackground" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="?attr/actionBarSize" android:layout_marginTop="24dp">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_back_white_24dp"/>
+        </LinearLayout>
+    </FrameLayout>
+    <com.coolapk.market.widget.CommentBar android:layout_gravity="bottom" android:id="@+id/comment_bar" android:tag="binding_9" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

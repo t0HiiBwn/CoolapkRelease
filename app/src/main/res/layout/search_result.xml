@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.widget.DrawSystemBarFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:tag="layout/search_result_0" android:background="?attr/mainBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent" app:drawNavigationBar="true" app:drawStatusBar="true">
+    <com.coolapk.market.widget.slidr.ScrollStateViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_drawNavigationBar="true"/>
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952177_themeoverlay_appcompat_dark_actionbar" android:id="@+id/app_bar" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/auto_elevation_app_bar_state_list_anim" app:drawNavigationBar="true" app:drawStatusBar="true" app:layout_behavior="com.coolapk.market.widget.FixAppBarLayoutBehavior" app:layout_drawStatusBar="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/search_box_layout" android:background="@drawable/search_box_board_bg" android:paddingLeft="16dp" android:paddingRight="16dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="48dp" app:navigationIcon="@drawable/ic_back_gray_24dp">
+            <FrameLayout android:id="@+id/navigation_button" android:paddingLeft="12dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="30dp">
+                <View android:layout_gravity="center" android:background="?android:attr/selectableItemBackgroundBorderless" android:duplicateParentState="true" android:layout_width="20dp" android:layout_height="20dp"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/navigation_icon" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_back_gray_24dp" android:scaleType="centerInside"/>
+            </FrameLayout>
+            <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimaryInverse" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/search_result_text_view" android:layout_width="0dp" android:layout_height="30dp" android:maxLines="1" android:lines="1" android:layout_weight="1"/>
+            <FrameLayout android:id="@+id/qr_view" android:visibility="gone" android:layout_width="40dp" android:layout_height="30dp">
+                <View android:layout_gravity="center" android:background="?android:attr/selectableItemBackgroundBorderless" android:duplicateParentState="true" android:layout_width="20dp" android:layout_height="20dp"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/qr_icon" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_qrcode_grey600_24dp" android:scaleType="centerInside"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/search_button" android:layout_width="40dp" android:layout_height="30dp">
+                <View android:layout_gravity="center" android:background="?android:attr/selectableItemBackgroundBorderless" android:duplicateParentState="true" android:layout_width="20dp" android:layout_height="20dp"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/search_icon" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_magnify_white_24dp" android:scaleType="centerInside"/>
+            </FrameLayout>
+            <Space android:layout_width="4dp" android:layout_height="0dp"/>
+        </LinearLayout>
+        <com.coolapk.market.widget.view.TabLayout android:id="@+id/tabs" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="-8dp" app:tabIndicatorColor="?attr/tabLayoutIndicatorColor" app:tabMinWidth="48dp" app:tabMode="0" app:tabPaddingBottom="0dp" app:tabPaddingEnd="12dp" app:tabPaddingStart="12dp" app:tabPaddingTop="0dp" app:tabSelectedTextColor="?attr/tabLayoutSelectedTextColor" app:tabTextAppearance="@style/TabLayoutTextAppearance"/>
+    </com.google.android.material.appbar.AppBarLayout>
+</com.coolapk.market.widget.DrawSystemBarFrameLayout>

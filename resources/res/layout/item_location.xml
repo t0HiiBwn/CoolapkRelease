@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/item_view" android:tag="layout/item_location_0" android:background="?attr/selectableItemBackground" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="64dp" android:paddingStart="16dp" android:paddingEnd="16dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@+id/title_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+        <TextView android:textSize="13sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:id="@+id/content_view" android:paddingTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:id="@+id/image_view" android:tag="binding_1" android:background="@drawable/theme_pick_circle_background" android:padding="2dp" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginLeft="16dp" android:src="@drawable/ic_done_white_24dp"/>
+</LinearLayout>

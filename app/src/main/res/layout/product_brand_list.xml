@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/content_view" android:tag="layout/product_brand_list_0" android:background="?attr/mainBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+        <com.coolapk.market.widget.PreventAutoScrollRecyclerView android:id="@+id/recycler_view" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.22"/>
+        <FrameLayout android:id="@+id/frame_view" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.78"/>
+    </LinearLayout>
+    <include android:id="@+id/loading_view" android:visibility="gone" layout="@layout/loading_view"/>
+</FrameLayout>

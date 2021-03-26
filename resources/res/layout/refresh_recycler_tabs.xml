@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:tag="layout/refresh_recycler_tabs_0" android:background="?attr/mainBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="com.coolapk.market.widget.FixAppBarLayoutBehavior">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/app_bar" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/auto_elevation_app_bar_state_list_anim" app:layout_behavior="com.coolapk.market.widget.FixAppBarLayoutBehavior">
+        <FrameLayout android:id="@+id/tab_container" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_scrollFlags="1">
+            <View android:layout_gravity="bottom" android:id="@+id/divider" android:background="?attr/mainBackgroundColor" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+            <com.coolapk.market.widget.view.TabLayout android:id="@+id/tabs" android:layout_width="match_parent" android:layout_height="40dp" app:tabIndicatorHeight="2.5dp" app:tabMinWidth="60dp" app:tabMode="0" app:tabPaddingBottom="0dp" app:tabPaddingEnd="10dp" app:tabPaddingStart="10dp" app:tabPaddingTop="0dp" app:tabSelectedTextColor="?android:attr/textColorPrimary" app:tabTextAppearance="@style/GroupTabLayoutTextAppearance"/>
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.coolapk.market.widget.slidr.ScrollStateViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

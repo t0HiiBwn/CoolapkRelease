@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_second_hand_search_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:gravity="bottom" android:id="@+id/item_view" android:tag="binding_1" android:padding="16dp" android:layout_width="match_parent" android:layout_height="132dp">
+        <FrameLayout android:layout_width="100dp" android:layout_height="100dp">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/pic_view" android:tag="binding_2" android:layout_width="100dp" android:layout_height="100dp" android:scaleType="centerCrop"/>
+            <View android:id="@+id/mask_view" android:background="#66000000" android:visibility="gone" android:layout_width="100dp" android:layout_height="100dp"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/img_sell_view" android:visibility="gone" android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/selled"/>
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/title_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp">
+                <TextView android:textSize="8sp" android:textColor="@color/light_text" android:gravity="center" android:id="@+id/title_tag_view" android:tag="binding_3" android:visibility="gone" android:layout_width="30dp" android:layout_height="15dp" android:layout_marginTop="3.6dp"/>
+                <TextView android:textSize="15sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:lines="2" android:lineSpacingMultiplier="1.2"/>
+            </FrameLayout>
+            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/action_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="12dp">
+                <TextView android:textSize="16sp" android:textColor="@color/red" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@+id/discount_price_view" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+                <TextView android:textSize="8sp" android:textStyle="bold" android:textColor="@color/compare_view_red" android:layout_gravity="bottom" android:id="@+id/exchange_price_view" android:tag="binding_5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4dp"/>
+                <com.coolapk.market.widget.SpaceView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/sign_link" android:tag="binding_6" android:layout_width="14dp" android:layout_height="14dp"/>
+                <TextView android:textSize="12sp" android:textColor="#757575" android:layout_gravity="center_vertical" android:id="@+id/sign_link_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="12dp">
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/avatar_view" android:tag="binding_7" android:layout_width="16dp" android:layout_height="16dp" android:scaleType="centerCrop"/>
+                <TextView android:textSize="12sp" android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center_vertical" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5dp"/>
+                <com.coolapk.market.widget.SpaceView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <TextView android:textSize="12sp" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@+id/location_view" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

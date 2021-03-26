@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/video_gesture_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/volume_box_view" android:tag="binding_1" android:background="#33000000" android:visibility="gone" android:layout_width="80dp" android:layout_height="80dp" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center" android:id="@+id/volume_icon_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_volume_up_white_24dp"/>
+        <TextView android:textSize="18dp" android:textColor="@android:color/white" android:id="@+id/volume_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50%"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/brightness_box_view" android:tag="binding_2" android:background="#33000000" android:visibility="gone" android:layout_width="80dp" android:layout_height="80dp" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center" android:id="@+id/brightness_icon_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_brightness_medium_white_24dp"/>
+        <TextView android:textSize="16dp" android:textColor="@android:color/white" android:id="@+id/brightness_text_view" android:paddingTop="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="50%"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/fast_forward_box_view" android:tag="binding_3" android:background="#33000000" android:padding="6dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="16dp" android:textColor="@android:color/white" android:id="@+id/fast_forward_step_time_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+        <TextView android:textSize="16dp" android:textColor="@android:color/white" android:id="@+id/fast_forward_progress_time_view" android:paddingTop="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+    </LinearLayout>
+</RelativeLayout>

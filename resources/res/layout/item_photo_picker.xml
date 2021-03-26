@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/card_view" android:tag="layout/item_photo_picker_0" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground">
+    <com.coolapk.market.widget.SquareImageView android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+    <FrameLayout android:id="@+id/presenter_view" android:layout_width="36dp" android:layout_height="36dp"/>
+    <FrameLayout android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/check_box" android:paddingLeft="24dp" android:paddingTop="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/pick_view" android:tag="binding_2" android:padding="4dp" android:layout_width="24dp" android:layout_height="24dp"/>
+    </FrameLayout>
+</FrameLayout>

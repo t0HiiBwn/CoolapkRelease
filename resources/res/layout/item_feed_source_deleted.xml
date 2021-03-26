@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/source_container" android:tag="layout/item_feed_source_deleted_0" android:background="?attr/commentLayoutBackground" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:foreground="?android:attr/selectableItemBackground">
+    <TextView android:textSize="15sp" android:id="@+id/text_view" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="10" android:lineSpacingMultiplier="1.2"/>
+</LinearLayout>

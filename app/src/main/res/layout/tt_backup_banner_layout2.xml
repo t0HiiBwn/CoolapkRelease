@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:padding="7dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14sp" android:textColor="#3e3e3e" android:ellipsize="end" android:id="@+id/tt_bu_desc" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1"/>
+        <ImageView android:id="@+id/tt_bu_close" android:layout_width="15dp" android:layout_height="15dp" android:src="@drawable/tt_titlebar_close_press_for_dark" android:scaleType="fitXY"/>
+    </LinearLayout>
+    <FrameLayout android:background="@android:color/background_dark" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="5dp" android:layout_weight="1">
+        <FrameLayout android:id="@+id/tt_ad_content_layout" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <ImageView android:id="@+id/tt_bu_img" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY"/>
+        <include android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginBottom="5dp" layout="@layout/tt_backup_ad"/>
+    </FrameLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp">
+        <com.bytedance.sdk.openadsdk.core.widget.RoundImageView android:id="@+id/tt_bu_icon" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginRight="3dp" android:scaleType="fitXY" android:layout_centerVertical="true"/>
+        <TextView android:textSize="12sp" android:textColor="#ffaeaeae" android:ellipsize="end" android:id="@+id/tt_bu_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_toLeftOf="@+id/tt_bu_download" android:layout_toRightOf="@+id/tt_bu_icon" android:layout_centerVertical="true"/>
+        <TextView android:textSize="12sp" android:textColor="#bb0082ff" android:gravity="center" android:id="@+id/tt_bu_download" android:background="@drawable/tt_backup_btn_2" android:layout_width="70dp" android:layout_height="25dp" android:text="@string/tt_video_download_apk" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

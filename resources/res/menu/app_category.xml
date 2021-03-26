@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_rank_follow" android:title="@string/str_app_category_rank_type_follow"/>
+    <item android:id="@+id/action_rank_rating" android:title="@string/str_app_category_rank_type_rating"/>
+    <item android:id="@+id/action_rank_comment" android:title="@string/str_app_category_rank_type_comment"/>
+    <item android:id="@+id/action_rank_download" android:title="@string/str_app_category_rank_type_download"/>
+    <item android:id="@+id/action_rank_pub_data" android:title="@string/str_app_category_rank_type_pub_data"/>
+    <item android:id="@+id/action_rank_last_update" android:title="@string/str_app_category_rank_type_last_update"/>
+    <item android:id="@+id/action_rank_default" android:title="@string/str_app_category_rank_type_default"/>
+</menu>

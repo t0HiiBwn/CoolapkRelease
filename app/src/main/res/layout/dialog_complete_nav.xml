@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/dialog_complete_nav_0" android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="center" android:id="@+id/img_view" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_check"/>
+    <TextView android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="分享成功"/>
+    <LinearLayout android:gravity="end" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:paddingStart="20dp" android:paddingEnd="20dp">
+        <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/dialog_go_message" android:tag="binding_1" android:background="?attr/selectableItemBackgroundBorderless" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="去私信"/>
+        <TextView android:id="@+id/dialog_back" android:tag="binding_2" android:background="?attr/selectableItemBackgroundBorderless" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="返回"/>
+    </LinearLayout>
+</LinearLayout>

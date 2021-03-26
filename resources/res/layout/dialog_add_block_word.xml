@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/content_view" android:tag="layout/dialog_add_block_word_0" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:id="@+id/text_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="24dp" android:text="输入你想在首页屏蔽的关键词"/>
+    <EditText android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:gravity="start" android:id="@+id/edit_text" android:background="@drawable/bg_stroke_rectangle" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="2-15个字，不区分大小写" android:lines="1" android:layout_marginStart="12dp" android:layout_marginEnd="12dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_marginBottom="8dp">
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <TextView android:id="@+id/cancel_button" android:tag="binding_1" android:background="?attr/selectableItemBackground" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/cancel"/>
+        <TextView android:id="@+id/ok_button" android:tag="binding_2" android:background="?attr/selectableItemBackground" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="确定屏蔽" android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</LinearLayout>

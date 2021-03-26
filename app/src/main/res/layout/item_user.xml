@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_user_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="3">
+    <LinearLayout android:id="@+id/card_view" android:tag="binding_1" android:paddingTop="10dp" android:paddingBottom="10dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <com.coolapk.market.widget.UserAvatarView android:id="@+id/icon_view" android:tag="binding_2" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginTop="2dp"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_weight="1">
+            <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+            <LinearLayout android:id="@+id/detail_container_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp">
+                <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp"/>
+                <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/login_time_view" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:id="@+id/subtitle_view" android:tag="binding_6" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:singleLine="true"/>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:id="@+id/introduce_view" android:tag="binding_7" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:singleLine="true"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/message_view" android:background="?android:attr/selectableItemBackground" android:padding="6dp" android:visibility="gone" android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_comment_outline_grey600_24dp" android:tint="@color/grey_600"/>
+        <CheckBox android:gravity="center" android:id="@+id/check_box" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.coolapk.market.widget.ActionButtonFrameLayout android:id="@+id/action_container" android:tag="binding_8" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:minWidth="56dp" android:minHeight="28dp" android:stateListAnimator="@animator/action_btn_state_list_anim">
+            <TextView android:textSize="12sp" android:layout_gravity="center" android:id="@+id/action_button" android:tag="binding_9" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </com.coolapk.market.widget.ActionButtonFrameLayout>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

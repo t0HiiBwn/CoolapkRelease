@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/card_view" android:tag="layout/item_node_pick_item_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/item_view" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="12dp" android:paddingEnd="12dp">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/icon_view" android:tag="binding_1" android:layout_width="56dp" android:layout_height="56dp" android:scaleType="centerCrop"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="10dp">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="10sp" android:id="@+id/tag_view" android:paddingTop="1dp" android:paddingBottom="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:paddingStart="3dp" android:paddingEnd="3dp"/>
+                <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_marginStart="4dp"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:id="@+id/description_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:maxLines="1" android:lines="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

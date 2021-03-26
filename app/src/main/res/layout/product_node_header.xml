@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/product_node_header_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/background_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <Space android:id="@+id/background_placeholder_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="203dp"/>
+        <View android:id="@+id/background_top_view" android:background="@color/node_content_background" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        <View android:id="@+id/background_bottom_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/item_view" android:paddingTop="0dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.coolapk.market.widget.view.MaxWidthFrameLayout android:id="@+id/cover_view_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.viewpager.widget.ViewPager android:id="@+id/image_view_pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <View android:layout_gravity="bottom" android:id="@+id/mask_view" android:layout_width="match_parent" android:layout_height="102dp"/>
+            <com.coolapk.market.widget.view.IndicatorView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/indicator_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:minWidth="10dp" android:minHeight="10dp"/>
+        </com.coolapk.market.widget.view.MaxWidthFrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/header_container" android:paddingTop="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/node_item_padding" android:layout_marginEnd="@dimen/node_item_padding">
+            <ImageView android:id="@+id/logo_view" android:tag="binding_1" android:layout_width="56dp" android:layout_height="56dp" android:scaleType="centerCrop" android:transitionName="@string/transition_name_logo"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="12dp">
+                <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/white_primary_text" android:ellipsize="end" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+                <TextView android:textSize="12sp" android:textColor="@color/white_secondary_text" android:id="@+id/hot_num_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="88066热度 5233425讨论"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginStart="@dimen/node_item_padding" android:layout_marginEnd="@dimen/node_item_padding">
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/more_follower_view" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="match_parent">
+                <Space android:id="@+id/triple_avatar_space_holder" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textSize="12sp" android:textColor="@color/white_secondary_text" android:gravity="center" android:id="@+id/follow_num_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.5dp" android:src="@drawable/ic_chevron_right_grey600_18dp" android:tint="@color/white_secondary_text"/>
+            </LinearLayout>
+            <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/action_view" android:tag="binding_4" android:layout_width="56dp" android:layout_height="28dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/rating_view_container" android:tag="binding_5" android:background="@color/node_translucent_background" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:paddingStart="16dp" android:paddingEnd="16dp" android:layout_marginStart="@dimen/node_item_padding" android:layout_marginEnd="@dimen/node_item_padding">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="28dp">
+                <com.coolapk.market.widget.ScaleImageView android:id="@+id/rating_image_view" android:layout_width="wrap_content" android:layout_height="14dp" android:src="@drawable/logo_coolapk_rating" android:scaleType="centerCrop"/>
+                <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <LinearLayout android:id="@+id/rating_owner_container" android:layout_width="wrap_content" android:layout_height="match_parent">
+                    <TextView android:textSize="12sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/view_owner_view" android:tag="binding_6" android:background="?attr/selectableItemBackground" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="只看机主" android:paddingStart="6dp" android:paddingEnd="6dp"/>
+                    <View android:layout_gravity="center_vertical" android:background="#33ffffff" android:layout_width="1dp" android:layout_height="12dp"/>
+                    <TextView android:textSize="12sp" android:textColor="#ffffffff" android:gravity="center" android:id="@+id/view_all_view" android:tag="binding_7" android:background="?attr/selectableItemBackground" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="查看全部" android:paddingStart="6dp" android:paddingEnd="6dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/rating_sub_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.4" app:layout_flexGrow="0.4">
+                    <TextView android:textSize="40sp" android:textStyle="bold" android:textColor="@color/white_pure_text" android:gravity="center_vertical" android:id="@+id/score_view" android:layout_width="wrap_content" android:layout_height="46dp" android:includeFontPadding="false"/>
+                    <RatingBar android:id="@+id/rating_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:progressDrawable="@drawable/ration_bar_18dp" android:numStars="5" android:stepSize="0.1" android:isIndicator="true" android:progressTint="#ffb712" android:progressBackgroundTint="#ffb712" android:secondaryProgressTint="#ffb712" style="@style/RatingBar"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/white_secondary_text" android:id="@+id/count_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="12234人点评"/>
+                </LinearLayout>
+                <TableLayout android:orientation="vertical" android:id="@+id/table_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.6" app:layout_flexGrow="0.6">
+                    <TableRow android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+                        <TextView android:textSize="10sp" android:textColor="@color/white_secondary_text" android:gravity="end" android:layout_width="25dp" android:layout_height="wrap_content" android:text="5星"/>
+                        <androidx.percentlayout.widget.PercentFrameLayout android:tag="binding_8" android:background="#0dffffff" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:layout_marginEnd="8dp">
+                            <ImageView android:id="@+id/rating_image_view_5" android:tag="binding_9" android:background="#ffb712" android:layout_width="wrap_content" android:layout_height="8dp" app:layout_widthPercent="50%"/>
+                        </androidx.percentlayout.widget.PercentFrameLayout>
+                        <TextView android:textSize="10sp" android:textColor="@color/white_primary_text" android:gravity="start" android:id="@+id/rate_num_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="32dp" android:text="25000"/>
+                    </TableRow>
+                    <TableRow android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+                        <TextView android:textSize="10sp" android:textColor="@color/white_secondary_text" android:gravity="end" android:layout_width="25dp" android:layout_height="wrap_content" android:text="4星"/>
+                        <androidx.percentlayout.widget.PercentFrameLayout android:tag="binding_10" android:background="#0dffffff" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:layout_marginEnd="8dp">
+                            <ImageView android:id="@+id/rating_image_view_4" android:tag="binding_11" android:background="#ffb712" android:layout_width="wrap_content" android:layout_height="8dp" app:layout_widthPercent="50%"/>
+                        </androidx.percentlayout.widget.PercentFrameLayout>
+                        <TextView android:textSize="10sp" android:textColor="@color/white_primary_text" android:gravity="start" android:id="@+id/rate_num_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="20dp" android:text="25"/>
+                    </TableRow>
+                    <TableRow android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+                        <TextView android:textSize="10sp" android:textColor="@color/white_secondary_text" android:gravity="end" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="3星"/>
+                        <androidx.percentlayout.widget.PercentFrameLayout android:tag="binding_12" android:background="#0dffffff" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:layout_marginEnd="8dp">
+                            <ImageView android:id="@+id/rating_image_view_3" android:tag="binding_13" android:background="#ffb712" android:layout_width="wrap_content" android:layout_height="8dp" app:layout_widthPercent="50%"/>
+                        </androidx.percentlayout.widget.PercentFrameLayout>
+                        <TextView android:textSize="10sp" android:textColor="@color/white_primary_text" android:gravity="start" android:id="@+id/rate_num_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="20dp" android:text="0"/>
+                    </TableRow>
+                    <TableRow android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+                        <TextView android:textSize="10sp" android:textColor="@color/white_secondary_text" android:gravity="end" android:layout_width="25dp" android:layout_height="wrap_content" android:text="2星"/>
+                        <androidx.percentlayout.widget.PercentFrameLayout android:tag="binding_14" android:background="#0dffffff" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:layout_marginEnd="8dp">
+                            <ImageView android:id="@+id/rating_image_view_2" android:tag="binding_15" android:background="#ffb712" android:layout_width="wrap_content" android:layout_height="8dp" app:layout_widthPercent="50%"/>
+                        </androidx.percentlayout.widget.PercentFrameLayout>
+                        <TextView android:textSize="10sp" android:textColor="@color/white_primary_text" android:gravity="start" android:id="@+id/rate_num_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="20dp" android:text="250"/>
+                    </TableRow>
+                    <TableRow android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="10sp" android:textColor="@color/white_secondary_text" android:gravity="end" android:layout_width="25dp" android:layout_height="wrap_content" android:text="1星"/>
+                        <androidx.percentlayout.widget.PercentFrameLayout android:tag="binding_16" android:background="#0dffffff" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:layout_marginEnd="8dp">
+                            <ImageView android:id="@+id/rating_image_view_1" android:tag="binding_17" android:background="#ffb712" android:layout_width="wrap_content" android:layout_height="8dp" app:layout_widthPercent="50%"/>
+                        </androidx.percentlayout.widget.PercentFrameLayout>
+                        <TextView android:textSize="10sp" android:textColor="@color/white_primary_text" android:gravity="start" android:id="@+id/rate_num_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="20dp" android:text="250"/>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+            <TextView android:textSize="14sp" android:textColor="@color/white_pure_text" android:gravity="center" android:id="@+id/buy_sub_view" android:tag="binding_18" android:layout_width="match_parent" android:layout_height="84dp" android:text="2333人想买"/>
+            <View android:background="#0dffffff" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="8dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="32dp">
+                <TextView android:textSize="12sp" android:textColor="@color/white_secondary_text" android:id="@+id/wish_count_view" android:tag="binding_19" android:background="?attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1234人想买 "/>
+                <TextView android:textSize="12sp" android:textColor="@color/white_secondary_text" android:id="@+id/buy_count_view" android:tag="binding_20" android:background="?attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" 1234人已有"/>
+                <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <TextView android:textSize="12sp" android:textColor="@color/white_pure_text" android:gravity="center" android:id="@+id/wish_view" android:tag="binding_21" android:background="#33ffffff" android:layout_width="48dp" android:layout_height="22dp" android:foreground="?attr/selectableItemBackground" android:layout_marginEnd="16dp"/>
+                <TextView android:textSize="12sp" android:textColor="@color/white_pure_text" android:gravity="center" android:id="@+id/rating_view" android:tag="binding_22" android:background="#33ffffff" android:layout_width="48dp" android:layout_height="22dp" android:foreground="?attr/selectableItemBackground"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/fetch_coupon_view" android:tag="binding_23" android:background="@color/node_translucent_background" android:paddingLeft="12dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="12dp" android:foreground="?android:attr/selectableItemBackground" android:minHeight="48dp" android:layout_marginStart="@dimen/node_item_padding" android:layout_marginEnd="@dimen/node_item_padding">
+            <TextView android:textSize="12sp" android:textColor="@color/white_primary_text" android:gravity="center" android:layout_gravity="center" android:tag="binding_24" android:background="#99f44336" android:layout_width="wrap_content" android:layout_height="20dp" android:minWidth="40dp" android:text="领取"/>
+            <TextView android:textColor="@color/white_primary_text" android:tag="binding_25" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:lines="1" android:layout_weight="1"/>
+            <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="32dp">
+                <TextView android:textColor="#f44336" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="立即领取"/>
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_keyboard_arrow_right_white_24dp" android:tint="#f44336"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="14sp" android:textColor="@color/white_primary_text" android:id="@+id/description_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:lineSpacingMultiplier="1.5" android:layout_marginStart="@dimen/node_item_padding" android:layout_marginEnd="@dimen/node_item_padding"/>
+        <HorizontalScrollView android:id="@+id/horizontal_scroll_view" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginStart="@dimen/node_item_padding" android:layout_marginEnd="@dimen/node_item_padding">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/tags_container" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </HorizontalScrollView>
+        <com.coolapk.market.widget.LinearAdapterLayout android:orientation="vertical" android:id="@+id/linear_view" android:tag="binding_26" android:background="@color/node_translucent_background" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginStart="@dimen/node_item_padding" android:layout_marginEnd="@dimen/node_item_padding"/>
+    </LinearLayout>
+</FrameLayout>

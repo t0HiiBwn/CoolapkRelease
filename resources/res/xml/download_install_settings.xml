@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.coolapk.market.widget.preference.PreferenceGroup android:title="下载选项">
+        <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_download_when_wifi" android:key="download_only_when_wifi" android:summary="@null"/>
+        <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_download_filename_cn_enabled" android:key="download_filename_cn_enabled" android:summary="@string/pref_description_download_filename_cn_enabled"/>
+        <com.coolapk.market.widget.preference.Preference android:singleLine="true" android:selectAllOnFocus="true" android:capitalize="words" android:title="@string/pref_title_download_dir" android:key="download_dir" android:inputType="textCapWords"/>
+    </com.coolapk.market.widget.preference.PreferenceGroup>
+    <com.coolapk.market.widget.preference.PreferenceGroup android:title="安装选项">
+        <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_install_silent_enabled" android:key="install_silent_enabled" android:summary="@string/pref_description_install_silent_enabled"/>
+        <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_auto_install_on_downloaded" android:key="auto_install_on_downloaded" android:summary="@string/pref_description_auto_install_on_downloaded"/>
+        <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_delete_file_on_installed" android:key="delete_file_on_installed" android:summary="@string/pref_description_delete_file_on_installed"/>
+    </com.coolapk.market.widget.preference.PreferenceGroup>
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_view" android:title="@string/menu_view"/>
+    <item android:id="@+id/action_open" android:title="@string/menu_open"/>
+    <item android:id="@+id/action_view_package" android:title="@string/menu_view_package"/>
+    <item android:id="@+id/action_open_application_info" android:title="@string/menu_open_application_info"/>
+    <item android:id="@+id/action_open_with_play" android:title="@string/menu_open_with_play"/>
+    <item android:id="@+id/action_discovery" android:title="@string/feed_entrance_discovery"/>
+</menu>

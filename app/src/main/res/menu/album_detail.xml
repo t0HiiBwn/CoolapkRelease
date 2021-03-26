@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_edit_album" android:visible="false" android:title="编辑" app:showAsAction="always"/>
+    <item android:icon="@drawable/ic_more_white_24dp" android:id="@+id/action_more_item" android:orderInCategory="101" android:title="@string/menu_more" app:showAsAction="always"/>
+</menu>

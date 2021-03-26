@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:id="@+id/text_view" android:tag="layout/emotion_panel_bottom_text_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent" android:foreground="?android:attr/selectableItemBackground"/>

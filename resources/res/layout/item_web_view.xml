@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_web_view_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:orientation="vertical" android:id="@+id/item_view" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:layout_gravity="bottom" android:tag="binding_1" android:paddingLeft="16dp" android:paddingTop="10dp" android:paddingRight="16dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <FrameLayout android:id="@+id/holder_view" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@+id/web_view_container" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:layout_gravity="right" android:id="@+id/full_screen_buttom" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/baseline_fullscreen_24" android:scaleType="center" android:tint="@color/white" android:alpha="0.5"/>
+                <com.coolapk.market.widget.AspectRatioImageView android:id="@+id/cover_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:aspectRatioEnabled="true"/>
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

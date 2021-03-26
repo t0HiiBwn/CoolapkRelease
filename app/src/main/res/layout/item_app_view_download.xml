@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:tag="layout/item_app_view_download_0" android:paddingLeft="16dp" android:paddingTop="10dp" android:paddingRight="16dp" android:paddingBottom="10dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="13sp" android:textColor="?android:attr/textColorSecondary" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textSize="13sp" android:textColor="?android:attr/textColorSecondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:layout_marginRight="3dp" android:text="·"/>
+    <TextView android:textSize="13sp" android:textColor="?android:attr/textColorSecondary" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:textSize="13sp" android:textColor="?android:attr/textColorSecondary" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:layout_marginRight="3dp" android:text="·"/>
+    <TextView android:textSize="13sp" android:gravity="center_vertical" android:id="@+id/history_version_view" android:tag="binding_3" android:background="?attr/selectableItemBackground" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_history_version"/>
+    <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+    <LinearLayout android:gravity="center" android:id="@+id/follow_view" android:tag="binding_4" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:minWidth="64dp" android:minHeight="28dp">
+        <ImageView android:tag="binding_5" android:layout_width="22dp" android:layout_height="22dp"/>
+        <TextView android:layout_gravity="center" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp"/>
+    </LinearLayout>
+    <com.coolapk.market.widget.ActionButtonFrameLayout android:id="@+id/action_container" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="64dp" android:minHeight="28dp" android:stateListAnimator="@animator/action_btn_state_list_anim">
+        <TextView android:textSize="12sp" android:layout_gravity="center" android:id="@+id/action_button" android:tag="binding_8" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </com.coolapk.market.widget.ActionButtonFrameLayout>
+</LinearLayout>

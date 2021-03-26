@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/custom_theme_0" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/content_view_1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="18sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="选择主题色:"/>
+            <View android:id="@+id/color_view_1" android:background="@drawable/theme_pick_circle_background" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginTop="8dp"/>
+        </LinearLayout>
+        <Space android:layout_width="40dp" android:layout_height="match_parent"/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="18sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="选择强调色:"/>
+            <View android:id="@+id/color_view_2" android:background="@drawable/theme_pick_circle_background" android:layout_width="80dp" android:layout_height="80dp" android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:weightSum="2">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="18sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="主题色风格:"/>
+            <CheckBox android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center" android:id="@+id/check_box1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="暗色风格"/>
+        </LinearLayout>
+        <Space android:layout_width="40dp" android:layout_height="match_parent"/>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:textSize="18sp" android:textColor="?android:attr/textColorPrimary" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="选择主色调:"/>
+            <CheckBox android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center" android:id="@+id/check_box2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="亮色风格"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp">
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <TextView android:gravity="center" android:id="@+id/action_cancel" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@android:string/cancel" android:layout_marginEnd="8dp" style="?android:attr/borderlessButtonStyle"/>
+        <TextView android:textColor="@color/light_text" android:gravity="center" android:id="@+id/action_next" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="32dp" android:foreground="?attr/selectableItemBackground" android:text="@android:string/ok" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+    </LinearLayout>
+</LinearLayout>

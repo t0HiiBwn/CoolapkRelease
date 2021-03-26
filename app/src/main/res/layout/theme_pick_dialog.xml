@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/content_view" android:tag="layout/theme_pick_dialog_0" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/icon_view" android:background="@drawable/theme_pick_circle_background" android:layout_width="128dp" android:layout_height="128dp"/>
+    <com.coolapk.market.widget.ColorPickerView android:id="@+id/color_picker_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+        <TextView android:id="@+id/custom_button" android:tag="binding_1" android:background="?attr/selectableItemBackground" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_theme_pick_color_custom"/>
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <TextView android:id="@+id/cancel_button" android:tag="binding_2" android:background="?attr/selectableItemBackground" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/cancel"/>
+        <TextView android:id="@+id/ok_button" android:tag="binding_3" android:background="?attr/selectableItemBackground" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@android:string/ok"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:id="@+id/card_view" android:tag="layout/item_sort_select_0" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="12dp" android:paddingEnd="6dp">
+    <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false"/>
+    <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/select_view" android:background="?attr/selectableItemBackground" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="6dp" android:paddingEnd="6dp">
+        <TextView android:textSize="12sp" android:id="@+id/select_text_view" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false"/>
+        <ImageView android:tag="binding_2" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_chevron_right_grey600_18dp" android:scaleType="centerInside" android:rotation="90"/>
+    </LinearLayout>
+</LinearLayout>

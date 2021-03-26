@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:id="@+id/card_view" android:tag="layout/item_chating_user_0" android:paddingLeft="12dp" android:paddingRight="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+    <ImageView android:id="@+id/user_avatar_view" android:tag="binding_1" android:layout_width="40dp" android:layout_height="40dp" android:scaleType="centerCrop"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/message_view_root" android:paddingLeft="52dp" android:paddingRight="64dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/message_view" android:tag="binding_2" android:background="@drawable/chatting_user_corner_rect_bg" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="40dp">
+            <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/text_view" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2"/>
+        </LinearLayout>
+        <com.coolapk.market.widget.view.ShapedImageView android:id="@+id/pic_view" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:adjustViewBounds="true" app:round_radius_bottomLeft="8dp" app:round_radius_bottomRight="8dp" app:round_radius_topLeft="1dp" app:round_radius_topRight="8dp" app:shape_mode="1"/>
+        <TextView android:textSize="12sp" android:gravity="center" android:id="@+id/error_pic_view" android:tag="binding_5" android:padding="8dp" android:layout_width="160dp" android:layout_height="160dp" android:text="抱歉，图片内容违反相关法律法规，不予显示"/>
+    </LinearLayout>
+</FrameLayout>

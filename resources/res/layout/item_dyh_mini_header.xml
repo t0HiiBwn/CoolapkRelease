@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/item_dyh_mini_header_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:tag="binding_1" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/feed_list_item_padding" android:paddingEnd="16dp">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_top_outline_white_24dp" android:tint="#f44336"/>
+        <TextView android:textColor="#f44336" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="置顶" android:layout_marginStart="4dp" android:layout_marginEnd="4dp"/>
+    </LinearLayout>
+    <View android:tag="binding_2" android:background="?attr/currencyColorDivider" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/article_template_layout" android:tag="binding_3" android:paddingLeft="@dimen/feed_list_item_padding" android:paddingRight="@dimen/feed_list_item_padding" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="8dp">
+        <ImageView android:id="@+id/dyh_logo_view" android:tag="binding_4" android:layout_width="20dp" android:layout_height="20dp" android:scaleType="centerCrop"/>
+        <TextView android:textSize="14sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:id="@+id/dyh_name_view" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:maxLines="1" android:lines="1"/>
+        <TextView android:textSize="14sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:id="@+id/dyh_time_view" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp" android:maxLines="1" android:lines="1"/>
+    </LinearLayout>
+</LinearLayout>

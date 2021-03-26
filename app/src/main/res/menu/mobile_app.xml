@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_sort_white_24dp" android:id="@+id/action_sort" android:orderInCategory="101" android:title="@string/menu_sort_way" app:showAsAction="always">
+        <menu>
+            <group android:id="@+id/action_sort_group">
+                <item android:id="@+id/action_sort_by_install_time" android:title="@string/str_sort_order_install_time"/>
+                <item android:id="@+id/action_sort_by_update_time" android:title="@string/str_sort_order_update_time"/>
+                <item android:id="@+id/action_sort_by_apk_size" android:title="@string/str_sort_order_size"/>
+                <item android:id="@+id/action_sort_by_name" android:title="@string/str_sort_order_name"/>
+                <item android:id="@+id/action_sort_by_package_name" android:title="@string/str_sort_order_package_name"/>
+            </group>
+        </menu>
+    </item>
+</menu>

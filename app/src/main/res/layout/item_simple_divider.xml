@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/item_view" android:tag="layout/item_simple_divider_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+    <View android:id="@+id/divider_view" android:background="?attr/currencyColorDivider" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+</LinearLayout>

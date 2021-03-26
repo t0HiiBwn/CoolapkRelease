@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/bg_view" android:tag="layout/item_good_goods_add_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/card_view" android:background="?android:attr/selectableItemBackground" android:padding="16dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/light_text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="该好物单还没有添加任何好物"/>
+        <TextView android:textColor="@color/light_text" android:layout_gravity="center" android:id="@+id/action_add" android:tag="binding_1" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="立即添加" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+    </LinearLayout>
+</FrameLayout>

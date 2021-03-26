@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/content_view" android:tag="layout/submit_vertfiy_captcha_dialog_0" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/text_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:lineSpacingMultiplier="1.2"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="40dp" android:layout_margin="8dp">
+        <EditText android:textSize="14sp" android:textColor="?android:attr/textColorSecondary" android:gravity="center_vertical" android:id="@+id/edit_text" android:background="?attr/commentLayoutBackground" android:layout_width="0dp" android:layout_height="match_parent" android:hint="请输入图形验证码" android:layout_weight="1" android:paddingStart="8dp" android:paddingEnd="8dp"/>
+        <ImageView android:id="@+id/image_view" android:tag="binding_1" android:layout_width="96dp" android:layout_height="40dp" android:scaleType="centerCrop" android:layout_marginStart="8dp"/>
+    </LinearLayout>
+    <TextView android:textSize="14sp" android:textColor="@color/red" android:id="@+id/error_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:lineSpacingMultiplier="1.2" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <TextView android:id="@+id/cancel_button" android:tag="binding_2" android:background="?attr/selectableItemBackground" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/cancel"/>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp">
+            <TextView android:id="@+id/ok_button" android:tag="binding_3" android:background="?attr/selectableItemBackground" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_verify_and_continue"/>
+            <ProgressBar android:id="@+id/progress_bar" android:tag="binding_4" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

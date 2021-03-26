@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/state_newest" android:title="@string/str_order_by_dateline_asc"/>
+    <item android:id="@+id/state_new_reply" android:title="@string/str_order_by_recent_reply"/>
+    <item android:id="@+id/state_reply_desc" android:title="@string/str_order_by_dataline_desc"/>
+    <item android:id="@+id/state_popular" android:title="@string/str_order_by_popular"/>
+    <item android:id="@+id/state_louzhu" android:title="@string/str_order_by_building_owner"/>
+    <item android:id="@+id/state_folded" android:visible="false" android:title="@string/str_title_folded"/>
+</menu>

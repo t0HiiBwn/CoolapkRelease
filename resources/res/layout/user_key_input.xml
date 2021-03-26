@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/content_view" android:tag="layout/user_key_input_0" android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/input_key_hint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="请输入邀请码:"/>
+    <EditText android:id="@+id/edit_text" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:singleLine="true"/>
+    <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/action_confirm" android:tag="binding_2" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="确定"/>
+    <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/hint_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"/>
+</LinearLayout>

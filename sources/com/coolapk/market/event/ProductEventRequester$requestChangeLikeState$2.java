@@ -1,0 +1,40 @@
+package com.coolapk.market.event;
+
+import com.coolapk.market.app.EmptySubscriber;
+import com.coolapk.market.model.Product;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
+
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001J\u0010\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u0006H\u0016J\u0010\u0010\u0007\u001a\u00020\u00042\u0006\u0010\b\u001a\u00020\u0002H\u0016¨\u0006\t"}, d2 = {"com/coolapk/market/event/ProductEventRequester$requestChangeLikeState$2", "Lcom/coolapk/market/app/EmptySubscriber;", "Lcom/coolapk/market/model/Product;", "onError", "", "e", "", "onNext", "t", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+/* compiled from: ProductEvent.kt */
+public final class ProductEventRequester$requestChangeLikeState$2 extends EmptySubscriber<Product> {
+    final /* synthetic */ Function1 $errorHandler;
+    final /* synthetic */ String $id;
+    final /* synthetic */ Function1 $successHandler;
+
+    ProductEventRequester$requestChangeLikeState$2(Function1 function1, String str, Function1 function12) {
+        this.$errorHandler = function1;
+        this.$id = str;
+        this.$successHandler = function12;
+    }
+
+    @Override // com.coolapk.market.app.EmptySubscriber, rx.Observer
+    public void onError(Throwable th) {
+        Intrinsics.checkNotNullParameter(th, "e");
+        super.onError(th);
+        Function1 function1 = this.$errorHandler;
+        if (function1 == null || !((Boolean) function1.invoke(th)).booleanValue()) {
+            ProductEventDispatcher.INSTANCE.dispatchLikeResult(this.$id, th, null);
+        }
+    }
+
+    public void onNext(Product product) {
+        Intrinsics.checkNotNullParameter(product, "t");
+        super.onNext((ProductEventRequester$requestChangeLikeState$2) product);
+        Function1 function1 = this.$successHandler;
+        if (function1 == null || !((Boolean) function1.invoke(product)).booleanValue()) {
+            ProductEventDispatcher.INSTANCE.dispatchLikeResult(this.$id, null, product);
+        }
+    }
+}

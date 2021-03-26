@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_auto_image_load" android:key="auto_disable_image_load" android:summary="@string/pref_summary_auto_image_load"/>
+    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_always_load_app_icon" android:key="always_load_app_icon" android:dependency="auto_disable_image_load"/>
+    <com.coolapk.market.widget.preference.Preference android:title="@string/pref_title_photo_view_options" android:key="photo_view_options"/>
+</PreferenceScreen>

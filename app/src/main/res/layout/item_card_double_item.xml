@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/item_card_double_item_0" android:paddingLeft="14dp" android:paddingTop="8dp" android:paddingRight="14dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground" android:layout_weight="1">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/stroke_view" android:padding="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <ImageView android:id="@+id/icon_view" android:tag="binding_1" android:layout_width="96dp" android:layout_height="96dp"/>
+        </LinearLayout>
+        <TextView android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:maxLines="1" android:lines="1" android:layout_below="@+id/stroke_view" android:layout_centerHorizontal="true"/>
+        <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/subtitle_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="subtitle" android:layout_below="@+id/title_view" android:layout_centerHorizontal="true"/>
+        <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/info_view" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_below="@+id/subtitle_view" android:layout_centerHorizontal="true"/>
+        <TextView android:textSize="12sp" android:gravity="center" android:id="@+id/action_button" android:tag="binding_4" android:background="?android:attr/selectableItemBackground" android:paddingLeft="8dp" android:paddingTop="4dp" android:paddingRight="8dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="32dp" android:layout_alignBottom="@+id/info_view" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</FrameLayout>

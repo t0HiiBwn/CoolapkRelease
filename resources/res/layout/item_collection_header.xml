@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/item_collection_header_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:tag="binding_1" android:layout_width="match_parent" android:layout_height="162dp" android:foreground="@drawable/img_shade_cover" android:scaleType="centerCrop"/>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/item_view" android:tag="binding_2" android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <View android:id="@+id/space_holder" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="81dp"/>
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2"/>
+        <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+            <com.coolapk.market.widget.UserAvatarView android:id="@+id/avatar_view" android:tag="binding_5" android:layout_width="24dp" android:layout_height="24dp"/>
+            <TextView android:ellipsize="end" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_marginStart="10dp"/>
+            <TextView android:ellipsize="end" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_marginStart="10dp"/>
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+            <TextView android:ellipsize="end" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+        </LinearLayout>
+        <TextView android:textColor="?android:attr/textColorSecondary" android:tag="binding_9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</LinearLayout>

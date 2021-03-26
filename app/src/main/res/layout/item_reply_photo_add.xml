@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/item_reply_photo_add_0" android:background="?attr/commentLayoutBackground" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/icon_view" android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_add_white_48dp" android:scaleType="centerInside" android:tint="@color/grey_600"/>
+</LinearLayout>

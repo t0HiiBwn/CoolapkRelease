@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/post_more_panel_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/more_panel_header" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.coolapk.market.widget.slidr.ScrollStateViewPager android:layout_gravity="center" android:id="@+id/more_panel_view_pager" android:layout_width="match_parent" android:layout_height="240dp"/>
+        <LinearLayout android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/more_panel_indicator" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/card_view" android:tag="layout/item_block_word_0" android:paddingTop="8dp" android:paddingBottom="8dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="12dp" android:paddingEnd="12dp">
+    <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_1" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_weight="1" android:layout_marginStart="4dp"/>
+    <TextView android:textSize="12sp" android:gravity="center" android:layout_gravity="center" android:id="@+id/action_button" android:tag="binding_2" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="56dp" android:layout_height="28dp" android:text="@string/action_cancel" android:layout_marginStart="8dp"/>
+</LinearLayout>

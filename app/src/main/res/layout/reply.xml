@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.widget.view.KeyBoardLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/key_board_interact_layout" android:tag="layout/reply_0" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" app:drawNavigationBar="true" app:drawStatusBar="true">
+    <FrameLayout android:id="@+id/mask_view" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@+id/content_view" android:tag="binding_2" android:background="?attr/contentBackgroundColor" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:tag="binding_3" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <TextView android:textSize="16sp" android:id="@+id/post_button" android:tag="binding_4" android:background="?attr/selectableItemBackground" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_add_feed"/>
+            </LinearLayout>
+            <EditText android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:gravity="start" android:id="@+id/edit_text" android:tag="binding_5" android:background="@null" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="8dp" android:maxLines="8" android:minLines="4" android:lineSpacingMultiplier="1.2"/>
+            <LinearLayout android:id="@+id/source_view" android:tag="binding_6" android:background="?attr/commentLayoutBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="8dp">
+                <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/source_text_view" android:tag="binding_7" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:tag="binding_8" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="8dp">
+                <LinearLayout android:gravity="center" android:tag="binding_9" android:background="?attr/commentLayoutBackground" android:layout_width="match_parent" android:layout_height="64dp">
+                    <ImageView android:id="@+id/icon_view" android:tag="binding_10" android:layout_width="64dp" android:layout_height="64dp" android:scaleType="centerCrop"/>
+                    <com.coolapk.market.widget.view.CoolEllipsizeTextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:gravity="center" android:id="@+id/text_view" android:tag="binding_11" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:maxLines="2" android:lineSpacingMultiplier="1.2"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/photo_list_view" android:tag="binding_12" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="binding_13" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginRight="12dp" android:layout_marginBottom="8dp">
+                <CheckBox android:gravity="center" android:id="@+id/check_box" android:tag="binding_14" android:layout_width="32dp" android:layout_height="32dp"/>
+                <TextView android:textColor="?android:attr/textColorSecondary" android:gravity="center" android:id="@+id/check_box_text" android:tag="binding_15" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+                <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            </LinearLayout>
+            <include android:id="@+id/alert_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:layout_marginBottom="12dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" layout="@layout/feed_warning"/>
+            <View android:background="?attr/contentBackgroundDividerColor" android:layout_width="match_parent" android:layout_height="1dp"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/bottom_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="8dp">
+                <ImageView android:id="@+id/menu_emotion" android:tag="binding_16" android:layout_width="0dp" android:layout_height="40dp" android:foreground="?android:attr/actionBarItemBackground" android:src="@drawable/ic_emoticon_grey600_24dp" android:scaleType="centerInside" android:tint="@color/grey_600" android:layout_weight="1"/>
+                <ImageView android:id="@+id/menu_add_photo" android:tag="binding_17" android:layout_width="0dp" android:layout_height="40dp" android:foreground="?android:attr/actionBarItemBackground" android:src="@drawable/ic_photo_white_24dp" android:scaleType="centerInside" android:tint="@color/grey_600" android:layout_weight="1"/>
+                <ImageView android:id="@+id/menu_at_item" android:tag="binding_18" android:layout_width="0dp" android:layout_height="40dp" android:foreground="?android:attr/actionBarItemBackground" android:src="@drawable/ic_at_grey600_24dp" android:scaleType="centerInside" android:layout_weight="1"/>
+                <ImageView android:id="@+id/menu_topic_item" android:tag="binding_19" android:layout_width="0dp" android:layout_height="40dp" android:foreground="?android:attr/actionBarItemBackground" android:src="@drawable/ic_pound_grey600_24dp" android:scaleType="centerInside" android:layout_weight="1"/>
+                <ImageView android:id="@+id/menu_share_app" android:tag="binding_20" android:padding="8dp" android:layout_width="0dp" android:layout_height="40dp" android:foreground="?android:attr/actionBarItemBackground" android:src="@drawable/ic_app_grey_24dp" android:scaleType="centerInside" android:layout_weight="1"/>
+                <ImageView android:id="@+id/menu_close_keyboard" android:tag="binding_21" android:layout_width="0dp" android:layout_height="40dp" android:foreground="?android:attr/actionBarItemBackground" android:src="@drawable/ic_keyboard_open_white_24dp" android:scaleType="centerInside" android:tint="@color/grey_600" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@+id/fake_keyboard_view" android:background="?attr/contentBackgroundColor" android:clickable="true" android:layout_width="match_parent" android:layout_height="0dp">
+        <com.coolapk.market.widget.emotion.EmotionPanel android:layout_gravity="bottom" android:id="@+id/emotion_panel" android:paddingTop="0dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+</com.coolapk.market.widget.view.KeyBoardLayout>

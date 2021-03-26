@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/post_button_setting_0" android:background="?attr/contentBackgroundColor" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:orientation="vertical" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:tag="binding_1" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="图标选择"/>
+        <com.coolapk.market.widget.RadioGroupPlus android:orientation="horizontal" android:id="@+id/radio_group" android:paddingTop="14dp" android:paddingBottom="14dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/plus_layout" android:background="@drawable/post_button_setting_selected_bg" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackground">
+                    <ImageView android:id="@+id/plus_background_view" android:layout_width="40dp" android:layout_height="30dp" android:src="@drawable/ic_plus_outline_white_24dp" android:scaleType="centerInside"/>
+                    <RadioButton android:textSize="12sp" android:textColor="?attr/colorAccent" android:gravity="center" android:id="@+id/radio_plus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:button="@null" android:text="加号"/>
+                </LinearLayout>
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/airplane_layout" android:background="@drawable/post_button_setting_selected_bg" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackground">
+                    <ImageView android:id="@+id/airplane_background_view" android:layout_width="40dp" android:layout_height="30dp" android:src="@drawable/ic_play_24dp_vct" android:scaleType="centerInside"/>
+                    <RadioButton android:textSize="12sp" android:textColor="?attr/colorAccent" android:gravity="center" android:id="@+id/radio_airplane" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:button="@null" android:text="播放"/>
+                </LinearLayout>
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/coolapk_layout" android:background="@drawable/post_button_setting_selected_bg" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackground">
+                    <ImageView android:id="@+id/coolapk_background_view" android:layout_width="40dp" android:layout_height="30dp" android:src="@drawable/ic_logo_white_24dp" android:scaleType="centerInside"/>
+                    <RadioButton android:textSize="12sp" android:textColor="?attr/colorAccent" android:gravity="center" android:id="@+id/radio_coolapk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:button="@null" android:text="@string/app_name"/>
+                </LinearLayout>
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/custom_layout" android:background="@drawable/post_button_setting_selected_bg" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackground">
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <com.meg7.widget.SvgImageView android:id="@+id/custom_button_image" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_photo_white_24dp" android:scaleType="centerInside" app:svg_raw_resource="@raw/post_button_shape"/>
+                        <ImageView android:id="@+id/custom_button_image_placeholder" android:layout_width="40dp" android:layout_height="30dp" android:src="@drawable/ic_photo_white_24dp" android:scaleType="centerInside"/>
+                    </FrameLayout>
+                    <RadioButton android:textSize="12sp" android:textColor="?attr/colorAccent" android:gravity="center" android:id="@+id/radio_custom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:button="@null" android:text="自定义"/>
+                </LinearLayout>
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+        </com.coolapk.market.widget.RadioGroupPlus>
+        <TextView android:tag="binding_2" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="长按快捷操作"/>
+        <com.coolapk.market.widget.RadioGroupPlus android:orientation="vertical" android:id="@+id/radio_group_long_click" android:paddingTop="8dp" android:paddingBottom="8dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/long_click_search" android:background="?android:attr/selectableItemBackground" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="48dp">
+                <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="0dp" android:layout_height="wrap_content" android:text="打开搜索页面" android:layout_weight="1"/>
+                <RadioButton android:id="@+id/radio_search" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/ic_radio_button_seletor"/>
+            </LinearLayout>
+            <ImageView android:layout_width="match_parent" android:layout_height="0.5dp" android:src="?attr/contentBackgroundDividerColor"/>
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/long_click_app_manager" android:background="?android:attr/selectableItemBackground" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="48dp">
+                <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="0dp" android:layout_height="wrap_content" android:text="打开应用管理页面" android:layout_weight="1"/>
+                <RadioButton android:id="@+id/radio_app_manager" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/ic_radio_button_seletor"/>
+            </LinearLayout>
+            <ImageView android:layout_width="match_parent" android:layout_height="0.5dp" android:src="?attr/contentBackgroundDividerColor"/>
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/long_click_notification" android:background="?android:attr/selectableItemBackground" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="48dp">
+                <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="0dp" android:layout_height="wrap_content" android:text="打开消息通知页面" android:layout_weight="1"/>
+                <RadioButton android:id="@+id/radio_notification" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/ic_radio_button_seletor"/>
+            </LinearLayout>
+            <ImageView android:layout_width="match_parent" android:layout_height="0.5dp" android:src="?attr/contentBackgroundDividerColor"/>
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/long_click_empty" android:background="?android:attr/selectableItemBackground" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="48dp">
+                <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="0dp" android:layout_height="wrap_content" android:text="无" android:layout_weight="1"/>
+                <RadioButton android:id="@+id/radio_empty" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/ic_radio_button_seletor"/>
+            </LinearLayout>
+        </com.coolapk.market.widget.RadioGroupPlus>
+    </LinearLayout>
+</ScrollView>

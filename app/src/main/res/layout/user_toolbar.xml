@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center" android:id="@+id/toolbar_action_container" android:tag="layout/user_toolbar_0" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height">
+    <com.coolapk.market.widget.UserAvatarView android:id="@+id/toolbar_user_avatar_view" android:tag="binding_1" android:layout_width="32dp" android:layout_height="32dp" android:scaleType="centerCrop" android:transitionName="@string/transition_name_logo"/>
+    <TextView android:textSize="16sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/toolbar_name_view" android:tag="binding_2" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1" android:layout_marginStart="6dp"/>
+    <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/toolbar_action_view" android:tag="binding_3" android:layout_width="56dp" android:layout_height="28dp" android:foreground="?attr/selectableItemBackground" android:layout_marginStart="8dp"/>
+</LinearLayout>

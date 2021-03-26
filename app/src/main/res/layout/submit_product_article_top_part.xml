@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/lv_top" android:tag="layout/submit_product_article_top_part_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include android:id="@+id/alert_view" layout="@layout/feed_warning"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/relative_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center_horizontal" android:id="@+id/score_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp"/>
+    <com.coolapk.market.widget.view.BadBadRatingBar android:layout_gravity="center_horizontal" android:id="@+id/rating_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:progressDrawable="@drawable/ration_bar_18dp" android:numStars="5" android:rating="3.5" android:stepSize="1" android:isIndicator="false" android:progressTint="@color/orange" android:progressBackgroundTint="@color/orange" android:secondaryProgressTint="@color/orange"/>
+    <CheckBox android:textColor="?android:attr/textColorPrimary" android:layout_gravity="center_horizontal" android:id="@+id/buy_state_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="买过"/>
+    <View android:background="?attr/commentLayoutDivider" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp"/>
+    <FrameLayout android:background="?attr/commentLayoutBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="12dp" android:layout_marginRight="16dp">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_plus_outline_white_24dp" android:tint="?android:attr/textColorTertiary"/>
+                <TextView android:textSize="18sp" android:textColor="?android:attr/textColorTertiary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="添加题图"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorTertiary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="(无关题图会导致无法获得推荐)"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/iv_cover" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop"/>
+        <ImageView android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/close_view" android:background="#ccdb4437" android:padding="2dp" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_close_white_24dp"/>
+    </FrameLayout>
+    <com.coolapk.market.view.feedv8.util.ArticleEditText android:textSize="20sp" android:textStyle="bold" android:gravity="center_vertical" android:id="@+id/et_title" android:background="@null" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="标题" android:maxLength="120" android:imeOptions="actionNone"/>
+    <View android:background="?attr/contentBackgroundDeepDividerColor" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="12dp" android:layout_marginRight="12dp"/>
+</LinearLayout>

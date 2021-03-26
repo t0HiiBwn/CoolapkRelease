@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/card_view" android:tag="layout/feed_comment_count_view_part_0" android:layout_width="match_parent" android:layout_height="48dp">
+    <FrameLayout android:id="@+id/fix_top_view" android:layout_width="match_parent" android:layout_height="48dp">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/action_container" android:layout_width="match_parent" android:layout_height="48dp">
+            <ImageView android:id="@+id/close_view" android:background="?attr/actionBarItemBackground" android:visibility="gone" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginLeft="4dp" android:src="@drawable/ic_close_white_24dp" android:scaleType="centerInside" android:tint="?android:attr/textColorSecondary"/>
+            <TextView android:textSize="14sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:gravity="center" android:id="@+id/like_view" android:background="?attr/selectableItemBackground" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxLines="1" android:lines="1"/>
+            <LinearLayout android:gravity="center" android:id="@+id/filter_view" android:background="?attr/selectableItemBackground" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+                <TextView android:textSize="14sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:gravity="center" android:id="@+id/filter_text_view" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxLines="1" android:lines="1"/>
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/filter_image_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_chevron_down_grey600_18dp"/>
+            </LinearLayout>
+            <Space android:id="@+id/space_view" android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <TextView android:textSize="14sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:gravity="center" android:id="@+id/forward_view" android:background="?attr/selectableItemBackground" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxLines="1" android:lines="1"/>
+        </LinearLayout>
+        <View android:layout_gravity="bottom" android:id="@+id/divider_view" android:background="?attr/currencyColorDivider" android:layout_width="match_parent" android:layout_height="@dimen/thin_divider_size"/>
+        <com.coolapk.market.widget.view.SimpleIndicatorView android:layout_gravity="bottom" android:id="@+id/indicator_view" android:layout_width="match_parent" android:layout_height="2dp" android:layout_marginBottom="5dp"/>
+    </FrameLayout>
+</FrameLayout>

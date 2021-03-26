@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/item_view" android:tag="layout/item_channel_tab_0" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/background_view" android:padding="12dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/content_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@+id/image_view" android:tag="binding_1" android:layout_width="32dp" android:layout_height="32dp" android:scaleType="fitXY"/>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:id="@+id/text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/delete_view" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginTop="-12dp" android:src="@drawable/ic_close_white_12dp" android:scaleType="centerInside" android:tint="?android:attr/textColorTertiary" android:layout_toRightOf="@+id/content_view"/>
+        <ImageView android:id="@+id/add_view" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginTop="-12dp" android:src="@drawable/ic_plus_outline_white_24dp" android:scaleType="centerInside" android:tint="?android:attr/textColorTertiary" android:layout_toRightOf="@+id/content_view"/>
+    </RelativeLayout>
+</FrameLayout>

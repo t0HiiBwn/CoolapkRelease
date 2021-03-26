@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/content_view" android:tag="layout/center_v9_social_dialog_0" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textColor="?android:attr/textColorPrimary" android:id="@+id/text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginTop="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp" android:text="@string/str_login_by_social_account"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="8dp" android:layout_marginRight="16dp" android:layout_marginBottom="8dp" android:baselineAligned="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/button_login_by_wechat" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:background="?android:attr/selectableItemBackgroundBorderless" android:duplicateParentState="true" android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/wechat" android:scaleType="centerInside"/>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="微信登录"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/button_login_by_qq" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:background="?android:attr/selectableItemBackgroundBorderless" android:duplicateParentState="true" android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/qq" android:scaleType="centerInside"/>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="QQ登录"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/button_login_by_weibo" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:background="?android:attr/selectableItemBackgroundBorderless" android:duplicateParentState="true" android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/weibo" android:scaleType="centerInside"/>
+            <TextView android:textSize="12sp" android:textColor="?android:attr/textColorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="微博登录"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="12sp" android:id="@+id/button_login_by_phone" android:tag="binding_4" android:background="?attr/selectableItemBackground" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:text="@string/str_login_register_by_phone"/>
+    <TextView android:textSize="10sp" android:textColor="?android:attr/textColorTertiary" android:gravity="center" android:id="@+id/tips_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:text="由于第三方网站原因，通过社交账号注册可能会失败，建议使用手机短信登录/注册"/>
+</LinearLayout>

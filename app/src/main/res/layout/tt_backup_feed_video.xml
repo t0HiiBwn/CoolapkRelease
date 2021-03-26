@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/tt_bu_video_container_inner" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="123"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="220">
+        <com.bytedance.sdk.openadsdk.core.widget.TTRoundRectImageView android:id="@+id/tt_bu_video_icon" android:layout_width="45dp" android:layout_height="45dp" android:scaleType="fitXY"/>
+        <TextView android:textSize="14sp" android:textColor="#ff333333" android:ellipsize="end" android:id="@+id/tt_bu_video_name1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:maxLines="1"/>
+        <TextView android:textSize="12sp" android:textColor="#ff999999" android:ellipsize="end" android:id="@+id/tt_bu_video_name2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1"/>
+        <TextView android:textSize="15sp" android:textStyle="bold" android:textColor="#ff333333" android:ellipsize="end" android:id="@+id/tt_bu_video_score" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:maxLines="1"/>
+        <com.bytedance.sdk.openadsdk.core.widget.TTRatingBar android:layout_gravity="center" android:id="@+id/tt_bu_video_score_bar" android:layout_width="wrap_content" android:layout_height="14dp"/>
+    </LinearLayout>
+</LinearLayout>

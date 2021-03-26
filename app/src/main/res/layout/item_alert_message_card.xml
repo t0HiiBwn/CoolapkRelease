@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_alert_message_card_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="1">
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/item_view" android:tag="binding_1" android:background="#fdd9d7" android:paddingLeft="12dp" android:paddingRight="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="36dp">
+        <ImageView android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_alert_circle_outline" android:tint="#f44336"/>
+        <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="#f44336" android:id="@+id/text_view" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="请勿添加无关话题，违规者轻则删帖，重则封号！"/>
+    </LinearLayout>
+</com.coolapk.market.design.CoolapkCardView>

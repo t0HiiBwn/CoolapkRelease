@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_image_white_24dp" android:id="@+id/action_pick" android:title="@string/str_new_feed_pick_a_photo" app:showAsAction="always"/>
+</menu>

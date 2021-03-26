@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_feed_news_view_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:orientation="vertical" android:id="@+id/card_view" android:tag="binding_1" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_list_item_padding" android:layout_marginRight="@dimen/feed_list_item_padding">
+            <androidx.cardview.widget.CardView android:layout_gravity="center_vertical" android:id="@+id/image_card_view" android:tag="binding_2" android:layout_width="104dp" android:layout_height="78dp" android:layout_alignParentTop="true" android:layout_marginStart="12dp" android:layout_alignParentEnd="true" app:cardCornerRadius="0dp" app:cardElevation="0dp">
+                <ImageView android:id="@+id/extra_image_view" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+                <com.coolapk.market.widget.view.DividerLineView android:id="@+id/divider_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+            <com.coolapk.market.widget.view.CoolEllipsizeTextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2" android:lineSpacingMultiplier="1.2" android:layout_toStartOf="@+id/image_card_view" android:layout_alignParentStart="true"/>
+            <Space android:id="@+id/nine_image_space_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/title_view"/>
+            <TextView android:textSize="12sp" android:textColor="@color/grey_a3x3" android:id="@+id/left_bottom_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_below="@+id/nine_image_space_view" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <com.coolapk.market.widget.ForegroundTextView android:id="@+id/foreground_text_view" android:tag="binding_4" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</com.coolapk.market.design.CoolapkCardView>

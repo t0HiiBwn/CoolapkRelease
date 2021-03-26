@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:id="@+id/item_view" android:tag="layout/item_center_user_menu_child_0" android:background="?android:attr/selectableItemBackgroundBorderless" android:paddingTop="4dp" android:layout_width="match_parent" android:layout_height="72dp">
+    <ImageView android:id="@+id/image_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_wodeguanzhu_white_24dp" android:tint="#00bcd4"/>
+    <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/str_user_my_follow" android:includeFontPadding="false"/>
+</LinearLayout>

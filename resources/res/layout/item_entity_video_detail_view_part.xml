@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/item_view" android:tag="layout/item_entity_video_detail_view_part_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/video_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@+id/top_container" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/navigation_view" android:tag="binding_1" android:layout_width="56dp" android:layout_height="52dp" android:src="@drawable/ic_back_white_24dp" android:scaleType="centerInside" android:tint="@color/white"/>
+        <TextView android:textSize="16sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/title_view" android:layout_width="0dp" android:layout_height="52dp" android:maxLines="1" android:layout_weight="1"/>
+        <ImageView android:id="@+id/volume_view" android:tag="binding_2" android:layout_width="56dp" android:layout_height="52dp" android:src="@drawable/ic_volume_off_white_24dp" android:scaleType="centerInside"/>
+        <ImageView android:id="@+id/pip_view" android:tag="binding_3" android:layout_width="56dp" android:layout_height="52dp" android:src="@drawable/ic_resizevideo_outline_white_24dp" android:scaleType="centerInside"/>
+        <ImageView android:id="@+id/more_view" android:tag="binding_4" android:layout_width="56dp" android:layout_height="52dp" android:src="@drawable/ic_more_white_24dp" android:scaleType="centerInside"/>
+    </LinearLayout>
+    <com.coolapk.market.design.CoolapkCardView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/coolapk_card_view" android:tag="binding_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="54dp" android:layout_marginStart="12dp" android:layout_marginEnd="12dp" app:cardStyle="2">
+        <include android:layout_gravity="bottom" android:id="@+id/include_app" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/item_app_inside_image_card"/>
+    </com.coolapk.market.design.CoolapkCardView>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/bottom_container" android:visibility="gone" android:layout_width="match_parent" android:layout_height="48dp">
+        <ImageView android:id="@+id/play_view" android:tag="binding_6" android:paddingLeft="4dp" android:paddingRight="4dp" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginLeft="4dp" android:layout_marginRight="4dp" android:src="@drawable/ic_play_white_24dp" android:scaleType="centerInside"/>
+        <TextView android:textSize="12sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/current_time_view" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="00:00:00"/>
+        <SeekBar android:id="@+id/seek_bar" android:focusable="false" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:layout_marginRight="4dp" android:maxHeight="4dp" android:progressDrawable="@drawable/video_seek_bar" android:minHeight="4dp" android:layout_weight="1" android:splitTrack="false"/>
+        <TextView android:textSize="12sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/total_time_view" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="16dp" android:text="00:00:00"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/live_view_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp">
+            <View android:background="@drawable/theme_pick_circle_background" android:layout_width="6dp" android:layout_height="6dp" android:layout_marginEnd="4dp" android:backgroundTint="@color/red"/>
+            <TextView android:textSize="12sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/live_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="直播"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/full_screen_view" android:tag="binding_7" android:paddingLeft="4dp" android:paddingRight="4dp" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginLeft="-12dp" android:layout_marginRight="4dp" android:src="@drawable/baseline_fullscreen_24" android:scaleType="centerInside" android:tint="@color/white"/>
+    </LinearLayout>
+    <ProgressBar android:layout_gravity="bottom" android:id="@+id/progress_bar" android:focusable="false" android:visibility="gone" android:layout_width="match_parent" android:layout_height="2dp" android:progressDrawable="@drawable/video_progress_bar" android:splitTrack="false" style="@style/res_2131951844_base_widget_appcompat_progressbar_horizontal"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/replay_view" android:tag="binding_8" android:padding="16dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_repeat_outline_white_36dp"/>
+        <TextView android:textSize="16sp" android:textColor="#ffffff" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="16dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="重播"/>
+    </LinearLayout>
+</FrameLayout>

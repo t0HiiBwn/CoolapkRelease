@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.widget.SquareImageView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/image_view" android:tag="layout/item_user_cover_add_0" android:background="?attr/commentLayoutBackground" android:layout_width="match_parent" android:layout_height="match_parent" android:foreground="?attr/selectableItemBackground" android:src="@drawable/ic_add_white_48dp" android:scaleType="centerInside" android:tint="@color/grey_600"/>

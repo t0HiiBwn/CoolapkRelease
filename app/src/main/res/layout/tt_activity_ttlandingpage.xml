@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewStub android:id="@+id/tt_browser_titlebar_view_stub" android:layout="@layout/tt_browser_titlebar" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <ViewStub android:id="@+id/tt_browser_titlebar_dark_view_stub" android:layout="@layout/tt_browser_titlebar_for_dark" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <com.bytedance.sdk.openadsdk.core.widget.webview.SSWebView android:id="@+id/tt_browser_webview" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <ViewStub android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tt_browser_download_btn_stub" android:layout="@layout/tt_browser_download_layout" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <ProgressBar android:layout_gravity="top|center_vertical|center_horizontal|center" android:id="@+id/tt_browser_progress" android:layout_width="match_parent" android:layout_height="3dp" android:progress="1" android:progressDrawable="@drawable/tt_browser_progress_style" style="@android:style/Widget.ProgressBar.Horizontal"/>
+    </FrameLayout>
+</LinearLayout>

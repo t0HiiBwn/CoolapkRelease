@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:id="@+id/extend_layout" android:tag="layout/item_article_edit_share_url_0" android:background="?attr/commentLayoutBackground" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:foreground="?attr/selectableItemBackground">
+    <ImageView android:id="@+id/extend_icon" android:tag="binding_1" android:layout_width="40dp" android:layout_height="40dp"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp">
+        <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@+id/extend_title" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2" android:includeFontPadding="false"/>
+        <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@+id/extend_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:maxLines="1" android:includeFontPadding="false"/>
+    </LinearLayout>
+</LinearLayout>

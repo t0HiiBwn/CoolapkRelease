@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/submit_feed_article_holder2_0" android:background="?attr/mainBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.coolapk.market.view.feedv8.util.HandleFocusRecyclerView android:id="@+id/recycler_view" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

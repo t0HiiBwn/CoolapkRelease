@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/item_search_sh_filter_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_content_background_vertical_1dp" android:showDividers="middle" android:dividerPadding="12dp">
+        <LinearLayout android:gravity="center" android:id="@+id/erShou_sort_view" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1">
+            <TextView android:id="@+id/erShou_sort_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="按默认选择"/>
+            <ImageView android:id="@+id/erShou_sort_chevron_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:src="@drawable/ic_chevron_down_grey600_18dp" android:tint="?android:attr/textColorPrimary"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@+id/sh_other_filter_view" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1">
+            <TextView android:id="@+id/sh_other_filter_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全部"/>
+            <ImageView android:id="@+id/sh_other_filter_chevron_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:src="@drawable/ic_chevron_down_grey600_18dp" android:tint="?android:attr/textColorPrimary"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

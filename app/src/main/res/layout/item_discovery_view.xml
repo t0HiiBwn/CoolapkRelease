@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_discovery_view_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
+    <LinearLayout android:orientation="vertical" android:id="@+id/card_view" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Space android:id="@+id/header_space_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/content_container" android:tag="binding_2" android:background="?attr/commentLayoutBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_list_item_padding" android:layout_marginRight="@dimen/feed_list_item_padding">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/icon_view" android:tag="binding_3" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="centerCrop"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_list_item_padding" android:layout_marginRight="@dimen/feed_list_item_padding" android:layout_weight="1">
+                    <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/title_view" android:tag="binding_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
+                    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:id="@+id/from_where_view" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:maxLines="1" android:lines="1"/>
+                </LinearLayout>
+                <TextView android:textSize="12sp" android:textColor="@color/light_text" android:gravity="center" android:id="@+id/action_button" android:tag="binding_6" android:layout_width="60dp" android:layout_height="26dp" android:foreground="?attr/selectableItemBackground"/>
+            </LinearLayout>
+            <Space android:id="@+id/nine_image_space_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/text_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/feed_list_item_padding" android:layout_marginTop="8dp" android:layout_marginRight="@dimen/feed_list_item_padding" android:lineSpacingMultiplier="1.2"/>
+        <Space android:id="@+id/relative_space_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.coolapk.market.widget.FeedActionView2 android:orientation="vertical" android:id="@+id/feed_action_view" android:tag="binding_7" android:layout_width="match_parent" android:layout_height="58dp"/>
+        <com.coolapk.market.widget.AutoLinkTextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:tag="binding_8" android:background="?attr/commentLayoutBackground" android:paddingLeft="@dimen/feed_list_item_padding" android:paddingTop="8dp" android:paddingRight="@dimen/feed_list_item_padding" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <com.coolapk.market.widget.ForegroundTextView android:id="@+id/foreground_text_view" android:tag="binding_9" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</com.coolapk.market.design.CoolapkCardView>

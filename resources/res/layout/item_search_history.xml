@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center" android:id="@+id/item_view" android:tag="layout/item_search_history_0" android:background="?attr/mainBackgroundColor" android:paddingLeft="12dp" android:paddingTop="5dp" android:paddingRight="12dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="28dp" android:layout_marginLeft="6dp" android:layout_marginTop="6dp" android:layout_marginRight="6dp" android:layout_marginBottom="6dp" android:foreground="?android:attr/selectableItemBackground">
+    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="实时" android:singleLine="true"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolapk.market.widget.DrawSystemBarFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:tag="layout/album_detailt_view_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent" app:drawNavigationBar="true" app:layout_drawStatusBar="true">
+    <com.coolapk.market.widget.slidr.ScrollStateViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_drawStatusBar="true"/>
+    <Space android:layout_gravity="bottom" android:id="@+id/comment_bar_space_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.coolapk.market.widget.photoview.PhotoView android:id="@+id/mask_view" android:layout_width="match_parent" android:layout_height="match_parent" app:drawNavigationBar="true" app:layout_drawStatusBar="true"/>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="48dp" android:layout_marginRight="48dp">
+        <ProgressBar android:id="@+id/loading_view" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:attr/progressBarStyle"/>
+    </LinearLayout>
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952177_themeoverlay_appcompat_dark_actionbar" android:id="@+id/app_bar" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/disable_elevation_app_bar_state_list_anim" app:layout_drawStatusBar="true">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" app:contentInsetStartWithNavigation="0dp" app:layout_scrollFlags="15" app:navigationContentDescription="@string/acc_back" app:navigationIcon="@drawable/ic_back_white_24dp" app:popupTheme="@style/res_2131952182_themeoverlay_appcompat_light"/>
+    </com.google.android.material.appbar.AppBarLayout>
+</com.coolapk.market.widget.DrawSystemBarFrameLayout>

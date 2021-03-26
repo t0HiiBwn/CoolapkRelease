@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/main_content" android:tag="layout/activity_wallpaper_0" android:background="?attr/contentBackgroundColor" android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952177_themeoverlay_appcompat_dark_actionbar" android:id="@+id/app_bar" android:tag="binding_1" android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/disable_elevation_app_bar_state_list_anim">
+        <com.coolapk.market.widget.view.CollapsingToolbarFixLayout android:id="@+id/collapsing_toolbar" android:tag="binding_2" android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_scrollFlags="13" app:titleEnabled="true">
+            <LinearLayout android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="match_parent" android:layout_height="match_parent">
+                <FrameLayout android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.coolapk.market.widget.RatioImageView android:id="@+id/cover_view" android:tag="binding_3" android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="wrap_content" android:layout_height="360dp" app:layout_collapseMode="1"/>
+                    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" android:layout_marginTop="16dp" app:contentInsetStartWithNavigation="0dp" app:layout_collapseMode="1" app:navigationContentDescription="@string/acc_back" app:navigationIcon="@drawable/ic_back_white_24dp" app:popupTheme="@style/res_2131952182_themeoverlay_appcompat_light"/>
+                    <LinearLayout android:layout_gravity="bottom" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="10sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/textView6" android:tag="binding_4" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <View android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                        <TextView android:textSize="12sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/set_wallpaper_view" android:background="@drawable/text_space_bg" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackground" android:text="@string/str_wallpaper_set"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </com.coolapk.market.widget.view.CollapsingToolbarFixLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:id="@+id/coolpic_view_recycler" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:tag="layout/item_main_category_link_0" android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:stretchColumns="0, 2" android:columnCount="3">
+    <TableRow android:tag="binding_1" android:layout_height="36dp">
+        <include android:id="@+id/item_view_1" android:layout_width="0dp" android:layout_height="36dp" layout="@layout/item_main_category_child"/>
+        <Space android:layout_width="8dp"/>
+        <include android:id="@+id/item_view_2" android:layout_width="0dp" android:layout_height="36dp" layout="@layout/item_main_category_child"/>
+    </TableRow>
+    <Space android:layout_gravity="fill" android:layout_height="8dp"/>
+    <TableRow android:tag="binding_2" android:layout_height="36dp">
+        <include android:id="@+id/item_view_3" android:layout_width="0dp" android:layout_height="36dp" layout="@layout/item_main_category_child"/>
+        <Space android:layout_width="8dp"/>
+        <include android:id="@+id/item_view_4" android:layout_width="0dp" android:layout_height="36dp" layout="@layout/item_main_category_child"/>
+    </TableRow>
+</TableLayout>
