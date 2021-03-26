@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_selector_link_view_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
-    <FrameLayout android:id="@+id/frame_view" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <com.coolapk.market.widget.LinearAdapterLayout android:gravity="center" android:orientation="vertical" android:id="@+id/item_view" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    </FrameLayout>
-</com.coolapk.market.design.CoolapkCardView>

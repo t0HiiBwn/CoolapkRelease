@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <group android:id="@+id/nav_group_1">
-        <item android:id="@+id/action_preview" android:title="@string/action_preview" app:showAsAction="always"/>
-        <item android:id="@+id/action_confirm" android:title="@string/action_confirm" app:showAsAction="always"/>
-        <item android:id="@+id/action_post" android:visible="false" android:title="@string/menu_add_feed" app:showAsAction="always"/>
-    </group>
-</menu>

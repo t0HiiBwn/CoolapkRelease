@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/item_black_list_0" android:background="?attr/contentBackgroundColor" android:paddingLeft="16dp" android:paddingTop="8dp" android:paddingRight="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/card_view" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_1" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_weight="1"/>
-        <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_view" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    </LinearLayout>
-    <TextView android:textSize="12sp" android:id="@+id/description_view" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-</LinearLayout>

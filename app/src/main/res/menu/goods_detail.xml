@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:icon="@drawable/ic_more_white_24dp" android:id="@+id/action_more_item" android:orderInCategory="101" android:title="@string/menu_more" app:showAsAction="always">
-        <menu>
-            <item android:id="@+id/action_add_to_goods_list" android:title="加入好物单"/>
-        </menu>
-    </item>
-</menu>

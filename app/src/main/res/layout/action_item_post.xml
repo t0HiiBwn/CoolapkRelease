@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:tag="layout/action_item_post_0" android:background="?attr/actionBarItemBackground" android:layout_width="wrap_content" android:layout_height="56dp">
-    <ImageView android:layout_width="wrap_content" android:layout_height="20dp" android:src="@drawable/divider_content_background_vertical_1dp"/>
-    <LinearLayout android:gravity="center_vertical" android:paddingLeft="10dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_plus_outline_white_24dp" android:scaleType="centerInside" android:tint="?android:attr/textColorSecondary"/>
-        <TextView android:textSize="15sp" android:textColor="?android:attr/textColorSecondary" android:padding="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发布"/>
-    </LinearLayout>
-</LinearLayout>

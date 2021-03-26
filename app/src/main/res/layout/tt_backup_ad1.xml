@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
-    <ImageView android:id="@+id/tt_insert_ad_logo" android:layout_width="10dp" android:layout_height="6dp" android:src="@drawable/tt_ad_logo_reward_full" android:scaleType="fitXY"/>
-    <TextView android:textSize="8sp" android:textColor="#dddddd" android:gravity="center" android:id="@+id/tt_insert_ad_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1dp" android:text="@string/tt_ad_logo_txt"/>
-</LinearLayout>

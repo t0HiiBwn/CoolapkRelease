@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:id="@+id/alert_view" android:tag="layout/feed_warning_0" android:background="#1af44336" android:paddingTop="0dp" android:paddingBottom="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:minHeight="24dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
-    <ImageView android:id="@+id/alert_image_view" android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_alert_circle_outline" android:tint="#fff44336" android:layout_marginStart="8dp"/>
-    <TextView android:textSize="12sp" android:textColor="#fff44336" android:id="@+id/alert_text_view" android:tag="binding_1" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/str_feed_warning" android:layout_weight="1" android:layout_marginStart="7dp"/>
-    <ImageView android:id="@+id/close_alert_view" android:tag="binding_2" android:padding="3dp" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_close_white_24dp" android:tint="#fff44336" android:layout_marginStart="5dp" android:layout_marginEnd="5dp"/>
-</LinearLayout>

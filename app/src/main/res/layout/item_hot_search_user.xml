@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/card_view" android:tag="layout/item_hot_search_user_0" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="42dp" android:paddingStart="16dp" android:paddingEnd="16dp">
-    <com.coolapk.market.widget.UserAvatarView android:layout_gravity="center_vertical" android:id="@+id/icon_view" android:tag="binding_1" android:layout_width="24dp" android:layout_height="24dp" android:scaleType="centerCrop"/>
-    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="16dp">
-        <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_weight="2.7"/>
-        <TextView android:textSize="12sp" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@+id/sub_title_view" android:layout_width="0dp" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_weight="1"/>
-    </LinearLayout>
-</LinearLayout>

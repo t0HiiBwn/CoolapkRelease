@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
-        <item android:icon="@drawable/ic_cube_outline_white_24dp" android:id="@+id/action_market" android:title="@string/title_market"/>
-        <item android:icon="@drawable/ic_lightbulb_outline_white_24dp" android:id="@+id/action_discovery" android:title="@string/title_discovery"/>
-        <item android:icon="@drawable/ic_shape_circle_plus_white_24dp" android:id="@+id/action_group" android:title="@string/title_group"/>
-        <item android:icon="@drawable/ic_person_outline_white_24dp" android:id="@+id/action_mine" android:title="@string/title_mine"/>
-    </group>
-</menu>

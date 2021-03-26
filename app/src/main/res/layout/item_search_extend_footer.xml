@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:gravity="center" android:id="@+id/clear_button" android:tag="layout/item_search_extend_footer_0" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="40dp" android:text="@string/str_clear_search_history" android:maxLines="1" android:lines="1"/>

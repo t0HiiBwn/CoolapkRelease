@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/log_item_0" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textColor="?android:attr/textColorPrimary" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
-    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp"/>
-</LinearLayout>

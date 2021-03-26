@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_link_card_v8_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="1">
-    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="@drawable/divider_content_background_horizontal_1dp">
-        <HorizontalScrollView android:scrollbarSize="0dp" android:id="@+id/scroll_view" android:scrollbars="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
-            <com.coolapk.market.widget.CoolapkTagsView android:id="@+id/keywords_scroll_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-        </HorizontalScrollView>
-        <com.coolapk.market.widget.CoolapkTagsView android:id="@+id/keywords_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    </FrameLayout>
-</com.coolapk.market.design.CoolapkCardView>

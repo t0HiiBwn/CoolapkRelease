@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/item_feed_reply_me_0" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <View android:background="?attr/contentBackgroundTranslucentDividerColor" android:layout_width="match_parent" android:layout_height="9dp"/>
-    <LinearLayout android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="18sp" android:textColor="?android:attr/textColorSecondary" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/text_view" android:layout_width="0dp" android:layout_height="match_parent" android:maxLines="1" android:lines="1" android:layout_weight="1"/>
-        <TextView android:textSize="13sp" android:textColor="?android:attr/textColorSecondary" android:gravity="center_vertical" android:id="@+id/action_view" android:background="?android:attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_feed_detail_conversation"/>
-    </LinearLayout>
-</LinearLayout>

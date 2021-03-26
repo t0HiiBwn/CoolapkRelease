@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="禁用 Xposed 模块" android:key="DISABLE_XPOSED" android:summary="禁用后，所有 Xposed 模块都无法对 酷安 生效"/>
-</PreferenceScreen>

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<launcher_menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <menu android:title="@string/title_qr_code" data="coolmarket://com.coolapk.market/qr_scan" icon=""/>
-    <menu android:title="@string/menu_search" data="coolmarket://com.coolapk.market/search" icon=""/>
-    <menu android:title="@string/menu_add_feed" data="coolmarket://com.coolapk.market/new_feed" icon=""/>
-    <menu android:title="@string/str_coolapker_wallpaper" data="coolmarket://com.coolapk.market/page?url=V8_CHANNEL_COOLPIC&amp;title=酷图" icon=""/>
-</launcher_menu>

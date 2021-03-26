@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_icon_link_grid_card_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
-    <LinearLayout android:orientation="vertical" android:id="@+id/item_view" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <androidx.recyclerview.widget.RecyclerView android:id="@+id/grid_view" android:background="@color/transparent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    </LinearLayout>
-</com.coolapk.market.design.CoolapkCardView>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center" android:id="@+id/owner_view" android:tag="layout/tag_product_owner_0" android:background="#a671ff" android:layout_width="43dp" android:layout_height="16dp" android:layout_marginStart="8dp">
-    <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_tag_outline"/>
-    <TextView android:textSize="10sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/owner_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="机主"/>
-</LinearLayout>

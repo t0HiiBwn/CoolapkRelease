@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/frame_view" android:tag="layout/item_feed_image_0" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <com.coolapk.market.widget.view.ControlGifImageView android:id="@+id/image_view" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent" android:foreground="?android:attr/selectableItemBackground" android:scaleType="fitCenter"/>
-    <TextView android:textSize="10sp" android:textColor="@color/light_text" android:gravity="center" android:layout_gravity="bottom|right|center_vertical|center_horizontal|center|end" android:id="@+id/gif_indicator" android:paddingLeft="2dp" android:paddingRight="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GIF"/>
-    <com.coolapk.market.widget.view.ImageLoadProgressBar android:layout_gravity="center" android:id="@+id/progress_bar" android:visibility="gone" android:layout_width="32dp" android:layout_height="32dp" app:max="100" app:ringColor="@android:color/darker_gray" app:ringWidth="3dp" app:style="0" app:textIsShow="true" app:textSize="12sp"/>
-    <com.coolapk.market.widget.view.DividerLineView android:id="@+id/divider_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
-</FrameLayout>

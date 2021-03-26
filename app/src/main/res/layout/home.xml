@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/root_view" android:tag="layout/home_0" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.coolapk.market.widget.slidr.ScrollStateViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    <ProgressBar android:id="@+id/loading_View" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
-</RelativeLayout>

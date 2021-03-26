@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/item_view" android:tag="layout/item_center_more_title_0" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <View android:background="?attr/contentBackgroundDividerColor" android:layout_width="match_parent" android:layout_height="@dimen/divider_normal"/>
-    <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:gravity="center_vertical" android:id="@+id/title_view" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-</LinearLayout>

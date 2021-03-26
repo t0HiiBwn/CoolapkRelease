@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_my_empty_card_0" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="90dp" app:cardStyle="2">
-    <ImageView android:id="@+id/bg_view" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY"/>
-    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
-        <ImageView android:tag="binding_1" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_plus_white_24dp"/>
-        <TextView android:gravity="center" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="定制我的主页卡片" android:layout_marginStart="8dp"/>
-    </LinearLayout>
-</com.coolapk.market.design.CoolapkCardView>

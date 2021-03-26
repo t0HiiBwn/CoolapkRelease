@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/poi_list_0" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.coolapk.market.widget.PreventAutoScrollRecyclerView android:id="@+id/recycler_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    <TextView android:textSize="15sp" android:textColor="?android:attr/textColorTertiary" android:layout_gravity="center" android:id="@+id/empty_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" style="?android:attr/textAppearance"/>
-    <ProgressBar android:layout_gravity="center" android:id="@+id/progress_bar" android:tag="binding_1" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-</FrameLayout>

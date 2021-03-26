@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="res_2131952313_widget_design_tablayout" parent="@style/res_2131951858_base_widget_design_tablayout">
-        <item name="tabGravity">1</item>
-        <item name="tabMode">1</item>
-    </style>
-</resources>

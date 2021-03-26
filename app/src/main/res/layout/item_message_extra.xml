@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/card_view" android:tag="layout/item_message_extra_0" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <Space android:id="@+id/margin_view" android:layout_width="match_parent" android:layout_height="16dp"/>
-    <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:gravity="center_vertical" android:id="@+id/title_view" android:tag="binding_1" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="240dp" android:paddingStart="6dp" android:paddingEnd="6dp"/>
-</LinearLayout>

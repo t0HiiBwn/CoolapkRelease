@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.coolapk.market.widget.NestedCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:tag="layout/rv_in_fragment_layout_0" android:background="?attr/mainBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.google.android.material.appbar.AppBarLayout android:orientation="vertical" android:id="@+id/app_bar" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/auto_elevation_app_bar_state_list_anim"/>
-    <FrameLayout android:id="@+id/content_fragment" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
-</com.coolapk.market.widget.NestedCoordinatorLayout>

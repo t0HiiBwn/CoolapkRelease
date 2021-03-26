@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:id="@+id/card_view" android:tag="layout/item_simple_user_view_0" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="60dp" android:foreground="?android:attr/selectableItemBackground" android:paddingStart="16dp" android:paddingEnd="16dp">
-    <com.coolapk.market.widget.UserAvatarView android:id="@+id/icon_view" android:tag="binding_1" android:layout_width="28dp" android:layout_height="28dp"/>
-    <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:maxLines="1" android:lines="1"/>
-</LinearLayout>

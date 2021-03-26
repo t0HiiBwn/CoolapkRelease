@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/item_view" android:tag="layout/item_card_manager_0" android:background="?attr/selectableItemBackground" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
-    <ImageView android:layout_gravity="center_vertical" android:id="@+id/less_view" android:tag="binding_1" android:layout_width="40dp" android:layout_height="match_parent" android:src="@drawable/ic_less_white_24dp" android:tint="@color/accent_red"/>
-    <ImageView android:layout_gravity="center_vertical" android:id="@+id/add_view" android:tag="binding_2" android:layout_width="40dp" android:layout_height="match_parent" android:src="@drawable/ic_plus_white_24dp" android:tint="@color/accent_blue"/>
-    <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
-    <ImageView android:layout_gravity="center_vertical" android:id="@+id/drag_view" android:layout_width="40dp" android:layout_height="match_parent" android:src="@drawable/ic_move_white_24dp" android:tint="@color/grey_600"/>
-</LinearLayout>

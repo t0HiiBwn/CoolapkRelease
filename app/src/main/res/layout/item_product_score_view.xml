@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/item_view" android:tag="layout/item_product_score_view_0" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:gravity="center_vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="44dp" android:text="系列产品"/>
-    <View android:background="?attr/currencyColorDivider" android:layout_width="match_parent" android:layout_height="@dimen/thin_divider_size"/>
-    <com.coolapk.market.widget.LinearAdapterLayout android:id="@+id/linear_adapter_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="6dp" android:layout_marginRight="16dp" android:layout_marginBottom="6dp"/>
-</FrameLayout>

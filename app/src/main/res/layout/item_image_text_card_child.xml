@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/card_view" android:tag="layout/item_image_text_card_child_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardCornerRadius="8dp" app:cardElevation="0dp">
-    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <com.coolapk.market.widget.AspectRatioImageView android:id="@+id/image_view" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:aspectRatio="0.45" app:aspectRatioEnabled="true"/>
-        <FrameLayout android:id="@+id/title_container" android:tag="binding_2" android:background="@color/grey" android:paddingLeft="12dp" android:paddingRight="12dp" android:layout_width="match_parent" android:layout_height="52dp">
-            <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@+id/title_view" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2" android:lines="2"/>
-        </FrameLayout>
-    </LinearLayout>
-</androidx.cardview.widget.CardView>

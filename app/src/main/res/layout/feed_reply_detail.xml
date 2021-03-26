@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.coolapk.market.widget.DrawSystemBarFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/main_content" android:tag="layout/feed_reply_detail_0" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" app:drawNavigationBar="true" app:drawStatusBar="true" app:layout_drawStatusBar="true">
-    <com.coolapk.market.widget.view.SlideUpView android:orientation="vertical" android:id="@+id/slide_up_view" android:background="?attr/contentBackgroundColor" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_drawNavigationBar="true">
-        <FrameLayout android:id="@+id/toolbar_content_fragment" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    </com.coolapk.market.widget.view.SlideUpView>
-</com.coolapk.market.widget.DrawSystemBarFrameLayout>

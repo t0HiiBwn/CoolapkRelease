@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
-    <TextView android:textSize="15sp" android:typeface="normal" android:textColor="#161823" android:gravity="top" android:layout_gravity="center" android:id="@+id/tt_item_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11.5dp" android:layout_marginBottom="12dp" android:hint="内容"/>
-    <com.bytedance.sdk.openadsdk.dislike.FlowLayout android:id="@+id/tt_item_tv_son" android:background="@color/tt_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-4dp"/>
-</LinearLayout>

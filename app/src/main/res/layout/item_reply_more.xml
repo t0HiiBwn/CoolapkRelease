@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/item_view" android:tag="layout/item_reply_more_0" android:padding="32dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textColor="?attr/mainTextColor" android:gravity="center" android:layout_gravity="center" android:id="@+id/action_view" android:background="@drawable/capsule_bg" android:paddingLeft="28dp" android:paddingTop="13dp" android:paddingRight="28dp" android:paddingBottom="13dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="查看更多回复"/>
-</LinearLayout>

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/album_item_base_info_0" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:gravity="left" android:id="@+id/introduce_shadow_view" android:tag="binding_1" android:background="?attr/selectableItemBackground" android:paddingLeft="16dp" android:paddingTop="2dp" android:paddingRight="16dp" android:paddingBottom="4dp" android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2"/>
-    <com.coolapk.market.widget.AlbumActionView android:id="@+id/album_action" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-</LinearLayout>

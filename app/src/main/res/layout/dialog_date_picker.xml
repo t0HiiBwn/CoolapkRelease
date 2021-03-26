@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.lany.picker.DatePicker xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_gravity="center_horizontal" android:id="@+id/datePicker" android:tag="layout/dialog_date_picker_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:dp_dayViewShown="true" app:dp_spinnersShown="true"/>

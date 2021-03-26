@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.coolapk.market.widget.DrawSystemBarFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/content_view" android:tag="layout/video_full_screen_0" android:layout_width="match_parent" android:layout_height="match_parent" app:drawNavigationBar="true" app:drawStatusBar="true">
-    <LinearLayout android:orientation="vertical" android:id="@+id/video_container" android:background="#000000" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_drawLeftRightInset="true" app:layout_drawNavigationBar="true" app:layout_drawStatusBar="true"/>
-</com.coolapk.market.widget.DrawSystemBarFrameLayout>

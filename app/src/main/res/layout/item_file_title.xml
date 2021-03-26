@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/item_file_title_0" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="40dp">
-    <TextView android:textSize="12sp" android:ellipsize="end" android:gravity="center" android:id="@+id/option1" android:tag="binding_1" android:background="?android:attr/selectableItemBackground" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="32dp" android:text="@string/str_file_view_up" android:maxLines="1" android:lines="1"/>
-    <TextView android:textSize="14sp" android:textColor="@color/grey" android:ellipsize="end" android:id="@+id/text_view" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
-</LinearLayout>

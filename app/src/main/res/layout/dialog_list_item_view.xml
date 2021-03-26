@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/dialog_list_item_view_0" android:background="?attr/contentBackgroundColor" android:padding="16dp" android:layout_width="match_parent" android:layout_height="90dp" android:foreground="?android:attr/selectableItemBackground">
-    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
-        <TextView android:textSize="18sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/submit_feed_visible_to_all_state"/>
-        <TextView android:id="@+id/description_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/submit_feed_visible_state_all_description"/>
-    </LinearLayout>
-    <ImageView android:id="@+id/check_view" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_done_white_24dp"/>
-</LinearLayout>

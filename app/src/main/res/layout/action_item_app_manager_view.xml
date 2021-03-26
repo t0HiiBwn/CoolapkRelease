@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:tag="layout/action_item_app_manager_view_0" android:focusable="true" android:clickable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="应用管理">
-    <View android:background="?android:attr/selectableItemBackgroundBorderless" android:duplicateParentState="true" android:layout_width="24dp" android:layout_height="24dp" android:layout_centerInParent="true"/>
-    <ImageView android:id="@+id/menu_badge_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_app_manager_white_24dp" android:scaleType="centerInside" android:layout_centerInParent="true"/>
-    <TextView android:textSize="7sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@+id/menu_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:translationY="-2.75dp"/>
-</RelativeLayout>

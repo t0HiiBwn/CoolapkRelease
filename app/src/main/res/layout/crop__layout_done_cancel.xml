@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/res_2131951880_crop_donecancelbar">
-    <FrameLayout android:id="@+id/btn_cancel" style="@style/res_2131951876_crop_actionbutton">
-        <TextView style="@style/res_2131951878_crop_actionbuttontext_cancel"/>
-    </FrameLayout>
-    <FrameLayout android:id="@+id/btn_done" style="@style/res_2131951876_crop_actionbutton">
-        <TextView style="@style/res_2131951879_crop_actionbuttontext_done"/>
-    </FrameLayout>
-</LinearLayout>

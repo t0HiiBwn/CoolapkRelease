@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:icon="@drawable/ic_cube_outline_white_24dp" android:id="@+id/action_market" android:title="市场"/>
-    <item android:icon="@drawable/ic_lightbulb_outline_white_24dp" android:id="@+id/action_discovery" android:title="发现"/>
-    <item android:icon="@drawable/ic_disqus_outline_white_24dp" android:id="@+id/action_feed" android:title="圈子"/>
-    <item android:icon="@drawable/ic_person_outline_white_24dp" android:id="@+id/action_mine" android:title="我"/>
-</menu>

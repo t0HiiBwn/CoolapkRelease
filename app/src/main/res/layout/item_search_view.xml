@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:id="@+id/card_view" android:tag="layout/item_search_view_0" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingEnd="16dp">
-    <EditText android:textSize="14sp" android:id="@+id/edit_text" android:tag="binding_1" android:background="@null" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="@string/str_contact_pick_from_net" android:layout_weight="1" android:imeOptions="actionSearch" android:paddingStart="16dp"/>
-    <ImageView android:id="@+id/image_view" android:background="?android:attr/selectableItemBackgroundBorderless" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_search_white_24dp" android:scaleType="center" android:tint="@color/grey_600"/>
-</LinearLayout>

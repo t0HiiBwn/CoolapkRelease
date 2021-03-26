@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/card_view" android:tag="layout/item_feed_forward_view_0" android:paddingTop="12dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackground" android:paddingStart="16dp" android:paddingEnd="16dp">
-    <ImageView android:id="@+id/icon_view" android:tag="binding_1" android:layout_width="28dp" android:layout_height="28dp"/>
-    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp">
-        <TextView android:textSize="14sp" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1"/>
-        <TextView android:textSize="15sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/text_view" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:lineSpacingMultiplier="1.2"/>
-        <TextView android:textSize="12sp" android:textColor="#9f9f9f" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/reply_reply_info_text" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="36dp" android:maxLines="1" android:lines="1"/>
-    </LinearLayout>
-</LinearLayout>

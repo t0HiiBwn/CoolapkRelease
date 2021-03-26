@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/main_content" android:tag="layout/photo_0" android:background="#000" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.coolapk.market.widget.view.SwipeScaleView android:id="@+id/swipe_scale_view" android:layout_width="match_parent" android:layout_height="match_parent">
-        <com.coolapk.market.widget.CatchErrorViewPager android:id="@+id/view_pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    </com.coolapk.market.widget.view.SwipeScaleView>
-    <TextView android:textSize="14sp" android:textColor="@color/lighter_grey" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/info_view" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="48dp"/>
-</FrameLayout>

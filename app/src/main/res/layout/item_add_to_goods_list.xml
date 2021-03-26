@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/card_view" android:tag="layout/item_add_to_goods_list_0" android:background="?attr/selectableItemBackground" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
-    <CheckBox android:id="@+id/check_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    <ImageView android:id="@+id/icon_view" android:tag="binding_1" android:layout_width="56dp" android:layout_height="56dp" android:scaleType="centerCrop" android:layout_marginStart="8dp"/>
-    <com.dinuscxj.ellipsize.EllipsizeTextView android:textSize="16sp" android:textColor="?android:attr/textColorPrimary" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_marginStart="16dp"/>
-</LinearLayout>

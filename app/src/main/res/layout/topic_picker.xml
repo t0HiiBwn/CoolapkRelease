@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.coolapk.market.widget.DrawSystemBarFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:tag="layout/topic_picker_0" android:background="?attr/mainBackgroundColor" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" app:drawNavigationBar="true" app:drawStatusBar="true">
-    <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952175_themeoverlay_appcompat_actionbar" android:id="@+id/app_bar" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/auto_elevation_app_bar_state_list_anim" app:layout_drawStatusBar="false">
-        <include android:id="@+id/search_header" layout="@layout/search_back_header"/>
-    </com.google.android.material.appbar.AppBarLayout>
-    <FrameLayout android:id="@+id/content_fragment" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="48dp" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_drawNavigationBar="true" app:layout_drawStatusBar="false"/>
-</com.coolapk.market.widget.DrawSystemBarFrameLayout>

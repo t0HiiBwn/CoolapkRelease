@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:tag="layout/dialog_app_rating_0" android:paddingTop="24dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textSize="18sp" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1"/>
-    <RatingBar android:id="@+id/rating_bar" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:numStars="5" android:stepSize="1" android:isIndicator="false" style="@style/RatingBarBig"/>
-</LinearLayout>

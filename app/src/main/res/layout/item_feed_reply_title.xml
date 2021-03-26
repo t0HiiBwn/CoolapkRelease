@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/card_view" android:tag="layout/item_feed_reply_title_0" android:layout_width="match_parent" android:layout_height="48dp"/>

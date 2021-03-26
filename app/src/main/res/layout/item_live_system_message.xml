@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:tag="layout/item_live_system_message_0" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <ImageView android:id="@+id/indicator_view" android:tag="binding_1" android:layout_width="6dp" android:layout_height="6dp" android:layout_marginLeft="13dp" android:src="@drawable/live_system_message_indicator"/>
-    <TextView android:textColor="?android:attr/textColorSecondary" android:id="@+id/message_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp"/>
-</LinearLayout>

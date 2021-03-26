@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_image_list_card_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="1">
-    <FrameLayout android:id="@+id/item_view" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <com.coolapk.market.widget.view.MaxWidthFrameLayout android:id="@+id/frame_view" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <com.youth.banner.Banner android:id="@+id/banner_view" android:layout_width="match_parent" android:layout_height="match_parent" app:banner_default_image="@drawable/img_placeholder_16_9" app:delay_time="5000" app:image_scale_type="1" app:indicator_drawable_selected="@drawable/image_indicator_selected" app:indicator_drawable_unselected="@drawable/image_indicator_unselected" app:indicator_height="4dp" app:indicator_margin="4dp" app:indicator_width="4dp" app:layout_aspectRatio="300%" app:layout_widthPercent="100%"/>
-        </com.coolapk.market.widget.view.MaxWidthFrameLayout>
-    </FrameLayout>
-</com.coolapk.market.design.CoolapkCardView>

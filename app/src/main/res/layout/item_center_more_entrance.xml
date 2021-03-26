@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/item_view" android:tag="layout/item_center_more_entrance_0" android:background="?attr/contentBackgroundColor" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:id="@+id/title_view" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="快捷入口"/>
-        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
-        <TextView android:textSize="12sp" android:gravity="center" android:layout_gravity="center" android:id="@+id/action_view" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    </LinearLayout>
-    <com.coolapk.market.view.center.InternalRecyclerView android:id="@+id/recycler_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-</LinearLayout>

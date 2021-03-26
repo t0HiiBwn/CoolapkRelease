@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:tag="layout/item_main_catogory_type_0" android:layout_width="match_parent" android:layout_height="48dp">
-    <LinearLayout android:gravity="center" android:id="@+id/click_1" android:paddingLeft="4dp" android:paddingTop="6dp" android:paddingRight="4dp" android:paddingBottom="6dp" android:layout_width="wrap_content" android:layout_height="match_parent">
-        <CheckedTextView android:textColor="@drawable/pic_tab_text_color" android:layout_gravity="center" android:id="@+id/text_view1" android:tag="binding_1" android:background="@drawable/pic_tab_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_app_category_title_app" style="@style/switch_pic_tab"/>
-    </LinearLayout>
-    <LinearLayout android:gravity="center" android:id="@+id/click_2" android:paddingLeft="4dp" android:paddingTop="6dp" android:paddingRight="4dp" android:paddingBottom="6dp" android:layout_width="wrap_content" android:layout_height="match_parent">
-        <CheckedTextView android:textColor="@drawable/pic_tab_text_color" android:layout_gravity="center" android:id="@+id/text_view2" android:tag="binding_2" android:background="@drawable/pic_tab_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_app_category_title_game" style="@style/switch_pic_tab"/>
-    </LinearLayout>
-</LinearLayout>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/album_list_item_card_nonuple_item_0" android:paddingLeft="12dp" android:paddingTop="8dp" android:paddingRight="12dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:foreground="?attr/selectableItemBackground" android:layout_weight="1">
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-        <ImageView android:id="@+id/icon_view" android:tag="binding_1" android:layout_width="52dp" android:layout_height="52dp" android:layout_centerHorizontal="true" app:aspectRatio="1" app:aspectRatioEnabled="true"/>
-        <TextView android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:gravity="center_horizontal" android:id="@+id/title_view" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:maxLines="2" android:minLines="2" android:layout_below="@+id/icon_view"/>
-        <TextView android:textSize="12sp" android:textColor="?android:attr/textColorSecondary" android:gravity="center_horizontal" android:id="@+id/apk_num_view" android:tag="binding_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_below="@+id/title_view"/>
-    </RelativeLayout>
-</FrameLayout>

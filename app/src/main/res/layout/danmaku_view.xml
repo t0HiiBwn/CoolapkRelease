@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.coolapk.market.view.danmaku.easy.danmaku.DanmakuView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:textSize="18sp" android:textStyle="bold" android:textColor="#fff" android:ellipsize="none" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="26dp" android:singleLine="true" app:outlineColor="#000" app:outlineWidth="1dp"/>

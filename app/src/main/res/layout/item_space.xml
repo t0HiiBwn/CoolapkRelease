@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Space xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/space_view" android:tag="layout/item_space_0" android:layout_width="match_parent" android:layout_height="40dp"/>

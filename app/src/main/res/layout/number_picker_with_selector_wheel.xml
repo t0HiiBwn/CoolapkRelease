@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
-    <view android:textAppearance="?android:attr/textAppearanceMedium" android:textSize="14sp" android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:id="@+id/np__numberpicker_input" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" class="com.lany.picker.NumberPicker$CustomEditText"/>
-</merge>

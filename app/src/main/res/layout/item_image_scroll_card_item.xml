@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/item_view" android:tag="layout/item_image_scroll_card_item_0" android:layout_width="104dp" android:layout_height="wrap_content" android:foreground="?android:attr/selectableItemBackground" app:cardBackgroundColor="?attr/contentBackgroundColor" app:cardCornerRadius="8dp" app:cardElevation="0dp" app:cardMaxElevation="0dp">
-    <com.coolapk.market.widget.AspectRatioImageView android:id="@+id/image_view" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:aspectRatio="0.6" app:aspectRatioEnabled="true"/>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="#66212121" android:padding="4dp" android:layout_width="match_parent" android:layout_height="match_parent">
-        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2"/>
-        <TextView android:textSize="10sp" android:textColor="#ffffff" android:ellipsize="end" android:gravity="center" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:maxLines="1" android:lines="1"/>
-    </LinearLayout>
-</androidx.cardview.widget.CardView>

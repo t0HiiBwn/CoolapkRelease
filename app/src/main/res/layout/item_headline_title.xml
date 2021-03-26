@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_vertical" android:tag="layout/item_headline_title_0" android:background="?android:attr/selectableItemBackground" android:paddingLeft="16dp" android:paddingRight="6dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <TextView android:textSize="16sp" android:textColor="?android:attr/textColorSecondary" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/str_headline_ba" android:layout_weight="1"/>
-    <TextView android:textSize="12sp" android:id="@+id/refresh_text_view" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    <ImageView android:id="@+id/up_view" android:background="?android:attr/selectableItemBackground" android:visibility="gone" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_chevron_double_up_white_24dp" android:scaleType="centerInside" android:tint="?android:attr/textColorTertiary"/>
-    <ImageView android:id="@+id/refresh_view" android:background="?android:attr/selectableItemBackgroundBorderless" android:layout_width="44dp" android:layout_height="44dp" android:src="@drawable/ic_refresh_white_24dp" android:scaleType="centerInside" android:tint="?android:attr/textColorTertiary"/>
-</LinearLayout>

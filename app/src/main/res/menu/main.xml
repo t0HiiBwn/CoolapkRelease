@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:icon="@drawable/ic_qrcode_white_24dp" android:id="@+id/action_qr_scan" android:visible="false" android:title="@string/menu_qr_scan" app:showAsAction="always"/>
-    <item android:icon="@drawable/ic_notifications_white_24dp" android:id="@+id/action_notification" android:title="@string/menu_notification" app:actionLayout="@layout/action_item_badge_view" app:showAsAction="always"/>
-    <item android:icon="@drawable/ic_apps_white_24dp" android:id="@+id/action_app" android:visible="false" android:title="@string/title_app_manager" app:showAsAction="always"/>
-    <item android:icon="@drawable/ic_plus_outline_white_24dp" android:id="@+id/action_add" android:visible="false" android:title="@string/menu_add_feed" app:actionLayout="@layout/action_item_post" app:showAsAction="always"/>
-    <item android:icon="@drawable/ic_search_white_24dp" android:id="@+id/action_search" android:visible="false" android:title="@string/menu_search" app:showAsAction="always"/>
-</menu>

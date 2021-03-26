@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.coolapk.market.widget.stackcard.StackFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/item_view" android:tag="layout/item_feed_stack_item_0" android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout android:orientation="vertical" android:id="@+id/card_view" android:tag="binding_1" android:paddingLeft="-4dp" android:paddingTop="-4dp" android:paddingRight="-4dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <Space android:id="@+id/header_space_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-        <com.coolapk.market.widget.view.CoolEllipsizeTextView android:textSize="15sp" android:textColor="?android:attr/textColorSecondary" android:layout_gravity="center_vertical" android:id="@+id/text_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:maxHeight="68dp" android:minHeight="68dp" android:maxLines="3" android:lines="3" android:lineSpacingMultiplier="1.2"/>
-    </LinearLayout>
-</com.coolapk.market.widget.stackcard.StackFrameLayout>
