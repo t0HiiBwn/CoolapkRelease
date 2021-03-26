@@ -32,9 +32,7 @@ public class TruckStep implements Parcelable {
     private List<LatLonPoint> i;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private List<RouteSearchCity> f1254l;
+    private List<RouteSearchCity> l;
     private List<TMC> m;
 
     @Override // android.os.Parcelable
@@ -57,7 +55,7 @@ public class TruckStep implements Parcelable {
         this.i = parcel.createTypedArrayList(LatLonPoint.CREATOR);
         this.j = parcel.readString();
         this.k = parcel.readString();
-        this.f1254l = parcel.createTypedArrayList(RouteSearchCity.CREATOR);
+        this.l = parcel.createTypedArrayList(RouteSearchCity.CREATOR);
         this.m = parcel.createTypedArrayList(TMC.CREATOR);
     }
 
@@ -106,7 +104,7 @@ public class TruckStep implements Parcelable {
     }
 
     public void setRouteSearchCityList(List<RouteSearchCity> list) {
-        this.f1254l = list;
+        this.l = list;
     }
 
     public void setTMCs(List<TMC> list) {
@@ -158,7 +156,7 @@ public class TruckStep implements Parcelable {
     }
 
     public List<RouteSearchCity> getRouteSearchCityList() {
-        return this.f1254l;
+        return this.l;
     }
 
     public List<TMC> getTMCs() {
@@ -178,7 +176,7 @@ public class TruckStep implements Parcelable {
         parcel.writeTypedList(this.i);
         parcel.writeString(this.j);
         parcel.writeString(this.k);
-        parcel.writeTypedList(this.f1254l);
+        parcel.writeTypedList(this.l);
         parcel.writeTypedList(this.m);
     }
 }

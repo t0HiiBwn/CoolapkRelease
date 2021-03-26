@@ -75,8 +75,8 @@ public final class ClientExceptionHandler {
     private final void showBindMobileDialog(Context context, ClientException clientException) {
         SimpleDialog newInstance = SimpleDialog.newInstance();
         newInstance.setMessage(clientException.getMessage());
-        newInstance.setNegativeButton(2131886706);
-        newInstance.setPositiveButton(2131887011, new ClientExceptionHandler$showBindMobileDialog$1(context));
+        newInstance.setNegativeButton(2131886768);
+        newInstance.setPositiveButton(2131887073, new ClientExceptionHandler$showBindMobileDialog$1(context));
         FragmentManager supportFragmentManager = ContextExtendsKt.requireAppCompatActivity(context).getSupportFragmentManager();
         Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "context.requireAppCompat…().supportFragmentManager");
         newInstance.show(supportFragmentManager, (String) null);

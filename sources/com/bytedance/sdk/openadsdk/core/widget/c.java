@@ -23,9 +23,7 @@ public class c extends Dialog {
     private String i;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1325l;
+    private String l;
     private int m = -1;
     private boolean n = false;
 
@@ -93,8 +91,8 @@ public class c extends Dialog {
         } else {
             this.f.setText("确定");
         }
-        if (!TextUtils.isEmpty(this.f1325l)) {
-            this.e.setText(this.f1325l);
+        if (!TextUtils.isEmpty(this.l)) {
+            this.e.setText(this.l);
         } else {
             this.e.setText("取消");
         }
@@ -145,7 +143,7 @@ public class c extends Dialog {
     }
 
     public c c(String str) {
-        this.f1325l = str;
+        this.l = str;
         return this;
     }
 }

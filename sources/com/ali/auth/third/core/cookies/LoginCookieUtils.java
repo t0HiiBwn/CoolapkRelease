@@ -9,8 +9,8 @@ public class LoginCookieUtils {
     private static final int b = 8;
 
     public static void expiresCookies(c cVar) {
-        Long l2 = 1000L;
-        cVar.e = l2.longValue();
+        Long l = 1000L;
+        cVar.e = l.longValue();
     }
 
     public static String getHttpDomin(c cVar) {

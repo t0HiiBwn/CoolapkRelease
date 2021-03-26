@@ -21,7 +21,7 @@ public abstract class ItemPicTypeTabBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPicTypeTabBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemPicTypeTabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558854, viewGroup, z, obj);
+        return (ItemPicTypeTabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558861, viewGroup, z, obj);
     }
 
     public static ItemPicTypeTabBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class ItemPicTypeTabBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPicTypeTabBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemPicTypeTabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558854, null, false, obj);
+        return (ItemPicTypeTabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558861, null, false, obj);
     }
 
     public static ItemPicTypeTabBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class ItemPicTypeTabBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPicTypeTabBinding bind(View view, Object obj) {
-        return (ItemPicTypeTabBinding) bind(obj, view, 2131558854);
+        return (ItemPicTypeTabBinding) bind(obj, view, 2131558861);
     }
 }

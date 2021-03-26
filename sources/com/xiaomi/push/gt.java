@@ -1,164 +1,404 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import android.net.TrafficStats;
-import android.os.Process;
-import android.os.SystemClock;
-import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.service.XMPushService;
+import java.io.Serializable;
+import java.util.BitSet;
 
-public class gt implements fl {
-    private int a;
+public class gt implements hu<gt, Object>, Serializable, Cloneable {
+    private static final il h = new il("OnlineConfigItem");
+    private static final id i = new id("", (byte) 8, 1);
+    private static final id j = new id("", (byte) 8, 2);
+    private static final id k = new id("", (byte) 2, 3);
+    private static final id l = new id("", (byte) 8, 4);
+    private static final id m = new id("", (byte) 10, 5);
+    private static final id n = new id("", (byte) 11, 6);
+    private static final id o = new id("", (byte) 2, 7);
+    public int a;
+    public int b;
+    public boolean c;
+    public int d;
+    public long e;
+    public String f;
+    public boolean g;
+    private BitSet p = new BitSet(6);
 
-    /* renamed from: a  reason: collision with other field name */
-    private long f523a = 0;
-
-    /* renamed from: a  reason: collision with other field name */
-    fi f524a;
-
-    /* renamed from: a  reason: collision with other field name */
-    XMPushService f525a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private Exception f526a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private String f527a;
-    private long b = 0;
-    private long c = 0;
-    private long d = 0;
-    private long e = 0;
-    private long f = 0;
-
-    gt(XMPushService xMPushService) {
-        this.f525a = xMPushService;
-        this.f527a = "";
-        b();
-        int myUid = Process.myUid();
-        try {
-            this.f = TrafficStats.getUidRxBytes(myUid);
-            this.e = TrafficStats.getUidTxBytes(myUid);
-        } catch (Exception e2) {
-            b.m41a("Failed to obtain traffic data during initialization: " + e2);
-            this.f = -1;
-            this.e = -1;
-        }
+    public int a() {
+        return this.a;
     }
 
-    private void b() {
-        this.b = 0;
-        this.d = 0;
-        this.f523a = 0;
-        this.c = 0;
-        long elapsedRealtime = SystemClock.elapsedRealtime();
-        if (bc.b(this.f525a)) {
-            this.f523a = elapsedRealtime;
-        }
-        if (this.f525a.m588c()) {
-            this.c = elapsedRealtime;
-        }
-    }
-
-    private synchronized void c() {
-        b.c("stat connpt = " + this.f527a + " netDuration = " + this.b + " ChannelDuration = " + this.d + " channelConnectedTime = " + this.c);
-        ey eyVar = new ey();
-        eyVar.f423a = 0;
-        eyVar.a(ex.CHANNEL_ONLINE_RATE.a());
-        eyVar.a(this.f527a);
-        eyVar.d((int) (System.currentTimeMillis() / 1000));
-        eyVar.b((int) (this.b / 1000));
-        eyVar.c((int) (this.d / 1000));
-        gu.m378a().a(eyVar);
-        b();
-    }
-
-    Exception a() {
-        return this.f526a;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public synchronized void m377a() {
-        XMPushService xMPushService = this.f525a;
-        if (xMPushService != null) {
-            String a2 = bc.m129a((Context) xMPushService);
-            boolean b2 = bc.b(this.f525a);
-            long elapsedRealtime = SystemClock.elapsedRealtime();
-            long j = this.f523a;
-            if (j > 0) {
-                this.b += elapsedRealtime - j;
-                this.f523a = 0;
+    @Override // com.xiaomi.push.hu
+    public void a(ig igVar) {
+        igVar.f();
+        while (true) {
+            id h2 = igVar.h();
+            if (h2.b == 0) {
+                igVar.g();
+                n();
+                return;
             }
-            long j2 = this.c;
-            if (j2 != 0) {
-                this.d += elapsedRealtime - j2;
-                this.c = 0;
+            switch (h2.c) {
+                case 1:
+                    if (h2.b == 8) {
+                        this.a = igVar.s();
+                        a(true);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 2:
+                    if (h2.b == 8) {
+                        this.b = igVar.s();
+                        b(true);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 3:
+                    if (h2.b == 2) {
+                        this.c = igVar.p();
+                        c(true);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 4:
+                    if (h2.b == 8) {
+                        this.d = igVar.s();
+                        d(true);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 5:
+                    if (h2.b == 10) {
+                        this.e = igVar.t();
+                        e(true);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 6:
+                    if (h2.b == 11) {
+                        this.f = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 7:
+                    if (h2.b == 2) {
+                        this.g = igVar.p();
+                        f(true);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
             }
-            if (b2) {
-                if ((!TextUtils.equals(this.f527a, a2) && this.b > 30000) || this.b > 5400000) {
-                    c();
-                }
-                this.f527a = a2;
-                if (this.f523a == 0) {
-                    this.f523a = elapsedRealtime;
-                }
-                if (this.f525a.m588c()) {
-                    this.c = elapsedRealtime;
-                }
+            ij.a(igVar, h2.b);
+            igVar.i();
+        }
+    }
+
+    public void a(boolean z) {
+        this.p.set(0, z);
+    }
+
+    public boolean a(gt gtVar) {
+        if (gtVar == null) {
+            return false;
+        }
+        boolean b2 = b();
+        boolean b3 = gtVar.b();
+        if ((b2 || b3) && (!b2 || !b3 || this.a != gtVar.a)) {
+            return false;
+        }
+        boolean d2 = d();
+        boolean d3 = gtVar.d();
+        if ((d2 || d3) && (!d2 || !d3 || this.b != gtVar.b)) {
+            return false;
+        }
+        boolean e2 = e();
+        boolean e3 = gtVar.e();
+        if ((e2 || e3) && (!e2 || !e3 || this.c != gtVar.c)) {
+            return false;
+        }
+        boolean g2 = g();
+        boolean g3 = gtVar.g();
+        if ((g2 || g3) && (!g2 || !g3 || this.d != gtVar.d)) {
+            return false;
+        }
+        boolean i2 = i();
+        boolean i3 = gtVar.i();
+        if ((i2 || i3) && (!i2 || !i3 || this.e != gtVar.e)) {
+            return false;
+        }
+        boolean k2 = k();
+        boolean k3 = gtVar.k();
+        if ((k2 || k3) && (!k2 || !k3 || !this.f.equals(gtVar.f))) {
+            return false;
+        }
+        boolean m2 = m();
+        boolean m3 = gtVar.m();
+        if (m2 || m3) {
+            return m2 && m3 && this.g == gtVar.g;
+        }
+        return true;
+    }
+
+    /* renamed from: b */
+    public int compareTo(gt gtVar) {
+        int a2;
+        int a3;
+        int a4;
+        int a5;
+        int a6;
+        int a7;
+        int a8;
+        if (!getClass().equals(gtVar.getClass())) {
+            return getClass().getName().compareTo(gtVar.getClass().getName());
+        }
+        int compareTo = Boolean.valueOf(b()).compareTo(Boolean.valueOf(gtVar.b()));
+        if (compareTo != 0) {
+            return compareTo;
+        }
+        if (b() && (a8 = hv.a(this.a, gtVar.a)) != 0) {
+            return a8;
+        }
+        int compareTo2 = Boolean.valueOf(d()).compareTo(Boolean.valueOf(gtVar.d()));
+        if (compareTo2 != 0) {
+            return compareTo2;
+        }
+        if (d() && (a7 = hv.a(this.b, gtVar.b)) != 0) {
+            return a7;
+        }
+        int compareTo3 = Boolean.valueOf(e()).compareTo(Boolean.valueOf(gtVar.e()));
+        if (compareTo3 != 0) {
+            return compareTo3;
+        }
+        if (e() && (a6 = hv.a(this.c, gtVar.c)) != 0) {
+            return a6;
+        }
+        int compareTo4 = Boolean.valueOf(g()).compareTo(Boolean.valueOf(gtVar.g()));
+        if (compareTo4 != 0) {
+            return compareTo4;
+        }
+        if (g() && (a5 = hv.a(this.d, gtVar.d)) != 0) {
+            return a5;
+        }
+        int compareTo5 = Boolean.valueOf(i()).compareTo(Boolean.valueOf(gtVar.i()));
+        if (compareTo5 != 0) {
+            return compareTo5;
+        }
+        if (i() && (a4 = hv.a(this.e, gtVar.e)) != 0) {
+            return a4;
+        }
+        int compareTo6 = Boolean.valueOf(k()).compareTo(Boolean.valueOf(gtVar.k()));
+        if (compareTo6 != 0) {
+            return compareTo6;
+        }
+        if (k() && (a3 = hv.a(this.f, gtVar.f)) != 0) {
+            return a3;
+        }
+        int compareTo7 = Boolean.valueOf(m()).compareTo(Boolean.valueOf(gtVar.m()));
+        if (compareTo7 != 0) {
+            return compareTo7;
+        }
+        if (!m() || (a2 = hv.a(this.g, gtVar.g)) == 0) {
+            return 0;
+        }
+        return a2;
+    }
+
+    @Override // com.xiaomi.push.hu
+    public void b(ig igVar) {
+        n();
+        igVar.a(h);
+        if (b()) {
+            igVar.a(i);
+            igVar.a(this.a);
+            igVar.b();
+        }
+        if (d()) {
+            igVar.a(j);
+            igVar.a(this.b);
+            igVar.b();
+        }
+        if (e()) {
+            igVar.a(k);
+            igVar.a(this.c);
+            igVar.b();
+        }
+        if (g()) {
+            igVar.a(l);
+            igVar.a(this.d);
+            igVar.b();
+        }
+        if (i()) {
+            igVar.a(m);
+            igVar.a(this.e);
+            igVar.b();
+        }
+        if (this.f != null && k()) {
+            igVar.a(n);
+            igVar.a(this.f);
+            igVar.b();
+        }
+        if (m()) {
+            igVar.a(o);
+            igVar.a(this.g);
+            igVar.b();
+        }
+        igVar.c();
+        igVar.a();
+    }
+
+    public void b(boolean z) {
+        this.p.set(1, z);
+    }
+
+    public boolean b() {
+        return this.p.get(0);
+    }
+
+    public int c() {
+        return this.b;
+    }
+
+    public void c(boolean z) {
+        this.p.set(2, z);
+    }
+
+    public void d(boolean z) {
+        this.p.set(3, z);
+    }
+
+    public boolean d() {
+        return this.p.get(1);
+    }
+
+    public void e(boolean z) {
+        this.p.set(4, z);
+    }
+
+    public boolean e() {
+        return this.p.get(2);
+    }
+
+    @Override // java.lang.Object
+    public boolean equals(Object obj) {
+        if (obj != null && (obj instanceof gt)) {
+            return a((gt) obj);
+        }
+        return false;
+    }
+
+    public int f() {
+        return this.d;
+    }
+
+    public void f(boolean z) {
+        this.p.set(5, z);
+    }
+
+    public boolean g() {
+        return this.p.get(3);
+    }
+
+    public long h() {
+        return this.e;
+    }
+
+    @Override // java.lang.Object
+    public int hashCode() {
+        return 0;
+    }
+
+    public boolean i() {
+        return this.p.get(4);
+    }
+
+    public String j() {
+        return this.f;
+    }
+
+    public boolean k() {
+        return this.f != null;
+    }
+
+    public boolean l() {
+        return this.g;
+    }
+
+    public boolean m() {
+        return this.p.get(5);
+    }
+
+    public void n() {
+    }
+
+    @Override // java.lang.Object
+    public String toString() {
+        boolean z;
+        StringBuilder sb = new StringBuilder("OnlineConfigItem(");
+        boolean z2 = false;
+        if (b()) {
+            sb.append("key:");
+            sb.append(this.a);
+            z = false;
+        } else {
+            z = true;
+        }
+        if (d()) {
+            if (!z) {
+                sb.append(", ");
             }
+            sb.append("type:");
+            sb.append(this.b);
+            z = false;
         }
-    }
-
-    @Override // com.xiaomi.push.fl
-    public void a(fi fiVar) {
-        m377a();
-        this.c = SystemClock.elapsedRealtime();
-        gw.a(0, ex.CONN_SUCCESS.a(), fiVar.m331a(), fiVar.mo328a());
-    }
-
-    @Override // com.xiaomi.push.fl
-    public void a(fi fiVar, int i, Exception exc) {
-        long j;
-        if (this.a == 0 && this.f526a == null) {
-            this.a = i;
-            this.f526a = exc;
-            gw.b(fiVar.m331a(), exc);
-        }
-        if (i == 22 && this.c != 0) {
-            long a2 = fiVar.a() - this.c;
-            if (a2 < 0) {
-                a2 = 0;
+        if (e()) {
+            if (!z) {
+                sb.append(", ");
             }
-            this.d += a2 + ((long) (fo.b() / 2));
-            this.c = 0;
+            sb.append("clear:");
+            sb.append(this.c);
+            z = false;
         }
-        m377a();
-        int myUid = Process.myUid();
-        long j2 = -1;
-        try {
-            j2 = TrafficStats.getUidRxBytes(myUid);
-            j = TrafficStats.getUidTxBytes(myUid);
-        } catch (Exception e2) {
-            b.m41a("Failed to obtain traffic data: " + e2);
-            j = -1;
+        if (g()) {
+            if (!z) {
+                sb.append(", ");
+            }
+            sb.append("intValue:");
+            sb.append(this.d);
+            z = false;
         }
-        b.c("Stats rx=" + (j2 - this.f) + ", tx=" + (j - this.e));
-        this.f = j2;
-        this.e = j;
-    }
-
-    @Override // com.xiaomi.push.fl
-    public void a(fi fiVar, Exception exc) {
-        gw.a(0, ex.CHANNEL_CON_FAIL.a(), 1, fiVar.m331a(), bc.b(this.f525a) ? 1 : 0);
-        m377a();
-    }
-
-    @Override // com.xiaomi.push.fl
-    public void b(fi fiVar) {
-        this.a = 0;
-        this.f526a = null;
-        this.f524a = fiVar;
-        this.f527a = bc.m129a((Context) this.f525a);
-        gw.a(0, ex.CONN_SUCCESS.a());
+        if (i()) {
+            if (!z) {
+                sb.append(", ");
+            }
+            sb.append("longValue:");
+            sb.append(this.e);
+            z = false;
+        }
+        if (k()) {
+            if (!z) {
+                sb.append(", ");
+            }
+            sb.append("stringValue:");
+            String str = this.f;
+            if (str == null) {
+                str = "null";
+            }
+            sb.append(str);
+        } else {
+            z2 = z;
+        }
+        if (m()) {
+            if (!z2) {
+                sb.append(", ");
+            }
+            sb.append("boolValue:");
+            sb.append(this.g);
+        }
+        sb.append(")");
+        return sb.toString();
     }
 }

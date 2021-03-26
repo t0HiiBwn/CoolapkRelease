@@ -141,55 +141,55 @@ public final class Cookie {
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "name", imports = {}))
     /* renamed from: -deprecated_name  reason: not valid java name */
-    public final String m2233deprecated_name() {
+    public final String m1482deprecated_name() {
         return this.name;
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "value", imports = {}))
     /* renamed from: -deprecated_value  reason: not valid java name */
-    public final String m2237deprecated_value() {
+    public final String m1486deprecated_value() {
         return this.value;
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "persistent", imports = {}))
     /* renamed from: -deprecated_persistent  reason: not valid java name */
-    public final boolean m2235deprecated_persistent() {
+    public final boolean m1484deprecated_persistent() {
         return this.persistent;
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "expiresAt", imports = {}))
     /* renamed from: -deprecated_expiresAt  reason: not valid java name */
-    public final long m2230deprecated_expiresAt() {
+    public final long m1479deprecated_expiresAt() {
         return this.expiresAt;
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "hostOnly", imports = {}))
     /* renamed from: -deprecated_hostOnly  reason: not valid java name */
-    public final boolean m2231deprecated_hostOnly() {
+    public final boolean m1480deprecated_hostOnly() {
         return this.hostOnly;
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "domain", imports = {}))
     /* renamed from: -deprecated_domain  reason: not valid java name */
-    public final String m2229deprecated_domain() {
+    public final String m1478deprecated_domain() {
         return this.domain;
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "path", imports = {}))
     /* renamed from: -deprecated_path  reason: not valid java name */
-    public final String m2234deprecated_path() {
+    public final String m1483deprecated_path() {
         return this.path;
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "httpOnly", imports = {}))
     /* renamed from: -deprecated_httpOnly  reason: not valid java name */
-    public final boolean m2232deprecated_httpOnly() {
+    public final boolean m1481deprecated_httpOnly() {
         return this.httpOnly;
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "secure", imports = {}))
     /* renamed from: -deprecated_secure  reason: not valid java name */
-    public final boolean m2236deprecated_secure() {
+    public final boolean m1485deprecated_secure() {
         return this.secure;
     }
 
@@ -370,9 +370,9 @@ public final class Cookie {
             return parse$okhttp(System.currentTimeMillis(), httpUrl, str);
         }
 
-        /* JADX WARNING: Removed duplicated region for block: B:59:0x011d  */
-        /* JADX WARNING: Removed duplicated region for block: B:60:0x0120  */
-        /* JADX WARNING: Removed duplicated region for block: B:76:0x0166  */
+        /* JADX WARNING: Removed duplicated region for block: B:59:0x011e  */
+        /* JADX WARNING: Removed duplicated region for block: B:60:0x0121  */
+        /* JADX WARNING: Removed duplicated region for block: B:76:0x0167  */
         public final Cookie parse$okhttp(long j, HttpUrl httpUrl, String str) {
             long j2;
             String host;

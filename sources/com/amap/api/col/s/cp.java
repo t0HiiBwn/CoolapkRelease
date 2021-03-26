@@ -47,9 +47,7 @@ public final class cp implements Closeable {
     private final int i;
     private long j;
     private final int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private long f1207l = 0;
+    private long l = 0;
     private Writer m;
     private int n = 1000;
     private final LinkedHashMap<String, c> o = new LinkedHashMap<>(0, 0.75f, true);
@@ -227,7 +225,7 @@ public final class cp implements Closeable {
             int i2 = 0;
             if (next.e == null) {
                 while (i2 < this.k) {
-                    this.f1207l += next.c[i2];
+                    this.l += next.c[i2];
                     i2++;
                 }
             } else {
@@ -377,7 +375,7 @@ public final class cp implements Closeable {
                     long j2 = cVar.c[i3];
                     long length = a2.length();
                     cVar.c[i3] = length;
-                    this.f1207l = (this.f1207l - j2) + length;
+                    this.l = (this.l - j2) + length;
                 }
             }
             this.p++;
@@ -395,7 +393,7 @@ public final class cp implements Closeable {
                 this.m.write("REMOVE " + cVar.b + '\n');
             }
             this.m.flush();
-            if (this.f1207l > this.j || i()) {
+            if (this.l > this.j || i()) {
                 e().submit(this.s);
             }
             return;
@@ -422,7 +420,7 @@ public final class cp implements Closeable {
                             throw new IOException("failed to delete ".concat(String.valueOf(a2)));
                         }
                     }
-                    this.f1207l -= cVar.c[i2];
+                    this.l -= cVar.c[i2];
                     cVar.c[i2] = 0;
                 }
                 this.p++;
@@ -468,7 +466,7 @@ public final class cp implements Closeable {
     /* access modifiers changed from: private */
     public void k() throws IOException {
         while (true) {
-            if (this.f1207l > this.j || this.o.size() > this.n) {
+            if (this.l > this.j || this.o.size() > this.n) {
                 c(this.o.entrySet().iterator().next().getKey());
             } else {
                 return;

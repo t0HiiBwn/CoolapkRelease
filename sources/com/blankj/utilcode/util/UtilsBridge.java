@@ -490,6 +490,10 @@ class UtilsBridge {
         return ViewUtils.layoutId2View(i);
     }
 
+    static boolean isLayoutRtl() {
+        return ViewUtils.isLayoutRtl();
+    }
+
     static final class FileHead {
         private LinkedHashMap<String, String> mFirst = new LinkedHashMap<>();
         private LinkedHashMap<String, String> mLast = new LinkedHashMap<>();

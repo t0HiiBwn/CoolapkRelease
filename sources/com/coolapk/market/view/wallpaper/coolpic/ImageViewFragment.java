@@ -116,7 +116,7 @@ public final class ImageViewFragment extends BaseFragment {
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558488, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558489, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…layout, container, false)");
         CoolPicImgLayoutBinding coolPicImgLayoutBinding = (CoolPicImgLayoutBinding) inflate;
         this.photoBinding = coolPicImgLayoutBinding;

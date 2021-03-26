@@ -48,26 +48,26 @@ public class f extends SQLiteOpenHelper {
         onCreate(sQLiteDatabase);
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:61:0x008a, code lost:
-        if (r1 == null) goto L_0x00a2;
+    /* JADX WARNING: Code restructure failed: missing block: B:61:0x008c, code lost:
+        if (r1 == null) goto L_0x00a4;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:62:0x008c, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:62:0x008e, code lost:
         r1.close();
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:70:0x009f, code lost:
-        if (r1 == null) goto L_0x00a2;
+    /* JADX WARNING: Code restructure failed: missing block: B:70:0x00a1, code lost:
+        if (r1 == null) goto L_0x00a4;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:72:0x00a3, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:72:0x00a5, code lost:
         return r0;
      */
-    /* JADX WARNING: Removed duplicated region for block: B:33:0x0062 A[SYNTHETIC, Splitter:B:33:0x0062] */
-    /* JADX WARNING: Removed duplicated region for block: B:44:0x006c A[SYNTHETIC, Splitter:B:44:0x006c] */
-    /* JADX WARNING: Removed duplicated region for block: B:52:0x0075  */
-    /* JADX WARNING: Removed duplicated region for block: B:60:0x0087  */
-    /* JADX WARNING: Removed duplicated region for block: B:69:0x009c  */
-    /* JADX WARNING: Removed duplicated region for block: B:74:0x00a6  */
-    /* JADX WARNING: Removed duplicated region for block: B:76:0x00ab  */
-    /* JADX WARNING: Removed duplicated region for block: B:81:0x0085 A[SYNTHETIC] */
+    /* JADX WARNING: Removed duplicated region for block: B:33:0x0064 A[SYNTHETIC, Splitter:B:33:0x0064] */
+    /* JADX WARNING: Removed duplicated region for block: B:44:0x006e A[SYNTHETIC, Splitter:B:44:0x006e] */
+    /* JADX WARNING: Removed duplicated region for block: B:52:0x0077  */
+    /* JADX WARNING: Removed duplicated region for block: B:60:0x0089  */
+    /* JADX WARNING: Removed duplicated region for block: B:69:0x009e  */
+    /* JADX WARNING: Removed duplicated region for block: B:74:0x00a8  */
+    /* JADX WARNING: Removed duplicated region for block: B:76:0x00ad  */
+    /* JADX WARNING: Removed duplicated region for block: B:81:0x0087 A[SYNTHETIC] */
     public synchronized List<Serializable> a(String str) {
         Throwable th;
         Exception e;
@@ -165,6 +165,7 @@ public class f extends SQLiteOpenHelper {
                     try {
                         com.tencent.open.a.f.b("openSDK_LOG.ReportDatabaseHelper", "getReportItemFromDB has exception.", e);
                         if (cursor != null) {
+                            cursor.close();
                         }
                     } catch (Throwable th5) {
                         th = th5;
@@ -193,25 +194,24 @@ public class f extends SQLiteOpenHelper {
             e = e3;
             com.tencent.open.a.f.b("openSDK_LOG.ReportDatabaseHelper", "getReportItemFromDB has exception.", e);
             if (cursor != null) {
-                cursor.close();
             }
         }
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:54:0x0080, code lost:
-        if (r1 != null) goto L_0x0082;
+    /* JADX WARNING: Code restructure failed: missing block: B:54:0x0082, code lost:
+        if (r1 != null) goto L_0x0084;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:55:0x0082, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:55:0x0084, code lost:
         r1.close();
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:62:0x0092, code lost:
-        if (r1 == null) goto L_0x0095;
+    /* JADX WARNING: Code restructure failed: missing block: B:62:0x0094, code lost:
+        if (r1 == null) goto L_0x0097;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:64:0x0096, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:64:0x0098, code lost:
         return;
      */
-    /* JADX WARNING: Removed duplicated region for block: B:38:0x0058 A[SYNTHETIC, Splitter:B:38:0x0058] */
-    /* JADX WARNING: Removed duplicated region for block: B:49:0x0062  */
+    /* JADX WARNING: Removed duplicated region for block: B:38:0x0059 A[SYNTHETIC, Splitter:B:38:0x0059] */
+    /* JADX WARNING: Removed duplicated region for block: B:49:0x0063  */
     public synchronized void a(String str, List<Serializable> list) {
         ObjectOutputStream objectOutputStream;
         Throwable th;
@@ -305,16 +305,16 @@ public class f extends SQLiteOpenHelper {
         }
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:13:0x001e, code lost:
-        if (r0 != null) goto L_0x0020;
+    /* JADX WARNING: Code restructure failed: missing block: B:13:0x0020, code lost:
+        if (r0 != null) goto L_0x0022;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:14:0x0020, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:14:0x0022, code lost:
         r0.close();
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:20:0x002e, code lost:
-        if (r0 == null) goto L_0x0031;
+    /* JADX WARNING: Code restructure failed: missing block: B:20:0x0030, code lost:
+        if (r0 == null) goto L_0x0033;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:22:0x0032, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:22:0x0034, code lost:
         return;
      */
     public synchronized void b(String str) {

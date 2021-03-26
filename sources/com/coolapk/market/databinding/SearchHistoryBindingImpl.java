@@ -30,12 +30,12 @@ public class SearchHistoryBindingImpl extends SearchHistoryBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131362257, 3);
-        sparseIntArray.put(2131363221, 4);
-        sparseIntArray.put(2131363587, 5);
-        sparseIntArray.put(2131362232, 6);
-        sparseIntArray.put(2131363586, 7);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131362262, 3);
+        sparseIntArray.put(2131363235, 4);
+        sparseIntArray.put(2131363609, 5);
+        sparseIntArray.put(2131362237, 6);
+        sparseIntArray.put(2131363608, 7);
     }
 
     public SearchHistoryBindingImpl(DataBindingComponent dataBindingComponent, View view) {

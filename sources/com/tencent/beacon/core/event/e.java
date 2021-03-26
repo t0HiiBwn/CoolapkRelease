@@ -86,7 +86,7 @@ public final class e {
         try {
             a strategy = StrategyQueryModule.getInstance(this.b).getStrategy();
             if (strategy != null) {
-                a.C0123a b2 = strategy.b(1);
+                a.C0141a b2 = strategy.b(1);
                 if (!(b2 == null || d.a() == null)) {
                     Set<String> d2 = b2.d();
                     if (d2 != null && d2.size() > 0) {

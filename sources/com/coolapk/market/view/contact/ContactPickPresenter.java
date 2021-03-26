@@ -42,10 +42,10 @@ public class ContactPickPresenter extends ContactContract.PickPresenter {
                     Application application = AppHolder.getApplication();
                     List loadRecentAtUser = ContactPickPresenter.this.loadRecentAtUser();
                     if (loadRecentAtUser != null && !loadRecentAtUser.isEmpty()) {
-                        arrayList.add(HolderItem.newBuilder().entityType("holder_type_delete_recent").string(application.getString(2131886797)).value(application.getString(2131886772)).build());
+                        arrayList.add(HolderItem.newBuilder().entityType("holder_type_delete_recent").string(application.getString(2131886859)).value(application.getString(2131886834)).build());
                         arrayList.addAll(loadRecentAtUser);
                     }
-                    arrayList.add(HolderItem.newBuilder().entityType("holder_title").string(application.getString(2131887261)).build());
+                    arrayList.add(HolderItem.newBuilder().entityType("holder_title").string(application.getString(2131887323)).build());
                     arrayList.addAll(data);
                     data = arrayList;
                 }

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.coolapk.market.binding.ViewBindingAdapters;
+import com.coolapk.market.widget.view.TimeTextView;
 
 public class ItemVideoDetailViewPartBindingImpl extends ItemVideoDetailViewPartBinding {
     private static final ViewDataBinding.IncludedLayouts sIncludes = null;
@@ -25,18 +26,18 @@ public class ItemVideoDetailViewPartBindingImpl extends ItemVideoDetailViewPartB
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363918, 8);
-        sparseIntArray.put(2131363912, 9);
-        sparseIntArray.put(2131363604, 10);
-        sparseIntArray.put(2131363582, 11);
-        sparseIntArray.put(2131362131, 12);
-        sparseIntArray.put(2131362348, 13);
-        sparseIntArray.put(2131363332, 14);
-        sparseIntArray.put(2131363613, 15);
-        sparseIntArray.put(2131362873, 16);
-        sparseIntArray.put(2131362872, 17);
-        sparseIntArray.put(2131363146, 18);
-        sparseIntArray.put(2131362285, 19);
+        sparseIntArray.put(2131363943, 8);
+        sparseIntArray.put(2131363937, 9);
+        sparseIntArray.put(2131363626, 10);
+        sparseIntArray.put(2131363604, 11);
+        sparseIntArray.put(2131362134, 12);
+        sparseIntArray.put(2131362354, 13);
+        sparseIntArray.put(2131363348, 14);
+        sparseIntArray.put(2131363635, 15);
+        sparseIntArray.put(2131362884, 16);
+        sparseIntArray.put(2131362883, 17);
+        sparseIntArray.put(2131363160, 18);
+        sparseIntArray.put(2131362290, 19);
     }
 
     public ItemVideoDetailViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -44,7 +45,7 @@ public class ItemVideoDetailViewPartBindingImpl extends ItemVideoDetailViewPartB
     }
 
     private ItemVideoDetailViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view, Object[] objArr) {
-        super(dataBindingComponent, view, 0, (LinearLayout) objArr[12], (FrameLayout) objArr[19], (TextView) objArr[13], (ImageView) objArr[6], (FrameLayout) objArr[0], (TextView) objArr[17], (LinearLayout) objArr[16], (ImageView) objArr[4], (ImageView) objArr[1], (ImageView) objArr[3], (ImageView) objArr[5], (ProgressBar) objArr[18], (LinearLayout) objArr[7], (SeekBar) objArr[14], (TextView) objArr[11], (LinearLayout) objArr[10], (TextView) objArr[15], (FrameLayout) objArr[9], (FrameLayout) objArr[8], (ImageView) objArr[2]);
+        super(dataBindingComponent, view, 0, (LinearLayout) objArr[12], (FrameLayout) objArr[19], (TimeTextView) objArr[13], (ImageView) objArr[6], (FrameLayout) objArr[0], (TextView) objArr[17], (LinearLayout) objArr[16], (ImageView) objArr[4], (ImageView) objArr[1], (ImageView) objArr[3], (ImageView) objArr[5], (ProgressBar) objArr[18], (LinearLayout) objArr[7], (SeekBar) objArr[14], (TextView) objArr[11], (LinearLayout) objArr[10], (TimeTextView) objArr[15], (FrameLayout) objArr[9], (FrameLayout) objArr[8], (ImageView) objArr[2]);
         this.mDirtyFlags = -1;
         this.fullScreenView.setTag(null);
         this.itemView.setTag(null);

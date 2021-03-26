@@ -30,7 +30,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SearchHistoryViewHolder.kt */
 public final class SearchHistoryViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131559125;
+    public static final int LAYOUT_ID = 2131559132;
     private final SearchHistoryBinding binding;
     private final List<String> dataSet;
     private final AtomicInteger historyLines;
@@ -152,7 +152,7 @@ public final class SearchHistoryViewHolder extends BindingViewHolder {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public DataViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558912, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558919, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             ItemActionHandler itemActionHandler = SearchHistoryViewHolder.this.getItemActionHandler();
             Intrinsics.checkNotNullExpressionValue(itemActionHandler, "itemActionHandler");
@@ -174,7 +174,7 @@ public final class SearchHistoryViewHolder extends BindingViewHolder {
     /* compiled from: SearchHistoryViewHolder.kt */
     public static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558912;
+        public static final int LAYOUT_ID = 2131558919;
         private final ItemSearchHistoryBinding binding;
         private String keyword;
         private final Function1<String, Unit> onKeywordClick;
@@ -232,7 +232,7 @@ public final class SearchHistoryViewHolder extends BindingViewHolder {
         public void onClick(View view) {
             Intrinsics.checkNotNullParameter(view, "view");
             super.onClick(view);
-            if (view.getId() == 2131362768) {
+            if (view.getId() == 2131362779) {
                 Function1<String, Unit> function1 = this.onKeywordClick;
                 if (function1 != null) {
                     String str = this.keyword;

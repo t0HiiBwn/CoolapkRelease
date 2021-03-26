@@ -39,7 +39,7 @@ public abstract class ShareListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ShareListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ShareListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559140, viewGroup, z, obj);
+        return (ShareListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559147, viewGroup, z, obj);
     }
 
     public static ShareListBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class ShareListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ShareListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ShareListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559140, null, false, obj);
+        return (ShareListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559147, null, false, obj);
     }
 
     public static ShareListBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class ShareListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ShareListBinding bind(View view, Object obj) {
-        return (ShareListBinding) bind(obj, view, 2131559140);
+        return (ShareListBinding) bind(obj, view, 2131559147);
     }
 }

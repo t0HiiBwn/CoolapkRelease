@@ -33,7 +33,7 @@ public abstract class ItemEmptyViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemEmptyViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemEmptyViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558687, viewGroup, z, obj);
+        return (ItemEmptyViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558693, viewGroup, z, obj);
     }
 
     public static ItemEmptyViewBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class ItemEmptyViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemEmptyViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemEmptyViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558687, null, false, obj);
+        return (ItemEmptyViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558693, null, false, obj);
     }
 
     public static ItemEmptyViewBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class ItemEmptyViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemEmptyViewBinding bind(View view, Object obj) {
-        return (ItemEmptyViewBinding) bind(obj, view, 2131558687);
+        return (ItemEmptyViewBinding) bind(obj, view, 2131558693);
     }
 }

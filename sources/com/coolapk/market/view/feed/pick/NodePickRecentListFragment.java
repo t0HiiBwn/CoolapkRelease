@@ -51,7 +51,7 @@ public final class NodePickRecentListFragment extends DataListFragment {
     @Override // com.coolapk.market.view.main.DataListFragment, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558838).constructor(new NodePickRecentListFragment$onActivityCreated$1(this)).suitedMethod(NodePickRecentListFragment$onActivityCreated$2.INSTANCE).doAfterBind(new NodePickRecentListFragment$onActivityCreated$3(this)).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558845).constructor(new NodePickRecentListFragment$onActivityCreated$1(this)).suitedMethod(NodePickRecentListFragment$onActivityCreated$2.INSTANCE).doAfterBind(new NodePickRecentListFragment$onActivityCreated$3(this)).build(), -1);
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new SingleDividerRule(DividerData.Companion.getEMPTY()));
         getDataBindingInterceptor$presentation_coolapkAppRelease().addCardStyleRule(new GroupListCardStyleRule());
         if (bundle != null && (Intrinsics.areEqual(bundle.getString("key_word"), getKeywords()) ^ true)) {

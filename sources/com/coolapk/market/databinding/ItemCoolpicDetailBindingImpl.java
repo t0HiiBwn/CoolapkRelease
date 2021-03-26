@@ -32,22 +32,22 @@ public class ItemCoolpicDetailBindingImpl extends ItemCoolpicDetailBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363934, 16);
-        sparseIntArray.put(2131363609, 17);
-        sparseIntArray.put(2131362145, 18);
-        sparseIntArray.put(2131363604, 19);
-        sparseIntArray.put(2131362131, 20);
-        sparseIntArray.put(2131362730, 21);
-        sparseIntArray.put(2131363367, 22);
-        sparseIntArray.put(2131363366, 23);
-        sparseIntArray.put(2131361886, 24);
-        sparseIntArray.put(2131362843, 25);
-        sparseIntArray.put(2131362847, 26);
-        sparseIntArray.put(2131362290, 27);
-        sparseIntArray.put(2131362517, 28);
-        sparseIntArray.put(2131362518, 29);
-        sparseIntArray.put(2131363356, 30);
-        sparseIntArray.put(2131362285, 31);
+        sparseIntArray.put(2131363959, 16);
+        sparseIntArray.put(2131363631, 17);
+        sparseIntArray.put(2131362148, 18);
+        sparseIntArray.put(2131363626, 19);
+        sparseIntArray.put(2131362134, 20);
+        sparseIntArray.put(2131362741, 21);
+        sparseIntArray.put(2131363384, 22);
+        sparseIntArray.put(2131363383, 23);
+        sparseIntArray.put(2131361887, 24);
+        sparseIntArray.put(2131362854, 25);
+        sparseIntArray.put(2131362858, 26);
+        sparseIntArray.put(2131362295, 27);
+        sparseIntArray.put(2131362525, 28);
+        sparseIntArray.put(2131362526, 29);
+        sparseIntArray.put(2131363372, 30);
+        sparseIntArray.put(2131362290, 31);
     }
 
     public ItemCoolpicDetailBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -97,9 +97,9 @@ public class ItemCoolpicDetailBindingImpl extends ItemCoolpicDetailBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -115,7 +115,7 @@ public class ItemCoolpicDetailBindingImpl extends ItemCoolpicDetailBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -141,7 +141,7 @@ public class ItemCoolpicDetailBindingImpl extends ItemCoolpicDetailBinding {
         String str2;
         String str3;
         String str4;
-        Long l2;
+        Long l;
         UserInfo userInfo;
         String str5;
         synchronized (this) {
@@ -153,14 +153,14 @@ public class ItemCoolpicDetailBindingImpl extends ItemCoolpicDetailBinding {
         int i = ((9 & j) > 0 ? 1 : ((9 & j) == 0 ? 0 : -1));
         if (i != 0) {
             if (feed != null) {
-                l2 = feed.getDateline();
+                l = feed.getDateline();
                 userInfo = feed.getUserInfo();
                 str3 = feed.getUserName();
                 str2 = feed.getMessage();
                 str5 = feed.getUserAvatar();
             } else {
                 str5 = null;
-                l2 = null;
+                l = null;
                 userInfo = null;
                 str3 = null;
                 str2 = null;
@@ -173,7 +173,7 @@ public class ItemCoolpicDetailBindingImpl extends ItemCoolpicDetailBinding {
                 str4 = null;
             }
         } else {
-            l2 = null;
+            l = null;
             str4 = null;
             str3 = null;
             str2 = null;
@@ -201,7 +201,7 @@ public class ItemCoolpicDetailBindingImpl extends ItemCoolpicDetailBinding {
             ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str, null, 0, 0, bool2, bool2, bool2, bool2, bool2, str6, null, null, bool2, bool2, bool2, null, bool2);
             ImageViewBindingAdapters.setVipSignView(this.avatarView, str4, bool2);
             TextViewBindingAdapters.setTextViewLinkable(this.contentView, str2, null, str6, bool2, null, str6);
-            TextViewBindingAdapters.setTime(this.desView, l2);
+            TextViewBindingAdapters.setTime(this.desView, l);
             TextViewBindingAdapter.setText(this.usernameView, str3);
         }
     }

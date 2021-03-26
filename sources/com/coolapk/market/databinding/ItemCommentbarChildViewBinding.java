@@ -27,7 +27,7 @@ public abstract class ItemCommentbarChildViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCommentbarChildViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemCommentbarChildViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558659, viewGroup, z, obj);
+        return (ItemCommentbarChildViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558665, viewGroup, z, obj);
     }
 
     public static ItemCommentbarChildViewBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class ItemCommentbarChildViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCommentbarChildViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemCommentbarChildViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558659, null, false, obj);
+        return (ItemCommentbarChildViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558665, null, false, obj);
     }
 
     public static ItemCommentbarChildViewBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class ItemCommentbarChildViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCommentbarChildViewBinding bind(View view, Object obj) {
-        return (ItemCommentbarChildViewBinding) bind(obj, view, 2131558659);
+        return (ItemCommentbarChildViewBinding) bind(obj, view, 2131558665);
     }
 }

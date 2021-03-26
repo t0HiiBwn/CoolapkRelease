@@ -26,7 +26,7 @@ public class ItemPickAppBindingImpl extends ItemPickAppBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363906, 5);
+        sparseIntArray.put(2131363929, 5);
     }
 
     public ItemPickAppBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -121,7 +121,7 @@ public class ItemPickAppBindingImpl extends ItemPickAppBinding {
         }
         if (i != 0) {
             TextViewBindingAdapter.setText(this.apkSizeView, str3);
-            ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, str, null, null, 2131231363, null, true);
+            ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, str, null, null, 2131231374, null, true);
             TextViewBindingAdapter.setText(this.titleView, str2);
             TextViewBindingAdapter.setText(this.versionView, str4);
         }

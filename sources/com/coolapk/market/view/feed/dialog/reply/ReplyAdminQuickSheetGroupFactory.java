@@ -52,31 +52,31 @@ public final class ReplyAdminQuickSheetGroupFactory extends ReplyAdminBaseSheetG
             boolean z = true;
             if (!(!this.dataList.isEmpty())) {
                 if (isFolded()) {
-                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Fold, "取消折叠", 2131231624, -15233209, null, false, 48, null);
+                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Fold, "取消折叠", 2131231635, -15233209, null, false, 48, null);
                 } else {
-                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Fold, "折叠", 2131231302, -1233878, null, false, 48, null);
+                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Fold, "折叠", 2131231313, -1233878, null, false, 48, null);
                 }
                 if (!isBanned()) {
-                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Ban, "手动屏蔽", 2131231554, -1233878, null, false, 48, null);
+                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Ban, "手动屏蔽", 2131231565, -1233878, null, false, 48, null);
                 } else {
-                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Ban, "解除屏蔽", 2131231554, -15233209, null, false, 48, null);
+                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Ban, "解除屏蔽", 2131231565, -15233209, null, false, 48, null);
                 }
                 if (isSelfVisible()) {
-                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "全站可见", 2131231351, -15233209, null, true, 16, null);
+                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "全站可见", 2131231362, -15233209, null, true, 16, null);
                 } else {
-                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "仅自己可见", 2131231351, -1233878, null, true, 16, null);
+                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "仅自己可见", 2131231362, -1233878, null, true, 16, null);
                 }
-                insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.ViewFeedStatus, "查看状态", 2131231590, -15233209, null, false, 48, null);
-                insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Author, "作者管理", 2131231671, -15233209, null, false, 48, null);
+                insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.ViewFeedStatus, "查看状态", 2131231601, -15233209, null, false, 48, null);
+                insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Author, "作者管理", 2131231682, -15233209, null, false, 48, null);
                 String spamReason = getData().getSpamReason();
                 if (!(spamReason == null || spamReason.length() == 0)) {
                     z = false;
                 }
                 if (!z) {
-                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Refuse, "驳回", 2131231510, -1233878, null, false, 48, null);
+                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.Refuse, "驳回", 2131231521, -1233878, null, false, 48, null);
                 }
                 if (EntityExtendsKt.isShowCancelReportSpam(getData())) {
-                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.CancelReportSpam, "取消举报屏蔽", 2131231621, -15233209, null, false, 48, null);
+                    insertItem$default(this, ReplyAdminBaseSheetGroupFactory.AdminAction.CancelReportSpam, "取消举报屏蔽", 2131231632, -15233209, null, false, 48, null);
                 }
                 return wrapAsSheetGroup();
             }

@@ -27,7 +27,7 @@ public abstract class ItemDeviceParamsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDeviceParamsBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemDeviceParamsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558669, viewGroup, z, obj);
+        return (ItemDeviceParamsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558675, viewGroup, z, obj);
     }
 
     public static ItemDeviceParamsBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class ItemDeviceParamsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDeviceParamsBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemDeviceParamsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558669, null, false, obj);
+        return (ItemDeviceParamsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558675, null, false, obj);
     }
 
     public static ItemDeviceParamsBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class ItemDeviceParamsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDeviceParamsBinding bind(View view, Object obj) {
-        return (ItemDeviceParamsBinding) bind(obj, view, 2131558669);
+        return (ItemDeviceParamsBinding) bind(obj, view, 2131558675);
     }
 }

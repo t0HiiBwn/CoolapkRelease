@@ -24,7 +24,7 @@ public abstract class ItemCategoryDetailRankBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCategoryDetailRankBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemCategoryDetailRankBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558636, viewGroup, z, obj);
+        return (ItemCategoryDetailRankBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558642, viewGroup, z, obj);
     }
 
     public static ItemCategoryDetailRankBinding inflate(LayoutInflater layoutInflater) {
@@ -33,7 +33,7 @@ public abstract class ItemCategoryDetailRankBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCategoryDetailRankBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemCategoryDetailRankBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558636, null, false, obj);
+        return (ItemCategoryDetailRankBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558642, null, false, obj);
     }
 
     public static ItemCategoryDetailRankBinding bind(View view) {
@@ -42,6 +42,6 @@ public abstract class ItemCategoryDetailRankBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCategoryDetailRankBinding bind(View view, Object obj) {
-        return (ItemCategoryDetailRankBinding) bind(obj, view, 2131558636);
+        return (ItemCategoryDetailRankBinding) bind(obj, view, 2131558642);
     }
 }

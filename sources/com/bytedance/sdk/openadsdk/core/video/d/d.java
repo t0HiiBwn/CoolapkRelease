@@ -38,9 +38,7 @@ public class d implements c.a, c.b, c.AbstractC0044c, c.d, c.e, c.f, c.g, al.a {
     private Handler i;
     private ArrayList<Runnable> j;
     private int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1319l;
+    private int l;
     private String n;
     private boolean p;
     private Runnable q;
@@ -822,7 +820,7 @@ public class d implements c.a, c.b, c.AbstractC0044c, c.d, c.e, c.f, c.g, al.a {
         int A;
         if (z2 && (A = A()) != i2) {
             m = true;
-            this.f1319l = A;
+            this.l = A;
         }
         AudioManager audioManager = (AudioManager) p.a().getSystemService("audio");
         if (audioManager != null) {
@@ -840,7 +838,7 @@ public class d implements c.a, c.b, c.AbstractC0044c, c.d, c.e, c.f, c.g, al.a {
 
     private void B() {
         if (m) {
-            a(this.f1319l, false);
+            a(this.l, false);
             m = false;
         }
     }

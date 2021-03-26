@@ -22,7 +22,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ImageAppBigViewHolder.kt */
 public final class ImageAppBigViewHolder extends StateViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558785;
+    public static final int LAYOUT_ID = 2131558792;
     private final ItemImageAppBigCardBinding binding;
     private EntityCard card;
     private EntityItemModel model;

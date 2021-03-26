@@ -153,7 +153,7 @@ public final class CreateFunThingsActivity extends FakeStatusBarActivity impleme
     }
 
     private final void setupInitView() {
-        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558490, new ContextBindingComponent(this));
+        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558491, new ContextBindingComponent(this));
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…xtBindingComponent(this))");
         CreateFunThingsBinding createFunThingsBinding = (CreateFunThingsBinding) contentView;
         this.binding = createFunThingsBinding;
@@ -406,17 +406,17 @@ public final class CreateFunThingsActivity extends FakeStatusBarActivity impleme
     public void onClick(View view) {
         Intrinsics.checkNotNull(view);
         switch (view.getId()) {
-            case 2131362001:
-            case 2131362793:
+            case 2131362002:
+            case 2131362804:
                 ActionManager.startPhotoPickerActivity(getActivity(), 1, (List<String>) null, 433);
                 return;
-            case 2131362257:
+            case 2131362262:
                 getActivity().finish();
                 return;
-            case 2131363101:
+            case 2131363115:
                 setupImage("");
                 return;
-            case 2131363457:
+            case 2131363475:
                 post();
                 return;
             default:

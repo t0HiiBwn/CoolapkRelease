@@ -95,7 +95,7 @@ public abstract class CreateCollectListBinding extends ViewDataBinding {
 
     @Deprecated
     public static CreateCollectListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (CreateCollectListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558489, viewGroup, z, obj);
+        return (CreateCollectListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558490, viewGroup, z, obj);
     }
 
     public static CreateCollectListBinding inflate(LayoutInflater layoutInflater) {
@@ -104,7 +104,7 @@ public abstract class CreateCollectListBinding extends ViewDataBinding {
 
     @Deprecated
     public static CreateCollectListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (CreateCollectListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558489, null, false, obj);
+        return (CreateCollectListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558490, null, false, obj);
     }
 
     public static CreateCollectListBinding bind(View view) {
@@ -113,6 +113,6 @@ public abstract class CreateCollectListBinding extends ViewDataBinding {
 
     @Deprecated
     public static CreateCollectListBinding bind(View view, Object obj) {
-        return (CreateCollectListBinding) bind(obj, view, 2131558489);
+        return (CreateCollectListBinding) bind(obj, view, 2131558490);
     }
 }

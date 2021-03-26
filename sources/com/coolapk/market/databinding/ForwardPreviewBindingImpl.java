@@ -29,11 +29,11 @@ public class ForwardPreviewBindingImpl extends ForwardPreviewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362316, 8);
-        sparseIntArray.put(2131362441, 9);
-        sparseIntArray.put(2131363533, 10);
-        sparseIntArray.put(2131362150, 11);
-        sparseIntArray.put(2131363221, 12);
+        sparseIntArray.put(2131362322, 8);
+        sparseIntArray.put(2131362448, 9);
+        sparseIntArray.put(2131363551, 10);
+        sparseIntArray.put(2131362153, 11);
+        sparseIntArray.put(2131363235, 12);
     }
 
     public ForwardPreviewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -25,9 +25,7 @@ public final class i {
     b h = null;
     private final List<c> j;
     private List<c> k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1272l;
+    private boolean l;
     private final b m;
 
     i(int i2, g gVar, boolean z, boolean z2, List<c> list) {
@@ -36,7 +34,7 @@ public final class i {
         this.c = i2;
         this.d = gVar;
         this.b = (long) gVar.m.d();
-        b bVar = new b((long) gVar.f1271l.d());
+        b bVar = new b((long) gVar.l.d());
         this.m = bVar;
         a aVar = new a();
         this.e = aVar;
@@ -53,7 +51,7 @@ public final class i {
         if (this.h != null) {
             return false;
         }
-        if ((this.m.b || this.m.a) && ((this.e.b || this.e.a) && this.f1272l)) {
+        if ((this.m.b || this.m.a) && ((this.e.b || this.e.a) && this.l)) {
             return false;
         }
         return true;
@@ -106,7 +104,7 @@ public final class i {
 
     public r h() {
         synchronized (this) {
-            if (!this.f1272l) {
+            if (!this.l) {
                 if (!c()) {
                     throw new IllegalStateException("reply before requesting the sink");
                 }
@@ -150,7 +148,7 @@ public final class i {
         if (i || !Thread.holdsLock(this)) {
             synchronized (this) {
                 z = true;
-                this.f1272l = true;
+                this.l = true;
                 if (this.k == null) {
                     this.k = list;
                     z = b();
@@ -230,14 +228,14 @@ public final class i {
                     com.bytedance.sdk.a.a.c cVar2 = this.f;
                     a2 = cVar2.a(cVar, Math.min(j, cVar2.b()));
                     i.this.a += a2;
-                    if (i.this.a >= ((long) (i.this.d.f1271l.d() / 2))) {
+                    if (i.this.a >= ((long) (i.this.d.l.d() / 2))) {
                         i.this.d.a(i.this.c, i.this.a);
                         i.this.a = 0;
                     }
                 }
                 synchronized (i.this.d) {
                     i.this.d.j += a2;
-                    if (i.this.d.j >= ((long) (i.this.d.f1271l.d() / 2))) {
+                    if (i.this.d.j >= ((long) (i.this.d.l.d() / 2))) {
                         i.this.d.a(0, i.this.d.j);
                         i.this.d.j = 0;
                     }

@@ -26,7 +26,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: IconLinkMIniGridCardViewHolder.kt */
 public final class IconLinkMIniGridCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558779;
+    public static final int LAYOUT_ID = 2131558786;
     private final DataAdapter adapter;
     private final ItemIconLinkGridCardBinding binding;
     private EntityCard card;
@@ -147,7 +147,7 @@ public final class IconLinkMIniGridCardViewHolder extends BindingViewHolder {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558781, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558788, viewGroup, false);
             IconLinkMIniGridCardViewHolder iconLinkMIniGridCardViewHolder = IconLinkMIniGridCardViewHolder.this;
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             DataBindingComponent component = IconLinkMIniGridCardViewHolder.this.getComponent();
@@ -174,7 +174,7 @@ public final class IconLinkMIniGridCardViewHolder extends BindingViewHolder {
     /* compiled from: IconLinkMIniGridCardViewHolder.kt */
     private static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558781;
+        public static final int LAYOUT_ID = 2131558788;
         private final IconLinkMIniGridCardViewHolder parent;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */

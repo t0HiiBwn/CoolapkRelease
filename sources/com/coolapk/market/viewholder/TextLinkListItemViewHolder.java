@@ -20,7 +20,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: TextLinkListCardViewHolder.kt */
 public class TextLinkListItemViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558951;
+    public static final int LAYOUT_ID = 2131558958;
     private final ItemTextLinkItemBinding binding = ((ItemTextLinkItemBinding) getBinding());
     private Entity parentCard;
     private BindingViewHolder parentViewHolder;
@@ -81,7 +81,7 @@ public class TextLinkListItemViewHolder extends BindingViewHolder {
         Entity entity = itemTextLinkItemBinding.getEntity();
         if (entity != null) {
             Intrinsics.checkNotNullExpressionValue(entity, "binding.entity.elvis { return }");
-            if (view.getId() != 2131362768) {
+            if (view.getId() != 2131362779) {
                 super.onClick(view);
                 return;
             }

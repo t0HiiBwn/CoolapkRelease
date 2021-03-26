@@ -8,7 +8,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Objects;
 
 public class FileCleaningTracker {
     final List<String> deleteFailures = Collections.synchronizedList(new ArrayList());
@@ -16,55 +15,6 @@ public class FileCleaningTracker {
     ReferenceQueue<Object> q = new ReferenceQueue<>();
     Thread reaper;
     final Collection<Tracker> trackers = Collections.synchronizedSet(new HashSet());
-
-    public void track(File file, Object obj) {
-        track(file, obj, (FileDeleteStrategy) null);
-    }
-
-    public void track(File file, Object obj, FileDeleteStrategy fileDeleteStrategy) {
-        Objects.requireNonNull(file, "The file must not be null");
-        addTracker(file.getPath(), obj, fileDeleteStrategy);
-    }
-
-    public void track(String str, Object obj) {
-        track(str, obj, (FileDeleteStrategy) null);
-    }
-
-    public void track(String str, Object obj, FileDeleteStrategy fileDeleteStrategy) {
-        Objects.requireNonNull(str, "The path must not be null");
-        addTracker(str, obj, fileDeleteStrategy);
-    }
-
-    private synchronized void addTracker(String str, Object obj, FileDeleteStrategy fileDeleteStrategy) {
-        if (!this.exitWhenFinished) {
-            if (this.reaper == null) {
-                Reaper reaper2 = new Reaper();
-                this.reaper = reaper2;
-                reaper2.start();
-            }
-            this.trackers.add(new Tracker(str, fileDeleteStrategy, obj, this.q));
-        } else {
-            throw new IllegalStateException("No new trackers can be added once exitWhenFinished() is called");
-        }
-    }
-
-    public int getTrackCount() {
-        return this.trackers.size();
-    }
-
-    public List<String> getDeleteFailures() {
-        return this.deleteFailures;
-    }
-
-    public synchronized void exitWhenFinished() {
-        this.exitWhenFinished = true;
-        Thread thread = this.reaper;
-        if (thread != null) {
-            synchronized (thread) {
-                this.reaper.interrupt();
-            }
-        }
-    }
 
     private final class Reaper extends Thread {
         Reaper() {
@@ -103,12 +53,66 @@ public class FileCleaningTracker {
             this.deleteStrategy = fileDeleteStrategy == null ? FileDeleteStrategy.NORMAL : fileDeleteStrategy;
         }
 
-        public String getPath() {
-            return this.path;
-        }
-
         public boolean delete() {
             return this.deleteStrategy.deleteQuietly(new File(this.path));
         }
+
+        public String getPath() {
+            return this.path;
+        }
+    }
+
+    private synchronized void addTracker(String str, Object obj, FileDeleteStrategy fileDeleteStrategy) {
+        if (!this.exitWhenFinished) {
+            if (this.reaper == null) {
+                Reaper reaper2 = new Reaper();
+                this.reaper = reaper2;
+                reaper2.start();
+            }
+            this.trackers.add(new Tracker(str, fileDeleteStrategy, obj, this.q));
+        } else {
+            throw new IllegalStateException("No new trackers can be added once exitWhenFinished() is called");
+        }
+    }
+
+    public synchronized void exitWhenFinished() {
+        this.exitWhenFinished = true;
+        if (this.reaper != null) {
+            synchronized (this.reaper) {
+                this.reaper.interrupt();
+            }
+        }
+    }
+
+    public List<String> getDeleteFailures() {
+        return this.deleteFailures;
+    }
+
+    public int getTrackCount() {
+        return this.trackers.size();
+    }
+
+    public void track(File file, Object obj) {
+        track(file, obj, (FileDeleteStrategy) null);
+    }
+
+    public void track(File file, Object obj, FileDeleteStrategy fileDeleteStrategy) {
+        if (file != null) {
+            addTracker(file.getPath(), obj, fileDeleteStrategy);
+            return;
+        }
+        throw new NullPointerException("The file must not be null");
+    }
+
+    public void track(String str, Object obj) {
+        track(str, obj, (FileDeleteStrategy) null);
+    }
+
+    public void track(String str, Object obj, FileDeleteStrategy fileDeleteStrategy) {
+        if (str != null) {
+            addTracker(str, obj, fileDeleteStrategy);
+            return;
+        }
+        throw new NullPointerException("The path must not be null");
     }
 }

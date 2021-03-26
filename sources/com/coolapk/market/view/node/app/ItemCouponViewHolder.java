@@ -24,7 +24,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemCouponViewHolder.kt */
 public final class ItemCouponViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558593;
+    public static final int LAYOUT_ID = 2131558597;
     private final ItemAppNodeCouponBinding binding = ((ItemAppNodeCouponBinding) getBinding());
     private CouponInfo couponInfo;
     private AppNodeViewModel viewModel;

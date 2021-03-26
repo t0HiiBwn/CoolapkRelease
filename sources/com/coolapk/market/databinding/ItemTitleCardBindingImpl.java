@@ -21,8 +21,8 @@ public class ItemTitleCardBindingImpl extends ItemTitleCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 1);
-        sparseIntArray.put(2131363397, 2);
+        sparseIntArray.put(2131362779, 1);
+        sparseIntArray.put(2131363414, 2);
     }
 
     public ItemTitleCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -57,7 +57,7 @@ public class ItemTitleCardBindingImpl extends ItemTitleCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (278 != i) {
+        if (279 != i) {
             return false;
         }
         setTitle((String) obj);

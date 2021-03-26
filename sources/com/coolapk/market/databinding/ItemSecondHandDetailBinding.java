@@ -26,7 +26,7 @@ public abstract class ItemSecondHandDetailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSecondHandDetailBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSecondHandDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558918, viewGroup, z, obj);
+        return (ItemSecondHandDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558925, viewGroup, z, obj);
     }
 
     public static ItemSecondHandDetailBinding inflate(LayoutInflater layoutInflater) {
@@ -35,7 +35,7 @@ public abstract class ItemSecondHandDetailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSecondHandDetailBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSecondHandDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558918, null, false, obj);
+        return (ItemSecondHandDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558925, null, false, obj);
     }
 
     public static ItemSecondHandDetailBinding bind(View view) {
@@ -44,6 +44,6 @@ public abstract class ItemSecondHandDetailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSecondHandDetailBinding bind(View view, Object obj) {
-        return (ItemSecondHandDetailBinding) bind(obj, view, 2131558918);
+        return (ItemSecondHandDetailBinding) bind(obj, view, 2131558925);
     }
 }

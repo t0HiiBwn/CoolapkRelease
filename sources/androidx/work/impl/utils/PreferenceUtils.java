@@ -31,8 +31,8 @@ public class PreferenceUtils {
         return Transformations.map(this.mWorkDatabase.preferenceDao().getObservableLongValue("last_cancel_all_time_ms"), new Function<Long, Long>() {
             /* class androidx.work.impl.utils.PreferenceUtils.AnonymousClass1 */
 
-            public Long apply(Long l2) {
-                return Long.valueOf(l2 != null ? l2.longValue() : 0);
+            public Long apply(Long l) {
+                return Long.valueOf(l != null ? l.longValue() : 0);
             }
         });
     }

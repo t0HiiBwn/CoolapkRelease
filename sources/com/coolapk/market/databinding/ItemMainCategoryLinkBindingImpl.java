@@ -24,8 +24,8 @@ public class ItemMainCategoryLinkBindingImpl extends ItemMainCategoryLinkBinding
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(7);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"item_main_category_child", "item_main_category_child"}, new int[]{3, 4}, new int[]{2131558817, 2131558817});
-        includedLayouts.setIncludes(2, new String[]{"item_main_category_child", "item_main_category_child"}, new int[]{5, 6}, new int[]{2131558817, 2131558817});
+        includedLayouts.setIncludes(1, new String[]{"item_main_category_child", "item_main_category_child"}, new int[]{3, 4}, new int[]{2131558824, 2131558824});
+        includedLayouts.setIncludes(2, new String[]{"item_main_category_child", "item_main_category_child"}, new int[]{5, 6}, new int[]{2131558824, 2131558824});
     }
 
     public ItemMainCategoryLinkBindingImpl(DataBindingComponent dataBindingComponent, View view) {

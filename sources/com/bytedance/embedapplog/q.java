@@ -19,9 +19,7 @@ public class q {
     private long i = -1;
     private volatile boolean j;
     private long k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1263l;
+    private int l;
     private String m;
     private aw n;
 
@@ -39,7 +37,7 @@ public class q {
         bundle = null;
         if (this.b.f() && c() && j2 - this.g > j3) {
             bundle = new Bundle();
-            bundle.putInt("session_no", this.f1263l);
+            bundle.putInt("session_no", this.l);
             int i2 = this.h + 1;
             this.h = i2;
             bundle.putInt("send_times", i2);
@@ -73,15 +71,15 @@ public class q {
             String str = "" + instance.get(1) + instance.get(2) + instance.get(5);
             if (TextUtils.isEmpty(this.m)) {
                 this.m = this.b.c();
-                this.f1263l = this.b.d();
+                this.l = this.b.d();
             }
             if (!str.equals(this.m)) {
                 this.m = str;
-                this.f1263l = 1;
+                this.l = 1;
             } else {
-                this.f1263l++;
+                this.l++;
             }
-            this.b.a(str, this.f1263l);
+            this.b.a(str, this.l);
             this.h = 0;
         }
         if (j2 != -1) {

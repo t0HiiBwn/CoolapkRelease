@@ -414,12 +414,12 @@ abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOnChangeL
         return this.activeThumbIdx;
     }
 
-    public void addOnChangeListener(L l2) {
-        this.changeListeners.add(l2);
+    public void addOnChangeListener(L l) {
+        this.changeListeners.add(l);
     }
 
-    public void removeOnChangeListener(L l2) {
-        this.changeListeners.remove(l2);
+    public void removeOnChangeListener(L l) {
+        this.changeListeners.remove(l);
     }
 
     public void clearOnChangeListeners() {
@@ -1028,17 +1028,17 @@ abstract class BaseSlider<S extends BaseSlider<S, L, T>, L extends BaseOnChangeL
     }
 
     private void dispatchOnChangedProgramatically() {
-        for (L l2 : this.changeListeners) {
+        for (L l : this.changeListeners) {
             Iterator<Float> it2 = this.values.iterator();
             while (it2.hasNext()) {
-                l2.onValueChange(this, it2.next().floatValue(), false);
+                l.onValueChange(this, it2.next().floatValue(), false);
             }
         }
     }
 
     private void dispatchOnChangedFromUser(int i) {
-        for (L l2 : this.changeListeners) {
-            l2.onValueChange(this, this.values.get(i).floatValue(), true);
+        for (L l : this.changeListeners) {
+            l.onValueChange(this, this.values.get(i).floatValue(), true);
         }
         AccessibilityManager accessibilityManager2 = this.accessibilityManager;
         if (accessibilityManager2 != null && accessibilityManager2.isEnabled()) {

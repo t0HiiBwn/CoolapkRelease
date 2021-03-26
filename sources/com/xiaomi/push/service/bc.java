@@ -1,92 +1,71 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.gu;
-import com.xiaomi.push.service.XMPushService;
+import com.xiaomi.push.fb;
+import com.xiaomi.push.fk;
+import com.xiaomi.push.fl;
+import com.xiaomi.push.fp;
+import java.util.ArrayList;
+import org.xmlpull.v1.XmlPullParser;
 
-class bc {
-    private static int d = 300000;
-    private int a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private long f983a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private XMPushService f984a;
-    private int b = 0;
-    private int c = 0;
-
-    public bc(XMPushService xMPushService) {
-        this.f984a = xMPushService;
-        this.a = 500;
-        this.f983a = 0;
+public class bc implements fk {
+    public static fb a(XmlPullParser xmlPullParser) {
+        ArrayList arrayList;
+        String str;
+        String[] strArr;
+        String[] strArr2;
+        if (xmlPullParser.getEventType() != 2) {
+            return null;
+        }
+        String name = xmlPullParser.getName();
+        String namespace = xmlPullParser.getNamespace();
+        if (xmlPullParser.getAttributeCount() > 0) {
+            String[] strArr3 = new String[xmlPullParser.getAttributeCount()];
+            String[] strArr4 = new String[xmlPullParser.getAttributeCount()];
+            for (int i = 0; i < xmlPullParser.getAttributeCount(); i++) {
+                strArr3[i] = xmlPullParser.getAttributeName(i);
+                strArr4[i] = fp.b(xmlPullParser.getAttributeValue(i));
+            }
+            strArr2 = strArr3;
+            str = null;
+            arrayList = null;
+            strArr = strArr4;
+        } else {
+            strArr2 = null;
+            strArr = null;
+            str = null;
+            arrayList = null;
+        }
+        while (true) {
+            int next = xmlPullParser.next();
+            if (next == 3) {
+                return new fb(name, namespace, strArr2, strArr, str, arrayList);
+            }
+            if (next == 4) {
+                str = xmlPullParser.getText().trim();
+            } else if (next == 2) {
+                if (arrayList == null) {
+                    arrayList = new ArrayList();
+                }
+                fb a = a(xmlPullParser);
+                if (a != null) {
+                    arrayList.add(a);
+                }
+            }
+        }
     }
 
-    private int a() {
-        if (this.b > 8) {
-            return 300000;
-        }
-        double random = (Math.random() * 2.0d) + 1.0d;
-        int i = this.b;
-        if (i > 4) {
-            return (int) (random * 60000.0d);
-        }
-        if (i > 1) {
-            return (int) (random * 10000.0d);
-        }
-        if (this.f983a == 0) {
-            return 0;
-        }
-        if (System.currentTimeMillis() - this.f983a < 310000) {
-            int i2 = this.a;
-            int i3 = d;
-            if (i2 >= i3) {
-                return i2;
-            }
-            int i4 = this.c + 1;
-            this.c = i4;
-            if (i4 >= 4) {
-                return i3;
-            }
-            this.a = (int) (((double) i2) * 1.5d);
-            return i2;
-        }
-        this.a = 1000;
-        this.c = 0;
-        return 0;
+    public void a() {
+        fl.a().a("all", "xm:chat", this);
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public void m637a() {
-        this.f983a = System.currentTimeMillis();
-        this.f984a.a(1);
-        this.b = 0;
-    }
-
-    public void a(boolean z) {
-        if (!this.f984a.m584a()) {
-            b.c("should not reconnect as no client or network.");
-        } else if (z) {
-            if (!this.f984a.m585a(1)) {
-                this.b++;
-            }
-            this.f984a.a(1);
-            XMPushService xMPushService = this.f984a;
-            xMPushService.getClass();
-            xMPushService.a(new XMPushService.d());
-        } else if (!this.f984a.m585a(1)) {
-            int a2 = a();
-            this.b++;
-            b.m41a("schedule reconnect in " + a2 + "ms");
-            XMPushService xMPushService2 = this.f984a;
-            xMPushService2.getClass();
-            xMPushService2.a(new XMPushService.d(), (long) a2);
-            if (this.b == 2 && gu.m378a().m383a()) {
-                af.b();
-            }
-            if (this.b == 3) {
-                af.a();
-            }
+    public fb b(XmlPullParser xmlPullParser) {
+        int eventType = xmlPullParser.getEventType();
+        while (eventType != 1 && eventType != 2) {
+            eventType = xmlPullParser.next();
         }
+        if (eventType == 2) {
+            return a(xmlPullParser);
+        }
+        return null;
     }
 }

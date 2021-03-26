@@ -27,8 +27,8 @@ public class ThemePickDialogBindingImpl extends ThemePickDialogBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362672, 4);
-        sparseIntArray.put(2131362266, 5);
+        sparseIntArray.put(2131362683, 4);
+        sparseIntArray.put(2131362271, 5);
     }
 
     public ThemePickDialogBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -253,7 +253,7 @@ public final class SymmetryAppHeader extends BaseAppHeader implements OnTabSelec
         if (!Intrinsics.areEqual(this.lastCenterViewPager, viewPager)) {
             this.lastCenterViewPager = viewPager;
             FrameLayout frameLayout = new FrameLayout(getContext());
-            View inflate = LayoutInflater.from(frameLayout.getContext()).inflate(2131559143, (ViewGroup) null, false);
+            View inflate = LayoutInflater.from(frameLayout.getContext()).inflate(2131559150, (ViewGroup) null, false);
             Objects.requireNonNull(inflate, "null cannot be cast to non-null type com.coolapk.market.widget.SlidingTabLayoutCompat");
             SlidingTabLayoutCompat slidingTabLayoutCompat = (SlidingTabLayoutCompat) inflate;
             slidingTabLayoutCompat.addOnPageChangeListener(this);
@@ -301,7 +301,7 @@ public final class SymmetryAppHeader extends BaseAppHeader implements OnTabSelec
         if (!Intrinsics.areEqual(this.lastBottomViewPager, viewPager)) {
             this.lastBottomViewPager = viewPager;
             FrameLayout frameLayout = new FrameLayout(getContext());
-            View inflate = LayoutInflater.from(frameLayout.getContext()).inflate(2131559143, (ViewGroup) null, false);
+            View inflate = LayoutInflater.from(frameLayout.getContext()).inflate(2131559150, (ViewGroup) null, false);
             Objects.requireNonNull(inflate, "null cannot be cast to non-null type com.coolapk.market.widget.SlidingTabLayoutCompat");
             SlidingTabLayoutCompat slidingTabLayoutCompat = (SlidingTabLayoutCompat) inflate;
             slidingTabLayoutCompat.addOnPageChangeListener(this);

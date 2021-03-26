@@ -49,7 +49,7 @@ public final class BlockWordListFragment extends ShortAsyncListFragment<Parcelab
     @Override // com.coolapk.market.view.base.asynclist.ShortAsyncListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558628).constructor(new BlockWordListFragment$onActivityCreated$1(new FragmentBindingComponent(this))).suitedMethod(BlockWordListFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558633).constructor(new BlockWordListFragment$onActivityCreated$1(new FragmentBindingComponent(this))).suitedMethod(BlockWordListFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
         setHasOptionsMenu(true);
         initData();
         setLoadMoreEnable(false);
@@ -85,7 +85,7 @@ public final class BlockWordListFragment extends ShortAsyncListFragment<Parcelab
     /* compiled from: BlockWordListFragment.kt */
     public static final class BlockWordViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558628;
+        public static final int LAYOUT_ID = 2131558633;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public BlockWordViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -127,7 +127,7 @@ public final class BlockWordListFragment extends ShortAsyncListFragment<Parcelab
         public void onClick(View view) {
             Intrinsics.checkNotNullParameter(view, "view");
             super.onClick(view);
-            if (view.getId() == 2131361876) {
+            if (view.getId() == 2131361877) {
                 DataBindingComponent component = getComponent();
                 LifecycleOwner lifecycleOwner = null;
                 if (!(component instanceof FragmentBindingComponent)) {

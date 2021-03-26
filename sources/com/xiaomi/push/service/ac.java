@@ -1,30 +1,35 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.push.ai;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.ef;
+import com.xiaomi.push.ey;
+import com.xiaomi.push.service.XMPushService;
 
-final class ac extends ai.a {
-    final /* synthetic */ int a;
+class ac extends XMPushService.i {
+    private XMPushService a = null;
+    private ef b;
 
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ al f936a;
-
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ String f937a;
-
-    ac(String str, al alVar, int i) {
-        this.f937a = str;
-        this.f936a = alVar;
-        this.a = i;
+    public ac(XMPushService xMPushService, ef efVar) {
+        super(4);
+        this.a = xMPushService;
+        this.b = efVar;
     }
 
-    @Override // com.xiaomi.push.ai.a
-    /* renamed from: a */
-    public String mo141a() {
-        return this.f937a;
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public void a() {
+        try {
+            ef efVar = this.b;
+            if (efVar != null) {
+                this.a.a(efVar);
+            }
+        } catch (ey e) {
+            c.a(e);
+            this.a.a(10, e);
+        }
     }
 
-    @Override // java.lang.Runnable
-    public void run() {
-        this.f936a.a(this.a);
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public String b() {
+        return "send a message.";
     }
 }

@@ -18,7 +18,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: DyhArticleContentViewPart.kt */
 public final class DyhArticleContentViewPart extends BindingViewPart<ItemDyhArticleContentBinding, DyhArticle> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558676;
+    public static final int LAYOUT_ID = 2131558682;
     private final DataBindingComponent dataBindingComponent;
     private DyhArticle mDyhArticle;
     private final DyhViewModel mDyhViewModel;
@@ -62,7 +62,7 @@ public final class DyhArticleContentViewPart extends BindingViewPart<ItemDyhArti
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemDyhArticleContentBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558676, viewGroup, false, this.dataBindingComponent);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558682, viewGroup, false, this.dataBindingComponent);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…se, dataBindingComponent)");
         return (ItemDyhArticleContentBinding) inflate;
     }

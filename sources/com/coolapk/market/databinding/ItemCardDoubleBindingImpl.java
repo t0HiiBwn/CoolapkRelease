@@ -21,10 +21,10 @@ public class ItemCardDoubleBindingImpl extends ItemCardDoubleBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(7);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(3, new String[]{"item_card_double_item", "item_card_double_item"}, new int[]{4, 5}, new int[]{2131558631, 2131558631});
+        includedLayouts.setIncludes(3, new String[]{"item_card_double_item", "item_card_double_item"}, new int[]{4, 5}, new int[]{2131558637, 2131558637});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362200, 6);
+        sparseIntArray.put(2131362205, 6);
     }
 
     public ItemCardDoubleBindingImpl(DataBindingComponent dataBindingComponent, View view) {

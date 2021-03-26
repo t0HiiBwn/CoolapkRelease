@@ -52,7 +52,7 @@ public final class PhotoGalleryUtils {
         boolean z;
         ArrayList<PhotoDirectory> arrayList = new ArrayList();
         PhotoDirectory photoDirectory = new PhotoDirectory(null, null, null, 0, null, 31, null);
-        String string = context.getString(2131886927);
+        String string = context.getString(2131886989);
         Intrinsics.checkNotNullExpressionValue(string, "context.getString(R.string.str_photo_picker_all)");
         photoDirectory.setName(string);
         photoDirectory.setId("ALL");

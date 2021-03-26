@@ -23,9 +23,7 @@ public final class g implements t.a {
     private final int i;
     private final int j;
     private final int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1269l;
+    private int l;
 
     public g(List<t> list, com.bytedance.sdk.a.b.a.b.g gVar, c cVar, c cVar2, int i2, y yVar, e eVar, p pVar, int i3, int i4, int i5) {
         this.a = list;
@@ -88,14 +86,14 @@ public final class g implements t.a {
 
     public aa a(y yVar, com.bytedance.sdk.a.b.a.b.g gVar, c cVar, c cVar2) throws IOException {
         if (this.e < this.a.size()) {
-            this.f1269l++;
+            this.l++;
             if (this.c != null && !this.d.a(yVar.a())) {
                 throw new IllegalStateException("network interceptor " + this.a.get(this.e - 1) + " must retain the same host and port");
-            } else if (this.c == null || this.f1269l <= 1) {
+            } else if (this.c == null || this.l <= 1) {
                 g gVar2 = new g(this.a, gVar, cVar, cVar2, this.e + 1, yVar, this.g, this.h, this.i, this.j, this.k);
                 t tVar = this.a.get(this.e);
                 aa a2 = tVar.a(gVar2);
-                if (cVar != null && this.e + 1 < this.a.size() && gVar2.f1269l != 1) {
+                if (cVar != null && this.e + 1 < this.a.size() && gVar2.l != 1) {
                     throw new IllegalStateException("network interceptor " + tVar + " must call proceed() exactly once");
                 } else if (a2 == null) {
                     throw new NullPointerException("interceptor " + tVar + " returned null");

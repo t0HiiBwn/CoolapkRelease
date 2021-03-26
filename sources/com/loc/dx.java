@@ -34,9 +34,7 @@ public final class dx {
     Context i;
     boolean j = false;
     StringBuilder k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    boolean f1369l = true;
+    boolean l = true;
     boolean m = true;
     boolean n = true;
     String o = null;
@@ -219,7 +217,7 @@ public final class dx {
     private boolean r() {
         boolean h2 = this.a == null ? false : ep.h(this.i);
         this.q = h2;
-        if (!h2 || !this.f1369l) {
+        if (!h2 || !this.l) {
             return false;
         }
         if (f != 0) {
@@ -258,7 +256,7 @@ public final class dx {
     }
 
     public final void a(boolean z2, boolean z3, boolean z4, long j2) {
-        this.f1369l = z2;
+        this.l = z2;
         this.m = z3;
         this.n = z4;
         if (j2 < 10000) {

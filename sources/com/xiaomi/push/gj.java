@@ -1,11 +1,16 @@
 package com.xiaomi.push;
 
-final class gj extends fx {
-    gj() {
+public enum gj {
+    START(0),
+    BIND(1);
+    
+    private final int c;
+
+    private gj(int i) {
+        this.c = i;
     }
 
-    @Override // com.xiaomi.push.fx, com.xiaomi.push.fz
-    public String b() {
-        return null;
+    public int a() {
+        return this.c;
     }
 }

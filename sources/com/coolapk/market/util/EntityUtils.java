@@ -46,6 +46,7 @@ public class EntityUtils {
     public static final String ENTITY_TYPE_APP_PI = "appPi";
     public static final String ENTITY_TYPE_ARTICLE_LIST_CARD = "articleListCard";
     public static final String ENTITY_TYPE_BACKUPINFO = "back";
+    public static final String ENTITY_TYPE_CAPSULE_LIST_CARD = "capsuleListCard";
     public static final String ENTITY_TYPE_CARD = "card";
     public static final String ENTITY_TYPE_CARD_ITEM = "cardItem";
     public static final String ENTITY_TYPE_COLLECTIOIN_ITEM = "collectionitem";
@@ -101,6 +102,7 @@ public class EntityUtils {
     public static final String ENTITY_TYPE_HOT_SEARCH_LIST = "hotSearch";
     public static final String ENTITY_TYPE_ICON_BUTTON_GRID_CARD = "iconButtonGridCard";
     public static final String ENTITY_TYPE_ICON_GRID_CARD = "iconGridCard";
+    public static final String ENTITY_TYPE_ICON_GRID_HORIZON_CARD = "iconGridHorizonCard";
     public static final String ENTITY_TYPE_ICON_LARGE_SCROLL_CARD = "iconLargeScrollCard";
     public static final String ENTITY_TYPE_ICON_LINK_GRID_CARD = "iconLinkGridCard";
     public static final String ENTITY_TYPE_ICON_LIST_CARD = "iconListCard";

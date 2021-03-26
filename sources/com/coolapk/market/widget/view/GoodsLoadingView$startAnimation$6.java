@@ -20,6 +20,6 @@ final class GoodsLoadingView$startAnimation$6 extends Lambda implements Function
 
     @Override // kotlin.jvm.functions.Function0
     public final void invoke() {
-        this.this$0.delayStartAnimation(this.$silentTime);
+        GoodsLoadingView.access$delayStartAnimation(this.this$0, this.$silentTime);
     }
 }

@@ -1,71 +1,59 @@
 package com.xiaomi.push;
 
-import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
-import android.os.Bundle;
 import android.text.TextUtils;
+import com.xiaomi.a.a.a.c;
+import java.util.HashMap;
 
-public class df implements Application.ActivityLifecycleCallbacks {
-    private Context a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private String f315a = "";
-    private String b;
-
-    public df(Context context, String str) {
-        this.a = context;
-        this.f315a = str;
+public class df {
+    public static void a(Context context, String str, int i, String str2) {
+        j.a(context).a(new dg(context, str, i, str2));
     }
 
-    private void a(String str) {
-        hk hkVar = new hk();
-        hkVar.a(str);
-        hkVar.a(System.currentTimeMillis());
-        hkVar.a(he.ActivityActiveTimeStamp);
-        ds.a(this.a, hkVar);
+    private static void a(Context context, HashMap<String, String> hashMap) {
+        dn a = dj.a(context).a();
+        if (a != null) {
+            a.a(context, hashMap);
+        }
     }
 
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public void onActivityCreated(Activity activity, Bundle bundle) {
+    private static void b(Context context, HashMap<String, String> hashMap) {
+        dn a = dj.a(context).a();
+        if (a != null) {
+            a.c(context, hashMap);
+        }
     }
 
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public void onActivityDestroyed(Activity activity) {
-    }
-
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public void onActivityPaused(Activity activity) {
-        String localClassName = activity.getLocalClassName();
-        if (!TextUtils.isEmpty(this.f315a) && !TextUtils.isEmpty(localClassName)) {
-            this.b = "";
-            if (TextUtils.isEmpty("") || TextUtils.equals(this.b, localClassName)) {
-                a(this.a.getPackageName() + "|" + localClassName + ":" + this.f315a + "," + String.valueOf(System.currentTimeMillis() / 1000));
-                this.f315a = "";
-                this.b = "";
-                return;
+    /* access modifiers changed from: private */
+    public static void c(Context context, String str, int i, String str2) {
+        if (context != null && !TextUtils.isEmpty(str)) {
+            try {
+                HashMap hashMap = new HashMap();
+                hashMap.put("awake_info", str);
+                hashMap.put("event_type", String.valueOf(i));
+                hashMap.put("description", str2);
+                int d = dj.a(context).d();
+                if (d != 1) {
+                    if (d != 2) {
+                        if (d == 3) {
+                            a(context, hashMap);
+                        }
+                    }
+                    c(context, hashMap);
+                } else {
+                    a(context, hashMap);
+                }
+                b(context, hashMap);
+            } catch (Exception e) {
+                c.a(e);
             }
-            this.f315a = "";
         }
     }
 
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public void onActivityResumed(Activity activity) {
-        if (TextUtils.isEmpty(this.b)) {
-            this.b = activity.getLocalClassName();
+    private static void c(Context context, HashMap<String, String> hashMap) {
+        dn a = dj.a(context).a();
+        if (a != null) {
+            a.b(context, hashMap);
         }
-        this.f315a = String.valueOf(System.currentTimeMillis() / 1000);
-    }
-
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
-    }
-
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public void onActivityStarted(Activity activity) {
-    }
-
-    @Override // android.app.Application.ActivityLifecycleCallbacks
-    public void onActivityStopped(Activity activity) {
     }
 }

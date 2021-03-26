@@ -15,16 +15,16 @@ import java.io.FileOutputStream;
 import java.util.Calendar;
 
 public final class ShareUtils {
-    /* JADX WARNING: Removed duplicated region for block: B:28:0x00ac  */
-    /* JADX WARNING: Removed duplicated region for block: B:32:0x00b6  */
-    /* JADX WARNING: Removed duplicated region for block: B:41:0x0111 A[Catch:{ Exception -> 0x0139, all -> 0x0136 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:48:0x0124 A[Catch:{ Exception -> 0x0134 }, LOOP:0: B:46:0x011d->B:48:0x0124, LOOP_END] */
-    /* JADX WARNING: Removed duplicated region for block: B:61:0x013f  */
-    /* JADX WARNING: Removed duplicated region for block: B:71:0x0154 A[SYNTHETIC, Splitter:B:71:0x0154] */
-    /* JADX WARNING: Removed duplicated region for block: B:74:0x0159 A[Catch:{ Exception -> 0x015c }] */
-    /* JADX WARNING: Removed duplicated region for block: B:80:0x0161 A[SYNTHETIC, Splitter:B:80:0x0161] */
-    /* JADX WARNING: Removed duplicated region for block: B:83:0x0166 A[Catch:{ Exception -> 0x0169 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:86:0x0129 A[EDGE_INSN: B:86:0x0129->B:49:0x0129 ?: BREAK  , SYNTHETIC] */
+    /* JADX WARNING: Removed duplicated region for block: B:28:0x00ad  */
+    /* JADX WARNING: Removed duplicated region for block: B:32:0x00b7  */
+    /* JADX WARNING: Removed duplicated region for block: B:41:0x0112 A[Catch:{ Exception -> 0x013a, all -> 0x0137 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:48:0x0125 A[Catch:{ Exception -> 0x0135 }, LOOP:0: B:46:0x011e->B:48:0x0125, LOOP_END] */
+    /* JADX WARNING: Removed duplicated region for block: B:61:0x0140  */
+    /* JADX WARNING: Removed duplicated region for block: B:71:0x0156 A[SYNTHETIC, Splitter:B:71:0x0156] */
+    /* JADX WARNING: Removed duplicated region for block: B:74:0x015b A[Catch:{ Exception -> 0x015e }] */
+    /* JADX WARNING: Removed duplicated region for block: B:80:0x0163 A[SYNTHETIC, Splitter:B:80:0x0163] */
+    /* JADX WARNING: Removed duplicated region for block: B:83:0x0168 A[Catch:{ Exception -> 0x016b }] */
+    /* JADX WARNING: Removed duplicated region for block: B:86:0x012a A[EDGE_INSN: B:86:0x012a->B:49:0x012a ?: BREAK  , SYNTHETIC] */
     protected static String copyFileToWeiboTem(Context context, Uri uri, int i) {
         FileOutputStream fileOutputStream;
         Throwable th;

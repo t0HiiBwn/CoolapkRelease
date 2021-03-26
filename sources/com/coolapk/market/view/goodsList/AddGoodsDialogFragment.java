@@ -100,7 +100,7 @@ public final class AddGoodsDialogFragment extends BaseDialogFragment {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558436, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558437, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…item_dialog, null, false)");
         AddGoodsItemDialogBinding addGoodsItemDialogBinding = (AddGoodsItemDialogBinding) inflate;
         this.binding = addGoodsItemDialogBinding;

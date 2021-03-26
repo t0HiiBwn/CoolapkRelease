@@ -23,7 +23,7 @@ public class ItemCreateGoodsListBindingImpl extends ItemCreateGoodsListBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362338, 2);
+        sparseIntArray.put(2131362344, 2);
     }
 
     public ItemCreateGoodsListBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -59,7 +59,7 @@ public class ItemCreateGoodsListBindingImpl extends ItemCreateGoodsListBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FunThings) obj);
         } else if (121 == i) {
             setFollowNum((String) obj);

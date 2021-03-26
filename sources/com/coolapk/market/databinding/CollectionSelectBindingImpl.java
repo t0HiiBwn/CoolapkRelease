@@ -33,14 +33,14 @@ public class CollectionSelectBindingImpl extends CollectionSelectBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362146, 3);
-        sparseIntArray.put(2131362639, 4);
-        sparseIntArray.put(2131362257, 5);
-        sparseIntArray.put(2131363481, 6);
-        sparseIntArray.put(2131363322, 7);
-        sparseIntArray.put(2131363934, 8);
-        sparseIntArray.put(2131362306, 9);
-        sparseIntArray.put(2131361899, 10);
+        sparseIntArray.put(2131362149, 3);
+        sparseIntArray.put(2131362647, 4);
+        sparseIntArray.put(2131362262, 5);
+        sparseIntArray.put(2131363499, 6);
+        sparseIntArray.put(2131363338, 7);
+        sparseIntArray.put(2131363959, 8);
+        sparseIntArray.put(2131362311, 9);
+        sparseIntArray.put(2131361900, 10);
     }
 
     public CollectionSelectBindingImpl(DataBindingComponent dataBindingComponent, View view) {

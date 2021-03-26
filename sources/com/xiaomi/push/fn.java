@@ -1,9 +1,11 @@
 package com.xiaomi.push;
 
-public interface fn {
-    void a(fb fbVar);
+final class fn extends fc {
+    fn() {
+    }
 
-    @Override // com.xiaomi.push.fv
-    /* renamed from: a */
-    void mo148a(fz fzVar);
+    @Override // com.xiaomi.push.fc
+    public String d() {
+        return null;
+    }
 }

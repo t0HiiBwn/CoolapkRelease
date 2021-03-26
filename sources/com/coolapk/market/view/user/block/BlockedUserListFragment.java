@@ -121,7 +121,7 @@ public abstract class BlockedUserListFragment extends NewAsyncListFragment<Resul
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558967;
+            return 2131558974;
         }
 
         public DataAdapter() {
@@ -131,7 +131,7 @@ public abstract class BlockedUserListFragment extends NewAsyncListFragment<Resul
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-            if (i == 2131558967) {
+            if (i == 2131558974) {
                 return new UserViewHolder(inflate, this.component, null) {
                     /* class com.coolapk.market.view.user.block.BlockedUserListFragment.DataAdapter.AnonymousClass1 */
                     private boolean isRequesting;

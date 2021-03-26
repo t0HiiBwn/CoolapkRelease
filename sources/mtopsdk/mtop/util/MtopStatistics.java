@@ -320,25 +320,25 @@ public class MtopStatistics implements Cloneable {
     }
 
     /* access modifiers changed from: private */
-    /* JADX WARNING: Removed duplicated region for block: B:104:0x033d A[Catch:{ all -> 0x0731 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:105:0x033f A[Catch:{ all -> 0x0731 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:108:0x034d A[Catch:{ all -> 0x0731 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:109:0x034f A[Catch:{ all -> 0x0731 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:115:0x0370 A[Catch:{ all -> 0x072f }] */
-    /* JADX WARNING: Removed duplicated region for block: B:116:0x0372 A[Catch:{ all -> 0x072f }] */
-    /* JADX WARNING: Removed duplicated region for block: B:119:0x0386 A[Catch:{ all -> 0x072f }] */
-    /* JADX WARNING: Removed duplicated region for block: B:120:0x0388 A[Catch:{ all -> 0x072f }] */
-    /* JADX WARNING: Removed duplicated region for block: B:124:0x0398  */
-    /* JADX WARNING: Removed duplicated region for block: B:129:0x03c4  */
-    /* JADX WARNING: Removed duplicated region for block: B:132:0x03ce  */
-    /* JADX WARNING: Removed duplicated region for block: B:146:0x044c  */
-    /* JADX WARNING: Removed duplicated region for block: B:149:0x051a  */
-    /* JADX WARNING: Removed duplicated region for block: B:152:0x0574  */
-    /* JADX WARNING: Removed duplicated region for block: B:155:0x05ca  */
-    /* JADX WARNING: Removed duplicated region for block: B:158:0x05d7  */
-    /* JADX WARNING: Removed duplicated region for block: B:180:0x0695  */
-    /* JADX WARNING: Removed duplicated region for block: B:181:0x0698  */
-    /* JADX WARNING: Removed duplicated region for block: B:184:0x0726  */
+    /* JADX WARNING: Removed duplicated region for block: B:104:0x0344 A[Catch:{ all -> 0x073f }] */
+    /* JADX WARNING: Removed duplicated region for block: B:105:0x0346 A[Catch:{ all -> 0x073f }] */
+    /* JADX WARNING: Removed duplicated region for block: B:108:0x0354 A[Catch:{ all -> 0x073f }] */
+    /* JADX WARNING: Removed duplicated region for block: B:109:0x0356 A[Catch:{ all -> 0x073f }] */
+    /* JADX WARNING: Removed duplicated region for block: B:115:0x0377 A[Catch:{ all -> 0x073d }] */
+    /* JADX WARNING: Removed duplicated region for block: B:116:0x0379 A[Catch:{ all -> 0x073d }] */
+    /* JADX WARNING: Removed duplicated region for block: B:119:0x038d A[Catch:{ all -> 0x073d }] */
+    /* JADX WARNING: Removed duplicated region for block: B:120:0x038f A[Catch:{ all -> 0x073d }] */
+    /* JADX WARNING: Removed duplicated region for block: B:124:0x039f  */
+    /* JADX WARNING: Removed duplicated region for block: B:129:0x03cb  */
+    /* JADX WARNING: Removed duplicated region for block: B:132:0x03d5  */
+    /* JADX WARNING: Removed duplicated region for block: B:146:0x0453  */
+    /* JADX WARNING: Removed duplicated region for block: B:149:0x0526  */
+    /* JADX WARNING: Removed duplicated region for block: B:152:0x0580  */
+    /* JADX WARNING: Removed duplicated region for block: B:155:0x05d7  */
+    /* JADX WARNING: Removed duplicated region for block: B:158:0x05e4  */
+    /* JADX WARNING: Removed duplicated region for block: B:180:0x06a2  */
+    /* JADX WARNING: Removed duplicated region for block: B:181:0x06a5  */
+    /* JADX WARNING: Removed duplicated region for block: B:184:0x0734  */
     public void a() {
         Object obj;
         Object obj2;
@@ -352,7 +352,6 @@ public class MtopStatistics implements Cloneable {
         String str;
         String str2;
         Throwable th;
-        HashMap hashMap;
         NetworkStats networkStats;
         Object obj9;
         String str3;
@@ -367,7 +366,6 @@ public class MtopStatistics implements Cloneable {
         Throwable th3;
         HashSet hashSet;
         Object obj14;
-        HashSet hashSet2;
         String str4;
         if (this.e != null) {
             obj = "processTime";
@@ -397,7 +395,7 @@ public class MtopStatistics implements Cloneable {
                             obj6 = obj13;
                             obj5 = "pageUrl";
                             TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                            hashMap = new HashMap();
+                            HashMap hashMap = new HashMap();
                             hashMap.put("api", mtopStatistics.apiKey);
                             hashMap.put("ret", mtopStatistics.retCode);
                             hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -412,62 +410,73 @@ public class MtopStatistics implements Cloneable {
                             hashMap.put(obj5, mtopStatistics.pageUrl);
                             hashMap.put(obj6, String.valueOf(mtopStatistics.backGround ? 1 : 0));
                             str2 = str;
-                            hashMap.put(obj3, String.valueOf(mtopStatistics.isMain ? 1 : 0));
-                            hashMap.put(obj4, String.valueOf(RemoteConfig.getInstance().useSecurityAdapter));
-                            hashMap.put(obj2, String.valueOf(mtopStatistics.isPrefetch ? 1 : 0));
-                            hashMap.put("handler", String.valueOf(mtopStatistics.handler ? 1 : 0));
-                            networkStats = getNetworkStats();
-                            if (networkStats != null) {
+                            try {
+                                hashMap.put(obj3, String.valueOf(mtopStatistics.isMain ? 1 : 0));
+                                hashMap.put(obj4, String.valueOf(RemoteConfig.getInstance().useSecurityAdapter));
+                                hashMap.put(obj2, String.valueOf(mtopStatistics.isPrefetch ? 1 : 0));
+                                hashMap.put("handler", String.valueOf(mtopStatistics.handler ? 1 : 0));
+                                networkStats = getNetworkStats();
+                                if (networkStats != null) {
+                                }
+                                if (Mtop.mIsFullTrackValid) {
+                                }
+                                HashMap hashMap2 = new HashMap();
+                                hashMap2.put("totalTime", Double.valueOf((double) mtopStatistics.totalTime));
+                                hashMap2.put("networkExeTime", Double.valueOf((double) mtopStatistics.netTotalTime));
+                                hashMap2.put("cacheCostTime", Double.valueOf((double) mtopStatistics.cacheCostTime));
+                                hashMap2.put("cacheResponseParseTime", Double.valueOf((double) mtopStatistics.cacheResponseParseTime));
+                                hashMap2.put("waitExecuteTime", Double.valueOf((double) mtopStatistics.waitExecuteTime));
+                                hashMap2.put("waitCallbackTime", Double.valueOf((double) mtopStatistics.waitCallbackTime));
+                                hashMap2.put("waitExecute2BuildParamTime", Double.valueOf((double) mtopStatistics.waitExecute2BuildParamTime));
+                                hashMap2.put("buildParamsTime", Double.valueOf((double) mtopStatistics.buildParamsTime));
+                                hashMap2.put("buildParams2NetworkTime", Double.valueOf((double) mtopStatistics.buildParams2NetworkTime));
+                                hashMap2.put("startCallBack2EndTime", Double.valueOf((double) mtopStatistics.startCallBack2EndTime));
+                                hashMap2.put("signTime", Double.valueOf((double) mtopStatistics.computeSignTime));
+                                hashMap2.put("wuaTime", Double.valueOf((double) mtopStatistics.computeWuaTime));
+                                hashMap2.put("miniWuaTime", Double.valueOf((double) mtopStatistics.computeMiniWuaTime));
+                                hashMap2.put("callbackPocTime", Double.valueOf((double) mtopStatistics.callbackPocTime));
+                                hashMap2.put("allTime", Double.valueOf((double) mtopStatistics.allTime));
+                                hashMap2.put("requestPocTime", Double.valueOf((double) mtopStatistics.requestPocTime));
+                                if (networkStats != null) {
+                                }
+                                rbStatisticData = mtopStatistics.c;
+                                if (rbStatisticData != null) {
+                                }
+                                iUploadStats = mtopStatistics.e;
+                                if (iUploadStats != null) {
+                                }
+                                if (!ErrorConstant.isSuccess(mtopStatistics.retCode)) {
+                                }
+                                HashMap hashMap3 = new HashMap();
+                                hashMap3.put("bizId", !TextUtils.isEmpty(mtopStatistics.bizIdStr) ? mtopStatistics.bizIdStr : String.valueOf(mtopStatistics.bizId));
+                                hashMap3.put("api", mtopStatistics.apiKey);
+                                hashMap3.put("version", mtopStatistics.apiKey);
+                                hashMap3.put("domain", mtopStatistics.domain);
+                                hashMap3.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
+                                hashMap3.put("ret", mtopStatistics.retCode);
+                                hashMap3.put("bxSessionId", mtopStatistics.bxSessionId);
+                                hashMap3.put("bxUI", String.valueOf(mtopStatistics.bxUI));
+                                hashMap3.put("bxMainAction", String.valueOf(mtopStatistics.bxMainAction));
+                                hashMap3.put("bxSubAction", String.valueOf(mtopStatistics.bxSubAction));
+                                hashMap3.put("bxRetry", String.valueOf(mtopStatistics.bxRetry));
+                                HashMap hashMap4 = new HashMap();
+                                hashMap4.put("bxSleep", Double.valueOf((double) mtopStatistics.bxSleep));
+                                hashMap4.put("checkTime", Double.valueOf((double) (mtopStatistics.fcProcessCheckEndTime - mtopStatistics.fcProcessCheckStartTime)));
+                                hashMap4.put(obj, Double.valueOf((double) (mtopStatistics.fcProcessCallbackTime - mtopStatistics.fcProcessStartTime)));
+                                iUploadStats2 = mtopStatistics.e;
+                                if (iUploadStats2 != null) {
+                                }
+                                mtopStatistics.commitStat = false;
+                            } catch (Throwable th5) {
+                                th = th5;
+                                try {
+                                    String str6 = mtopStatistics.seqNo;
+                                    TBSdkLog.e(str2, str6, "[commitStatData] commit mtopStats error ---" + th.toString());
+                                    return;
+                                } finally {
+                                    mtopStatistics.commitStat = false;
+                                }
                             }
-                            if (Mtop.mIsFullTrackValid) {
-                            }
-                            HashMap hashMap2 = new HashMap();
-                            hashMap2.put("totalTime", Double.valueOf((double) mtopStatistics.totalTime));
-                            hashMap2.put("networkExeTime", Double.valueOf((double) mtopStatistics.netTotalTime));
-                            hashMap2.put("cacheCostTime", Double.valueOf((double) mtopStatistics.cacheCostTime));
-                            hashMap2.put("cacheResponseParseTime", Double.valueOf((double) mtopStatistics.cacheResponseParseTime));
-                            hashMap2.put("waitExecuteTime", Double.valueOf((double) mtopStatistics.waitExecuteTime));
-                            hashMap2.put("waitCallbackTime", Double.valueOf((double) mtopStatistics.waitCallbackTime));
-                            hashMap2.put("waitExecute2BuildParamTime", Double.valueOf((double) mtopStatistics.waitExecute2BuildParamTime));
-                            hashMap2.put("buildParamsTime", Double.valueOf((double) mtopStatistics.buildParamsTime));
-                            hashMap2.put("buildParams2NetworkTime", Double.valueOf((double) mtopStatistics.buildParams2NetworkTime));
-                            hashMap2.put("startCallBack2EndTime", Double.valueOf((double) mtopStatistics.startCallBack2EndTime));
-                            hashMap2.put("signTime", Double.valueOf((double) mtopStatistics.computeSignTime));
-                            hashMap2.put("wuaTime", Double.valueOf((double) mtopStatistics.computeWuaTime));
-                            hashMap2.put("miniWuaTime", Double.valueOf((double) mtopStatistics.computeMiniWuaTime));
-                            hashMap2.put("callbackPocTime", Double.valueOf((double) mtopStatistics.callbackPocTime));
-                            hashMap2.put("allTime", Double.valueOf((double) mtopStatistics.allTime));
-                            hashMap2.put("requestPocTime", Double.valueOf((double) mtopStatistics.requestPocTime));
-                            if (networkStats != null) {
-                            }
-                            rbStatisticData = mtopStatistics.c;
-                            if (rbStatisticData != null) {
-                            }
-                            iUploadStats = mtopStatistics.e;
-                            if (iUploadStats != null) {
-                            }
-                            if (!ErrorConstant.isSuccess(mtopStatistics.retCode)) {
-                            }
-                            HashMap hashMap3 = new HashMap();
-                            hashMap3.put("bizId", !TextUtils.isEmpty(mtopStatistics.bizIdStr) ? mtopStatistics.bizIdStr : String.valueOf(mtopStatistics.bizId));
-                            hashMap3.put("api", mtopStatistics.apiKey);
-                            hashMap3.put("version", mtopStatistics.apiKey);
-                            hashMap3.put("domain", mtopStatistics.domain);
-                            hashMap3.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
-                            hashMap3.put("ret", mtopStatistics.retCode);
-                            hashMap3.put("bxSessionId", mtopStatistics.bxSessionId);
-                            hashMap3.put("bxUI", String.valueOf(mtopStatistics.bxUI));
-                            hashMap3.put("bxMainAction", String.valueOf(mtopStatistics.bxMainAction));
-                            hashMap3.put("bxSubAction", String.valueOf(mtopStatistics.bxSubAction));
-                            hashMap3.put("bxRetry", String.valueOf(mtopStatistics.bxRetry));
-                            HashMap hashMap4 = new HashMap();
-                            hashMap4.put("bxSleep", Double.valueOf((double) mtopStatistics.bxSleep));
-                            hashMap4.put("checkTime", Double.valueOf((double) (mtopStatistics.fcProcessCheckEndTime - mtopStatistics.fcProcessCheckStartTime)));
-                            hashMap4.put(obj, Double.valueOf((double) (mtopStatistics.fcProcessCallbackTime - mtopStatistics.fcProcessStartTime)));
-                            iUploadStats2 = mtopStatistics.e;
-                            if (iUploadStats2 != null) {
-                            }
-                            mtopStatistics.commitStat = false;
                         }
                     } else {
                         try {
@@ -489,8 +498,8 @@ public class MtopStatistics implements Cloneable {
                             hashSet.add("pageName");
                             hashSet.add("pageUrl");
                             obj13 = "backGround";
-                        } catch (Throwable th5) {
-                            th3 = th5;
+                        } catch (Throwable th6) {
+                            th3 = th6;
                             obj4 = "securityFeature";
                             obj13 = "backGround";
                             obj7 = "cacheHitType";
@@ -502,7 +511,7 @@ public class MtopStatistics implements Cloneable {
                             obj6 = obj13;
                             obj5 = "pageUrl";
                             TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                            hashMap = new HashMap();
+                            HashMap hashMap = new HashMap();
                             hashMap.put("api", mtopStatistics.apiKey);
                             hashMap.put("ret", mtopStatistics.retCode);
                             hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -591,8 +600,8 @@ public class MtopStatistics implements Cloneable {
                                         hashSet.add("deviceLevel");
                                         hashSet.add("sinceLastLaunchInternal");
                                         obj14 = "securityFeature";
-                                    } catch (Throwable th6) {
-                                        th3 = th6;
+                                    } catch (Throwable th7) {
+                                        th3 = th7;
                                         obj4 = "securityFeature";
                                         obj8 = "cacheSwitch";
                                         str = "mtopsdk.MtopStatistics";
@@ -602,7 +611,7 @@ public class MtopStatistics implements Cloneable {
                                         obj6 = obj13;
                                         obj5 = "pageUrl";
                                         TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                                        hashMap = new HashMap();
+                                        HashMap hashMap = new HashMap();
                                         hashMap.put("api", mtopStatistics.apiKey);
                                         hashMap.put("ret", mtopStatistics.retCode);
                                         hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -677,8 +686,8 @@ public class MtopStatistics implements Cloneable {
                                     try {
                                         hashSet.add(obj14);
                                         obj8 = "cacheSwitch";
-                                    } catch (Throwable th7) {
-                                        th3 = th7;
+                                    } catch (Throwable th8) {
+                                        th3 = th8;
                                         obj4 = obj14;
                                         obj8 = "cacheSwitch";
                                         str = "mtopsdk.MtopStatistics";
@@ -688,7 +697,7 @@ public class MtopStatistics implements Cloneable {
                                         obj6 = obj13;
                                         obj5 = "pageUrl";
                                         TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                                        hashMap = new HashMap();
+                                        HashMap hashMap = new HashMap();
                                         hashMap.put("api", mtopStatistics.apiKey);
                                         hashMap.put("ret", mtopStatistics.retCode);
                                         hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -760,8 +769,8 @@ public class MtopStatistics implements Cloneable {
                                         }
                                         mtopStatistics.commitStat = false;
                                     }
-                                } catch (Throwable th8) {
-                                    th3 = th8;
+                                } catch (Throwable th9) {
+                                    th3 = th9;
                                     obj2 = obj2;
                                     obj4 = "securityFeature";
                                     obj8 = "cacheSwitch";
@@ -772,7 +781,7 @@ public class MtopStatistics implements Cloneable {
                                     obj6 = obj13;
                                     obj5 = "pageUrl";
                                     TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                                    hashMap = new HashMap();
+                                    HashMap hashMap = new HashMap();
                                     hashMap.put("api", mtopStatistics.apiKey);
                                     hashMap.put("ret", mtopStatistics.retCode);
                                     hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -844,8 +853,8 @@ public class MtopStatistics implements Cloneable {
                                     }
                                     mtopStatistics.commitStat = false;
                                 }
-                            } catch (Throwable th9) {
-                                th3 = th9;
+                            } catch (Throwable th10) {
+                                th3 = th10;
                                 obj3 = obj3;
                                 obj4 = "securityFeature";
                                 obj8 = "cacheSwitch";
@@ -856,7 +865,7 @@ public class MtopStatistics implements Cloneable {
                                 obj6 = obj13;
                                 obj5 = "pageUrl";
                                 TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                                hashMap = new HashMap();
+                                HashMap hashMap = new HashMap();
                                 hashMap.put("api", mtopStatistics.apiKey);
                                 hashMap.put("ret", mtopStatistics.retCode);
                                 hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -928,8 +937,8 @@ public class MtopStatistics implements Cloneable {
                                 }
                                 mtopStatistics.commitStat = false;
                             }
-                        } catch (Throwable th10) {
-                            th3 = th10;
+                        } catch (Throwable th11) {
+                            th3 = th11;
                             obj7 = "cacheHitType";
                             obj4 = "securityFeature";
                             obj8 = "cacheSwitch";
@@ -940,7 +949,7 @@ public class MtopStatistics implements Cloneable {
                             obj6 = obj13;
                             obj5 = "pageUrl";
                             TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                            hashMap = new HashMap();
+                            HashMap hashMap = new HashMap();
                             hashMap.put("api", mtopStatistics.apiKey);
                             hashMap.put("ret", mtopStatistics.retCode);
                             hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -1015,7 +1024,7 @@ public class MtopStatistics implements Cloneable {
                         try {
                             hashSet.add("speedBucket");
                             hashSet.add("speedBucketId");
-                            hashSet2 = new HashSet();
+                            HashSet hashSet2 = new HashSet();
                             try {
                                 hashSet2.add("totalTime");
                                 hashSet2.add("waitExecuteTime");
@@ -1039,8 +1048,8 @@ public class MtopStatistics implements Cloneable {
                                 hashSet2.add("bizCallbackTime");
                                 hashSet2.add("mtopJsonParseTime");
                                 hashSet2.add("mtopReqTime");
-                            } catch (Throwable th11) {
-                                th3 = th11;
+                            } catch (Throwable th12) {
+                                th3 = th12;
                                 mtopStatistics = this;
                                 obj4 = obj14;
                                 str = "mtopsdk.MtopStatistics";
@@ -1049,7 +1058,7 @@ public class MtopStatistics implements Cloneable {
                                 obj6 = obj13;
                                 obj5 = "pageUrl";
                                 TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                                hashMap = new HashMap();
+                                HashMap hashMap = new HashMap();
                                 hashMap.put("api", mtopStatistics.apiKey);
                                 hashMap.put("ret", mtopStatistics.retCode);
                                 hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -1121,169 +1130,168 @@ public class MtopStatistics implements Cloneable {
                                 }
                                 mtopStatistics.commitStat = false;
                             }
-                        } catch (Throwable th12) {
-                            th3 = th12;
-                            obj4 = obj14;
-                            str = "mtopsdk.MtopStatistics";
-                            mtopStatistics = this;
-                            th2 = th3;
-                            String str5 = mtopStatistics.seqNo;
-                            obj6 = obj13;
-                            obj5 = "pageUrl";
-                            TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                            hashMap = new HashMap();
-                            hashMap.put("api", mtopStatistics.apiKey);
-                            hashMap.put("ret", mtopStatistics.retCode);
-                            hashMap.put("retType", String.valueOf(mtopStatistics.retType));
-                            hashMap.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
-                            hashMap.put("domain", mtopStatistics.domain);
-                            hashMap.put("reqSource", String.valueOf(mtopStatistics.reqSource));
-                            hashMap.put(obj8, String.valueOf(mtopStatistics.cacheSwitch));
-                            hashMap.put(obj7, String.valueOf(mtopStatistics.cacheHitType));
-                            hashMap.put("clientTraceId", mtopStatistics.clientTraceId);
-                            hashMap.put("serverTraceId", mtopStatistics.serverTraceId);
-                            hashMap.put("pageName", mtopStatistics.pageName);
-                            hashMap.put(obj5, mtopStatistics.pageUrl);
-                            hashMap.put(obj6, String.valueOf(mtopStatistics.backGround ? 1 : 0));
-                            str2 = str;
-                            hashMap.put(obj3, String.valueOf(mtopStatistics.isMain ? 1 : 0));
-                            hashMap.put(obj4, String.valueOf(RemoteConfig.getInstance().useSecurityAdapter));
-                            hashMap.put(obj2, String.valueOf(mtopStatistics.isPrefetch ? 1 : 0));
-                            hashMap.put("handler", String.valueOf(mtopStatistics.handler ? 1 : 0));
-                            networkStats = getNetworkStats();
-                            if (networkStats != null) {
-                            }
-                            if (Mtop.mIsFullTrackValid) {
-                            }
-                            HashMap hashMap2 = new HashMap();
-                            hashMap2.put("totalTime", Double.valueOf((double) mtopStatistics.totalTime));
-                            hashMap2.put("networkExeTime", Double.valueOf((double) mtopStatistics.netTotalTime));
-                            hashMap2.put("cacheCostTime", Double.valueOf((double) mtopStatistics.cacheCostTime));
-                            hashMap2.put("cacheResponseParseTime", Double.valueOf((double) mtopStatistics.cacheResponseParseTime));
-                            hashMap2.put("waitExecuteTime", Double.valueOf((double) mtopStatistics.waitExecuteTime));
-                            hashMap2.put("waitCallbackTime", Double.valueOf((double) mtopStatistics.waitCallbackTime));
-                            hashMap2.put("waitExecute2BuildParamTime", Double.valueOf((double) mtopStatistics.waitExecute2BuildParamTime));
-                            hashMap2.put("buildParamsTime", Double.valueOf((double) mtopStatistics.buildParamsTime));
-                            hashMap2.put("buildParams2NetworkTime", Double.valueOf((double) mtopStatistics.buildParams2NetworkTime));
-                            hashMap2.put("startCallBack2EndTime", Double.valueOf((double) mtopStatistics.startCallBack2EndTime));
-                            hashMap2.put("signTime", Double.valueOf((double) mtopStatistics.computeSignTime));
-                            hashMap2.put("wuaTime", Double.valueOf((double) mtopStatistics.computeWuaTime));
-                            hashMap2.put("miniWuaTime", Double.valueOf((double) mtopStatistics.computeMiniWuaTime));
-                            hashMap2.put("callbackPocTime", Double.valueOf((double) mtopStatistics.callbackPocTime));
-                            hashMap2.put("allTime", Double.valueOf((double) mtopStatistics.allTime));
-                            hashMap2.put("requestPocTime", Double.valueOf((double) mtopStatistics.requestPocTime));
-                            if (networkStats != null) {
-                            }
-                            rbStatisticData = mtopStatistics.c;
-                            if (rbStatisticData != null) {
-                            }
-                            iUploadStats = mtopStatistics.e;
-                            if (iUploadStats != null) {
-                            }
-                            if (!ErrorConstant.isSuccess(mtopStatistics.retCode)) {
-                            }
-                            HashMap hashMap3 = new HashMap();
-                            hashMap3.put("bizId", !TextUtils.isEmpty(mtopStatistics.bizIdStr) ? mtopStatistics.bizIdStr : String.valueOf(mtopStatistics.bizId));
-                            hashMap3.put("api", mtopStatistics.apiKey);
-                            hashMap3.put("version", mtopStatistics.apiKey);
-                            hashMap3.put("domain", mtopStatistics.domain);
-                            hashMap3.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
-                            hashMap3.put("ret", mtopStatistics.retCode);
-                            hashMap3.put("bxSessionId", mtopStatistics.bxSessionId);
-                            hashMap3.put("bxUI", String.valueOf(mtopStatistics.bxUI));
-                            hashMap3.put("bxMainAction", String.valueOf(mtopStatistics.bxMainAction));
-                            hashMap3.put("bxSubAction", String.valueOf(mtopStatistics.bxSubAction));
-                            hashMap3.put("bxRetry", String.valueOf(mtopStatistics.bxRetry));
-                            HashMap hashMap4 = new HashMap();
-                            hashMap4.put("bxSleep", Double.valueOf((double) mtopStatistics.bxSleep));
-                            hashMap4.put("checkTime", Double.valueOf((double) (mtopStatistics.fcProcessCheckEndTime - mtopStatistics.fcProcessCheckStartTime)));
-                            hashMap4.put(obj, Double.valueOf((double) (mtopStatistics.fcProcessCallbackTime - mtopStatistics.fcProcessStartTime)));
-                            iUploadStats2 = mtopStatistics.e;
-                            if (iUploadStats2 != null) {
-                            }
-                            mtopStatistics.commitStat = false;
-                        }
-                        try {
-                            hashSet2.add(obj);
-                            obj = obj;
-                            hashSet2.add("firstDataTime");
-                            hashSet2.add("recDataTime");
-                            hashSet2.add("revSize");
-                            hashSet2.add("dataSpeed");
-                            hashSet2.add("oneWayTime_ANet");
-                            hashSet2.add("serverRT");
-                            mtopStatistics = this;
-                            obj4 = obj14;
                             try {
-                                IUploadStats iUploadStats3 = mtopStatistics.e;
-                                if (iUploadStats3 != null) {
-                                    try {
-                                        iUploadStats3.onRegister("mtopsdk", "mtopStats", hashSet, hashSet2, false);
-                                    } catch (Throwable th13) {
-                                        th2 = th13;
-                                    }
-                                }
-                                HashSet hashSet3 = new HashSet();
-                                hashSet3.add("api");
-                                hashSet3.add("domain");
-                                hashSet3.add("ret");
-                                hashSet3.add("retType");
-                                hashSet3.add("reqSource");
-                                hashSet3.add("mappingCode");
-                                hashSet3.add("httpResponseStatus");
-                                hashSet3.add("refer");
-                                hashSet3.add("clientTraceId");
-                                hashSet3.add("serverTraceId");
-                                hashSet3.add("pageName");
-                                hashSet3.add("pageUrl");
-                                hashSet3.add(obj13);
-                                obj14 = obj4;
+                                hashSet2.add(obj);
+                                obj = obj;
+                                hashSet2.add("firstDataTime");
+                                hashSet2.add("recDataTime");
+                                hashSet2.add("revSize");
+                                hashSet2.add("dataSpeed");
+                                hashSet2.add("oneWayTime_ANet");
+                                hashSet2.add("serverRT");
+                                mtopStatistics = this;
+                                obj4 = obj14;
                                 try {
-                                    hashSet3.add(obj14);
-                                    IUploadStats iUploadStats4 = mtopStatistics.e;
-                                    if (iUploadStats4 != null) {
+                                    IUploadStats iUploadStats3 = mtopStatistics.e;
+                                    if (iUploadStats3 != null) {
                                         try {
-                                            iUploadStats4.onRegister("mtopsdk", "mtopExceptions", hashSet3, null, false);
-                                        } catch (Throwable th14) {
-                                            th2 = th14;
-                                            obj4 = obj14;
+                                            iUploadStats3.onRegister("mtopsdk", "mtopStats", hashSet, hashSet2, false);
+                                        } catch (Throwable th13) {
+                                            th2 = th13;
                                         }
                                     }
-                                    HashSet hashSet4 = new HashSet();
-                                    hashSet4.add("bizId");
-                                    hashSet4.add("api");
-                                    hashSet4.add("version");
-                                    hashSet4.add("domain");
-                                    hashSet4.add("httpResponseStatus");
-                                    hashSet4.add("ret");
-                                    hashSet4.add("bxSessionId");
-                                    hashSet4.add("bxUI");
-                                    hashSet4.add("bxMainAction");
-                                    hashSet4.add("bxSubAction");
-                                    hashSet4.add("bxRetry");
-                                    HashSet hashSet5 = new HashSet();
-                                    obj4 = obj14;
-                                    hashSet5.add("bxSleep");
-                                    hashSet5.add("checkTime");
+                                    HashSet hashSet3 = new HashSet();
+                                    hashSet3.add("api");
+                                    hashSet3.add("domain");
+                                    hashSet3.add("ret");
+                                    hashSet3.add("retType");
+                                    hashSet3.add("reqSource");
+                                    hashSet3.add("mappingCode");
+                                    hashSet3.add("httpResponseStatus");
+                                    hashSet3.add("refer");
+                                    hashSet3.add("clientTraceId");
+                                    hashSet3.add("serverTraceId");
+                                    hashSet3.add("pageName");
+                                    hashSet3.add("pageUrl");
+                                    hashSet3.add(obj13);
+                                    obj14 = obj4;
                                     try {
-                                        hashSet5.add(obj);
-                                        obj = obj;
-                                        IUploadStats iUploadStats5 = mtopStatistics.e;
-                                        if (iUploadStats5 != null) {
-                                            iUploadStats5.onRegister("mtopsdk", "baxiaAction", hashSet4, hashSet5, false);
+                                        hashSet3.add(obj14);
+                                        IUploadStats iUploadStats4 = mtopStatistics.e;
+                                        if (iUploadStats4 != null) {
+                                            try {
+                                                iUploadStats4.onRegister("mtopsdk", "mtopExceptions", hashSet3, null, false);
+                                            } catch (Throwable th14) {
+                                                th2 = th14;
+                                                obj4 = obj14;
+                                            }
                                         }
-                                        str4 = mtopStatistics.seqNo;
-                                        str = "mtopsdk.MtopStatistics";
-                                    } catch (Throwable th15) {
-                                        th3 = th15;
-                                        obj = obj;
+                                        HashSet hashSet4 = new HashSet();
+                                        hashSet4.add("bizId");
+                                        hashSet4.add("api");
+                                        hashSet4.add("version");
+                                        hashSet4.add("domain");
+                                        hashSet4.add("httpResponseStatus");
+                                        hashSet4.add("ret");
+                                        hashSet4.add("bxSessionId");
+                                        hashSet4.add("bxUI");
+                                        hashSet4.add("bxMainAction");
+                                        hashSet4.add("bxSubAction");
+                                        hashSet4.add("bxRetry");
+                                        HashSet hashSet5 = new HashSet();
+                                        obj4 = obj14;
+                                        hashSet5.add("bxSleep");
+                                        hashSet5.add("checkTime");
+                                        try {
+                                            hashSet5.add(obj);
+                                            obj = obj;
+                                            IUploadStats iUploadStats5 = mtopStatistics.e;
+                                            if (iUploadStats5 != null) {
+                                                iUploadStats5.onRegister("mtopsdk", "baxiaAction", hashSet4, hashSet5, false);
+                                            }
+                                            str4 = mtopStatistics.seqNo;
+                                            str = "mtopsdk.MtopStatistics";
+                                        } catch (Throwable th15) {
+                                            th3 = th15;
+                                            obj = obj;
+                                            str = "mtopsdk.MtopStatistics";
+                                            th2 = th3;
+                                            String str5 = mtopStatistics.seqNo;
+                                            obj6 = obj13;
+                                            obj5 = "pageUrl";
+                                            TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
+                                            HashMap hashMap = new HashMap();
+                                            hashMap.put("api", mtopStatistics.apiKey);
+                                            hashMap.put("ret", mtopStatistics.retCode);
+                                            hashMap.put("retType", String.valueOf(mtopStatistics.retType));
+                                            hashMap.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
+                                            hashMap.put("domain", mtopStatistics.domain);
+                                            hashMap.put("reqSource", String.valueOf(mtopStatistics.reqSource));
+                                            hashMap.put(obj8, String.valueOf(mtopStatistics.cacheSwitch));
+                                            hashMap.put(obj7, String.valueOf(mtopStatistics.cacheHitType));
+                                            hashMap.put("clientTraceId", mtopStatistics.clientTraceId);
+                                            hashMap.put("serverTraceId", mtopStatistics.serverTraceId);
+                                            hashMap.put("pageName", mtopStatistics.pageName);
+                                            hashMap.put(obj5, mtopStatistics.pageUrl);
+                                            hashMap.put(obj6, String.valueOf(mtopStatistics.backGround ? 1 : 0));
+                                            str2 = str;
+                                            hashMap.put(obj3, String.valueOf(mtopStatistics.isMain ? 1 : 0));
+                                            hashMap.put(obj4, String.valueOf(RemoteConfig.getInstance().useSecurityAdapter));
+                                            hashMap.put(obj2, String.valueOf(mtopStatistics.isPrefetch ? 1 : 0));
+                                            hashMap.put("handler", String.valueOf(mtopStatistics.handler ? 1 : 0));
+                                            networkStats = getNetworkStats();
+                                            if (networkStats != null) {
+                                            }
+                                            if (Mtop.mIsFullTrackValid) {
+                                            }
+                                            HashMap hashMap2 = new HashMap();
+                                            hashMap2.put("totalTime", Double.valueOf((double) mtopStatistics.totalTime));
+                                            hashMap2.put("networkExeTime", Double.valueOf((double) mtopStatistics.netTotalTime));
+                                            hashMap2.put("cacheCostTime", Double.valueOf((double) mtopStatistics.cacheCostTime));
+                                            hashMap2.put("cacheResponseParseTime", Double.valueOf((double) mtopStatistics.cacheResponseParseTime));
+                                            hashMap2.put("waitExecuteTime", Double.valueOf((double) mtopStatistics.waitExecuteTime));
+                                            hashMap2.put("waitCallbackTime", Double.valueOf((double) mtopStatistics.waitCallbackTime));
+                                            hashMap2.put("waitExecute2BuildParamTime", Double.valueOf((double) mtopStatistics.waitExecute2BuildParamTime));
+                                            hashMap2.put("buildParamsTime", Double.valueOf((double) mtopStatistics.buildParamsTime));
+                                            hashMap2.put("buildParams2NetworkTime", Double.valueOf((double) mtopStatistics.buildParams2NetworkTime));
+                                            hashMap2.put("startCallBack2EndTime", Double.valueOf((double) mtopStatistics.startCallBack2EndTime));
+                                            hashMap2.put("signTime", Double.valueOf((double) mtopStatistics.computeSignTime));
+                                            hashMap2.put("wuaTime", Double.valueOf((double) mtopStatistics.computeWuaTime));
+                                            hashMap2.put("miniWuaTime", Double.valueOf((double) mtopStatistics.computeMiniWuaTime));
+                                            hashMap2.put("callbackPocTime", Double.valueOf((double) mtopStatistics.callbackPocTime));
+                                            hashMap2.put("allTime", Double.valueOf((double) mtopStatistics.allTime));
+                                            hashMap2.put("requestPocTime", Double.valueOf((double) mtopStatistics.requestPocTime));
+                                            if (networkStats != null) {
+                                            }
+                                            rbStatisticData = mtopStatistics.c;
+                                            if (rbStatisticData != null) {
+                                            }
+                                            iUploadStats = mtopStatistics.e;
+                                            if (iUploadStats != null) {
+                                            }
+                                            if (!ErrorConstant.isSuccess(mtopStatistics.retCode)) {
+                                            }
+                                            HashMap hashMap3 = new HashMap();
+                                            hashMap3.put("bizId", !TextUtils.isEmpty(mtopStatistics.bizIdStr) ? mtopStatistics.bizIdStr : String.valueOf(mtopStatistics.bizId));
+                                            hashMap3.put("api", mtopStatistics.apiKey);
+                                            hashMap3.put("version", mtopStatistics.apiKey);
+                                            hashMap3.put("domain", mtopStatistics.domain);
+                                            hashMap3.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
+                                            hashMap3.put("ret", mtopStatistics.retCode);
+                                            hashMap3.put("bxSessionId", mtopStatistics.bxSessionId);
+                                            hashMap3.put("bxUI", String.valueOf(mtopStatistics.bxUI));
+                                            hashMap3.put("bxMainAction", String.valueOf(mtopStatistics.bxMainAction));
+                                            hashMap3.put("bxSubAction", String.valueOf(mtopStatistics.bxSubAction));
+                                            hashMap3.put("bxRetry", String.valueOf(mtopStatistics.bxRetry));
+                                            HashMap hashMap4 = new HashMap();
+                                            hashMap4.put("bxSleep", Double.valueOf((double) mtopStatistics.bxSleep));
+                                            hashMap4.put("checkTime", Double.valueOf((double) (mtopStatistics.fcProcessCheckEndTime - mtopStatistics.fcProcessCheckStartTime)));
+                                            hashMap4.put(obj, Double.valueOf((double) (mtopStatistics.fcProcessCallbackTime - mtopStatistics.fcProcessStartTime)));
+                                            iUploadStats2 = mtopStatistics.e;
+                                            if (iUploadStats2 != null) {
+                                            }
+                                            mtopStatistics.commitStat = false;
+                                        }
+                                    } catch (Throwable th16) {
+                                        th3 = th16;
+                                        obj4 = obj14;
                                         str = "mtopsdk.MtopStatistics";
                                         th2 = th3;
                                         String str5 = mtopStatistics.seqNo;
                                         obj6 = obj13;
                                         obj5 = "pageUrl";
                                         TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                                        hashMap = new HashMap();
+                                        HashMap hashMap = new HashMap();
                                         hashMap.put("api", mtopStatistics.apiKey);
                                         hashMap.put("ret", mtopStatistics.retCode);
                                         hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -1355,16 +1363,15 @@ public class MtopStatistics implements Cloneable {
                                         }
                                         mtopStatistics.commitStat = false;
                                     }
-                                } catch (Throwable th16) {
-                                    th3 = th16;
-                                    obj4 = obj14;
+                                } catch (Throwable th17) {
+                                    th3 = th17;
                                     str = "mtopsdk.MtopStatistics";
                                     th2 = th3;
                                     String str5 = mtopStatistics.seqNo;
                                     obj6 = obj13;
                                     obj5 = "pageUrl";
                                     TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                                    hashMap = new HashMap();
+                                    HashMap hashMap = new HashMap();
                                     hashMap.put("api", mtopStatistics.apiKey);
                                     hashMap.put("ret", mtopStatistics.retCode);
                                     hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -1436,15 +1443,101 @@ public class MtopStatistics implements Cloneable {
                                     }
                                     mtopStatistics.commitStat = false;
                                 }
-                            } catch (Throwable th17) {
-                                th3 = th17;
+                                try {
+                                    TBSdkLog.i(str, str4, "[registerMtopStats]register MtopStats executed.uploadStats=" + mtopStatistics.e);
+                                    obj6 = obj13;
+                                    obj5 = "pageUrl";
+                                } catch (Throwable th18) {
+                                    th3 = th18;
+                                    th2 = th3;
+                                    String str5 = mtopStatistics.seqNo;
+                                    obj6 = obj13;
+                                    obj5 = "pageUrl";
+                                    TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
+                                    HashMap hashMap = new HashMap();
+                                    hashMap.put("api", mtopStatistics.apiKey);
+                                    hashMap.put("ret", mtopStatistics.retCode);
+                                    hashMap.put("retType", String.valueOf(mtopStatistics.retType));
+                                    hashMap.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
+                                    hashMap.put("domain", mtopStatistics.domain);
+                                    hashMap.put("reqSource", String.valueOf(mtopStatistics.reqSource));
+                                    hashMap.put(obj8, String.valueOf(mtopStatistics.cacheSwitch));
+                                    hashMap.put(obj7, String.valueOf(mtopStatistics.cacheHitType));
+                                    hashMap.put("clientTraceId", mtopStatistics.clientTraceId);
+                                    hashMap.put("serverTraceId", mtopStatistics.serverTraceId);
+                                    hashMap.put("pageName", mtopStatistics.pageName);
+                                    hashMap.put(obj5, mtopStatistics.pageUrl);
+                                    hashMap.put(obj6, String.valueOf(mtopStatistics.backGround ? 1 : 0));
+                                    str2 = str;
+                                    hashMap.put(obj3, String.valueOf(mtopStatistics.isMain ? 1 : 0));
+                                    hashMap.put(obj4, String.valueOf(RemoteConfig.getInstance().useSecurityAdapter));
+                                    hashMap.put(obj2, String.valueOf(mtopStatistics.isPrefetch ? 1 : 0));
+                                    hashMap.put("handler", String.valueOf(mtopStatistics.handler ? 1 : 0));
+                                    networkStats = getNetworkStats();
+                                    if (networkStats != null) {
+                                    }
+                                    if (Mtop.mIsFullTrackValid) {
+                                    }
+                                    HashMap hashMap2 = new HashMap();
+                                    hashMap2.put("totalTime", Double.valueOf((double) mtopStatistics.totalTime));
+                                    hashMap2.put("networkExeTime", Double.valueOf((double) mtopStatistics.netTotalTime));
+                                    hashMap2.put("cacheCostTime", Double.valueOf((double) mtopStatistics.cacheCostTime));
+                                    hashMap2.put("cacheResponseParseTime", Double.valueOf((double) mtopStatistics.cacheResponseParseTime));
+                                    hashMap2.put("waitExecuteTime", Double.valueOf((double) mtopStatistics.waitExecuteTime));
+                                    hashMap2.put("waitCallbackTime", Double.valueOf((double) mtopStatistics.waitCallbackTime));
+                                    hashMap2.put("waitExecute2BuildParamTime", Double.valueOf((double) mtopStatistics.waitExecute2BuildParamTime));
+                                    hashMap2.put("buildParamsTime", Double.valueOf((double) mtopStatistics.buildParamsTime));
+                                    hashMap2.put("buildParams2NetworkTime", Double.valueOf((double) mtopStatistics.buildParams2NetworkTime));
+                                    hashMap2.put("startCallBack2EndTime", Double.valueOf((double) mtopStatistics.startCallBack2EndTime));
+                                    hashMap2.put("signTime", Double.valueOf((double) mtopStatistics.computeSignTime));
+                                    hashMap2.put("wuaTime", Double.valueOf((double) mtopStatistics.computeWuaTime));
+                                    hashMap2.put("miniWuaTime", Double.valueOf((double) mtopStatistics.computeMiniWuaTime));
+                                    hashMap2.put("callbackPocTime", Double.valueOf((double) mtopStatistics.callbackPocTime));
+                                    hashMap2.put("allTime", Double.valueOf((double) mtopStatistics.allTime));
+                                    hashMap2.put("requestPocTime", Double.valueOf((double) mtopStatistics.requestPocTime));
+                                    if (networkStats != null) {
+                                    }
+                                    rbStatisticData = mtopStatistics.c;
+                                    if (rbStatisticData != null) {
+                                    }
+                                    iUploadStats = mtopStatistics.e;
+                                    if (iUploadStats != null) {
+                                    }
+                                    if (!ErrorConstant.isSuccess(mtopStatistics.retCode)) {
+                                    }
+                                    HashMap hashMap3 = new HashMap();
+                                    hashMap3.put("bizId", !TextUtils.isEmpty(mtopStatistics.bizIdStr) ? mtopStatistics.bizIdStr : String.valueOf(mtopStatistics.bizId));
+                                    hashMap3.put("api", mtopStatistics.apiKey);
+                                    hashMap3.put("version", mtopStatistics.apiKey);
+                                    hashMap3.put("domain", mtopStatistics.domain);
+                                    hashMap3.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
+                                    hashMap3.put("ret", mtopStatistics.retCode);
+                                    hashMap3.put("bxSessionId", mtopStatistics.bxSessionId);
+                                    hashMap3.put("bxUI", String.valueOf(mtopStatistics.bxUI));
+                                    hashMap3.put("bxMainAction", String.valueOf(mtopStatistics.bxMainAction));
+                                    hashMap3.put("bxSubAction", String.valueOf(mtopStatistics.bxSubAction));
+                                    hashMap3.put("bxRetry", String.valueOf(mtopStatistics.bxRetry));
+                                    HashMap hashMap4 = new HashMap();
+                                    hashMap4.put("bxSleep", Double.valueOf((double) mtopStatistics.bxSleep));
+                                    hashMap4.put("checkTime", Double.valueOf((double) (mtopStatistics.fcProcessCheckEndTime - mtopStatistics.fcProcessCheckStartTime)));
+                                    hashMap4.put(obj, Double.valueOf((double) (mtopStatistics.fcProcessCallbackTime - mtopStatistics.fcProcessStartTime)));
+                                    iUploadStats2 = mtopStatistics.e;
+                                    if (iUploadStats2 != null) {
+                                    }
+                                    mtopStatistics.commitStat = false;
+                                }
+                            } catch (Throwable th19) {
+                                th3 = th19;
+                                obj4 = obj14;
+                                obj = obj;
                                 str = "mtopsdk.MtopStatistics";
+                                mtopStatistics = this;
                                 th2 = th3;
                                 String str5 = mtopStatistics.seqNo;
                                 obj6 = obj13;
                                 obj5 = "pageUrl";
                                 TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                                hashMap = new HashMap();
+                                HashMap hashMap = new HashMap();
                                 hashMap.put("api", mtopStatistics.apiKey);
                                 hashMap.put("ret", mtopStatistics.retCode);
                                 hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -1516,93 +1609,9 @@ public class MtopStatistics implements Cloneable {
                                 }
                                 mtopStatistics.commitStat = false;
                             }
-                            try {
-                                TBSdkLog.i(str, str4, "[registerMtopStats]register MtopStats executed.uploadStats=" + mtopStatistics.e);
-                                obj6 = obj13;
-                                obj5 = "pageUrl";
-                            } catch (Throwable th18) {
-                                th3 = th18;
-                                th2 = th3;
-                                String str5 = mtopStatistics.seqNo;
-                                obj6 = obj13;
-                                obj5 = "pageUrl";
-                                TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                                hashMap = new HashMap();
-                                hashMap.put("api", mtopStatistics.apiKey);
-                                hashMap.put("ret", mtopStatistics.retCode);
-                                hashMap.put("retType", String.valueOf(mtopStatistics.retType));
-                                hashMap.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
-                                hashMap.put("domain", mtopStatistics.domain);
-                                hashMap.put("reqSource", String.valueOf(mtopStatistics.reqSource));
-                                hashMap.put(obj8, String.valueOf(mtopStatistics.cacheSwitch));
-                                hashMap.put(obj7, String.valueOf(mtopStatistics.cacheHitType));
-                                hashMap.put("clientTraceId", mtopStatistics.clientTraceId);
-                                hashMap.put("serverTraceId", mtopStatistics.serverTraceId);
-                                hashMap.put("pageName", mtopStatistics.pageName);
-                                hashMap.put(obj5, mtopStatistics.pageUrl);
-                                hashMap.put(obj6, String.valueOf(mtopStatistics.backGround ? 1 : 0));
-                                str2 = str;
-                                hashMap.put(obj3, String.valueOf(mtopStatistics.isMain ? 1 : 0));
-                                hashMap.put(obj4, String.valueOf(RemoteConfig.getInstance().useSecurityAdapter));
-                                hashMap.put(obj2, String.valueOf(mtopStatistics.isPrefetch ? 1 : 0));
-                                hashMap.put("handler", String.valueOf(mtopStatistics.handler ? 1 : 0));
-                                networkStats = getNetworkStats();
-                                if (networkStats != null) {
-                                }
-                                if (Mtop.mIsFullTrackValid) {
-                                }
-                                HashMap hashMap2 = new HashMap();
-                                hashMap2.put("totalTime", Double.valueOf((double) mtopStatistics.totalTime));
-                                hashMap2.put("networkExeTime", Double.valueOf((double) mtopStatistics.netTotalTime));
-                                hashMap2.put("cacheCostTime", Double.valueOf((double) mtopStatistics.cacheCostTime));
-                                hashMap2.put("cacheResponseParseTime", Double.valueOf((double) mtopStatistics.cacheResponseParseTime));
-                                hashMap2.put("waitExecuteTime", Double.valueOf((double) mtopStatistics.waitExecuteTime));
-                                hashMap2.put("waitCallbackTime", Double.valueOf((double) mtopStatistics.waitCallbackTime));
-                                hashMap2.put("waitExecute2BuildParamTime", Double.valueOf((double) mtopStatistics.waitExecute2BuildParamTime));
-                                hashMap2.put("buildParamsTime", Double.valueOf((double) mtopStatistics.buildParamsTime));
-                                hashMap2.put("buildParams2NetworkTime", Double.valueOf((double) mtopStatistics.buildParams2NetworkTime));
-                                hashMap2.put("startCallBack2EndTime", Double.valueOf((double) mtopStatistics.startCallBack2EndTime));
-                                hashMap2.put("signTime", Double.valueOf((double) mtopStatistics.computeSignTime));
-                                hashMap2.put("wuaTime", Double.valueOf((double) mtopStatistics.computeWuaTime));
-                                hashMap2.put("miniWuaTime", Double.valueOf((double) mtopStatistics.computeMiniWuaTime));
-                                hashMap2.put("callbackPocTime", Double.valueOf((double) mtopStatistics.callbackPocTime));
-                                hashMap2.put("allTime", Double.valueOf((double) mtopStatistics.allTime));
-                                hashMap2.put("requestPocTime", Double.valueOf((double) mtopStatistics.requestPocTime));
-                                if (networkStats != null) {
-                                }
-                                rbStatisticData = mtopStatistics.c;
-                                if (rbStatisticData != null) {
-                                }
-                                iUploadStats = mtopStatistics.e;
-                                if (iUploadStats != null) {
-                                }
-                                if (!ErrorConstant.isSuccess(mtopStatistics.retCode)) {
-                                }
-                                HashMap hashMap3 = new HashMap();
-                                hashMap3.put("bizId", !TextUtils.isEmpty(mtopStatistics.bizIdStr) ? mtopStatistics.bizIdStr : String.valueOf(mtopStatistics.bizId));
-                                hashMap3.put("api", mtopStatistics.apiKey);
-                                hashMap3.put("version", mtopStatistics.apiKey);
-                                hashMap3.put("domain", mtopStatistics.domain);
-                                hashMap3.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
-                                hashMap3.put("ret", mtopStatistics.retCode);
-                                hashMap3.put("bxSessionId", mtopStatistics.bxSessionId);
-                                hashMap3.put("bxUI", String.valueOf(mtopStatistics.bxUI));
-                                hashMap3.put("bxMainAction", String.valueOf(mtopStatistics.bxMainAction));
-                                hashMap3.put("bxSubAction", String.valueOf(mtopStatistics.bxSubAction));
-                                hashMap3.put("bxRetry", String.valueOf(mtopStatistics.bxRetry));
-                                HashMap hashMap4 = new HashMap();
-                                hashMap4.put("bxSleep", Double.valueOf((double) mtopStatistics.bxSleep));
-                                hashMap4.put("checkTime", Double.valueOf((double) (mtopStatistics.fcProcessCheckEndTime - mtopStatistics.fcProcessCheckStartTime)));
-                                hashMap4.put(obj, Double.valueOf((double) (mtopStatistics.fcProcessCallbackTime - mtopStatistics.fcProcessStartTime)));
-                                iUploadStats2 = mtopStatistics.e;
-                                if (iUploadStats2 != null) {
-                                }
-                                mtopStatistics.commitStat = false;
-                            }
-                        } catch (Throwable th19) {
-                            th3 = th19;
+                        } catch (Throwable th20) {
+                            th3 = th20;
                             obj4 = obj14;
-                            obj = obj;
                             str = "mtopsdk.MtopStatistics";
                             mtopStatistics = this;
                             th2 = th3;
@@ -1610,7 +1619,7 @@ public class MtopStatistics implements Cloneable {
                             obj6 = obj13;
                             obj5 = "pageUrl";
                             TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                            hashMap = new HashMap();
+                            HashMap hashMap = new HashMap();
                             hashMap.put("api", mtopStatistics.apiKey);
                             hashMap.put("ret", mtopStatistics.retCode);
                             hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -1683,8 +1692,8 @@ public class MtopStatistics implements Cloneable {
                             mtopStatistics.commitStat = false;
                         }
                     }
-                } catch (Throwable th20) {
-                    th3 = th20;
+                } catch (Throwable th21) {
+                    th3 = th21;
                     obj4 = "securityFeature";
                     obj13 = "backGround";
                     obj7 = "cacheHitType";
@@ -1696,7 +1705,7 @@ public class MtopStatistics implements Cloneable {
                     obj6 = obj13;
                     obj5 = "pageUrl";
                     TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-                    hashMap = new HashMap();
+                    HashMap hashMap = new HashMap();
                     hashMap.put("api", mtopStatistics.apiKey);
                     hashMap.put("ret", mtopStatistics.retCode);
                     hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -1778,7 +1787,7 @@ public class MtopStatistics implements Cloneable {
                 mtopStatistics = this;
             }
             try {
-                hashMap = new HashMap();
+                HashMap hashMap = new HashMap();
                 hashMap.put("api", mtopStatistics.apiKey);
                 hashMap.put("ret", mtopStatistics.retCode);
                 hashMap.put("retType", String.valueOf(mtopStatistics.retType));
@@ -1793,146 +1802,135 @@ public class MtopStatistics implements Cloneable {
                 hashMap.put(obj5, mtopStatistics.pageUrl);
                 hashMap.put(obj6, String.valueOf(mtopStatistics.backGround ? 1 : 0));
                 str2 = str;
-                try {
-                    hashMap.put(obj3, String.valueOf(mtopStatistics.isMain ? 1 : 0));
-                    hashMap.put(obj4, String.valueOf(RemoteConfig.getInstance().useSecurityAdapter));
-                    hashMap.put(obj2, String.valueOf(mtopStatistics.isPrefetch ? 1 : 0));
-                    hashMap.put("handler", String.valueOf(mtopStatistics.handler ? 1 : 0));
-                    networkStats = getNetworkStats();
-                    if (networkStats != null) {
-                        str3 = "0";
-                        obj9 = obj6;
-                        hashMap.put("connType", networkStats.connectionType);
-                        hashMap.put("isSSL", networkStats.isSSL ? "1" : str3);
-                        hashMap.put("retryTimes", String.valueOf(networkStats.retryTimes));
-                        hashMap.put("ip_port", networkStats.ip_port);
-                    } else {
-                        str3 = "0";
-                        obj9 = obj6;
+                hashMap.put(obj3, String.valueOf(mtopStatistics.isMain ? 1 : 0));
+                hashMap.put(obj4, String.valueOf(RemoteConfig.getInstance().useSecurityAdapter));
+                hashMap.put(obj2, String.valueOf(mtopStatistics.isPrefetch ? 1 : 0));
+                hashMap.put("handler", String.valueOf(mtopStatistics.handler ? 1 : 0));
+                networkStats = getNetworkStats();
+                if (networkStats != null) {
+                    str3 = "0";
+                    obj9 = obj6;
+                    hashMap.put("connType", networkStats.connectionType);
+                    hashMap.put("isSSL", networkStats.isSSL ? "1" : str3);
+                    hashMap.put("retryTimes", String.valueOf(networkStats.retryTimes));
+                    hashMap.put("ip_port", networkStats.ip_port);
+                } else {
+                    str3 = "0";
+                    obj9 = obj6;
+                }
+                if (Mtop.mIsFullTrackValid) {
+                    obj10 = obj5;
+                    hashMap.put("launchType", String.valueOf(SceneIdentifier.getStartType()));
+                    hashMap.put("appLaunchExternal", SceneIdentifier.isUrlLaunch() ? "1" : str3);
+                    obj12 = "pageName";
+                    obj11 = "serverTraceId";
+                    hashMap.put("sinceAppLaunchInterval", String.valueOf(mtopStatistics.bizReqStart - SceneIdentifier.getAppLaunchTime()));
+                    hashMap.put("deviceLevel", String.valueOf(SceneIdentifier.getDeviceLevel()));
+                    if (SceneIdentifier.getStartType() != 1) {
+                        hashMap.put("sinceLastLaunchInternal", String.valueOf((int) (SceneIdentifier.getAppLaunchTime() - SceneIdentifier.getLastLaunchTime())));
                     }
-                    if (Mtop.mIsFullTrackValid) {
-                        obj10 = obj5;
-                        hashMap.put("launchType", String.valueOf(SceneIdentifier.getStartType()));
-                        hashMap.put("appLaunchExternal", SceneIdentifier.isUrlLaunch() ? "1" : str3);
-                        obj12 = "pageName";
-                        obj11 = "serverTraceId";
-                        hashMap.put("sinceAppLaunchInterval", String.valueOf(mtopStatistics.bizReqStart - SceneIdentifier.getAppLaunchTime()));
-                        hashMap.put("deviceLevel", String.valueOf(SceneIdentifier.getDeviceLevel()));
-                        if (SceneIdentifier.getStartType() != 1) {
-                            hashMap.put("sinceLastLaunchInternal", String.valueOf((int) (SceneIdentifier.getAppLaunchTime() - SceneIdentifier.getLastLaunchTime())));
-                        }
-                        String tBSpeedBucket = ABTestCenter.getTBSpeedBucket();
-                        if (TextUtils.isEmpty(tBSpeedBucket)) {
-                            tBSpeedBucket = str3;
-                        }
-                        hashMap.put("speedBucket", tBSpeedBucket);
-                        String uTABTestBucketId = ABTestCenter.getUTABTestBucketId("mtopsdk");
-                        if (TextUtils.isEmpty(uTABTestBucketId)) {
-                            uTABTestBucketId = str3;
-                        }
-                        hashMap.put("speedBucketId", uTABTestBucketId);
-                    } else {
-                        obj10 = obj5;
-                        obj12 = "pageName";
-                        obj11 = "serverTraceId";
+                    String tBSpeedBucket = ABTestCenter.getTBSpeedBucket();
+                    if (TextUtils.isEmpty(tBSpeedBucket)) {
+                        tBSpeedBucket = str3;
                     }
-                    HashMap hashMap2 = new HashMap();
-                    hashMap2.put("totalTime", Double.valueOf((double) mtopStatistics.totalTime));
-                    hashMap2.put("networkExeTime", Double.valueOf((double) mtopStatistics.netTotalTime));
-                    hashMap2.put("cacheCostTime", Double.valueOf((double) mtopStatistics.cacheCostTime));
-                    hashMap2.put("cacheResponseParseTime", Double.valueOf((double) mtopStatistics.cacheResponseParseTime));
-                    hashMap2.put("waitExecuteTime", Double.valueOf((double) mtopStatistics.waitExecuteTime));
-                    hashMap2.put("waitCallbackTime", Double.valueOf((double) mtopStatistics.waitCallbackTime));
-                    hashMap2.put("waitExecute2BuildParamTime", Double.valueOf((double) mtopStatistics.waitExecute2BuildParamTime));
-                    hashMap2.put("buildParamsTime", Double.valueOf((double) mtopStatistics.buildParamsTime));
-                    hashMap2.put("buildParams2NetworkTime", Double.valueOf((double) mtopStatistics.buildParams2NetworkTime));
-                    hashMap2.put("startCallBack2EndTime", Double.valueOf((double) mtopStatistics.startCallBack2EndTime));
-                    hashMap2.put("signTime", Double.valueOf((double) mtopStatistics.computeSignTime));
-                    hashMap2.put("wuaTime", Double.valueOf((double) mtopStatistics.computeWuaTime));
-                    hashMap2.put("miniWuaTime", Double.valueOf((double) mtopStatistics.computeMiniWuaTime));
-                    hashMap2.put("callbackPocTime", Double.valueOf((double) mtopStatistics.callbackPocTime));
-                    hashMap2.put("allTime", Double.valueOf((double) mtopStatistics.allTime));
-                    hashMap2.put("requestPocTime", Double.valueOf((double) mtopStatistics.requestPocTime));
-                    if (networkStats != null) {
-                        hashMap2.put(obj, Double.valueOf((double) networkStats.processTime));
-                        obj = obj;
-                        hashMap2.put("firstDataTime", Double.valueOf((double) networkStats.firstDataTime));
-                        hashMap2.put("recDataTime", Double.valueOf((double) networkStats.recDataTime));
-                        hashMap2.put("oneWayTime_ANet", Double.valueOf((double) networkStats.oneWayTime_ANet));
-                        hashMap2.put("serverRT", Double.valueOf((double) networkStats.serverRT));
-                        hashMap2.put("revSize", Double.valueOf((double) networkStats.recvSize));
-                        hashMap2.put("dataSpeed", Double.valueOf((double) networkStats.dataSpeed));
+                    hashMap.put("speedBucket", tBSpeedBucket);
+                    String uTABTestBucketId = ABTestCenter.getUTABTestBucketId("mtopsdk");
+                    if (TextUtils.isEmpty(uTABTestBucketId)) {
+                        uTABTestBucketId = str3;
                     }
-                    rbStatisticData = mtopStatistics.c;
-                    if (rbStatisticData != null) {
-                        hashMap2.put("rbReqTime", Double.valueOf((double) rbStatisticData.rbReqTime));
-                        hashMap2.put("toMainThTime", Double.valueOf((double) mtopStatistics.c.toMainThTime));
-                        hashMap2.put("mtopDispatchTime", Double.valueOf((double) mtopStatistics.c.mtopDispatchTime));
-                        hashMap2.put("bizCallbackTime", Double.valueOf((double) mtopStatistics.c.bizCallbackTime));
-                        hashMap2.put("mtopJsonParseTime", Double.valueOf((double) mtopStatistics.c.jsonParseTime));
-                        hashMap2.put("mtopReqTime", Double.valueOf((double) mtopStatistics.c.mtopReqTime));
+                    hashMap.put("speedBucketId", uTABTestBucketId);
+                } else {
+                    obj10 = obj5;
+                    obj12 = "pageName";
+                    obj11 = "serverTraceId";
+                }
+                HashMap hashMap2 = new HashMap();
+                hashMap2.put("totalTime", Double.valueOf((double) mtopStatistics.totalTime));
+                hashMap2.put("networkExeTime", Double.valueOf((double) mtopStatistics.netTotalTime));
+                hashMap2.put("cacheCostTime", Double.valueOf((double) mtopStatistics.cacheCostTime));
+                hashMap2.put("cacheResponseParseTime", Double.valueOf((double) mtopStatistics.cacheResponseParseTime));
+                hashMap2.put("waitExecuteTime", Double.valueOf((double) mtopStatistics.waitExecuteTime));
+                hashMap2.put("waitCallbackTime", Double.valueOf((double) mtopStatistics.waitCallbackTime));
+                hashMap2.put("waitExecute2BuildParamTime", Double.valueOf((double) mtopStatistics.waitExecute2BuildParamTime));
+                hashMap2.put("buildParamsTime", Double.valueOf((double) mtopStatistics.buildParamsTime));
+                hashMap2.put("buildParams2NetworkTime", Double.valueOf((double) mtopStatistics.buildParams2NetworkTime));
+                hashMap2.put("startCallBack2EndTime", Double.valueOf((double) mtopStatistics.startCallBack2EndTime));
+                hashMap2.put("signTime", Double.valueOf((double) mtopStatistics.computeSignTime));
+                hashMap2.put("wuaTime", Double.valueOf((double) mtopStatistics.computeWuaTime));
+                hashMap2.put("miniWuaTime", Double.valueOf((double) mtopStatistics.computeMiniWuaTime));
+                hashMap2.put("callbackPocTime", Double.valueOf((double) mtopStatistics.callbackPocTime));
+                hashMap2.put("allTime", Double.valueOf((double) mtopStatistics.allTime));
+                hashMap2.put("requestPocTime", Double.valueOf((double) mtopStatistics.requestPocTime));
+                if (networkStats != null) {
+                    hashMap2.put(obj, Double.valueOf((double) networkStats.processTime));
+                    obj = obj;
+                    hashMap2.put("firstDataTime", Double.valueOf((double) networkStats.firstDataTime));
+                    hashMap2.put("recDataTime", Double.valueOf((double) networkStats.recDataTime));
+                    hashMap2.put("oneWayTime_ANet", Double.valueOf((double) networkStats.oneWayTime_ANet));
+                    hashMap2.put("serverRT", Double.valueOf((double) networkStats.serverRT));
+                    hashMap2.put("revSize", Double.valueOf((double) networkStats.recvSize));
+                    hashMap2.put("dataSpeed", Double.valueOf((double) networkStats.dataSpeed));
+                }
+                rbStatisticData = mtopStatistics.c;
+                if (rbStatisticData != null) {
+                    hashMap2.put("rbReqTime", Double.valueOf((double) rbStatisticData.rbReqTime));
+                    hashMap2.put("toMainThTime", Double.valueOf((double) mtopStatistics.c.toMainThTime));
+                    hashMap2.put("mtopDispatchTime", Double.valueOf((double) mtopStatistics.c.mtopDispatchTime));
+                    hashMap2.put("bizCallbackTime", Double.valueOf((double) mtopStatistics.c.bizCallbackTime));
+                    hashMap2.put("mtopJsonParseTime", Double.valueOf((double) mtopStatistics.c.jsonParseTime));
+                    hashMap2.put("mtopReqTime", Double.valueOf((double) mtopStatistics.c.mtopReqTime));
+                }
+                iUploadStats = mtopStatistics.e;
+                if (iUploadStats != null) {
+                    iUploadStats.onCommit("mtopsdk", "mtopStats", hashMap, hashMap2);
+                }
+                if (!ErrorConstant.isSuccess(mtopStatistics.retCode)) {
+                    HashMap hashMap5 = new HashMap();
+                    hashMap5.put("api", mtopStatistics.apiKey);
+                    hashMap5.put("ret", mtopStatistics.retCode);
+                    hashMap5.put("retType", String.valueOf(mtopStatistics.retType));
+                    hashMap5.put("reqSource", String.valueOf(mtopStatistics.reqSource));
+                    hashMap5.put("mappingCode", mtopStatistics.mappingCode);
+                    hashMap5.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
+                    hashMap5.put("domain", mtopStatistics.domain);
+                    hashMap5.put("refer", mtopStatistics.pageUrl);
+                    hashMap5.put("clientTraceId", mtopStatistics.clientTraceId);
+                    hashMap5.put(obj11, mtopStatistics.serverTraceId);
+                    hashMap5.put(obj12, mtopStatistics.pageName);
+                    hashMap5.put(obj10, mtopStatistics.pageUrl);
+                    hashMap5.put(obj9, String.valueOf(mtopStatistics.backGround ? 1 : 0));
+                    hashMap5.put(obj3, String.valueOf(mtopStatistics.isMain ? 1 : 0));
+                    hashMap5.put(obj4, String.valueOf(RemoteConfig.getInstance().useSecurityAdapter));
+                    hashMap5.put(obj2, String.valueOf(mtopStatistics.isPrefetch ? 1 : 0));
+                    IUploadStats iUploadStats6 = mtopStatistics.e;
+                    if (iUploadStats6 != null) {
+                        iUploadStats6.onCommit("mtopsdk", "mtopExceptions", hashMap5, null);
                     }
-                    iUploadStats = mtopStatistics.e;
-                    if (iUploadStats != null) {
-                        iUploadStats.onCommit("mtopsdk", "mtopStats", hashMap, hashMap2);
-                    }
-                    if (!ErrorConstant.isSuccess(mtopStatistics.retCode)) {
-                        HashMap hashMap5 = new HashMap();
-                        hashMap5.put("api", mtopStatistics.apiKey);
-                        hashMap5.put("ret", mtopStatistics.retCode);
-                        hashMap5.put("retType", String.valueOf(mtopStatistics.retType));
-                        hashMap5.put("reqSource", String.valueOf(mtopStatistics.reqSource));
-                        hashMap5.put("mappingCode", mtopStatistics.mappingCode);
-                        hashMap5.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
-                        hashMap5.put("domain", mtopStatistics.domain);
-                        hashMap5.put("refer", mtopStatistics.pageUrl);
-                        hashMap5.put("clientTraceId", mtopStatistics.clientTraceId);
-                        hashMap5.put(obj11, mtopStatistics.serverTraceId);
-                        hashMap5.put(obj12, mtopStatistics.pageName);
-                        hashMap5.put(obj10, mtopStatistics.pageUrl);
-                        hashMap5.put(obj9, String.valueOf(mtopStatistics.backGround ? 1 : 0));
-                        hashMap5.put(obj3, String.valueOf(mtopStatistics.isMain ? 1 : 0));
-                        hashMap5.put(obj4, String.valueOf(RemoteConfig.getInstance().useSecurityAdapter));
-                        hashMap5.put(obj2, String.valueOf(mtopStatistics.isPrefetch ? 1 : 0));
-                        IUploadStats iUploadStats6 = mtopStatistics.e;
-                        if (iUploadStats6 != null) {
-                            iUploadStats6.onCommit("mtopsdk", "mtopExceptions", hashMap5, null);
-                        }
-                        if (!(mtopStatistics.retType == 0 || mtopStatistics.f == null)) {
-                            hashMap5.put("seqNo", mtopStatistics.seqNo);
-                        }
-                    }
-                    HashMap hashMap3 = new HashMap();
-                    hashMap3.put("bizId", !TextUtils.isEmpty(mtopStatistics.bizIdStr) ? mtopStatistics.bizIdStr : String.valueOf(mtopStatistics.bizId));
-                    hashMap3.put("api", mtopStatistics.apiKey);
-                    hashMap3.put("version", mtopStatistics.apiKey);
-                    hashMap3.put("domain", mtopStatistics.domain);
-                    hashMap3.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
-                    hashMap3.put("ret", mtopStatistics.retCode);
-                    hashMap3.put("bxSessionId", mtopStatistics.bxSessionId);
-                    hashMap3.put("bxUI", String.valueOf(mtopStatistics.bxUI));
-                    hashMap3.put("bxMainAction", String.valueOf(mtopStatistics.bxMainAction));
-                    hashMap3.put("bxSubAction", String.valueOf(mtopStatistics.bxSubAction));
-                    hashMap3.put("bxRetry", String.valueOf(mtopStatistics.bxRetry));
-                    HashMap hashMap4 = new HashMap();
-                    hashMap4.put("bxSleep", Double.valueOf((double) mtopStatistics.bxSleep));
-                    hashMap4.put("checkTime", Double.valueOf((double) (mtopStatistics.fcProcessCheckEndTime - mtopStatistics.fcProcessCheckStartTime)));
-                    hashMap4.put(obj, Double.valueOf((double) (mtopStatistics.fcProcessCallbackTime - mtopStatistics.fcProcessStartTime)));
-                    iUploadStats2 = mtopStatistics.e;
-                    if (iUploadStats2 != null) {
-                        iUploadStats2.onCommit("mtopsdk", "baxiaAction", hashMap3, hashMap4);
-                    }
-                    mtopStatistics.commitStat = false;
-                } catch (Throwable th21) {
-                    th = th21;
-                    try {
-                        String str6 = mtopStatistics.seqNo;
-                        TBSdkLog.e(str2, str6, "[commitStatData] commit mtopStats error ---" + th.toString());
-                        return;
-                    } finally {
-                        mtopStatistics.commitStat = false;
+                    if (!(mtopStatistics.retType == 0 || mtopStatistics.f == null)) {
+                        hashMap5.put("seqNo", mtopStatistics.seqNo);
                     }
                 }
+                HashMap hashMap3 = new HashMap();
+                hashMap3.put("bizId", !TextUtils.isEmpty(mtopStatistics.bizIdStr) ? mtopStatistics.bizIdStr : String.valueOf(mtopStatistics.bizId));
+                hashMap3.put("api", mtopStatistics.apiKey);
+                hashMap3.put("version", mtopStatistics.apiKey);
+                hashMap3.put("domain", mtopStatistics.domain);
+                hashMap3.put("httpResponseStatus", String.valueOf(mtopStatistics.statusCode));
+                hashMap3.put("ret", mtopStatistics.retCode);
+                hashMap3.put("bxSessionId", mtopStatistics.bxSessionId);
+                hashMap3.put("bxUI", String.valueOf(mtopStatistics.bxUI));
+                hashMap3.put("bxMainAction", String.valueOf(mtopStatistics.bxMainAction));
+                hashMap3.put("bxSubAction", String.valueOf(mtopStatistics.bxSubAction));
+                hashMap3.put("bxRetry", String.valueOf(mtopStatistics.bxRetry));
+                HashMap hashMap4 = new HashMap();
+                hashMap4.put("bxSleep", Double.valueOf((double) mtopStatistics.bxSleep));
+                hashMap4.put("checkTime", Double.valueOf((double) (mtopStatistics.fcProcessCheckEndTime - mtopStatistics.fcProcessCheckStartTime)));
+                hashMap4.put(obj, Double.valueOf((double) (mtopStatistics.fcProcessCallbackTime - mtopStatistics.fcProcessStartTime)));
+                iUploadStats2 = mtopStatistics.e;
+                if (iUploadStats2 != null) {
+                    iUploadStats2.onCommit("mtopsdk", "baxiaAction", hashMap3, hashMap4);
+                }
+                mtopStatistics.commitStat = false;
             } catch (Throwable th22) {
                 th = th22;
                 str2 = str;
@@ -1948,7 +1946,7 @@ public class MtopStatistics implements Cloneable {
         obj6 = obj13;
         obj5 = "pageUrl";
         TBSdkLog.e(str, str5, "[registerMtopStats] register MtopStats error ---" + th2.toString());
-        hashMap = new HashMap();
+        HashMap hashMap = new HashMap();
         hashMap.put("api", mtopStatistics.apiKey);
         hashMap.put("ret", mtopStatistics.retCode);
         hashMap.put("retType", String.valueOf(mtopStatistics.retType));

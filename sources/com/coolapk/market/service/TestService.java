@@ -26,15 +26,15 @@ public class TestService extends Service {
     }
 
     private RemoteViews createDownloadView(Context context) {
-        RemoteViews remoteViews = new RemoteViews(context.getPackageName(), 2131559075);
-        int adjustAlpha = ColorUtils.adjustAlpha(((TextView) remoteViews.apply(context, new LinearLayout(context)).findViewById(2131363844)).getCurrentTextColor(), 0.1f);
+        RemoteViews remoteViews = new RemoteViews(context.getPackageName(), 2131559082);
+        int adjustAlpha = ColorUtils.adjustAlpha(((TextView) remoteViews.apply(context, new LinearLayout(context)).findViewById(2131363866)).getCurrentTextColor(), 0.1f);
+        remoteViews.setInt(2131362814, "setBackgroundColor", adjustAlpha);
+        remoteViews.setInt(2131362802, "setBackgroundColor", adjustAlpha);
         remoteViews.setInt(2131362803, "setBackgroundColor", adjustAlpha);
-        remoteViews.setInt(2131362791, "setBackgroundColor", adjustAlpha);
-        remoteViews.setInt(2131362792, "setBackgroundColor", adjustAlpha);
-        remoteViews.setTextColor(2131362162, AppHolder.getAppTheme().getColorAccent());
-        remoteViews.setTextColor(2131362163, AppHolder.getAppTheme().getColorAccent());
         remoteViews.setTextColor(2131362165, AppHolder.getAppTheme().getColorAccent());
         remoteViews.setTextColor(2131362166, AppHolder.getAppTheme().getColorAccent());
+        remoteViews.setTextColor(2131362168, AppHolder.getAppTheme().getColorAccent());
+        remoteViews.setTextColor(2131362169, AppHolder.getAppTheme().getColorAccent());
         return remoteViews;
     }
 

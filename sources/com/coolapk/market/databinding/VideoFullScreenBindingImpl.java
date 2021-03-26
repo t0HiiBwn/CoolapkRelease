@@ -20,7 +20,7 @@ public class VideoFullScreenBindingImpl extends VideoFullScreenBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363912, 1);
+        sparseIntArray.put(2131363937, 1);
     }
 
     public VideoFullScreenBindingImpl(DataBindingComponent dataBindingComponent, View view) {

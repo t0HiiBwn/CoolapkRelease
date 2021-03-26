@@ -22,7 +22,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ImageCardViewHolder.kt */
 public final class ImageCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558787;
+    public static final int LAYOUT_ID = 2131558794;
     private Entity card;
     private final Random random = new Random();
 
@@ -85,7 +85,7 @@ public final class ImageCardViewHolder extends BindingViewHolder {
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
-        if (view.getId() == 2131362768) {
+        if (view.getId() == 2131362779) {
             Context context = getContext();
             Intrinsics.checkNotNullExpressionValue(context, "context");
             Entity entity = this.card;

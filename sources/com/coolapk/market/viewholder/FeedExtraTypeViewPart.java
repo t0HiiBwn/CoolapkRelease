@@ -46,7 +46,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedExtraTypeViewPart.kt */
 public final class FeedExtraTypeViewPart extends BindingViewPart<ItemFeedExtraTypePartBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558698;
+    public static final int LAYOUT_ID = 2131558705;
     private final DataBindingComponent component;
     private Feed feed;
 
@@ -74,7 +74,7 @@ public final class FeedExtraTypeViewPart extends BindingViewPart<ItemFeedExtraTy
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedExtraTypePartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558698, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558705, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemFeedExtraTypePartBinding) inflate;
     }
@@ -159,7 +159,7 @@ public final class FeedExtraTypeViewPart extends BindingViewPart<ItemFeedExtraTy
         itemFeedExtraTypePartBinding.executePendingBindings();
         if (TextUtils.isEmpty(feed2.getExtraPic())) {
             String feedType = feed2.getFeedType();
-            int i2 = (feedType != null && ((hashCode = feedType.hashCode()) == 116079 ? feedType.equals("url") : !(hashCode == 3138974 ? !feedType.equals("feed") : hashCode != 950398559 || !feedType.equals("comment")))) ? 2131231397 : 2131231410;
+            int i2 = (feedType != null && ((hashCode = feedType.hashCode()) == 116079 ? feedType.equals("url") : !(hashCode == 3138974 ? !feedType.equals("feed") : hashCode != 950398559 || !feedType.equals("comment")))) ? 2131231408 : 2131231421;
             ImageView imageView2 = itemFeedExtraTypePartBinding.extendIcon;
             Intrinsics.checkNotNullExpressionValue(imageView2, "binding.extendIcon");
             imageView2.setScaleType(ImageView.ScaleType.CENTER);
@@ -185,7 +185,7 @@ public final class FeedExtraTypeViewPart extends BindingViewPart<ItemFeedExtraTy
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         int id = view.getId();
-        if (id == 2131361886) {
+        if (id == 2131361887) {
             Feed feed2 = this.feed;
             if (feed2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("feed");
@@ -206,7 +206,7 @@ public final class FeedExtraTypeViewPart extends BindingViewPart<ItemFeedExtraTy
             if (Intrinsics.areEqual(feed4.getExtraType(), "apk")) {
                 handleApkButtonClick(view);
             }
-        } else if (id == 2131362481) {
+        } else if (id == 2131362489) {
             Feed feed5 = this.feed;
             if (feed5 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("feed");

@@ -27,10 +27,10 @@ public class ItemGoodsBindingImpl extends ItemGoodsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 5);
-        sparseIntArray.put(2131362316, 6);
-        sparseIntArray.put(2131363501, 7);
-        sparseIntArray.put(2131361981, 8);
+        sparseIntArray.put(2131362779, 5);
+        sparseIntArray.put(2131362322, 6);
+        sparseIntArray.put(2131363519, 7);
+        sparseIntArray.put(2131361982, 8);
     }
 
     public ItemGoodsBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -69,9 +69,9 @@ public class ItemGoodsBindingImpl extends ItemGoodsBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Goods) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);
@@ -85,7 +85,7 @@ public class ItemGoodsBindingImpl extends ItemGoodsBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -95,7 +95,7 @@ public class ItemGoodsBindingImpl extends ItemGoodsBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 

@@ -85,7 +85,7 @@ public class FeedReplyDetailHeaderFragment extends FeedReplyDetailFragment {
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
         View onCreateView = super.onCreateView(layoutInflater, viewGroup, bundle);
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558561, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558564, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…header, container, false)");
         FeedReplyDetailHeaderBinding feedReplyDetailHeaderBinding = (FeedReplyDetailHeaderBinding) inflate;
         this.binding = feedReplyDetailHeaderBinding;
@@ -104,7 +104,7 @@ public class FeedReplyDetailHeaderFragment extends FeedReplyDetailFragment {
     public void onViewCreated(View view, Bundle bundle) {
         Intrinsics.checkNotNullParameter(view, "view");
         super.onViewCreated(view, bundle);
-        Drawable drawable = ResourceUtils.getDrawable(getActivity(), 2131231200);
+        Drawable drawable = ResourceUtils.getDrawable(getActivity(), 2131231211);
         drawable.mutate().setColorFilter(AppHolder.getAppTheme().getTextColorSecondary(), PorterDuff.Mode.SRC_IN);
         FeedReplyDetailHeaderBinding feedReplyDetailHeaderBinding = this.binding;
         if (feedReplyDetailHeaderBinding == null) {
@@ -150,7 +150,7 @@ public class FeedReplyDetailHeaderFragment extends FeedReplyDetailFragment {
         }
         Toolbar toolbar = feedReplyDetailHeaderBinding.toolbar;
         Intrinsics.checkNotNullExpressionValue(toolbar, "binding.toolbar");
-        toolbar.setTitle(StringUtils.titleWithNum(getString(2131886791), feedReply.getReplyNum()));
+        toolbar.setTitle(StringUtils.titleWithNum(getString(2131886853), feedReply.getReplyNum()));
     }
 
     public void setupCommentBar(FeedReply feedReply) {

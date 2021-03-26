@@ -98,7 +98,7 @@ abstract class C$$AutoValue_Product extends Product {
     private final float voteDigPercentage;
     private final int wishCount;
 
-    C$$AutoValue_Product(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, String str13, List<String> list, int i, float f, float f2, String str14, int i2, float f3, float f4, float f5, float f6, float f7, float f8, float f9, float f10, float f11, float f12, float f13, int i3, int i4, int i5, List<String> list2, int i6, int i7, int i8, int i9, int i10, int i11, String str15, int i12, String str16, int i13, int i14, int i15, String str17, String str18, String str19, String str20, List<ProductConfig> list3, UserAction userAction2, List<ConfigPage> list4, String str21, float f14, String str22, float f15, int i16, int i17, int i18, int i19, int i20, int i21, int i22, int i23, int i24, int i25, int i26, float f16, int i27, int i28, int i29, String str23, String str24, List<ProductCoupon> list5, String str25, List<String> list6, List<RelatedData> list7, int i30, String str26, String str27, int i31, int i32, int i33, int i34, int i35, List<NewHeadLine> list8) {
+    C$$AutoValue_Product(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, String str13, List<String> list, int i, float f, float f2, String str14, int i2, float f3, float f4, float f5, float f6, float f7, float f8, float f9, float f10, float f11, float f12, float f13, int i3, int i4, int i5, List<String> list2, int i6, int i7, int i8, int i9, int i10, int i11, String str15, int i12, String str16, int i13, int i14, int i15, String str17, String str18, String str19, String str20, List<ProductConfig> list3, UserAction userAction2, List<ConfigPage> list4, String str21, float f14, String str22, float f15, int i16, int i17, int i18, int i19, int i20, int i21, int i22, int i23, int i24, int i25, int i26, float f16, int i27, int i28, int i29, String str23, String str24, List<ProductCoupon> list5, String str25, List<String> list6, List<RelatedData> list7, int i30, String str26, String str27, int i31, int i32, int i33, int i34, int i35, List<NewHeadLine> list8) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -111,8 +111,8 @@ abstract class C$$AutoValue_Product extends Product {
         this.subTitle = str9;
         this.id = str10;
         this.extraData = str11;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.brandId = str12;
         this.seriesId = str13;
         Objects.requireNonNull(list, "Null coverPicList");
@@ -790,10 +790,10 @@ abstract class C$$AutoValue_Product extends Product {
                                                 if (str24 != null ? str24.equals(product.getId()) : product.getId() == null) {
                                                     String str25 = this.extraData;
                                                     if (str25 != null ? str25.equals(product.getExtraData()) : product.getExtraData() == null) {
-                                                        Long l2 = this.dateline;
-                                                        if (l2 != null ? l2.equals(product.getDateline()) : product.getDateline() == null) {
-                                                            Long l3 = this.lastUpdate;
-                                                            if (l3 != null ? l3.equals(product.getLastUpdate()) : product.getLastUpdate() == null) {
+                                                        Long l = this.dateline;
+                                                        if (l != null ? l.equals(product.getDateline()) : product.getDateline() == null) {
+                                                            Long l2 = this.lastUpdate;
+                                                            if (l2 != null ? l2.equals(product.getLastUpdate()) : product.getLastUpdate() == null) {
                                                                 String str26 = this.brandId;
                                                                 if (str26 != null ? str26.equals(product.getBrandId()) : product.getBrandId() == null) {
                                                                     String str27 = this.seriesId;
@@ -847,10 +847,10 @@ abstract class C$$AutoValue_Product extends Product {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str12 = this.brandId;
         int hashCode15 = (hashCode14 ^ (str12 == null ? 0 : str12.hashCode())) * 1000003;
         String str13 = this.seriesId;
@@ -1153,14 +1153,14 @@ abstract class C$$AutoValue_Product extends Product {
         }
 
         @Override // com.coolapk.market.model.Product.Builder
-        public Product.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public Product.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.Product.Builder
-        public Product.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public Product.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

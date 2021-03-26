@@ -35,9 +35,7 @@ public final class RegeocodeAddress implements Parcelable {
     private String i;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private List<RegeocodeRoad> f1251l;
+    private List<RegeocodeRoad> l;
     private List<Crossroad> m;
     private List<PoiItem> n;
     private List<BusinessArea> o;
@@ -55,7 +53,7 @@ public final class RegeocodeAddress implements Parcelable {
     }
 
     public RegeocodeAddress() {
-        this.f1251l = new ArrayList();
+        this.l = new ArrayList();
         this.m = new ArrayList();
         this.n = new ArrayList();
         this.o = new ArrayList();
@@ -143,11 +141,11 @@ public final class RegeocodeAddress implements Parcelable {
     }
 
     public final List<RegeocodeRoad> getRoads() {
-        return this.f1251l;
+        return this.l;
     }
 
     public final void setRoads(List<RegeocodeRoad> list) {
-        this.f1251l = list;
+        this.l = list;
     }
 
     public final List<PoiItem> getPois() {
@@ -216,7 +214,7 @@ public final class RegeocodeAddress implements Parcelable {
         parcel.writeString(this.f);
         parcel.writeString(this.g);
         parcel.writeValue(this.h);
-        parcel.writeList(this.f1251l);
+        parcel.writeList(this.l);
         parcel.writeList(this.m);
         parcel.writeList(this.n);
         parcel.writeString(this.i);
@@ -229,7 +227,7 @@ public final class RegeocodeAddress implements Parcelable {
     }
 
     private RegeocodeAddress(Parcel parcel) {
-        this.f1251l = new ArrayList();
+        this.l = new ArrayList();
         this.m = new ArrayList();
         this.n = new ArrayList();
         this.o = new ArrayList();
@@ -242,7 +240,7 @@ public final class RegeocodeAddress implements Parcelable {
         this.f = parcel.readString();
         this.g = parcel.readString();
         this.h = (StreetNumber) parcel.readValue(StreetNumber.class.getClassLoader());
-        this.f1251l = parcel.readArrayList(Road.class.getClassLoader());
+        this.l = parcel.readArrayList(Road.class.getClassLoader());
         this.m = parcel.readArrayList(Crossroad.class.getClassLoader());
         this.n = parcel.readArrayList(PoiItem.class.getClassLoader());
         this.i = parcel.readString();

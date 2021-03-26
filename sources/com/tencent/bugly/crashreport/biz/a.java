@@ -66,7 +66,7 @@ public final class a {
                 i2 = 1;
             }
             userInfoBean.o = i2;
-            userInfoBean.f1431l = a3.a();
+            userInfoBean.l = a3.a();
             userInfoBean.m = a3.q;
             userInfoBean.g = a3.r;
             userInfoBean.h = a3.s;
@@ -76,7 +76,7 @@ public final class a {
             userInfoBean.s = a3.y();
             userInfoBean.p = a3.z();
             userInfoBean.q = a3.A();
-            w.a().a(new RunnableC0125a(userInfoBean, z), 0);
+            w.a().a(new RunnableC0143a(userInfoBean, z), 0);
             return;
         }
         x.e("UserInfo is disable", new Object[0]);
@@ -89,11 +89,11 @@ public final class a {
 
     /* renamed from: com.tencent.bugly.crashreport.biz.a$a  reason: collision with other inner class name */
     /* compiled from: BUGLY */
-    class RunnableC0125a implements Runnable {
+    class RunnableC0143a implements Runnable {
         private boolean a;
         private UserInfoBean b;
 
-        public RunnableC0125a(UserInfoBean userInfoBean, boolean z) {
+        public RunnableC0143a(UserInfoBean userInfoBean, boolean z) {
             this.b = userInfoBean;
             this.a = z;
         }

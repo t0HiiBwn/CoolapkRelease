@@ -15,9 +15,7 @@ public class c {
     public static int i = 10000;
     public static String j = "debug.file.blockcount";
     public static String k = "debug.file.keepperiod";
-
-    /* renamed from: l  reason: collision with root package name */
-    public static String f1454l = "debug.file.tracelevel";
+    public static String l = "debug.file.tracelevel";
     public static int m = 24;
     public static long n = 604800000;
 }

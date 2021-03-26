@@ -21,7 +21,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedRatingViewPart.kt */
 public final class FeedRatingViewPart extends BindingViewPart<ItemFeedRatingViewBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558715;
+    public static final int LAYOUT_ID = 2131558722;
 
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u000e\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\bR\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\t"}, d2 = {"Lcom/coolapk/market/viewholder/v8/FeedRatingViewPart$Companion;", "", "()V", "LAYOUT_ID", "", "shouldShowView", "", "feed", "Lcom/coolapk/market/model/Feed;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: FeedRatingViewPart.kt */
@@ -43,7 +43,7 @@ public final class FeedRatingViewPart extends BindingViewPart<ItemFeedRatingView
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedRatingViewBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558715, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558722, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemFeedRatingViewBinding) inflate;
     }

@@ -23,7 +23,7 @@ final class QRCodeActivity$processOtherText$2 implements View.OnClickListener {
         StringUtils.copyText(this.this$0.getActivity(), this.$text);
         BaseActivity activity = this.this$0.getActivity();
         Intrinsics.checkNotNullExpressionValue(activity, "activity");
-        Toast.show(activity, 2131887190);
+        Toast.show(activity, 2131887252);
         this.this$0.hideResultView();
     }
 }

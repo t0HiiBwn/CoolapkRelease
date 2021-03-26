@@ -60,9 +60,9 @@ public class ItemFollowDyhBindingImpl extends ItemFollowDyhBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((DyhViewModel) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -79,7 +79,7 @@ public class ItemFollowDyhBindingImpl extends ItemFollowDyhBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -89,7 +89,7 @@ public class ItemFollowDyhBindingImpl extends ItemFollowDyhBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -127,7 +127,7 @@ public class ItemFollowDyhBindingImpl extends ItemFollowDyhBinding {
                 this.mDirtyFlags |= 16;
             }
             return true;
-        } else if (i == 276) {
+        } else if (i == 277) {
             synchronized (this) {
                 this.mDirtyFlags |= 32;
             }
@@ -137,7 +137,7 @@ public class ItemFollowDyhBindingImpl extends ItemFollowDyhBinding {
                 this.mDirtyFlags |= 64;
             }
             return true;
-        } else if (i == 259) {
+        } else if (i == 260) {
             synchronized (this) {
                 this.mDirtyFlags |= 128;
             }
@@ -152,12 +152,12 @@ public class ItemFollowDyhBindingImpl extends ItemFollowDyhBinding {
                 this.mDirtyFlags |= 512;
             }
             return true;
-        } else if (i == 167) {
+        } else if (i == 168) {
             synchronized (this) {
                 this.mDirtyFlags |= 1024;
             }
             return true;
-        } else if (i != 256) {
+        } else if (i != 257) {
             return false;
         } else {
             synchronized (this) {
@@ -229,7 +229,7 @@ public class ItemFollowDyhBindingImpl extends ItemFollowDyhBinding {
                     j = j5 | j4;
                 }
                 str8 = z5 ? "textColorSecondary" : "white";
-                str9 = z5 ? this.actionView.getResources().getString(2131886761) : this.actionView.getResources().getString(2131886760);
+                str9 = z5 ? this.actionView.getResources().getString(2131886823) : this.actionView.getResources().getString(2131886822);
             } else {
                 str9 = null;
                 str8 = null;
@@ -437,7 +437,7 @@ public class ItemFollowDyhBindingImpl extends ItemFollowDyhBinding {
         }
         if (i13 != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str4, null, 2131231271, 0, bool2, bool2, bool2, true, bool2, null, null, onBitmapTransformListener, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str4, null, 2131231282, 0, bool2, bool2, bool2, true, bool2, null, null, onBitmapTransformListener, bool2, bool2, bool2, null, bool2);
         }
         if ((j & 6145) != 0) {
             this.statusView.setVisibility(i);

@@ -19,9 +19,7 @@ public class ag {
     int i = 100;
     int j = 100;
     int k = 100;
-
-    /* renamed from: l  reason: collision with root package name */
-    int f1198l = 6;
+    int l = 6;
     int m = 100;
     int n = 5000;
     int o = 1200;
@@ -87,7 +85,7 @@ public class ag {
     }
 
     public final void a(List<LatLonPoint> list) throws AMapException {
-        if (this.g && list != null && this.f1198l < list.size()) {
+        if (this.g && list != null && this.l < list.size()) {
             throw new AMapException("途经点个数超限");
         }
     }

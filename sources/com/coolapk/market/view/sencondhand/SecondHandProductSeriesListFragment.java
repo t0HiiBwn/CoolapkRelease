@@ -93,8 +93,8 @@ public final class SecondHandProductSeriesListFragment extends SupportVerticalMo
         super.onActivityCreated(bundle);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getMainBackgroundColor());
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new SecondHandProductSeriesListFragment$onActivityCreated$1());
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558877).suitedMethod(SecondHandProductSeriesListFragment$onActivityCreated$2.INSTANCE).constructor(new SecondHandProductSeriesListFragment$onActivityCreated$3(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558874).suitedMethod(SecondHandProductSeriesListFragment$onActivityCreated$4.INSTANCE).constructor(new SecondHandProductSeriesListFragment$onActivityCreated$5(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558884).suitedMethod(SecondHandProductSeriesListFragment$onActivityCreated$2.INSTANCE).constructor(new SecondHandProductSeriesListFragment$onActivityCreated$3(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558881).suitedMethod(SecondHandProductSeriesListFragment$onActivityCreated$4.INSTANCE).constructor(new SecondHandProductSeriesListFragment$onActivityCreated$5(this)).build(), 0, 2, null);
         initData();
     }
 
@@ -167,7 +167,7 @@ public final class SecondHandProductSeriesListFragment extends SupportVerticalMo
     /* compiled from: SecondHandProductSeriesListFragment.kt */
     private static final class ProductSeriesTitleHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558877;
+        public static final int LAYOUT_ID = 2131558884;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public ProductSeriesTitleHolder(View view, DataBindingComponent dataBindingComponent) {
@@ -203,7 +203,7 @@ public final class SecondHandProductSeriesListFragment extends SupportVerticalMo
     /* compiled from: SecondHandProductSeriesListFragment.kt */
     private static final class ProductSeriesHorizonHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558874;
+        public static final int LAYOUT_ID = 2131558881;
         private final ItemProductSeriesErshouBinding binding;
         private LocalData data;
         private final int dataType;
@@ -264,7 +264,7 @@ public final class SecondHandProductSeriesListFragment extends SupportVerticalMo
             Intrinsics.checkNotNullParameter(view, "view");
             super.onClick(view);
             int id = view.getId();
-            if (id == 2131362769) {
+            if (id == 2131362780) {
                 ItemProductSeriesErshouBinding itemProductSeriesErshouBinding = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemProductSeriesErshouBinding, "binding");
                 Product model1 = itemProductSeriesErshouBinding.getModel1();
@@ -272,7 +272,7 @@ public final class SecondHandProductSeriesListFragment extends SupportVerticalMo
                     Intrinsics.checkNotNullExpressionValue(model1, "it");
                     takeAction(model1);
                 }
-            } else if (id == 2131362773) {
+            } else if (id == 2131362784) {
                 ItemProductSeriesErshouBinding itemProductSeriesErshouBinding2 = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemProductSeriesErshouBinding2, "binding");
                 Product model2 = itemProductSeriesErshouBinding2.getModel2();

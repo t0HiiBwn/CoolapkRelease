@@ -1,16 +1,20 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import com.xiaomi.clientreport.processor.b;
-import java.util.List;
+class el extends Thread {
+    final /* synthetic */ ek a;
 
-public class el extends b {
-    public el(Context context) {
-        super(context);
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    el(ek ekVar, String str) {
+        super(str);
+        this.a = ekVar;
     }
 
-    @Override // com.xiaomi.clientreport.processor.b
-    public void a(List<String> list) {
-        em.a(this.a, list);
+    @Override // java.lang.Thread, java.lang.Runnable
+    public void run() {
+        try {
+            this.a.w.a();
+        } catch (Exception e) {
+            this.a.c(9, e);
+        }
     }
 }

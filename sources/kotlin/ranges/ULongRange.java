@@ -22,39 +22,39 @@ public final class ULongRange extends ULongProgression implements ClosedRange<UL
     /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Comparable] */
     @Override // kotlin.ranges.ClosedRange
     public /* bridge */ /* synthetic */ boolean contains(ULong uLong) {
-        return m1877containsVKZWuLQ(uLong.m886unboximpl());
+        return m1275containsVKZWuLQ(uLong.m284unboximpl());
     }
 
     /* Return type fixed from 'java.lang.Comparable' to match base method */
     @Override // kotlin.ranges.ClosedRange
     public /* bridge */ /* synthetic */ ULong getEndInclusive() {
-        return ULong.m837boximpl(m1878getEndInclusivesVKNKU());
+        return ULong.m235boximpl(m1276getEndInclusivesVKNKU());
     }
 
     /* Return type fixed from 'java.lang.Comparable' to match base method */
     @Override // kotlin.ranges.ClosedRange
     public /* bridge */ /* synthetic */ ULong getStart() {
-        return ULong.m837boximpl(m1879getStartsVKNKU());
+        return ULong.m235boximpl(m1277getStartsVKNKU());
     }
 
     /* renamed from: getStart-s-VKNKU  reason: not valid java name */
-    public long m1879getStartsVKNKU() {
-        return m1874getFirstsVKNKU();
+    public long m1277getStartsVKNKU() {
+        return m1272getFirstsVKNKU();
     }
 
     /* renamed from: getEndInclusive-s-VKNKU  reason: not valid java name */
-    public long m1878getEndInclusivesVKNKU() {
-        return m1875getLastsVKNKU();
+    public long m1276getEndInclusivesVKNKU() {
+        return m1273getLastsVKNKU();
     }
 
     /* renamed from: contains-VKZWuLQ  reason: not valid java name */
-    public boolean m1877containsVKZWuLQ(long j) {
-        return UnsignedKt.ulongCompare(m1874getFirstsVKNKU(), j) <= 0 && UnsignedKt.ulongCompare(j, m1875getLastsVKNKU()) <= 0;
+    public boolean m1275containsVKZWuLQ(long j) {
+        return UnsignedKt.ulongCompare(m1272getFirstsVKNKU(), j) <= 0 && UnsignedKt.ulongCompare(j, m1273getLastsVKNKU()) <= 0;
     }
 
     @Override // kotlin.ranges.ULongProgression, kotlin.ranges.ClosedRange
     public boolean isEmpty() {
-        return UnsignedKt.ulongCompare(m1874getFirstsVKNKU(), m1875getLastsVKNKU()) > 0;
+        return UnsignedKt.ulongCompare(m1272getFirstsVKNKU(), m1273getLastsVKNKU()) > 0;
     }
 
     @Override // kotlin.ranges.ULongProgression, java.lang.Object
@@ -62,7 +62,7 @@ public final class ULongRange extends ULongProgression implements ClosedRange<UL
         if (obj instanceof ULongRange) {
             if (!isEmpty() || !((ULongRange) obj).isEmpty()) {
                 ULongRange uLongRange = (ULongRange) obj;
-                if (!(m1874getFirstsVKNKU() == uLongRange.m1874getFirstsVKNKU() && m1875getLastsVKNKU() == uLongRange.m1875getLastsVKNKU())) {
+                if (!(m1272getFirstsVKNKU() == uLongRange.m1272getFirstsVKNKU() && m1273getLastsVKNKU() == uLongRange.m1273getLastsVKNKU())) {
                 }
             }
             return true;
@@ -75,12 +75,12 @@ public final class ULongRange extends ULongProgression implements ClosedRange<UL
         if (isEmpty()) {
             return -1;
         }
-        return ((int) ULong.m843constructorimpl(m1875getLastsVKNKU() ^ ULong.m843constructorimpl(m1875getLastsVKNKU() >>> 32))) + (((int) ULong.m843constructorimpl(m1874getFirstsVKNKU() ^ ULong.m843constructorimpl(m1874getFirstsVKNKU() >>> 32))) * 31);
+        return ((int) ULong.m241constructorimpl(m1273getLastsVKNKU() ^ ULong.m241constructorimpl(m1273getLastsVKNKU() >>> 32))) + (((int) ULong.m241constructorimpl(m1272getFirstsVKNKU() ^ ULong.m241constructorimpl(m1272getFirstsVKNKU() >>> 32))) * 31);
     }
 
     @Override // kotlin.ranges.ULongProgression, java.lang.Object
     public String toString() {
-        return ULong.m880toStringimpl(m1874getFirstsVKNKU()) + ".." + ULong.m880toStringimpl(m1875getLastsVKNKU());
+        return ULong.m278toStringimpl(m1272getFirstsVKNKU()) + ".." + ULong.m278toStringimpl(m1273getLastsVKNKU());
     }
 
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u0011\u0010\u0003\u001a\u00020\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"Lkotlin/ranges/ULongRange$Companion;", "", "()V", "EMPTY", "Lkotlin/ranges/ULongRange;", "getEMPTY", "()Lkotlin/ranges/ULongRange;", "kotlin-stdlib"}, k = 1, mv = {1, 4, 1})

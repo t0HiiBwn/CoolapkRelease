@@ -18,7 +18,7 @@ public class a {
     public static IRequestAuth a = null;
 
     /* renamed from: a  reason: collision with other field name */
-    private static boolean f52a = false;
+    private static boolean f51a = false;
     public static long b = -1;
     public static final AtomicInteger d = new AtomicInteger(0);
     private static Context mContext = null;
@@ -29,7 +29,7 @@ public class a {
     public static int s = 10000;
 
     /* renamed from: s  reason: collision with other field name */
-    public static boolean f53s = true;
+    public static boolean f52s = true;
     public static int t;
 
     public static String d() {
@@ -46,8 +46,8 @@ public class a {
                 i.a("UTDC", "UTDC init failed ,context:" + context);
                 return;
             }
-            if (!f52a) {
-                f52a = true;
+            if (!f51a) {
+                f51a = true;
                 mContext = context.getApplicationContext();
                 UploadEngine.getInstance().start();
             }

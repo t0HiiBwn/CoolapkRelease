@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Ads  reason: invalid class name */
 abstract class C$AutoValue_Ads extends C$$AutoValue_Ads {
-    C$AutoValue_Ads(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l2, Long l3, String str7, String str8, int i, String str9, String str10, String str11, String str12, String str13, String str14) {
-        super(str, str2, num, str3, str4, str5, str6, l2, l3, str7, str8, i, str9, str10, str11, str12, str13, str14);
+    C$AutoValue_Ads(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l, Long l2, String str7, String str8, int i, String str9, String str10, String str11, String str12, String str13, String str14) {
+        super(str, str2, num, str3, str4, str5, str6, l, l2, str7, str8, i, str9, str10, str11, str12, str13, str14);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Ads$GsonTypeAdapter */
@@ -108,13 +108,13 @@ abstract class C$AutoValue_Ads extends C$$AutoValue_Ads {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -222,8 +222,8 @@ abstract class C$AutoValue_Ads extends C$$AutoValue_Ads {
             String str4 = this.defaultPic;
             String str5 = this.defaultId;
             String str6 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str7 = this.defaultEntityTypeName;
             String str8 = this.defaultUid;
             int i = this.defaultFollow;
@@ -239,8 +239,8 @@ abstract class C$AutoValue_Ads extends C$$AutoValue_Ads {
             String str17 = str4;
             String str18 = str5;
             String str19 = str6;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str20 = str7;
             String str21 = str8;
             int i2 = i;
@@ -384,7 +384,7 @@ abstract class C$AutoValue_Ads extends C$$AutoValue_Ads {
                             str22 = this.entityTypeAdapter.read(jsonReader);
                             continue;
                         case 5:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 6:
                             i2 = this.followAdapter.read(jsonReader).intValue();
@@ -420,7 +420,7 @@ abstract class C$AutoValue_Ads extends C$$AutoValue_Ads {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 17:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -429,7 +429,7 @@ abstract class C$AutoValue_Ads extends C$$AutoValue_Ads {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Ads(str24, str15, num2, str16, str17, str18, str19, l4, l5, str20, str21, i2, str22, str23, str25, str26, str27, str14);
+            return new AutoValue_Ads(str24, str15, num2, str16, str17, str18, str19, l3, l4, str20, str21, i2, str22, str23, str25, str26, str27, str14);
         }
     }
 }

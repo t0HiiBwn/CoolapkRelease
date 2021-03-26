@@ -1,29 +1,21 @@
 package com.xiaomi.push.service;
 
-import android.database.ContentObserver;
-import android.os.Handler;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.service.XMPushService;
+import com.xiaomi.push.service.q;
 
-class bx extends ContentObserver {
+final class bx implements q.b.a {
     final /* synthetic */ XMPushService a;
 
-    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    bx(XMPushService xMPushService, Handler handler) {
-        super(handler);
+    bx(XMPushService xMPushService) {
         this.a = xMPushService;
     }
 
-    @Override // android.database.ContentObserver
-    public void onChange(boolean z) {
-        super.onChange(z);
-        boolean a2 = XMPushService.a(this.a);
-        b.m41a("ExtremePowerMode:" + a2);
-        if (a2) {
-            XMPushService xMPushService = this.a;
-            xMPushService.a(new XMPushService.f(23, null));
-            return;
+    @Override // com.xiaomi.push.service.q.b.a
+    public void a(q.c cVar, q.c cVar2, int i) {
+        if (cVar2 == q.c.binded) {
+            bm.a(this.a);
+            bm.b(this.a);
+        } else if (cVar2 == q.c.unbind) {
+            bm.a(this.a, 70000001, " the push is not connected.");
         }
-        this.a.a(true);
     }
 }

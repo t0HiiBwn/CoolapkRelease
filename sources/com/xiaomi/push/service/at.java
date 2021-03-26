@@ -1,20 +1,29 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.push.service.as;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.dd;
+import com.xiaomi.push.en;
+import com.xiaomi.push.eq;
+import java.util.Map;
 
-class at implements as.b.a {
-    final /* synthetic */ as.b a;
+class at extends en {
+    final /* synthetic */ XMPushService d;
 
-    at(as.b bVar) {
-        this.a = bVar;
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    at(XMPushService xMPushService, Map map, int i, String str, eq eqVar) {
+        super(map, i, str, eqVar);
+        this.d = xMPushService;
     }
 
-    @Override // com.xiaomi.push.service.as.b.a
-    public void a(as.c cVar, as.c cVar2, int i) {
-        if (cVar2 == as.c.binding) {
-            this.a.f964a.a(as.b.a(this.a), 60000);
-        } else {
-            this.a.f964a.b(as.b.a(this.a));
+    @Override // com.xiaomi.push.en
+    public byte[] c() {
+        try {
+            dd.b bVar = new dd.b();
+            bVar.a(ag.a().c());
+            return bVar.c();
+        } catch (Exception e) {
+            c.a("getOBBString err: " + e.toString());
+            return null;
         }
     }
 }

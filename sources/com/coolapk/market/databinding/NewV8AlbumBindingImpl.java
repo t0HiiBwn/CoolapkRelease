@@ -27,10 +27,10 @@ public class NewV8AlbumBindingImpl extends NewV8AlbumBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362118, 6);
-        sparseIntArray.put(2131362200, 7);
-        sparseIntArray.put(2131362067, 8);
-        sparseIntArray.put(2131363588, 9);
+        sparseIntArray.put(2131362121, 6);
+        sparseIntArray.put(2131362205, 7);
+        sparseIntArray.put(2131362069, 8);
+        sparseIntArray.put(2131363610, 9);
     }
 
     public NewV8AlbumBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -70,11 +70,11 @@ public class NewV8AlbumBindingImpl extends NewV8AlbumBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((AlbumDetailViewModel) obj);
@@ -99,7 +99,7 @@ public class NewV8AlbumBindingImpl extends NewV8AlbumBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -117,7 +117,7 @@ public class NewV8AlbumBindingImpl extends NewV8AlbumBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 170) {
+        } else if (i == 171) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
@@ -127,7 +127,7 @@ public class NewV8AlbumBindingImpl extends NewV8AlbumBinding {
                 this.mDirtyFlags |= 16;
             }
             return true;
-        } else if (i == 293) {
+        } else if (i == 294) {
             synchronized (this) {
                 this.mDirtyFlags |= 32;
             }

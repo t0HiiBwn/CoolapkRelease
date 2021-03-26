@@ -144,7 +144,7 @@ public class ItemUpgradeCardBindingImpl extends ItemUpgradeCardBinding {
             }
             UpgradeInfo upgradeInfo = mobileApp2 != null ? mobileApp2.getUpgradeInfo() : null;
             boolean z2 = mobileApp2 != null;
-            str4 = this.mboundView4.getResources().getString(2131887057, Integer.valueOf(i2));
+            str4 = this.mboundView4.getResources().getString(2131887119, Integer.valueOf(i2));
             if (mobileApp3 == null) {
                 z = false;
             }
@@ -195,15 +195,15 @@ public class ItemUpgradeCardBindingImpl extends ItemUpgradeCardBinding {
             OnImageLoadListener onImageLoadListener = null;
             OnBitmapTransformListener onBitmapTransformListener = null;
             View.OnClickListener onClickListener2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(dataBindingComponent, roundedImageView, str2, AppCompatResources.getDrawable(roundedImageView.getContext(), 2131231408), 0, 0, bool2, bool2, bool2, bool2, bool2, str5, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(dataBindingComponent, roundedImageView, str2, AppCompatResources.getDrawable(roundedImageView.getContext(), 2131231419), 0, 0, bool2, bool2, bool2, bool2, bool2, str5, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
             this.mboundView2.setVisibility(i3);
             DataBindingComponent dataBindingComponent2 = this.mBindingComponent;
             RoundedImageView roundedImageView2 = this.mboundView2;
-            ImageViewBindingAdapters.setImageUriWithContext(dataBindingComponent2, roundedImageView2, str, AppCompatResources.getDrawable(roundedImageView2.getContext(), 2131231408), 0, 0, bool2, bool2, bool2, bool2, bool2, str5, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(dataBindingComponent2, roundedImageView2, str, AppCompatResources.getDrawable(roundedImageView2.getContext(), 2131231419), 0, 0, bool2, bool2, bool2, bool2, bool2, str5, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
             this.mboundView3.setVisibility(i);
             DataBindingComponent dataBindingComponent3 = this.mBindingComponent;
             RoundedImageView roundedImageView3 = this.mboundView3;
-            ImageViewBindingAdapters.setImageUriWithContext(dataBindingComponent3, roundedImageView3, str3, AppCompatResources.getDrawable(roundedImageView3.getContext(), 2131231408), 0, 0, bool2, bool2, bool2, bool2, bool2, str5, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(dataBindingComponent3, roundedImageView3, str3, AppCompatResources.getDrawable(roundedImageView3.getContext(), 2131231419), 0, 0, bool2, bool2, bool2, bool2, bool2, str5, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
             TextViewBindingAdapter.setText(this.mboundView4, str4);
         }
     }

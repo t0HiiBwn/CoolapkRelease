@@ -2,7 +2,6 @@ package com.coolapk.market.view.live;
 
 import android.content.Context;
 import android.graphics.Rect;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.transition.TransitionManager;
@@ -18,15 +17,17 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.LifecycleOwnerKt;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import com.coolapk.market.AppHolder;
 import com.coolapk.market.app.TranslucentActivity;
 import com.coolapk.market.databinding.LiveActivityBinding;
 import com.coolapk.market.event.LiveFollowEvent;
+import com.coolapk.market.extend.EventBusExtendsKt;
 import com.coolapk.market.extend.ViewExtendsKt;
+import com.coolapk.market.local.LoginSession;
 import com.coolapk.market.manager.ActionManager;
-import com.coolapk.market.manager.AppNotification;
 import com.coolapk.market.model.Live;
 import com.coolapk.market.model.LiveMessage;
 import com.coolapk.market.model.LiveProduct;
@@ -42,11 +43,9 @@ import com.coolapk.market.view.live.LiveContract;
 import com.coolapk.market.view.live.LiveOptionsDialog;
 import com.coolapk.market.widget.DrawSystemBarFrameLayout;
 import com.coolapk.market.widget.Toast;
-import com.coolapk.market.widget.view.CollapsingToolbarFixLayout;
 import com.coolapk.market.widget.view.TabLayout;
 import com.google.android.material.appbar.AppBarLayout;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
@@ -57,36 +56,32 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
+import kotlinx.coroutines.BuildersKt__Builders_commonKt;
+import kotlinx.coroutines.GlobalScope;
+import kotlinx.coroutines.Job;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000×\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0010\u000b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0017\n\u0002\u0018\u0002\n\u0002\b\u0004*\u0001\u001d\u0018\u0000 {2\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005:\u0003{|}B\u0005¢\u0006\u0002\u0010\u0006J\u0010\u0010/\u001a\u0002002\u0006\u00101\u001a\u000202H\u0002J\b\u00103\u001a\u000200H\u0016J\n\u00104\u001a\u0004\u0018\u000105H\u0002J\b\u00106\u001a\u00020\u0013H\u0016J\b\u00107\u001a\u00020&H\u0016J\b\u00108\u001a\u00020 H\u0016J\b\u00109\u001a\u00020\u0019H\u0016J\b\u0010:\u001a\u00020.H\u0016J\u0006\u0010;\u001a\u00020 J\b\u0010<\u001a\u00020=H\u0002J\u0010\u0010>\u001a\u00020?2\u0006\u0010@\u001a\u00020 H\u0002J\b\u0010A\u001a\u000200H\u0002J\b\u0010B\u001a\u00020\nH\u0016J\"\u0010C\u001a\u0002002\u000e\u0010D\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010E2\b\u0010F\u001a\u0004\u0018\u00010GH\u0016J\b\u0010H\u001a\u000200H\u0016J\"\u0010I\u001a\u0002002\u000e\u0010D\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010E2\b\u0010F\u001a\u0004\u0018\u00010GH\u0016J\"\u0010J\u001a\u0002002\u000e\u0010D\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010E2\b\u0010F\u001a\u0004\u0018\u00010GH\u0016J*\u0010K\u001a\u0002002\u000e\u0010D\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010E2\b\u0010F\u001a\u0004\u0018\u00010G2\u0006\u0010L\u001a\u00020\tH\u0016J*\u0010M\u001a\u0002002\u000e\u0010D\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010E2\b\u0010F\u001a\u0004\u0018\u00010G2\u0006\u0010L\u001a\u00020\tH\u0016J\"\u0010N\u001a\u0002002\u000e\u0010D\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010E2\b\u0010F\u001a\u0004\u0018\u00010GH\u0016J\u0010\u0010O\u001a\u0002002\u0006\u0010P\u001a\u00020QH\u0016J\u0012\u0010R\u001a\u0002002\b\u0010S\u001a\u0004\u0018\u00010TH\u0014J\b\u0010U\u001a\u000200H\u0014J\u0010\u0010V\u001a\u0002002\u0006\u0010W\u001a\u00020XH\u0007J\u0010\u0010Y\u001a\u0002002\u0006\u0010W\u001a\u00020ZH\u0007J*\u0010[\u001a\u0002002\u0006\u0010\\\u001a\u00020\n2\u000e\u0010D\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010E2\b\u0010F\u001a\u0004\u0018\u00010GH\u0016J\"\u0010]\u001a\u0002002\u000e\u0010D\u001a\n\u0012\u0004\u0012\u000205\u0018\u00010E2\b\u0010F\u001a\u0004\u0018\u00010GH\u0016J\u0010\u0010^\u001a\u0002002\u0006\u0010_\u001a\u00020`H\u0016J\u0010\u0010a\u001a\u0002002\u0006\u0010W\u001a\u00020bH\u0007J\u0010\u0010c\u001a\u0002002\u0006\u0010_\u001a\u00020`H\u0016J*\u0010d\u001a\u0002002\u000e\u0010D\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010E2\b\u0010F\u001a\u0004\u0018\u00010G2\u0006\u0010e\u001a\u00020\tH\u0016J\b\u0010f\u001a\u000200H\u0014J\b\u0010g\u001a\u000200H\u0014J\u0010\u0010h\u001a\u0002002\u0006\u0010i\u001a\u00020TH\u0014J\b\u0010j\u001a\u000200H\u0014J\u0010\u0010k\u001a\u0002002\u0006\u0010l\u001a\u00020 H\u0014J\b\u0010m\u001a\u000200H\u0014J\u0014\u0010n\u001a\u0002002\n\b\u0002\u0010_\u001a\u0004\u0018\u00010`H\u0002J\b\u0010o\u001a\u000200H\u0014J\u000e\u0010p\u001a\u00020\n2\u0006\u0010q\u001a\u00020\nJ\b\u0010r\u001a\u000200H\u0002J\u0006\u0010s\u001a\u000200J\b\u0010t\u001a\u000200H\u0002J\b\u0010u\u001a\u000200H\u0002J7\u0010v\u001a\u00020 \"\u0004\b\u0000\u0010w*\b\u0012\u0004\u0012\u0002Hw0+2\b\b\u0002\u0010x\u001a\u00020 2\u0012\u0010y\u001a\u000e\u0012\u0004\u0012\u0002Hw\u0012\u0004\u0012\u00020\n0zH\bR*\u0010\u0007\u001a\u001e\u0012\u0004\u0012\u00020\t\u0012\u0004\u0012\u00020\n0\bj\u000e\u0012\u0004\u0012\u00020\t\u0012\u0004\u0012\u00020\n`\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\rX.¢\u0006\u0002\n\u0000R\u001b\u0010\u000e\u001a\u00020\n8BX\u0002¢\u0006\f\n\u0004\b\u0010\u0010\u0011\u001a\u0004\b\u000e\u0010\u000fR\u000e\u0010\u0012\u001a\u00020\u0013X.¢\u0006\u0002\n\u0000R\u001b\u0010\u0014\u001a\u00020\t8BX\u0002¢\u0006\f\n\u0004\b\u0017\u0010\u0011\u001a\u0004\b\u0015\u0010\u0016R\u000e\u0010\u0018\u001a\u00020\u0019X.¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u001c\u001a\u00020\u001dX\u0004¢\u0006\u0004\n\u0002\u0010\u001eR\u001a\u0010\u001f\u001a\u00020 X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b!\u0010\"\"\u0004\b#\u0010$R\u000e\u0010%\u001a\u00020&X.¢\u0006\u0002\n\u0000R\u001b\u0010'\u001a\u00020\t8BX\u0002¢\u0006\f\n\u0004\b)\u0010\u0011\u001a\u0004\b(\u0010\u0016R\u0016\u0010*\u001a\n\u0012\u0004\u0012\u00020,\u0018\u00010+X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010-\u001a\u00020.X.¢\u0006\u0002\n\u0000¨\u0006~"}, d2 = {"Lcom/coolapk/market/view/live/LiveActivity;", "Lcom/coolapk/market/view/base/BaseActivity;", "Lcom/coolapk/market/view/live/LiveContract$View;", "Lcom/coolapk/market/view/live/LiveContext;", "Landroid/view/View$OnClickListener;", "Lcom/coolapk/market/app/TranslucentActivity;", "()V", "actionCache", "Ljava/util/HashMap;", "", "", "Lkotlin/collections/HashMap;", "binding", "Lcom/coolapk/market/databinding/LiveActivityBinding;", "isPresenter", "()Z", "isPresenter$delegate", "Lkotlin/Lazy;", "liveDiscussPoll", "Lcom/coolapk/market/view/live/LiveDiscussPoll;", "liveId", "getLiveId", "()Ljava/lang/String;", "liveId$delegate", "liveVideoViewPart", "Lcom/coolapk/market/view/live/LiveVideoViewPart;", "messageIntercept", "Lcom/coolapk/market/manager/AppNotification$MessageIntercept;", "onPageChangeListener", "com/coolapk/market/view/live/LiveActivity$onPageChangeListener$1", "Lcom/coolapk/market/view/live/LiveActivity$onPageChangeListener$1;", "paddingBottom", "", "getPaddingBottom", "()I", "setPaddingBottom", "(I)V", "presenter", "Lcom/coolapk/market/view/live/LivePresenter;", "pushTag", "getPushTag", "pushTag$delegate", "tabs", "", "Lcom/coolapk/market/view/live/LiveActivity$Tab;", "viewModel", "Lcom/coolapk/market/view/live/LiveViewModel;", "applyWindowsInset", "", "rect", "Landroid/graphics/Rect;", "finish", "getLive", "Lcom/coolapk/market/model/Live;", "getLiveDiscussPoll", "getLivePresenter", "getLiveVideoHeight", "getLiveVideoViewPart", "getLiveViewModel", "getNavigationBarHeight", "getViewPagerAdapter", "Lcom/coolapk/market/view/live/LiveActivity$DataAdapter;", "getViewPagerFragment", "Landroidx/fragment/app/Fragment;", "position", "initUI", "isNavigationBarTranslucent", "onAddToBroadcast", "result", "Lcom/coolapk/market/network/Result;", "error", "", "onBackPressed", "onBanAllPost", "onBanAllPostPic", "onBanUser", "uid", "onBanUserAndClean", "onChangeLiveStatus", "onClick", "v", "Landroid/view/View;", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onDestroy", "onLiveActionEventChanged", "event", "Lcom/coolapk/market/view/live/LiveActionEvent;", "onLiveDiscussNumEventChanged", "Lcom/coolapk/market/view/live/LiveNumEvent;", "onLiveFollowed", "follow", "onLiveLoaded", "onLiveMessageClick", "liveMessage", "Lcom/coolapk/market/model/LiveMessage;", "onLiveMessageEventChanged", "Lcom/coolapk/market/view/live/LiveMessageEvent;", "onLiveMessageLongClick", "onMessageDeleted", "messageId", "onPause", "onResume", "onSaveInstanceState", "outState", "onSetStatusBarColor", "onSetStatusBarDarkMode", "delay", "onStart", "onStartLivePostMessageActivity", "onStop", "requireToggleVideoFullScreen", "withAnimation", "updateAppbarScrollable", "updateLiveVideoViewPart", "updatePostView", "updateUI", "indexOfFirst", "T", "default", "predicate", "Lkotlin/Function1;", "Companion", "DataAdapter", "Tab", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000Ï\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0016\n\u0002\u0018\u0002\n\u0002\b\u0004*\u0003\b\r\u001c\u0018\u0000 s2\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005:\u0003stuB\u0005¢\u0006\u0002\u0010\u0006J\u0010\u0010%\u001a\u00020&2\u0006\u0010'\u001a\u00020(H\u0002J\b\u0010)\u001a\u00020&H\u0016J\n\u0010*\u001a\u0004\u0018\u00010+H\u0002J\b\u0010,\u001a\u00020\u001fH\u0016J\b\u0010-\u001a\u00020.H\u0016J\b\u0010/\u001a\u00020\u001aH\u0016J\b\u00100\u001a\u00020$H\u0016J\u0006\u00101\u001a\u00020.J\b\u00102\u001a\u000203H\u0002J\u0010\u00104\u001a\u0002052\u0006\u00106\u001a\u00020.H\u0002J\b\u00107\u001a\u00020&H\u0002J\b\u00108\u001a\u00020\u0010H\u0016J\b\u00109\u001a\u00020&H\u0002J\"\u0010:\u001a\u00020&2\u000e\u0010;\u001a\n\u0012\u0004\u0012\u00020\u0015\u0018\u00010<2\b\u0010=\u001a\u0004\u0018\u00010>H\u0016J\b\u0010?\u001a\u00020&H\u0016J\"\u0010@\u001a\u00020&2\u000e\u0010;\u001a\n\u0012\u0004\u0012\u00020\u0015\u0018\u00010<2\b\u0010=\u001a\u0004\u0018\u00010>H\u0016J\"\u0010A\u001a\u00020&2\u000e\u0010;\u001a\n\u0012\u0004\u0012\u00020\u0015\u0018\u00010<2\b\u0010=\u001a\u0004\u0018\u00010>H\u0016J*\u0010B\u001a\u00020&2\u000e\u0010;\u001a\n\u0012\u0004\u0012\u00020\u0015\u0018\u00010<2\b\u0010=\u001a\u0004\u0018\u00010>2\u0006\u0010C\u001a\u00020\u0015H\u0016J*\u0010D\u001a\u00020&2\u000e\u0010;\u001a\n\u0012\u0004\u0012\u00020\u0015\u0018\u00010<2\b\u0010=\u001a\u0004\u0018\u00010>2\u0006\u0010C\u001a\u00020\u0015H\u0016J\"\u0010E\u001a\u00020&2\u000e\u0010;\u001a\n\u0012\u0004\u0012\u00020\u0015\u0018\u00010<2\b\u0010=\u001a\u0004\u0018\u00010>H\u0016J\u0010\u0010F\u001a\u00020&2\u0006\u0010G\u001a\u00020HH\u0016J\u0012\u0010I\u001a\u00020&2\b\u0010J\u001a\u0004\u0018\u00010KH\u0014J\b\u0010L\u001a\u00020&H\u0014J\u0010\u0010M\u001a\u00020&2\u0006\u0010N\u001a\u00020OH\u0007J*\u0010P\u001a\u00020&2\u0006\u0010Q\u001a\u00020\u00102\u000e\u0010;\u001a\n\u0012\u0004\u0012\u00020\u0015\u0018\u00010<2\b\u0010=\u001a\u0004\u0018\u00010>H\u0016J\"\u0010R\u001a\u00020&2\u000e\u0010;\u001a\n\u0012\u0004\u0012\u00020+\u0018\u00010<2\b\u0010=\u001a\u0004\u0018\u00010>H\u0016J\u0010\u0010S\u001a\u00020&2\u0006\u0010T\u001a\u00020UH\u0016J\u0010\u0010V\u001a\u00020&2\u0006\u0010N\u001a\u00020WH\u0007J\u0010\u0010X\u001a\u00020&2\u0006\u0010T\u001a\u00020UH\u0016J\u0010\u0010Y\u001a\u00020&2\u0006\u0010Z\u001a\u00020[H\u0007J*\u0010\\\u001a\u00020&2\u000e\u0010;\u001a\n\u0012\u0004\u0012\u00020\u0015\u0018\u00010<2\b\u0010=\u001a\u0004\u0018\u00010>2\u0006\u0010]\u001a\u00020\u0015H\u0016J\b\u0010^\u001a\u00020&H\u0014J\b\u0010_\u001a\u00020&H\u0014J\u0010\u0010`\u001a\u00020&2\u0006\u0010a\u001a\u00020KH\u0014J\b\u0010b\u001a\u00020&H\u0014J\u0010\u0010c\u001a\u00020&2\u0006\u0010d\u001a\u00020.H\u0014J\b\u0010e\u001a\u00020&H\u0014J\u0014\u0010f\u001a\u00020&2\n\b\u0002\u0010T\u001a\u0004\u0018\u00010UH\u0002J\b\u0010g\u001a\u00020&H\u0014J\u000e\u0010h\u001a\u00020\u00102\u0006\u0010i\u001a\u00020\u0010J\b\u0010j\u001a\u00020&H\u0002J\u0006\u0010k\u001a\u00020&J\b\u0010l\u001a\u00020&H\u0002J\b\u0010m\u001a\u00020&H\u0002J7\u0010n\u001a\u00020.\"\u0004\b\u0000\u0010o*\b\u0012\u0004\u0012\u0002Ho0!2\b\b\u0002\u0010p\u001a\u00020.2\u0012\u0010q\u001a\u000e\u0012\u0004\u0012\u0002Ho\u0012\u0004\u0012\u00020\u00100rH\bR\u0010\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0004\n\u0002\u0010\tR\u000e\u0010\n\u001a\u00020\u000bX.¢\u0006\u0002\n\u0000R\u0010\u0010\f\u001a\u00020\rX\u0004¢\u0006\u0004\n\u0002\u0010\u000eR\u001b\u0010\u000f\u001a\u00020\u00108BX\u0002¢\u0006\f\n\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u000f\u0010\u0011R\u001b\u0010\u0014\u001a\u00020\u00158BX\u0002¢\u0006\f\n\u0004\b\u0018\u0010\u0013\u001a\u0004\b\u0016\u0010\u0017R\u000e\u0010\u0019\u001a\u00020\u001aX.¢\u0006\u0002\n\u0000R\u0010\u0010\u001b\u001a\u00020\u001cX\u0004¢\u0006\u0004\n\u0002\u0010\u001dR\u000e\u0010\u001e\u001a\u00020\u001fX.¢\u0006\u0002\n\u0000R\u0016\u0010 \u001a\n\u0012\u0004\u0012\u00020\"\u0018\u00010!X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010#\u001a\u00020$X.¢\u0006\u0002\n\u0000¨\u0006v"}, d2 = {"Lcom/coolapk/market/view/live/LiveActivity;", "Lcom/coolapk/market/view/base/BaseActivity;", "Lcom/coolapk/market/view/live/LiveContract$View;", "Lcom/coolapk/market/view/live/LiveContext;", "Landroid/view/View$OnClickListener;", "Lcom/coolapk/market/app/TranslucentActivity;", "()V", "appImStateListener", "com/coolapk/market/view/live/LiveActivity$appImStateListener$1", "Lcom/coolapk/market/view/live/LiveActivity$appImStateListener$1;", "binding", "Lcom/coolapk/market/databinding/LiveActivityBinding;", "groupMessageListener", "com/coolapk/market/view/live/LiveActivity$groupMessageListener$1", "Lcom/coolapk/market/view/live/LiveActivity$groupMessageListener$1;", "isPresenter", "", "()Z", "isPresenter$delegate", "Lkotlin/Lazy;", "liveId", "", "getLiveId", "()Ljava/lang/String;", "liveId$delegate", "liveVideoViewPart", "Lcom/coolapk/market/view/live/LiveVideoViewPart;", "onPageChangeListener", "com/coolapk/market/view/live/LiveActivity$onPageChangeListener$1", "Lcom/coolapk/market/view/live/LiveActivity$onPageChangeListener$1;", "presenter", "Lcom/coolapk/market/view/live/LivePresenter;", "tabs", "", "Lcom/coolapk/market/view/live/LiveActivity$Tab;", "viewModel", "Lcom/coolapk/market/view/live/LiveViewModel;", "applyWindowsInset", "", "rect", "Landroid/graphics/Rect;", "finish", "getLive", "Lcom/coolapk/market/model/Live;", "getLivePresenter", "getLiveVideoHeight", "", "getLiveVideoViewPart", "getLiveViewModel", "getNavigationBarHeight", "getViewPagerAdapter", "Lcom/coolapk/market/view/live/LiveActivity$DataAdapter;", "getViewPagerFragment", "Landroidx/fragment/app/Fragment;", "position", "initUI", "isNavigationBarTranslucent", "joinIMGroup", "onAddToBroadcast", "result", "Lcom/coolapk/market/network/Result;", "error", "", "onBackPressed", "onBanAllPost", "onBanAllPostPic", "onBanUser", "uid", "onBanUserAndClean", "onChangeLiveStatus", "onClick", "v", "Landroid/view/View;", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onDestroy", "onLiveDiscussNumEventChanged", "event", "Lcom/coolapk/market/view/live/LiveNumEvent;", "onLiveFollowed", "follow", "onLiveLoaded", "onLiveMessageClick", "liveMessage", "Lcom/coolapk/market/model/LiveMessage;", "onLiveMessageEventChanged", "Lcom/coolapk/market/view/live/LiveMessageEvent;", "onLiveMessageLongClick", "onLoginEvent", "session", "Lcom/coolapk/market/local/LoginSession;", "onMessageDeleted", "messageId", "onPause", "onResume", "onSaveInstanceState", "outState", "onSetStatusBarColor", "onSetStatusBarDarkMode", "delay", "onStart", "onStartLivePostMessageActivity", "onStop", "requireToggleVideoFullScreen", "withAnimation", "updateAppbarScrollable", "updateLiveVideoViewPart", "updatePostView", "updateUI", "indexOfFirst", "T", "default", "predicate", "Lkotlin/Function1;", "Companion", "DataAdapter", "Tab", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: LiveActivity.kt */
 public final class LiveActivity extends BaseActivity implements LiveContract.View, LiveContext, View.OnClickListener, TranslucentActivity {
     public static final Companion Companion = new Companion(null);
     public static final String KEY_LIVE_ID = "LIVE_ID";
-    private final HashMap<String, Boolean> actionCache = new HashMap<>();
+    private final LiveActivity$appImStateListener$1 appImStateListener = new LiveActivity$appImStateListener$1(this);
     private LiveActivityBinding binding;
+    private final LiveActivity$groupMessageListener$1 groupMessageListener = new LiveActivity$groupMessageListener$1(this);
     private final Lazy isPresenter$delegate = LazyKt.lazy(new LiveActivity$isPresenter$2(this));
-    private LiveDiscussPoll liveDiscussPoll;
     private final Lazy liveId$delegate = LazyKt.lazy(new LiveActivity$liveId$2(this));
     private LiveVideoViewPart liveVideoViewPart;
-    private final AppNotification.MessageIntercept messageIntercept = new LiveActivity$messageIntercept$1(this);
     private final LiveActivity$onPageChangeListener$1 onPageChangeListener = new LiveActivity$onPageChangeListener$1(this);
-    private int paddingBottom;
     private LivePresenter presenter;
-    private final Lazy pushTag$delegate = LazyKt.lazy(new LiveActivity$pushTag$2(this));
     private List<Tab> tabs;
     private LiveViewModel viewModel;
 
     /* access modifiers changed from: private */
     public final String getLiveId() {
         return (String) this.liveId$delegate.getValue();
-    }
-
-    private final String getPushTag() {
-        return (String) this.pushTag$delegate.getValue();
     }
 
     private final boolean isPresenter() {
@@ -141,32 +136,17 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
         }
     }
 
-    public final int getPaddingBottom() {
-        return this.paddingBottom;
-    }
-
-    public final void setPaddingBottom(int i) {
-        this.paddingBottom = i;
-    }
-
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559009);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559016);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…, R.layout.live_activity)");
         LiveActivityBinding liveActivityBinding = (LiveActivityBinding) contentView;
         this.binding = liveActivityBinding;
         if (liveActivityBinding == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
-        CollapsingToolbarFixLayout collapsingToolbarFixLayout = liveActivityBinding.collapsingToolbar;
-        Intrinsics.checkNotNullExpressionValue(collapsingToolbarFixLayout, "binding.collapsingToolbar");
-        collapsingToolbarFixLayout.setContentScrim(new ColorDrawable(AppHolder.getAppTheme().getColorAccent()));
-        LiveActivityBinding liveActivityBinding2 = this.binding;
-        if (liveActivityBinding2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("binding");
-        }
-        liveActivityBinding2.contentView.addOnInsetChangeListener(new LiveActivity$onCreate$1(this));
+        liveActivityBinding.contentView.addOnInsetChangeListener(new LiveActivity$onCreate$1(this));
         String liveId = getLiveId();
         Intrinsics.checkNotNullExpressionValue(liveId, "liveId");
         LivePresenter livePresenter = new LivePresenter(this, liveId);
@@ -193,15 +173,11 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
         }
         livePresenter3.loadLive();
         initUI();
-        AppHolder.getAppPushManager().subscribe(getPushTag());
-        String liveId2 = getLiveId();
-        Intrinsics.checkNotNullExpressionValue(liveId2, "liveId");
-        LiveDiscussPoll liveDiscussPoll2 = new LiveDiscussPoll(liveId2);
-        this.liveDiscussPoll = liveDiscussPoll2;
-        if (liveDiscussPoll2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("liveDiscussPoll");
-        }
-        liveDiscussPoll2.setCallback(new LiveActivity$onCreate$2(this));
+        AppHolder.getAppIMManager().addStateListener(this.appImStateListener);
+        AppHolder.getAppIMManager().addGroupMessageListener(this.groupMessageListener);
+        EventBus eventBus = EventBus.getDefault();
+        Intrinsics.checkNotNullExpressionValue(eventBus, "EventBus.getDefault()");
+        EventBusExtendsKt.safeRegister(eventBus, this);
     }
 
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
@@ -320,9 +296,9 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
         if (liveActivityBinding == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
-        CollapsingToolbarFixLayout collapsingToolbarFixLayout = liveActivityBinding.collapsingToolbar;
-        Intrinsics.checkNotNullExpressionValue(collapsingToolbarFixLayout, "binding.collapsingToolbar");
-        ViewGroup.LayoutParams layoutParams = collapsingToolbarFixLayout.getLayoutParams();
+        FrameLayout frameLayout = liveActivityBinding.collapsingToolbar;
+        Intrinsics.checkNotNullExpressionValue(frameLayout, "binding.collapsingToolbar");
+        ViewGroup.LayoutParams layoutParams = frameLayout.getLayoutParams();
         Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type com.google.android.material.appbar.AppBarLayout.LayoutParams");
         AppBarLayout.LayoutParams layoutParams2 = (AppBarLayout.LayoutParams) layoutParams;
         layoutParams2.setScrollFlags(3);
@@ -330,9 +306,9 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
         if (liveActivityBinding2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
-        CollapsingToolbarFixLayout collapsingToolbarFixLayout2 = liveActivityBinding2.collapsingToolbar;
-        Intrinsics.checkNotNullExpressionValue(collapsingToolbarFixLayout2, "binding.collapsingToolbar");
-        collapsingToolbarFixLayout2.setLayoutParams(layoutParams2);
+        FrameLayout frameLayout2 = liveActivityBinding2.collapsingToolbar;
+        Intrinsics.checkNotNullExpressionValue(frameLayout2, "binding.collapsingToolbar");
+        frameLayout2.setLayoutParams(layoutParams2);
     }
 
     private final void updateUI() {
@@ -471,6 +447,7 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
                         Intrinsics.checkNotNullExpressionValue(message2, "liveMessage.message");
                         danmakuManager2.addDanmaku(new DanmakuText(message2, DanmakuTextStyle.ALL, t.getUserName()));
                     }
+                    LiveUpdateTabHelper.Companion.onLiveUpdateTab(t);
                 }
             }
         }
@@ -539,59 +516,11 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
         }
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public final void onLiveActionEventChanged(LiveActionEvent liveActionEvent) {
-        Intrinsics.checkNotNullParameter(liveActionEvent, "event");
-        if (!Intrinsics.areEqual((Object) this.actionCache.get(liveActionEvent.getId()), (Object) true)) {
-            this.actionCache.put(liveActionEvent.getId(), true);
-            String action = liveActionEvent.getAction();
-            int hashCode = action.hashCode();
-            if (hashCode != -1418315962) {
-                if (hashCode == 1213495119 && action.equals("live_start")) {
-                    LivePresenter livePresenter = this.presenter;
-                    if (livePresenter == null) {
-                        Intrinsics.throwUninitializedPropertyAccessException("presenter");
-                    }
-                    if (!livePresenter.isLoadingLive()) {
-                        LiveViewModel liveViewModel = this.viewModel;
-                        if (liveViewModel == null) {
-                            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
-                        }
-                        if (!liveViewModel.isLiveStart()) {
-                            LivePresenter livePresenter2 = this.presenter;
-                            if (livePresenter2 == null) {
-                                Intrinsics.throwUninitializedPropertyAccessException("presenter");
-                            }
-                            livePresenter2.loadLive();
-                        }
-                    }
-                }
-            } else if (action.equals("live_finish")) {
-                LivePresenter livePresenter3 = this.presenter;
-                if (livePresenter3 == null) {
-                    Intrinsics.throwUninitializedPropertyAccessException("presenter");
-                }
-                if (!livePresenter3.isLoadingLive()) {
-                    LiveViewModel liveViewModel2 = this.viewModel;
-                    if (liveViewModel2 == null) {
-                        Intrinsics.throwUninitializedPropertyAccessException("viewModel");
-                    }
-                    if (!liveViewModel2.isLiveClosed()) {
-                        LivePresenter livePresenter4 = this.presenter;
-                        if (livePresenter4 == null) {
-                            Intrinsics.throwUninitializedPropertyAccessException("presenter");
-                        }
-                        livePresenter4.loadLive();
-                    }
-                }
-            }
-        }
-    }
-
     @Override // com.coolapk.market.view.live.LiveContract.View
     public void onLiveLoaded(Result<Live> result, Throwable th) {
         updateUI();
         updatePostView();
+        joinIMGroup();
     }
 
     @Override // com.coolapk.market.view.live.LiveContract.View
@@ -649,7 +578,7 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
             str = "";
         }
         Toast.show$default(liveActivity, str, 0, false, 12, null);
-        EventBus.getDefault().post(new LiveMessageEvent(3, null, "1", null, null, 24, null));
+        EventBus.getDefault().post(new LiveMessageEvent(1, null, "1", null, null, 26, null));
     }
 
     @Override // com.coolapk.market.view.live.LiveContract.View
@@ -810,15 +739,6 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
     }
 
     @Override // com.coolapk.market.view.live.LiveContext
-    public LiveDiscussPoll getLiveDiscussPoll() {
-        LiveDiscussPoll liveDiscussPoll2 = this.liveDiscussPoll;
-        if (liveDiscussPoll2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("liveDiscussPoll");
-        }
-        return liveDiscussPoll2;
-    }
-
-    @Override // com.coolapk.market.view.live.LiveContext
     public int getLiveVideoHeight() {
         LiveActivityBinding liveActivityBinding = this.binding;
         if (liveActivityBinding == null) {
@@ -892,7 +812,7 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
                         if (liveActivityBinding3 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("binding");
                         }
-                        liveActivityBinding3.postIconView.setImageResource(2131231429);
+                        liveActivityBinding3.postIconView.setImageResource(2131231440);
                         i = 0;
                         break;
                     }
@@ -927,7 +847,7 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
                         if (liveActivityBinding5 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("binding");
                         }
-                        liveActivityBinding5.postIconView.setImageResource(2131231669);
+                        liveActivityBinding5.postIconView.setImageResource(2131231680);
                         i = 0;
                         break;
                     }
@@ -946,7 +866,7 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
-        if (view.getId() == 2131363137) {
+        if (view.getId() == 2131363151) {
             List<Tab> list = this.tabs;
             Intrinsics.checkNotNull(list);
             LiveActivityBinding liveActivityBinding = this.binding;
@@ -1033,7 +953,6 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
             Intrinsics.throwUninitializedPropertyAccessException("liveVideoViewPart");
         }
         liveVideoViewPart2.applyWindowsInset(rect);
-        this.paddingBottom = rect.bottom;
     }
 
     @Override // com.coolapk.market.view.base.BaseActivity
@@ -1178,11 +1097,6 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
     protected void onStart() {
         super.onStart();
-        LiveDiscussPoll liveDiscussPoll2 = this.liveDiscussPoll;
-        if (liveDiscussPoll2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("liveDiscussPoll");
-        }
-        liveDiscussPoll2.launch();
     }
 
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
@@ -1193,6 +1107,13 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
             Intrinsics.throwUninitializedPropertyAccessException("liveVideoViewPart");
         }
         liveVideoViewPart2.handleActivityResume();
+        LiveViewModel liveViewModel = this.viewModel;
+        if (liveViewModel == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
+        }
+        if (liveViewModel.getLive() != null && !AppHolder.getAppIMManager().isInit()) {
+            joinIMGroup();
+        }
     }
 
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
@@ -1213,11 +1134,6 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
             Intrinsics.throwUninitializedPropertyAccessException("liveVideoViewPart");
         }
         liveVideoViewPart2.handleActivityStop();
-        LiveDiscussPoll liveDiscussPoll2 = this.liveDiscussPoll;
-        if (liveDiscussPoll2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("liveDiscussPoll");
-        }
-        liveDiscussPoll2.stop();
     }
 
     @Override // com.coolapk.market.view.base.BaseActivity, android.app.Activity
@@ -1232,7 +1148,9 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
 
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
     protected void onDestroy() {
+        String relationGroupId;
         super.onDestroy();
+        EventBus.getDefault().unregister(this);
         LiveVideoViewPart liveVideoViewPart2 = this.liveVideoViewPart;
         if (liveVideoViewPart2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("liveVideoViewPart");
@@ -1243,8 +1161,16 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
         liveActivityBinding.viewPager.removeOnPageChangeListener(this.onPageChangeListener);
-        AppHolder.getAppNotification().removeIntercept(this.messageIntercept);
-        AppHolder.getAppPushManager().unsubscribe(getPushTag());
+        AppHolder.getAppIMManager().removeGroupMessageListener(this.groupMessageListener);
+        AppHolder.getAppIMManager().removeStateListener(this.appImStateListener);
+        LiveViewModel liveViewModel = this.viewModel;
+        if (liveViewModel == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
+        }
+        Live live = liveViewModel.getLive();
+        if (live != null && (relationGroupId = live.getRelationGroupId()) != null) {
+            Job unused = BuildersKt__Builders_commonKt.launch$default(GlobalScope.INSTANCE, null, null, new LiveActivity$onDestroy$1$1(relationGroupId, null), 3, null);
+        }
     }
 
     @Override // com.coolapk.market.view.live.LiveContext
@@ -1283,14 +1209,21 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
         }
         ViewPager viewPager = liveActivityBinding.viewPager;
         Intrinsics.checkNotNullExpressionValue(viewPager, "binding.viewPager");
-        String index = list.get(viewPager.getCurrentItem()).getIndex();
+        Tab tab = list.get(viewPager.getCurrentItem());
+        LiveViewModel liveViewModel = this.viewModel;
+        if (liveViewModel == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
+        }
+        Live live = liveViewModel.getLive();
+        String relationGroupId = live != null ? live.getRelationGroupId() : null;
+        String index = tab.getIndex();
         int hashCode = index.hashCode();
         if (hashCode != 3322092) {
             if (hashCode == 1671386080 && index.equals("discuss")) {
-                ActionManager.startLivePostMessageActivity(getActivity(), "live_discuss", getLiveId(), liveMessage, isPresenter());
+                ActionManager.startLivePostMessageActivity(getActivity(), "live_discuss", getLiveId(), relationGroupId, liveMessage, isPresenter());
             }
         } else if (index.equals("live")) {
-            ActionManager.startLivePostMessageActivity(getActivity(), "live_message", getLiveId(), liveMessage, isPresenter());
+            ActionManager.startLivePostMessageActivity(getActivity(), "live_message", getLiveId(), relationGroupId, liveMessage, isPresenter());
         }
     }
 
@@ -1304,7 +1237,7 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
         return drawSystemBarFrameLayout.getLastInsetsRect().height();
     }
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\r\n\u0000\b\u0002\u0018\u00002\u00020\u0001B\u001b\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005¢\u0006\u0002\u0010\u0007J\b\u0010\n\u001a\u00020\u000bH\u0016J\u0010\u0010\f\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000bH\u0016J\u0010\u0010\u000f\u001a\u00020\u000b2\u0006\u0010\u0010\u001a\u00020\u0011H\u0016J\u0012\u0010\u0012\u001a\u0004\u0018\u00010\u00132\u0006\u0010\u000e\u001a\u00020\u000bH\u0016J\u0012\u0010\u0014\u001a\u0004\u0018\u00010\u00152\u0006\u0010\u000e\u001a\u00020\u000bH\u0016R\u0017\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\t¨\u0006\u0016"}, d2 = {"Lcom/coolapk/market/view/live/LiveActivity$DataAdapter;", "Lcom/coolapk/market/view/base/FragmentStatePagerAdapter;", "fm", "Landroidx/fragment/app/FragmentManager;", "tabs", "", "Lcom/coolapk/market/view/live/LiveActivity$Tab;", "(Landroidx/fragment/app/FragmentManager;Ljava/util/List;)V", "getTabs", "()Ljava/util/List;", "getCount", "", "getItem", "Landroidx/fragment/app/Fragment;", "position", "getItemPosition", "object", "", "getItemTag", "", "getPageTitle", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\r\n\u0000\b\u0002\u0018\u00002\u00020\u0001B\u001b\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005¢\u0006\u0002\u0010\u0007J\b\u0010\n\u001a\u00020\u000bH\u0016J\u0010\u0010\f\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000bH\u0016J\u0010\u0010\u000f\u001a\u00020\u000b2\u0006\u0010\u0010\u001a\u00020\u0011H\u0016J\u0012\u0010\u0012\u001a\u0004\u0018\u00010\u00132\u0006\u0010\u000e\u001a\u00020\u000bH\u0016J\u0010\u0010\u0014\u001a\u00020\u00152\u0006\u0010\u000e\u001a\u00020\u000bH\u0016R\u0017\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\t¨\u0006\u0016"}, d2 = {"Lcom/coolapk/market/view/live/LiveActivity$DataAdapter;", "Lcom/coolapk/market/view/base/FragmentStatePagerAdapter;", "fm", "Landroidx/fragment/app/FragmentManager;", "tabs", "", "Lcom/coolapk/market/view/live/LiveActivity$Tab;", "(Landroidx/fragment/app/FragmentManager;Ljava/util/List;)V", "getTabs", "()Ljava/util/List;", "getCount", "", "getItem", "Landroidx/fragment/app/Fragment;", "position", "getItemPosition", "object", "", "getItemTag", "", "getPageTitle", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: LiveActivity.kt */
     private static final class DataAdapter extends FragmentStatePagerAdapter {
         private final List<Tab> tabs;
@@ -1462,5 +1395,27 @@ public final class LiveActivity extends BaseActivity implements LiveContract.Vie
             Intrinsics.checkNotNullParameter(str, "<set-?>");
             this.name = str;
         }
+    }
+
+    /* access modifiers changed from: private */
+    public final void joinIMGroup() {
+        LiveViewModel liveViewModel = this.viewModel;
+        if (liveViewModel == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("viewModel");
+        }
+        Live live = liveViewModel.getLive();
+        if (live != null) {
+            String relationGroupId = live.getRelationGroupId();
+            Intrinsics.checkNotNullExpressionValue(relationGroupId, "groupId");
+            if (relationGroupId.length() > 0) {
+                Job unused = BuildersKt__Builders_commonKt.launch$default(LifecycleOwnerKt.getLifecycleScope(this), null, null, new LiveActivity$joinIMGroup$$inlined$let$lambda$1(relationGroupId, null, this), 3, null);
+            }
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public final void onLoginEvent(LoginSession loginSession) {
+        Intrinsics.checkNotNullParameter(loginSession, "session");
+        joinIMGroup();
     }
 }

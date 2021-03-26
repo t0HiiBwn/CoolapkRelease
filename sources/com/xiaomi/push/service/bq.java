@@ -1,27 +1,36 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.push.fb;
-import com.xiaomi.push.fn;
-import com.xiaomi.push.fz;
+import android.content.Context;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.ey;
+import com.xiaomi.push.hf;
 import com.xiaomi.push.service.XMPushService;
 
-class bq implements fn {
+final class bq extends XMPushService.i {
     final /* synthetic */ XMPushService a;
+    final /* synthetic */ hf b;
 
-    bq(XMPushService xMPushService) {
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    bq(int i, XMPushService xMPushService, hf hfVar) {
+        super(i);
         this.a = xMPushService;
+        this.b = hfVar;
     }
 
-    @Override // com.xiaomi.push.fn
-    public void a(fb fbVar) {
-        XMPushService xMPushService = this.a;
-        xMPushService.a(new XMPushService.c(fbVar));
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public void a() {
+        try {
+            hf a2 = bn.a((Context) this.a, this.b);
+            a2.m().a("message_obsleted", "1");
+            bu.a(this.a, a2);
+        } catch (ey e) {
+            c.a(e);
+            this.a.a(10, e);
+        }
     }
 
-    @Override // com.xiaomi.push.fn, com.xiaomi.push.fv
-    /* renamed from: a */
-    public void mo148a(fz fzVar) {
-        XMPushService xMPushService = this.a;
-        xMPushService.a(new XMPushService.k(fzVar));
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public String b() {
+        return "send ack message for obsleted message.";
     }
 }

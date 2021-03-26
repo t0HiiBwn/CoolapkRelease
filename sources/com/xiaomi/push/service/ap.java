@@ -1,40 +1,26 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.push.hi;
-import com.xiaomi.push.hj;
+import com.xiaomi.push.service.XMPushService;
 
-/* synthetic */ class ap {
-    static final /* synthetic */ int[] a;
-    static final /* synthetic */ int[] b;
+class ap extends XMPushService.i {
+    final /* synthetic */ XMPushService a;
 
-    static {
-        int[] iArr = new int[hj.values().length];
-        b = iArr;
-        try {
-            iArr[hj.INT.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    ap(XMPushService xMPushService, int i) {
+        super(i);
+        this.a = xMPushService;
+    }
+
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public void a() {
+        if (this.a.n != null) {
+            this.a.n.b(15, (Exception) null);
+            this.a.n = null;
         }
-        try {
-            b[hj.LONG.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            b[hj.STRING.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            b[hj.BOOLEAN.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        int[] iArr2 = new int[hi.values().length];
-        a = iArr2;
-        try {
-            iArr2[hi.MISC_CONFIG.ordinal()] = 1;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            a[hi.PLUGIN_CONFIG.ordinal()] = 2;
-        } catch (NoSuchFieldError unused6) {
-        }
+    }
+
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public String b() {
+        return "disconnect for service destroy.";
     }
 }

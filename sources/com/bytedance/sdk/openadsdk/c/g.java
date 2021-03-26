@@ -27,9 +27,7 @@ public class g<T extends i> extends HandlerThread implements Handler.Callback {
     public Handler i;
     public final a j;
     public final b k;
-
-    /* renamed from: l  reason: collision with root package name */
-    protected boolean f1291l = false;
+    protected boolean l = false;
 
     /* compiled from: AdEventThread */
     public interface a {
@@ -147,7 +145,7 @@ public class g<T extends i> extends HandlerThread implements Handler.Callback {
         } else if (b(a3)) {
             g();
             f();
-        } else if (!this.f1291l) {
+        } else if (!this.l) {
             i();
             a("onHandleServerBusyRetryEvent, net fail");
         } else {
@@ -199,7 +197,7 @@ public class g<T extends i> extends HandlerThread implements Handler.Callback {
     }
 
     private void c(List<T> list) {
-        if (this.f1291l && list != null) {
+        if (this.l && list != null) {
             if (list.size() <= 100) {
                 a("start and return, checkAndDeleteEvent local size:" + list.size() + "小于:100");
                 return;
@@ -242,7 +240,7 @@ public class g<T extends i> extends HandlerThread implements Handler.Callback {
                 f();
             } else if (this.g) {
             } else {
-                if (!this.f1291l) {
+                if (!this.l) {
                     i();
                     a("doRoutineUpload net fail retry");
                     return;

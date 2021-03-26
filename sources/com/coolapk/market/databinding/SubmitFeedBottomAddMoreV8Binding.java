@@ -45,7 +45,7 @@ public abstract class SubmitFeedBottomAddMoreV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedBottomAddMoreV8Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitFeedBottomAddMoreV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559155, viewGroup, z, obj);
+        return (SubmitFeedBottomAddMoreV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559163, viewGroup, z, obj);
     }
 
     public static SubmitFeedBottomAddMoreV8Binding inflate(LayoutInflater layoutInflater) {
@@ -54,7 +54,7 @@ public abstract class SubmitFeedBottomAddMoreV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedBottomAddMoreV8Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitFeedBottomAddMoreV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559155, null, false, obj);
+        return (SubmitFeedBottomAddMoreV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559163, null, false, obj);
     }
 
     public static SubmitFeedBottomAddMoreV8Binding bind(View view) {
@@ -63,6 +63,6 @@ public abstract class SubmitFeedBottomAddMoreV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedBottomAddMoreV8Binding bind(View view, Object obj) {
-        return (SubmitFeedBottomAddMoreV8Binding) bind(obj, view, 2131559155);
+        return (SubmitFeedBottomAddMoreV8Binding) bind(obj, view, 2131559163);
     }
 }

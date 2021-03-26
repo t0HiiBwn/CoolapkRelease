@@ -18,8 +18,8 @@ final class AutoValue_Gift extends C$AutoValue_Gift {
         }
     };
 
-    AutoValue_Gift(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, UserInfo userInfo, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, String str27, int i2, String str28, String str29, String str30, String str31, String str32, String str33, String str34, int i3, String str35, String str36, Integer num2, Integer num3, Integer num4, String str37) {
-        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, l2, l3, str9, userInfo, str10, str11, str12, str13, str14, str15, str16, str17, str18, str19, str20, str21, str22, str23, str24, str25, str26, str27, i2, str28, str29, str30, str31, str32, str33, str34, i3, str35, str36, num2, num3, num4, str37);
+    AutoValue_Gift(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, UserInfo userInfo, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, String str27, int i2, String str28, String str29, String str30, String str31, String str32, String str33, String str34, int i3, String str35, String str36, Integer num2, Integer num3, Integer num4, String str37) {
+        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, l, l2, str9, userInfo, str10, str11, str12, str13, str14, str15, str16, str17, str18, str19, str20, str21, str22, str23, str24, str25, str26, str27, i2, str28, str29, str30, str31, str32, str33, str34, i3, str35, str36, num2, num3, num4, str37);
     }
 
     @Override // android.os.Parcelable

@@ -41,9 +41,7 @@ public class e {
     private SparseArray<IDownloadListener> i;
     private boolean j = false;
     private volatile long k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final AtomicLong f1410l = new AtomicLong();
+    private final AtomicLong l = new AtomicLong();
     private boolean m = false;
     private int n;
     private long o;
@@ -128,7 +126,7 @@ public class e {
     }
 
     public boolean a(long j2) {
-        this.f1410l.addAndGet(j2);
+        this.l.addAndGet(j2);
         this.c.increaseCurBytes(j2);
         long uptimeMillis = SystemClock.uptimeMillis();
         return a(uptimeMillis, b(uptimeMillis));
@@ -160,13 +158,13 @@ public class e {
 
     public void a(BaseException baseException, boolean z) {
         this.c.setFirstDownload(false);
-        this.f1410l.set(0);
+        this.l.set(0);
         b(baseException, z);
     }
 
     public void a(b bVar, BaseException baseException, boolean z) {
         this.c.setFirstDownload(false);
-        this.f1410l.set(0);
+        this.l.set(0);
         this.d.h(this.c.getId());
         a(z ? 10 : 9, baseException, true);
     }
@@ -381,12 +379,12 @@ public class e {
             return true;
         }
         long j3 = j2 - this.k;
-        if (this.f1410l.get() < this.o && j3 < ((long) this.n)) {
+        if (this.l.get() < this.o && j3 < ((long) this.n)) {
             z = false;
         }
         if (z) {
             this.k = j2;
-            this.f1410l.set(0);
+            this.l.set(0);
         }
         return z;
     }

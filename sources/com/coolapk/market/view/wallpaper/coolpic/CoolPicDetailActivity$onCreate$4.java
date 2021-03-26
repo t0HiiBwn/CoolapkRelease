@@ -17,7 +17,7 @@ final class CoolPicDetailActivity$onCreate$4 implements DrawSystemBarFrameLayout
 
     @Override // com.coolapk.market.widget.DrawSystemBarFrameLayout.OnInsetChangeListener
     public final void onInsetChange(Rect rect) {
-        Fragment findFragmentById = this.this$0.getSupportFragmentManager().findFragmentById(2131362318);
+        Fragment findFragmentById = this.this$0.getSupportFragmentManager().findFragmentById(2131362324);
         if (!(findFragmentById instanceof CoolPicListFragment)) {
             findFragmentById = null;
         }

@@ -159,7 +159,7 @@ public final class FeedRelativeInfoViewPart extends ViewPart {
             } else {
                 str9 = "";
             }
-            arrayList.add(new RelativeInfoView.RelativeItem(str9, String.valueOf(2131231415), null, true, false, null, 52, null));
+            arrayList.add(new RelativeInfoView.RelativeItem(str9, String.valueOf(2131231426), null, true, false, null, 52, null));
         }
         if (areEqual) {
             StringBuilder sb = new StringBuilder();

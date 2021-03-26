@@ -2,8 +2,9 @@ package com.coolapk.market.view.cardlist;
 
 import android.view.View;
 import com.coolapk.market.viewholder.BindingViewHolder;
-import com.coolapk.market.viewholder.ProductTimelineViewHolder;
+import com.coolapk.market.viewholder.FeedStackCardViewHolder;
 import kotlin.Metadata;
+import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.Lambda;
@@ -21,6 +22,25 @@ final class EntityListFragment$onRegisterCards$102 extends Lambda implements Fun
 
     public final BindingViewHolder invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "itemView");
-        return new ProductTimelineViewHolder(view, this.this$0.getBindingComponent());
+        return new FeedStackCardViewHolder(view, this.this$0.getBindingComponent(), new Function1<Integer, Unit>(this) {
+            /* class com.coolapk.market.view.cardlist.EntityListFragment$onRegisterCards$102.AnonymousClass1 */
+            final /* synthetic */ EntityListFragment$onRegisterCards$102 this$0;
+
+            {
+                this.this$0 = r1;
+            }
+
+            /* Return type fixed from 'java.lang.Object' to match base method */
+            /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object] */
+            @Override // kotlin.jvm.functions.Function1
+            public /* bridge */ /* synthetic */ Unit invoke(Integer num) {
+                invoke(num.intValue());
+                return Unit.INSTANCE;
+            }
+
+            public final void invoke(int i) {
+                this.this$0.this$0.getDataList().remove(i);
+            }
+        });
     }
 }

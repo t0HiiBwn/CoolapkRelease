@@ -61,10 +61,10 @@ public class DownloadListRemoteService extends RemoteViewsService {
 
         @Override // android.widget.RemoteViewsService.RemoteViewsFactory
         public RemoteViews getViewAt(int i) {
-            RemoteViews remoteViews = new RemoteViews(this.context.getPackageName(), 2131559076);
-            remoteViews.setInt(2131362790, "setBackgroundColor", ColorUtils.adjustAlpha(((TextView) remoteViews.apply(this.context, new LinearLayout(this.context)).findViewById(2131363843)).getCurrentTextColor(), 0.6f));
-            remoteViews.setTextColor(2131362161, AppHolder.getAppTheme().getColorAccent());
+            RemoteViews remoteViews = new RemoteViews(this.context.getPackageName(), 2131559083);
+            remoteViews.setInt(2131362801, "setBackgroundColor", ColorUtils.adjustAlpha(((TextView) remoteViews.apply(this.context, new LinearLayout(this.context)).findViewById(2131363865)).getCurrentTextColor(), 0.6f));
             remoteViews.setTextColor(2131362164, AppHolder.getAppTheme().getColorAccent());
+            remoteViews.setTextColor(2131362167, AppHolder.getAppTheme().getColorAccent());
             return remoteViews;
         }
     }

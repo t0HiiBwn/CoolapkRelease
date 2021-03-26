@@ -16,7 +16,7 @@ public class CA {
     public XI K0 = new XI("oaid");
 
     /* renamed from: XI  reason: collision with root package name */
-    public XI f1181XI = new XI("udid");
+    public XI f187XI = new XI("udid");
     public XI kM = new XI("aaid");
     public BroadcastReceiver vs;
     public XI xo = new XI("vaid");
@@ -40,7 +40,7 @@ public class CA {
         cursor.moveToFirst();
         int columnIndex = cursor.getColumnIndex("value");
         if (columnIndex >= 0) {
-            kMVar.f1184XI = cursor.getString(columnIndex);
+            kMVar.f190XI = cursor.getString(columnIndex);
         }
         int columnIndex2 = cursor.getColumnIndex("code");
         if (columnIndex2 >= 0) {
@@ -71,7 +71,7 @@ public class CA {
         if (xi == null) {
             return null;
         }
-        if (xi.f1183XI > System.currentTimeMillis()) {
+        if (xi.f189XI > System.currentTimeMillis()) {
             return xi.K0;
         }
         if (!XI(context, true)) {
@@ -83,9 +83,9 @@ public class CA {
             if (cursor != null) {
                 try {
                     kM XI3 = XI(cursor);
-                    str3 = XI3.f1184XI;
+                    str3 = XI3.f190XI;
                     xi.K0 = str3;
-                    xi.f1183XI = XI3.kM;
+                    xi.f189XI = XI3.kM;
                     xi.xo = XI3.K0;
                     String str5 = xi.kM;
                     int i = xi.xo;
@@ -198,7 +198,7 @@ public class CA {
                     str = packageInfo.versionName;
                     k0 = this.CA;
                     if (k0.K0 == null) {
-                        if (TextUtils.isEmpty(str) ? false : TextUtils.equals(k0.f1182XI, str)) {
+                        if (TextUtils.isEmpty(str) ? false : TextUtils.equals(k0.f188XI, str)) {
                             Boolean bool2 = this.CA.K0;
                             if (bool2 != null) {
                                 return bool2.booleanValue();
@@ -206,14 +206,14 @@ public class CA {
                             return false;
                         }
                     }
-                    this.CA.f1182XI = str;
+                    this.CA.f188XI = str;
                     resolveContentProvider = packageManager.resolveContentProvider("com.meizu.flyme.openidsdk", 0);
                     if ((resolveContentProvider == null || (resolveContentProvider.applicationInfo.flags & 1) == 0 || !TextUtils.equals("com.meizu.safe", resolveContentProvider.packageName)) ? false : true) {
                         try {
                             cursor = context.getContentResolver().query(Uri.parse("content://com.meizu.flyme.openidsdk/"), null, null, new String[]{"supported"}, null);
                             if (cursor != null) {
                                 kM XI2 = XI(cursor);
-                                if (1000 == XI2.K0 && !"0".equals(XI2.f1184XI)) {
+                                if (1000 == XI2.K0 && !"0".equals(XI2.f190XI)) {
                                     z2 = false;
                                 }
                                 cursor.close();
@@ -241,7 +241,7 @@ public class CA {
             k0 = this.CA;
             if (k0.K0 == null) {
             }
-            this.CA.f1182XI = str;
+            this.CA.f188XI = str;
             resolveContentProvider = packageManager.resolveContentProvider("com.meizu.flyme.openidsdk", 0);
             if (resolveContentProvider == null) {
                 if ((resolveContentProvider == null || (resolveContentProvider.applicationInfo.flags & 1) == 0 || !TextUtils.equals("com.meizu.safe", resolveContentProvider.packageName)) ? false : true) {

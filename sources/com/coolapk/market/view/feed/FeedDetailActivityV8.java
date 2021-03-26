@@ -1,6 +1,7 @@
 package com.coolapk.market.view.feed;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 import androidx.core.view.ViewKt;
 import androidx.fragment.app.Fragment;
@@ -15,6 +16,7 @@ import com.coolapk.market.util.RxUtils;
 import com.coolapk.market.util.UiUtils;
 import com.coolapk.market.view.base.AlphaToolbarActivity;
 import com.coolapk.market.view.base.BaseActivity;
+import com.coolapk.market.view.feed.goods.FeedBindGoodsViewPart;
 import com.coolapk.market.view.feed.question.QuestionDetailFragment;
 import com.coolapk.market.view.feed.reply.DiscoveryDetailFragment;
 import com.coolapk.market.view.feed.reply.FeedArticleAnswerDetailFragment;
@@ -42,7 +44,7 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u0000 &2\u00020\u00012\u00020\u0002:\u0001&B\u0005¢\u0006\u0002\u0010\u0003J\u0010\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0004\u001a\u00020\u0005H\u0002J\b\u0010\u0012\u001a\u00020\u0011H\u0002J\u0012\u0010\u0013\u001a\u00020\u00112\b\u0010\u0014\u001a\u0004\u0018\u00010\u0015H\u0014J\n\u0010\u0016\u001a\u0004\u0018\u00010\u0017H\u0016J\b\u0010\u0018\u001a\u00020\u0011H\u0014J\u0018\u0010\u0019\u001a\u00020\u00112\u0006\u0010\u001a\u001a\u00020\u00072\u0006\u0010\u001b\u001a\u00020\u001cH\u0016J\b\u0010\u001d\u001a\u00020\u0011H\u0016J\u0010\u0010\u001e\u001a\u00020\u00112\u0006\u0010\u001f\u001a\u00020 H\u0007J\u0010\u0010!\u001a\u00020\u00112\u0006\u0010\"\u001a\u00020\u0015H\u0014J\u0010\u0010#\u001a\u00020\u00112\u0006\u0010$\u001a\u00020\u0017H\u0014J\u0010\u0010%\u001a\u00020\u00112\u0006\u0010\u0004\u001a\u00020\u0005H\u0002R\u0010\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\b\u001a\u0004\u0018\u00010\tX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\f\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u000e¢\u0006\u0002\n\u0000¨\u0006'"}, d2 = {"Lcom/coolapk/market/view/feed/FeedDetailActivityV8;", "Lcom/coolapk/market/view/base/AlphaToolbarActivity;", "Lcom/coolapk/market/view/photo/PhotoActivityCallback;", "()V", "feed", "Lcom/coolapk/market/model/Feed;", "feedId", "", "foregroundTextView", "Lcom/coolapk/market/widget/ForegroundTextView;", "fromApi", "historyId", "noticeId", "rid", "subscription", "Lrx/Subscription;", "installForegroundTextView", "", "loadFeedInfo", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onCreateFragment", "Landroidx/fragment/app/Fragment;", "onDestroy", "onDismissPhoto", "source", "index", "", "onEmptyViewClick", "onFeedPostEvent", "event", "Lcom/coolapk/market/event/FeedPostEvent;", "onSaveInstanceState", "outState", "setupFastReturnView", "fragment", "statisticForFeed", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\u0018\u0000 )2\u00020\u00012\u00020\u0002:\u0001)B\u0005¢\u0006\u0002\u0010\u0003J\u0010\u0010\u0012\u001a\u00020\u00132\u0006\u0010\u0004\u001a\u00020\u0005H\u0002J\b\u0010\u0014\u001a\u00020\u0013H\u0002J\u0012\u0010\u0015\u001a\u00020\u00132\b\u0010\u0016\u001a\u0004\u0018\u00010\u0017H\u0014J\n\u0010\u0018\u001a\u0004\u0018\u00010\u0019H\u0016J\b\u0010\u001a\u001a\u00020\u0013H\u0014J\u0018\u0010\u001b\u001a\u00020\u00132\u0006\u0010\u001c\u001a\u00020\u00072\u0006\u0010\u001d\u001a\u00020\u001eH\u0016J\b\u0010\u001f\u001a\u00020\u0013H\u0016J\u0010\u0010 \u001a\u00020\u00132\u0006\u0010!\u001a\u00020\"H\u0007J\u0010\u0010#\u001a\u00020\u00132\u0006\u0010$\u001a\u00020\u0017H\u0014J\u0010\u0010%\u001a\u00020\u00132\u0006\u0010&\u001a\u00020\u0019H\u0014J\u000e\u0010'\u001a\u00020\u00132\u0006\u0010\u0004\u001a\u00020\u0005J\u0010\u0010(\u001a\u00020\u00132\u0006\u0010\u0004\u001a\u00020\u0005H\u0002R\u0010\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\b\u001a\u0004\u0018\u00010\tX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\f\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u000e¢\u0006\u0002\n\u0000¨\u0006*"}, d2 = {"Lcom/coolapk/market/view/feed/FeedDetailActivityV8;", "Lcom/coolapk/market/view/base/AlphaToolbarActivity;", "Lcom/coolapk/market/view/photo/PhotoActivityCallback;", "()V", "feed", "Lcom/coolapk/market/model/Feed;", "feedId", "", "foregroundTextView", "Lcom/coolapk/market/widget/ForegroundTextView;", "fromApi", "historyId", "noticeId", "rid", "shouldShowEditBindGoodsAfterDataLoad", "", "subscription", "Lrx/Subscription;", "installForegroundTextView", "", "loadFeedInfo", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onCreateFragment", "Landroidx/fragment/app/Fragment;", "onDestroy", "onDismissPhoto", "source", "index", "", "onEmptyViewClick", "onFeedPostEvent", "event", "Lcom/coolapk/market/event/FeedPostEvent;", "onSaveInstanceState", "outState", "setupFastReturnView", "fragment", "showEditBindGoodsView", "statisticForFeed", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: FeedDetailActivityV8.kt */
 public final class FeedDetailActivityV8 extends AlphaToolbarActivity implements PhotoActivityCallback {
     public static final Companion Companion = new Companion(null);
@@ -58,6 +60,7 @@ public final class FeedDetailActivityV8 extends AlphaToolbarActivity implements 
     public static final String EXTRA_REPLY_ID = "extra_reply_id";
     public static final int FLAG_COLLAPSING_TEXT = 2;
     public static final int FLAG_COMMENT_POSITION = 1;
+    public static final int FLAG_EDIT_BIND_GOODS = 64;
     public static final int FLAG_HIDE_EXTRA_VIEW_PART = 8;
     public static final int FLAG_PREVIEW_MODE = 32;
     public static final int FLAG_USE_COOLPIC_VIEW_PART = 4;
@@ -69,9 +72,10 @@ public final class FeedDetailActivityV8 extends AlphaToolbarActivity implements 
     private String historyId;
     private String noticeId;
     private String rid;
+    private boolean shouldShowEditBindGoodsAfterDataLoad;
     private Subscription subscription;
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\n\n\u0002\u0010\b\n\u0002\b\u0006\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000¨\u0006\u0015"}, d2 = {"Lcom/coolapk/market/view/feed/FeedDetailActivityV8$Companion;", "", "()V", "DETAIL_TYPE_REPLY_LIST", "", "EXTRA_BUNDLE_TO_CHILD", "EXTRA_DETAIL_TYPE", "EXTRA_FEED", "EXTRA_FEED_ID", "EXTRA_FLAG", "EXTRA_FROM_API", "EXTRA_HISTORY_ID", "EXTRA_NOTICE_ID", "EXTRA_REPLY_ID", "FLAG_COLLAPSING_TEXT", "", "FLAG_COMMENT_POSITION", "FLAG_HIDE_EXTRA_VIEW_PART", "FLAG_PREVIEW_MODE", "FLAG_USE_COOLPIC_VIEW_PART", "FLAG_USE_DISCOVERY_VIEW_PART", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\n\n\u0002\u0010\b\n\u0002\b\u0007\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u000fXT¢\u0006\u0002\n\u0000¨\u0006\u0016"}, d2 = {"Lcom/coolapk/market/view/feed/FeedDetailActivityV8$Companion;", "", "()V", "DETAIL_TYPE_REPLY_LIST", "", "EXTRA_BUNDLE_TO_CHILD", "EXTRA_DETAIL_TYPE", "EXTRA_FEED", "EXTRA_FEED_ID", "EXTRA_FLAG", "EXTRA_FROM_API", "EXTRA_HISTORY_ID", "EXTRA_NOTICE_ID", "EXTRA_REPLY_ID", "FLAG_COLLAPSING_TEXT", "", "FLAG_COMMENT_POSITION", "FLAG_EDIT_BIND_GOODS", "FLAG_HIDE_EXTRA_VIEW_PART", "FLAG_PREVIEW_MODE", "FLAG_USE_COOLPIC_VIEW_PART", "FLAG_USE_DISCOVERY_VIEW_PART", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: FeedDetailActivityV8.kt */
     public static final class Companion {
         private Companion() {
@@ -85,6 +89,8 @@ public final class FeedDetailActivityV8 extends AlphaToolbarActivity implements 
     @Override // com.coolapk.market.view.base.AlphaToolbarActivity, com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         Feed feed2 = (Feed) getIntent().getParcelableExtra("extra_feed");
+        boolean z = false;
+        int intExtra = getIntent().getIntExtra("extra_flag", 0);
         if (feed2 != null) {
             String id = feed2.getId();
             if (id == null) {
@@ -100,11 +106,17 @@ public final class FeedDetailActivityV8 extends AlphaToolbarActivity implements 
         this.noticeId = getIntent().getStringExtra("extra_notice_id");
         String stringExtra = getIntent().getStringExtra("extra_history_id");
         this.historyId = stringExtra;
-        if ((this.feedId == null && stringExtra == null) ? false : true) {
+        if (!(this.feedId == null && stringExtra == null)) {
+            z = true;
+        }
+        if (z) {
             if (bundle != null) {
                 this.feed = (Feed) bundle.getParcelable("extra_feed");
             }
             super.onCreate(bundle);
+            if (bundle == null && (intExtra & 64) > 0) {
+                this.shouldShowEditBindGoodsAfterDataLoad = true;
+            }
             if (this.feed == null) {
                 loadFeedInfo();
                 return;
@@ -267,7 +279,7 @@ public final class FeedDetailActivityV8 extends AlphaToolbarActivity implements 
     @Override // com.coolapk.market.view.photo.PhotoActivityCallback
     public void onDismissPhoto(String str, int i) {
         Intrinsics.checkNotNullParameter(str, "source");
-        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362316);
+        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362322);
         if (findFragmentById != null && findFragmentById.isAdded() && findFragmentById.getView() != null && (findFragmentById instanceof PhotoActivityCallback)) {
             ((PhotoActivityCallback) findFragmentById).onDismissPhoto(str, i);
         }
@@ -296,6 +308,20 @@ public final class FeedDetailActivityV8 extends AlphaToolbarActivity implements 
         ForegroundTextView foregroundTextView4 = this.foregroundTextView;
         if (foregroundTextView4 != null) {
             ViewKt.setVisible(foregroundTextView4, false);
+        }
+    }
+
+    public final void showEditBindGoodsView(Feed feed2) {
+        Intrinsics.checkNotNullParameter(feed2, "feed");
+        if (!(!Intrinsics.areEqual(this.feedId, feed2.getId()))) {
+            FeedBindGoodsViewPart feedBindGoodsViewPart = new FeedBindGoodsViewPart();
+            LayoutInflater from = LayoutInflater.from(getActivity());
+            Intrinsics.checkNotNullExpressionValue(from, "LayoutInflater.from(activity)");
+            feedBindGoodsViewPart.createView(from, getBinding().mainContent);
+            feedBindGoodsViewPart.bindToContent(feed2);
+            DrawSystemBarFrameLayout drawSystemBarFrameLayout = getBinding().mainContent;
+            Intrinsics.checkNotNullExpressionValue(drawSystemBarFrameLayout, "binding.mainContent");
+            feedBindGoodsViewPart.showInViewGroup(drawSystemBarFrameLayout);
         }
     }
 }

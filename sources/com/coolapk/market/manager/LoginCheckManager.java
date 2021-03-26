@@ -104,6 +104,7 @@ public final class LoginCheckManager {
         loginSession.update(loginInfo);
         hasCheckValidate = true;
         unregisterNetworkListener();
+        AppHolder.getAppPushManager().registerUserAccount();
         if (z) {
             startForwardUrl();
         }

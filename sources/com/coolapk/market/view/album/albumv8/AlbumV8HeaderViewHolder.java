@@ -37,7 +37,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: AlbumV8HeaderViewHolder.kt */
 public final class AlbumV8HeaderViewHolder extends GenericBindHolder<AlbumHeaderViewV2Binding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558446;
+    public static final int LAYOUT_ID = 2131558447;
     private boolean isCoverLoaded;
     private final AlbumHeaderViewV2Binding mBinding;
 

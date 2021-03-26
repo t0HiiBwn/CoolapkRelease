@@ -32,11 +32,11 @@ public class RelateDataListFragment extends AsyncListFragment<Result<List<Relate
     @Override // com.coolapk.market.view.base.asynclist.AsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        setEmptyData(getString(2131886764), 0);
+        setEmptyData(getString(2131886826), 0);
         this.component = new FragmentBindingComponent(this);
         setAdapter(new DataAdapter());
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558895, 2131231052).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558902, 2131231062).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         setRefreshEnable(false);
@@ -92,7 +92,7 @@ public class RelateDataListFragment extends AsyncListFragment<Result<List<Relate
     private class DataAdapter extends RecyclerView.Adapter<BindingViewHolder> {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558895;
+            return 2131558902;
         }
 
         private DataAdapter() {

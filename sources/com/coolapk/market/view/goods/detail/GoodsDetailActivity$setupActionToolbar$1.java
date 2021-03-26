@@ -18,10 +18,15 @@ final class GoodsDetailActivity$setupActionToolbar$1 implements View.OnClickList
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        BaseActivity activity = this.this$0.getActivity();
-        Intrinsics.checkNotNullExpressionValue(activity, "activity");
-        BaseActivity baseActivity = activity;
         FeedGoods model = GoodsDetailActivity.access$getBinding$p(this.this$0).getModel();
-        ActionManagerCompat.startActivityByUrl$default(baseActivity, model != null ? model.getSellUrl() : null, null, null, 12, null);
+        if (model != null) {
+            Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return@setOnClickListener");
+            ActionManagerCompat actionManagerCompat = ActionManagerCompat.INSTANCE;
+            BaseActivity activity = this.this$0.getActivity();
+            Intrinsics.checkNotNullExpressionValue(activity, "activity");
+            String mallName = model.getMallName();
+            Intrinsics.checkNotNullExpressionValue(mallName, "feedGoods.mallName");
+            actionManagerCompat.startFeedGoodsSellPage(activity, mallName, model.getSellUrl(), model.getFromApi());
+        }
     }
 }

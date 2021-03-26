@@ -26,9 +26,9 @@ public class FeedAnswerViewPartBindingImpl extends FeedAnswerViewPartBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363260, 12);
-        sparseIntArray.put(2131362707, 13);
-        sparseIntArray.put(2131362290, 14);
+        sparseIntArray.put(2131363274, 12);
+        sparseIntArray.put(2131362718, 13);
+        sparseIntArray.put(2131362295, 14);
     }
 
     public FeedAnswerViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -27,7 +27,7 @@ public abstract class DiscoveryBinding extends ViewDataBinding {
 
     @Deprecated
     public static DiscoveryBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DiscoveryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558539, viewGroup, z, obj);
+        return (DiscoveryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558541, viewGroup, z, obj);
     }
 
     public static DiscoveryBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class DiscoveryBinding extends ViewDataBinding {
 
     @Deprecated
     public static DiscoveryBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DiscoveryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558539, null, false, obj);
+        return (DiscoveryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558541, null, false, obj);
     }
 
     public static DiscoveryBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class DiscoveryBinding extends ViewDataBinding {
 
     @Deprecated
     public static DiscoveryBinding bind(View view, Object obj) {
-        return (DiscoveryBinding) bind(obj, view, 2131558539);
+        return (DiscoveryBinding) bind(obj, view, 2131558541);
     }
 }

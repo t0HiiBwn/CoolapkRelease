@@ -49,7 +49,7 @@ public final class UserAvatarFragment extends BaseFragment implements View.OnCli
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559280, viewGroup, false, new FragmentBindingComponent(this));
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559290, viewGroup, false, new FragmentBindingComponent(this));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ntBindingComponent(this))");
         UserAvatarBinding userAvatarBinding = (UserAvatarBinding) inflate;
         this.mBinding = userAvatarBinding;
@@ -89,7 +89,7 @@ public final class UserAvatarFragment extends BaseFragment implements View.OnCli
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
-        if (view.getId() == 2131363103) {
+        if (view.getId() == 2131363117) {
             checkPermissionAndPick();
         }
     }
@@ -98,13 +98,13 @@ public final class UserAvatarFragment extends BaseFragment implements View.OnCli
         if (!hasImage()) {
             FragmentActivity requireActivity = requireActivity();
             Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-            Toast.show(requireActivity, 2131886643);
+            Toast.show(requireActivity, 2131886705);
         } else if (!this.mPostRequest) {
             this.mPostRequest = true;
             ProgressDialog progressDialog = new ProgressDialog(getActivity());
             progressDialog.setProgressStyle(0);
             progressDialog.setCancelable(false);
-            progressDialog.setMessage(getString(2131886647));
+            progressDialog.setMessage(getString(2131886709));
             progressDialog.show();
             DataManager.getInstance().changeAvatar(this.mCropOutFile).compose(RxUtils.applyIOSchedulers()).map(RxUtils.checkResultToData()).subscribe((Subscriber<? super R>) new UserAvatarFragment$checkAndUpload$1(this, progressDialog));
         }
@@ -159,12 +159,12 @@ public final class UserAvatarFragment extends BaseFragment implements View.OnCli
                     }
                     FragmentActivity requireActivity = requireActivity();
                     Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-                    Toast.show(requireActivity, 2131886645);
+                    Toast.show(requireActivity, 2131886707);
                 } catch (Exception e) {
                     e.printStackTrace();
                     FragmentActivity requireActivity2 = requireActivity();
                     Intrinsics.checkNotNullExpressionValue(requireActivity2, "requireActivity()");
-                    Toast.show(requireActivity2, 2131886645);
+                    Toast.show(requireActivity2, 2131886707);
                 }
             }
         }
@@ -214,7 +214,7 @@ public final class UserAvatarFragment extends BaseFragment implements View.OnCli
 
         @Override // androidx.fragment.app.DialogFragment
         public Dialog onCreateDialog(Bundle bundle) {
-            AlertDialog create = new AlertDialog.Builder(requireActivity()).setMessage(requireActivity().getString(2131886642)).setPositiveButton(requireActivity().getString(2131886641), new UserAvatarFragment$AlertDialogFragment$onCreateDialog$1(this)).setNegativeButton(17039360, (DialogInterface.OnClickListener) null).create();
+            AlertDialog create = new AlertDialog.Builder(requireActivity()).setMessage(requireActivity().getString(2131886704)).setPositiveButton(requireActivity().getString(2131886703), new UserAvatarFragment$AlertDialogFragment$onCreateDialog$1(this)).setNegativeButton(17039360, (DialogInterface.OnClickListener) null).create();
             Intrinsics.checkNotNullExpressionValue(create, "AlertDialog.Builder(requ…                .create()");
             return create;
         }

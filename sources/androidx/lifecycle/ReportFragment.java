@@ -22,7 +22,7 @@ public class ReportFragment extends Fragment {
 
     public static void injectIfNeededIn(Activity activity) {
         if (Build.VERSION.SDK_INT >= 29) {
-            activity.registerActivityLifecycleCallbacks(new LifecycleCallbacks());
+            LifecycleCallbacks.registerIn(activity);
         }
         FragmentManager fragmentManager = activity.getFragmentManager();
         if (fragmentManager.findFragmentByTag("androidx.lifecycle.LifecycleDispatcher.report_fragment_tag") == null) {
@@ -144,6 +144,10 @@ public class ReportFragment extends Fragment {
         }
 
         LifecycleCallbacks() {
+        }
+
+        static void registerIn(Activity activity) {
+            activity.registerActivityLifecycleCallbacks(new LifecycleCallbacks());
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks

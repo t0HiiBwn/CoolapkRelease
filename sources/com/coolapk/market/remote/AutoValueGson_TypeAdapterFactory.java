@@ -41,6 +41,7 @@ import com.coolapk.market.model.Goods;
 import com.coolapk.market.model.GoodsCategoryInfo;
 import com.coolapk.market.model.GoodsListItem;
 import com.coolapk.market.model.GridCard;
+import com.coolapk.market.model.ImInfo;
 import com.coolapk.market.model.ItemPlaceHolder;
 import com.coolapk.market.model.LikeResult;
 import com.coolapk.market.model.Link;
@@ -329,6 +330,9 @@ public final class AutoValueGson_TypeAdapterFactory extends TypeAdapterFactory {
         }
         if (ShareFeedInfo.class.isAssignableFrom(rawType)) {
             return (TypeAdapter<T>) ShareFeedInfo.typeAdapter(gson);
+        }
+        if (ImInfo.class.isAssignableFrom(rawType)) {
+            return (TypeAdapter<T>) ImInfo.typeAdapter(gson);
         }
         if (ProductBrand.class.isAssignableFrom(rawType)) {
             return (TypeAdapter<T>) ProductBrand.typeAdapter(gson);

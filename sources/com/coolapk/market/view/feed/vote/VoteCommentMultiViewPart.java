@@ -17,9 +17,11 @@ import com.coolapk.market.extend.NumberExtendsKt;
 import com.coolapk.market.model.Feed;
 import com.coolapk.market.model.VoteOption;
 import com.coolapk.market.util.ColorUtils;
+import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.math.MathKt;
 
+@Metadata(bv = {1, 0, 3}, d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J0\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000e2\b\b\u0002\u0010\u000f\u001a\u00020\u000e¨\u0006\u0010"}, d2 = {"Lcom/coolapk/market/view/feed/vote/VoteCommentMultiViewPart;", "Lcom/coolapk/market/view/feed/vote/VoteMultiViewPart;", "component", "Landroidx/databinding/DataBindingComponent;", "(Landroidx/databinding/DataBindingComponent;)V", "bindToUserVoteDetail", "", "data", "Lcom/coolapk/market/model/Feed;", "option", "Lcom/coolapk/market/model/VoteOption;", "realTotalSelectNum", "", "showAnimation", "", "showPercent", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: VoteMultiViewPart.kt */
 public final class VoteCommentMultiViewPart extends VoteMultiViewPart {
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */

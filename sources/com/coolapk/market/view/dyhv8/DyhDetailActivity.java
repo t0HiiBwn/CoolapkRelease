@@ -126,7 +126,7 @@ public final class DyhDetailActivity extends AlphaToolbarActivity {
         public FeedDyhDetailSheetModifier(DyhDetailActivity dyhDetailActivity) {
             Intrinsics.checkNotNullParameter(dyhDetailActivity, "activity");
             this.activity = dyhDetailActivity;
-            this.bgColor = ResourceUtils.getColorInt(dyhDetailActivity, 2131100049);
+            this.bgColor = ResourceUtils.getColorInt(dyhDetailActivity, 2131100054);
             this.userItemColor = ResourceUtils.resolveData(dyhDetailActivity, 2130969438);
         }
 
@@ -197,9 +197,9 @@ public final class DyhDetailActivity extends AlphaToolbarActivity {
                             arrayList = arrayList2;
                             DyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$1 dyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$1 = new DyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$1(isTop, this, contains, intValue, equals, obj, isAdmin, dyhModel);
                             if (isTop) {
-                                sheetDataItem2 = new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, this.userItemColor, this.bgColor), dyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
+                                sheetDataItem2 = new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231637, this.userItemColor, this.bgColor), dyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
                             } else {
-                                sheetDataItem2 = new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231615, this.userItemColor, this.bgColor), dyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
+                                sheetDataItem2 = new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, this.userItemColor, this.bgColor), dyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
                             }
                             arrayList.add(sheetDataItem2);
                         }
@@ -207,14 +207,14 @@ public final class DyhDetailActivity extends AlphaToolbarActivity {
                             boolean z2 = intValue == 0;
                             DyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$2 dyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$2 = new DyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$2(z2, this, contains, intValue, equals, obj, isAdmin, dyhModel);
                             if (z2) {
-                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.One, "下看看号精选", SheetDataItem.Companion.createIconBgApplyer(2131231673, this.userItemColor, this.bgColor), dyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$2, null, 2, false, false, 208, null);
+                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.One, "下看看号精选", SheetDataItem.Companion.createIconBgApplyer(2131231684, this.userItemColor, this.bgColor), dyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$2, null, 2, false, false, 208, null);
                             } else {
-                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.One, "上看看号精选", SheetDataItem.Companion.createIconBgApplyer(2131231542, this.userItemColor, this.bgColor), dyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$2, null, 2, false, false, 208, null);
+                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.One, "上看看号精选", SheetDataItem.Companion.createIconBgApplyer(2131231553, this.userItemColor, this.bgColor), dyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$2, null, 2, false, false, 208, null);
                             }
                             arrayList.add(sheetDataItem);
                         }
                         if (contains || isAdmin) {
-                            arrayList.add(new SheetDataItem(SheetGroupModifier.Action.Two, "从看看号中移除", SheetDataItem.Companion.createIconBgApplyer(2131231241, this.userItemColor, this.bgColor), new DyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$3(this, contains, intValue, equals, obj, isAdmin, dyhModel), null, 2, false, false, 208, null));
+                            arrayList.add(new SheetDataItem(SheetGroupModifier.Action.Two, "从看看号中移除", SheetDataItem.Companion.createIconBgApplyer(2131231252, this.userItemColor, this.bgColor), new DyhDetailActivity$FeedDyhDetailSheetModifier$modifySheet$$inlined$also$lambda$3(this, contains, intValue, equals, obj, isAdmin, dyhModel), null, 2, false, false, 208, null));
                         }
                         ArrayList arrayList3 = arrayList;
                         if (!arrayList3.isEmpty()) {

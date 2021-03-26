@@ -35,13 +35,13 @@ public class e {
             } catch (Exception unused) {
             }
         }
-        if (g.m30a(str)) {
+        if (g.m20a(str)) {
             str = b();
         }
-        if (g.m30a(str)) {
+        if (g.m20a(str)) {
             str = b(context);
         }
-        return g.m30a(str) ? a() : str;
+        return g.m20a(str) ? a() : str;
     }
 
     private static String b(Context context) {
@@ -86,6 +86,6 @@ public class e {
             } catch (Exception unused) {
             }
         }
-        return g.m30a(str) ? a() : str;
+        return g.m20a(str) ? a() : str;
     }
 }

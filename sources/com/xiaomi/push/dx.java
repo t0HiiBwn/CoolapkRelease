@@ -1,62 +1,92 @@
 package com.xiaomi.push;
 
-import android.net.Uri;
-import android.text.TextUtils;
-import android.util.Base64;
-import com.xiaomi.channel.commonutils.logger.b;
-import java.util.HashMap;
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
+import android.os.SystemClock;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.dw;
+import com.xiaomi.push.service.u;
 
-public class dx {
-    public static Uri a(String str, String str2) {
-        return Uri.parse("content://" + str).buildUpon().appendPath(str2).build();
+class dx implements dw.a {
+    protected Context a = null;
+    private PendingIntent b = null;
+    private volatile long c = 0;
+
+    public dx(Context context) {
+        this.a = context;
     }
 
-    public static String a(String str) {
-        return Base64.encodeToString(bi.m139a(str), 2);
-    }
-
-    public static String a(HashMap<String, String> hashMap) {
-        if (hashMap == null) {
-            return "";
-        }
-        JSONObject jSONObject = new JSONObject();
+    private void a(AlarmManager alarmManager, long j, PendingIntent pendingIntent) {
         try {
-            for (String str : hashMap.keySet()) {
-                jSONObject.put(str, hashMap.get(str));
-            }
-        } catch (JSONException e) {
-            b.a(e);
+            AlarmManager.class.getMethod("setExact", Integer.TYPE, Long.TYPE, PendingIntent.class).invoke(alarmManager, 0, Long.valueOf(j), pendingIntent);
+        } catch (Exception e) {
+            c.a(e);
         }
-        return jSONObject.toString();
     }
 
-    public static String b(String str) {
-        return bi.a(Base64.decode(str, 2));
+    @Override // com.xiaomi.push.dw.a
+    public void a() {
+        if (this.b != null) {
+            try {
+                ((AlarmManager) this.a.getSystemService("alarm")).cancel(this.b);
+            } catch (Exception unused) {
+            } catch (Throwable th) {
+                this.b = null;
+                c.c("unregister timer");
+                this.c = 0;
+                throw th;
+            }
+            this.b = null;
+            c.c("unregister timer");
+            this.c = 0;
+        }
+        this.c = 0;
     }
 
-    public static String b(HashMap<String, String> hashMap) {
-        HashMap hashMap2 = new HashMap();
-        if (hashMap != null) {
-            hashMap2.put("event_type", hashMap.get("event_type") + "");
-            hashMap2.put("description", hashMap.get("description") + "");
-            String str = hashMap.get("awake_info");
-            if (!TextUtils.isEmpty(str)) {
-                try {
-                    JSONObject jSONObject = new JSONObject(str);
-                    hashMap2.put("__planId__", String.valueOf(jSONObject.opt("__planId__")));
-                    hashMap2.put("flow_id", String.valueOf(jSONObject.opt("flow_id")));
-                    hashMap2.put("jobkey", String.valueOf(jSONObject.opt("jobkey")));
-                    hashMap2.put("msg_id", String.valueOf(jSONObject.opt("msg_id")));
-                    hashMap2.put("A", String.valueOf(jSONObject.opt("awake_app")));
-                    hashMap2.put("B", String.valueOf(jSONObject.opt("awakened_app")));
-                    hashMap2.put("module", String.valueOf(jSONObject.opt("awake_type")));
-                } catch (JSONException e) {
-                    b.a(e);
-                }
-            }
+    public void a(Intent intent, long j) {
+        AlarmManager alarmManager = (AlarmManager) this.a.getSystemService("alarm");
+        this.b = PendingIntent.getBroadcast(this.a, 0, intent, 0);
+        if (Build.VERSION.SDK_INT >= 23) {
+            ac.a(alarmManager, "setExactAndAllowWhileIdle", 0, Long.valueOf(j), this.b);
+        } else if (Build.VERSION.SDK_INT >= 19) {
+            a(alarmManager, j, this.b);
+        } else {
+            alarmManager.set(0, j, this.b);
         }
-        return a(hashMap2);
+        c.c("register timer " + j);
+    }
+
+    /* JADX WARNING: Code restructure failed: missing block: B:11:0x002a, code lost:
+        if (r7.c < java.lang.System.currentTimeMillis()) goto L_0x0033;
+     */
+    @Override // com.xiaomi.push.dw.a
+    public void a(boolean z) {
+        long c2 = c();
+        if (z || this.c != 0) {
+            if (z) {
+                a();
+            }
+            if (z || this.c == 0) {
+                c2 -= SystemClock.elapsedRealtime() % c2;
+            } else {
+                this.c += c2;
+            }
+            this.c = System.currentTimeMillis() + c2;
+            Intent intent = new Intent(u.o);
+            intent.setPackage(this.a.getPackageName());
+            a(intent, this.c);
+        }
+    }
+
+    @Override // com.xiaomi.push.dw.a
+    public boolean b() {
+        return this.c != 0;
+    }
+
+    long c() {
+        return (long) es.c();
     }
 }

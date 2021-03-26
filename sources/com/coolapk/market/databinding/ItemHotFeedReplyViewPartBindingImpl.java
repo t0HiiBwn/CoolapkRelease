@@ -27,8 +27,8 @@ public class ItemHotFeedReplyViewPartBindingImpl extends ItemHotFeedReplyViewPar
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363014, 1);
-        sparseIntArray.put(2131363582, 2);
+        sparseIntArray.put(2131363028, 1);
+        sparseIntArray.put(2131363604, 2);
     }
 
     public ItemHotFeedReplyViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

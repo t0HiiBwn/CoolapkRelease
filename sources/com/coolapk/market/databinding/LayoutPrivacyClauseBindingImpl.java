@@ -23,10 +23,10 @@ public class LayoutPrivacyClauseBindingImpl extends LayoutPrivacyClauseBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 4);
-        sparseIntArray.put(2131362376, 5);
-        sparseIntArray.put(2131362865, 6);
-        sparseIntArray.put(2131362377, 7);
+        sparseIntArray.put(2131363604, 4);
+        sparseIntArray.put(2131362382, 5);
+        sparseIntArray.put(2131362876, 6);
+        sparseIntArray.put(2131362383, 7);
     }
 
     public LayoutPrivacyClauseBindingImpl(DataBindingComponent dataBindingComponent, View view) {

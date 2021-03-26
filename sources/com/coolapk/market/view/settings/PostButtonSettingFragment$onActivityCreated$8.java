@@ -19,6 +19,6 @@ final class PostButtonSettingFragment$onActivityCreated$8 implements View.OnClic
         DataManager instance = DataManager.getInstance();
         Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
         instance.getPreferencesEditor().putString("POST_BUTTON_SETTING_LONG_CLICK_KEY", "NOTIFICATION").apply();
-        PostButtonSettingFragment.access$getBinding$p(this.this$0).radioGroupLongClick.check(2131363173);
+        PostButtonSettingFragment.access$getBinding$p(this.this$0).radioGroupLongClick.check(2131363187);
     }
 }

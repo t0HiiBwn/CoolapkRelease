@@ -11,7 +11,7 @@ final class UriActionUtils$DouYinAction$takeAction$1<T, R> implements Func1<Long
     UriActionUtils$DouYinAction$takeAction$1() {
     }
 
-    public final String call(Long l2) {
+    public final String call(Long l) {
         return "";
     }
 }

@@ -21,7 +21,7 @@ public abstract class ItemSpaceBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSpaceBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSpaceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558937, viewGroup, z, obj);
+        return (ItemSpaceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558944, viewGroup, z, obj);
     }
 
     public static ItemSpaceBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class ItemSpaceBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSpaceBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSpaceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558937, null, false, obj);
+        return (ItemSpaceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558944, null, false, obj);
     }
 
     public static ItemSpaceBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class ItemSpaceBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSpaceBinding bind(View view, Object obj) {
-        return (ItemSpaceBinding) bind(obj, view, 2131558937);
+        return (ItemSpaceBinding) bind(obj, view, 2131558944);
     }
 }

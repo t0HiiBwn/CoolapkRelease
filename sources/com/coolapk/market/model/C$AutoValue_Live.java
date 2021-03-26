@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Live  reason: invalid class name */
 abstract class C$AutoValue_Live extends C$$AutoValue_Live {
-    C$AutoValue_Live(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, String str11, String str12, long j, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, LiveProduct liveProduct, int i, String str22, int i2, int i3, String str23, int i4, String str24, int i5, long j2, long j3, int i6, int i7, int i8, int i9, String str25, int i10, User user, int i11, List<User> list) {
-        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, l2, l3, str10, str11, str12, j, str13, str14, str15, str16, str17, str18, str19, str20, str21, liveProduct, i, str22, i2, i3, str23, i4, str24, i5, j2, j3, i6, i7, i8, i9, str25, i10, user, i11, list);
+    C$AutoValue_Live(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, String str11, String str12, long j, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, LiveProduct liveProduct, int i, String str22, int i2, int i3, String str23, int i4, String str24, int i5, long j2, long j3, int i6, int i7, int i8, int i9, String str25, int i10, User user, int i11, List<User> list, String str26) {
+        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, l, l2, str10, str11, str12, j, str13, str14, str15, str16, str17, str18, str19, str20, str21, liveProduct, i, str22, i2, i3, str23, i4, str24, i5, j2, j3, i6, i7, i8, i9, str25, i10, user, i11, list, str26);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Live$GsonTypeAdapter */
@@ -49,6 +49,7 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
         private String defaultPresenterUid = null;
         private List<User> defaultPresenterUserInfo = Collections.emptyList();
         private int defaultRankScore = 0;
+        private String defaultRelationGroupId = null;
         private String defaultRelationPageName = null;
         private LiveProduct defaultRelationProduct = null;
         private String defaultRelationTag = null;
@@ -92,6 +93,7 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
         private final TypeAdapter<String> presenterUidAdapter;
         private final TypeAdapter<List<User>> presenterUserInfoAdapter;
         private final TypeAdapter<Integer> rankScoreAdapter;
+        private final TypeAdapter<String> relationGroupIdAdapter;
         private final TypeAdapter<String> relationPageNameAdapter;
         private final TypeAdapter<LiveProduct> relationProductAdapter;
         private final TypeAdapter<String> relationTagAdapter;
@@ -155,6 +157,7 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
             this.userInfoAdapter = gson.getAdapter(User.class);
             this.isFollowAdapter = gson.getAdapter(Integer.class);
             this.presenterUserInfoAdapter = gson.getAdapter(TypeToken.getParameterized(List.class, User.class));
+            this.relationGroupIdAdapter = gson.getAdapter(String.class);
         }
 
         public GsonTypeAdapter setDefaultEntityTypeName(String str) {
@@ -207,13 +210,13 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -382,6 +385,11 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
             return this;
         }
 
+        public GsonTypeAdapter setDefaultRelationGroupId(String str) {
+            this.defaultRelationGroupId = str;
+            return this;
+        }
+
         public void write(JsonWriter jsonWriter, Live live) throws IOException {
             if (live == null) {
                 jsonWriter.nullValue();
@@ -478,6 +486,8 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
             this.isFollowAdapter.write(jsonWriter, Integer.valueOf(live.getIsFollow()));
             jsonWriter.name("presenterUserInfo");
             this.presenterUserInfoAdapter.write(jsonWriter, live.getPresenterUserInfo());
+            jsonWriter.name("relation_group_id");
+            this.relationGroupIdAdapter.write(jsonWriter, live.getRelationGroupId());
             jsonWriter.endObject();
         }
 
@@ -498,8 +508,8 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
             String str7 = this.defaultSubTitle;
             String str8 = this.defaultId;
             String str9 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str10 = this.defaultUid;
             String str11 = this.defaultTitle;
             String str12 = this.defaultPresenterUid;
@@ -533,50 +543,52 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
             User user = this.defaultUserInfo;
             int i11 = this.defaultIsFollow;
             List<User> list = this.defaultPresenterUserInfo;
+            String str26 = this.defaultRelationGroupId;
             int i12 = i7;
-            String str26 = str3;
-            String str27 = str4;
+            String str27 = str3;
+            String str28 = str4;
             Integer num2 = num;
-            String str28 = str5;
-            String str29 = str6;
-            String str30 = str7;
-            String str31 = str8;
-            String str32 = str9;
+            String str29 = str5;
+            String str30 = str6;
+            String str31 = str7;
+            String str32 = str8;
+            String str33 = str9;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
-            String str33 = str10;
-            String str34 = str11;
-            String str35 = str;
-            String str36 = str2;
-            String str37 = str12;
+            String str34 = str10;
+            String str35 = str11;
+            String str36 = str;
+            String str37 = str2;
+            String str38 = str12;
             long j4 = j;
-            String str38 = str13;
-            String str39 = str15;
-            String str40 = str16;
-            String str41 = str17;
-            String str42 = str18;
-            String str43 = str19;
-            String str44 = str20;
-            String str45 = str21;
+            String str39 = str13;
+            String str40 = str15;
+            String str41 = str16;
+            String str42 = str17;
+            String str43 = str18;
+            String str44 = str19;
+            String str45 = str20;
+            String str46 = str21;
             LiveProduct liveProduct2 = liveProduct;
             int i13 = i;
-            String str46 = str22;
+            String str47 = str22;
             int i14 = i2;
             int i15 = i3;
-            String str47 = str23;
+            String str48 = str23;
             int i16 = i4;
-            String str48 = str24;
-            String str49 = str14;
+            String str49 = str24;
+            String str50 = str14;
             int i17 = i5;
             long j5 = j2;
             long j6 = j3;
             int i18 = i6;
             int i19 = i8;
             int i20 = i9;
-            String str50 = str25;
+            String str51 = str25;
             int i21 = i10;
             User user2 = user;
             int i22 = i11;
+            List<User> list2 = list;
             while (jsonReader.hasNext()) {
                 String nextName = jsonReader.nextName();
                 if (jsonReader.peek() == JsonToken.NULL) {
@@ -813,55 +825,61 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
                                 break;
                             }
                             break;
+                        case 1297295806:
+                            if (nextName.equals("relation_group_id")) {
+                                c = '&';
+                                break;
+                            }
+                            break;
                         case 1400061071:
                             if (nextName.equals("discuss_num_format")) {
-                                c = '&';
+                                c = '\'';
                                 break;
                             }
                             break;
                         case 1763560893:
                             if (nextName.equals("live_start_time")) {
-                                c = '\'';
+                                c = '(';
                                 break;
                             }
                             break;
                         case 1768208351:
                             if (nextName.equals("disable_discuss_tab")) {
-                                c = '(';
+                                c = ')';
                                 break;
                             }
                             break;
                         case 1770442483:
                             if (nextName.equals("rank_scrore")) {
-                                c = ')';
+                                c = '*';
                                 break;
                             }
                             break;
                         case 1793464482:
                             if (nextName.equals("dateline")) {
-                                c = '*';
+                                c = '+';
                                 break;
                             }
                             break;
                         case 1880066706:
                             if (nextName.equals("visit_num")) {
-                                c = '+';
+                                c = ',';
                                 break;
                             }
                             break;
                         case 2112476046:
                             if (nextName.equals("video_playback_info")) {
-                                c = ',';
+                                c = '-';
                                 break;
                             }
                             break;
                     }
                     switch (c) {
                         case 0:
-                            str27 = this.entityIdAdapter.read(jsonReader);
+                            str28 = this.entityIdAdapter.read(jsonReader);
                             continue;
                         case 1:
-                            str30 = this.subTitleAdapter.read(jsonReader);
+                            str31 = this.subTitleAdapter.read(jsonReader);
                             continue;
                         case 2:
                             i14 = this.followNumAdapter.read(jsonReader).intValue();
@@ -870,88 +888,88 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
                             i13 = this.isShowBannerTitleAdapter.read(jsonReader).intValue();
                             continue;
                         case 4:
-                            str49 = this.descriptionAdapter.read(jsonReader);
+                            str50 = this.descriptionAdapter.read(jsonReader);
                             continue;
                         case 5:
-                            str26 = this.entityTemplateAdapter.read(jsonReader);
+                            str27 = this.entityTemplateAdapter.read(jsonReader);
                             continue;
                         case 6:
-                            str36 = this.entityTypeAdapter.read(jsonReader);
+                            str37 = this.entityTypeAdapter.read(jsonReader);
                             continue;
                         case 7:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\b':
-                            str46 = this.followNumFormatAdapter.read(jsonReader);
+                            str47 = this.followNumFormatAdapter.read(jsonReader);
                             continue;
                         case '\t':
-                            str41 = this.videoLiveInfoAdapter.read(jsonReader);
+                            str42 = this.videoLiveInfoAdapter.read(jsonReader);
                             continue;
                         case '\n':
                             i18 = this.liveStatusAdapter.read(jsonReader).intValue();
                             continue;
                         case 11:
-                            str35 = this.entityTypeNameAdapter.read(jsonReader);
+                            str36 = this.entityTypeNameAdapter.read(jsonReader);
                             continue;
                         case '\f':
-                            str38 = this.showLiveTimeAdapter.read(jsonReader);
+                            str39 = this.showLiveTimeAdapter.read(jsonReader);
                             continue;
                         case '\r':
                             i22 = this.isFollowAdapter.read(jsonReader).intValue();
                             continue;
                         case 14:
-                            str39 = this.picUrlAdapter.read(jsonReader);
+                            str40 = this.picUrlAdapter.read(jsonReader);
                             continue;
                         case 15:
-                            list = this.presenterUserInfoAdapter.read(jsonReader);
+                            list2 = this.presenterUserInfoAdapter.read(jsonReader);
                             continue;
                         case 16:
                             i12 = this.disallowPostAdapter.read(jsonReader).intValue();
                             continue;
                         case 17:
-                            str45 = this.relationPageNameAdapter.read(jsonReader);
+                            str46 = this.relationPageNameAdapter.read(jsonReader);
                             continue;
                         case 18:
-                            str50 = this.showTabAdapter.read(jsonReader);
+                            str51 = this.showTabAdapter.read(jsonReader);
                             continue;
                         case 19:
                             user2 = this.userInfoAdapter.read(jsonReader);
                             continue;
                         case 20:
-                            str44 = this.relationTagAdapter.read(jsonReader);
+                            str45 = this.relationTagAdapter.read(jsonReader);
                             continue;
                         case 21:
-                            str32 = this.extraDataAdapter.read(jsonReader);
+                            str33 = this.extraDataAdapter.read(jsonReader);
                             continue;
                         case 22:
-                            str40 = this.videoLiveUrlAdapter.read(jsonReader);
+                            str41 = this.videoLiveUrlAdapter.read(jsonReader);
                             continue;
                         case 23:
-                            str31 = this.idAdapter.read(jsonReader);
+                            str32 = this.idAdapter.read(jsonReader);
                             continue;
                         case 24:
-                            str29 = this.picAdapter.read(jsonReader);
+                            str30 = this.picAdapter.read(jsonReader);
                             continue;
                         case 25:
-                            str33 = this.uidAdapter.read(jsonReader);
+                            str34 = this.uidAdapter.read(jsonReader);
                             continue;
                         case 26:
-                            str28 = this.urlAdapter.read(jsonReader);
+                            str29 = this.urlAdapter.read(jsonReader);
                             continue;
                         case 27:
-                            str42 = this.videoPlaybackUrlAdapter.read(jsonReader);
+                            str43 = this.videoPlaybackUrlAdapter.read(jsonReader);
                             continue;
                         case 28:
-                            str34 = this.titleAdapter.read(jsonReader);
+                            str35 = this.titleAdapter.read(jsonReader);
                             continue;
                         case 29:
-                            str37 = this.presenterUidAdapter.read(jsonReader);
+                            str38 = this.presenterUidAdapter.read(jsonReader);
                             continue;
                         case 30:
                             i15 = this.discussNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 31:
-                            str48 = this.visitNumFormatAdapter.read(jsonReader);
+                            str49 = this.visitNumFormatAdapter.read(jsonReader);
                             continue;
                         case ' ':
                             i19 = this.disallowPostPicAdapter.read(jsonReader).intValue();
@@ -972,25 +990,28 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case '&':
-                            str47 = this.discussNumFormatAdapter.read(jsonReader);
+                            str26 = this.relationGroupIdAdapter.read(jsonReader);
                             continue;
                         case '\'':
-                            j5 = this.liveStartTimeAdapter.read(jsonReader).longValue();
+                            str48 = this.discussNumFormatAdapter.read(jsonReader);
                             continue;
                         case '(':
-                            i20 = this.disableDiscussTabAdapter.read(jsonReader).intValue();
+                            j5 = this.liveStartTimeAdapter.read(jsonReader).longValue();
                             continue;
                         case ')':
-                            i17 = this.rankScoreAdapter.read(jsonReader).intValue();
+                            i20 = this.disableDiscussTabAdapter.read(jsonReader).intValue();
                             continue;
                         case '*':
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            i17 = this.rankScoreAdapter.read(jsonReader).intValue();
                             continue;
                         case '+':
-                            i16 = this.visitNumAdapter.read(jsonReader).intValue();
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case ',':
-                            str43 = this.videoPlaybackUInfoAdapter.read(jsonReader);
+                            i16 = this.visitNumAdapter.read(jsonReader).intValue();
+                            continue;
+                        case '-':
+                            str44 = this.videoPlaybackUInfoAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -999,7 +1020,7 @@ abstract class C$AutoValue_Live extends C$$AutoValue_Live {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Live(str35, str36, str26, str27, num2, str28, str29, str30, str31, str32, l4, l5, str33, str34, str37, j4, str38, str49, str39, str40, str41, str42, str43, str44, str45, liveProduct2, i13, str46, i14, i15, str47, i16, str48, i17, j5, j6, i18, i12, i19, i20, str50, i21, user2, i22, list);
+            return new AutoValue_Live(str36, str37, str27, str28, num2, str29, str30, str31, str32, str33, l3, l4, str34, str35, str38, j4, str39, str50, str40, str41, str42, str43, str44, str45, str46, liveProduct2, i13, str47, i14, i15, str48, i16, str49, i17, j5, j6, i18, i12, i19, i20, str51, i21, user2, i22, list2, str26);
         }
     }
 }

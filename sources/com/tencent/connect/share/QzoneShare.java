@@ -58,19 +58,19 @@ public class QzoneShare extends BaseApi {
         super(qQToken);
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:104:0x0359  */
-    /* JADX WARNING: Removed duplicated region for block: B:108:0x0399  */
-    /* JADX WARNING: Removed duplicated region for block: B:109:0x03a8  */
-    /* JADX WARNING: Removed duplicated region for block: B:13:0x00a1  */
-    /* JADX WARNING: Removed duplicated region for block: B:19:0x00b3  */
-    /* JADX WARNING: Removed duplicated region for block: B:21:0x00b7  */
-    /* JADX WARNING: Removed duplicated region for block: B:43:0x018d  */
-    /* JADX WARNING: Removed duplicated region for block: B:47:0x01a0  */
-    /* JADX WARNING: Removed duplicated region for block: B:53:0x01e2  */
-    /* JADX WARNING: Removed duplicated region for block: B:63:0x0264  */
-    /* JADX WARNING: Removed duplicated region for block: B:64:0x026b  */
-    /* JADX WARNING: Removed duplicated region for block: B:83:0x02e0  */
-    /* JADX WARNING: Removed duplicated region for block: B:85:0x02e7 A[ADDED_TO_REGION] */
+    /* JADX WARNING: Removed duplicated region for block: B:104:0x0364  */
+    /* JADX WARNING: Removed duplicated region for block: B:108:0x03a5  */
+    /* JADX WARNING: Removed duplicated region for block: B:109:0x03b4  */
+    /* JADX WARNING: Removed duplicated region for block: B:13:0x00a4  */
+    /* JADX WARNING: Removed duplicated region for block: B:19:0x00b6  */
+    /* JADX WARNING: Removed duplicated region for block: B:21:0x00ba  */
+    /* JADX WARNING: Removed duplicated region for block: B:43:0x0194  */
+    /* JADX WARNING: Removed duplicated region for block: B:47:0x01a7  */
+    /* JADX WARNING: Removed duplicated region for block: B:53:0x01eb  */
+    /* JADX WARNING: Removed duplicated region for block: B:63:0x026d  */
+    /* JADX WARNING: Removed duplicated region for block: B:64:0x0274  */
+    /* JADX WARNING: Removed duplicated region for block: B:83:0x02ea  */
+    /* JADX WARNING: Removed duplicated region for block: B:85:0x02f1 A[ADDED_TO_REGION] */
     public void shareToQzone(final Activity activity, final Bundle bundle, final IUiListener iUiListener) {
         String str;
         String str2;
@@ -289,20 +289,20 @@ public class QzoneShare extends BaseApi {
     }
 
     /* access modifiers changed from: private */
-    /* JADX WARNING: Removed duplicated region for block: B:21:0x00bd  */
-    /* JADX WARNING: Removed duplicated region for block: B:33:0x0116  */
-    /* JADX WARNING: Removed duplicated region for block: B:36:0x0139  */
-    /* JADX WARNING: Removed duplicated region for block: B:39:0x015c  */
-    /* JADX WARNING: Removed duplicated region for block: B:42:0x0176  */
-    /* JADX WARNING: Removed duplicated region for block: B:45:0x0199  */
-    /* JADX WARNING: Removed duplicated region for block: B:48:0x01bc  */
-    /* JADX WARNING: Removed duplicated region for block: B:51:0x01df  */
-    /* JADX WARNING: Removed duplicated region for block: B:54:0x0223  */
-    /* JADX WARNING: Removed duplicated region for block: B:57:0x0245  */
-    /* JADX WARNING: Removed duplicated region for block: B:60:0x02d1  */
-    /* JADX WARNING: Removed duplicated region for block: B:64:0x02eb  */
-    /* JADX WARNING: Removed duplicated region for block: B:72:0x0316  */
-    /* JADX WARNING: Removed duplicated region for block: B:73:0x035e  */
+    /* JADX WARNING: Removed duplicated region for block: B:21:0x00be  */
+    /* JADX WARNING: Removed duplicated region for block: B:33:0x0117  */
+    /* JADX WARNING: Removed duplicated region for block: B:36:0x013a  */
+    /* JADX WARNING: Removed duplicated region for block: B:39:0x015d  */
+    /* JADX WARNING: Removed duplicated region for block: B:42:0x0177  */
+    /* JADX WARNING: Removed duplicated region for block: B:45:0x019a  */
+    /* JADX WARNING: Removed duplicated region for block: B:48:0x01bd  */
+    /* JADX WARNING: Removed duplicated region for block: B:51:0x01e0  */
+    /* JADX WARNING: Removed duplicated region for block: B:54:0x0224  */
+    /* JADX WARNING: Removed duplicated region for block: B:57:0x0246  */
+    /* JADX WARNING: Removed duplicated region for block: B:60:0x02d2  */
+    /* JADX WARNING: Removed duplicated region for block: B:64:0x02ec  */
+    /* JADX WARNING: Removed duplicated region for block: B:72:0x0317  */
+    /* JADX WARNING: Removed duplicated region for block: B:73:0x035f  */
     public void b(Activity activity, Bundle bundle, IUiListener iUiListener) {
         int i;
         String appId;

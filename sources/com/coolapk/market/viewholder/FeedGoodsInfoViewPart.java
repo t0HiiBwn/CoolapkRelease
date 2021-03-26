@@ -19,7 +19,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedGoodsInfoViewPart.kt */
 public final class FeedGoodsInfoViewPart extends BindingViewPart<ItemFeedGoodsInfoBinding, GoodsSimpleInfo> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558705;
+    public static final int LAYOUT_ID = 2131558712;
     private final DataBindingComponent component;
 
     public FeedGoodsInfoViewPart(DataBindingComponent dataBindingComponent) {
@@ -46,7 +46,7 @@ public final class FeedGoodsInfoViewPart extends BindingViewPart<ItemFeedGoodsIn
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedGoodsInfoBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558705, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558712, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemFeedGoodsInfoBinding) inflate;
     }
@@ -77,9 +77,9 @@ public final class FeedGoodsInfoViewPart extends BindingViewPart<ItemFeedGoodsIn
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
             int id = view.getId();
-            if (id == 2131361981) {
+            if (id == 2131361982) {
                 ActionManagerCompat.startActivityByUrl$default(getContext(), model.getSellUrl(), null, null, 12, null);
-            } else if (id == 2131362768) {
+            } else if (id == 2131362779) {
                 ActionManagerCompat.startActivityByUrl$default(getContext(), model.getExtraUrl(), null, null, 12, null);
             }
         }

@@ -15,32 +15,32 @@ import kotlin.text.StringsKt;
 /* compiled from: Duration.kt */
 public final class Duration implements Comparable<Duration> {
     public static final Companion Companion = new Companion(null);
-    private static final double INFINITE = m1945constructorimpl(Double.POSITIVE_INFINITY);
-    private static final double ZERO = m1945constructorimpl(0.0d);
+    private static final double INFINITE = m1343constructorimpl(Double.POSITIVE_INFINITY);
+    private static final double ZERO = m1343constructorimpl(0.0d);
     private final double value;
 
     /* renamed from: box-impl  reason: not valid java name */
-    public static final /* synthetic */ Duration m1943boximpl(double d) {
+    public static final /* synthetic */ Duration m1341boximpl(double d) {
         return new Duration(d);
     }
 
     /* renamed from: constructor-impl  reason: not valid java name */
-    public static double m1945constructorimpl(double d) {
+    public static double m1343constructorimpl(double d) {
         return d;
     }
 
     /* renamed from: div-LRDsOJo  reason: not valid java name */
-    public static final double m1946divLRDsOJo(double d, double d2) {
+    public static final double m1344divLRDsOJo(double d, double d2) {
         return d / d2;
     }
 
     /* renamed from: equals-impl  reason: not valid java name */
-    public static boolean m1949equalsimpl(double d, Object obj) {
-        return (obj instanceof Duration) && Double.compare(d, ((Duration) obj).m1988unboximpl()) == 0;
+    public static boolean m1347equalsimpl(double d, Object obj) {
+        return (obj instanceof Duration) && Double.compare(d, ((Duration) obj).m1386unboximpl()) == 0;
     }
 
     /* renamed from: equals-impl0  reason: not valid java name */
-    public static final boolean m1950equalsimpl0(double d, double d2) {
+    public static final boolean m1348equalsimpl0(double d, double d2) {
         return Double.compare(d, d2) == 0;
     }
 
@@ -57,23 +57,23 @@ public final class Duration implements Comparable<Duration> {
     }
 
     /* renamed from: hashCode-impl  reason: not valid java name */
-    public static int m1963hashCodeimpl(double d) {
+    public static int m1361hashCodeimpl(double d) {
         long doubleToLongBits = Double.doubleToLongBits(d);
         return (int) (doubleToLongBits ^ (doubleToLongBits >>> 32));
     }
 
     /* renamed from: isNegative-impl  reason: not valid java name */
-    public static final boolean m1966isNegativeimpl(double d) {
+    public static final boolean m1364isNegativeimpl(double d) {
         return d < ((double) 0);
     }
 
     /* renamed from: isPositive-impl  reason: not valid java name */
-    public static final boolean m1967isPositiveimpl(double d) {
+    public static final boolean m1365isPositiveimpl(double d) {
         return d > ((double) 0);
     }
 
     /* renamed from: precision-impl  reason: not valid java name */
-    private static final int m1970precisionimpl(double d, double d2) {
+    private static final int m1368precisionimpl(double d, double d2) {
         if (d2 < ((double) 1)) {
             return 3;
         }
@@ -84,27 +84,27 @@ public final class Duration implements Comparable<Duration> {
     }
 
     /* renamed from: compareTo-LRDsOJo  reason: not valid java name */
-    public int m1987compareToLRDsOJo(double d) {
-        return m1944compareToLRDsOJo(this.value, d);
+    public int m1385compareToLRDsOJo(double d) {
+        return m1342compareToLRDsOJo(this.value, d);
     }
 
     @Override // java.lang.Object
     public boolean equals(Object obj) {
-        return m1949equalsimpl(this.value, obj);
+        return m1347equalsimpl(this.value, obj);
     }
 
     @Override // java.lang.Object
     public int hashCode() {
-        return m1963hashCodeimpl(this.value);
+        return m1361hashCodeimpl(this.value);
     }
 
     @Override // java.lang.Object
     public String toString() {
-        return m1983toStringimpl(this.value);
+        return m1381toStringimpl(this.value);
     }
 
     /* renamed from: unbox-impl  reason: not valid java name */
-    public final /* synthetic */ double m1988unboximpl() {
+    public final /* synthetic */ double m1386unboximpl() {
         return this.value;
     }
 
@@ -115,7 +115,7 @@ public final class Duration implements Comparable<Duration> {
     /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object] */
     @Override // java.lang.Comparable
     public /* bridge */ /* synthetic */ int compareTo(Duration duration) {
-        return m1987compareToLRDsOJo(duration.m1988unboximpl());
+        return m1385compareToLRDsOJo(duration.m1386unboximpl());
     }
 
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0006\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J&\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u000b2\n\u0010\r\u001a\u00060\u000ej\u0002`\u000f2\n\u0010\u0010\u001a\u00060\u000ej\u0002`\u000fR\u0019\u0010\u0003\u001a\u00020\u0004ø\u0001\u0000ø\u0001\u0001¢\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u0005\u0010\u0006R\u0019\u0010\b\u001a\u00020\u0004ø\u0001\u0000ø\u0001\u0001¢\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\t\u0010\u0006\u0002\b\n\u0002\b\u0019\n\u0002\b!¨\u0006\u0011"}, d2 = {"Lkotlin/time/Duration$Companion;", "", "()V", "INFINITE", "Lkotlin/time/Duration;", "getINFINITE-UwyO8pc", "()D", "D", "ZERO", "getZERO-UwyO8pc", "convert", "", "value", "sourceUnit", "Ljava/util/concurrent/TimeUnit;", "Lkotlin/time/DurationUnit;", "targetUnit", "kotlin-stdlib"}, k = 1, mv = {1, 4, 1})
@@ -129,12 +129,12 @@ public final class Duration implements Comparable<Duration> {
         }
 
         /* renamed from: getZERO-UwyO8pc  reason: not valid java name */
-        public final double m1990getZEROUwyO8pc() {
+        public final double m1388getZEROUwyO8pc() {
             return Duration.ZERO;
         }
 
         /* renamed from: getINFINITE-UwyO8pc  reason: not valid java name */
-        public final double m1989getINFINITEUwyO8pc() {
+        public final double m1387getINFINITEUwyO8pc() {
             return Duration.INFINITE;
         }
 
@@ -146,181 +146,181 @@ public final class Duration implements Comparable<Duration> {
     }
 
     /* renamed from: unaryMinus-UwyO8pc  reason: not valid java name */
-    public static final double m1986unaryMinusUwyO8pc(double d) {
-        return m1945constructorimpl(-d);
+    public static final double m1384unaryMinusUwyO8pc(double d) {
+        return m1343constructorimpl(-d);
     }
 
     /* renamed from: plus-LRDsOJo  reason: not valid java name */
-    public static final double m1969plusLRDsOJo(double d, double d2) {
-        return m1945constructorimpl(d + d2);
+    public static final double m1367plusLRDsOJo(double d, double d2) {
+        return m1343constructorimpl(d + d2);
     }
 
     /* renamed from: minus-LRDsOJo  reason: not valid java name */
-    public static final double m1968minusLRDsOJo(double d, double d2) {
-        return m1945constructorimpl(d - d2);
+    public static final double m1366minusLRDsOJo(double d, double d2) {
+        return m1343constructorimpl(d - d2);
     }
 
     /* renamed from: times-UwyO8pc  reason: not valid java name */
-    public static final double m1972timesUwyO8pc(double d, int i) {
-        return m1945constructorimpl(d * ((double) i));
+    public static final double m1370timesUwyO8pc(double d, int i) {
+        return m1343constructorimpl(d * ((double) i));
     }
 
     /* renamed from: times-UwyO8pc  reason: not valid java name */
-    public static final double m1971timesUwyO8pc(double d, double d2) {
-        return m1945constructorimpl(d * d2);
+    public static final double m1369timesUwyO8pc(double d, double d2) {
+        return m1343constructorimpl(d * d2);
     }
 
     /* renamed from: div-UwyO8pc  reason: not valid java name */
-    public static final double m1948divUwyO8pc(double d, int i) {
-        return m1945constructorimpl(d / ((double) i));
+    public static final double m1346divUwyO8pc(double d, int i) {
+        return m1343constructorimpl(d / ((double) i));
     }
 
     /* renamed from: div-UwyO8pc  reason: not valid java name */
-    public static final double m1947divUwyO8pc(double d, double d2) {
-        return m1945constructorimpl(d / d2);
+    public static final double m1345divUwyO8pc(double d, double d2) {
+        return m1343constructorimpl(d / d2);
     }
 
     /* renamed from: isInfinite-impl  reason: not valid java name */
-    public static final boolean m1965isInfiniteimpl(double d) {
+    public static final boolean m1363isInfiniteimpl(double d) {
         return Double.isInfinite(d);
     }
 
     /* renamed from: isFinite-impl  reason: not valid java name */
-    public static final boolean m1964isFiniteimpl(double d) {
+    public static final boolean m1362isFiniteimpl(double d) {
         return !Double.isInfinite(d) && !Double.isNaN(d);
     }
 
     /* renamed from: getAbsoluteValue-UwyO8pc  reason: not valid java name */
-    public static final double m1951getAbsoluteValueUwyO8pc(double d) {
-        return m1966isNegativeimpl(d) ? m1986unaryMinusUwyO8pc(d) : d;
+    public static final double m1349getAbsoluteValueUwyO8pc(double d) {
+        return m1364isNegativeimpl(d) ? m1384unaryMinusUwyO8pc(d) : d;
     }
 
     /* renamed from: compareTo-LRDsOJo  reason: not valid java name */
-    public static int m1944compareToLRDsOJo(double d, double d2) {
+    public static int m1342compareToLRDsOJo(double d, double d2) {
         return Double.compare(d, d2);
     }
 
     /* renamed from: toComponents-impl  reason: not valid java name */
-    public static final <T> T m1976toComponentsimpl(double d, Function5<? super Integer, ? super Integer, ? super Integer, ? super Integer, ? super Integer, ? extends T> function5) {
+    public static final <T> T m1374toComponentsimpl(double d, Function5<? super Integer, ? super Integer, ? super Integer, ? super Integer, ? super Integer, ? extends T> function5) {
         Intrinsics.checkNotNullParameter(function5, "action");
-        return (T) function5.invoke(Integer.valueOf((int) m1953getInDaysimpl(d)), Integer.valueOf(m1952getHoursComponentimpl(d)), Integer.valueOf(m1960getMinutesComponentimpl(d)), Integer.valueOf(m1962getSecondsComponentimpl(d)), Integer.valueOf(m1961getNanosecondsComponentimpl(d)));
+        return (T) function5.invoke(Integer.valueOf((int) m1351getInDaysimpl(d)), Integer.valueOf(m1350getHoursComponentimpl(d)), Integer.valueOf(m1358getMinutesComponentimpl(d)), Integer.valueOf(m1360getSecondsComponentimpl(d)), Integer.valueOf(m1359getNanosecondsComponentimpl(d)));
     }
 
     /* renamed from: toComponents-impl  reason: not valid java name */
-    public static final <T> T m1975toComponentsimpl(double d, Function4<? super Integer, ? super Integer, ? super Integer, ? super Integer, ? extends T> function4) {
+    public static final <T> T m1373toComponentsimpl(double d, Function4<? super Integer, ? super Integer, ? super Integer, ? super Integer, ? extends T> function4) {
         Intrinsics.checkNotNullParameter(function4, "action");
-        return (T) function4.invoke(Integer.valueOf((int) m1954getInHoursimpl(d)), Integer.valueOf(m1960getMinutesComponentimpl(d)), Integer.valueOf(m1962getSecondsComponentimpl(d)), Integer.valueOf(m1961getNanosecondsComponentimpl(d)));
+        return (T) function4.invoke(Integer.valueOf((int) m1352getInHoursimpl(d)), Integer.valueOf(m1358getMinutesComponentimpl(d)), Integer.valueOf(m1360getSecondsComponentimpl(d)), Integer.valueOf(m1359getNanosecondsComponentimpl(d)));
     }
 
     /* renamed from: toComponents-impl  reason: not valid java name */
-    public static final <T> T m1974toComponentsimpl(double d, Function3<? super Integer, ? super Integer, ? super Integer, ? extends T> function3) {
+    public static final <T> T m1372toComponentsimpl(double d, Function3<? super Integer, ? super Integer, ? super Integer, ? extends T> function3) {
         Intrinsics.checkNotNullParameter(function3, "action");
-        return (T) function3.invoke(Integer.valueOf((int) m1957getInMinutesimpl(d)), Integer.valueOf(m1962getSecondsComponentimpl(d)), Integer.valueOf(m1961getNanosecondsComponentimpl(d)));
+        return (T) function3.invoke(Integer.valueOf((int) m1355getInMinutesimpl(d)), Integer.valueOf(m1360getSecondsComponentimpl(d)), Integer.valueOf(m1359getNanosecondsComponentimpl(d)));
     }
 
     /* renamed from: toComponents-impl  reason: not valid java name */
-    public static final <T> T m1973toComponentsimpl(double d, Function2<? super Long, ? super Integer, ? extends T> function2) {
+    public static final <T> T m1371toComponentsimpl(double d, Function2<? super Long, ? super Integer, ? extends T> function2) {
         Intrinsics.checkNotNullParameter(function2, "action");
-        return (T) function2.invoke(Long.valueOf((long) m1959getInSecondsimpl(d)), Integer.valueOf(m1961getNanosecondsComponentimpl(d)));
+        return (T) function2.invoke(Long.valueOf((long) m1357getInSecondsimpl(d)), Integer.valueOf(m1359getNanosecondsComponentimpl(d)));
     }
 
     /* renamed from: getHoursComponent-impl  reason: not valid java name */
-    public static final int m1952getHoursComponentimpl(double d) {
-        return (int) (m1954getInHoursimpl(d) % ((double) 24));
+    public static final int m1350getHoursComponentimpl(double d) {
+        return (int) (m1352getInHoursimpl(d) % ((double) 24));
     }
 
     /* renamed from: getMinutesComponent-impl  reason: not valid java name */
-    public static final int m1960getMinutesComponentimpl(double d) {
-        return (int) (m1957getInMinutesimpl(d) % ((double) 60));
+    public static final int m1358getMinutesComponentimpl(double d) {
+        return (int) (m1355getInMinutesimpl(d) % ((double) 60));
     }
 
     /* renamed from: getSecondsComponent-impl  reason: not valid java name */
-    public static final int m1962getSecondsComponentimpl(double d) {
-        return (int) (m1959getInSecondsimpl(d) % ((double) 60));
+    public static final int m1360getSecondsComponentimpl(double d) {
+        return (int) (m1357getInSecondsimpl(d) % ((double) 60));
     }
 
     /* renamed from: getNanosecondsComponent-impl  reason: not valid java name */
-    public static final int m1961getNanosecondsComponentimpl(double d) {
-        return (int) (m1958getInNanosecondsimpl(d) % 1.0E9d);
+    public static final int m1359getNanosecondsComponentimpl(double d) {
+        return (int) (m1356getInNanosecondsimpl(d) % 1.0E9d);
     }
 
     /* renamed from: toDouble-impl  reason: not valid java name */
-    public static final double m1977toDoubleimpl(double d, TimeUnit timeUnit) {
+    public static final double m1375toDoubleimpl(double d, TimeUnit timeUnit) {
         Intrinsics.checkNotNullParameter(timeUnit, "unit");
         return DurationUnitKt.convertDurationUnit(d, DurationKt.access$getStorageUnit$p(), timeUnit);
     }
 
     /* renamed from: toLong-impl  reason: not valid java name */
-    public static final long m1980toLongimpl(double d, TimeUnit timeUnit) {
+    public static final long m1378toLongimpl(double d, TimeUnit timeUnit) {
         Intrinsics.checkNotNullParameter(timeUnit, "unit");
-        return (long) m1977toDoubleimpl(d, timeUnit);
+        return (long) m1375toDoubleimpl(d, timeUnit);
     }
 
     /* renamed from: toInt-impl  reason: not valid java name */
-    public static final int m1978toIntimpl(double d, TimeUnit timeUnit) {
+    public static final int m1376toIntimpl(double d, TimeUnit timeUnit) {
         Intrinsics.checkNotNullParameter(timeUnit, "unit");
-        return (int) m1977toDoubleimpl(d, timeUnit);
+        return (int) m1375toDoubleimpl(d, timeUnit);
     }
 
     /* renamed from: getInDays-impl  reason: not valid java name */
-    public static final double m1953getInDaysimpl(double d) {
-        return m1977toDoubleimpl(d, TimeUnit.DAYS);
+    public static final double m1351getInDaysimpl(double d) {
+        return m1375toDoubleimpl(d, TimeUnit.DAYS);
     }
 
     /* renamed from: getInHours-impl  reason: not valid java name */
-    public static final double m1954getInHoursimpl(double d) {
-        return m1977toDoubleimpl(d, TimeUnit.HOURS);
+    public static final double m1352getInHoursimpl(double d) {
+        return m1375toDoubleimpl(d, TimeUnit.HOURS);
     }
 
     /* renamed from: getInMinutes-impl  reason: not valid java name */
-    public static final double m1957getInMinutesimpl(double d) {
-        return m1977toDoubleimpl(d, TimeUnit.MINUTES);
+    public static final double m1355getInMinutesimpl(double d) {
+        return m1375toDoubleimpl(d, TimeUnit.MINUTES);
     }
 
     /* renamed from: getInSeconds-impl  reason: not valid java name */
-    public static final double m1959getInSecondsimpl(double d) {
-        return m1977toDoubleimpl(d, TimeUnit.SECONDS);
+    public static final double m1357getInSecondsimpl(double d) {
+        return m1375toDoubleimpl(d, TimeUnit.SECONDS);
     }
 
     /* renamed from: getInMilliseconds-impl  reason: not valid java name */
-    public static final double m1956getInMillisecondsimpl(double d) {
-        return m1977toDoubleimpl(d, TimeUnit.MILLISECONDS);
+    public static final double m1354getInMillisecondsimpl(double d) {
+        return m1375toDoubleimpl(d, TimeUnit.MILLISECONDS);
     }
 
     /* renamed from: getInMicroseconds-impl  reason: not valid java name */
-    public static final double m1955getInMicrosecondsimpl(double d) {
-        return m1977toDoubleimpl(d, TimeUnit.MICROSECONDS);
+    public static final double m1353getInMicrosecondsimpl(double d) {
+        return m1375toDoubleimpl(d, TimeUnit.MICROSECONDS);
     }
 
     /* renamed from: getInNanoseconds-impl  reason: not valid java name */
-    public static final double m1958getInNanosecondsimpl(double d) {
-        return m1977toDoubleimpl(d, TimeUnit.NANOSECONDS);
+    public static final double m1356getInNanosecondsimpl(double d) {
+        return m1375toDoubleimpl(d, TimeUnit.NANOSECONDS);
     }
 
     /* renamed from: toLongNanoseconds-impl  reason: not valid java name */
-    public static final long m1982toLongNanosecondsimpl(double d) {
-        return m1980toLongimpl(d, TimeUnit.NANOSECONDS);
+    public static final long m1380toLongNanosecondsimpl(double d) {
+        return m1378toLongimpl(d, TimeUnit.NANOSECONDS);
     }
 
     /* renamed from: toLongMilliseconds-impl  reason: not valid java name */
-    public static final long m1981toLongMillisecondsimpl(double d) {
-        return m1980toLongimpl(d, TimeUnit.MILLISECONDS);
+    public static final long m1379toLongMillisecondsimpl(double d) {
+        return m1378toLongimpl(d, TimeUnit.MILLISECONDS);
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:38:0x009a  */
     /* JADX WARNING: Removed duplicated region for block: B:39:0x009f  */
     /* renamed from: toString-impl  reason: not valid java name */
-    public static String m1983toStringimpl(double d) {
+    public static String m1381toStringimpl(double d) {
         int i;
         TimeUnit timeUnit;
         String str;
-        if (m1965isInfiniteimpl(d)) {
+        if (m1363isInfiniteimpl(d)) {
             return String.valueOf(d);
         }
         if (d == 0.0d) {
             return "0s";
         }
-        double r0 = m1958getInNanosecondsimpl(m1951getAbsoluteValueUwyO8pc(d));
+        double r0 = m1356getInNanosecondsimpl(m1349getAbsoluteValueUwyO8pc(d));
         boolean z = false;
         if (r0 < 1.0E-6d) {
             timeUnit = TimeUnit.SECONDS;
@@ -348,14 +348,14 @@ public final class Duration implements Comparable<Duration> {
                 }
                 i = 0;
             }
-            double r2 = m1977toDoubleimpl(d, timeUnit);
+            double r2 = m1375toDoubleimpl(d, timeUnit);
             StringBuilder sb = new StringBuilder();
             if (!z) {
                 str = FormatToDecimalsKt.formatScientific(r2);
             } else if (i > 0) {
                 str = FormatToDecimalsKt.formatUpToDecimals(r2, i);
             } else {
-                str = FormatToDecimalsKt.formatToExactDecimals(r2, m1970precisionimpl(d, Math.abs(r2)));
+                str = FormatToDecimalsKt.formatToExactDecimals(r2, m1368precisionimpl(d, Math.abs(r2)));
             }
             sb.append(str);
             sb.append(DurationUnitKt.shortName(timeUnit));
@@ -363,7 +363,7 @@ public final class Duration implements Comparable<Duration> {
         }
         i = 0;
         z = true;
-        double r2 = m1977toDoubleimpl(d, timeUnit);
+        double r2 = m1375toDoubleimpl(d, timeUnit);
         StringBuilder sb = new StringBuilder();
         if (!z) {
         }
@@ -373,23 +373,23 @@ public final class Duration implements Comparable<Duration> {
     }
 
     /* renamed from: toString-impl$default  reason: not valid java name */
-    public static /* synthetic */ String m1985toStringimpl$default(double d, TimeUnit timeUnit, int i, int i2, Object obj) {
+    public static /* synthetic */ String m1383toStringimpl$default(double d, TimeUnit timeUnit, int i, int i2, Object obj) {
         if ((i2 & 2) != 0) {
             i = 0;
         }
-        return m1984toStringimpl(d, timeUnit, i);
+        return m1382toStringimpl(d, timeUnit, i);
     }
 
     /* renamed from: toString-impl  reason: not valid java name */
-    public static final String m1984toStringimpl(double d, TimeUnit timeUnit, int i) {
+    public static final String m1382toStringimpl(double d, TimeUnit timeUnit, int i) {
         String str;
         Intrinsics.checkNotNullParameter(timeUnit, "unit");
         if (!(i >= 0)) {
             throw new IllegalArgumentException(("decimals must be not negative, but was " + i).toString());
-        } else if (m1965isInfiniteimpl(d)) {
+        } else if (m1363isInfiniteimpl(d)) {
             return String.valueOf(d);
         } else {
-            double r6 = m1977toDoubleimpl(d, timeUnit);
+            double r6 = m1375toDoubleimpl(d, timeUnit);
             StringBuilder sb = new StringBuilder();
             if (Math.abs(r6) < 1.0E14d) {
                 str = FormatToDecimalsKt.formatToExactDecimals(r6, RangesKt.coerceAtMost(i, 12));
@@ -403,17 +403,17 @@ public final class Duration implements Comparable<Duration> {
     }
 
     /* renamed from: toIsoString-impl  reason: not valid java name */
-    public static final String m1979toIsoStringimpl(double d) {
+    public static final String m1377toIsoStringimpl(double d) {
         StringBuilder sb = new StringBuilder();
-        if (m1966isNegativeimpl(d)) {
+        if (m1364isNegativeimpl(d)) {
             sb.append('-');
         }
         sb.append("PT");
-        double r7 = m1951getAbsoluteValueUwyO8pc(d);
-        int r1 = (int) m1954getInHoursimpl(r7);
-        int r2 = m1960getMinutesComponentimpl(r7);
-        int r3 = m1962getSecondsComponentimpl(r7);
-        int r72 = m1961getNanosecondsComponentimpl(r7);
+        double r7 = m1349getAbsoluteValueUwyO8pc(d);
+        int r1 = (int) m1352getInHoursimpl(r7);
+        int r2 = m1358getMinutesComponentimpl(r7);
+        int r3 = m1360getSecondsComponentimpl(r7);
+        int r72 = m1359getNanosecondsComponentimpl(r7);
         boolean z = true;
         boolean z2 = r1 != 0;
         boolean z3 = (r3 == 0 && r72 == 0) ? false : true;

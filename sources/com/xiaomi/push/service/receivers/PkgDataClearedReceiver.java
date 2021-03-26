@@ -4,10 +4,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
+import com.xiaomi.a.a.a.c;
 import com.xiaomi.push.service.XMPushService;
-import com.xiaomi.push.service.ba;
-import com.xiaomi.push.service.be;
+import com.xiaomi.push.service.ad;
+import com.xiaomi.push.service.y;
 
 public class PkgDataClearedReceiver extends BroadcastReceiver {
     @Override // android.content.BroadcastReceiver
@@ -17,11 +17,11 @@ public class PkgDataClearedReceiver extends BroadcastReceiver {
             if (!TextUtils.isEmpty(encodedSchemeSpecificPart)) {
                 try {
                     Intent intent2 = new Intent(context, XMPushService.class);
-                    intent2.setAction(ba.b);
+                    intent2.setAction(y.b);
                     intent2.putExtra("data_cleared_pkg_name", encodedSchemeSpecificPart);
-                    be.a(context).m640a(intent2);
+                    ad.a(context).a(intent2);
                 } catch (Exception e) {
-                    b.d("data cleared broadcast error: " + e);
+                    c.d("data cleared broadcast error: " + e);
                 }
             }
         }

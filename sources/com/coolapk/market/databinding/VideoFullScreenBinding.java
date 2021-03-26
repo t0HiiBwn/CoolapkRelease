@@ -33,7 +33,7 @@ public abstract class VideoFullScreenBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoFullScreenBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (VideoFullScreenBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559292, viewGroup, z, obj);
+        return (VideoFullScreenBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559302, viewGroup, z, obj);
     }
 
     public static VideoFullScreenBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class VideoFullScreenBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoFullScreenBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (VideoFullScreenBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559292, null, false, obj);
+        return (VideoFullScreenBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559302, null, false, obj);
     }
 
     public static VideoFullScreenBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class VideoFullScreenBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoFullScreenBinding bind(View view, Object obj) {
-        return (VideoFullScreenBinding) bind(obj, view, 2131559292);
+        return (VideoFullScreenBinding) bind(obj, view, 2131559302);
     }
 }

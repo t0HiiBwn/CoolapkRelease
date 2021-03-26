@@ -39,11 +39,11 @@ public class VideoDecoder<T> implements ResourceDecoder<T, Bitmap> {
         /* class com.bumptech.glide.load.resource.bitmap.VideoDecoder.AnonymousClass1 */
         private final ByteBuffer buffer = ByteBuffer.allocate(8);
 
-        public void update(byte[] bArr, Long l2, MessageDigest messageDigest) {
+        public void update(byte[] bArr, Long l, MessageDigest messageDigest) {
             messageDigest.update(bArr);
             synchronized (this.buffer) {
                 this.buffer.position(0);
-                messageDigest.update(this.buffer.putLong(l2.longValue()).array());
+                messageDigest.update(this.buffer.putLong(l.longValue()).array());
             }
         }
     });

@@ -27,9 +27,9 @@ public class ItemTabViewBindingImpl extends ItemTabViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 1);
-        sparseIntArray.put(2131363480, 2);
-        sparseIntArray.put(2131363490, 3);
+        sparseIntArray.put(2131362779, 1);
+        sparseIntArray.put(2131363498, 2);
+        sparseIntArray.put(2131363508, 3);
     }
 
     public ItemTabViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

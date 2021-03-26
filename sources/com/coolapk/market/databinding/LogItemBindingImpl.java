@@ -66,9 +66,9 @@ public class LogItemBindingImpl extends LogItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (196 == i) {
+        if (197 == i) {
             setMessage((String) obj);
-        } else if (276 == i) {
+        } else if (277 == i) {
             setTime((String) obj);
         } else if (98 != i) {
             return false;
@@ -84,7 +84,7 @@ public class LogItemBindingImpl extends LogItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(196);
+        notifyPropertyChanged(197);
         super.requestRebind();
     }
 
@@ -94,7 +94,7 @@ public class LogItemBindingImpl extends LogItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(276);
+        notifyPropertyChanged(277);
         super.requestRebind();
     }
 

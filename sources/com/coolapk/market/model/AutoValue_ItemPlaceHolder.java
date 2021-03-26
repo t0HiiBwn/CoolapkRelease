@@ -23,8 +23,8 @@ final class AutoValue_ItemPlaceHolder extends C$AutoValue_ItemPlaceHolder {
         return 0;
     }
 
-    AutoValue_ItemPlaceHolder(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, UserInfo userInfo, String str12, String str13, String str14, String str15, DyhModel dyhModel, CollectionItem collectionItem) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l2, l3, str11, userInfo, str12, str13, str14, str15, dyhModel, collectionItem);
+    AutoValue_ItemPlaceHolder(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, UserInfo userInfo, String str12, String str13, String str14, String str15, DyhModel dyhModel, CollectionItem collectionItem) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l, l2, str11, userInfo, str12, str13, str14, str15, dyhModel, collectionItem);
     }
 
     @Override // android.os.Parcelable

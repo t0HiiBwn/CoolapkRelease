@@ -134,9 +134,9 @@ public final class ArticlePreviewFragment extends LocalMultiTypeFragment<Object>
         BaseFeedContentHolder baseFeedContentHolder = this.contentHolder;
         AlphableToolbar alphableToolbar = null;
         if (Intrinsics.areEqual((baseFeedContentHolder == null || (multiPart = baseFeedContentHolder.getMultiPart()) == null) ? null : multiPart.type(), "answer")) {
-            BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558608).suitedMethod(ArticlePreviewFragment$onActivityCreated$1.INSTANCE).constructor(new ArticlePreviewFragment$onActivityCreated$2(fragmentBindingComponent)).build(), 0, 2, null);
+            BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558612).suitedMethod(ArticlePreviewFragment$onActivityCreated$1.INSTANCE).constructor(new ArticlePreviewFragment$onActivityCreated$2(fragmentBindingComponent)).build(), 0, 2, null);
         } else {
-            BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558614).suitedMethod(ArticlePreviewFragment$onActivityCreated$3.INSTANCE).constructor(new ArticlePreviewFragment$onActivityCreated$4(fragmentBindingComponent)).build(), 0, 2, null);
+            BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558618).suitedMethod(ArticlePreviewFragment$onActivityCreated$3.INSTANCE).constructor(new ArticlePreviewFragment$onActivityCreated$4(fragmentBindingComponent)).build(), 0, 2, null);
         }
         BaseFeedContentHolder baseFeedContentHolder2 = this.contentHolder;
         if (baseFeedContentHolder2 == null || (uiConfig = baseFeedContentHolder2.getUiConfig()) == null || (list = uiConfig.extraEntities()) == null) {
@@ -160,11 +160,11 @@ public final class ArticlePreviewFragment extends LocalMultiTypeFragment<Object>
             linkedHashMap.put(str, next);
         }
         ArticlePreviewFragment$onActivityCreated$articlePresenter$1 articlePreviewFragment$onActivityCreated$articlePresenter$1 = new ArticlePreviewFragment$onActivityCreated$articlePresenter$1(this, linkedHashMap);
-        getAdapter().setMatchAllFactor(SimpleViewHolderFactor.Companion.withLayoutId(2131558929).constructor(new ArticlePreviewFragment$onActivityCreated$5(fragmentBindingComponent)).suitedMethod(ArticlePreviewFragment$onActivityCreated$6.INSTANCE).build());
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558617).suitedMethod(ArticlePreviewFragment$onActivityCreated$7.INSTANCE).constructor(new ArticlePreviewFragment$onActivityCreated$8(fragmentBindingComponent)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558616).suitedMethod(ArticlePreviewFragment$onActivityCreated$9.INSTANCE).constructor(new ArticlePreviewFragment$onActivityCreated$10(fragmentBindingComponent)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558609).constructor(new ArticlePreviewFragment$onActivityCreated$11(fragmentBindingComponent, articlePreviewFragment$onActivityCreated$articlePresenter$1)).suitedMethod(ArticlePreviewFragment$onActivityCreated$12.INSTANCE).resetItemViewType(2131562034).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558609).suitedMethod(new ArticlePreviewFragment$onActivityCreated$13(articlePreviewFragment$onActivityCreated$articlePresenter$1)).constructor(new ArticlePreviewFragment$onActivityCreated$14(fragmentBindingComponent, articlePreviewFragment$onActivityCreated$articlePresenter$1)).build(), 0, 2, null);
+        getAdapter().setMatchAllFactor(SimpleViewHolderFactor.Companion.withLayoutId(2131558936).constructor(new ArticlePreviewFragment$onActivityCreated$5(fragmentBindingComponent)).suitedMethod(ArticlePreviewFragment$onActivityCreated$6.INSTANCE).build());
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558621).suitedMethod(ArticlePreviewFragment$onActivityCreated$7.INSTANCE).constructor(new ArticlePreviewFragment$onActivityCreated$8(fragmentBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558620).suitedMethod(ArticlePreviewFragment$onActivityCreated$9.INSTANCE).constructor(new ArticlePreviewFragment$onActivityCreated$10(fragmentBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558613).constructor(new ArticlePreviewFragment$onActivityCreated$11(fragmentBindingComponent, articlePreviewFragment$onActivityCreated$articlePresenter$1)).suitedMethod(ArticlePreviewFragment$onActivityCreated$12.INSTANCE).resetItemViewType(2131562038).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558613).suitedMethod(new ArticlePreviewFragment$onActivityCreated$13(articlePreviewFragment$onActivityCreated$articlePresenter$1)).constructor(new ArticlePreviewFragment$onActivityCreated$14(fragmentBindingComponent, articlePreviewFragment$onActivityCreated$articlePresenter$1)).build(), 0, 2, null);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
@@ -172,7 +172,7 @@ public final class ArticlePreviewFragment extends LocalMultiTypeFragment<Object>
         RecyclerView recyclerView2 = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView2, "recyclerView");
         recyclerView2.setClipChildren(false);
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558608, 2131231052).type(2131558614, 2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558612, 2131231062).type(2131558618, 2131231062).create());
         initData();
         FragmentActivity activity = getActivity();
         if (activity instanceof AlphableToolbar) {
@@ -281,7 +281,7 @@ public final class ArticlePreviewFragment extends LocalMultiTypeFragment<Object>
             if (frameLayout != null) {
                 TextView textView = new TextView(activity);
                 textView.setLayoutParams(new FrameLayout.LayoutParams(-1, ConvertUtils.dp2px(52.0f)));
-                textView.setText(getString(2131886370));
+                textView.setText(getString(2131886430));
                 textView.setGravity(17);
                 textView.setBackground(ShapeUtils.createSelectableItemBackgroundWith(textView.getContext(), new ColorDrawable(AppHolder.getAppTheme().getContentBackgroundColor())));
                 textView.setTextColor(AppHolder.getAppTheme().getColorAccent());
@@ -303,7 +303,7 @@ public final class ArticlePreviewFragment extends LocalMultiTypeFragment<Object>
     /* compiled from: ArticlePreviewFragment.kt */
     public static final class ArticlePreviewTextViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558617;
+        public static final int LAYOUT_ID = 2131558621;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public ArticlePreviewTextViewHolder(View view, DataBindingComponent dataBindingComponent) {
@@ -347,7 +347,7 @@ public final class ArticlePreviewFragment extends LocalMultiTypeFragment<Object>
     /* compiled from: ArticlePreviewFragment.kt */
     public static final class ArticlePreviewImageViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558616;
+        public static final int LAYOUT_ID = 2131558620;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public ArticlePreviewImageViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -449,7 +449,7 @@ public final class ArticlePreviewFragment extends LocalMultiTypeFragment<Object>
                 setImageViewSize(articleImage);
                 Uri parse = Uri.parse(StringUtils.notNull(articleImage.getImageUrl()));
                 Intrinsics.checkNotNullExpressionValue(parse, "Uri.parse(StringUtils.notNull(model.imageUrl))");
-                GlideApp.with(articlePreviewFragment.requireActivity()).load(UtilExtendsKt.toSafeFileUri(parse)).placeholder(2131231696).diskCacheStrategy(DiskCacheStrategy.NONE).into(itemArticleViewImageBinding.ivCover);
+                GlideApp.with(articlePreviewFragment.requireActivity()).load(UtilExtendsKt.toSafeFileUri(parse)).placeholder(2131231707).diskCacheStrategy(DiskCacheStrategy.NONE).into(itemArticleViewImageBinding.ivCover);
                 TextView textView3 = itemArticleViewImageBinding.descriptionView;
                 Intrinsics.checkNotNullExpressionValue(textView3, "binding.descriptionView");
                 textView3.setText(articleImage.getText());
@@ -461,7 +461,7 @@ public final class ArticlePreviewFragment extends LocalMultiTypeFragment<Object>
     /* compiled from: ArticlePreviewFragment.kt */
     public static final class ArticlePreviewTopViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558614;
+        public static final int LAYOUT_ID = 2131558618;
         private final ItemArticleFeedPreviewTopBinding binding;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -543,7 +543,7 @@ public final class ArticlePreviewFragment extends LocalMultiTypeFragment<Object>
                 textView3.setText(loginSession.getUserName());
                 TextView textView4 = this.binding.timeView;
                 Intrinsics.checkNotNullExpressionValue(textView4, "binding.timeView");
-                textView4.setText(getContext().getText(2131887006));
+                textView4.setText(getContext().getText(2131887068));
                 TextView textView5 = this.binding.fromWhereView;
                 Intrinsics.checkNotNullExpressionValue(textView5, "binding.fromWhereView");
                 textView5.setVisibility(0);
@@ -566,7 +566,7 @@ public final class ArticlePreviewFragment extends LocalMultiTypeFragment<Object>
                 ScalingImageView scalingImageView5 = this.binding.topImageView;
                 Intrinsics.checkNotNullExpressionValue(scalingImageView5, "binding.topImageView");
                 scalingImageView5.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                AppHolder.getFragmentImageLoader().displayImage((Fragment) articlePreviewFragment2, articleNative.getImageUrl(), (ImageView) this.binding.topImageView, ImageLoaderOptions.newBuilder().placeHolderRes(2131231691).useAnimate(true).build(), (OnImageLoadListener) null, (OnBitmapTransformListener) null);
+                AppHolder.getFragmentImageLoader().displayImage((Fragment) articlePreviewFragment2, articleNative.getImageUrl(), (ImageView) this.binding.topImageView, ImageLoaderOptions.newBuilder().placeHolderRes(2131231702).useAnimate(true).build(), (OnImageLoadListener) null, (OnBitmapTransformListener) null);
                 ScalingImageView scalingImageView6 = this.binding.topImageView;
                 Intrinsics.checkNotNullExpressionValue(scalingImageView6, "binding.topImageView");
                 scalingImageView6.setScaleType(ImageView.ScaleType.MATRIX);
@@ -584,7 +584,7 @@ public final class ArticlePreviewFragment extends LocalMultiTypeFragment<Object>
     /* compiled from: ArticlePreviewFragment.kt */
     public static final class ArticlePreviewAnswerTopViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558608;
+        public static final int LAYOUT_ID = 2131558612;
         private final ItemArticleAnswerPreviewTopBinding binding;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */

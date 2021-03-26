@@ -54,9 +54,9 @@ public class ItemCoverViewBindingImpl extends ItemCoverViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((DyhArticle) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -72,7 +72,7 @@ public class ItemCoverViewBindingImpl extends ItemCoverViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -105,7 +105,7 @@ public class ItemCoverViewBindingImpl extends ItemCoverViewBinding {
         int i2 = ((j & 12) > 0 ? 1 : ((j & 12) == 0 ? 0 : -1));
         if (i != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extraImageView, thumbnailPic, null, 2131231691, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extraImageView, thumbnailPic, null, 2131231702, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
         }
         if (i2 != 0) {
             ViewBindingAdapters.clickListener(this.extraImageView, onClickListener, null);

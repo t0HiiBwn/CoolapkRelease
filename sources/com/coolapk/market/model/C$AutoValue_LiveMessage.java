@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_LiveMessage  reason: invalid class name */
 abstract class C$AutoValue_LiveMessage extends C$$AutoValue_LiveMessage {
-    C$AutoValue_LiveMessage(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, String str14, String str15, String str16, String str17, int i, User user, LiveMessage liveMessage, String str18, int i2) {
-        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l2, l3, str13, str14, str15, str16, str17, i, user, liveMessage, str18, i2);
+    C$AutoValue_LiveMessage(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, String str14, String str15, String str16, String str17, int i, User user, LiveMessage liveMessage, String str18, int i2) {
+        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l, l2, str13, str14, str15, str16, str17, i, user, liveMessage, str18, i2);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_LiveMessage$GsonTypeAdapter */
@@ -159,13 +159,13 @@ abstract class C$AutoValue_LiveMessage extends C$$AutoValue_LiveMessage {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -298,8 +298,8 @@ abstract class C$AutoValue_LiveMessage extends C$$AutoValue_LiveMessage {
             String str10 = this.defaultSubTitle;
             String str11 = this.defaultId;
             String str12 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str13 = this.defaultLiveId;
             String str14 = this.defaultUid;
             String str15 = this.defaultUserName;
@@ -322,9 +322,9 @@ abstract class C$AutoValue_LiveMessage extends C$$AutoValue_LiveMessage {
             String str27 = str10;
             String str28 = str11;
             String str29 = str12;
-            Long l4 = l2;
+            Long l3 = l;
             String str30 = str;
-            Long l5 = l3;
+            Long l4 = l2;
             String str31 = str13;
             String str32 = str14;
             String str33 = str15;
@@ -513,7 +513,7 @@ abstract class C$AutoValue_LiveMessage extends C$$AutoValue_LiveMessage {
                             str19 = this.entityTypeAdapter.read(jsonReader);
                             continue;
                         case 6:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 7:
                             str36 = this.datelineFormatAdapter.read(jsonReader);
@@ -564,7 +564,7 @@ abstract class C$AutoValue_LiveMessage extends C$$AutoValue_LiveMessage {
                             i3 = this.isBroadcastAdapter.read(jsonReader).intValue();
                             continue;
                         case 23:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case 24:
                             i2 = this.isReadAdapter.read(jsonReader).intValue();
@@ -576,7 +576,7 @@ abstract class C$AutoValue_LiveMessage extends C$$AutoValue_LiveMessage {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_LiveMessage(str30, str19, str20, str21, num2, str22, str23, str24, str25, str26, str27, str28, str29, l4, l5, str31, str32, str33, str34, str35, i3, user2, liveMessage2, str36, i2);
+            return new AutoValue_LiveMessage(str30, str19, str20, str21, num2, str22, str23, str24, str25, str26, str27, str28, str29, l3, l4, str31, str32, str33, str34, str35, i3, user2, liveMessage2, str36, i2);
         }
     }
 }

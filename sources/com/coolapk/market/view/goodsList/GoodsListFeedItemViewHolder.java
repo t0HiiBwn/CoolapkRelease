@@ -24,7 +24,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: GoodsListFeedItemViewHolder.kt */
 public final class GoodsListFeedItemViewHolder extends GenericBindHolder<ItemGoodsListFeedBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558760;
+    public static final int LAYOUT_ID = 2131558767;
     private Feed feed;
     private final Lazy headerViewPart$delegate;
 
@@ -92,14 +92,14 @@ public final class GoodsListFeedItemViewHolder extends GenericBindHolder<ItemGoo
         super.onClick(view);
         Intrinsics.checkNotNull(view);
         int id = view.getId();
-        if (id == 2131362199 || id == 2131362768) {
+        if (id == 2131362204 || id == 2131362779) {
             Context context = getContext();
             Feed feed2 = this.feed;
             if (feed2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("feed");
             }
             ActionManager.startFeedDetailActivity(context, feed2.getId(), (String) null);
-        } else if (id == 2131362970) {
+        } else if (id == 2131362982) {
             Feed feed3 = this.feed;
             if (feed3 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("feed");

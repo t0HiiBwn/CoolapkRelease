@@ -25,8 +25,8 @@ public class ItemProductConfigItemBindingImpl extends ItemProductConfigItemBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 1);
-        sparseIntArray.put(2131362376, 2);
+        sparseIntArray.put(2131363604, 1);
+        sparseIntArray.put(2131362382, 2);
     }
 
     public ItemProductConfigItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {

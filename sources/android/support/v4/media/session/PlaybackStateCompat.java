@@ -212,8 +212,8 @@ public final class PlaybackStateCompat implements Parcelable {
         return this.mUpdateTime;
     }
 
-    public long getCurrentPosition(Long l2) {
-        return Math.max(0L, this.mPosition + ((long) (this.mSpeed * ((float) (l2 != null ? l2.longValue() : SystemClock.elapsedRealtime() - this.mUpdateTime)))));
+    public long getCurrentPosition(Long l) {
+        return Math.max(0L, this.mPosition + ((long) (this.mSpeed * ((float) (l != null ? l.longValue() : SystemClock.elapsedRealtime() - this.mUpdateTime)))));
     }
 
     public long getBufferedPosition() {

@@ -2,129 +2,221 @@ package com.xiaomi.push;
 
 import java.io.Serializable;
 import java.util.BitSet;
-import java.util.HashMap;
-import java.util.Map;
 
-public class hp implements in<hp, Object>, Serializable, Cloneable {
-    private static final iv a = new iv("", (byte) 11, 1);
+public class hp implements hu<hp, Object>, Serializable, Cloneable {
+    private static final il m = new il("XmPushActionUnRegistration");
+    private static final id n = new id("", (byte) 11, 1);
+    private static final id o = new id("", (byte) 12, 2);
+    private static final id p = new id("", (byte) 11, 3);
+    private static final id q = new id("", (byte) 11, 4);
+    private static final id r = new id("", (byte) 11, 5);
+    private static final id s = new id("", (byte) 11, 6);
+    private static final id t = new id("", (byte) 11, 7);
+    private static final id u = new id("", (byte) 11, 8);
+    private static final id v = new id("", (byte) 11, 9);
+    private static final id w = new id("", (byte) 11, 10);
+    private static final id x = new id("", (byte) 2, 11);
+    private static final id y = new id("", (byte) 10, 12);
+    public String a;
+    public gy b;
+    public String c;
+    public String d;
+    public String e;
+    public String f;
+    public String g;
+    public String h;
+    public String i;
+    public String j;
+    public boolean k = true;
+    public long l;
+    private BitSet z = new BitSet(2);
 
-    /* renamed from: a  reason: collision with other field name */
-    private static final jd f606a = new jd("PushMetaInfo");
-    private static final iv b = new iv("", (byte) 10, 2);
-    private static final iv c = new iv("", (byte) 11, 3);
-    private static final iv d = new iv("", (byte) 11, 4);
-    private static final iv e = new iv("", (byte) 11, 5);
-    private static final iv f = new iv("", (byte) 8, 6);
-    private static final iv g = new iv("", (byte) 11, 7);
-    private static final iv h = new iv("", (byte) 8, 8);
-    private static final iv i = new iv("", (byte) 8, 9);
-    private static final iv j = new iv("", (byte) 13, 10);
-    private static final iv k = new iv("", (byte) 13, 11);
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final iv f1505l = new iv("", (byte) 2, 12);
-    private static final iv m = new iv("", (byte) 13, 13);
-
-    /* renamed from: a  reason: collision with other field name */
-    public int f607a;
-
-    /* renamed from: a  reason: collision with other field name */
-    public long f608a;
-
-    /* renamed from: a  reason: collision with other field name */
-    public String f609a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private BitSet f610a;
-
-    /* renamed from: a  reason: collision with other field name */
-    public Map<String, String> f611a;
-
-    /* renamed from: a  reason: collision with other field name */
-    public boolean f612a;
-
-    /* renamed from: b  reason: collision with other field name */
-    public int f613b;
-
-    /* renamed from: b  reason: collision with other field name */
-    public String f614b;
-
-    /* renamed from: b  reason: collision with other field name */
-    public Map<String, String> f615b;
-
-    /* renamed from: c  reason: collision with other field name */
-    public int f616c;
-
-    /* renamed from: c  reason: collision with other field name */
-    public String f617c;
-
-    /* renamed from: c  reason: collision with other field name */
-    public Map<String, String> f618c;
-
-    /* renamed from: d  reason: collision with other field name */
-    public String f619d;
-
-    /* renamed from: e  reason: collision with other field name */
-    public String f620e;
-
-    public hp() {
-        this.f610a = new BitSet(5);
-        this.f612a = false;
+    public hp a(String str) {
+        this.c = str;
+        return this;
     }
 
-    public hp(hp hpVar) {
-        BitSet bitSet = new BitSet(5);
-        this.f610a = bitSet;
-        bitSet.clear();
-        this.f610a.or(hpVar.f610a);
-        if (hpVar.m425a()) {
-            this.f609a = hpVar.f609a;
-        }
-        this.f608a = hpVar.f608a;
-        if (hpVar.m431c()) {
-            this.f614b = hpVar.f614b;
-        }
-        if (hpVar.m432d()) {
-            this.f617c = hpVar.f617c;
-        }
-        if (hpVar.e()) {
-            this.f619d = hpVar.f619d;
-        }
-        this.f607a = hpVar.f607a;
-        if (hpVar.g()) {
-            this.f620e = hpVar.f620e;
-        }
-        this.f613b = hpVar.f613b;
-        this.f616c = hpVar.f616c;
-        if (hpVar.j()) {
-            HashMap hashMap = new HashMap();
-            for (Map.Entry<String, String> entry : hpVar.f611a.entrySet()) {
-                hashMap.put(entry.getKey(), entry.getValue());
+    @Override // com.xiaomi.push.hu
+    public void a(ig igVar) {
+        igVar.f();
+        while (true) {
+            id h2 = igVar.h();
+            if (h2.b == 0) {
+                igVar.g();
+                m();
+                return;
             }
-            this.f611a = hashMap;
-        }
-        if (hpVar.k()) {
-            HashMap hashMap2 = new HashMap();
-            for (Map.Entry<String, String> entry2 : hpVar.f615b.entrySet()) {
-                hashMap2.put(entry2.getKey(), entry2.getValue());
+            switch (h2.c) {
+                case 1:
+                    if (h2.b == 11) {
+                        this.a = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 2:
+                    if (h2.b == 12) {
+                        gy gyVar = new gy();
+                        this.b = gyVar;
+                        gyVar.a(igVar);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 3:
+                    if (h2.b == 11) {
+                        this.c = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 4:
+                    if (h2.b == 11) {
+                        this.d = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 5:
+                    if (h2.b == 11) {
+                        this.e = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 6:
+                    if (h2.b == 11) {
+                        this.f = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 7:
+                    if (h2.b == 11) {
+                        this.g = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 8:
+                    if (h2.b == 11) {
+                        this.h = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 9:
+                    if (h2.b == 11) {
+                        this.i = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 10:
+                    if (h2.b == 11) {
+                        this.j = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 11:
+                    if (h2.b == 2) {
+                        this.k = igVar.p();
+                        a(true);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 12:
+                    if (h2.b == 10) {
+                        this.l = igVar.t();
+                        b(true);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
             }
-            this.f615b = hashMap2;
-        }
-        this.f612a = hpVar.f612a;
-        if (hpVar.n()) {
-            HashMap hashMap3 = new HashMap();
-            for (Map.Entry<String, String> entry3 : hpVar.f618c.entrySet()) {
-                hashMap3.put(entry3.getKey(), entry3.getValue());
-            }
-            this.f618c = hashMap3;
+            ij.a(igVar, h2.b);
+            igVar.i();
         }
     }
 
-    public int a() {
-        return this.f607a;
+    public void a(boolean z2) {
+        this.z.set(0, z2);
     }
 
-    /* renamed from: a */
+    public boolean a() {
+        return this.a != null;
+    }
+
+    public boolean a(hp hpVar) {
+        if (hpVar == null) {
+            return false;
+        }
+        boolean a2 = a();
+        boolean a3 = hpVar.a();
+        if ((a2 || a3) && (!a2 || !a3 || !this.a.equals(hpVar.a))) {
+            return false;
+        }
+        boolean b2 = b();
+        boolean b3 = hpVar.b();
+        if ((b2 || b3) && (!b2 || !b3 || !this.b.a(hpVar.b))) {
+            return false;
+        }
+        boolean c2 = c();
+        boolean c3 = hpVar.c();
+        if ((c2 || c3) && (!c2 || !c3 || !this.c.equals(hpVar.c))) {
+            return false;
+        }
+        boolean d2 = d();
+        boolean d3 = hpVar.d();
+        if ((d2 || d3) && (!d2 || !d3 || !this.d.equals(hpVar.d))) {
+            return false;
+        }
+        boolean e2 = e();
+        boolean e3 = hpVar.e();
+        if ((e2 || e3) && (!e2 || !e3 || !this.e.equals(hpVar.e))) {
+            return false;
+        }
+        boolean f2 = f();
+        boolean f3 = hpVar.f();
+        if ((f2 || f3) && (!f2 || !f3 || !this.f.equals(hpVar.f))) {
+            return false;
+        }
+        boolean g2 = g();
+        boolean g3 = hpVar.g();
+        if ((g2 || g3) && (!g2 || !g3 || !this.g.equals(hpVar.g))) {
+            return false;
+        }
+        boolean h2 = h();
+        boolean h3 = hpVar.h();
+        if ((h2 || h3) && (!h2 || !h3 || !this.h.equals(hpVar.h))) {
+            return false;
+        }
+        boolean i2 = i();
+        boolean i3 = hpVar.i();
+        if ((i2 || i3) && (!i2 || !i3 || !this.i.equals(hpVar.i))) {
+            return false;
+        }
+        boolean j2 = j();
+        boolean j3 = hpVar.j();
+        if ((j2 || j3) && (!j2 || !j3 || !this.j.equals(hpVar.j))) {
+            return false;
+        }
+        boolean k2 = k();
+        boolean k3 = hpVar.k();
+        if ((k2 || k3) && (!k2 || !k3 || this.k != hpVar.k)) {
+            return false;
+        }
+        boolean l2 = l();
+        boolean l3 = hpVar.l();
+        if (l2 || l3) {
+            return l2 && l3 && this.l == hpVar.l;
+        }
+        return true;
+    }
+
+    /* renamed from: b */
     public int compareTo(hp hpVar) {
         int a2;
         int a3;
@@ -138,569 +230,222 @@ public class hp implements in<hp, Object>, Serializable, Cloneable {
         int a11;
         int a12;
         int a13;
-        int a14;
         if (!getClass().equals(hpVar.getClass())) {
             return getClass().getName().compareTo(hpVar.getClass().getName());
         }
-        int compareTo = Boolean.valueOf(m425a()).compareTo(Boolean.valueOf(hpVar.m425a()));
+        int compareTo = Boolean.valueOf(a()).compareTo(Boolean.valueOf(hpVar.a()));
         if (compareTo != 0) {
             return compareTo;
         }
-        if (m425a() && (a14 = io.a(this.f609a, hpVar.f609a)) != 0) {
-            return a14;
+        if (a() && (a13 = hv.a(this.a, hpVar.a)) != 0) {
+            return a13;
         }
-        int compareTo2 = Boolean.valueOf(m429b()).compareTo(Boolean.valueOf(hpVar.m429b()));
+        int compareTo2 = Boolean.valueOf(b()).compareTo(Boolean.valueOf(hpVar.b()));
         if (compareTo2 != 0) {
             return compareTo2;
         }
-        if (m429b() && (a13 = io.a(this.f608a, hpVar.f608a)) != 0) {
-            return a13;
+        if (b() && (a12 = hv.a(this.b, hpVar.b)) != 0) {
+            return a12;
         }
-        int compareTo3 = Boolean.valueOf(m431c()).compareTo(Boolean.valueOf(hpVar.m431c()));
+        int compareTo3 = Boolean.valueOf(c()).compareTo(Boolean.valueOf(hpVar.c()));
         if (compareTo3 != 0) {
             return compareTo3;
         }
-        if (m431c() && (a12 = io.a(this.f614b, hpVar.f614b)) != 0) {
-            return a12;
+        if (c() && (a11 = hv.a(this.c, hpVar.c)) != 0) {
+            return a11;
         }
-        int compareTo4 = Boolean.valueOf(m432d()).compareTo(Boolean.valueOf(hpVar.m432d()));
+        int compareTo4 = Boolean.valueOf(d()).compareTo(Boolean.valueOf(hpVar.d()));
         if (compareTo4 != 0) {
             return compareTo4;
         }
-        if (m432d() && (a11 = io.a(this.f617c, hpVar.f617c)) != 0) {
-            return a11;
+        if (d() && (a10 = hv.a(this.d, hpVar.d)) != 0) {
+            return a10;
         }
         int compareTo5 = Boolean.valueOf(e()).compareTo(Boolean.valueOf(hpVar.e()));
         if (compareTo5 != 0) {
             return compareTo5;
         }
-        if (e() && (a10 = io.a(this.f619d, hpVar.f619d)) != 0) {
-            return a10;
+        if (e() && (a9 = hv.a(this.e, hpVar.e)) != 0) {
+            return a9;
         }
         int compareTo6 = Boolean.valueOf(f()).compareTo(Boolean.valueOf(hpVar.f()));
         if (compareTo6 != 0) {
             return compareTo6;
         }
-        if (f() && (a9 = io.a(this.f607a, hpVar.f607a)) != 0) {
-            return a9;
+        if (f() && (a8 = hv.a(this.f, hpVar.f)) != 0) {
+            return a8;
         }
         int compareTo7 = Boolean.valueOf(g()).compareTo(Boolean.valueOf(hpVar.g()));
         if (compareTo7 != 0) {
             return compareTo7;
         }
-        if (g() && (a8 = io.a(this.f620e, hpVar.f620e)) != 0) {
-            return a8;
+        if (g() && (a7 = hv.a(this.g, hpVar.g)) != 0) {
+            return a7;
         }
         int compareTo8 = Boolean.valueOf(h()).compareTo(Boolean.valueOf(hpVar.h()));
         if (compareTo8 != 0) {
             return compareTo8;
         }
-        if (h() && (a7 = io.a(this.f613b, hpVar.f613b)) != 0) {
-            return a7;
+        if (h() && (a6 = hv.a(this.h, hpVar.h)) != 0) {
+            return a6;
         }
         int compareTo9 = Boolean.valueOf(i()).compareTo(Boolean.valueOf(hpVar.i()));
         if (compareTo9 != 0) {
             return compareTo9;
         }
-        if (i() && (a6 = io.a(this.f616c, hpVar.f616c)) != 0) {
-            return a6;
+        if (i() && (a5 = hv.a(this.i, hpVar.i)) != 0) {
+            return a5;
         }
         int compareTo10 = Boolean.valueOf(j()).compareTo(Boolean.valueOf(hpVar.j()));
         if (compareTo10 != 0) {
             return compareTo10;
         }
-        if (j() && (a5 = io.a(this.f611a, hpVar.f611a)) != 0) {
-            return a5;
+        if (j() && (a4 = hv.a(this.j, hpVar.j)) != 0) {
+            return a4;
         }
         int compareTo11 = Boolean.valueOf(k()).compareTo(Boolean.valueOf(hpVar.k()));
         if (compareTo11 != 0) {
             return compareTo11;
         }
-        if (k() && (a4 = io.a(this.f615b, hpVar.f615b)) != 0) {
-            return a4;
+        if (k() && (a3 = hv.a(this.k, hpVar.k)) != 0) {
+            return a3;
         }
-        int compareTo12 = Boolean.valueOf(m()).compareTo(Boolean.valueOf(hpVar.m()));
+        int compareTo12 = Boolean.valueOf(l()).compareTo(Boolean.valueOf(hpVar.l()));
         if (compareTo12 != 0) {
             return compareTo12;
         }
-        if (m() && (a3 = io.a(this.f612a, hpVar.f612a)) != 0) {
-            return a3;
-        }
-        int compareTo13 = Boolean.valueOf(n()).compareTo(Boolean.valueOf(hpVar.n()));
-        if (compareTo13 != 0) {
-            return compareTo13;
-        }
-        if (!n() || (a2 = io.a(this.f618c, hpVar.f618c)) == 0) {
+        if (!l() || (a2 = hv.a(this.l, hpVar.l)) == 0) {
             return 0;
         }
         return a2;
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public long m420a() {
-        return this.f608a;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public hp m421a() {
-        return new hp(this);
-    }
-
-    public hp a(int i2) {
-        this.f607a = i2;
-        b(true);
-        return this;
-    }
-
-    public hp a(String str) {
-        this.f609a = str;
-        return this;
-    }
-
-    public hp a(Map<String, String> map) {
-        this.f611a = map;
-        return this;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public String m422a() {
-        return this.f609a;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public Map<String, String> m423a() {
-        return this.f611a;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public void m424a() {
-        if (this.f609a == null) {
-            throw new iz("Required field 'id' was not present! Struct: " + toString());
-        }
-    }
-
-    /* JADX INFO: Can't fix incorrect switch cases order, some code will duplicate */
-    @Override // com.xiaomi.push.in
-    public void a(iy iyVar) {
-        iyVar.m551a();
-        while (true) {
-            iv a2 = iyVar.m547a();
-            if (a2.a == 0) {
-                iyVar.f();
-                if (m429b()) {
-                    m424a();
-                    return;
-                }
-                throw new iz("Required field 'messageTs' was not found in serialized data! Struct: " + toString());
-            }
-            int i2 = 0;
-            switch (a2.f877a) {
-                case 1:
-                    if (a2.a == 11) {
-                        this.f609a = iyVar.m552a();
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 2:
-                    if (a2.a == 10) {
-                        this.f608a = iyVar.m546a();
-                        a(true);
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 3:
-                    if (a2.a == 11) {
-                        this.f614b = iyVar.m552a();
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 4:
-                    if (a2.a == 11) {
-                        this.f617c = iyVar.m552a();
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 5:
-                    if (a2.a == 11) {
-                        this.f619d = iyVar.m552a();
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 6:
-                    if (a2.a == 8) {
-                        this.f607a = iyVar.m545a();
-                        b(true);
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 7:
-                    if (a2.a == 11) {
-                        this.f620e = iyVar.m552a();
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 8:
-                    if (a2.a == 8) {
-                        this.f613b = iyVar.m545a();
-                        c(true);
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 9:
-                    if (a2.a == 8) {
-                        this.f616c = iyVar.m545a();
-                        d(true);
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 10:
-                    if (a2.a == 13) {
-                        ix a3 = iyVar.m549a();
-                        this.f611a = new HashMap(a3.f879a * 2);
-                        while (i2 < a3.f879a) {
-                            this.f611a.put(iyVar.m552a(), iyVar.m552a());
-                            i2++;
-                        }
-                        iyVar.h();
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 11:
-                    if (a2.a == 13) {
-                        ix a4 = iyVar.m549a();
-                        this.f615b = new HashMap(a4.f879a * 2);
-                        while (i2 < a4.f879a) {
-                            this.f615b.put(iyVar.m552a(), iyVar.m552a());
-                            i2++;
-                        }
-                        iyVar.h();
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 12:
-                    if (a2.a == 2) {
-                        this.f612a = iyVar.m556a();
-                        e(true);
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                case 13:
-                    if (a2.a == 13) {
-                        ix a5 = iyVar.m549a();
-                        this.f618c = new HashMap(a5.f879a * 2);
-                        while (i2 < a5.f879a) {
-                            this.f618c.put(iyVar.m552a(), iyVar.m552a());
-                            i2++;
-                        }
-                        iyVar.h();
-                        break;
-                    }
-                    jb.a(iyVar, a2.a);
-                    break;
-                default:
-                    jb.a(iyVar, a2.a);
-                    break;
-            }
-            iyVar.g();
-        }
-    }
-
-    public void a(String str, String str2) {
-        if (this.f611a == null) {
-            this.f611a = new HashMap();
-        }
-        this.f611a.put(str, str2);
-    }
-
-    public void a(boolean z) {
-        this.f610a.set(0, z);
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public boolean m425a() {
-        return this.f609a != null;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public boolean m426a(hp hpVar) {
-        if (hpVar == null) {
-            return false;
-        }
-        boolean a2 = m425a();
-        boolean a3 = hpVar.m425a();
-        if (((a2 || a3) && (!a2 || !a3 || !this.f609a.equals(hpVar.f609a))) || this.f608a != hpVar.f608a) {
-            return false;
-        }
-        boolean c2 = m431c();
-        boolean c3 = hpVar.m431c();
-        if ((c2 || c3) && (!c2 || !c3 || !this.f614b.equals(hpVar.f614b))) {
-            return false;
-        }
-        boolean d2 = m432d();
-        boolean d3 = hpVar.m432d();
-        if ((d2 || d3) && (!d2 || !d3 || !this.f617c.equals(hpVar.f617c))) {
-            return false;
-        }
-        boolean e2 = e();
-        boolean e3 = hpVar.e();
-        if ((e2 || e3) && (!e2 || !e3 || !this.f619d.equals(hpVar.f619d))) {
-            return false;
-        }
-        boolean f2 = f();
-        boolean f3 = hpVar.f();
-        if ((f2 || f3) && (!f2 || !f3 || this.f607a != hpVar.f607a)) {
-            return false;
-        }
-        boolean g2 = g();
-        boolean g3 = hpVar.g();
-        if ((g2 || g3) && (!g2 || !g3 || !this.f620e.equals(hpVar.f620e))) {
-            return false;
-        }
-        boolean h2 = h();
-        boolean h3 = hpVar.h();
-        if ((h2 || h3) && (!h2 || !h3 || this.f613b != hpVar.f613b)) {
-            return false;
-        }
-        boolean i2 = i();
-        boolean i3 = hpVar.i();
-        if ((i2 || i3) && (!i2 || !i3 || this.f616c != hpVar.f616c)) {
-            return false;
-        }
-        boolean j2 = j();
-        boolean j3 = hpVar.j();
-        if ((j2 || j3) && (!j2 || !j3 || !this.f611a.equals(hpVar.f611a))) {
-            return false;
-        }
-        boolean k2 = k();
-        boolean k3 = hpVar.k();
-        if ((k2 || k3) && (!k2 || !k3 || !this.f615b.equals(hpVar.f615b))) {
-            return false;
-        }
-        boolean m2 = m();
-        boolean m3 = hpVar.m();
-        if ((m2 || m3) && (!m2 || !m3 || this.f612a != hpVar.f612a)) {
-            return false;
-        }
-        boolean n = n();
-        boolean n2 = hpVar.n();
-        if (n || n2) {
-            return n && n2 && this.f618c.equals(hpVar.f618c);
-        }
-        return true;
-    }
-
-    public int b() {
-        return this.f613b;
-    }
-
-    public hp b(int i2) {
-        this.f613b = i2;
-        c(true);
-        return this;
-    }
-
     public hp b(String str) {
-        this.f614b = str;
+        this.d = str;
         return this;
     }
 
-    /* renamed from: b  reason: collision with other method in class */
-    public String m427b() {
-        return this.f614b;
+    @Override // com.xiaomi.push.hu
+    public void b(ig igVar) {
+        m();
+        igVar.a(m);
+        if (this.a != null && a()) {
+            igVar.a(n);
+            igVar.a(this.a);
+            igVar.b();
+        }
+        if (this.b != null && b()) {
+            igVar.a(o);
+            this.b.b(igVar);
+            igVar.b();
+        }
+        if (this.c != null) {
+            igVar.a(p);
+            igVar.a(this.c);
+            igVar.b();
+        }
+        if (this.d != null) {
+            igVar.a(q);
+            igVar.a(this.d);
+            igVar.b();
+        }
+        if (this.e != null && e()) {
+            igVar.a(r);
+            igVar.a(this.e);
+            igVar.b();
+        }
+        if (this.f != null && f()) {
+            igVar.a(s);
+            igVar.a(this.f);
+            igVar.b();
+        }
+        if (this.g != null && g()) {
+            igVar.a(t);
+            igVar.a(this.g);
+            igVar.b();
+        }
+        if (this.h != null && h()) {
+            igVar.a(u);
+            igVar.a(this.h);
+            igVar.b();
+        }
+        if (this.i != null && i()) {
+            igVar.a(v);
+            igVar.a(this.i);
+            igVar.b();
+        }
+        if (this.j != null && j()) {
+            igVar.a(w);
+            igVar.a(this.j);
+            igVar.b();
+        }
+        if (k()) {
+            igVar.a(x);
+            igVar.a(this.k);
+            igVar.b();
+        }
+        if (l()) {
+            igVar.a(y);
+            igVar.a(this.l);
+            igVar.b();
+        }
+        igVar.c();
+        igVar.a();
     }
 
-    /* renamed from: b  reason: collision with other method in class */
-    public Map<String, String> m428b() {
-        return this.f615b;
+    public void b(boolean z2) {
+        this.z.set(1, z2);
     }
 
-    @Override // com.xiaomi.push.in
-    public void b(iy iyVar) {
-        m424a();
-        iyVar.a(f606a);
-        if (this.f609a != null) {
-            iyVar.a(a);
-            iyVar.a(this.f609a);
-            iyVar.b();
-        }
-        iyVar.a(b);
-        iyVar.a(this.f608a);
-        iyVar.b();
-        if (this.f614b != null && m431c()) {
-            iyVar.a(c);
-            iyVar.a(this.f614b);
-            iyVar.b();
-        }
-        if (this.f617c != null && m432d()) {
-            iyVar.a(d);
-            iyVar.a(this.f617c);
-            iyVar.b();
-        }
-        if (this.f619d != null && e()) {
-            iyVar.a(e);
-            iyVar.a(this.f619d);
-            iyVar.b();
-        }
-        if (f()) {
-            iyVar.a(f);
-            iyVar.mo543a(this.f607a);
-            iyVar.b();
-        }
-        if (this.f620e != null && g()) {
-            iyVar.a(g);
-            iyVar.a(this.f620e);
-            iyVar.b();
-        }
-        if (h()) {
-            iyVar.a(h);
-            iyVar.mo543a(this.f613b);
-            iyVar.b();
-        }
-        if (i()) {
-            iyVar.a(i);
-            iyVar.mo543a(this.f616c);
-            iyVar.b();
-        }
-        if (this.f611a != null && j()) {
-            iyVar.a(j);
-            iyVar.a(new ix((byte) 11, (byte) 11, this.f611a.size()));
-            for (Map.Entry<String, String> entry : this.f611a.entrySet()) {
-                iyVar.a(entry.getKey());
-                iyVar.a(entry.getValue());
-            }
-            iyVar.d();
-            iyVar.b();
-        }
-        if (this.f615b != null && k()) {
-            iyVar.a(k);
-            iyVar.a(new ix((byte) 11, (byte) 11, this.f615b.size()));
-            for (Map.Entry<String, String> entry2 : this.f615b.entrySet()) {
-                iyVar.a(entry2.getKey());
-                iyVar.a(entry2.getValue());
-            }
-            iyVar.d();
-            iyVar.b();
-        }
-        if (m()) {
-            iyVar.a(f1505l);
-            iyVar.a(this.f612a);
-            iyVar.b();
-        }
-        if (this.f618c != null && n()) {
-            iyVar.a(m);
-            iyVar.a(new ix((byte) 11, (byte) 11, this.f618c.size()));
-            for (Map.Entry<String, String> entry3 : this.f618c.entrySet()) {
-                iyVar.a(entry3.getKey());
-                iyVar.a(entry3.getValue());
-            }
-            iyVar.d();
-            iyVar.b();
-        }
-        iyVar.c();
-        iyVar.m555a();
-    }
-
-    public void b(String str, String str2) {
-        if (this.f615b == null) {
-            this.f615b = new HashMap();
-        }
-        this.f615b.put(str, str2);
-    }
-
-    public void b(boolean z) {
-        this.f610a.set(1, z);
-    }
-
-    /* renamed from: b  reason: collision with other method in class */
-    public boolean m429b() {
-        return this.f610a.get(0);
-    }
-
-    public int c() {
-        return this.f616c;
-    }
-
-    public hp c(int i2) {
-        this.f616c = i2;
-        d(true);
-        return this;
+    public boolean b() {
+        return this.b != null;
     }
 
     public hp c(String str) {
-        this.f617c = str;
+        this.e = str;
         return this;
     }
 
-    /* renamed from: c  reason: collision with other method in class */
-    public String m430c() {
-        return this.f617c;
-    }
-
-    public void c(boolean z) {
-        this.f610a.set(2, z);
-    }
-
-    /* renamed from: c  reason: collision with other method in class */
-    public boolean m431c() {
-        return this.f614b != null;
+    public boolean c() {
+        return this.c != null;
     }
 
     public hp d(String str) {
-        this.f619d = str;
+        this.g = str;
         return this;
     }
 
-    public String d() {
-        return this.f619d;
+    public boolean d() {
+        return this.d != null;
     }
 
-    public void d(boolean z) {
-        this.f610a.set(3, z);
-    }
-
-    /* renamed from: d  reason: collision with other method in class */
-    public boolean m432d() {
-        return this.f617c != null;
-    }
-
-    public void e(boolean z) {
-        this.f610a.set(4, z);
+    public hp e(String str) {
+        this.h = str;
+        return this;
     }
 
     public boolean e() {
-        return this.f619d != null;
+        return this.e != null;
     }
 
     @Override // java.lang.Object
     public boolean equals(Object obj) {
         if (obj != null && (obj instanceof hp)) {
-            return m426a((hp) obj);
+            return a((hp) obj);
         }
         return false;
     }
 
     public boolean f() {
-        return this.f610a.get(1);
+        return this.f != null;
     }
 
     public boolean g() {
-        return this.f620e != null;
+        return this.g != null;
     }
 
     public boolean h() {
-        return this.f610a.get(2);
+        return this.h != null;
     }
 
     @Override // java.lang.Object
@@ -709,66 +454,82 @@ public class hp implements in<hp, Object>, Serializable, Cloneable {
     }
 
     public boolean i() {
-        return this.f610a.get(3);
+        return this.i != null;
     }
 
     public boolean j() {
-        return this.f611a != null;
+        return this.j != null;
     }
 
     public boolean k() {
-        return this.f615b != null;
+        return this.z.get(0);
     }
 
     public boolean l() {
-        return this.f612a;
+        return this.z.get(1);
     }
 
-    public boolean m() {
-        return this.f610a.get(4);
-    }
-
-    public boolean n() {
-        return this.f618c != null;
+    public void m() {
+        if (this.c == null) {
+            throw new ih("Required field 'id' was not present! Struct: " + toString());
+        } else if (this.d == null) {
+            throw new ih("Required field 'appId' was not present! Struct: " + toString());
+        }
     }
 
     @Override // java.lang.Object
     public String toString() {
-        StringBuilder sb = new StringBuilder("PushMetaInfo(");
+        boolean z2;
+        StringBuilder sb = new StringBuilder("XmPushActionUnRegistration(");
+        boolean z3 = false;
+        if (a()) {
+            sb.append("debug:");
+            String str = this.a;
+            if (str == null) {
+                sb.append("null");
+            } else {
+                sb.append(str);
+            }
+            z2 = false;
+        } else {
+            z2 = true;
+        }
+        if (b()) {
+            if (!z2) {
+                sb.append(", ");
+            }
+            sb.append("target:");
+            gy gyVar = this.b;
+            if (gyVar == null) {
+                sb.append("null");
+            } else {
+                sb.append(gyVar);
+            }
+        } else {
+            z3 = z2;
+        }
+        if (!z3) {
+            sb.append(", ");
+        }
         sb.append("id:");
-        String str = this.f609a;
-        if (str == null) {
+        String str2 = this.c;
+        if (str2 == null) {
             sb.append("null");
         } else {
-            sb.append(str);
+            sb.append(str2);
         }
         sb.append(", ");
-        sb.append("messageTs:");
-        sb.append(this.f608a);
-        if (m431c()) {
-            sb.append(", ");
-            sb.append("topic:");
-            String str2 = this.f614b;
-            if (str2 == null) {
-                sb.append("null");
-            } else {
-                sb.append(str2);
-            }
-        }
-        if (m432d()) {
-            sb.append(", ");
-            sb.append("title:");
-            String str3 = this.f617c;
-            if (str3 == null) {
-                sb.append("null");
-            } else {
-                sb.append(str3);
-            }
+        sb.append("appId:");
+        String str3 = this.d;
+        if (str3 == null) {
+            sb.append("null");
+        } else {
+            sb.append(str3);
         }
         if (e()) {
             sb.append(", ");
-            sb.append("description:");
-            String str4 = this.f619d;
+            sb.append("regId:");
+            String str4 = this.e;
             if (str4 == null) {
                 sb.append("null");
             } else {
@@ -777,63 +538,63 @@ public class hp implements in<hp, Object>, Serializable, Cloneable {
         }
         if (f()) {
             sb.append(", ");
-            sb.append("notifyType:");
-            sb.append(this.f607a);
-        }
-        if (g()) {
-            sb.append(", ");
-            sb.append("url:");
-            String str5 = this.f620e;
+            sb.append("appVersion:");
+            String str5 = this.f;
             if (str5 == null) {
                 sb.append("null");
             } else {
                 sb.append(str5);
             }
         }
+        if (g()) {
+            sb.append(", ");
+            sb.append("packageName:");
+            String str6 = this.g;
+            if (str6 == null) {
+                sb.append("null");
+            } else {
+                sb.append(str6);
+            }
+        }
         if (h()) {
             sb.append(", ");
-            sb.append("passThrough:");
-            sb.append(this.f613b);
+            sb.append("token:");
+            String str7 = this.h;
+            if (str7 == null) {
+                sb.append("null");
+            } else {
+                sb.append(str7);
+            }
         }
         if (i()) {
             sb.append(", ");
-            sb.append("notifyId:");
-            sb.append(this.f616c);
+            sb.append("deviceId:");
+            String str8 = this.i;
+            if (str8 == null) {
+                sb.append("null");
+            } else {
+                sb.append(str8);
+            }
         }
         if (j()) {
             sb.append(", ");
-            sb.append("extra:");
-            Map<String, String> map = this.f611a;
-            if (map == null) {
+            sb.append("aliasName:");
+            String str9 = this.j;
+            if (str9 == null) {
                 sb.append("null");
             } else {
-                sb.append(map);
+                sb.append(str9);
             }
         }
         if (k()) {
             sb.append(", ");
-            sb.append("internal:");
-            Map<String, String> map2 = this.f615b;
-            if (map2 == null) {
-                sb.append("null");
-            } else {
-                sb.append(map2);
-            }
+            sb.append("needAck:");
+            sb.append(this.k);
         }
-        if (m()) {
+        if (l()) {
             sb.append(", ");
-            sb.append("ignoreRegInfo:");
-            sb.append(this.f612a);
-        }
-        if (n()) {
-            sb.append(", ");
-            sb.append("apsProperFields:");
-            Map<String, String> map3 = this.f618c;
-            if (map3 == null) {
-                sb.append("null");
-            } else {
-                sb.append(map3);
-            }
+            sb.append("createdTs:");
+            sb.append(this.l);
         }
         sb.append(")");
         return sb.toString();

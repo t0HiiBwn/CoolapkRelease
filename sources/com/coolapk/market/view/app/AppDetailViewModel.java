@@ -50,14 +50,14 @@ public class AppDetailViewModel extends BaseObservable {
     }
 
     public void notifyDataChanged() {
-        notifyPropertyChanged(242);
-        notifyPropertyChanged(219);
+        notifyPropertyChanged(243);
+        notifyPropertyChanged(220);
         notifyPropertyChanged(146);
-        notifyPropertyChanged(218);
-        notifyPropertyChanged(179);
+        notifyPropertyChanged(219);
+        notifyPropertyChanged(180);
         notifyPropertyChanged(69);
+        notifyPropertyChanged(232);
         notifyPropertyChanged(231);
-        notifyPropertyChanged(230);
     }
 
     @Bindable
@@ -67,7 +67,7 @@ public class AppDetailViewModel extends BaseObservable {
             return null;
         }
         if (permissionList.isEmpty()) {
-            return this.context.getString(2131886889);
+            return this.context.getString(2131886951);
         }
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < Math.min(permissionList.size(), 5); i++) {

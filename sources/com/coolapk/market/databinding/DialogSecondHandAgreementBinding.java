@@ -45,7 +45,7 @@ public abstract class DialogSecondHandAgreementBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSecondHandAgreementBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogSecondHandAgreementBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558532, viewGroup, z, obj);
+        return (DialogSecondHandAgreementBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558534, viewGroup, z, obj);
     }
 
     public static DialogSecondHandAgreementBinding inflate(LayoutInflater layoutInflater) {
@@ -54,7 +54,7 @@ public abstract class DialogSecondHandAgreementBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSecondHandAgreementBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogSecondHandAgreementBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558532, null, false, obj);
+        return (DialogSecondHandAgreementBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558534, null, false, obj);
     }
 
     public static DialogSecondHandAgreementBinding bind(View view) {
@@ -63,6 +63,6 @@ public abstract class DialogSecondHandAgreementBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSecondHandAgreementBinding bind(View view, Object obj) {
-        return (DialogSecondHandAgreementBinding) bind(obj, view, 2131558532);
+        return (DialogSecondHandAgreementBinding) bind(obj, view, 2131558534);
     }
 }

@@ -35,9 +35,7 @@ public class g {
     private static long i;
     private static HandlerThread j;
     private static long k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static long f1343l;
+    private static long l;
     private static Handler m;
     private static int n;
     private static boolean o;
@@ -140,10 +138,10 @@ public class g {
                         long v = g.v();
                         long uptimeMillis = SystemClock.uptimeMillis();
                         if (!g.q) {
-                            g.b(g.t(), v - g.k, uptimeMillis - g.f1343l, j, i, g.n, null);
+                            g.b(g.t(), v - g.k, uptimeMillis - g.l, j, i, g.n, null);
                         }
                         long unused4 = g.k = v;
-                        long unused5 = g.f1343l = uptimeMillis;
+                        long unused5 = g.l = uptimeMillis;
                         int unused6 = g.n = 1;
                     }
                 }
@@ -172,10 +170,10 @@ public class g {
                             i = 4;
                         }
                         if (!g.q) {
-                            g.b(g.t(), v - g.k, uptimeMillis - g.f1343l, j, i, g.n, str);
+                            g.b(g.t(), v - g.k, uptimeMillis - g.l, j, i, g.n, str);
                         }
                         long unused = g.k = v;
-                        long unused2 = g.f1343l = uptimeMillis;
+                        long unused2 = g.l = uptimeMillis;
                         int unused3 = g.n = 0;
                         g.a = -1;
                     }
@@ -183,7 +181,7 @@ public class g {
             }
         });
         k = v();
-        f1343l = SystemClock.uptimeMillis();
+        l = SystemClock.uptimeMillis();
     }
 
     /* access modifiers changed from: private */

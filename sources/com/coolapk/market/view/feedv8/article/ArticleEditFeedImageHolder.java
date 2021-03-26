@@ -36,7 +36,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ArticleEditFeedImageHolder.kt */
 public final class ArticleEditFeedImageHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131559151;
+    public static final int LAYOUT_ID = 2131559159;
     private final ArticleViewModel viewModel;
 
     public final ArticleViewModel getViewModel() {
@@ -140,7 +140,7 @@ public final class ArticleEditFeedImageHolder extends BindingViewHolder {
         Intrinsics.checkNotNullExpressionValue(submitFeedArticleImagePartBinding, "binding");
         View root = submitFeedArticleImagePartBinding.getRoot();
         Intrinsics.checkNotNullExpressionValue(root, "binding.root");
-        GlideApp.with(root.getContext()).load(safeFileUri).placeholder(2131231696).diskCacheStrategy(DiskCacheStrategy.NONE).into(submitFeedArticleImagePartBinding.ivCover);
+        GlideApp.with(root.getContext()).load(safeFileUri).placeholder(2131231707).diskCacheStrategy(DiskCacheStrategy.NONE).into(submitFeedArticleImagePartBinding.ivCover);
         ScalingImageView scalingImageView2 = submitFeedArticleImagePartBinding.ivCover;
         Intrinsics.checkNotNullExpressionValue(scalingImageView2, "binding.ivCover");
         scalingImageView2.setScaleType(ImageView.ScaleType.MATRIX);

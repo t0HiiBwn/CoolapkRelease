@@ -36,7 +36,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SearchHotListViewHolder.kt */
 public final class SearchHotListViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131559127;
+    public static final int LAYOUT_ID = 2131559134;
     private DataAdapter adapter;
     private final SearchListBinding binding;
     private Card<Entity> card;
@@ -170,7 +170,7 @@ public final class SearchHotListViewHolder extends BindingViewHolder {
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-            if (i != 2131558776) {
+            if (i != 2131558783) {
                 Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
                 return new DataViewHolder(inflate, this.component, true);
             }
@@ -203,7 +203,7 @@ public final class SearchHotListViewHolder extends BindingViewHolder {
                 Intrinsics.throwUninitializedPropertyAccessException("entities");
             }
             String entityType = ((Entity) list.get(i)).getEntityType();
-            return (entityType != null && entityType.hashCode() == 3599307 && entityType.equals("user")) ? 2131558776 : 2131558775;
+            return (entityType != null && entityType.hashCode() == 3599307 && entityType.equals("user")) ? 2131558783 : 2131558782;
         }
     }
 
@@ -211,7 +211,7 @@ public final class SearchHotListViewHolder extends BindingViewHolder {
     /* compiled from: SearchHotListViewHolder.kt */
     public static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558775;
+        public static final int LAYOUT_ID = 2131558782;
         private final ItemHotSearchListBinding binding;
         private Entity entity;
         private final int firstColor = Color.parseColor("#F44336");
@@ -229,8 +229,8 @@ public final class SearchHotListViewHolder extends BindingViewHolder {
             ItemHotSearchListBinding itemHotSearchListBinding = (ItemHotSearchListBinding) getBinding();
             this.binding = itemHotSearchListBinding;
             itemHotSearchListBinding.itemView.setOnClickListener(this);
-            Drawable mutate = ResourceUtils.getDrawable(getContext(), 2131231300).mutate();
-            mutate.setTint(ResourceUtils.getColorInt(getContext(), 2131100011));
+            Drawable mutate = ResourceUtils.getDrawable(getContext(), 2131231311).mutate();
+            mutate.setTint(ResourceUtils.getColorInt(getContext(), 2131100016));
             mutate.setBounds(0, 0, NumberExtendsKt.getDp((Number) 12), NumberExtendsKt.getDp((Number) 12));
             Intrinsics.checkNotNullExpressionValue(mutate, "ResourceUtils.getDrawabl…dp)\n                    }");
             LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{mutate});
@@ -283,8 +283,8 @@ public final class SearchHotListViewHolder extends BindingViewHolder {
                 z = false;
             }
             TextView textView2 = this.binding.rankTextView;
-            int colorInt = ResourceUtils.getColorInt(getContext(), 2131100146);
-            int colorInt2 = ResourceUtils.getColorInt(getContext(), 2131099751);
+            int colorInt = ResourceUtils.getColorInt(getContext(), 2131100159);
+            int colorInt2 = ResourceUtils.getColorInt(getContext(), 2131099753);
             if (!z) {
                 colorInt = colorInt2;
             }
@@ -313,7 +313,7 @@ public final class SearchHotListViewHolder extends BindingViewHolder {
                 str = ((Topic) entity4).getHotNumText();
             }
             textView4.setText(str);
-            textView4.setTextColor(ResourceUtils.getColorInt(textView4.getContext(), 2131100011));
+            textView4.setTextColor(ResourceUtils.getColorInt(textView4.getContext(), 2131100016));
             TextView textView5 = this.binding.titleView;
             Intrinsics.checkNotNullExpressionValue(textView5, "binding.titleView");
             Entity entity5 = this.entity;
@@ -328,7 +328,7 @@ public final class SearchHotListViewHolder extends BindingViewHolder {
         public void onClick(View view) {
             Intrinsics.checkNotNullParameter(view, "view");
             super.onClick(view);
-            if (view.getId() == 2131362768) {
+            if (view.getId() == 2131362779) {
                 Entity entity2 = this.entity;
                 if (entity2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("entity");

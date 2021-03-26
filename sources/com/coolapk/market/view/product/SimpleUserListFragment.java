@@ -14,8 +14,8 @@ public abstract class SimpleUserListFragment extends ShortAsyncListFragment<User
     @Override // com.coolapk.market.view.base.asynclist.ShortAsyncListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558967, 2131231052).create());
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558967).suitedClass(User.class).constructor(new SimpleUserListFragment$onActivityCreated$1(this)).build(), 0, 2, null);
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558974, 2131231062).create());
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558974).suitedClass(User.class).constructor(new SimpleUserListFragment$onActivityCreated$1(this)).build(), 0, 2, null);
         initData();
         setLoadMoreEnable(true);
         setRefreshEnable(true);

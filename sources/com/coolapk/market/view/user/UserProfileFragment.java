@@ -336,32 +336,32 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
     private List<HolderItem> convert(UserProfile userProfile) {
         ArrayList arrayList = new ArrayList();
         Application application = AppHolder.getApplication();
-        arrayList.add(HolderItem.newBuilder().entityType("holder_avatar").string(application.getString(2131887106)).build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_cover").string(getString(2131887109)).value(userProfile.getCover()).build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_username").string(application.getString(2131887116)).value(userProfile.getUserName()).build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_gender").string(application.getString(2131887111)).value(getGenderString(AppHolder.getApplication(), userProfile.getGender())).build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_birthday").string(application.getString(2131887107)).value(StringUtils.defaultIfEmpty(userProfile.getBirthDayString(), application.getString(2131887119))).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_avatar").string(application.getString(2131887168)).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_cover").string(getString(2131887171)).value(userProfile.getCover()).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_username").string(application.getString(2131887178)).value(userProfile.getUserName()).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_gender").string(application.getString(2131887173)).value(getGenderString(AppHolder.getApplication(), userProfile.getGender())).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_birthday").string(application.getString(2131887169)).value(StringUtils.defaultIfEmpty(userProfile.getBirthDayString(), application.getString(2131887181))).build());
         if (!TextUtils.isEmpty(userProfile.getZodiacSign())) {
-            arrayList.add(HolderItem.newBuilder().entityType("holder_zodia_sign").string(application.getString(2131887121)).value(StringUtils.defaultIfEmpty(userProfile.getZodiacSign(), application.getString(2131887119))).build());
+            arrayList.add(HolderItem.newBuilder().entityType("holder_zodia_sign").string(application.getString(2131887183)).value(StringUtils.defaultIfEmpty(userProfile.getZodiacSign(), application.getString(2131887181))).build());
         }
-        arrayList.add(HolderItem.newBuilder().entityType("holder_address").string(getString(2131887108)).value(StringUtils.defaultIfEmpty(userProfile.getAddressString(), application.getString(2131887119))).build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_signature").string(application.getString(2131887118)).value(userProfile.getSignature()).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_address").string(getString(2131887170)).value(StringUtils.defaultIfEmpty(userProfile.getAddressString(), application.getString(2131887181))).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_signature").string(application.getString(2131887180)).value(userProfile.getSignature()).build());
         arrayList.add(HolderItem.newBuilder().entityType("holder_user_account").string("账号与绑定").build());
         return arrayList;
     }
 
     private String getGenderString(Context context, int i) {
         if (i == 0) {
-            return context.getString(2131887113);
+            return context.getString(2131887175);
         }
         if (i != 1) {
-            return context.getString(2131887119);
+            return context.getString(2131887181);
         }
-        return context.getString(2131887112);
+        return context.getString(2131887174);
     }
 
     private static class ProfileItemViewHolder extends GenericBindHolder<ItemUserProfileItemBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558980;
+        public static final int LAYOUT_ID = 2131558987;
 
         public ProfileItemViewHolder(View view, ItemActionHandler itemActionHandler) {
             super(view, itemActionHandler);
@@ -377,7 +377,7 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
     }
 
     public static class ProfileAvatarViewHolder extends GenericBindHolder<ItemUserProfileAvatarBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558979;
+        public static final int LAYOUT_ID = 2131558986;
 
         public ProfileAvatarViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);
@@ -392,11 +392,11 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
             if (entityType.equals("holder_avatar")) {
                 String userAvatar = DataManager.getInstance().getLoginSession().getUserAvatar();
                 ViewExtendsKt.clipView(((ItemUserProfileAvatarBinding) getBinding()).iconView, 0, (float) DisplayUtils.dp2px(getContext(), 24.0f));
-                AppHolder.getContextImageLoader().displayImage(getContext(), userAvatar, ((ItemUserProfileAvatarBinding) getBinding()).iconView, 2131231152);
+                AppHolder.getContextImageLoader().displayImage(getContext(), userAvatar, ((ItemUserProfileAvatarBinding) getBinding()).iconView, 2131231162);
             } else if (entityType.equals("holder_cover")) {
                 String value = holderItem.getValue();
                 ViewExtendsKt.clipView(((ItemUserProfileAvatarBinding) getBinding()).iconView, 0, (float) DisplayUtils.dp2px(getContext(), 4.0f));
-                AppHolder.getContextImageLoader().displayImage(getContext(), value, ((ItemUserProfileAvatarBinding) getBinding()).iconView, 2131231363);
+                AppHolder.getContextImageLoader().displayImage(getContext(), value, ((ItemUserProfileAvatarBinding) getBinding()).iconView, 2131231374);
             }
         }
 
@@ -435,7 +435,7 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
 
         @Override // androidx.fragment.app.Fragment
         public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-            DialogEditBinding dialogEditBinding = (DialogEditBinding) DataBindingUtil.inflate(layoutInflater, 2131558523, viewGroup, false);
+            DialogEditBinding dialogEditBinding = (DialogEditBinding) DataBindingUtil.inflate(layoutInflater, 2131558525, viewGroup, false);
             this.binding = dialogEditBinding;
             return dialogEditBinding.getRoot();
         }
@@ -498,7 +498,7 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
                     public void afterTextChanged(Editable editable) {
                         int i;
                         if (editable.length() > BottomEditTextDialog.this.limit) {
-                            i = ResourceUtils.getColorInt(BottomEditTextDialog.this.getActivity(), 2131100035);
+                            i = ResourceUtils.getColorInt(BottomEditTextDialog.this.getActivity(), 2131100040);
                         } else {
                             i = AppHolder.getAppTheme().getColorAccent();
                         }
@@ -512,9 +512,9 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
             int id = view.getId();
-            if (id == 2131362196) {
+            if (id == 2131362200) {
                 getDialog().dismiss();
-            } else if (id == 2131363037) {
+            } else if (id == 2131363051) {
                 this.binding.loadingView.setVisibility(0);
                 if (this.binding.tipView.getText() != null) {
                     this.binding.tipView.setText((CharSequence) null);
@@ -552,7 +552,7 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
 
         @Override // androidx.fragment.app.DialogFragment
         public Dialog onCreateDialog(Bundle bundle) {
-            this.binding = (DialogCityPickerBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558520, null, false);
+            this.binding = (DialogCityPickerBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558522, null, false);
             initData();
             initUi();
             return new AlertDialog.Builder(getActivity()).setView(this.binding.getRoot()).setNegativeButton(17039360, (DialogInterface.OnClickListener) null).setPositiveButton(17039370, this).create();
@@ -685,7 +685,7 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
 
         @Override // androidx.fragment.app.DialogFragment
         public Dialog onCreateDialog(Bundle bundle) {
-            this.binding = (DialogGenderPickerBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558525, null, false);
+            this.binding = (DialogGenderPickerBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558527, null, false);
             initUi();
             return new AlertDialog.Builder(getActivity()).setView(this.binding.getRoot()).setNegativeButton(17039360, (DialogInterface.OnClickListener) null).setPositiveButton(17039370, this).create();
         }
@@ -699,7 +699,7 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
             if (gender < 0 || gender > 2) {
                 gender = 0;
             }
-            String[] strArr = {getActivity().getString(2131887119), getActivity().getString(2131887113), getActivity().getString(2131887112)};
+            String[] strArr = {getActivity().getString(2131887181), getActivity().getString(2131887175), getActivity().getString(2131887174)};
             this.binding.picker.setMinValue(0);
             this.binding.picker.setMaxValue(2);
             this.binding.picker.setWrapSelectorWheel(false);
@@ -731,7 +731,7 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
 
         @Override // androidx.fragment.app.DialogFragment
         public Dialog onCreateDialog(Bundle bundle) {
-            this.binding = (DialogDatePickerBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558522, null, false);
+            this.binding = (DialogDatePickerBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558524, null, false);
             UserProfile userProfile = (UserProfile) getArguments().getParcelable("DATA");
             int birthyear = userProfile.getBirthyear();
             if (birthyear < 1900) {
@@ -771,14 +771,14 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
         public int getItemViewType(int i) {
             String entityType = ((HolderItem) UserProfileFragment.this.getDataList().get(i)).getEntityType();
             entityType.hashCode();
-            return (entityType.equals("holder_avatar") || entityType.equals("holder_cover")) ? 2131558979 : 2131558980;
+            return (entityType.equals("holder_avatar") || entityType.equals("holder_cover")) ? 2131558986 : 2131558987;
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             View inflate = LayoutInflater.from(UserProfileFragment.this.getActivity()).inflate(i, viewGroup, false);
             switch (i) {
-                case 2131558979:
+                case 2131558986:
                     return new ProfileAvatarViewHolder(inflate, this.component, new ItemActionHandler() {
                         /* class com.coolapk.market.view.user.UserProfileFragment.DataAdapter.AnonymousClass1 */
 
@@ -794,7 +794,7 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
                             }
                         }
                     });
-                case 2131558980:
+                case 2131558987:
                     return new ProfileItemViewHolder(inflate, new ProfileActionHandler());
                 default:
                     throw new RuntimeException("unknown view type...");
@@ -956,7 +956,7 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
                         showBirthDayDialog();
                         return;
                     case '\t':
-                        ActionManager.startWebViewTitleActivity(UserProfileFragment.this.getActivity(), "https://m.coolapk.com/mp/do?c=userDevice&m=myDevice", UserProfileFragment.this.getString(2131886877));
+                        ActionManager.startWebViewTitleActivity(UserProfileFragment.this.getActivity(), "https://m.coolapk.com/mp/do?c=userDevice&m=myDevice", UserProfileFragment.this.getString(2131886939));
                         return;
                     case '\n':
                         showAddressDialog();
@@ -1099,8 +1099,8 @@ public class UserProfileFragment extends NewAsyncListFragment<List<HolderItem>> 
             }
             SimpleDialog newInstance = SimpleDialog.newInstance();
             newInstance.setMessage(str2);
-            newInstance.setNegativeButton(2131886706);
-            newInstance.setPositiveButton(2131886710, new DialogInterface.OnClickListener() {
+            newInstance.setNegativeButton(2131886768);
+            newInstance.setPositiveButton(2131886772, new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.view.user.UserProfileFragment.AnonymousClass1 */
 
                 @Override // android.content.DialogInterface.OnClickListener

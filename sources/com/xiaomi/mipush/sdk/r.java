@@ -2,21 +2,21 @@ package com.xiaomi.mipush.sdk;
 
 import android.content.Context;
 import android.content.Intent;
-import com.xiaomi.clientreport.data.Config;
-import com.xiaomi.push.in;
+import com.xiaomi.b.a.a;
+import com.xiaomi.push.hu;
 
 public class r {
-    public static <T extends in<T, ?>> void a(Context context, Config config) {
-        if (config != null) {
+    public static <T extends hu<T, ?>> void a(Context context, a aVar) {
+        if (aVar != null) {
             Intent intent = new Intent();
             intent.setAction("action_cr_config");
-            intent.putExtra("action_cr_event_switch", config.isEventUploadSwitchOpen());
-            intent.putExtra("action_cr_event_frequency", config.getEventUploadFrequency());
-            intent.putExtra("action_cr_perf_switch", config.isPerfUploadSwitchOpen());
-            intent.putExtra("action_cr_perf_frequency", config.getPerfUploadFrequency());
-            intent.putExtra("action_cr_event_en", config.isEventEncrypted());
-            intent.putExtra("action_cr_max_file_size", config.getMaxFileLength());
-            ak.a(context).m67a(intent);
+            intent.putExtra("action_cr_event_switch", aVar.c());
+            intent.putExtra("action_cr_event_frequency", aVar.f());
+            intent.putExtra("action_cr_perf_switch", aVar.d());
+            intent.putExtra("action_cr_perf_frequency", aVar.g());
+            intent.putExtra("action_cr_event_en", aVar.b());
+            intent.putExtra("action_cr_max_file_size", aVar.e());
+            aq.a(context).m46a(intent);
         }
     }
 }

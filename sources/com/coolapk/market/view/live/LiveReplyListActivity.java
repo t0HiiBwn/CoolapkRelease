@@ -13,6 +13,7 @@ import com.blankj.utilcode.util.ScreenUtils;
 import com.coolapk.market.AppHolder;
 import com.coolapk.market.databinding.LiveReplyListBinding;
 import com.coolapk.market.manager.ActionManager;
+import com.coolapk.market.manager.AppIMManagerKt;
 import com.coolapk.market.model.Live;
 import com.coolapk.market.model.LiveMessage;
 import com.coolapk.market.util.ResourceUtils;
@@ -71,7 +72,7 @@ public final class LiveReplyListActivity extends BaseActivity implements LiveRep
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559012);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559019);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…R.layout.live_reply_list)");
         LiveReplyListBinding liveReplyListBinding = (LiveReplyListBinding) contentView;
         this.binding = liveReplyListBinding;
@@ -87,7 +88,7 @@ public final class LiveReplyListActivity extends BaseActivity implements LiveRep
         if (supportActionBar != null) {
             supportActionBar.setTitle(str);
         }
-        Drawable drawable = ResourceUtils.getDrawable(this, 2131231200);
+        Drawable drawable = ResourceUtils.getDrawable(this, 2131231211);
         drawable.setTint(AppHolder.getAppTheme().getTextColorPrimary());
         LiveReplyListBinding liveReplyListBinding2 = this.binding;
         if (liveReplyListBinding2 == null) {
@@ -124,7 +125,7 @@ public final class LiveReplyListActivity extends BaseActivity implements LiveRep
             RelativeMessageListFragment.Companion companion = RelativeMessageListFragment.Companion;
             Live live = getLive();
             Intrinsics.checkNotNullExpressionValue(live, "live");
-            beginTransaction.add(2131362307, companion.newInstance(live)).commit();
+            beginTransaction.add(2131362312, companion.newInstance(live)).commit();
         }
     }
 
@@ -161,12 +162,14 @@ public final class LiveReplyListActivity extends BaseActivity implements LiveRep
     @Override // com.coolapk.market.view.live.LiveReplyContext
     public void onLiveMessageClick(LiveMessage liveMessage) {
         Intrinsics.checkNotNullParameter(liveMessage, "liveMessage");
+        BaseActivity activity = getActivity();
         Live live = getLive();
         Intrinsics.checkNotNullExpressionValue(live, "live");
         String id = live.getId();
+        String groupId = AppIMManagerKt.getGroupId(liveMessage);
         LiveUtils liveUtils = LiveUtils.INSTANCE;
         Live live2 = getLive();
         Intrinsics.checkNotNullExpressionValue(live2, "live");
-        ActionManager.startLivePostMessageActivity(getActivity(), "live_discuss", id, liveMessage, liveUtils.currentUserIsPresenter(live2));
+        ActionManager.startLivePostMessageActivity(activity, "live_discuss", id, groupId, liveMessage, liveUtils.currentUserIsPresenter(live2));
     }
 }

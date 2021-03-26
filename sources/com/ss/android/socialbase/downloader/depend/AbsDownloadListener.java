@@ -46,7 +46,7 @@ public abstract class AbsDownloadListener implements IDownloadListener {
         }
     }
 
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x001e: APUT  (r1v1 java.lang.Object[]), (1 ??[boolean, int, float, short, byte, char]), (r5v1 java.lang.String) */
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x001f: APUT  (r1v1 java.lang.Object[]), (1 ??[boolean, int, float, short, byte, char]), (r5v1 java.lang.String) */
     @Override // com.ss.android.socialbase.downloader.depend.IDownloadListener
     public void onFailed(DownloadInfo downloadInfo, BaseException baseException) {
         if (a.a() && downloadInfo != null) {
@@ -82,7 +82,7 @@ public abstract class AbsDownloadListener implements IDownloadListener {
         }
     }
 
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x001e: APUT  (r1v1 java.lang.Object[]), (1 ??[boolean, int, float, short, byte, char]), (r5v1 java.lang.String) */
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x001f: APUT  (r1v1 java.lang.Object[]), (1 ??[boolean, int, float, short, byte, char]), (r5v1 java.lang.String) */
     @Override // com.ss.android.socialbase.downloader.depend.IDownloadListener
     public void onRetry(DownloadInfo downloadInfo, BaseException baseException) {
         if (a.a() && downloadInfo != null) {
@@ -94,7 +94,7 @@ public abstract class AbsDownloadListener implements IDownloadListener {
         }
     }
 
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x001e: APUT  (r1v1 java.lang.Object[]), (1 ??[boolean, int, float, short, byte, char]), (r5v1 java.lang.String) */
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x001f: APUT  (r1v1 java.lang.Object[]), (1 ??[boolean, int, float, short, byte, char]), (r5v1 java.lang.String) */
     @Override // com.ss.android.socialbase.downloader.depend.IDownloadListener
     public void onRetryDelay(DownloadInfo downloadInfo, BaseException baseException) {
         if (a.a() && downloadInfo != null) {

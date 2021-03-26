@@ -23,7 +23,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedSmallHeaderViewPart.kt */
 public final class FeedSmallHeaderViewPart extends BindingViewPart<ItemFeedSmallHeaderViewBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558727;
+    public static final int LAYOUT_ID = 2131558734;
     private final DataBindingComponent dataBindingComponent;
     private Feed mFeed;
 
@@ -51,7 +51,7 @@ public final class FeedSmallHeaderViewPart extends BindingViewPart<ItemFeedSmall
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedSmallHeaderViewBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558727, viewGroup, false, this.dataBindingComponent);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558734, viewGroup, false, this.dataBindingComponent);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…se, dataBindingComponent)");
         return (ItemFeedSmallHeaderViewBinding) inflate;
     }
@@ -73,7 +73,7 @@ public final class FeedSmallHeaderViewPart extends BindingViewPart<ItemFeedSmall
         Feed feed = this.mFeed;
         if (feed != null) {
             int id = view.getId();
-            if (id == 2131362595) {
+            if (id == 2131362603) {
                 CharSequence text = ((TextView) view).getText();
                 if (text instanceof SpannableString) {
                     URLSpan[] uRLSpanArr = (URLSpan[]) ((SpannableString) text).getSpans(0, text.length(), URLSpan.class);
@@ -82,9 +82,9 @@ public final class FeedSmallHeaderViewPart extends BindingViewPart<ItemFeedSmall
                         uRLSpanArr[0].onClick(view);
                     }
                 }
-            } else if (id == 2131362970) {
+            } else if (id == 2131362982) {
                 showItemDialog();
-            } else if (id != 2131363877) {
+            } else if (id != 2131363900) {
                 super.onClick(view);
             } else {
                 ActionManager.startUserSpaceActivity(view, feed.getUid(), feed.getUserAvatar());

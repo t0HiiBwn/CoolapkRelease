@@ -76,7 +76,7 @@ public final class SmallScrollCardViewHolder extends TitleRecycleViewCardViewHol
         public BindingViewHolder onCreateViewHolder(TitleRecycleViewCardViewHolder titleRecycleViewCardViewHolder, ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(titleRecycleViewCardViewHolder, "holder");
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558935, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558942, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "view");
             DataBindingComponent component = titleRecycleViewCardViewHolder.getComponent();
             Intrinsics.checkNotNullExpressionValue(component, "holder.component");

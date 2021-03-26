@@ -45,7 +45,7 @@ public class CustomThemeFragment extends BaseDialogFragment {
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        CustomThemeBinding customThemeBinding = (CustomThemeBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558494, null, false);
+        CustomThemeBinding customThemeBinding = (CustomThemeBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558496, null, false);
         this.binding = customThemeBinding;
         builder.setView(customThemeBinding.getRoot());
         builder.setCancelable(false);

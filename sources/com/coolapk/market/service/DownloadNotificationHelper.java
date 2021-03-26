@@ -38,9 +38,9 @@ public class DownloadNotificationHelper {
             string = downloadState.getFileName();
         }
         int hashCode = downloadState.getKey().hashCode();
-        NotificationCompat.Builder contentIntent = new NotificationCompat.Builder(context, String.valueOf(1)).setTicker(context.getString(2131886449, string)).setContentTitle(context.getString(2131886450, string)).setContentText(context.getString(2131886448)).setProgress(100, 0, true).setSmallIcon(17301633).setWhen(downloadState.getStartTime()).setAutoCancel(true).setContentIntent(PendingIntent.getService(context, hashCode, new Intent(context, DownloadManagerActivity.class), 134217728));
-        contentIntent.addAction(2131231589, context.getString(2131886143), buildPauseIntent(context, hashCode, downloadState.getUrl()));
-        contentIntent.addAction(2131231586, context.getString(2131886124), buildDeleteIntent(context, hashCode, downloadState.getUrl()));
+        NotificationCompat.Builder contentIntent = new NotificationCompat.Builder(context, String.valueOf(1)).setTicker(context.getString(2131886509, string)).setContentTitle(context.getString(2131886510, string)).setContentText(context.getString(2131886508)).setProgress(100, 0, true).setSmallIcon(17301633).setWhen(downloadState.getStartTime()).setAutoCancel(true).setContentIntent(PendingIntent.getService(context, hashCode, new Intent(context, DownloadManagerActivity.class), 134217728));
+        contentIntent.addAction(2131231600, context.getString(2131886143), buildPauseIntent(context, hashCode, downloadState.getUrl()));
+        contentIntent.addAction(2131231597, context.getString(2131886124), buildDeleteIntent(context, hashCode, downloadState.getUrl()));
         notify(context, downloadState.getKey(), contentIntent.build());
     }
 
@@ -50,10 +50,10 @@ public class DownloadNotificationHelper {
             string = downloadState.getFileName();
         }
         int hashCode = downloadState.getKey().hashCode();
-        NotificationCompat.Builder progress = new NotificationCompat.Builder(context, String.valueOf(1)).setTicker(context.getString(2131886449, string)).setContentTitle(context.getString(2131886450, string)).setContentText(context.getString(2131886445)).setProgress(100, (int) ((((float) downloadState.getCurrentLength()) * 100.0f) / ((float) downloadState.getTotalLength())), false);
+        NotificationCompat.Builder progress = new NotificationCompat.Builder(context, String.valueOf(1)).setTicker(context.getString(2131886509, string)).setContentTitle(context.getString(2131886510, string)).setContentText(context.getString(2131886505)).setProgress(100, (int) ((((float) downloadState.getCurrentLength()) * 100.0f) / ((float) downloadState.getTotalLength())), false);
         NotificationCompat.Builder contentIntent = progress.setContentInfo(StringUtils.formatSize(downloadState.getCurrentLength()) + "/" + StringUtils.formatSize(downloadState.getTotalLength())).setSmallIcon(17301633).setWhen(downloadState.getStartTime()).setOngoing(true).setContentIntent(buildDownloadManagerIntent(context, hashCode));
-        contentIntent.addAction(2131231589, context.getString(2131886143), buildPauseIntent(context, hashCode, downloadState.getUrl()));
-        contentIntent.addAction(2131231586, context.getString(2131886124), buildDeleteIntent(context, hashCode, downloadState.getUrl()));
+        contentIntent.addAction(2131231600, context.getString(2131886143), buildPauseIntent(context, hashCode, downloadState.getUrl()));
+        contentIntent.addAction(2131231597, context.getString(2131886124), buildDeleteIntent(context, hashCode, downloadState.getUrl()));
         notify(context, downloadState.getKey(), contentIntent.build());
     }
 
@@ -62,7 +62,7 @@ public class DownloadNotificationHelper {
         if (TextUtils.isEmpty(string)) {
             string = downloadState.getFileName();
         }
-        notifyResult(context, downloadState.getKey(), new NotificationCompat.Builder(context, String.valueOf(1)).setTicker(context.getString(2131886444, string)).setContentTitle(context.getString(2131886450, string)).setContentText(context.getString(2131886443)).setContentInfo(StringUtils.formatSize(downloadState.getTotalLength())).setSmallIcon(17301634).setWhen(downloadState.getStartTime()).setAutoCancel(true).setContentIntent(buildOpenIntent(context, downloadState.getKey().hashCode(), downloadState.getUrl())).build());
+        notifyResult(context, downloadState.getKey(), new NotificationCompat.Builder(context, String.valueOf(1)).setTicker(context.getString(2131886504, string)).setContentTitle(context.getString(2131886510, string)).setContentText(context.getString(2131886503)).setContentInfo(StringUtils.formatSize(downloadState.getTotalLength())).setSmallIcon(17301634).setWhen(downloadState.getStartTime()).setAutoCancel(true).setContentIntent(buildOpenIntent(context, downloadState.getKey().hashCode(), downloadState.getUrl())).build());
     }
 
     public void onDownloadCancel(Context context, DownloadState downloadState) {
@@ -71,10 +71,10 @@ public class DownloadNotificationHelper {
             string = downloadState.getFileName();
         }
         int hashCode = downloadState.getKey().hashCode();
-        NotificationCompat.Builder contentText = new NotificationCompat.Builder(context, String.valueOf(1)).setTicker(context.getString(2131886447, string)).setContentTitle(context.getString(2131886450, string)).setContentText(context.getString(2131886446));
+        NotificationCompat.Builder contentText = new NotificationCompat.Builder(context, String.valueOf(1)).setTicker(context.getString(2131886507, string)).setContentTitle(context.getString(2131886510, string)).setContentText(context.getString(2131886506));
         NotificationCompat.Builder contentIntent = contentText.setContentInfo(StringUtils.formatSize(downloadState.getCurrentLength()) + "/" + StringUtils.formatSize(downloadState.getTotalLength())).setSmallIcon(17301634).setAutoCancel(true).setWhen(downloadState.getStartTime()).setContentIntent(buildDownloadManagerIntent(context, hashCode));
-        contentIntent.addAction(2131231584, context.getString(2131886120), buildContinueIntent(context, hashCode, downloadState.getUrl()));
-        contentIntent.addAction(2131231586, context.getString(2131886124), buildDeleteIntent(context, hashCode, downloadState.getUrl()));
+        contentIntent.addAction(2131231595, context.getString(2131886120), buildContinueIntent(context, hashCode, downloadState.getUrl()));
+        contentIntent.addAction(2131231597, context.getString(2131886124), buildDeleteIntent(context, hashCode, downloadState.getUrl()));
         notifyResult(context, downloadState.getKey(), contentIntent.build());
     }
 

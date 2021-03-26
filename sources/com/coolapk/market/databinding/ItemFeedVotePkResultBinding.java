@@ -43,7 +43,7 @@ public abstract class ItemFeedVotePkResultBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVotePkResultBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedVotePkResultBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558743, viewGroup, z, obj);
+        return (ItemFeedVotePkResultBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558750, viewGroup, z, obj);
     }
 
     public static ItemFeedVotePkResultBinding inflate(LayoutInflater layoutInflater) {
@@ -52,7 +52,7 @@ public abstract class ItemFeedVotePkResultBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVotePkResultBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedVotePkResultBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558743, null, false, obj);
+        return (ItemFeedVotePkResultBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558750, null, false, obj);
     }
 
     public static ItemFeedVotePkResultBinding bind(View view) {
@@ -61,6 +61,6 @@ public abstract class ItemFeedVotePkResultBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVotePkResultBinding bind(View view, Object obj) {
-        return (ItemFeedVotePkResultBinding) bind(obj, view, 2131558743);
+        return (ItemFeedVotePkResultBinding) bind(obj, view, 2131558750);
     }
 }

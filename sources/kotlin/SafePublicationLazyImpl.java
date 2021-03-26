@@ -14,7 +14,7 @@ final class SafePublicationLazyImpl<T> implements Lazy<T>, Serializable {
     private volatile Object _value = UNINITIALIZED_VALUE.INSTANCE;
 
     /* renamed from: final  reason: not valid java name */
-    private final Object f1055final = UNINITIALIZED_VALUE.INSTANCE;
+    private final Object f168final = UNINITIALIZED_VALUE.INSTANCE;
     private volatile Function0<? extends T> initializer;
 
     public SafePublicationLazyImpl(Function0<? extends T> function0) {

@@ -23,8 +23,8 @@ final class AutoValue_HolderItem extends C$AutoValue_HolderItem {
         return 0;
     }
 
-    AutoValue_HolderItem(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, String str14, Integer num2) {
-        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l2, l3, str13, str14, num2);
+    AutoValue_HolderItem(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, String str14, Integer num2) {
+        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l, l2, str13, str14, num2);
     }
 
     @Override // android.os.Parcelable

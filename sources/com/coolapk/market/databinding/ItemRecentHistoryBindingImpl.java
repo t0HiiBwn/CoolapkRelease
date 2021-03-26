@@ -25,10 +25,10 @@ public class ItemRecentHistoryBindingImpl extends ItemRecentHistoryBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 2);
-        sparseIntArray.put(2131363505, 3);
-        sparseIntArray.put(2131363582, 4);
-        sparseIntArray.put(2131362376, 5);
+        sparseIntArray.put(2131362779, 2);
+        sparseIntArray.put(2131363523, 3);
+        sparseIntArray.put(2131363604, 4);
+        sparseIntArray.put(2131362382, 5);
     }
 
     public ItemRecentHistoryBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -64,9 +64,9 @@ public class ItemRecentHistoryBindingImpl extends ItemRecentHistoryBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((RecentHistory) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);
@@ -80,7 +80,7 @@ public class ItemRecentHistoryBindingImpl extends ItemRecentHistoryBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -90,7 +90,7 @@ public class ItemRecentHistoryBindingImpl extends ItemRecentHistoryBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -107,7 +107,7 @@ public class ItemRecentHistoryBindingImpl extends ItemRecentHistoryBinding {
         String logo = (i == 0 || recentHistory == null) ? null : recentHistory.getLogo();
         if (i != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, logo, null, 2131231691, 0, bool, bool, bool, true, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, logo, null, 2131231702, 0, bool, bool, bool, true, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
         }
     }
 }

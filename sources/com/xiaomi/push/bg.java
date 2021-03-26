@@ -1,52 +1,72 @@
 package com.xiaomi.push;
 
-import android.net.Uri;
-import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
-import java.io.UnsupportedEncodingException;
-import java.security.InvalidParameterException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.TreeMap;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.be;
 
-public class bg {
-    public static String a(String str) {
-        try {
-            return String.valueOf(bf.a(MessageDigest.getInstance("SHA1").digest(str.getBytes("UTF-8"))));
-        } catch (UnsupportedEncodingException | Exception | NoSuchAlgorithmException e) {
-            b.a("CloudCoder.hash4SHA1 ", e);
-            throw new IllegalStateException("failed to SHA1");
-        }
+class bg implements Runnable {
+    final /* synthetic */ Context a;
+    final /* synthetic */ be.a b;
+
+    bg(be.a aVar, Context context) {
+        this.b = aVar;
+        this.a = context;
     }
 
-    public static String a(String str, String str2, Map<String, String> map, String str3) {
-        if (!TextUtils.isEmpty(str3)) {
-            ArrayList<String> arrayList = new ArrayList();
-            if (str != null) {
-                arrayList.add(str.toUpperCase());
+    @Override // java.lang.Runnable
+    public void run() {
+        Exception e;
+        SQLiteDatabase sQLiteDatabase = null;
+        try {
+            SQLiteDatabase d = this.b.d();
+            if (d != null && d.isOpen()) {
+                d.beginTransaction();
+                this.b.a(this.a, d);
+                d.setTransactionSuccessful();
             }
-            if (str2 != null) {
-                arrayList.add(Uri.parse(str2).getEncodedPath());
-            }
-            boolean z = true;
-            if (map != null && !map.isEmpty()) {
-                for (Map.Entry entry : new TreeMap(map).entrySet()) {
-                    arrayList.add(String.format("%s=%s", entry.getKey(), entry.getValue()));
+            if (d != null) {
+                try {
+                    d.endTransaction();
+                } catch (Exception e2) {
+                    e = e2;
+                    c.a(e);
+                    this.b.a(this.a);
                 }
             }
-            arrayList.add(str3);
-            StringBuilder sb = new StringBuilder();
-            for (String str4 : arrayList) {
-                if (!z) {
-                    sb.append('&');
-                }
-                sb.append(str4);
-                z = false;
+            if (this.b.c != null) {
+                this.b.c.close();
             }
-            return a(sb.toString());
+        } catch (Exception e3) {
+            c.a(e3);
+            if (0 != 0) {
+                try {
+                    sQLiteDatabase.endTransaction();
+                } catch (Exception e4) {
+                    e = e4;
+                    c.a(e);
+                    this.b.a(this.a);
+                }
+            }
+            if (this.b.c != null) {
+                this.b.c.close();
+            }
+        } catch (Throwable th) {
+            if (0 != 0) {
+                try {
+                    sQLiteDatabase.endTransaction();
+                } catch (Exception e5) {
+                    c.a(e5);
+                    this.b.a(this.a);
+                    throw th;
+                }
+            }
+            if (this.b.c != null) {
+                this.b.c.close();
+            }
+            this.b.a(this.a);
+            throw th;
         }
-        throw new InvalidParameterException("security is not nullable");
+        this.b.a(this.a);
     }
 }

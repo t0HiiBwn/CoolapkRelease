@@ -52,9 +52,9 @@ public class ItemMessageCardBindingImpl extends ItemMessageCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (278 == i) {
+        if (279 == i) {
             setTitle((String) obj);
-        } else if (196 != i) {
+        } else if (197 != i) {
             return false;
         } else {
             setMessage((String) obj);
@@ -73,7 +73,7 @@ public class ItemMessageCardBindingImpl extends ItemMessageCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(196);
+        notifyPropertyChanged(197);
         super.requestRebind();
     }
 

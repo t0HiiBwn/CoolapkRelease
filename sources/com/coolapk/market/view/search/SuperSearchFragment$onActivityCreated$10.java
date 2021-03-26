@@ -53,7 +53,7 @@ final class SuperSearchFragment$onActivityCreated$10 extends Lambda implements F
                 super.onItemClick(viewHolder, view);
                 int id = view.getId();
                 SecondHandFilterViewHolder secondHandFilterViewHolder = null;
-                if (id == 2131362468) {
+                if (id == 2131362476) {
                     SuperSearchFragment.access$getViewModel$p(this.this$0.this$0).setFilterType("1");
                     SuperSearchFilterView superSearchFilterView = this.this$0.this$0.dealTypeFilterView;
                     if (superSearchFilterView != null) {
@@ -81,7 +81,7 @@ final class SuperSearchFragment$onActivityCreated$10 extends Lambda implements F
                         if (this.this$0.this$0.isExchange) {
                             f = 7.0f;
                         }
-                        superSearchFragment.secondHandSortFilterView = new SuperSearchFilterView(fragmentActivity, 2131363350, f2 * f);
+                        superSearchFragment.secondHandSortFilterView = new SuperSearchFilterView(fragmentActivity, 2131363366, f2 * f);
                         SuperSearchFilterView superSearchFilterView3 = this.this$0.this$0.secondHandSortFilterView;
                         if (superSearchFilterView3 != null) {
                             superSearchFilterView3.setOnClickListener(new SuperSearchFragment$onActivityCreated$10$1$onItemClick$1(this));
@@ -192,7 +192,7 @@ final class SuperSearchFragment$onActivityCreated$10 extends Lambda implements F
                     if (secondHandFilterViewHolder4 != null) {
                         SecondHandFilterViewHolder.resetSortChevronView$default(secondHandFilterViewHolder4, false, 1, null);
                     }
-                } else if (id == 2131363349) {
+                } else if (id == 2131363365) {
                     SuperSearchFragment.access$getViewModel$p(this.this$0.this$0).setFilterType("2");
                     SuperSearchFilterView superSearchFilterView13 = this.this$0.this$0.dealTypeFilterView;
                     if (superSearchFilterView13 != null) {
@@ -214,7 +214,7 @@ final class SuperSearchFragment$onActivityCreated$10 extends Lambda implements F
                         SuperSearchFragment superSearchFragment3 = this.this$0.this$0;
                         FragmentActivity requireActivity2 = this.this$0.this$0.requireActivity();
                         Intrinsics.checkNotNullExpressionValue(requireActivity2, "requireActivity()");
-                        superSearchFragment3.secondHandOtherFilterView = new SuperSearchFilterView(requireActivity2, 2131363346, ((float) this.this$0.this$0.height) * 2.0f);
+                        superSearchFragment3.secondHandOtherFilterView = new SuperSearchFilterView(requireActivity2, 2131363362, ((float) this.this$0.this$0.height) * 2.0f);
                         SuperSearchFilterView superSearchFilterView15 = this.this$0.this$0.secondHandOtherFilterView;
                         if (superSearchFilterView15 != null) {
                             superSearchFilterView15.setOnClickListener(new SuperSearchFragment$onActivityCreated$10$1$onItemClick$3(this));

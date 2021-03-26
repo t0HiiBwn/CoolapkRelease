@@ -11,56 +11,17 @@ public class PosixParser extends Parser {
     private Options options;
     private List tokens = new ArrayList();
 
-    private void init() {
-        this.eatTheRest = false;
-        this.tokens.clear();
-    }
-
-    @Override // org.apache.commons.cli.Parser
-    protected String[] flatten(Options options2, String[] strArr, boolean z) {
-        String str;
-        init();
-        this.options = options2;
-        Iterator it2 = Arrays.asList(strArr).iterator();
-        while (it2.hasNext()) {
-            String str2 = (String) it2.next();
-            if (str2.startsWith("--")) {
-                int indexOf = str2.indexOf(61);
-                if (indexOf == -1) {
-                    str = str2;
-                } else {
-                    str = str2.substring(0, indexOf);
-                }
-                if (!options2.hasOption(str)) {
-                    processNonOptionToken(str2, z);
-                } else {
-                    this.currentOption = options2.getOption(str);
-                    this.tokens.add(str);
-                    if (indexOf != -1) {
-                        this.tokens.add(str2.substring(indexOf + 1));
-                    }
-                }
-            } else if ("-".equals(str2)) {
-                this.tokens.add(str2);
-            } else if (!str2.startsWith("-")) {
-                processNonOptionToken(str2, z);
-            } else if (str2.length() == 2 || options2.hasOption(str2)) {
-                processOptionToken(str2, z);
-            } else {
-                burstToken(str2, z);
-            }
-            gobble(it2);
-        }
-        List list = this.tokens;
-        return (String[]) list.toArray(new String[list.size()]);
-    }
-
     private void gobble(Iterator it2) {
         if (this.eatTheRest) {
             while (it2.hasNext()) {
                 this.tokens.add(it2.next());
             }
         }
+    }
+
+    private void init() {
+        this.eatTheRest = false;
+        this.tokens.clear();
     }
 
     private void processNonOptionToken(String str, boolean z) {
@@ -106,5 +67,39 @@ public class PosixParser extends Parser {
                 return;
             }
         }
+    }
+
+    @Override // org.apache.commons.cli.Parser
+    protected String[] flatten(Options options2, String[] strArr, boolean z) {
+        init();
+        this.options = options2;
+        Iterator it2 = Arrays.asList(strArr).iterator();
+        while (it2.hasNext()) {
+            String str = (String) it2.next();
+            if (str.startsWith("--")) {
+                int indexOf = str.indexOf(61);
+                String substring = indexOf == -1 ? str : str.substring(0, indexOf);
+                if (!options2.hasOption(substring)) {
+                    processNonOptionToken(str, z);
+                } else {
+                    this.currentOption = options2.getOption(substring);
+                    this.tokens.add(substring);
+                    if (indexOf != -1) {
+                        this.tokens.add(str.substring(indexOf + 1));
+                    }
+                }
+            } else if ("-".equals(str)) {
+                this.tokens.add(str);
+            } else if (!str.startsWith("-")) {
+                processNonOptionToken(str, z);
+            } else if (str.length() == 2 || options2.hasOption(str)) {
+                processOptionToken(str, z);
+            } else {
+                burstToken(str, z);
+            }
+            gobble(it2);
+        }
+        List list = this.tokens;
+        return (String[]) list.toArray(new String[list.size()]);
     }
 }

@@ -36,12 +36,12 @@ public class ReplyBindingImpl extends ReplyBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(26);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(2, new String[]{"feed_warning"}, new int[]{22}, new int[]{2131558563});
+        includedLayouts.setIncludes(2, new String[]{"feed_warning"}, new int[]{22}, new int[]{2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362150, 23);
-        sparseIntArray.put(2131362510, 24);
-        sparseIntArray.put(2131362450, 25);
+        sparseIntArray.put(2131362153, 23);
+        sparseIntArray.put(2131362518, 24);
+        sparseIntArray.put(2131362457, 25);
     }
 
     public ReplyBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -110,7 +110,7 @@ public class ReplyBindingImpl extends ReplyBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (288 == i) {
+        if (289 == i) {
             setUiConfig((ReplyActivity.ReplyUiConfig) obj);
         } else if (50 != i) {
             return false;
@@ -126,7 +126,7 @@ public class ReplyBindingImpl extends ReplyBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(288);
+        notifyPropertyChanged(289);
         super.requestRebind();
     }
 
@@ -326,7 +326,7 @@ public class ReplyBindingImpl extends ReplyBinding {
             this.editText.setHint(str3);
             Boolean bool2 = null;
             String str14 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231696), 0, 0, bool2, bool2, bool2, bool2, bool2, str14, null, null, bool2, bool2, true, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231707), 0, 0, bool2, bool2, bool2, bool2, bool2, str14, null, null, bool2, bool2, true, null, bool2);
             this.mboundView13.setVisibility(i9);
             TextViewBindingAdapter.setText(this.mboundView3, str4);
             this.mboundView8.setVisibility(i7);

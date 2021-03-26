@@ -26,7 +26,7 @@ public class ItemBackupAppBindingImpl extends ItemBackupAppBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131361876, 6);
+        sparseIntArray.put(2131361877, 6);
     }
 
     public ItemBackupAppBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -128,7 +128,7 @@ public class ItemBackupAppBindingImpl extends ItemBackupAppBinding {
         if (i != 0) {
             TextViewBindingAdapter.setText(this.apkSizeView, str2);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.sourceNameView, str4);
             TextViewBindingAdapter.setText(this.titleView, str3);
         }

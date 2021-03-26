@@ -1,31 +1,53 @@
 package com.xiaomi.push;
 
-import android.content.ContentValues;
-import android.content.Context;
-import com.xiaomi.push.ce;
+import com.xiaomi.push.ca;
+import java.io.File;
+import java.util.Date;
 
-public class cb extends ce.e {
-    private String a = "MessageInsertJob";
+class cb extends ca.b {
+    File a;
+    final /* synthetic */ int d;
+    final /* synthetic */ Date e;
+    final /* synthetic */ Date f;
+    final /* synthetic */ String g;
+    final /* synthetic */ String h;
+    final /* synthetic */ boolean i;
+    final /* synthetic */ ca j;
 
-    public cb(String str, ContentValues contentValues, String str2) {
-        super(str, contentValues);
-        this.a = str2;
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    cb(ca caVar, int i2, Date date, Date date2, String str, String str2, boolean z) {
+        super();
+        this.j = caVar;
+        this.d = i2;
+        this.e = date;
+        this.f = date2;
+        this.g = str;
+        this.h = str2;
+        this.i = z;
     }
 
-    public static cb a(Context context, String str, hg hgVar) {
-        byte[] a2 = im.a(hgVar);
-        if (a2 == null || a2.length <= 0) {
-            return null;
+    @Override // com.xiaomi.push.ca.b, com.xiaomi.push.m.b
+    public void b() {
+        if (b.d()) {
+            try {
+                File file = new File(ca.a(this.j).getExternalFilesDir(null) + "/.logcache");
+                file.mkdirs();
+                if (file.isDirectory()) {
+                    bz bzVar = new bz();
+                    bzVar.a(this.d);
+                    this.a = bzVar.a(ca.a(this.j), this.e, this.f, file);
+                }
+            } catch (NullPointerException unused) {
+            }
         }
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("status", (Integer) 0);
-        contentValues.put("messageId", "");
-        contentValues.put("messageItemId", hgVar.d());
-        contentValues.put("messageItem", a2);
-        contentValues.put("appId", bs.a(context).b());
-        contentValues.put("packageName", bs.a(context).m149a());
-        contentValues.put("createTimeStamp", Long.valueOf(System.currentTimeMillis()));
-        contentValues.put("uploadTimestamp", (Integer) 0);
-        return new cb(str, contentValues, "a job build to insert message to db");
+    }
+
+    @Override // com.xiaomi.push.m.b
+    public void c() {
+        File file = this.a;
+        if (file != null && file.exists()) {
+            ca.b(this.j).add(new ca.c(this.g, this.h, this.a, this.i));
+        }
+        ca.a(this.j, 0);
     }
 }

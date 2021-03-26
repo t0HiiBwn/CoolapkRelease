@@ -22,7 +22,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemGiftViewHolder.kt */
 public final class ItemGiftViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558594;
+    public static final int LAYOUT_ID = 2131558598;
     private final ItemAppNodeGiftBinding binding;
     private Gift gift;
     private final AppNodeViewModel viewModel;
@@ -74,7 +74,7 @@ public final class ItemGiftViewHolder extends BindingViewHolder {
         Intrinsics.checkNotNull(serviceApp);
         Intrinsics.checkNotNullExpressionValue(serviceApp, "viewModel.serviceApp.get()!!");
         ServiceApp serviceApp2 = serviceApp;
-        if (view.getId() != 2131362547) {
+        if (view.getId() != 2131362555) {
             Context context = getContext();
             Gift gift2 = this.gift;
             if (gift2 == null) {
@@ -106,7 +106,7 @@ public final class ItemGiftViewHolder extends BindingViewHolder {
             return;
         }
         SimpleDialog newInstance2 = SimpleDialog.newInstance();
-        newInstance2.setMessage(getContext().getString(2131886822));
+        newInstance2.setMessage(getContext().getString(2131886884));
         newInstance2.setPositiveButton(2131886128, new ItemGiftViewHolder$onClick$1(this, serviceApp2));
         newInstance2.setNegativeButton(2131886115);
         Context context3 = getContext();

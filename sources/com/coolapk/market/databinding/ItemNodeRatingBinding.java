@@ -42,7 +42,7 @@ public abstract class ItemNodeRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNodeRatingBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemNodeRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558839, viewGroup, z, obj);
+        return (ItemNodeRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558846, viewGroup, z, obj);
     }
 
     public static ItemNodeRatingBinding inflate(LayoutInflater layoutInflater) {
@@ -51,7 +51,7 @@ public abstract class ItemNodeRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNodeRatingBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemNodeRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558839, null, false, obj);
+        return (ItemNodeRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558846, null, false, obj);
     }
 
     public static ItemNodeRatingBinding bind(View view) {
@@ -60,6 +60,6 @@ public abstract class ItemNodeRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNodeRatingBinding bind(View view, Object obj) {
-        return (ItemNodeRatingBinding) bind(obj, view, 2131558839);
+        return (ItemNodeRatingBinding) bind(obj, view, 2131558846);
     }
 }

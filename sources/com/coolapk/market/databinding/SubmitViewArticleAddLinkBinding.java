@@ -31,7 +31,7 @@ public abstract class SubmitViewArticleAddLinkBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitViewArticleAddLinkBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitViewArticleAddLinkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559173, viewGroup, z, obj);
+        return (SubmitViewArticleAddLinkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559181, viewGroup, z, obj);
     }
 
     public static SubmitViewArticleAddLinkBinding inflate(LayoutInflater layoutInflater) {
@@ -40,7 +40,7 @@ public abstract class SubmitViewArticleAddLinkBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitViewArticleAddLinkBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitViewArticleAddLinkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559173, null, false, obj);
+        return (SubmitViewArticleAddLinkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559181, null, false, obj);
     }
 
     public static SubmitViewArticleAddLinkBinding bind(View view) {
@@ -49,6 +49,6 @@ public abstract class SubmitViewArticleAddLinkBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitViewArticleAddLinkBinding bind(View view, Object obj) {
-        return (SubmitViewArticleAddLinkBinding) bind(obj, view, 2131559173);
+        return (SubmitViewArticleAddLinkBinding) bind(obj, view, 2131559181);
     }
 }

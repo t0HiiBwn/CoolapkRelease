@@ -135,7 +135,7 @@ class d {
                 super.a(bVar, dVar, th);
                 com.bytedance.sdk.openadsdk.preload.geckox.statistic.model.a a = b.a(dVar.c()).a(((UpdatePackage) ((Pair) bVar.b(h.class)).second).getChannel());
                 a.i = false;
-                a.f1342l = SystemClock.uptimeMillis();
+                a.l = SystemClock.uptimeMillis();
                 a.s = th.getMessage();
             }
         };

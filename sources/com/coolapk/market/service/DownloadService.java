@@ -66,7 +66,7 @@ public class DownloadService extends Service {
         LogUtils.v("DownloadService on create", new Object[0]);
         DataManager.getInstance().registerDownloadEvent(this);
         DataManager.getInstance().setDownloadStartInterceptor(new MyDownloadStartInterceptor());
-        startForeground(1, new NotificationCompat.Builder(this, String.valueOf(1)).setContentTitle(getString(2131886684)).setContentText(getString(2131886953)).setSmallIcon(17301634).setContentIntent(PendingIntent.getActivity(this, 0, new Intent(this, DownloadManagerActivity.class), 134217728)).build());
+        startForeground(1, new NotificationCompat.Builder(this, String.valueOf(1)).setContentTitle(getString(2131886746)).setContentText(getString(2131887015)).setSmallIcon(17301634).setContentIntent(PendingIntent.getActivity(this, 0, new Intent(this, DownloadManagerActivity.class), 134217728)).build());
     }
 
     /* JADX INFO: Can't fix incorrect switch cases order, some code will duplicate */

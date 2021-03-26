@@ -15,9 +15,7 @@ import com.bytedance.sdk.openadsdk.utils.u;
 
 public class FullRewardExpressBackupView extends BackupView {
     private View k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private NativeExpressView f1314l;
+    private NativeExpressView l;
     private FrameLayout m;
     private a n;
 
@@ -30,7 +28,7 @@ public class FullRewardExpressBackupView extends BackupView {
         u.b("FullRewardExpressBackupView", "show backup view");
         setBackgroundColor(-1);
         this.b = lVar;
-        this.f1314l = nativeExpressView;
+        this.l = nativeExpressView;
         this.n = aVar;
         if (aj.c(this.b.aj()) == 7) {
             this.e = "rewarded_video";
@@ -38,12 +36,12 @@ public class FullRewardExpressBackupView extends BackupView {
             this.e = "fullscreen_interstitial_ad";
         }
         b();
-        this.f1314l.addView(this, new ViewGroup.LayoutParams(-2, -2));
+        this.l.addView(this, new ViewGroup.LayoutParams(-2, -2));
     }
 
     private void b() {
-        this.f = ak.c(this.a, (float) this.f1314l.getExpectExpressWidth());
-        this.g = ak.c(this.a, (float) this.f1314l.getExpectExpressWidth());
+        this.f = ak.c(this.a, (float) this.l.getExpectExpressWidth());
+        this.g = ak.c(this.a, (float) this.l.getExpectExpressWidth());
         ViewGroup.LayoutParams layoutParams = getLayoutParams();
         if (layoutParams == null) {
             layoutParams = new ViewGroup.LayoutParams(this.f, this.g);
@@ -72,7 +70,7 @@ public class FullRewardExpressBackupView extends BackupView {
 
     @Override // com.bytedance.sdk.openadsdk.core.nativeexpress.BackupView
     protected void a(int i, j jVar) {
-        NativeExpressView nativeExpressView = this.f1314l;
+        NativeExpressView nativeExpressView = this.l;
         if (nativeExpressView != null) {
             nativeExpressView.a(i, jVar);
         }

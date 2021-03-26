@@ -62,7 +62,7 @@ public class ConfirmDeleteDialog extends BaseDialogFragment {
             z = false;
         }
         if (DataManager.getInstance().getLoginSession().isAdmin() && !z) {
-            builder.setNeutralButton(2131886302, new DialogInterface.OnClickListener() {
+            builder.setNeutralButton(2131886332, new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.view.feed.post.$$Lambda$ConfirmDeleteDialog$fxr1hQyfe65qgNrGVRQaRbi_3F4 */
 
                 @Override // android.content.DialogInterface.OnClickListener
@@ -126,7 +126,7 @@ public class ConfirmDeleteDialog extends BaseDialogFragment {
                 case 1:
                     Feed feed2 = (Feed) this.entity;
                     if (TextUtils.equals(feed2.getFeedType(), "album")) {
-                        ConfirmDialog newInstance = ConfirmDialog.newInstance(getString(2131886722), getString(2131886709, feed2.getExtraTitle()));
+                        ConfirmDialog newInstance = ConfirmDialog.newInstance(getString(2131886784), getString(2131886771, feed2.getExtraTitle()));
                         newInstance.setOnOkRunnable(new Runnable(feed2, i) {
                             /* class com.coolapk.market.view.feed.post.$$Lambda$ConfirmDeleteDialog$c6uTiwfzHVfE_F6m_YUrx9z5WMY */
                             public final /* synthetic */ Feed f$1;
@@ -145,7 +145,7 @@ public class ConfirmDeleteDialog extends BaseDialogFragment {
                         newInstance.show(requireActivity().getSupportFragmentManager(), (String) null);
                         return;
                     } else if (feed2.getFavoriteNum() >= 100) {
-                        ConfirmDialog newInstance2 = ConfirmDialog.newInstance(getString(2131886722), String.format(Locale.getDefault(), "您的这条动态已经有%d人收藏，删除会导致收藏失效并丢失经验，您确定要删除么？💔💔💔", Integer.valueOf(feed2.getFavoriteNum())));
+                        ConfirmDialog newInstance2 = ConfirmDialog.newInstance(getString(2131886784), String.format(Locale.getDefault(), "您的这条动态已经有%d人收藏，删除会导致收藏失效并丢失经验，您确定要删除么？💔💔💔", Integer.valueOf(feed2.getFavoriteNum())));
                         newInstance2.setOnOkRunnable(new Runnable(feed2, i) {
                             /* class com.coolapk.market.view.feed.post.$$Lambda$ConfirmDeleteDialog$OtGeIlyetQdMvgadz1uwdzZI18 */
                             public final /* synthetic */ Feed f$1;

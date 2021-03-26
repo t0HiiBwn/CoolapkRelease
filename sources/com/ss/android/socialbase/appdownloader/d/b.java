@@ -50,9 +50,9 @@ public class b implements k {
     /* access modifiers changed from: private */
     public void b(List<DownloadInfo> list, int i) {
         if (list != null && !list.isEmpty()) {
-            g l2 = d.j().l();
-            if (l2 != null) {
-                l2.a(list);
+            g l = d.j().l();
+            if (l != null) {
+                l.a(list);
             }
             Context L = com.ss.android.socialbase.downloader.downloader.b.L();
             if (L != null) {
@@ -127,7 +127,7 @@ public class b implements k {
     /* access modifiers changed from: private */
     /* JADX WARNING: Removed duplicated region for block: B:24:0x008b  */
     /* JADX WARNING: Removed duplicated region for block: B:51:0x013a  */
-    /* JADX WARNING: Removed duplicated region for block: B:70:0x01bf  */
+    /* JADX WARNING: Removed duplicated region for block: B:70:0x01c3  */
     /* JADX WARNING: Removed duplicated region for block: B:96:? A[RETURN, SYNTHETIC] */
     /* JADX WARNING: Removed duplicated region for block: B:98:? A[RETURN, SYNTHETIC] */
     public void a(Context context, DownloadInfo downloadInfo, boolean z, int i) {
@@ -138,7 +138,7 @@ public class b implements k {
         String str3;
         boolean z3;
         boolean z4;
-        g l2;
+        g l;
         if (downloadInfo != null && downloadInfo.isShowNotification()) {
             int realStatus = downloadInfo.getRealStatus();
             if (realStatus == -5 && ("application/ttpatch".equalsIgnoreCase(downloadInfo.getMimeType()) || !downloadInfo.isDownloaded())) {
@@ -172,9 +172,9 @@ public class b implements k {
                                     }
                                 }
                                 a.c(str2, "launchResume, name = " + downloadInfo.getTitle() + str3 + z3 + ", downloadResumed = " + z4);
-                                l2 = d.j().l();
-                                if (l2 != null) {
-                                    l2.a(downloadInfo, z4);
+                                l = d.j().l();
+                                if (l != null) {
+                                    l.a(downloadInfo, z4);
                                     return;
                                 }
                                 return;
@@ -191,8 +191,8 @@ public class b implements k {
                         }
                         z4 = false;
                         a.c(str2, "launchResume, name = " + downloadInfo.getTitle() + str3 + z3 + ", downloadResumed = " + z4);
-                        l2 = d.j().l();
-                        if (l2 != null) {
+                        l = d.j().l();
+                        if (l != null) {
                         }
                     }
                 } else {
@@ -205,8 +205,8 @@ public class b implements k {
                 }
                 z4 = false;
                 a.c(str2, "launchResume, name = " + downloadInfo.getTitle() + str3 + z3 + ", downloadResumed = " + z4);
-                l2 = d.j().l();
-                if (l2 != null) {
+                l = d.j().l();
+                if (l != null) {
                 }
             } else if (realStatus == -3 && a(downloadInfo)) {
                 com.ss.android.socialbase.downloader.g.a a6 = com.ss.android.socialbase.downloader.g.a.a(downloadInfo.getId());
@@ -257,9 +257,9 @@ public class b implements k {
                     c.a(downloadInfo, true, true);
                     downloadInfo.updateSpData();
                     downloadInfo.setDownloadFromReserveWifi(true);
-                    g l3 = d.j().l();
-                    if (l3 != null) {
-                        l3.a(downloadInfo, true);
+                    g l2 = d.j().l();
+                    if (l2 != null) {
+                        l2.a(downloadInfo, true);
                     }
                     p m2 = d.j().m();
                     if (m2 != null) {

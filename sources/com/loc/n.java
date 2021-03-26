@@ -54,9 +54,7 @@ public final class n {
     static String i = "";
     static String j = "";
     private static String k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static boolean f1381l = false;
+    private static boolean l = false;
     private static volatile boolean m = false;
     private static String n = "";
     private static boolean o = false;

@@ -31,6 +31,26 @@ public class OrFileFilter extends AbstractFileFilter implements ConditionalFileF
         addFileFilter(iOFileFilter2);
     }
 
+    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
+    public boolean accept(File file) {
+        for (IOFileFilter iOFileFilter : this.fileFilters) {
+            if (iOFileFilter.accept(file)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FilenameFilter
+    public boolean accept(File file, String str) {
+        for (IOFileFilter iOFileFilter : this.fileFilters) {
+            if (iOFileFilter.accept(file, str)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override // org.apache.commons.io.filefilter.ConditionalFileFilter
     public void addFileFilter(IOFileFilter iOFileFilter) {
         this.fileFilters.add(iOFileFilter);
@@ -52,29 +72,8 @@ public class OrFileFilter extends AbstractFileFilter implements ConditionalFileF
         this.fileFilters.addAll(list);
     }
 
-    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
-    public boolean accept(File file) {
-        for (IOFileFilter iOFileFilter : this.fileFilters) {
-            if (iOFileFilter.accept(file)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FilenameFilter
-    public boolean accept(File file, String str) {
-        for (IOFileFilter iOFileFilter : this.fileFilters) {
-            if (iOFileFilter.accept(file, str)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     @Override // org.apache.commons.io.filefilter.AbstractFileFilter, java.lang.Object
     public String toString() {
-        String str;
         StringBuilder sb = new StringBuilder();
         sb.append(super.toString());
         sb.append("(");
@@ -84,12 +83,7 @@ public class OrFileFilter extends AbstractFileFilter implements ConditionalFileF
                     sb.append(",");
                 }
                 IOFileFilter iOFileFilter = this.fileFilters.get(i);
-                if (iOFileFilter == null) {
-                    str = "null";
-                } else {
-                    str = iOFileFilter.toString();
-                }
-                sb.append(str);
+                sb.append(iOFileFilter == null ? "null" : iOFileFilter.toString());
             }
         }
         sb.append(")");

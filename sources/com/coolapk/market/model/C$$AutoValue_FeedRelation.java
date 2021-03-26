@@ -19,7 +19,7 @@ abstract class C$$AutoValue_FeedRelation extends FeedRelation {
     private final String title;
     private final String url;
 
-    C$$AutoValue_FeedRelation(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3) {
+    C$$AutoValue_FeedRelation(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -32,8 +32,8 @@ abstract class C$$AutoValue_FeedRelation extends FeedRelation {
         this.subTitle = str9;
         this.id = str10;
         this.extraData = str11;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
     }
 
     @Override // com.coolapk.market.model.Entity
@@ -158,14 +158,14 @@ abstract class C$$AutoValue_FeedRelation extends FeedRelation {
                                                 if (str10 != null ? str10.equals(feedRelation.getId()) : feedRelation.getId() == null) {
                                                     String str11 = this.extraData;
                                                     if (str11 != null ? str11.equals(feedRelation.getExtraData()) : feedRelation.getExtraData() == null) {
-                                                        Long l2 = this.dateline;
-                                                        if (l2 != null ? l2.equals(feedRelation.getDateline()) : feedRelation.getDateline() == null) {
-                                                            Long l3 = this.lastUpdate;
-                                                            if (l3 == null) {
+                                                        Long l = this.dateline;
+                                                        if (l != null ? l.equals(feedRelation.getDateline()) : feedRelation.getDateline() == null) {
+                                                            Long l2 = this.lastUpdate;
+                                                            if (l2 == null) {
                                                                 if (feedRelation.getLastUpdate() == null) {
                                                                     return true;
                                                                 }
-                                                            } else if (l3.equals(feedRelation.getLastUpdate())) {
+                                                            } else if (l2.equals(feedRelation.getLastUpdate())) {
                                                                 return true;
                                                             }
                                                         }
@@ -211,11 +211,11 @@ abstract class C$$AutoValue_FeedRelation extends FeedRelation {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        if (l3 != null) {
-            i = l3.hashCode();
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        if (l2 != null) {
+            i = l2.hashCode();
         }
         return hashCode13 ^ i;
     }

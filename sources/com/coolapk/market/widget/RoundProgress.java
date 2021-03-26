@@ -13,7 +13,7 @@ import kotlin.jvm.internal.Intrinsics;
 public final class RoundProgress extends BaseRoundProgress {
     @Override // com.coolapk.market.widget.BaseRoundProgress
     public int initLayout() {
-        return 2131559000;
+        return 2131559007;
     }
 
     @Override // com.coolapk.market.widget.BaseRoundProgress

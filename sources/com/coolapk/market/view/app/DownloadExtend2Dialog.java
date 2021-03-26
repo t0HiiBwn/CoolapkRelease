@@ -33,7 +33,7 @@ public class DownloadExtend2Dialog extends BaseDialogFragment {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        return new AlertDialog.Builder(getActivity()).setTitle(2131887298).setItems(new String[]{getString(2131886747), getString(2131886750, this.appForum.packageName())}, new DialogInterface.OnClickListener() {
+        return new AlertDialog.Builder(getActivity()).setTitle(2131887360).setItems(new String[]{getString(2131886809), getString(2131886812, this.appForum.packageName())}, new DialogInterface.OnClickListener() {
             /* class com.coolapk.market.view.app.DownloadExtend2Dialog.AnonymousClass1 */
 
             @Override // android.content.DialogInterface.OnClickListener

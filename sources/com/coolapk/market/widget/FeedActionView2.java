@@ -33,10 +33,10 @@ import rx.functions.Func1;
 /* compiled from: FeedActionView2.kt */
 public final class FeedActionView2 extends LinearLayout implements View.OnClickListener {
     public static final Companion Companion = new Companion(null);
-    private static final FeedItem LIKE = new FeedItem(2131886790, 2131689494, 2131362527);
+    private static final FeedItem LIKE = new FeedItem(2131886852, 2131689494, 2131362535);
     private static final int LIKED = 2131689495;
-    private static final FeedItem REPLY = new FeedItem(2131886791, 2131689479, 2131362528);
-    private static final FeedItem SHARE = new FeedItem(2131886793, 2131689492, 2131362529);
+    private static final FeedItem REPLY = new FeedItem(2131886853, 2131689479, 2131362536);
+    private static final FeedItem SHARE = new FeedItem(2131886855, 2131689492, 2131362537);
     private boolean collectState;
     private Func1<View, Boolean> extraListener;
     private Feed feed;
@@ -98,7 +98,7 @@ public final class FeedActionView2 extends LinearLayout implements View.OnClickL
 
     /* access modifiers changed from: private */
     public final View newItemView(LayoutInflater layoutInflater, FeedItem feedItem) {
-        View inflate = layoutInflater.inflate(2131558552, (ViewGroup) this, false);
+        View inflate = layoutInflater.inflate(2131558554, (ViewGroup) this, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "view");
         ViewGroup.LayoutParams layoutParams = inflate.getLayoutParams();
         if (!(layoutParams instanceof LinearLayout.LayoutParams)) {
@@ -111,12 +111,12 @@ public final class FeedActionView2 extends LinearLayout implements View.OnClickL
         inflate.setId(feedItem.getContainerId());
         ViewUtil.clickListener(inflate, this);
         ViewExtendsKt.disableAccessibilityClick(inflate);
-        View findViewById = inflate.findViewById(2131362707);
+        View findViewById = inflate.findViewById(2131362718);
         Intrinsics.checkNotNullExpressionValue(findViewById, "view.findViewById(R.id.image_view)");
-        View findViewById2 = inflate.findViewById(2131363533);
+        View findViewById2 = inflate.findViewById(2131363551);
         Intrinsics.checkNotNullExpressionValue(findViewById2, "view.findViewById(R.id.text_view)");
         Holder holder = new Holder(inflate, (ImageView) findViewById, (TextView) findViewById2, feedItem);
-        inflate.setTag(2131362526, holder);
+        inflate.setTag(2131362534, holder);
         restoreView(holder);
         this.holderArray.put(feedItem.getContainerId(), holder);
         return inflate;
@@ -142,7 +142,7 @@ public final class FeedActionView2 extends LinearLayout implements View.OnClickL
     }
 
     private final void actionGone() {
-        if (getId() == 2131362521) {
+        if (getId() == 2131362529) {
             setVisibility(4);
             ViewGroup.LayoutParams layoutParams = getLayoutParams();
             Objects.requireNonNull(layoutParams, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
@@ -203,7 +203,7 @@ public final class FeedActionView2 extends LinearLayout implements View.OnClickL
         if (findViewById == null) {
             return null;
         }
-        Object tag = findViewById.getTag(2131362526);
+        Object tag = findViewById.getTag(2131362534);
         Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.widget.FeedActionView2.Holder");
         return (Holder) tag;
     }
@@ -237,7 +237,7 @@ public final class FeedActionView2 extends LinearLayout implements View.OnClickL
             Feed feed2 = this.feed;
             if (feed2 != null) {
                 switch (view.getId()) {
-                    case 2131362527:
+                    case 2131362535:
                         Boolean checkLogin = ActionManager.checkLogin(getContext());
                         Intrinsics.checkNotNullExpressionValue(checkLogin, "ActionManager.checkLogin(context)");
                         if (checkLogin.booleanValue()) {
@@ -247,7 +247,7 @@ public final class FeedActionView2 extends LinearLayout implements View.OnClickL
                             StatisticHelper.Companion.getInstance().recordLoginClickEvent("点赞");
                             return;
                         }
-                    case 2131362528:
+                    case 2131362536:
                         if (feed2.getReplyNum() > 0) {
                             ActionManager.startFeedDetailActivity(UiUtils.getActivity(getContext()), feed2, null, 1);
                             return;
@@ -261,7 +261,7 @@ public final class FeedActionView2 extends LinearLayout implements View.OnClickL
                             StatisticHelper.Companion.getInstance().recordLoginClickEvent("回复");
                             return;
                         }
-                    case 2131362529:
+                    case 2131362537:
                         StatisticHelper instance = StatisticHelper.Companion.getInstance();
                         String feedTypeName = feed2.getFeedTypeName();
                         if (feedTypeName == null) {
@@ -285,7 +285,7 @@ public final class FeedActionView2 extends LinearLayout implements View.OnClickL
             this.postingLike = true;
             Feed feed2 = this.feed;
             if (feed2 != null) {
-                Object tag = findViewById(LIKE.getContainerId()).getTag(2131362526);
+                Object tag = findViewById(LIKE.getContainerId()).getTag(2131362534);
                 Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.widget.FeedActionView2.Holder");
                 Holder holder = (Holder) tag;
                 if (!this.likeState) {
@@ -313,8 +313,8 @@ public final class FeedActionView2 extends LinearLayout implements View.OnClickL
             i2 = icon.intValue();
         }
         imageView.setImageResource(i2);
-        holder.getImageView().setColorFilter(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099892));
-        holder.getTextView().setTextColor(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099892));
+        holder.getImageView().setColorFilter(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099897));
+        holder.getTextView().setTextColor(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099897));
     }
 
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\n\b\u0002\u0018\u00002\u00020\u0001B%\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nR\u0011\u0010\b\u001a\u00020\t¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u0011\u0010\u0006\u001a\u00020\u0007¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0012¨\u0006\u0013"}, d2 = {"Lcom/coolapk/market/widget/FeedActionView2$Holder;", "", "parent", "Landroid/view/View;", "imageView", "Landroid/widget/ImageView;", "textView", "Landroid/widget/TextView;", "feedItem", "Lcom/coolapk/market/widget/FeedActionView2$FeedItem;", "(Landroid/view/View;Landroid/widget/ImageView;Landroid/widget/TextView;Lcom/coolapk/market/widget/FeedActionView2$FeedItem;)V", "getFeedItem", "()Lcom/coolapk/market/widget/FeedActionView2$FeedItem;", "getImageView", "()Landroid/widget/ImageView;", "getParent", "()Landroid/view/View;", "getTextView", "()Landroid/widget/TextView;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})

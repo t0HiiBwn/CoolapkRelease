@@ -27,7 +27,7 @@ public abstract class HomeBinding extends ViewDataBinding {
 
     @Deprecated
     public static HomeBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (HomeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558570, viewGroup, z, obj);
+        return (HomeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558574, viewGroup, z, obj);
     }
 
     public static HomeBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class HomeBinding extends ViewDataBinding {
 
     @Deprecated
     public static HomeBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (HomeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558570, null, false, obj);
+        return (HomeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558574, null, false, obj);
     }
 
     public static HomeBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class HomeBinding extends ViewDataBinding {
 
     @Deprecated
     public static HomeBinding bind(View view, Object obj) {
-        return (HomeBinding) bind(obj, view, 2131558570);
+        return (HomeBinding) bind(obj, view, 2131558574);
     }
 }

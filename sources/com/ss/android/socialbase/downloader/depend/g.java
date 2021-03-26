@@ -28,7 +28,7 @@ public interface g extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.ss.android.socialbase.downloader.depend.IDownloadAidlFileProvider");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof g)) {
-                return new C0102a(iBinder);
+                return new C0112a(iBinder);
             }
             return (g) queryLocalInterface;
         }
@@ -56,11 +56,11 @@ public interface g extends IInterface {
 
         /* renamed from: com.ss.android.socialbase.downloader.depend.g$a$a  reason: collision with other inner class name */
         /* compiled from: IDownloadAidlFileProvider */
-        private static class C0102a implements g {
+        private static class C0112a implements g {
             public static g a;
             private IBinder b;
 
-            C0102a(IBinder iBinder) {
+            C0112a(IBinder iBinder) {
                 this.b = iBinder;
             }
 
@@ -93,7 +93,7 @@ public interface g extends IInterface {
         }
 
         public static g a() {
-            return C0102a.a;
+            return C0112a.a;
         }
     }
 }

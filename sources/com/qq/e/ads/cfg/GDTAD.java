@@ -9,15 +9,15 @@ import com.qq.e.comm.util.StringUtil;
 public class GDTAD {
     private static boolean a;
     private static InitListener b;
-    private static PM.a.AbstractC0076a c = new PM.a.AbstractC0076a() {
+    private static PM.a.AbstractC0086a c = new PM.a.AbstractC0086a() {
         /* class com.qq.e.ads.cfg.GDTAD.AnonymousClass1 */
 
-        @Override // com.qq.e.comm.managers.plugin.PM.a.AbstractC0076a
+        @Override // com.qq.e.comm.managers.plugin.PM.a.AbstractC0086a
         public final void onLoadFail() {
             GDTLogger.w("Init fail", null);
         }
 
-        @Override // com.qq.e.comm.managers.plugin.PM.a.AbstractC0076a
+        @Override // com.qq.e.comm.managers.plugin.PM.a.AbstractC0086a
         public final void onLoadSuccess() {
             boolean unused = GDTAD.a = true;
             if (GDTAD.b != null) {

@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Product  reason: invalid class name */
 abstract class C$AutoValue_Product extends C$$AutoValue_Product {
-    C$AutoValue_Product(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, String str13, List<String> list, int i, float f, float f2, String str14, int i2, float f3, float f4, float f5, float f6, float f7, float f8, float f9, float f10, float f11, float f12, float f13, int i3, int i4, int i5, List<String> list2, int i6, int i7, int i8, int i9, int i10, int i11, String str15, int i12, String str16, int i13, int i14, int i15, String str17, String str18, String str19, String str20, List<ProductConfig> list3, UserAction userAction, List<ConfigPage> list4, String str21, float f14, String str22, float f15, int i16, int i17, int i18, int i19, int i20, int i21, int i22, int i23, int i24, int i25, int i26, float f16, int i27, int i28, int i29, String str23, String str24, List<ProductCoupon> list5, String str25, List<String> list6, List<RelatedData> list7, int i30, String str26, String str27, int i31, int i32, int i33, int i34, int i35, List<NewHeadLine> list8) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l2, l3, str12, str13, list, i, f, f2, str14, i2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, i3, i4, i5, list2, i6, i7, i8, i9, i10, i11, str15, i12, str16, i13, i14, i15, str17, str18, str19, str20, list3, userAction, list4, str21, f14, str22, f15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, f16, i27, i28, i29, str23, str24, list5, str25, list6, list7, i30, str26, str27, i31, i32, i33, i34, i35, list8);
+    C$AutoValue_Product(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, String str13, List<String> list, int i, float f, float f2, String str14, int i2, float f3, float f4, float f5, float f6, float f7, float f8, float f9, float f10, float f11, float f12, float f13, int i3, int i4, int i5, List<String> list2, int i6, int i7, int i8, int i9, int i10, int i11, String str15, int i12, String str16, int i13, int i14, int i15, String str17, String str18, String str19, String str20, List<ProductConfig> list3, UserAction userAction, List<ConfigPage> list4, String str21, float f14, String str22, float f15, int i16, int i17, int i18, int i19, int i20, int i21, int i22, int i23, int i24, int i25, int i26, float f16, int i27, int i28, int i29, String str23, String str24, List<ProductCoupon> list5, String str25, List<String> list6, List<RelatedData> list7, int i30, String str26, String str27, int i31, int i32, int i33, int i34, int i35, List<NewHeadLine> list8) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l, l2, str12, str13, list, i, f, f2, str14, i2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, i3, i4, i5, list2, i6, i7, i8, i9, i10, i11, str15, i12, str16, i13, i14, i15, str17, str18, str19, str20, list3, userAction, list4, str21, f14, str22, f15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, f16, i27, i28, i29, str23, str24, list5, str25, list6, list7, i30, str26, str27, i31, i32, i33, i34, i35, list8);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Product$GsonTypeAdapter */
@@ -352,13 +352,13 @@ abstract class C$AutoValue_Product extends C$$AutoValue_Product {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -950,8 +950,8 @@ abstract class C$AutoValue_Product extends C$$AutoValue_Product {
             String str9 = this.defaultSubTitle;
             String str10 = this.defaultId;
             String str11 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str12 = this.defaultBrandId;
             String str13 = this.defaultSeriesId;
             List<String> list = this.defaultCoverPicList;
@@ -1039,8 +1039,8 @@ abstract class C$AutoValue_Product extends C$$AutoValue_Product {
             String str35 = str9;
             String str36 = str10;
             String str37 = str11;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str38 = str;
             String str39 = str12;
             String str40 = str13;
@@ -1716,7 +1716,7 @@ abstract class C$AutoValue_Product extends C$$AutoValue_Product {
                             str53 = this.hotNumTextAdapter.read(jsonReader);
                             continue;
                         case 16:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 17:
                             i63 = this.ownerRatingTotalNumAdapter.read(jsonReader).intValue();
@@ -1893,7 +1893,7 @@ abstract class C$AutoValue_Product extends C$$AutoValue_Product {
                             list13 = this.couponListAdapter.read(jsonReader);
                             continue;
                         case 'K':
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case 'L':
                             f29 = this.ratingAverageScore10Adapter.read(jsonReader).floatValue();
@@ -1944,7 +1944,7 @@ abstract class C$AutoValue_Product extends C$$AutoValue_Product {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Product(str38, str28, str29, num2, str30, str31, str32, str33, str34, str35, str36, str37, l4, l5, str39, str40, list9, i36, f17, f18, str41, i37, f19, f20, f21, f22, f23, f24, f25, f26, f27, f28, f29, i38, i39, i40, list10, i41, i42, i43, i44, i45, i46, str42, i47, str43, i48, i49, i50, str44, str45, str46, str47, list11, userAction2, list12, str48, f30, str49, f31, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, f32, i62, i63, i64, str50, str51, list13, str52, list14, list15, i65, str53, str54, i66, i67, i68, i69, i70, list8);
+            return new AutoValue_Product(str38, str28, str29, num2, str30, str31, str32, str33, str34, str35, str36, str37, l3, l4, str39, str40, list9, i36, f17, f18, str41, i37, f19, f20, f21, f22, f23, f24, f25, f26, f27, f28, f29, i38, i39, i40, list10, i41, i42, i43, i44, i45, i46, str42, i47, str43, i48, i49, i50, str44, str45, str46, str47, list11, userAction2, list12, str48, f30, str49, f31, i51, i52, i53, i54, i55, i56, i57, i58, i59, i60, i61, f32, i62, i63, i64, str50, str51, list13, str52, list14, list15, i65, str53, str54, i66, i67, i68, i69, i70, list8);
         }
     }
 }

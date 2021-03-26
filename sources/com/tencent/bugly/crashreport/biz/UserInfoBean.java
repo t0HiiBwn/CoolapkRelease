@@ -33,9 +33,7 @@ public class UserInfoBean implements Parcelable {
     public long i;
     public String j;
     public long k;
-
-    /* renamed from: l  reason: collision with root package name */
-    public boolean f1431l;
+    public boolean l;
     public String m;
     public String n;
     public int o;
@@ -51,7 +49,7 @@ public class UserInfoBean implements Parcelable {
 
     public UserInfoBean() {
         this.k = 0;
-        this.f1431l = false;
+        this.l = false;
         this.m = "unknown";
         this.p = -1;
         this.q = -1;
@@ -62,7 +60,7 @@ public class UserInfoBean implements Parcelable {
     public UserInfoBean(Parcel parcel) {
         this.k = 0;
         boolean z = false;
-        this.f1431l = false;
+        this.l = false;
         this.m = "unknown";
         this.p = -1;
         this.q = -1;
@@ -78,7 +76,7 @@ public class UserInfoBean implements Parcelable {
         this.i = parcel.readLong();
         this.j = parcel.readString();
         this.k = parcel.readLong();
-        this.f1431l = parcel.readByte() == 1 ? true : z;
+        this.l = parcel.readByte() == 1 ? true : z;
         this.m = parcel.readString();
         this.p = parcel.readInt();
         this.q = parcel.readInt();
@@ -100,7 +98,7 @@ public class UserInfoBean implements Parcelable {
         parcel.writeLong(this.i);
         parcel.writeString(this.j);
         parcel.writeLong(this.k);
-        parcel.writeByte(this.f1431l ? (byte) 1 : 0);
+        parcel.writeByte(this.l ? (byte) 1 : 0);
         parcel.writeString(this.m);
         parcel.writeInt(this.p);
         parcel.writeInt(this.q);

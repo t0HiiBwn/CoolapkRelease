@@ -28,8 +28,8 @@ public class FeedActionBarBindingImpl extends FeedActionBarBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363876, 3);
-        sparseIntArray.put(2131362520, 4);
+        sparseIntArray.put(2131363899, 3);
+        sparseIntArray.put(2131362528, 4);
     }
 
     public FeedActionBarBindingImpl(DataBindingComponent dataBindingComponent, View view) {

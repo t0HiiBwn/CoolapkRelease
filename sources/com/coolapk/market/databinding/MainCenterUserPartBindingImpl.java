@@ -24,8 +24,8 @@ public class MainCenterUserPartBindingImpl extends MainCenterUserPartBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363890, 2);
-        sparseIntArray.put(2131362707, 3);
+        sparseIntArray.put(2131363913, 2);
+        sparseIntArray.put(2131362718, 3);
     }
 
     public MainCenterUserPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -63,7 +63,7 @@ public class MainCenterUserPartBindingImpl extends MainCenterUserPartBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (39 != i) {
             return false;
@@ -79,7 +79,7 @@ public class MainCenterUserPartBindingImpl extends MainCenterUserPartBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -104,7 +104,7 @@ public class MainCenterUserPartBindingImpl extends MainCenterUserPartBinding {
         String str = this.mAvatar;
         if ((j & 7) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, true, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, true, null, bool);
         }
     }
 }

@@ -26,7 +26,7 @@ class b implements a {
     /* JADX WARNING: Removed duplicated region for block: B:39:0x00b8 A[SYNTHETIC, Splitter:B:39:0x00b8] */
     @Override // com.alibaba.mtl.log.c.a
     /* renamed from: a  reason: collision with other method in class */
-    public synchronized boolean mo25a(List<com.alibaba.mtl.log.model.a> list) {
+    public synchronized boolean mo15a(List<com.alibaba.mtl.log.model.a> list) {
         SQLiteDatabase sQLiteDatabase;
         Throwable th;
         boolean z = true;
@@ -64,7 +64,7 @@ class b implements a {
                                 th = th2;
                                 try {
                                     i.a("UTSqliteLogStore", "insert error", th);
-                                    com.alibaba.mtl.appmonitor.b.b.m19a(th);
+                                    com.alibaba.mtl.appmonitor.b.b.m9a(th);
                                     if (sQLiteDatabase != null) {
                                     }
                                     this.a.a(sQLiteDatabase);
@@ -93,7 +93,7 @@ class b implements a {
                     th = th3;
                     z = false;
                     i.a("UTSqliteLogStore", "insert error", th);
-                    com.alibaba.mtl.appmonitor.b.b.m19a(th);
+                    com.alibaba.mtl.appmonitor.b.b.m9a(th);
                     if (sQLiteDatabase != null) {
                         try {
                             sQLiteDatabase.setTransactionSuccessful();
@@ -121,7 +121,7 @@ class b implements a {
 
     @Override // com.alibaba.mtl.log.c.a
     /* renamed from: a */
-    public synchronized int mo25a(List<com.alibaba.mtl.log.model.a> list) {
+    public synchronized int mo15a(List<com.alibaba.mtl.log.model.a> list) {
         SQLiteDatabase writableDatabase;
         int i;
         boolean z;
@@ -316,7 +316,7 @@ class b implements a {
                 }
             } catch (Throwable th) {
                 i.a("TAG", "e", th);
-                com.alibaba.mtl.appmonitor.b.b.m19a(th);
+                com.alibaba.mtl.appmonitor.b.b.m9a(th);
             }
             return this.a;
         }

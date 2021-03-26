@@ -11,9 +11,7 @@ public final class gr extends es {
     byte[] i = null;
     boolean j = false;
     String k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    Map<String, String> f1238l = null;
+    Map<String, String> l = null;
     boolean m = false;
     private String n = "";
 
@@ -26,7 +24,7 @@ public final class gr extends es {
     }
 
     public final void a(Map<String, String> map) {
-        this.f1238l = map;
+        this.l = map;
     }
 
     public final void b(String str) {
@@ -63,7 +61,7 @@ public final class gr extends es {
 
     @Override // com.amap.api.mapcore2d.es, com.amap.api.mapcore2d.ew
     public final Map<String, String> g() {
-        return this.f1238l;
+        return this.l;
     }
 
     @Override // com.amap.api.mapcore2d.ew

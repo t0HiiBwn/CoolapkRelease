@@ -26,9 +26,7 @@ public class AdSlot {
     private String i;
     private int j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1283l;
+    private String l;
     private int m;
     private int n;
     private int o;
@@ -117,7 +115,7 @@ public class AdSlot {
     }
 
     public String getUserID() {
-        return this.f1283l;
+        return this.l;
     }
 
     public int getOrientation() {
@@ -162,7 +160,7 @@ public class AdSlot {
     }
 
     public String toString() {
-        return "AdSlot{mCodeId='" + this.a + "', mImgAcceptedWidth=" + this.b + ", mImgAcceptedHeight=" + this.c + ", mExpressViewAcceptedWidth=" + this.d + ", mExpressViewAcceptedHeight=" + this.e + ", mAdCount=" + this.f + ", mSupportDeepLink=" + this.g + ", mSupportRenderControl=" + this.h + ", mRewardName='" + this.i + "', mRewardAmount=" + this.j + ", mMediaExtra='" + this.k + "', mUserID='" + this.f1283l + "', mOrientation=" + this.m + ", mNativeAdType=" + this.o + ", mIsAutoPlay=" + this.p + ", mPrimeRit" + this.t + ", mAdloadSeq" + this.s + ", mAdId" + this.v + ", mCreativeId" + this.w + '}';
+        return "AdSlot{mCodeId='" + this.a + "', mImgAcceptedWidth=" + this.b + ", mImgAcceptedHeight=" + this.c + ", mExpressViewAcceptedWidth=" + this.d + ", mExpressViewAcceptedHeight=" + this.e + ", mAdCount=" + this.f + ", mSupportDeepLink=" + this.g + ", mSupportRenderControl=" + this.h + ", mRewardName='" + this.i + "', mRewardAmount=" + this.j + ", mMediaExtra='" + this.k + "', mUserID='" + this.l + "', mOrientation=" + this.m + ", mNativeAdType=" + this.o + ", mIsAutoPlay=" + this.p + ", mPrimeRit" + this.t + ", mAdloadSeq" + this.s + ", mAdId" + this.v + ", mCreativeId" + this.w + '}';
     }
 
     public JSONObject toJsonObj() {
@@ -180,7 +178,7 @@ public class AdSlot {
             jSONObject.put("mRewardName", this.i);
             jSONObject.put("mRewardAmount", this.j);
             jSONObject.put("mMediaExtra", this.k);
-            jSONObject.put("mUserID", this.f1283l);
+            jSONObject.put("mUserID", this.l);
             jSONObject.put("mOrientation", this.m);
             jSONObject.put("mNativeAdType", this.o);
             jSONObject.put("mAdloadSeq", this.s);
@@ -206,9 +204,7 @@ public class AdSlot {
         private String i;
         private String j = "defaultUser";
         private int k = 2;
-
-        /* renamed from: l  reason: collision with root package name */
-        private int f1284l;
+        private int l;
         private String m;
         private int n;
         private float o;
@@ -309,7 +305,7 @@ public class AdSlot {
         }
 
         public Builder setNativeAdType(int i2) {
-            this.f1284l = i2;
+            this.l = i2;
             return this;
         }
 
@@ -356,9 +352,9 @@ public class AdSlot {
             adSlot.i = this.g;
             adSlot.j = this.h;
             adSlot.k = this.i;
-            adSlot.f1283l = this.j;
+            adSlot.l = this.j;
             adSlot.m = this.k;
-            adSlot.o = this.f1284l;
+            adSlot.o = this.l;
             adSlot.p = this.q;
             adSlot.q = this.r;
             adSlot.s = this.s;

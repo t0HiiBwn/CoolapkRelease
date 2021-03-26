@@ -30,7 +30,7 @@ public abstract class ItemTabViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTabViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemTabViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558945, viewGroup, z, obj);
+        return (ItemTabViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558952, viewGroup, z, obj);
     }
 
     public static ItemTabViewBinding inflate(LayoutInflater layoutInflater) {
@@ -39,7 +39,7 @@ public abstract class ItemTabViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTabViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemTabViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558945, null, false, obj);
+        return (ItemTabViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558952, null, false, obj);
     }
 
     public static ItemTabViewBinding bind(View view) {
@@ -48,6 +48,6 @@ public abstract class ItemTabViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTabViewBinding bind(View view, Object obj) {
-        return (ItemTabViewBinding) bind(obj, view, 2131558945);
+        return (ItemTabViewBinding) bind(obj, view, 2131558952);
     }
 }

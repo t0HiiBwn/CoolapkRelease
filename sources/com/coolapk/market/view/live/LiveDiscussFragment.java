@@ -7,12 +7,10 @@ import android.os.Parcelable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.FrameLayout;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.coolapk.market.AppHolder;
-import com.coolapk.market.extend.EntityExtendsKt;
 import com.coolapk.market.extend.EventBusExtendsKt;
 import com.coolapk.market.extend.NumberExtendsKt;
 import com.coolapk.market.extend.ViewExtendsKt;
@@ -20,7 +18,6 @@ import com.coolapk.market.manager.DataManager;
 import com.coolapk.market.model.Entity;
 import com.coolapk.market.model.LiveMessage;
 import com.coolapk.market.network.ClientException;
-import com.coolapk.market.util.LogUtils;
 import com.coolapk.market.util.RxUtils;
 import com.coolapk.market.util.UiUtils;
 import com.coolapk.market.view.cardlist.EntityDataFilter;
@@ -45,16 +42,16 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 import rx.Observable;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0003\n\u0002\b\r\u0018\u0000 B2\u00020\u0001:\u0002BCB\u0005¢\u0006\u0002\u0010\u0002J\b\u0010\u001b\u001a\u00020\u001cH\u0002J\n\u0010\u001d\u001a\u0004\u0018\u00010\u001eH\u0002J\n\u0010\u001f\u001a\u0004\u0018\u00010\u001eH\u0002J\u0012\u0010 \u001a\u00020\u001c2\b\u0010!\u001a\u0004\u0018\u00010\"H\u0016J\u0012\u0010#\u001a\u00020\u001c2\b\u0010!\u001a\u0004\u0018\u00010\"H\u0016J$\u0010$\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u001e0&0%2\u0006\u0010'\u001a\u00020(2\u0006\u0010)\u001a\u00020*H\u0016J\b\u0010+\u001a\u00020\u001cH\u0016J\u0010\u0010,\u001a\u00020\u001c2\u0006\u0010-\u001a\u00020.H\u0007J\u0010\u0010/\u001a\u00020\u001c2\u0006\u0010-\u001a\u000200H\u0007J\b\u00101\u001a\u00020\u001cH\u0014J\b\u00102\u001a\u00020\u001cH\u0016J\b\u00103\u001a\u00020\u001cH\u0014J\b\u00104\u001a\u00020\u001cH\u0014J\u0018\u00105\u001a\u00020\u001c2\u0006\u0010'\u001a\u00020(2\u0006\u00106\u001a\u000207H\u0014J \u00108\u001a\u00020(2\u0006\u0010'\u001a\u00020(2\u000e\u00109\u001a\n\u0012\u0004\u0012\u00020\u001e\u0018\u00010&H\u0014J\b\u0010:\u001a\u00020\u001cH\u0016J\u0010\u0010;\u001a\u00020\u001c2\u0006\u0010<\u001a\u00020\"H\u0016J\b\u0010=\u001a\u00020\u001cH\u0016J!\u0010>\u001a\u00020\u001c2\u0006\u0010?\u001a\u00020*2\n\b\u0002\u0010@\u001a\u0004\u0018\u00010*H\u0002¢\u0006\u0002\u0010AR\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0004¢\u0006\u0002\n\u0000R\u001b\u0010\t\u001a\u00020\n8BX\u0002¢\u0006\f\n\u0004\b\r\u0010\u000e\u001a\u0004\b\u000b\u0010\fR\u001d\u0010\u000f\u001a\u0004\u0018\u00010\u00108BX\u0002¢\u0006\f\n\u0004\b\u0013\u0010\u000e\u001a\u0004\b\u0011\u0010\u0012R\u0010\u0010\u0014\u001a\u0004\u0018\u00010\u0015X\u000e¢\u0006\u0002\n\u0000R\u001b\u0010\u0016\u001a\u00020\u00178BX\u0002¢\u0006\f\n\u0004\b\u001a\u0010\u000e\u001a\u0004\b\u0018\u0010\u0019¨\u0006D"}, d2 = {"Lcom/coolapk/market/view/live/LiveDiscussFragment;", "Lcom/coolapk/market/view/cardlist/EntityListFragment;", "()V", "bubbleMessenger", "Lcom/coolapk/market/view/live/BubbleMessenger;", "commandHelper", "Lcom/coolapk/market/view/live/CommandHelper;", "handler", "Landroid/os/Handler;", "liveContext", "Lcom/coolapk/market/view/live/LiveContext;", "getLiveContext", "()Lcom/coolapk/market/view/live/LiveContext;", "liveContext$delegate", "Lkotlin/Lazy;", "liveId", "", "getLiveId", "()Ljava/lang/String;", "liveId$delegate", "notifyItemRunnable", "Ljava/lang/Runnable;", "viewModel", "Lcom/coolapk/market/view/live/LiveViewModel;", "getViewModel", "()Lcom/coolapk/market/view/live/LiveViewModel;", "viewModel$delegate", "autoScrollToBottom", "", "findFirstLiveEntity", "Lcom/coolapk/market/model/Entity;", "findLastLiveEntity", "onActivityCreated", "savedInstanceState", "Landroid/os/Bundle;", "onCreate", "onCreateRequest", "Lrx/Observable;", "", "isRefresh", "", "page", "", "onDestroyView", "onLiveCommandEventChanged", "event", "Lcom/coolapk/market/view/live/LiveCommandEvent;", "onLiveMessageEventChanged", "Lcom/coolapk/market/view/live/LiveMessageEvent;", "onLoadMore", "onPause", "onRefresh", "onRegisterCards", "onRequestFailure", "error", "", "onRequestResponse", "data", "onResume", "onSaveInstanceState", "outState", "reloadData", "scrollTo", "position", "offset", "(ILjava/lang/Integer;)V", "Companion", "DividerCallback", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0003\n\u0002\b\f\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u0000 H2\u00020\u0001:\u0002HIB\u0005¢\u0006\u0002\u0010\u0002J\b\u0010\u001b\u001a\u00020\u001cH\u0002J\n\u0010\u001d\u001a\u0004\u0018\u00010\u001eH\u0002J\n\u0010\u001f\u001a\u0004\u0018\u00010\u001eH\u0002J\u0012\u0010 \u001a\u00020\u001c2\b\u0010!\u001a\u0004\u0018\u00010\"H\u0016J\u0012\u0010#\u001a\u00020\u001c2\b\u0010!\u001a\u0004\u0018\u00010\"H\u0016J$\u0010$\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u001e0&0%2\u0006\u0010'\u001a\u00020(2\u0006\u0010)\u001a\u00020*H\u0016J\b\u0010+\u001a\u00020\u001cH\u0016J\u0010\u0010,\u001a\u00020\u001c2\u0006\u0010-\u001a\u00020.H\u0007J\u0010\u0010/\u001a\u00020\u001c2\u0006\u0010-\u001a\u000200H\u0007J\b\u00101\u001a\u00020\u001cH\u0014J\b\u00102\u001a\u00020\u001cH\u0016J\b\u00103\u001a\u00020\u001cH\u0014J\b\u00104\u001a\u00020\u001cH\u0014J\u0018\u00105\u001a\u00020\u001c2\u0006\u0010'\u001a\u00020(2\u0006\u00106\u001a\u000207H\u0014J \u00108\u001a\u00020(2\u0006\u0010'\u001a\u00020(2\u000e\u00109\u001a\n\u0012\u0004\u0012\u00020\u001e\u0018\u00010&H\u0014J\b\u0010:\u001a\u00020\u001cH\u0016J\u0010\u0010;\u001a\u00020\u001c2\u0006\u0010<\u001a\u00020\"H\u0016J\b\u0010=\u001a\u00020\u001cH\u0016J!\u0010>\u001a\u00020\u001c2\u0006\u0010?\u001a\u00020*2\n\b\u0002\u0010@\u001a\u0004\u0018\u00010*H\u0002¢\u0006\u0002\u0010AJ\u0010\u0010B\u001a\u00020\u001c2\u0006\u0010C\u001a\u00020DH\u0016J\u0010\u0010E\u001a\u00020\u001c2\u0006\u0010F\u001a\u00020GH\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0004¢\u0006\u0002\n\u0000R\u001b\u0010\u0007\u001a\u00020\b8BX\u0002¢\u0006\f\n\u0004\b\u000b\u0010\f\u001a\u0004\b\t\u0010\nR\u001d\u0010\r\u001a\u0004\u0018\u00010\u000e8BX\u0002¢\u0006\f\n\u0004\b\u0011\u0010\f\u001a\u0004\b\u000f\u0010\u0010R\u000e\u0010\u0012\u001a\u00020\u0013X.¢\u0006\u0002\n\u0000R\u0010\u0010\u0014\u001a\u0004\u0018\u00010\u0015X\u000e¢\u0006\u0002\n\u0000R\u001b\u0010\u0016\u001a\u00020\u00178BX\u0002¢\u0006\f\n\u0004\b\u001a\u0010\f\u001a\u0004\b\u0018\u0010\u0019¨\u0006J"}, d2 = {"Lcom/coolapk/market/view/live/LiveDiscussFragment;", "Lcom/coolapk/market/view/cardlist/EntityListFragment;", "()V", "commandHelper", "Lcom/coolapk/market/view/live/CommandHelper;", "handler", "Landroid/os/Handler;", "liveContext", "Lcom/coolapk/market/view/live/LiveContext;", "getLiveContext", "()Lcom/coolapk/market/view/live/LiveContext;", "liveContext$delegate", "Lkotlin/Lazy;", "liveId", "", "getLiveId", "()Ljava/lang/String;", "liveId$delegate", "liveUnreadMessageHelper", "Lcom/coolapk/market/view/live/LiveUnreadMessageHelper;", "notifyItemRunnable", "Ljava/lang/Runnable;", "viewModel", "Lcom/coolapk/market/view/live/LiveViewModel;", "getViewModel", "()Lcom/coolapk/market/view/live/LiveViewModel;", "viewModel$delegate", "autoScrollToBottom", "", "findFirstLiveEntity", "Lcom/coolapk/market/model/Entity;", "findLastLiveEntity", "onActivityCreated", "savedInstanceState", "Landroid/os/Bundle;", "onCreate", "onCreateRequest", "Lrx/Observable;", "", "isRefresh", "", "page", "", "onDestroyView", "onLiveCommandEventChanged", "event", "Lcom/coolapk/market/view/live/LiveCommandEvent;", "onLiveMessageEventChanged", "Lcom/coolapk/market/view/live/LiveMessageEvent;", "onLoadMore", "onPause", "onRefresh", "onRegisterCards", "onRequestFailure", "error", "", "onRequestResponse", "data", "onResume", "onSaveInstanceState", "outState", "reloadData", "scrollTo", "position", "offset", "(ILjava/lang/Integer;)V", "updateRecyclerViewBottomInset", "rect", "Landroid/graphics/Rect;", "updateUnreadMessage", "liveMessage", "Lcom/coolapk/market/model/LiveMessage;", "Companion", "DividerCallback", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: LiveDiscussFragment.kt */
 public final class LiveDiscussFragment extends EntityListFragment {
     public static final Companion Companion = new Companion(null);
     public static final String KEY_LIVE_ID = "LIVE_ID";
-    private final BubbleMessenger bubbleMessenger;
     private final CommandHelper commandHelper = new CommandHelper();
     private final Handler handler = new Handler();
     private final Lazy liveContext$delegate = LazyKt.lazy(new LiveDiscussFragment$liveContext$2(this));
     private final Lazy liveId$delegate = LazyKt.lazy(new LiveDiscussFragment$liveId$2(this));
+    private LiveUnreadMessageHelper liveUnreadMessageHelper;
     private Runnable notifyItemRunnable;
     private final Lazy viewModel$delegate = LazyKt.lazy(new LiveDiscussFragment$viewModel$2(this));
 
@@ -70,13 +67,6 @@ public final class LiveDiscussFragment extends EntityListFragment {
     /* access modifiers changed from: private */
     public final LiveViewModel getViewModel() {
         return (LiveViewModel) this.viewModel$delegate.getValue();
-    }
-
-    public LiveDiscussFragment() {
-        BubbleMessenger bubbleMessenger2 = new BubbleMessenger(false);
-        bubbleMessenger2.setOutputListener(new LiveDiscussFragment$$special$$inlined$apply$lambda$1(this));
-        Unit unit = Unit.INSTANCE;
-        this.bubbleMessenger = bubbleMessenger2;
     }
 
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u000e\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u0004R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\b"}, d2 = {"Lcom/coolapk/market/view/live/LiveDiscussFragment$Companion;", "", "()V", "KEY_LIVE_ID", "", "newInstance", "Lcom/coolapk/market/view/live/LiveDiscussFragment;", "liveId", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
@@ -103,13 +93,11 @@ public final class LiveDiscussFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.BaseFragment, androidx.fragment.app.Fragment
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.bubbleMessenger.restoreInstanceState(bundle);
     }
 
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getRecyclerView().setPadding(0, 0, 0, NumberExtendsKt.getDp((Number) 48));
         setAutoUpdateContentUiOnDataChanged(true);
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
@@ -118,24 +106,33 @@ public final class LiveDiscussFragment extends EntityListFragment {
         Unit unit = Unit.INSTANCE;
         recyclerView.setLayoutManager(linearLayoutManager);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getMainBackgroundColor());
-        FragmentActivity activity = getActivity();
-        if (activity instanceof LiveActivity) {
-            getRecyclerView().setPadding(0, 0, 0, ((LiveActivity) activity).getPaddingBottom() + NumberExtendsKt.getDp((Number) 48));
-        }
         RecyclerView recyclerView2 = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView2, "recyclerView");
         ViewExtendsKt.removeAllItemDecorations(recyclerView2);
         getRecyclerView().addItemDecoration(new CustomizedItemDecoration(getAdapter$presentation_coolapkAppRelease(), new DividerCallback()));
         setLoadMoreEnable(false);
-        getEntityDataFilterList$presentation_coolapkAppRelease().add(new LiveActionHelper());
         getEntityDataFilterList$presentation_coolapkAppRelease().add(new LiveUpdateTabHelper());
-        ArrayList<EntityDataFilter> entityDataFilterList$presentation_coolapkAppRelease = getEntityDataFilterList$presentation_coolapkAppRelease();
         View view = getView();
         Objects.requireNonNull(view, "null cannot be cast to non-null type android.widget.FrameLayout");
-        entityDataFilterList$presentation_coolapkAppRelease.add(new LiveUnreadMessageHelper((FrameLayout) view, new LiveDiscussFragment$onActivityCreated$2(this)));
+        this.liveUnreadMessageHelper = new LiveUnreadMessageHelper((FrameLayout) view, new LiveDiscussFragment$onActivityCreated$2(this));
+        ArrayList<EntityDataFilter> entityDataFilterList$presentation_coolapkAppRelease = getEntityDataFilterList$presentation_coolapkAppRelease();
+        LiveUnreadMessageHelper liveUnreadMessageHelper2 = this.liveUnreadMessageHelper;
+        if (liveUnreadMessageHelper2 == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("liveUnreadMessageHelper");
+        }
+        entityDataFilterList$presentation_coolapkAppRelease.add(liveUnreadMessageHelper2);
         EventBus eventBus = EventBus.getDefault();
         Intrinsics.checkNotNullExpressionValue(eventBus, "EventBus.getDefault()");
         EventBusExtendsKt.safeRegister(eventBus, this);
+    }
+
+    @Override // com.coolapk.market.view.cardlist.EntityListFragment
+    public void updateRecyclerViewBottomInset(Rect rect) {
+        Intrinsics.checkNotNullParameter(rect, "rect");
+        RecyclerView recyclerView = getRecyclerView();
+        Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
+        RecyclerView recyclerView2 = recyclerView;
+        recyclerView2.setPadding(recyclerView2.getPaddingLeft(), recyclerView2.getPaddingTop(), recyclerView2.getPaddingRight(), rect.bottom + NumberExtendsKt.getDp((Number) 48));
     }
 
     @Override // androidx.fragment.app.Fragment
@@ -157,7 +154,6 @@ public final class LiveDiscussFragment extends EntityListFragment {
     public void onSaveInstanceState(Bundle bundle) {
         Intrinsics.checkNotNullParameter(bundle, "outState");
         super.onSaveInstanceState(bundle);
-        this.bubbleMessenger.saveInstanceState(bundle);
     }
 
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, androidx.fragment.app.Fragment
@@ -172,9 +168,9 @@ public final class LiveDiscussFragment extends EntityListFragment {
     protected void onRegisterCards() {
         super.onRegisterCards();
         addEntityTemplate("liveMessage");
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), createFactor(new String[]{"liveMessage"}, 2131558808, new LiveDiscussFragment$onRegisterCards$1(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), createFactor(new String[]{"liveMessage"}, 2131558815, new LiveDiscussFragment$onRegisterCards$1(this)), 0, 2, null);
         addEntityTemplate("liveSystemMessage");
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), createFactor(new String[]{"liveSystemMessage"}, 2131558809, LiveDiscussFragment$onRegisterCards$2.INSTANCE), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), createFactor(new String[]{"liveSystemMessage"}, 2131558816, LiveDiscussFragment$onRegisterCards$2.INSTANCE), 0, 2, null);
     }
 
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment
@@ -191,29 +187,15 @@ public final class LiveDiscussFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListContract.View
     public Observable<List<Entity>> onCreateRequest(boolean z, int i) {
         Entity findFirstLiveEntity = findFirstLiveEntity();
-        Entity lastItem = this.bubbleMessenger.getLastItem();
-        if (lastItem == null) {
-            lastItem = findLastLiveEntity();
-        }
+        Entity findLastLiveEntity = findLastLiveEntity();
         String str = null;
-        String entityId = (!z || lastItem == null) ? null : lastItem.getEntityId();
+        String entityId = (!z || findLastLiveEntity == null) ? null : findLastLiveEntity.getEntityId();
         if (!z && findFirstLiveEntity != null) {
             str = findFirstLiveEntity.getEntityId();
         }
-        if (!z || !isDataLoaded()) {
-            Observable<R> map = DataManager.getInstance().getLiveMessageList(getLiveId(), "0", i, entityId, str).map(RxUtils.checkResultToData());
-            Intrinsics.checkNotNullExpressionValue(map, "DataManager.getInstance(…tils.checkResultToData())");
-            return map;
-        }
-        List<Entity> latestDataList = getLiveContext().getLiveDiscussPoll().getLatestDataList();
-        StringBuilder sb = new StringBuilder();
-        sb.append("从LiveDiscussPoll中拿到");
-        sb.append(latestDataList != null ? latestDataList.size() : 0);
-        sb.append("数据");
-        LogUtils.d(sb.toString(), new Object[0]);
-        Observable<List<Entity>> just = Observable.just(latestDataList);
-        Intrinsics.checkNotNullExpressionValue(just, "Observable.just(latestDataList)");
-        return just;
+        Observable<R> map = DataManager.getInstance().getLiveMessageList(getLiveId(), "0", i, entityId, str).map(RxUtils.checkResultToData());
+        Intrinsics.checkNotNullExpressionValue(map, "DataManager.getInstance(…tils.checkResultToData())");
+        return map;
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:16:0x003e A[EDGE_INSN: B:16:0x003e->B:13:0x003e ?: BREAK  , SYNTHETIC] */
@@ -290,28 +272,18 @@ public final class LiveDiscussFragment extends EntityListFragment {
             swipeRefreshLayout2.setRefreshing(false);
         }
         if (list != null && (!list.isEmpty())) {
-            List<? extends Entity> reversed = CollectionsKt.reversed(modifyDataBeforeHandle(list, z));
-            if (getDataList().isEmpty()) {
-                ArrayList arrayList = new ArrayList();
-                for (int lastIndex = CollectionsKt.getLastIndex(reversed); lastIndex >= 0; lastIndex--) {
-                    Entity entity = (Entity) reversed.get(lastIndex);
-                    if (entity instanceof LiveMessage) {
-                        arrayList.add(EntityExtendsKt.entityUniqueId(entity));
-                    }
-                }
-                this.bubbleMessenger.addAllToAlreadyOutputId(arrayList);
+            List reversed = CollectionsKt.reversed(modifyDataBeforeHandle(list, z));
+            if (z) {
                 getDataList().addAll(reversed);
-            } else if (z) {
-                this.bubbleMessenger.input(reversed);
             } else {
-                List<? extends Entity> list2 = reversed;
+                List list2 = reversed;
                 getDataList().addAll(0, list2);
                 if (!UiUtils.canScrollDown(getRecyclerView()) && (!list2.isEmpty())) {
                     scrollTo(reversed.size() - 1, Integer.valueOf(NumberExtendsKt.getDp((Number) 8)));
                 }
             }
         }
-        Entity entity2 = null;
+        Entity entity = null;
         if (list != null) {
             Iterator<T> it2 = list.iterator();
             while (true) {
@@ -328,13 +300,13 @@ public final class LiveDiscussFragment extends EntityListFragment {
                     continue;
                 }
                 if (z2) {
-                    entity2 = next;
+                    entity = next;
                     break;
                 }
             }
-            entity2 = entity2;
+            entity = entity;
         }
-        if (entity2 != null) {
+        if (entity != null) {
             return true;
         }
         return false;
@@ -357,7 +329,7 @@ public final class LiveDiscussFragment extends EntityListFragment {
             str2 = th.getMessage();
         }
         if (TextUtils.isEmpty(str2)) {
-            str2 = getString(2131886356);
+            str2 = getString(2131886416);
         }
         setEmptyData(str2, 0);
         th.printStackTrace();
@@ -387,44 +359,56 @@ public final class LiveDiscussFragment extends EntityListFragment {
     public final void onLiveMessageEventChanged(LiveMessageEvent liveMessageEvent) {
         String messageType;
         List<LiveMessage> liveMessages;
+        List<LiveMessage> liveMessages2;
         Intrinsics.checkNotNullParameter(liveMessageEvent, "event");
-        int action = liveMessageEvent.getAction();
-        if (action != 1) {
-            if (action != 2) {
-                if (action == 3) {
-                    if ((Intrinsics.areEqual(liveMessageEvent.getMessageType(), "0") || liveMessageEvent.getMessageType() == null) && (liveMessages = liveMessageEvent.getLiveMessages()) != null) {
-                        for (T t : liveMessages) {
-                            T t2 = t;
-                            if (!this.bubbleMessenger.isAlreadyOutput(EntityExtendsKt.entityUniqueId(t2))) {
-                                this.bubbleMessenger.addToAlreadyOutputId(EntityExtendsKt.entityUniqueId(t2));
-                                getDataList().add(t);
+        if (isDataLoaded()) {
+            int action = liveMessageEvent.getAction();
+            if (action != 1) {
+                if (action != 2) {
+                    if (action != 3) {
+                        if (action == 4 && (liveMessages2 = liveMessageEvent.getLiveMessages()) != null) {
+                            Iterator<T> it2 = liveMessages2.iterator();
+                            while (it2.hasNext()) {
+                                updateUnreadMessage(it2.next());
                             }
+                        }
+                    } else if (!isRefreshing() && (liveMessages = liveMessageEvent.getLiveMessages()) != null) {
+                        for (T t : liveMessages) {
+                            getDataList().add(t);
                             autoScrollToBottom();
+                            updateUnreadMessage(t);
+                        }
+                    }
+                } else if (liveMessageEvent.getUid() != null) {
+                    CollectionsKt.removeAll((List) getDataList(), (Function1) new LiveDiscussFragment$onLiveMessageEventChanged$1(liveMessageEvent));
+                } else if (liveMessageEvent.getMessageId() != null) {
+                    Iterator<Parcelable> it3 = getDataList().iterator();
+                    while (it3.hasNext()) {
+                        Parcelable next = it3.next();
+                        if (next instanceof Entity) {
+                            Entity entity = (Entity) next;
+                            if (Intrinsics.areEqual(entity.getEntityType(), "liveMessage") && Intrinsics.areEqual(entity.getId(), liveMessageEvent.getMessageId())) {
+                                it3.remove();
+                                return;
+                            }
                         }
                     }
                 }
-            } else if (liveMessageEvent.getUid() != null) {
-                CollectionsKt.removeAll((List) getDataList(), (Function1) new LiveDiscussFragment$onLiveMessageEventChanged$1(liveMessageEvent));
-            } else if (liveMessageEvent.getMessageId() != null) {
-                Iterator<Parcelable> it2 = getDataList().iterator();
-                while (it2.hasNext()) {
-                    Parcelable next = it2.next();
-                    if (next instanceof Entity) {
-                        Entity entity = (Entity) next;
-                        if (Intrinsics.areEqual(entity.getEntityType(), "liveMessage") && Intrinsics.areEqual(entity.getId(), liveMessageEvent.getMessageId())) {
-                            it2.remove();
-                            return;
-                        }
-                    }
-                }
+            } else if (!isRefreshing() && !isLoadingMore() && (messageType = liveMessageEvent.getMessageType()) != null && messageType.hashCode() == 48 && messageType.equals("0") && !isRefreshing()) {
+                reloadData();
             }
-        } else if (!isRefreshing() && !isLoadingMore() && (messageType = liveMessageEvent.getMessageType()) != null && messageType.hashCode() == 48 && messageType.equals("0") && !isRefreshing()) {
-            reloadData();
         }
     }
 
-    /* access modifiers changed from: private */
-    public final void autoScrollToBottom() {
+    private final void updateUnreadMessage(LiveMessage liveMessage) {
+        LiveUnreadMessageHelper liveUnreadMessageHelper2 = this.liveUnreadMessageHelper;
+        if (liveUnreadMessageHelper2 == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("liveUnreadMessageHelper");
+        }
+        liveUnreadMessageHelper2.handleLiveMessageInsert(liveMessage);
+    }
+
+    private final void autoScrollToBottom() {
         if (!UiUtils.canScrollUp(getRecyclerView()) && CollectionsKt.getLastIndex(getDataList()) > 0) {
             scrollTo$default(this, CollectionsKt.getLastIndex(getDataList()), null, 2, null);
         }

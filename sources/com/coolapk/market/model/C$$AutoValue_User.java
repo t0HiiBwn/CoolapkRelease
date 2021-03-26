@@ -34,7 +34,7 @@ abstract class C$$AutoValue_User extends User {
     private final String url;
     private final UserInfo userInfo;
 
-    C$$AutoValue_User(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, UserInfo userInfo2, String str11, String str12, String str13, String str14, String str15, String str16, String str17, int i, String str18, String str19, long j, int i2, String str20) {
+    C$$AutoValue_User(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, UserInfo userInfo2, String str11, String str12, String str13, String str14, String str15, String str16, String str17, int i, String str18, String str19, long j, int i2, String str20) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -45,8 +45,8 @@ abstract class C$$AutoValue_User extends User {
         this.logo = str7;
         this.id = str8;
         this.extraData = str9;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str10;
         this.userInfo = userInfo2;
         this.deprecatedUserName = str11;
@@ -254,10 +254,10 @@ abstract class C$$AutoValue_User extends User {
                                         if (str10 != null ? str10.equals(user.getId()) : user.getId() == null) {
                                             String str11 = this.extraData;
                                             if (str11 != null ? str11.equals(user.getExtraData()) : user.getExtraData() == null) {
-                                                Long l2 = this.dateline;
-                                                if (l2 != null ? l2.equals(user.getDateline()) : user.getDateline() == null) {
-                                                    Long l3 = this.lastUpdate;
-                                                    if (l3 != null ? l3.equals(user.getLastUpdate()) : user.getLastUpdate() == null) {
+                                                Long l = this.dateline;
+                                                if (l != null ? l.equals(user.getDateline()) : user.getDateline() == null) {
+                                                    Long l2 = this.lastUpdate;
+                                                    if (l2 != null ? l2.equals(user.getLastUpdate()) : user.getLastUpdate() == null) {
                                                         String str12 = this.deprecatedUserAvatar;
                                                         if (str12 != null ? str12.equals(user.getDeprecatedUserAvatar()) : user.getDeprecatedUserAvatar() == null) {
                                                             UserInfo userInfo2 = this.userInfo;
@@ -330,10 +330,10 @@ abstract class C$$AutoValue_User extends User {
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
         String str9 = this.extraData;
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode11 = (hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode12 = (hashCode11 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode11 = (hashCode10 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str10 = this.deprecatedUserAvatar;
         int hashCode13 = (hashCode12 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         UserInfo userInfo2 = this.userInfo;
@@ -488,14 +488,14 @@ abstract class C$$AutoValue_User extends User {
         }
 
         @Override // com.coolapk.market.model.User.Builder
-        public User.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public User.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.User.Builder
-        public User.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public User.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

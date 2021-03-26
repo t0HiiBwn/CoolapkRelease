@@ -109,8 +109,8 @@ public abstract class a implements g.a {
                         }
                     }
                     synchronized (this.b) {
-                        Long l2 = this.h.get(id);
-                        long longValue = l2 != null ? l2.longValue() : 0;
+                        Long l = this.h.get(id);
+                        long longValue = l != null ? l.longValue() : 0;
                         long uptimeMillis = SystemClock.uptimeMillis();
                         if (uptimeMillis - longValue < 50) {
                             DownloadTask downloadTask3 = this.b.get(id);

@@ -11,7 +11,7 @@ import com.coolapk.market.model.DyhArticle;
 import com.coolapk.market.viewholder.iview.BindingViewPart;
 
 public class ArticleCoverViewPart extends BindingViewPart<ItemCoverViewBinding, DyhArticle> {
-    public static final int LAYOUT_ID = 2131558665;
+    public static final int LAYOUT_ID = 2131558671;
     private DyhArticle dyhArticle;
     private final DataBindingComponent mComponent;
 
@@ -41,13 +41,13 @@ public class ArticleCoverViewPart extends BindingViewPart<ItemCoverViewBinding, 
     /* access modifiers changed from: protected */
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemCoverViewBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
-        return (ItemCoverViewBinding) DataBindingUtil.inflate(layoutInflater, 2131558665, viewGroup, false, this.mComponent);
+        return (ItemCoverViewBinding) DataBindingUtil.inflate(layoutInflater, 2131558671, viewGroup, false, this.mComponent);
     }
 
     @Override // com.coolapk.market.viewholder.iview.ViewPart, android.view.View.OnClickListener
     public void onClick(View view) {
         super.onClick(view);
-        if (view.getId() == 2131362489) {
+        if (view.getId() == 2131362497) {
             ActionManager.startPhotoViewActivity(view, this.dyhArticle.getPic(), this.dyhArticle.getThumbnailPic());
         }
     }

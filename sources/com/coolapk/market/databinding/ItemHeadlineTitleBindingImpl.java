@@ -28,8 +28,8 @@ public class ItemHeadlineTitleBindingImpl extends ItemHeadlineTitleBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363865, 2);
-        sparseIntArray.put(2131363223, 3);
+        sparseIntArray.put(2131363887, 2);
+        sparseIntArray.put(2131363237, 3);
     }
 
     public ItemHeadlineTitleBindingImpl(DataBindingComponent dataBindingComponent, View view) {

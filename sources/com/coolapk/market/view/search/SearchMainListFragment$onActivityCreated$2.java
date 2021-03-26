@@ -39,12 +39,12 @@ final class SearchMainListFragment$onActivityCreated$2 extends Lambda implements
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
                 int id = view.getId();
-                if (id == 2131362257) {
+                if (id == 2131362262) {
                     DataManager instance = DataManager.getInstance();
                     Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
                     instance.getDataBase().delete("searchHistory", null, new String[0]);
                     this.this$0.this$0.loadHistory();
-                } else if (id == 2131363587) {
+                } else if (id == 2131363609) {
                     this.this$0.this$0.showAllHistory.set(!this.this$0.this$0.showAllHistory.get());
                     this.this$0.this$0.loadHistory();
                 }
@@ -54,7 +54,7 @@ final class SearchMainListFragment$onActivityCreated$2 extends Lambda implements
             public boolean onItemLongClick(RecyclerView.ViewHolder viewHolder, View view) {
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
-                if (view.getId() == 2131362768) {
+                if (view.getId() == 2131362779) {
                     Object tag = view.getTag();
                     Objects.requireNonNull(tag, "null cannot be cast to non-null type kotlin.String");
                     String[] strArr = {(String) tag};

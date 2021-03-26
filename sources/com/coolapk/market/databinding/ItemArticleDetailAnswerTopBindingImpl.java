@@ -31,11 +31,11 @@ public class ItemArticleDetailAnswerTopBindingImpl extends ItemArticleDetailAnsw
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(11);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"item_feed_target_view"}, new int[]{8}, new int[]{2131558732});
+        includedLayouts.setIncludes(0, new String[]{"item_feed_target_view"}, new int[]{8}, new int[]{2131558739});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363568, 9);
-        sparseIntArray.put(2131362649, 10);
+        sparseIntArray.put(2131363590, 9);
+        sparseIntArray.put(2131362657, 10);
     }
 
     public ItemArticleDetailAnswerTopBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -88,7 +88,7 @@ public class ItemArticleDetailAnswerTopBindingImpl extends ItemArticleDetailAnsw
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -104,7 +104,7 @@ public class ItemArticleDetailAnswerTopBindingImpl extends ItemArticleDetailAnsw
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

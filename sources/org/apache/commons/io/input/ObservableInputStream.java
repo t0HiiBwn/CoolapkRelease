@@ -18,11 +18,11 @@ public class ObservableInputStream extends ProxyInputStream {
         void data(byte[] bArr, int i, int i2) throws IOException {
         }
 
-        void finished() throws IOException {
-        }
-
         void error(IOException iOException) throws IOException {
             throw iOException;
+        }
+
+        void finished() throws IOException {
         }
     }
 
@@ -34,12 +34,59 @@ public class ObservableInputStream extends ProxyInputStream {
         this.observers.add(observer);
     }
 
-    public void remove(Observer observer) {
-        this.observers.remove(observer);
+    @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.Closeable, java.lang.AutoCloseable, java.io.InputStream
+    public void close() throws IOException {
+        IOException e;
+        try {
+            super.close();
+            e = null;
+        } catch (IOException e2) {
+            e = e2;
+        }
+        if (e == null) {
+            noteClosed();
+        } else {
+            noteError(e);
+        }
     }
 
-    public void removeAllObservers() {
-        this.observers.clear();
+    public void consume() throws IOException {
+        do {
+        } while (read(new byte[8192]) != -1);
+    }
+
+    protected List<Observer> getObservers() {
+        return this.observers;
+    }
+
+    protected void noteClosed() throws IOException {
+        for (Observer observer : getObservers()) {
+            observer.closed();
+        }
+    }
+
+    protected void noteDataByte(int i) throws IOException {
+        for (Observer observer : getObservers()) {
+            observer.data(i);
+        }
+    }
+
+    protected void noteDataBytes(byte[] bArr, int i, int i2) throws IOException {
+        for (Observer observer : getObservers()) {
+            observer.data(bArr, i, i2);
+        }
+    }
+
+    protected void noteError(IOException iOException) throws IOException {
+        for (Observer observer : getObservers()) {
+            observer.error(iOException);
+        }
+    }
+
+    protected void noteFinished() throws IOException {
+        for (Observer observer : getObservers()) {
+            observer.finished();
+        }
     }
 
     @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.InputStream
@@ -105,58 +152,11 @@ public class ObservableInputStream extends ProxyInputStream {
         return i3;
     }
 
-    protected void noteDataBytes(byte[] bArr, int i, int i2) throws IOException {
-        for (Observer observer : getObservers()) {
-            observer.data(bArr, i, i2);
-        }
+    public void remove(Observer observer) {
+        this.observers.remove(observer);
     }
 
-    protected void noteFinished() throws IOException {
-        for (Observer observer : getObservers()) {
-            observer.finished();
-        }
-    }
-
-    protected void noteDataByte(int i) throws IOException {
-        for (Observer observer : getObservers()) {
-            observer.data(i);
-        }
-    }
-
-    protected void noteError(IOException iOException) throws IOException {
-        for (Observer observer : getObservers()) {
-            observer.error(iOException);
-        }
-    }
-
-    protected void noteClosed() throws IOException {
-        for (Observer observer : getObservers()) {
-            observer.closed();
-        }
-    }
-
-    protected List<Observer> getObservers() {
-        return this.observers;
-    }
-
-    @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.Closeable, java.lang.AutoCloseable, java.io.InputStream
-    public void close() throws IOException {
-        IOException e;
-        try {
-            super.close();
-            e = null;
-        } catch (IOException e2) {
-            e = e2;
-        }
-        if (e == null) {
-            noteClosed();
-        } else {
-            noteError(e);
-        }
-    }
-
-    public void consume() throws IOException {
-        do {
-        } while (read(new byte[8192]) != -1);
+    public void removeAllObservers() {
+        this.observers.clear();
     }
 }

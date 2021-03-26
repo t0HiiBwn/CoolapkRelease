@@ -25,11 +25,11 @@ public class RelateDataListActivity extends ToolbarActivity<RelateDataListFragme
         String action = getIntent().getAction();
         action.hashCode();
         if (action.equals("ACTION_DISCOVERY_OF_THEIRS")) {
-            setTitle(getString(2131887245));
+            setTitle(getString(2131887307));
         } else if (!action.equals("ACTION_RATING_OF_THEIRS")) {
             throw new RuntimeException("Unknown action: " + action);
         } else {
-            setTitle(getString(2131887295));
+            setTitle(getString(2131887357));
         }
         return RelateDataListFragment.newInstance();
     }

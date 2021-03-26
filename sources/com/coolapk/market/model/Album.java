@@ -27,7 +27,7 @@ public abstract class Album implements Entity, IUser {
 
         public abstract Builder commentNum(int i);
 
-        public abstract Builder dateline(Long l2);
+        public abstract Builder dateline(Long l);
 
         public abstract Builder description(String str);
 
@@ -67,7 +67,7 @@ public abstract class Album implements Entity, IUser {
 
         public abstract Builder keyWords(String str);
 
-        public abstract Builder lastUpdate(Long l2);
+        public abstract Builder lastUpdate(Long l);
 
         public abstract Builder likeAvatar(String str);
 

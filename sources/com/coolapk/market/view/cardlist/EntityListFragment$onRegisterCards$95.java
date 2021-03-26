@@ -2,7 +2,7 @@ package com.coolapk.market.view.cardlist;
 
 import android.view.View;
 import com.coolapk.market.viewholder.BindingViewHolder;
-import com.coolapk.market.viewholder.ImageAppBigViewHolder;
+import com.coolapk.market.viewholder.ImageAppViewHolder;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
@@ -21,6 +21,6 @@ final class EntityListFragment$onRegisterCards$95 extends Lambda implements Func
 
     public final BindingViewHolder invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "itemView");
-        return new ImageAppBigViewHolder(view, this.this$0.getBindingComponent());
+        return new ImageAppViewHolder(view, this.this$0.getBindingComponent());
     }
 }

@@ -229,14 +229,14 @@ class a {
             return;
         }
         String i = lVar.R().i();
-        final String l2 = lVar.R().l();
-        if (TextUtils.isEmpty(l2)) {
-            l2 = j.a(i);
+        final String l = lVar.R().l();
+        if (TextUtils.isEmpty(l)) {
+            l = j.a(i);
         }
         int d2 = aj.d(lVar.aj());
         String a2 = a(String.valueOf(d2), b.b());
         u.f("FullScreenVideoCache", "ritId:" + d2 + ",cacheDirPath=" + a2);
-        final File a3 = a(this.b, a2, l2);
+        final File a3 = a(this.b, a2, l);
         StringBuilder sb = new StringBuilder();
         sb.append("FullScreenVideoCache downloadVideo target getPath");
         sb.append(a3.getPath());
@@ -255,7 +255,7 @@ class a {
                     if (parentFile == null || !parentFile.exists()) {
                         return null;
                     }
-                    return i.d().p().a(l2, parentFile);
+                    return i.d().p().a(l, parentFile);
                 } catch (IOException e2) {
                     u.f("FullScreenVideoCache", "datastoreGet throw IOException : " + e2.toString());
                     return null;

@@ -16,6 +16,10 @@ public class AppIconLoader {
     private final int mIconSize;
     private final boolean mShrinkNonAdaptiveIcons;
 
+    static {
+        MiuiAdaptiveIconDrawableFix.apply();
+    }
+
     public AppIconLoader(int i, boolean z, Context context) {
         this.mIconSize = i;
         this.mShrinkNonAdaptiveIcons = z;

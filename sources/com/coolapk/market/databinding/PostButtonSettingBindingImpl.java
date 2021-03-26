@@ -34,29 +34,29 @@ public class PostButtonSettingBindingImpl extends PostButtonSettingBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363170, 3);
-        sparseIntArray.put(2131363132, 4);
-        sparseIntArray.put(2131363131, 5);
-        sparseIntArray.put(2131363174, 6);
-        sparseIntArray.put(2131362010, 7);
-        sparseIntArray.put(2131362009, 8);
-        sparseIntArray.put(2131363162, 9);
-        sparseIntArray.put(2131362324, 10);
-        sparseIntArray.put(2131362322, 11);
-        sparseIntArray.put(2131363164, 12);
-        sparseIntArray.put(2131362354, 13);
-        sparseIntArray.put(2131362352, 14);
-        sparseIntArray.put(2131362353, 15);
-        sparseIntArray.put(2131363165, 16);
-        sparseIntArray.put(2131363171, 17);
-        sparseIntArray.put(2131362894, 18);
-        sparseIntArray.put(2131363176, 19);
-        sparseIntArray.put(2131362891, 20);
-        sparseIntArray.put(2131363163, 21);
-        sparseIntArray.put(2131362893, 22);
-        sparseIntArray.put(2131363173, 23);
-        sparseIntArray.put(2131362892, 24);
-        sparseIntArray.put(2131363166, 25);
+        sparseIntArray.put(2131363184, 3);
+        sparseIntArray.put(2131363146, 4);
+        sparseIntArray.put(2131363145, 5);
+        sparseIntArray.put(2131363188, 6);
+        sparseIntArray.put(2131362011, 7);
+        sparseIntArray.put(2131362010, 8);
+        sparseIntArray.put(2131363176, 9);
+        sparseIntArray.put(2131362330, 10);
+        sparseIntArray.put(2131362328, 11);
+        sparseIntArray.put(2131363178, 12);
+        sparseIntArray.put(2131362360, 13);
+        sparseIntArray.put(2131362358, 14);
+        sparseIntArray.put(2131362359, 15);
+        sparseIntArray.put(2131363179, 16);
+        sparseIntArray.put(2131363185, 17);
+        sparseIntArray.put(2131362905, 18);
+        sparseIntArray.put(2131363190, 19);
+        sparseIntArray.put(2131362902, 20);
+        sparseIntArray.put(2131363177, 21);
+        sparseIntArray.put(2131362904, 22);
+        sparseIntArray.put(2131363187, 23);
+        sparseIntArray.put(2131362903, 24);
+        sparseIntArray.put(2131363180, 25);
     }
 
     public PostButtonSettingBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -42,6 +42,6 @@ public class Constants {
     }
 
     public static final class PLUGIN {
-        public static final int ASSET_PLUGIN_VERSION = 1202;
+        public static final int ASSET_PLUGIN_VERSION = 1203;
     }
 }

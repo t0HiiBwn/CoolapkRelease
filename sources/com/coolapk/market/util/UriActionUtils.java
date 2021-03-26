@@ -1101,7 +1101,7 @@ public final class UriActionUtils {
                             Intrinsics.checkNotNullExpressionValue(checkLogin, "ActionManager.checkLogin(it)");
                             if (checkLogin.booleanValue()) {
                                 Intrinsics.checkNotNullExpressionValue(loginSession, "session");
-                                ActionManager.startFriendListActivity(context, loginSession.getUid(), context.getString(2131887260));
+                                ActionManager.startFriendListActivity(context, loginSession.getUid(), context.getString(2131887322));
                             }
                             Unit unit = Unit.INSTANCE;
                             return;
@@ -1132,7 +1132,7 @@ public final class UriActionUtils {
                             Intrinsics.checkNotNullExpressionValue(checkLogin2, "ActionManager.checkLogin(it)");
                             if (checkLogin2.booleanValue()) {
                                 Intrinsics.checkNotNullExpressionValue(loginSession2, "session");
-                                ActionManager.startUserQAListActivity(context, loginSession2.getUid(), context.getString(2131887081));
+                                ActionManager.startUserQAListActivity(context, loginSession2.getUid(), context.getString(2131887143));
                             }
                             Unit unit2 = Unit.INSTANCE;
                             return;
@@ -1276,7 +1276,7 @@ public final class UriActionUtils {
                             Intrinsics.checkNotNullExpressionValue(checkLogin4, "ActionManager.checkLogin(it)");
                             if (checkLogin4.booleanValue()) {
                                 Intrinsics.checkNotNullExpressionValue(loginSession3, "session");
-                                ActionManager.startFansListActivity(context, loginSession3.getUid(), context.getString(2131887255));
+                                ActionManager.startFansListActivity(context, loginSession3.getUid(), context.getString(2131887317));
                             }
                             Unit unit4 = Unit.INSTANCE;
                             return;
@@ -1467,7 +1467,7 @@ public final class UriActionUtils {
                             activityNullable3 = AppHolder.getCurrentActivity();
                         }
                         if (activityNullable3 != null) {
-                            ActionManager.startGoodsCouponSearchActivity(activityNullable3);
+                            ActionManager.startGoodsCouponSearchActivity(activityNullable3, uri.getQueryParameter("keyword"));
                             Unit unit5 = Unit.INSTANCE;
                             return;
                         }

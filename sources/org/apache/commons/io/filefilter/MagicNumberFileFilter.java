@@ -12,10 +12,6 @@ public class MagicNumberFileFilter extends AbstractFileFilter implements Seriali
     private final long byteOffset;
     private final byte[] magicNumbers;
 
-    public MagicNumberFileFilter(byte[] bArr) {
-        this(bArr, 0);
-    }
-
     public MagicNumberFileFilter(String str) {
         this(str, 0);
     }
@@ -33,6 +29,10 @@ public class MagicNumberFileFilter extends AbstractFileFilter implements Seriali
         }
     }
 
+    public MagicNumberFileFilter(byte[] bArr) {
+        this(bArr, 0);
+    }
+
     public MagicNumberFileFilter(byte[] bArr, long j) {
         if (bArr == null) {
             throw new IllegalArgumentException("The magic number cannot be null");
@@ -48,19 +48,19 @@ public class MagicNumberFileFilter extends AbstractFileFilter implements Seriali
         }
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:18:0x0037, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:18:0x0039, code lost:
         r2 = move-exception;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:20:?, code lost:
         r1.close();
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:21:0x003c, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:21:0x003e, code lost:
         r1 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:22:0x003d, code lost:
-        r6.addSuppressed(r1);
+    /* JADX WARNING: Code restructure failed: missing block: B:22:0x003f, code lost:
+        r5.addSuppressed(r1);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:23:0x0040, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:23:0x0042, code lost:
         throw r2;
      */
     @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
@@ -70,13 +70,11 @@ public class MagicNumberFileFilter extends AbstractFileFilter implements Seriali
                 RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");
                 byte[] bArr = new byte[this.magicNumbers.length];
                 randomAccessFile.seek(this.byteOffset);
-                int read = randomAccessFile.read(bArr);
-                byte[] bArr2 = this.magicNumbers;
-                if (read != bArr2.length) {
+                if (randomAccessFile.read(bArr) != this.magicNumbers.length) {
                     randomAccessFile.close();
                     return false;
                 }
-                boolean equals = Arrays.equals(bArr2, bArr);
+                boolean equals = Arrays.equals(this.magicNumbers, bArr);
                 randomAccessFile.close();
                 return equals;
             } catch (IOException unused) {

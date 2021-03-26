@@ -11,12 +11,12 @@ public class AppendableOutputStream<T extends Appendable> extends OutputStream {
         this.appendable = t;
     }
 
+    public T getAppendable() {
+        return this.appendable;
+    }
+
     @Override // java.io.OutputStream
     public void write(int i) throws IOException {
         this.appendable.append((char) i);
-    }
-
-    public T getAppendable() {
-        return this.appendable;
     }
 }

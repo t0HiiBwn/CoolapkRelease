@@ -49,9 +49,7 @@ class a implements al.a {
     private e i;
     private f j;
     private long k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    private long f1295l = 0;
+    private long l = 0;
     private AtomicBoolean m = new AtomicBoolean(false);
     private C0038a n;
 
@@ -646,7 +644,7 @@ class a implements al.a {
                             i = 2;
                         }
                         c.a(lVar, i);
-                        a.this.f1295l = SystemClock.elapsedRealtime();
+                        a.this.l = SystemClock.elapsedRealtime();
                         o.a(a.this.e, a2, b2, new o.a() {
                             /* class com.bytedance.sdk.openadsdk.component.splash.a.AnonymousClass3.AnonymousClass1 */
 
@@ -662,7 +660,7 @@ class a implements al.a {
                                 u.b("splashLoad", "预加载成功，广告缓存到本地----10");
                                 a.a(a.this.e).a(new p(aVar, lVar, bArr));
                                 if (z) {
-                                    c.a(a.this.f1295l, false, true, lVar, 0, null);
+                                    c.a(a.this.l, false, true, lVar, 0, null);
                                 }
                                 a.this.m.set(false);
                                 if (a.this.n != null) {
@@ -676,7 +674,7 @@ class a implements al.a {
                                 u.b("SplashAdCacheManager", "图片数据加载失败");
                                 u.b("splashLoad", "图片数据预加载失败....");
                                 if (z) {
-                                    c.a(a.this.f1295l, false, false, lVar, -7, null);
+                                    c.a(a.this.l, false, false, lVar, -7, null);
                                 }
                                 a.this.m.set(false);
                                 if (a.this.n != null) {

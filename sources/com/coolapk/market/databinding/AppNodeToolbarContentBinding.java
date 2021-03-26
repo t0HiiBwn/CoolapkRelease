@@ -49,7 +49,7 @@ public abstract class AppNodeToolbarContentBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppNodeToolbarContentBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AppNodeToolbarContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558465, viewGroup, z, obj);
+        return (AppNodeToolbarContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558466, viewGroup, z, obj);
     }
 
     public static AppNodeToolbarContentBinding inflate(LayoutInflater layoutInflater) {
@@ -58,7 +58,7 @@ public abstract class AppNodeToolbarContentBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppNodeToolbarContentBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AppNodeToolbarContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558465, null, false, obj);
+        return (AppNodeToolbarContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558466, null, false, obj);
     }
 
     public static AppNodeToolbarContentBinding bind(View view) {
@@ -67,6 +67,6 @@ public abstract class AppNodeToolbarContentBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppNodeToolbarContentBinding bind(View view, Object obj) {
-        return (AppNodeToolbarContentBinding) bind(obj, view, 2131558465);
+        return (AppNodeToolbarContentBinding) bind(obj, view, 2131558466);
     }
 }

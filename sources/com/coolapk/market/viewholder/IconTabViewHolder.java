@@ -36,7 +36,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: IconTabViewHolder.kt */
 public final class IconTabViewHolder extends BindingViewHolder implements TabLayout.OnTabSelectedListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558945;
+    public static final int LAYOUT_ID = 2131558952;
     private final ItemTabViewBinding binding;
     private EntityCard card;
     private final FakeTabIndicator fakeIndicator;
@@ -77,7 +77,7 @@ public final class IconTabViewHolder extends BindingViewHolder implements TabLay
         Intrinsics.checkNotNullExpressionValue(frameLayout, "binding.tabContainer");
         this.viewPart = companion.newInstance(frameLayout, this);
         AppTheme appTheme = AppHolder.getAppTheme();
-        itemTabViewBinding.tabs.setTabTextColors(ResourceUtils.getColorInt(getContext(), 2131099891), appTheme.getColorAccent());
+        itemTabViewBinding.tabs.setTabTextColors(ResourceUtils.getColorInt(getContext(), 2131099896), appTheme.getColorAccent());
         itemTabViewBinding.tabs.setSelectedTabIndicatorColor(0);
         itemTabViewBinding.tabs.addOnTabSelectedListener(this);
         Context context = getContext();
@@ -129,7 +129,7 @@ public final class IconTabViewHolder extends BindingViewHolder implements TabLay
                         LayoutInflater from = LayoutInflater.from(getContext());
                         TabLayout.Tab newTab = this.binding.tabs.newTab();
                         Intrinsics.checkNotNullExpressionValue(newTab, "binding.tabs.newTab()");
-                        ItemIconLinkMiniGridCardItemBinding itemIconLinkMiniGridCardItemBinding = (ItemIconLinkMiniGridCardItemBinding) DataBindingUtil.inflate(from, 2131558781, null, false, getComponent());
+                        ItemIconLinkMiniGridCardItemBinding itemIconLinkMiniGridCardItemBinding = (ItemIconLinkMiniGridCardItemBinding) DataBindingUtil.inflate(from, 2131558788, null, false, getComponent());
                         Intrinsics.checkNotNullExpressionValue(itemIconLinkMiniGridCardItemBinding, "childBinding");
                         itemIconLinkMiniGridCardItemBinding.setEntity(it2.next());
                         View root = itemIconLinkMiniGridCardItemBinding.getRoot();

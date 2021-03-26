@@ -43,12 +43,12 @@ final class FeedReplyTopDialogInterceptor$modifySheet$1 extends Lambda implement
         }
         boolean contains = topIds.contains(id);
         FeedReplyTopDialogInterceptor$modifySheet$1$callback$1 feedReplyTopDialogInterceptor$modifySheet$1$callback$1 = new FeedReplyTopDialogInterceptor$modifySheet$1$callback$1(this, contains);
-        int colorInt = ResourceUtils.getColorInt(this.this$0.getActivity(), 2131100049);
+        int colorInt = ResourceUtils.getColorInt(this.this$0.getActivity(), 2131100054);
         int resolveData = ResourceUtils.resolveData(this.this$0.getActivity(), 2130969438);
         if (contains) {
-            sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, resolveData, colorInt), feedReplyTopDialogInterceptor$modifySheet$1$callback$1, null, 0, false, false, 240, null);
+            sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231637, resolveData, colorInt), feedReplyTopDialogInterceptor$modifySheet$1$callback$1, null, 0, false, false, 240, null);
         } else {
-            sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231615, resolveData, colorInt), feedReplyTopDialogInterceptor$modifySheet$1$callback$1, null, 0, false, false, 240, null);
+            sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, resolveData, colorInt), feedReplyTopDialogInterceptor$modifySheet$1$callback$1, null, 0, false, false, 240, null);
         }
         sheetGroup.getItems().add(i, sheetDataItem);
     }

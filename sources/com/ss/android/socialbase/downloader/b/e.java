@@ -911,11 +911,11 @@ public class e extends c.a implements r {
 
     /* renamed from: k */
     public ArrayList<i> n(int i) {
-        Map<Long, i> l2 = l(i);
-        if (l2 == null || l2.isEmpty()) {
+        Map<Long, i> l = l(i);
+        if (l == null || l.isEmpty()) {
             return null;
         }
-        return new ArrayList<>(l2.values());
+        return new ArrayList<>(l.values());
     }
 
     @Override // com.ss.android.socialbase.downloader.downloader.i
@@ -971,8 +971,8 @@ public class e extends c.a implements r {
         }
         JSONArray jSONArray = new JSONArray();
         try {
-            for (Long l2 : map.keySet()) {
-                jSONArray.put(map.get(Long.valueOf(l2.longValue())).k());
+            for (Long l : map.keySet()) {
+                jSONArray.put(map.get(Long.valueOf(l.longValue())).k());
             }
         } catch (Throwable th) {
             th.printStackTrace();

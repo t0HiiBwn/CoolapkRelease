@@ -21,7 +21,7 @@ public abstract class ItemReplyPhotoAddBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReplyPhotoAddBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemReplyPhotoAddBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558901, viewGroup, z, obj);
+        return (ItemReplyPhotoAddBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558908, viewGroup, z, obj);
     }
 
     public static ItemReplyPhotoAddBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class ItemReplyPhotoAddBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReplyPhotoAddBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemReplyPhotoAddBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558901, null, false, obj);
+        return (ItemReplyPhotoAddBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558908, null, false, obj);
     }
 
     public static ItemReplyPhotoAddBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class ItemReplyPhotoAddBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReplyPhotoAddBinding bind(View view, Object obj) {
-        return (ItemReplyPhotoAddBinding) bind(obj, view, 2131558901);
+        return (ItemReplyPhotoAddBinding) bind(obj, view, 2131558908);
     }
 }

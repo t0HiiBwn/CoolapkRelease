@@ -45,7 +45,7 @@ public final class ItemThumbnailViewHolder$imageTarget$1 extends CustomViewTarge
     public void onResourceReady(Size size, Transition<? super Size> transition) {
         Intrinsics.checkNotNullParameter(size, "resource");
         if (!(!Intrinsics.areEqual((ImageView) this.view, this.this$0.binding.imageView))) {
-            Object tag = ((ImageView) this.view).getTag(2131362703);
+            Object tag = ((ImageView) this.view).getTag(2131362714);
             Objects.requireNonNull(tag, "null cannot be cast to non-null type kotlin.String");
             String str = (String) tag;
             this.this$0.viewModel.getImageSizeCache().put(str, size);

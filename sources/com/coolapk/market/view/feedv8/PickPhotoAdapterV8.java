@@ -74,8 +74,8 @@ public class PickPhotoAdapterV8 extends RecyclerView.Adapter<BindingViewHolder> 
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558834, viewGroup, false);
-        if (i == 2131558834) {
+        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558841, viewGroup, false);
+        if (i == 2131558841) {
             return new AddViewHolder(inflate, this.mComponent, null);
         }
         return new ImageViewHolder(inflate, this.mComponent, null);
@@ -93,7 +93,7 @@ public class PickPhotoAdapterV8 extends RecyclerView.Adapter<BindingViewHolder> 
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public int getItemViewType(int i) {
-        return this.mImageUrls.get(i) == ADD_BUTTON_IMAGE_URL ? 2131558834 : 2131558835;
+        return this.mImageUrls.get(i) == ADD_BUTTON_IMAGE_URL ? 2131558841 : 2131558842;
     }
 
     public void setPickPhotoClickListener(Action2<Integer, List<String>> action2) {
@@ -175,7 +175,7 @@ public class PickPhotoAdapterV8 extends RecyclerView.Adapter<BindingViewHolder> 
         }
         final ProgressDialog progressDialog = new ProgressDialog(this.mActivity);
         progressDialog.setProgressStyle(0);
-        progressDialog.setMessage(this.mActivity.getString(2131886928));
+        progressDialog.setMessage(this.mActivity.getString(2131886990));
         progressDialog.setCancelable(false);
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
@@ -224,7 +224,7 @@ public class PickPhotoAdapterV8 extends RecyclerView.Adapter<BindingViewHolder> 
                     arrayList2.add(imageUrl);
                 }
                 this.index++;
-                progressDialog.setMessage(PickPhotoAdapterV8.this.mActivity.getString(2131886928) + String.format(Locale.getDefault(), "(%d/%d)", Integer.valueOf(this.index), Integer.valueOf(list.size())));
+                progressDialog.setMessage(PickPhotoAdapterV8.this.mActivity.getString(2131886990) + String.format(Locale.getDefault(), "(%d/%d)", Integer.valueOf(this.index), Integer.valueOf(list.size())));
             }
         });
     }
@@ -256,7 +256,7 @@ public class PickPhotoAdapterV8 extends RecyclerView.Adapter<BindingViewHolder> 
     }
 
     private class AddViewHolder extends BindingViewHolder {
-        static final int TYPE = 2131558834;
+        static final int TYPE = 2131558841;
 
         AddViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);
@@ -265,9 +265,9 @@ public class PickPhotoAdapterV8 extends RecyclerView.Adapter<BindingViewHolder> 
         @Override // com.coolapk.market.viewholder.BindingViewHolder
         public void bindTo(Object obj) {
             ItemNewFeedImageBinding itemNewFeedImageBinding = (ItemNewFeedImageBinding) getBinding();
-            itemNewFeedImageBinding.imageView.setImageResource(2131231115);
+            itemNewFeedImageBinding.imageView.setImageResource(2131231125);
             itemNewFeedImageBinding.imageView.setScaleType(ImageView.ScaleType.CENTER);
-            itemNewFeedImageBinding.imageView.setColorFilter(ResourceUtils.getColorInt(getContext(), 2131099891));
+            itemNewFeedImageBinding.imageView.setColorFilter(ResourceUtils.getColorInt(getContext(), 2131099896));
             ViewUtil.clickListener(itemNewFeedImageBinding.getRoot(), this);
             itemNewFeedImageBinding.closeView.setVisibility(8);
             itemNewFeedImageBinding.executePendingBindings();
@@ -281,7 +281,7 @@ public class PickPhotoAdapterV8 extends RecyclerView.Adapter<BindingViewHolder> 
     }
 
     private class ImageViewHolder extends BindingViewHolder {
-        static final int TYPE = 2131558835;
+        static final int TYPE = 2131558842;
 
         ImageViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);
@@ -321,7 +321,7 @@ public class PickPhotoAdapterV8 extends RecyclerView.Adapter<BindingViewHolder> 
         public void onClick(View view) {
             super.onClick(view);
             int id = view.getId();
-            if (id == 2131362200) {
+            if (id == 2131362205) {
                 ArrayList arrayList = new ArrayList();
                 Iterator it2 = PickPhotoAdapterV8.this.mImageUrls.iterator();
                 while (it2.hasNext()) {
@@ -342,7 +342,7 @@ public class PickPhotoAdapterV8 extends RecyclerView.Adapter<BindingViewHolder> 
                     strArr[i2] = ((ImageUrl) arrayList.get(i2)).getSourceUrl();
                 }
                 ActionManager.startPhotoViewActivity(PickPhotoAdapterV8.this.mActivity, strArr, null, getAdapterPosition(), null, null, rectArr);
-            } else if (id == 2131362257 && PickPhotoAdapterV8.this.mEditTable && getAdapterPosition() >= 0) {
+            } else if (id == 2131362262 && PickPhotoAdapterV8.this.mEditTable && getAdapterPosition() >= 0) {
                 PickPhotoAdapterV8.this.mImageUrls.remove(getAdapterPosition());
                 if (!PickPhotoAdapterV8.this.mImageUrls.contains(PickPhotoAdapterV8.ADD_BUTTON_IMAGE_URL) && PickPhotoAdapterV8.this.mImageUrls.size() < 9) {
                     PickPhotoAdapterV8.this.mImageUrls.add(PickPhotoAdapterV8.ADD_BUTTON_IMAGE_URL);

@@ -14,7 +14,7 @@ final class MessageViewHolder$onClick$1<T> implements Action1<Long> {
         this.this$0 = messageViewHolder;
     }
 
-    public final void call(Long l2) {
+    public final void call(Long l) {
         EventBus.getDefault().post(new MessageEvent(MessageViewHolder.access$getMMessage$p(this.this$0), 1));
     }
 }

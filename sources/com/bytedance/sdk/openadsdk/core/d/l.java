@@ -61,9 +61,7 @@ public class l {
     private String i;
     private List<String> j = new ArrayList();
     private List<String> k = new ArrayList();
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1305l;
+    private String l;
     private String m;
     private String n;
     private String o = "0";
@@ -500,11 +498,11 @@ public class l {
     }
 
     public String ad() {
-        return this.f1305l;
+        return this.l;
     }
 
     public void i(String str) {
-        this.f1305l = str;
+        this.l = str;
     }
 
     public String ae() {

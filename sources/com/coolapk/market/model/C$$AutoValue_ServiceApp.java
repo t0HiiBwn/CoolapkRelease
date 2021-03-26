@@ -100,7 +100,7 @@ abstract class C$$AutoValue_ServiceApp extends ServiceApp {
     private final int votenum4;
     private final int votenum5;
 
-    C$$AutoValue_ServiceApp(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, String str10, String str11, String str12, String str13, String str14, int i, String str15, long j, long j2, String str16, String str17, int i2, int i3, String str18, String str19, String str20, String str21, String str22, String str23, float f, String str24, String str25, String str26, String str27, List<String> list, List<String> list2, String str28, String str29, String str30, String str31, int i4, String str32, int i5, List<Gift> list3, int i6, int i7, int i8, int i9, int i10, int i11, UserAction userAction2, List<RelatedData> list4, List<RelatedData> list5, List<User> list6, List<RelatedData> list7, String str33, String str34, List<String> list8, String str35, String str36, List<String> list9, List<ServiceApp> list10, List<ServiceApp> list11, List<Album> list12, String str37, int i12, User user, String str38, String str39, String str40, int i13, List<MenuCard> list13, String str41, int i14, int i15, int i16, Collection collection, CollectionItem collectionItem2, boolean z, String str42, String str43, List<CouponInfo> list14, List<ConfigPage> list15, String str44, int i17, String str45, String str46, List<NewHeadLine> list16, List<String> list17, String str47) {
+    C$$AutoValue_ServiceApp(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, String str10, String str11, String str12, String str13, String str14, int i, String str15, long j, long j2, String str16, String str17, int i2, int i3, String str18, String str19, String str20, String str21, String str22, String str23, float f, String str24, String str25, String str26, String str27, List<String> list, List<String> list2, String str28, String str29, String str30, String str31, int i4, String str32, int i5, List<Gift> list3, int i6, int i7, int i8, int i9, int i10, int i11, UserAction userAction2, List<RelatedData> list4, List<RelatedData> list5, List<User> list6, List<RelatedData> list7, String str33, String str34, List<String> list8, String str35, String str36, List<String> list9, List<ServiceApp> list10, List<ServiceApp> list11, List<Album> list12, String str37, int i12, User user, String str38, String str39, String str40, int i13, List<MenuCard> list13, String str41, int i14, int i15, int i16, Collection collection, CollectionItem collectionItem2, boolean z, String str42, String str43, List<CouponInfo> list14, List<ConfigPage> list15, String str44, int i17, String str45, String str46, List<NewHeadLine> list16, List<String> list17, String str47) {
         this.entityTemplate = str;
         this.entityId = str2;
         this.entityFixed = num;
@@ -110,8 +110,8 @@ abstract class C$$AutoValue_ServiceApp extends ServiceApp {
         this.subTitle = str6;
         this.id = str7;
         this.extraData = str8;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.entityTypeName = str9;
         this.packageName = str10;
         this.targetId = str11;
@@ -790,10 +790,10 @@ abstract class C$$AutoValue_ServiceApp extends ServiceApp {
                                     if (str36 != null ? str36.equals(serviceApp.getId()) : serviceApp.getId() == null) {
                                         String str37 = this.extraData;
                                         if (str37 != null ? str37.equals(serviceApp.getExtraData()) : serviceApp.getExtraData() == null) {
-                                            Long l2 = this.dateline;
-                                            if (l2 != null ? l2.equals(serviceApp.getDateline()) : serviceApp.getDateline() == null) {
-                                                Long l3 = this.lastUpdate;
-                                                if (l3 != null ? l3.equals(serviceApp.getLastUpdate()) : serviceApp.getLastUpdate() == null) {
+                                            Long l = this.dateline;
+                                            if (l != null ? l.equals(serviceApp.getDateline()) : serviceApp.getDateline() == null) {
+                                                Long l2 = this.lastUpdate;
+                                                if (l2 != null ? l2.equals(serviceApp.getLastUpdate()) : serviceApp.getLastUpdate() == null) {
                                                     String str38 = this.entityTypeName;
                                                     if (str38 != null ? str38.equals(serviceApp.getEntityTypeName()) : serviceApp.getEntityTypeName() == null) {
                                                         String str39 = this.packageName;
@@ -851,10 +851,10 @@ abstract class C$$AutoValue_ServiceApp extends ServiceApp {
         int hashCode8 = (hashCode7 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
         String str8 = this.extraData;
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode10 = (hashCode9 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode11 = (hashCode10 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode10 = (hashCode9 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode11 = (hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str9 = this.entityTypeName;
         int hashCode12 = (hashCode11 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.packageName;
@@ -1218,14 +1218,14 @@ abstract class C$$AutoValue_ServiceApp extends ServiceApp {
         }
 
         @Override // com.coolapk.market.model.ServiceApp.Builder
-        public ServiceApp.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public ServiceApp.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.ServiceApp.Builder
-        public ServiceApp.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public ServiceApp.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

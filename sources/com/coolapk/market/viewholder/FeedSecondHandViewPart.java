@@ -51,7 +51,7 @@ import kotlin.text.StringsKt;
 /* compiled from: FeedSecondHandViewPart.kt */
 public final class FeedSecondHandViewPart extends BindingViewPart<ItemFeedSecondHandViewPartBinding, Feed> implements View.OnClickListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558725;
+    public static final int LAYOUT_ID = 2131558732;
     private final DataBindingComponent component;
     private Feed feed;
     private final boolean inForwardFeed;
@@ -94,7 +94,7 @@ public final class FeedSecondHandViewPart extends BindingViewPart<ItemFeedSecond
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedSecondHandViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558725, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558732, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemFeedSecondHandViewPartBinding) inflate;
     }
@@ -168,8 +168,8 @@ public final class FeedSecondHandViewPart extends BindingViewPart<ItemFeedSecond
             Intrinsics.checkNotNullExpressionValue(textView2, "binding.textNotice");
             GradientDrawable gradientDrawable = new GradientDrawable();
             gradientDrawable.setGradientType(0);
-            int i2 = 2131099790;
-            ShapesKt.setSolidColor(gradientDrawable, ColorUtils.setAlphaComponent(ResourceUtils.getColorInt(getContext(), 2131099790), 26));
+            int i2 = 2131099792;
+            ShapesKt.setSolidColor(gradientDrawable, ColorUtils.setAlphaComponent(ResourceUtils.getColorInt(getContext(), 2131099792), 26));
             Unit unit = Unit.INSTANCE;
             textView2.setBackground(gradientDrawable);
             LinearLayout linearLayout2 = ((ItemFeedSecondHandViewPartBinding) getBinding()).urlNoticeLayout;
@@ -209,7 +209,7 @@ public final class FeedSecondHandViewPart extends BindingViewPart<ItemFeedSecond
                     spannableString.setSpan(new FeedSecondHandViewPart$onBindToContent$4(this, coolMarketURLSpan, coolMarketURLSpan.getURL(), ResourceUtils.getColorInt(getContext(), i2), true), spanStart, spanEnd, spanFlags);
                     i3++;
                     length = length;
-                    i2 = 2131099790;
+                    i2 = 2131099792;
                 }
                 TextView textView5 = ((ItemFeedSecondHandViewPartBinding) getBinding()).textNotice;
                 Intrinsics.checkNotNullExpressionValue(textView5, "binding.textNotice");
@@ -387,7 +387,7 @@ public final class FeedSecondHandViewPart extends BindingViewPart<ItemFeedSecond
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public ParamsDataViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558870, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558877, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             return new ParamsDataViewHolder(inflate);
         }
@@ -416,7 +416,7 @@ public final class FeedSecondHandViewPart extends BindingViewPart<ItemFeedSecond
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public DataViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558867, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558874, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             return new DataViewHolder(inflate);
         }
@@ -436,7 +436,7 @@ public final class FeedSecondHandViewPart extends BindingViewPart<ItemFeedSecond
     /* compiled from: FeedSecondHandViewPart.kt */
     public static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558867;
+        public static final int LAYOUT_ID = 2131558874;
         private final ItemProductExtraParamsBinding binding;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -481,7 +481,7 @@ public final class FeedSecondHandViewPart extends BindingViewPart<ItemFeedSecond
     /* compiled from: FeedSecondHandViewPart.kt */
     public static final class ParamsDataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558870;
+        public static final int LAYOUT_ID = 2131558877;
         private final ItemProductParamsBinding binding;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */

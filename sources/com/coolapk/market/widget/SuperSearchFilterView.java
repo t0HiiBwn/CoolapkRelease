@@ -46,7 +46,7 @@ public final class SuperSearchFilterView extends FrameLayout {
         frameLayout.setElevation((float) NumberExtendsKt.getDp((Number) 3));
         addView(frameLayout, new FrameLayout.LayoutParams(-1, (int) f));
         ImageView imageView = new ImageView(context);
-        imageView.setImageResource(2131231052);
+        imageView.setImageResource(2131231062);
         imageView.setZ((float) NumberExtendsKt.getDp((Number) 3));
         addView(imageView, new FrameLayout.LayoutParams(-1, context.getResources().getDimensionPixelSize(2131165598)));
     }
@@ -83,7 +83,7 @@ public final class SuperSearchFilterView extends FrameLayout {
         this.contentFragmentLayout.setTranslationY(-this.height);
         addView(this.contentFragmentLayout, new FrameLayout.LayoutParams(-1, (int) this.height));
         ImageView imageView = new ImageView(getContext());
-        imageView.setImageResource(2131231052);
+        imageView.setImageResource(2131231062);
         imageView.setZ((float) NumberExtendsKt.getDp((Number) 3));
         Context context = getContext();
         Intrinsics.checkNotNullExpressionValue(context, "context");

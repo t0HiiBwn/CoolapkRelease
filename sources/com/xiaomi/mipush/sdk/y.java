@@ -1,22 +1,25 @@
 package com.xiaomi.mipush.sdk;
 
-import com.xiaomi.mipush.sdk.MiTinyDataClient;
-import com.xiaomi.push.hg;
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.util.Log;
 
-class y implements Runnable {
-    final /* synthetic */ MiTinyDataClient.a.C0156a a;
+final class y implements Runnable {
+    final /* synthetic */ Context a;
 
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ hg f180a;
-
-    y(MiTinyDataClient.a.C0156a aVar, hg hgVar) {
-        this.a = aVar;
-        this.f180a = hgVar;
+    y(Context context) {
+        this.a = context;
     }
 
     @Override // java.lang.Runnable
     public void run() {
-        this.a.f135a.add(this.f180a);
-        MiTinyDataClient.a.C0156a.a(this.a);
+        try {
+            PackageInfo packageInfo = this.a.getPackageManager().getPackageInfo(this.a.getPackageName(), 4612);
+            x.c(this.a);
+            x.d(this.a, packageInfo);
+            x.c(this.a, packageInfo);
+        } catch (Throwable th) {
+            Log.e("ManifestChecker", "", th);
+        }
     }
 }

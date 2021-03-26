@@ -42,10 +42,10 @@ public class HistoryVersionFragment extends StateEventListFragment<List<VersionA
         super.onActivityCreated(bundle);
         setRefreshEnable(false);
         setLoadMoreEnable(false);
-        setEmptyData(getString(2131886766), 0);
+        setEmptyData(getString(2131886828), 0);
         setLayoutManager(new LinearLayoutManager(getActivity()));
         setAdapter(new DataAdapter());
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558983, 2131231052).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558990, 2131231062).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         initData();
@@ -76,7 +76,7 @@ public class HistoryVersionFragment extends StateEventListFragment<List<VersionA
     private class DataAdapter extends RecyclerView.Adapter<BindingViewHolder> {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558983;
+            return 2131558990;
         }
 
         private DataAdapter() {
@@ -84,7 +84,7 @@ public class HistoryVersionFragment extends StateEventListFragment<List<VersionA
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new VersionAppViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558983, viewGroup, false), new ItemActionHandler() {
+            return new VersionAppViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558990, viewGroup, false), new ItemActionHandler() {
                 /* class com.coolapk.market.view.app.HistoryVersionFragment.DataAdapter.AnonymousClass1 */
 
                 @Override // com.coolapk.market.viewholder.ItemActionHandler

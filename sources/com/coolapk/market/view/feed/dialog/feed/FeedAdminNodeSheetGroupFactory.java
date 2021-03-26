@@ -50,7 +50,7 @@ public final class FeedAdminNodeSheetGroupFactory extends FeedAdminBaseSheetGrou
             return wrapAsSheetGroup();
         }
         if (isNodeFeed()) {
-            insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.UnlinkNode, "解除关联", 2131231376, -769226);
+            insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.UnlinkNode, "解除关联", 2131231387, -769226);
         }
         return wrapAsSheetGroup();
     }

@@ -27,8 +27,8 @@ public class ItemMainCatogoryTypeBindingImpl extends ItemMainCatogoryTypeBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362246, 3);
-        sparseIntArray.put(2131362247, 4);
+        sparseIntArray.put(2131362251, 3);
+        sparseIntArray.put(2131362252, 4);
     }
 
     public ItemMainCatogoryTypeBindingImpl(DataBindingComponent dataBindingComponent, View view) {

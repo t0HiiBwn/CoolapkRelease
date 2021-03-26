@@ -78,7 +78,7 @@ public class ItemFunThingBindingImpl extends ItemFunThingBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FunThings) obj);
         } else if (121 == i) {
             setFollowNum((String) obj);
@@ -96,7 +96,7 @@ public class ItemFunThingBindingImpl extends ItemFunThingBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -170,7 +170,7 @@ public class ItemFunThingBindingImpl extends ItemFunThingBinding {
             OnImageLoadListener onImageLoadListener = null;
             OnBitmapTransformListener onBitmapTransformListener = null;
             View.OnClickListener onClickListener2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.coverView, str, AppCompatResources.getDrawable(this.coverView.getContext(), 2131231696), 0, 0, bool, bool, bool, bool, bool, str7, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.coverView, str, AppCompatResources.getDrawable(this.coverView.getContext(), 2131231707), 0, 0, bool, bool, bool, bool, bool, str7, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
             TextViewBindingAdapter.setText(this.mboundView3, str4);
             ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView4, str2, null, 0, 0, bool, bool, bool, bool, bool, str7, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
             TextViewBindingAdapter.setText(this.mboundView5, str3);

@@ -20,10 +20,6 @@ public class PatternOptionBuilder {
     static /* synthetic */ Class class$java$net$URL;
     static /* synthetic */ Class class$java$util$Date;
 
-    public static boolean isValueCode(char c) {
-        return c == '@' || c == ':' || c == '%' || c == '+' || c == '#' || c == '<' || c == '>' || c == '*' || c == '/' || c == '!';
-    }
-
     static {
         Class cls = class$java$lang$String;
         if (cls == null) {
@@ -118,6 +114,10 @@ public class PatternOptionBuilder {
             return null;
         }
         return CLASS_VALUE;
+    }
+
+    public static boolean isValueCode(char c) {
+        return c == '@' || c == ':' || c == '%' || c == '+' || c == '#' || c == '<' || c == '>' || c == '*' || c == '/' || c == '!';
     }
 
     public static Options parsePattern(String str) {

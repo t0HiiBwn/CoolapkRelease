@@ -33,13 +33,13 @@ public class ItemProductSmallRatingFeedBindingImpl extends ItemProductSmallRatin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363194, 11);
-        sparseIntArray.put(2131363281, 12);
-        sparseIntArray.put(2131362628, 13);
-        sparseIntArray.put(2131362110, 14);
-        sparseIntArray.put(2131362604, 15);
-        sparseIntArray.put(2131362842, 16);
-        sparseIntArray.put(2131362287, 17);
+        sparseIntArray.put(2131363208, 11);
+        sparseIntArray.put(2131363295, 12);
+        sparseIntArray.put(2131362636, 13);
+        sparseIntArray.put(2131362113, 14);
+        sparseIntArray.put(2131362612, 15);
+        sparseIntArray.put(2131362853, 16);
+        sparseIntArray.put(2131362292, 17);
     }
 
     public ItemProductSmallRatingFeedBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -90,7 +90,7 @@ public class ItemProductSmallRatingFeedBindingImpl extends ItemProductSmallRatin
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -106,7 +106,7 @@ public class ItemProductSmallRatingFeedBindingImpl extends ItemProductSmallRatin
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -214,7 +214,7 @@ public class ItemProductSmallRatingFeedBindingImpl extends ItemProductSmallRatin
             TextViewBindingAdapter.setText(this.nameView, str2);
             TextViewBindingAdapters.setDatelineByEntity(this.timeView, feed);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str3, bool);
         }
         if (i6 != 0) {

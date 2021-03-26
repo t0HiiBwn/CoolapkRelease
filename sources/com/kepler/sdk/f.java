@@ -34,9 +34,7 @@ public class f {
     public String i;
     public String j;
     private LinkedHashMap<String, ArrayList<String>> k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private LinkedHashMap<String, ArrayList<String>> f1352l;
+    private LinkedHashMap<String, ArrayList<String>> l;
     private LinkedHashMap<String, String> m;
     private String n;
     private String[] o;
@@ -91,7 +89,7 @@ public class f {
 
     private f() {
         this.k = new LinkedHashMap<>();
-        this.f1352l = new LinkedHashMap<>();
+        this.l = new LinkedHashMap<>();
         this.m = new LinkedHashMap<>();
         this.n = "";
         this.o = new String[0];
@@ -251,9 +249,9 @@ public class f {
             ab.m = jSONObject.optString("logout_200", ab.m);
             JSONArray optJSONArray3 = jSONObject.optJSONArray("loginAuthArray_200");
             if (optJSONArray3 != null && optJSONArray3.length() > 0) {
-                ab.f1351l = new String[optJSONArray3.length()];
+                ab.l = new String[optJSONArray3.length()];
                 for (int i4 = 0; i4 < optJSONArray3.length(); i4++) {
-                    ab.f1351l[i4] = optJSONArray3.getString(i4);
+                    ab.l[i4] = optJSONArray3.getString(i4);
                 }
             }
             ab.b = jSONObject.optString("isUseStatic_114", "1").equals("1");
@@ -413,7 +411,7 @@ public class f {
             }
             this.A.add(this.n);
             this.k = linkedHashMap;
-            this.f1352l = linkedHashMap2;
+            this.l = linkedHashMap2;
             this.d = true;
             return true;
         } catch (Throwable th) {

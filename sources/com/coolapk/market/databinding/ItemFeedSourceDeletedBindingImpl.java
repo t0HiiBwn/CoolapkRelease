@@ -22,7 +22,7 @@ public class ItemFeedSourceDeletedBindingImpl extends ItemFeedSourceDeletedBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 1);
+        sparseIntArray.put(2131363551, 1);
     }
 
     public ItemFeedSourceDeletedBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -57,7 +57,7 @@ public class ItemFeedSourceDeletedBindingImpl extends ItemFeedSourceDeletedBindi
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((Feed) obj);

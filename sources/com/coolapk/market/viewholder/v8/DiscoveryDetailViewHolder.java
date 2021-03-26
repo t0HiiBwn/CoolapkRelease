@@ -26,7 +26,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: DiscoveryDetailViewHolder.kt */
 public final class DiscoveryDetailViewHolder extends GenericBindHolder<ItemFeedDiscoveryDetailBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558697;
+    public static final int LAYOUT_ID = 2131558704;
     private Feed feed;
     private final int flags;
     private final Lazy headerViewPart$delegate;
@@ -144,7 +144,7 @@ public final class DiscoveryDetailViewHolder extends GenericBindHolder<ItemFeedD
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
         int id = view.getId();
-        if (id == 2131361876 || id == 2131362734) {
+        if (id == 2131361877 || id == 2131362745) {
             Feed feed2 = this.feed;
             if (feed2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("feed");

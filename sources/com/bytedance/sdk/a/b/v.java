@@ -42,9 +42,7 @@ public class v implements Cloneable {
     final p.a i;
     final ProxySelector j;
     final m k;
-
-    /* renamed from: l  reason: collision with root package name */
-    final c f1278l;
+    final c l;
     final e m;
     final SocketFactory n;
     final SSLSocketFactory o;
@@ -132,9 +130,9 @@ public class v implements Cloneable {
         this.i = aVar.g;
         this.j = aVar.h;
         this.k = aVar.i;
-        this.f1278l = aVar.j;
+        this.l = aVar.j;
         this.m = aVar.k;
-        this.n = aVar.f1279l;
+        this.n = aVar.l;
         Iterator<k> it2 = list.iterator();
         loop0:
         while (true) {
@@ -226,7 +224,7 @@ public class v implements Cloneable {
     }
 
     e g() {
-        c cVar = this.f1278l;
+        c cVar = this.l;
         return cVar != null ? cVar.a : this.m;
     }
 
@@ -320,9 +318,7 @@ public class v implements Cloneable {
         m i;
         c j;
         e k;
-
-        /* renamed from: l  reason: collision with root package name */
-        SocketFactory f1279l;
+        SocketFactory l;
         SSLSocketFactory m;
         com.bytedance.sdk.a.b.a.i.c n;
         HostnameVerifier o;
@@ -347,7 +343,7 @@ public class v implements Cloneable {
             this.g = p.a(p.a);
             this.h = ProxySelector.getDefault();
             this.i = m.a;
-            this.f1279l = SocketFactory.getDefault();
+            this.l = SocketFactory.getDefault();
             this.o = com.bytedance.sdk.a.b.a.i.e.a;
             this.p = g.a;
             this.q = b.a;
@@ -378,8 +374,8 @@ public class v implements Cloneable {
             this.h = vVar.j;
             this.i = vVar.k;
             this.k = vVar.m;
-            this.j = vVar.f1278l;
-            this.f1279l = vVar.n;
+            this.j = vVar.l;
+            this.l = vVar.n;
             this.m = vVar.o;
             this.n = vVar.p;
             this.o = vVar.q;

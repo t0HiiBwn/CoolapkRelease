@@ -76,7 +76,7 @@ public final class UserQRCodeFragment extends BaseFragment {
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559284, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559294, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…qrcode, container, false)");
         UserQrcodeBinding userQrcodeBinding = (UserQrcodeBinding) inflate;
         this.binding = userQrcodeBinding;
@@ -173,7 +173,7 @@ public final class UserQRCodeFragment extends BaseFragment {
         Intrinsics.checkNotNullExpressionValue(textView2, "binding.descriptionView");
         textView2.setText(str2 + "关注 " + str + "粉丝 " + str3);
         UserQRCodeFragment userQRCodeFragment = this;
-        GlideRequest transform = GlideApp.with(userQRCodeFragment).load(userProfile.getUserAvatar()).placeholder(2131231152).transform((Transformation<Bitmap>) new CircleTransform(false, 0, 3, null));
+        GlideRequest transform = GlideApp.with(userQRCodeFragment).load(userProfile.getUserAvatar()).placeholder(2131231162).transform((Transformation<Bitmap>) new CircleTransform(false, 0, 3, null));
         UserQrcodeBinding userQrcodeBinding4 = this.binding;
         if (userQrcodeBinding4 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");

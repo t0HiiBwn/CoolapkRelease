@@ -14,7 +14,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: AlbumReplyMoreViewHolder.kt */
 public final class FeedReplyMoreViewHolder extends GenericBindHolder<ItemReplyMoreBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558899;
+    public static final int LAYOUT_ID = 2131558906;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public FeedReplyMoreViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {

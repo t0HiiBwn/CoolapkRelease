@@ -358,7 +358,7 @@ public class TTDelegateActivity extends Activity implements ActivityCompat.OnReq
         c.a((Activity) this);
     }
 
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x0035: APUT  (r1v2 java.lang.Object[]), (0 ??[int, short, byte, char]), (r2v2 java.lang.String) */
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x0037: APUT  (r1v2 java.lang.Object[]), (0 ??[int, short, byte, char]), (r2v2 java.lang.String) */
     private void c(long j) {
         final b d2 = f.a().d(j);
         if (d2 == null) {

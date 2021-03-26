@@ -24,7 +24,7 @@ public class ItemDownloadBindingImpl extends ItemDownloadBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363053, 11);
+        sparseIntArray.put(2131363067, 11);
     }
 
     public ItemDownloadBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -69,7 +69,7 @@ public class ItemDownloadBindingImpl extends ItemDownloadBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (306 != i) {
+        if (307 != i) {
             return false;
         }
         setVh((DownloadViewHolder) obj);
@@ -83,7 +83,7 @@ public class ItemDownloadBindingImpl extends ItemDownloadBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(306);
+        notifyPropertyChanged(307);
         super.requestRebind();
     }
 
@@ -101,7 +101,7 @@ public class ItemDownloadBindingImpl extends ItemDownloadBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 189) {
+        } else if (i == 190) {
             synchronized (this) {
                 this.mDirtyFlags |= 2;
             }
@@ -116,17 +116,17 @@ public class ItemDownloadBindingImpl extends ItemDownloadBinding {
                 this.mDirtyFlags |= 8;
             }
             return true;
-        } else if (i == 261) {
+        } else if (i == 262) {
             synchronized (this) {
                 this.mDirtyFlags |= 16;
             }
             return true;
-        } else if (i == 305) {
+        } else if (i == 306) {
             synchronized (this) {
                 this.mDirtyFlags |= 32;
             }
             return true;
-        } else if (i == 303) {
+        } else if (i == 304) {
             synchronized (this) {
                 this.mDirtyFlags |= 64;
             }
@@ -151,12 +151,12 @@ public class ItemDownloadBindingImpl extends ItemDownloadBinding {
                 this.mDirtyFlags |= 1024;
             }
             return true;
-        } else if (i == 270) {
+        } else if (i == 271) {
             synchronized (this) {
                 this.mDirtyFlags |= 2048;
             }
             return true;
-        } else if (i != 258) {
+        } else if (i != 259) {
             return false;
         } else {
             synchronized (this) {
@@ -324,8 +324,8 @@ public class ItemDownloadBindingImpl extends ItemDownloadBinding {
             ViewBindingAdapters.clickListener(this.moreView, downloadViewHolder, bool);
         }
         if ((j & 8449) != 0) {
-            Long l2 = null;
-            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, str7, l2, l2);
+            Long l = null;
+            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, str7, l, l);
         }
         if ((j & 8321) != 0) {
             TextViewBindingAdapter.setText(this.downloadSize, str5);

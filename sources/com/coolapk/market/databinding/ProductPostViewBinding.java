@@ -45,7 +45,7 @@ public abstract class ProductPostViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductPostViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ProductPostViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559111, viewGroup, z, obj);
+        return (ProductPostViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559118, viewGroup, z, obj);
     }
 
     public static ProductPostViewBinding inflate(LayoutInflater layoutInflater) {
@@ -54,7 +54,7 @@ public abstract class ProductPostViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductPostViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ProductPostViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559111, null, false, obj);
+        return (ProductPostViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559118, null, false, obj);
     }
 
     public static ProductPostViewBinding bind(View view) {
@@ -63,6 +63,6 @@ public abstract class ProductPostViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductPostViewBinding bind(View view, Object obj) {
-        return (ProductPostViewBinding) bind(obj, view, 2131559111);
+        return (ProductPostViewBinding) bind(obj, view, 2131559118);
     }
 }

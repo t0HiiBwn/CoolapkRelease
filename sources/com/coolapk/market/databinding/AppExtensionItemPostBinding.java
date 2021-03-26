@@ -21,7 +21,7 @@ public abstract class AppExtensionItemPostBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppExtensionItemPostBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AppExtensionItemPostBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558460, viewGroup, z, obj);
+        return (AppExtensionItemPostBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558461, viewGroup, z, obj);
     }
 
     public static AppExtensionItemPostBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class AppExtensionItemPostBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppExtensionItemPostBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AppExtensionItemPostBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558460, null, false, obj);
+        return (AppExtensionItemPostBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558461, null, false, obj);
     }
 
     public static AppExtensionItemPostBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class AppExtensionItemPostBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppExtensionItemPostBinding bind(View view, Object obj) {
-        return (AppExtensionItemPostBinding) bind(obj, view, 2131558460);
+        return (AppExtensionItemPostBinding) bind(obj, view, 2131558461);
     }
 }

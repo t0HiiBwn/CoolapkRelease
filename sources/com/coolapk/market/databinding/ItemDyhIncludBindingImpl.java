@@ -25,7 +25,7 @@ public class ItemDyhIncludBindingImpl extends ItemDyhIncludBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362222, 7);
+        sparseIntArray.put(2131362227, 7);
     }
 
     public ItemDyhIncludBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -66,9 +66,9 @@ public class ItemDyhIncludBindingImpl extends ItemDyhIncludBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((DyhViewModel) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -85,7 +85,7 @@ public class ItemDyhIncludBindingImpl extends ItemDyhIncludBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -95,7 +95,7 @@ public class ItemDyhIncludBindingImpl extends ItemDyhIncludBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -128,7 +128,7 @@ public class ItemDyhIncludBindingImpl extends ItemDyhIncludBinding {
                 this.mDirtyFlags |= 8;
             }
             return true;
-        } else if (i == 243) {
+        } else if (i == 244) {
             synchronized (this) {
                 this.mDirtyFlags |= 16;
             }
@@ -240,7 +240,7 @@ public class ItemDyhIncludBindingImpl extends ItemDyhIncludBinding {
                             Boolean bool = null;
                             str5 = str3;
                             onClickListener = onClickListener2;
-                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str, null, 2131231271, 0, bool, bool, bool, true, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
+                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str, null, 2131231282, 0, bool, bool, bool, true, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
                         } else {
                             str5 = str3;
                             onClickListener = onClickListener2;

@@ -40,9 +40,9 @@ public class DownloadService extends Service {
             a.b(b, "DownloadService onStartCommand");
         }
         this.a.c();
-        ExecutorService l2 = b.l();
-        if (l2 != null) {
-            l2.execute(new Runnable() {
+        ExecutorService l = b.l();
+        if (l != null) {
+            l.execute(new Runnable() {
                 /* class com.ss.android.socialbase.downloader.downloader.DownloadService.AnonymousClass1 */
 
                 @Override // java.lang.Runnable

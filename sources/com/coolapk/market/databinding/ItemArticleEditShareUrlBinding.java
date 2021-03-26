@@ -47,7 +47,7 @@ public abstract class ItemArticleEditShareUrlBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemArticleEditShareUrlBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemArticleEditShareUrlBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558612, viewGroup, z, obj);
+        return (ItemArticleEditShareUrlBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558616, viewGroup, z, obj);
     }
 
     public static ItemArticleEditShareUrlBinding inflate(LayoutInflater layoutInflater) {
@@ -56,7 +56,7 @@ public abstract class ItemArticleEditShareUrlBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemArticleEditShareUrlBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemArticleEditShareUrlBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558612, null, false, obj);
+        return (ItemArticleEditShareUrlBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558616, null, false, obj);
     }
 
     public static ItemArticleEditShareUrlBinding bind(View view) {
@@ -65,6 +65,6 @@ public abstract class ItemArticleEditShareUrlBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemArticleEditShareUrlBinding bind(View view, Object obj) {
-        return (ItemArticleEditShareUrlBinding) bind(obj, view, 2131558612);
+        return (ItemArticleEditShareUrlBinding) bind(obj, view, 2131558616);
     }
 }

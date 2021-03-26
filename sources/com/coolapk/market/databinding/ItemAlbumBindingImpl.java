@@ -24,12 +24,12 @@ public class ItemAlbumBindingImpl extends ItemAlbumBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(9);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"feed_top"}, new int[]{5}, new int[]{2131558562});
+        includedLayouts.setIncludes(1, new String[]{"feed_top"}, new int[]{5}, new int[]{2131558565});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363605, 6);
-        sparseIntArray.put(2131363435, 7);
-        sparseIntArray.put(2131363219, 8);
+        sparseIntArray.put(2131363627, 6);
+        sparseIntArray.put(2131363453, 7);
+        sparseIntArray.put(2131363233, 8);
     }
 
     public ItemAlbumBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -75,7 +75,7 @@ public class ItemAlbumBindingImpl extends ItemAlbumBinding {
     public boolean setVariable(int i, Object obj) {
         if (8 == i) {
             setAlbum((Album) obj);
-        } else if (307 != i) {
+        } else if (308 != i) {
             return false;
         } else {
             setViewHolder((AlbumViewHolder) obj);
@@ -100,7 +100,7 @@ public class ItemAlbumBindingImpl extends ItemAlbumBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(307);
+        notifyPropertyChanged(308);
         super.requestRebind();
     }
 
@@ -137,7 +137,7 @@ public class ItemAlbumBindingImpl extends ItemAlbumBinding {
                 this.mDirtyFlags |= 2;
             }
             return true;
-        } else if (i != 297) {
+        } else if (i != 298) {
             return false;
         } else {
             synchronized (this) {
@@ -171,7 +171,7 @@ public class ItemAlbumBindingImpl extends ItemAlbumBinding {
         String userName = (i2 == 0 || albumViewHolder == null) ? null : albumViewHolder.getUserName();
         if (i != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.textView, str2);
         }
         if ((j & 18) != 0) {

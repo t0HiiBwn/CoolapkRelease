@@ -36,7 +36,7 @@ public abstract class ItemMyEmptyCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMyEmptyCardBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemMyEmptyCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558832, viewGroup, z, obj);
+        return (ItemMyEmptyCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558839, viewGroup, z, obj);
     }
 
     public static ItemMyEmptyCardBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class ItemMyEmptyCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMyEmptyCardBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemMyEmptyCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558832, null, false, obj);
+        return (ItemMyEmptyCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558839, null, false, obj);
     }
 
     public static ItemMyEmptyCardBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class ItemMyEmptyCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMyEmptyCardBinding bind(View view, Object obj) {
-        return (ItemMyEmptyCardBinding) bind(obj, view, 2131558832);
+        return (ItemMyEmptyCardBinding) bind(obj, view, 2131558839);
     }
 }

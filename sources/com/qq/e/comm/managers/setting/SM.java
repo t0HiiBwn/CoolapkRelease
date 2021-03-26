@@ -22,9 +22,7 @@ public class SM {
     private String i;
     private c j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1388l = "";
+    private String l = "";
     private Context m;
     private String n;
 
@@ -175,7 +173,7 @@ public class SM {
     }
 
     public String getSid() {
-        return this.f1388l;
+        return this.l;
     }
 
     public String getString(String str) {
@@ -251,7 +249,7 @@ public class SM {
     }
 
     public void updateSID(String str) {
-        this.f1388l = str;
+        this.l = str;
     }
 
     public void updateSUID(String str) {

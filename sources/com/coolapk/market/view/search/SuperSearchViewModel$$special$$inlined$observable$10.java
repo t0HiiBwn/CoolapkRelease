@@ -21,6 +21,6 @@ public final class SuperSearchViewModel$$special$$inlined$observable$10 extends 
     @Override // kotlin.properties.ObservableProperty
     protected void afterChange(KProperty<?> kProperty, String str, String str2) {
         Intrinsics.checkNotNullParameter(kProperty, "property");
-        this.this$0.notifyPropertyChanged(240);
+        this.this$0.notifyPropertyChanged(241);
     }
 }

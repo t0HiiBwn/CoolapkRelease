@@ -31,7 +31,7 @@ import java.lang.reflect.Field;
 
 public class TintHelper {
     private static int getDefaultRippleColor(Context context, boolean z) {
-        return ContextCompat.getColor(context, z ? 2131100037 : 2131100036);
+        return ContextCompat.getColor(context, z ? 2131100042 : 2131100041);
     }
 
     private static ColorStateList getDisabledColorStateList(int i, int i2) {
@@ -41,7 +41,7 @@ public class TintHelper {
     public static void setTintSelector(View view, int i, boolean z, boolean z2) {
         ColorStateList colorStateList;
         boolean isColorLight = ATEUtil.isColorLight(i);
-        int color = ContextCompat.getColor(view.getContext(), z2 ? 2131099721 : 2131099722);
+        int color = ContextCompat.getColor(view.getContext(), z2 ? 2131099723 : 2131099724);
         float f = 0.9f;
         int shiftColor = ATEUtil.shiftColor(i, z ? 0.9f : 1.1f);
         if (z) {
@@ -49,14 +49,14 @@ public class TintHelper {
         }
         int shiftColor2 = ATEUtil.shiftColor(i, f);
         int defaultRippleColor = getDefaultRippleColor(view.getContext(), isColorLight);
-        int color2 = ContextCompat.getColor(view.getContext(), isColorLight ? 2131099734 : 2131099733);
+        int color2 = ContextCompat.getColor(view.getContext(), isColorLight ? 2131099736 : 2131099735);
         boolean z3 = view instanceof Button;
         if (z3) {
             colorStateList = getDisabledColorStateList(i, color);
             if (Build.VERSION.SDK_INT >= 21 && (view.getBackground() instanceof RippleDrawable)) {
                 ((RippleDrawable) view.getBackground()).setColor(ColorStateList.valueOf(defaultRippleColor));
             }
-            ((Button) view).setTextColor(getDisabledColorStateList(color2, ContextCompat.getColor(view.getContext(), z2 ? 2131099723 : 2131099724)));
+            ((Button) view).setTextColor(getDisabledColorStateList(color2, ContextCompat.getColor(view.getContext(), z2 ? 2131099725 : 2131099726)));
         } else if (view instanceof FloatingActionButton) {
             ColorStateList colorStateList2 = new ColorStateList(new int[][]{new int[]{-16842919}, new int[]{16842919}}, new int[]{i, shiftColor});
             FloatingActionButton floatingActionButton = (FloatingActionButton) view;
@@ -75,7 +75,7 @@ public class TintHelper {
             ATEUtil.setBackgroundCompat(view, createTintedDrawable(background, colorStateList));
         }
         if ((view instanceof TextView) && !z3) {
-            ((TextView) view).setTextColor(getDisabledColorStateList(color2, ContextCompat.getColor(view.getContext(), isColorLight ? 2131099746 : 2131099745)));
+            ((TextView) view).setTextColor(getDisabledColorStateList(color2, ContextCompat.getColor(view.getContext(), isColorLight ? 2131099748 : 2131099747)));
         }
     }
 
@@ -103,7 +103,7 @@ public class TintHelper {
             }
             if (Build.VERSION.SDK_INT >= 21 && !z && (view.getBackground() instanceof RippleDrawable)) {
                 RippleDrawable rippleDrawable = (RippleDrawable) view.getBackground();
-                int color = ContextCompat.getColor(view.getContext(), z2 ? 2131100036 : 2131100037);
+                int color = ContextCompat.getColor(view.getContext(), z2 ? 2131100041 : 2131100042);
                 int adjustAlpha = ATEUtil.adjustAlpha(i, 0.4f);
                 rippleDrawable.setColor(new ColorStateList(new int[][]{new int[]{-16843518, -16842912}, new int[]{16843518}, new int[]{16842912}}, new int[]{color, adjustAlpha, adjustAlpha}));
             }
@@ -128,8 +128,8 @@ public class TintHelper {
     public static void setTint(RadioButton radioButton, int i, boolean z) {
         int[][] iArr = {new int[]{-16842910}, new int[]{16842910, -16842912}, new int[]{16842910, 16842912}};
         int[] iArr2 = new int[3];
-        iArr2[0] = ATEUtil.stripAlpha(ContextCompat.getColor(radioButton.getContext(), z ? 2131099725 : 2131099726));
-        iArr2[1] = ContextCompat.getColor(radioButton.getContext(), z ? 2131099727 : 2131099728);
+        iArr2[0] = ATEUtil.stripAlpha(ContextCompat.getColor(radioButton.getContext(), z ? 2131099727 : 2131099728));
+        iArr2[1] = ContextCompat.getColor(radioButton.getContext(), z ? 2131099729 : 2131099730);
         iArr2[2] = i;
         ColorStateList colorStateList = new ColorStateList(iArr, iArr2);
         if (Build.VERSION.SDK_INT >= 21) {
@@ -140,7 +140,7 @@ public class TintHelper {
     }
 
     public static void setTint(SeekBar seekBar, int i, boolean z) {
-        ColorStateList disabledColorStateList = getDisabledColorStateList(i, ContextCompat.getColor(seekBar.getContext(), z ? 2131099725 : 2131099726));
+        ColorStateList disabledColorStateList = getDisabledColorStateList(i, ContextCompat.getColor(seekBar.getContext(), z ? 2131099727 : 2131099728));
         if (Build.VERSION.SDK_INT >= 21) {
             seekBar.setThumbTintList(disabledColorStateList);
             seekBar.setProgressTintList(disabledColorStateList);
@@ -198,8 +198,8 @@ public class TintHelper {
     public static void setTint(EditText editText, int i, boolean z) {
         int[][] iArr = {new int[]{-16842910}, new int[]{16842910, -16842919, -16842908}, new int[0]};
         int[] iArr2 = new int[3];
-        iArr2[0] = ContextCompat.getColor(editText.getContext(), z ? 2131099745 : 2131099746);
-        iArr2[1] = ContextCompat.getColor(editText.getContext(), z ? 2131099727 : 2131099728);
+        iArr2[0] = ContextCompat.getColor(editText.getContext(), z ? 2131099747 : 2131099748);
+        iArr2[1] = ContextCompat.getColor(editText.getContext(), z ? 2131099729 : 2131099730);
         iArr2[2] = i;
         ColorStateList colorStateList = new ColorStateList(iArr, iArr2);
         Drawable background = editText.getBackground();
@@ -221,8 +221,8 @@ public class TintHelper {
     public static void setTint(CheckBox checkBox, int i, boolean z) {
         int[][] iArr = {new int[]{-16842910}, new int[]{16842910, -16842912}, new int[]{16842910, 16842912}};
         int[] iArr2 = new int[3];
-        iArr2[0] = ContextCompat.getColor(checkBox.getContext(), z ? 2131099725 : 2131099726);
-        iArr2[1] = ContextCompat.getColor(checkBox.getContext(), z ? 2131099727 : 2131099728);
+        iArr2[0] = ContextCompat.getColor(checkBox.getContext(), z ? 2131099727 : 2131099728);
+        iArr2[1] = ContextCompat.getColor(checkBox.getContext(), z ? 2131099729 : 2131099730);
         iArr2[2] = i;
         ColorStateList colorStateList = new ColorStateList(iArr, iArr2);
         if (Build.VERSION.SDK_INT >= 21) {
@@ -248,11 +248,11 @@ public class TintHelper {
         }
         int adjustAlpha = ATEUtil.adjustAlpha(i, (!z2 || z) ? 1.0f : 0.5f);
         if (z) {
-            i2 = ContextCompat.getColor(context, z3 ? 2131099737 : 2131099738);
-            i3 = ContextCompat.getColor(context, z3 ? 2131099739 : 2131099740);
+            i2 = ContextCompat.getColor(context, z3 ? 2131099739 : 2131099740);
+            i3 = ContextCompat.getColor(context, z3 ? 2131099741 : 2131099742);
         } else {
-            i2 = ContextCompat.getColor(context, z3 ? 2131099741 : 2131099742);
-            i3 = ContextCompat.getColor(context, z3 ? 2131099743 : 2131099744);
+            i2 = ContextCompat.getColor(context, z3 ? 2131099743 : 2131099744);
+            i3 = ContextCompat.getColor(context, z3 ? 2131099745 : 2131099746);
         }
         if (!z2) {
             i3 = ATEUtil.stripAlpha(i3);

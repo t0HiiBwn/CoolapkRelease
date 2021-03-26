@@ -388,10 +388,10 @@ public class d {
         e(context, lVar, str, str2, jSONObject);
     }
 
-    public static void a(Context context, l lVar, String str, String str2, Long l2) {
+    public static void a(Context context, l lVar, String str, String str2, Long l) {
         JSONObject jSONObject = new JSONObject();
         try {
-            jSONObject.put("duration", l2);
+            jSONObject.put("duration", l);
         } catch (Exception unused) {
         }
         e(context, lVar, str, str2, jSONObject);

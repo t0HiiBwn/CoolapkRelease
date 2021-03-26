@@ -2,6 +2,6 @@
 <com.coolapk.market.widget.ScrollChildSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/swipe_refresh_view" android:tag="layout/web_view_0" android:layout_width="match_parent" android:layout_height="match_parent">
     <FrameLayout android:id="@+id/web_root" android:layout_width="match_parent" android:layout_height="match_parent">
         <com.coolapk.market.widget.CoolWebView android:id="@+id/web_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
-        <ProgressBar android:id="@+id/progress_bar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="2dp" android:progressDrawable="@drawable/progress_bar" style="@style/res_2131951844_base_widget_appcompat_progressbar_horizontal"/>
+        <ProgressBar android:id="@+id/progress_bar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="2dp" android:progressDrawable="@drawable/progress_bar" style="@style/res_2131951845_base_widget_appcompat_progressbar_horizontal"/>
     </FrameLayout>
 </com.coolapk.market.widget.ScrollChildSwipeRefreshLayout>

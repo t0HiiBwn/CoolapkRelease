@@ -27,9 +27,9 @@ public class PhotoBindingImpl extends PhotoBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363472, 1);
-        sparseIntArray.put(2131363934, 2);
-        sparseIntArray.put(2131362734, 3);
+        sparseIntArray.put(2131363490, 1);
+        sparseIntArray.put(2131363959, 2);
+        sparseIntArray.put(2131362745, 3);
     }
 
     public PhotoBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -21,10 +21,10 @@ final class AppViewBaseInfoViewHolder$onPhotoImageLoadListener$1 implements OnIm
     public final void onLoadComplete(String str, Drawable drawable, View view, boolean z, Throwable th) {
         if (drawable != null) {
             try {
-                AppViewViewModel.ImageSize thumbnailSize = AppViewBaseInfoViewHolder.access$getViewModel$p(this.this$0).getThumbnailSize(str);
+                AppViewViewModel.ImageSize thumbnailSize = this.this$0.viewModel.getThumbnailSize(str);
                 Intrinsics.checkNotNull(thumbnailSize);
                 if (thumbnailSize.width != drawable.getIntrinsicWidth() || thumbnailSize.height != drawable.getIntrinsicHeight()) {
-                    AppViewBaseInfoViewHolder.access$getViewModel$p(this.this$0).setThumbnailSize(str, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+                    this.this$0.viewModel.setThumbnailSize(str, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
                 }
             } catch (Exception e) {
                 LogUtils.e(e, "Unexpected", new Object[0]);

@@ -12,9 +12,7 @@ import java.util.List;
 public final class j extends b<DistanceSearch.DistanceQuery, DistanceResult> {
     private final String j = "/distance?";
     private final String k = "|";
-
-    /* renamed from: l  reason: collision with root package name */
-    private final String f1210l = ",";
+    private final String l = ",";
 
     public j(Context context, DistanceSearch.DistanceQuery distanceQuery) {
         super(context, distanceQuery);

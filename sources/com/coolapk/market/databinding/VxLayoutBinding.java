@@ -45,7 +45,7 @@ public abstract class VxLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static VxLayoutBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (VxLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559300, viewGroup, z, obj);
+        return (VxLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559310, viewGroup, z, obj);
     }
 
     public static VxLayoutBinding inflate(LayoutInflater layoutInflater) {
@@ -54,7 +54,7 @@ public abstract class VxLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static VxLayoutBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (VxLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559300, null, false, obj);
+        return (VxLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559310, null, false, obj);
     }
 
     public static VxLayoutBinding bind(View view) {
@@ -63,6 +63,6 @@ public abstract class VxLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static VxLayoutBinding bind(View view, Object obj) {
-        return (VxLayoutBinding) bind(obj, view, 2131559300);
+        return (VxLayoutBinding) bind(obj, view, 2131559310);
     }
 }

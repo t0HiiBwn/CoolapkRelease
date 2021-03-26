@@ -19,12 +19,12 @@ final class LiveDiscussPoll$startNewPoll$1<R> implements Func0<Observable<List<?
 
     @Override // rx.functions.Func0, java.util.concurrent.Callable
     public final Observable<List<Entity>> call() {
-        Entity entity = this.this$0.latestLiveEntity;
-        String entityId = entity != null ? entity.getEntityId() : null;
+        Entity access$getLatestLiveEntity$p = LiveDiscussPoll.access$getLatestLiveEntity$p(this.this$0);
+        String entityId = access$getLatestLiveEntity$p != null ? access$getLatestLiveEntity$p.getEntityId() : null;
         LiveDiscussPollKt.liveDiscussPollLogD("请求API");
         if (LiveUtils.INSTANCE.isTestMultiDanmaku()) {
-            return this.this$0.getFakeDanmakuData().createData().compose(RxUtils.applyIOSchedulers()).map(RxUtils.checkResultToData());
+            return LiveDiscussPoll.access$getFakeDanmakuData$p(this.this$0).createData().compose(RxUtils.applyIOSchedulers()).map(RxUtils.checkResultToData());
         }
-        return DataManager.getInstance().getLiveMessageList(this.this$0.liveId, "0", 0, entityId, null).compose(RxUtils.applyIOSchedulers()).map(RxUtils.checkResultToData());
+        return DataManager.getInstance().getLiveMessageList(LiveDiscussPoll.access$getLiveId$p(this.this$0), "0", 0, entityId, null).compose(RxUtils.applyIOSchedulers()).map(RxUtils.checkResultToData());
     }
 }

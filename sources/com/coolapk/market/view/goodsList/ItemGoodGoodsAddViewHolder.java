@@ -26,7 +26,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemGoodGoodsAddViewHolder.kt */
 public final class ItemGoodGoodsAddViewHolder extends GenericBindHolder<ItemGoodGoodsAddBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558753;
+    public static final int LAYOUT_ID = 2131558760;
     private final Feed feed;
 
     public final Feed getFeed() {
@@ -71,7 +71,7 @@ public final class ItemGoodGoodsAddViewHolder extends GenericBindHolder<ItemGood
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131361853) {
+        if (view.getId() == 2131361854) {
             Activity activityNullable = UiUtils.getActivityNullable(getContext());
             FeedGoodsHelper feedGoodsHelper = FeedGoodsHelper.INSTANCE;
             Intrinsics.checkNotNullExpressionValue(activityNullable, "activity");

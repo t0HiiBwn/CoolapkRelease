@@ -71,7 +71,7 @@ public abstract class ItemFeedNewsViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedNewsViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedNewsViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558710, viewGroup, z, obj);
+        return (ItemFeedNewsViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558717, viewGroup, z, obj);
     }
 
     public static ItemFeedNewsViewBinding inflate(LayoutInflater layoutInflater) {
@@ -80,7 +80,7 @@ public abstract class ItemFeedNewsViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedNewsViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedNewsViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558710, null, false, obj);
+        return (ItemFeedNewsViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558717, null, false, obj);
     }
 
     public static ItemFeedNewsViewBinding bind(View view) {
@@ -89,6 +89,6 @@ public abstract class ItemFeedNewsViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedNewsViewBinding bind(View view, Object obj) {
-        return (ItemFeedNewsViewBinding) bind(obj, view, 2131558710);
+        return (ItemFeedNewsViewBinding) bind(obj, view, 2131558717);
     }
 }

@@ -29,8 +29,8 @@ public class PoiListBindingImpl extends PoiListBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363221, 2);
-        sparseIntArray.put(2131362456, 3);
+        sparseIntArray.put(2131363235, 2);
+        sparseIntArray.put(2131362463, 3);
     }
 
     public PoiListBindingImpl(DataBindingComponent dataBindingComponent, View view) {

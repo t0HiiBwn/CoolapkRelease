@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_FeedRelation  reason: invalid class name */
 abstract class C$AutoValue_FeedRelation extends C$$AutoValue_FeedRelation {
-    C$AutoValue_FeedRelation(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l2, l3);
+    C$AutoValue_FeedRelation(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l, l2);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_FeedRelation$GsonTypeAdapter */
@@ -121,13 +121,13 @@ abstract class C$AutoValue_FeedRelation extends C$$AutoValue_FeedRelation {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -199,8 +199,8 @@ abstract class C$AutoValue_FeedRelation extends C$$AutoValue_FeedRelation {
             String str20 = str9;
             String str21 = str10;
             String str22 = str11;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             while (jsonReader.hasNext()) {
                 String nextName = jsonReader.nextName();
                 if (jsonReader.peek() == JsonToken.NULL) {
@@ -308,7 +308,7 @@ abstract class C$AutoValue_FeedRelation extends C$$AutoValue_FeedRelation {
                             str13 = this.entityTemplateAdapter.read(jsonReader);
                             continue;
                         case 4:
-                            l3 = this.lastUpdateAdapter.read(jsonReader);
+                            l2 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 5:
                             str12 = this.entityTypeNameAdapter.read(jsonReader);
@@ -335,7 +335,7 @@ abstract class C$AutoValue_FeedRelation extends C$$AutoValue_FeedRelation {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case '\r':
-                            l2 = this.datelineAdapter.read(jsonReader);
+                            l = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -344,7 +344,7 @@ abstract class C$AutoValue_FeedRelation extends C$$AutoValue_FeedRelation {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_FeedRelation(str12, str13, str14, num2, str15, str16, str17, str18, str19, str20, str21, str22, l2, l3);
+            return new AutoValue_FeedRelation(str12, str13, str14, num2, str15, str16, str17, str18, str19, str20, str21, str22, l, l2);
         }
     }
 }

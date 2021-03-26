@@ -69,7 +69,7 @@ public abstract class ItemDiscoveryViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDiscoveryViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemDiscoveryViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558671, viewGroup, z, obj);
+        return (ItemDiscoveryViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558677, viewGroup, z, obj);
     }
 
     public static ItemDiscoveryViewBinding inflate(LayoutInflater layoutInflater) {
@@ -78,7 +78,7 @@ public abstract class ItemDiscoveryViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDiscoveryViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemDiscoveryViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558671, null, false, obj);
+        return (ItemDiscoveryViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558677, null, false, obj);
     }
 
     public static ItemDiscoveryViewBinding bind(View view) {
@@ -87,6 +87,6 @@ public abstract class ItemDiscoveryViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDiscoveryViewBinding bind(View view, Object obj) {
-        return (ItemDiscoveryViewBinding) bind(obj, view, 2131558671);
+        return (ItemDiscoveryViewBinding) bind(obj, view, 2131558677);
     }
 }

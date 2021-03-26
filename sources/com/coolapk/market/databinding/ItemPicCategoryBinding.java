@@ -28,7 +28,7 @@ public abstract class ItemPicCategoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPicCategoryBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemPicCategoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558853, viewGroup, z, obj);
+        return (ItemPicCategoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558860, viewGroup, z, obj);
     }
 
     public static ItemPicCategoryBinding inflate(LayoutInflater layoutInflater) {
@@ -37,7 +37,7 @@ public abstract class ItemPicCategoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPicCategoryBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemPicCategoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558853, null, false, obj);
+        return (ItemPicCategoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558860, null, false, obj);
     }
 
     public static ItemPicCategoryBinding bind(View view) {
@@ -46,6 +46,6 @@ public abstract class ItemPicCategoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPicCategoryBinding bind(View view, Object obj) {
-        return (ItemPicCategoryBinding) bind(obj, view, 2131558853);
+        return (ItemPicCategoryBinding) bind(obj, view, 2131558860);
     }
 }

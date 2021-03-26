@@ -66,7 +66,7 @@ public final class AppMonitorDelegate {
                     i = false;
                 }
             } catch (Throwable th) {
-                b.m19a(th);
+                b.m9a(th);
             }
         }
         return;
@@ -80,7 +80,7 @@ public final class AppMonitorDelegate {
                     c.d();
                 }
             } catch (Throwable th) {
-                b.m19a(th);
+                b.m9a(th);
             }
         }
         return;
@@ -135,7 +135,7 @@ public final class AppMonitorDelegate {
                 }
             }
         } catch (Throwable th) {
-            b.m19a(th);
+            b.m9a(th);
         }
     }
 
@@ -188,7 +188,7 @@ public final class AppMonitorDelegate {
                 com.alibaba.mtl.log.b.a.B();
                 e.a().a(f.ALARM.a(), str, str2, str3, map);
             } catch (Throwable th) {
-                b.m19a(th);
+                b.m9a(th);
             }
         }
 
@@ -213,7 +213,7 @@ public final class AppMonitorDelegate {
                 com.alibaba.mtl.log.b.a.B();
                 e.a().a(f.ALARM.a(), str, str2, str3, str4, str5, map);
             } catch (Throwable th) {
-                b.m19a(th);
+                b.m9a(th);
             }
         }
     }
@@ -252,7 +252,7 @@ public final class AppMonitorDelegate {
                     }
                 }
             } catch (Throwable th) {
-                b.m19a(th);
+                b.m9a(th);
             }
         }
     }
@@ -287,7 +287,7 @@ public final class AppMonitorDelegate {
                     }
                 }
             } catch (Throwable th) {
-                b.m19a(th);
+                b.m9a(th);
             }
         }
     }
@@ -316,7 +316,7 @@ public final class AppMonitorDelegate {
                     }
                 }
             } catch (Throwable th) {
-                b.m19a(th);
+                b.m9a(th);
             }
         }
 
@@ -329,7 +329,7 @@ public final class AppMonitorDelegate {
                     }
                 }
             } catch (Throwable th) {
-                b.m19a(th);
+                b.m9a(th);
             }
         }
 
@@ -366,7 +366,7 @@ public final class AppMonitorDelegate {
                     }
                 }
             } catch (Throwable th) {
-                b.m19a(th);
+                b.m9a(th);
             }
         }
 
@@ -392,7 +392,7 @@ public final class AppMonitorDelegate {
                 }
                 i.a("AppMonitorDelegate", "module & monitorPoint must not null");
             } catch (Throwable th) {
-                b.m19a(th);
+                b.m9a(th);
             }
         }
     }
@@ -408,7 +408,7 @@ public final class AppMonitorDelegate {
                 }
             }
         } catch (Throwable th) {
-            b.m19a(th);
+            b.m9a(th);
         }
     }
 

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CardDoubleViewHolder extends CardViewHolder {
-    public static final int LAYOUT_ID = 2131558630;
+    public static final int LAYOUT_ID = 2131558636;
     private List<ChildItemViewModel> viewModelList;
 
     public static class ChildItemViewModel extends BaseObservable {
@@ -57,7 +57,7 @@ public class CardDoubleViewHolder extends CardViewHolder {
 
     @Override // com.coolapk.market.viewholder.CardViewHolder
     protected View onFindChildView(View view, int i) {
-        return view.findViewById(i != 0 ? i != 1 ? -1 : 2131362773 : 2131362769);
+        return view.findViewById(i != 0 ? i != 1 ? -1 : 2131362784 : 2131362780);
     }
 
     @Override // com.coolapk.market.viewholder.CardViewHolder
@@ -77,7 +77,7 @@ public class CardDoubleViewHolder extends CardViewHolder {
             ServiceApp serviceApp = (ServiceApp) entity;
             childItemViewModel.title.set(serviceApp.getAppName());
             childItemViewModel.logo.set(serviceApp.getLogo());
-            childItemViewModel.info.set(getContext().getString(2131886640, serviceApp.getScore()));
+            childItemViewModel.info.set(getContext().getString(2131886702, serviceApp.getScore()));
             childItemViewModel.actionText.set(StateUtils.getActionText(getContext(), true, serviceApp.getPackageName(), serviceApp.getPackageName(), serviceApp.getDownloadUrlMd5(0)));
             ViewUtil.directClickListener(itemCardDoubleItemBinding.actionButton, this);
             itemCardDoubleItemBinding.actionButton.setTag(Integer.valueOf(i));
@@ -92,7 +92,7 @@ public class CardDoubleViewHolder extends CardViewHolder {
             Album album = (Album) entity;
             childItemViewModel.title.set(album.getTitle());
             childItemViewModel.logo.set(album.getIcon());
-            childItemViewModel.info.set(getContext().getString(2131886638, Integer.valueOf(album.getTotalApkNum())));
+            childItemViewModel.info.set(getContext().getString(2131886700, Integer.valueOf(album.getTotalApkNum())));
             childItemViewModel.actionText.set(null);
             childItemViewModel.isAlbum.set(true);
             childItemViewModel.transform.set(new CircleRadiusTransform(NumberExtendsKt.getDpf(12), true));

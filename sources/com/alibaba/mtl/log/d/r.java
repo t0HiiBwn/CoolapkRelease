@@ -19,7 +19,7 @@ public class r {
     public static r a;
 
     /* renamed from: a  reason: collision with other field name */
-    private static ThreadPoolExecutor f67a;
+    private static ThreadPoolExecutor f66a;
     private static final AtomicInteger f = new AtomicInteger();
     private HandlerThread b;
     private Handler mHandler = new Handler(this.b.getLooper()) {
@@ -30,7 +30,7 @@ public class r {
             super.handleMessage(message);
             try {
                 if (message.obj != null && (message.obj instanceof Runnable)) {
-                    r.m28a().submit((Runnable) message.obj);
+                    r.m18a().submit((Runnable) message.obj);
                 }
             } catch (Throwable unused) {
             }
@@ -66,13 +66,13 @@ public class r {
 
     /* access modifiers changed from: private */
     /* renamed from: a  reason: collision with other method in class */
-    public static synchronized ThreadPoolExecutor m28a() {
+    public static synchronized ThreadPoolExecutor m18a() {
         ThreadPoolExecutor threadPoolExecutor;
         synchronized (r.class) {
-            if (f67a == null) {
-                f67a = a(G, H, I, J, 500);
+            if (f66a == null) {
+                f66a = a(G, H, I, J, 500);
             }
-            threadPoolExecutor = f67a;
+            threadPoolExecutor = f66a;
         }
         return threadPoolExecutor;
     }
@@ -100,7 +100,7 @@ public class r {
             obtain.obj = runnable;
             this.mHandler.sendMessageDelayed(obtain, j);
         } catch (Exception e) {
-            b.m19a((Throwable) e);
+            b.m9a((Throwable) e);
         }
     }
 
@@ -114,7 +114,7 @@ public class r {
 
     public void b(Runnable runnable) {
         try {
-            m28a().submit(runnable);
+            m18a().submit(runnable);
         } catch (Throwable unused) {
         }
     }

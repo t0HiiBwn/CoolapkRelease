@@ -47,7 +47,7 @@ final class MainFragment$showTips$1 implements Runnable {
                 if (!z) {
                     i = 0;
                 }
-                mainFragment.tooltip = Tooltip.Builder.anchor$default(builder, aHBottomNavigation2, 0, i, false, 8, null).text("酷图搬到这里啦").styleId(2131952224).maxWidth(DisplayUtils.getWidthPixels(this.this$0.getActivity()) / 2).arrow(true).floatingAnimation(Tooltip.Animation.Companion.getSLOW()).closePolicy(new ClosePolicy.Builder().consume(true).inside(true).outside(true).build()).showDuration(10000).overlay(true).create();
+                mainFragment.tooltip = Tooltip.Builder.anchor$default(builder, aHBottomNavigation2, 0, i, false, 8, null).text("酷图搬到这里啦").styleId(2131952225).maxWidth(DisplayUtils.getWidthPixels(this.this$0.getActivity()) / 2).arrow(true).floatingAnimation(Tooltip.Animation.Companion.getSLOW()).closePolicy(new ClosePolicy.Builder().consume(true).inside(true).outside(true).build()).showDuration(10000).overlay(true).create();
                 Tooltip tooltip2 = this.this$0.tooltip;
                 if (tooltip2 != null && (doOnHidden = tooltip2.doOnHidden(new Function1<Tooltip, Unit>(this) {
                     /* class com.coolapk.market.view.main.MainFragment$showTips$1.AnonymousClass1 */

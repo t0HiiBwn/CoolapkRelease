@@ -56,8 +56,8 @@ public final class ChattingActivity extends NewBaseChatActivity {
         setTitle(getIntent().getStringExtra("TITLE"));
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "supportFragmentManager");
-        if (((ChatListFragment) supportFragmentManager.findFragmentById(2131363592)) == null) {
-            supportFragmentManager.beginTransaction().add(2131363592, ChatListFragment.Companion.newInstance(this.uKey, this.myId, this.userId)).commit();
+        if (((ChatListFragment) supportFragmentManager.findFragmentById(2131363614)) == null) {
+            supportFragmentManager.beginTransaction().add(2131363614, ChatListFragment.Companion.newInstance(this.uKey, this.myId, this.userId)).commit();
         }
     }
 
@@ -127,7 +127,7 @@ public final class ChattingActivity extends NewBaseChatActivity {
         if (str != null) {
             File file = new File(str);
             if (!file.exists() || file.length() <= ((long) 10485760)) {
-                BitmapUtil.compressImage(getActivity(), CoolFileUtils.wrap(str), 0).flatMap(new ChattingActivity$setPhoto$1(this)).onErrorResumeNext(ChattingActivity$setPhoto$2.INSTANCE).flatMap(new ChattingActivity$setPhoto$3(this)).compose(RxUtils.applyIOSchedulers()).doOnSubscribe(new ChattingActivity$setPhoto$4(this)).subscribe((Subscriber<? super R>) new ChattingActivity$setPhoto$5(this));
+                BitmapUtil.compressImage(getActivity(), CoolFileUtils.wrap(str), 0).flatMap(new ChattingActivity$setPhoto$1(this)).onErrorResumeNext(ChattingActivity$setPhoto$2.INSTANCE).flatMap(new ChattingActivity$setPhoto$3(this)).flatMap(ChattingActivity$setPhoto$4.INSTANCE).compose(RxUtils.applyIOSchedulers()).doOnSubscribe(new ChattingActivity$setPhoto$5(this)).subscribe((Subscriber<? super R>) new ChattingActivity$setPhoto$6(this));
             } else {
                 Toast.show$default(getActivity(), "图片大小大于10兆，请压缩大小后继续操作", 0, false, 12, null);
             }
@@ -144,11 +144,11 @@ public final class ChattingActivity extends NewBaseChatActivity {
         } else if (TextUtils.isEmpty(str)) {
             BaseActivity activity = getActivity();
             Intrinsics.checkNotNullExpressionValue(activity, "activity");
-            Toast.show(activity, 2131886648);
+            Toast.show(activity, 2131886710);
         } else if (isPosting()) {
             BaseActivity activity2 = getActivity();
             Intrinsics.checkNotNullExpressionValue(activity2, "activity");
-            Toast.show(activity2, 2131886649);
+            Toast.show(activity2, 2131886711);
         } else {
             Intrinsics.checkNotNull(str);
             sendMessage(str, "", "");
@@ -193,30 +193,30 @@ public final class ChattingActivity extends NewBaseChatActivity {
         if (menu2 == null) {
             return false;
         }
-        MenuItem findItem = menu2.findItem(2131361960);
+        MenuItem findItem = menu2.findItem(2131361961);
         Intrinsics.checkNotNullExpressionValue(findItem, "menu.findItem(R.id.action_search)");
         findItem.setVisible(false);
         Intrinsics.checkNotNullExpressionValue(loginSession, "session");
         boolean z = loginSession.isLogin() && !TextUtils.equals(this.userId, loginSession.getUid()) && !TextUtils.equals("10086", this.userId);
-        MenuItem findItem2 = menu2.findItem(2131361857);
+        MenuItem findItem2 = menu2.findItem(2131361858);
         if (findItem2 != null && loginSession.isAdmin() && z) {
             findItem2.setVisible(true);
         }
-        MenuItem findItem3 = menu2.findItem(2131361925);
+        MenuItem findItem3 = menu2.findItem(2131361926);
         Intrinsics.checkNotNull(findItem3);
         findItem3.setVisible(false);
-        MenuItem findItem4 = menu2.findItem(2131361984);
+        MenuItem findItem4 = menu2.findItem(2131361985);
         Intrinsics.checkNotNull(findItem4);
         findItem4.setVisible(true);
-        MenuItem findItem5 = menu2.findItem(2131361874);
+        MenuItem findItem5 = menu2.findItem(2131361875);
         if (findItem5 != null && z) {
             findItem5.setVisible(true);
         }
-        MenuItem findItem6 = menu2.findItem(2131361957);
+        MenuItem findItem6 = menu2.findItem(2131361958);
         if (findItem6 != null && z) {
             findItem6.setVisible(true);
         }
-        MenuItem findItem7 = menu2.findItem(2131361968);
+        MenuItem findItem7 = menu2.findItem(2131361969);
         Intrinsics.checkNotNullExpressionValue(findItem7, "menuItem");
         findItem7.setVisible(false);
         return true;
@@ -226,7 +226,7 @@ public final class ChattingActivity extends NewBaseChatActivity {
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
         switch (menuItem.getItemId()) {
-            case 2131361857:
+            case 2131361858:
                 if (this.userId == null) {
                     return false;
                 }
@@ -234,7 +234,7 @@ public final class ChattingActivity extends NewBaseChatActivity {
                 Intrinsics.checkNotNull(str);
                 ActionManager.startWebViewActivity(getActivity(), UriUtils.getUserManageUrl(str));
                 return true;
-            case 2131361874:
+            case 2131361875:
                 BaseActivity activity = getActivity();
                 String str2 = this.userId;
                 String stringExtra = getIntent().getStringExtra("TITLE");
@@ -243,7 +243,7 @@ public final class ChattingActivity extends NewBaseChatActivity {
                 }
                 ActionManager.startBlackListSettingActivity(activity, str2, stringExtra);
                 return true;
-            case 2131361957:
+            case 2131361958:
                 if (this.userId == null) {
                     return false;
                 }
@@ -251,7 +251,7 @@ public final class ChattingActivity extends NewBaseChatActivity {
                 Intrinsics.checkNotNull(str3);
                 ActionManager.startWebViewActivity(getActivity(), UriUtils.buildUserReportUrl(str3));
                 return true;
-            case 2131361984:
+            case 2131361985:
                 ActionManager.startUserSpaceActivity(getActivity(), this.userId);
                 return true;
             default:

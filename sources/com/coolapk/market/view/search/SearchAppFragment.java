@@ -72,10 +72,10 @@ public class SearchAppFragment extends StateEventListFragment<Result<List<Entity
     @Override // com.coolapk.market.view.base.asynclist.AsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        setEmptyData(getString(2131886764), 0);
+        setEmptyData(getString(2131886826), 0);
         setAdapter(new DataAdapter(this));
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558924, 2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558931, 2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         if (getUserVisibleHint()) {
@@ -116,7 +116,7 @@ public class SearchAppFragment extends StateEventListFragment<Result<List<Entity
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558924;
+            return 2131558931;
         }
 
         public DataAdapter(Fragment fragment) {
@@ -134,8 +134,8 @@ public class SearchAppFragment extends StateEventListFragment<Result<List<Entity
                     if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition())) {
                         Entity entity = (Entity) SearchAppFragment.this.getDataList().get(viewHolder.getAdapterPosition());
                         int id = view.getId();
-                        if (id != 2131361886) {
-                            if (id == 2131362768 && EntityUtils.isApkType(entity.getEntityType())) {
+                        if (id != 2131361887) {
+                            if (id == 2131362779 && EntityUtils.isApkType(entity.getEntityType())) {
                                 ServiceApp serviceApp = (ServiceApp) entity;
                                 ActionManager.startAppViewActivity(SearchAppFragment.this.getActivity(), ((ServiceAppBinding) ((BindingViewHolder) viewHolder).getBinding()).iconView, serviceApp.getPackageName(), serviceApp.getLogo(), serviceApp.getAppName(), serviceApp.getExtraAnalysisData(), serviceApp.getRequestContext(), serviceApp.getExtraFromApi());
                             }

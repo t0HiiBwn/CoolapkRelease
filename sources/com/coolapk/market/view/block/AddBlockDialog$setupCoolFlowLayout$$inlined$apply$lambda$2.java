@@ -45,15 +45,15 @@ public final class AddBlockDialog$setupCoolFlowLayout$$inlined$apply$lambda$2 ex
         Intrinsics.checkNotNullExpressionValue(item, "getItem(position)!!");
         BlockItem blockItem = (BlockItem) item;
         if (view != null) {
-            Object tag = view.getTag(2131363492);
+            Object tag = view.getTag(2131363510);
             Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.databinding.FeedBlockItemsBinding");
             feedBlockItemsBinding = (FeedBlockItemsBinding) tag;
         } else {
-            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558554, viewGroup, false);
+            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558557, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ock_items, parent, false)");
             feedBlockItemsBinding = (FeedBlockItemsBinding) inflate;
         }
-        feedBlockItemsBinding.getRoot().setTag(2131363492, feedBlockItemsBinding);
+        feedBlockItemsBinding.getRoot().setTag(2131363510, feedBlockItemsBinding);
         if (blockItem.getActive()) {
             View root = feedBlockItemsBinding.getRoot();
             Intrinsics.checkNotNullExpressionValue(root, "childBinding.root");

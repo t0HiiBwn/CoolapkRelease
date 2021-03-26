@@ -170,17 +170,17 @@ public final class DurationKt {
     }
 
     /* renamed from: times-mvk6XK0 */
-    private static final double m1992timesmvk6XK0(int i, double d) {
-        return Duration.m1972timesUwyO8pc(d, i);
+    private static final double m1390timesmvk6XK0(int i, double d) {
+        return Duration.m1370timesUwyO8pc(d, i);
     }
 
     /* renamed from: times-kIfJnKk */
-    private static final double m1991timeskIfJnKk(double d, double d2) {
-        return Duration.m1971timesUwyO8pc(d2, d);
+    private static final double m1389timeskIfJnKk(double d, double d2) {
+        return Duration.m1369timesUwyO8pc(d2, d);
     }
 
     public static final double toDuration(double d, TimeUnit timeUnit) {
         Intrinsics.checkNotNullParameter(timeUnit, "unit");
-        return Duration.m1945constructorimpl(DurationUnitKt.convertDurationUnit(d, timeUnit, TimeUnit.NANOSECONDS));
+        return Duration.m1343constructorimpl(DurationUnitKt.convertDurationUnit(d, timeUnit, TimeUnit.NANOSECONDS));
     }
 }

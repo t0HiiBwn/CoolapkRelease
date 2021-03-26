@@ -63,7 +63,7 @@ public class UserHistoryListFragment extends NewAsyncListFragment<Result<List<En
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558973, 2131231052).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558980, 2131231062).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         getRecyclerView().setClipToPadding(false);
@@ -147,10 +147,10 @@ public class UserHistoryListFragment extends NewAsyncListFragment<Result<List<En
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-            if (i == 2131558748) {
+            if (i == 2131558755) {
                 return new LastViewHolder(inflate, null);
             }
-            if (i == 2131558973) {
+            if (i == 2131558980) {
                 return new UserHistoryViewHolder(inflate, this.component, null);
             }
             throw new IllegalStateException("Unknown view type " + i);
@@ -160,7 +160,7 @@ public class UserHistoryListFragment extends NewAsyncListFragment<Result<List<En
         public int getItemViewType(int i) {
             String entityType = ((Entity) UserHistoryListFragment.this.dataList.get(i)).getEntityType();
             entityType.hashCode();
-            return !entityType.equals("FOOT") ? 2131558973 : 2131558748;
+            return !entityType.equals("FOOT") ? 2131558980 : 2131558755;
         }
 
         public void onBindViewHolder(BindingViewHolder bindingViewHolder, int i) {
@@ -174,7 +174,7 @@ public class UserHistoryListFragment extends NewAsyncListFragment<Result<List<En
     }
 
     private static class LastViewHolder extends GenericBindHolder<ItemFootBinding, Entity> {
-        public static final int LAYOUT_ID = 2131558748;
+        public static final int LAYOUT_ID = 2131558755;
 
         public LastViewHolder(View view, ItemActionHandler itemActionHandler) {
             super(view, itemActionHandler);

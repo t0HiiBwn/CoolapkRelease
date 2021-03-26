@@ -1,7 +1,14 @@
 package com.xiaomi.push;
 
-import java.io.Serializable;
+import com.xiaomi.a.a.a.c;
 
-public interface ja extends Serializable {
-    iy a(ji jiVar);
+public class ja {
+    public static String a(String str, String str2) {
+        try {
+            return (String) jb.a(null, "android.os.SystemProperties").getMethod("get", String.class, String.class).invoke(null, str, str2);
+        } catch (Exception e) {
+            c.a("SystemProperties.get: " + e);
+            return str2;
+        }
+    }
 }

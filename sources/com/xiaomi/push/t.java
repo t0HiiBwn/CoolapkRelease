@@ -1,138 +1,80 @@
 package com.xiaomi.push;
 
 import android.content.Context;
-import android.os.Build;
-import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
+import com.xiaomi.a.a.a.c;
+import java.lang.reflect.Method;
 
-public class t {
-    private static Context a;
+class t implements s {
+    private Context a;
+    private Class<?> b;
+    private Object c;
+    private Method d = null;
+    private Method e = null;
+    private Method f = null;
+    private Method g = null;
 
-    /* renamed from: a  reason: collision with other field name */
-    private static String f1048a;
-
-    public static int a() {
-        try {
-            Class<?> a2 = a(null, "miui.os.Build");
-            if (a2.getField("IS_STABLE_VERSION").getBoolean(null)) {
-                return 3;
-            }
-            return a2.getField("IS_DEVELOPMENT_VERSION").getBoolean(null) ? 2 : 1;
-        } catch (Exception unused) {
-            return 0;
-        }
+    public t(Context context) {
+        this.a = context;
+        b(context);
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public static Context m674a() {
-        return a;
-    }
-
-    public static Class<?> a(Context context, String str) {
-        if (str == null || str.trim().length() == 0) {
-            throw new ClassNotFoundException("class is empty");
-        }
-        boolean z = context != null;
-        if (z && Build.VERSION.SDK_INT >= 29) {
-            try {
-                return context.getClassLoader().loadClass(str);
-            } catch (ClassNotFoundException unused) {
-            }
+    private String a(Context context, Method method) {
+        Object obj = this.c;
+        if (obj == null || method == null) {
+            return null;
         }
         try {
-            return Class.forName(str);
-        } catch (ClassNotFoundException e) {
-            b.m41a(String.format("loadClass fail hasContext= %s, errMsg = %s", Boolean.valueOf(z), e.getLocalizedMessage()));
-            throw new ClassNotFoundException("loadClass fail ", e);
-        }
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public static synchronized String m675a() {
-        synchronized (t.class) {
-            String str = f1048a;
-            if (str != null) {
-                return str;
+            Object invoke = method.invoke(obj, context);
+            if (invoke != null) {
+                return (String) invoke;
             }
-            String str2 = Build.VERSION.INCREMENTAL;
-            if (a() <= 0) {
-                String b = b();
-                if (TextUtils.isEmpty(b)) {
-                    b = c();
-                    if (TextUtils.isEmpty(b)) {
-                        b = d();
-                        if (TextUtils.isEmpty(b)) {
-                            str2 = String.valueOf(s.a("ro.product.brand", "Android") + "_" + str2);
-                        }
-                    }
-                }
-                str2 = b;
-            }
-            f1048a = str2;
-            return str2;
+            return null;
+        } catch (Exception e2) {
+            c.a("miui invoke error", e2);
+            return null;
         }
     }
 
-    public static String a(Context context) {
-        if (l.m571b()) {
-            return "";
-        }
-        String str = (String) bd.a("com.xiaomi.xmsf.helper.MIIDAccountHelper", "getMIID", context);
-        return TextUtils.isEmpty(str) ? "0" : str;
+    public static boolean a(Context context) {
+        return "com.xiaomi.xmsf".equals(context.getPackageName());
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public static void m676a(Context context) {
-        a = context.getApplicationContext();
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public static boolean m677a() {
-        return TextUtils.equals((String) bd.a("android.os.SystemProperties", "get", "sys.boot_completed"), "1");
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public static boolean m678a(Context context) {
+    private void b(Context context) {
         try {
-            return (context.getApplicationInfo().flags & 2) != 0;
-        } catch (Exception e) {
-            b.a(e);
-            return false;
+            Class<?> a2 = jb.a(context, "com.android.id.impl.IdProviderImpl");
+            this.b = a2;
+            this.c = a2.newInstance();
+            this.d = this.b.getMethod("getUDID", Context.class);
+            this.e = this.b.getMethod("getOAID", Context.class);
+            this.f = this.b.getMethod("getVAID", Context.class);
+            this.g = this.b.getMethod("getAAID", Context.class);
+        } catch (Exception e2) {
+            c.a("miui load class error", e2);
         }
     }
 
-    private static String b() {
-        String a2 = s.a("ro.build.version.emui", "");
-        f1048a = a2;
-        return a2;
+    @Override // com.xiaomi.push.s
+    public boolean a() {
+        return (this.b == null || this.c == null) ? false : true;
     }
 
-    /* renamed from: b  reason: collision with other method in class */
-    public static boolean m679b() {
-        try {
-            return a(null, "miui.os.Build").getField("IS_GLOBAL_BUILD").getBoolean(false);
-        } catch (ClassNotFoundException unused) {
-            b.d("miui.os.Build ClassNotFound");
-            return false;
-        } catch (Exception e) {
-            b.a(e);
-            return false;
-        }
+    @Override // com.xiaomi.push.s
+    public String b() {
+        return a(this.a, this.d);
     }
 
-    private static String c() {
-        String a2 = s.a("ro.build.version.opporom", "");
-        if (!TextUtils.isEmpty(a2) && !a2.startsWith("ColorOS_")) {
-            f1048a = "ColorOS_" + a2;
-        }
-        return f1048a;
+    @Override // com.xiaomi.push.s
+    public String c() {
+        return a(this.a, this.e);
     }
 
-    private static String d() {
-        String a2 = s.a("ro.vivo.os.version", "");
-        if (!TextUtils.isEmpty(a2) && !a2.startsWith("FuntouchOS_")) {
-            f1048a = "FuntouchOS_" + a2;
-        }
-        return f1048a;
+    @Override // com.xiaomi.push.s
+    public String d() {
+        return a(this.a, this.f);
+    }
+
+    @Override // com.xiaomi.push.s
+    public String e() {
+        return a(this.a, this.g);
     }
 }

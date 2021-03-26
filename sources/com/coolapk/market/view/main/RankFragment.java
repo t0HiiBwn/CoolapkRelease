@@ -66,8 +66,8 @@ public final class RankFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558888).suitedEntityType("HOLDER_TYPE_RANK_TAB").constructor(new RankFragment$onActivityCreated$1(this)).build(), 0, 2, null);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558924).suitedEntityType("apk").constructor(new RankFragment$onActivityCreated$2(this)).build(), 0);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558895).suitedEntityType("HOLDER_TYPE_RANK_TAB").constructor(new RankFragment$onActivityCreated$1(this)).build(), 0, 2, null);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558931).suitedEntityType("apk").constructor(new RankFragment$onActivityCreated$2(this)).build(), 0);
     }
 
     /* access modifiers changed from: protected */
@@ -162,7 +162,7 @@ public final class RankFragment extends EntityListFragment {
     /* compiled from: RankFragment.kt */
     private static final class RankHeaderViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558888;
+        public static final int LAYOUT_ID = 2131558895;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public RankHeaderViewHolder(View view, ItemActionHandler itemActionHandler) {

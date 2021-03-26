@@ -21,7 +21,7 @@ public abstract class SearchSceneListBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchSceneListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SearchSceneListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559131, viewGroup, z, obj);
+        return (SearchSceneListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559138, viewGroup, z, obj);
     }
 
     public static SearchSceneListBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class SearchSceneListBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchSceneListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SearchSceneListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559131, null, false, obj);
+        return (SearchSceneListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559138, null, false, obj);
     }
 
     public static SearchSceneListBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class SearchSceneListBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchSceneListBinding bind(View view, Object obj) {
-        return (SearchSceneListBinding) bind(obj, view, 2131559131);
+        return (SearchSceneListBinding) bind(obj, view, 2131559138);
     }
 }

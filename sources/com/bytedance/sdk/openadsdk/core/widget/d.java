@@ -24,9 +24,7 @@ public class d extends AlertDialog {
     private TextView i;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1326l;
+    private String l;
     private String m;
     private a n;
 
@@ -129,8 +127,8 @@ public class d extends AlertDialog {
         if (textView != null) {
             textView.setText(this.j);
         }
-        if (this.f != null && !TextUtils.isEmpty(this.f1326l)) {
-            com.bytedance.sdk.openadsdk.h.d.a(this.g).a(this.f1326l, this.f);
+        if (this.f != null && !TextUtils.isEmpty(this.l)) {
+            com.bytedance.sdk.openadsdk.h.d.a(this.g).a(this.l, this.f);
         }
         if (this.i != null) {
             String a2 = ac.a(this.g, "tt_open_app_detail_developer");
@@ -163,7 +161,7 @@ public class d extends AlertDialog {
     }
 
     public d c(String str) {
-        this.f1326l = str;
+        this.l = str;
         return this;
     }
 

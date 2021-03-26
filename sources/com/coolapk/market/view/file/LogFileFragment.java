@@ -38,7 +38,7 @@ public final class LogFileFragment extends NewAsyncListFragment<List<? extends F
         super.onActivityCreated(bundle);
         setRefreshEnable(false);
         setLoadMoreEnable(false);
-        setEmptyData(getString(2131886764), 0);
+        setEmptyData(getString(2131886826), 0);
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -52,7 +52,7 @@ public final class LogFileFragment extends NewAsyncListFragment<List<? extends F
         RecyclerView recyclerView3 = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView3, "recyclerView");
         recyclerView3.setAdapter(this.adapter);
-        BaseMultiTypeAdapter.register$default(this.adapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558814).constructor(LogFileFragment$onActivityCreated$1.INSTANCE).suitedMethod(LogFileFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(this.adapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558821).constructor(LogFileFragment$onActivityCreated$1.INSTANCE).suitedMethod(LogFileFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
         if (getUserVisibleHint()) {
             initData();
         }
@@ -88,7 +88,7 @@ public final class LogFileFragment extends NewAsyncListFragment<List<? extends F
     /* compiled from: LogFileFragment.kt */
     public static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558814;
+        public static final int LAYOUT_ID = 2131558821;
         private final ItemLogFileBinding binding;
         private File file;
 

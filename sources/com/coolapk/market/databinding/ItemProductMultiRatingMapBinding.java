@@ -54,7 +54,7 @@ public abstract class ItemProductMultiRatingMapBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductMultiRatingMapBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemProductMultiRatingMapBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558869, viewGroup, z, obj);
+        return (ItemProductMultiRatingMapBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558876, viewGroup, z, obj);
     }
 
     public static ItemProductMultiRatingMapBinding inflate(LayoutInflater layoutInflater) {
@@ -63,7 +63,7 @@ public abstract class ItemProductMultiRatingMapBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductMultiRatingMapBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemProductMultiRatingMapBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558869, null, false, obj);
+        return (ItemProductMultiRatingMapBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558876, null, false, obj);
     }
 
     public static ItemProductMultiRatingMapBinding bind(View view) {
@@ -72,6 +72,6 @@ public abstract class ItemProductMultiRatingMapBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductMultiRatingMapBinding bind(View view, Object obj) {
-        return (ItemProductMultiRatingMapBinding) bind(obj, view, 2131558869);
+        return (ItemProductMultiRatingMapBinding) bind(obj, view, 2131558876);
     }
 }

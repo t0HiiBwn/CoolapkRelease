@@ -34,18 +34,18 @@ public class ItemSponsorSelfDrawNewsBindingImpl extends ItemSponsorSelfDrawNewsB
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363002, 6);
-        sparseIntArray.put(2131362768, 7);
-        sparseIntArray.put(2131362417, 8);
-        sparseIntArray.put(2131363582, 9);
-        sparseIntArray.put(2131362913, 10);
-        sparseIntArray.put(2131362304, 11);
-        sparseIntArray.put(2131362308, 12);
-        sparseIntArray.put(2131362309, 13);
-        sparseIntArray.put(2131362310, 14);
-        sparseIntArray.put(2131363723, 15);
-        sparseIntArray.put(2131362833, 16);
-        sparseIntArray.put(2131362257, 17);
+        sparseIntArray.put(2131363016, 6);
+        sparseIntArray.put(2131362779, 7);
+        sparseIntArray.put(2131362423, 8);
+        sparseIntArray.put(2131363604, 9);
+        sparseIntArray.put(2131362925, 10);
+        sparseIntArray.put(2131362309, 11);
+        sparseIntArray.put(2131362313, 12);
+        sparseIntArray.put(2131362314, 13);
+        sparseIntArray.put(2131362315, 14);
+        sparseIntArray.put(2131363745, 15);
+        sparseIntArray.put(2131362844, 16);
+        sparseIntArray.put(2131362262, 17);
     }
 
     public ItemSponsorSelfDrawNewsBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -85,9 +85,9 @@ public class ItemSponsorSelfDrawNewsBindingImpl extends ItemSponsorSelfDrawNewsB
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (157 == i) {
+        } else if (158 == i) {
             setImageUrl((String) obj);
         } else if (50 != i) {
             return false;
@@ -108,7 +108,7 @@ public class ItemSponsorSelfDrawNewsBindingImpl extends ItemSponsorSelfDrawNewsB
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(157);
+        notifyPropertyChanged(158);
         super.requestRebind();
     }
 
@@ -145,7 +145,7 @@ public class ItemSponsorSelfDrawNewsBindingImpl extends ItemSponsorSelfDrawNewsB
         }
         if ((j & 10) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extraImageView, str, null, 2131231691, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extraImageView, str, null, 2131231702, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             this.imageCardView.setVisibility(i);
         }
     }

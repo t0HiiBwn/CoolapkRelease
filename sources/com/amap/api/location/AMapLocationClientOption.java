@@ -36,9 +36,7 @@ public class AMapLocationClientOption implements Parcelable, Cloneable {
     private long i;
     private boolean j;
     private boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1214l;
+    private boolean l;
     private boolean m;
     private boolean n;
     private AMapLocationMode o;
@@ -113,7 +111,7 @@ public class AMapLocationClientOption implements Parcelable, Cloneable {
         this.i = (long) ej.g;
         this.j = false;
         this.k = true;
-        this.f1214l = true;
+        this.l = true;
         this.m = true;
         this.n = true;
         this.o = AMapLocationMode.Hight_Accuracy;
@@ -139,7 +137,7 @@ public class AMapLocationClientOption implements Parcelable, Cloneable {
         boolean z2 = false;
         this.j = false;
         this.k = true;
-        this.f1214l = true;
+        this.l = true;
         this.m = true;
         this.n = true;
         this.o = AMapLocationMode.Hight_Accuracy;
@@ -162,7 +160,7 @@ public class AMapLocationClientOption implements Parcelable, Cloneable {
         this.i = parcel.readLong();
         this.j = parcel.readByte() != 0;
         this.k = parcel.readByte() != 0;
-        this.f1214l = parcel.readByte() != 0;
+        this.l = parcel.readByte() != 0;
         this.m = parcel.readByte() != 0;
         this.n = parcel.readByte() != 0;
         int readInt = parcel.readInt();
@@ -227,7 +225,7 @@ public class AMapLocationClientOption implements Parcelable, Cloneable {
         aMapLocationClientOption.k = this.k;
         aMapLocationClientOption.q = this.q;
         aMapLocationClientOption.r = this.r;
-        aMapLocationClientOption.f1214l = this.f1214l;
+        aMapLocationClientOption.l = this.l;
         aMapLocationClientOption.m = this.m;
         aMapLocationClientOption.i = this.i;
         aMapLocationClientOption.s = this.s;
@@ -309,7 +307,7 @@ public class AMapLocationClientOption implements Parcelable, Cloneable {
     }
 
     public boolean isNeedAddress() {
-        return this.f1214l;
+        return this.l;
     }
 
     public boolean isOffset() {
@@ -462,7 +460,7 @@ public class AMapLocationClientOption implements Parcelable, Cloneable {
     }
 
     public AMapLocationClientOption setNeedAddress(boolean z2) {
-        this.f1214l = z2;
+        this.l = z2;
         return this;
     }
 
@@ -500,7 +498,7 @@ public class AMapLocationClientOption implements Parcelable, Cloneable {
 
     @Override // java.lang.Object
     public String toString() {
-        return "interval:" + String.valueOf(this.h) + "#isOnceLocation:" + String.valueOf(this.j) + "#locationMode:" + String.valueOf(this.o) + "#locationProtocol:" + String.valueOf(p) + "#isMockEnable:" + String.valueOf(this.k) + "#isKillProcess:" + String.valueOf(this.q) + "#isGpsFirst:" + String.valueOf(this.r) + "#isNeedAddress:" + String.valueOf(this.f1214l) + "#isWifiActiveScan:" + String.valueOf(this.m) + "#wifiScan:" + String.valueOf(this.w) + "#httpTimeOut:" + String.valueOf(this.i) + "#isLocationCacheEnable:" + String.valueOf(this.t) + "#isOnceLocationLatest:" + String.valueOf(this.u) + "#sensorEnable:" + String.valueOf(this.v) + "#geoLanguage:" + String.valueOf(this.z) + "#locationPurpose:" + String.valueOf(this.B) + "#";
+        return "interval:" + String.valueOf(this.h) + "#isOnceLocation:" + String.valueOf(this.j) + "#locationMode:" + String.valueOf(this.o) + "#locationProtocol:" + String.valueOf(p) + "#isMockEnable:" + String.valueOf(this.k) + "#isKillProcess:" + String.valueOf(this.q) + "#isGpsFirst:" + String.valueOf(this.r) + "#isNeedAddress:" + String.valueOf(this.l) + "#isWifiActiveScan:" + String.valueOf(this.m) + "#wifiScan:" + String.valueOf(this.w) + "#httpTimeOut:" + String.valueOf(this.i) + "#isLocationCacheEnable:" + String.valueOf(this.t) + "#isOnceLocationLatest:" + String.valueOf(this.u) + "#sensorEnable:" + String.valueOf(this.v) + "#geoLanguage:" + String.valueOf(this.z) + "#locationPurpose:" + String.valueOf(this.B) + "#";
     }
 
     @Override // android.os.Parcelable
@@ -509,7 +507,7 @@ public class AMapLocationClientOption implements Parcelable, Cloneable {
         parcel.writeLong(this.i);
         parcel.writeByte(this.j ? (byte) 1 : 0);
         parcel.writeByte(this.k ? (byte) 1 : 0);
-        parcel.writeByte(this.f1214l ? (byte) 1 : 0);
+        parcel.writeByte(this.l ? (byte) 1 : 0);
         parcel.writeByte(this.m ? (byte) 1 : 0);
         parcel.writeByte(this.n ? (byte) 1 : 0);
         AMapLocationMode aMapLocationMode = this.o;

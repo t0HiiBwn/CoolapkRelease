@@ -37,7 +37,7 @@ public final class DialogUtil$showItemSelectDialog$2 extends RecyclerView.Adapte
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
-        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558535, viewGroup, false);
+        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558537, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "view");
         return new DialogUtil.SelectItemViewHolder(inflate);
     }

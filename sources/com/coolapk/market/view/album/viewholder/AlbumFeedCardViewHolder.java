@@ -48,7 +48,7 @@ import kotlin.text.StringsKt;
 /* compiled from: AlbumFeedCardViewHolder.kt */
 public final class AlbumFeedCardViewHolder extends GenericBindHolder<ItemAlbumWithAvatarBinding, Album> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558585;
+    public static final int LAYOUT_ID = 2131558589;
     private final List<?> dataList;
     private boolean isCoverLoaded;
     private String signUrl;
@@ -186,8 +186,8 @@ public final class AlbumFeedCardViewHolder extends GenericBindHolder<ItemAlbumWi
         Intrinsics.checkNotNull(view);
         String str = null;
         switch (view.getId()) {
-            case 2131362095:
-            case 2131363877:
+            case 2131362098:
+            case 2131363900:
                 Context context = getContext();
                 ItemAlbumWithAvatarBinding itemAlbumWithAvatarBinding = (ItemAlbumWithAvatarBinding) getBinding();
                 Intrinsics.checkNotNullExpressionValue(itemAlbumWithAvatarBinding, "binding");
@@ -197,8 +197,8 @@ public final class AlbumFeedCardViewHolder extends GenericBindHolder<ItemAlbumWi
                 }
                 ActionManager.startUserSpaceActivity(context, str);
                 return;
-            case 2131362199:
-            case 2131362312:
+            case 2131362204:
+            case 2131362317:
                 Context context2 = getContext();
                 Intrinsics.checkNotNullExpressionValue(context2, "context");
                 ActionManagerCompat.startActivityByUrl$default(context2, this.viewModel.getUrl(), null, null, 12, null);
@@ -221,7 +221,7 @@ public final class AlbumFeedCardViewHolder extends GenericBindHolder<ItemAlbumWi
                 Intrinsics.checkNotNullExpressionValue(album2, "viewModel.album!!");
                 StatisticHelper.recordEntityEvent$default(instance, str, album2, getAdapterPosition(), null, null, 24, null);
                 return;
-            case 2131362970:
+            case 2131362982:
                 moreAction();
                 return;
             default:

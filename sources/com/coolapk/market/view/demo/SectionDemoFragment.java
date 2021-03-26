@@ -52,7 +52,7 @@ public class SectionDemoFragment extends StateEventListFragment<Result<List<Enti
         this.adapter = new MySectionedAdapter(getRecyclerView().getAdapter());
         getRecyclerView().setAdapter(this.adapter);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558921, 2131231052).type(2131558924, 2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558928, 2131231062).type(2131558931, 2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         if (getUserVisibleHint()) {
@@ -91,7 +91,7 @@ public class SectionDemoFragment extends StateEventListFragment<Result<List<Enti
         ArrayList arrayList = new ArrayList();
         for (int i = 0; i < list.size(); i++) {
             if (i == 0 || i == 3 || i == 5) {
-                arrayList.add(new SectionedAdapter.Section(i, 2131558921, "Section " + (i + 1)));
+                arrayList.add(new SectionedAdapter.Section(i, 2131558928, "Section " + (i + 1)));
             }
         }
         this.adapter.setSections(arrayList);
@@ -127,7 +127,7 @@ public class SectionDemoFragment extends StateEventListFragment<Result<List<Enti
 
         @Override // com.coolapk.market.widget.SectionedAdapter
         public RecyclerView.ViewHolder onCreateSectionViewHolder(ViewGroup viewGroup, int i) {
-            return new SectionViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558921, viewGroup, false));
+            return new SectionViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558928, viewGroup, false));
         }
 
         @Override // com.coolapk.market.widget.SectionedAdapter
@@ -141,7 +141,7 @@ public class SectionDemoFragment extends StateEventListFragment<Result<List<Enti
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558924;
+            return 2131558931;
         }
 
         public DataAdapter(Fragment fragment) {
@@ -159,8 +159,8 @@ public class SectionDemoFragment extends StateEventListFragment<Result<List<Enti
                     if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition())) {
                         Entity entity = (Entity) SectionDemoFragment.this.getDataList().get(SectionDemoFragment.this.adapter.sectionedPositionToPosition(viewHolder.getAdapterPosition()));
                         int id = view.getId();
-                        if (id != 2131361886) {
-                            if (id == 2131362768 && EntityUtils.isApkType(entity.getEntityType())) {
+                        if (id != 2131361887) {
+                            if (id == 2131362779 && EntityUtils.isApkType(entity.getEntityType())) {
                                 ActionManager.startAppViewActivity(SectionDemoFragment.this.getActivity(), ((ServiceApp) entity).getPackageName());
                             }
                         } else if (EntityUtils.isApkType(entity.getEntityType())) {
@@ -204,7 +204,7 @@ public class SectionDemoFragment extends StateEventListFragment<Result<List<Enti
     }
 
     public static class SectionViewHolder extends BindingViewHolder {
-        private static final int LAYOUT_ID = 2131558921;
+        private static final int LAYOUT_ID = 2131558928;
         private String title;
 
         public SectionViewHolder(View view) {
@@ -215,7 +215,7 @@ public class SectionDemoFragment extends StateEventListFragment<Result<List<Enti
         @Override // com.coolapk.market.viewholder.BindingViewHolder
         public void bindTo(Object obj) {
             this.title = (String) ((SectionedAdapter.Section) obj).getObject();
-            notifyPropertyChanged(278);
+            notifyPropertyChanged(279);
         }
 
         @Bindable

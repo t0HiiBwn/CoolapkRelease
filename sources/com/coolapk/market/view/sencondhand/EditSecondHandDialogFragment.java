@@ -99,7 +99,7 @@ public final class EditSecondHandDialogFragment extends BaseDialogFragment imple
         if (!StringsKt.contains$default((CharSequence) str, (CharSequence) "zhuanzhuan.com", false, 2, (Object) null) && !StringsKt.contains$default((CharSequence) str, (CharSequence) "market.m.taobao.com", false, 2, (Object) null) && !StringsKt.contains$default((CharSequence) str, (CharSequence) "2.taobao.com", false, 2, (Object) null) && !StringsKt.contains$default((CharSequence) str, (CharSequence) "m.jiaoyimao.com", false, 2, (Object) null) && !StringsKt.contains$default((CharSequence) str, (CharSequence) "www.jiaoyimao.com", false, 2, (Object) null)) {
             extraUrl = str2;
         }
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558533, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558535, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…d_hand_edit, null, false)");
         DialogSecondHandEditBinding dialogSecondHandEditBinding = (DialogSecondHandEditBinding) inflate;
         this.binding = dialogSecondHandEditBinding;
@@ -114,7 +114,7 @@ public final class EditSecondHandDialogFragment extends BaseDialogFragment imple
         }
         dialogSecondHandEditBinding2.submitView.setOnClickListener(editSecondHandDialogFragment);
         int i2 = 1;
-        boolean z = 2131363446 == i;
+        boolean z = 2131363464 == i;
         DialogSecondHandEditBinding dialogSecondHandEditBinding3 = this.binding;
         if (dialogSecondHandEditBinding3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -130,8 +130,8 @@ public final class EditSecondHandDialogFragment extends BaseDialogFragment imple
         }
         EditText editText2 = dialogSecondHandEditBinding4.editText;
         Intrinsics.checkNotNullExpressionValue(editText2, "binding.editText");
-        editText2.setHint(i != 2131363446 ? i != 2131363450 ? str2 : "输入出售价格" : "添加闲鱼/交易猫链接");
-        if (i == 2131363450) {
+        editText2.setHint(i != 2131363464 ? i != 2131363468 ? str2 : "输入出售价格" : "添加闲鱼/交易猫链接");
+        if (i == 2131363468) {
             DialogSecondHandEditBinding dialogSecondHandEditBinding5 = this.binding;
             if (dialogSecondHandEditBinding5 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -159,7 +159,7 @@ public final class EditSecondHandDialogFragment extends BaseDialogFragment imple
             editText5.setSelection(string2.length());
         } else {
             String str3 = extraUrl;
-            if (!TextUtils.isEmpty(str3) && i == 2131363446) {
+            if (!TextUtils.isEmpty(str3) && i == 2131363464) {
                 DialogSecondHandEditBinding dialogSecondHandEditBinding8 = this.binding;
                 if (dialogSecondHandEditBinding8 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -188,7 +188,7 @@ public final class EditSecondHandDialogFragment extends BaseDialogFragment imple
     public void onClick(View view) {
         Intrinsics.checkNotNull(view);
         int id = view.getId();
-        if (id == 2131362193) {
+        if (id == 2131362196) {
             DialogSecondHandEditBinding dialogSecondHandEditBinding = this.binding;
             if (dialogSecondHandEditBinding == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -202,7 +202,7 @@ public final class EditSecondHandDialogFragment extends BaseDialogFragment imple
             if (action1 != null && action1 != null) {
                 action1.call(false);
             }
-        } else if (id == 2131363457 && this.listener != null) {
+        } else if (id == 2131363475 && this.listener != null) {
             DialogSecondHandEditBinding dialogSecondHandEditBinding2 = this.binding;
             if (dialogSecondHandEditBinding2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");

@@ -87,7 +87,7 @@ public abstract class ItemSecondHandSearchBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSecondHandSearchBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSecondHandSearchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558920, viewGroup, z, obj);
+        return (ItemSecondHandSearchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558927, viewGroup, z, obj);
     }
 
     public static ItemSecondHandSearchBinding inflate(LayoutInflater layoutInflater) {
@@ -96,7 +96,7 @@ public abstract class ItemSecondHandSearchBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSecondHandSearchBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSecondHandSearchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558920, null, false, obj);
+        return (ItemSecondHandSearchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558927, null, false, obj);
     }
 
     public static ItemSecondHandSearchBinding bind(View view) {
@@ -105,6 +105,6 @@ public abstract class ItemSecondHandSearchBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSecondHandSearchBinding bind(View view, Object obj) {
-        return (ItemSecondHandSearchBinding) bind(obj, view, 2131558920);
+        return (ItemSecondHandSearchBinding) bind(obj, view, 2131558927);
     }
 }

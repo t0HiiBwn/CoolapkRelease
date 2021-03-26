@@ -19,7 +19,7 @@ public class a {
     }
 
     private static a c() {
-        a c2 = C0129a.c();
+        a c2 = C0147a.c();
         if (c2 != null) {
             return c2;
         }
@@ -36,11 +36,11 @@ public class a {
 
     /* renamed from: com.tencent.msdk.dns.base.d.a$a  reason: collision with other inner class name */
     /* compiled from: Platform */
-    private static class C0129a extends a {
+    private static class C0147a extends a {
         private static Class a;
         private Activity b = null;
 
-        private C0129a() {
+        private C0147a() {
             super();
         }
 
@@ -56,7 +56,7 @@ public class a {
             if (a == null) {
                 return null;
             }
-            return new C0129a();
+            return new C0147a();
         }
 
         @Override // com.tencent.msdk.dns.base.d.a

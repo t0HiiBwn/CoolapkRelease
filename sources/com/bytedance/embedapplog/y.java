@@ -27,12 +27,12 @@ class y extends u {
         aa.a(jSONObject, "ab_sdk_version", this.f.p());
         aa.a(jSONObject, "ab_version", this.f.t());
         aa.a(jSONObject, "aliyun_uuid", this.f.a());
-        String l2 = this.f.l();
-        if (TextUtils.isEmpty(l2)) {
-            l2 = bk.a(this.e, this.f);
+        String l = this.f.l();
+        if (TextUtils.isEmpty(l)) {
+            l = bk.a(this.e, this.f);
         }
-        if (!TextUtils.isEmpty(l2)) {
-            aa.a(jSONObject, "google_aid", l2);
+        if (!TextUtils.isEmpty(l)) {
+            aa.a(jSONObject, "google_aid", l);
         }
         String z = this.f.z();
         if (!TextUtils.isEmpty(z)) {

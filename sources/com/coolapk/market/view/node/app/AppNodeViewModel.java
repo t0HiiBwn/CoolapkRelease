@@ -207,7 +207,7 @@ public final class AppNodeViewModel extends BaseObservable {
         notifyPropertyChanged(68);
         notifyPropertyChanged(70);
         notifyPropertyChanged(72);
-        notifyPropertyChanged(248);
+        notifyPropertyChanged(249);
         notifyPropertyChanged(47);
     }
 

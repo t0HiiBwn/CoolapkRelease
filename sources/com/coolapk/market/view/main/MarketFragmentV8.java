@@ -51,11 +51,11 @@ public final class MarketFragmentV8 extends BaseFragment implements ScrollableFr
 
     public MarketFragmentV8() {
         ArrayList arrayList = new ArrayList();
-        arrayList.add(2131887236);
-        arrayList.add(2131887228);
-        arrayList.add(2131887262);
-        arrayList.add(2131887220);
-        arrayList.add(2131887294);
+        arrayList.add(2131887298);
+        arrayList.add(2131887290);
+        arrayList.add(2131887324);
+        arrayList.add(2131887282);
+        arrayList.add(2131887356);
         Unit unit = Unit.INSTANCE;
         this.titleResList = arrayList;
     }
@@ -118,7 +118,7 @@ public final class MarketFragmentV8 extends BaseFragment implements ScrollableFr
         if (viewPager2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("viewPager");
         }
-        viewPager2.setId(2131363934);
+        viewPager2.setId(2131363959);
         ViewPager viewPager3 = this.viewPager;
         if (viewPager3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("viewPager");
@@ -250,19 +250,19 @@ public final class MarketFragmentV8 extends BaseFragment implements ScrollableFr
         DataListFragment dataListFragment;
         int intValue = this.titleResList.get(i).intValue();
         switch (intValue) {
-            case 2131887220:
+            case 2131887282:
                 dataListFragment = DataListFragment.Companion.newInstance$default(DataListFragment.Companion, "V8_MARKET_ALBUM", "应用集", null, 0, 12, null);
                 break;
-            case 2131887228:
+            case 2131887290:
                 dataListFragment = DataListFragment.Companion.newInstance$default(DataListFragment.Companion, "V8_MARKET_APP", "应用", null, 0, 12, null);
                 break;
-            case 2131887236:
+            case 2131887298:
                 dataListFragment = DataListFragment.Companion.newInstance$default(DataListFragment.Companion, "V10_MARKET_HOME", "精选", null, 0, 12, null);
                 break;
-            case 2131887262:
+            case 2131887324:
                 dataListFragment = DataListFragment.Companion.newInstance$default(DataListFragment.Companion, "V8_MARKET_GAME", "游戏", null, 0, 12, null);
                 break;
-            case 2131887294:
+            case 2131887356:
                 dataListFragment = DataListFragment.Companion.newInstance$default(DataListFragment.Companion, "V10_MARKET_RANK", "排行 ", null, 0, 12, null);
                 break;
             default:

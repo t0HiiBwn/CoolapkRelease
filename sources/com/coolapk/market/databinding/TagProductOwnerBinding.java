@@ -24,7 +24,7 @@ public abstract class TagProductOwnerBinding extends ViewDataBinding {
 
     @Deprecated
     public static TagProductOwnerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (TagProductOwnerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559177, viewGroup, z, obj);
+        return (TagProductOwnerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559185, viewGroup, z, obj);
     }
 
     public static TagProductOwnerBinding inflate(LayoutInflater layoutInflater) {
@@ -33,7 +33,7 @@ public abstract class TagProductOwnerBinding extends ViewDataBinding {
 
     @Deprecated
     public static TagProductOwnerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (TagProductOwnerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559177, null, false, obj);
+        return (TagProductOwnerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559185, null, false, obj);
     }
 
     public static TagProductOwnerBinding bind(View view) {
@@ -42,6 +42,6 @@ public abstract class TagProductOwnerBinding extends ViewDataBinding {
 
     @Deprecated
     public static TagProductOwnerBinding bind(View view, Object obj) {
-        return (TagProductOwnerBinding) bind(obj, view, 2131559177);
+        return (TagProductOwnerBinding) bind(obj, view, 2131559185);
     }
 }

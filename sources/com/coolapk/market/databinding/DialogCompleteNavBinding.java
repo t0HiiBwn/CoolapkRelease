@@ -35,7 +35,7 @@ public abstract class DialogCompleteNavBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogCompleteNavBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogCompleteNavBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558521, viewGroup, z, obj);
+        return (DialogCompleteNavBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558523, viewGroup, z, obj);
     }
 
     public static DialogCompleteNavBinding inflate(LayoutInflater layoutInflater) {
@@ -44,7 +44,7 @@ public abstract class DialogCompleteNavBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogCompleteNavBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogCompleteNavBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558521, null, false, obj);
+        return (DialogCompleteNavBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558523, null, false, obj);
     }
 
     public static DialogCompleteNavBinding bind(View view) {
@@ -53,6 +53,6 @@ public abstract class DialogCompleteNavBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogCompleteNavBinding bind(View view, Object obj) {
-        return (DialogCompleteNavBinding) bind(obj, view, 2131558521);
+        return (DialogCompleteNavBinding) bind(obj, view, 2131558523);
     }
 }

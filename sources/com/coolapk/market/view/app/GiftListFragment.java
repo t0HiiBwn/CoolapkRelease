@@ -104,9 +104,9 @@ public class GiftListFragment extends NewAsyncListFragment<List<Gift>> {
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        setEmptyData(getString(2131886764), 0);
+        setEmptyData(getString(2131886826), 0);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558751, 2131231051).type(2131558972, 2131231051).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558758, 2131231061).type(2131558979, 2131231061).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         setAdapter(new DataAdapter());
@@ -188,7 +188,7 @@ public class GiftListFragment extends NewAsyncListFragment<List<Gift>> {
     }
 
     private static class DataViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558751;
+        public static final int LAYOUT_ID = 2131558758;
         private final FragmentBindingComponent component;
         private final boolean isShowLogo;
 
@@ -206,7 +206,7 @@ public class GiftListFragment extends NewAsyncListFragment<List<Gift>> {
             ItemGiftItemBinding itemGiftItemBinding = (ItemGiftItemBinding) getBinding();
             Gift gift = (Gift) obj;
             if (this.isShowLogo) {
-                AppHolder.getFragmentImageLoader().displayImage((Fragment) this.component.getContainer(), gift.getApkLogo(), itemGiftItemBinding.giftLogoView, 2131231363);
+                AppHolder.getFragmentImageLoader().displayImage((Fragment) this.component.getContainer(), gift.getApkLogo(), itemGiftItemBinding.giftLogoView, 2131231374);
             } else {
                 itemGiftItemBinding.giftLogoView.setVisibility(8);
                 itemGiftItemBinding.getRoot().setPadding(0, DisplayUtils.dp2px(getContext(), 16.0f), DisplayUtils.dp2px(getContext(), 16.0f), DisplayUtils.dp2px(getContext(), 16.0f));
@@ -218,16 +218,16 @@ public class GiftListFragment extends NewAsyncListFragment<List<Gift>> {
             itemGiftItemBinding.giftProgressView.setProgress((int) f);
             int i = parseInt2 - parseInt;
             if (i > 10) {
-                itemGiftItemBinding.progressBarText.setText(getContext().getString(2131886825, Integer.valueOf(Math.round(f))));
+                itemGiftItemBinding.progressBarText.setText(getContext().getString(2131886887, Integer.valueOf(Math.round(f))));
                 itemGiftItemBinding.progressBarText.setTextColor(AppHolder.getAppTheme().getTextColorSecondary());
             } else {
-                itemGiftItemBinding.progressBarText.setText(getContext().getString(2131886826, Integer.valueOf(i)));
-                itemGiftItemBinding.progressBarText.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099820));
+                itemGiftItemBinding.progressBarText.setText(getContext().getString(2131886888, Integer.valueOf(i)));
+                itemGiftItemBinding.progressBarText.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099822));
             }
             if (gift.isGet()) {
-                itemGiftItemBinding.giftGetText.setText(getContext().getString(2131886823));
+                itemGiftItemBinding.giftGetText.setText(getContext().getString(2131886885));
             } else {
-                itemGiftItemBinding.giftGetText.setText(getContext().getString(2131886821));
+                itemGiftItemBinding.giftGetText.setText(getContext().getString(2131886883));
             }
             itemGiftItemBinding.giftDateLine.setText(gift.getDateline() != null ? DateUtils.getTimeDescription(getContext(), gift.getDateline()) : "");
             if (!TextUtils.isEmpty(gift.getDescription())) {
@@ -254,7 +254,7 @@ public class GiftListFragment extends NewAsyncListFragment<List<Gift>> {
         @Override // androidx.fragment.app.DialogFragment
         public Dialog onCreateDialog(Bundle bundle) {
             this.gift = (Gift) getArguments().getParcelable("GIFT");
-            return new AlertDialog.Builder(getActivity()).setMessage(getActivity().getString(2131886721)).setPositiveButton(getActivity().getString(2131886708), new DialogInterface.OnClickListener() {
+            return new AlertDialog.Builder(getActivity()).setMessage(getActivity().getString(2131886783)).setPositiveButton(getActivity().getString(2131886770), new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.view.app.GiftListFragment.DelGiftDialogFragment.AnonymousClass1 */
 
                 @Override // android.content.DialogInterface.OnClickListener
@@ -290,7 +290,7 @@ public class GiftListFragment extends NewAsyncListFragment<List<Gift>> {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-            if (i == 2131558751) {
+            if (i == 2131558758) {
                 return new DataViewHolder(inflate, this.component, TextUtils.isEmpty(GiftListFragment.this.apkId), new ItemActionHandler() {
                     /* class com.coolapk.market.view.app.GiftListFragment.DataAdapter.AnonymousClass2 */
 
@@ -300,15 +300,15 @@ public class GiftListFragment extends NewAsyncListFragment<List<Gift>> {
                         if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition())) {
                             final Gift gift = (Gift) GiftListFragment.this.dataList.get(viewHolder.getAdapterPosition());
                             int id = view.getId();
-                            if (id != 2131362613) {
-                                if (id == 2131362768) {
-                                    ActionManager.startAppViewActivity(GiftListFragment.this.getActivity(), view.findViewById(2131362616), gift.getApkName(), gift.getApkLogo(), gift.getTitle(), gift.getExtraAnalysisData(), null, null);
+                            if (id != 2131362621) {
+                                if (id == 2131362779) {
+                                    ActionManager.startAppViewActivity(GiftListFragment.this.getActivity(), view.findViewById(2131362624), gift.getApkName(), gift.getApkLogo(), gift.getTitle(), gift.getExtraAnalysisData(), null, null);
                                 }
                             } else if (!gift.isRequireInstalled() || PackageUtils.isInstalled(GiftListFragment.this.getActivity(), gift.getApkName())) {
                                 FetchGiftDialog.newInstance(gift).show(GiftListFragment.this.getChildFragmentManager(), (String) null);
                             } else {
                                 SimpleDialog newInstance = SimpleDialog.newInstance();
-                                newInstance.setMessage(GiftListFragment.this.getString(2131886822));
+                                newInstance.setMessage(GiftListFragment.this.getString(2131886884));
                                 newInstance.setPositiveButton(2131886128, new DialogInterface.OnClickListener() {
                                     /* class com.coolapk.market.view.app.GiftListFragment.DataAdapter.AnonymousClass2.AnonymousClass1 */
 
@@ -324,7 +324,7 @@ public class GiftListFragment extends NewAsyncListFragment<List<Gift>> {
                     }
                 });
             }
-            if (i == 2131558972) {
+            if (i == 2131558979) {
                 return new UserGiftViewHolder(inflate, this.component, new ItemActionHandler() {
                     /* class com.coolapk.market.view.app.GiftListFragment.DataAdapter.AnonymousClass1 */
 
@@ -333,11 +333,11 @@ public class GiftListFragment extends NewAsyncListFragment<List<Gift>> {
                         if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition())) {
                             Gift gift = (Gift) GiftListFragment.this.dataList.get(viewHolder.getAdapterPosition());
                             int id = view.getId();
-                            if (id == 2131362613) {
+                            if (id == 2131362621) {
                                 StringUtils.copyText(GiftListFragment.this.getActivity(), gift.getGiftData());
-                                Toast.show(GiftListFragment.this.getActivity(), GiftListFragment.this.getString(2131886824));
-                            } else if (id == 2131362768) {
-                                ActionManager.startAppViewActivity(GiftListFragment.this.getActivity(), view.findViewById(2131362616), gift.getApkName(), gift.getApkLogo(), gift.getApkTitle(), gift.getExtraAnalysisData(), null, null);
+                                Toast.show(GiftListFragment.this.getActivity(), GiftListFragment.this.getString(2131886886));
+                            } else if (id == 2131362779) {
+                                ActionManager.startAppViewActivity(GiftListFragment.this.getActivity(), view.findViewById(2131362624), gift.getApkName(), gift.getApkLogo(), gift.getApkTitle(), gift.getExtraAnalysisData(), null, null);
                             }
                         }
                     }
@@ -354,7 +354,7 @@ public class GiftListFragment extends NewAsyncListFragment<List<Gift>> {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return (TextUtils.isEmpty(GiftListFragment.this.sign) || TextUtils.isEmpty(GiftListFragment.this.uid)) ? 2131558751 : 2131558972;
+            return (TextUtils.isEmpty(GiftListFragment.this.sign) || TextUtils.isEmpty(GiftListFragment.this.uid)) ? 2131558758 : 2131558979;
         }
 
         public void onBindViewHolder(BindingViewHolder bindingViewHolder, int i) {

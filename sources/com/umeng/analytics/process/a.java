@@ -13,7 +13,7 @@ interface a {
 
     /* renamed from: com.umeng.analytics.process.a$a  reason: collision with other inner class name */
     /* compiled from: DBConstant */
-    public interface AbstractC0145a {
+    public interface AbstractC0172a {
         public static final String a = "__et_p";
         public static final String b = "__i";
         public static final String c = "__e";

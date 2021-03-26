@@ -41,6 +41,6 @@ public final class QuestionDetailBottomViewPart$onAddAnswerViewClick$2 extends E
             }
             return;
         }
-        this.this$0.enterAnswerActivity();
+        QuestionDetailBottomViewPart.access$enterAnswerActivity(this.this$0);
     }
 }

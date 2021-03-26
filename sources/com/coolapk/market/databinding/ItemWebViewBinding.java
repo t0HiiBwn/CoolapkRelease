@@ -45,7 +45,7 @@ public abstract class ItemWebViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemWebViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemWebViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558990, viewGroup, z, obj);
+        return (ItemWebViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558997, viewGroup, z, obj);
     }
 
     public static ItemWebViewBinding inflate(LayoutInflater layoutInflater) {
@@ -54,7 +54,7 @@ public abstract class ItemWebViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemWebViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemWebViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558990, null, false, obj);
+        return (ItemWebViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558997, null, false, obj);
     }
 
     public static ItemWebViewBinding bind(View view) {
@@ -63,6 +63,6 @@ public abstract class ItemWebViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemWebViewBinding bind(View view, Object obj) {
-        return (ItemWebViewBinding) bind(obj, view, 2131558990);
+        return (ItemWebViewBinding) bind(obj, view, 2131558997);
     }
 }

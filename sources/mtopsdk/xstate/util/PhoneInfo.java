@@ -196,8 +196,8 @@ public class PhoneInfo {
         }
     }
 
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x0057: APUT  (r10v1 java.lang.Object[]), (1 ??[boolean, int, float, short, byte, char]), (r11v4 java.lang.String) */
-    /* JADX WARNING: Removed duplicated region for block: B:29:0x0082  */
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x0058: APUT  (r10v1 java.lang.Object[]), (1 ??[boolean, int, float, short, byte, char]), (r11v4 java.lang.String) */
+    /* JADX WARNING: Removed duplicated region for block: B:29:0x0084  */
     public static String getLocalMacAddress(Context context) {
         Throwable th;
         String str = "";

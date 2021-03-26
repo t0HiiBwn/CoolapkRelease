@@ -23,8 +23,8 @@ public class ItemPermissionsBindingImpl extends ItemPermissionsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131362376, 3);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131362382, 3);
     }
 
     public ItemPermissionsBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -22,9 +22,9 @@ final class CollectionSelectFragment$onActivityCreated$2 extends Lambda implemen
 
     public final RecyclerView.ViewHolder invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "it");
-        TextView textView = this.this$0.doneView;
-        LinkedHashMap linkedHashMap = this.this$0.collectionMap;
-        Intrinsics.checkNotNull(linkedHashMap);
-        return new CollectionSelectViewHolder(textView, linkedHashMap, this.this$0.cancelMap, this.this$0.component, view, null);
+        TextView access$getDoneView$p = CollectionSelectFragment.access$getDoneView$p(this.this$0);
+        LinkedHashMap access$getCollectionMap$p = CollectionSelectFragment.access$getCollectionMap$p(this.this$0);
+        Intrinsics.checkNotNull(access$getCollectionMap$p);
+        return new CollectionSelectViewHolder(access$getDoneView$p, access$getCollectionMap$p, CollectionSelectFragment.access$getCancelMap$p(this.this$0), CollectionSelectFragment.access$getComponent$p(this.this$0), view, null);
     }
 }

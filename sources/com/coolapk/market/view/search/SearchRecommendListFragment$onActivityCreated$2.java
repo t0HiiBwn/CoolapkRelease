@@ -41,7 +41,7 @@ final class SearchRecommendListFragment$onActivityCreated$2 extends Lambda imple
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
                 super.onItemClick(viewHolder, view);
-                Object tag = viewHolder.itemView.getTag(2131362753);
+                Object tag = viewHolder.itemView.getTag(2131362764);
                 Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.model.Entity");
                 Entity entity = (Entity) tag;
                 String url = entity.getUrl();

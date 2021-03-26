@@ -28,9 +28,9 @@ public class ItemSecondHandDetailBindingImpl extends ItemSecondHandDetailBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 1);
-        sparseIntArray.put(2131363070, 2);
-        sparseIntArray.put(2131363499, 3);
+        sparseIntArray.put(2131363604, 1);
+        sparseIntArray.put(2131363084, 2);
+        sparseIntArray.put(2131363517, 3);
     }
 
     public ItemSecondHandDetailBindingImpl(DataBindingComponent dataBindingComponent, View view) {

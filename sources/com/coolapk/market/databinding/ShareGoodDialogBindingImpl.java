@@ -27,10 +27,10 @@ public class ShareGoodDialogBindingImpl extends ShareGoodDialogBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 5);
-        sparseIntArray.put(2131363437, 6);
-        sparseIntArray.put(2131362632, 7);
-        sparseIntArray.put(2131362196, 8);
+        sparseIntArray.put(2131363604, 5);
+        sparseIntArray.put(2131363455, 6);
+        sparseIntArray.put(2131362640, 7);
+        sparseIntArray.put(2131362200, 8);
     }
 
     public ShareGoodDialogBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -71,7 +71,7 @@ public class ShareGoodDialogBindingImpl extends ShareGoodDialogBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((FeedGoods) obj);
@@ -84,7 +84,7 @@ public class ShareGoodDialogBindingImpl extends ShareGoodDialogBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -133,7 +133,7 @@ public class ShareGoodDialogBindingImpl extends ShareGoodDialogBinding {
             this.itemView.setVisibility(i2);
             this.loadingView.setVisibility(i);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView2, str, null, 2131231408, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView2, str, null, 2131231419, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
         }
         if ((j & 2) != 0) {
             ThemeBindingAdapters.setIndeterminateTint(this.loadingView, "colorAccent");

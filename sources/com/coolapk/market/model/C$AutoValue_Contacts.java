@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Contacts  reason: invalid class name */
 abstract class C$AutoValue_Contacts extends C$$AutoValue_Contacts {
-    C$AutoValue_Contacts(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, String str14, String str15, String str16, String str17, String str18, int i, String str19, UserInfo userInfo, UserInfo userInfo2) {
-        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l2, l3, str13, str14, str15, str16, str17, str18, i, str19, userInfo, userInfo2);
+    C$AutoValue_Contacts(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, String str14, String str15, String str16, String str17, String str18, int i, String str19, UserInfo userInfo, UserInfo userInfo2) {
+        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l, l2, str13, str14, str15, str16, str17, str18, i, str19, userInfo, userInfo2);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Contacts$GsonTypeAdapter */
@@ -159,13 +159,13 @@ abstract class C$AutoValue_Contacts extends C$$AutoValue_Contacts {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -298,8 +298,8 @@ abstract class C$AutoValue_Contacts extends C$$AutoValue_Contacts {
             String str10 = this.defaultSubTitle;
             String str11 = this.defaultId;
             String str12 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str13 = this.defaultDeprecatedUserAvatar;
             String str14 = this.defaultDeprecatedUserName;
             String str15 = this.defaultDisplayUserName;
@@ -322,9 +322,9 @@ abstract class C$AutoValue_Contacts extends C$$AutoValue_Contacts {
             String str28 = str10;
             String str29 = str11;
             String str30 = str12;
-            Long l4 = l2;
+            Long l3 = l;
             String str31 = str;
-            Long l5 = l3;
+            Long l4 = l2;
             String str32 = str13;
             String str33 = str14;
             String str34 = str15;
@@ -513,7 +513,7 @@ abstract class C$AutoValue_Contacts extends C$$AutoValue_Contacts {
                             str34 = this.displayUserNameAdapter.read(jsonReader);
                             continue;
                         case 6:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 7:
                             str31 = this.entityTypeNameAdapter.read(jsonReader);
@@ -567,7 +567,7 @@ abstract class C$AutoValue_Contacts extends C$$AutoValue_Contacts {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 24:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -576,7 +576,7 @@ abstract class C$AutoValue_Contacts extends C$$AutoValue_Contacts {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Contacts(str31, str20, str21, str22, num2, str23, str24, str25, str26, str27, str28, str29, str30, l4, l5, str32, str33, str34, str35, str36, str37, i2, str38, userInfo3, userInfo2);
+            return new AutoValue_Contacts(str31, str20, str21, str22, num2, str23, str24, str25, str26, str27, str28, str29, str30, l3, l4, str32, str33, str34, str35, str36, str37, i2, str38, userInfo3, userInfo2);
         }
     }
 }

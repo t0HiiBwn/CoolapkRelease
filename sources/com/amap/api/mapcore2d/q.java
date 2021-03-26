@@ -13,9 +13,7 @@ public class q {
     public static int i = 1;
     public static int j = 256;
     public static int k = 21;
-
-    /* renamed from: l  reason: collision with root package name */
-    public static int f1243l;
+    public static int l;
     static int m = 0;
     static int n = 0;
     static int o = 0;

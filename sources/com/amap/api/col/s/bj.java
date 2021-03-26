@@ -41,9 +41,7 @@ public final class bj {
     private static long i = 0;
     private static volatile ConcurrentHashMap<String, Long> j = new ConcurrentHashMap<>(8);
     private static volatile ConcurrentHashMap<String, Long> k = new ConcurrentHashMap<>(8);
-
-    /* renamed from: l  reason: collision with root package name */
-    private static volatile ConcurrentHashMap<String, d> f1201l = new ConcurrentHashMap<>(8);
+    private static volatile ConcurrentHashMap<String, d> l = new ConcurrentHashMap<>(8);
 
     /* compiled from: AuthConfigManager */
     public interface a {
@@ -1006,8 +1004,8 @@ public final class bj {
                     String b2 = brVar.b();
                     if (!TextUtils.isEmpty(b2)) {
                         a(brVar);
-                        if (f1201l == null) {
-                            f1201l = new ConcurrentHashMap<>(8);
+                        if (l == null) {
+                            l = new ConcurrentHashMap<>(8);
                         }
                         if (k == null) {
                             k = new ConcurrentHashMap<>(8);
@@ -1015,12 +1013,12 @@ public final class bj {
                         if (j == null) {
                             j = new ConcurrentHashMap<>(8);
                         }
-                        if (!f1201l.containsKey(b2)) {
+                        if (!l.containsKey(b2)) {
                             d dVar = new d((byte) 0);
                             dVar.a = brVar;
                             dVar.b = str;
                             dVar.c = aVar;
-                            f1201l.put(b2, dVar);
+                            l.put(b2, dVar);
                             j.put(b2, Long.valueOf(ci.c(c, "open_common", b2)));
                         }
                     }
@@ -1067,8 +1065,8 @@ public final class bj {
                         k = new ConcurrentHashMap<>(8);
                     }
                     k.put(str, Long.valueOf(SystemClock.elapsedRealtime()));
-                    if (f1201l != null) {
-                        if (f1201l.containsKey(str)) {
+                    if (l != null) {
+                        if (l.containsKey(str)) {
                             if (!TextUtils.isEmpty(str)) {
                                 if (z) {
                                     cu.a(true, str);
@@ -1078,7 +1076,7 @@ public final class bj {
 
                                     @Override // java.lang.Runnable
                                     public final void run() {
-                                        d dVar = (d) bj.f1201l.get(str);
+                                        d dVar = (d) bj.l.get(str);
                                         if (dVar != null) {
                                             a aVar = dVar.c;
                                             b a2 = bj.a(bj.c, dVar.a, dVar.b, str2, str3, str4);
@@ -1104,13 +1102,13 @@ public final class bj {
                 if (TextUtils.isEmpty(str)) {
                     return false;
                 }
-                if (f1201l == null) {
+                if (l == null) {
                     return false;
                 }
                 if (k == null) {
                     k = new ConcurrentHashMap<>(8);
                 }
-                if (f1201l.containsKey(str) && !k.containsKey(str)) {
+                if (l.containsKey(str) && !k.containsKey(str)) {
                     k.put(str, Long.valueOf(SystemClock.elapsedRealtime()));
                     return true;
                 }
@@ -1150,8 +1148,8 @@ public final class bj {
     private static synchronized void b(String str, long j2) {
         synchronized (bj.class) {
             try {
-                if (f1201l != null) {
-                    if (f1201l.containsKey(str)) {
+                if (l != null) {
+                    if (l.containsKey(str)) {
                         if (j == null) {
                             j = new ConcurrentHashMap<>(8);
                         }

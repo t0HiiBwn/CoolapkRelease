@@ -33,7 +33,7 @@ public abstract class LayoutWaterMarkBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutWaterMarkBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (LayoutWaterMarkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559008, viewGroup, z, obj);
+        return (LayoutWaterMarkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559015, viewGroup, z, obj);
     }
 
     public static LayoutWaterMarkBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class LayoutWaterMarkBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutWaterMarkBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (LayoutWaterMarkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559008, null, false, obj);
+        return (LayoutWaterMarkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559015, null, false, obj);
     }
 
     public static LayoutWaterMarkBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class LayoutWaterMarkBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutWaterMarkBinding bind(View view, Object obj) {
-        return (LayoutWaterMarkBinding) bind(obj, view, 2131559008);
+        return (LayoutWaterMarkBinding) bind(obj, view, 2131559015);
     }
 }

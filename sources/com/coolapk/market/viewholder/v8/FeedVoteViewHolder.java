@@ -37,7 +37,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedVoteViewHolder.kt */
 public final class FeedVoteViewHolder extends GenericBindHolder<ItemFeedVoteBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558735;
+    public static final int LAYOUT_ID = 2131558742;
     private Feed feed;
     private final Lazy headerViewPart$delegate;
     private final Lazy voteMultiView$delegate = LazyKt.lazy(new FeedVoteViewHolder$voteMultiView$2(this));
@@ -192,7 +192,7 @@ public final class FeedVoteViewHolder extends GenericBindHolder<ItemFeedVoteBind
                     Intrinsics.throwUninitializedPropertyAccessException("feed");
                 }
                 String message2 = feed7.getMessage();
-                SpannableStringBuilder spannableStringBuilder2 = new SpannableStringBuilder(getContext().getString(2131886656));
+                SpannableStringBuilder spannableStringBuilder2 = new SpannableStringBuilder(getContext().getString(2131886718));
                 spannableStringBuilder2.setSpan(new ForegroundColorSpan(AppHolder.getAppTheme().getColorAccent()), 0, spannableStringBuilder2.length(), 33);
                 Unit unit = Unit.INSTANCE;
                 ViewExtendsKt.setBriefMessage(textView6, 90, message2, spannableStringBuilder2);
@@ -239,7 +239,7 @@ public final class FeedVoteViewHolder extends GenericBindHolder<ItemFeedVoteBind
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

@@ -26,7 +26,7 @@ import kotlin.text.StringsKt;
 /* compiled from: SortSelectViewHolder.kt */
 public final class SortSelectViewHolder extends GenericBindHolder<ItemSortSelectBinding, EntityCard> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558936;
+    public static final int LAYOUT_ID = 2131558943;
     private EntityCard data;
     private final EntityRequestArgHelper entityRequestArgHelper;
 
@@ -100,7 +100,7 @@ public final class SortSelectViewHolder extends GenericBindHolder<ItemSortSelect
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() == 2131363338) {
+        if (view.getId() == 2131363354) {
             showMoreOptionMenu(view);
         }
     }

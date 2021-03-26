@@ -55,7 +55,7 @@ public abstract class ItemFeedSmallHeaderViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedSmallHeaderViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedSmallHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558727, viewGroup, z, obj);
+        return (ItemFeedSmallHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558734, viewGroup, z, obj);
     }
 
     public static ItemFeedSmallHeaderViewBinding inflate(LayoutInflater layoutInflater) {
@@ -64,7 +64,7 @@ public abstract class ItemFeedSmallHeaderViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedSmallHeaderViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedSmallHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558727, null, false, obj);
+        return (ItemFeedSmallHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558734, null, false, obj);
     }
 
     public static ItemFeedSmallHeaderViewBinding bind(View view) {
@@ -73,6 +73,6 @@ public abstract class ItemFeedSmallHeaderViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedSmallHeaderViewBinding bind(View view, Object obj) {
-        return (ItemFeedSmallHeaderViewBinding) bind(obj, view, 2131558727);
+        return (ItemFeedSmallHeaderViewBinding) bind(obj, view, 2131558734);
     }
 }

@@ -47,12 +47,12 @@ public class ck {
                 case 12:
                     chVar.j();
                     while (true) {
-                        cc l2 = chVar.l();
-                        if (l2.b == 0) {
+                        cc l = chVar.l();
+                        if (l.b == 0) {
                             chVar.k();
                             return;
                         } else {
-                            a(chVar, l2.b, i - 1);
+                            a(chVar, l.b, i - 1);
                             chVar.m();
                         }
                     }

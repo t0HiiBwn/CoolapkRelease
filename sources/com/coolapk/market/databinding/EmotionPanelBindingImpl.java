@@ -27,10 +27,10 @@ public class EmotionPanelBindingImpl extends EmotionPanelBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362452, 1);
-        sparseIntArray.put(2131362454, 2);
-        sparseIntArray.put(2131362453, 3);
-        sparseIntArray.put(2131362451, 4);
+        sparseIntArray.put(2131362459, 1);
+        sparseIntArray.put(2131362461, 2);
+        sparseIntArray.put(2131362460, 3);
+        sparseIntArray.put(2131362458, 4);
     }
 
     public EmotionPanelBindingImpl(DataBindingComponent dataBindingComponent, View view) {

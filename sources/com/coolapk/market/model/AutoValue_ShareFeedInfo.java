@@ -24,8 +24,8 @@ final class AutoValue_ShareFeedInfo extends C$AutoValue_ShareFeedInfo {
         return 0;
     }
 
-    AutoValue_ShareFeedInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l2, Long l3, String str8, String str9, List<String> list, String str10, String str11, int i, String str12, String str13, String str14, int i2, String str15, String str16, String str17) {
-        super(str, str2, str3, num, str4, str5, str6, str7, l2, l3, str8, str9, list, str10, str11, i, str12, str13, str14, i2, str15, str16, str17);
+    AutoValue_ShareFeedInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l, Long l2, String str8, String str9, List<String> list, String str10, String str11, int i, String str12, String str13, String str14, int i2, String str15, String str16, String str17) {
+        super(str, str2, str3, num, str4, str5, str6, str7, l, l2, str8, str9, list, str10, str11, i, str12, str13, str14, i2, str15, str16, str17);
     }
 
     @Override // android.os.Parcelable

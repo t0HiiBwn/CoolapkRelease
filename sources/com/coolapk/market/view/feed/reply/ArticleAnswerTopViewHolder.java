@@ -33,7 +33,7 @@ import rx.Subscriber;
 /* compiled from: ArticleAnswerTopViewHolder.kt */
 public final class ArticleAnswerTopViewHolder extends GenericBindHolder<ItemArticleDetailAnswerTopBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558610;
+    public static final int LAYOUT_ID = 2131558614;
     private final Lazy headerViewPart$delegate;
     private boolean isCheckAnswerCount;
     private final FeedDetailPresenter presenter;
@@ -107,7 +107,7 @@ public final class ArticleAnswerTopViewHolder extends GenericBindHolder<ItemArti
             int optInt = jsonExtraData.optInt("questionAnswerNum", 0);
             TextView textView5 = ((ItemArticleDetailAnswerTopBinding) getBinding()).countView;
             Intrinsics.checkNotNullExpressionValue(textView5, "binding.countView");
-            textView5.setText(getContext().getString(2131886595, Integer.valueOf(optInt)));
+            textView5.setText(getContext().getString(2131886657, Integer.valueOf(optInt)));
             TextView textView6 = ((ItemArticleDetailAnswerTopBinding) getBinding()).countView;
             Intrinsics.checkNotNullExpressionValue(textView6, "binding.countView");
             textView6.setClickable(true);
@@ -130,10 +130,10 @@ public final class ArticleAnswerTopViewHolder extends GenericBindHolder<ItemArti
         Feed feed = this.presenter.getFeed();
         if (!EntityExtendsKt.isDeletedQuestion(feed)) {
             int id = view.getId();
-            if (id == 2131361998) {
+            if (id == 2131361999) {
                 onAddAnswerViewClick();
                 StatisticHelper.Companion.getInstance().recordAnswerAction("点击添加回答");
-            } else if (id == 2131362330 || id == 2131363582) {
+            } else if (id == 2131362336 || id == 2131363604) {
                 String stringExtraData = EntityExtendsKt.getStringExtraData(feed, "questionUrl", "");
                 if (stringExtraData.length() == 0) {
                     Context context = getContext();
@@ -144,7 +144,7 @@ public final class ArticleAnswerTopViewHolder extends GenericBindHolder<ItemArti
                     Intrinsics.checkNotNullExpressionValue(context2, "context");
                     ActionManagerCompat.startActivityByUrl$default(context2, stringExtraData, null, null, 12, null);
                 }
-                StatisticHelper.Companion.getInstance().recordAnswerAction(view.getId() == 2131363582 ? "点标题跳转到提问页" : "点【查看全部xx个回答】到提问页");
+                StatisticHelper.Companion.getInstance().recordAnswerAction(view.getId() == 2131363604 ? "点标题跳转到提问页" : "点【查看全部xx个回答】到提问页");
             }
         }
     }

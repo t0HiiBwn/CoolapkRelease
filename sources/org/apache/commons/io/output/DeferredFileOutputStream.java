@@ -17,21 +17,10 @@ public class DeferredFileOutputStream extends ThresholdingOutputStream {
     private final String prefix;
     private final String suffix;
 
-    public DeferredFileOutputStream(int i, File file) {
-        this(i, file, null, null, null, 1024);
-    }
-
     public DeferredFileOutputStream(int i, int i2, File file) {
         this(i, file, null, null, null, i2);
         if (i2 < 0) {
             throw new IllegalArgumentException("Initial buffer size must be atleast 0.");
-        }
-    }
-
-    public DeferredFileOutputStream(int i, String str, String str2, File file) {
-        this(i, null, str, str2, file, 1024);
-        if (str == null) {
-            throw new IllegalArgumentException("Temporary file prefix is missing");
         }
     }
 
@@ -42,6 +31,10 @@ public class DeferredFileOutputStream extends ThresholdingOutputStream {
         } else if (i2 < 0) {
             throw new IllegalArgumentException("Initial buffer size must be atleast 0.");
         }
+    }
+
+    public DeferredFileOutputStream(int i, File file) {
+        this(i, file, null, null, null, 1024);
     }
 
     private DeferredFileOutputStream(int i, File file, String str, String str2, File file2, int i2) {
@@ -56,9 +49,38 @@ public class DeferredFileOutputStream extends ThresholdingOutputStream {
         this.currentOutputStream = byteArrayOutputStream;
     }
 
+    public DeferredFileOutputStream(int i, String str, String str2, File file) {
+        this(i, null, str, str2, file, 1024);
+        if (str == null) {
+            throw new IllegalArgumentException("Temporary file prefix is missing");
+        }
+    }
+
+    @Override // org.apache.commons.io.output.ThresholdingOutputStream, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
+        super.close();
+        this.closed = true;
+    }
+
+    public byte[] getData() {
+        ByteArrayOutputStream byteArrayOutputStream = this.memoryOutputStream;
+        if (byteArrayOutputStream != null) {
+            return byteArrayOutputStream.toByteArray();
+        }
+        return null;
+    }
+
+    public File getFile() {
+        return this.outputFile;
+    }
+
     @Override // org.apache.commons.io.output.ThresholdingOutputStream
     protected OutputStream getStream() throws IOException {
         return this.currentOutputStream;
+    }
+
+    public boolean isInMemory() {
+        return !isThresholdExceeded();
     }
 
     @Override // org.apache.commons.io.output.ThresholdingOutputStream
@@ -77,28 +99,6 @@ public class DeferredFileOutputStream extends ThresholdingOutputStream {
             fileOutputStream.close();
             throw e;
         }
-    }
-
-    public boolean isInMemory() {
-        return !isThresholdExceeded();
-    }
-
-    public byte[] getData() {
-        ByteArrayOutputStream byteArrayOutputStream = this.memoryOutputStream;
-        if (byteArrayOutputStream != null) {
-            return byteArrayOutputStream.toByteArray();
-        }
-        return null;
-    }
-
-    public File getFile() {
-        return this.outputFile;
-    }
-
-    @Override // org.apache.commons.io.output.ThresholdingOutputStream, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
-        super.close();
-        this.closed = true;
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x0020, code lost:

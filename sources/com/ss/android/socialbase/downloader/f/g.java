@@ -29,9 +29,7 @@ class g {
     private volatile boolean i;
     private volatile boolean j;
     private volatile boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final com.ss.android.socialbase.downloader.a.a f1412l;
+    private final com.ss.android.socialbase.downloader.a.a l;
     private final boolean m;
     private final long n;
     private final long o;
@@ -55,7 +53,7 @@ class g {
         this.d = b.x();
         this.f = fVar;
         this.g = cVar;
-        this.f1412l = com.ss.android.socialbase.downloader.a.a.a();
+        this.l = com.ss.android.socialbase.downloader.a.a.a();
         a a2 = a.a(downloadInfo.getId());
         this.e = a2;
         boolean z2 = a2.a("sync_strategy", 0) == 1;
@@ -683,7 +681,7 @@ class g {
     private void a(long j2, boolean z) throws IOException {
         long j3 = j2 - this.s;
         if (this.m) {
-            if (j3 > (this.f1412l.b() ? this.n : this.o)) {
+            if (j3 > (this.l.b() ? this.n : this.o)) {
                 c();
                 this.s = j2;
                 return;

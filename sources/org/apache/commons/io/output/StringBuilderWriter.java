@@ -7,14 +7,6 @@ public class StringBuilderWriter extends Writer implements Serializable {
     private static final long serialVersionUID = -146927496096066153L;
     private final StringBuilder builder;
 
-    @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
-    public void close() {
-    }
-
-    @Override // java.io.Writer, java.io.Flushable
-    public void flush() {
-    }
-
     public StringBuilderWriter() {
         this.builder = new StringBuilder();
     }
@@ -45,6 +37,23 @@ public class StringBuilderWriter extends Writer implements Serializable {
         return this;
     }
 
+    @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
+    public void close() {
+    }
+
+    @Override // java.io.Writer, java.io.Flushable
+    public void flush() {
+    }
+
+    public StringBuilder getBuilder() {
+        return this.builder;
+    }
+
+    @Override // java.lang.Object
+    public String toString() {
+        return this.builder.toString();
+    }
+
     @Override // java.io.Writer
     public void write(String str) {
         if (str != null) {
@@ -57,14 +66,5 @@ public class StringBuilderWriter extends Writer implements Serializable {
         if (cArr != null) {
             this.builder.append(cArr, i, i2);
         }
-    }
-
-    public StringBuilder getBuilder() {
-        return this.builder;
-    }
-
-    @Override // java.lang.Object
-    public String toString() {
-        return this.builder.toString();
     }
 }

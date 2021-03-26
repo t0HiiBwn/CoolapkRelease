@@ -30,7 +30,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemSecondHandSearchViewholder.kt */
 public final class ItemSecondHandSearchViewholder extends GenericBindHolder<ItemSecondHandSearchBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558920;
+    public static final int LAYOUT_ID = 2131558927;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public ItemSecondHandSearchViewholder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -70,11 +70,11 @@ public final class ItemSecondHandSearchViewholder extends GenericBindHolder<Item
             Intrinsics.checkNotNullExpressionValue(itemSecondHandSearchBinding3, "binding");
             itemSecondHandSearchBinding3.setLocationText(locationText);
             if (secondHandInfo.isXianyu()) {
-                i = 2131232047;
+                i = 2131232065;
             } else if (secondHandInfo.isZhuanzhuan()) {
-                i = 2131232049;
+                i = 2131232067;
             } else {
-                i = secondHandInfo.isJiaoYiMao() ? 2131231374 : 2131231788;
+                i = secondHandInfo.isJiaoYiMao() ? 2131231385 : 2131231799;
             }
             ((ItemSecondHandSearchBinding) getBinding()).signLink.setImageResource(i);
             TextView textView2 = ((ItemSecondHandSearchBinding) getBinding()).signLinkText;
@@ -98,7 +98,7 @@ public final class ItemSecondHandSearchViewholder extends GenericBindHolder<Item
             TextView textView5 = ((ItemSecondHandSearchBinding) getBinding()).titleTagView;
             Intrinsics.checkNotNullExpressionValue(textView5, "binding.titleTagView");
             textView5.setText(secondHandInfo2.getStoreTypeText());
-            int colorInt = ResourceUtils.getColorInt(getContext(), 2131100035);
+            int colorInt = ResourceUtils.getColorInt(getContext(), 2131100040);
             int colorInt2 = ResourceUtils.getColorInt(getContext(), 2131099687);
             if (!z2) {
                 colorInt = colorInt2;
@@ -138,11 +138,11 @@ public final class ItemSecondHandSearchViewholder extends GenericBindHolder<Item
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
             Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-            if (valueOf != null && valueOf.intValue() == 2131362768) {
+            if (valueOf != null && valueOf.intValue() == 2131362779) {
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");
                 ActionManagerCompat.startActivityByUrl$default(context, FeedUriAction.Companion.buildUrl(model), null, null, 12, null);
-            } else if (valueOf != null && valueOf.intValue() == 2131362095) {
+            } else if (valueOf != null && valueOf.intValue() == 2131362098) {
                 ActionManager.startUserSpaceActivity(getContext(), model.getUid());
             } else {
                 super.onClick(view);

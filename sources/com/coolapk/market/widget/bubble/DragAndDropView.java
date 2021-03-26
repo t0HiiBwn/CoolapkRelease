@@ -170,7 +170,7 @@ class DragAndDropView extends FrameLayout {
     private void outRangeUp() {
         this.mTargetBitmap = null;
         final ImageView imageView = new ImageView(getContext());
-        imageView.setImageResource(2131231804);
+        imageView.setImageResource(2131231816);
         final AnimationDrawable animationDrawable = (AnimationDrawable) imageView.getDrawable();
         int intrinsicWidth = imageView.getDrawable().getIntrinsicWidth();
         int intrinsicHeight = imageView.getDrawable().getIntrinsicHeight();

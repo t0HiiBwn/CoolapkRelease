@@ -21,9 +21,7 @@ import com.bytedance.sdk.openadsdk.utils.ak;
 /* compiled from: InteractionExpressBackupView */
 class a extends BackupView {
     private static i[] k = {new i(1, 1.0f, 300, 300), new i(2, 0.6666667f, 300, 450), new i(3, 1.5f, 300, 200)};
-
-    /* renamed from: l  reason: collision with root package name */
-    private View f1301l;
+    private View l;
     private NativeExpressView m;
     private com.bytedance.sdk.openadsdk.downloadnew.core.a n;
     private int o = 1;
@@ -90,15 +88,15 @@ class a extends BackupView {
 
     private void c() {
         View inflate = LayoutInflater.from(this.a).inflate(ac.f(this.a, "tt_backup_insert_layout1"), (ViewGroup) this, true);
-        this.f1301l = inflate;
+        this.l = inflate;
         FrameLayout frameLayout = (FrameLayout) inflate.findViewById(ac.e(this.a, "tt_ad_container"));
-        ImageView imageView = (ImageView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_img"));
-        View findViewById = this.f1301l.findViewById(ac.e(this.a, "tt_bu_close"));
-        ImageView imageView2 = (ImageView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_icon"));
-        TextView textView = (TextView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_title"));
-        TextView textView2 = (TextView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_desc"));
-        TextView textView3 = (TextView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_download"));
-        TextView textView4 = (TextView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_dislike"));
+        ImageView imageView = (ImageView) this.l.findViewById(ac.e(this.a, "tt_bu_img"));
+        View findViewById = this.l.findViewById(ac.e(this.a, "tt_bu_close"));
+        ImageView imageView2 = (ImageView) this.l.findViewById(ac.e(this.a, "tt_bu_icon"));
+        TextView textView = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_title"));
+        TextView textView2 = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_desc"));
+        TextView textView3 = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_download"));
+        TextView textView4 = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_dislike"));
         int a = (int) ak.a(this.a, 15.0f);
         ak.a(findViewById, a, a, a, a);
         b(findViewById);
@@ -154,15 +152,15 @@ class a extends BackupView {
 
     private void d() {
         View inflate = LayoutInflater.from(this.a).inflate(ac.f(this.a, "tt_backup_insert_layout2"), (ViewGroup) this, true);
-        this.f1301l = inflate;
+        this.l = inflate;
         FrameLayout frameLayout = (FrameLayout) inflate.findViewById(ac.e(this.a, "tt_ad_container"));
-        ImageView imageView = (ImageView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_img"));
-        View findViewById = this.f1301l.findViewById(ac.e(this.a, "tt_bu_close"));
-        ImageView imageView2 = (ImageView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_icon"));
-        TextView textView = (TextView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_title"));
-        TextView textView2 = (TextView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_desc"));
-        TextView textView3 = (TextView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_download"));
-        TextView textView4 = (TextView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_dislike"));
+        ImageView imageView = (ImageView) this.l.findViewById(ac.e(this.a, "tt_bu_img"));
+        View findViewById = this.l.findViewById(ac.e(this.a, "tt_bu_close"));
+        ImageView imageView2 = (ImageView) this.l.findViewById(ac.e(this.a, "tt_bu_icon"));
+        TextView textView = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_title"));
+        TextView textView2 = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_desc"));
+        TextView textView3 = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_download"));
+        TextView textView4 = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_dislike"));
         int a = (int) ak.a(this.a, 15.0f);
         ak.a(findViewById, a, a, a, a);
         b(findViewById);
@@ -203,12 +201,12 @@ class a extends BackupView {
 
     private void e() {
         View inflate = LayoutInflater.from(this.a).inflate(ac.f(this.a, "tt_backup_insert_layout3"), (ViewGroup) this, true);
-        this.f1301l = inflate;
+        this.l = inflate;
         FrameLayout frameLayout = (FrameLayout) inflate.findViewById(ac.e(this.a, "tt_ad_container"));
-        ImageView imageView = (ImageView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_img"));
-        View findViewById = this.f1301l.findViewById(ac.e(this.a, "tt_bu_close"));
-        TextView textView = (TextView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_desc"));
-        TextView textView2 = (TextView) this.f1301l.findViewById(ac.e(this.a, "tt_bu_dislike"));
+        ImageView imageView = (ImageView) this.l.findViewById(ac.e(this.a, "tt_bu_img"));
+        View findViewById = this.l.findViewById(ac.e(this.a, "tt_bu_close"));
+        TextView textView = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_desc"));
+        TextView textView2 = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_dislike"));
         int a = (int) ak.a(this.a, 15.0f);
         ak.a(findViewById, a, a, a, a);
         b(findViewById);
@@ -238,7 +236,7 @@ class a extends BackupView {
         }
         textView.setText(getDescription());
         a((View) this, true);
-        a(this.f1301l, true);
+        a(this.l, true);
         a((View) textView2, true);
         a(frameLayout);
     }

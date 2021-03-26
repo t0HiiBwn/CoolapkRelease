@@ -86,7 +86,7 @@ public abstract class ItemChatingMineBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemChatingMineBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemChatingMineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558648, viewGroup, z, obj);
+        return (ItemChatingMineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558654, viewGroup, z, obj);
     }
 
     public static ItemChatingMineBinding inflate(LayoutInflater layoutInflater) {
@@ -95,7 +95,7 @@ public abstract class ItemChatingMineBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemChatingMineBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemChatingMineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558648, null, false, obj);
+        return (ItemChatingMineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558654, null, false, obj);
     }
 
     public static ItemChatingMineBinding bind(View view) {
@@ -104,6 +104,6 @@ public abstract class ItemChatingMineBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemChatingMineBinding bind(View view, Object obj) {
-        return (ItemChatingMineBinding) bind(obj, view, 2131558648);
+        return (ItemChatingMineBinding) bind(obj, view, 2131558654);
     }
 }

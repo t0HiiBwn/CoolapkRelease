@@ -39,7 +39,7 @@ final class EntityListFragment$registerNecessaryCards$3 extends Lambda implement
                 Intrinsics.checkNotNullParameter(view, "view");
                 super.onItemClick(viewHolder, view);
                 int id = view.getId();
-                if ((id == 2131362323 || id == 2131362457) && (function0 = this.this$0.this$0.onProgressViewClickListener) != null) {
+                if ((id == 2131362329 || id == 2131362464) && (function0 = this.this$0.this$0.onProgressViewClickListener) != null) {
                     function0.invoke();
                 }
             }

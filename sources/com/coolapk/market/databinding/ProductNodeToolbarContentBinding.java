@@ -36,7 +36,7 @@ public abstract class ProductNodeToolbarContentBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductNodeToolbarContentBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ProductNodeToolbarContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559110, viewGroup, z, obj);
+        return (ProductNodeToolbarContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559117, viewGroup, z, obj);
     }
 
     public static ProductNodeToolbarContentBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class ProductNodeToolbarContentBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductNodeToolbarContentBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ProductNodeToolbarContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559110, null, false, obj);
+        return (ProductNodeToolbarContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559117, null, false, obj);
     }
 
     public static ProductNodeToolbarContentBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class ProductNodeToolbarContentBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductNodeToolbarContentBinding bind(View view, Object obj) {
-        return (ProductNodeToolbarContentBinding) bind(obj, view, 2131559110);
+        return (ProductNodeToolbarContentBinding) bind(obj, view, 2131559117);
     }
 }

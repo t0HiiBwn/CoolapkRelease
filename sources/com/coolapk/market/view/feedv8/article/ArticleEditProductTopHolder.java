@@ -48,7 +48,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ArticleEditProductTopHolder.kt */
 public final class ArticleEditProductTopHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131559165;
+    public static final int LAYOUT_ID = 2131559173;
     private final ArticleRatingContentHolder content;
     private final ArticleViewModel viewModel;
 

@@ -15,8 +15,8 @@ public final class LongRange extends LongProgression implements ClosedRange<Long
 
     /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Comparable] */
     @Override // kotlin.ranges.ClosedRange
-    public /* bridge */ /* synthetic */ boolean contains(Long l2) {
-        return contains(l2.longValue());
+    public /* bridge */ /* synthetic */ boolean contains(Long l) {
+        return contains(l.longValue());
     }
 
     @Override // kotlin.ranges.ClosedRange

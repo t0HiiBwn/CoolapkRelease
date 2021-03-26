@@ -23,10 +23,6 @@ public class Option implements Cloneable, Serializable {
         this(str, null, false, str2);
     }
 
-    public Option(String str, boolean z, String str2) throws IllegalArgumentException {
-        this(str, null, z, str2);
-    }
-
     public Option(String str, String str2, boolean z, String str3) throws IllegalArgumentException {
         this.argName = "arg";
         this.numberOfArgs = -1;
@@ -40,112 +36,20 @@ public class Option implements Cloneable, Serializable {
         this.description = str3;
     }
 
-    public int getId() {
-        return getKey().charAt(0);
+    public Option(String str, boolean z, String str2) throws IllegalArgumentException {
+        this(str, null, z, str2);
     }
 
-    String getKey() {
-        String str = this.opt;
-        return str == null ? this.longOpt : str;
-    }
-
-    public String getOpt() {
-        return this.opt;
-    }
-
-    public Object getType() {
-        return this.type;
-    }
-
-    public void setType(Object obj) {
-        this.type = obj;
-    }
-
-    public String getLongOpt() {
-        return this.longOpt;
-    }
-
-    public void setLongOpt(String str) {
-        this.longOpt = str;
-    }
-
-    public void setOptionalArg(boolean z) {
-        this.optionalArg = z;
-    }
-
-    public boolean hasOptionalArg() {
-        return this.optionalArg;
-    }
-
-    public boolean hasLongOpt() {
-        return this.longOpt != null;
-    }
-
-    public boolean hasArg() {
-        int i = this.numberOfArgs;
-        return i > 0 || i == -2;
-    }
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    public void setDescription(String str) {
-        this.description = str;
-    }
-
-    public boolean isRequired() {
-        return this.required;
-    }
-
-    public void setRequired(boolean z) {
-        this.required = z;
-    }
-
-    public void setArgName(String str) {
-        this.argName = str;
-    }
-
-    public String getArgName() {
-        return this.argName;
-    }
-
-    public boolean hasArgName() {
-        String str = this.argName;
-        return str != null && str.length() > 0;
-    }
-
-    public boolean hasArgs() {
-        int i = this.numberOfArgs;
-        return i > 1 || i == -2;
-    }
-
-    public void setArgs(int i) {
-        this.numberOfArgs = i;
-    }
-
-    public void setValueSeparator(char c) {
-        this.valuesep = c;
-    }
-
-    public char getValueSeparator() {
-        return this.valuesep;
-    }
-
-    public boolean hasValueSeparator() {
-        return this.valuesep > 0;
-    }
-
-    public int getArgs() {
-        return this.numberOfArgs;
-    }
-
-    void addValueForProcessing(String str) {
-        if (this.numberOfArgs != -1) {
-            processValue(str);
+    private void add(String str) {
+        if (this.numberOfArgs <= 0 || this.values.size() <= this.numberOfArgs - 1) {
+            this.values.add(str);
             return;
         }
-        throw new RuntimeException("NO_ARGS_ALLOWED");
+        throw new RuntimeException("Cannot add value, list full.");
+    }
+
+    private boolean hasNoValues() {
+        return this.values.isEmpty();
     }
 
     private void processValue(String str) {
@@ -161,12 +65,85 @@ public class Option implements Cloneable, Serializable {
         add(str);
     }
 
-    private void add(String str) {
-        if (this.numberOfArgs <= 0 || this.values.size() <= this.numberOfArgs - 1) {
-            this.values.add(str);
+    public boolean addValue(String str) {
+        throw new UnsupportedOperationException("The addValue method is not intended for client use. Subclasses should use the addValueForProcessing method instead. ");
+    }
+
+    void addValueForProcessing(String str) {
+        if (this.numberOfArgs != -1) {
+            processValue(str);
             return;
         }
-        throw new RuntimeException("Cannot add value, list full.");
+        throw new RuntimeException("NO_ARGS_ALLOWED");
+    }
+
+    void clearValues() {
+        this.values.clear();
+    }
+
+    @Override // java.lang.Object
+    public Object clone() {
+        try {
+            Option option = (Option) super.clone();
+            option.values = new ArrayList(this.values);
+            return option;
+        } catch (CloneNotSupportedException e) {
+            StringBuffer stringBuffer = new StringBuffer();
+            stringBuffer.append("A CloneNotSupportedException was thrown: ");
+            stringBuffer.append(e.getMessage());
+            throw new RuntimeException(stringBuffer.toString());
+        }
+    }
+
+    @Override // java.lang.Object
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Option option = (Option) obj;
+        String str = this.opt;
+        if (str == null ? option.opt != null : !str.equals(option.opt)) {
+            return false;
+        }
+        String str2 = this.longOpt;
+        String str3 = option.longOpt;
+        return str2 == null ? str3 == null : str2.equals(str3);
+    }
+
+    public String getArgName() {
+        return this.argName;
+    }
+
+    public int getArgs() {
+        return this.numberOfArgs;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public int getId() {
+        return getKey().charAt(0);
+    }
+
+    String getKey() {
+        String str = this.opt;
+        return str == null ? this.longOpt : str;
+    }
+
+    public String getLongOpt() {
+        return this.longOpt;
+    }
+
+    public String getOpt() {
+        return this.opt;
+    }
+
+    public Object getType() {
+        return this.type;
     }
 
     public String getValue() {
@@ -188,6 +165,10 @@ public class Option implements Cloneable, Serializable {
         return value != null ? value : str;
     }
 
+    public char getValueSeparator() {
+        return this.valuesep;
+    }
+
     public String[] getValues() {
         if (hasNoValues()) {
             return null;
@@ -198,6 +179,81 @@ public class Option implements Cloneable, Serializable {
 
     public List getValuesList() {
         return this.values;
+    }
+
+    public boolean hasArg() {
+        int i = this.numberOfArgs;
+        return i > 0 || i == -2;
+    }
+
+    public boolean hasArgName() {
+        String str = this.argName;
+        return str != null && str.length() > 0;
+    }
+
+    public boolean hasArgs() {
+        int i = this.numberOfArgs;
+        return i > 1 || i == -2;
+    }
+
+    public boolean hasLongOpt() {
+        return this.longOpt != null;
+    }
+
+    public boolean hasOptionalArg() {
+        return this.optionalArg;
+    }
+
+    public boolean hasValueSeparator() {
+        return this.valuesep > 0;
+    }
+
+    @Override // java.lang.Object
+    public int hashCode() {
+        String str = this.opt;
+        int i = 0;
+        int hashCode = (str != null ? str.hashCode() : 0) * 31;
+        String str2 = this.longOpt;
+        if (str2 != null) {
+            i = str2.hashCode();
+        }
+        return hashCode + i;
+    }
+
+    public boolean isRequired() {
+        return this.required;
+    }
+
+    public void setArgName(String str) {
+        this.argName = str;
+    }
+
+    public void setArgs(int i) {
+        this.numberOfArgs = i;
+    }
+
+    public void setDescription(String str) {
+        this.description = str;
+    }
+
+    public void setLongOpt(String str) {
+        this.longOpt = str;
+    }
+
+    public void setOptionalArg(boolean z) {
+        this.optionalArg = z;
+    }
+
+    public void setRequired(boolean z) {
+        this.required = z;
+    }
+
+    public void setType(Object obj) {
+        this.type = obj;
+    }
+
+    public void setValueSeparator(char c) {
+        this.valuesep = c;
     }
 
     @Override // java.lang.Object
@@ -223,61 +279,5 @@ public class Option implements Cloneable, Serializable {
         }
         stringBuffer.append(" ]");
         return stringBuffer.toString();
-    }
-
-    private boolean hasNoValues() {
-        return this.values.isEmpty();
-    }
-
-    @Override // java.lang.Object
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-        Option option = (Option) obj;
-        String str = this.opt;
-        if (str == null ? option.opt != null : !str.equals(option.opt)) {
-            return false;
-        }
-        String str2 = this.longOpt;
-        String str3 = option.longOpt;
-        return str2 == null ? str3 == null : str2.equals(str3);
-    }
-
-    @Override // java.lang.Object
-    public int hashCode() {
-        String str = this.opt;
-        int i = 0;
-        int hashCode = (str != null ? str.hashCode() : 0) * 31;
-        String str2 = this.longOpt;
-        if (str2 != null) {
-            i = str2.hashCode();
-        }
-        return hashCode + i;
-    }
-
-    @Override // java.lang.Object
-    public Object clone() {
-        try {
-            Option option = (Option) super.clone();
-            option.values = new ArrayList(this.values);
-            return option;
-        } catch (CloneNotSupportedException e) {
-            StringBuffer stringBuffer = new StringBuffer();
-            stringBuffer.append("A CloneNotSupportedException was thrown: ");
-            stringBuffer.append(e.getMessage());
-            throw new RuntimeException(stringBuffer.toString());
-        }
-    }
-
-    void clearValues() {
-        this.values.clear();
-    }
-
-    public boolean addValue(String str) {
-        throw new UnsupportedOperationException("The addValue method is not intended for client use. Subclasses should use the addValueForProcessing method instead. ");
     }
 }

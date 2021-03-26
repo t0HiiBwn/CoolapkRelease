@@ -27,7 +27,7 @@ public abstract class ItemAddToAlbumHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAddToAlbumHeaderBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAddToAlbumHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558575, viewGroup, z, obj);
+        return (ItemAddToAlbumHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558579, viewGroup, z, obj);
     }
 
     public static ItemAddToAlbumHeaderBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class ItemAddToAlbumHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAddToAlbumHeaderBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAddToAlbumHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558575, null, false, obj);
+        return (ItemAddToAlbumHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558579, null, false, obj);
     }
 
     public static ItemAddToAlbumHeaderBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class ItemAddToAlbumHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAddToAlbumHeaderBinding bind(View view, Object obj) {
-        return (ItemAddToAlbumHeaderBinding) bind(obj, view, 2131558575);
+        return (ItemAddToAlbumHeaderBinding) bind(obj, view, 2131558579);
     }
 }

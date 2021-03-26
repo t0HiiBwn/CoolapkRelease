@@ -88,7 +88,7 @@ public final class GoodsSearchActivity extends FakeStatusBarActivity implements 
     @Override // com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558569);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558572);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…s, R.layout.goods_search)");
         GoodsSearchBinding goodsSearchBinding = (GoodsSearchBinding) contentView;
         this.binding = goodsSearchBinding;
@@ -181,7 +181,7 @@ public final class GoodsSearchActivity extends FakeStatusBarActivity implements 
             imageView.setLayoutParams(layoutParams);
             imageView.setScaleX(0.75f);
             imageView.setScaleY(0.75f);
-            imageView.setImageResource(2131231156);
+            imageView.setImageResource(2131231166);
             AppTheme appTheme = AppHolder.getAppTheme();
             Context context = imageView.getContext();
             Intrinsics.checkNotNullExpressionValue(context, "context");

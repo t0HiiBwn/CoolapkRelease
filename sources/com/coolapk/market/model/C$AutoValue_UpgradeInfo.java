@@ -21,7 +21,7 @@ abstract class C$AutoValue_UpgradeInfo extends UpgradeInfo {
     private final int versionCode;
     private final String versionName;
 
-    C$AutoValue_UpgradeInfo(String str, String str2, String str3, String str4, int i, String str5, long j, String str6, String str7, String str8, String str9, Long l2, String str10, String str11, String str12) {
+    C$AutoValue_UpgradeInfo(String str, String str2, String str3, String str4, int i, String str5, long j, String str6, String str7, String str8, String str9, Long l, String str10, String str11, String str12) {
         Objects.requireNonNull(str, "Null packageName");
         this.packageName = str;
         Objects.requireNonNull(str2, "Null apkId");
@@ -37,7 +37,7 @@ abstract class C$AutoValue_UpgradeInfo extends UpgradeInfo {
         this.logo = str7;
         this.patchKey = str8;
         this.patchSize = str9;
-        this.patchLength = l2;
+        this.patchLength = l;
         this.patchMd5 = str10;
         this.extraAnalysisData = str11;
         this.extraFlag = str12;
@@ -130,7 +130,7 @@ abstract class C$AutoValue_UpgradeInfo extends UpgradeInfo {
         String str3;
         String str4;
         String str5;
-        Long l2;
+        Long l;
         String str6;
         String str7;
         if (obj == this) {
@@ -140,7 +140,7 @@ abstract class C$AutoValue_UpgradeInfo extends UpgradeInfo {
             return false;
         }
         UpgradeInfo upgradeInfo = (UpgradeInfo) obj;
-        if (this.packageName.equals(upgradeInfo.getPackageName()) && this.apkId.equals(upgradeInfo.getApkId()) && ((str = this.displayVersionName) != null ? str.equals(upgradeInfo.getDisplayVersionName()) : upgradeInfo.getDisplayVersionName() == null) && this.versionName.equals(upgradeInfo.getVersionName()) && this.versionCode == upgradeInfo.getVersionCode() && this.apkSize.equals(upgradeInfo.getApkSize()) && this.lastUpdate == upgradeInfo.getLastUpdate() && ((str2 = this.changeLog) != null ? str2.equals(upgradeInfo.getChangeLog()) : upgradeInfo.getChangeLog() == null) && ((str3 = this.logo) != null ? str3.equals(upgradeInfo.getLogo()) : upgradeInfo.getLogo() == null) && ((str4 = this.patchKey) != null ? str4.equals(upgradeInfo.getPatchKey()) : upgradeInfo.getPatchKey() == null) && ((str5 = this.patchSize) != null ? str5.equals(upgradeInfo.getPatchSize()) : upgradeInfo.getPatchSize() == null) && ((l2 = this.patchLength) != null ? l2.equals(upgradeInfo.getPatchLength()) : upgradeInfo.getPatchLength() == null) && ((str6 = this.patchMd5) != null ? str6.equals(upgradeInfo.getPatchMd5()) : upgradeInfo.getPatchMd5() == null) && ((str7 = this.extraAnalysisData) != null ? str7.equals(upgradeInfo.getExtraAnalysisData()) : upgradeInfo.getExtraAnalysisData() == null)) {
+        if (this.packageName.equals(upgradeInfo.getPackageName()) && this.apkId.equals(upgradeInfo.getApkId()) && ((str = this.displayVersionName) != null ? str.equals(upgradeInfo.getDisplayVersionName()) : upgradeInfo.getDisplayVersionName() == null) && this.versionName.equals(upgradeInfo.getVersionName()) && this.versionCode == upgradeInfo.getVersionCode() && this.apkSize.equals(upgradeInfo.getApkSize()) && this.lastUpdate == upgradeInfo.getLastUpdate() && ((str2 = this.changeLog) != null ? str2.equals(upgradeInfo.getChangeLog()) : upgradeInfo.getChangeLog() == null) && ((str3 = this.logo) != null ? str3.equals(upgradeInfo.getLogo()) : upgradeInfo.getLogo() == null) && ((str4 = this.patchKey) != null ? str4.equals(upgradeInfo.getPatchKey()) : upgradeInfo.getPatchKey() == null) && ((str5 = this.patchSize) != null ? str5.equals(upgradeInfo.getPatchSize()) : upgradeInfo.getPatchSize() == null) && ((l = this.patchLength) != null ? l.equals(upgradeInfo.getPatchLength()) : upgradeInfo.getPatchLength() == null) && ((str6 = this.patchMd5) != null ? str6.equals(upgradeInfo.getPatchMd5()) : upgradeInfo.getPatchMd5() == null) && ((str7 = this.extraAnalysisData) != null ? str7.equals(upgradeInfo.getExtraAnalysisData()) : upgradeInfo.getExtraAnalysisData() == null)) {
             String str8 = this.extraFlag;
             if (str8 == null) {
                 if (upgradeInfo.getExtraFlag() == null) {
@@ -169,8 +169,8 @@ abstract class C$AutoValue_UpgradeInfo extends UpgradeInfo {
         int hashCode6 = (hashCode5 ^ (str4 == null ? 0 : str4.hashCode())) * 1000003;
         String str5 = this.patchSize;
         int hashCode7 = (hashCode6 ^ (str5 == null ? 0 : str5.hashCode())) * 1000003;
-        Long l2 = this.patchLength;
-        int hashCode8 = (hashCode7 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
+        Long l = this.patchLength;
+        int hashCode8 = (hashCode7 ^ (l == null ? 0 : l.hashCode())) * 1000003;
         String str6 = this.patchMd5;
         int hashCode9 = (hashCode8 ^ (str6 == null ? 0 : str6.hashCode())) * 1000003;
         String str7 = this.extraAnalysisData;
@@ -288,8 +288,8 @@ abstract class C$AutoValue_UpgradeInfo extends UpgradeInfo {
         }
 
         @Override // com.coolapk.market.model.UpgradeInfo.Builder
-        public UpgradeInfo.Builder patchLength(Long l2) {
-            this.patchLength = l2;
+        public UpgradeInfo.Builder patchLength(Long l) {
+            this.patchLength = l;
             return this;
         }
 

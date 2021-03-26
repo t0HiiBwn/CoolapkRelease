@@ -34,9 +34,7 @@ class k {
     private float i;
     private float j;
     private float k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1242l;
+    private int l;
     private int m;
     private int n;
     private int o;
@@ -191,7 +189,7 @@ class k {
                 this.p = round;
                 int min = Math.min(round, this.m);
                 this.p = min;
-                this.p = Math.max(min, this.f1242l);
+                this.p = Math.max(min, this.l);
                 int i6 = this.c;
                 int round2 = i6 + Math.round(f4 * ((float) (this.h - i6)));
                 this.q = round2;

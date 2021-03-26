@@ -15,9 +15,7 @@ public final class ds extends AMapLocation {
     private int i;
     private String j = "";
     private String k = "new";
-
-    /* renamed from: l  reason: collision with root package name */
-    private JSONObject f1365l = null;
+    private JSONObject l = null;
     private String m = "";
     private String n = "";
     private String o = null;
@@ -35,7 +33,7 @@ public final class ds extends AMapLocation {
     }
 
     public final void a(JSONObject jSONObject) {
-        this.f1365l = jSONObject;
+        this.l = jSONObject;
     }
 
     public final void a(boolean z) {
@@ -137,7 +135,7 @@ public final class ds extends AMapLocation {
     }
 
     public final JSONObject f() {
-        return this.f1365l;
+        return this.l;
     }
 
     public final void f(String str) {
@@ -207,8 +205,8 @@ public final class ds extends AMapLocation {
                 json.put("mcell", this.m);
                 json.put("desc", this.d);
                 json.put("address", getAddress());
-                if (this.f1365l != null && ep.a(json, "offpct")) {
-                    json.put("offpct", this.f1365l.getString("offpct"));
+                if (this.l != null && ep.a(json, "offpct")) {
+                    json.put("offpct", this.l.getString("offpct"));
                 }
             } else if (!(i2 == 2 || i2 == 3)) {
                 return json;

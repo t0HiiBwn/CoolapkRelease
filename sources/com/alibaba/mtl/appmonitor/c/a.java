@@ -22,7 +22,7 @@ public class a {
             try {
                 a2 = cls.newInstance();
             } catch (Exception e) {
-                b.m19a((Throwable) e);
+                b.m9a((Throwable) e);
             }
         }
         if (a2 != null) {

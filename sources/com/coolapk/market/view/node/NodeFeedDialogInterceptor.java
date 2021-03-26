@@ -48,8 +48,12 @@ public final class NodeFeedDialogInterceptor implements SheetGroupModifier {
         this.showTopOnly = z;
         this.GREEN_COLOR = (int) 4279734087L;
         this.RED_COLOR = (int) 4294198070L;
-        this.bgColor = ResourceUtils.getColorInt(activity2, 2131100049);
+        this.bgColor = ResourceUtils.getColorInt(activity2, 2131100054);
         this.userItemColor = ResourceUtils.resolveData(activity2, 2130969438);
+    }
+
+    public static final /* synthetic */ void access$checkAndShowSetFeedTopHint(NodeFeedDialogInterceptor nodeFeedDialogInterceptor, boolean z, Feed feed) {
+        nodeFeedDialogInterceptor.checkAndShowSetFeedTopHint(z, feed);
     }
 
     public final Activity getActivity() {
@@ -200,7 +204,7 @@ public final class NodeFeedDialogInterceptor implements SheetGroupModifier {
     }
 
     private final SheetDataItem buildSheetDataItem(Object obj) {
-        return new SheetDataItem(FeedCategorySheetGroupFactory.CategoryAction.Node, "节点相关", SheetDataItem.Companion.createIconBgApplyer(2131231493, -1, (int) 4279213400L), new NodeFeedDialogInterceptor$buildSheetDataItem$1(this, obj), null, 0, false, true, 112, null);
+        return new SheetDataItem(FeedCategorySheetGroupFactory.CategoryAction.Node, "节点相关", SheetDataItem.Companion.createIconBgApplyer(2131231504, -1, (int) 4279213400L), new NodeFeedDialogInterceptor$buildSheetDataItem$1(this, obj), null, 0, false, true, 112, null);
     }
 
     public final List<SheetGroup> buildChildSheetItems(Object obj) {
@@ -214,12 +218,12 @@ public final class NodeFeedDialogInterceptor implements SheetGroupModifier {
             boolean contains = list.contains(id);
             NodeFeedDialogInterceptor$buildChildSheetItems$callback$1 nodeFeedDialogInterceptor$buildChildSheetItems$callback$1 = new NodeFeedDialogInterceptor$buildChildSheetItems$callback$1(this, contains, obj);
             if (contains) {
-                arrayList.add(new SheetDataItem(SheetGroupModifier.Action.One, "取消置顶", SheetDataItem.Companion.create36dpIconApplyer(2131231295, this.RED_COLOR), nodeFeedDialogInterceptor$buildChildSheetItems$callback$1, null, 0, false, false, 240, null));
+                arrayList.add(new SheetDataItem(SheetGroupModifier.Action.One, "取消置顶", SheetDataItem.Companion.create36dpIconApplyer(2131231306, this.RED_COLOR), nodeFeedDialogInterceptor$buildChildSheetItems$callback$1, null, 0, false, false, 240, null));
             } else {
-                arrayList.add(new SheetDataItem(SheetGroupModifier.Action.One, "Feed置顶", SheetDataItem.Companion.create36dpIconApplyer(2131231295, this.GREEN_COLOR), nodeFeedDialogInterceptor$buildChildSheetItems$callback$1, null, 0, false, false, 240, null));
+                arrayList.add(new SheetDataItem(SheetGroupModifier.Action.One, "Feed置顶", SheetDataItem.Companion.create36dpIconApplyer(2131231306, this.GREEN_COLOR), nodeFeedDialogInterceptor$buildChildSheetItems$callback$1, null, 0, false, false, 240, null));
             }
             if (!this.showTopOnly) {
-                arrayList.add(new SheetDataItem(SheetGroupModifier.Action.Two, "单行置顶", SheetDataItem.Companion.create36dpIconApplyer(2131231523, this.GREEN_COLOR), new NodeFeedDialogInterceptor$buildChildSheetItems$1(this, obj), null, 0, false, false, 240, null));
+                arrayList.add(new SheetDataItem(SheetGroupModifier.Action.Two, "单行置顶", SheetDataItem.Companion.create36dpIconApplyer(2131231534, this.GREEN_COLOR), new NodeFeedDialogInterceptor$buildChildSheetItems$1(this, obj), null, 0, false, false, 240, null));
             }
             return CollectionsKt.mutableListOf(new SheetGroup(SheetGroupType.SecondPage, arrayList));
         }
@@ -236,14 +240,14 @@ public final class NodeFeedDialogInterceptor implements SheetGroupModifier {
             boolean contains = list.contains(id);
             NodeFeedDialogInterceptor$buildFeedUserTopItem$callback$1 nodeFeedDialogInterceptor$buildFeedUserTopItem$callback$1 = new NodeFeedDialogInterceptor$buildFeedUserTopItem$callback$1(this, contains, obj);
             if (contains) {
-                return new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, this.userItemColor, this.bgColor), nodeFeedDialogInterceptor$buildFeedUserTopItem$callback$1, null, 0, false, false, 240, null);
+                return new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231637, this.userItemColor, this.bgColor), nodeFeedDialogInterceptor$buildFeedUserTopItem$callback$1, null, 0, false, false, 240, null);
             }
-            return new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231615, this.userItemColor, this.bgColor), nodeFeedDialogInterceptor$buildFeedUserTopItem$callback$1, null, 0, false, false, 240, null);
+            return new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, this.userItemColor, this.bgColor), nodeFeedDialogInterceptor$buildFeedUserTopItem$callback$1, null, 0, false, false, 240, null);
         }
         throw new IllegalArgumentException("Failed requirement.".toString());
     }
 
-    public final void checkAndShowSetFeedTopHint(boolean z, Feed feed) {
+    private final void checkAndShowSetFeedTopHint(boolean z, Feed feed) {
         if (z || !(!this.topIds.isEmpty())) {
             setFeedToNodeTop(z, feed);
             return;

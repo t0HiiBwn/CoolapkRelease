@@ -153,7 +153,7 @@ public final class SecondhandDealTypeListFragment extends NewAsyncListFragment<L
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public DataViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558589, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558593, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             return new DataViewHolder(inflate, SecondhandDealTypeListFragment.access$getViewModel$p(SecondhandDealTypeListFragment.this), new SecondhandDealTypeListFragment$DataAdapter$onCreateViewHolder$1(this));
         }
@@ -173,7 +173,7 @@ public final class SecondhandDealTypeListFragment extends NewAsyncListFragment<L
     /* compiled from: SecondhandDealTypeListFragment.kt */
     private static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558589;
+        public static final int LAYOUT_ID = 2131558593;
         private final ItemAppCategoryBinding binding;
         private final SuperSearchViewModel viewModel;
 

@@ -19,13 +19,13 @@ public final class DyhArticleDetailPresenter$followAuthor$2 extends EmptySubscri
     public void onError(Throwable th) {
         Intrinsics.checkNotNullParameter(th, "e");
         super.onError(th);
-        DyhArticleDetailPresenter.access$setPostingFollow$p(this.this$0, false);
+        this.this$0.isPostingFollow = false;
         this.this$0.getView().onFollowAuthorResult(this.$isFollowing, th);
     }
 
     public void onNext(String str) {
         super.onNext((DyhArticleDetailPresenter$followAuthor$2) str);
-        DyhArticleDetailPresenter.access$setPostingFollow$p(this.this$0, false);
+        this.this$0.isPostingFollow = false;
         this.this$0.getView().onFollowAuthorResult(!this.$isFollowing, null);
     }
 }

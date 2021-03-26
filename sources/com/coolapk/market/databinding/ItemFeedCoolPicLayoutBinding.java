@@ -60,7 +60,7 @@ public abstract class ItemFeedCoolPicLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedCoolPicLayoutBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedCoolPicLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558694, viewGroup, z, obj);
+        return (ItemFeedCoolPicLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558701, viewGroup, z, obj);
     }
 
     public static ItemFeedCoolPicLayoutBinding inflate(LayoutInflater layoutInflater) {
@@ -69,7 +69,7 @@ public abstract class ItemFeedCoolPicLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedCoolPicLayoutBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedCoolPicLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558694, null, false, obj);
+        return (ItemFeedCoolPicLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558701, null, false, obj);
     }
 
     public static ItemFeedCoolPicLayoutBinding bind(View view) {
@@ -78,6 +78,6 @@ public abstract class ItemFeedCoolPicLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedCoolPicLayoutBinding bind(View view, Object obj) {
-        return (ItemFeedCoolPicLayoutBinding) bind(obj, view, 2131558694);
+        return (ItemFeedCoolPicLayoutBinding) bind(obj, view, 2131558701);
     }
 }

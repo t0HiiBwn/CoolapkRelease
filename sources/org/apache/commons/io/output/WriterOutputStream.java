@@ -18,6 +18,27 @@ public class WriterOutputStream extends OutputStream {
     private final boolean writeImmediately;
     private final Writer writer;
 
+    @Deprecated
+    public WriterOutputStream(Writer writer2) {
+        this(writer2, Charset.defaultCharset(), 1024, false);
+    }
+
+    public WriterOutputStream(Writer writer2, String str) {
+        this(writer2, str, 1024, false);
+    }
+
+    public WriterOutputStream(Writer writer2, String str, int i, boolean z) {
+        this(writer2, Charset.forName(str), i, z);
+    }
+
+    public WriterOutputStream(Writer writer2, Charset charset) {
+        this(writer2, charset, 1024, false);
+    }
+
+    public WriterOutputStream(Writer writer2, Charset charset, int i, boolean z) {
+        this(writer2, charset.newDecoder().onMalformedInput(CodingErrorAction.REPLACE).onUnmappableCharacter(CodingErrorAction.REPLACE).replaceWith("?"), i, z);
+    }
+
     public WriterOutputStream(Writer writer2, CharsetDecoder charsetDecoder) {
         this(writer2, charsetDecoder, 1024, false);
     }
@@ -29,88 +50,6 @@ public class WriterOutputStream extends OutputStream {
         this.decoder = charsetDecoder;
         this.writeImmediately = z;
         this.decoderOut = CharBuffer.allocate(i);
-    }
-
-    public WriterOutputStream(Writer writer2, Charset charset, int i, boolean z) {
-        this(writer2, charset.newDecoder().onMalformedInput(CodingErrorAction.REPLACE).onUnmappableCharacter(CodingErrorAction.REPLACE).replaceWith("?"), i, z);
-    }
-
-    public WriterOutputStream(Writer writer2, Charset charset) {
-        this(writer2, charset, 1024, false);
-    }
-
-    public WriterOutputStream(Writer writer2, String str, int i, boolean z) {
-        this(writer2, Charset.forName(str), i, z);
-    }
-
-    public WriterOutputStream(Writer writer2, String str) {
-        this(writer2, str, 1024, false);
-    }
-
-    @Deprecated
-    public WriterOutputStream(Writer writer2) {
-        this(writer2, Charset.defaultCharset(), 1024, false);
-    }
-
-    @Override // java.io.OutputStream
-    public void write(byte[] bArr, int i, int i2) throws IOException {
-        while (i2 > 0) {
-            int min = Math.min(i2, this.decoderIn.remaining());
-            this.decoderIn.put(bArr, i, min);
-            processInput(false);
-            i2 -= min;
-            i += min;
-        }
-        if (this.writeImmediately) {
-            flushOutput();
-        }
-    }
-
-    @Override // java.io.OutputStream
-    public void write(byte[] bArr) throws IOException {
-        write(bArr, 0, bArr.length);
-    }
-
-    @Override // java.io.OutputStream
-    public void write(int i) throws IOException {
-        write(new byte[]{(byte) i}, 0, 1);
-    }
-
-    @Override // java.io.OutputStream, java.io.Flushable
-    public void flush() throws IOException {
-        flushOutput();
-        this.writer.flush();
-    }
-
-    @Override // java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
-        processInput(true);
-        flushOutput();
-        this.writer.close();
-    }
-
-    private void processInput(boolean z) throws IOException {
-        CoderResult decode;
-        this.decoderIn.flip();
-        while (true) {
-            decode = this.decoder.decode(this.decoderIn, this.decoderOut, z);
-            if (!decode.isOverflow()) {
-                break;
-            }
-            flushOutput();
-        }
-        if (decode.isUnderflow()) {
-            this.decoderIn.compact();
-            return;
-        }
-        throw new IOException("Unexpected coder result");
-    }
-
-    private void flushOutput() throws IOException {
-        if (this.decoderOut.position() > 0) {
-            this.writer.write(this.decoderOut.array(), 0, this.decoderOut.position());
-            this.decoderOut.rewind();
-        }
     }
 
     private static void checkIbmJdkWithBrokenUTF16(Charset charset) {
@@ -136,6 +75,67 @@ public class WriterOutputStream extends OutputStream {
             if (!"vés".equals(allocate2.toString())) {
                 throw new UnsupportedOperationException("UTF-16 requested when runninng on an IBM JDK with broken UTF-16 support. Please find a JDK that supports UTF-16 if you intend to use UF-16 with WriterOutputStream");
             }
+        }
+    }
+
+    private void flushOutput() throws IOException {
+        if (this.decoderOut.position() > 0) {
+            this.writer.write(this.decoderOut.array(), 0, this.decoderOut.position());
+            this.decoderOut.rewind();
+        }
+    }
+
+    private void processInput(boolean z) throws IOException {
+        CoderResult decode;
+        this.decoderIn.flip();
+        while (true) {
+            decode = this.decoder.decode(this.decoderIn, this.decoderOut, z);
+            if (!decode.isOverflow()) {
+                break;
+            }
+            flushOutput();
+        }
+        if (decode.isUnderflow()) {
+            this.decoderIn.compact();
+            return;
+        }
+        throw new IOException("Unexpected coder result");
+    }
+
+    @Override // java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
+        processInput(true);
+        flushOutput();
+        this.writer.close();
+    }
+
+    @Override // java.io.OutputStream, java.io.Flushable
+    public void flush() throws IOException {
+        flushOutput();
+        this.writer.flush();
+    }
+
+    @Override // java.io.OutputStream
+    public void write(int i) throws IOException {
+        write(new byte[]{(byte) i}, 0, 1);
+    }
+
+    @Override // java.io.OutputStream
+    public void write(byte[] bArr) throws IOException {
+        write(bArr, 0, bArr.length);
+    }
+
+    @Override // java.io.OutputStream
+    public void write(byte[] bArr, int i, int i2) throws IOException {
+        while (i2 > 0) {
+            int min = Math.min(i2, this.decoderIn.remaining());
+            this.decoderIn.put(bArr, i, min);
+            processInput(false);
+            i2 -= min;
+            i += min;
+        }
+        if (this.writeImmediately) {
+            flushOutput();
         }
     }
 }

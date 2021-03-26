@@ -38,10 +38,10 @@ public class ItemFeedAlbumLayoutBindingImpl extends ItemFeedAlbumLayoutBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 10);
-        sparseIntArray.put(2131363014, 11);
-        sparseIntArray.put(2131363582, 12);
-        sparseIntArray.put(2131363533, 13);
+        sparseIntArray.put(2131362657, 10);
+        sparseIntArray.put(2131363028, 11);
+        sparseIntArray.put(2131363604, 12);
+        sparseIntArray.put(2131363551, 13);
     }
 
     public ItemFeedAlbumLayoutBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -101,9 +101,9 @@ public class ItemFeedAlbumLayoutBindingImpl extends ItemFeedAlbumLayoutBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -119,7 +119,7 @@ public class ItemFeedAlbumLayoutBindingImpl extends ItemFeedAlbumLayoutBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

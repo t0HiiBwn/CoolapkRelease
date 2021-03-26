@@ -29,7 +29,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: LoginUserNodeRatingViewHolder.kt */
 public final class LoginUserNodeRatingViewHolder extends GenericBindHolder<ItemUserNodeRatingBinding, NodeRating> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558978;
+    public static final int LAYOUT_ID = 2131558985;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public LoginUserNodeRatingViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -94,7 +94,7 @@ public final class LoginUserNodeRatingViewHolder extends GenericBindHolder<ItemU
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
             int id = view.getId();
-            if (id == 2131362672) {
+            if (id == 2131362683) {
                 NodeTargetInfo targetInfo = model.getTargetInfo();
                 if (targetInfo != null) {
                     Intrinsics.checkNotNullExpressionValue(targetInfo, "data.targetInfo ?: return");
@@ -102,7 +102,7 @@ public final class LoginUserNodeRatingViewHolder extends GenericBindHolder<ItemU
                     Intrinsics.checkNotNullExpressionValue(context, "context");
                     ActionManagerCompat.startActivityByUrl$default(context, targetInfo.getUrl(), null, null, 12, null);
                 }
-            } else if (id == 2131362768) {
+            } else if (id == 2131362779) {
                 String feedId = model.getFeedId();
                 if ((feedId == null || feedId.length() == 0) || !(!Intrinsics.areEqual(model.getFeedId(), "0"))) {
                     Toast.show$default(getContext(), "你真懒，居然没写评语", 0, false, 12, null);

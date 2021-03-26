@@ -38,9 +38,7 @@ public final class gn {
     boolean i = false;
     StringBuilder j = null;
     HandlerThread k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private Context f1236l;
+    private Context l;
     private String m = null;
     private ArrayList<gm> n = new ArrayList<>();
     private int o = -113;
@@ -80,7 +78,7 @@ public final class gn {
     }
 
     public gn(Context context) {
-        this.f1236l = context;
+        this.l = context;
         if (this.c == null) {
             this.c = (TelephonyManager) gy.a(context, "phone");
         }
@@ -463,7 +461,7 @@ public final class gn {
             try {
                 int u2 = u();
                 this.r = u2;
-                this.q = u2 != 1 ? u2 != 2 ? gy.a(this.f1236l, "phone2") : gy.a(this.f1236l, "phone2") : gy.a(this.f1236l, "phone_msim");
+                this.q = u2 != 1 ? u2 != 2 ? gy.a(this.l, "phone2") : gy.a(this.l, "phone2") : gy.a(this.l, "phone_msim");
             } catch (Throwable unused) {
             }
             if (this.k == null) {
@@ -767,7 +765,7 @@ public final class gn {
                                     min = Math.min(65535L, glVar.a(a2));
                                 }
                             }
-                            a2.f1235l = (short) ((int) min);
+                            a2.l = (short) ((int) min);
                             arrayList.add(a2);
                         } catch (Throwable unused) {
                         }
@@ -852,7 +850,7 @@ public final class gn {
 
     public final void f() {
         try {
-            this.i = gy.a(this.f1236l);
+            this.i = gy.a(this.l);
             if (m() || this.b.isEmpty()) {
                 p();
                 this.d = gy.b();

@@ -17,20 +17,20 @@ public class RegexFileFilter extends AbstractFileFilter implements Serializable 
         throw new IllegalArgumentException("Pattern is missing");
     }
 
-    public RegexFileFilter(String str, IOCase iOCase) {
+    public RegexFileFilter(String str, int i) {
         if (str != null) {
-            int i = 0;
-            if (iOCase != null && !iOCase.isCaseSensitive()) {
-                i = 2;
-            }
             this.pattern = Pattern.compile(str, i);
             return;
         }
         throw new IllegalArgumentException("Pattern is missing");
     }
 
-    public RegexFileFilter(String str, int i) {
+    public RegexFileFilter(String str, IOCase iOCase) {
         if (str != null) {
+            int i = 0;
+            if (iOCase != null && !iOCase.isCaseSensitive()) {
+                i = 2;
+            }
             this.pattern = Pattern.compile(str, i);
             return;
         }

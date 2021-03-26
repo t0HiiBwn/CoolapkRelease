@@ -29,10 +29,10 @@ public class AppExtensionBarV3BindingImpl extends AppExtensionBarV3Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362284, 3);
-        sparseIntArray.put(2131362290, 4);
-        sparseIntArray.put(2131362291, 5);
-        sparseIntArray.put(2131362482, 6);
+        sparseIntArray.put(2131362289, 3);
+        sparseIntArray.put(2131362295, 4);
+        sparseIntArray.put(2131362296, 5);
+        sparseIntArray.put(2131362490, 6);
     }
 
     public AppExtensionBarV3BindingImpl(DataBindingComponent dataBindingComponent, View view) {

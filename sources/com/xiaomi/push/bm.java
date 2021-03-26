@@ -1,231 +1,279 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.clientreport.manager.a;
-import java.io.File;
-import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.nio.channels.FileLock;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Iterator;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class bm {
-    public static String a() {
-        return Build.VERSION.RELEASE + "-" + Build.VERSION.INCREMENTAL;
-    }
+    public String a = "";
+    public String b;
+    public String c;
+    public String d;
+    public String e;
+    public String f;
+    public String g;
+    protected String h;
+    private long i;
+    private ArrayList<bw> j = new ArrayList<>();
+    private String k;
+    private double l = 0.1d;
+    private String m = "s.mi1.cc";
+    private long n = 86400000;
 
-    public static String a(Context context) {
-        String a = bp.a(context).a("sp_client_report_status", "sp_client_report_key", "");
-        if (!TextUtils.isEmpty(a)) {
-            return a;
+    public bm(String str) {
+        if (!TextUtils.isEmpty(str)) {
+            this.i = System.currentTimeMillis();
+            this.j.add(new bw(str, -1));
+            this.a = bq.b();
+            this.b = str;
+            return;
         }
-        String a2 = bi.a(20);
-        bp.a(context).m147a("sp_client_report_status", "sp_client_report_key", a2);
-        return a2;
+        throw new IllegalArgumentException("the host is empty");
     }
 
-    public static void a(Context context, String str) {
-        Intent intent = new Intent("com.xiaomi.xmsf.push.XMSF_UPLOAD_ACTIVE");
-        intent.putExtra("pkgname", context.getPackageName());
-        intent.putExtra("category", "category_client_report_data");
-        intent.putExtra("name", "quality_support");
-        intent.putExtra("data", str);
-        context.sendBroadcast(intent, "com.xiaomi.xmsf.permission.USE_XMSF_UPLOAD");
+    private synchronized void d(String str) {
+        Iterator<bw> it2 = this.j.iterator();
+        while (it2.hasNext()) {
+            if (TextUtils.equals(it2.next().a, str)) {
+                it2.remove();
+            }
+        }
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:58:0x00e4, code lost:
-        if (r7 == null) goto L_0x00e9;
-     */
-    /* JADX WARNING: Removed duplicated region for block: B:73:0x0104  */
-    public static void a(Context context, String str, String str2) {
-        Throwable th;
-        File file;
-        RandomAccessFile randomAccessFile;
-        Exception e;
-        File externalFilesDir = context.getExternalFilesDir(str2);
-        if (externalFilesDir != null) {
-            if (!externalFilesDir.exists()) {
-                externalFilesDir.mkdirs();
-            }
-            File externalFilesDir2 = context.getExternalFilesDir(str);
-            if (externalFilesDir2 == null) {
-                return;
-            }
-            if (!externalFilesDir2.exists()) {
-                externalFilesDir2.mkdirs();
-                return;
-            }
-            File[] listFiles = externalFilesDir2.listFiles(new bn());
-            if (listFiles != null && listFiles.length > 0) {
-                long currentTimeMillis = System.currentTimeMillis();
-                FileLock fileLock = null;
-                RandomAccessFile randomAccessFile2 = null;
-                File file2 = null;
-                for (File file3 : listFiles) {
-                    if (file3 != null) {
-                        try {
-                            if (!TextUtils.isEmpty(file3.getAbsolutePath())) {
-                                file = new File(file3.getAbsolutePath() + ".lock");
-                                try {
-                                    y.m681a(file);
-                                    randomAccessFile = new RandomAccessFile(file, "rw");
-                                    try {
-                                        fileLock = randomAccessFile.getChannel().lock();
-                                        File file4 = new File(externalFilesDir.getAbsolutePath() + File.separator + file3.getName() + currentTimeMillis);
-                                        try {
-                                            y.b(file3, file4);
-                                        } catch (IOException e2) {
-                                            e2.printStackTrace();
-                                            file3.delete();
-                                            file4.delete();
-                                        }
-                                        file3.delete();
-                                        if (fileLock != null && fileLock.isValid()) {
-                                            try {
-                                                fileLock.release();
-                                            } catch (IOException e3) {
-                                                b.a(e3);
-                                            }
-                                        }
-                                        y.a(randomAccessFile);
-                                    } catch (Exception e4) {
-                                        e = e4;
-                                        try {
-                                            b.a(e);
-                                            if (fileLock != null && fileLock.isValid()) {
-                                                try {
-                                                    fileLock.release();
-                                                } catch (IOException e5) {
-                                                    b.a(e5);
-                                                }
-                                            }
-                                            y.a(randomAccessFile);
-                                        } catch (Throwable th2) {
-                                            th = th2;
-                                            randomAccessFile2 = randomAccessFile;
-                                            file2 = file;
-                                            try {
-                                                fileLock.release();
-                                            } catch (IOException e6) {
-                                                b.a(e6);
-                                            }
-                                            y.a(randomAccessFile2);
-                                            if (file2 != null) {
-                                            }
-                                            throw th;
-                                        }
-                                    }
-                                } catch (Exception e7) {
-                                    randomAccessFile = randomAccessFile2;
-                                    e = e7;
-                                    b.a(e);
-                                    fileLock.release();
-                                    y.a(randomAccessFile);
-                                } catch (Throwable th3) {
-                                    th = th3;
-                                    file2 = file;
-                                    fileLock.release();
-                                    y.a(randomAccessFile2);
-                                    if (file2 != null) {
-                                    }
-                                    throw th;
-                                }
-                                file.delete();
-                                randomAccessFile2 = randomAccessFile;
-                                file2 = file;
-                            }
-                        } catch (Exception e8) {
-                            file = file2;
-                            randomAccessFile = randomAccessFile2;
-                            e = e8;
-                            b.a(e);
-                            fileLock.release();
-                            y.a(randomAccessFile);
-                        } catch (Throwable th4) {
-                            th = th4;
-                            if (fileLock != null && fileLock.isValid()) {
-                                fileLock.release();
-                            }
-                            y.a(randomAccessFile2);
-                            if (file2 != null) {
-                                file2.delete();
-                            }
-                            throw th;
-                        }
-                    }
-                    if (fileLock != null && fileLock.isValid()) {
-                        try {
-                            fileLock.release();
-                        } catch (IOException e9) {
-                            b.a(e9);
-                        }
-                    }
-                    y.a(randomAccessFile2);
-                    if (file2 != null) {
-                        file2.delete();
-                    }
+    public synchronized bm a(JSONObject jSONObject) {
+        this.a = jSONObject.optString("net");
+        this.n = jSONObject.getLong("ttl");
+        this.l = jSONObject.getDouble("pct");
+        this.i = jSONObject.getLong("ts");
+        this.d = jSONObject.optString("city");
+        this.c = jSONObject.optString("prv");
+        this.g = jSONObject.optString("cty");
+        this.e = jSONObject.optString("isp");
+        this.f = jSONObject.optString("ip");
+        this.b = jSONObject.optString("host");
+        this.h = jSONObject.optString("xf");
+        JSONArray jSONArray = jSONObject.getJSONArray("fbs");
+        for (int i2 = 0; i2 < jSONArray.length(); i2++) {
+            a(new bw().a(jSONArray.getJSONObject(i2)));
+        }
+        return this;
+    }
+
+    public ArrayList<String> a(String str) {
+        if (!TextUtils.isEmpty(str)) {
+            URL url = new URL(str);
+            if (TextUtils.equals(url.getHost(), this.b)) {
+                ArrayList<String> arrayList = new ArrayList<>();
+                Iterator<String> it2 = a(true).iterator();
+                while (it2.hasNext()) {
+                    bo a2 = bo.a(it2.next(), url.getPort());
+                    arrayList.add(new URL(url.getProtocol(), a2.b(), a2.a(), url.getFile()).toString());
                 }
+                return arrayList;
             }
+            throw new IllegalArgumentException("the url is not supported by the fallback");
         }
+        throw new IllegalArgumentException("the url is empty.");
     }
 
-    public static void a(Context context, List<String> list) {
-        if (list != null && list.size() > 0 && m143a(context)) {
-            for (String str : list) {
-                if (!TextUtils.isEmpty(str)) {
-                    a(context, str);
-                }
+    public synchronized ArrayList<String> a(boolean z) {
+        ArrayList<String> arrayList;
+        String substring;
+        int size = this.j.size();
+        bw[] bwVarArr = new bw[size];
+        this.j.toArray(bwVarArr);
+        Arrays.sort(bwVarArr);
+        arrayList = new ArrayList<>();
+        for (int i2 = 0; i2 < size; i2++) {
+            bw bwVar = bwVarArr[i2];
+            if (z) {
+                substring = bwVar.a;
+            } else {
+                int indexOf = bwVar.a.indexOf(":");
+                substring = indexOf != -1 ? bwVar.a.substring(0, indexOf) : bwVar.a;
             }
+            arrayList.add(substring);
         }
+        return arrayList;
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public static boolean m143a(Context context) {
+    public void a(double d2) {
+        this.l = d2;
+    }
+
+    public void a(long j2) {
+        if (j2 > 0) {
+            this.n = j2;
+            return;
+        }
+        throw new IllegalArgumentException("the duration is invalid " + j2);
+    }
+
+    synchronized void a(bw bwVar) {
+        d(bwVar.a);
+        this.j.add(bwVar);
+    }
+
+    public void a(String str, int i2, long j2, long j3, Exception exc) {
+        a(str, new bl(i2, j2, j3, exc));
+    }
+
+    public void a(String str, long j2, long j3) {
         try {
-            return context.getApplicationContext().getPackageManager().getPackageInfo("com.xiaomi.xmsf", 0).versionCode >= 108;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-            return false;
+            b(new URL(str).getHost(), j2, j3);
+        } catch (MalformedURLException unused) {
         }
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public static boolean m144a(Context context, String str) {
-        File file = new File(str);
-        long maxFileLength = a.a(context).m43a().getMaxFileLength();
-        if (file.exists()) {
-            try {
-                if (file.length() > maxFileLength) {
-                    return false;
-                }
-            } catch (Exception e) {
-                b.a(e);
-                return false;
+    public void a(String str, long j2, long j3, Exception exc) {
+        try {
+            b(new URL(str).getHost(), j2, j3, exc);
+        } catch (MalformedURLException unused) {
+        }
+    }
+
+    public synchronized void a(String str, bl blVar) {
+        Iterator<bw> it2 = this.j.iterator();
+        while (true) {
+            if (!it2.hasNext()) {
+                break;
             }
+            bw next = it2.next();
+            if (TextUtils.equals(str, next.a)) {
+                next.a(blVar);
+                break;
+            }
+        }
+    }
+
+    public synchronized void a(String[] strArr) {
+        int i2;
+        int size = this.j.size() - 1;
+        while (true) {
+            i2 = 0;
+            if (size < 0) {
+                break;
+            }
+            int length = strArr.length;
+            while (true) {
+                if (i2 >= length) {
+                    break;
+                }
+                if (TextUtils.equals(this.j.get(size).a, strArr[i2])) {
+                    this.j.remove(size);
+                    break;
+                }
+                i2++;
+            }
+            size--;
+        }
+        Iterator<bw> it2 = this.j.iterator();
+        int i3 = 0;
+        while (it2.hasNext()) {
+            bw next = it2.next();
+            if (next.b > i3) {
+                i3 = next.b;
+            }
+        }
+        while (i2 < strArr.length) {
+            a(new bw(strArr[i2], (strArr.length + i3) - i2));
+            i2++;
+        }
+    }
+
+    public boolean a() {
+        return TextUtils.equals(this.a, bq.b());
+    }
+
+    public boolean a(bm bmVar) {
+        return TextUtils.equals(this.a, bmVar.a);
+    }
+
+    public synchronized void b(String str) {
+        a(new bw(str));
+    }
+
+    public void b(String str, long j2, long j3) {
+        a(str, 0, j2, j3, null);
+    }
+
+    public void b(String str, long j2, long j3, Exception exc) {
+        a(str, -1, j2, j3, exc);
+    }
+
+    public boolean b() {
+        return System.currentTimeMillis() - this.i < this.n;
+    }
+
+    public void c(String str) {
+        this.m = str;
+    }
+
+    boolean c() {
+        long j2 = this.n;
+        if (864000000 >= j2) {
+            j2 = 864000000;
+        }
+        long currentTimeMillis = System.currentTimeMillis();
+        long j3 = this.i;
+        return currentTimeMillis - j3 > j2 || (currentTimeMillis - j3 > this.n && this.a.startsWith("WIFI-"));
+    }
+
+    public synchronized ArrayList<String> d() {
+        return a(false);
+    }
+
+    public synchronized String e() {
+        if (!TextUtils.isEmpty(this.k)) {
+            return this.k;
+        } else if (TextUtils.isEmpty(this.e)) {
+            return "hardcode_isp";
         } else {
-            y.m681a(file);
+            String a2 = ah.a(new String[]{this.e, this.c, this.d, this.g, this.f}, "_");
+            this.k = a2;
+            return a2;
         }
-        return true;
     }
 
-    public static byte[] a(String str) {
-        byte[] copyOf = Arrays.copyOf(bf.m137a(str), 16);
-        copyOf[0] = 68;
-        copyOf[15] = 84;
-        return copyOf;
+    public synchronized JSONObject f() {
+        JSONObject jSONObject;
+        jSONObject = new JSONObject();
+        jSONObject.put("net", this.a);
+        jSONObject.put("ttl", this.n);
+        jSONObject.put("pct", this.l);
+        jSONObject.put("ts", this.i);
+        jSONObject.put("city", this.d);
+        jSONObject.put("prv", this.c);
+        jSONObject.put("cty", this.g);
+        jSONObject.put("isp", this.e);
+        jSONObject.put("ip", this.f);
+        jSONObject.put("host", this.b);
+        jSONObject.put("xf", this.h);
+        JSONArray jSONArray = new JSONArray();
+        Iterator<bw> it2 = this.j.iterator();
+        while (it2.hasNext()) {
+            jSONArray.put(it2.next().a());
+        }
+        jSONObject.put("fbs", jSONArray);
+        return jSONObject;
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public static File[] m145a(Context context, String str) {
-        File externalFilesDir = context.getExternalFilesDir(str);
-        if (externalFilesDir != null) {
-            return externalFilesDir.listFiles(new bo());
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.a);
+        sb.append("\n");
+        sb.append(e());
+        Iterator<bw> it2 = this.j.iterator();
+        while (it2.hasNext()) {
+            sb.append("\n");
+            sb.append(it2.next().toString());
         }
-        return null;
+        sb.append("\n");
+        return sb.toString();
     }
 }

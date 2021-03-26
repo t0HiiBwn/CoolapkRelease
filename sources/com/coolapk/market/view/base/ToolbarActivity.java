@@ -41,13 +41,13 @@ public abstract class ToolbarActivity<FragmentType extends Fragment> extends Fak
     @Override // com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        ToolbarLayoutBinding toolbarLayoutBinding = (ToolbarLayoutBinding) DataBindingUtil.setContentView(this, 2131559199);
+        ToolbarLayoutBinding toolbarLayoutBinding = (ToolbarLayoutBinding) DataBindingUtil.setContentView(this, 2131559207);
         this.binding = toolbarLayoutBinding;
         Toolbar toolbar2 = toolbarLayoutBinding.toolbar;
         this.toolbar = toolbar2;
         setSupportActionBar(toolbar2);
         this.toolbar.setTitle(getTitle());
-        this.toolbar.setNavigationIcon(2131231156);
+        this.toolbar.setNavigationIcon(2131231166);
         ViewExtendsKt.setTintColor(this.toolbar);
         ViewUtil.doubleClickListener(this.toolbar, new ViewUtil.OnDoubleClickListener() {
             /* class com.coolapk.market.view.base.ToolbarActivity.AnonymousClass1 */
@@ -63,7 +63,7 @@ public abstract class ToolbarActivity<FragmentType extends Fragment> extends Fak
             }
         });
         FragmentManager supportFragmentManager = getSupportFragmentManager();
-        FragmentType fragmenttype = (FragmentType) supportFragmentManager.findFragmentById(2131363592);
+        FragmentType fragmenttype = (FragmentType) supportFragmentManager.findFragmentById(2131363614);
         this.contentFragment = fragmenttype;
         if (fragmenttype == null) {
             FragmentType onCreateFragment = onCreateFragment();
@@ -72,7 +72,7 @@ public abstract class ToolbarActivity<FragmentType extends Fragment> extends Fak
                 finish();
                 return;
             }
-            supportFragmentManager.beginTransaction().add(2131363592, this.contentFragment).commit();
+            supportFragmentManager.beginTransaction().add(2131363614, this.contentFragment).commit();
         }
         FragmentType fragmenttype2 = this.contentFragment;
         if (fragmenttype2 != null) {
@@ -157,7 +157,7 @@ public abstract class ToolbarActivity<FragmentType extends Fragment> extends Fak
 
     private void recreateFragmentOnThemeChange() {
         FragmentManager supportFragmentManager = getSupportFragmentManager();
-        Fragment findFragmentById = supportFragmentManager.findFragmentById(2131363592);
+        Fragment findFragmentById = supportFragmentManager.findFragmentById(2131363614);
         FragmentType onCreateFragment = onCreateFragment();
         FragmentTransaction beginTransaction = supportFragmentManager.beginTransaction();
         if (findFragmentById != null && findFragmentById.isAdded()) {
@@ -165,7 +165,7 @@ public abstract class ToolbarActivity<FragmentType extends Fragment> extends Fak
             beginTransaction.remove(findFragmentById);
         }
         onFragmentCreated(onCreateFragment);
-        beginTransaction.add(2131363592, onCreateFragment).commitAllowingStateLoss();
+        beginTransaction.add(2131363614, onCreateFragment).commitAllowingStateLoss();
         this.contentFragment = onCreateFragment;
         this.binding.toolbarContentFragment.post(new Runnable() {
             /* class com.coolapk.market.view.base.$$Lambda$ToolbarActivity$GzAxyNSoJUbrPvB4izFAl525s */

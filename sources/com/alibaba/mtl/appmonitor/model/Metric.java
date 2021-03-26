@@ -9,7 +9,7 @@ public class Metric implements b {
     private DimensionSet b;
 
     /* renamed from: b  reason: collision with other field name */
-    private MeasureSet f51b;
+    private MeasureSet f50b;
     private boolean g;
     private String o;
     private String p;
@@ -25,7 +25,7 @@ public class Metric implements b {
         this.o = str;
         this.p = str2;
         this.b = dimensionSet;
-        this.f51b = measureSet;
+        this.f50b = measureSet;
         this.s = null;
         this.g = z2;
     }
@@ -47,8 +47,8 @@ public class Metric implements b {
         boolean z2 = true;
         boolean valid = dimensionSet != null ? dimensionSet.valid(dimensionValueSet) : true;
         Metric metric = MetricRepo.getRepo().getMetric("config_prefix" + this.o, "config_prefix" + this.p);
-        if (metric == null || metric.getMeasureSet() == null || measureValueSet == null || measureValueSet.getMap() == null || this.f51b == null) {
-            MeasureSet measureSet = this.f51b;
+        if (metric == null || metric.getMeasureSet() == null || measureValueSet == null || measureValueSet.getMap() == null || this.f50b == null) {
+            MeasureSet measureSet = this.f50b;
             if (measureSet == null) {
                 return valid;
             }
@@ -61,7 +61,7 @@ public class Metric implements b {
         for (String str : measureValueSet.getMap().keySet()) {
             Measure a = a(str, measures);
             if (a == null) {
-                a = a(str, this.f51b.getMeasures());
+                a = a(str, this.f50b.getMeasures());
             }
             if (a == null || !a.valid(measureValueSet.getValue(str))) {
                 return false;
@@ -97,7 +97,7 @@ public class Metric implements b {
     }
 
     public MeasureSet getMeasureSet() {
-        return this.f51b;
+        return this.f50b;
     }
 
     public synchronized boolean isCommitDetail() {
@@ -171,7 +171,7 @@ public class Metric implements b {
         this.s = null;
         this.g = false;
         this.b = null;
-        this.f51b = null;
+        this.f50b = null;
         this.r = null;
     }
 

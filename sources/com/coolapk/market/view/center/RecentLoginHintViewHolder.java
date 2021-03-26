@@ -16,7 +16,7 @@ import kotlin.jvm.internal.Intrinsics;
 public final class RecentLoginHintViewHolder extends GenericBindHolder<ItemRecentLoginBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
     public static final String ENTITY_TYPE_RECENT_LOGIN = "recent_login";
-    public static final int LAYOUT_ID = 2131558892;
+    public static final int LAYOUT_ID = 2131558899;
     public static final String LOGIN_HTML = "你还没有登录, <a href=\"/account/login\">去登录</a>";
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */

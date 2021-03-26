@@ -33,12 +33,10 @@ class a implements UMImprintChangeCallback {
     private static final int f = 274;
     private static final int g = 512;
     private static final int h = 769;
-    private static FileObserverC0147a i = null;
+    private static FileObserverC0174a i = null;
     private static ConnectivityManager j = null;
     private static NetworkInfo k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static IntentFilter f1482l = null;
+    private static IntentFilter l = null;
     private static boolean m = false;
     private static ArrayList<UMSenderStateNotify> n = null;
     private static Object o = new Object();
@@ -194,18 +192,18 @@ class a implements UMImprintChangeCallback {
                 a = handlerThread;
                 handlerThread.start();
                 if (i == null) {
-                    FileObserverC0147a aVar = new FileObserverC0147a(UMFrUtils.getEnvelopeDirPath(context));
+                    FileObserverC0174a aVar = new FileObserverC0174a(UMFrUtils.getEnvelopeDirPath(context));
                     i = aVar;
                     aVar.startWatching();
                     ULog.d("--->>> FileMonitor has already started!");
                 }
-                if (DeviceConfig.checkPermission(appContext, "android.permission.ACCESS_NETWORK_STATE") && j != null && f1482l == null) {
+                if (DeviceConfig.checkPermission(appContext, "android.permission.ACCESS_NETWORK_STATE") && j != null && l == null) {
                     IntentFilter intentFilter = new IntentFilter();
-                    f1482l = intentFilter;
+                    l = intentFilter;
                     intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
                     BroadcastReceiver broadcastReceiver = y;
                     if (broadcastReceiver != null) {
-                        appContext.registerReceiver(broadcastReceiver, f1482l);
+                        appContext.registerReceiver(broadcastReceiver, l);
                     }
                 }
                 n();
@@ -323,8 +321,8 @@ class a implements UMImprintChangeCallback {
 
     /* renamed from: com.umeng.commonsdk.framework.a$a  reason: collision with other inner class name */
     /* compiled from: UMNetWorkSender */
-    static class FileObserverC0147a extends FileObserver {
-        public FileObserverC0147a(String str) {
+    static class FileObserverC0174a extends FileObserver {
+        public FileObserverC0174a(String str) {
             super(str);
         }
 

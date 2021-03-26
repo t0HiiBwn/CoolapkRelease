@@ -106,6 +106,7 @@ public final class BarUtils {
 
     private static void addMarginTopEqualStatusBarHeight(Window window) {
         View findViewWithTag;
+        Objects.requireNonNull(window, "Argument 'window' of type Window (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         if (Build.VERSION.SDK_INT >= 19 && (findViewWithTag = window.getDecorView().findViewWithTag("TAG_OFFSET")) != null) {
             addMarginTopEqualStatusBarHeight(findViewWithTag);
         }
@@ -113,6 +114,7 @@ public final class BarUtils {
 
     private static void subtractMarginTopEqualStatusBarHeight(Window window) {
         View findViewWithTag;
+        Objects.requireNonNull(window, "Argument 'window' of type Window (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         if (Build.VERSION.SDK_INT >= 19 && (findViewWithTag = window.getDecorView().findViewWithTag("TAG_OFFSET")) != null) {
             subtractMarginTopEqualStatusBarHeight(findViewWithTag);
         }
@@ -202,11 +204,13 @@ public final class BarUtils {
     }
 
     private static View applyStatusBarColor(Activity activity, int i, boolean z) {
+        Objects.requireNonNull(activity, "Argument 'activity' of type Activity (#0 out of 3, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         return applyStatusBarColor(activity.getWindow(), i, z);
     }
 
     private static View applyStatusBarColor(Window window, int i, boolean z) {
         ViewGroup viewGroup;
+        Objects.requireNonNull(window, "Argument 'window' of type Window (#0 out of 3, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         if (z) {
             viewGroup = (ViewGroup) window.getDecorView();
         } else {
@@ -226,10 +230,12 @@ public final class BarUtils {
     }
 
     private static void hideStatusBarView(Activity activity) {
+        Objects.requireNonNull(activity, "Argument 'activity' of type Activity (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         hideStatusBarView(activity.getWindow());
     }
 
     private static void hideStatusBarView(Window window) {
+        Objects.requireNonNull(window, "Argument 'window' of type Window (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         View findViewWithTag = ((ViewGroup) window.getDecorView()).findViewWithTag("TAG_STATUS_BAR");
         if (findViewWithTag != null) {
             findViewWithTag.setVisibility(8);
@@ -237,6 +243,7 @@ public final class BarUtils {
     }
 
     private static void showStatusBarView(Window window) {
+        Objects.requireNonNull(window, "Argument 'window' of type Window (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         View findViewWithTag = ((ViewGroup) window.getDecorView()).findViewWithTag("TAG_STATUS_BAR");
         if (findViewWithTag != null) {
             findViewWithTag.setVisibility(0);
@@ -244,6 +251,7 @@ public final class BarUtils {
     }
 
     private static View createStatusBarView(Context context, int i) {
+        Objects.requireNonNull(context, "Argument 'context' of type Context (#0 out of 2, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         View view = new View(context);
         view.setLayoutParams(new ViewGroup.LayoutParams(-1, getStatusBarHeight()));
         view.setBackgroundColor(i);
@@ -252,10 +260,12 @@ public final class BarUtils {
     }
 
     public static void transparentStatusBar(Activity activity) {
+        Objects.requireNonNull(activity, "Argument 'activity' of type Activity (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         transparentStatusBar(activity.getWindow());
     }
 
     public static void transparentStatusBar(Window window) {
+        Objects.requireNonNull(window, "Argument 'window' of type Window (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         if (Build.VERSION.SDK_INT >= 19) {
             if (Build.VERSION.SDK_INT >= 21) {
                 window.clearFlags(67108864);

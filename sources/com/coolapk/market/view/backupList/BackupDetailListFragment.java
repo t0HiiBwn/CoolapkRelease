@@ -105,7 +105,7 @@ public final class BackupDetailListFragment extends EntityListFragment {
         DataManager instance = DataManager.getInstance();
         Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
         LoginSession loginSession = instance.getLoginSession();
-        MenuItem findItem = menu.findItem(2131361891);
+        MenuItem findItem = menu.findItem(2131361892);
         if (findItem != null) {
             Intrinsics.checkNotNullExpressionValue(loginSession, "session");
             if (loginSession.isLogin()) {
@@ -124,7 +124,7 @@ public final class BackupDetailListFragment extends EntityListFragment {
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361891) {
+        if (menuItem.getItemId() != 2131361892) {
             return super.onOptionsItemSelected(menuItem);
         }
         ConfirmDialog newInstance = ConfirmDialog.newInstance("", "确定要删除此备份单吗？", "确定", "取消");
@@ -169,10 +169,10 @@ public final class BackupDetailListFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment
     protected void onRegisterCards() {
         super.onRegisterCards();
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558621).suitedMethod(BackupDetailListFragment$onRegisterCards$1.INSTANCE).constructor(new BackupDetailListFragment$onRegisterCards$2(this)).build(), 0);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558623).suitedMethod(BackupDetailListFragment$onRegisterCards$3.INSTANCE).constructor(new BackupDetailListFragment$onRegisterCards$4(this)).build(), 0);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558622).suitedMethod(BackupDetailListFragment$onRegisterCards$5.INSTANCE).constructor(new BackupDetailListFragment$onRegisterCards$6(this)).build(), 0);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558620).suitedMethod(BackupDetailListFragment$onRegisterCards$7.INSTANCE).constructor(new BackupDetailListFragment$onRegisterCards$8(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558625).suitedMethod(BackupDetailListFragment$onRegisterCards$1.INSTANCE).constructor(new BackupDetailListFragment$onRegisterCards$2(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558627).suitedMethod(BackupDetailListFragment$onRegisterCards$3.INSTANCE).constructor(new BackupDetailListFragment$onRegisterCards$4(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558626).suitedMethod(BackupDetailListFragment$onRegisterCards$5.INSTANCE).constructor(new BackupDetailListFragment$onRegisterCards$6(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558624).suitedMethod(BackupDetailListFragment$onRegisterCards$7.INSTANCE).constructor(new BackupDetailListFragment$onRegisterCards$8(this)).build(), 0);
     }
 
     /* access modifiers changed from: protected */

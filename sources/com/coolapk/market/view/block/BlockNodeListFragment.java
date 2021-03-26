@@ -44,7 +44,7 @@ public final class BlockNodeListFragment extends ShortAsyncListFragment<Parcelab
     @Override // com.coolapk.market.view.base.asynclist.ShortAsyncListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558626).constructor(new BlockNodeListFragment$onActivityCreated$1(new FragmentBindingComponent(this))).suitedMethod(BlockNodeListFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558631).constructor(new BlockNodeListFragment$onActivityCreated$1(new FragmentBindingComponent(this))).suitedMethod(BlockNodeListFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
         initData();
         setLoadMoreEnable(false);
         setRefreshEnable(false);
@@ -59,7 +59,7 @@ public final class BlockNodeListFragment extends ShortAsyncListFragment<Parcelab
     /* compiled from: BlockNodeListFragment.kt */
     public static final class BlockNodeViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558626;
+        public static final int LAYOUT_ID = 2131558631;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public BlockNodeViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -119,7 +119,7 @@ public final class BlockNodeListFragment extends ShortAsyncListFragment<Parcelab
             Intrinsics.checkNotNullParameter(view, "view");
             super.onClick(view);
             int id = view.getId();
-            if (id == 2131361876) {
+            if (id == 2131361877) {
                 DataBindingComponent component = getComponent();
                 LifecycleOwner lifecycleOwner = null;
                 if (!(component instanceof FragmentBindingComponent)) {
@@ -140,7 +140,7 @@ public final class BlockNodeListFragment extends ShortAsyncListFragment<Parcelab
                         blockNodeListFragment.removeBlockNode(model);
                     }
                 }
-            } else if (id == 2131362200) {
+            } else if (id == 2131362205) {
                 ViewDataBinding binding2 = getBinding();
                 Intrinsics.checkNotNullExpressionValue(binding2, "getBinding<ItemBlockNodeBinding>()");
                 BlockItem model2 = ((ItemBlockNodeBinding) binding2).getModel();

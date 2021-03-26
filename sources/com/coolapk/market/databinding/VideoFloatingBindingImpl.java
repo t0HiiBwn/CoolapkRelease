@@ -31,9 +31,9 @@ public class VideoFloatingBindingImpl extends VideoFloatingBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363146, 3);
-        sparseIntArray.put(2131362470, 4);
-        sparseIntArray.put(2131363240, 5);
+        sparseIntArray.put(2131363160, 3);
+        sparseIntArray.put(2131362478, 4);
+        sparseIntArray.put(2131363254, 5);
     }
 
     public VideoFloatingBindingImpl(DataBindingComponent dataBindingComponent, View view) {

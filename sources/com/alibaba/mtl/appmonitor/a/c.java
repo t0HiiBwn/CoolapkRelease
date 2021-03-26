@@ -17,19 +17,19 @@ public class c extends d {
     private static final Long a = 300000L;
 
     /* renamed from: a  reason: collision with other field name */
-    private Metric f41a;
+    private Metric f40a;
     private DimensionValueSet b;
 
     /* renamed from: b  reason: collision with other field name */
-    private MeasureValueSet f42b;
+    private MeasureValueSet f41b;
 
     /* renamed from: b  reason: collision with other field name */
-    private Long f43b;
+    private Long f42b;
     private Map<String, MeasureValue> i;
 
     public boolean c() {
         long currentTimeMillis = System.currentTimeMillis();
-        List<Measure> measures = this.f41a.getMeasureSet().getMeasures();
+        List<Measure> measures = this.f40a.getMeasureSet().getMeasures();
         if (measures != null) {
             int size = measures.size();
             for (int i2 = 0; i2 < size; i2++) {
@@ -49,21 +49,21 @@ public class c extends d {
     public void a(String str) {
         long currentTimeMillis = System.currentTimeMillis();
         if (this.i.isEmpty()) {
-            this.f43b = Long.valueOf(currentTimeMillis);
+            this.f42b = Long.valueOf(currentTimeMillis);
         }
-        this.i.put(str, (MeasureValue) a.a().a(MeasureValue.class, Double.valueOf((double) currentTimeMillis), Double.valueOf((double) (currentTimeMillis - this.f43b.longValue()))));
+        this.i.put(str, (MeasureValue) a.a().a(MeasureValue.class, Double.valueOf((double) currentTimeMillis), Double.valueOf((double) (currentTimeMillis - this.f42b.longValue()))));
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public boolean m14a(String str) {
+    public boolean m4a(String str) {
         MeasureValue measureValue = this.i.get(str);
         if (measureValue != null) {
             double currentTimeMillis = (double) System.currentTimeMillis();
             i.a("DurationEvent", "statEvent consumeTime. module:", this.o, " monitorPoint:", this.p, " measureName:", str, " time:", Double.valueOf(currentTimeMillis - measureValue.getValue()));
             measureValue.setValue(currentTimeMillis - measureValue.getValue());
             measureValue.setFinish(true);
-            this.f42b.setValue(str, measureValue);
-            if (this.f41a.getMeasureSet().valid(this.f42b)) {
+            this.f41b.setValue(str, measureValue);
+            if (this.f40a.getMeasureSet().valid(this.f41b)) {
                 return true;
             }
         }
@@ -81,28 +81,28 @@ public class c extends d {
 
     @Override // com.alibaba.mtl.appmonitor.a.d
     /* renamed from: a  reason: collision with other method in class */
-    public MeasureValueSet mo13a() {
-        return this.f42b;
+    public MeasureValueSet mo3a() {
+        return this.f41b;
     }
 
     @Override // com.alibaba.mtl.appmonitor.a.d
     /* renamed from: a */
-    public DimensionValueSet mo13a() {
+    public DimensionValueSet mo3a() {
         return this.b;
     }
 
     @Override // com.alibaba.mtl.appmonitor.a.d, com.alibaba.mtl.appmonitor.c.b
     public void clean() {
         super.clean();
-        this.f41a = null;
-        this.f43b = null;
+        this.f40a = null;
+        this.f42b = null;
         for (MeasureValue measureValue : this.i.values()) {
             a.a().a((a) measureValue);
         }
         this.i.clear();
-        if (this.f42b != null) {
-            a.a().a((a) this.f42b);
-            this.f42b = null;
+        if (this.f41b != null) {
+            a.a().a((a) this.f41b);
+            this.f41b = null;
         }
         if (this.b != null) {
             a.a().a((a) this.b);
@@ -117,11 +117,11 @@ public class c extends d {
             this.i = new HashMap();
         }
         Metric metric = MetricRepo.getRepo().getMetric(this.o, this.p);
-        this.f41a = metric;
+        this.f40a = metric;
         if (metric.getDimensionSet() != null) {
             this.b = (DimensionValueSet) a.a().a(DimensionValueSet.class, new Object[0]);
-            this.f41a.getDimensionSet().setConstantValue(this.b);
+            this.f40a.getDimensionSet().setConstantValue(this.b);
         }
-        this.f42b = (MeasureValueSet) a.a().a(MeasureValueSet.class, new Object[0]);
+        this.f41b = (MeasureValueSet) a.a().a(MeasureValueSet.class, new Object[0]);
     }
 }

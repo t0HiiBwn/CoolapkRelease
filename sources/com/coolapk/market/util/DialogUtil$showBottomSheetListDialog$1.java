@@ -27,7 +27,7 @@ public final class DialogUtil$showBottomSheetListDialog$1 extends RecyclerView.A
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
-        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558528, viewGroup, false);
+        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558530, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "view");
         return new DialogUtil.ListItemViewHolder(inflate);
     }

@@ -39,9 +39,7 @@ public class TDialog extends b {
     private IUiListener i;
     private FrameLayout j;
     private b k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private Handler f1453l;
+    private Handler l;
     private boolean m = false;
     private QQToken n = null;
 
@@ -141,7 +139,7 @@ public class TDialog extends b {
         this.e = new WeakReference<>(context);
         this.g = str2;
         this.h = new OnTimeListener(context, str, str2, qQToken.getAppId(), iUiListener);
-        this.f1453l = new THandler(this.h, context.getMainLooper());
+        this.l = new THandler(this.h, context.getMainLooper());
         this.i = iUiListener;
         this.n = qQToken;
     }
@@ -244,23 +242,23 @@ public class TDialog extends b {
         }
 
         public void onComplete(String str) {
-            TDialog.this.f1453l.obtainMessage(1, str).sendToTarget();
+            TDialog.this.l.obtainMessage(1, str).sendToTarget();
             f.e("openSDK_LOG.TDialog", "JsListener onComplete" + str);
             TDialog.this.dismiss();
         }
 
         public void onCancel(String str) {
             f.e("openSDK_LOG.TDialog", "JsListener onCancel --msg = " + str);
-            TDialog.this.f1453l.obtainMessage(2, str).sendToTarget();
+            TDialog.this.l.obtainMessage(2, str).sendToTarget();
             TDialog.this.dismiss();
         }
 
         public void showMsg(String str) {
-            TDialog.this.f1453l.obtainMessage(3, str).sendToTarget();
+            TDialog.this.l.obtainMessage(3, str).sendToTarget();
         }
 
         public void onLoad(String str) {
-            TDialog.this.f1453l.obtainMessage(4, str).sendToTarget();
+            TDialog.this.l.obtainMessage(4, str).sendToTarget();
         }
     }
 

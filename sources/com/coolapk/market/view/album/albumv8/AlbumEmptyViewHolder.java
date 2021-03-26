@@ -18,7 +18,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: AlbumEmptyViewHolder.kt */
 public final class AlbumEmptyViewHolder extends GenericBindHolder<ItemNewAddBinding, Album> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558833;
+    public static final int LAYOUT_ID = 2131558840;
     private boolean isMyAlbum;
     private Album mAlbum;
 
@@ -68,7 +68,7 @@ public final class AlbumEmptyViewHolder extends GenericBindHolder<ItemNewAddBind
     public void onClick(View view) {
         super.onClick(view);
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf != null && valueOf.intValue() == 2131361981 && this.isMyAlbum) {
+        if (valueOf != null && valueOf.intValue() == 2131361982 && this.isMyAlbum) {
             ActionManager.startAlbumPickActivity(getContext(), this.mAlbum);
         }
     }

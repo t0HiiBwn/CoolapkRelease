@@ -28,12 +28,12 @@ public class LayoutWaterMarkBindingImpl extends LayoutWaterMarkBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 1);
-        sparseIntArray.put(2131363170, 2);
-        sparseIntArray.put(2131363167, 3);
-        sparseIntArray.put(2131363175, 4);
-        sparseIntArray.put(2131363178, 5);
-        sparseIntArray.put(2131363169, 6);
+        sparseIntArray.put(2131363604, 1);
+        sparseIntArray.put(2131363184, 2);
+        sparseIntArray.put(2131363181, 3);
+        sparseIntArray.put(2131363189, 4);
+        sparseIntArray.put(2131363192, 5);
+        sparseIntArray.put(2131363183, 6);
     }
 
     public LayoutWaterMarkBindingImpl(DataBindingComponent dataBindingComponent, View view) {

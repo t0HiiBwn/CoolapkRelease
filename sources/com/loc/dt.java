@@ -20,9 +20,7 @@ public final class dt implements SensorEventListener {
     double i = 0.0d;
     double j = 0.0d;
     double k = 0.0d;
-
-    /* renamed from: l  reason: collision with root package name */
-    double f1366l = 0.0d;
+    double l = 0.0d;
     double[] m = new double[3];
     volatile double n = 0.0d;
     long o = 0;
@@ -120,7 +118,7 @@ public final class dt implements SensorEventListener {
     }
 
     public final double d() {
-        return this.f1366l;
+        return this.l;
     }
 
     public final void e() {
@@ -197,7 +195,7 @@ public final class dt implements SensorEventListener {
                         this.o = currentTimeMillis;
                         this.n += sqrt;
                         if (this.p >= 30) {
-                            this.f1366l = this.n / ((double) this.p);
+                            this.l = this.n / ((double) this.p);
                             this.n = 0.0d;
                             this.p = 0;
                         }

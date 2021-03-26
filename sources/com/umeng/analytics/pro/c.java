@@ -80,9 +80,7 @@ public class c {
     public static final String i = "vertical_type";
     public static final String j = "device_id";
     public static final String k = "device_model";
-
-    /* renamed from: l  reason: collision with root package name */
-    public static final String f1463l = "$pr_ve";
+    public static final String l = "$pr_ve";
     public static final String m = "$ud_da";
     public static final String n = "sessions";
     public static final String o = "id";

@@ -30,8 +30,8 @@ public final class CountCompareView extends RelativeLayout {
         this.paint = paint2;
         setWillNotDraw(false);
         paint2.setStyle(Paint.Style.FILL);
-        int colorInt = ResourceUtils.getColorInt(getContext(), 2131099789);
-        this.leftColor = ColorUtils.setAlphaComponent(ResourceUtils.getColorInt(getContext(), 2131099790), 26);
+        int colorInt = ResourceUtils.getColorInt(getContext(), 2131099791);
+        this.leftColor = ColorUtils.setAlphaComponent(ResourceUtils.getColorInt(getContext(), 2131099792), 26);
         this.rightColor = ColorUtils.setAlphaComponent(colorInt, 26);
     }
 
@@ -43,8 +43,8 @@ public final class CountCompareView extends RelativeLayout {
         this.paint = paint2;
         setWillNotDraw(false);
         paint2.setStyle(Paint.Style.FILL);
-        int colorInt = ResourceUtils.getColorInt(getContext(), 2131099789);
-        this.leftColor = ColorUtils.setAlphaComponent(ResourceUtils.getColorInt(getContext(), 2131099790), 26);
+        int colorInt = ResourceUtils.getColorInt(getContext(), 2131099791);
+        this.leftColor = ColorUtils.setAlphaComponent(ResourceUtils.getColorInt(getContext(), 2131099792), 26);
         this.rightColor = ColorUtils.setAlphaComponent(colorInt, 26);
     }
 

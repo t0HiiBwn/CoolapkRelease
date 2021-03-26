@@ -32,7 +32,7 @@ final class FeedReplyDetailHeaderFragment$setupCommentBar$1 extends Lambda imple
 
     public final void invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
-        if (view.getId() == 2131362284) {
+        if (view.getId() == 2131362289) {
             ActionManager.startReplyActivity(this.this$0.getActivity(), this.$feedReply);
         }
     }

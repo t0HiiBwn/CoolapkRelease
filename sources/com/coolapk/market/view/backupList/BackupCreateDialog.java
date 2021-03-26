@@ -64,7 +64,7 @@ public final class BackupCreateDialog extends DialogFragment {
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
         AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558518, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558520, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ckup_create, null, false)");
         DialogBackupCreateBinding dialogBackupCreateBinding = (DialogBackupCreateBinding) inflate;
         this.binding = dialogBackupCreateBinding;

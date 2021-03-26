@@ -39,7 +39,7 @@ public abstract class ItemVideoViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVideoViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemVideoViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558985, viewGroup, z, obj);
+        return (ItemVideoViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558992, viewGroup, z, obj);
     }
 
     public static ItemVideoViewBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class ItemVideoViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVideoViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemVideoViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558985, null, false, obj);
+        return (ItemVideoViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558992, null, false, obj);
     }
 
     public static ItemVideoViewBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class ItemVideoViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVideoViewBinding bind(View view, Object obj) {
-        return (ItemVideoViewBinding) bind(obj, view, 2131558985);
+        return (ItemVideoViewBinding) bind(obj, view, 2131558992);
     }
 }

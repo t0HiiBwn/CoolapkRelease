@@ -56,7 +56,7 @@ public class TopicDetailHeadlineBindingImpl extends TopicDetailHeadlineBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((NewHeadLine) obj);
@@ -69,7 +69,7 @@ public class TopicDetailHeadlineBindingImpl extends TopicDetailHeadlineBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

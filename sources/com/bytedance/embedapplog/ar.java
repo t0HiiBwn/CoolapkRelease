@@ -10,9 +10,7 @@ public class ar extends av {
     public String i;
     public ArrayList<String> j;
     public ArrayList<String> k;
-
-    /* renamed from: l  reason: collision with root package name */
-    public int f1256l;
+    public int l;
     public int m;
     public int n;
     public int o;
@@ -27,7 +25,7 @@ public class ar extends av {
         this.i = str2;
         this.j = arrayList;
         this.k = arrayList2;
-        this.f1256l = i2;
+        this.l = i2;
         this.m = i3;
         this.n = i4;
         this.o = i5;
@@ -47,7 +45,7 @@ public class ar extends av {
             if (arrayList2 != null && arrayList2.size() > 0) {
                 jSONObject.put("texts", new JSONArray((Collection) this.j));
             }
-            jSONObject.put("element_width", this.f1256l);
+            jSONObject.put("element_width", this.l);
             jSONObject.put("element_height", this.m);
             jSONObject.put("touch_x", this.n);
             jSONObject.put("touch_y", this.o);

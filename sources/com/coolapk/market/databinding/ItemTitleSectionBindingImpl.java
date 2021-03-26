@@ -54,7 +54,7 @@ public class ItemTitleSectionBindingImpl extends ItemTitleSectionBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (278 != i) {
+        if (279 != i) {
             return false;
         }
         setTitle((String) obj);
@@ -67,7 +67,7 @@ public class ItemTitleSectionBindingImpl extends ItemTitleSectionBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(278);
+        notifyPropertyChanged(279);
         super.requestRebind();
     }
 

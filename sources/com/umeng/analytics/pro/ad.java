@@ -13,9 +13,7 @@ public class ad {
     public static String i = "language";
     public static String j = "resolutionWidth";
     public static String k = "resolutionHeight";
-
-    /* renamed from: l  reason: collision with root package name */
-    public static String f1457l = "country";
+    public static String l = "country";
     public static String m = "installDatetime";
     String n;
     String o;

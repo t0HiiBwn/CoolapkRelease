@@ -46,17 +46,17 @@ public class i<T> implements m.a<T>, Future<m<T>> {
         return a(Long.valueOf(TimeUnit.MILLISECONDS.convert(j, timeUnit)));
     }
 
-    private synchronized m<T> a(Long l2) throws InterruptedException, TimeoutException {
+    private synchronized m<T> a(Long l) throws InterruptedException, TimeoutException {
         if (this.b) {
             return this.c;
         }
-        if (l2 == null) {
+        if (l == null) {
             while (!isDone()) {
                 wait(0);
             }
-        } else if (l2.longValue() > 0) {
+        } else if (l.longValue() > 0) {
             long uptimeMillis = SystemClock.uptimeMillis();
-            long longValue = l2.longValue() + uptimeMillis;
+            long longValue = l.longValue() + uptimeMillis;
             while (!isDone() && uptimeMillis < longValue) {
                 wait(longValue - uptimeMillis);
                 uptimeMillis = SystemClock.uptimeMillis();

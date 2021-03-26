@@ -41,7 +41,7 @@ public final class VoteDetailMultiViewPart extends VoteMultiViewPart {
         ((ItemFeedVoteMultiBinding) getBinding()).executePendingBindings();
         int dp = NumberExtendsKt.getDp((Number) 1);
         int adjustAlpha = ColorUtils.adjustAlpha(AppHolder.getAppTheme().getColorAccent(), 0.2f);
-        int adjustAlpha2 = ColorUtils.adjustAlpha(ResourceUtils.getColorInt(getContext(), 2131099893), 0.2f);
+        int adjustAlpha2 = ColorUtils.adjustAlpha(ResourceUtils.getColorInt(getContext(), 2131099898), 0.2f);
         if (!z) {
             adjustAlpha = adjustAlpha2;
         }
@@ -139,7 +139,7 @@ public final class VoteDetailMultiViewPart extends VoteMultiViewPart {
         Intrinsics.checkNotNullParameter(function2, "onCheckListener");
         ((ItemFeedVoteMultiBinding) getBinding()).executePendingBindings();
         int dp = NumberExtendsKt.getDp((Number) 1);
-        int adjustAlpha = ColorUtils.adjustAlpha(ResourceUtils.getColorInt(getContext(), 2131099893), 0.2f);
+        int adjustAlpha = ColorUtils.adjustAlpha(ResourceUtils.getColorInt(getContext(), 2131099898), 0.2f);
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setStroke(dp, adjustAlpha);
         gradientDrawable.setCornerRadius((float) NumberExtendsKt.getDp((Number) 3));
@@ -152,7 +152,7 @@ public final class VoteDetailMultiViewPart extends VoteMultiViewPart {
             gradientDrawable2.setShape(1);
             Unit unit = Unit.INSTANCE;
             imageView.setBackground(gradientDrawable2);
-            ((ItemFeedVoteMultiBinding) getBinding()).checkBox.setImageResource(2131231178);
+            ((ItemFeedVoteMultiBinding) getBinding()).checkBox.setImageResource(2131231189);
         } else {
             ImageView imageView2 = ((ItemFeedVoteMultiBinding) getBinding()).checkBox;
             Intrinsics.checkNotNullExpressionValue(imageView2, "binding.checkBox");

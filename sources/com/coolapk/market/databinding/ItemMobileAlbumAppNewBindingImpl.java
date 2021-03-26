@@ -25,9 +25,9 @@ public class ItemMobileAlbumAppNewBindingImpl extends ItemMobileAlbumAppNewBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362316, 8);
-        sparseIntArray.put(2131363906, 9);
-        sparseIntArray.put(2131362941, 10);
+        sparseIntArray.put(2131362322, 8);
+        sparseIntArray.put(2131363929, 9);
+        sparseIntArray.put(2131362953, 10);
     }
 
     public ItemMobileAlbumAppNewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -71,9 +71,9 @@ public class ItemMobileAlbumAppNewBindingImpl extends ItemMobileAlbumAppNewBindi
     public boolean setVariable(int i, Object obj) {
         if (27 == i) {
             setApp((MobileApp) obj);
-        } else if (307 == i) {
+        } else if (308 == i) {
             setViewHolder((NewAlbumPickFragment.AlbumMobileAPPViewHolder) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((AlbumPickAPKViewModel) obj);
@@ -98,7 +98,7 @@ public class ItemMobileAlbumAppNewBindingImpl extends ItemMobileAlbumAppNewBindi
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(307);
+        notifyPropertyChanged(308);
         super.requestRebind();
     }
 
@@ -109,7 +109,7 @@ public class ItemMobileAlbumAppNewBindingImpl extends ItemMobileAlbumAppNewBindi
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -140,12 +140,12 @@ public class ItemMobileAlbumAppNewBindingImpl extends ItemMobileAlbumAppNewBindi
                 this.mDirtyFlags |= 2;
             }
             return true;
-        } else if (i == 164) {
+        } else if (i == 165) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
             return true;
-        } else if (i != 223) {
+        } else if (i != 224) {
             return false;
         } else {
             synchronized (this) {
@@ -234,7 +234,7 @@ public class ItemMobileAlbumAppNewBindingImpl extends ItemMobileAlbumAppNewBindi
                     this.apkSystemView.setVisibility(i);
                     this.appEditText.setHint(str5);
                     Boolean bool = null;
-                    ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, str, null, null, 2131231363, bool, bool);
+                    ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, str, null, null, 2131231374, bool, bool);
                     TextViewBindingAdapter.setText(this.titleView, str4);
                     TextViewBindingAdapter.setText(this.versionView, str3);
                 }

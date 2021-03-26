@@ -29,12 +29,12 @@ public class SubmitFeedV8BindingImpl extends SubmitFeedV8Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363593, 17);
-        sparseIntArray.put(2131362316, 18);
-        sparseIntArray.put(2131362127, 19);
-        sparseIntArray.put(2131361922, 20);
-        sparseIntArray.put(2131362510, 21);
-        sparseIntArray.put(2131362509, 22);
+        sparseIntArray.put(2131363615, 17);
+        sparseIntArray.put(2131362322, 18);
+        sparseIntArray.put(2131362130, 19);
+        sparseIntArray.put(2131361923, 20);
+        sparseIntArray.put(2131362518, 21);
+        sparseIntArray.put(2131362517, 22);
     }
 
     public SubmitFeedV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -85,7 +85,7 @@ public class SubmitFeedV8BindingImpl extends SubmitFeedV8Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (288 == i) {
+        if (289 == i) {
             setUiConfig((FeedUIConfig) obj);
         } else if (50 != i) {
             return false;
@@ -101,7 +101,7 @@ public class SubmitFeedV8BindingImpl extends SubmitFeedV8Binding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(288);
+        notifyPropertyChanged(289);
         super.requestRebind();
     }
 

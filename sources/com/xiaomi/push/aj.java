@@ -1,33 +1,35 @@
 package com.xiaomi.push;
 
-import com.xiaomi.push.ai;
+import android.content.Context;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.b.b.b;
+import com.xiaomi.push.j;
 
-class aj extends ai.b {
-    final /* synthetic */ ai a;
+public class aj extends j.a {
+    private Context a;
 
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ String f190a;
-
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ boolean f191a;
-
-    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    aj(ai aiVar, ai.a aVar, boolean z, String str) {
-        super(aVar);
-        this.a = aiVar;
-        this.f191a = z;
-        this.f190a = str;
+    public aj(Context context) {
+        this.a = context;
     }
 
-    @Override // com.xiaomi.push.ai.b
-    void a() {
-        super.a();
+    private boolean b() {
+        return b.a(this.a).a().d();
     }
 
-    @Override // com.xiaomi.push.ai.b
-    void b() {
-        if (!this.f191a) {
-            ai.a(this.a).edit().putLong(this.f190a, System.currentTimeMillis()).commit();
+    @Override // com.xiaomi.push.j.a
+    public int a() {
+        return 100887;
+    }
+
+    @Override // java.lang.Runnable
+    public void run() {
+        try {
+            if (b()) {
+                b.a(this.a).d();
+                c.c(this.a.getPackageName() + "perf  begin upload");
+            }
+        } catch (Exception e) {
+            c.a(e);
         }
     }
 }

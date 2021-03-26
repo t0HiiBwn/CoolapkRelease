@@ -43,7 +43,7 @@ public final class FeedToolbarViewPart extends BindingViewPart<UserToolbarBindin
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public UserToolbarBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559286, viewGroup, false, new ContextBindingComponent(layoutInflater.getContext()));
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559296, viewGroup, false, new ContextBindingComponent(layoutInflater.getContext()));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ponent(inflater.context))");
         return (UserToolbarBinding) inflate;
     }
@@ -101,11 +101,11 @@ public final class FeedToolbarViewPart extends BindingViewPart<UserToolbarBindin
         } else if (z) {
             GradientDrawable gradientDrawable = new GradientDrawable();
             gradientDrawable.setShape(0);
-            gradientDrawable.setColor(ColorStateList.valueOf(ResourceUtils.getColorInt(textView.getContext(), 2131099911)));
+            gradientDrawable.setColor(ColorStateList.valueOf(ResourceUtils.getColorInt(textView.getContext(), 2131099916)));
             gradientDrawable.setCornerRadius(NumberExtendsKt.getDpf((Number) 14));
             Unit unit = Unit.INSTANCE;
             textView.setBackground(gradientDrawable);
-            textView.setTextColor(ResourceUtils.getColorInt(textView.getContext(), 2131099891));
+            textView.setTextColor(ResourceUtils.getColorInt(textView.getContext(), 2131099896));
         } else {
             GradientDrawable gradientDrawable2 = new GradientDrawable();
             gradientDrawable2.setShape(0);
@@ -113,7 +113,7 @@ public final class FeedToolbarViewPart extends BindingViewPart<UserToolbarBindin
             gradientDrawable2.setCornerRadius(NumberExtendsKt.getDpf((Number) 14));
             Unit unit2 = Unit.INSTANCE;
             textView.setBackground(gradientDrawable2);
-            textView.setTextColor(ResourceUtils.getColorInt(textView.getContext(), 2131099912));
+            textView.setTextColor(ResourceUtils.getColorInt(textView.getContext(), 2131099917));
         }
     }
 
@@ -121,7 +121,7 @@ public final class FeedToolbarViewPart extends BindingViewPart<UserToolbarBindin
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         int id = view.getId();
-        if (id == 2131363590) {
+        if (id == 2131363612) {
             Activity currentActivity = AppHolder.getCurrentActivity();
             if (currentActivity != null) {
                 Boolean checkLogin = ActionManager.checkLogin(currentActivity);
@@ -133,7 +133,7 @@ public final class FeedToolbarViewPart extends BindingViewPart<UserToolbarBindin
                     setFollowState(!z);
                 }
             }
-        } else if (id == 2131363599) {
+        } else if (id == 2131363621) {
             ActionManager.startUserSpaceActivity(getContext(), this.presenter.getFeed().getUid());
         }
     }

@@ -34,7 +34,7 @@ import rx.Subscriber;
 /* compiled from: NodeRatingViewHolder.kt */
 public final class NodeRatingViewHolder extends GenericBindHolder<ItemNodeRatingBinding, NodeRating> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558839;
+    public static final int LAYOUT_ID = 2131558846;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public NodeRatingViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -130,14 +130,14 @@ public final class NodeRatingViewHolder extends GenericBindHolder<ItemNodeRating
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
             int id = view.getId();
-            if (id == 2131362768) {
+            if (id == 2131362779) {
                 String feedId = model.getFeedId();
                 if ((feedId == null || feedId.length() == 0) || !(!Intrinsics.areEqual(model.getFeedId(), "0"))) {
                     Toast.show$default(getContext(), "TA很懒，并没有留下评语", 0, false, 12, null);
                 } else {
                     ActionManager.startFeedDetailActivity(getContext(), model.getFeedId(), (String) null);
                 }
-            } else if (id == 2131363877 && (userInfo = model.getUserInfo()) != null) {
+            } else if (id == 2131363900 && (userInfo = model.getUserInfo()) != null) {
                 Intrinsics.checkNotNullExpressionValue(userInfo, "data.userInfo ?: return");
                 ActionManager.startUserSpaceActivity(getContext(), userInfo.getUid());
             }

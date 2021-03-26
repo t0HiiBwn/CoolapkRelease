@@ -37,18 +37,18 @@ public class DbHelper {
     }
 
     private long saveContentValues(String str, ContentValues contentValues) {
-        Long l2;
+        Long l;
         if (contentValues.containsKey("_id")) {
-            l2 = contentValues.getAsLong("_id");
+            l = contentValues.getAsLong("_id");
             contentValues.remove("_id");
         } else {
-            l2 = null;
+            l = null;
         }
-        if (l2 == null || l2.longValue() <= 0) {
+        if (l == null || l.longValue() <= 0) {
             return this.db.insert(str, contentValues, 3);
         }
         Db db2 = this.db;
-        return (long) db2.update(str, contentValues, "_id=?", "" + l2);
+        return (long) db2.update(str, contentValues, "_id=?", "" + l);
     }
 
     public long saveMobileApp(MobileApp mobileApp) {

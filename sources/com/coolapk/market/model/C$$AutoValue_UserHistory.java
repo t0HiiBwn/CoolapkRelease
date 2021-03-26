@@ -22,15 +22,15 @@ abstract class C$$AutoValue_UserHistory extends UserHistory {
     private final String typeName;
     private final String url;
 
-    C$$AutoValue_UserHistory(String str, String str2, Integer num, String str3, String str4, String str5, Long l2, Long l3, String str6, String str7, String str8, String str9, String str10, String str11, String str12, String str13) {
+    C$$AutoValue_UserHistory(String str, String str2, Integer num, String str3, String str4, String str5, Long l, Long l2, String str6, String str7, String str8, String str9, String str10, String str11, String str12, String str13) {
         this.entityTemplate = str;
         this.entityId = str2;
         this.entityFixed = num;
         this.pic = str3;
         this.subTitle = str4;
         this.extraData = str5;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str6, "Null id");
         this.id = str6;
         this.logo = str7;
@@ -162,10 +162,10 @@ abstract class C$$AutoValue_UserHistory extends UserHistory {
                         if (str9 != null ? str9.equals(userHistory.getSubTitle()) : userHistory.getSubTitle() == null) {
                             String str10 = this.extraData;
                             if (str10 != null ? str10.equals(userHistory.getExtraData()) : userHistory.getExtraData() == null) {
-                                Long l2 = this.dateline;
-                                if (l2 != null ? l2.equals(userHistory.getDateline()) : userHistory.getDateline() == null) {
-                                    Long l3 = this.lastUpdate;
-                                    if (l3 != null ? l3.equals(userHistory.getLastUpdate()) : userHistory.getLastUpdate() == null) {
+                                Long l = this.dateline;
+                                if (l != null ? l.equals(userHistory.getDateline()) : userHistory.getDateline() == null) {
+                                    Long l2 = this.lastUpdate;
+                                    if (l2 != null ? l2.equals(userHistory.getLastUpdate()) : userHistory.getLastUpdate() == null) {
                                         if (this.id.equals(userHistory.getId()) && ((str = this.logo) != null ? str.equals(userHistory.getLogo()) : userHistory.getLogo() == null) && ((str2 = this.description) != null ? str2.equals(userHistory.getDescription()) : userHistory.getDescription() == null) && this.historyType.equals(userHistory.getHistoryType()) && ((str3 = this.url) != null ? str3.equals(userHistory.getUrl()) : userHistory.getUrl() == null) && ((str4 = this.typeName) != null ? str4.equals(userHistory.getTypeName()) : userHistory.getTypeName() == null) && ((str5 = this.title) != null ? str5.equals(userHistory.getTitle()) : userHistory.getTitle() == null)) {
                                             String str11 = this.entityTypeName;
                                             if (str11 == null) {
@@ -202,10 +202,10 @@ abstract class C$$AutoValue_UserHistory extends UserHistory {
         int hashCode5 = (hashCode4 ^ (str4 == null ? 0 : str4.hashCode())) * 1000003;
         String str5 = this.extraData;
         int hashCode6 = (hashCode5 ^ (str5 == null ? 0 : str5.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode7 = (hashCode6 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode8 = (((hashCode7 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003) ^ this.id.hashCode()) * 1000003;
+        Long l = this.dateline;
+        int hashCode7 = (hashCode6 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode8 = (((hashCode7 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003) ^ this.id.hashCode()) * 1000003;
         String str6 = this.logo;
         int hashCode9 = (hashCode8 ^ (str6 == null ? 0 : str6.hashCode())) * 1000003;
         String str7 = this.description;

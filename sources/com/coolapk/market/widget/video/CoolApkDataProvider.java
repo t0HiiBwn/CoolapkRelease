@@ -21,6 +21,7 @@ import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
+import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
 import kotlin.collections.MapsKt;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -29,6 +30,7 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
 
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000r\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0003\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u00020\u0001:\u00014B\u0019\u0012\b\b\u0002\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0003¢\u0006\u0002\u0010\u0005J\u000e\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u0015J\u0018\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u0003H\u0002J\u0010\u0010\u001e\u001a\u00020\u00172\u0006\u0010\u001f\u001a\u00020\u000eH\u0002J\u001a\u0010 \u001a\u00020\u00172\u0006\u0010!\u001a\u00020\"2\b\u0010#\u001a\u0004\u0018\u00010$H\u0002J\b\u0010%\u001a\u00020\u0017H\u0016J\b\u0010&\u001a\u00020\u0017H\u0016J\u0018\u0010'\u001a\u00020\n2\u0006\u0010(\u001a\u00020\n2\u0006\u0010\u001d\u001a\u00020\u0003H\u0002J\u0012\u0010)\u001a\u00020\u00172\b\u0010*\u001a\u0004\u0018\u00010\u000eH\u0016J\u000e\u0010+\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u0015J\u001e\u0010,\u001a\b\u0012\u0004\u0012\u00020\u000e0-2\u0006\u0010.\u001a\u00020\n2\u0006\u0010/\u001a\u000200H\u0002J \u00101\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u00152\u0006\u0010/\u001a\u0002002\u0006\u0010*\u001a\u00020\u000eH\u0002J\u0018\u00102\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u00152\u0006\u0010*\u001a\u00020\u000eH\u0002J\b\u00103\u001a\u00020\u0017H\u0002R\u000e\u0010\u0006\u001a\u00020\u0007X\u0004¢\u0006\u0002\n\u0000R.\u0010\b\u001a\"\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020\n\u0018\u00010\tj\u0010\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020\n\u0018\u0001`\u000bX\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000e0\rX\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u000e¢\u0006\u0002\n\u0000R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0012R\u0011\u0010\u0004\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u0012R\u0014\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00150\rX\u0004¢\u0006\u0002\n\u0000¨\u00065"}, d2 = {"Lcom/coolapk/market/widget/video/CoolApkDataProvider;", "Lcom/kk/taurus/playerbase/provider/BaseDataProvider;", "useDataSourceCache", "", "useVideoCache", "(ZZ)V", "loadingVideoModelKey", "Ljava/util/concurrent/atomic/AtomicInteger;", "pendingHeader", "Ljava/util/HashMap;", "", "Lkotlin/collections/HashMap;", "resultDataSource", "Landroid/util/SparseArray;", "Lcom/kk/taurus/playerbase/entity/DataSource;", "subscription", "Lrx/Subscription;", "getUseDataSourceCache", "()Z", "getUseVideoCache", "videoModelArray", "Lcom/coolapk/market/widget/video/VideoModel;", "addToPendingParseList", "", "videoModel", "buildConcatFile", "Ljava/io/File;", "urls", "Lcom/coolapk/market/model/VideoUrls;", "isLive", "callProviderDataSource", "dataSource", "callProviderError", "type", "", "error", "", "cancel", "destroy", "getProxyUrl", "source", "handleSourceData", "oldSource", "invalidVideoModelResult", "loadPlayerUrlObservable", "Lrx/Observable;", "requestParams", "video", "Lcom/coolapk/market/model/Video;", "loadVideoDataSource", "loadVideoModel", "setInvalidateLoadingKey", "VideoLoadMismatchException", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: CoolApkDataProvider.kt */
 public final class CoolApkDataProvider extends BaseDataProvider {
     private final AtomicInteger loadingVideoModelKey;
@@ -43,6 +45,7 @@ public final class CoolApkDataProvider extends BaseDataProvider {
         this(false, false, 3, null);
     }
 
+    /* access modifiers changed from: private */
     public final String getProxyUrl(String str, boolean z) {
         return str;
     }
@@ -143,6 +146,7 @@ public final class CoolApkDataProvider extends BaseDataProvider {
         this.subscription = loadPlayerUrlObservable(str2, video).compose(RxUtils.applyIOSchedulers()).subscribe((Subscriber<? super R>) new CoolApkDataProvider$loadVideoDataSource$2(this, videoModel, dataSource));
     }
 
+    /* access modifiers changed from: private */
     public final void callProviderDataSource(DataSource dataSource) {
         if (VideoModelKt.getVideoModelKey(dataSource) != this.loadingVideoModelKey.get()) {
             AppHolder.getThirdPartUtils().markException(new VideoLoadMismatchException("VideoPlayer invalidate loading key, videoModel is " + this.videoModelArray.get(VideoModelKt.getVideoModelKey(dataSource)) + ", dataSource is " + dataSource));
@@ -156,6 +160,7 @@ public final class CoolApkDataProvider extends BaseDataProvider {
         setInvalidateLoadingKey();
     }
 
+    /* access modifiers changed from: private */
     public final void callProviderError(int i, Throwable th) {
         if (this.loadingVideoModelKey.get() != 0) {
             Bundle bundle = null;
@@ -188,6 +193,7 @@ public final class CoolApkDataProvider extends BaseDataProvider {
         this.loadingVideoModelKey.set(0);
     }
 
+    /* access modifiers changed from: private */
     public final File buildConcatFile(VideoUrls videoUrls, boolean z) {
         VideoManager videoManager = VideoManager.INSTANCE;
         Application application = AppHolder.getApplication();
@@ -220,6 +226,7 @@ public final class CoolApkDataProvider extends BaseDataProvider {
         return map;
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\u0018\u00002\u00060\u0001j\u0002`\u0002B\r\u0012\u0006\u0010\u0003\u001a\u00020\u0004¢\u0006\u0002\u0010\u0005¨\u0006\u0006"}, d2 = {"Lcom/coolapk/market/widget/video/CoolApkDataProvider$VideoLoadMismatchException;", "Ljava/lang/RuntimeException;", "Lkotlin/RuntimeException;", "message", "", "(Ljava/lang/String;)V", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: CoolApkDataProvider.kt */
     public static final class VideoLoadMismatchException extends RuntimeException {
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */

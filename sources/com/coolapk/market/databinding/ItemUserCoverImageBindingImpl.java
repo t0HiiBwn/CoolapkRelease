@@ -27,9 +27,9 @@ public class ItemUserCoverImageBindingImpl extends ItemUserCoverImageBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362586, 2);
-        sparseIntArray.put(2131363533, 3);
-        sparseIntArray.put(2131362447, 4);
+        sparseIntArray.put(2131362594, 2);
+        sparseIntArray.put(2131363551, 3);
+        sparseIntArray.put(2131362454, 4);
     }
 
     public ItemUserCoverImageBindingImpl(DataBindingComponent dataBindingComponent, View view) {

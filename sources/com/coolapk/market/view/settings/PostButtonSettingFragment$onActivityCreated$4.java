@@ -14,6 +14,6 @@ final class PostButtonSettingFragment$onActivityCreated$4 implements View.OnClic
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        PostButtonSettingFragment.access$getBinding$p(this.this$0).radioGroup.check(2131363164);
+        PostButtonSettingFragment.access$getBinding$p(this.this$0).radioGroup.check(2131363178);
     }
 }

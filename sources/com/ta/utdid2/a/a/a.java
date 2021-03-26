@@ -20,7 +20,7 @@ public class a {
 
     public static String b(String str) {
         try {
-            return new String(b(a(), m29a(str)));
+            return new String(b(a(), m19a(str)));
         } catch (Exception unused) {
             return null;
         }
@@ -45,7 +45,7 @@ public class a {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    private static byte[] m29a(String str) {
+    private static byte[] m19a(String str) {
         int length = str.length() / 2;
         byte[] bArr = new byte[length];
         for (int i = 0; i < length; i++) {

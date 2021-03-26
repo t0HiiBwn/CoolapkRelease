@@ -26,7 +26,7 @@ public class MorePageBindingImpl extends MorePageBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362169, 1);
+        sparseIntArray.put(2131362172, 1);
     }
 
     public MorePageBindingImpl(DataBindingComponent dataBindingComponent, View view) {

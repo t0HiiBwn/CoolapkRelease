@@ -508,13 +508,13 @@ public class d implements i {
 
     @Override // com.ss.android.socialbase.downloader.downloader.i
     public Map<Long, com.ss.android.socialbase.downloader.f.i> l(int i) {
-        Map<Long, com.ss.android.socialbase.downloader.f.i> l2 = this.a.l(i);
-        if (l2 != null && !l2.isEmpty()) {
-            return l2;
+        Map<Long, com.ss.android.socialbase.downloader.f.i> l = this.a.l(i);
+        if (l != null && !l.isEmpty()) {
+            return l;
         }
-        Map<Long, com.ss.android.socialbase.downloader.f.i> l3 = this.b.l(i);
-        this.a.a(i, l3);
-        return l3;
+        Map<Long, com.ss.android.socialbase.downloader.f.i> l2 = this.b.l(i);
+        this.a.a(i, l2);
+        return l2;
     }
 
     @Override // com.ss.android.socialbase.downloader.downloader.i

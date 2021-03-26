@@ -20,7 +20,7 @@ public class SystemHookManager {
         Observable.timer(2, TimeUnit.SECONDS).subscribe(new Action1<Long>() {
             /* class com.coolapk.market.manager.SystemHookManager.AnonymousClass1 */
 
-            public void call(Long l2) {
+            public void call(Long l) {
                 SystemHookManager.this.hookActivityThreadHandler();
                 if (26 >= Build.VERSION.SDK_INT) {
                     SystemHookManager.this.hookActivityMangerNativeOreo();

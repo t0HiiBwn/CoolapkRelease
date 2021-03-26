@@ -21,7 +21,7 @@ public abstract class SubmitProductArticleBottomBinding extends ViewDataBinding 
 
     @Deprecated
     public static SubmitProductArticleBottomBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitProductArticleBottomBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559164, viewGroup, z, obj);
+        return (SubmitProductArticleBottomBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559172, viewGroup, z, obj);
     }
 
     public static SubmitProductArticleBottomBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class SubmitProductArticleBottomBinding extends ViewDataBinding 
 
     @Deprecated
     public static SubmitProductArticleBottomBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitProductArticleBottomBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559164, null, false, obj);
+        return (SubmitProductArticleBottomBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559172, null, false, obj);
     }
 
     public static SubmitProductArticleBottomBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class SubmitProductArticleBottomBinding extends ViewDataBinding 
 
     @Deprecated
     public static SubmitProductArticleBottomBinding bind(View view, Object obj) {
-        return (SubmitProductArticleBottomBinding) bind(obj, view, 2131559164);
+        return (SubmitProductArticleBottomBinding) bind(obj, view, 2131559172);
     }
 }

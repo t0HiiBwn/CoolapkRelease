@@ -78,7 +78,7 @@ public final class FeedVoteDetailFragment$initTabAndViewPager$1 implements DataL
             Intrinsics.checkNotNullExpressionValue(voteOption, "options[0]");
             Integer stringToColor = ColorUtils.stringToColor(voteOption.getColor());
             if (stringToColor == null) {
-                stringToColor = Integer.valueOf(ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099790));
+                stringToColor = Integer.valueOf(ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099792));
             }
             Intrinsics.checkNotNullExpressionValue(stringToColor, "ColorUtils.stringToColor…R.color.compare_view_red)");
             int intValue = stringToColor.intValue();
@@ -86,7 +86,7 @@ public final class FeedVoteDetailFragment$initTabAndViewPager$1 implements DataL
             Intrinsics.checkNotNullExpressionValue(voteOption2, "options[1]");
             Integer stringToColor2 = ColorUtils.stringToColor(voteOption2.getColor());
             if (stringToColor2 == null) {
-                stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099789));
+                stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099791));
             }
             Intrinsics.checkNotNullExpressionValue(stringToColor2, "ColorUtils.stringToColor….color.compare_view_blue)");
             int intValue2 = stringToColor2.intValue();

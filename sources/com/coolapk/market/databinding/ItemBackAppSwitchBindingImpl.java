@@ -20,7 +20,7 @@ public class ItemBackAppSwitchBindingImpl extends ItemBackAppSwitchBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 3);
+        sparseIntArray.put(2131363551, 3);
     }
 
     public ItemBackAppSwitchBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -59,7 +59,7 @@ public class ItemBackAppSwitchBindingImpl extends ItemBackAppSwitchBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (306 != i) {
+        if (307 != i) {
             return false;
         }
         setVh((BackupMobileAppFragment.SwitchViewHolder) obj);
@@ -73,7 +73,7 @@ public class ItemBackAppSwitchBindingImpl extends ItemBackAppSwitchBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(306);
+        notifyPropertyChanged(307);
         super.requestRebind();
     }
 
@@ -96,7 +96,7 @@ public class ItemBackAppSwitchBindingImpl extends ItemBackAppSwitchBinding {
                 this.mDirtyFlags |= 2;
             }
             return true;
-        } else if (i != 186) {
+        } else if (i != 187) {
             return false;
         } else {
             synchronized (this) {

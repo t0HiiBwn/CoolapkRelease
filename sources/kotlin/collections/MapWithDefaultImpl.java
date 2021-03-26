@@ -12,7 +12,7 @@ import kotlin.jvm.internal.Intrinsics;
 final class MapWithDefaultImpl<K, V> implements MapWithDefault<K, V> {
 
     /* renamed from: default  reason: not valid java name */
-    private final Function1<K, V> f1056default;
+    private final Function1<K, V> f169default;
     private final Map<K, V> map;
 
     @Override // java.util.Map
@@ -42,7 +42,7 @@ final class MapWithDefaultImpl<K, V> implements MapWithDefault<K, V> {
         Intrinsics.checkNotNullParameter(map2, "map");
         Intrinsics.checkNotNullParameter(function1, "default");
         this.map = map2;
-        this.f1056default = function1;
+        this.f169default = function1;
     }
 
     @Override // java.util.Map
@@ -125,6 +125,6 @@ final class MapWithDefaultImpl<K, V> implements MapWithDefault<K, V> {
     public V getOrImplicitDefault(K k) {
         Map<K, V> map2 = getMap();
         V v = map2.get(k);
-        return (v != null || map2.containsKey(k)) ? v : this.f1056default.invoke(k);
+        return (v != null || map2.containsKey(k)) ? v : this.f169default.invoke(k);
     }
 }

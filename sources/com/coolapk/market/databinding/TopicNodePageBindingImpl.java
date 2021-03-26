@@ -37,22 +37,22 @@ public class TopicNodePageBindingImpl extends TopicNodePageBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363009, 3);
-        sparseIntArray.put(2131362103, 4);
-        sparseIntArray.put(2131362084, 5);
-        sparseIntArray.put(2131362067, 6);
-        sparseIntArray.put(2131363588, 7);
-        sparseIntArray.put(2131363591, 8);
-        sparseIntArray.put(2131362575, 9);
-        sparseIntArray.put(2131362316, 10);
-        sparseIntArray.put(2131363482, 11);
-        sparseIntArray.put(2131363480, 12);
-        sparseIntArray.put(2131363490, 13);
-        sparseIntArray.put(2131362416, 14);
-        sparseIntArray.put(2131363934, 15);
-        sparseIntArray.put(2131362880, 16);
-        sparseIntArray.put(2131362881, 17);
-        sparseIntArray.put(2131362656, 18);
+        sparseIntArray.put(2131363023, 3);
+        sparseIntArray.put(2131362106, 4);
+        sparseIntArray.put(2131362086, 5);
+        sparseIntArray.put(2131362069, 6);
+        sparseIntArray.put(2131363610, 7);
+        sparseIntArray.put(2131363613, 8);
+        sparseIntArray.put(2131362583, 9);
+        sparseIntArray.put(2131362322, 10);
+        sparseIntArray.put(2131363500, 11);
+        sparseIntArray.put(2131363498, 12);
+        sparseIntArray.put(2131363508, 13);
+        sparseIntArray.put(2131362422, 14);
+        sparseIntArray.put(2131363959, 15);
+        sparseIntArray.put(2131362891, 16);
+        sparseIntArray.put(2131362892, 17);
+        sparseIntArray.put(2131362664, 18);
     }
 
     public TopicNodePageBindingImpl(DataBindingComponent dataBindingComponent, View view) {

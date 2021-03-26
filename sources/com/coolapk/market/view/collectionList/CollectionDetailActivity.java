@@ -120,7 +120,7 @@ public final class CollectionDetailActivity extends AlphaToolbarActivity {
         public FeedCollectionSheetModifier(CollectionDetailActivity collectionDetailActivity) {
             Intrinsics.checkNotNullParameter(collectionDetailActivity, "activity");
             this.activity = collectionDetailActivity;
-            this.bgColor = ResourceUtils.getColorInt(collectionDetailActivity, 2131100049);
+            this.bgColor = ResourceUtils.getColorInt(collectionDetailActivity, 2131100054);
             this.userItemColor = ResourceUtils.resolveData(collectionDetailActivity, 2130969438);
         }
 
@@ -177,12 +177,12 @@ public final class CollectionDetailActivity extends AlphaToolbarActivity {
                             boolean isTop = collectionItem != null ? collectionItem.isTop() : false;
                             CollectionDetailActivity$FeedCollectionSheetModifier$modifySheet$$inlined$also$lambda$1 collectionDetailActivity$FeedCollectionSheetModifier$modifySheet$$inlined$also$lambda$1 = new CollectionDetailActivity$FeedCollectionSheetModifier$modifySheet$$inlined$also$lambda$1(feedCollectionSheetModifier, isTop, arrayList, this, obj);
                             if (isTop) {
-                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, feedCollectionSheetModifier.userItemColor, feedCollectionSheetModifier.bgColor), collectionDetailActivity$FeedCollectionSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
+                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231637, feedCollectionSheetModifier.userItemColor, feedCollectionSheetModifier.bgColor), collectionDetailActivity$FeedCollectionSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
                             } else {
-                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231615, feedCollectionSheetModifier.userItemColor, feedCollectionSheetModifier.bgColor), collectionDetailActivity$FeedCollectionSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
+                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, feedCollectionSheetModifier.userItemColor, feedCollectionSheetModifier.bgColor), collectionDetailActivity$FeedCollectionSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
                             }
                             arrayList.add(sheetDataItem);
-                            arrayList.add(new SheetDataItem(SheetGroupModifier.Action.Two, "从收藏单中移除", SheetDataItem.Companion.createIconBgApplyer(2131231241, feedCollectionSheetModifier.userItemColor, feedCollectionSheetModifier.bgColor), new CollectionDetailActivity$FeedCollectionSheetModifier$modifySheet$$inlined$also$lambda$2(feedCollectionSheetModifier, arrayList, this, obj), null, 2, false, false, 208, null));
+                            arrayList.add(new SheetDataItem(SheetGroupModifier.Action.Two, "从收藏单中移除", SheetDataItem.Companion.createIconBgApplyer(2131231252, feedCollectionSheetModifier.userItemColor, feedCollectionSheetModifier.bgColor), new CollectionDetailActivity$FeedCollectionSheetModifier$modifySheet$$inlined$also$lambda$2(feedCollectionSheetModifier, arrayList, this, obj), null, 2, false, false, 208, null));
                             ArrayList arrayList2 = arrayList;
                             if (!arrayList2.isEmpty()) {
                                 arrayList.add(SheetDataItem.copy$default((SheetDataItem) CollectionsKt.removeLast(arrayList), null, null, null, null, null, 0, true, false, 191, null));
@@ -225,7 +225,7 @@ public final class CollectionDetailActivity extends AlphaToolbarActivity {
         public AlbumCollectionSheetModifier(CollectionDetailActivity collectionDetailActivity) {
             Intrinsics.checkNotNullParameter(collectionDetailActivity, "activity");
             this.activity = collectionDetailActivity;
-            this.bgColor = ResourceUtils.getColorInt(collectionDetailActivity, 2131100049);
+            this.bgColor = ResourceUtils.getColorInt(collectionDetailActivity, 2131100054);
             this.userItemColor = ResourceUtils.resolveData(collectionDetailActivity, 2130969438);
         }
 
@@ -282,12 +282,12 @@ public final class CollectionDetailActivity extends AlphaToolbarActivity {
                             boolean isTop = collectionItem != null ? collectionItem.isTop() : false;
                             CollectionDetailActivity$AlbumCollectionSheetModifier$modifySheet$$inlined$also$lambda$1 collectionDetailActivity$AlbumCollectionSheetModifier$modifySheet$$inlined$also$lambda$1 = new CollectionDetailActivity$AlbumCollectionSheetModifier$modifySheet$$inlined$also$lambda$1(albumCollectionSheetModifier, isTop, arrayList, this, obj);
                             if (isTop) {
-                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, albumCollectionSheetModifier.userItemColor, albumCollectionSheetModifier.bgColor), collectionDetailActivity$AlbumCollectionSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
+                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231637, albumCollectionSheetModifier.userItemColor, albumCollectionSheetModifier.bgColor), collectionDetailActivity$AlbumCollectionSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
                             } else {
-                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231615, albumCollectionSheetModifier.userItemColor, albumCollectionSheetModifier.bgColor), collectionDetailActivity$AlbumCollectionSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
+                                sheetDataItem = new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, albumCollectionSheetModifier.userItemColor, albumCollectionSheetModifier.bgColor), collectionDetailActivity$AlbumCollectionSheetModifier$modifySheet$$inlined$also$lambda$1, null, 0, false, false, 240, null);
                             }
                             arrayList.add(sheetDataItem);
-                            arrayList.add(new SheetDataItem(SheetGroupModifier.Action.Two, "从收藏单中移除", SheetDataItem.Companion.createIconBgApplyer(2131231241, albumCollectionSheetModifier.userItemColor, albumCollectionSheetModifier.bgColor), new CollectionDetailActivity$AlbumCollectionSheetModifier$modifySheet$$inlined$also$lambda$2(albumCollectionSheetModifier, arrayList, this, obj), null, 2, false, false, 208, null));
+                            arrayList.add(new SheetDataItem(SheetGroupModifier.Action.Two, "从收藏单中移除", SheetDataItem.Companion.createIconBgApplyer(2131231252, albumCollectionSheetModifier.userItemColor, albumCollectionSheetModifier.bgColor), new CollectionDetailActivity$AlbumCollectionSheetModifier$modifySheet$$inlined$also$lambda$2(albumCollectionSheetModifier, arrayList, this, obj), null, 2, false, false, 208, null));
                             ArrayList arrayList2 = arrayList;
                             if (!arrayList2.isEmpty()) {
                                 arrayList.add(SheetDataItem.copy$default((SheetDataItem) CollectionsKt.removeLast(arrayList), null, null, null, null, null, 0, true, false, 191, null));

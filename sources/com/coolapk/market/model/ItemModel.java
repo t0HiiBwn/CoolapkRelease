@@ -11,7 +11,7 @@ public abstract class ItemModel implements Entity {
 
         public abstract Builder content(String str);
 
-        public abstract Builder dateline(Long l2);
+        public abstract Builder dateline(Long l);
 
         public abstract Builder description(String str);
 
@@ -27,7 +27,7 @@ public abstract class ItemModel implements Entity {
 
         public abstract Builder id(String str);
 
-        public abstract Builder lastUpdate(Long l2);
+        public abstract Builder lastUpdate(Long l);
 
         public abstract Builder logo(String str);
 

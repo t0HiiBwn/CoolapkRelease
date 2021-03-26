@@ -38,7 +38,7 @@ public abstract class ItemLinkCardV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLinkCardV8Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemLinkCardV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558802, viewGroup, z, obj);
+        return (ItemLinkCardV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558809, viewGroup, z, obj);
     }
 
     public static ItemLinkCardV8Binding inflate(LayoutInflater layoutInflater) {
@@ -47,7 +47,7 @@ public abstract class ItemLinkCardV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLinkCardV8Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemLinkCardV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558802, null, false, obj);
+        return (ItemLinkCardV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558809, null, false, obj);
     }
 
     public static ItemLinkCardV8Binding bind(View view) {
@@ -56,6 +56,6 @@ public abstract class ItemLinkCardV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLinkCardV8Binding bind(View view, Object obj) {
-        return (ItemLinkCardV8Binding) bind(obj, view, 2131558802);
+        return (ItemLinkCardV8Binding) bind(obj, view, 2131558809);
     }
 }

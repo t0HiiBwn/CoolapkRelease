@@ -24,6 +24,19 @@ public class WildcardFileFilter extends AbstractFileFilter implements Serializab
         throw new IllegalArgumentException("The wildcard must not be null");
     }
 
+    public WildcardFileFilter(List<String> list) {
+        this(list, IOCase.SENSITIVE);
+    }
+
+    public WildcardFileFilter(List<String> list, IOCase iOCase) {
+        if (list != null) {
+            this.wildcards = (String[]) list.toArray(new String[list.size()]);
+            this.caseSensitivity = iOCase == null ? IOCase.SENSITIVE : iOCase;
+            return;
+        }
+        throw new IllegalArgumentException("The wildcard list must not be null");
+    }
+
     public WildcardFileFilter(String[] strArr) {
         this(strArr, IOCase.SENSITIVE);
     }
@@ -39,34 +52,21 @@ public class WildcardFileFilter extends AbstractFileFilter implements Serializab
         throw new IllegalArgumentException("The wildcard array must not be null");
     }
 
-    public WildcardFileFilter(List<String> list) {
-        this(list, IOCase.SENSITIVE);
-    }
-
-    public WildcardFileFilter(List<String> list, IOCase iOCase) {
-        if (list != null) {
-            this.wildcards = (String[]) list.toArray(new String[list.size()]);
-            this.caseSensitivity = iOCase == null ? IOCase.SENSITIVE : iOCase;
-            return;
-        }
-        throw new IllegalArgumentException("The wildcard list must not be null");
-    }
-
-    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FilenameFilter
-    public boolean accept(File file, String str) {
-        for (String str2 : this.wildcards) {
-            if (FilenameUtils.wildcardMatch(str, str2, this.caseSensitivity)) {
+    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
+    public boolean accept(File file) {
+        String name = file.getName();
+        for (String str : this.wildcards) {
+            if (FilenameUtils.wildcardMatch(name, str, this.caseSensitivity)) {
                 return true;
             }
         }
         return false;
     }
 
-    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
-    public boolean accept(File file) {
-        String name = file.getName();
-        for (String str : this.wildcards) {
-            if (FilenameUtils.wildcardMatch(name, str, this.caseSensitivity)) {
+    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FilenameFilter
+    public boolean accept(File file, String str) {
+        for (String str2 : this.wildcards) {
+            if (FilenameUtils.wildcardMatch(str, str2, this.caseSensitivity)) {
                 return true;
             }
         }

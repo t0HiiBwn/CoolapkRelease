@@ -86,7 +86,7 @@ public final class FeedUserSheetGroupFactory implements SheetCallback {
         Intrinsics.checkNotNullParameter(activity2, "activity");
         this.data = feed;
         this.activity = activity2;
-        this.bgColor = ResourceUtils.getColorInt(activity2, 2131100049);
+        this.bgColor = ResourceUtils.getColorInt(activity2, 2131100054);
         this.userItemColor = ResourceUtils.resolveData(activity2, 2130969438);
     }
 
@@ -113,40 +113,40 @@ public final class FeedUserSheetGroupFactory implements SheetCallback {
         boolean z3 = this.data.getStatus() == -21;
         boolean z4 = z2 || z3;
         if (isAdmin) {
-            insertItem$default(this, FeedAction.EditTitle, "编辑标题", 2131231612, 0, null, 24, null);
+            insertItem$default(this, FeedAction.EditTitle, "编辑标题", 2131231623, 0, null, 24, null);
         }
         if (z4 && areEqual) {
-            insertItem$default(this, FeedAction.Censor, "催审", 2131231520, 0, z3 ? "催审中" : "", 8, null);
+            insertItem$default(this, FeedAction.Censor, "催审", 2131231531, 0, z3 ? "催审中" : "", 8, null);
         }
         boolean isGoodsType = FeedUtils.isGoodsType(this.data.getFeedType());
         if (!z4 && isGoodsType) {
-            insertItem$default(this, FeedAction.AddToGoodsList, "加入好物单", 2131231375, 0, null, 24, null);
+            insertItem$default(this, FeedAction.AddToGoodsList, "加入好物单", 2131231386, 0, null, 24, null);
         }
-        insertItem$default(this, FeedAction.Copy, "复制", 2131231233, 0, null, 24, null);
+        insertItem$default(this, FeedAction.Copy, "复制", 2131231244, 0, null, 24, null);
         if (!z4) {
             UserAction userAction = this.data.getUserAction();
             if ((userAction != null ? userAction.getCollect() : 0) > 0) {
                 z = true;
             }
             if (z) {
-                insertItem$default(this, FeedAction.Favor, "已收藏", 2131231622, (int) 4294948626L, null, 16, null);
+                insertItem$default(this, FeedAction.Favor, "已收藏", 2131231633, (int) 4294948626L, null, 16, null);
             } else {
-                insertItem$default(this, FeedAction.Favor, "收藏", 2131231202, 0, null, 24, null);
+                insertItem$default(this, FeedAction.Favor, "收藏", 2131231213, 0, null, 24, null);
             }
         }
         if (!z4) {
             if (this.data.getEnableModify() == 1 && areEqual) {
-                insertItem$default(this, FeedAction.Edit, "编辑", 2131231273, 0, null, 24, null);
+                insertItem$default(this, FeedAction.Edit, "编辑", 2131231284, 0, null, 24, null);
             }
             if (this.data.getIsModified() == 1) {
-                insertItem$default(this, FeedAction.EditHistory, "编辑历史", 2131231348, 0, null, 24, null);
+                insertItem$default(this, FeedAction.EditHistory, "编辑历史", 2131231359, 0, null, 24, null);
             }
         }
         if (areEqual || loginSession.isAdmin()) {
-            insertItem$default(this, FeedAction.Delete, "删除", 2131231241, 0, null, 24, null);
+            insertItem$default(this, FeedAction.Delete, "删除", 2131231252, 0, null, 24, null);
         }
         if (!z4 && !areEqual) {
-            insertItem$default(this, FeedAction.Report, "举报", 2131231646, 0, null, 24, null);
+            insertItem$default(this, FeedAction.Report, "举报", 2131231657, 0, null, 24, null);
         }
         return wrapAsSheetGroup();
     }
@@ -207,7 +207,7 @@ public final class FeedUserSheetGroupFactory implements SheetCallback {
                 new FeedItemDialog.SecondEditActionItem(this.activity, feed).takeAction();
                 break;
             case 6:
-                String string = this.activity.getString(2131886722);
+                String string = this.activity.getString(2131886784);
                 Intrinsics.checkNotNullExpressionValue(string, "activity.getString(R.str….str_dialog_delete_title)");
                 ConfirmDeleteDialog newInstance2 = ConfirmDeleteDialog.newInstance(string, "删除 " + feed.getUserName() + " 的" + feed.getFeedTypeName() + "： " + feed.getMessage());
                 newInstance2.setDeleteTarget(feed);

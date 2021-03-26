@@ -55,7 +55,7 @@ public class ItemShareAppBindingImpl extends ItemShareAppBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((ItemModel) obj);
@@ -68,7 +68,7 @@ public class ItemShareAppBindingImpl extends ItemShareAppBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -92,7 +92,7 @@ public class ItemShareAppBindingImpl extends ItemShareAppBinding {
             str = packageName;
         }
         if (i != 0) {
-            ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, str, null, null, 2131231363, null, true);
+            ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, str, null, null, 2131231374, null, true);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }
     }

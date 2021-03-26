@@ -28,12 +28,12 @@ public class CommentBarBindingImpl extends CommentBarBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362284, 4);
-        sparseIntArray.put(2131362707, 5);
-        sparseIntArray.put(2131362290, 6);
-        sparseIntArray.put(2131361886, 7);
-        sparseIntArray.put(2131362291, 8);
-        sparseIntArray.put(2131363358, 9);
+        sparseIntArray.put(2131362289, 4);
+        sparseIntArray.put(2131362718, 5);
+        sparseIntArray.put(2131362295, 6);
+        sparseIntArray.put(2131361887, 7);
+        sparseIntArray.put(2131362296, 8);
+        sparseIntArray.put(2131363374, 9);
     }
 
     public CommentBarBindingImpl(DataBindingComponent dataBindingComponent, View view) {

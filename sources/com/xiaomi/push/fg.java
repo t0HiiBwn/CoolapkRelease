@@ -1,183 +1,152 @@
 package com.xiaomi.push;
 
-import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.dw;
-import com.xiaomi.push.fi;
-import com.xiaomi.push.service.XMPushService;
-import com.xiaomi.push.service.as;
-import com.xiaomi.push.service.bb;
-import com.xiaomi.push.service.bh;
+import android.os.Bundle;
+import java.util.Objects;
 
-public class fg extends fp {
-    private fc a;
+public class fg extends fe {
+    private b c = b.available;
+    private String d = null;
+    private int e = Integer.MIN_VALUE;
+    private a f = null;
 
-    /* renamed from: a  reason: collision with other field name */
-    private fd f455a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private Thread f456a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private byte[] f457a;
-
-    public fg(XMPushService xMPushService, fj fjVar) {
-        super(xMPushService, fjVar);
+    public enum a {
+        chat,
+        available,
+        away,
+        xa,
+        dnd
     }
 
-    @Override // com.xiaomi.push.fp
-    /* renamed from: a */
-    private fb mo327a(boolean z) {
-        ff ffVar = new ff();
-        if (z) {
-            ffVar.a("1");
-        }
-        byte[] a2 = gw.m384a();
-        if (a2 != null) {
-            dw.j jVar = new dw.j();
-            jVar.a(a.a(a2));
-            ffVar.a(jVar.mo211a(), (String) null);
-        }
-        return ffVar;
+    public enum b {
+        available,
+        unavailable,
+        subscribe,
+        subscribed,
+        unsubscribe,
+        unsubscribed,
+        error,
+        probe
     }
 
-    private void h() {
-        try {
-            this.a = new fc(this.f478a.getInputStream(), this);
-            this.f455a = new fd(this.f478a.getOutputStream(), this);
-            fh fhVar = new fh(this, "Blob Reader (" + this.b + ")");
-            this.f456a = fhVar;
-            fhVar.start();
-        } catch (Exception e) {
-            throw new ft("Error to init reader and writer", e);
+    public fg(Bundle bundle) {
+        super(bundle);
+        if (bundle.containsKey("ext_pres_type")) {
+            this.c = b.valueOf(bundle.getString("ext_pres_type"));
+        }
+        if (bundle.containsKey("ext_pres_status")) {
+            this.d = bundle.getString("ext_pres_status");
+        }
+        if (bundle.containsKey("ext_pres_prio")) {
+            this.e = bundle.getInt("ext_pres_prio");
+        }
+        if (bundle.containsKey("ext_pres_mode")) {
+            this.f = a.valueOf(bundle.getString("ext_pres_mode"));
         }
     }
 
-    @Override // com.xiaomi.push.fp, com.xiaomi.push.fi
-    /* renamed from: a */
-    protected synchronized void mo328a() {
-        h();
-        this.f455a.a();
+    public fg(b bVar) {
+        a(bVar);
     }
 
-    @Override // com.xiaomi.push.fp
-    protected synchronized void a(int i, Exception exc) {
-        fc fcVar = this.a;
-        if (fcVar != null) {
-            fcVar.b();
-            this.a = null;
+    public void a(int i) {
+        if (i < -128 || i > 128) {
+            throw new IllegalArgumentException("Priority value " + i + " is not valid. Valid range is -128 through 128.");
         }
-        fd fdVar = this.f455a;
-        if (fdVar != null) {
-            try {
-                fdVar.b();
-            } catch (Exception e) {
-                b.a(e);
-            }
-            this.f455a = null;
+        this.e = i;
+    }
+
+    public void a(a aVar) {
+        this.f = aVar;
+    }
+
+    public void a(b bVar) {
+        Objects.requireNonNull(bVar, "Type cannot be null");
+        this.c = bVar;
+    }
+
+    public void a(String str) {
+        this.d = str;
+    }
+
+    @Override // com.xiaomi.push.fe
+    public Bundle b() {
+        Bundle b2 = super.b();
+        b bVar = this.c;
+        if (bVar != null) {
+            b2.putString("ext_pres_type", bVar.toString());
         }
-        this.f457a = null;
-        super.a(i, exc);
-    }
-
-    void a(fb fbVar) {
-        if (fbVar != null) {
-            if (fbVar.m320a()) {
-                b.m41a("[Slim] RCV blob chid=" + fbVar.a() + "; id=" + fbVar.e() + "; errCode=" + fbVar.b() + "; err=" + fbVar.m324c());
-            }
-            if (fbVar.a() == 0) {
-                if ("PING".equals(fbVar.m317a())) {
-                    b.m41a("[Slim] RCV ping id=" + fbVar.e());
-                    g();
-                } else if ("CLOSE".equals(fbVar.m317a())) {
-                    c(13, null);
-                }
-            }
-            for (fi.a aVar : this.f467a.values()) {
-                aVar.a(fbVar);
-            }
+        String str = this.d;
+        if (str != null) {
+            b2.putString("ext_pres_status", str);
         }
-    }
-
-    @Override // com.xiaomi.push.fi
-    @Deprecated
-    public void a(fz fzVar) {
-        b(fb.a(fzVar, (String) null));
-    }
-
-    @Override // com.xiaomi.push.fi
-    public synchronized void a(as.b bVar) {
-        fa.a(bVar, c(), this);
-    }
-
-    @Override // com.xiaomi.push.fi
-    public synchronized void a(String str, String str2) {
-        fa.a(str, str2, this);
-    }
-
-    @Override // com.xiaomi.push.fp
-    /* renamed from: a  reason: collision with other method in class */
-    protected void mo327a(boolean z) {
-        if (this.f455a != null) {
-            fb a2 = mo327a(z);
-            b.m41a("[Slim] SND ping id=" + a2.e());
-            b(a2);
-            f();
-            return;
+        int i = this.e;
+        if (i != Integer.MIN_VALUE) {
+            b2.putInt("ext_pres_prio", i);
         }
-        throw new ft("The BlobWriter is null.");
-    }
-
-    @Override // com.xiaomi.push.fp, com.xiaomi.push.fi
-    public void a(fb[] fbVarArr) {
-        for (fb fbVar : fbVarArr) {
-            b(fbVar);
+        a aVar = this.f;
+        if (!(aVar == null || aVar == a.available)) {
+            b2.putString("ext_pres_mode", this.f.toString());
         }
+        return b2;
     }
 
-    @Override // com.xiaomi.push.fp, com.xiaomi.push.fi
-    /* renamed from: a  reason: collision with other method in class */
-    public boolean mo328a() {
-        return true;
-    }
-
-    @Override // com.xiaomi.push.fp, com.xiaomi.push.fi
-    /* renamed from: a */
-    synchronized byte[] mo328a() {
-        if (this.f457a == null && !TextUtils.isEmpty(this.f464a)) {
-            String a2 = bh.m641a();
-            this.f457a = bb.a(this.f464a.getBytes(), (this.f464a.substring(this.f464a.length() / 2) + a2.substring(a2.length() / 2)).getBytes());
+    @Override // com.xiaomi.push.fe
+    public String c() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("<presence");
+        if (t() != null) {
+            sb.append(" xmlns=\"");
+            sb.append(t());
+            sb.append("\"");
         }
-        return this.f457a;
-    }
-
-    @Override // com.xiaomi.push.fi
-    public void b(fb fbVar) {
-        fd fdVar = this.f455a;
-        if (fdVar != null) {
-            try {
-                int a2 = fdVar.a(fbVar);
-                this.d = System.currentTimeMillis();
-                String f = fbVar.f();
-                if (!TextUtils.isEmpty(f)) {
-                    gn.a(this.f463a, f, (long) a2, false, true, System.currentTimeMillis());
-                }
-                for (fi.a aVar : this.f470b.values()) {
-                    aVar.a(fbVar);
-                }
-            } catch (Exception e) {
-                throw new ft(e);
-            }
-        } else {
-            throw new ft("the writer is null.");
+        if (k() != null) {
+            sb.append(" id=\"");
+            sb.append(k());
+            sb.append("\"");
         }
-    }
-
-    void b(fz fzVar) {
-        if (fzVar != null) {
-            for (fi.a aVar : this.f467a.values()) {
-                aVar.a(fzVar);
-            }
+        if (m() != null) {
+            sb.append(" to=\"");
+            sb.append(fp.a(m()));
+            sb.append("\"");
         }
+        if (n() != null) {
+            sb.append(" from=\"");
+            sb.append(fp.a(n()));
+            sb.append("\"");
+        }
+        if (l() != null) {
+            sb.append(" chid=\"");
+            sb.append(fp.a(l()));
+            sb.append("\"");
+        }
+        if (this.c != null) {
+            sb.append(" type=\"");
+            sb.append(this.c);
+            sb.append("\"");
+        }
+        sb.append(">");
+        if (this.d != null) {
+            sb.append("<status>");
+            sb.append(fp.a(this.d));
+            sb.append("</status>");
+        }
+        if (this.e != Integer.MIN_VALUE) {
+            sb.append("<priority>");
+            sb.append(this.e);
+            sb.append("</priority>");
+        }
+        a aVar = this.f;
+        if (!(aVar == null || aVar == a.available)) {
+            sb.append("<show>");
+            sb.append(this.f);
+            sb.append("</show>");
+        }
+        sb.append(s());
+        fi p = p();
+        if (p != null) {
+            sb.append(p.b());
+        }
+        sb.append("</presence>");
+        return sb.toString();
     }
 }

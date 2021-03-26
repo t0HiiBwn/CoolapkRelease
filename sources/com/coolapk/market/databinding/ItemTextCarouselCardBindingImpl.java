@@ -23,7 +23,7 @@ public class ItemTextCarouselCardBindingImpl extends ItemTextCarouselCardBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362906, 2);
+        sparseIntArray.put(2131362918, 2);
     }
 
     public ItemTextCarouselCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {

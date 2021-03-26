@@ -46,7 +46,7 @@ import org.json.JSONObject;
 /* compiled from: ImageListCardViewHolder.kt */
 public class ImageListCardViewHolder extends BindingViewHolder implements IAnimationBehavior, Recyclable, CoolapkCardView.CardStyleCallback {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558791;
+    public static final int LAYOUT_ID = 2131558798;
     private final ItemImageListCardBinding binding;
     private int displayedChild = 1;
     private EntityCard entityCard;
@@ -75,6 +75,7 @@ public class ImageListCardViewHolder extends BindingViewHolder implements IAnima
         itemImageListCardBinding.bannerView.setBannerStyle(1);
         itemImageListCardBinding.bannerView.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener(this) {
             /* class com.coolapk.market.viewholder.ImageListCardViewHolder.AnonymousClass1 */
+            private Integer lastestPosition;
             final /* synthetic */ ImageListCardViewHolder this$0;
 
             /* JADX WARN: Incorrect args count in method signature: ()V */
@@ -93,21 +94,25 @@ public class ImageListCardViewHolder extends BindingViewHolder implements IAnima
             public void onPageSelected(int i) {
                 Entity entity;
                 super.onPageSelected(i);
-                if (i != 0 || !CollectionUtils.isEmpty(ImageListCardViewHolder.access$getEntityCard$p(this.this$0).getEntities())) {
-                    List<Entity> entities = ImageListCardViewHolder.access$getEntityCard$p(this.this$0).getEntities();
-                    Intrinsics.checkNotNull(entities);
-                    Entity entity2 = entities.get(i);
-                    Intrinsics.checkNotNullExpressionValue(entity2, "entityCard.entities!![position]");
-                    entity = entity2;
-                } else {
-                    entity = ImageListCardViewHolder.access$getEntityCard$p(this.this$0);
+                Integer num = this.lastestPosition;
+                if (num == null || i != num.intValue()) {
+                    this.lastestPosition = Integer.valueOf(i);
+                    if (i != 0 || !CollectionUtils.isEmpty(ImageListCardViewHolder.access$getEntityCard$p(this.this$0).getEntities())) {
+                        List<Entity> entities = ImageListCardViewHolder.access$getEntityCard$p(this.this$0).getEntities();
+                        Intrinsics.checkNotNull(entities);
+                        Entity entity2 = entities.get(i);
+                        Intrinsics.checkNotNullExpressionValue(entity2, "entityCard.entities!![position]");
+                        entity = entity2;
+                    } else {
+                        entity = ImageListCardViewHolder.access$getEntityCard$p(this.this$0);
+                    }
+                    StatisticHelper instance = StatisticHelper.Companion.getInstance();
+                    String title = entity.getTitle();
+                    if (title == null) {
+                        title = "";
+                    }
+                    instance.recordBannerDisplayEvent(title);
                 }
-                StatisticHelper instance = StatisticHelper.Companion.getInstance();
-                String title = entity.getTitle();
-                if (title == null) {
-                    title = "";
-                }
-                instance.recordBannerDisplayEvent(title);
             }
         });
         try {
@@ -379,7 +384,7 @@ public class ImageListCardViewHolder extends BindingViewHolder implements IAnima
         @Override // com.youth.banner.loader.ImageLoaderInterface
         public View createImageView(Context context) {
             Intrinsics.checkNotNullParameter(context, "context");
-            ItemImageCarouselCard1ItemBinding itemImageCarouselCard1ItemBinding = (ItemImageCarouselCard1ItemBinding) DataBindingUtil.inflate(LayoutInflater.from(context), 2131558788, null, false, ImageListCardViewHolder.this.getComponent());
+            ItemImageCarouselCard1ItemBinding itemImageCarouselCard1ItemBinding = (ItemImageCarouselCard1ItemBinding) DataBindingUtil.inflate(LayoutInflater.from(context), 2131558795, null, false, ImageListCardViewHolder.this.getComponent());
             Intrinsics.checkNotNullExpressionValue(itemImageCarouselCard1ItemBinding, "binding");
             View root = itemImageCarouselCard1ItemBinding.getRoot();
             Intrinsics.checkNotNullExpressionValue(root, "binding.root");

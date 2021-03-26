@@ -49,7 +49,7 @@ public abstract class CollectionSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static CollectionSelectBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (CollectionSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558480, viewGroup, z, obj);
+        return (CollectionSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558481, viewGroup, z, obj);
     }
 
     public static CollectionSelectBinding inflate(LayoutInflater layoutInflater) {
@@ -58,7 +58,7 @@ public abstract class CollectionSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static CollectionSelectBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (CollectionSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558480, null, false, obj);
+        return (CollectionSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558481, null, false, obj);
     }
 
     public static CollectionSelectBinding bind(View view) {
@@ -67,6 +67,6 @@ public abstract class CollectionSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static CollectionSelectBinding bind(View view, Object obj) {
-        return (CollectionSelectBinding) bind(obj, view, 2131558480);
+        return (CollectionSelectBinding) bind(obj, view, 2131558481);
     }
 }

@@ -24,7 +24,7 @@ public abstract class FeedReply implements Entity, IUser {
 
         public abstract Builder setBlockStatusText(String str);
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         @Override // com.coolapk.market.model.IUser.BuilderM1
         public abstract Builder setDeprecatedUserName(String str);
@@ -67,7 +67,7 @@ public abstract class FeedReply implements Entity, IUser {
 
         public abstract Builder setIsFolded(int i);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLikeAvatar(String str);
 

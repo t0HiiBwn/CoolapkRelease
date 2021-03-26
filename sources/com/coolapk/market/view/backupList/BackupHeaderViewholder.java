@@ -38,7 +38,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: BackupHeaderViewholder.kt */
 public final class BackupHeaderViewholder extends GenericBindHolder<ItemBackupHeaderBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558621;
+    public static final int LAYOUT_ID = 2131558625;
     private boolean isDetail;
     private boolean isDownloading;
 
@@ -89,7 +89,7 @@ public final class BackupHeaderViewholder extends GenericBindHolder<ItemBackupHe
                 itemBackupHeaderBinding4.setCount("我的备份单（" + holderItem.getIntValue() + (char) 65289);
                 TextView textView2 = ((ItemBackupHeaderBinding) getBinding()).actionView;
                 Intrinsics.checkNotNullExpressionValue(textView2, "binding.actionView");
-                textView2.setBackground(ShapeUtils.createActionCornerBg(getContext(), ResourceUtils.getColorInt(getContext(), 2131100146), 24));
+                textView2.setBackground(ShapeUtils.createActionCornerBg(getContext(), ResourceUtils.getColorInt(getContext(), 2131100159), 24));
                 LinearLayout linearLayout = ((ItemBackupHeaderBinding) getBinding()).countView;
                 Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.countView");
                 if (!TextUtils.equals("backupDeatilHeader", holderItem.getEntityTemplate())) {
@@ -109,7 +109,7 @@ public final class BackupHeaderViewholder extends GenericBindHolder<ItemBackupHe
         itemBackupHeaderBinding4.setCount("我的备份单（" + holderItem.getIntValue() + (char) 65289);
         TextView textView2 = ((ItemBackupHeaderBinding) getBinding()).actionView;
         Intrinsics.checkNotNullExpressionValue(textView2, "binding.actionView");
-        textView2.setBackground(ShapeUtils.createActionCornerBg(getContext(), ResourceUtils.getColorInt(getContext(), 2131100146), 24));
+        textView2.setBackground(ShapeUtils.createActionCornerBg(getContext(), ResourceUtils.getColorInt(getContext(), 2131100159), 24));
         LinearLayout linearLayout = ((ItemBackupHeaderBinding) getBinding()).countView;
         Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.countView");
         if (!TextUtils.equals("backupDeatilHeader", holderItem.getEntityTemplate())) {
@@ -122,7 +122,7 @@ public final class BackupHeaderViewholder extends GenericBindHolder<ItemBackupHe
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131361981) {
+        if (view.getId() == 2131361982) {
             if (this.isDetail) {
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");

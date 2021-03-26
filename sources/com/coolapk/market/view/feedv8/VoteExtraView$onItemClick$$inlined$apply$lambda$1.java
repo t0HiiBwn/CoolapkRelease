@@ -34,9 +34,9 @@ final class VoteExtraView$onItemClick$$inlined$apply$lambda$1 extends Lambda imp
 
     public final void invoke(int i, int i2) {
         VoteExtraView voteExtraView = this.this$0;
-        FeedMultiPart build = voteExtraView.getMultiPart().newBuilder().voteOptionColors(CollectionsKt.mutableListOf(ColorUtils.toColorString(i), ColorUtils.toColorString(i2))).build();
+        FeedMultiPart build = VoteExtraView.access$getMultiPart$p(voteExtraView).newBuilder().voteOptionColors(CollectionsKt.mutableListOf(ColorUtils.toColorString(i), ColorUtils.toColorString(i2))).build();
         Intrinsics.checkNotNullExpressionValue(build, "multiPart.newBuilder()\n …                 .build()");
-        voteExtraView.setMultiPart(build);
+        VoteExtraView.access$setMultiPart$p(voteExtraView, build);
         this.this$0.requestUpdateDataList();
     }
 }

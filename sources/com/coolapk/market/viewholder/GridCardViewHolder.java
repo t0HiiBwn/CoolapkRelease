@@ -29,7 +29,7 @@ import com.coolapk.market.util.DisplayUtils;
 import com.coolapk.market.util.ViewUtil;
 
 public class GridCardViewHolder extends StateViewHolder {
-    public static final int LAYOUT_ID = 2131558765;
+    public static final int LAYOUT_ID = 2131558772;
     private final DataAdapter adapter;
     private final ItemGridCardBinding binding;
     private EntityCard card;
@@ -98,7 +98,7 @@ public class GridCardViewHolder extends StateViewHolder {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            View inflate = LayoutInflater.from(GridCardViewHolder.this.getContext()).inflate(2131558766, viewGroup, false);
+            View inflate = LayoutInflater.from(GridCardViewHolder.this.getContext()).inflate(2131558773, viewGroup, false);
             GridCardViewHolder gridCardViewHolder = GridCardViewHolder.this;
             return new DataViewHolder(gridCardViewHolder, inflate, gridCardViewHolder.component, GridCardViewHolder.this.card.getUrl(), GridCardViewHolder.this.entityType, GridCardViewHolder.this.itemActionHandler);
         }
@@ -123,7 +123,7 @@ public class GridCardViewHolder extends StateViewHolder {
     }
 
     public static class DataViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558766;
+        public static final int LAYOUT_ID = 2131558773;
         public OnBitmapTransformListener circleTransform;
         private final String entityType;
         public int follow = 0;
@@ -172,7 +172,7 @@ public class GridCardViewHolder extends StateViewHolder {
                         c = 1;
                     }
                     if (c != 2) {
-                        this.info = getContext().getString(2131886639, serviceApp2.getDownCount());
+                        this.info = getContext().getString(2131886701, serviceApp2.getDownCount());
                     } else {
                         this.info = serviceApp2.getApkSizeFormat();
                     }
@@ -216,7 +216,7 @@ public class GridCardViewHolder extends StateViewHolder {
                 AppForum appForum = (AppForum) obj;
                 this.title = appForum.title();
                 this.logo = appForum.logo();
-                this.info = getContext().getString(2131886607, appForum.commentCount());
+                this.info = getContext().getString(2131886669, appForum.commentCount());
                 this.serviceApp = null;
             } else if (obj instanceof DyhModel) {
                 DyhModel dyhModel = (DyhModel) obj;

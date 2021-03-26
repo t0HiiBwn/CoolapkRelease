@@ -13,7 +13,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: CardNoLoginTitleViewHolder.kt */
 public final class CardNoLoginTitleViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558836;
+    public static final int LAYOUT_ID = 2131558843;
     private final ItemNoLoginTitelBinding binding = ((ItemNoLoginTitelBinding) getBinding());
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -48,7 +48,7 @@ public final class CardNoLoginTitleViewHolder extends BindingViewHolder {
     public void onClick(View view) {
         super.onClick(view);
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf != null && valueOf.intValue() == 2131362768) {
+        if (valueOf != null && valueOf.intValue() == 2131362779) {
             ActionManager.startLoginActivity(getContext(), "https://account.coolapk.com/auth/login?type=coolapk");
         }
     }

@@ -100,7 +100,7 @@ public final class a implements i {
 
     /* renamed from: com.tencent.msdk.dns.core.c.a$a  reason: collision with other inner class name */
     /* compiled from: Sorter */
-    public static class C0131a implements i.a {
+    public static class C0149a implements i.a {
         @Override // com.tencent.msdk.dns.core.i.a
         public i a(int i) {
             return new a(i);

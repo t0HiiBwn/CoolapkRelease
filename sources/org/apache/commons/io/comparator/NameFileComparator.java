@@ -16,16 +16,6 @@ public class NameFileComparator extends AbstractFileComparator implements Serial
     private static final long serialVersionUID = 8397947749814525798L;
     private final IOCase caseSensitivity;
 
-    @Override // org.apache.commons.io.comparator.AbstractFileComparator
-    public /* bridge */ /* synthetic */ List sort(List list) {
-        return super.sort(list);
-    }
-
-    @Override // org.apache.commons.io.comparator.AbstractFileComparator
-    public /* bridge */ /* synthetic */ File[] sort(File[] fileArr) {
-        return super.sort(fileArr);
-    }
-
     static {
         NameFileComparator nameFileComparator = new NameFileComparator();
         NAME_COMPARATOR = nameFileComparator;
@@ -48,6 +38,16 @@ public class NameFileComparator extends AbstractFileComparator implements Serial
 
     public int compare(File file, File file2) {
         return this.caseSensitivity.checkCompareTo(file.getName(), file2.getName());
+    }
+
+    @Override // org.apache.commons.io.comparator.AbstractFileComparator
+    public /* bridge */ /* synthetic */ List sort(List list) {
+        return super.sort(list);
+    }
+
+    @Override // org.apache.commons.io.comparator.AbstractFileComparator
+    public /* bridge */ /* synthetic */ File[] sort(File[] fileArr) {
+        return super.sort(fileArr);
     }
 
     @Override // org.apache.commons.io.comparator.AbstractFileComparator, java.lang.Object

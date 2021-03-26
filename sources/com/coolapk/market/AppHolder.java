@@ -14,6 +14,7 @@ import com.coolapk.market.imageloader.GlideFragmentImageLoader;
 import com.coolapk.market.imageloader.GlideImageLoader;
 import com.coolapk.market.local.LoginSession;
 import com.coolapk.market.manager.ActivityStackManager;
+import com.coolapk.market.manager.AppIMManager;
 import com.coolapk.market.manager.AppNotification;
 import com.coolapk.market.manager.AppPushManger;
 import com.coolapk.market.manager.MainInitHelper;
@@ -50,6 +51,7 @@ public class AppHolder {
     private SystemHookManager activityManagerHook;
     private ActivityStackManager activityStackManager;
     private Application appContext;
+    private AppIMManager appIMManager;
     private AppMetadata appMetadata;
     private AppSetting appSetting;
     private AppTheme appTheme;
@@ -116,6 +118,10 @@ public class AppHolder {
         return getInstance().mAppPushManger;
     }
 
+    public static AppIMManager getAppIMManager() {
+        return getInstance().appIMManager;
+    }
+
     public static ThirdPartUtils getThirdPartUtils() {
         return getInstance().thirdPartUtils;
     }
@@ -180,6 +186,7 @@ public class AppHolder {
         this.fragmentImageLoader = new GlideFragmentImageLoader(glideImageLoader);
         this.mAppNotification = new AppNotification(this.appContext);
         this.mAppPushManger = new AppPushManger(this.appContext);
+        this.appIMManager = new AppIMManager(this.appContext);
         this.thirdPartUtils = new ThirdPartUtils(this.appContext, appMetadata2);
         this.thirdStatUtil = new ThirdStatUtil(this.appContext, appMetadata2);
         this.weakValueMap = new HashMap();
@@ -191,6 +198,7 @@ public class AppHolder {
         GDTAdManagerHolder.INSTANCE.init(this.appContext);
         TTAdManagerHolder.INSTANCE.init(this.appContext);
         CoolCodeHelper.INSTANCE.init(this.appContext);
+        MainInitHelper.updateMainInitInfo();
         LogUtils.i("Init AppHolder end", new Object[0]);
     }
 
@@ -296,7 +304,7 @@ public class AppHolder {
             instance.removeAllCookies(null);
             instance.flush();
         }
-        MainInitHelper.loadMainInitInfo();
+        MainInitHelper.updateMainInitInfo();
         StatisticHelper.getInstance().recordLoginStatusEvent(loginSession.isLogin());
     }
 

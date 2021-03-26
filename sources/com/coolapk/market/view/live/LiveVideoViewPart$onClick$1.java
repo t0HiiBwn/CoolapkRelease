@@ -36,7 +36,7 @@ final class LiveVideoViewPart$onClick$1 implements PopupMenu.OnMenuItemClickList
     public final boolean onMenuItemClick(MenuItem menuItem) {
         Intrinsics.checkNotNullExpressionValue(menuItem, "item");
         switch (menuItem.getItemId()) {
-            case 2131361864:
+            case 2131361865:
                 SimpleDialog newInstance = SimpleDialog.newInstance();
                 StringBuilder sb = new StringBuilder();
                 sb.append("确认");
@@ -67,7 +67,7 @@ final class LiveVideoViewPart$onClick$1 implements PopupMenu.OnMenuItemClickList
                 Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "activity.requireAppCompa…().supportFragmentManager");
                 newInstance.show(supportFragmentManager, (String) null);
                 break;
-            case 2131361865:
+            case 2131361866:
                 SimpleDialog newInstance2 = SimpleDialog.newInstance();
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("确认");
@@ -98,12 +98,12 @@ final class LiveVideoViewPart$onClick$1 implements PopupMenu.OnMenuItemClickList
                 Intrinsics.checkNotNullExpressionValue(supportFragmentManager2, "activity.requireAppCompa…().supportFragmentManager");
                 newInstance2.show(supportFragmentManager2, (String) null);
                 break;
-            case 2131361866:
+            case 2131361867:
                 String id = this.$live.getId();
                 Intrinsics.checkNotNull(id);
                 ActionManager.startLiveBannedUserTabActivity(this.this$0.getActivity(), id);
                 break;
-            case 2131361907:
+            case 2131361908:
                 if (SettingsCompat.canDrawOverlays(this.this$0.getActivity())) {
                     this.this$0.enterFloatingWindow();
                     break;
@@ -111,7 +111,7 @@ final class LiveVideoViewPart$onClick$1 implements PopupMenu.OnMenuItemClickList
                     FloatWindowUtil.INSTANCE.showNeedFloatingPermissionDialog(this.this$0.getActivity());
                     break;
                 }
-            case 2131361919:
+            case 2131361920:
                 SimpleDialog newInstance3 = SimpleDialog.newInstance();
                 StringBuilder sb3 = new StringBuilder();
                 sb3.append("确认");
@@ -148,7 +148,7 @@ final class LiveVideoViewPart$onClick$1 implements PopupMenu.OnMenuItemClickList
                 Intrinsics.checkNotNullExpressionValue(supportFragmentManager3, "activity.requireAppCompa…().supportFragmentManager");
                 newInstance3.show(supportFragmentManager3, (String) null);
                 break;
-            case 2131361981:
+            case 2131361982:
                 String sourceUrl = this.this$0.data.getSourceUrl();
                 if (sourceUrl.length() > 0) {
                     ActionManagerCompat.startActivityByUrl$default(this.this$0.getActivity(), sourceUrl, null, null, 12, null);

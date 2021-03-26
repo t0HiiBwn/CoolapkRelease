@@ -80,7 +80,7 @@ public final class ShareImageListActivity extends BaseActivity implements View.O
         ShareImageListActivity shareImageListActivity = this;
         ThemeUtils.setSystemBarDrawFlags(shareImageListActivity);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(shareImageListActivity, 2131559140, null);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(shareImageListActivity, 2131559147, null);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte….layout.share_list, null)");
         this.binding = (ShareListBinding) contentView;
         String stringExtra = getIntent().getStringExtra("extra_file_path");
@@ -206,7 +206,7 @@ public final class ShareImageListActivity extends BaseActivity implements View.O
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         int id = view.getId();
-        if (id == 2131362196 || id == 2131362908) {
+        if (id == 2131362200 || id == 2131362920) {
             onBackPressed();
         }
     }
@@ -374,7 +374,7 @@ public final class ShareImageListActivity extends BaseActivity implements View.O
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public SimpleViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(this.context).inflate(2131558749, viewGroup, false);
+            View inflate = LayoutInflater.from(this.context).inflate(2131558756, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "LayoutInflater.from(cont…LAYOUT_ID, parent, false)");
             return new SimpleViewHolder(inflate);
         }
@@ -394,7 +394,7 @@ public final class ShareImageListActivity extends BaseActivity implements View.O
                 switch (entityType.hashCode()) {
                     case -1462912464:
                         if (entityType.equals("wexin_moment")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231318);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231329);
                             TextView textView = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView, "binding.titleView");
                             textView.setText("朋友圈");
@@ -404,7 +404,7 @@ public final class ShareImageListActivity extends BaseActivity implements View.O
                         return;
                     case 3616:
                         if (entityType.equals("qq")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231319);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231330);
                             TextView textView2 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView2, "binding.titleView");
                             textView2.setText("QQ");
@@ -414,7 +414,7 @@ public final class ShareImageListActivity extends BaseActivity implements View.O
                         return;
                     case 114840:
                         if (entityType.equals("tim")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231320);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231331);
                             TextView textView3 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView3, "binding.titleView");
                             textView3.setText("TIM");
@@ -424,7 +424,7 @@ public final class ShareImageListActivity extends BaseActivity implements View.O
                         return;
                     case 3357525:
                         if (entityType.equals("more")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231317);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231328);
                             TextView textView4 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView4, "binding.titleView");
                             textView4.setText("更多");
@@ -434,7 +434,7 @@ public final class ShareImageListActivity extends BaseActivity implements View.O
                         return;
                     case 113011944:
                         if (entityType.equals("weibo")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231322);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231333);
                             TextView textView5 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView5, "binding.titleView");
                             textView5.setText("微博");
@@ -444,7 +444,7 @@ public final class ShareImageListActivity extends BaseActivity implements View.O
                         return;
                     case 113026575:
                         if (entityType.equals("wexin")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231321);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231332);
                             TextView textView6 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView6, "binding.titleView");
                             textView6.setText("微信");
@@ -454,7 +454,7 @@ public final class ShareImageListActivity extends BaseActivity implements View.O
                         return;
                     case 1376909533:
                         if (entityType.equals("new_feed")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231315);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231326);
                             TextView textView7 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView7, "binding.titleView");
                             textView7.setText("动态");
@@ -592,7 +592,7 @@ public final class ShareImageListActivity extends BaseActivity implements View.O
     /* compiled from: ShareImageListActivity.kt */
     private static final class SimpleViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558749;
+        public static final int LAYOUT_ID = 2131558756;
 
         @Override // com.coolapk.market.viewholder.BindingViewHolder
         public void bindTo(Object obj) {

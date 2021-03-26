@@ -29,7 +29,7 @@ final class DyhDetailFragment$onActivityCreated$3 extends Lambda implements Func
     }
 
     public final void invoke(float f) {
-        if (this.this$0.isAdded() && this.this$0.isInit()) {
+        if (this.this$0.isAdded() && (this.this$0.isInit())) {
             ((AlphableToolbar) this.$activity).setToolbarTitle(f >= ((float) 1) ? this.this$0.viewModel.getDyhTitle() : "");
         }
     }

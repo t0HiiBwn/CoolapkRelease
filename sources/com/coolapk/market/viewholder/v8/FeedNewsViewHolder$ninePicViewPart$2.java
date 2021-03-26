@@ -51,7 +51,7 @@ final class FeedNewsViewHolder$ninePicViewPart$2 extends Lambda implements Funct
             layoutParams2.bottomMargin = DisplayUtils.dp2px(this.this$0.getContext(), 0.0f);
             layoutParams2.leftMargin = 0;
             layoutParams2.rightMargin = 0;
-            layoutParams2.addRule(3, 2131363582);
+            layoutParams2.addRule(3, 2131363604);
         }
         View view = ninePicViewPart.getView();
         Space space2 = ((ItemFeedNewsViewBinding) this.this$0.getBinding()).nineImageSpaceView;

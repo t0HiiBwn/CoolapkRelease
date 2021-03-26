@@ -14,9 +14,9 @@ import com.dinuscxj.ellipsize.EllipsizeTextView;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 public abstract class ItemGoodsListSimpleBinding extends ViewDataBinding {
+    public final LinearLayout cardView;
     public final CoolapkCardView coolapkCardView;
     public final RoundedImageView iconView;
-    public final LinearLayout itemAlbumView;
     @Bindable
     protected View.OnClickListener mClick;
     @Bindable
@@ -34,11 +34,11 @@ public abstract class ItemGoodsListSimpleBinding extends ViewDataBinding {
 
     public abstract void setUserInfo(String str);
 
-    protected ItemGoodsListSimpleBinding(Object obj, View view, int i, CoolapkCardView coolapkCardView2, RoundedImageView roundedImageView, LinearLayout linearLayout, TextView textView, LinearLayout linearLayout2, EllipsizeTextView ellipsizeTextView, TextView textView2) {
+    protected ItemGoodsListSimpleBinding(Object obj, View view, int i, LinearLayout linearLayout, CoolapkCardView coolapkCardView2, RoundedImageView roundedImageView, TextView textView, LinearLayout linearLayout2, EllipsizeTextView ellipsizeTextView, TextView textView2) {
         super(obj, view, i);
+        this.cardView = linearLayout;
         this.coolapkCardView = coolapkCardView2;
         this.iconView = roundedImageView;
-        this.itemAlbumView = linearLayout;
         this.recommendView = textView;
         this.strokeView = linearLayout2;
         this.titleView = ellipsizeTextView;
@@ -63,7 +63,7 @@ public abstract class ItemGoodsListSimpleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemGoodsListSimpleBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemGoodsListSimpleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558761, viewGroup, z, obj);
+        return (ItemGoodsListSimpleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558768, viewGroup, z, obj);
     }
 
     public static ItemGoodsListSimpleBinding inflate(LayoutInflater layoutInflater) {
@@ -72,7 +72,7 @@ public abstract class ItemGoodsListSimpleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemGoodsListSimpleBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemGoodsListSimpleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558761, null, false, obj);
+        return (ItemGoodsListSimpleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558768, null, false, obj);
     }
 
     public static ItemGoodsListSimpleBinding bind(View view) {
@@ -81,6 +81,6 @@ public abstract class ItemGoodsListSimpleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemGoodsListSimpleBinding bind(View view, Object obj) {
-        return (ItemGoodsListSimpleBinding) bind(obj, view, 2131558761);
+        return (ItemGoodsListSimpleBinding) bind(obj, view, 2131558768);
     }
 }

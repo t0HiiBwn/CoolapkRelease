@@ -38,11 +38,11 @@ public class NodeRatingFeedLikeViewBindingImpl extends NodeRatingFeedLikeViewBin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363194, 10);
-        sparseIntArray.put(2131363460, 11);
-        sparseIntArray.put(2131363282, 12);
-        sparseIntArray.put(2131362097, 13);
-        sparseIntArray.put(2131362096, 14);
+        sparseIntArray.put(2131363208, 10);
+        sparseIntArray.put(2131363478, 11);
+        sparseIntArray.put(2131363296, 12);
+        sparseIntArray.put(2131362100, 13);
+        sparseIntArray.put(2131362099, 14);
     }
 
     public NodeRatingFeedLikeViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -92,7 +92,7 @@ public class NodeRatingFeedLikeViewBindingImpl extends NodeRatingFeedLikeViewBin
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((NodeRating) obj);
         } else if (50 != i) {
             return false;
@@ -108,7 +108,7 @@ public class NodeRatingFeedLikeViewBindingImpl extends NodeRatingFeedLikeViewBin
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -204,13 +204,13 @@ public class NodeRatingFeedLikeViewBindingImpl extends NodeRatingFeedLikeViewBin
             OnImageLoadListener onImageLoadListener = null;
             OnBitmapTransformListener onBitmapTransformListener = null;
             View.OnClickListener onClickListener2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str2, drawable, 2131231363, 0, bool2, bool2, bool2, bool2, bool2, str12, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str2, drawable, 2131231374, 0, bool2, bool2, bool2, bool2, bool2, str12, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
             TextViewBindingAdapter.setText(this.mboundView4, str6);
             this.mboundView4.setVisibility(i);
             TextViewBindingAdapter.setText(this.nameView, str5);
             TextViewBindingAdapters.setDatelineByEntity(this.timeView, nodeRating);
             TextViewBindingAdapter.setText(this.titleView, str4);
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, drawable, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, str12, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, drawable, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, str12, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str3, bool2);
         }
         if ((j & 4) != 0) {

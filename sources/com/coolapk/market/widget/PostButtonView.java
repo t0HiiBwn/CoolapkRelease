@@ -57,7 +57,7 @@ public final class PostButtonView extends FrameLayout {
         frameLayout.setClipToPadding(false);
         frameLayout.setClipChildren(false);
         View view = new View(frameLayout.getContext());
-        view.setBackgroundResource(2131231815);
+        view.setBackgroundResource(2131231827);
         view.setDuplicateParentStateEnabled(true);
         int i = this.size;
         frameLayout.addView(view, new FrameLayout.LayoutParams(i, i));
@@ -112,30 +112,30 @@ public final class PostButtonView extends FrameLayout {
             switch (preferencesString.hashCode()) {
                 case 2459034:
                     if (preferencesString.equals("PLUS")) {
-                        i = 2131231489;
+                        i = 2131231500;
                         break;
                     }
                     break;
                 case 105615186:
                     if (preferencesString.equals("AIRPLANE")) {
-                        i = 2131231118;
+                        i = 2131231128;
                         break;
                     }
                     break;
                 case 1670194707:
                     if (preferencesString.equals("COOLAPK")) {
-                        i = 2131231410;
+                        i = 2131231421;
                         break;
                     }
                     break;
                 case 1999208305:
                     if (preferencesString.equals("CUSTOM")) {
-                        i = 2131231478;
+                        i = 2131231489;
                         break;
                     }
                     break;
             }
-            if (i == 2131231478) {
+            if (i == 2131231489) {
                 File file = this.outputFiles;
                 if (file == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("outputFiles");
@@ -152,7 +152,7 @@ public final class PostButtonView extends FrameLayout {
                         if (frameLayout == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("buttonBackgroundView");
                         }
-                        frameLayout.setBackgroundResource(2131231818);
+                        frameLayout.setBackgroundResource(2131231830);
                         ImageView imageView2 = this.customImageView;
                         if (imageView2 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("customImageView");
@@ -189,7 +189,7 @@ public final class PostButtonView extends FrameLayout {
                     if (frameLayout2 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("buttonBackgroundView");
                     }
-                    frameLayout2.setBackgroundResource(2131231817);
+                    frameLayout2.setBackgroundResource(2131231829);
                     FrameLayout frameLayout3 = this.buttonBackgroundView;
                     if (frameLayout3 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("buttonBackgroundView");
@@ -213,7 +213,7 @@ public final class PostButtonView extends FrameLayout {
             }
         }
         i = 0;
-        if (i == 2131231478) {
+        if (i == 2131231489) {
         }
         z = false;
         if (z) {

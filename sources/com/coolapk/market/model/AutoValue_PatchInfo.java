@@ -8,8 +8,8 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
 final class AutoValue_PatchInfo extends C$AutoValue_PatchInfo {
-    AutoValue_PatchInfo(String str, String str2, String str3, String str4, int i, String str5, long j, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, String str13, String str14) {
-        super(str, str2, str3, str4, i, str5, j, str6, str7, str8, str9, str10, str11, str12, l2, str13, str14);
+    AutoValue_PatchInfo(String str, String str2, String str3, String str4, int i, String str5, long j, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, String str13, String str14) {
+        super(str, str2, str3, str4, i, str5, j, str6, str7, str8, str9, str10, str11, str12, l, str13, str14);
     }
 
     public static final class GsonTypeAdapter extends TypeAdapter<PatchInfo> {
@@ -138,8 +138,8 @@ final class AutoValue_PatchInfo extends C$AutoValue_PatchInfo {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultPatchLength(Long l2) {
-            this.defaultPatchLength = l2;
+        public GsonTypeAdapter setDefaultPatchLength(Long l) {
+            this.defaultPatchLength = l;
             return this;
         }
 
@@ -217,7 +217,7 @@ final class AutoValue_PatchInfo extends C$AutoValue_PatchInfo {
             String str10 = this.defaultExtraAnalysisData;
             String str11 = this.defaultPatchKey;
             String str12 = this.defaultPatchSize;
-            Long l2 = this.defaultPatchLength;
+            Long l = this.defaultPatchLength;
             String str13 = this.defaultPatchMd5;
             String str14 = this.defaultExtraFlag;
             String str15 = str2;
@@ -234,7 +234,7 @@ final class AutoValue_PatchInfo extends C$AutoValue_PatchInfo {
             String str24 = str11;
             String str25 = str;
             String str26 = str12;
-            Long l3 = l2;
+            Long l2 = l;
             String str27 = str13;
             while (jsonReader.hasNext()) {
                 String nextName = jsonReader.nextName();
@@ -373,7 +373,7 @@ final class AutoValue_PatchInfo extends C$AutoValue_PatchInfo {
                             str21 = this.appFullNameAdapter.read(jsonReader);
                             continue;
                         case '\b':
-                            l3 = this.patchLengthAdapter.read(jsonReader);
+                            l2 = this.patchLengthAdapter.read(jsonReader);
                             continue;
                         case '\t':
                             str16 = this.displayVersionNameAdapter.read(jsonReader);
@@ -406,7 +406,7 @@ final class AutoValue_PatchInfo extends C$AutoValue_PatchInfo {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_PatchInfo(str25, str15, str16, str17, i2, str18, j2, str19, str20, str21, str22, str23, str24, str26, l3, str27, str14);
+            return new AutoValue_PatchInfo(str25, str15, str16, str17, i2, str18, j2, str19, str20, str21, str22, str23, str24, str26, l2, str27, str14);
         }
     }
 }

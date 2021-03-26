@@ -28,7 +28,7 @@ public class ItemAddToAlbumHeaderBindingImpl extends ItemAddToAlbumHeaderBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
+        sparseIntArray.put(2131363604, 2);
     }
 
     public ItemAddToAlbumHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -70,7 +70,7 @@ public class ItemAddToAlbumHeaderBindingImpl extends ItemAddToAlbumHeaderBinding
             this.mDirtyFlags = 0;
         }
         if ((j & 1) != 0) {
-            ImageViewBindingAdapters.setImageIcon(this.iconView, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231489));
+            ImageViewBindingAdapters.setImageIcon(this.iconView, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231500));
         }
     }
 }

@@ -13,7 +13,7 @@ public abstract class Contacts implements Entity, IUser {
     public static abstract class Builder implements IUser.BuilderM1<Builder> {
         public abstract Contacts build();
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         public abstract Builder setDeprecatedFollowUserName(String str);
 
@@ -41,7 +41,7 @@ public abstract class Contacts implements Entity, IUser {
 
         public abstract Builder setIsFriend(int i);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLogo(String str);
 

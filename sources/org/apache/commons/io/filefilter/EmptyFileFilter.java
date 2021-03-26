@@ -19,16 +19,10 @@ public class EmptyFileFilter extends AbstractFileFilter implements Serializable 
 
     @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
     public boolean accept(File file) {
-        if (file.isDirectory()) {
-            File[] listFiles = file.listFiles();
-            if (listFiles == null || listFiles.length == 0) {
-                return true;
-            }
-            return false;
-        } else if (file.length() == 0) {
-            return true;
-        } else {
-            return false;
+        if (!file.isDirectory()) {
+            return file.length() == 0;
         }
+        File[] listFiles = file.listFiles();
+        return listFiles == null || listFiles.length == 0;
     }
 }

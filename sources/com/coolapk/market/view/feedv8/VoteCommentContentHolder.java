@@ -63,7 +63,7 @@ public final class VoteCommentContentHolder extends NormalFeedContentHolder {
     }
 
     private final void insertAnonymousHint(FrameLayout frameLayout) {
-        int colorInt = ResourceUtils.getColorInt(getActivity(), 2131100035);
+        int colorInt = ResourceUtils.getColorInt(getActivity(), 2131100040);
         Drawable drawable = ResourceUtils.getDrawable(getActivity(), 2131230844);
         Intrinsics.checkNotNullExpressionValue(drawable, "ResourceUtils.getDrawabl…aseline_error_outline_24)");
         Drawable tintColor = ViewExtendsKt.tintColor(drawable, colorInt);

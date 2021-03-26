@@ -80,7 +80,7 @@ public final class ct {
                             aVar = new a(daVar.j, daVar.k, daVar.c);
                         } else if (cwVar instanceof cx) {
                             cx cxVar = (cx) cwVar;
-                            aVar = new a(cxVar.k, cxVar.f1357l, cxVar.c);
+                            aVar = new a(cxVar.k, cxVar.l, cxVar.c);
                         }
                         arrayList.add(aVar);
                     }

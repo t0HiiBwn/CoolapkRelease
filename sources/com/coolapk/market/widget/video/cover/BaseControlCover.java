@@ -274,7 +274,7 @@ public abstract class BaseControlCover extends ThemeableCover implements OnTimer
                 return;
             case 1076260898:
                 if (str.equals("need_mute")) {
-                    Drawable drawable = ResourceUtils.getDrawable(getContext(), ((Boolean) obj).booleanValue() ? 2131231642 : 2131231643);
+                    Drawable drawable = ResourceUtils.getDrawable(getContext(), ((Boolean) obj).booleanValue() ? 2131231653 : 2131231654);
                     ImageView volumeView$presentation_coolapkAppRelease = getVolumeView$presentation_coolapkAppRelease();
                     if (volumeView$presentation_coolapkAppRelease != null) {
                         volumeView$presentation_coolapkAppRelease.setImageDrawable(drawable);
@@ -320,7 +320,7 @@ public abstract class BaseControlCover extends ThemeableCover implements OnTimer
         updateProgress(0, 0);
         ImageView playView$presentation_coolapkAppRelease = getPlayView$presentation_coolapkAppRelease();
         if (playView$presentation_coolapkAppRelease != null) {
-            playView$presentation_coolapkAppRelease.setImageResource(2131231467);
+            playView$presentation_coolapkAppRelease.setImageResource(2131231478);
         }
         SeekBar seekBar$presentation_coolapkAppRelease = getSeekBar$presentation_coolapkAppRelease();
         if (seekBar$presentation_coolapkAppRelease != null) {
@@ -392,6 +392,10 @@ public abstract class BaseControlCover extends ThemeableCover implements OnTimer
             this.handler.postDelayed(this.hideControllerRunnable, 5000);
             return;
         }
+        this.handler.removeCallbacks(this.hideControllerRunnable);
+    }
+
+    public final void removeDelayHideController() {
         this.handler.removeCallbacks(this.hideControllerRunnable);
     }
 
@@ -502,15 +506,15 @@ public abstract class BaseControlCover extends ThemeableCover implements OnTimer
         if (num != null && num.intValue() == 4) {
             ImageView playView$presentation_coolapkAppRelease2 = getPlayView$presentation_coolapkAppRelease();
             if (playView$presentation_coolapkAppRelease2 != null) {
-                playView$presentation_coolapkAppRelease2.setImageResource(2131231486);
+                playView$presentation_coolapkAppRelease2.setImageResource(2131231497);
             }
         } else if (num != null && num.intValue() == 3) {
             ImageView playView$presentation_coolapkAppRelease3 = getPlayView$presentation_coolapkAppRelease();
             if (playView$presentation_coolapkAppRelease3 != null) {
-                playView$presentation_coolapkAppRelease3.setImageResource(2131231467);
+                playView$presentation_coolapkAppRelease3.setImageResource(2131231478);
             }
         } else if (((num != null && num.intValue() == 0) || ((num != null && num.intValue() == -1) || ((num != null && num.intValue() == 5) || (num != null && num.intValue() == 6)))) && (playView$presentation_coolapkAppRelease = getPlayView$presentation_coolapkAppRelease()) != null) {
-            playView$presentation_coolapkAppRelease.setImageResource(2131231486);
+            playView$presentation_coolapkAppRelease.setImageResource(2131231497);
         }
         setPlayCompleteState(num != null && num.intValue() == 6);
     }
@@ -519,19 +523,19 @@ public abstract class BaseControlCover extends ThemeableCover implements OnTimer
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         switch (view.getId()) {
-            case 2131362600:
+            case 2131362608:
                 notifyReceiverEvent(-104, null);
                 return;
-            case 2131362970:
+            case 2131362982:
                 showMoreOptionMenu(view);
                 return;
-            case 2131363008:
+            case 2131363022:
                 notifyReceiverEvent(-100, null);
                 return;
-            case 2131363113:
+            case 2131363127:
                 notifyReceiverEvent(-124, null);
                 return;
-            case 2131363129:
+            case 2131363143:
                 PlayerStateGetter playerStateGetter = getPlayerStateGetter();
                 if (playerStateGetter != null) {
                     int state = playerStateGetter.getState();
@@ -552,18 +556,18 @@ public abstract class BaseControlCover extends ThemeableCover implements OnTimer
                     return;
                 }
                 return;
-            case 2131363223:
+            case 2131363237:
                 requestStop(null);
                 requestResume(null);
                 return;
-            case 2131363240:
+            case 2131363254:
                 requestReplay(null);
                 setPlayCompleteState(false);
                 return;
-            case 2131363358:
+            case 2131363374:
                 notifyReceiverEvent(-107, null);
                 return;
-            case 2131363943:
+            case 2131363969:
                 getGroupValue().putBoolean("need_mute", !getGroupValue().getBoolean("need_mute"));
                 return;
             default:
@@ -573,7 +577,7 @@ public abstract class BaseControlCover extends ThemeableCover implements OnTimer
 
     private final void showMoreOptionMenu(View view) {
         BasePopMenu basePopMenu = new BasePopMenu(AppHolder.getCurrentActivity(), view);
-        basePopMenu.getMenu().add(0, 2131361981, 101, 2131887153);
+        basePopMenu.getMenu().add(0, 2131361982, 101, 2131887215);
         basePopMenu.setOnMenuItemClickListener(new BaseControlCover$showMoreOptionMenu$1(this));
         basePopMenu.show();
     }

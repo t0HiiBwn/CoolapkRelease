@@ -24,7 +24,7 @@ public class ItemGridDyhCardItemBindingImpl extends ItemGridDyhCardItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363435, 5);
+        sparseIntArray.put(2131363453, 5);
     }
 
     public ItemGridDyhCardItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -63,9 +63,9 @@ public class ItemGridDyhCardItemBindingImpl extends ItemGridDyhCardItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((DyhViewModel) obj);
@@ -79,7 +79,7 @@ public class ItemGridDyhCardItemBindingImpl extends ItemGridDyhCardItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -90,7 +90,7 @@ public class ItemGridDyhCardItemBindingImpl extends ItemGridDyhCardItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -123,7 +123,7 @@ public class ItemGridDyhCardItemBindingImpl extends ItemGridDyhCardItemBinding {
                 this.mDirtyFlags |= 16;
             }
             return true;
-        } else if (i != 167) {
+        } else if (i != 168) {
             return false;
         } else {
             synchronized (this) {
@@ -197,7 +197,7 @@ public class ItemGridDyhCardItemBindingImpl extends ItemGridDyhCardItemBinding {
                         }
                         drawable = AppCompatResources.getDrawable(this.actionText.getContext(), z2 ? 2131230821 : 2131230813);
                         str4 = z2 ? "textColorSecondary" : "white";
-                        str3 = this.actionText.getResources().getString(z2 ? 2131886761 : 2131886760);
+                        str3 = this.actionText.getResources().getString(z2 ? 2131886823 : 2131886822);
                         z2 = r8;
                         str = dyhLogo;
                     } else {
@@ -239,7 +239,7 @@ public class ItemGridDyhCardItemBindingImpl extends ItemGridDyhCardItemBinding {
             str7 = str2;
             z = z2;
             str6 = str5;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, true, bool, bool, null, bool);
         } else {
             str6 = str5;
             z = z2;

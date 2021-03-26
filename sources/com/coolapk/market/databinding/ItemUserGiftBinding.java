@@ -43,7 +43,7 @@ public abstract class ItemUserGiftBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserGiftBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemUserGiftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558972, viewGroup, z, obj);
+        return (ItemUserGiftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558979, viewGroup, z, obj);
     }
 
     public static ItemUserGiftBinding inflate(LayoutInflater layoutInflater) {
@@ -52,7 +52,7 @@ public abstract class ItemUserGiftBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserGiftBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemUserGiftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558972, null, false, obj);
+        return (ItemUserGiftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558979, null, false, obj);
     }
 
     public static ItemUserGiftBinding bind(View view) {
@@ -61,6 +61,6 @@ public abstract class ItemUserGiftBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserGiftBinding bind(View view, Object obj) {
-        return (ItemUserGiftBinding) bind(obj, view, 2131558972);
+        return (ItemUserGiftBinding) bind(obj, view, 2131558979);
     }
 }

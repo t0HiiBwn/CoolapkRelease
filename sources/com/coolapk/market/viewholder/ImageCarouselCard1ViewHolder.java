@@ -16,7 +16,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ImageCarouselCard1ViewHolder.kt */
 public final class ImageCarouselCard1ViewHolder extends ImageListCardViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558791;
+    public static final int LAYOUT_ID = 2131558798;
     private final ItemImageListCardBinding binding;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */

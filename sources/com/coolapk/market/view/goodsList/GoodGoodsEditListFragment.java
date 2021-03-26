@@ -140,7 +140,7 @@ public final class GoodGoodsEditListFragment extends EntityListFragment implemen
         }
         itemTouchHelper2.attachToRecyclerView(getRecyclerView());
         FrameLayout.LayoutParams layoutParams = null;
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558997, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559004, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…edit_button, null, false)");
         LayoutListEditButtonBinding layoutListEditButtonBinding = (LayoutListEditButtonBinding) inflate;
         this.editButtonBinding = layoutListEditButtonBinding;
@@ -263,14 +263,14 @@ public final class GoodGoodsEditListFragment extends EntityListFragment implemen
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            menu.add(0, 2131361899, 0, "完成").setShowAsAction(1);
+            menu.add(0, 2131361900, 0, "完成").setShowAsAction(1);
         }
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361899) {
+        if (menuItem.getItemId() != 2131361900) {
             return super.onOptionsItemSelected(menuItem);
         }
         requireActivity().finish();
@@ -291,8 +291,8 @@ public final class GoodGoodsEditListFragment extends EntityListFragment implemen
     @Override // com.coolapk.market.view.cardlist.EntityListFragment
     protected void onRegisterCards() {
         super.onRegisterCards();
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558759).suitedMethod(GoodGoodsEditListFragment$onRegisterCards$1.INSTANCE).constructor(new GoodGoodsEditListFragment$onRegisterCards$2(this)).build(), -1);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558686).suitedMethod(GoodGoodsEditListFragment$onRegisterCards$3.INSTANCE).constructor(new GoodGoodsEditListFragment$onRegisterCards$4(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558766).suitedMethod(GoodGoodsEditListFragment$onRegisterCards$1.INSTANCE).constructor(new GoodGoodsEditListFragment$onRegisterCards$2(this)).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558692).suitedMethod(GoodGoodsEditListFragment$onRegisterCards$3.INSTANCE).constructor(new GoodGoodsEditListFragment$onRegisterCards$4(this)).build(), 0);
     }
 
     private final int findTargetPosition() {

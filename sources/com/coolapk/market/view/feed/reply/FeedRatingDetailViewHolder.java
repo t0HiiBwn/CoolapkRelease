@@ -32,7 +32,7 @@ import kotlin.text.StringsKt;
 /* compiled from: FeedRatingDetailViewHolder.kt */
 public final class FeedRatingDetailViewHolder extends GenericBindHolder<ItemFeedRatingDetailBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558713;
+    public static final int LAYOUT_ID = 2131558720;
     private final Lazy badImageViewPart$delegate;
     private Feed feed;
     private final int flags;

@@ -68,7 +68,7 @@ final class EntityListFragment$onRegisterCards$58 extends Lambda implements Func
             public BindingViewHolder onCreateViewHolder(TitleRecycleViewCardViewHolder titleRecycleViewCardViewHolder, ViewGroup viewGroup, int i) {
                 Intrinsics.checkNotNullParameter(titleRecycleViewCardViewHolder, "holder");
                 Intrinsics.checkNotNullParameter(viewGroup, "parent");
-                return new ServiceAppViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558924, viewGroup, false), titleRecycleViewCardViewHolder.getComponent(), titleRecycleViewCardViewHolder.getItemActionHandler());
+                return new ServiceAppViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558931, viewGroup, false), titleRecycleViewCardViewHolder.getComponent(), titleRecycleViewCardViewHolder.getItemActionHandler());
             }
         });
     }

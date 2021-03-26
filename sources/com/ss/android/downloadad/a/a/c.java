@@ -29,9 +29,7 @@ public class c implements com.ss.android.a.a.b.c {
     private List<String> i;
     private JSONObject j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private List<String> f1398l;
+    private List<String> l;
     private String m;
     private String n;
     private String o;
@@ -61,9 +59,9 @@ public class c implements com.ss.android.a.a.b.c {
         this.i = aVar.i;
         this.j = aVar.j;
         this.k = aVar.k;
-        this.f1398l = aVar.z;
+        this.l = aVar.z;
         this.m = aVar.A;
-        this.n = aVar.f1399l;
+        this.n = aVar.l;
         this.o = aVar.m;
         this.p = aVar.n;
         this.q = aVar.o;
@@ -113,7 +111,7 @@ public class c implements com.ss.android.a.a.b.c {
 
     @Override // com.ss.android.a.a.b.c
     public List<String> b() {
-        return this.f1398l;
+        return this.l;
     }
 
     @Override // com.ss.android.a.a.b.c
@@ -307,9 +305,7 @@ public class c implements com.ss.android.a.a.b.c {
         private List<String> i;
         private JSONObject j;
         private String k;
-
-        /* renamed from: l  reason: collision with root package name */
-        private String f1399l;
+        private String l;
         private String m;
         private Map<String, String> n;
         private boolean o = true;
@@ -377,7 +373,7 @@ public class c implements com.ss.android.a.a.b.c {
         }
 
         public a e(String str) {
-            this.f1399l = str;
+            this.l = str;
             return this;
         }
 

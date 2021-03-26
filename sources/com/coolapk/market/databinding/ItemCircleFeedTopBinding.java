@@ -40,7 +40,7 @@ public abstract class ItemCircleFeedTopBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCircleFeedTopBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemCircleFeedTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558652, viewGroup, z, obj);
+        return (ItemCircleFeedTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558658, viewGroup, z, obj);
     }
 
     public static ItemCircleFeedTopBinding inflate(LayoutInflater layoutInflater) {
@@ -49,7 +49,7 @@ public abstract class ItemCircleFeedTopBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCircleFeedTopBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemCircleFeedTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558652, null, false, obj);
+        return (ItemCircleFeedTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558658, null, false, obj);
     }
 
     public static ItemCircleFeedTopBinding bind(View view) {
@@ -58,6 +58,6 @@ public abstract class ItemCircleFeedTopBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCircleFeedTopBinding bind(View view, Object obj) {
-        return (ItemCircleFeedTopBinding) bind(obj, view, 2131558652);
+        return (ItemCircleFeedTopBinding) bind(obj, view, 2131558658);
     }
 }

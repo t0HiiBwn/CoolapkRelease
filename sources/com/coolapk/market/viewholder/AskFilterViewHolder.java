@@ -18,7 +18,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: AskFilterViewHolder.kt */
 public final class AskFilterViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558906;
+    public static final int LAYOUT_ID = 2131558913;
     private final ItemSearchAskFilterBinding binding;
     private final ArrayList<RadioButton> feedTypeViews;
     private final RadioGroup.OnCheckedChangeListener onChecked = new AskFilterViewHolder$onChecked$1(this);
@@ -68,14 +68,14 @@ public final class AskFilterViewHolder extends BindingViewHolder {
         int hashCode = askFeedType.hashCode();
         if (hashCode != -1412808770) {
             if (hashCode == -1165870106 && askFeedType.equals("question")) {
-                this.binding.radioGroup.check(2131362544);
+                this.binding.radioGroup.check(2131362552);
                 return;
             }
         } else if (askFeedType.equals("answer")) {
-            this.binding.radioGroup.check(2131362538);
+            this.binding.radioGroup.check(2131362546);
             return;
         }
-        this.binding.radioGroup.check(2131362537);
+        this.binding.radioGroup.check(2131362545);
     }
 
     private final ColorStateList createSelectedTextColor() {

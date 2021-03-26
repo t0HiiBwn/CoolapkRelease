@@ -74,7 +74,7 @@ public final class j<LookupExtra extends f.a> {
     }
 
     public int j() {
-        return this.a.f1450l;
+        return this.a.l;
     }
 
     public boolean k() {

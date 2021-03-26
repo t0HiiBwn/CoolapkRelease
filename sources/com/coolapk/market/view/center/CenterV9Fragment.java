@@ -144,7 +144,7 @@ public final class CenterV9Fragment extends EntityListFragment implements Center
             View loadingView = getLoadingView();
             Intrinsics.checkNotNullExpressionValue(loadingView, "loadingView");
             ViewExtendsKt.detachFromParent(loadingView);
-            int i = AppHolder.getAppTheme().isDarkTheme() ? 2131231752 : 2131231751;
+            int i = AppHolder.getAppTheme().isDarkTheme() ? 2131231763 : 2131231762;
             View view = getView();
             if (!(view instanceof FrameLayout)) {
                 view = null;
@@ -327,18 +327,18 @@ public final class CenterV9Fragment extends EntityListFragment implements Center
     @Override // com.coolapk.market.view.cardlist.EntityListFragment
     protected void onRegisterCards() {
         super.onRegisterCards();
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558643).constructor(new CenterV9Fragment$onRegisterCards$1(this)).suitedEntityType("entity_type_user_info").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558572).constructor(new CenterV9Fragment$onRegisterCards$2(this)).suitedEntityType("accountTipsCard").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558973).suitedEntityType("history").constructor(new CenterV9Fragment$onRegisterCards$3(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558975).constructor(new CenterV9Fragment$onRegisterCards$4(this)).suitedEntityType("entity_type_user_info_num").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558638).constructor(new CenterV9Fragment$onRegisterCards$5(this)).suitedEntityType("entity_type_login").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558633).constructor(CenterV9Fragment$onRegisterCards$6.INSTANCE).suitedEntityType("entity_type_user_card_manager").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558629).constructor(CenterV9Fragment$onRegisterCards$7.INSTANCE).suitedEntityType("entity_type_user_card_add").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558836).constructor(CenterV9Fragment$onRegisterCards$8.INSTANCE).suitedEntityType("entity_type_user_no_login_tip").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558644).constructor(new CenterV9Fragment$onRegisterCards$9(this)).suitedEntityType("entity_type_user_menu").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558953).constructor(CenterV9Fragment$onRegisterCards$10.INSTANCE).suitedEntityType("tipsCard").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558832).constructor(CenterV9Fragment$onRegisterCards$11.INSTANCE).suitedEntityType("entity_type_user_no_card").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558598).constructor(CenterV9Fragment$onRegisterCards$12.INSTANCE).suitedEntityType("entity_type_user_updata_manager").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558649).constructor(new CenterV9Fragment$onRegisterCards$1(this)).suitedEntityType("entity_type_user_info").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558576).constructor(new CenterV9Fragment$onRegisterCards$2(this)).suitedEntityType("accountTipsCard").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558980).suitedEntityType("history").constructor(new CenterV9Fragment$onRegisterCards$3(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558982).constructor(new CenterV9Fragment$onRegisterCards$4(this)).suitedEntityType("entity_type_user_info_num").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558644).constructor(new CenterV9Fragment$onRegisterCards$5(this)).suitedEntityType("entity_type_login").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558639).constructor(CenterV9Fragment$onRegisterCards$6.INSTANCE).suitedEntityType("entity_type_user_card_manager").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558635).constructor(CenterV9Fragment$onRegisterCards$7.INSTANCE).suitedEntityType("entity_type_user_card_add").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558843).constructor(CenterV9Fragment$onRegisterCards$8.INSTANCE).suitedEntityType("entity_type_user_no_login_tip").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558650).constructor(new CenterV9Fragment$onRegisterCards$9(this)).suitedEntityType("entity_type_user_menu").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558960).constructor(CenterV9Fragment$onRegisterCards$10.INSTANCE).suitedEntityType("tipsCard").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558839).constructor(CenterV9Fragment$onRegisterCards$11.INSTANCE).suitedEntityType("entity_type_user_no_card").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558602).constructor(CenterV9Fragment$onRegisterCards$12.INSTANCE).suitedEntityType("entity_type_user_updata_manager").build(), 0, 2, null);
     }
 
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListContract.View

@@ -19,9 +19,7 @@ public class d {
     private final JSONObject i;
     private final List<String> j;
     private final int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final Object f1392l;
+    private final Object l;
     private final String m;
     private final boolean n;
     private final String o;
@@ -38,8 +36,8 @@ public class d {
         this.h = aVar.h;
         this.i = aVar.i;
         this.j = aVar.k;
-        this.k = aVar.f1393l;
-        this.f1392l = aVar.m;
+        this.k = aVar.l;
+        this.l = aVar.m;
         this.n = aVar.o;
         this.o = aVar.p;
         this.p = aVar.q;
@@ -59,9 +57,7 @@ public class d {
         private JSONObject i;
         private Map<String, Object> j;
         private List<String> k;
-
-        /* renamed from: l  reason: collision with root package name */
-        private int f1393l;
+        private int l;
         private Object m;
         private String n;
         private boolean o = false;
@@ -119,7 +115,7 @@ public class d {
         }
 
         public a a(int i2) {
-            this.f1393l = i2;
+            this.l = i2;
             return this;
         }
 
@@ -246,7 +242,7 @@ public class d {
         sb.append("\teventSource: ");
         sb.append(this.k);
         sb.append("\textraObject: ");
-        Object obj = this.f1392l;
+        Object obj = this.l;
         sb.append(obj != null ? obj.toString() : str);
         sb.append("\nisV3: ");
         sb.append(this.n);

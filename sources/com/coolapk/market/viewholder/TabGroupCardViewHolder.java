@@ -21,7 +21,7 @@ import com.coolapk.market.util.ViewUtil;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class TabGroupCardViewHolder extends StateViewHolder {
-    public static final int LAYOUT_ID = 2131558942;
+    public static final int LAYOUT_ID = 2131558949;
     private final DataAdapter adapter;
     private final DataBindingComponent component;
     private GridCard gridCard;
@@ -95,7 +95,7 @@ public class TabGroupCardViewHolder extends StateViewHolder {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            View inflate = LayoutInflater.from(TabGroupCardViewHolder.this.getContext()).inflate(2131558943, viewGroup, false);
+            View inflate = LayoutInflater.from(TabGroupCardViewHolder.this.getContext()).inflate(2131558950, viewGroup, false);
             TabGroupCardViewHolder tabGroupCardViewHolder = TabGroupCardViewHolder.this;
             return new DataViewHolder(tabGroupCardViewHolder, inflate, tabGroupCardViewHolder.component, TabGroupCardViewHolder.this.tabIndex, TabGroupCardViewHolder.this.itemActionHandler);
         }
@@ -116,7 +116,7 @@ public class TabGroupCardViewHolder extends StateViewHolder {
     }
 
     public static class DataViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558943;
+        public static final int LAYOUT_ID = 2131558950;
         private final AtomicInteger tabIndex;
 
         public DataViewHolder(TabGroupCardViewHolder tabGroupCardViewHolder, View view, DataBindingComponent dataBindingComponent, AtomicInteger atomicInteger, ItemActionHandler itemActionHandler) {
@@ -135,7 +135,7 @@ public class TabGroupCardViewHolder extends StateViewHolder {
             if (preferencesInt == 0) {
                 itemTabGroupCardItemBinding.infoView.setText(serviceApp.getApkSizeFormat());
             } else if (preferencesInt == 1) {
-                itemTabGroupCardItemBinding.infoView.setText(getContext().getString(2131886639, serviceApp.getDownCount()));
+                itemTabGroupCardItemBinding.infoView.setText(getContext().getString(2131886701, serviceApp.getDownCount()));
             }
             itemTabGroupCardItemBinding.getRoot().setTag(Integer.valueOf(getAdapterPosition()));
             itemTabGroupCardItemBinding.actionButton.setTag(Integer.valueOf(getAdapterPosition()));

@@ -50,7 +50,7 @@ public class AboutFragment extends BaseFragment implements View.OnClickListener 
     @Override // androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getActivity().setTitle(getString(2131887217));
+        getActivity().setTitle(getString(2131887279));
         this.mBinding.setClick(this);
         PackageInfo packageInfo = getPackageInfo();
         boolean z = false;
@@ -62,9 +62,9 @@ public class AboutFragment extends BaseFragment implements View.OnClickListener 
         String str = "检查更新";
         this.mBinding.checkUpgradeView.setText(str);
         if (AppHolder.getAppMetadata().isCommunityMode()) {
-            this.mBinding.titleView.setText(2131886222);
+            this.mBinding.titleView.setText(2131886252);
         } else {
-            this.mBinding.titleView.setText(2131886221);
+            this.mBinding.titleView.setText(2131886251);
         }
         MobileApp mobileAppUpgradeFast = DataManager.getInstance().getMobileAppUpgradeFast(getActivity().getPackageName(), false);
         if (!(mobileAppUpgradeFast == null || mobileAppUpgradeFast.getUpgradeInfo() == null || AppHolder.getAppMetadata().getAppVersionCode() >= mobileAppUpgradeFast.getUpgradeInfo().getVersionCode())) {
@@ -136,16 +136,16 @@ public class AboutFragment extends BaseFragment implements View.OnClickListener 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         switch (view.getId()) {
-            case 2131362227:
+            case 2131362232:
                 checkForUpgrade();
                 return;
-            case 2131362889:
+            case 2131362900:
                 ActionManager.startAppViewActivity(getActivity(), getActivity().getPackageName());
                 return;
-            case 2131363049:
+            case 2131363063:
                 ActionManager.startProjectLibraryListActivity(getActivity());
                 return;
-            case 2131363375:
+            case 2131363392:
                 if (this.useTime.intValue() < 1) {
                     Toast.show(getActivity(), "💖初次见面请多关照💖");
                     return;
@@ -153,7 +153,7 @@ public class AboutFragment extends BaseFragment implements View.OnClickListener 
                 FragmentActivity activity = getActivity();
                 Toast.show(activity, "💖酷安已经陪伴你" + this.useTime.intValue() + "天了哦💖");
                 return;
-            case 2131363902:
+            case 2131363925:
                 if (Build.VERSION.SDK_INT >= 23) {
                     String str = Process.is64Bit() ? "64Bit：支持" : "64Bit：不支持";
                     int i = getActivity().getApplicationInfo().targetSdkVersion;

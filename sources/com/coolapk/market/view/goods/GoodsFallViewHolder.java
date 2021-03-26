@@ -34,7 +34,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: GoodsFallViewHolder.kt */
 public final class GoodsFallViewHolder extends GenericBindHolder<ItemGoodsFallBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558756;
+    public static final int LAYOUT_ID = 2131558763;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public GoodsFallViewHolder(View view, DataBindingComponent dataBindingComponent) {
@@ -156,11 +156,11 @@ public final class GoodsFallViewHolder extends GenericBindHolder<ItemGoodsFallBi
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
             Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-            if (valueOf != null && valueOf.intValue() == 2131362768) {
+            if (valueOf != null && valueOf.intValue() == 2131362779) {
                 ActionManager.startFeedDetailActivity(getContext(), model.getId(), (String) null);
-            } else if (valueOf != null && valueOf.intValue() == 2131363888) {
+            } else if (valueOf != null && valueOf.intValue() == 2131363911) {
                 ActionManager.startUserSpaceActivity(getContext(), model.getUid());
-            } else if (valueOf != null && valueOf.intValue() == 2131362723) {
+            } else if (valueOf != null && valueOf.intValue() == 2131362734) {
                 FeedEventRequester feedEventRequester = FeedEventRequester.INSTANCE;
                 String id = model.getId();
                 Intrinsics.checkNotNull(id);

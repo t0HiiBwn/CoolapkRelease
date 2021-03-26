@@ -62,15 +62,15 @@ public class a extends b {
 
     @Override // com.ss.android.socialbase.appdownloader.c.l
     public k a() {
-        return new C0090a(this.a);
+        return new C0100a(this.a);
     }
 
     /* renamed from: com.ss.android.socialbase.appdownloader.d.a$a  reason: collision with other inner class name */
     /* compiled from: DefaultAlertDialogBuilder */
-    private static class C0090a implements k {
+    private static class C0100a implements k {
         private AlertDialog a;
 
-        public C0090a(AlertDialog.Builder builder) {
+        public C0100a(AlertDialog.Builder builder) {
             if (builder != null) {
                 this.a = builder.show();
             }

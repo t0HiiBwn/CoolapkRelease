@@ -16,9 +16,7 @@ public final class d {
     private final boolean i;
     private final boolean j;
     private final int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final int f1275l;
+    private final int l;
     private final boolean m;
     private final boolean n;
     private final boolean o;
@@ -32,7 +30,7 @@ public final class d {
         this.i = z4;
         this.j = z5;
         this.k = i4;
-        this.f1275l = i5;
+        this.l = i5;
         this.m = z6;
         this.n = z7;
         this.o = z8;
@@ -48,7 +46,7 @@ public final class d {
         this.i = false;
         this.j = false;
         this.k = aVar.d;
-        this.f1275l = aVar.e;
+        this.l = aVar.e;
         this.m = aVar.f;
         this.n = aVar.g;
         this.o = aVar.h;
@@ -83,7 +81,7 @@ public final class d {
     }
 
     public int h() {
-        return this.f1275l;
+        return this.l;
     }
 
     public boolean i() {
@@ -224,9 +222,9 @@ public final class d {
             sb.append(this.k);
             sb.append(", ");
         }
-        if (this.f1275l != -1) {
+        if (this.l != -1) {
             sb.append("min-fresh=");
-            sb.append(this.f1275l);
+            sb.append(this.l);
             sb.append(", ");
         }
         if (this.m) {

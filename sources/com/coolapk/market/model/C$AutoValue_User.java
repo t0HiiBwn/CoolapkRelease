@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_User  reason: invalid class name */
 abstract class C$AutoValue_User extends C$$AutoValue_User {
-    C$AutoValue_User(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, UserInfo userInfo, String str11, String str12, String str13, String str14, String str15, String str16, String str17, int i, String str18, String str19, long j, int i2, String str20) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, l2, l3, str10, userInfo, str11, str12, str13, str14, str15, str16, str17, i, str18, str19, j, i2, str20);
+    C$AutoValue_User(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, UserInfo userInfo, String str11, String str12, String str13, String str14, String str15, String str16, String str17, int i, String str18, String str19, long j, int i2, String str20) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, l, l2, str10, userInfo, str11, str12, str13, str14, str15, str16, str17, i, str18, str19, j, i2, str20);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_User$GsonTypeAdapter */
@@ -150,13 +150,13 @@ abstract class C$AutoValue_User extends C$$AutoValue_User {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -315,8 +315,8 @@ abstract class C$AutoValue_User extends C$$AutoValue_User {
             String str7 = this.defaultLogo;
             String str8 = this.defaultId;
             String str9 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str10 = this.defaultDeprecatedUserAvatar;
             UserInfo userInfo = this.defaultUserInfo;
             String str11 = this.defaultDeprecatedUserName;
@@ -340,8 +340,8 @@ abstract class C$AutoValue_User extends C$$AutoValue_User {
             String str25 = str7;
             String str26 = str8;
             String str27 = str9;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str28 = str10;
             UserInfo userInfo2 = userInfo;
             String str29 = str;
@@ -554,7 +554,7 @@ abstract class C$AutoValue_User extends C$$AutoValue_User {
                             str31 = this.displayUserNameAdapter.read(jsonReader);
                             continue;
                         case '\b':
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\t':
                             str39 = this.followAdapter.read(jsonReader);
@@ -608,7 +608,7 @@ abstract class C$AutoValue_User extends C$$AutoValue_User {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 26:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -617,7 +617,7 @@ abstract class C$AutoValue_User extends C$$AutoValue_User {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_User(str29, str38, str21, num2, str22, str23, str24, str25, str26, str27, l4, l5, str28, userInfo2, str30, str31, str32, str33, str34, str35, str36, i3, str37, str39, j2, i2, str20);
+            return new AutoValue_User(str29, str38, str21, num2, str22, str23, str24, str25, str26, str27, l3, l4, str28, userInfo2, str30, str31, str32, str33, str34, str35, str36, i3, str37, str39, j2, i2, str20);
         }
     }
 }

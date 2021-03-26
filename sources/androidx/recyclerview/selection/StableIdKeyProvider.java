@@ -54,9 +54,9 @@ public final class StableIdKeyProvider extends ItemKeyProvider<Long> {
         return this.mPositionToKey.get(i, null);
     }
 
-    public int getPosition(Long l2) {
-        if (this.mKeyToPosition.containsKey(l2)) {
-            return this.mKeyToPosition.get(l2).intValue();
+    public int getPosition(Long l) {
+        if (this.mKeyToPosition.containsKey(l)) {
+            return this.mKeyToPosition.get(l).intValue();
         }
         return -1;
     }

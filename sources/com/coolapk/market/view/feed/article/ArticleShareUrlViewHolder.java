@@ -20,8 +20,8 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ArticleShareUrlViewHolder.kt */
 public final class ArticleShareUrlViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558609;
-    public static final int VIEW_TYPE = 2131562034;
+    public static final int LAYOUT_ID = 2131558613;
+    public static final int VIEW_TYPE = 2131562038;
     private final ItemArticleCardGoodsBinding binding = ((ItemArticleCardGoodsBinding) getBinding());
     private final ArticlePresenter presenter;
     private final Lazy viewPart$delegate;

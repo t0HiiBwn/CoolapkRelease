@@ -16,7 +16,7 @@ final class PostButtonSettingFragment$onActivityCreated$9 implements View.OnClic
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        PostButtonSettingFragment.access$getBinding$p(this.this$0).radioGroupLongClick.check(2131363166);
+        PostButtonSettingFragment.access$getBinding$p(this.this$0).radioGroupLongClick.check(2131363180);
         DataManager instance = DataManager.getInstance();
         Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
         instance.getPreferencesEditor().putString("POST_BUTTON_SETTING_LONG_CLICK_KEY", "EMPTY").apply();

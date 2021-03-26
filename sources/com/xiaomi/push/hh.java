@@ -1,133 +1,123 @@
 package com.xiaomi.push;
 
-public enum hh {
-    UploadSwitch(1),
-    UploadFrequency(2),
-    ScreenSizeCollectionSwitch(3),
-    MacCollectionSwitch(4),
-    IMSICollectionSwitch(5),
-    AndroidVnCollectionSwitch(6),
-    AndroidVcCollectionSwitch(7),
-    AndroidIdCollectionSwitch(8),
-    DeviceInfoCollectionFrequency(9),
-    AppInstallListCollectionSwitch(10),
-    AppInstallListCollectionFrequency(11),
-    AppActiveListCollectionSwitch(12),
-    AppActiveListCollectionFrequency(13),
-    BluetoothCollectionSwitch(14),
-    BluetoothCollectionFrequency(15),
-    LocationCollectionSwitch(16),
-    LocationCollectionFrequency(17),
-    AccountCollectionSwitch(18),
-    AccountCollectionFrequency(19),
-    WifiCollectionSwitch(20),
-    WifiCollectionFrequency(21),
-    CellularCollectionSwitch(22),
-    CellularCollectionFrequency(23),
-    TopAppCollectionSwitch(24),
-    TopAppCollectionFrequency(25),
-    DataCollectionSwitch(26),
-    OcVersionCheckFrequency(27),
-    SyncInfoFrequency(28),
-    UploadNotificationInfoFrequency(29),
-    UploadNotificationInfoMaxNum(30),
-    CollectionNotificationInfoBaseSwitch(31),
-    CollectionNotificationInfoAppSwitch(32),
-    CollectionNotificationInfoRemovedSwitch(33),
-    ForegroundServiceSwitch(34),
-    SyncMIIDFrequency(35),
-    Upload4GSwitch(36),
-    Upload4GFrequency(37),
-    Upload3GSwitch(38),
-    Upload3GFrequency(39),
-    ShieldTypeConfig(40),
-    UploadWIFIGeoLocFrequency(41),
-    UploadNOWIFIGeoLocFrequency(42),
-    BroadcastActionCollectionSwitch(43),
-    BroadcastActionCollectionFrequency(44),
-    UploadGeoLocSwitch(45),
-    ServiceBootMode(46),
-    AppPermissionCollectionSwitch(47),
-    AppPermissionCollectionFrequency(48),
-    WifiDevicesMacCollectionSwitch(49),
-    WifiDevicesMacCollectionFrequency(50),
-    WifiDevicesMacWifiUnchangedCollectionFrequency(51),
-    AggregationSdkMonitorSwitch(52),
-    AggregationSdkMonitorFrequency(53),
-    AggregationSdkMonitorDepth(54),
-    UploadGeoAppLocSwitch(55),
-    ThirdPushControlSwitch(56),
-    ThirdPushComponentKeyWords(57),
-    ThirdPushWhiteList(58),
-    XmsfScanWhitelist(59),
-    IccidCollectionSwitch(60),
-    LimitThridPushStrategyMode(61),
-    GlobalPushChannelException(62),
-    TinyDataUploadSwitch(63),
-    TinyDataUploadFrequency(64),
-    GlobalRegionIOSwitch(65),
-    GlobalRegionIOWait(66),
-    AggregatePushSwitch(67),
-    ActivityTSSwitch(68),
-    OperatorSwitch(69),
-    DeviceIdSwitch(70),
-    DeviceBaseInfoCollectionFrequency(71),
-    UsageStatsCollectionFrequency(72),
-    UsageStatsCollectionWhiteList(73),
-    ForceHandleCrashSwitch(74),
-    Crash4GUploadSwitch(75),
-    Crash4GUploadFrequency(76),
-    CrashWIFIUploadFrequency(77),
-    EventUploadSwitch(78),
-    PerfUploadSwitch(79),
-    EventUploadFrequency(80),
-    PerfUploadFrequency(81),
-    BatteryCollectionSwitch(82),
-    BatteryCollectionFrequency(83),
-    AwakeInfoUploadWaySwitch(84),
-    AwakeAppPingSwitch(85),
-    AwakeAppPingFrequency(86),
-    StorageCollectionSwitch(87),
-    StorageCollectionFrequency(88),
-    PopupDialogWhiteList(94),
-    PopupDialogContent(95),
-    PopupDialogSwitch(96),
-    FallDownTimeRange(97),
-    AppIsInstalledCollectionSwitch(98),
-    AppIsInstalledCollectionFrequency(99),
-    AppIsInstalledList(100),
-    TopNotificationUpdateFrequency(101),
-    TopNotificationUpdatePeriod(102),
-    TopNotificationUpdateSwitch(103),
-    EventUploadNewSwitch(104),
-    ScreenOnOrChargingTinyDataUploadSwitch(105),
-    NotificationAutoGroupSwitch(106),
-    LatestNotificationNotIntoGroupSwitch(107),
-    DCJobMutualSwitch(108),
-    NotificationBelongToAppSwitch(109),
-    DCJobUploadRepeatedInterval(110),
-    LauncherAppListCollectionSwitch(111),
-    LauncherAppListCollectionFrequency(112),
-    StatDataUploadFrequency(120),
-    StatDataUploadNum(121),
-    StatDataProcessFrequency(122),
-    StatDataSwitch(123),
-    StatDataUploadWay(124),
-    StatDataDeleteFrequency(125),
-    CollectionDataPluginVersion(1001),
-    CollectionPluginDownloadUrl(1002),
-    CollectionPluginMd5(1003),
-    CollectionPluginForceStop(1004);
-    
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-    /* renamed from: a  reason: collision with other field name */
-    private final int f560a;
+public class hh implements hu<hh, Object>, Serializable, Cloneable {
+    private static final il b = new il("XmPushActionNormalConfig");
+    private static final id c = new id("", (byte) 15, 1);
+    public List<gr> a;
 
-    private hh(int i) {
-        this.f560a = i;
+    public List<gr> a() {
+        return this.a;
     }
 
-    public int a() {
-        return this.f560a;
+    @Override // com.xiaomi.push.hu
+    public void a(ig igVar) {
+        igVar.f();
+        while (true) {
+            id h = igVar.h();
+            if (h.b == 0) {
+                igVar.g();
+                c();
+                return;
+            }
+            if (h.c == 1 && h.b == 15) {
+                ie l = igVar.l();
+                this.a = new ArrayList(l.b);
+                for (int i = 0; i < l.b; i++) {
+                    gr grVar = new gr();
+                    grVar.a(igVar);
+                    this.a.add(grVar);
+                }
+                igVar.m();
+            } else {
+                ij.a(igVar, h.b);
+            }
+            igVar.i();
+        }
+    }
+
+    public boolean a(hh hhVar) {
+        if (hhVar == null) {
+            return false;
+        }
+        boolean b2 = b();
+        boolean b3 = hhVar.b();
+        if (b2 || b3) {
+            return b2 && b3 && this.a.equals(hhVar.a);
+        }
+        return true;
+    }
+
+    /* renamed from: b */
+    public int compareTo(hh hhVar) {
+        int a2;
+        if (!getClass().equals(hhVar.getClass())) {
+            return getClass().getName().compareTo(hhVar.getClass().getName());
+        }
+        int compareTo = Boolean.valueOf(b()).compareTo(Boolean.valueOf(hhVar.b()));
+        if (compareTo != 0) {
+            return compareTo;
+        }
+        if (!b() || (a2 = hv.a(this.a, hhVar.a)) == 0) {
+            return 0;
+        }
+        return a2;
+    }
+
+    @Override // com.xiaomi.push.hu
+    public void b(ig igVar) {
+        c();
+        igVar.a(b);
+        if (this.a != null) {
+            igVar.a(c);
+            igVar.a(new ie((byte) 12, this.a.size()));
+            for (gr grVar : this.a) {
+                grVar.b(igVar);
+            }
+            igVar.e();
+            igVar.b();
+        }
+        igVar.c();
+        igVar.a();
+    }
+
+    public boolean b() {
+        return this.a != null;
+    }
+
+    public void c() {
+        if (this.a == null) {
+            throw new ih("Required field 'normalConfigs' was not present! Struct: " + toString());
+        }
+    }
+
+    @Override // java.lang.Object
+    public boolean equals(Object obj) {
+        if (obj != null && (obj instanceof hh)) {
+            return a((hh) obj);
+        }
+        return false;
+    }
+
+    @Override // java.lang.Object
+    public int hashCode() {
+        return 0;
+    }
+
+    @Override // java.lang.Object
+    public String toString() {
+        StringBuilder sb = new StringBuilder("XmPushActionNormalConfig(");
+        sb.append("normalConfigs:");
+        List<gr> list = this.a;
+        if (list == null) {
+            sb.append("null");
+        } else {
+            sb.append(list);
+        }
+        sb.append(")");
+        return sb.toString();
     }
 }

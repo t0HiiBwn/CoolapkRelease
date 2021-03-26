@@ -18,7 +18,7 @@ final class DiscoveryTabConfigDialog$onCreateDialog$3 implements View.OnClickLis
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        this.$binding.radioGroup.check(2131363178);
+        this.$binding.radioGroup.check(2131363192);
         DiscoveryTabConfigDialog discoveryTabConfigDialog = this.this$0;
         Intrinsics.checkNotNullExpressionValue(view, "it");
         discoveryTabConfigDialog.showTabTitleToast(view);

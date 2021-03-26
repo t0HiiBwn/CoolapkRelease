@@ -35,7 +35,7 @@ import kotlin.text.StringsKt;
 /* compiled from: ProductViewHolder.kt */
 public final class ProductViewHolder extends GenericBindHolder<ItemProductViewBinding, Product> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558882;
+    public static final int LAYOUT_ID = 2131558889;
     private final Drawable fireDrawable;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -60,8 +60,8 @@ public final class ProductViewHolder extends GenericBindHolder<ItemProductViewBi
         Context context = getContext();
         Intrinsics.checkNotNullExpressionValue(context, "context");
         textView2.setTypeface(ProductGlobalData.getNumberTypeface(context));
-        Drawable mutate = ResourceUtils.getDrawable(getContext(), 2131231300).mutate();
-        mutate.setTint(ResourceUtils.getColorInt(getContext(), 2131100011));
+        Drawable mutate = ResourceUtils.getDrawable(getContext(), 2131231311).mutate();
+        mutate.setTint(ResourceUtils.getColorInt(getContext(), 2131100016));
         mutate.setBounds(0, 0, NumberExtendsKt.getDp((Number) 12), NumberExtendsKt.getDp((Number) 12));
         Intrinsics.checkNotNullExpressionValue(mutate, "ResourceUtils.getDrawabl… 12.dp)\n                }");
         LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{mutate});
@@ -171,7 +171,7 @@ public final class ProductViewHolder extends GenericBindHolder<ItemProductViewBi
         Product model = itemProductViewBinding.getModel();
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
-            if (view.getId() != 2131362768) {
+            if (view.getId() != 2131362779) {
                 super.onClick(view);
                 return;
             }

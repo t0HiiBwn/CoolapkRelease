@@ -37,13 +37,13 @@ final class AlbumDetailActivity$initCommentBar$1 extends Lambda implements Funct
         Intrinsics.checkNotNullParameter(view, "v");
         int i = 1;
         switch (view.getId()) {
-            case 2131362284:
+            case 2131362289:
                 ActionManager.startFeedCommentActivity(this.this$0.getActivity(), this.$album.getFeedId(), this.$album.getUserName());
                 ScrollStateViewPager scrollStateViewPager = AlbumDetailActivity.access$getBinding$p(this.this$0).viewPager;
                 Intrinsics.checkNotNullExpressionValue(scrollStateViewPager, "binding.viewPager");
                 scrollStateViewPager.setCurrentItem(1);
                 return;
-            case 2131362291:
+            case 2131362296:
                 ScrollStateViewPager scrollStateViewPager2 = AlbumDetailActivity.access$getBinding$p(this.this$0).viewPager;
                 Intrinsics.checkNotNullExpressionValue(scrollStateViewPager2, "binding.viewPager");
                 if (this.this$0.getCurrentPage() == 1) {
@@ -51,7 +51,7 @@ final class AlbumDetailActivity$initCommentBar$1 extends Lambda implements Funct
                 }
                 scrollStateViewPager2.setCurrentItem(i);
                 return;
-            case 2131362851:
+            case 2131362862:
                 Activity currentActivity = AppHolder.getCurrentActivity();
                 if (currentActivity != null) {
                     Boolean checkLogin = ActionManager.checkLogin(currentActivity);
@@ -63,10 +63,10 @@ final class AlbumDetailActivity$initCommentBar$1 extends Lambda implements Funct
                     return;
                 }
                 return;
-            case 2131363358:
+            case 2131363374:
                 ActionManager.shareText(this.this$0.getActivity(), this.$album);
                 return;
-            case 2131363418:
+            case 2131363436:
                 Activity currentActivity2 = AppHolder.getCurrentActivity();
                 if (currentActivity2 != null) {
                     Boolean checkLogin2 = ActionManager.checkLogin(currentActivity2);

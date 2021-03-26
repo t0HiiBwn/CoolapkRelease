@@ -67,7 +67,7 @@ public final class ee {
                     str4 = "locf";
                 }
                 efVar.n = true;
-                efVar.f1373l = String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s&loc_channel=%s", "5.2.0", str4, 3);
+                efVar.l = String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s&loc_channel=%s", "5.2.0", str4, 3);
                 efVar.k = z;
                 efVar.g = str;
                 efVar.h = str2;
@@ -156,7 +156,7 @@ public final class ee {
                             }
                             efVar.n = false;
                             efVar.k = true;
-                            efVar.f1373l = String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s&loc_channel=%s", "5.2.0", "loc", 3);
+                            efVar.l = String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s&loc_channel=%s", "5.2.0", "loc", 3);
                             efVar.m = hashMap2;
                             efVar.f = hashMap;
                             efVar.a(s.a(context));
@@ -182,7 +182,7 @@ public final class ee {
                 byteArrayOutputStream.close();
                 efVar.n = false;
                 efVar.k = true;
-                efVar.f1373l = String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s&loc_channel=%s", "5.2.0", "loc", 3);
+                efVar.l = String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s&loc_channel=%s", "5.2.0", "loc", 3);
                 efVar.m = hashMap2;
                 efVar.f = hashMap;
                 efVar.a(s.a(context));
@@ -222,7 +222,7 @@ public final class ee {
                 }
                 efVar.n = false;
                 efVar.k = true;
-                efVar.f1373l = String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s&loc_channel=%s", "5.2.0", "loc", 3);
+                efVar.l = String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s&loc_channel=%s", "5.2.0", "loc", 3);
                 efVar.m = hashMap2;
                 efVar.f = hashMap;
                 efVar.a(s.a(context));
@@ -235,7 +235,7 @@ public final class ee {
             }
             efVar.n = false;
             efVar.k = true;
-            efVar.f1373l = String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s&loc_channel=%s", "5.2.0", "loc", 3);
+            efVar.l = String.format(Locale.US, "platform=Android&sdkversion=%s&product=%s&loc_channel=%s", "5.2.0", "loc", 3);
             efVar.m = hashMap2;
             efVar.f = hashMap;
             efVar.a(s.a(context));

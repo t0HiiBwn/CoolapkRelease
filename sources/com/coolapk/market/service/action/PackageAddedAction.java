@@ -124,7 +124,7 @@ public final class PackageAddedAction implements ServiceAction {
         }
         LogUtils.v("We have %d install state(s)", Integer.valueOf(i));
         if (i > 3) {
-            sb.append(context.getString(2131886451, Integer.valueOf(i)));
+            sb.append(context.getString(2131886511, Integer.valueOf(i)));
         }
         if (installState == null || installState.getExtra() == null) {
             ActionManager.statInstall(context, stringExtra, "0", "", isAppNewInstall(context, stringExtra), "");
@@ -142,17 +142,17 @@ public final class PackageAddedAction implements ServiceAction {
         Extra extra7 = installState.getExtra();
         Intrinsics.checkNotNull(extra7);
         String string6 = extra7.getString("EXTRA_ANALYSIS_DATA");
-        NotificationCompat.Builder deleteIntent = new NotificationCompat.Builder(context, String.valueOf(2)).setTicker(context.getString(2131886452, string3)).setSmallIcon(2131231756).setColor(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099784)).setShowWhen(true).setAutoCancel(true).setDeleteIntent(PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_INSTALL_SUCCESS_ON_DISMISS"), 134217728));
+        NotificationCompat.Builder deleteIntent = new NotificationCompat.Builder(context, String.valueOf(2)).setTicker(context.getString(2131886512, string3)).setSmallIcon(2131231767).setColor(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099786)).setShowWhen(true).setAutoCancel(true).setDeleteIntent(PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_INSTALL_SUCCESS_ON_DISMISS"), 134217728));
         if (i > 1) {
             String sb2 = sb.toString();
             Intrinsics.checkNotNullExpressionValue(sb2, "bigTextBuilder.toString()");
             String str = sb2;
             deleteIntent.setStyle(new NotificationCompat.BigTextStyle().bigText(str));
-            deleteIntent.setContentTitle(context.getString(2131886453, Integer.valueOf(i)));
+            deleteIntent.setContentTitle(context.getString(2131886513, Integer.valueOf(i)));
             deleteIntent.setContentText(str);
             deleteIntent.setContentIntent(PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_INSTALL_SUCCESS_ON_START_DOWNLOAD_MANAGER_CLICK"), 134217728));
-            deleteIntent.addAction(2131231585, context.getString(2131886158), PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_INSTALL_SUCCESS_ON_START_DOWNLOAD_MANAGER_CLICK"), 134217728));
-            deleteIntent.addAction(2131231583, context.getString(2131886136), PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_INSTALL_SUCCESS_ON_CANCEL_CLICK"), 134217728));
+            deleteIntent.addAction(2131231596, context.getString(2131886158), PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_INSTALL_SUCCESS_ON_START_DOWNLOAD_MANAGER_CLICK"), 134217728));
+            deleteIntent.addAction(2131231594, context.getString(2131886136), PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_INSTALL_SUCCESS_ON_CANCEL_CLICK"), 134217728));
         } else {
             try {
                 PackageManager packageManager = context.getPackageManager();
@@ -161,10 +161,10 @@ public final class PackageAddedAction implements ServiceAction {
                     deleteIntent.setLargeIcon(((BitmapDrawable) loadIcon).getBitmap());
                 }
                 deleteIntent.setContentTitle(string3);
-                deleteIntent.setContentText(context.getString(2131886455, StringUtils.emptyIfNull(string4)));
+                deleteIntent.setContentText(context.getString(2131886515, StringUtils.emptyIfNull(string4)));
                 deleteIntent.setContentInfo(string5);
                 deleteIntent.setContentIntent(PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_INSTALL_SUCCESS_ON_START_APP_CLICK").putExtra("packageName", stringExtra), 134217728));
-                deleteIntent.addAction(2131231585, context.getString(2131886158), PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_INSTALL_SUCCESS_ON_START_DOWNLOAD_MANAGER_CLICK"), 134217728));
+                deleteIntent.addAction(2131231596, context.getString(2131886158), PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_INSTALL_SUCCESS_ON_START_DOWNLOAD_MANAGER_CLICK"), 134217728));
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             } catch (Exception unused) {

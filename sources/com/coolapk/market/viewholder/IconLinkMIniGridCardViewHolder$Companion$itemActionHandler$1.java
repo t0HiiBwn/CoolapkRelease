@@ -29,7 +29,7 @@ public final class IconLinkMIniGridCardViewHolder$Companion$itemActionHandler$1 
         IconLinkMIniGridCardViewHolder iconLinkMIniGridCardViewHolder;
         Intrinsics.checkNotNullParameter(viewHolder, "holder");
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() == 2131362768) {
+        if (view.getId() == 2131362779) {
             Object tag = view.getTag();
             Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.model.Entity");
             Entity entity = (Entity) tag;

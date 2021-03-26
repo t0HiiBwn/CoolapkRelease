@@ -81,9 +81,7 @@ public class f implements c, d, al.a {
     private long i = 0;
     private long j = 0;
     private long k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private List<Runnable> f1321l;
+    private List<Runnable> l;
     private boolean m;
     private final WeakReference<Context> n;
     private final boolean o;
@@ -723,20 +721,20 @@ public class f implements c, d, al.a {
     }
 
     private void b(Runnable runnable) {
-        if (this.f1321l == null) {
-            this.f1321l = Collections.synchronizedList(new ArrayList());
+        if (this.l == null) {
+            this.l = Collections.synchronizedList(new ArrayList());
         }
-        this.f1321l.add(runnable);
+        this.l.add(runnable);
     }
 
     private void D() {
-        List<Runnable> list = this.f1321l;
+        List<Runnable> list = this.l;
         if (list != null && !list.isEmpty()) {
-            Iterator it2 = new ArrayList(this.f1321l).iterator();
+            Iterator it2 = new ArrayList(this.l).iterator();
             while (it2.hasNext()) {
                 ((Runnable) it2.next()).run();
             }
-            this.f1321l.clear();
+            this.l.clear();
         }
     }
 
@@ -879,7 +877,7 @@ public class f implements c, d, al.a {
             this.d.removeCallbacksAndMessages(null);
         }
         B();
-        List<Runnable> list = this.f1321l;
+        List<Runnable> list = this.l;
         if (list != null) {
             list.clear();
         }

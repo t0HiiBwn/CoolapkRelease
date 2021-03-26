@@ -2,25 +2,44 @@ package kotlinx.coroutines.channels;
 
 import java.util.concurrent.locks.ReentrantLock;
 import kotlin.Metadata;
+import kotlin.NoWhenBranchMatchedException;
 import kotlin.Unit;
+import kotlin.collections.ArraysKt;
+import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
 import kotlinx.coroutines.CancellableContinuationImplKt;
 import kotlinx.coroutines.DebugKt;
 import kotlinx.coroutines.channels.AbstractChannel;
 import kotlinx.coroutines.channels.AbstractSendChannel;
 import kotlinx.coroutines.internal.AtomicKt;
+import kotlinx.coroutines.internal.OnUndeliveredElementKt;
 import kotlinx.coroutines.internal.Symbol;
+import kotlinx.coroutines.internal.UndeliveredElementException;
 import kotlinx.coroutines.selects.SelectInstance;
 import kotlinx.coroutines.selects.SelectKt;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0010\u0011\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\b\u0010\u0018\u0000*\u0004\b\u0000\u0010\u00012\b\u0012\u0004\u0012\u00028\u000009B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001d\u0010\t\u001a\u00020\b2\f\u0010\u0007\u001a\b\u0012\u0004\u0012\u00028\u00000\u0006H\u0014¢\u0006\u0004\b\t\u0010\nJ\u0019\u0010\u000e\u001a\u0004\u0018\u00010\r2\u0006\u0010\f\u001a\u00020\u000bH\u0014¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u0010\u001a\u00020\u0002H\u0002¢\u0006\u0004\b\u0012\u0010\u0005J\u0017\u0010\u0014\u001a\u00020\r2\u0006\u0010\u0013\u001a\u00028\u0000H\u0014¢\u0006\u0004\b\u0014\u0010\u0015J#\u0010\u0018\u001a\u00020\r2\u0006\u0010\u0013\u001a\u00028\u00002\n\u0010\u0017\u001a\u0006\u0012\u0002\b\u00030\u0016H\u0014¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001b\u001a\u00020\u00112\u0006\u0010\u001a\u001a\u00020\bH\u0014¢\u0006\u0004\b\u001b\u0010\u001cJ\u0011\u0010\u001d\u001a\u0004\u0018\u00010\rH\u0014¢\u0006\u0004\b\u001d\u0010\u001eJ\u001d\u0010\u001f\u001a\u0004\u0018\u00010\r2\n\u0010\u0017\u001a\u0006\u0012\u0002\b\u00030\u0016H\u0014¢\u0006\u0004\b\u001f\u0010 R\u001e\u0010\"\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\r0!8\u0002@\u0002X\u000e¢\u0006\u0006\n\u0004\b\"\u0010#R\u0016\u0010'\u001a\u00020$8T@\u0014X\u0004¢\u0006\u0006\u001a\u0004\b%\u0010&R\u0019\u0010\u0003\u001a\u00020\u00028\u0006@\u0006¢\u0006\f\n\u0004\b\u0003\u0010(\u001a\u0004\b)\u0010*R\u0016\u0010+\u001a\u00020\u00028\u0002@\u0002X\u000e¢\u0006\u0006\n\u0004\b+\u0010(R\u0016\u0010,\u001a\u00020\b8D@\u0004X\u0004¢\u0006\u0006\u001a\u0004\b,\u0010-R\u0016\u0010.\u001a\u00020\b8D@\u0004X\u0004¢\u0006\u0006\u001a\u0004\b.\u0010-R\u0016\u0010/\u001a\u00020\b8D@\u0004X\u0004¢\u0006\u0006\u001a\u0004\b/\u0010-R\u0016\u00100\u001a\u00020\b8D@\u0004X\u0004¢\u0006\u0006\u001a\u0004\b0\u0010-R\u0016\u00101\u001a\u00020\b8V@\u0016X\u0004¢\u0006\u0006\u001a\u0004\b1\u0010-R\u0016\u00102\u001a\u00020\b8V@\u0016X\u0004¢\u0006\u0006\u001a\u0004\b2\u0010-R\u0016\u00103\u001a\u00020\b8V@\u0016X\u0004¢\u0006\u0006\u001a\u0004\b3\u0010-R\u001a\u00106\u001a\u000604j\u0002`58\u0002@\u0002X\u0004¢\u0006\u0006\n\u0004\b6\u00107¨\u00068"}, d2 = {"Lkotlinx/coroutines/channels/ArrayChannel;", "E", "", "capacity", "<init>", "(I)V", "Lkotlinx/coroutines/channels/Receive;", "receive", "", "enqueueReceiveInternal", "(Lkotlinx/coroutines/channels/Receive;)Z", "Lkotlinx/coroutines/channels/Send;", "send", "", "enqueueSend", "(Lkotlinx/coroutines/channels/Send;)Ljava/lang/Object;", "currentSize", "", "ensureCapacity", "element", "offerInternal", "(Ljava/lang/Object;)Ljava/lang/Object;", "Lkotlinx/coroutines/selects/SelectInstance;", "select", "offerSelectInternal", "(Ljava/lang/Object;Lkotlinx/coroutines/selects/SelectInstance;)Ljava/lang/Object;", "wasClosed", "onCancelIdempotent", "(Z)V", "pollInternal", "()Ljava/lang/Object;", "pollSelectInternal", "(Lkotlinx/coroutines/selects/SelectInstance;)Ljava/lang/Object;", "", "buffer", "[Ljava/lang/Object;", "", "getBufferDebugString", "()Ljava/lang/String;", "bufferDebugString", "I", "getCapacity", "()I", "head", "isBufferAlwaysEmpty", "()Z", "isBufferAlwaysFull", "isBufferEmpty", "isBufferFull", "isClosedForReceive", "isEmpty", "isFull", "Ljava/util/concurrent/locks/ReentrantLock;", "Lkotlinx/coroutines/internal/ReentrantLock;", "lock", "Ljava/util/concurrent/locks/ReentrantLock;", "kotlinx-coroutines-core", "Lkotlinx/coroutines/channels/AbstractChannel;"}, k = 1, mv = {1, 1, 16})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\b\u0010\u0018\u0000*\u0004\b\u0000\u0010\u00012\b\u0012\u0004\u0012\u00028\u00000CB9\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012 \u0010\t\u001a\u001c\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u0006j\n\u0012\u0004\u0012\u00028\u0000\u0018\u0001`\b¢\u0006\u0004\b\n\u0010\u000bJ\u001f\u0010\u000e\u001a\u00020\u00072\u0006\u0010\f\u001a\u00020\u00022\u0006\u0010\r\u001a\u00028\u0000H\u0002¢\u0006\u0004\b\u000e\u0010\u000fJ\u001d\u0010\u0013\u001a\u00020\u00122\f\u0010\u0011\u001a\b\u0012\u0004\u0012\u00028\u00000\u0010H\u0014¢\u0006\u0004\b\u0013\u0010\u0014J\u0019\u0010\u0018\u001a\u0004\u0018\u00010\u00172\u0006\u0010\u0016\u001a\u00020\u0015H\u0014¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001a\u001a\u00020\u00072\u0006\u0010\f\u001a\u00020\u0002H\u0002¢\u0006\u0004\b\u001a\u0010\u001bJ\u0017\u0010\u001c\u001a\u00020\u00172\u0006\u0010\r\u001a\u00028\u0000H\u0014¢\u0006\u0004\b\u001c\u0010\u001dJ#\u0010 \u001a\u00020\u00172\u0006\u0010\r\u001a\u00028\u00002\n\u0010\u001f\u001a\u0006\u0012\u0002\b\u00030\u001eH\u0014¢\u0006\u0004\b \u0010!J\u0017\u0010#\u001a\u00020\u00072\u0006\u0010\"\u001a\u00020\u0012H\u0014¢\u0006\u0004\b#\u0010$J\u0011\u0010%\u001a\u0004\u0018\u00010\u0017H\u0014¢\u0006\u0004\b%\u0010&J\u001d\u0010'\u001a\u0004\u0018\u00010\u00172\n\u0010\u001f\u001a\u0006\u0012\u0002\b\u00030\u001eH\u0014¢\u0006\u0004\b'\u0010(J\u0019\u0010*\u001a\u0004\u0018\u00010)2\u0006\u0010\f\u001a\u00020\u0002H\u0002¢\u0006\u0004\b*\u0010+R\u001e\u0010-\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00170,8\u0002@\u0002X\u000e¢\u0006\u0006\n\u0004\b-\u0010.R\u0016\u00102\u001a\u00020/8T@\u0014X\u0004¢\u0006\u0006\u001a\u0004\b0\u00101R\u0016\u0010\u0003\u001a\u00020\u00028\u0002@\u0002X\u0004¢\u0006\u0006\n\u0004\b\u0003\u00103R\u0016\u00104\u001a\u00020\u00028\u0002@\u0002X\u000e¢\u0006\u0006\n\u0004\b4\u00103R\u0016\u00105\u001a\u00020\u00128D@\u0004X\u0004¢\u0006\u0006\u001a\u0004\b5\u00106R\u0016\u00107\u001a\u00020\u00128D@\u0004X\u0004¢\u0006\u0006\u001a\u0004\b7\u00106R\u0016\u00108\u001a\u00020\u00128D@\u0004X\u0004¢\u0006\u0006\u001a\u0004\b8\u00106R\u0016\u00109\u001a\u00020\u00128D@\u0004X\u0004¢\u0006\u0006\u001a\u0004\b9\u00106R\u0016\u0010:\u001a\u00020\u00128V@\u0016X\u0004¢\u0006\u0006\u001a\u0004\b:\u00106R\u0016\u0010;\u001a\u00020\u00128V@\u0016X\u0004¢\u0006\u0006\u001a\u0004\b;\u00106R\u0016\u0010<\u001a\u00020\u00128V@\u0016X\u0004¢\u0006\u0006\u001a\u0004\b<\u00106R\u001a\u0010?\u001a\u00060=j\u0002`>8\u0002@\u0002X\u0004¢\u0006\u0006\n\u0004\b?\u0010@R\u0016\u0010\u0005\u001a\u00020\u00048\u0002@\u0002X\u0004¢\u0006\u0006\n\u0004\b\u0005\u0010A¨\u0006B"}, d2 = {"Lkotlinx/coroutines/channels/ArrayChannel;", "E", "", "capacity", "Lkotlinx/coroutines/channels/BufferOverflow;", "onBufferOverflow", "Lkotlin/Function1;", "", "Lkotlinx/coroutines/internal/OnUndeliveredElement;", "onUndeliveredElement", "<init>", "(ILkotlinx/coroutines/channels/BufferOverflow;Lkotlin/jvm/functions/Function1;)V", "currentSize", "element", "enqueueElement", "(ILjava/lang/Object;)V", "Lkotlinx/coroutines/channels/Receive;", "receive", "", "enqueueReceiveInternal", "(Lkotlinx/coroutines/channels/Receive;)Z", "Lkotlinx/coroutines/channels/Send;", "send", "", "enqueueSend", "(Lkotlinx/coroutines/channels/Send;)Ljava/lang/Object;", "ensureCapacity", "(I)V", "offerInternal", "(Ljava/lang/Object;)Ljava/lang/Object;", "Lkotlinx/coroutines/selects/SelectInstance;", "select", "offerSelectInternal", "(Ljava/lang/Object;Lkotlinx/coroutines/selects/SelectInstance;)Ljava/lang/Object;", "wasClosed", "onCancelIdempotent", "(Z)V", "pollInternal", "()Ljava/lang/Object;", "pollSelectInternal", "(Lkotlinx/coroutines/selects/SelectInstance;)Ljava/lang/Object;", "Lkotlinx/coroutines/internal/Symbol;", "updateBufferSize", "(I)Lkotlinx/coroutines/internal/Symbol;", "", "buffer", "[Ljava/lang/Object;", "", "getBufferDebugString", "()Ljava/lang/String;", "bufferDebugString", "I", "head", "isBufferAlwaysEmpty", "()Z", "isBufferAlwaysFull", "isBufferEmpty", "isBufferFull", "isClosedForReceive", "isEmpty", "isFull", "Ljava/util/concurrent/locks/ReentrantLock;", "Lkotlinx/coroutines/internal/ReentrantLock;", "lock", "Ljava/util/concurrent/locks/ReentrantLock;", "Lkotlinx/coroutines/channels/BufferOverflow;", "kotlinx-coroutines-core", "Lkotlinx/coroutines/channels/AbstractChannel;"}, k = 1, mv = {1, 4, 0})
 /* compiled from: ArrayChannel.kt */
 public class ArrayChannel<E> extends AbstractChannel<E> {
     private Object[] buffer;
     private final int capacity;
     private int head;
     private final ReentrantLock lock;
+    private final BufferOverflow onBufferOverflow;
     private volatile int size;
+
+    @Metadata(bv = {1, 0, 3}, k = 3, mv = {1, 4, 0})
+    public final /* synthetic */ class WhenMappings {
+        public static final /* synthetic */ int[] $EnumSwitchMapping$0;
+
+        static {
+            int[] iArr = new int[BufferOverflow.values().length];
+            $EnumSwitchMapping$0 = iArr;
+            iArr[BufferOverflow.SUSPEND.ordinal()] = 1;
+            iArr[BufferOverflow.DROP_LATEST.ordinal()] = 2;
+            iArr[BufferOverflow.DROP_OLDEST.ordinal()] = 3;
+        }
+    }
 
     @Override // kotlinx.coroutines.channels.AbstractChannel
     protected final boolean isBufferAlwaysEmpty() {
@@ -32,15 +51,16 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
         return false;
     }
 
-    public final int getCapacity() {
-        return this.capacity;
-    }
-
-    public ArrayChannel(int i) {
+    public ArrayChannel(int i, BufferOverflow bufferOverflow, Function1<? super E, Unit> function1) {
+        super(function1);
         this.capacity = i;
+        this.onBufferOverflow = bufferOverflow;
         if (i < 1 ? false : true) {
             this.lock = new ReentrantLock();
-            this.buffer = new Object[Math.min(i, 8)];
+            Object[] objArr = new Object[Math.min(i, 8)];
+            ArraysKt.fill$default(objArr, AbstractChannelKt.EMPTY, 0, 0, 6, (Object) null);
+            Unit unit = Unit.INSTANCE;
+            this.buffer = objArr;
             this.size = 0;
             return;
         }
@@ -54,7 +74,7 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
 
     @Override // kotlinx.coroutines.channels.AbstractSendChannel
     protected final boolean isBufferFull() {
-        return this.size == this.capacity;
+        return this.size == this.capacity && this.onBufferOverflow == BufferOverflow.SUSPEND;
     }
 
     @Override // kotlinx.coroutines.channels.AbstractSendChannel, kotlinx.coroutines.channels.SendChannel
@@ -102,53 +122,42 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
             if (closedForSend != null) {
                 return closedForSend;
             }
-            if (i < this.capacity) {
-                this.size = i + 1;
-                if (i == 0) {
-                    do {
-                        takeFirstReceiveOrPeekClosed = takeFirstReceiveOrPeekClosed();
-                        if (takeFirstReceiveOrPeekClosed != null) {
-                            if (takeFirstReceiveOrPeekClosed instanceof Closed) {
-                                this.size = i;
-                                if (takeFirstReceiveOrPeekClosed == null) {
-                                    Intrinsics.throwNpe();
-                                }
-                                reentrantLock.unlock();
-                                return takeFirstReceiveOrPeekClosed;
-                            }
-                            if (takeFirstReceiveOrPeekClosed == null) {
-                                Intrinsics.throwNpe();
-                            }
-                            tryResumeReceive = takeFirstReceiveOrPeekClosed.tryResumeReceive(e, null);
-                        }
-                    } while (tryResumeReceive == null);
-                    if (DebugKt.getASSERTIONS_ENABLED()) {
-                        if (!(tryResumeReceive == CancellableContinuationImplKt.RESUME_TOKEN)) {
-                            throw new AssertionError();
-                        }
-                    }
-                    this.size = i;
-                    Unit unit = Unit.INSTANCE;
-                    reentrantLock.unlock();
-                    if (takeFirstReceiveOrPeekClosed == null) {
-                        Intrinsics.throwNpe();
-                    }
-                    takeFirstReceiveOrPeekClosed.completeResumeReceive(e);
-                    if (takeFirstReceiveOrPeekClosed == null) {
-                        Intrinsics.throwNpe();
-                    }
-                    return takeFirstReceiveOrPeekClosed.getOfferResult();
-                }
-                ensureCapacity(i);
-                Object[] objArr = this.buffer;
-                objArr[(this.head + i) % objArr.length] = e;
-                Object obj = AbstractChannelKt.OFFER_SUCCESS;
+            Symbol updateBufferSize = updateBufferSize(i);
+            if (updateBufferSize != null) {
                 reentrantLock.unlock();
-                return obj;
+                return updateBufferSize;
             }
-            Object obj2 = AbstractChannelKt.OFFER_FAILED;
+            if (i == 0) {
+                do {
+                    takeFirstReceiveOrPeekClosed = takeFirstReceiveOrPeekClosed();
+                    if (takeFirstReceiveOrPeekClosed != null) {
+                        if (takeFirstReceiveOrPeekClosed instanceof Closed) {
+                            this.size = i;
+                            Intrinsics.checkNotNull(takeFirstReceiveOrPeekClosed);
+                            reentrantLock.unlock();
+                            return takeFirstReceiveOrPeekClosed;
+                        }
+                        Intrinsics.checkNotNull(takeFirstReceiveOrPeekClosed);
+                        tryResumeReceive = takeFirstReceiveOrPeekClosed.tryResumeReceive(e, null);
+                    }
+                } while (tryResumeReceive == null);
+                if (DebugKt.getASSERTIONS_ENABLED()) {
+                    if (!(tryResumeReceive == CancellableContinuationImplKt.RESUME_TOKEN)) {
+                        throw new AssertionError();
+                    }
+                }
+                this.size = i;
+                Unit unit = Unit.INSTANCE;
+                reentrantLock.unlock();
+                Intrinsics.checkNotNull(takeFirstReceiveOrPeekClosed);
+                takeFirstReceiveOrPeekClosed.completeResumeReceive(e);
+                Intrinsics.checkNotNull(takeFirstReceiveOrPeekClosed);
+                return takeFirstReceiveOrPeekClosed.getOfferResult();
+            }
+            enqueueElement(i, e);
+            Symbol symbol = AbstractChannelKt.OFFER_SUCCESS;
             reentrantLock.unlock();
-            return obj2;
+            return symbol;
         } finally {
             reentrantLock.unlock();
         }
@@ -165,51 +174,44 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
             if (closedForSend != null) {
                 return closedForSend;
             }
-            if (i < this.capacity) {
-                this.size = i + 1;
-                if (i == 0) {
-                    do {
-                        AbstractSendChannel.TryOfferDesc<E> describeTryOffer = describeTryOffer(e);
-                        performAtomicTrySelect = selectInstance.performAtomicTrySelect(describeTryOffer);
-                        if (performAtomicTrySelect == null) {
-                            this.size = i;
-                            ReceiveOrClosed receiveOrClosed = (ReceiveOrClosed) describeTryOffer.getResult();
-                            Unit unit = Unit.INSTANCE;
-                            reentrantLock.unlock();
-                            if (receiveOrClosed == null) {
-                                Intrinsics.throwNpe();
-                            }
-                            receiveOrClosed.completeResumeReceive(e);
-                            if (receiveOrClosed == null) {
-                                Intrinsics.throwNpe();
-                            }
-                            return receiveOrClosed.getOfferResult();
-                        } else if (performAtomicTrySelect == AbstractChannelKt.OFFER_FAILED) {
-                        }
-                    } while (performAtomicTrySelect == AtomicKt.RETRY_ATOMIC);
-                    if (performAtomicTrySelect == SelectKt.getALREADY_SELECTED() || (performAtomicTrySelect instanceof Closed)) {
-                        this.size = i;
-                        reentrantLock.unlock();
-                        return performAtomicTrySelect;
-                    }
-                    throw new IllegalStateException(("performAtomicTrySelect(describeTryOffer) returned " + performAtomicTrySelect).toString());
-                }
-                if (!selectInstance.trySelect()) {
-                    this.size = i;
-                    Object already_selected = SelectKt.getALREADY_SELECTED();
-                    reentrantLock.unlock();
-                    return already_selected;
-                }
-                ensureCapacity(i);
-                Object[] objArr = this.buffer;
-                objArr[(this.head + i) % objArr.length] = e;
-                Object obj = AbstractChannelKt.OFFER_SUCCESS;
+            Symbol updateBufferSize = updateBufferSize(i);
+            if (updateBufferSize != null) {
                 reentrantLock.unlock();
-                return obj;
+                return updateBufferSize;
             }
-            Object obj2 = AbstractChannelKt.OFFER_FAILED;
+            if (i == 0) {
+                do {
+                    AbstractSendChannel.TryOfferDesc<E> describeTryOffer = describeTryOffer(e);
+                    performAtomicTrySelect = selectInstance.performAtomicTrySelect(describeTryOffer);
+                    if (performAtomicTrySelect == null) {
+                        this.size = i;
+                        ReceiveOrClosed receiveOrClosed = (ReceiveOrClosed) describeTryOffer.getResult();
+                        Unit unit = Unit.INSTANCE;
+                        reentrantLock.unlock();
+                        Intrinsics.checkNotNull(receiveOrClosed);
+                        receiveOrClosed.completeResumeReceive(e);
+                        Intrinsics.checkNotNull(receiveOrClosed);
+                        return receiveOrClosed.getOfferResult();
+                    } else if (performAtomicTrySelect == AbstractChannelKt.OFFER_FAILED) {
+                    }
+                } while (performAtomicTrySelect == AtomicKt.RETRY_ATOMIC);
+                if (performAtomicTrySelect == SelectKt.getALREADY_SELECTED() || (performAtomicTrySelect instanceof Closed)) {
+                    this.size = i;
+                    reentrantLock.unlock();
+                    return performAtomicTrySelect;
+                }
+                throw new IllegalStateException(("performAtomicTrySelect(describeTryOffer) returned " + performAtomicTrySelect).toString());
+            }
+            if (!selectInstance.trySelect()) {
+                this.size = i;
+                Object already_selected = SelectKt.getALREADY_SELECTED();
+                reentrantLock.unlock();
+                return already_selected;
+            }
+            enqueueElement(i, e);
+            Symbol symbol = AbstractChannelKt.OFFER_SUCCESS;
             reentrantLock.unlock();
-            return obj2;
+            return symbol;
         } finally {
             reentrantLock.unlock();
         }
@@ -226,14 +228,53 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
         }
     }
 
+    private final Symbol updateBufferSize(int i) {
+        if (i < this.capacity) {
+            this.size = i + 1;
+            return null;
+        }
+        int i2 = WhenMappings.$EnumSwitchMapping$0[this.onBufferOverflow.ordinal()];
+        if (i2 == 1) {
+            return AbstractChannelKt.OFFER_FAILED;
+        }
+        if (i2 == 2) {
+            return AbstractChannelKt.OFFER_SUCCESS;
+        }
+        if (i2 == 3) {
+            return null;
+        }
+        throw new NoWhenBranchMatchedException();
+    }
+
+    private final void enqueueElement(int i, E e) {
+        if (i < this.capacity) {
+            ensureCapacity(i);
+            Object[] objArr = this.buffer;
+            objArr[(this.head + i) % objArr.length] = e;
+            return;
+        }
+        if (DebugKt.getASSERTIONS_ENABLED()) {
+            if (!(this.onBufferOverflow == BufferOverflow.DROP_OLDEST)) {
+                throw new AssertionError();
+            }
+        }
+        Object[] objArr2 = this.buffer;
+        int i2 = this.head;
+        objArr2[i2 % objArr2.length] = null;
+        objArr2[(i + i2) % objArr2.length] = e;
+        this.head = (i2 + 1) % objArr2.length;
+    }
+
     private final void ensureCapacity(int i) {
         Object[] objArr = this.buffer;
         if (i >= objArr.length) {
-            Object[] objArr2 = new Object[Math.min(objArr.length * 2, this.capacity)];
+            int min = Math.min(objArr.length * 2, this.capacity);
+            Object[] objArr2 = new Object[min];
             for (int i2 = 0; i2 < i; i2++) {
                 Object[] objArr3 = this.buffer;
                 objArr2[i2] = objArr3[(this.head + i2) % objArr3.length];
             }
+            ArraysKt.fill((Symbol[]) objArr2, AbstractChannelKt.EMPTY, i, min);
             this.buffer = objArr2;
             this.head = 0;
         }
@@ -266,9 +307,7 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
                     if (takeFirstSendOrPeekClosed == null) {
                         break;
                     }
-                    if (takeFirstSendOrPeekClosed == null) {
-                        Intrinsics.throwNpe();
-                    }
+                    Intrinsics.checkNotNull(takeFirstSendOrPeekClosed);
                     Symbol tryResumeSend = takeFirstSendOrPeekClosed.tryResumeSend(null);
                     if (tryResumeSend != null) {
                         if (DebugKt.getASSERTIONS_ENABLED()) {
@@ -279,13 +318,13 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
                                 throw new AssertionError();
                             }
                         }
-                        if (takeFirstSendOrPeekClosed == null) {
-                            Intrinsics.throwNpe();
-                        }
+                        Intrinsics.checkNotNull(takeFirstSendOrPeekClosed);
                         obj2 = takeFirstSendOrPeekClosed.getPollResult();
                         send = takeFirstSendOrPeekClosed;
                         z = true;
                     } else {
+                        Intrinsics.checkNotNull(takeFirstSendOrPeekClosed);
+                        takeFirstSendOrPeekClosed.undeliveredElement();
                         send = takeFirstSendOrPeekClosed;
                     }
                 }
@@ -299,9 +338,7 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
             Unit unit = Unit.INSTANCE;
             reentrantLock.unlock();
             if (z) {
-                if (send == null) {
-                    Intrinsics.throwNpe();
-                }
+                Intrinsics.checkNotNull(send);
                 send.completeResumeSend();
             }
             return obj;
@@ -310,11 +347,11 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:40:0x00ab  */
-    /* JADX WARNING: Removed duplicated region for block: B:44:0x00cb  */
+    /* JADX WARNING: Code restructure failed: missing block: B:15:0x004a, code lost:
+        r4 = true;
+     */
     @Override // kotlinx.coroutines.channels.AbstractChannel
     protected Object pollSelectInternal(SelectInstance<?> selectInstance) {
-        boolean z;
         Send send = null;
         ReentrantLock reentrantLock = this.lock;
         reentrantLock.lock();
@@ -332,17 +369,16 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
             Object obj = objArr[i2];
             objArr[i2] = null;
             this.size = i - 1;
-            Object obj2 = AbstractChannelKt.POLL_FAILED;
+            Symbol symbol = AbstractChannelKt.POLL_FAILED;
             if (i == this.capacity) {
                 while (true) {
                     AbstractChannel.TryPollDesc<E> describeTryPoll = describeTryPoll();
                     Object performAtomicTrySelect = selectInstance.performAtomicTrySelect(describeTryPoll);
                     if (performAtomicTrySelect == null) {
                         send = (Send) describeTryPoll.getResult();
-                        if (send == null) {
-                            Intrinsics.throwNpe();
-                        }
-                        obj2 = send.getPollResult();
+                        Intrinsics.checkNotNull(send);
+                        symbol = send.getPollResult();
+                        break;
                     } else if (performAtomicTrySelect == AbstractChannelKt.POLL_FAILED) {
                         break;
                     } else if (performAtomicTrySelect != AtomicKt.RETRY_ATOMIC) {
@@ -353,44 +389,31 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
                             return performAtomicTrySelect;
                         } else if (performAtomicTrySelect instanceof Closed) {
                             send = (Send) performAtomicTrySelect;
-                            obj2 = performAtomicTrySelect;
+                            symbol = performAtomicTrySelect;
                         } else {
                             throw new IllegalStateException(("performAtomicTrySelect(describeTryOffer) returned " + performAtomicTrySelect).toString());
                         }
                     }
                 }
-                z = true;
-                if (obj2 == AbstractChannelKt.POLL_FAILED && !(obj2 instanceof Closed)) {
-                    this.size = i;
-                    Object[] objArr2 = this.buffer;
-                    objArr2[(this.head + i) % objArr2.length] = obj2;
-                } else if (!selectInstance.trySelect()) {
-                    this.size = i;
-                    this.buffer[this.head] = obj;
-                    Object already_selected = SelectKt.getALREADY_SELECTED();
-                    reentrantLock.unlock();
-                    return already_selected;
-                }
-                this.head = (this.head + 1) % this.buffer.length;
-                Unit unit = Unit.INSTANCE;
+            }
+            boolean z = false;
+            if (symbol != AbstractChannelKt.POLL_FAILED && !(symbol instanceof Closed)) {
+                this.size = i;
+                Object[] objArr2 = this.buffer;
+                objArr2[(this.head + i) % objArr2.length] = symbol;
+            } else if (!selectInstance.trySelect()) {
+                this.size = i;
+                this.buffer[this.head] = obj;
+                Object already_selected = SelectKt.getALREADY_SELECTED();
                 reentrantLock.unlock();
-                if (z) {
-                    if (send == null) {
-                        Intrinsics.throwNpe();
-                    }
-                    send.completeResumeSend();
-                }
-                return obj;
-            }
-            z = false;
-            if (obj2 == AbstractChannelKt.POLL_FAILED) {
-            }
-            if (!selectInstance.trySelect()) {
+                return already_selected;
             }
             this.head = (this.head + 1) % this.buffer.length;
             Unit unit = Unit.INSTANCE;
             reentrantLock.unlock();
             if (z) {
+                Intrinsics.checkNotNull(send);
+                send.completeResumeSend();
             }
             return obj;
         } finally {
@@ -409,24 +432,34 @@ public class ArrayChannel<E> extends AbstractChannel<E> {
         }
     }
 
+    /* JADX INFO: finally extract failed */
     @Override // kotlinx.coroutines.channels.AbstractChannel
     protected void onCancelIdempotent(boolean z) {
-        if (z) {
-            ReentrantLock reentrantLock = this.lock;
-            reentrantLock.lock();
-            try {
-                int i = this.size;
-                for (int i2 = 0; i2 < i; i2++) {
-                    this.buffer[this.head] = 0;
-                    this.head = (this.head + 1) % this.buffer.length;
+        Function1 function1 = this.onUndeliveredElement;
+        UndeliveredElementException undeliveredElementException = null;
+        ReentrantLock reentrantLock = this.lock;
+        reentrantLock.lock();
+        try {
+            int i = this.size;
+            for (int i2 = 0; i2 < i; i2++) {
+                Object obj = this.buffer[this.head];
+                if (!(function1 == null || obj == AbstractChannelKt.EMPTY)) {
+                    undeliveredElementException = OnUndeliveredElementKt.callUndeliveredElementCatchingException(function1, obj, undeliveredElementException);
                 }
-                this.size = 0;
-                Unit unit = Unit.INSTANCE;
-            } finally {
-                reentrantLock.unlock();
+                this.buffer[this.head] = AbstractChannelKt.EMPTY;
+                this.head = (this.head + 1) % this.buffer.length;
             }
+            this.size = 0;
+            Unit unit = Unit.INSTANCE;
+            reentrantLock.unlock();
+            super.onCancelIdempotent(z);
+            if (undeliveredElementException != null) {
+                throw undeliveredElementException;
+            }
+        } catch (Throwable th) {
+            reentrantLock.unlock();
+            throw th;
         }
-        super.onCancelIdempotent(z);
     }
 
     @Override // kotlinx.coroutines.channels.AbstractSendChannel

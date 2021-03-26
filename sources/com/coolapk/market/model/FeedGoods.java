@@ -42,6 +42,9 @@ public abstract class FeedGoods implements Entity {
         return "goods";
     }
 
+    @SerializedName("fromApi")
+    public abstract int getFromApi();
+
     @Override // com.coolapk.market.model.Entity
     @SerializedName("id")
     public abstract String getId();

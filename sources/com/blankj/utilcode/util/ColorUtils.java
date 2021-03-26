@@ -77,7 +77,7 @@ public final class ColorUtils {
         return (z ? ((int) (Math.random() * 256.0d)) << 24 : -16777216) | ((int) (Math.random() * 1.6777216E7d));
     }
 
-    public boolean isLightColor(int i) {
+    public static boolean isLightColor(int i) {
         return ((((double) Color.red(i)) * 0.299d) + (((double) Color.green(i)) * 0.587d)) + (((double) Color.blue(i)) * 0.114d) >= 127.5d;
     }
 }

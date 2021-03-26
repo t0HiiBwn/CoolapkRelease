@@ -44,17 +44,17 @@ public final class EntityItemActionUtils$tabGroupCard$1 extends ItemActionHandle
             Intrinsics.checkNotNull(entities);
             GridCard gridCard = entities.get(preferencesInt);
             switch (view.getId()) {
-                case 2131362970:
+                case 2131362982:
                     Intrinsics.checkNotNullExpressionValue(gridCard, "gridCard");
                     ActionManagerCompat.startActivityByUrl(this.$activity, gridCard.getUrl(), gridCard.getTitle(), gridCard.getSubTitle());
                     return;
-                case 2131363483:
+                case 2131363501:
                     DataManager instance = DataManager.getInstance();
                     Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
                     instance.getPreferencesEditor().putInt("TAB_GROUP_CARD_INDEX", 0);
                     this.$fragment.getAdapter$presentation_coolapkAppRelease().notifyItemChanged(viewHolder.getAdapterPosition());
                     return;
-                case 2131363484:
+                case 2131363502:
                     DataManager instance2 = DataManager.getInstance();
                     Intrinsics.checkNotNullExpressionValue(instance2, "DataManager.getInstance()");
                     instance2.getPreferencesEditor().putInt("TAB_GROUP_CARD_INDEX", 1);
@@ -69,7 +69,7 @@ public final class EntityItemActionUtils$tabGroupCard$1 extends ItemActionHandle
                     Intrinsics.checkNotNull(entities2);
                     ServiceApp serviceApp = entities2.get(intValue);
                     int id = view.getId();
-                    if (id == 2131361876) {
+                    if (id == 2131361877) {
                         UpgradeInfo upgradeInfo = null;
                         DataManager instance3 = DataManager.getInstance();
                         Intrinsics.checkNotNullExpressionValue(serviceApp, "serviceApp");
@@ -85,8 +85,8 @@ public final class EntityItemActionUtils$tabGroupCard$1 extends ItemActionHandle
                         strArr[3] = upgradeInfo != null ? upgradeInfo.getDownloadUrlMd5(1) : null;
                         StateUtils.handleClick(this.$activity, targetUrl.downloadKeys(strArr).build(), null);
                         return;
-                    } else if (id == 2131362768) {
-                        View findViewById = view.findViewById(2131362672);
+                    } else if (id == 2131362779) {
+                        View findViewById = view.findViewById(2131362683);
                         Intrinsics.checkNotNullExpressionValue(serviceApp, "serviceApp");
                         ActionManager.startAppViewActivity(this.$activity, findViewById, serviceApp.getPackageName(), serviceApp.getLogo(), serviceApp.getAppName(), serviceApp.getExtraAnalysisData(), serviceApp.getRequestContext(), serviceApp.getExtraFromApi());
                         ActionManagerCompat.startActivityByUrl(this.$activity, gridCard.getUrl(), gridCard.getTitle(), gridCard.getSubTitle());

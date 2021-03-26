@@ -21,6 +21,6 @@ final class FeedEntranceV8Activity$onCreate$3$1$2 extends Lambda implements Func
 
     public final Object invoke(List<FeedEntranceV8Activity.EntranceItem> list) {
         Intrinsics.checkNotNullParameter(list, "it");
-        return Boolean.valueOf(this.$this_apply.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Album, "应用集", Color.parseColor("#EF5350"), 2131231681, false, 16, null)));
+        return Boolean.valueOf(this.$this_apply.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Album, "应用集", Color.parseColor("#EF5350"), 2131231692, false, 16, null)));
     }
 }

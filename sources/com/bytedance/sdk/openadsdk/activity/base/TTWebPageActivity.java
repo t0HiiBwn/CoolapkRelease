@@ -116,9 +116,7 @@ public class TTWebPageActivity extends Activity implements d {
     private ImageView i;
     private ImageView j;
     private TextView k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private TextView f1290l;
+    private TextView l;
     private TextView m;
     private TextView n;
     private TextView o;
@@ -469,13 +467,13 @@ public class TTWebPageActivity extends Activity implements d {
             });
         }
         this.k = (TextView) findViewById(ac.e(this, "tt_titlebar_title"));
-        this.f1290l = (TextView) findViewById(ac.e(this, "tt_titlebar_dislike"));
+        this.l = (TextView) findViewById(ac.e(this, "tt_titlebar_dislike"));
         this.m = (TextView) findViewById(ac.e(this, "tt_titlebar_developer"));
         this.n = (TextView) findViewById(ac.e(this, "tt_titlebar_app_name"));
         this.o = (TextView) findViewById(ac.e(this, "tt_titlebar_app_detail"));
         this.p = (TextView) findViewById(ac.e(this, "tt_titlebar_app_privacy"));
         this.q = (LinearLayout) findViewById(ac.e(this, "tt_titlebar_detail_layout"));
-        TextView textView = this.f1290l;
+        TextView textView = this.l;
         if (textView != null) {
             textView.setOnClickListener(new View.OnClickListener() {
                 /* class com.bytedance.sdk.openadsdk.activity.base.TTWebPageActivity.AnonymousClass3 */

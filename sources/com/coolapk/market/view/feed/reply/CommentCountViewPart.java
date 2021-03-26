@@ -55,7 +55,7 @@ public final class CommentCountViewPart extends BindingViewPart<FeedCommentCount
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public FeedCommentCountViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558556, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558559, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…w_part, viewGroup, false)");
         return (FeedCommentCountViewPartBinding) inflate;
     }

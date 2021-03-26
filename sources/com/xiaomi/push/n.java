@@ -1,27 +1,27 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import android.preference.PreferenceManager;
-import java.util.Map;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+import com.xiaomi.push.m;
 
-public abstract class n {
-    public static void a(Context context) {
+class n extends Handler {
+    final /* synthetic */ m a;
+
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    n(m mVar, Looper looper) {
+        super(looper);
+        this.a = mVar;
     }
 
-    public static void a(Context context, String str, boolean z) {
-        a(context);
-        PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(str, z).commit();
-    }
-
-    public static void a(Map<String, String> map, String str, String str2) {
-        if (map != null && str != null && str2 != null) {
-            map.put(str, str2);
+    @Override // android.os.Handler
+    public void handleMessage(Message message) {
+        m.b bVar = (m.b) message.obj;
+        if (message.what == 0) {
+            bVar.a();
+        } else if (message.what == 1) {
+            bVar.c();
         }
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public static boolean m572a(Context context, String str, boolean z) {
-        a(context);
-        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean(str, z);
+        super.handleMessage(message);
     }
 }

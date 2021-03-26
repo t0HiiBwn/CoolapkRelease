@@ -18,6 +18,14 @@ public class WildcardFilter extends AbstractFileFilter implements Serializable {
         throw new IllegalArgumentException("The wildcard must not be null");
     }
 
+    public WildcardFilter(List<String> list) {
+        if (list != null) {
+            this.wildcards = (String[]) list.toArray(new String[list.size()]);
+            return;
+        }
+        throw new IllegalArgumentException("The wildcard list must not be null");
+    }
+
     public WildcardFilter(String[] strArr) {
         if (strArr != null) {
             String[] strArr2 = new String[strArr.length];
@@ -28,12 +36,17 @@ public class WildcardFilter extends AbstractFileFilter implements Serializable {
         throw new IllegalArgumentException("The wildcard array must not be null");
     }
 
-    public WildcardFilter(List<String> list) {
-        if (list != null) {
-            this.wildcards = (String[]) list.toArray(new String[list.size()]);
-            return;
+    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
+    public boolean accept(File file) {
+        if (file.isDirectory()) {
+            return false;
         }
-        throw new IllegalArgumentException("The wildcard list must not be null");
+        for (String str : this.wildcards) {
+            if (FilenameUtils.wildcardMatch(file.getName(), str)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FilenameFilter
@@ -43,19 +56,6 @@ public class WildcardFilter extends AbstractFileFilter implements Serializable {
         }
         for (String str2 : this.wildcards) {
             if (FilenameUtils.wildcardMatch(str, str2)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
-    public boolean accept(File file) {
-        if (file.isDirectory()) {
-            return false;
-        }
-        for (String str : this.wildcards) {
-            if (FilenameUtils.wildcardMatch(file.getName(), str)) {
                 return true;
             }
         }

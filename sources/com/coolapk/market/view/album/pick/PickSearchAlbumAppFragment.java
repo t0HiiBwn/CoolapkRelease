@@ -82,11 +82,11 @@ public class PickSearchAlbumAppFragment extends StateEventListFragment<Result<Li
     @Override // com.coolapk.market.view.base.asynclist.AsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        setEmptyData(getString(2131886764), 0);
+        setEmptyData(getString(2131886826), 0);
         this.commitApps = ((AlbumPickAppTabActivity) getActivity()).getCommitApps();
         setAdapter(new DataAdapter(this));
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558856, 2131231052).type(2131558917, 2131231056).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558863, 2131231062).type(2131558924, 2131231066).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         if (getUserVisibleHint()) {
@@ -132,7 +132,7 @@ public class PickSearchAlbumAppFragment extends StateEventListFragment<Result<Li
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-            if (i == 2131558856) {
+            if (i == 2131558863) {
                 return new ServicePickAppViewHolder(inflate, this.component, PickSearchAlbumAppFragment.this.commitApps, new ItemActionHandler() {
                     /* class com.coolapk.market.view.album.pick.PickSearchAlbumAppFragment.DataAdapter.AnonymousClass1 */
 
@@ -140,7 +140,7 @@ public class PickSearchAlbumAppFragment extends StateEventListFragment<Result<Li
                     public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                         if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition())) {
                             Entity entity = (Entity) PickSearchAlbumAppFragment.this.getDataList().get(viewHolder.getAdapterPosition());
-                            if (view.getId() == 2131362768 && EntityUtils.isApkType(entity.getEntityType())) {
+                            if (view.getId() == 2131362779 && EntityUtils.isApkType(entity.getEntityType())) {
                                 ServiceApp serviceApp = (ServiceApp) entity;
                                 AlbumItem createAlbumItemBySapp = AlbumItem.createAlbumItemBySapp(serviceApp);
                                 PickSearchAlbumAppFragment.this.commitApps.put(serviceApp.getPackageName(), createAlbumItemBySapp);
@@ -158,7 +158,7 @@ public class PickSearchAlbumAppFragment extends StateEventListFragment<Result<Li
                     }
                 };
             }
-            if (i == 2131558917) {
+            if (i == 2131558924) {
                 return new SearchViewHolder(inflate, null, null);
             }
             throw new RuntimeException("xxx");
@@ -178,17 +178,17 @@ public class PickSearchAlbumAppFragment extends StateEventListFragment<Result<Li
             String entityType = ((Entity) PickSearchAlbumAppFragment.this.getDataList().get(i)).getEntityType();
             entityType.hashCode();
             if (entityType.equals("holder type search")) {
-                return 2131558917;
+                return 2131558924;
             }
             if (entityType.equals("apk")) {
-                return 2131558856;
+                return 2131558863;
             }
             throw new RuntimeException("error");
         }
     }
 
     public class SearchViewHolder extends GenericBindHolder<ItemSearchViewBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558917;
+        public static final int LAYOUT_ID = 2131558924;
 
         public SearchViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);

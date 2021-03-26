@@ -65,26 +65,26 @@ public class u {
     }
 
     public void b(String str) {
-        Long l2;
+        Long l;
         Context appContext;
         if (TextUtils.isEmpty(str)) {
             return;
         }
         if (this.f.containsKey(str)) {
             synchronized (this.f) {
-                l2 = this.f.get(str);
+                l = this.f.get(str);
             }
-            if (l2 != null) {
+            if (l != null) {
                 if (UMConfigure.isDebugLog() && this.a.size() > 0 && str.equals(this.a.peek())) {
                     this.a.pop();
                 }
-                long currentTimeMillis = System.currentTimeMillis() - l2.longValue();
+                long currentTimeMillis = System.currentTimeMillis() - l.longValue();
                 synchronized (e) {
                     try {
                         JSONObject jSONObject = new JSONObject();
                         jSONObject.put("page_name", str);
                         jSONObject.put("duration", currentTimeMillis);
-                        jSONObject.put("page_start", l2);
+                        jSONObject.put("page_start", l);
                         jSONObject.put("type", a());
                         d.put(jSONObject);
                         if (d.length() >= 5 && (appContext = UMGlobalContext.getAppContext(null)) != null) {

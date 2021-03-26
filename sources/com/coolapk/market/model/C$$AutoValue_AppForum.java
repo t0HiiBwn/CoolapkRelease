@@ -41,7 +41,7 @@ abstract class C$$AutoValue_AppForum extends AppForum {
     private final int versionCode;
     private final String versionName;
 
-    C$$AutoValue_AppForum(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, String str12, int i, String str13, String str14, String str15, int i2, int i3, String str16, String str17, String str18, String str19, String str20, String str21, int i4, UserAction userAction2, int i5, String str22, String str23, List<String> list, List<String> list2) {
+    C$$AutoValue_AppForum(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, String str12, int i, String str13, String str14, String str15, int i2, int i3, String str16, String str17, String str18, String str19, String str20, String str21, int i4, UserAction userAction2, int i5, String str22, String str23, List<String> list, List<String> list2) {
         this.getEntityTemplate = str;
         this.getEntityId = str2;
         this.getEntityFixed = num;
@@ -53,8 +53,8 @@ abstract class C$$AutoValue_AppForum extends AppForum {
         this.getSubTitle = str8;
         this.getId = str9;
         this.getExtraData = str10;
-        this.getDateline = l2;
-        this.getLastUpdate = l3;
+        this.getDateline = l;
+        this.getLastUpdate = l2;
         Objects.requireNonNull(str11, "Null getTargetId");
         this.getTargetId = str11;
         Objects.requireNonNull(str12, "Null appName");
@@ -322,10 +322,10 @@ abstract class C$$AutoValue_AppForum extends AppForum {
                                             if (str16 != null ? str16.equals(appForum.getId()) : appForum.getId() == null) {
                                                 String str17 = this.getExtraData;
                                                 if (str17 != null ? str17.equals(appForum.getExtraData()) : appForum.getExtraData() == null) {
-                                                    Long l2 = this.getDateline;
-                                                    if (l2 != null ? l2.equals(appForum.getDateline()) : appForum.getDateline() == null) {
-                                                        Long l3 = this.getLastUpdate;
-                                                        if (l3 != null ? l3.equals(appForum.getLastUpdate()) : appForum.getLastUpdate() == null) {
+                                                    Long l = this.getDateline;
+                                                    if (l != null ? l.equals(appForum.getDateline()) : appForum.getDateline() == null) {
+                                                        Long l2 = this.getLastUpdate;
+                                                        if (l2 != null ? l2.equals(appForum.getLastUpdate()) : appForum.getLastUpdate() == null) {
                                                             if (this.getTargetId.equals(appForum.getTargetId()) && this.appName.equals(appForum.appName()) && this.apkType == appForum.apkType() && this.apkName.equals(appForum.apkName()) && ((str = this.apkSize) != null ? str.equals(appForum.apkSize()) : appForum.apkSize() == null) && this.versionName.equals(appForum.versionName()) && this.versionCode == appForum.versionCode() && this.supportAndroidVersion == appForum.supportAndroidVersion() && ((str2 = this.extendFile) != null ? str2.equals(appForum.extendFile()) : appForum.extendFile() == null) && this.followCount.equals(appForum.followCount()) && ((str3 = this.downCount) != null ? str3.equals(appForum.downCount()) : appForum.downCount() == null) && this.commentCount.equals(appForum.commentCount()) && ((str4 = this.packageName) != null ? str4.equals(appForum.packageName()) : appForum.packageName() == null) && ((str5 = this.appUrl) != null ? str5.equals(appForum.appUrl()) : appForum.appUrl() == null) && this.is_download_app == appForum.is_download_app() && ((userAction2 = this.userAction) != null ? userAction2.equals(appForum.userAction()) : appForum.userAction() == null) && this.commentBlockNum == appForum.commentBlockNum() && ((str6 = this.extraAnalysisData) != null ? str6.equals(appForum.extraAnalysisData()) : appForum.extraAnalysisData() == null) && ((str7 = this.introduce) != null ? str7.equals(appForum.introduce()) : appForum.introduce() == null) && ((list = this.thumbList) != null ? list.equals(appForum.thumbList()) : appForum.thumbList() == null)) {
                                                                 List<String> list2 = this.screenList;
                                                                 if (list2 == null) {
@@ -377,10 +377,10 @@ abstract class C$$AutoValue_AppForum extends AppForum {
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.getExtraData;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.getDateline;
-        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.getLastUpdate;
-        int hashCode13 = (((((((((hashCode12 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003) ^ this.getTargetId.hashCode()) * 1000003) ^ this.appName.hashCode()) * 1000003) ^ this.apkType) * 1000003) ^ this.apkName.hashCode()) * 1000003;
+        Long l = this.getDateline;
+        int hashCode12 = (hashCode11 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.getLastUpdate;
+        int hashCode13 = (((((((((hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003) ^ this.getTargetId.hashCode()) * 1000003) ^ this.appName.hashCode()) * 1000003) ^ this.apkType) * 1000003) ^ this.apkName.hashCode()) * 1000003;
         String str11 = this.apkSize;
         int hashCode14 = (((((((hashCode13 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003) ^ this.versionName.hashCode()) * 1000003) ^ this.versionCode) * 1000003) ^ this.supportAndroidVersion) * 1000003;
         String str12 = this.extendFile;

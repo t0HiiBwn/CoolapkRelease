@@ -99,10 +99,10 @@ public class d {
         return i;
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:45:0x0101, code lost:
-        if (r2 == null) goto L_0x0106;
+    /* JADX WARNING: Code restructure failed: missing block: B:45:0x0104, code lost:
+        if (r2 == null) goto L_0x0109;
      */
-    /* JADX WARNING: Removed duplicated region for block: B:41:0x00dd A[Catch:{ IOException -> 0x00de, all -> 0x00b8, all -> 0x0108 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:41:0x00df A[Catch:{ IOException -> 0x00e0, all -> 0x00b9, all -> 0x010b }] */
     public static boolean b(Context context, String str, String str2, byte[] bArr) {
         boolean z;
         IOException e;

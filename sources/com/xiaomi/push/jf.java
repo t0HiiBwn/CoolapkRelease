@@ -1,53 +1,32 @@
 package com.xiaomi.push;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import com.xiaomi.a.a.a.c;
+import java.io.File;
+import java.util.HashMap;
 
-public class jf extends ji {
-    protected InputStream a = null;
+public class jf {
+    private static final HashMap<String, String> a;
 
-    /* renamed from: a  reason: collision with other field name */
-    protected OutputStream f883a = null;
-
-    protected jf() {
+    static {
+        HashMap<String, String> hashMap = new HashMap<>();
+        a = hashMap;
+        hashMap.put("FFD8FF", "jpg");
+        hashMap.put("89504E47", "png");
+        hashMap.put("47494638", "gif");
+        hashMap.put("474946", "gif");
+        hashMap.put("424D", "bmp");
     }
 
-    public jf(OutputStream outputStream) {
-        this.f883a = outputStream;
-    }
-
-    @Override // com.xiaomi.push.ji
-    /* renamed from: a */
-    public int mo561a(byte[] bArr, int i, int i2) {
-        InputStream inputStream = this.a;
-        if (inputStream != null) {
-            try {
-                int read = inputStream.read(bArr, i, i2);
-                if (read >= 0) {
-                    return read;
-                }
-                throw new jj(4);
-            } catch (IOException e) {
-                throw new jj(0, e);
+    public static long a(File file) {
+        long j = 0;
+        try {
+            File[] listFiles = file.listFiles();
+            for (int i = 0; i < listFiles.length; i++) {
+                j += listFiles[i].isDirectory() ? a(listFiles[i]) : listFiles[i].length();
             }
-        } else {
-            throw new jj(1, "Cannot read from null inputStream");
+        } catch (Exception e) {
+            c.a(e);
         }
-    }
-
-    @Override // com.xiaomi.push.ji
-    /* renamed from: a  reason: collision with other method in class */
-    public void mo561a(byte[] bArr, int i, int i2) {
-        OutputStream outputStream = this.f883a;
-        if (outputStream != null) {
-            try {
-                outputStream.write(bArr, i, i2);
-            } catch (IOException e) {
-                throw new jj(0, e);
-            }
-        } else {
-            throw new jj(1, "Cannot write to null outputStream");
-        }
+        return j;
     }
 }

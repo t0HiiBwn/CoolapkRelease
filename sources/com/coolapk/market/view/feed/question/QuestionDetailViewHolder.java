@@ -42,7 +42,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: QuestionDetailViewHolder.kt */
 public final class QuestionDetailViewHolder extends GenericBindHolder<ItemQuestionDetailViewBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558885;
+    public static final int LAYOUT_ID = 2131558892;
     private final Lazy extraPart$delegate;
     private final QuestionPresenter presenter;
     private final Lazy relativeInfoViewPart$delegate = LazyKt.lazy(new QuestionDetailViewHolder$relativeInfoViewPart$2(this));
@@ -126,24 +126,24 @@ public final class QuestionDetailViewHolder extends GenericBindHolder<ItemQuesti
         frameLayout.requestLayout();
         TextView textView = ((ItemQuestionDetailViewBinding) getBinding()).countView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.countView");
-        textView.setText(getContext().getString(2131886594, Integer.valueOf(feed.getQuestionAnswerNum())));
+        textView.setText(getContext().getString(2131886656, Integer.valueOf(feed.getQuestionAnswerNum())));
         UserAction userAction = feed.getUserAction();
         if (userAction != null && userAction.getFollow() == 1) {
             z = true;
         }
         setFollowQuestionState(z, feed.getQuestionFollowNum());
         String order = this.presenter.getOrder();
-        int i = 2131886548;
+        int i = 2131886610;
         switch (order.hashCode()) {
             case 3321751:
                 if (order.equals("like")) {
-                    i = 2131886549;
+                    i = 2131886611;
                     break;
                 }
                 break;
             case 93832333:
                 if (order.equals("block")) {
-                    i = 2131887132;
+                    i = 2131887194;
                     break;
                 }
                 break;
@@ -152,7 +152,7 @@ public final class QuestionDetailViewHolder extends GenericBindHolder<ItemQuesti
                 break;
             case 1793464482:
                 if (order.equals("dateline")) {
-                    i = 2131886547;
+                    i = 2131886609;
                     break;
                 }
                 break;
@@ -173,7 +173,7 @@ public final class QuestionDetailViewHolder extends GenericBindHolder<ItemQuesti
         TextView textView2 = ((ItemQuestionDetailViewBinding) getBinding()).textView;
         Intrinsics.checkNotNullExpressionValue(textView2, "binding.textView");
         String message = feed.getMessage();
-        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886656));
+        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886718));
         spannableStringBuilder.setSpan(new ForegroundColorSpan(AppHolder.getAppTheme().getColorAccent()), 0, spannableStringBuilder.length(), 33);
         Unit unit = Unit.INSTANCE;
         ViewExtendsKt.setBriefMessage(textView2, 75, message, spannableStringBuilder);
@@ -228,15 +228,15 @@ public final class QuestionDetailViewHolder extends GenericBindHolder<ItemQuesti
         textView.setVisibility(z3 ? 8 : 0);
         TextView textView2 = ((ItemQuestionDetailViewBinding) getBinding()).followNumView;
         Intrinsics.checkNotNullExpressionValue(textView2, "binding.followNumView");
-        textView2.setText(getContext().getString(2131886814, Integer.valueOf(i)));
+        textView2.setText(getContext().getString(2131886876, Integer.valueOf(i)));
         if (z) {
             TextView textView3 = ((ItemQuestionDetailViewBinding) getBinding()).followView;
             Intrinsics.checkNotNullExpressionValue(textView3, "binding.followView");
             textView3.setText("已关注");
             TextView textView4 = ((ItemQuestionDetailViewBinding) getBinding()).followView;
             Intrinsics.checkNotNullExpressionValue(textView4, "binding.followView");
-            textView4.setBackgroundTintList(ColorStateList.valueOf(ResourceUtils.getColorInt(getContext(), 2131099911)));
-            ((ItemQuestionDetailViewBinding) getBinding()).followView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099891));
+            textView4.setBackgroundTintList(ColorStateList.valueOf(ResourceUtils.getColorInt(getContext(), 2131099916)));
+            ((ItemQuestionDetailViewBinding) getBinding()).followView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099896));
         } else {
             TextView textView5 = ((ItemQuestionDetailViewBinding) getBinding()).followView;
             Intrinsics.checkNotNullExpressionValue(textView5, "binding.followView");
@@ -244,7 +244,7 @@ public final class QuestionDetailViewHolder extends GenericBindHolder<ItemQuesti
             TextView textView6 = ((ItemQuestionDetailViewBinding) getBinding()).followView;
             Intrinsics.checkNotNullExpressionValue(textView6, "binding.followView");
             textView6.setBackgroundTintList(ColorStateList.valueOf(AppHolder.getAppTheme().getColorAccent()));
-            ((ItemQuestionDetailViewBinding) getBinding()).followView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099912));
+            ((ItemQuestionDetailViewBinding) getBinding()).followView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099917));
         }
         ((ItemQuestionDetailViewBinding) getBinding()).executePendingBindings();
     }
@@ -255,9 +255,9 @@ public final class QuestionDetailViewHolder extends GenericBindHolder<ItemQuesti
         Feed feed = this.presenter.getFeed();
         boolean z = false;
         switch (view.getId()) {
-            case 2131362200:
+            case 2131362205:
                 return;
-            case 2131362582:
+            case 2131362590:
                 Activity currentActivity = AppHolder.getCurrentActivity();
                 if (currentActivity != null) {
                     Boolean checkLogin = ActionManager.checkLogin(currentActivity);
@@ -281,7 +281,7 @@ public final class QuestionDetailViewHolder extends GenericBindHolder<ItemQuesti
                     return;
                 }
                 return;
-            case 2131362708:
+            case 2131362719:
                 List<RelatedData> userFollowList = feed.getUserFollowList();
                 Intrinsics.checkNotNullExpressionValue(userFollowList, "feed.userFollowList");
                 RelatedData relatedData = (RelatedData) CollectionsKt.getOrNull(userFollowList, 0);
@@ -290,7 +290,7 @@ public final class QuestionDetailViewHolder extends GenericBindHolder<ItemQuesti
                     return;
                 }
                 return;
-            case 2131362709:
+            case 2131362720:
                 List<RelatedData> userFollowList2 = feed.getUserFollowList();
                 Intrinsics.checkNotNullExpressionValue(userFollowList2, "feed.userFollowList");
                 RelatedData relatedData2 = (RelatedData) CollectionsKt.getOrNull(userFollowList2, 1);
@@ -299,7 +299,7 @@ public final class QuestionDetailViewHolder extends GenericBindHolder<ItemQuesti
                     return;
                 }
                 return;
-            case 2131362710:
+            case 2131362721:
                 List<RelatedData> userFollowList3 = feed.getUserFollowList();
                 Intrinsics.checkNotNullExpressionValue(userFollowList3, "feed.userFollowList");
                 RelatedData relatedData3 = (RelatedData) CollectionsKt.getOrNull(userFollowList3, 2);
@@ -308,15 +308,15 @@ public final class QuestionDetailViewHolder extends GenericBindHolder<ItemQuesti
                     return;
                 }
                 return;
-            case 2131362961:
+            case 2131362973:
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");
                 ActionManager.startFeedFollowerListActivity(UiUtils.getActivityNullable(context), feed.getId());
                 return;
-            case 2131363058:
+            case 2131363072:
                 this.presenter.showOrderPopMenu(view);
                 return;
-            case 2131363877:
+            case 2131363900:
                 ActionManager.startUserSpaceActivity(view, feed.getUid(), feed.getUserAvatar());
                 return;
             default:

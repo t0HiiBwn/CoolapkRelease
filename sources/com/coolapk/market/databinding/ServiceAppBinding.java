@@ -76,7 +76,7 @@ public abstract class ServiceAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ServiceAppBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ServiceAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558924, viewGroup, z, obj);
+        return (ServiceAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558931, viewGroup, z, obj);
     }
 
     public static ServiceAppBinding inflate(LayoutInflater layoutInflater) {
@@ -85,7 +85,7 @@ public abstract class ServiceAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ServiceAppBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ServiceAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558924, null, false, obj);
+        return (ServiceAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558931, null, false, obj);
     }
 
     public static ServiceAppBinding bind(View view) {
@@ -94,6 +94,6 @@ public abstract class ServiceAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ServiceAppBinding bind(View view, Object obj) {
-        return (ServiceAppBinding) bind(obj, view, 2131558924);
+        return (ServiceAppBinding) bind(obj, view, 2131558931);
     }
 }

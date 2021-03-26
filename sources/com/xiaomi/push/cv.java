@@ -1,94 +1,58 @@
 package com.xiaomi.push;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import android.content.Context;
+import android.text.TextUtils;
 
-class cv implements Comparable<cv> {
-    protected int a;
+public class cv extends cw {
+    public static String a = "";
+    public static String b = "";
 
-    /* renamed from: a  reason: collision with other field name */
-    private long f287a;
-
-    /* renamed from: a  reason: collision with other field name */
-    String f288a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private final LinkedList<cl> f289a;
-
-    public cv() {
-        this(null, 0);
+    public cv(Context context, int i) {
+        super(context, i);
     }
 
-    public cv(String str) {
-        this(str, 0);
-    }
-
-    public cv(String str, int i) {
-        this.f289a = new LinkedList<>();
-        this.f287a = 0;
-        this.f288a = str;
-        this.a = i;
-    }
-
-    /* renamed from: a */
-    public int compareTo(cv cvVar) {
-        if (cvVar == null) {
-            return 1;
+    private String a(String str, String str2) {
+        if (TextUtils.isEmpty(str) || TextUtils.isEmpty(str2)) {
+            return "";
         }
-        return cvVar.a - this.a;
-    }
-
-    public synchronized cv a(JSONObject jSONObject) {
-        this.f287a = jSONObject.getLong("tt");
-        this.a = jSONObject.getInt("wt");
-        this.f288a = jSONObject.getString("host");
-        JSONArray jSONArray = jSONObject.getJSONArray("ah");
-        for (int i = 0; i < jSONArray.length(); i++) {
-            this.f289a.add(new cl().a(jSONArray.getJSONObject(i)));
+        String[] split = str2.split(",");
+        if (split.length <= 10) {
+            return str2;
         }
-        return this;
-    }
-
-    public synchronized JSONObject a() {
-        JSONObject jSONObject;
-        jSONObject = new JSONObject();
-        jSONObject.put("tt", this.f287a);
-        jSONObject.put("wt", this.a);
-        jSONObject.put("host", this.f288a);
-        JSONArray jSONArray = new JSONArray();
-        Iterator<cl> it2 = this.f289a.iterator();
-        while (it2.hasNext()) {
-            jSONArray.put(it2.next().m175a());
-        }
-        jSONObject.put("ah", jSONArray);
-        return jSONObject;
-    }
-
-    protected synchronized void a(cl clVar) {
-        if (clVar != null) {
-            this.f289a.add(clVar);
-            int a2 = clVar.a();
-            if (a2 > 0) {
-                this.a += clVar.a();
-            } else {
-                int i = 0;
-                int size = this.f289a.size() - 1;
-                while (size >= 0 && this.f289a.get(size).a() < 0) {
-                    i++;
-                    size--;
-                }
-                this.a += a2 * i;
+        int length = split.length;
+        while (true) {
+            length--;
+            if (length < split.length - 10) {
+                return str;
             }
-            if (this.f289a.size() > 30) {
-                this.a -= this.f289a.remove().a();
-            }
+            str = str + split[length];
         }
     }
 
-    @Override // java.lang.Object
-    public String toString() {
-        return this.f288a + ":" + this.a;
+    @Override // com.xiaomi.push.j.a
+    public int a() {
+        return 12;
+    }
+
+    @Override // com.xiaomi.push.cw
+    public String b() {
+        String str;
+        if (!TextUtils.isEmpty(a)) {
+            str = "" + a(cn.b, a);
+            a = "";
+        } else {
+            str = "";
+        }
+        if (TextUtils.isEmpty(b)) {
+            return str;
+        }
+        String str2 = str + a(cn.c, b);
+        b = "";
+        return str2;
+    }
+
+    @Override // com.xiaomi.push.cw
+    public gk c() {
+        return gk.BroadcastAction;
     }
 }

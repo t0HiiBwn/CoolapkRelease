@@ -12,7 +12,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: NoMoreDataViewHolder.kt */
 public final class NoMoreDataViewHolder extends GenericBindHolder<ItemNoMoreDataViewBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558837;
+    public static final int LAYOUT_ID = 2131558844;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public NoMoreDataViewHolder(View view, ItemActionHandler itemActionHandler) {

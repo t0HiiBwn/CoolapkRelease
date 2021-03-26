@@ -30,7 +30,7 @@ public abstract class AppExtensionBarV3Binding extends ViewDataBinding {
 
     @Deprecated
     public static AppExtensionBarV3Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AppExtensionBarV3Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558458, viewGroup, z, obj);
+        return (AppExtensionBarV3Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558459, viewGroup, z, obj);
     }
 
     public static AppExtensionBarV3Binding inflate(LayoutInflater layoutInflater) {
@@ -39,7 +39,7 @@ public abstract class AppExtensionBarV3Binding extends ViewDataBinding {
 
     @Deprecated
     public static AppExtensionBarV3Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AppExtensionBarV3Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558458, null, false, obj);
+        return (AppExtensionBarV3Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558459, null, false, obj);
     }
 
     public static AppExtensionBarV3Binding bind(View view) {
@@ -48,6 +48,6 @@ public abstract class AppExtensionBarV3Binding extends ViewDataBinding {
 
     @Deprecated
     public static AppExtensionBarV3Binding bind(View view, Object obj) {
-        return (AppExtensionBarV3Binding) bind(obj, view, 2131558458);
+        return (AppExtensionBarV3Binding) bind(obj, view, 2131558459);
     }
 }

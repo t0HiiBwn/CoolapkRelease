@@ -14,20 +14,32 @@ public final class OptionBuilder {
     private OptionBuilder() {
     }
 
-    private static void reset() {
-        description = null;
-        argName = "arg";
-        longopt = null;
-        type = null;
-        required = false;
-        numberOfArgs = -1;
-        optionalArg = false;
-        valuesep = 0;
+    public static Option create() throws IllegalArgumentException {
+        if (longopt != null) {
+            return create((String) null);
+        }
+        reset();
+        throw new IllegalArgumentException("must specify longopt");
     }
 
-    public static OptionBuilder withLongOpt(String str) {
-        longopt = str;
-        return instance;
+    public static Option create(char c) throws IllegalArgumentException {
+        return create(String.valueOf(c));
+    }
+
+    public static Option create(String str) throws IllegalArgumentException {
+        try {
+            Option option = new Option(str, description);
+            option.setLongOpt(longopt);
+            option.setRequired(required);
+            option.setOptionalArg(optionalArg);
+            option.setArgs(numberOfArgs);
+            option.setType(type);
+            option.setValueSeparator(valuesep);
+            option.setArgName(argName);
+            return option;
+        } finally {
+            reset();
+        }
     }
 
     public static OptionBuilder hasArg() {
@@ -37,31 +49,6 @@ public final class OptionBuilder {
 
     public static OptionBuilder hasArg(boolean z) {
         numberOfArgs = z ? 1 : -1;
-        return instance;
-    }
-
-    public static OptionBuilder withArgName(String str) {
-        argName = str;
-        return instance;
-    }
-
-    public static OptionBuilder isRequired() {
-        required = true;
-        return instance;
-    }
-
-    public static OptionBuilder withValueSeparator(char c) {
-        valuesep = c;
-        return instance;
-    }
-
-    public static OptionBuilder withValueSeparator() {
-        valuesep = '=';
-        return instance;
-    }
-
-    public static OptionBuilder isRequired(boolean z) {
-        required = z;
         return instance;
     }
 
@@ -93,8 +80,29 @@ public final class OptionBuilder {
         return instance;
     }
 
-    public static OptionBuilder withType(Object obj) {
-        type = obj;
+    public static OptionBuilder isRequired() {
+        required = true;
+        return instance;
+    }
+
+    public static OptionBuilder isRequired(boolean z) {
+        required = z;
+        return instance;
+    }
+
+    private static void reset() {
+        description = null;
+        argName = "arg";
+        longopt = null;
+        type = null;
+        required = false;
+        numberOfArgs = -1;
+        optionalArg = false;
+        valuesep = 0;
+    }
+
+    public static OptionBuilder withArgName(String str) {
+        argName = str;
         return instance;
     }
 
@@ -103,31 +111,23 @@ public final class OptionBuilder {
         return instance;
     }
 
-    public static Option create(char c) throws IllegalArgumentException {
-        return create(String.valueOf(c));
+    public static OptionBuilder withLongOpt(String str) {
+        longopt = str;
+        return instance;
     }
 
-    public static Option create() throws IllegalArgumentException {
-        if (longopt != null) {
-            return create((String) null);
-        }
-        reset();
-        throw new IllegalArgumentException("must specify longopt");
+    public static OptionBuilder withType(Object obj) {
+        type = obj;
+        return instance;
     }
 
-    public static Option create(String str) throws IllegalArgumentException {
-        try {
-            Option option = new Option(str, description);
-            option.setLongOpt(longopt);
-            option.setRequired(required);
-            option.setOptionalArg(optionalArg);
-            option.setArgs(numberOfArgs);
-            option.setType(type);
-            option.setValueSeparator(valuesep);
-            option.setArgName(argName);
-            return option;
-        } finally {
-            reset();
-        }
+    public static OptionBuilder withValueSeparator() {
+        valuesep = '=';
+        return instance;
+    }
+
+    public static OptionBuilder withValueSeparator(char c) {
+        valuesep = c;
+        return instance;
     }
 }

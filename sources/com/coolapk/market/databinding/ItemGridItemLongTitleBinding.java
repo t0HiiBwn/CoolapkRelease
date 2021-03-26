@@ -58,7 +58,7 @@ public abstract class ItemGridItemLongTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemGridItemLongTitleBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemGridItemLongTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558770, viewGroup, z, obj);
+        return (ItemGridItemLongTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558777, viewGroup, z, obj);
     }
 
     public static ItemGridItemLongTitleBinding inflate(LayoutInflater layoutInflater) {
@@ -67,7 +67,7 @@ public abstract class ItemGridItemLongTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemGridItemLongTitleBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemGridItemLongTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558770, null, false, obj);
+        return (ItemGridItemLongTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558777, null, false, obj);
     }
 
     public static ItemGridItemLongTitleBinding bind(View view) {
@@ -76,6 +76,6 @@ public abstract class ItemGridItemLongTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemGridItemLongTitleBinding bind(View view, Object obj) {
-        return (ItemGridItemLongTitleBinding) bind(obj, view, 2131558770);
+        return (ItemGridItemLongTitleBinding) bind(obj, view, 2131558777);
     }
 }

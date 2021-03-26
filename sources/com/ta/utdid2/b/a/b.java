@@ -23,7 +23,7 @@ public interface b {
     }
 
     /* renamed from: com.ta.utdid2.b.a.b$b  reason: collision with other inner class name */
-    public interface AbstractC0117b {
+    public interface AbstractC0127b {
         void a(b bVar, String str);
     }
 

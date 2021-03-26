@@ -28,16 +28,16 @@ public class FeedEntranceV8BindingImpl extends FeedEntranceV8Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362686, 10);
-        sparseIntArray.put(2131363596, 11);
-        sparseIntArray.put(2131362257, 12);
-        sparseIntArray.put(2131363611, 13);
-        sparseIntArray.put(2131362836, 14);
-        sparseIntArray.put(2131362711, 15);
-        sparseIntArray.put(2131363397, 16);
-        sparseIntArray.put(2131362712, 17);
-        sparseIntArray.put(2131363255, 18);
-        sparseIntArray.put(2131363221, 19);
+        sparseIntArray.put(2131362697, 10);
+        sparseIntArray.put(2131363618, 11);
+        sparseIntArray.put(2131362262, 12);
+        sparseIntArray.put(2131363633, 13);
+        sparseIntArray.put(2131362847, 14);
+        sparseIntArray.put(2131362722, 15);
+        sparseIntArray.put(2131363414, 16);
+        sparseIntArray.put(2131362723, 17);
+        sparseIntArray.put(2131363269, 18);
+        sparseIntArray.put(2131363235, 19);
     }
 
     public FeedEntranceV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {

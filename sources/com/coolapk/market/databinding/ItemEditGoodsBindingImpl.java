@@ -22,8 +22,8 @@ public class ItemEditGoodsBindingImpl extends ItemEditGoodsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362229, 6);
-        sparseIntArray.put(2131362426, 7);
+        sparseIntArray.put(2131362234, 6);
+        sparseIntArray.put(2131362433, 7);
     }
 
     public ItemEditGoodsBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -63,7 +63,7 @@ public class ItemEditGoodsBindingImpl extends ItemEditGoodsBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((GoodsListItemViewModel) obj);
         } else if (50 != i) {
             return false;
@@ -80,7 +80,7 @@ public class ItemEditGoodsBindingImpl extends ItemEditGoodsBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -108,12 +108,12 @@ public class ItemEditGoodsBindingImpl extends ItemEditGoodsBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 226) {
+        } else if (i == 227) {
             synchronized (this) {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i == 227) {
+        } else if (i == 228) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
@@ -156,7 +156,7 @@ public class ItemEditGoodsBindingImpl extends ItemEditGoodsBinding {
         }
         if ((37 & j) != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231363, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, true, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231374, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, true, null, bool2);
         }
         if ((j & 41) != 0) {
             TextViewBindingAdapter.setText(this.titleView, str3);

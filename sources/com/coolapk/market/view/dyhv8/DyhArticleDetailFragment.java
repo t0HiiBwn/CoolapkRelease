@@ -150,7 +150,7 @@ public final class DyhArticleDetailFragment extends FeedReplyListFragmentV8 impl
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         BaseMultiTypeAdapter adapter$presentation_coolapkAppRelease = getAdapter$presentation_coolapkAppRelease();
-        SimpleHolderFactorBuilder suitedEntityType = SimpleViewHolderFactor.Companion.withLayoutId(2131558679).constructor(new DyhArticleDetailFragment$onActivityCreated$1(this)).suitedEntityType("article");
+        SimpleHolderFactorBuilder suitedEntityType = SimpleViewHolderFactor.Companion.withLayoutId(2131558685).constructor(new DyhArticleDetailFragment$onActivityCreated$1(this)).suitedEntityType("article");
         Integer num = getItemViewTypeByEntityType().get("article");
         Intrinsics.checkNotNull(num);
         Intrinsics.checkNotNullExpressionValue(num, "itemViewTypeByEntityType…NTITY_TYPE_DYH_ARTICLE]!!");
@@ -297,7 +297,7 @@ public final class DyhArticleDetailFragment extends FeedReplyListFragmentV8 impl
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() == 2131361931) {
+        if (menuItem.getItemId() == 2131361932) {
             DyhArticleAction.Companion companion = DyhArticleAction.Companion;
             DyhArticle dyhArticle2 = this.dyhArticle;
             if (dyhArticle2 == null) {
@@ -310,7 +310,7 @@ public final class DyhArticleDetailFragment extends FeedReplyListFragmentV8 impl
             Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "requireActivity().requir…().supportFragmentManager");
             newInstance.show(supportFragmentManager, (String) null);
             return true;
-        } else if (menuItem.getItemId() != 2131361968) {
+        } else if (menuItem.getItemId() != 2131361969) {
             return super.onOptionsItemSelected(menuItem);
         } else {
             FragmentActivity activity = getActivity();

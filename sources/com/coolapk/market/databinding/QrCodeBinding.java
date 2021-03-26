@@ -66,7 +66,7 @@ public abstract class QrCodeBinding extends ViewDataBinding {
 
     @Deprecated
     public static QrCodeBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (QrCodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559112, viewGroup, z, obj);
+        return (QrCodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559119, viewGroup, z, obj);
     }
 
     public static QrCodeBinding inflate(LayoutInflater layoutInflater) {
@@ -75,7 +75,7 @@ public abstract class QrCodeBinding extends ViewDataBinding {
 
     @Deprecated
     public static QrCodeBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (QrCodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559112, null, false, obj);
+        return (QrCodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559119, null, false, obj);
     }
 
     public static QrCodeBinding bind(View view) {
@@ -84,6 +84,6 @@ public abstract class QrCodeBinding extends ViewDataBinding {
 
     @Deprecated
     public static QrCodeBinding bind(View view, Object obj) {
-        return (QrCodeBinding) bind(obj, view, 2131559112);
+        return (QrCodeBinding) bind(obj, view, 2131559119);
     }
 }

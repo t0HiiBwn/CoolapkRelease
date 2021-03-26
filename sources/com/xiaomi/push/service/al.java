@@ -1,277 +1,134 @@
 package com.xiaomi.push.service;
 
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Context;
-import android.os.Build;
-import android.service.notification.StatusBarNotification;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.bd;
-import com.xiaomi.push.hh;
-import com.xiaomi.push.i;
-import com.xiaomi.push.l;
-import java.util.ArrayList;
+import android.text.TextUtils;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.ae;
+import com.xiaomi.push.ah;
+import com.xiaomi.push.d;
+import com.xiaomi.push.fv;
+import com.xiaomi.push.gm;
+import com.xiaomi.push.ht;
+import com.xiaomi.push.ix;
+import com.xiaomi.push.j;
+import com.xiaomi.push.jg;
+import java.io.BufferedOutputStream;
+import java.io.Closeable;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Arrays;
-import java.util.List;
-import java.util.WeakHashMap;
 
 public class al {
-    private static Context a;
+    public static final Object a = new Object();
 
-    /* renamed from: a  reason: collision with other field name */
-    private static Object f950a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private static WeakHashMap<Integer, al> f951a = new WeakHashMap<>();
-
-    /* renamed from: a  reason: collision with other field name */
-    private static boolean f952a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private String f953a;
-
-    private al(String str) {
-        this.f953a = str;
-    }
-
-    private static int a(String str) {
-        if (Build.VERSION.SDK_INT < 24) {
-            return -1;
-        }
-        try {
-            return a.getPackageManager().getPackageUid(str, 0);
-        } catch (Exception unused) {
-            return -1;
+    public static void a(Context context, gm gmVar) {
+        if (ak.a(gmVar.p())) {
+            j.a(context).a(new am(context, gmVar));
         }
     }
 
-    private static NotificationManager a() {
-        return (NotificationManager) a.getSystemService("notification");
-    }
-
-    public static al a(Context context, String str) {
-        a(context);
-        int hashCode = str.hashCode();
-        al alVar = f951a.get(Integer.valueOf(hashCode));
-        if (alVar != null) {
-            return alVar;
+    public static byte[] a(Context context) {
+        String b = ix.a(context).b("mipush", "td_key", "");
+        if (TextUtils.isEmpty(b)) {
+            b = ah.a(20);
+            ix.a(context).a("mipush", "td_key", b);
         }
-        al alVar2 = new al(str);
-        f951a.put(Integer.valueOf(hashCode), alVar2);
-        return alVar2;
+        return a(b);
     }
 
-    private static <T> T a(Object obj) {
-        if (obj == null) {
-            return null;
-        }
-        try {
-            return (T) obj.getClass().getMethod("getList", new Class[0]).invoke(obj, new Object[0]);
-        } catch (Exception unused) {
-            return null;
-        }
+    private static byte[] a(String str) {
+        byte[] copyOf = Arrays.copyOf(ae.c(str), 16);
+        copyOf[0] = 68;
+        copyOf[15] = 84;
+        return copyOf;
     }
 
-    private static Object a(List list) {
-        return Class.forName("android.content.pm.ParceledListSlice").getConstructor(List.class).newInstance(list);
-    }
-
-    private static void a(Context context) {
-        if (a == null) {
-            a = context.getApplicationContext();
-            NotificationManager a2 = a();
-            Boolean bool = (Boolean) bd.a((Object) a2, "isSystemConditionProviderEnabled", "xmsf_fake_condition_provider_path");
-            b("fwk is support.init:" + bool);
-            boolean booleanValue = bool != null ? bool.booleanValue() : false;
-            f952a = booleanValue;
-            if (booleanValue) {
-                f950a = bd.a((Object) a2, "getService", new Object[0]);
-            }
-        }
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    private static boolean m616a() {
-        if (l.m568a() && an.a(a).a(hh.NotificationBelongToAppSwitch.a(), true)) {
-            return f952a;
-        }
-        return false;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public static boolean m617a(Context context) {
-        a(context);
-        return m616a();
-    }
-
-    static void b(String str) {
-        b.m41a("NMHelper:" + str);
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public NotificationChannel m618a(String str) {
-        try {
-            if (!m616a()) {
-                return a().getNotificationChannel(str);
-            }
-            List<NotificationChannel> a2 = m620a();
-            if (a2 == null) {
-                return null;
-            }
-            for (NotificationChannel notificationChannel : a2) {
-                if (str.equals(notificationChannel.getId())) {
-                    return notificationChannel;
-                }
-            }
-            return null;
-        } catch (Exception e) {
-            b("getNotificationChannel error" + e);
-            return null;
-        }
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    String m619a(String str) {
-        return String.format(m616a() ? "mipush|%s|%s" : "mipush_%s_%s", this.f953a, str);
-    }
-
-    String a(String str, String str2) {
-        return m616a() ? str : str2;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    List<NotificationChannel> m620a() {
+    /* JADX DEBUG: Failed to insert an additional move for type inference into block B:1:0x0005 */
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v1, types: [java.io.Closeable] */
+    /* JADX WARN: Type inference failed for: r0v3, types: [java.io.Closeable] */
+    /* JADX WARN: Type inference failed for: r0v8 */
+    /* JADX WARN: Type inference failed for: r7v13, types: [java.io.Closeable, java.io.BufferedOutputStream] */
+    /* JADX WARN: Type inference failed for: r0v16 */
+    /* JADX WARN: Type inference failed for: r0v19 */
+    /* JADX WARN: Type inference failed for: r0v20 */
+    /* JADX WARN: Type inference failed for: r0v21 */
+    /* access modifiers changed from: private */
+    /* JADX WARNING: Unknown variable types count: 3 */
+    public static void c(Context context, gm gmVar) {
+        Throwable th;
+        ?? r0;
         String str;
-        String str2 = this.f953a;
-        List<NotificationChannel> list = null;
+        IOException e;
+        ?? r02;
+        Object obj;
+        String str2;
+        byte[] a2 = a(context);
         try {
-            if (m616a()) {
-                int a2 = a(str2);
-                if (a2 != -1) {
-                    Object obj = f950a;
-                    Object[] objArr = {str2, Integer.valueOf(a2), false};
-                    str = "mipush|%s|%s";
-                    list = (List) a(bd.a(obj, "getNotificationChannelsForPackage", objArr));
-                } else {
-                    str = null;
-                }
+            byte[] b = fv.b(a2, ht.a(gmVar));
+            if (b == null || b.length < 1) {
+                str2 = "TinyData write to cache file failed case encryption fail item:" + gmVar.m() + "  ts:" + System.currentTimeMillis();
+            } else if (b.length > 10240) {
+                str2 = "TinyData write to cache file failed case too much data content item:" + gmVar.m() + "  ts:" + System.currentTimeMillis();
             } else {
-                list = a().getNotificationChannels();
-                str = "mipush_%s_%s";
-            }
-            if (!l.m568a() || list == null) {
-                return list;
-            }
-            ArrayList arrayList = new ArrayList();
-            String format = String.format(str, str2, "");
-            for (NotificationChannel notificationChannel : list) {
-                if (notificationChannel.getId().startsWith(format)) {
-                    arrayList.add(notificationChannel);
-                }
-            }
-            return arrayList;
-        } catch (Exception e) {
-            b("getNotificationChannels error " + e);
-            return null;
-        }
-    }
-
-    void a(int i) {
-        String str = this.f953a;
-        try {
-            if (m616a()) {
-                bd.b(f950a, "cancelNotificationWithTag", str, null, Integer.valueOf(i), Integer.valueOf(i.a()));
-                b("cancel succ:" + i);
-                return;
-            }
-            a().cancel(i);
-        } catch (Exception e) {
-            b("cancel error" + e);
-        }
-    }
-
-    public void a(int i, Notification notification) {
-        String str = this.f953a;
-        NotificationManager a2 = a();
-        try {
-            int i2 = Build.VERSION.SDK_INT;
-            if (m616a()) {
-                if (i2 >= 19) {
-                    notification.extras.putString("xmsf_target_package", str);
-                }
-                if (i2 >= 29) {
-                    a2.notifyAsPackage(str, null, i, notification);
+                ?? bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(new File(context.getFilesDir(), "tiny_data.data"), true));
+                try {
+                    bufferedOutputStream.write(d.a(b.length));
+                    bufferedOutputStream.write(b);
+                    bufferedOutputStream.flush();
+                    jg.a((Closeable) null);
+                    jg.a((Closeable) bufferedOutputStream);
                     return;
+                } catch (IOException e2) {
+                    obj = bufferedOutputStream;
+                    e = e2;
+                    str = "TinyData write to cache file failed cause io exception item:" + gmVar.m();
+                    r02 = obj;
+                    c.a(str, e);
+                    jg.a((Closeable) null);
+                    jg.a((Closeable) r02);
+                } catch (Exception e3) {
+                    a2 = bufferedOutputStream;
+                    e = e3;
+                    str = "TinyData write to cache file  failed item:" + gmVar.m();
+                    r02 = a2;
+                    c.a(str, e);
+                    jg.a((Closeable) null);
+                    jg.a((Closeable) r02);
+                } catch (Throwable th2) {
+                    r0 = bufferedOutputStream;
+                    th = th2;
+                    jg.a((Closeable) null);
+                    jg.a((Closeable) r0);
+                    throw th;
                 }
             }
-            a2.notify(i, notification);
-        } catch (Exception unused) {
+            c.a(str2);
+            jg.a((Closeable) null);
+            jg.a((Closeable) null);
+        } catch (IOException e4) {
+            e = e4;
+            obj = null;
+            str = "TinyData write to cache file failed cause io exception item:" + gmVar.m();
+            r02 = obj;
+            c.a(str, e);
+            jg.a((Closeable) null);
+            jg.a((Closeable) r02);
+        } catch (Exception e5) {
+            e = e5;
+            a2 = null;
+            str = "TinyData write to cache file  failed item:" + gmVar.m();
+            r02 = a2;
+            c.a(str, e);
+            jg.a((Closeable) null);
+            jg.a((Closeable) r02);
+        } catch (Throwable th3) {
+            th = th3;
+            r0 = a2;
+            jg.a((Closeable) null);
+            jg.a((Closeable) r0);
+            throw th;
         }
-    }
-
-    void a(NotificationChannel notificationChannel) {
-        String str = this.f953a;
-        try {
-            if (m616a()) {
-                int a2 = a(str);
-                if (a2 != -1) {
-                    bd.b(f950a, "createNotificationChannelsForPackage", str, Integer.valueOf(a2), a(Arrays.asList(notificationChannel)));
-                    return;
-                }
-                return;
-            }
-            a().createNotificationChannel(notificationChannel);
-        } catch (Exception e) {
-            b("createNotificationChannel error" + e);
-        }
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    void m621a(String str) {
-        a().deleteNotificationChannel(str);
-    }
-
-    public List<StatusBarNotification> b() {
-        Exception e;
-        String str = this.f953a;
-        NotificationManager a2 = a();
-        ArrayList arrayList = null;
-        try {
-            if (m616a()) {
-                int a3 = i.a();
-                if (a3 != -1) {
-                    return (List) a(bd.a(f950a, "getAppActiveNotifications", str, Integer.valueOf(a3)));
-                }
-                return null;
-            }
-            StatusBarNotification[] activeNotifications = a2.getActiveNotifications();
-            boolean a4 = l.m568a();
-            if (activeNotifications == null || activeNotifications.length <= 0) {
-                return null;
-            }
-            ArrayList arrayList2 = new ArrayList();
-            try {
-                for (StatusBarNotification statusBarNotification : activeNotifications) {
-                    if (!a4 || str.equals(am.a(statusBarNotification.getNotification()))) {
-                        arrayList2.add(statusBarNotification);
-                    }
-                }
-                return arrayList2;
-            } catch (Exception e2) {
-                e = e2;
-                arrayList = arrayList2;
-                b("getActiveNotifications error " + e);
-                return arrayList;
-            }
-        } catch (Exception e3) {
-            e = e3;
-            b("getActiveNotifications error " + e);
-            return arrayList;
-        }
-    }
-
-    public String toString() {
-        return "NotificationManagerHelper{" + this.f953a + "}";
     }
 }

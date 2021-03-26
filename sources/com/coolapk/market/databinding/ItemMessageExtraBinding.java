@@ -37,7 +37,7 @@ public abstract class ItemMessageExtraBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMessageExtraBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemMessageExtraBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558826, viewGroup, z, obj);
+        return (ItemMessageExtraBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558833, viewGroup, z, obj);
     }
 
     public static ItemMessageExtraBinding inflate(LayoutInflater layoutInflater) {
@@ -46,7 +46,7 @@ public abstract class ItemMessageExtraBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMessageExtraBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemMessageExtraBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558826, null, false, obj);
+        return (ItemMessageExtraBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558833, null, false, obj);
     }
 
     public static ItemMessageExtraBinding bind(View view) {
@@ -55,6 +55,6 @@ public abstract class ItemMessageExtraBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMessageExtraBinding bind(View view, Object obj) {
-        return (ItemMessageExtraBinding) bind(obj, view, 2131558826);
+        return (ItemMessageExtraBinding) bind(obj, view, 2131558833);
     }
 }

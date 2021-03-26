@@ -28,8 +28,8 @@ public class SearchHotBindingImpl extends SearchHotBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131363223, 3);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131363237, 3);
     }
 
     public SearchHotBindingImpl(DataBindingComponent dataBindingComponent, View view) {

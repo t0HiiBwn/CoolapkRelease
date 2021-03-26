@@ -31,18 +31,18 @@ public final class FileAlterationMonitor implements Runnable {
         }
     }
 
-    public long getInterval() {
-        return this.interval;
-    }
-
-    public synchronized void setThreadFactory(ThreadFactory threadFactory2) {
-        this.threadFactory = threadFactory2;
-    }
-
     public void addObserver(FileAlterationObserver fileAlterationObserver) {
         if (fileAlterationObserver != null) {
             this.observers.add(fileAlterationObserver);
         }
+    }
+
+    public long getInterval() {
+        return this.interval;
+    }
+
+    public Iterable<FileAlterationObserver> getObservers() {
+        return this.observers;
     }
 
     public void removeObserver(FileAlterationObserver fileAlterationObserver) {
@@ -52,8 +52,25 @@ public final class FileAlterationMonitor implements Runnable {
         }
     }
 
-    public Iterable<FileAlterationObserver> getObservers() {
-        return this.observers;
+    @Override // java.lang.Runnable
+    public void run() {
+        while (this.running) {
+            for (FileAlterationObserver fileAlterationObserver : this.observers) {
+                fileAlterationObserver.checkAndNotify();
+            }
+            if (this.running) {
+                try {
+                    Thread.sleep(this.interval);
+                } catch (InterruptedException unused) {
+                }
+            } else {
+                return;
+            }
+        }
+    }
+
+    public synchronized void setThreadFactory(ThreadFactory threadFactory2) {
+        this.threadFactory = threadFactory2;
     }
 
     public synchronized void start() throws Exception {
@@ -62,9 +79,8 @@ public final class FileAlterationMonitor implements Runnable {
                 fileAlterationObserver.initialize();
             }
             this.running = true;
-            ThreadFactory threadFactory2 = this.threadFactory;
-            if (threadFactory2 != null) {
-                this.thread = threadFactory2.newThread(this);
+            if (this.threadFactory != null) {
+                this.thread = this.threadFactory.newThread(this);
             } else {
                 this.thread = new Thread(this);
             }
@@ -91,23 +107,6 @@ public final class FileAlterationMonitor implements Runnable {
             }
         } else {
             throw new IllegalStateException("Monitor is not running");
-        }
-    }
-
-    @Override // java.lang.Runnable
-    public void run() {
-        while (this.running) {
-            for (FileAlterationObserver fileAlterationObserver : this.observers) {
-                fileAlterationObserver.checkAndNotify();
-            }
-            if (this.running) {
-                try {
-                    Thread.sleep(this.interval);
-                } catch (InterruptedException unused) {
-                }
-            } else {
-                return;
-            }
         }
     }
 }

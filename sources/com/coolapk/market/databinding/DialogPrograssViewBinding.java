@@ -27,7 +27,7 @@ public abstract class DialogPrograssViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogPrograssViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogPrograssViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558531, viewGroup, z, obj);
+        return (DialogPrograssViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558533, viewGroup, z, obj);
     }
 
     public static DialogPrograssViewBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class DialogPrograssViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogPrograssViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogPrograssViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558531, null, false, obj);
+        return (DialogPrograssViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558533, null, false, obj);
     }
 
     public static DialogPrograssViewBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class DialogPrograssViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogPrograssViewBinding bind(View view, Object obj) {
-        return (DialogPrograssViewBinding) bind(obj, view, 2131558531);
+        return (DialogPrograssViewBinding) bind(obj, view, 2131558533);
     }
 }

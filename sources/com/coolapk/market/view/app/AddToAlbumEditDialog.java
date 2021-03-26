@@ -56,7 +56,7 @@ public class AddToAlbumEditDialog extends MinimumWidthDialog implements AddToAlb
         final Album album = (Album) getArguments().getParcelable("album");
         final ServiceApp serviceApp = (ServiceApp) getArguments().getParcelable("serviceApp");
         this.displayOrder = getArguments().getInt("displayOrder");
-        View inflate = LayoutInflater.from(getActivity()).inflate(2131558437, (ViewGroup) null, false);
+        View inflate = LayoutInflater.from(getActivity()).inflate(2131558438, (ViewGroup) null, false);
         AddToAlbumEditBinding addToAlbumEditBinding = (AddToAlbumEditBinding) DataBindingUtil.bind(inflate);
         this.binding = addToAlbumEditBinding;
         addToAlbumEditBinding.setLoading(this.presenter.isInSubmit());
@@ -106,7 +106,7 @@ public class AddToAlbumEditDialog extends MinimumWidthDialog implements AddToAlb
             Toast.error(getActivity(), th);
             return;
         }
-        Toast.show(getActivity(), 2131887212);
+        Toast.show(getActivity(), 2131887274);
         dismiss();
     }
 }

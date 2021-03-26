@@ -4,18 +4,18 @@ package kotlin;
 /* compiled from: UShort.kt */
 public final class UShortKt {
     private static final short toUShort(byte b) {
-        return UShort.m941constructorimpl((short) b);
+        return UShort.m339constructorimpl((short) b);
     }
 
     private static final short toUShort(short s) {
-        return UShort.m941constructorimpl(s);
+        return UShort.m339constructorimpl(s);
     }
 
     private static final short toUShort(int i) {
-        return UShort.m941constructorimpl((short) i);
+        return UShort.m339constructorimpl((short) i);
     }
 
     private static final short toUShort(long j) {
-        return UShort.m941constructorimpl((short) ((int) j));
+        return UShort.m339constructorimpl((short) ((int) j));
     }
 }

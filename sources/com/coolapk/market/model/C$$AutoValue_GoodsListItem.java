@@ -31,7 +31,7 @@ abstract class C$$AutoValue_GoodsListItem extends GoodsListItem {
     private final String title;
     private final String url;
 
-    C$$AutoValue_GoodsListItem(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, int i2, Long l3) {
+    C$$AutoValue_GoodsListItem(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, int i2, Long l2) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityTypeId = i;
@@ -44,7 +44,7 @@ abstract class C$$AutoValue_GoodsListItem extends GoodsListItem {
         this.logo = str8;
         this.subTitle = str9;
         this.extraData = str10;
-        this.lastUpdate = l2;
+        this.lastUpdate = l;
         this.id = str11;
         this.feedId = str12;
         this.productGoodsId = str13;
@@ -55,8 +55,8 @@ abstract class C$$AutoValue_GoodsListItem extends GoodsListItem {
         this.mallName = str18;
         this.note = str19;
         this.sort = i2;
-        Objects.requireNonNull(l3, "Null dateline");
-        this.dateline = l3;
+        Objects.requireNonNull(l2, "Null dateline");
+        this.dateline = l2;
     }
 
     @Override // com.coolapk.market.model.Entity
@@ -218,7 +218,7 @@ abstract class C$$AutoValue_GoodsListItem extends GoodsListItem {
         String str6;
         String str7;
         String str8;
-        Long l2;
+        Long l;
         String str9;
         String str10;
         String str11;
@@ -239,7 +239,7 @@ abstract class C$$AutoValue_GoodsListItem extends GoodsListItem {
         if (str18 != null ? str18.equals(goodsListItem.getEntityTypeName()) : goodsListItem.getEntityTypeName() == null) {
             String str19 = this.entityTemplate;
             if (str19 != null ? str19.equals(goodsListItem.getEntityTemplate()) : goodsListItem.getEntityTemplate() == null) {
-                if (this.entityTypeId == goodsListItem.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(goodsListItem.getEntityId()) : goodsListItem.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(goodsListItem.getEntityFixed()) : goodsListItem.getEntityFixed() == null) && ((str2 = this.title) != null ? str2.equals(goodsListItem.getTitle()) : goodsListItem.getTitle() == null) && ((str3 = this.url) != null ? str3.equals(goodsListItem.getUrl()) : goodsListItem.getUrl() == null) && ((str4 = this.description) != null ? str4.equals(goodsListItem.getDescription()) : goodsListItem.getDescription() == null) && ((str5 = this.pic) != null ? str5.equals(goodsListItem.getPic()) : goodsListItem.getPic() == null) && ((str6 = this.logo) != null ? str6.equals(goodsListItem.getLogo()) : goodsListItem.getLogo() == null) && ((str7 = this.subTitle) != null ? str7.equals(goodsListItem.getSubTitle()) : goodsListItem.getSubTitle() == null) && ((str8 = this.extraData) != null ? str8.equals(goodsListItem.getExtraData()) : goodsListItem.getExtraData() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(goodsListItem.getLastUpdate()) : goodsListItem.getLastUpdate() == null) && ((str9 = this.id) != null ? str9.equals(goodsListItem.getId()) : goodsListItem.getId() == null) && ((str10 = this.feedId) != null ? str10.equals(goodsListItem.getFeedId()) : goodsListItem.getFeedId() == null) && ((str11 = this.productGoodsId) != null ? str11.equals(goodsListItem.getProductGoodsId()) : goodsListItem.getProductGoodsId() == null) && ((str12 = this.productGoodsLogo) != null ? str12.equals(goodsListItem.getProductGoodsLogo()) : goodsListItem.getProductGoodsLogo() == null) && ((str13 = this.productGoodsTitle) != null ? str13.equals(goodsListItem.getProductGoodsTitle()) : goodsListItem.getProductGoodsTitle() == null) && ((str14 = this.goodsUrl) != null ? str14.equals(goodsListItem.getGoodsUrl()) : goodsListItem.getGoodsUrl() == null) && ((str15 = this.price) != null ? str15.equals(goodsListItem.getPrice()) : goodsListItem.getPrice() == null) && ((str16 = this.mallName) != null ? str16.equals(goodsListItem.getMallName()) : goodsListItem.getMallName() == null) && ((str17 = this.note) != null ? str17.equals(goodsListItem.getNote()) : goodsListItem.getNote() == null) && this.sort == goodsListItem.getSort() && this.dateline.equals(goodsListItem.getDateline())) {
+                if (this.entityTypeId == goodsListItem.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(goodsListItem.getEntityId()) : goodsListItem.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(goodsListItem.getEntityFixed()) : goodsListItem.getEntityFixed() == null) && ((str2 = this.title) != null ? str2.equals(goodsListItem.getTitle()) : goodsListItem.getTitle() == null) && ((str3 = this.url) != null ? str3.equals(goodsListItem.getUrl()) : goodsListItem.getUrl() == null) && ((str4 = this.description) != null ? str4.equals(goodsListItem.getDescription()) : goodsListItem.getDescription() == null) && ((str5 = this.pic) != null ? str5.equals(goodsListItem.getPic()) : goodsListItem.getPic() == null) && ((str6 = this.logo) != null ? str6.equals(goodsListItem.getLogo()) : goodsListItem.getLogo() == null) && ((str7 = this.subTitle) != null ? str7.equals(goodsListItem.getSubTitle()) : goodsListItem.getSubTitle() == null) && ((str8 = this.extraData) != null ? str8.equals(goodsListItem.getExtraData()) : goodsListItem.getExtraData() == null) && ((l = this.lastUpdate) != null ? l.equals(goodsListItem.getLastUpdate()) : goodsListItem.getLastUpdate() == null) && ((str9 = this.id) != null ? str9.equals(goodsListItem.getId()) : goodsListItem.getId() == null) && ((str10 = this.feedId) != null ? str10.equals(goodsListItem.getFeedId()) : goodsListItem.getFeedId() == null) && ((str11 = this.productGoodsId) != null ? str11.equals(goodsListItem.getProductGoodsId()) : goodsListItem.getProductGoodsId() == null) && ((str12 = this.productGoodsLogo) != null ? str12.equals(goodsListItem.getProductGoodsLogo()) : goodsListItem.getProductGoodsLogo() == null) && ((str13 = this.productGoodsTitle) != null ? str13.equals(goodsListItem.getProductGoodsTitle()) : goodsListItem.getProductGoodsTitle() == null) && ((str14 = this.goodsUrl) != null ? str14.equals(goodsListItem.getGoodsUrl()) : goodsListItem.getGoodsUrl() == null) && ((str15 = this.price) != null ? str15.equals(goodsListItem.getPrice()) : goodsListItem.getPrice() == null) && ((str16 = this.mallName) != null ? str16.equals(goodsListItem.getMallName()) : goodsListItem.getMallName() == null) && ((str17 = this.note) != null ? str17.equals(goodsListItem.getNote()) : goodsListItem.getNote() == null) && this.sort == goodsListItem.getSort() && this.dateline.equals(goodsListItem.getDateline())) {
                     return true;
                 }
             }
@@ -272,8 +272,8 @@ abstract class C$$AutoValue_GoodsListItem extends GoodsListItem {
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.extraData;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.lastUpdate;
-        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
+        Long l = this.lastUpdate;
+        int hashCode12 = (hashCode11 ^ (l == null ? 0 : l.hashCode())) * 1000003;
         String str11 = this.id;
         int hashCode13 = (hashCode12 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
         String str12 = this.feedId;
@@ -428,8 +428,8 @@ abstract class C$$AutoValue_GoodsListItem extends GoodsListItem {
         }
 
         @Override // com.coolapk.market.model.GoodsListItem.Builder
-        public GoodsListItem.Builder lastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public GoodsListItem.Builder lastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 
@@ -494,8 +494,8 @@ abstract class C$$AutoValue_GoodsListItem extends GoodsListItem {
         }
 
         @Override // com.coolapk.market.model.GoodsListItem.Builder
-        public GoodsListItem.Builder dateline(Long l2) {
-            this.dateline = l2;
+        public GoodsListItem.Builder dateline(Long l) {
+            this.dateline = l;
             return this;
         }
 

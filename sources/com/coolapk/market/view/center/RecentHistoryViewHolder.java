@@ -30,7 +30,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: RecentHistoryViewHolder.kt */
 public final class RecentHistoryViewHolder extends GenericBindHolder<ItemRecentHistoryBinding, RecentHistory> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558891;
+    public static final int LAYOUT_ID = 2131558898;
     private RecentHistory data;
 
     public static final /* synthetic */ RecentHistory access$getData$p(RecentHistoryViewHolder recentHistoryViewHolder) {

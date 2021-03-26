@@ -24,13 +24,7 @@ public class SizeFileFilter extends AbstractFileFilter implements Serializable {
     @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
     public boolean accept(File file) {
         boolean z = file.length() < this.size;
-        if (!this.acceptLarger) {
-            return z;
-        }
-        if (!z) {
-            return true;
-        }
-        return false;
+        return this.acceptLarger ? !z : z;
     }
 
     @Override // org.apache.commons.io.filefilter.AbstractFileFilter, java.lang.Object

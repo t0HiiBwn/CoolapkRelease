@@ -135,7 +135,7 @@ public abstract class ItemChatingUserCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemChatingUserCardBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemChatingUserCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558651, viewGroup, z, obj);
+        return (ItemChatingUserCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558657, viewGroup, z, obj);
     }
 
     public static ItemChatingUserCardBinding inflate(LayoutInflater layoutInflater) {
@@ -144,7 +144,7 @@ public abstract class ItemChatingUserCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemChatingUserCardBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemChatingUserCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558651, null, false, obj);
+        return (ItemChatingUserCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558657, null, false, obj);
     }
 
     public static ItemChatingUserCardBinding bind(View view) {
@@ -153,6 +153,6 @@ public abstract class ItemChatingUserCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemChatingUserCardBinding bind(View view, Object obj) {
-        return (ItemChatingUserCardBinding) bind(obj, view, 2131558651);
+        return (ItemChatingUserCardBinding) bind(obj, view, 2131558657);
     }
 }

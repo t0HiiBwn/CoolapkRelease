@@ -30,9 +30,7 @@ public final class go {
     boolean i = false;
     StringBuilder j = null;
     boolean k = true;
-
-    /* renamed from: l  reason: collision with root package name */
-    boolean f1237l = true;
+    boolean l = true;
     boolean m = true;
     String n = null;
     TreeMap<Integer, ScanResult> o = null;
@@ -63,7 +61,7 @@ public final class go {
 
     private void d(boolean z) {
         this.k = z;
-        this.f1237l = true;
+        this.l = true;
         this.m = true;
         this.w = 30000;
     }

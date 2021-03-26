@@ -15,8 +15,8 @@
                 </LinearLayout>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
-        <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952177_themeoverlay_appcompat_dark_actionbar" android:id="@+id/app_bar" android:background="@android:color/transparent" android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/disable_elevation_app_bar_state_list_anim">
-            <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" android:navigationIcon="@drawable/ic_back_white_24dp" app:contentInsetStartWithNavigation="0dp" app:navigationContentDescription="@string/acc_back" app:popupTheme="@style/res_2131952182_themeoverlay_appcompat_light"/>
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/res_2131952178_themeoverlay_appcompat_dark_actionbar" android:id="@+id/app_bar" android:background="@android:color/transparent" android:fitsSystemWindows="@bool/fits_system_windows" android:layout_width="match_parent" android:layout_height="wrap_content" android:stateListAnimator="@animator/disable_elevation_app_bar_state_list_anim">
+            <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" android:navigationIcon="@drawable/ic_back_white_24dp" app:contentInsetStartWithNavigation="0dp" app:navigationContentDescription="@string/acc_back" app:popupTheme="@style/res_2131952183_themeoverlay_appcompat_light"/>
         </com.google.android.material.appbar.AppBarLayout>
     </FrameLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

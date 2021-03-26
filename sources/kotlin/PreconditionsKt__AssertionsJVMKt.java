@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function0;
 /* compiled from: AssertionsJVM.kt */
 class PreconditionsKt__AssertionsJVMKt {
     /* renamed from: assert  reason: not valid java name */
-    private static final void m684assert(boolean z) {
+    private static final void m82assert(boolean z) {
     }
 
     /* renamed from: assert  reason: not valid java name */
-    private static final void m685assert(boolean z, Function0<? extends Object> function0) {
+    private static final void m83assert(boolean z, Function0<? extends Object> function0) {
     }
 }

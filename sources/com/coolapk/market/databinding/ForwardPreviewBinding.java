@@ -59,7 +59,7 @@ public abstract class ForwardPreviewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ForwardPreviewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ForwardPreviewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558566, viewGroup, z, obj);
+        return (ForwardPreviewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558569, viewGroup, z, obj);
     }
 
     public static ForwardPreviewBinding inflate(LayoutInflater layoutInflater) {
@@ -68,7 +68,7 @@ public abstract class ForwardPreviewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ForwardPreviewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ForwardPreviewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558566, null, false, obj);
+        return (ForwardPreviewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558569, null, false, obj);
     }
 
     public static ForwardPreviewBinding bind(View view) {
@@ -77,6 +77,6 @@ public abstract class ForwardPreviewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ForwardPreviewBinding bind(View view, Object obj) {
-        return (ForwardPreviewBinding) bind(obj, view, 2131558566);
+        return (ForwardPreviewBinding) bind(obj, view, 2131558569);
     }
 }

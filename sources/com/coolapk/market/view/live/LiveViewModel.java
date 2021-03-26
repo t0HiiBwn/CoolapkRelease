@@ -295,7 +295,7 @@ public final class LiveViewModel {
     }
 
     public final int getLiveSubscribeStateBackground() {
-        return isFollowLive() ? 2131231733 : 2131231732;
+        return isFollowLive() ? 2131231744 : 2131231743;
     }
 
     public final int getLiveStatusSimpleColor() {

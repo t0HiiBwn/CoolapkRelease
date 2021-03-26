@@ -21,6 +21,6 @@ final class NotificationListFragment$onActivityCreated$1 extends Lambda implemen
 
     public final RecyclerView.ViewHolder invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "it");
-        return new NotificationViewHolder(view, this.this$0.getBindingComponent(), null);
+        return new NotificationViewHolder(view, NotificationListFragment.access$getBindingComponent$p(this.this$0), null);
     }
 }

@@ -24,7 +24,7 @@ abstract class C$$AutoValue_LocalApp extends LocalApp {
     private final String title;
     private final String url;
 
-    C$$AutoValue_LocalApp(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, String str11, String str12, String str13, String str14) {
+    C$$AutoValue_LocalApp(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, String str11, String str12, String str13, String str14) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -35,8 +35,8 @@ abstract class C$$AutoValue_LocalApp extends LocalApp {
         this.subTitle = str7;
         this.id = str8;
         this.extraData = str9;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.title = str10;
         this.apkId = str11;
         Objects.requireNonNull(str12, "Null packageName");
@@ -180,10 +180,10 @@ abstract class C$$AutoValue_LocalApp extends LocalApp {
                                         if (str9 != null ? str9.equals(localApp.getId()) : localApp.getId() == null) {
                                             String str10 = this.extraData;
                                             if (str10 != null ? str10.equals(localApp.getExtraData()) : localApp.getExtraData() == null) {
-                                                Long l2 = this.dateline;
-                                                if (l2 != null ? l2.equals(localApp.getDateline()) : localApp.getDateline() == null) {
-                                                    Long l3 = this.lastUpdate;
-                                                    if (l3 != null ? l3.equals(localApp.getLastUpdate()) : localApp.getLastUpdate() == null) {
+                                                Long l = this.dateline;
+                                                if (l != null ? l.equals(localApp.getDateline()) : localApp.getDateline() == null) {
+                                                    Long l2 = this.lastUpdate;
+                                                    if (l2 != null ? l2.equals(localApp.getLastUpdate()) : localApp.getLastUpdate() == null) {
                                                         String str11 = this.title;
                                                         if (str11 != null ? str11.equals(localApp.getTitle()) : localApp.getTitle() == null) {
                                                             String str12 = this.apkId;
@@ -238,10 +238,10 @@ abstract class C$$AutoValue_LocalApp extends LocalApp {
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
         String str9 = this.extraData;
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode11 = (hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode12 = (hashCode11 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode11 = (hashCode10 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str10 = this.title;
         int hashCode13 = (hashCode12 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.apkId;
@@ -360,14 +360,14 @@ abstract class C$$AutoValue_LocalApp extends LocalApp {
         }
 
         @Override // com.coolapk.market.model.LocalApp.Builder
-        public LocalApp.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public LocalApp.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.LocalApp.Builder
-        public LocalApp.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public LocalApp.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

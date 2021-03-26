@@ -27,7 +27,7 @@ public class ItemHotSearchUserBindingImpl extends ItemHotSearchUserBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363437, 3);
+        sparseIntArray.put(2131363455, 3);
     }
 
     public ItemHotSearchUserBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -64,11 +64,11 @@ public class ItemHotSearchUserBindingImpl extends ItemHotSearchUserBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((User) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (211 != i) {
+        } else if (212 != i) {
             return false;
         } else {
             setOnClick((View.OnClickListener) obj);
@@ -82,7 +82,7 @@ public class ItemHotSearchUserBindingImpl extends ItemHotSearchUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -92,7 +92,7 @@ public class ItemHotSearchUserBindingImpl extends ItemHotSearchUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -102,7 +102,7 @@ public class ItemHotSearchUserBindingImpl extends ItemHotSearchUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(211);
+        notifyPropertyChanged(212);
         super.requestRebind();
     }
 
@@ -160,7 +160,7 @@ public class ItemHotSearchUserBindingImpl extends ItemHotSearchUserBinding {
             Boolean bool = null;
             str5 = str;
             str4 = str2;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str3, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str3, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
         } else {
             str4 = str2;
             str5 = str;

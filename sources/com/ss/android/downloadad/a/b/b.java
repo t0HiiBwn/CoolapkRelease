@@ -51,9 +51,7 @@ public class b implements a {
     private String i;
     private String j;
     private int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1400l;
+    private int l;
     private int m;
     private int n;
     private String o;
@@ -149,7 +147,7 @@ public class b implements a {
         this.J = bVar.a();
         this.K = bVar.m();
         this.v = aVar.c();
-        this.f1400l = aVar.a();
+        this.l = aVar.a();
         this.m = aVar.b();
         this.Q = aVar.e();
         this.R = aVar.f();
@@ -422,11 +420,11 @@ public class b implements a {
     }
 
     public void j(int i2) {
-        this.f1400l = i2;
+        this.l = i2;
     }
 
     public int N() {
-        return this.f1400l;
+        return this.l;
     }
 
     public void k(int i2) {
@@ -603,7 +601,7 @@ public class b implements a {
             jSONObject.put("mLastFailedErrCode", this.C);
             jSONObject.put("mLastFailedErrMsg", this.D);
             jSONObject.put("mOpenUrl", this.i);
-            jSONObject.put("mLinkMode", this.f1400l);
+            jSONObject.put("mLinkMode", this.l);
             jSONObject.put("mDownloadMode", this.m);
             jSONObject.put("mModelType", this.k);
             jSONObject.put("mAppName", this.p);
@@ -725,6 +723,6 @@ public class b implements a {
     }
 
     public com.ss.android.downloadad.a.a.a ag() {
-        return new a.C0080a().a(this.v).a(this.f1400l).b(this.m).e(this.Q).a();
+        return new a.C0090a().a(this.v).a(this.l).b(this.m).e(this.Q).a();
     }
 }

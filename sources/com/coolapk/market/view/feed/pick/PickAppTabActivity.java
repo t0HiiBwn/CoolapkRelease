@@ -27,14 +27,14 @@ public class PickAppTabActivity extends TabActivity {
 
     @Override // com.coolapk.market.view.base.TabActivity
     protected String[] onCreateTabs() {
-        return new String[]{getString(2131887289), getString(2131887288), getString(2131887287), getString(2131887290)};
+        return new String[]{getString(2131887351), getString(2131887350), getString(2131887349), getString(2131887352)};
     }
 
     @Override // com.coolapk.market.view.base.TabActivity, com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         getViewPager().setCurrentItem(getIntent().getIntExtra("PAGE_INDEX", 0));
-        getToolbar().setTitle(2131887286);
+        getToolbar().setTitle(2131887348);
         if (bundle != null) {
             for (int i = 0; i < getTabTitles().length; i++) {
                 Fragment findFragmentByTag = getSupportFragmentManager().findFragmentByTag(getTabTitles()[i]);

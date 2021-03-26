@@ -72,7 +72,7 @@ public abstract class ItemNotificationAlbumLikeBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNotificationAlbumLikeBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemNotificationAlbumLikeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558843, viewGroup, z, obj);
+        return (ItemNotificationAlbumLikeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558850, viewGroup, z, obj);
     }
 
     public static ItemNotificationAlbumLikeBinding inflate(LayoutInflater layoutInflater) {
@@ -81,7 +81,7 @@ public abstract class ItemNotificationAlbumLikeBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNotificationAlbumLikeBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemNotificationAlbumLikeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558843, null, false, obj);
+        return (ItemNotificationAlbumLikeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558850, null, false, obj);
     }
 
     public static ItemNotificationAlbumLikeBinding bind(View view) {
@@ -90,6 +90,6 @@ public abstract class ItemNotificationAlbumLikeBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNotificationAlbumLikeBinding bind(View view, Object obj) {
-        return (ItemNotificationAlbumLikeBinding) bind(obj, view, 2131558843);
+        return (ItemNotificationAlbumLikeBinding) bind(obj, view, 2131558850);
     }
 }

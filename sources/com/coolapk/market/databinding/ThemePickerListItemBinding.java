@@ -19,16 +19,18 @@ public abstract class ThemePickerListItemBinding extends ViewDataBinding {
     @Bindable
     protected ThemeListActivity.ThemePickerFragment.ThemeViewHolder mViewHolder;
     public final TextView textView;
+    public final TextView tipText;
 
     public abstract void setThemeItem(AppTheme.ThemeItem themeItem);
 
     public abstract void setViewHolder(ThemeListActivity.ThemePickerFragment.ThemeViewHolder themeViewHolder);
 
-    protected ThemePickerListItemBinding(Object obj, View view, int i, ImageView imageView, TextView textView2, TextView textView3) {
+    protected ThemePickerListItemBinding(Object obj, View view, int i, ImageView imageView, TextView textView2, TextView textView3, TextView textView4) {
         super(obj, view, i);
         this.checkIndicator = imageView;
         this.colorText = textView2;
         this.textView = textView3;
+        this.tipText = textView4;
     }
 
     public AppTheme.ThemeItem getThemeItem() {
@@ -45,7 +47,7 @@ public abstract class ThemePickerListItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ThemePickerListItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ThemePickerListItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559196, viewGroup, z, obj);
+        return (ThemePickerListItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559204, viewGroup, z, obj);
     }
 
     public static ThemePickerListItemBinding inflate(LayoutInflater layoutInflater) {
@@ -54,7 +56,7 @@ public abstract class ThemePickerListItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ThemePickerListItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ThemePickerListItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559196, null, false, obj);
+        return (ThemePickerListItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559204, null, false, obj);
     }
 
     public static ThemePickerListItemBinding bind(View view) {
@@ -63,6 +65,6 @@ public abstract class ThemePickerListItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ThemePickerListItemBinding bind(View view, Object obj) {
-        return (ThemePickerListItemBinding) bind(obj, view, 2131559196);
+        return (ThemePickerListItemBinding) bind(obj, view, 2131559204);
     }
 }

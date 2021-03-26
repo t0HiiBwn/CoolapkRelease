@@ -18,15 +18,15 @@ final class QuestionDetailFragment$showOrderPopMenu$2 implements PopupMenu.OnMen
     public final boolean onMenuItemClick(MenuItem menuItem) {
         Intrinsics.checkNotNullExpressionValue(menuItem, "item");
         int itemId = menuItem.getItemId();
-        if (itemId != 2131887132) {
+        if (itemId != 2131887194) {
             switch (itemId) {
-                case 2131886547:
+                case 2131886609:
                     QuestionDetailFragment.access$getPresenter$p(this.this$0).setOrderType("dateline");
                     return true;
-                case 2131886548:
+                case 2131886610:
                     QuestionDetailFragment.access$getPresenter$p(this.this$0).setOrderType("reply");
                     return true;
-                case 2131886549:
+                case 2131886611:
                     QuestionDetailFragment.access$getPresenter$p(this.this$0).setOrderType("like");
                     return true;
                 default:

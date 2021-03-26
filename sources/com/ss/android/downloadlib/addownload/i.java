@@ -84,7 +84,7 @@ public class i {
         return bVar;
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:58:0x00a0, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:58:0x00a1, code lost:
         continue;
      */
     private static boolean a(f fVar, com.ss.android.socialbase.downloader.g.a aVar, int i) {

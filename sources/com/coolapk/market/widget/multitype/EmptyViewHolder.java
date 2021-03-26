@@ -8,7 +8,7 @@ import com.coolapk.market.view.feed.CommentHelper;
 import com.coolapk.market.viewholder.BindingViewHolder;
 
 public class EmptyViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558617;
+    public static final int LAYOUT_ID = 2131558621;
 
     public EmptyViewHolder(View view) {
         super(view);

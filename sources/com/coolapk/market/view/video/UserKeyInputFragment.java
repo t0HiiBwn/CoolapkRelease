@@ -48,7 +48,7 @@ public final class UserKeyInputFragment extends BaseFragment {
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559282, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559292, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…_input, container, false)");
         UserKeyInputBinding userKeyInputBinding = (UserKeyInputBinding) inflate;
         this.binding = userKeyInputBinding;

@@ -37,7 +37,7 @@ public abstract class ItemAppViewBaseInfoCouponItemBinding extends ViewDataBindi
 
     @Deprecated
     public static ItemAppViewBaseInfoCouponItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAppViewBaseInfoCouponItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558600, viewGroup, z, obj);
+        return (ItemAppViewBaseInfoCouponItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558604, viewGroup, z, obj);
     }
 
     public static ItemAppViewBaseInfoCouponItemBinding inflate(LayoutInflater layoutInflater) {
@@ -46,7 +46,7 @@ public abstract class ItemAppViewBaseInfoCouponItemBinding extends ViewDataBindi
 
     @Deprecated
     public static ItemAppViewBaseInfoCouponItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAppViewBaseInfoCouponItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558600, null, false, obj);
+        return (ItemAppViewBaseInfoCouponItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558604, null, false, obj);
     }
 
     public static ItemAppViewBaseInfoCouponItemBinding bind(View view) {
@@ -55,6 +55,6 @@ public abstract class ItemAppViewBaseInfoCouponItemBinding extends ViewDataBindi
 
     @Deprecated
     public static ItemAppViewBaseInfoCouponItemBinding bind(View view, Object obj) {
-        return (ItemAppViewBaseInfoCouponItemBinding) bind(obj, view, 2131558600);
+        return (ItemAppViewBaseInfoCouponItemBinding) bind(obj, view, 2131558604);
     }
 }

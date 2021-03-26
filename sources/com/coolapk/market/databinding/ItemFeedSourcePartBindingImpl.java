@@ -24,10 +24,10 @@ public class ItemFeedSourcePartBindingImpl extends ItemFeedSourcePartBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 2);
-        sparseIntArray.put(2131363326, 3);
-        sparseIntArray.put(2131363397, 4);
-        sparseIntArray.put(2131363917, 5);
+        sparseIntArray.put(2131363551, 2);
+        sparseIntArray.put(2131363342, 3);
+        sparseIntArray.put(2131363414, 4);
+        sparseIntArray.put(2131363942, 5);
     }
 
     public ItemFeedSourcePartBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -63,7 +63,7 @@ public class ItemFeedSourcePartBindingImpl extends ItemFeedSourcePartBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((Feed) obj);

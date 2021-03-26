@@ -103,9 +103,9 @@ public class CheckRequestBodyModel {
             this.channelName = str;
         }
 
-        public TargetChannel(String str, Long l2) {
+        public TargetChannel(String str, Long l) {
             this.channelName = str;
-            this.targetVersion = l2;
+            this.targetVersion = l;
         }
     }
 

@@ -12,10 +12,6 @@ public class LineIterator implements Iterator<String>, Closeable {
     private String cachedLine;
     private boolean finished = false;
 
-    protected boolean isValidLine(String str) {
-        return true;
-    }
-
     public LineIterator(Reader reader) throws IllegalArgumentException {
         if (reader == null) {
             throw new IllegalArgumentException("Reader must not be null");
@@ -23,6 +19,26 @@ public class LineIterator implements Iterator<String>, Closeable {
             this.bufferedReader = (BufferedReader) reader;
         } else {
             this.bufferedReader = new BufferedReader(reader);
+        }
+    }
+
+    @Deprecated
+    public static void closeQuietly(LineIterator lineIterator) {
+        if (lineIterator != null) {
+            try {
+                lineIterator.close();
+            } catch (IOException unused) {
+            }
+        }
+    }
+
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
+        this.finished = true;
+        this.cachedLine = null;
+        BufferedReader bufferedReader2 = this.bufferedReader;
+        if (bufferedReader2 != null) {
+            bufferedReader2.close();
         }
     }
 
@@ -55,6 +71,10 @@ public class LineIterator implements Iterator<String>, Closeable {
         return true;
     }
 
+    protected boolean isValidLine(String str) {
+        return true;
+    }
+
     @Override // java.util.Iterator
     public String next() {
         return nextLine();
@@ -69,28 +89,8 @@ public class LineIterator implements Iterator<String>, Closeable {
         throw new NoSuchElementException("No more lines");
     }
 
-    @Override // java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
-        this.finished = true;
-        this.cachedLine = null;
-        BufferedReader bufferedReader2 = this.bufferedReader;
-        if (bufferedReader2 != null) {
-            bufferedReader2.close();
-        }
-    }
-
     @Override // java.util.Iterator
     public void remove() {
         throw new UnsupportedOperationException("Remove unsupported on LineIterator");
-    }
-
-    @Deprecated
-    public static void closeQuietly(LineIterator lineIterator) {
-        if (lineIterator != null) {
-            try {
-                lineIterator.close();
-            } catch (IOException unused) {
-            }
-        }
     }
 }

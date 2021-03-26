@@ -44,9 +44,7 @@ class m implements Runnable {
     String i;
     private final f j;
     private final c k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final DownloadInfo f1414l;
+    private final DownloadInfo l;
     private final a m;
     private i n;
     private com.ss.android.socialbase.downloader.model.d o;
@@ -63,7 +61,7 @@ class m implements Runnable {
     private Thread z;
 
     m(DownloadInfo downloadInfo, k kVar, c cVar, q qVar, int i2) {
-        this.f1414l = downloadInfo;
+        this.l = downloadInfo;
         this.j = kVar;
         this.k = cVar;
         this.m = a.a(downloadInfo.getId());
@@ -117,6 +115,7 @@ class m implements Runnable {
             try {
                 this.a.b(this);
                 fVar = this.j;
+                fVar.b(this);
             } catch (Throwable unused2) {
             }
         } catch (Throwable th2) {
@@ -128,7 +127,6 @@ class m implements Runnable {
             this.z = null;
             throw th2;
         }
-        fVar.b(this);
         this.z = null;
     }
 
@@ -184,7 +182,7 @@ class m implements Runnable {
     }
 
     private void l() {
-        this.C = this.a.d ? this.f1414l.getRetryCount() : this.f1414l.getBackUpUrlRetryCount();
+        this.C = this.a.d ? this.l.getRetryCount() : this.l.getBackUpUrlRetryCount();
         this.D = 0;
     }
 
@@ -226,7 +224,7 @@ class m implements Runnable {
             return false;
         }
         String str = this.a.a;
-        if (TextUtils.isEmpty(str) || !str.startsWith("https") || !this.f1414l.isNeedHttpsToHttpRetry() || this.G) {
+        if (TextUtils.isEmpty(str) || !str.startsWith("https") || !this.l.isNeedHttpsToHttpRetry() || this.G) {
             return false;
         }
         this.G = true;
@@ -250,10 +248,10 @@ class m implements Runnable {
             this.s = iVar.f();
             this.t = this.q;
             this.K = new d();
-            List<c> a2 = e.a(this.f1414l.getExtraHeaders(), this.f1414l.geteTag(), this.q, this.s);
+            List<c> a2 = e.a(this.l.getExtraHeaders(), this.l.geteTag(), this.q, this.s);
             a2.add(new c("Segment-Index", String.valueOf(iVar.g())));
             a2.add(new c("Thread-Index", String.valueOf(this.b)));
-            e.a(a2, this.f1414l);
+            e.a(a2, this.l);
             String str = this.a.a;
             if (this.G && !TextUtils.isEmpty(str) && str.startsWith("https")) {
                 str = str.replaceFirst("https", "http");
@@ -262,7 +260,7 @@ class m implements Runnable {
             com.ss.android.socialbase.downloader.c.a.c("SegmentReader", "createConnectionBegin: url = " + str + ", ip = " + str2 + ", segment = " + iVar + ", threadIndex = " + this.b);
             this.g = str;
             this.h = str2;
-            i a3 = b.a(this.f1414l.isNeedDefaultHttpServiceBackUp(), this.f1414l.getMaxBytes(), str, str2, a2, 0, currentTimeMillis - this.E > 3000 && this.m.b("monitor_download_connect") > 0, this.f1414l);
+            i a3 = b.a(this.l.isNeedDefaultHttpServiceBackUp(), this.l.getMaxBytes(), str, str2, a2, 0, currentTimeMillis - this.E > 3000 && this.m.b("monitor_download_connect") > 0, this.l);
             if (a3 != null) {
                 this.n = a3;
                 this.o = new com.ss.android.socialbase.downloader.model.d(str, a3);
@@ -324,7 +322,7 @@ class m implements Runnable {
         r6 = r11;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:139:0x020b, code lost:
-        if (r31.x == false) goto L_0x0326;
+        if (r31.x == false) goto L_0x0327;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:140:0x020f, code lost:
         r0 = th;
@@ -346,10 +344,10 @@ class m implements Runnable {
     /* JADX WARNING: Code restructure failed: missing block: B:147:0x0233, code lost:
         r0 = e;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:212:0x0323, code lost:
-        if (r31.x == false) goto L_0x0326;
+    /* JADX WARNING: Code restructure failed: missing block: B:212:0x0324, code lost:
+        if (r31.x == false) goto L_0x0327;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:213:0x0326, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:213:0x0327, code lost:
         r11 = false;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:54:0x00cc, code lost:
@@ -409,11 +407,11 @@ class m implements Runnable {
     /* JADX WARNING: Removed duplicated region for block: B:123:0x01de A[SYNTHETIC, Splitter:B:123:0x01de] */
     /* JADX WARNING: Removed duplicated region for block: B:133:0x01ee  */
     /* JADX WARNING: Removed duplicated region for block: B:136:0x01fb  */
-    /* JADX WARNING: Removed duplicated region for block: B:198:0x02f5  */
-    /* JADX WARNING: Removed duplicated region for block: B:206:0x0306  */
-    /* JADX WARNING: Removed duplicated region for block: B:209:0x0313  */
-    /* JADX WARNING: Removed duplicated region for block: B:235:0x036d  */
-    /* JADX WARNING: Removed duplicated region for block: B:238:0x037a  */
+    /* JADX WARNING: Removed duplicated region for block: B:198:0x02f6  */
+    /* JADX WARNING: Removed duplicated region for block: B:206:0x0307  */
+    /* JADX WARNING: Removed duplicated region for block: B:209:0x0314  */
+    /* JADX WARNING: Removed duplicated region for block: B:235:0x036e  */
+    /* JADX WARNING: Removed duplicated region for block: B:238:0x037b  */
     /* JADX WARNING: Removed duplicated region for block: B:250:0x0135 A[EDGE_INSN: B:250:0x0135->B:91:0x0135 ?: BREAK  , SYNTHETIC] */
     /* JADX WARNING: Removed duplicated region for block: B:252:? A[RETURN, SYNTHETIC] */
     /* JADX WARNING: Removed duplicated region for block: B:253:? A[RETURN, SYNTHETIC] */
@@ -490,7 +488,7 @@ class m implements Runnable {
                         this.f = System.currentTimeMillis();
                         if (j2 > d2) {
                             aVar = this.m;
-                            downloadInfo = this.f1414l;
+                            downloadInfo = this.l;
                             str3 = this.g;
                             str2 = this.h;
                             str = this.i;
@@ -784,7 +782,7 @@ class m implements Runnable {
                                 this.f = System.currentTimeMillis();
                                 if (j2 <= d2) {
                                     aVar = this.m;
-                                    downloadInfo = this.f1414l;
+                                    downloadInfo = this.l;
                                     str3 = this.g;
                                     str2 = this.h;
                                     str = this.i;

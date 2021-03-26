@@ -92,7 +92,7 @@ public abstract class ItemSponsorSelfDrawNewsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSponsorSelfDrawNewsBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSponsorSelfDrawNewsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558940, viewGroup, z, obj);
+        return (ItemSponsorSelfDrawNewsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558947, viewGroup, z, obj);
     }
 
     public static ItemSponsorSelfDrawNewsBinding inflate(LayoutInflater layoutInflater) {
@@ -101,7 +101,7 @@ public abstract class ItemSponsorSelfDrawNewsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSponsorSelfDrawNewsBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSponsorSelfDrawNewsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558940, null, false, obj);
+        return (ItemSponsorSelfDrawNewsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558947, null, false, obj);
     }
 
     public static ItemSponsorSelfDrawNewsBinding bind(View view) {
@@ -110,6 +110,6 @@ public abstract class ItemSponsorSelfDrawNewsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSponsorSelfDrawNewsBinding bind(View view, Object obj) {
-        return (ItemSponsorSelfDrawNewsBinding) bind(obj, view, 2131558940);
+        return (ItemSponsorSelfDrawNewsBinding) bind(obj, view, 2131558947);
     }
 }

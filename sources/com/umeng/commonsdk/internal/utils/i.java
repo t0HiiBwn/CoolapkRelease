@@ -34,9 +34,7 @@ public class i {
     private static int i = 1;
     private static long j = 0;
     private static long k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final int f1488l = 40;
+    private static final int l = 40;
     private static final int m = 50000;
     private static SensorManager n;
     private static ArrayList<float[]> o = new ArrayList<>();

@@ -32,12 +32,12 @@ public class ItemSecondHandSearchBindingImpl extends ItemSecondHandSearchBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362908, 10);
-        sparseIntArray.put(2131362722, 11);
-        sparseIntArray.put(2131363568, 12);
-        sparseIntArray.put(2131363582, 13);
-        sparseIntArray.put(2131361981, 14);
-        sparseIntArray.put(2131363364, 15);
+        sparseIntArray.put(2131362920, 10);
+        sparseIntArray.put(2131362733, 11);
+        sparseIntArray.put(2131363590, 12);
+        sparseIntArray.put(2131363604, 13);
+        sparseIntArray.put(2131361982, 14);
+        sparseIntArray.put(2131363380, 15);
     }
 
     public ItemSecondHandSearchBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -83,9 +83,9 @@ public class ItemSecondHandSearchBindingImpl extends ItemSecondHandSearchBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (187 == i) {
+        } else if (188 == i) {
             setLocationText((String) obj);
         } else if (63 == i) {
             setDateAndReply((String) obj);
@@ -103,7 +103,7 @@ public class ItemSecondHandSearchBindingImpl extends ItemSecondHandSearchBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -113,7 +113,7 @@ public class ItemSecondHandSearchBindingImpl extends ItemSecondHandSearchBinding
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(187);
+        notifyPropertyChanged(188);
         super.requestRebind();
     }
 
@@ -189,11 +189,11 @@ public class ItemSecondHandSearchBindingImpl extends ItemSecondHandSearchBinding
             OnImageLoadListener onImageLoadListener = null;
             OnBitmapTransformListener onBitmapTransformListener = null;
             View.OnClickListener onClickListener2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str, drawable, 2131231152, 0, bool, bool, bool, bool, bool, str9, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str, drawable, 2131231162, 0, bool, bool, bool, bool, bool, str9, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
             TextViewBindingAdapter.setText(this.discountPriceView, str3);
             TextViewBindingAdapter.setText(this.exchangePriceView, str5);
             TextViewBindingAdapter.setText(this.mboundView8, str4);
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.picView, str2, drawable, 2131231691, 0, bool, bool, bool, bool, bool, str9, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.picView, str2, drawable, 2131231702, 0, bool, bool, bool, bool, bool, str9, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
         }
         if (i3 != 0) {
             Boolean bool2 = null;

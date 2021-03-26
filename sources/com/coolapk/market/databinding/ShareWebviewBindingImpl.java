@@ -27,9 +27,9 @@ public class ShareWebviewBindingImpl extends ShareWebviewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363373, 1);
-        sparseIntArray.put(2131363588, 2);
-        sparseIntArray.put(2131363592, 3);
+        sparseIntArray.put(2131363390, 1);
+        sparseIntArray.put(2131363610, 2);
+        sparseIntArray.put(2131363614, 3);
     }
 
     public ShareWebviewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

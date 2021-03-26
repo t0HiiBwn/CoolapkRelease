@@ -31,9 +31,7 @@ public final class GeocodeAddress implements Parcelable {
     private LatLonPoint i;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1250l;
+    private String l;
 
     @Override // android.os.Parcelable
     public final int describeContents() {
@@ -136,11 +134,11 @@ public final class GeocodeAddress implements Parcelable {
     }
 
     public final String getPostcode() {
-        return this.f1250l;
+        return this.l;
     }
 
     public final void setPostcode(String str) {
-        this.f1250l = str;
+        this.l = str;
     }
 
     @Override // android.os.Parcelable
@@ -156,7 +154,7 @@ public final class GeocodeAddress implements Parcelable {
         parcel.writeValue(this.i);
         parcel.writeString(this.j);
         parcel.writeString(this.k);
-        parcel.writeString(this.f1250l);
+        parcel.writeString(this.l);
     }
 
     private GeocodeAddress(Parcel parcel) {
@@ -171,6 +169,6 @@ public final class GeocodeAddress implements Parcelable {
         this.i = (LatLonPoint) parcel.readValue(LatLonPoint.class.getClassLoader());
         this.j = parcel.readString();
         this.k = parcel.readString();
-        this.f1250l = parcel.readString();
+        this.l = parcel.readString();
     }
 }

@@ -1,32 +1,29 @@
 package com.coolapk.market.util;
 
-import android.app.Activity;
 import android.view.View;
-import android.widget.FrameLayout;
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import android.view.ViewParent;
+import java.util.Objects;
 import kotlin.Metadata;
-import kotlin.jvm.internal.Intrinsics;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\b\n\u0000\n\u0002\u0010\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001H\n¢\u0006\u0002\b\u0002"}, d2 = {"<anonymous>", "", "run"}, k = 3, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0018\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\b\u0010\u0000\u001a\u00020\u00012\u000e\u0010\u0002\u001a\n \u0004*\u0004\u0018\u00010\u00030\u00032\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u00062\u0006\u0010\f\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\u0006H\n¢\u0006\u0002\b\u000e"}, d2 = {"<anonymous>", "", "v", "Landroid/view/View;", "kotlin.jvm.PlatformType", "left", "", "top", "right", "bottom", "oldLeft", "oldTop", "oldRight", "oldBottom", "onLayoutChange"}, k = 3, mv = {1, 4, 2})
 /* compiled from: DialogUtil.kt */
-final class DialogUtil$showBottomSheetDialog$1 implements Runnable {
-    final /* synthetic */ Activity $activity;
-    final /* synthetic */ BottomSheetDialog $dialog;
+final class DialogUtil$showBottomSheetDialog$1 implements View.OnLayoutChangeListener {
     final /* synthetic */ View $view;
 
-    DialogUtil$showBottomSheetDialog$1(View view, BottomSheetDialog bottomSheetDialog, Activity activity) {
+    DialogUtil$showBottomSheetDialog$1(View view) {
         this.$view = view;
-        this.$dialog = bottomSheetDialog;
-        this.$activity = activity;
     }
 
-    @Override // java.lang.Runnable
-    public final void run() {
+    @Override // android.view.View.OnLayoutChangeListener
+    public final void onLayoutChange(View view, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8) {
         if (this.$view.getHeight() > 0) {
-            BottomSheetBehavior<FrameLayout> behavior = this.$dialog.getBehavior();
-            Intrinsics.checkNotNullExpressionValue(behavior, "dialog.behavior");
-            behavior.setPeekHeight(Math.min(DisplayUtils.getHeightPixels(this.$activity), this.$view.getHeight()));
+            ViewParent parent = this.$view.getParent();
+            Objects.requireNonNull(parent, "null cannot be cast to non-null type android.view.View");
+            View view2 = (View) parent;
+            int height = view2.getHeight();
+            if (this.$view.getHeight() != height) {
+                view2.setTranslationY(((float) height) - ((float) this.$view.getHeight()));
+            }
         }
     }
 }

@@ -23,7 +23,7 @@ public final class Platform {
     }
 
     /* renamed from: synchronized  reason: not valid java name */
-    public static final <R> R m2334synchronized(Object obj, Function0<? extends R> function0) {
+    public static final <R> R m1583synchronized(Object obj, Function0<? extends R> function0) {
         R r;
         Intrinsics.checkNotNullParameter(obj, "lock");
         Intrinsics.checkNotNullParameter(function0, "block");

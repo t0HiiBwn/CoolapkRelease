@@ -40,7 +40,7 @@ public class SearchMenuHelperFragment extends BaseFragment {
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() != 2131361960) {
+        if (menuItem.getItemId() != 2131361961) {
             return super.onOptionsItemSelected(menuItem);
         }
         ActionManager.startSearchActivity(getActivity());

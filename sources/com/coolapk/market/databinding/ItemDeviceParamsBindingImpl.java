@@ -26,8 +26,8 @@ public class ItemDeviceParamsBindingImpl extends ItemDeviceParamsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363071, 1);
-        sparseIntArray.put(2131363070, 2);
+        sparseIntArray.put(2131363085, 1);
+        sparseIntArray.put(2131363084, 2);
     }
 
     public ItemDeviceParamsBindingImpl(DataBindingComponent dataBindingComponent, View view) {

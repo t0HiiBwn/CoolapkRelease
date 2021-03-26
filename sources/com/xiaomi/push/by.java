@@ -1,49 +1,58 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
+/* synthetic */ class by {
+    static final /* synthetic */ int[] a;
 
-public class by extends ca {
-    public by(String str, String str2, String[] strArr, String str3) {
-        super(str, str2, strArr, str3);
-    }
-
-    public static by a(Context context, String str, int i) {
-        b.b("delete  messages when db size is too bigger");
-        String a = ce.a(context).m171a(str);
-        if (TextUtils.isEmpty(a)) {
-            return null;
+    static {
+        int[] iArr = new int[gi.values().length];
+        a = iArr;
+        try {
+            iArr[gi.Registration.ordinal()] = 1;
+        } catch (NoSuchFieldError unused) {
         }
-        StringBuilder sb = new StringBuilder();
-        sb.append("rowDataId in (select ");
-        sb.append("rowDataId from " + a);
-        sb.append(" order by createTimeStamp asc");
-        sb.append(" limit ?)");
-        return new by(str, sb.toString(), new String[]{String.valueOf(i)}, "a job build to delete history message");
-    }
-
-    private void a(long j) {
-        if (this.f264a != null && this.f264a.length > 0) {
-            this.f264a[0] = String.valueOf(j);
+        try {
+            a[gi.UnRegistration.ordinal()] = 2;
+        } catch (NoSuchFieldError unused2) {
         }
-    }
-
-    @Override // com.xiaomi.push.ce.a
-    public void a(Context context, Object obj) {
-        if (obj instanceof Long) {
-            long longValue = ((Long) obj).longValue();
-            long a = ck.a(a());
-            long j = bw.f245a;
-            if (a > j) {
-                long j2 = (long) (((((double) (a - j)) * 1.2d) / ((double) j)) * ((double) longValue));
-                a(j2);
-                bs a2 = bs.a(context);
-                a2.a("begin delete " + j2 + "noUpload messages , because db size is " + a + "B");
-                super.a(context, obj);
-                return;
-            }
-            b.b("db size is suitable");
+        try {
+            a[gi.Subscription.ordinal()] = 3;
+        } catch (NoSuchFieldError unused3) {
+        }
+        try {
+            a[gi.UnSubscription.ordinal()] = 4;
+        } catch (NoSuchFieldError unused4) {
+        }
+        try {
+            a[gi.SendMessage.ordinal()] = 5;
+        } catch (NoSuchFieldError unused5) {
+        }
+        try {
+            a[gi.AckMessage.ordinal()] = 6;
+        } catch (NoSuchFieldError unused6) {
+        }
+        try {
+            a[gi.SetConfig.ordinal()] = 7;
+        } catch (NoSuchFieldError unused7) {
+        }
+        try {
+            a[gi.ReportFeedback.ordinal()] = 8;
+        } catch (NoSuchFieldError unused8) {
+        }
+        try {
+            a[gi.MultiConnectionBroadcast.ordinal()] = 9;
+        } catch (NoSuchFieldError unused9) {
+        }
+        try {
+            a[gi.MultiConnectionResult.ordinal()] = 10;
+        } catch (NoSuchFieldError unused10) {
+        }
+        try {
+            a[gi.Notification.ordinal()] = 11;
+        } catch (NoSuchFieldError unused11) {
+        }
+        try {
+            a[gi.Command.ordinal()] = 12;
+        } catch (NoSuchFieldError unused12) {
         }
     }
 }

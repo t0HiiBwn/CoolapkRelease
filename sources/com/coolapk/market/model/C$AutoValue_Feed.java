@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Feed  reason: invalid class name */
 abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
-    C$AutoValue_Feed(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l2, Long l3, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, int i, String str15, List<String> list, String str16, String str17, int i2, int i3, int i4, int i5, int i6, int i7, String str18, String str19, int i8, String str20, int i9, int i10, String str21, String str22, String str23, int i11, int i12, int i13, int i14, String str24, String str25, String str26, List<FeedReply> list2, int i15, List<RelatedData> list3, List<RelatedData> list4, List<RelatedData> list5, String str27, Collection collection, CollectionItem collectionItem, UserAction userAction, List<FeedReply> list6, List<FeedReply> list7, List<FeedReply> list8, List<String> list9, List<GoodsListItem> list10, Feed feed, DyhArticle dyhArticle, String str28, String str29, String str30, String str31, long j, UserInfo userInfo2, String str32, String str33, String str34, String str35, String str36, String str37, String str38, String str39, String str40, int i16, int i17, int i18, int i19, long j2, String str41, String str42, String str43, String str44, String str45, String str46, String str47, String str48, List<FeedRelation> list11, FeedTarget feedTarget, int i20, String str49, String str50, String str51, String str52, String str53, String str54, String str55, String str56, String str57, String str58, String str59, String str60, List<Entity> list12, String str61, String str62, String str63, String str64, String str65, String str66, String str67, int i21, String str68, String str69, int i22, DyhModel dyhModel, String str70, String str71, String str72, String str73, float f, float f2, float f3, float f4, float f5, float f6, float f7, float f8, float f9, float f10, float f11, String str74, String str75, String str76, String str77, String str78, String str79, String str80, String str81, Entity entity, Entity entity2, Entity entity3, int i23, List<FeedReply> list13, FeedGoodsAction feedGoodsAction, String str82, int i24, int i25, int i26, Vote vote, SecondHandInfo secondHandInfo, int i27, SimpleInfo simpleInfo, SimpleInfo simpleInfo2, int i28, int i29, int i30) {
-        super(str, str2, str3, str4, num, str5, str6, str7, l2, l3, str8, userInfo, str9, str10, str11, str12, str13, str14, i, str15, list, str16, str17, i2, i3, i4, i5, i6, i7, str18, str19, i8, str20, i9, i10, str21, str22, str23, i11, i12, i13, i14, str24, str25, str26, list2, i15, list3, list4, list5, str27, collection, collectionItem, userAction, list6, list7, list8, list9, list10, feed, dyhArticle, str28, str29, str30, str31, j, userInfo2, str32, str33, str34, str35, str36, str37, str38, str39, str40, i16, i17, i18, i19, j2, str41, str42, str43, str44, str45, str46, str47, str48, list11, feedTarget, i20, str49, str50, str51, str52, str53, str54, str55, str56, str57, str58, str59, str60, list12, str61, str62, str63, str64, str65, str66, str67, i21, str68, str69, i22, dyhModel, str70, str71, str72, str73, f, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, str74, str75, str76, str77, str78, str79, str80, str81, entity, entity2, entity3, i23, list13, feedGoodsAction, str82, i24, i25, i26, vote, secondHandInfo, i27, simpleInfo, simpleInfo2, i28, i29, i30);
+    C$AutoValue_Feed(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l, Long l2, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, int i, String str15, List<String> list, String str16, String str17, int i2, int i3, int i4, int i5, int i6, int i7, String str18, String str19, int i8, String str20, int i9, int i10, String str21, String str22, String str23, int i11, int i12, int i13, int i14, String str24, String str25, String str26, List<FeedReply> list2, int i15, List<RelatedData> list3, List<RelatedData> list4, List<RelatedData> list5, String str27, Collection collection, CollectionItem collectionItem, UserAction userAction, List<FeedReply> list6, List<FeedReply> list7, List<FeedReply> list8, List<String> list9, List<GoodsListItem> list10, Feed feed, DyhArticle dyhArticle, String str28, String str29, String str30, String str31, long j, UserInfo userInfo2, String str32, String str33, String str34, String str35, String str36, String str37, String str38, String str39, String str40, int i16, int i17, int i18, int i19, long j2, String str41, String str42, String str43, String str44, String str45, String str46, String str47, String str48, List<FeedRelation> list11, FeedTarget feedTarget, int i20, List<FeedGoods> list12, String str49, String str50, String str51, String str52, String str53, String str54, String str55, String str56, String str57, String str58, String str59, String str60, List<Entity> list13, String str61, String str62, String str63, String str64, String str65, String str66, String str67, int i21, String str68, String str69, int i22, DyhModel dyhModel, String str70, String str71, String str72, String str73, float f, float f2, float f3, float f4, float f5, float f6, float f7, float f8, float f9, float f10, float f11, String str74, String str75, String str76, String str77, String str78, String str79, String str80, String str81, Entity entity, Entity entity2, Entity entity3, int i23, List<FeedReply> list14, FeedGoodsAction feedGoodsAction, String str82, int i24, int i25, int i26, Vote vote, SecondHandInfo secondHandInfo, int i27, SimpleInfo simpleInfo, SimpleInfo simpleInfo2, int i28, int i29, int i30) {
+        super(str, str2, str3, str4, num, str5, str6, str7, l, l2, str8, userInfo, str9, str10, str11, str12, str13, str14, i, str15, list, str16, str17, i2, i3, i4, i5, i6, i7, str18, str19, i8, str20, i9, i10, str21, str22, str23, i11, i12, i13, i14, str24, str25, str26, list2, i15, list3, list4, list5, str27, collection, collectionItem, userAction, list6, list7, list8, list9, list10, feed, dyhArticle, str28, str29, str30, str31, j, userInfo2, str32, str33, str34, str35, str36, str37, str38, str39, str40, i16, i17, i18, i19, j2, str41, str42, str43, str44, str45, str46, str47, str48, list11, feedTarget, i20, list12, str49, str50, str51, str52, str53, str54, str55, str56, str57, str58, str59, str60, list13, str61, str62, str63, str64, str65, str66, str67, i21, str68, str69, i22, dyhModel, str70, str71, str72, str73, f, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, str74, str75, str76, str77, str78, str79, str80, str81, entity, entity2, entity3, i23, list14, feedGoodsAction, str82, i24, i25, i26, vote, secondHandInfo, i27, simpleInfo, simpleInfo2, i28, i29, i30);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Feed$GsonTypeAdapter */
@@ -94,6 +94,7 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
         private List<FeedReply> defaultHotReplyRows = Collections.emptyList();
         private Entity defaultHotSponsorCard = null;
         private String defaultId = null;
+        private List<FeedGoods> defaultIncludeGoods = Collections.emptyList();
         private String defaultInfo = null;
         private String defaultInfoHtml = null;
         private SimpleInfo defaultInnerInfo = null;
@@ -236,6 +237,7 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
         private final TypeAdapter<List<FeedReply>> hotReplyRowsAdapter;
         private final TypeAdapter<Entity> hotSponsorCardAdapter;
         private final TypeAdapter<String> idAdapter;
+        private final TypeAdapter<List<FeedGoods>> includeGoodsAdapter;
         private final TypeAdapter<String> infoAdapter;
         private final TypeAdapter<String> infoHtmlAdapter;
         private final TypeAdapter<SimpleInfo> innerInfoAdapter;
@@ -428,6 +430,7 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             this.relationRowsAdapter = gson.getAdapter(TypeToken.getParameterized(List.class, FeedRelation.class));
             this.targetRowAdapter = gson.getAdapter(FeedTarget.class);
             this.starAdapter = gson.getAdapter(Integer.class);
+            this.includeGoodsAdapter = gson.getAdapter(TypeToken.getParameterized(List.class, FeedGoods.class));
             this.fidAdapter = gson.getAdapter(String.class);
             this.dyhIdAdapter = gson.getAdapter(String.class);
             this.dyhNameAdapter = gson.getAdapter(String.class);
@@ -536,13 +539,13 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -953,6 +956,11 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
 
         public GsonTypeAdapter setDefaultStar(int i) {
             this.defaultStar = i;
+            return this;
+        }
+
+        public GsonTypeAdapter setDefaultIncludeGoods(List<FeedGoods> list) {
+            this.defaultIncludeGoods = list;
             return this;
         }
 
@@ -1476,6 +1484,8 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             this.targetRowAdapter.write(jsonWriter, feed.getTargetRow());
             jsonWriter.name("star");
             this.starAdapter.write(jsonWriter, Integer.valueOf(feed.getStar()));
+            jsonWriter.name("include_goods");
+            this.includeGoodsAdapter.write(jsonWriter, feed.getIncludeGoods());
             jsonWriter.name("fid");
             this.fidAdapter.write(jsonWriter, feed.getFid());
             jsonWriter.name("dyh_id");
@@ -1626,8 +1636,8 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             String str5 = this.defaultDescription;
             String str6 = this.defaultSubTitle;
             String str7 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str8 = this.defaultDeprecatedUserAvatar;
             UserInfo userInfo = this.defaultUserInfo;
             String str9 = this.defaultUid;
@@ -1710,6 +1720,7 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             List<FeedRelation> list11 = this.defaultRelationRows;
             FeedTarget feedTarget = this.defaultTargetRow;
             int i20 = this.defaultStar;
+            List<FeedGoods> list12 = this.defaultIncludeGoods;
             String str49 = this.defaultFid;
             String str50 = this.defaultDyhId;
             String str51 = this.defaultDyhName;
@@ -1722,7 +1733,7 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             String str58 = this.defaultExtraInfo;
             String str59 = this.defaultExtraLinkUrl;
             String str60 = this.defaultExtraPic;
-            List<Entity> list12 = this.defaultExtraEntities;
+            List<Entity> list13 = this.defaultExtraEntities;
             String str61 = this.defaultVideoPic;
             String str62 = this.defaultVideoUrl;
             String str63 = this.defaultLocation;
@@ -1762,7 +1773,7 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             Entity entity2 = this.defaultHotSponsorCard;
             Entity entity3 = this.defaultNoticeSponsorCard;
             int i23 = this.defaultBuyStatus;
-            List<FeedReply> list13 = this.defaultTopReplyRows;
+            List<FeedReply> list14 = this.defaultTopReplyRows;
             FeedGoodsAction feedGoodsAction = this.defaultGoodsAction;
             String str82 = this.defaultEditorTitle;
             int i24 = this.defaultIsOwner;
@@ -1783,8 +1794,8 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             String str86 = str5;
             String str87 = str6;
             String str88 = str7;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str89 = str8;
             UserInfo userInfo3 = userInfo;
             String str90 = str9;
@@ -1796,7 +1807,7 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             String str96 = str14;
             int i31 = i;
             String str97 = str15;
-            List<String> list14 = list;
+            List<String> list15 = list;
             String str98 = str16;
             String str99 = str17;
             int i32 = i2;
@@ -1821,20 +1832,20 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             String str106 = str24;
             String str107 = str25;
             String str108 = str26;
-            List<FeedReply> list15 = list2;
+            List<FeedReply> list16 = list2;
             int i45 = i15;
-            List<RelatedData> list16 = list3;
-            List<RelatedData> list17 = list4;
-            List<RelatedData> list18 = list5;
+            List<RelatedData> list17 = list3;
+            List<RelatedData> list18 = list4;
+            List<RelatedData> list19 = list5;
             String str109 = str27;
             Collection collection2 = collection;
             CollectionItem collectionItem2 = collectionItem;
             UserAction userAction2 = userAction;
-            List<FeedReply> list19 = list6;
-            List<FeedReply> list20 = list7;
-            List<FeedReply> list21 = list8;
-            List<String> list22 = list9;
-            List<GoodsListItem> list23 = list10;
+            List<FeedReply> list20 = list6;
+            List<FeedReply> list21 = list7;
+            List<FeedReply> list22 = list8;
+            List<String> list23 = list9;
+            List<GoodsListItem> list24 = list10;
             Feed feed2 = feed;
             DyhArticle dyhArticle2 = dyhArticle;
             String str110 = str28;
@@ -1865,9 +1876,10 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             String str128 = str46;
             String str129 = str47;
             String str130 = str48;
-            List<FeedRelation> list24 = list11;
+            List<FeedRelation> list25 = list11;
             FeedTarget feedTarget2 = feedTarget;
             int i50 = i20;
+            List<FeedGoods> list26 = list12;
             String str131 = str49;
             String str132 = str50;
             String str133 = str51;
@@ -1880,7 +1892,7 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             String str140 = str58;
             String str141 = str59;
             String str142 = str60;
-            List<Entity> list25 = list12;
+            List<Entity> list27 = list13;
             String str143 = str61;
             String str144 = str62;
             String str145 = str63;
@@ -1920,7 +1932,7 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
             Entity entity5 = entity2;
             Entity entity6 = entity3;
             int i53 = i23;
-            List<FeedReply> list26 = list13;
+            List<FeedReply> list28 = list14;
             FeedGoodsAction feedGoodsAction2 = feedGoodsAction;
             String str164 = str82;
             int i54 = i24;
@@ -2019,873 +2031,879 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
                                 break;
                             }
                             break;
+                        case -1551027969:
+                            if (nextName.equals("include_goods")) {
+                                c = '\r';
+                                break;
+                            }
+                            break;
                         case -1482998339:
                             if (nextName.equals("entityType")) {
-                                c = '\r';
+                                c = 14;
                                 break;
                             }
                             break;
                         case -1460853832:
                             if (nextName.equals("displayUsername")) {
-                                c = 14;
+                                c = 15;
                                 break;
                             }
                             break;
                         case -1433038149:
                             if (nextName.equals("message_raw_input")) {
-                                c = 15;
+                                c = 16;
                                 break;
                             }
                             break;
                         case -1408783853:
                             if (nextName.equals("isModified")) {
-                                c = 16;
+                                c = 17;
                                 break;
                             }
                             break;
                         case -1385954593:
                             if (nextName.equals("lastupdate")) {
-                                c = 17;
+                                c = 18;
                                 break;
                             }
                             break;
                         case -1345087976:
                             if (nextName.equals("long_location")) {
-                                c = 18;
+                                c = 19;
                                 break;
                             }
                             break;
                         case -1317113241:
                             if (nextName.equals("dyh_id")) {
-                                c = 19;
+                                c = 20;
                                 break;
                             }
                             break;
                         case -1303117998:
                             if (nextName.equals("noticeSponsorCard")) {
-                                c = 20;
+                                c = 21;
                                 break;
                             }
                             break;
                         case -1296155600:
                             if (nextName.equals("message_raw_output")) {
-                                c = 21;
+                                c = 22;
                                 break;
                             }
                             break;
                         case -1281587573:
                             if (nextName.equals("favnum")) {
-                                c = 22;
+                                c = 23;
                                 break;
                             }
                             break;
                         case -1272781286:
                             if (nextName.equals("userFollowList")) {
-                                c = 23;
+                                c = 24;
                                 break;
                             }
                             break;
                         case -1237377772:
                             if (nextName.equals("fetchType")) {
-                                c = 24;
+                                c = 25;
                                 break;
                             }
                             break;
                         case -1229302401:
                             if (nextName.equals("message_cover")) {
-                                c = 25;
+                                c = 26;
                                 break;
                             }
                             break;
                         case -1213783008:
                             if (nextName.equals("message_title")) {
-                                c = 26;
+                                c = 27;
                                 break;
                             }
                             break;
                         case -1140201565:
                             if (nextName.equals("topInfo")) {
-                                c = 27;
+                                c = 28;
                                 break;
                             }
                             break;
                         case -1103915498:
                             if (nextName.equals("hotReplyRows")) {
-                                c = 28;
+                                c = 29;
                                 break;
                             }
                             break;
                         case -988517257:
                             if (nextName.equals("picArr")) {
-                                c = 29;
+                                c = 30;
                                 break;
                             }
                             break;
                         case -946093840:
                             if (nextName.equals("spamContent")) {
-                                c = 30;
+                                c = 31;
                                 break;
                             }
                             break;
                         case -935262744:
                             if (nextName.equals("entityTypeName")) {
-                                c = 31;
+                                c = ' ';
                                 break;
                             }
                             break;
                         case -892481550:
                             if (nextName.equals("status")) {
-                                c = ' ';
+                                c = '!';
                                 break;
                             }
                             break;
                         case -886838317:
                             if (nextName.equals("comment_general_pic")) {
-                                c = '!';
+                                c = '\"';
                                 break;
                             }
                             break;
                         case -869304560:
                             if (nextName.equals("extra_entities")) {
-                                c = '\"';
+                                c = '#';
                                 break;
                             }
                             break;
                         case -863614364:
                             if (nextName.equals("ttitle")) {
-                                c = '#';
+                                c = '$';
                                 break;
                             }
                             break;
                         case -854586421:
                             if (nextName.equals("buy_status")) {
-                                c = '$';
+                                c = '%';
                                 break;
                             }
                             break;
                         case -815588727:
                             if (nextName.equals("targetRow")) {
-                                c = '%';
+                                c = '&';
                                 break;
                             }
                             break;
                         case -763015088:
                             if (nextName.equals("recentLikeList")) {
-                                c = '&';
+                                c = '\'';
                                 break;
                             }
                             break;
                         case -743768816:
                             if (nextName.equals("shareUrl")) {
-                                c = '\'';
+                                c = '(';
                                 break;
                             }
                             break;
                         case -731774526:
                             if (nextName.equals("feedFromType")) {
-                                c = '(';
+                                c = ')';
                                 break;
                             }
                             break;
                         case -717007700:
                             if (nextName.equals("blockStatusText")) {
-                                c = ')';
+                                c = '*';
                                 break;
                             }
                             break;
                         case -714661626:
                             if (nextName.equals("editor_title")) {
-                                c = '*';
+                                c = '+';
                                 break;
                             }
                             break;
                         case -645462302:
                             if (nextName.equals("messagesource")) {
-                                c = '+';
+                                c = ',';
                                 break;
                             }
                             break;
                         case -601407516:
                             if (nextName.equals("block_status")) {
-                                c = ',';
+                                c = '-';
                                 break;
                             }
                             break;
                         case -584774865:
                             if (nextName.equals("device_title")) {
-                                c = '-';
+                                c = '.';
                                 break;
                             }
                             break;
                         case -566515261:
                             if (nextName.equals("isHeadlineCommentV8")) {
-                                c = '.';
+                                c = '/';
                                 break;
                             }
                             break;
                         case -563842096:
                             if (nextName.equals("likeUserInfo")) {
-                                c = '/';
+                                c = '0';
                                 break;
                             }
                             break;
                         case -562752115:
                             if (nextName.equals("likeUsername")) {
-                                c = '0';
+                                c = '1';
                                 break;
                             }
                             break;
                         case -534538128:
                             if (nextName.equals("comment_bad_pic")) {
-                                c = '1';
+                                c = '2';
                                 break;
                             }
                             break;
                         case -528282588:
                             if (nextName.equals("innerInfo")) {
-                                c = '2';
+                                c = '3';
                                 break;
                             }
                             break;
                         case -433749021:
                             if (nextName.equals("replyRows")) {
-                                c = '3';
+                                c = '4';
                                 break;
                             }
                             break;
                         case -429606820:
                             if (nextName.equals("replynum")) {
-                                c = '4';
+                                c = '5';
                                 break;
                             }
                             break;
                         case -419037274:
                             if (nextName.equals("messageStatusText")) {
-                                c = '5';
+                                c = '6';
                                 break;
                             }
                             break;
                         case -374464741:
                             if (nextName.equals("replyMeRows")) {
-                                c = '6';
+                                c = '7';
                                 break;
                             }
                             break;
                         case -316741264:
                             if (nextName.equals("rating_score")) {
-                                c = '7';
+                                c = '8';
                                 break;
                             }
                             break;
                         case -268054776:
                             if (nextName.equals("comment_general")) {
-                                c = '8';
+                                c = '9';
                                 break;
                             }
                             break;
                         case -266803431:
                             if (nextName.equals("userInfo")) {
-                                c = '9';
+                                c = ':';
                                 break;
                             }
                             break;
                         case -265713450:
                             if (nextName.equals("username")) {
-                                c = ':';
+                                c = ';';
                                 break;
                             }
                             break;
                         case -262827531:
                             if (nextName.equals("relationRows")) {
-                                c = ';';
+                                c = '<';
                                 break;
                             }
                             break;
                         case -253792294:
                             if (nextName.equals("extraData")) {
-                                c = '<';
+                                c = '=';
                                 break;
                             }
                             break;
                         case -252978768:
                             if (nextName.equals("extra_key")) {
-                                c = '=';
+                                c = '>';
                                 break;
                             }
                             break;
                         case -252973861:
                             if (nextName.equals("extra_pic")) {
-                                c = '>';
+                                c = '?';
                                 break;
                             }
                             break;
                         case -252968768:
                             if (nextName.equals("extra_url")) {
-                                c = '?';
+                                c = '@';
                                 break;
                             }
                             break;
                         case -241177981:
                             if (nextName.equals("relatedata")) {
-                                c = '@';
+                                c = 'A';
                                 break;
                             }
                             break;
                         case -241165445:
                             if (nextName.equals("relatednum")) {
-                                c = 'A';
+                                c = 'B';
                                 break;
                             }
                             break;
                         case -191895048:
                             if (nextName.equals("feedType")) {
-                                c = 'B';
+                                c = 'C';
                                 break;
                             }
                             break;
                         case -163636061:
                             if (nextName.equals("feedTypeName")) {
-                                c = 'C';
+                                c = 'D';
                                 break;
                             }
                             break;
                         case 3355:
                             if (nextName.equals("id")) {
-                                c = 'D';
+                                c = 'E';
                                 break;
                             }
                             break;
                         case 101377:
                             if (nextName.equals("fid")) {
-                                c = 'E';
+                                c = 'F';
                                 break;
                             }
                             break;
                         case 110986:
                             if (nextName.equals("pic")) {
-                                c = 'F';
+                                c = 'G';
                                 break;
                             }
                             break;
                         case 114831:
                             if (nextName.equals("tid")) {
-                                c = 'G';
+                                c = 'H';
                                 break;
                             }
                             break;
                         case 115792:
                             if (nextName.equals("uid")) {
-                                c = 'H';
+                                c = 'I';
                                 break;
                             }
                             break;
                         case 116079:
                             if (nextName.equals("url")) {
-                                c = 'I';
+                                c = 'J';
                                 break;
                             }
                             break;
                         case 3237038:
                             if (nextName.equals("info")) {
-                                c = 'J';
+                                c = 'K';
                                 break;
                             }
                             break;
                         case 3540562:
                             if (nextName.equals("star")) {
-                                c = 'K';
+                                c = 'L';
                                 break;
                             }
                             break;
                         case 3552281:
                             if (nextName.equals("tags")) {
-                                c = 'L';
+                                c = 'M';
                                 break;
                             }
                             break;
                         case 3561835:
                             if (nextName.equals("tkey")) {
-                                c = 'M';
+                                c = 'N';
                                 break;
                             }
                             break;
                         case 3566742:
                             if (nextName.equals("tpic")) {
-                                c = 'N';
+                                c = 'O';
                                 break;
                             }
                             break;
                         case 3571835:
                             if (nextName.equals("turl")) {
-                                c = 'O';
+                                c = 'P';
                                 break;
                             }
                             break;
                         case 3575610:
                             if (nextName.equals("type")) {
-                                c = 'P';
+                                c = 'Q';
                                 break;
                             }
                             break;
                         case 3625706:
                             if (nextName.equals("vote")) {
-                                c = 'Q';
+                                c = 'R';
                                 break;
                             }
                             break;
                         case 4246350:
                             if (nextName.equals("rating_score_10")) {
-                                c = 'R';
+                                c = 'S';
                                 break;
                             }
                             break;
                         case 21535901:
                             if (nextName.equals("adminInfo")) {
-                                c = 'S';
+                                c = 'T';
                                 break;
                             }
                             break;
                         case 46690368:
                             if (nextName.equals("isHeadlineV8")) {
-                                c = 'T';
+                                c = 'U';
                                 break;
                             }
                             break;
                         case 98539350:
                             if (nextName.equals("goods")) {
-                                c = 'U';
+                                c = 'V';
                                 break;
                             }
                             break;
                         case 102727412:
                             if (nextName.equals("label")) {
-                                c = 'V';
+                                c = 'W';
                                 break;
                             }
                             break;
                         case 110365474:
                             if (nextName.equals("tinfo")) {
-                                c = 'W';
+                                c = 'X';
                                 break;
                             }
                             break;
                         case 110371416:
                             if (nextName.equals("title")) {
-                                c = 'X';
+                                c = 'Y';
                                 break;
                             }
                             break;
                         case 110450286:
                             if (nextName.equals("tlink")) {
-                                c = 'Y';
+                                c = 'Z';
                                 break;
                             }
                             break;
                         case 110704046:
                             if (nextName.equals("ttype")) {
-                                c = 'Z';
+                                c = '[';
                                 break;
                             }
                             break;
                         case 121133918:
                             if (nextName.equals("is_owner")) {
-                                c = '[';
+                                c = '\\';
                                 break;
                             }
                             break;
                         case 139881314:
                             if (nextName.equals("is_recommend_vote_comment")) {
-                                c = '\\';
+                                c = ']';
                                 break;
                             }
                             break;
                         case 174121273:
                             if (nextName.equals("likeUid")) {
-                                c = ']';
+                                c = '^';
                                 break;
                             }
                             break;
                         case 174145679:
                             if (nextName.equals("likenum")) {
-                                c = '^';
+                                c = '_';
                                 break;
                             }
                             break;
                         case 177592697:
                             if (nextName.equals("infoHtml")) {
-                                c = '_';
+                                c = '`';
                                 break;
                             }
                             break;
                         case 248004671:
                             if (nextName.equals("statusText")) {
-                                c = '`';
+                                c = 'a';
                                 break;
                             }
                             break;
                         case 250747629:
                             if (nextName.equals("spamReason")) {
-                                c = 'a';
+                                c = 'b';
                                 break;
                             }
                             break;
                         case 302894437:
                             if (nextName.equals("ershou_info")) {
-                                c = 'b';
+                                c = 'c';
                                 break;
                             }
                             break;
                         case 334595520:
                             if (nextName.equals("userLikeList")) {
-                                c = 'c';
+                                c = 'd';
                                 break;
                             }
                             break;
                         case 339519501:
                             if (nextName.equals("user_tags")) {
-                                c = 'd';
+                                c = 'e';
                                 break;
                             }
                             break;
                         case 340983322:
                             if (nextName.equals("useragent")) {
-                                c = 'e';
+                                c = 'f';
                                 break;
                             }
                             break;
                         case 347155466:
                             if (nextName.equals("isHistory")) {
-                                c = 'f';
+                                c = 'g';
                                 break;
                             }
                             break;
                         case 405475484:
                             if (nextName.equals("rating_type")) {
-                                c = 'g';
+                                c = 'h';
                                 break;
                             }
                             break;
                         case 406262265:
                             if (nextName.equals("collection_item_info")) {
-                                c = 'h';
+                                c = 'i';
                                 break;
                             }
                             break;
                         case 509524222:
                             if (nextName.equals("forwardSourceFeed")) {
-                                c = 'i';
+                                c = 'j';
                                 break;
                             }
                             break;
                         case 509960858:
                             if (nextName.equals("forwardSourceType")) {
-                                c = 'j';
+                                c = 'k';
                                 break;
                             }
                             break;
                         case 523149226:
                             if (nextName.equals("keywords")) {
-                                c = 'k';
+                                c = 'l';
                                 break;
                             }
                             break;
                         case 554326306:
                             if (nextName.equals("rating_score_1")) {
-                                c = 'l';
+                                c = 'm';
                                 break;
                             }
                             break;
                         case 554326307:
                             if (nextName.equals("rating_score_2")) {
-                                c = 'm';
+                                c = 'n';
                                 break;
                             }
                             break;
                         case 554326308:
                             if (nextName.equals("rating_score_3")) {
-                                c = 'n';
+                                c = 'o';
                                 break;
                             }
                             break;
                         case 554326309:
                             if (nextName.equals("rating_score_4")) {
-                                c = 'o';
+                                c = 'p';
                                 break;
                             }
                             break;
                         case 554326310:
                             if (nextName.equals("rating_score_5")) {
-                                c = 'p';
+                                c = 'q';
                                 break;
                             }
                             break;
                         case 554326311:
                             if (nextName.equals("rating_score_6")) {
-                                c = 'q';
+                                c = 'r';
                                 break;
                             }
                             break;
                         case 554326312:
                             if (nextName.equals("rating_score_7")) {
-                                c = 'r';
+                                c = 's';
                                 break;
                             }
                             break;
                         case 554326313:
                             if (nextName.equals("rating_score_8")) {
-                                c = 's';
+                                c = 't';
                                 break;
                             }
                             break;
                         case 554326314:
                             if (nextName.equals("rating_score_9")) {
-                                c = 't';
+                                c = 'u';
                                 break;
                             }
                             break;
                         case 559509681:
                             if (nextName.equals("articleId")) {
-                                c = 'u';
+                                c = 'v';
                                 break;
                             }
                             break;
                         case 592492776:
                             if (nextName.equals("comment_good_pic")) {
-                                c = 'v';
+                                c = 'w';
                                 break;
                             }
                             break;
                         case 607544993:
                             if (nextName.equals("forwardnum")) {
-                                c = 'w';
+                                c = 'x';
                                 break;
                             }
                             break;
                         case 683233012:
                             if (nextName.equals("comment_block_num")) {
-                                c = 'x';
+                                c = 'y';
                                 break;
                             }
                             break;
                         case 738428399:
                             if (nextName.equals("isStickTop")) {
-                                c = 'y';
+                                c = 'z';
                                 break;
                             }
                             break;
                         case 747541373:
                             if (nextName.equals("extra_info")) {
-                                c = 'z';
+                                c = '{';
                                 break;
                             }
                             break;
                         case 747879945:
                             if (nextName.equals("extra_type")) {
-                                c = '{';
+                                c = '|';
                                 break;
                             }
                             break;
                         case 765920821:
                             if (nextName.equals("follownum")) {
-                                c = '|';
+                                c = '}';
                                 break;
                             }
                             break;
                         case 795242141:
                             if (nextName.equals("comment_good")) {
-                                c = '}';
+                                c = '~';
                                 break;
                             }
                             break;
                         case 888049560:
                             if (nextName.equals("is_anonymous")) {
-                                c = '~';
+                                c = 127;
                                 break;
                             }
                             break;
                         case 929064519:
                             if (nextName.equals("goodsListItem")) {
-                                c = 127;
+                                c = 128;
                                 break;
                             }
                             break;
                         case 954925063:
                             if (nextName.equals("message")) {
-                                c = 128;
+                                c = 129;
                                 break;
                             }
                             break;
                         case 989204668:
                             if (nextName.equals("recommend")) {
-                                c = 129;
+                                c = 130;
                                 break;
                             }
                             break;
                         case 1008404266:
                             if (nextName.equals("message_status")) {
-                                c = 130;
+                                c = 131;
                                 break;
                             }
                             break;
                         case 1060168111:
                             if (nextName.equals("collection_info")) {
-                                c = 131;
+                                c = 132;
                                 break;
                             }
                             break;
                         case 1061163489:
                             if (nextName.equals("userAction")) {
-                                c = 132;
+                                c = 133;
                                 break;
                             }
                             break;
                         case 1065401750:
                             if (nextName.equals("forwardSourceArticle")) {
-                                c = 133;
+                                c = 134;
                                 break;
                             }
                             break;
                         case 1078154500:
                             if (nextName.equals("userAvatar")) {
-                                c = 134;
+                                c = 135;
                                 break;
                             }
                             break;
                         case 1102762756:
                             if (nextName.equals("likeTime")) {
-                                c = 135;
+                                c = 136;
                                 break;
                             }
                             break;
                         case 1122189041:
                             if (nextName.equals("show_owner")) {
-                                c = 136;
+                                c = 137;
                                 break;
                             }
                             break;
                         case 1130002109:
                             if (nextName.equals("hotSponsorCard")) {
-                                c = 137;
+                                c = 138;
                                 break;
                             }
                             break;
                         case 1231131150:
                             if (nextName.equals("topReplyRows")) {
-                                c = 138;
+                                c = 139;
                                 break;
                             }
                             break;
                         case 1258293585:
                             if (nextName.equals("entityFixed")) {
-                                c = 139;
+                                c = 140;
                                 break;
                             }
                             break;
                         case 1269540602:
                             if (nextName.equals("dyh_info")) {
-                                c = 140;
+                                c = 141;
                                 break;
                             }
                             break;
                         case 1269677271:
                             if (nextName.equals("dyh_name")) {
-                                c = 141;
+                                c = 142;
                                 break;
                             }
                             break;
                         case 1333280710:
                             if (nextName.equals("video_pic")) {
-                                c = 142;
+                                c = 143;
                                 break;
                             }
                             break;
                         case 1333285803:
                             if (nextName.equals("video_url")) {
-                                c = 143;
+                                c = 144;
                                 break;
                             }
                             break;
                         case 1426643326:
                             if (nextName.equals("question_answer_num")) {
-                                c = 144;
+                                c = 145;
                                 break;
                             }
                             break;
                         case 1561866583:
                             if (nextName.equals("is_html_article")) {
-                                c = 145;
+                                c = 146;
                                 break;
                             }
                             break;
                         case 1708969321:
                             if (nextName.equals("extra_title")) {
-                                c = 146;
+                                c = 147;
                                 break;
                             }
                             break;
                         case 1793464482:
                             if (nextName.equals("dateline")) {
-                                c = 147;
+                                c = 148;
                                 break;
                             }
                             break;
                         case 1864061896:
                             if (nextName.equals("recentReplyRows")) {
-                                c = 148;
+                                c = 149;
                                 break;
                             }
                             break;
                         case 1901043637:
                             if (nextName.equals("location")) {
-                                c = 149;
+                                c = 150;
                                 break;
                             }
                             break;
                         case 1913317602:
                             if (nextName.equals("message_keywords")) {
-                                c = 150;
+                                c = 151;
                                 break;
                             }
                             break;
                         case 1939536937:
                             if (nextName.equals("media_info")) {
-                                c = 151;
+                                c = 152;
                                 break;
                             }
                             break;
                         case 1939875509:
                             if (nextName.equals("media_type")) {
-                                c = 152;
+                                c = 153;
                                 break;
                             }
                             break;
                         case 2046691385:
                             if (nextName.equals("detailSponsorCard")) {
-                                c = 153;
+                                c = 154;
                                 break;
                             }
                             break;
                         case 2056188342:
                             if (nextName.equals("spamTime")) {
-                                c = 154;
+                                c = 155;
                                 break;
                             }
                             break;
                         case 2097808032:
                             if (nextName.equals("forwardid")) {
-                                c = 155;
+                                c = 156;
                                 break;
                             }
                             break;
                         case 2103857701:
                             if (nextName.equals("comment_bad")) {
-                                c = 156;
+                                c = 157;
                                 break;
                             }
                             break;
                         case 2140787348:
                             if (nextName.equals("media_url")) {
-                                c = 157;
+                                c = 158;
                                 break;
                             }
                             break;
@@ -2931,438 +2949,441 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
                             i52 = this.questionFollowNumAdapter.read(jsonReader).intValue();
                             continue;
                         case '\r':
-                            str113 = this.entityTypeAdapter.read(jsonReader);
+                            list26 = this.includeGoodsAdapter.read(jsonReader);
                             continue;
                         case 14:
-                            str93 = this.displayUserNameAdapter.read(jsonReader);
+                            str113 = this.entityTypeAdapter.read(jsonReader);
                             continue;
                         case 15:
-                            str104 = this.messageRawInputAdapter.read(jsonReader);
+                            str93 = this.displayUserNameAdapter.read(jsonReader);
                             continue;
                         case 16:
-                            i58 = this.isModifiedAdapter.read(jsonReader).intValue();
+                            str104 = this.messageRawInputAdapter.read(jsonReader);
                             continue;
                         case 17:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            i58 = this.isModifiedAdapter.read(jsonReader).intValue();
                             continue;
                         case 18:
-                            str146 = this.longLocationAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 19:
-                            str132 = this.dyhIdAdapter.read(jsonReader);
+                            str146 = this.longLocationAdapter.read(jsonReader);
                             continue;
                         case 20:
-                            entity6 = this.noticeSponsorCardAdapter.read(jsonReader);
+                            str132 = this.dyhIdAdapter.read(jsonReader);
                             continue;
                         case 21:
-                            str103 = this.messageRawOutputAdapter.read(jsonReader);
+                            entity6 = this.noticeSponsorCardAdapter.read(jsonReader);
                             continue;
                         case 22:
-                            i42 = this.favoriteNumAdapter.read(jsonReader).intValue();
+                            str103 = this.messageRawOutputAdapter.read(jsonReader);
                             continue;
                         case 23:
-                            list18 = this.userFollowListAdapter.read(jsonReader);
+                            i42 = this.favoriteNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 24:
-                            str108 = this.fetchTypeAdapter.read(jsonReader);
+                            list19 = this.userFollowListAdapter.read(jsonReader);
                             continue;
                         case 25:
-                            str149 = this.messageCoverAdapter.read(jsonReader);
+                            str108 = this.fetchTypeAdapter.read(jsonReader);
                             continue;
                         case 26:
-                            str147 = this.messageTitleAdapter.read(jsonReader);
+                            str149 = this.messageCoverAdapter.read(jsonReader);
                             continue;
                         case 27:
-                            simpleInfo3 = this.topInfoAdapter.read(jsonReader);
+                            str147 = this.messageTitleAdapter.read(jsonReader);
                             continue;
                         case 28:
-                            list21 = this.hotReplyRowsAdapter.read(jsonReader);
+                            simpleInfo3 = this.topInfoAdapter.read(jsonReader);
                             continue;
                         case 29:
-                            list14 = this.picArrayAdapter.read(jsonReader);
+                            list22 = this.hotReplyRowsAdapter.read(jsonReader);
                             continue;
                         case 30:
-                            str118 = this.spamContentAdapter.read(jsonReader);
+                            list15 = this.picArrayAdapter.read(jsonReader);
                             continue;
                         case 31:
-                            str92 = this.entityTypeNameAdapter.read(jsonReader);
+                            str118 = this.spamContentAdapter.read(jsonReader);
                             continue;
                         case ' ':
-                            i38 = this.statusAdapter.read(jsonReader).intValue();
+                            str92 = this.entityTypeNameAdapter.read(jsonReader);
                             continue;
                         case '!':
-                            str161 = this.commentGeneralPicAdapter.read(jsonReader);
+                            i38 = this.statusAdapter.read(jsonReader).intValue();
                             continue;
                         case '\"':
-                            list25 = this.extraEntitiesAdapter.read(jsonReader);
+                            str161 = this.commentGeneralPicAdapter.read(jsonReader);
                             continue;
                         case '#':
-                            str124 = this.appNameAdapter.read(jsonReader);
+                            list27 = this.extraEntitiesAdapter.read(jsonReader);
                             continue;
                         case '$':
-                            i53 = this.buyStatusAdapter.read(jsonReader).intValue();
+                            str124 = this.appNameAdapter.read(jsonReader);
                             continue;
                         case '%':
-                            feedTarget2 = this.targetRowAdapter.read(jsonReader);
+                            i53 = this.buyStatusAdapter.read(jsonReader).intValue();
                             continue;
                         case '&':
-                            list22 = this.recentLikeListAdapter.read(jsonReader);
+                            feedTarget2 = this.targetRowAdapter.read(jsonReader);
                             continue;
                         case '\'':
-                            str163 = this.shareUrlAdapter.read(jsonReader);
+                            list23 = this.recentLikeListAdapter.read(jsonReader);
                             continue;
                         case '(':
-                            str106 = this.feedFromTypeAdapter.read(jsonReader);
+                            str163 = this.shareUrlAdapter.read(jsonReader);
                             continue;
                         case ')':
-                            str122 = this.blockStatusTextAdapter.read(jsonReader);
+                            str106 = this.feedFromTypeAdapter.read(jsonReader);
                             continue;
                         case '*':
-                            str164 = this.editorTitleAdapter.read(jsonReader);
+                            str122 = this.blockStatusTextAdapter.read(jsonReader);
                             continue;
                         case '+':
-                            str151 = this.messageSourceAdapter.read(jsonReader);
+                            str164 = this.editorTitleAdapter.read(jsonReader);
                             continue;
                         case ',':
-                            i44 = this.blockStatusAdapter.read(jsonReader).intValue();
+                            str151 = this.messageSourceAdapter.read(jsonReader);
                             continue;
                         case '-':
-                            str109 = this.deviceTitleAdapter.read(jsonReader);
+                            i44 = this.blockStatusAdapter.read(jsonReader).intValue();
                             continue;
                         case '.':
-                            i49 = this.isHeadlineCommentV8Adapter.read(jsonReader).intValue();
+                            str109 = this.deviceTitleAdapter.read(jsonReader);
                             continue;
                         case '/':
-                            userInfo4 = this.likeUserInfoAdapter.read(jsonReader);
+                            i49 = this.isHeadlineCommentV8Adapter.read(jsonReader).intValue();
                             continue;
                         case '0':
-                            str112 = this.likeUserNameAdapter.read(jsonReader);
+                            userInfo4 = this.likeUserInfoAdapter.read(jsonReader);
                             continue;
                         case '1':
-                            str159 = this.commentBadPicAdapter.read(jsonReader);
+                            str112 = this.likeUserNameAdapter.read(jsonReader);
                             continue;
                         case '2':
-                            simpleInfo4 = this.innerInfoAdapter.read(jsonReader);
+                            str159 = this.commentBadPicAdapter.read(jsonReader);
                             continue;
                         case '3':
-                            list15 = this.replyRowsAdapter.read(jsonReader);
+                            simpleInfo4 = this.innerInfoAdapter.read(jsonReader);
                             continue;
                         case '4':
-                            i35 = this.replyNumAdapter.read(jsonReader).intValue();
+                            list16 = this.replyRowsAdapter.read(jsonReader);
                             continue;
                         case '5':
-                            str121 = this.messageStatusTextAdapter.read(jsonReader);
+                            i35 = this.replyNumAdapter.read(jsonReader).intValue();
                             continue;
                         case '6':
-                            list19 = this.replyMeRowsAdapter.read(jsonReader);
+                            str121 = this.messageStatusTextAdapter.read(jsonReader);
                             continue;
                         case '7':
-                            f12 = this.ratingScoreAdapter.read(jsonReader).floatValue();
+                            list20 = this.replyMeRowsAdapter.read(jsonReader);
                             continue;
                         case '8':
-                            str160 = this.commentGeneralAdapter.read(jsonReader);
+                            f12 = this.ratingScoreAdapter.read(jsonReader).floatValue();
                             continue;
                         case '9':
-                            userInfo3 = this.userInfoAdapter.read(jsonReader);
+                            str160 = this.commentGeneralAdapter.read(jsonReader);
                             continue;
                         case ':':
-                            str91 = this.deprecatedUserNameAdapter.read(jsonReader);
+                            userInfo3 = this.userInfoAdapter.read(jsonReader);
                             continue;
                         case ';':
-                            list24 = this.relationRowsAdapter.read(jsonReader);
+                            str91 = this.deprecatedUserNameAdapter.read(jsonReader);
                             continue;
                         case '<':
-                            str88 = this.extraDataAdapter.read(jsonReader);
+                            list25 = this.relationRowsAdapter.read(jsonReader);
                             continue;
                         case '=':
-                            str136 = this.extraKeyAdapter.read(jsonReader);
+                            str88 = this.extraDataAdapter.read(jsonReader);
                             continue;
                         case '>':
-                            str142 = this.extraPicAdapter.read(jsonReader);
+                            str136 = this.extraKeyAdapter.read(jsonReader);
                             continue;
                         case '?':
-                            str139 = this.extraUrlAdapter.read(jsonReader);
+                            str142 = this.extraPicAdapter.read(jsonReader);
                             continue;
                         case '@':
-                            list16 = this.relatedDataAdapter.read(jsonReader);
+                            str139 = this.extraUrlAdapter.read(jsonReader);
                             continue;
                         case 'A':
-                            i36 = this.relatedNumAdapter.read(jsonReader).intValue();
+                            list17 = this.relatedDataAdapter.read(jsonReader);
                             continue;
                         case 'B':
-                            str107 = this.feedTypeAdapter.read(jsonReader);
+                            i36 = this.relatedNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 'C':
-                            str105 = this.feedTypeNameAdapter.read(jsonReader);
+                            str107 = this.feedTypeAdapter.read(jsonReader);
                             continue;
                         case 'D':
-                            str95 = this.idAdapter.read(jsonReader);
+                            str105 = this.feedTypeNameAdapter.read(jsonReader);
                             continue;
                         case 'E':
-                            str131 = this.fidAdapter.read(jsonReader);
+                            str95 = this.idAdapter.read(jsonReader);
                             continue;
                         case 'F':
-                            str97 = this.picAdapter.read(jsonReader);
+                            str131 = this.fidAdapter.read(jsonReader);
                             continue;
                         case 'G':
-                            str126 = this.tidAdapter.read(jsonReader);
+                            str97 = this.picAdapter.read(jsonReader);
                             continue;
                         case 'H':
-                            str90 = this.uidAdapter.read(jsonReader);
+                            str126 = this.tidAdapter.read(jsonReader);
                             continue;
                         case 'I':
-                            str111 = this.urlAdapter.read(jsonReader);
+                            str90 = this.uidAdapter.read(jsonReader);
                             continue;
                         case 'J':
-                            str99 = this.infoAdapter.read(jsonReader);
+                            str111 = this.urlAdapter.read(jsonReader);
                             continue;
                         case 'K':
-                            i50 = this.starAdapter.read(jsonReader).intValue();
+                            str99 = this.infoAdapter.read(jsonReader);
                             continue;
                         case 'L':
-                            str150 = this.tagsAdapter.read(jsonReader);
+                            i50 = this.starAdapter.read(jsonReader).intValue();
                             continue;
                         case 'M':
-                            str83 = this.tkeyAdapter.read(jsonReader);
+                            str150 = this.tagsAdapter.read(jsonReader);
                             continue;
                         case 'N':
-                            str128 = this.tpicAdapter.read(jsonReader);
+                            str83 = this.tkeyAdapter.read(jsonReader);
                             continue;
                         case 'O':
-                            str127 = this.TUrlAdapter.read(jsonReader);
+                            str128 = this.tpicAdapter.read(jsonReader);
                             continue;
                         case 'P':
-                            i31 = this.typeAdapter.read(jsonReader).intValue();
+                            str127 = this.TUrlAdapter.read(jsonReader);
                             continue;
                         case 'Q':
-                            vote2 = this.voteAdapter.read(jsonReader);
+                            i31 = this.typeAdapter.read(jsonReader).intValue();
                             continue;
                         case 'R':
-                            f22 = this.ratingScore10Adapter.read(jsonReader).floatValue();
+                            vote2 = this.voteAdapter.read(jsonReader);
                             continue;
                         case 'S':
-                            str119 = this.adminInfoAdapter.read(jsonReader);
+                            f22 = this.ratingScore10Adapter.read(jsonReader).floatValue();
                             continue;
                         case 'T':
-                            i48 = this.isHeadlineV8Adapter.read(jsonReader).intValue();
+                            str119 = this.adminInfoAdapter.read(jsonReader);
                             continue;
                         case 'U':
-                            feedGoodsAction2 = this.goodsActionAdapter.read(jsonReader);
+                            i48 = this.isHeadlineV8Adapter.read(jsonReader).intValue();
                             continue;
                         case 'V':
-                            str96 = this.labelAdapter.read(jsonReader);
+                            feedGoodsAction2 = this.goodsActionAdapter.read(jsonReader);
                             continue;
                         case 'W':
-                            str129 = this.tinfoAdapter.read(jsonReader);
+                            str96 = this.labelAdapter.read(jsonReader);
                             continue;
                         case 'X':
-                            str94 = this.titleAdapter.read(jsonReader);
+                            str129 = this.tinfoAdapter.read(jsonReader);
                             continue;
                         case 'Y':
-                            str130 = this.tlinkAdapter.read(jsonReader);
+                            str94 = this.titleAdapter.read(jsonReader);
                             continue;
                         case 'Z':
-                            str125 = this.ttypeAdapter.read(jsonReader);
+                            str130 = this.tlinkAdapter.read(jsonReader);
                             continue;
                         case '[':
-                            i54 = this.isOwnerAdapter.read(jsonReader).intValue();
+                            str125 = this.ttypeAdapter.read(jsonReader);
                             continue;
                         case '\\':
-                            i57 = this.isRecommendVoteCommentAdapter.read(jsonReader).intValue();
+                            i54 = this.isOwnerAdapter.read(jsonReader).intValue();
                             continue;
                         case ']':
-                            str114 = this.likeUidAdapter.read(jsonReader);
+                            i57 = this.isRecommendVoteCommentAdapter.read(jsonReader).intValue();
                             continue;
                         case '^':
-                            i34 = this.likeNumAdapter.read(jsonReader).intValue();
+                            str114 = this.likeUidAdapter.read(jsonReader);
                             continue;
                         case '_':
-                            str98 = this.infoHtmlAdapter.read(jsonReader);
+                            i34 = this.likeNumAdapter.read(jsonReader).intValue();
                             continue;
                         case '`':
-                            str120 = this.statusTextAdapter.read(jsonReader);
+                            str98 = this.infoHtmlAdapter.read(jsonReader);
                             continue;
                         case 'a':
-                            str117 = this.spamReasonAdapter.read(jsonReader);
+                            str120 = this.statusTextAdapter.read(jsonReader);
                             continue;
                         case 'b':
-                            secondHandInfo2 = this.secondHandInfoAdapter.read(jsonReader);
+                            str117 = this.spamReasonAdapter.read(jsonReader);
                             continue;
                         case 'c':
-                            list17 = this.userLikeListAdapter.read(jsonReader);
+                            secondHandInfo2 = this.secondHandInfoAdapter.read(jsonReader);
                             continue;
                         case 'd':
-                            str134 = this.userTagsAdapter.read(jsonReader);
+                            list18 = this.userLikeListAdapter.read(jsonReader);
                             continue;
                         case 'e':
-                            str100 = this.useragentAdapter.read(jsonReader);
+                            str134 = this.userTagsAdapter.read(jsonReader);
                             continue;
                         case 'f':
-                            i30 = this.isHistoryAdapter.read(jsonReader).intValue();
+                            str100 = this.useragentAdapter.read(jsonReader);
                             continue;
                         case 'g':
-                            str155 = this.ratingTypeAdapter.read(jsonReader);
+                            i30 = this.isHistoryAdapter.read(jsonReader).intValue();
                             continue;
                         case 'h':
-                            collectionItem2 = this.collectionItemAdapter.read(jsonReader);
+                            str155 = this.ratingTypeAdapter.read(jsonReader);
                             continue;
                         case 'i':
-                            feed2 = this.forwardSourceFeedAdapter.read(jsonReader);
+                            collectionItem2 = this.collectionItemAdapter.read(jsonReader);
                             continue;
                         case 'j':
-                            str110 = this.forwardSourceTypeAdapter.read(jsonReader);
+                            feed2 = this.forwardSourceFeedAdapter.read(jsonReader);
                             continue;
                         case 'k':
-                            str135 = this.keywordsAdapter.read(jsonReader);
+                            str110 = this.forwardSourceTypeAdapter.read(jsonReader);
                             continue;
                         case 'l':
-                            f13 = this.ratingScore1Adapter.read(jsonReader).floatValue();
+                            str135 = this.keywordsAdapter.read(jsonReader);
                             continue;
                         case 'm':
-                            f14 = this.ratingScore2Adapter.read(jsonReader).floatValue();
+                            f13 = this.ratingScore1Adapter.read(jsonReader).floatValue();
                             continue;
                         case 'n':
-                            f15 = this.ratingScore3Adapter.read(jsonReader).floatValue();
+                            f14 = this.ratingScore2Adapter.read(jsonReader).floatValue();
                             continue;
                         case 'o':
-                            f16 = this.ratingScore4Adapter.read(jsonReader).floatValue();
+                            f15 = this.ratingScore3Adapter.read(jsonReader).floatValue();
                             continue;
                         case 'p':
-                            f17 = this.ratingScore5Adapter.read(jsonReader).floatValue();
+                            f16 = this.ratingScore4Adapter.read(jsonReader).floatValue();
                             continue;
                         case 'q':
-                            f18 = this.ratingScore6Adapter.read(jsonReader).floatValue();
+                            f17 = this.ratingScore5Adapter.read(jsonReader).floatValue();
                             continue;
                         case 'r':
-                            f19 = this.ratingScore7Adapter.read(jsonReader).floatValue();
+                            f18 = this.ratingScore6Adapter.read(jsonReader).floatValue();
                             continue;
                         case 's':
-                            f20 = this.ratingScore8Adapter.read(jsonReader).floatValue();
+                            f19 = this.ratingScore7Adapter.read(jsonReader).floatValue();
                             continue;
                         case 't':
-                            f21 = this.ratingScore9Adapter.read(jsonReader).floatValue();
+                            f20 = this.ratingScore8Adapter.read(jsonReader).floatValue();
                             continue;
                         case 'u':
-                            str101 = this.articleIdAdapter.read(jsonReader);
+                            f21 = this.ratingScore9Adapter.read(jsonReader).floatValue();
                             continue;
                         case 'v':
-                            str157 = this.commentGoodPicAdapter.read(jsonReader);
+                            str101 = this.articleIdAdapter.read(jsonReader);
                             continue;
                         case 'w':
-                            i32 = this.forwardNumAdapter.read(jsonReader).intValue();
+                            str157 = this.commentGoodPicAdapter.read(jsonReader);
                             continue;
                         case 'x':
-                            i43 = this.commentBlockNumAdapter.read(jsonReader).intValue();
+                            i32 = this.forwardNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 'y':
-                            i40 = this.isStickTopAdapter.read(jsonReader).intValue();
+                            i43 = this.commentBlockNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 'z':
-                            str140 = this.extraInfoAdapter.read(jsonReader);
+                            i40 = this.isStickTopAdapter.read(jsonReader).intValue();
                             continue;
                         case '{':
-                            str138 = this.extraTypeAdapter.read(jsonReader);
+                            str140 = this.extraInfoAdapter.read(jsonReader);
                             continue;
                         case '|':
-                            i37 = this.followNumAdapter.read(jsonReader).intValue();
+                            str138 = this.extraTypeAdapter.read(jsonReader);
                             continue;
                         case '}':
-                            str156 = this.commentGoodAdapter.read(jsonReader);
+                            i37 = this.followNumAdapter.read(jsonReader).intValue();
                             continue;
                         case '~':
-                            i56 = this.isAnonymousAdapter.read(jsonReader).intValue();
+                            str156 = this.commentGoodAdapter.read(jsonReader);
                             continue;
                         case 127:
-                            list23 = this.goodsListItemAdapter.read(jsonReader);
+                            i56 = this.isAnonymousAdapter.read(jsonReader).intValue();
                             continue;
                         case 128:
-                            str102 = this.messageAdapter.read(jsonReader);
+                            list24 = this.goodsListItemAdapter.read(jsonReader);
                             continue;
                         case 129:
-                            i41 = this.recommendAdapter.read(jsonReader).intValue();
+                            str102 = this.messageAdapter.read(jsonReader);
                             continue;
                         case 130:
-                            i45 = this.messageStatusAdapter.read(jsonReader).intValue();
+                            i41 = this.recommendAdapter.read(jsonReader).intValue();
                             continue;
                         case 131:
-                            collection2 = this.collectionInfoAdapter.read(jsonReader);
+                            i45 = this.messageStatusAdapter.read(jsonReader).intValue();
                             continue;
                         case 132:
-                            userAction2 = this.userActionAdapter.read(jsonReader);
+                            collection2 = this.collectionInfoAdapter.read(jsonReader);
                             continue;
                         case 133:
-                            dyhArticle2 = this.forwardSourceArticleAdapter.read(jsonReader);
+                            userAction2 = this.userActionAdapter.read(jsonReader);
                             continue;
                         case 134:
-                            str89 = this.deprecatedUserAvatarAdapter.read(jsonReader);
+                            dyhArticle2 = this.forwardSourceArticleAdapter.read(jsonReader);
                             continue;
                         case 135:
-                            j3 = this.likeTimeAdapter.read(jsonReader).longValue();
+                            str89 = this.deprecatedUserAvatarAdapter.read(jsonReader);
                             continue;
                         case 136:
-                            i55 = this.showOwnerAdapter.read(jsonReader).intValue();
+                            j3 = this.likeTimeAdapter.read(jsonReader).longValue();
                             continue;
                         case 137:
-                            entity5 = this.hotSponsorCardAdapter.read(jsonReader);
+                            i55 = this.showOwnerAdapter.read(jsonReader).intValue();
                             continue;
                         case 138:
-                            list26 = this.topReplyRowsAdapter.read(jsonReader);
+                            entity5 = this.hotSponsorCardAdapter.read(jsonReader);
                             continue;
                         case 139:
-                            num2 = this.entityFixedAdapter.read(jsonReader);
+                            list28 = this.topReplyRowsAdapter.read(jsonReader);
                             continue;
                         case 140:
-                            dyhModel2 = this.dyhModelAdapter.read(jsonReader);
+                            num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 141:
-                            str133 = this.dyhNameAdapter.read(jsonReader);
+                            dyhModel2 = this.dyhModelAdapter.read(jsonReader);
                             continue;
                         case 142:
-                            str143 = this.videoPicAdapter.read(jsonReader);
+                            str133 = this.dyhNameAdapter.read(jsonReader);
                             continue;
                         case 143:
-                            str144 = this.videoUrlAdapter.read(jsonReader);
+                            str143 = this.videoPicAdapter.read(jsonReader);
                             continue;
                         case 144:
-                            i51 = this.questionAnswerNumAdapter.read(jsonReader).intValue();
+                            str144 = this.videoUrlAdapter.read(jsonReader);
                             continue;
                         case 145:
-                            i39 = this.isHtmlArticleAdapter.read(jsonReader).intValue();
+                            i51 = this.questionAnswerNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 146:
-                            str137 = this.extraTitleAdapter.read(jsonReader);
+                            i39 = this.isHtmlArticleAdapter.read(jsonReader).intValue();
                             continue;
                         case 147:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            str137 = this.extraTitleAdapter.read(jsonReader);
                             continue;
                         case 148:
-                            list20 = this.recentReplyRowsAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case 149:
-                            str145 = this.locationAdapter.read(jsonReader);
+                            list21 = this.recentReplyRowsAdapter.read(jsonReader);
                             continue;
                         case 150:
-                            str148 = this.messageKeywordsAdapter.read(jsonReader);
+                            str145 = this.locationAdapter.read(jsonReader);
                             continue;
                         case 151:
-                            str152 = this.mediaInfoAdapter.read(jsonReader);
+                            str148 = this.messageKeywordsAdapter.read(jsonReader);
                             continue;
                         case 152:
-                            str154 = this.mediaTypeAdapter.read(jsonReader);
+                            str152 = this.mediaInfoAdapter.read(jsonReader);
                             continue;
                         case 153:
-                            entity4 = this.detailSponsorCardAdapter.read(jsonReader);
+                            str154 = this.mediaTypeAdapter.read(jsonReader);
                             continue;
                         case 154:
-                            j4 = this.spamTimeAdapter.read(jsonReader).longValue();
+                            entity4 = this.detailSponsorCardAdapter.read(jsonReader);
                             continue;
                         case 155:
-                            str115 = this.forwardIdAdapter.read(jsonReader);
+                            j4 = this.spamTimeAdapter.read(jsonReader).longValue();
                             continue;
                         case 156:
-                            str158 = this.commentBadAdapter.read(jsonReader);
+                            str115 = this.forwardIdAdapter.read(jsonReader);
                             continue;
                         case 157:
+                            str158 = this.commentBadAdapter.read(jsonReader);
+                            continue;
+                        case 158:
                             str153 = this.mediaUrlAdapter.read(jsonReader);
                             continue;
                         default:
@@ -3372,7 +3393,7 @@ abstract class C$AutoValue_Feed extends C$$AutoValue_Feed {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Feed(str92, str113, str84, str85, num2, str86, str87, str88, l4, l5, str89, userInfo3, str90, str91, str93, str94, str95, str96, i31, str97, list14, str98, str99, i32, i33, i34, i35, i36, i37, str100, str101, i38, str102, i39, i40, str103, str104, str105, i41, i42, i43, i44, str106, str107, str108, list15, i45, list16, list17, list18, str109, collection2, collectionItem2, userAction2, list19, list20, list21, list22, list23, feed2, dyhArticle2, str110, str111, str112, str114, j3, userInfo4, str123, str115, str116, str117, str118, str119, str120, str121, str122, i46, i47, i48, i49, j4, str124, str83, str125, str126, str127, str128, str129, str130, list24, feedTarget2, i50, str131, str132, str133, str134, str135, str136, str137, str138, str139, str140, str141, str142, list25, str143, str144, str145, str146, str147, str148, str149, i51, str150, str151, i52, dyhModel2, str152, str153, str154, str155, f12, f13, f14, f15, f16, f17, f18, f19, f20, f21, f22, str156, str157, str158, str159, str160, str161, str162, str163, entity4, entity5, entity6, i53, list26, feedGoodsAction2, str164, i54, i55, i56, vote2, secondHandInfo2, i57, simpleInfo3, simpleInfo4, i58, i59, i30);
+            return new AutoValue_Feed(str92, str113, str84, str85, num2, str86, str87, str88, l3, l4, str89, userInfo3, str90, str91, str93, str94, str95, str96, i31, str97, list15, str98, str99, i32, i33, i34, i35, i36, i37, str100, str101, i38, str102, i39, i40, str103, str104, str105, i41, i42, i43, i44, str106, str107, str108, list16, i45, list17, list18, list19, str109, collection2, collectionItem2, userAction2, list20, list21, list22, list23, list24, feed2, dyhArticle2, str110, str111, str112, str114, j3, userInfo4, str123, str115, str116, str117, str118, str119, str120, str121, str122, i46, i47, i48, i49, j4, str124, str83, str125, str126, str127, str128, str129, str130, list25, feedTarget2, i50, list26, str131, str132, str133, str134, str135, str136, str137, str138, str139, str140, str141, str142, list27, str143, str144, str145, str146, str147, str148, str149, i51, str150, str151, i52, dyhModel2, str152, str153, str154, str155, f12, f13, f14, f15, f16, f17, f18, f19, f20, f21, f22, str156, str157, str158, str159, str160, str161, str162, str163, entity4, entity5, entity6, i53, list28, feedGoodsAction2, str164, i54, i55, i56, vote2, secondHandInfo2, i57, simpleInfo3, simpleInfo4, i58, i59, i30);
         }
     }
 }

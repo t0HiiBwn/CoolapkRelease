@@ -47,7 +47,7 @@ public class ThemeListActivity extends AlphaToolbarActivity {
     @Override // com.coolapk.market.view.base.AlphaToolbarActivity, com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setToolbarTitle(getString(2131887303));
+        setToolbarTitle(getString(2131887365));
         this.binding.mainContent.addOnInsetChangeListener(new DrawSystemBarFrameLayout.OnInsetChangeListener() {
             /* class com.coolapk.market.view.theme.$$Lambda$ThemeListActivity$r6eiCtv2ZrSRFVxQiwZQf5tvLaY */
 
@@ -89,7 +89,7 @@ public class ThemeListActivity extends AlphaToolbarActivity {
             getRecyclerView().setPadding(0, 0, 0, ((ThemeListActivity) getActivity()).getNavigationBarHeight() + DisplayUtils.dp2px(getActivity(), 16.0f));
             getRecyclerView().setClipChildren(false);
             getRecyclerView().setClipToPadding(false);
-            getAdapter().register(SimpleViewHolderFactor.withLayoutId(2131559196).constructor(new Function1<View, RecyclerView.ViewHolder>() {
+            getAdapter().register(SimpleViewHolderFactor.withLayoutId(2131559204).constructor(new Function1<View, RecyclerView.ViewHolder>() {
                 /* class com.coolapk.market.view.theme.ThemeListActivity.ThemePickerFragment.AnonymousClass1 */
 
                 public RecyclerView.ViewHolder invoke(View view) {
@@ -124,7 +124,7 @@ public class ThemeListActivity extends AlphaToolbarActivity {
                 }
                 this.oldColor = AppHolder.getAppTheme().getColorPrimary();
                 AppHolder.getAppTheme().setThemeId((AppCompatActivity) requireActivity(), themeItem.getThemeId(), true);
-                onThemeChange(view.findViewById(2131363533));
+                onThemeChange(view.findViewById(2131363551));
             } else if (NightModeHelper.isThisRomSupportSystemTheme()) {
                 AlertDialog create = new AlertDialog.Builder(getActivity()).setMessage("当前夜间主题跟随系统设置，手动切换日夜模式需要关闭跟随系统，确定要取消跟随么？").setPositiveButton("取消跟随", new DialogInterface.OnClickListener() {
                     /* class com.coolapk.market.view.theme.ThemeListActivity.ThemePickerFragment.AnonymousClass2 */
@@ -188,7 +188,7 @@ public class ThemeListActivity extends AlphaToolbarActivity {
             themeListActivity.setupStatusBar();
             themeListActivity.setNavigationBarColor(150);
             ViewExtendsKt.setTintColor(themeListActivity.getToolbar());
-            FragmentUtils.cloneFragment(themeListActivity.getSupportFragmentManager(), 2131362316, null);
+            FragmentUtils.cloneFragment(themeListActivity.getSupportFragmentManager(), 2131362322, null);
             themeListActivity.getSupportFragmentManager().executePendingTransactions();
         }
 
@@ -200,7 +200,7 @@ public class ThemeListActivity extends AlphaToolbarActivity {
             themeListActivity.setupStatusBar();
             themeListActivity.setNavigationBarColor(150);
             ViewExtendsKt.setTintColor(themeListActivity.getToolbar());
-            FragmentUtils.cloneFragment(themeListActivity.getSupportFragmentManager(), 2131362316, null);
+            FragmentUtils.cloneFragment(themeListActivity.getSupportFragmentManager(), 2131362322, null);
             themeListActivity.getSupportFragmentManager().executePendingTransactions();
         }
 
@@ -247,7 +247,7 @@ public class ThemeListActivity extends AlphaToolbarActivity {
         }
 
         public static class ThemeViewHolder extends BindingViewHolder {
-            public static final int LAYOUT_ID = 2131559196;
+            public static final int LAYOUT_ID = 2131559204;
 
             public ThemeViewHolder(View view, ItemActionHandler itemActionHandler) {
                 super(view, itemActionHandler);
@@ -259,14 +259,17 @@ public class ThemeListActivity extends AlphaToolbarActivity {
                 AppTheme.ThemeItem themeItem = (AppTheme.ThemeItem) obj;
                 themePickerListItemBinding.setThemeItem(themeItem);
                 themePickerListItemBinding.setViewHolder(this);
+                boolean isTimeLimit = themeItem.isTimeLimit();
+                themePickerListItemBinding.tipText.setVisibility(isTimeLimit ? 0 : 8);
+                themePickerListItemBinding.tipText.setText(isTimeLimit ? "限时" : "");
                 if (themeItem.isCustomTheme()) {
-                    themePickerListItemBinding.checkIndicator.setImageResource(2131231210);
+                    themePickerListItemBinding.checkIndicator.setImageResource(2131231221);
                 } else if (themeItem.isCurrentTheme()) {
-                    themePickerListItemBinding.checkIndicator.setImageResource(2131231256);
+                    themePickerListItemBinding.checkIndicator.setImageResource(2131231267);
                 } else {
                     themePickerListItemBinding.checkIndicator.setImageDrawable(null);
                 }
-                themePickerListItemBinding.checkIndicator.setBackgroundResource(2131231885);
+                themePickerListItemBinding.checkIndicator.setBackgroundResource(2131231897);
                 themePickerListItemBinding.checkIndicator.setBackgroundTintList(ColorStateList.valueOf(getIndicatorColor(themeItem)));
                 themePickerListItemBinding.textView.setTextColor(getBackgroundTintColor(themeItem));
                 themePickerListItemBinding.textView.setBackgroundTintList(ColorStateList.valueOf(getBackgroundTintColor(themeItem)));

@@ -1,25 +1,16 @@
 package com.xiaomi.push;
 
-public class az implements bb {
-    private final String a;
-    private final String b;
+import com.xiaomi.push.be;
 
-    public az(String str, String str2) {
-        if (str != null) {
-            this.a = str;
-            this.b = str2;
-            return;
-        }
-        throw new IllegalArgumentException("Name may not be null");
+public class az extends be.d {
+    protected String a = "MessageDeleteJob";
+
+    public az(String str, String str2, String[] strArr, String str3) {
+        super(str, str2, strArr);
+        this.a = str3;
     }
 
-    @Override // com.xiaomi.push.bb
-    public String a() {
-        return this.a;
-    }
-
-    @Override // com.xiaomi.push.bb
-    public String b() {
-        return this.b;
+    public static az a(String str) {
+        return new az(str, "status = ?", new String[]{String.valueOf(2)}, "a job build to delete uploaded job");
     }
 }

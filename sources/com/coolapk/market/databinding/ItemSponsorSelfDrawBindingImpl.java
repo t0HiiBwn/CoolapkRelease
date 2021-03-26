@@ -23,19 +23,19 @@ public class ItemSponsorSelfDrawBindingImpl extends ItemSponsorSelfDrawBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(17);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"item_relative_child"}, new int[]{6}, new int[]{2131558896});
+        includedLayouts.setIncludes(1, new String[]{"item_relative_child"}, new int[]{6}, new int[]{2131558903});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363002, 7);
-        sparseIntArray.put(2131362257, 8);
-        sparseIntArray.put(2131363610, 9);
-        sparseIntArray.put(2131362376, 10);
-        sparseIntArray.put(2131362913, 11);
-        sparseIntArray.put(2131363723, 12);
-        sparseIntArray.put(2131362304, 13);
-        sparseIntArray.put(2131362308, 14);
-        sparseIntArray.put(2131362309, 15);
-        sparseIntArray.put(2131362310, 16);
+        sparseIntArray.put(2131363016, 7);
+        sparseIntArray.put(2131362262, 8);
+        sparseIntArray.put(2131363632, 9);
+        sparseIntArray.put(2131362382, 10);
+        sparseIntArray.put(2131362925, 11);
+        sparseIntArray.put(2131363745, 12);
+        sparseIntArray.put(2131362309, 13);
+        sparseIntArray.put(2131362313, 14);
+        sparseIntArray.put(2131362314, 15);
+        sparseIntArray.put(2131362315, 16);
     }
 
     public ItemSponsorSelfDrawBindingImpl(DataBindingComponent dataBindingComponent, View view) {

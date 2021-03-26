@@ -30,7 +30,7 @@ public abstract class ShareWebviewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ShareWebviewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ShareWebviewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559142, viewGroup, z, obj);
+        return (ShareWebviewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559149, viewGroup, z, obj);
     }
 
     public static ShareWebviewBinding inflate(LayoutInflater layoutInflater) {
@@ -39,7 +39,7 @@ public abstract class ShareWebviewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ShareWebviewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ShareWebviewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559142, null, false, obj);
+        return (ShareWebviewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559149, null, false, obj);
     }
 
     public static ShareWebviewBinding bind(View view) {
@@ -48,6 +48,6 @@ public abstract class ShareWebviewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ShareWebviewBinding bind(View view, Object obj) {
-        return (ShareWebviewBinding) bind(obj, view, 2131559142);
+        return (ShareWebviewBinding) bind(obj, view, 2131559149);
     }
 }

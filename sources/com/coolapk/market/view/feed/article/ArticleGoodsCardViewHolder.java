@@ -23,7 +23,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ArticleGoodsCardViewHolder.kt */
 public final class ArticleGoodsCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558609;
+    public static final int LAYOUT_ID = 2131558613;
     private final ItemArticleCardGoodsBinding binding = ((ItemArticleCardGoodsBinding) getBinding());
     private final Lazy goodsInfoViewPart$delegate;
     private final ArticlePresenter presenter;

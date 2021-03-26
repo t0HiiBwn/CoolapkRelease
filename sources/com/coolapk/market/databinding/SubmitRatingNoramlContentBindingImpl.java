@@ -30,25 +30,25 @@ public class SubmitRatingNoramlContentBindingImpl extends SubmitRatingNoramlCont
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(25);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(4, new String[]{"feed_warning"}, new int[]{8}, new int[]{2131558563});
+        includedLayouts.setIncludes(4, new String[]{"feed_warning"}, new int[]{8}, new int[]{2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363230, 9);
-        sparseIntArray.put(2131363279, 10);
-        sparseIntArray.put(2131363194, 11);
-        sparseIntArray.put(2131362188, 12);
-        sparseIntArray.put(2131362306, 13);
-        sparseIntArray.put(2131362005, 14);
-        sparseIntArray.put(2131362006, 15);
-        sparseIntArray.put(2131362007, 16);
-        sparseIntArray.put(2131362406, 17);
-        sparseIntArray.put(2131362407, 18);
-        sparseIntArray.put(2131362408, 19);
-        sparseIntArray.put(2131363465, 20);
-        sparseIntArray.put(2131363466, 21);
-        sparseIntArray.put(2131363467, 22);
-        sparseIntArray.put(2131363397, 23);
-        sparseIntArray.put(2131363199, 24);
+        sparseIntArray.put(2131363244, 9);
+        sparseIntArray.put(2131363293, 10);
+        sparseIntArray.put(2131363208, 11);
+        sparseIntArray.put(2131362191, 12);
+        sparseIntArray.put(2131362311, 13);
+        sparseIntArray.put(2131362006, 14);
+        sparseIntArray.put(2131362007, 15);
+        sparseIntArray.put(2131362008, 16);
+        sparseIntArray.put(2131362412, 17);
+        sparseIntArray.put(2131362413, 18);
+        sparseIntArray.put(2131362414, 19);
+        sparseIntArray.put(2131363483, 20);
+        sparseIntArray.put(2131363484, 21);
+        sparseIntArray.put(2131363485, 22);
+        sparseIntArray.put(2131363414, 23);
+        sparseIntArray.put(2131363213, 24);
     }
 
     public SubmitRatingNoramlContentBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -99,7 +99,7 @@ public class SubmitRatingNoramlContentBindingImpl extends SubmitRatingNoramlCont
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (288 == i) {
+        if (289 == i) {
             setUiConfig((FeedUIConfig) obj);
         } else if (50 != i) {
             return false;

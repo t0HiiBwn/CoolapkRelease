@@ -72,9 +72,7 @@ public class k implements f, c.a {
     private final List<q> i = new ArrayList();
     private d j;
     private d k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private volatile boolean f1413l = true;
+    private volatile boolean l = true;
     private long m;
     private final LinkedList<i> n = new LinkedList<>();
     private final List<i> o = new ArrayList();
@@ -240,7 +238,7 @@ public class k implements f, c.a {
      */
     private void e() {
         int i2 = 1;
-        int a2 = (this.m <= 0 || this.f1413l) ? 1 : this.b.a();
+        int a2 = (this.m <= 0 || this.l) ? 1 : this.b.a();
         com.ss.android.socialbase.downloader.c.a.c("SegmentDispatcher", "dispatchReadThread: totalLength = " + this.m + ", threadCount = " + a2);
         if (a2 > 0) {
             i2 = a2;
@@ -302,7 +300,7 @@ public class k implements f, c.a {
         List<String> backUpUrls;
         int k2 = this.b.k();
         if (k2 <= 0) {
-            this.f1413l = false;
+            this.l = false;
             e();
             return;
         }
@@ -330,7 +328,7 @@ public class k implements f, c.a {
                 if (list2 != null) {
                     b(str, list2);
                 }
-                this.f1413l = false;
+                this.l = false;
                 this.b.a(this.i.size());
                 Log.i("SegmentDispatcher", "onDnsResolved: dispatchReadThread");
                 e();

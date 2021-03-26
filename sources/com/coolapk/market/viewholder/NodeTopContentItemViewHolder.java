@@ -29,7 +29,7 @@ import rx.Subscriber;
 /* compiled from: NodeTopContentViewHolder.kt */
 final class NodeTopContentItemViewHolder extends GenericBindHolder<ItemNodeTopContenItemBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558841;
+    public static final int LAYOUT_ID = 2131558848;
     private Entity entity;
     private final String nodeId;
     private final String nodeType;
@@ -153,7 +153,7 @@ final class NodeTopContentItemViewHolder extends GenericBindHolder<ItemNodeTopCo
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

@@ -56,7 +56,7 @@ public class ItemAppViewRatingBindingImpl extends ItemAppViewRatingBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppViewViewModel) obj);
@@ -70,7 +70,7 @@ public class ItemAppViewRatingBindingImpl extends ItemAppViewRatingBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -88,7 +88,7 @@ public class ItemAppViewRatingBindingImpl extends ItemAppViewRatingBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i != 202) {
+        } else if (i != 203) {
             return false;
         } else {
             synchronized (this) {
@@ -124,10 +124,10 @@ public class ItemAppViewRatingBindingImpl extends ItemAppViewRatingBinding {
             z = false;
         }
         String str = null;
-        String string = (16 & j) != 0 ? this.mboundView1.getResources().getString(2131886879, Integer.valueOf(i)) : null;
+        String string = (16 & j) != 0 ? this.mboundView1.getResources().getString(2131886941, Integer.valueOf(i)) : null;
         int i3 = ((j & 7) > 0 ? 1 : ((j & 7) == 0 ? 0 : -1));
         if (i3 != 0) {
-            str = z ? string : this.mboundView1.getResources().getString(2131886890);
+            str = z ? string : this.mboundView1.getResources().getString(2131886952);
         }
         if (i3 != 0) {
             TextViewBindingAdapter.setText(this.mboundView1, str);

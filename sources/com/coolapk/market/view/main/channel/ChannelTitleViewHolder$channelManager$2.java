@@ -19,7 +19,7 @@ final class ChannelTitleViewHolder$channelManager$2 extends Lambda implements Fu
 
     @Override // kotlin.jvm.functions.Function0
     public final ChannelManagerFragment invoke() {
-        Fragment asFragment = ChannelTitleViewHolder.access$getContainer$p(this.this$0).asFragment();
+        Fragment asFragment = this.this$0.container.asFragment();
         Objects.requireNonNull(asFragment, "null cannot be cast to non-null type com.coolapk.market.view.main.channel.ChannelManagerFragment");
         return (ChannelManagerFragment) asFragment;
     }

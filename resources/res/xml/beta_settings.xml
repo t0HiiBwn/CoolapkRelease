@@ -4,7 +4,7 @@
     <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_check_beta_version" android:key="check_beta_version_enabled" android:summary="@string/pref_description_check_beta_version"/>
     <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_use_internal_webview" android:key="use_internal_webview" android:summary="@string/pref_summary_use_internal_webview"/>
     <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_show_hide_apps" android:key="show_hide_apps" android:summary="@string/pref_summary_show_hide_apps"/>
-    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_limited_background" android:key="limited_background_enabled" android:summary="『后台纯净』是遵循『Android 绿色应用公约』的一部分。开启后台纯净后，当应用进入后台，会停止非必要的后台服务，还后台一个干净。『Android 绿色应用公约』详细内容请参考：https://green-android.org"/>
+    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_limited_background" android:key="limited_background_enabled" android:summary="『后台纯净』是遵循『Android 绿色应用公约』的一部分。开启后台纯净后，当应用进入后台，会停止非必要的后台服务，还后台一个干净，但会导致无法收到推送。『Android 绿色应用公约』详细内容请参考：https://green-android.org"/>
     <com.coolapk.market.widget.preference.CheckBoxPreference android:title="7天免开屏广告特权" android:key="weekly_no_ad_splash" android:summary="注册用户可开启7天免开屏广告特权，7天后需要再次手动开启"/>
     <com.coolapk.market.widget.preference.CheckBoxPreference android:title="WiFi 下自动播放视频" android:key="auto_load_video_when_wifi"/>
     <com.coolapk.market.widget.preference.CheckBoxPreference android:title="输出统计内容" android:key="statistic_toast"/>

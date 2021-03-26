@@ -22,9 +22,7 @@ import java.util.Locale;
 /* compiled from: FeedExpressBackupView */
 class h extends BackupView {
     private static i[] k = {new i(2, 3.0241935f, 375, 124), new i(3, 1.25f, 375, 300), new i(4, 1.4044944f, 375, 267), new i(16, 1.25f, 375, 300), new i(5, 1.25f, 375, 300), new i(15, 1.25f, 375, 300)};
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1317l;
+    private int l;
     private View m;
     private NativeExpressView n;
     private a o;
@@ -41,7 +39,7 @@ class h extends BackupView {
         this.n = nativeExpressView;
         this.o = aVar;
         int d = aj.d(this.b.aj());
-        this.f1317l = d;
+        this.l = d;
         a(d);
         b();
         this.n.addView(this, new ViewGroup.LayoutParams(-2, -2));

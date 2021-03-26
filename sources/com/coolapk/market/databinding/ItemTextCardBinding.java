@@ -49,7 +49,7 @@ public abstract class ItemTextCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTextCardBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemTextCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558947, viewGroup, z, obj);
+        return (ItemTextCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558954, viewGroup, z, obj);
     }
 
     public static ItemTextCardBinding inflate(LayoutInflater layoutInflater) {
@@ -58,7 +58,7 @@ public abstract class ItemTextCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTextCardBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemTextCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558947, null, false, obj);
+        return (ItemTextCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558954, null, false, obj);
     }
 
     public static ItemTextCardBinding bind(View view) {
@@ -67,6 +67,6 @@ public abstract class ItemTextCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTextCardBinding bind(View view, Object obj) {
-        return (ItemTextCardBinding) bind(obj, view, 2131558947);
+        return (ItemTextCardBinding) bind(obj, view, 2131558954);
     }
 }

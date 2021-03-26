@@ -11,9 +11,7 @@ class by extends e {
     private int i;
     private int j;
     private int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private bz f1225l;
+    private bz l;
     private long m;
     private int n;
 
@@ -22,7 +20,7 @@ class by extends e {
         this.c = wVar;
         this.d = wVar2;
         this.e = (int) wVar.e();
-        this.f1225l = bzVar;
+        this.l = bzVar;
         this.i = (int) Math.abs(wVar2.e() - this.c.e());
         this.j = (int) Math.abs(wVar2.f() - this.c.f());
         this.m = System.currentTimeMillis();
@@ -39,13 +37,13 @@ class by extends e {
 
     @Override // com.amap.api.mapcore2d.e
     protected void c() {
-        this.f1225l.c();
+        this.l.c();
         l.a().b();
     }
 
     @Override // com.amap.api.mapcore2d.e
     protected void b() {
-        this.f1225l.c();
+        this.l.c();
         n.a().b();
     }
 
@@ -57,14 +55,14 @@ class by extends e {
         if (!f()) {
             this.e = e2;
             this.f = f2;
-            this.f1225l.a(new w((double) f2, (double) e2, false));
+            this.l.a(new w((double) f2, (double) e2, false));
             return;
         }
         this.k++;
         this.e = a(this.e, e2, this.g);
         int a = a(this.f, f2, this.h);
         this.f = a;
-        this.f1225l.a(new w((double) a, (double) this.e, false));
+        this.l.a(new w((double) a, (double) this.e, false));
         if (this.e == e2 && this.f == f2) {
             a(false);
             b(true);

@@ -33,7 +33,7 @@ public abstract class ItemSearchAppFilterBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchAppFilterBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSearchAppFilterBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558905, viewGroup, z, obj);
+        return (ItemSearchAppFilterBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558912, viewGroup, z, obj);
     }
 
     public static ItemSearchAppFilterBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class ItemSearchAppFilterBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchAppFilterBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSearchAppFilterBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558905, null, false, obj);
+        return (ItemSearchAppFilterBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558912, null, false, obj);
     }
 
     public static ItemSearchAppFilterBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class ItemSearchAppFilterBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchAppFilterBinding bind(View view, Object obj) {
-        return (ItemSearchAppFilterBinding) bind(obj, view, 2131558905);
+        return (ItemSearchAppFilterBinding) bind(obj, view, 2131558912);
     }
 }

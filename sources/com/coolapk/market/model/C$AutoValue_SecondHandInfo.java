@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_SecondHandInfo  reason: invalid class name */
 abstract class C$AutoValue_SecondHandInfo extends C$$AutoValue_SecondHandInfo {
-    C$AutoValue_SecondHandInfo(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, int i, String str13, String str14, int i2, Long l2, Long l3, String str15, int i3, int i4, int i5, String str16) {
-        super(str, str2, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12, i, str13, str14, i2, l2, l3, str15, i3, i4, i5, str16);
+    C$AutoValue_SecondHandInfo(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, int i, String str13, String str14, int i2, Long l, Long l2, String str15, int i3, int i4, int i5, String str16) {
+        super(str, str2, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12, i, str13, str14, i2, l, l2, str15, i3, i4, i5, str16);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_SecondHandInfo$GsonTypeAdapter */
@@ -168,13 +168,13 @@ abstract class C$AutoValue_SecondHandInfo extends C$$AutoValue_SecondHandInfo {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -281,8 +281,8 @@ abstract class C$AutoValue_SecondHandInfo extends C$$AutoValue_SecondHandInfo {
             String str13 = this.defaultUrl;
             String str14 = this.defaultSource;
             int i2 = this.defaultSecondHandStatus;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str15 = this.defaultStoreTypeText;
             int i3 = this.defaultSecondHandDealType;
             int i4 = this.defaultSecondHandFaceDeal;
@@ -304,8 +304,8 @@ abstract class C$AutoValue_SecondHandInfo extends C$$AutoValue_SecondHandInfo {
             String str29 = str;
             String str30 = str14;
             int i7 = i2;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str31 = str15;
             int i8 = i3;
             int i9 = i4;
@@ -501,7 +501,7 @@ abstract class C$AutoValue_SecondHandInfo extends C$$AutoValue_SecondHandInfo {
                             str18 = this.logoAdapter.read(jsonReader);
                             continue;
                         case 14:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 15:
                             str28 = this.urlAdapter.read(jsonReader);
@@ -522,7 +522,7 @@ abstract class C$AutoValue_SecondHandInfo extends C$$AutoValue_SecondHandInfo {
                             str23 = this.ershouTypeTitleAdapter.read(jsonReader);
                             continue;
                         case 21:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case 22:
                             str31 = this.storeTypeTextAdapter.read(jsonReader);
@@ -534,7 +534,7 @@ abstract class C$AutoValue_SecondHandInfo extends C$$AutoValue_SecondHandInfo {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_SecondHandInfo(str29, str17, str18, str19, str20, str21, str22, str23, str24, str25, str26, str27, i6, str28, str30, i7, l4, l5, str31, i8, i9, i10, str16);
+            return new AutoValue_SecondHandInfo(str29, str17, str18, str19, str20, str21, str22, str23, str24, str25, str26, str27, i6, str28, str30, i7, l3, l4, str31, i8, i9, i10, str16);
         }
     }
 }

@@ -41,7 +41,7 @@ public final class OnSubscribeJoin<TLeft, TRight, TLeftDuration, TRightDuration,
         private static final long serialVersionUID = 3491669543549085380L;
 
         /* renamed from: group  reason: collision with root package name */
-        final CompositeSubscription f1518group = new CompositeSubscription();
+        final CompositeSubscription f202group = new CompositeSubscription();
         boolean leftDone;
         int leftId;
         boolean rightDone;
@@ -58,11 +58,11 @@ public final class OnSubscribeJoin<TLeft, TRight, TLeftDuration, TRightDuration,
         }
 
         public void run() {
-            this.subscriber.add(this.f1518group);
+            this.subscriber.add(this.f202group);
             LeftSubscriber leftSubscriber = new LeftSubscriber();
             RightSubscriber rightSubscriber = new RightSubscriber();
-            this.f1518group.add(leftSubscriber);
-            this.f1518group.add(rightSubscriber);
+            this.f202group.add(leftSubscriber);
+            this.f202group.add(rightSubscriber);
             OnSubscribeJoin.this.left.unsafeSubscribe(leftSubscriber);
             OnSubscribeJoin.this.right.unsafeSubscribe(rightSubscriber);
         }
@@ -81,7 +81,7 @@ public final class OnSubscribeJoin<TLeft, TRight, TLeftDuration, TRightDuration,
                     ResultSink.this.subscriber.unsubscribe();
                     return;
                 }
-                ResultSink.this.f1518group.remove(subscription);
+                ResultSink.this.f202group.remove(subscription);
             }
 
             /* JADX DEBUG: Multi-variable search result rejected for r2v6, resolved type: rx.functions.Func2<TLeft, TRight, R> */
@@ -99,7 +99,7 @@ public final class OnSubscribeJoin<TLeft, TRight, TLeftDuration, TRightDuration,
                 }
                 try {
                     LeftDurationSubscriber leftDurationSubscriber = new LeftDurationSubscriber(i);
-                    ResultSink.this.f1518group.add(leftDurationSubscriber);
+                    ResultSink.this.f202group.add(leftDurationSubscriber);
                     OnSubscribeJoin.this.leftDurationSelector.call(tleft).unsafeSubscribe(leftDurationSubscriber);
                     ArrayList<Object> arrayList = new ArrayList();
                     synchronized (ResultSink.this) {
@@ -140,7 +140,7 @@ public final class OnSubscribeJoin<TLeft, TRight, TLeftDuration, TRightDuration,
                     ResultSink.this.subscriber.unsubscribe();
                     return;
                 }
-                ResultSink.this.f1518group.remove(this);
+                ResultSink.this.f202group.remove(this);
             }
 
             final class LeftDurationSubscriber extends Subscriber<TLeftDuration> {
@@ -185,7 +185,7 @@ public final class OnSubscribeJoin<TLeft, TRight, TLeftDuration, TRightDuration,
                     ResultSink.this.subscriber.unsubscribe();
                     return;
                 }
-                ResultSink.this.f1518group.remove(subscription);
+                ResultSink.this.f202group.remove(subscription);
             }
 
             /* JADX DEBUG: Multi-variable search result rejected for r2v6, resolved type: rx.functions.Func2<TLeft, TRight, R> */
@@ -201,10 +201,10 @@ public final class OnSubscribeJoin<TLeft, TRight, TLeftDuration, TRightDuration,
                     ResultSink.this.rightMap.put(Integer.valueOf(i), tright);
                     i2 = ResultSink.this.leftId;
                 }
-                ResultSink.this.f1518group.add(new SerialSubscription());
+                ResultSink.this.f202group.add(new SerialSubscription());
                 try {
                     RightDurationSubscriber rightDurationSubscriber = new RightDurationSubscriber(i);
-                    ResultSink.this.f1518group.add(rightDurationSubscriber);
+                    ResultSink.this.f202group.add(rightDurationSubscriber);
                     OnSubscribeJoin.this.rightDurationSelector.call(tright).unsafeSubscribe(rightDurationSubscriber);
                     ArrayList<Object> arrayList = new ArrayList();
                     synchronized (ResultSink.this) {
@@ -245,7 +245,7 @@ public final class OnSubscribeJoin<TLeft, TRight, TLeftDuration, TRightDuration,
                     ResultSink.this.subscriber.unsubscribe();
                     return;
                 }
-                ResultSink.this.f1518group.remove(this);
+                ResultSink.this.f202group.remove(this);
             }
 
             final class RightDurationSubscriber extends Subscriber<TRightDuration> {

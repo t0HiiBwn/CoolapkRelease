@@ -27,7 +27,7 @@ final class EntityBlockSpamHelper$findAndRemoveWordSpam$1 extends Lambda impleme
     @Override // kotlin.jvm.functions.Function1
     public final Boolean invoke(Object obj) {
         Intrinsics.checkNotNullParameter(obj, "it");
-        if (!(obj instanceof Feed) || !EntityBlockSpamHelper.access$isFeedNeedToBlock(this.this$0, (Feed) obj, this.$wordRegex)) {
+        if (!(obj instanceof Feed) || !this.this$0.isFeedNeedToBlock((Feed) obj, this.$wordRegex)) {
             return null;
         }
         this.$deletedFeeds.add(obj);

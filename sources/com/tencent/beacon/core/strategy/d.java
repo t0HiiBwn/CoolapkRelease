@@ -22,10 +22,10 @@ public final class d implements g {
         this.a = context;
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:106:0x0288  */
-    /* JADX WARNING: Removed duplicated region for block: B:107:0x028a  */
-    /* JADX WARNING: Removed duplicated region for block: B:111:0x0292  */
-    /* JADX WARNING: Removed duplicated region for block: B:123:0x02b6  */
+    /* JADX WARNING: Removed duplicated region for block: B:106:0x0289  */
+    /* JADX WARNING: Removed duplicated region for block: B:107:0x028b  */
+    /* JADX WARNING: Removed duplicated region for block: B:111:0x0293  */
+    /* JADX WARNING: Removed duplicated region for block: B:123:0x02b7  */
     @Override // com.tencent.beacon.core.c.g
     public final void a(int i, byte[] bArr, boolean z) {
         boolean z2;
@@ -63,11 +63,11 @@ public final class d implements g {
                     ArrayList<ModuleStrategy> arrayList2 = commonStrategy.moduleList;
                     if (strategy != null) {
                         if (arrayList2 != null) {
-                            SparseArray<a.C0123a> e = strategy.e();
+                            SparseArray<a.C0141a> e = strategy.e();
                             if (e != null) {
                                 z4 = false;
                                 for (int i2 = 0; i2 < e.size(); i2++) {
-                                    a.C0123a valueAt = e.valueAt(i2);
+                                    a.C0141a valueAt = e.valueAt(i2);
                                     Iterator<ModuleStrategy> it2 = arrayList2.iterator();
                                     while (it2.hasNext()) {
                                         ModuleStrategy next = it2.next();
@@ -125,12 +125,12 @@ public final class d implements g {
                             }
                         } else {
                             z3 = z2;
-                            SparseArray<a.C0123a> e2 = strategy.e();
+                            SparseArray<a.C0141a> e2 = strategy.e();
                             if (e2 != null) {
                                 int size = e2.size();
                                 boolean z8 = false;
                                 for (int i3 = 0; i3 < size; i3++) {
-                                    a.C0123a valueAt2 = e2.valueAt(i3);
+                                    a.C0141a valueAt2 = e2.valueAt(i3);
                                     if (valueAt2.a()) {
                                         b.b("[strategy] mid: %d , server not response strategy, sdk local close it!", Integer.valueOf(valueAt2.e()));
                                         valueAt2.a(false);

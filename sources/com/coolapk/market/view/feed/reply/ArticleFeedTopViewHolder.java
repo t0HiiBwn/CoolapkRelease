@@ -31,15 +31,13 @@ import com.coolapk.market.widget.view.RatingTagShape;
 import com.coolapk.market.widget.view.ScalingImageView;
 import kotlin.Lazy;
 import kotlin.LazyKt;
-import kotlin.Metadata;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0002\b\u0007\u0018\u0000 \u001a2\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0001\u001aB\u001d\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nJ\u0010\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u0003H\u0016J\b\u0010\u0016\u001a\u00020\u0014H\u0002J\u0010\u0010\u0017\u001a\u00020\u00142\u0006\u0010\u0018\u001a\u00020\u0005H\u0016J\b\u0010\u0019\u001a\u00020\u0014H\u0002R\u001b\u0010\u000b\u001a\u00020\f8BX\u0002¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\r\u0010\u000eR\u0011\u0010\b\u001a\u00020\t¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0012¨\u0006\u001b"}, d2 = {"Lcom/coolapk/market/view/feed/reply/ArticleFeedTopViewHolder;", "Lcom/coolapk/market/viewholder/GenericBindHolder;", "Lcom/coolapk/market/databinding/ItemArticleDetailTopBinding;", "Lcom/coolapk/market/model/HolderItem;", "itemView", "Landroid/view/View;", "component", "Landroidx/databinding/DataBindingComponent;", "presenter", "Lcom/coolapk/market/view/feed/reply/FeedDetailPresenter;", "(Landroid/view/View;Landroidx/databinding/DataBindingComponent;Lcom/coolapk/market/view/feed/reply/FeedDetailPresenter;)V", "headerViewPart", "Lcom/coolapk/market/view/feed/reply/FeedFollowableHeaderViewPart;", "getHeaderViewPart", "()Lcom/coolapk/market/view/feed/reply/FeedFollowableHeaderViewPart;", "headerViewPart$delegate", "Lkotlin/Lazy;", "getPresenter", "()Lcom/coolapk/market/view/feed/reply/FeedDetailPresenter;", "bindToContent", "", "data", "doCoverAnim", "onClick", "view", "populateCover", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: ArticleFeedTopViewHolder.kt */
 public final class ArticleFeedTopViewHolder extends GenericBindHolder<ItemArticleDetailTopBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558611;
+    public static final int LAYOUT_ID = 2131558615;
     private final Lazy headerViewPart$delegate;
     private final FeedDetailPresenter presenter;
 
@@ -65,7 +63,6 @@ public final class ArticleFeedTopViewHolder extends GenericBindHolder<ItemArticl
         this.headerViewPart$delegate = LazyKt.lazy(new ArticleFeedTopViewHolder$headerViewPart$2(this, dataBindingComponent));
     }
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/view/feed/reply/ArticleFeedTopViewHolder$Companion;", "", "()V", "LAYOUT_ID", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: ArticleFeedTopViewHolder.kt */
     public static final class Companion {
         private Companion() {
@@ -190,7 +187,7 @@ public final class ArticleFeedTopViewHolder extends GenericBindHolder<ItemArticl
                     ScalingImageView scalingImageView5 = ((ItemArticleDetailTopBinding) getBinding()).topImageView;
                     Intrinsics.checkNotNullExpressionValue(scalingImageView5, "binding.topImageView");
                     scalingImageView5.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                    AppHolder.getFragmentImageLoader().displayImage((Fragment) baseFragment2, str, (ImageView) ((ItemArticleDetailTopBinding) getBinding()).topImageView, ImageLoaderOptions.newBuilder().placeHolderRes(2131231691).useAnimate(true).build(), (OnImageLoadListener) articleFeedTopViewHolder$populateCover$onImageLoadListener$1, (OnBitmapTransformListener) null);
+                    AppHolder.getFragmentImageLoader().displayImage((Fragment) baseFragment2, str, (ImageView) ((ItemArticleDetailTopBinding) getBinding()).topImageView, ImageLoaderOptions.newBuilder().placeHolderRes(2131231702).useAnimate(true).build(), (OnImageLoadListener) articleFeedTopViewHolder$populateCover$onImageLoadListener$1, (OnBitmapTransformListener) null);
                     ScalingImageView scalingImageView6 = ((ItemArticleDetailTopBinding) getBinding()).topImageView;
                     Intrinsics.checkNotNullExpressionValue(scalingImageView6, "binding.topImageView");
                     scalingImageView6.setScaleType(ImageView.ScaleType.MATRIX);
@@ -210,7 +207,6 @@ public final class ArticleFeedTopViewHolder extends GenericBindHolder<ItemArticl
         }
     }
 
-    /* access modifiers changed from: private */
     public final void doCoverAnim() {
         ScalingImageView scalingImageView = ((ItemArticleDetailTopBinding) getBinding()).topImageView;
         Intrinsics.checkNotNullExpressionValue(scalingImageView, "binding.topImageView");
@@ -234,11 +230,11 @@ public final class ArticleFeedTopViewHolder extends GenericBindHolder<ItemArticl
         }
         if (view != null) {
             Intrinsics.checkNotNullExpressionValue(view, "inFragment<Fragment>()?.view.elvis { return }");
-            if (!Intrinsics.areEqual(view.getTag(2131362638), (Object) true)) {
+            if (!Intrinsics.areEqual(view.getTag(2131362646), (Object) true)) {
                 View view2 = ((ItemArticleDetailTopBinding) getBinding()).coverViewMask;
                 Intrinsics.checkNotNullExpressionValue(view2, "binding.coverViewMask");
                 view2.setVisibility(0);
-                view.setTag(2131362638, true);
+                view.setTag(2131362646, true);
                 View view3 = ((ItemArticleDetailTopBinding) getBinding()).coverViewMask;
                 Intrinsics.checkNotNullExpressionValue(view3, "binding.coverViewMask");
                 ScalingImageView scalingImageView3 = ((ItemArticleDetailTopBinding) getBinding()).topImageView;

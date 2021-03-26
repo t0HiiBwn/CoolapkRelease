@@ -14,6 +14,7 @@ import androidx.lifecycle.LifecycleOwner;
 import com.coolapk.market.binding.ViewBindingAdapters;
 import com.coolapk.market.design.CoolapkCardView;
 import com.coolapk.market.viewholder.EntityItemModel;
+import com.coolapk.market.widget.view.TimeTextView;
 
 public class ItemEntityVideoDetailViewPartBindingImpl extends ItemEntityVideoDetailViewPartBinding {
     private static final ViewDataBinding.IncludedLayouts sIncludes;
@@ -23,19 +24,19 @@ public class ItemEntityVideoDetailViewPartBindingImpl extends ItemEntityVideoDet
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(20);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(5, new String[]{"item_app_inside_image_card"}, new int[]{9}, new int[]{2131558592});
+        includedLayouts.setIncludes(5, new String[]{"item_app_inside_image_card"}, new int[]{9}, new int[]{2131558596});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363912, 10);
-        sparseIntArray.put(2131363604, 11);
-        sparseIntArray.put(2131363582, 12);
-        sparseIntArray.put(2131362131, 13);
-        sparseIntArray.put(2131362348, 14);
-        sparseIntArray.put(2131363332, 15);
-        sparseIntArray.put(2131363613, 16);
-        sparseIntArray.put(2131362873, 17);
-        sparseIntArray.put(2131362872, 18);
-        sparseIntArray.put(2131363146, 19);
+        sparseIntArray.put(2131363937, 10);
+        sparseIntArray.put(2131363626, 11);
+        sparseIntArray.put(2131363604, 12);
+        sparseIntArray.put(2131362134, 13);
+        sparseIntArray.put(2131362354, 14);
+        sparseIntArray.put(2131363348, 15);
+        sparseIntArray.put(2131363635, 16);
+        sparseIntArray.put(2131362884, 17);
+        sparseIntArray.put(2131362883, 18);
+        sparseIntArray.put(2131363160, 19);
     }
 
     public ItemEntityVideoDetailViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -43,7 +44,7 @@ public class ItemEntityVideoDetailViewPartBindingImpl extends ItemEntityVideoDet
     }
 
     private ItemEntityVideoDetailViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view, Object[] objArr) {
-        super(dataBindingComponent, view, 1, (LinearLayout) objArr[13], (CoolapkCardView) objArr[5], (TextView) objArr[14], (ImageView) objArr[7], (ItemAppInsideImageCardBinding) objArr[9], (FrameLayout) objArr[0], (TextView) objArr[18], (LinearLayout) objArr[17], (ImageView) objArr[4], (ImageView) objArr[1], (ImageView) objArr[3], (ImageView) objArr[6], (ProgressBar) objArr[19], (LinearLayout) objArr[8], (SeekBar) objArr[15], (TextView) objArr[12], (LinearLayout) objArr[11], (TextView) objArr[16], (FrameLayout) objArr[10], (ImageView) objArr[2]);
+        super(dataBindingComponent, view, 1, (LinearLayout) objArr[13], (CoolapkCardView) objArr[5], (TimeTextView) objArr[14], (ImageView) objArr[7], (ItemAppInsideImageCardBinding) objArr[9], (FrameLayout) objArr[0], (TextView) objArr[18], (LinearLayout) objArr[17], (ImageView) objArr[4], (ImageView) objArr[1], (ImageView) objArr[3], (ImageView) objArr[6], (ProgressBar) objArr[19], (LinearLayout) objArr[8], (SeekBar) objArr[15], (TextView) objArr[12], (LinearLayout) objArr[11], (TimeTextView) objArr[16], (FrameLayout) objArr[10], (ImageView) objArr[2]);
         this.mDirtyFlags = -1;
         this.coolapkCardView.setTag(null);
         this.fullScreenView.setTag(null);
@@ -83,7 +84,7 @@ public class ItemEntityVideoDetailViewPartBindingImpl extends ItemEntityVideoDet
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((EntityItemModel) obj);
         } else if (50 != i) {
             return false;
@@ -99,7 +100,7 @@ public class ItemEntityVideoDetailViewPartBindingImpl extends ItemEntityVideoDet
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

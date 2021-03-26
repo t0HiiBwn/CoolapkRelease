@@ -8,6 +8,10 @@ public class ChunkedWriter extends FilterWriter {
     private static final int DEFAULT_CHUNK_SIZE = 4096;
     private final int chunkSize;
 
+    public ChunkedWriter(Writer writer) {
+        this(writer, 4096);
+    }
+
     public ChunkedWriter(Writer writer, int i) {
         super(writer);
         if (i > 0) {
@@ -15,10 +19,6 @@ public class ChunkedWriter extends FilterWriter {
             return;
         }
         throw new IllegalArgumentException();
-    }
-
-    public ChunkedWriter(Writer writer) {
-        this(writer, 4096);
     }
 
     @Override // java.io.FilterWriter, java.io.Writer

@@ -75,9 +75,7 @@ public class b implements m, s {
     private k g;
     private boolean j;
     private volatile JSONObject k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private volatile JSONObject f1455l;
+    private volatile JSONObject l;
     private volatile JSONObject m;
     private boolean n;
     private com.umeng.analytics.filter.a u;
@@ -99,7 +97,7 @@ public class b implements m, s {
         this.g = null;
         this.j = false;
         this.k = null;
-        this.f1455l = null;
+        this.l = null;
         this.m = null;
         this.n = false;
         this.u = null;
@@ -184,8 +182,8 @@ public class b implements m, s {
             if (this.k == null) {
                 this.k = new JSONObject();
             }
-            if (this.f1455l == null) {
-                this.f1455l = new JSONObject();
+            if (this.l == null) {
+                this.l = new JSONObject();
             }
             String string = sharedPreferences.getString("prepp_uapp", null);
             if (!TextUtils.isEmpty(string)) {
@@ -209,11 +207,11 @@ public class b implements m, s {
     }
 
     public JSONObject d() {
-        return this.f1455l;
+        return this.l;
     }
 
     public void e() {
-        this.f1455l = null;
+        this.l = null;
     }
 
     void a(String str) {
@@ -512,7 +510,7 @@ public class b implements m, s {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:43:0x008f  */
+    /* JADX WARNING: Removed duplicated region for block: B:43:0x0091  */
     public void a(Context context, String str, Uri uri, String str2) {
         String str3;
         Exception e2;
@@ -1536,7 +1534,7 @@ public class b implements m, s {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:43:0x00b6  */
+    /* JADX WARNING: Removed duplicated region for block: B:43:0x00bb  */
     public void a(Context context, Uri uri, UMLinkListener uMLinkListener) {
         String str;
         String str2;

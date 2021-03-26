@@ -13,7 +13,7 @@ public class a {
     private final boolean b;
 
     /* renamed from: com.qq.e.comm.util.a$a  reason: collision with other inner class name */
-    static final class C0078a {
+    static final class C0088a {
         public static final a a = new a((byte) 0);
     }
 
@@ -33,7 +33,7 @@ public class a {
     }
 
     public static a a() {
-        return C0078a.a;
+        return C0088a.a;
     }
 
     private String a(String str) {

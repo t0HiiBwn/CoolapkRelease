@@ -38,7 +38,7 @@ final class LiveDiscussFragment$onRegisterCards$1 extends Lambda implements Func
             public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
-                if (view.getId() == 2131362768) {
+                if (view.getId() == 2131362779) {
                     Object tag = view.getTag();
                     Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.model.LiveMessage");
                     this.this$0.this$0.getLiveContext().onLiveMessageClick((LiveMessage) tag);
@@ -49,7 +49,7 @@ final class LiveDiscussFragment$onRegisterCards$1 extends Lambda implements Func
             public boolean onItemLongClick(RecyclerView.ViewHolder viewHolder, View view) {
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
-                if (view.getId() != 2131362768) {
+                if (view.getId() != 2131362779) {
                     return super.onItemLongClick(viewHolder, view);
                 }
                 Object tag = view.getTag();

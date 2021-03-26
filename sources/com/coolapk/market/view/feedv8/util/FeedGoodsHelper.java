@@ -87,7 +87,7 @@ public final class FeedGoodsHelper {
     private final void showGoodsDialog(Activity activity, String str, String str2, String str3, String str4, boolean z, Function2<? super String, ? super Dialog, ? extends Function0<Unit>> function2) {
         Activity activity2 = activity;
         boolean z2 = false;
-        SubmitFeedNewGoodsBinding submitFeedNewGoodsBinding = (SubmitFeedNewGoodsBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131559160, null, false);
+        SubmitFeedNewGoodsBinding submitFeedNewGoodsBinding = (SubmitFeedNewGoodsBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131559168, null, false);
         AlertDialog.Builder builder = new AlertDialog.Builder(activity2);
         Intrinsics.checkNotNullExpressionValue(submitFeedNewGoodsBinding, "binding");
         AlertDialog create = builder.setView(submitFeedNewGoodsBinding.getRoot()).create();
@@ -159,7 +159,7 @@ public final class FeedGoodsHelper {
         Activity activity2 = activity;
         String clipBoardUrl = UserPermissionChecker.INSTANCE.getClipBoardUrl(activity2);
         if (isSupportAddGoodsUrl(clipBoardUrl)) {
-            ShareGoodDialogBinding shareGoodDialogBinding = (ShareGoodDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131559139, null, false, new ContextBindingComponent(activity2));
+            ShareGoodDialogBinding shareGoodDialogBinding = (ShareGoodDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131559146, null, false, new ContextBindingComponent(activity2));
             AlertDialog.Builder builder = new AlertDialog.Builder(activity2);
             Intrinsics.checkNotNullExpressionValue(shareGoodDialogBinding, "binding");
             AlertDialog create = builder.setView(shareGoodDialogBinding.getRoot()).create();

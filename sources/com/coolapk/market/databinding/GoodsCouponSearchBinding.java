@@ -33,7 +33,7 @@ public abstract class GoodsCouponSearchBinding extends ViewDataBinding {
 
     @Deprecated
     public static GoodsCouponSearchBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (GoodsCouponSearchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558567, viewGroup, z, obj);
+        return (GoodsCouponSearchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558570, viewGroup, z, obj);
     }
 
     public static GoodsCouponSearchBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class GoodsCouponSearchBinding extends ViewDataBinding {
 
     @Deprecated
     public static GoodsCouponSearchBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (GoodsCouponSearchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558567, null, false, obj);
+        return (GoodsCouponSearchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558570, null, false, obj);
     }
 
     public static GoodsCouponSearchBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class GoodsCouponSearchBinding extends ViewDataBinding {
 
     @Deprecated
     public static GoodsCouponSearchBinding bind(View view, Object obj) {
-        return (GoodsCouponSearchBinding) bind(obj, view, 2131558567);
+        return (GoodsCouponSearchBinding) bind(obj, view, 2131558570);
     }
 }

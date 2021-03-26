@@ -24,7 +24,7 @@ public final class FeedVoteDetailFragment$onActivityCreated$1 implements SheetGr
     /* JADX WARN: Incorrect args count in method signature: ()V */
     FeedVoteDetailFragment$onActivityCreated$1(FeedVoteDetailFragment feedVoteDetailFragment) {
         this.this$0 = feedVoteDetailFragment;
-        this.bgColor = ResourceUtils.getColorInt(feedVoteDetailFragment.getActivity(), 2131100049);
+        this.bgColor = ResourceUtils.getColorInt(feedVoteDetailFragment.getActivity(), 2131100054);
         this.userItemColor = ResourceUtils.resolveData(feedVoteDetailFragment.getActivity(), 2130969438);
     }
 
@@ -65,7 +65,7 @@ public final class FeedVoteDetailFragment$onActivityCreated$1 implements SheetGr
             }
             T t2 = t;
             if (t2 != null) {
-                t2.getItems().add(0, new SheetDataItem(SheetGroupModifier.Action.One, str, SheetDataItem.Companion.createIconBgApplyer(2131231610, this.userItemColor, this.bgColor), new FeedVoteDetailFragment$onActivityCreated$1$modifySheet$$inlined$also$lambda$1(this, str, str2), str2, 0, false, false, 224, null));
+                t2.getItems().add(0, new SheetDataItem(SheetGroupModifier.Action.One, str, SheetDataItem.Companion.createIconBgApplyer(2131231621, this.userItemColor, this.bgColor), new FeedVoteDetailFragment$onActivityCreated$1$modifySheet$$inlined$also$lambda$1(this, str, str2), str2, 0, false, false, 224, null));
             }
         }
     }

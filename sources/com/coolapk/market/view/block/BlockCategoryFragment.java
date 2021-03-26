@@ -36,7 +36,7 @@ public final class BlockCategoryFragment extends ShortAsyncListFragment<Parcelab
     @Override // com.coolapk.market.view.base.asynclist.ShortAsyncListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558625).constructor(new BlockCategoryFragment$onActivityCreated$1(new FragmentBindingComponent(this))).suitedMethod(BlockCategoryFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558630).constructor(new BlockCategoryFragment$onActivityCreated$1(new FragmentBindingComponent(this))).suitedMethod(BlockCategoryFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
         initData();
         setLoadMoreEnable(false);
         setRefreshEnable(false);
@@ -84,7 +84,7 @@ public final class BlockCategoryFragment extends ShortAsyncListFragment<Parcelab
     /* compiled from: BlockCategoryFragment.kt */
     public static final class BlockHeaderViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558625;
+        public static final int LAYOUT_ID = 2131558630;
 
         @Override // com.coolapk.market.viewholder.BindingViewHolder
         public void bindTo(Object obj) {

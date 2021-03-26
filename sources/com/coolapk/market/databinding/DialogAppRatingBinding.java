@@ -31,7 +31,7 @@ public abstract class DialogAppRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAppRatingBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogAppRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558517, viewGroup, z, obj);
+        return (DialogAppRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558519, viewGroup, z, obj);
     }
 
     public static DialogAppRatingBinding inflate(LayoutInflater layoutInflater) {
@@ -40,7 +40,7 @@ public abstract class DialogAppRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAppRatingBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogAppRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558517, null, false, obj);
+        return (DialogAppRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558519, null, false, obj);
     }
 
     public static DialogAppRatingBinding bind(View view) {
@@ -49,6 +49,6 @@ public abstract class DialogAppRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAppRatingBinding bind(View view, Object obj) {
-        return (DialogAppRatingBinding) bind(obj, view, 2131558517);
+        return (DialogAppRatingBinding) bind(obj, view, 2131558519);
     }
 }

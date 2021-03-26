@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 public class ArrayUtils {
     public static final int INDEX_NOT_FOUND = -1;
@@ -15,45 +16,53 @@ public class ArrayUtils {
         void execute(int i, E e);
     }
 
-    @SafeVarargs
+    private ArrayUtils() {
+        throw new UnsupportedOperationException("u can't instantiate me...");
+    }
+
     public static <T> T[] newArray(T... tArr) {
+        Objects.requireNonNull(tArr, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.newArray() marked by @androidx.annotation.NonNull");
         return tArr;
     }
 
-    public static boolean[] newBooleanArray(boolean... zArr) {
-        return zArr;
+    public static long[] newLongArray(long... jArr) {
+        Objects.requireNonNull(jArr, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.newLongArray() marked by @androidx.annotation.NonNull");
+        return jArr;
     }
 
-    public static byte[] newByteArray(byte... bArr) {
-        return bArr;
+    public static int[] newIntArray(int... iArr) {
+        Objects.requireNonNull(iArr, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.newIntArray() marked by @androidx.annotation.NonNull");
+        return iArr;
+    }
+
+    public static short[] newShortArray(short... sArr) {
+        Objects.requireNonNull(sArr, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.newShortArray() marked by @androidx.annotation.NonNull");
+        return sArr;
     }
 
     public static char[] newCharArray(char... cArr) {
+        Objects.requireNonNull(cArr, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.newCharArray() marked by @androidx.annotation.NonNull");
         return cArr;
     }
 
+    public static byte[] newByteArray(byte... bArr) {
+        Objects.requireNonNull(bArr, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.newByteArray() marked by @androidx.annotation.NonNull");
+        return bArr;
+    }
+
     public static double[] newDoubleArray(double... dArr) {
+        Objects.requireNonNull(dArr, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.newDoubleArray() marked by @androidx.annotation.NonNull");
         return dArr;
     }
 
     public static float[] newFloatArray(float... fArr) {
+        Objects.requireNonNull(fArr, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.newFloatArray() marked by @androidx.annotation.NonNull");
         return fArr;
     }
 
-    public static int[] newIntArray(int... iArr) {
-        return iArr;
-    }
-
-    public static long[] newLongArray(long... jArr) {
-        return jArr;
-    }
-
-    public static short[] newShortArray(short... sArr) {
-        return sArr;
-    }
-
-    private ArrayUtils() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
+    public static boolean[] newBooleanArray(boolean... zArr) {
+        Objects.requireNonNull(zArr, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.newBooleanArray() marked by @androidx.annotation.NonNull");
+        return zArr;
     }
 
     public static boolean isEmpty(Object obj) {
@@ -360,39 +369,57 @@ public class ArrayUtils {
     }
 
     public static <T> T[] add(T[] tArr, T t) {
-        return (T[]) ((Object[]) realAddOne(tArr, t, tArr != null ? tArr.getClass() : t != null ? t.getClass() : Object.class));
+        T[] tArr2 = (T[]) ((Object[]) realAddOne(tArr, t, tArr != null ? tArr.getClass() : t != null ? t.getClass() : Object.class));
+        Objects.requireNonNull(tArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return tArr2;
     }
 
     public static boolean[] add(boolean[] zArr, boolean z) {
-        return (boolean[]) realAddOne(zArr, Boolean.valueOf(z), Boolean.TYPE);
+        boolean[] zArr2 = (boolean[]) realAddOne(zArr, Boolean.valueOf(z), Boolean.TYPE);
+        Objects.requireNonNull(zArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return zArr2;
     }
 
     public static byte[] add(byte[] bArr, byte b) {
-        return (byte[]) realAddOne(bArr, Byte.valueOf(b), Byte.TYPE);
+        byte[] bArr2 = (byte[]) realAddOne(bArr, Byte.valueOf(b), Byte.TYPE);
+        Objects.requireNonNull(bArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return bArr2;
     }
 
     public static char[] add(char[] cArr, char c) {
-        return (char[]) realAddOne(cArr, Character.valueOf(c), Character.TYPE);
+        char[] cArr2 = (char[]) realAddOne(cArr, Character.valueOf(c), Character.TYPE);
+        Objects.requireNonNull(cArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return cArr2;
     }
 
     public static double[] add(double[] dArr, double d) {
-        return (double[]) realAddOne(dArr, Double.valueOf(d), Double.TYPE);
+        double[] dArr2 = (double[]) realAddOne(dArr, Double.valueOf(d), Double.TYPE);
+        Objects.requireNonNull(dArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return dArr2;
     }
 
     public static float[] add(float[] fArr, float f) {
-        return (float[]) realAddOne(fArr, Float.valueOf(f), Float.TYPE);
+        float[] fArr2 = (float[]) realAddOne(fArr, Float.valueOf(f), Float.TYPE);
+        Objects.requireNonNull(fArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return fArr2;
     }
 
     public static int[] add(int[] iArr, int i) {
-        return (int[]) realAddOne(iArr, Integer.valueOf(i), Integer.TYPE);
+        int[] iArr2 = (int[]) realAddOne(iArr, Integer.valueOf(i), Integer.TYPE);
+        Objects.requireNonNull(iArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return iArr2;
     }
 
     public static long[] add(long[] jArr, long j) {
-        return (long[]) realAddOne(jArr, Long.valueOf(j), Long.TYPE);
+        long[] jArr2 = (long[]) realAddOne(jArr, Long.valueOf(j), Long.TYPE);
+        Objects.requireNonNull(jArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return jArr2;
     }
 
     public static short[] add(short[] sArr, short s) {
-        return (short[]) realAddOne(sArr, Short.valueOf(s), Short.TYPE);
+        short[] sArr2 = (short[]) realAddOne(sArr, Short.valueOf(s), Short.TYPE);
+        Objects.requireNonNull(sArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return sArr2;
     }
 
     private static Object realAddOne(Object obj, Object obj2, Class cls) {
@@ -407,6 +434,7 @@ public class ArrayUtils {
             obj3 = Array.newInstance(cls, 1);
         }
         Array.set(obj3, i, obj2);
+        Objects.requireNonNull(obj3, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.realAddOne() marked by @androidx.annotation.NonNull");
         return obj3;
     }
 
@@ -469,7 +497,7 @@ public class ArrayUtils {
         if (tArr != null) {
             cls = tArr.getClass().getComponentType();
         } else if (tArr2 == null) {
-            return (T[]) new Object[]{null};
+            return null;
         } else {
             cls = tArr2.getClass().getComponentType();
         }
@@ -477,35 +505,67 @@ public class ArrayUtils {
     }
 
     public static boolean[] add(boolean[] zArr, int i, boolean[] zArr2) {
-        return (boolean[]) realAddArr(zArr, i, zArr2, Boolean.TYPE);
+        Object realAddArr = realAddArr(zArr, i, zArr2, Boolean.TYPE);
+        if (realAddArr == null) {
+            return null;
+        }
+        return (boolean[]) realAddArr;
     }
 
     public static char[] add(char[] cArr, int i, char[] cArr2) {
-        return (char[]) realAddArr(cArr, i, cArr2, Character.TYPE);
+        Object realAddArr = realAddArr(cArr, i, cArr2, Character.TYPE);
+        if (realAddArr == null) {
+            return null;
+        }
+        return (char[]) realAddArr;
     }
 
     public static byte[] add(byte[] bArr, int i, byte[] bArr2) {
-        return (byte[]) realAddArr(bArr, i, bArr2, Byte.TYPE);
+        Object realAddArr = realAddArr(bArr, i, bArr2, Byte.TYPE);
+        if (realAddArr == null) {
+            return null;
+        }
+        return (byte[]) realAddArr;
     }
 
     public static short[] add(short[] sArr, int i, short[] sArr2) {
-        return (short[]) realAddArr(sArr, i, sArr2, Short.TYPE);
+        Object realAddArr = realAddArr(sArr, i, sArr2, Short.TYPE);
+        if (realAddArr == null) {
+            return null;
+        }
+        return (short[]) realAddArr;
     }
 
     public static int[] add(int[] iArr, int i, int[] iArr2) {
-        return (int[]) realAddArr(iArr, i, iArr2, Integer.TYPE);
+        Object realAddArr = realAddArr(iArr, i, iArr2, Integer.TYPE);
+        if (realAddArr == null) {
+            return null;
+        }
+        return (int[]) realAddArr;
     }
 
     public static long[] add(long[] jArr, int i, long[] jArr2) {
-        return (long[]) realAddArr(jArr, i, jArr2, Long.TYPE);
+        Object realAddArr = realAddArr(jArr, i, jArr2, Long.TYPE);
+        if (realAddArr == null) {
+            return null;
+        }
+        return (long[]) realAddArr;
     }
 
     public static float[] add(float[] fArr, int i, float[] fArr2) {
-        return (float[]) realAddArr(fArr, i, fArr2, Float.TYPE);
+        Object realAddArr = realAddArr(fArr, i, fArr2, Float.TYPE);
+        if (realAddArr == null) {
+            return null;
+        }
+        return (float[]) realAddArr;
     }
 
     public static double[] add(double[] dArr, int i, double[] dArr2) {
-        return (double[]) realAddArr(dArr, i, dArr2, Double.TYPE);
+        Object realAddArr = realAddArr(dArr, i, dArr2, Double.TYPE);
+        if (realAddArr == null) {
+            return null;
+        }
+        return (double[]) realAddArr;
     }
 
     private static Object realAddArr(Object obj, int i, Object obj2, Class cls) {
@@ -550,39 +610,57 @@ public class ArrayUtils {
         } else {
             cls = t.getClass();
         }
-        return (T[]) ((Object[]) realAdd(tArr, i, t, cls));
+        T[] tArr2 = (T[]) ((Object[]) realAdd(tArr, i, t, cls));
+        Objects.requireNonNull(tArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return tArr2;
     }
 
     public static boolean[] add(boolean[] zArr, int i, boolean z) {
-        return (boolean[]) realAdd(zArr, i, Boolean.valueOf(z), Boolean.TYPE);
+        boolean[] zArr2 = (boolean[]) realAdd(zArr, i, Boolean.valueOf(z), Boolean.TYPE);
+        Objects.requireNonNull(zArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return zArr2;
     }
 
     public static char[] add(char[] cArr, int i, char c) {
-        return (char[]) realAdd(cArr, i, Character.valueOf(c), Character.TYPE);
+        char[] cArr2 = (char[]) realAdd(cArr, i, Character.valueOf(c), Character.TYPE);
+        Objects.requireNonNull(cArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return cArr2;
     }
 
     public static byte[] add(byte[] bArr, int i, byte b) {
-        return (byte[]) realAdd(bArr, i, Byte.valueOf(b), Byte.TYPE);
+        byte[] bArr2 = (byte[]) realAdd(bArr, i, Byte.valueOf(b), Byte.TYPE);
+        Objects.requireNonNull(bArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return bArr2;
     }
 
     public static short[] add(short[] sArr, int i, short s) {
-        return (short[]) realAdd(sArr, i, Short.valueOf(s), Short.TYPE);
+        short[] sArr2 = (short[]) realAdd(sArr, i, Short.valueOf(s), Short.TYPE);
+        Objects.requireNonNull(sArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return sArr2;
     }
 
     public static int[] add(int[] iArr, int i, int i2) {
-        return (int[]) realAdd(iArr, i, Integer.valueOf(i2), Integer.TYPE);
+        int[] iArr2 = (int[]) realAdd(iArr, i, Integer.valueOf(i2), Integer.TYPE);
+        Objects.requireNonNull(iArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return iArr2;
     }
 
     public static long[] add(long[] jArr, int i, long j) {
-        return (long[]) realAdd(jArr, i, Long.valueOf(j), Long.TYPE);
+        long[] jArr2 = (long[]) realAdd(jArr, i, Long.valueOf(j), Long.TYPE);
+        Objects.requireNonNull(jArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return jArr2;
     }
 
     public static float[] add(float[] fArr, int i, float f) {
-        return (float[]) realAdd(fArr, i, Float.valueOf(f), Float.TYPE);
+        float[] fArr2 = (float[]) realAdd(fArr, i, Float.valueOf(f), Float.TYPE);
+        Objects.requireNonNull(fArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return fArr2;
     }
 
     public static double[] add(double[] dArr, int i, double d) {
-        return (double[]) realAdd(dArr, i, Double.valueOf(d), Double.TYPE);
+        double[] dArr2 = (double[]) realAdd(dArr, i, Double.valueOf(d), Double.TYPE);
+        Objects.requireNonNull(dArr2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.add() marked by @androidx.annotation.NonNull");
+        return dArr2;
     }
 
     private static Object realAdd(Object obj, int i, Object obj2, Class cls) {
@@ -597,10 +675,12 @@ public class ArrayUtils {
             if (i < length) {
                 System.arraycopy(obj, i, newInstance, i + 1, length - i);
             }
+            Objects.requireNonNull(newInstance, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.realAdd() marked by @androidx.annotation.NonNull");
             return newInstance;
         } else if (i == 0) {
             Object newInstance2 = Array.newInstance(cls, 1);
             Array.set(newInstance2, 0, obj2);
+            Objects.requireNonNull(newInstance2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.realAdd() marked by @androidx.annotation.NonNull");
             return newInstance2;
         } else {
             throw new IndexOutOfBoundsException("Index: " + i + ", Length: 0");
@@ -608,6 +688,9 @@ public class ArrayUtils {
     }
 
     public static Object[] remove(Object[] objArr, int i) {
+        if (objArr == null) {
+            return null;
+        }
         return (Object[]) remove((Object) objArr, i);
     }
 
@@ -620,6 +703,9 @@ public class ArrayUtils {
     }
 
     public static boolean[] remove(boolean[] zArr, int i) {
+        if (zArr == null) {
+            return null;
+        }
         return (boolean[]) remove((Object) zArr, i);
     }
 
@@ -632,6 +718,9 @@ public class ArrayUtils {
     }
 
     public static byte[] remove(byte[] bArr, int i) {
+        if (bArr == null) {
+            return null;
+        }
         return (byte[]) remove((Object) bArr, i);
     }
 
@@ -644,6 +733,9 @@ public class ArrayUtils {
     }
 
     public static char[] remove(char[] cArr, int i) {
+        if (cArr == null) {
+            return null;
+        }
         return (char[]) remove((Object) cArr, i);
     }
 
@@ -656,6 +748,9 @@ public class ArrayUtils {
     }
 
     public static double[] remove(double[] dArr, int i) {
+        if (dArr == null) {
+            return null;
+        }
         return (double[]) remove((Object) dArr, i);
     }
 
@@ -668,6 +763,9 @@ public class ArrayUtils {
     }
 
     public static float[] remove(float[] fArr, int i) {
+        if (fArr == null) {
+            return null;
+        }
         return (float[]) remove((Object) fArr, i);
     }
 
@@ -680,6 +778,9 @@ public class ArrayUtils {
     }
 
     public static int[] remove(int[] iArr, int i) {
+        if (iArr == null) {
+            return null;
+        }
         return (int[]) remove((Object) iArr, i);
     }
 
@@ -692,6 +793,9 @@ public class ArrayUtils {
     }
 
     public static long[] remove(long[] jArr, int i) {
+        if (jArr == null) {
+            return null;
+        }
         return (long[]) remove((Object) jArr, i);
     }
 
@@ -704,6 +808,9 @@ public class ArrayUtils {
     }
 
     public static short[] remove(short[] sArr, int i) {
+        if (sArr == null) {
+            return null;
+        }
         return (short[]) remove((Object) sArr, i);
     }
 
@@ -716,6 +823,7 @@ public class ArrayUtils {
     }
 
     private static Object remove(Object obj, int i) {
+        Objects.requireNonNull(obj, "Argument 'array' of type Object (#0 out of 2, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         int length = getLength(obj);
         if (i < 0 || i >= length) {
             throw new IndexOutOfBoundsException("Index: " + i + ", Length: " + length);
@@ -726,6 +834,7 @@ public class ArrayUtils {
         if (i < i2) {
             System.arraycopy(obj, i + 1, newInstance, i, (length - i) - 1);
         }
+        Objects.requireNonNull(newInstance, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.remove() marked by @androidx.annotation.NonNull");
         return newInstance;
     }
 
@@ -1264,11 +1373,11 @@ public class ArrayUtils {
         }
         long[] jArr = new long[lArr.length];
         for (int i = 0; i < lArr.length; i++) {
-            Long l2 = lArr[i];
-            if (l2 == null) {
+            Long l = lArr[i];
+            if (l == null) {
                 j2 = j;
             } else {
-                j2 = l2.longValue();
+                j2 = l.longValue();
             }
             jArr[i] = j2;
         }
@@ -1585,13 +1694,19 @@ public class ArrayUtils {
 
     public static <T> List<T> asList(T... tArr) {
         if (tArr == null || tArr.length == 0) {
-            return Collections.emptyList();
+            List<T> emptyList = Collections.emptyList();
+            Objects.requireNonNull(emptyList, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.asList() marked by @androidx.annotation.NonNull");
+            return emptyList;
         }
-        return Arrays.asList(tArr);
+        List<T> asList = Arrays.asList(tArr);
+        Objects.requireNonNull(asList, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.asList() marked by @androidx.annotation.NonNull");
+        return asList;
     }
 
     public static <T> List<T> asUnmodifiableList(T... tArr) {
-        return Collections.unmodifiableList(asList(tArr));
+        List<T> unmodifiableList = Collections.unmodifiableList(asList(tArr));
+        Objects.requireNonNull(unmodifiableList, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.asUnmodifiableList() marked by @androidx.annotation.NonNull");
+        return unmodifiableList;
     }
 
     public static <T> List<T> asArrayList(T... tArr) {
@@ -1737,32 +1852,43 @@ public class ArrayUtils {
             return "null";
         }
         if (obj instanceof Object[]) {
-            return Arrays.deepToString((Object[]) obj);
+            String deepToString = Arrays.deepToString((Object[]) obj);
+            Objects.requireNonNull(deepToString, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.toString() marked by @androidx.annotation.NonNull");
+            return deepToString;
+        } else if (obj instanceof boolean[]) {
+            String arrays = Arrays.toString((boolean[]) obj);
+            Objects.requireNonNull(arrays, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.toString() marked by @androidx.annotation.NonNull");
+            return arrays;
+        } else if (obj instanceof byte[]) {
+            String arrays2 = Arrays.toString((byte[]) obj);
+            Objects.requireNonNull(arrays2, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.toString() marked by @androidx.annotation.NonNull");
+            return arrays2;
+        } else if (obj instanceof char[]) {
+            String arrays3 = Arrays.toString((char[]) obj);
+            Objects.requireNonNull(arrays3, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.toString() marked by @androidx.annotation.NonNull");
+            return arrays3;
+        } else if (obj instanceof double[]) {
+            String arrays4 = Arrays.toString((double[]) obj);
+            Objects.requireNonNull(arrays4, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.toString() marked by @androidx.annotation.NonNull");
+            return arrays4;
+        } else if (obj instanceof float[]) {
+            String arrays5 = Arrays.toString((float[]) obj);
+            Objects.requireNonNull(arrays5, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.toString() marked by @androidx.annotation.NonNull");
+            return arrays5;
+        } else if (obj instanceof int[]) {
+            String arrays6 = Arrays.toString((int[]) obj);
+            Objects.requireNonNull(arrays6, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.toString() marked by @androidx.annotation.NonNull");
+            return arrays6;
+        } else if (obj instanceof long[]) {
+            String arrays7 = Arrays.toString((long[]) obj);
+            Objects.requireNonNull(arrays7, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.toString() marked by @androidx.annotation.NonNull");
+            return arrays7;
+        } else if (obj instanceof short[]) {
+            String arrays8 = Arrays.toString((short[]) obj);
+            Objects.requireNonNull(arrays8, "Detected an attempt to return null from a method com.blankj.utilcode.util.ArrayUtils.toString() marked by @androidx.annotation.NonNull");
+            return arrays8;
+        } else {
+            throw new IllegalArgumentException("Array has incompatible type: " + obj.getClass());
         }
-        if (obj instanceof boolean[]) {
-            return Arrays.toString((boolean[]) obj);
-        }
-        if (obj instanceof byte[]) {
-            return Arrays.toString((byte[]) obj);
-        }
-        if (obj instanceof char[]) {
-            return Arrays.toString((char[]) obj);
-        }
-        if (obj instanceof double[]) {
-            return Arrays.toString((double[]) obj);
-        }
-        if (obj instanceof float[]) {
-            return Arrays.toString((float[]) obj);
-        }
-        if (obj instanceof int[]) {
-            return Arrays.toString((int[]) obj);
-        }
-        if (obj instanceof long[]) {
-            return Arrays.toString((long[]) obj);
-        }
-        if (obj instanceof short[]) {
-            return Arrays.toString((short[]) obj);
-        }
-        throw new IllegalArgumentException("Array has incompatible type: " + obj.getClass());
     }
 }

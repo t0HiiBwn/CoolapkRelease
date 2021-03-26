@@ -16,9 +16,7 @@ import java.io.File;
 public class NativeCrashHandler implements a {
     public static int JNI_CALL_TYPE = 1;
     private static NativeCrashHandler a = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static boolean f1438l = false;
+    private static boolean l = false;
     private static boolean m = false;
     private static boolean o = true;
     private final Context b;
@@ -151,7 +149,7 @@ public class NativeCrashHandler implements a {
                             str = "00";
                         }
                         if (Integer.parseInt(replace3) >= Integer.parseInt(replace)) {
-                            f1438l = true;
+                            l = true;
                         }
                         if (Integer.parseInt(replace3) >= Integer.parseInt(replace2)) {
                             m = true;
@@ -161,7 +159,7 @@ public class NativeCrashHandler implements a {
                         } else {
                             x.d("[Native] Info setting jni can not be accessed.", new Object[0]);
                         }
-                        if (!f1438l) {
+                        if (!l) {
                             x.a("[Native] Extra jni can be accessed.", new Object[0]);
                         } else {
                             x.d("[Native] Extra jni can not be accessed.", new Object[0]);
@@ -186,7 +184,7 @@ public class NativeCrashHandler implements a {
                     }
                     if (!m) {
                     }
-                    if (!f1438l) {
+                    if (!l) {
                     }
                     this.c.o = regist;
                     if (!this.c.f.contains("-".concat(this.c.o))) {
@@ -218,7 +216,7 @@ public class NativeCrashHandler implements a {
                     this.c.o = str2;
                     Boolean bool = (Boolean) z.a("com.tencent.feedback.eup.jni.NativeExceptionUpload", "checkExtraJni", null, new Class[]{String.class}, new Object[]{str2});
                     if (bool != null) {
-                        f1438l = bool.booleanValue();
+                        l = bool.booleanValue();
                     }
                     z.a("com.tencent.feedback.eup.jni.NativeExceptionUpload", "enableHandler", null, new Class[]{Boolean.TYPE}, new Object[]{true});
                     if (z) {
@@ -249,7 +247,7 @@ public class NativeCrashHandler implements a {
                 this.i = a2;
                 if (a2 || this.h) {
                     a(this.g);
-                    if (f1438l) {
+                    if (l) {
                         setNativeAppVersion(this.c.k);
                         setNativeAppChannel(this.c.m);
                         setNativeAppPackage(this.c.c);
@@ -452,7 +450,7 @@ public class NativeCrashHandler implements a {
     }
 
     public boolean appendLogToNative(String str, String str2, String str3) {
-        if (!((!this.h && !this.i) || !f1438l || str == null || str2 == null || str3 == null)) {
+        if (!((!this.h && !this.i) || !l || str == null || str2 == null || str3 == null)) {
             try {
                 if (this.i) {
                     return appendNativeLog(str, str2, str3);
@@ -463,7 +461,7 @@ public class NativeCrashHandler implements a {
                 }
                 return false;
             } catch (UnsatisfiedLinkError unused) {
-                f1438l = false;
+                l = false;
             } catch (Throwable th) {
                 if (!x.a(th)) {
                     th.printStackTrace();
@@ -475,7 +473,7 @@ public class NativeCrashHandler implements a {
     }
 
     public String getLogFromNative() {
-        if ((!this.h && !this.i) || !f1438l) {
+        if ((!this.h && !this.i) || !l) {
             return null;
         }
         try {
@@ -484,7 +482,7 @@ public class NativeCrashHandler implements a {
             }
             return (String) z.a("com.tencent.feedback.eup.jni.NativeExceptionUpload", "getNativeLog", null, null, null);
         } catch (UnsatisfiedLinkError unused) {
-            f1438l = false;
+            l = false;
             return null;
         } catch (Throwable th) {
             if (!x.a(th)) {
@@ -495,7 +493,7 @@ public class NativeCrashHandler implements a {
     }
 
     public boolean putKeyValueToNative(String str, String str2) {
-        if ((this.h || this.i) && f1438l && str != null && str2 != null) {
+        if ((this.h || this.i) && l && str != null && str2 != null) {
             try {
                 if (this.i) {
                     return putNativeKeyValue(str, str2);
@@ -506,7 +504,7 @@ public class NativeCrashHandler implements a {
                 }
                 return false;
             } catch (UnsatisfiedLinkError unused) {
-                f1438l = false;
+                l = false;
             } catch (Throwable th) {
                 if (!x.a(th)) {
                     th.printStackTrace();

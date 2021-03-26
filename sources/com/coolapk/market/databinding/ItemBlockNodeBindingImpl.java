@@ -26,7 +26,7 @@ public class ItemBlockNodeBindingImpl extends ItemBlockNodeBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363505, 4);
+        sparseIntArray.put(2131363523, 4);
     }
 
     public ItemBlockNodeBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -64,7 +64,7 @@ public class ItemBlockNodeBindingImpl extends ItemBlockNodeBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((BlockItem) obj);
@@ -77,7 +77,7 @@ public class ItemBlockNodeBindingImpl extends ItemBlockNodeBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -106,7 +106,7 @@ public class ItemBlockNodeBindingImpl extends ItemBlockNodeBinding {
         }
         if (i != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231408, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231419, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }
     }

@@ -27,7 +27,7 @@ public interface e extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.ss.android.socialbase.downloader.depend.IChunkCntAidlCalculator");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof e)) {
-                return new C0100a(iBinder);
+                return new C0110a(iBinder);
             }
             return (e) queryLocalInterface;
         }
@@ -50,11 +50,11 @@ public interface e extends IInterface {
 
         /* renamed from: com.ss.android.socialbase.downloader.depend.e$a$a  reason: collision with other inner class name */
         /* compiled from: IChunkCntAidlCalculator */
-        private static class C0100a implements e {
+        private static class C0110a implements e {
             public static e a;
             private IBinder b;
 
-            C0100a(IBinder iBinder) {
+            C0110a(IBinder iBinder) {
                 this.b = iBinder;
             }
 
@@ -86,7 +86,7 @@ public interface e extends IInterface {
         }
 
         public static e a() {
-            return C0100a.a;
+            return C0110a.a;
         }
     }
 }

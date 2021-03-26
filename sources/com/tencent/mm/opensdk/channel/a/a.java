@@ -9,7 +9,7 @@ import com.tencent.mm.opensdk.utils.d;
 public final class a {
 
     /* renamed from: com.tencent.mm.opensdk.channel.a.a$a  reason: collision with other inner class name */
-    public static class C0127a {
+    public static class C0145a {
         public String a;
         public String action;
         public long b;
@@ -17,7 +17,7 @@ public final class a {
         public String content;
     }
 
-    public static boolean a(Context context, C0127a aVar) {
+    public static boolean a(Context context, C0145a aVar) {
         String str;
         if (context == null) {
             str = "send fail, invalid argument";

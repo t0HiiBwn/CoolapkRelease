@@ -57,11 +57,11 @@ public class ItemOptionsTitleBindingImpl extends ItemOptionsTitleBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (214 == i) {
+        if (215 == i) {
             setOption2((String) obj);
-        } else if (213 == i) {
+        } else if (214 == i) {
             setOption1((String) obj);
-        } else if (278 != i) {
+        } else if (279 != i) {
             return false;
         } else {
             setTitle((String) obj);
@@ -75,7 +75,7 @@ public class ItemOptionsTitleBindingImpl extends ItemOptionsTitleBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(214);
+        notifyPropertyChanged(215);
         super.requestRebind();
     }
 
@@ -85,7 +85,7 @@ public class ItemOptionsTitleBindingImpl extends ItemOptionsTitleBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(213);
+        notifyPropertyChanged(214);
         super.requestRebind();
     }
 
@@ -95,7 +95,7 @@ public class ItemOptionsTitleBindingImpl extends ItemOptionsTitleBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(278);
+        notifyPropertyChanged(279);
         super.requestRebind();
     }
 

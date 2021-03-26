@@ -67,9 +67,7 @@ public abstract class a implements c, d, al.a {
     public long i;
     private h j;
     private final ViewGroup k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final al f1318l = new al(this);
+    private final al l = new al(this);
     private long m = 0;
     private long n = 0;
     private com.bytedance.sdk.openadsdk.core.video.d.d o;
@@ -175,7 +173,7 @@ public abstract class a implements c, d, al.a {
                     }
                     a.this.o.f();
                 }
-                a.this.f1318l.postDelayed(this, 200);
+                a.this.l.postDelayed(this, 200);
             }
         };
         this.K = false;
@@ -228,7 +226,7 @@ public abstract class a implements c, d, al.a {
             this.j.c(this.k);
         }
         if (this.o == null) {
-            this.o = new com.bytedance.sdk.openadsdk.core.video.d.d(this.f1318l);
+            this.o = new com.bytedance.sdk.openadsdk.core.video.d.d(this.l);
         }
         this.n = 0;
         try {
@@ -385,8 +383,8 @@ public abstract class a implements c, d, al.a {
                     } else if (a.this.o != null) {
                         a.this.o.a(true, a.this.q, !a.this.y);
                     }
-                    if (a.this.f1318l != null) {
-                        a.this.f1318l.postDelayed(a.this.H, 100);
+                    if (a.this.l != null) {
+                        a.this.l.postDelayed(a.this.H, 100);
                     }
                     a.this.E();
                 }
@@ -402,18 +400,18 @@ public abstract class a implements c, d, al.a {
         } else {
             i2 = a2 == 3 ? p.h().f(String.valueOf(this.E)) : 5;
         }
-        this.f1318l.removeCallbacks(this.I);
-        this.f1318l.postDelayed(this.I, (long) i2);
+        this.l.removeCallbacks(this.I);
+        this.l.postDelayed(this.I, (long) i2);
     }
 
     /* access modifiers changed from: private */
     public void E() {
         F();
-        this.f1318l.postDelayed(this.J, 800);
+        this.l.postDelayed(this.J, 800);
     }
 
     private void F() {
-        this.f1318l.removeCallbacks(this.J);
+        this.l.removeCallbacks(this.J);
     }
 
     @Override // com.bytedance.sdk.openadsdk.core.video.nativevideo.c
@@ -423,7 +421,7 @@ public abstract class a implements c, d, al.a {
 
     private void b(int i2) {
         if (G() && this.j != null) {
-            this.f1318l.removeCallbacks(this.I);
+            this.l.removeCallbacks(this.I);
             this.j.w();
             long currentTimeMillis = System.currentTimeMillis() - this.m;
             this.n = currentTimeMillis;
@@ -558,11 +556,11 @@ public abstract class a implements c, d, al.a {
         if (hVar != null) {
             hVar.g();
         }
-        al alVar = this.f1318l;
+        al alVar = this.l;
         if (alVar != null) {
             alVar.removeCallbacks(this.I);
-            this.f1318l.removeCallbacks(this.H);
-            this.f1318l.removeCallbacksAndMessages(null);
+            this.l.removeCallbacks(this.H);
+            this.l.removeCallbacksAndMessages(null);
             F();
         }
         this.p = null;
@@ -601,7 +599,7 @@ public abstract class a implements c, d, al.a {
                                 return;
                             case 303:
                                 a(message.arg1, message.arg2);
-                                this.f1318l.removeCallbacks(this.I);
+                                this.l.removeCallbacks(this.I);
                                 h hVar = this.j;
                                 if (hVar != null) {
                                     hVar.w();
@@ -618,7 +616,7 @@ public abstract class a implements c, d, al.a {
                                 if (hVar2 != null) {
                                     if (i3 == 3 || i3 == 702) {
                                         hVar2.w();
-                                        this.f1318l.removeCallbacks(this.I);
+                                        this.l.removeCallbacks(this.I);
                                         this.F = false;
                                     } else if (i3 == 701) {
                                         hVar2.t();
@@ -635,7 +633,7 @@ public abstract class a implements c, d, al.a {
                                 }
                                 return;
                             case 305:
-                                al alVar = this.f1318l;
+                                al alVar = this.l;
                                 if (alVar != null) {
                                     alVar.removeCallbacks(this.I);
                                 }
@@ -651,7 +649,7 @@ public abstract class a implements c, d, al.a {
                                 }
                                 return;
                             case 306:
-                                this.f1318l.removeCallbacks(this.I);
+                                this.l.removeCallbacks(this.I);
                                 h hVar4 = this.j;
                                 if (hVar4 != null) {
                                     hVar4.w();

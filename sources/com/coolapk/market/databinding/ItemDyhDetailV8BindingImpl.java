@@ -31,13 +31,13 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362436, 12);
-        sparseIntArray.put(2131362312, 13);
-        sparseIntArray.put(2131363251, 14);
-        sparseIntArray.put(2131362338, 15);
-        sparseIntArray.put(2131362319, 16);
-        sparseIntArray.put(2131362483, 17);
-        sparseIntArray.put(2131362642, 18);
+        sparseIntArray.put(2131362443, 12);
+        sparseIntArray.put(2131362317, 13);
+        sparseIntArray.put(2131363265, 14);
+        sparseIntArray.put(2131362344, 15);
+        sparseIntArray.put(2131362325, 16);
+        sparseIntArray.put(2131362491, 17);
+        sparseIntArray.put(2131362650, 18);
     }
 
     public ItemDyhDetailV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -85,11 +85,11 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((DyhViewModel) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (263 == i) {
+        } else if (264 == i) {
             setSingleImg((String) obj);
         } else if (50 != i) {
             return false;
@@ -106,7 +106,7 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -116,7 +116,7 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -186,7 +186,7 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
         long j;
         String str;
         String str2;
-        Long l2;
+        Long l;
         String str3;
         String str4;
         String str5;
@@ -201,7 +201,7 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
         int i5;
         String str10;
         int i6;
-        Long l3;
+        Long l2;
         String str11;
         int i7;
         int i8;
@@ -226,13 +226,13 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
             if (i11 != 0) {
                 DyhArticle dyhArticle = dyhViewModel != null ? dyhViewModel.getDyhArticle() : null;
                 if (dyhArticle != null) {
-                    l3 = dyhArticle.getCreatDate();
+                    l2 = dyhArticle.getCreatDate();
                     str10 = dyhArticle.getMessage();
                     str14 = dyhArticle.getRawUrl();
                     str11 = dyhArticle.getTitle();
                 } else {
                     str11 = null;
-                    l3 = null;
+                    l2 = null;
                     str10 = null;
                     str14 = null;
                 }
@@ -292,15 +292,15 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
                                     String str15 = z ? "textColorSecondary" : "white";
                                     if (z) {
                                         resources = this.actionView.getResources();
-                                        i9 = 2131886761;
+                                        i9 = 2131886823;
                                     } else {
                                         resources = this.actionView.getResources();
-                                        i9 = 2131886760;
+                                        i9 = 2131886822;
                                     }
                                     str9 = resources.getString(i9);
                                     str3 = str13;
                                     str8 = str11;
-                                    l2 = l3;
+                                    l = l2;
                                     i4 = i10;
                                     i3 = i6;
                                     str2 = str10;
@@ -311,7 +311,7 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
                                     str6 = str15;
                                 } else {
                                     str8 = str11;
-                                    l2 = l3;
+                                    l = l2;
                                     i4 = i10;
                                     i3 = i6;
                                     str9 = null;
@@ -325,7 +325,7 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
                                 }
                             } else {
                                 str8 = str11;
-                                l2 = l3;
+                                l = l2;
                                 i3 = i6;
                                 str9 = null;
                                 str7 = null;
@@ -348,7 +348,7 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
                 }
             } else {
                 str11 = null;
-                l3 = null;
+                l2 = null;
                 str10 = null;
                 i6 = 0;
             }
@@ -369,7 +369,7 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
             str5 = null;
             str4 = null;
             str3 = null;
-            l2 = null;
+            l = null;
             str2 = null;
             str = null;
             i4 = 0;
@@ -398,11 +398,11 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
         }
         if ((321 & j) != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extendIcon, str, null, 2131231361, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extendIcon, str, null, 2131231372, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
         }
         if ((j & 289) != 0) {
             this.extendLayout.setVisibility(i3);
-            TextViewBindingAdapters.setTime(this.headerTimeView, l2);
+            TextViewBindingAdapters.setTime(this.headerTimeView, l);
             TextViewBindingAdapter.setText(this.realTitleView, str8);
             this.realTitleView.setVisibility(i2);
             TextViewBindingAdapters.setAutoTextViewLinkable(this.titleView, str2, null, null, null);
@@ -414,7 +414,7 @@ public class ItemDyhDetailV8BindingImpl extends ItemDyhDetailV8Binding {
         }
         if (i14 != 0) {
             Boolean bool3 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str4, null, 2131231271, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str4, null, 2131231282, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
         }
     }
 }

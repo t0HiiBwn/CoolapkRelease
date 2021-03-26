@@ -54,8 +54,8 @@ public final class PickPicCategoryFragment extends ShortAsyncListFragment<PicCat
     @Override // com.coolapk.market.view.base.asynclist.ShortAsyncListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558853, 2131231052).create());
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558853).suitedEntityType("picCategory").constructor(new PickPicCategoryFragment$onActivityCreated$1(this)).build(), 0, 2, null);
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558860, 2131231062).create());
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558860).suitedEntityType("picCategory").constructor(new PickPicCategoryFragment$onActivityCreated$1(this)).build(), 0, 2, null);
         initData();
     }
 
@@ -81,7 +81,7 @@ public final class PickPicCategoryFragment extends ShortAsyncListFragment<PicCat
     /* compiled from: PickPicCategoryFragment.kt */
     public static final class PicCategoryViewHolder extends GenericBindHolder<ItemPicCategoryBinding, PicCategory> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558853;
+        public static final int LAYOUT_ID = 2131558860;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public PicCategoryViewHolder(View view, FragmentBindingComponent fragmentBindingComponent) {

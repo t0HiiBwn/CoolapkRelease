@@ -72,9 +72,7 @@ public class h implements b, a, g.a, h.b, al.a {
     ImageView i;
     View j;
     RoundImageView k;
-
-    /* renamed from: l  reason: collision with root package name */
-    TextView f1322l;
+    TextView l;
     TextView m;
     TextView n;
     ProgressBar o;
@@ -250,7 +248,7 @@ public class h implements b, a, g.a, h.b, al.a {
 
                 @Override // com.bytedance.sdk.openadsdk.core.a.a
                 public boolean c() {
-                    return (h.this.h != null && h.this.h.getVisibility() == 0) || (h.this.j != null && h.this.j.getVisibility() == 0) || ((h.this.k != null && h.this.k.getVisibility() == 0) || (h.this.f1322l != null && h.this.f1322l.getVisibility() == 0));
+                    return (h.this.h != null && h.this.h.getVisibility() == 0) || (h.this.j != null && h.this.j.getVisibility() == 0) || ((h.this.k != null && h.this.k.getVisibility() == 0) || (h.this.l != null && h.this.l.getVisibility() == 0));
                 }
             };
             this.G = r0;
@@ -412,7 +410,7 @@ public class h implements b, a, g.a, h.b, al.a {
             this.i = (ImageView) view.findViewById(ac.e(context, "tt_video_ad_finish_cover_image"));
             this.j = view.findViewById(ac.e(context, "tt_video_ad_cover_center_layout"));
             this.k = (RoundImageView) view.findViewById(ac.e(context, "tt_video_ad_logo_image"));
-            this.f1322l = (TextView) view.findViewById(ac.e(context, "tt_video_btn_ad_image_tv"));
+            this.l = (TextView) view.findViewById(ac.e(context, "tt_video_btn_ad_image_tv"));
             this.m = (TextView) view.findViewById(ac.e(context, "tt_video_ad_name"));
             this.n = (TextView) view.findViewById(ac.e(context, "tt_video_ad_button"));
         }
@@ -651,7 +649,7 @@ public class h implements b, a, g.a, h.b, al.a {
         ak.a((View) this.i, 8);
         ak.a(this.j, 8);
         ak.a((View) this.k, 8);
-        ak.a((View) this.f1322l, 8);
+        ak.a((View) this.l, 8);
         ak.a((View) this.m, 8);
         ak.a((View) this.n, 8);
     }
@@ -743,7 +741,7 @@ public class h implements b, a, g.a, h.b, al.a {
             }
             if (this.k != null && (lVar2 = this.y) != null && lVar2.U() != null && this.y.U().a() != null) {
                 ak.a((View) this.k, 0);
-                ak.a((View) this.f1322l, 4);
+                ak.a((View) this.l, 4);
                 com.bytedance.sdk.openadsdk.h.d.a(this.z).a(this.y.U().a(), this.k);
                 if (y()) {
                     this.k.setOnClickListener(this.G);
@@ -754,16 +752,16 @@ public class h implements b, a, g.a, h.b, al.a {
                 }
             } else if (!TextUtils.isEmpty(str)) {
                 ak.a((View) this.k, 4);
-                ak.a((View) this.f1322l, 0);
-                TextView textView = this.f1322l;
+                ak.a((View) this.l, 0);
+                TextView textView = this.l;
                 if (textView != null) {
                     textView.setText(str.substring(0, 1));
                     if (y()) {
-                        this.f1322l.setOnClickListener(this.G);
-                        this.f1322l.setOnTouchListener(this.G);
+                        this.l.setOnClickListener(this.G);
+                        this.l.setOnTouchListener(this.G);
                     } else {
-                        this.f1322l.setOnClickListener(this.F);
-                        this.f1322l.setOnTouchListener(this.F);
+                        this.l.setOnClickListener(this.F);
+                        this.l.setOnTouchListener(this.F);
                     }
                 }
             }
@@ -878,7 +876,7 @@ public class h implements b, a, g.a, h.b, al.a {
         ak.a((View) this.i, 8);
         ak.a(this.j, 8);
         ak.a((View) this.k, 8);
-        ak.a((View) this.f1322l, 8);
+        ak.a((View) this.l, 8);
         ak.a((View) this.m, 8);
         com.bytedance.sdk.openadsdk.core.widget.h hVar = this.A;
         if (hVar != null) {

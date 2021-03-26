@@ -1,17 +1,14 @@
 package com.xiaomi.push;
 
-public class iz extends is {
-    protected int a = 0;
+import android.content.SharedPreferences;
+import android.os.Build;
 
-    public iz() {
-    }
-
-    public iz(int i, String str) {
-        super(str);
-        this.a = i;
-    }
-
-    public iz(String str) {
-        super(str);
+public final class iz {
+    public static void a(SharedPreferences.Editor editor) {
+        if (Build.VERSION.SDK_INT > 8) {
+            editor.apply();
+        } else {
+            editor.commit();
+        }
     }
 }

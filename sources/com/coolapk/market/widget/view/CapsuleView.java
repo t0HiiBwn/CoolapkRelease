@@ -34,7 +34,7 @@ public final class CapsuleView extends LinearLayout {
         ViewExtendsKt.clipView$default(this, 2, 0.0f, 2, null);
         setElevation((float) NumberExtendsKt.getDp((Number) 2));
         ImageView imageView2 = new ImageView(context);
-        imageView2.setImageResource(2131231669);
+        imageView2.setImageResource(2131231680);
         Unit unit = Unit.INSTANCE;
         this.imageView = imageView2;
         TextView textView2 = new TextView(context);

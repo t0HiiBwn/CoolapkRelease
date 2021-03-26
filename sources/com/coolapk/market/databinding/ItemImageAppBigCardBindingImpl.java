@@ -26,10 +26,10 @@ public class ItemImageAppBigCardBindingImpl extends ItemImageAppBigCardBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(6);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"item_app_inside_image_card"}, new int[]{4}, new int[]{2131558592});
+        includedLayouts.setIncludes(0, new String[]{"item_app_inside_image_card"}, new int[]{4}, new int[]{2131558596});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362908, 5);
+        sparseIntArray.put(2131362920, 5);
     }
 
     public ItemImageAppBigCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -78,7 +78,7 @@ public class ItemImageAppBigCardBindingImpl extends ItemImageAppBigCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((EntityItemModel) obj);
         } else if (44 != i) {
             return false;
@@ -94,7 +94,7 @@ public class ItemImageAppBigCardBindingImpl extends ItemImageAppBigCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -213,7 +213,7 @@ public class ItemImageAppBigCardBindingImpl extends ItemImageAppBigCardBinding {
         }
         if (i2 != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str7, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231696), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str7, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231707), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.mboundView2, str3);
             TextViewBindingAdapter.setText(this.mboundView3, str8);
         }

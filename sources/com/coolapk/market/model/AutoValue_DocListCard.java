@@ -19,8 +19,8 @@ final class AutoValue_DocListCard extends C$AutoValue_DocListCard {
         }
     };
 
-    AutoValue_DocListCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, Long l2, Long l3, String str8, String str9, String str10, String str11, List<Entity> list) {
-        super(str, str2, num, str3, str4, str5, str6, str7, l2, l3, str8, str9, str10, str11, list);
+    AutoValue_DocListCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, Long l, Long l2, String str8, String str9, String str10, String str11, List<Entity> list) {
+        super(str, str2, num, str3, str4, str5, str6, str7, l, l2, str8, str9, str10, str11, list);
     }
 
     @Override // android.os.Parcelable

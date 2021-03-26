@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_gravity="bottom" android:tag="layout/feed_bind_goods_main_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/container_view" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="?android:attr/textColorPrimary" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:text="提到的好物" android:layout_weight="1" android:layout_marginStart="16dp"/>
+            <TextView android:textSize="14sp" android:id="@+id/action_done" android:tag="binding_1" android:background="?attr/actionBarItemBackground" android:padding="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="完成" android:layout_marginEnd="4dp"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="8dp" android:paddingEnd="8dp"/>
+        <TextView android:textColor="?android:attr/textColorPrimary" android:gravity="center" android:layout_gravity="center" android:id="@+id/empty_text_view" android:layout_width="wrap_content" android:layout_height="120dp" android:text="暂未添加"/>
+        <LinearLayout android:orientation="horizontal" android:paddingTop="16dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <LinearLayout android:gravity="center" android:id="@+id/search_goods_view" android:tag="binding_2" android:background="@color/red" android:layout_width="wrap_content" android:layout_height="36dp" android:foreground="?attr/selectableItemBackground" android:paddingStart="12dp" android:paddingEnd="12dp">
+                <ImageView android:tag="binding_3" android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_search_white_24dp"/>
+                <TextView android:textSize="12sp" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="搜索添加好物" android:layout_marginStart="4dp"/>
+            </LinearLayout>
+            <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <LinearLayout android:gravity="center" android:id="@+id/manual_goods_view" android:tag="binding_5" android:background="@color/red" android:layout_width="wrap_content" android:layout_height="36dp" android:foreground="?attr/selectableItemBackground" android:paddingStart="12dp" android:paddingEnd="12dp">
+                <ImageView android:tag="binding_6" android:layout_width="18dp" android:layout_height="18dp" android:src="@drawable/ic_edit_outline" android:scaleType="centerInside"/>
+                <TextView android:textSize="12sp" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="手动添加好物" android:layout_marginStart="4dp"/>
+            </LinearLayout>
+            <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

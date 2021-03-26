@@ -40,7 +40,7 @@ abstract class C$$AutoValue_Collection extends Collection {
     private final UserAction userAction;
     private final UserInfo userInfo;
 
-    C$$AutoValue_Collection(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l2, Long l3, String str8, UserInfo userInfo2, String str9, String str10, String str11, String str12, String str13, String str14, int i, int i2, String str15, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10, String str16, int i11, Long l4, UserAction userAction2, String str17) {
+    C$$AutoValue_Collection(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l, Long l2, String str8, UserInfo userInfo2, String str9, String str10, String str11, String str12, String str13, String str14, int i, int i2, String str15, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10, String str16, int i11, Long l3, UserAction userAction2, String str17) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -49,8 +49,8 @@ abstract class C$$AutoValue_Collection extends Collection {
         this.pic = str5;
         this.subTitle = str6;
         this.extraData = str7;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str8;
         this.userInfo = userInfo2;
         this.deprecatedUserName = str9;
@@ -72,7 +72,7 @@ abstract class C$$AutoValue_Collection extends Collection {
         this.itemNum = i10;
         this.coverPic = str16;
         this.isOpen = i11;
-        this.createdate = l4;
+        this.createdate = l3;
         this.userAction = userAction2;
         this.description = str17;
     }
@@ -285,7 +285,7 @@ abstract class C$$AutoValue_Collection extends Collection {
     public boolean equals(Object obj) {
         String str;
         String str2;
-        Long l2;
+        Long l;
         UserAction userAction2;
         if (obj == this) {
             return true;
@@ -310,10 +310,10 @@ abstract class C$$AutoValue_Collection extends Collection {
                                 if (str8 != null ? str8.equals(collection.getSubTitle()) : collection.getSubTitle() == null) {
                                     String str9 = this.extraData;
                                     if (str9 != null ? str9.equals(collection.getExtraData()) : collection.getExtraData() == null) {
-                                        Long l3 = this.dateline;
-                                        if (l3 != null ? l3.equals(collection.getDateline()) : collection.getDateline() == null) {
-                                            Long l4 = this.lastUpdate;
-                                            if (l4 != null ? l4.equals(collection.getLastUpdate()) : collection.getLastUpdate() == null) {
+                                        Long l2 = this.dateline;
+                                        if (l2 != null ? l2.equals(collection.getDateline()) : collection.getDateline() == null) {
+                                            Long l3 = this.lastUpdate;
+                                            if (l3 != null ? l3.equals(collection.getLastUpdate()) : collection.getLastUpdate() == null) {
                                                 String str10 = this.deprecatedUserAvatar;
                                                 if (str10 != null ? str10.equals(collection.getDeprecatedUserAvatar()) : collection.getDeprecatedUserAvatar() == null) {
                                                     UserInfo userInfo2 = this.userInfo;
@@ -330,7 +330,7 @@ abstract class C$$AutoValue_Collection extends Collection {
                                                                         if (str15 != null ? str15.equals(collection.getLogo()) : collection.getLogo() == null) {
                                                                             String str16 = this.uid;
                                                                             if (str16 != null ? str16.equals(collection.getUid()) : collection.getUid() == null) {
-                                                                                if (this.isBeCollected == collection.getIsBeCollected() && this.defaultCollected == collection.getDefaultCollected() && ((str = this.sourceId) != null ? str.equals(collection.getSourceId()) : collection.getSourceId() == null) && this.followNum == collection.getFollowNum() && this.copyNum == collection.getCopyNum() && this.replyNum == collection.getReplyNum() && this.likeNum == collection.getLikeNum() && this.feedNum == collection.getFeedNum() && this.apkNum == collection.getApkNum() && this.shareNum == collection.getShareNum() && this.itemNum == collection.getItemNum() && ((str2 = this.coverPic) != null ? str2.equals(collection.getCoverPic()) : collection.getCoverPic() == null) && this.isOpen == collection.getIsOpen() && ((l2 = this.createdate) != null ? l2.equals(collection.getCreatedate()) : collection.getCreatedate() == null) && ((userAction2 = this.userAction) != null ? userAction2.equals(collection.getUserAction()) : collection.getUserAction() == null)) {
+                                                                                if (this.isBeCollected == collection.getIsBeCollected() && this.defaultCollected == collection.getDefaultCollected() && ((str = this.sourceId) != null ? str.equals(collection.getSourceId()) : collection.getSourceId() == null) && this.followNum == collection.getFollowNum() && this.copyNum == collection.getCopyNum() && this.replyNum == collection.getReplyNum() && this.likeNum == collection.getLikeNum() && this.feedNum == collection.getFeedNum() && this.apkNum == collection.getApkNum() && this.shareNum == collection.getShareNum() && this.itemNum == collection.getItemNum() && ((str2 = this.coverPic) != null ? str2.equals(collection.getCoverPic()) : collection.getCoverPic() == null) && this.isOpen == collection.getIsOpen() && ((l = this.createdate) != null ? l.equals(collection.getCreatedate()) : collection.getCreatedate() == null) && ((userAction2 = this.userAction) != null ? userAction2.equals(collection.getUserAction()) : collection.getUserAction() == null)) {
                                                                                     String str17 = this.description;
                                                                                     if (str17 == null) {
                                                                                         if (collection.getDescription() == null) {
@@ -380,10 +380,10 @@ abstract class C$$AutoValue_Collection extends Collection {
         int hashCode7 = (hashCode6 ^ (str6 == null ? 0 : str6.hashCode())) * 1000003;
         String str7 = this.extraData;
         int hashCode8 = (hashCode7 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode9 = (hashCode8 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode10 = (hashCode9 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode9 = (hashCode8 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode10 = (hashCode9 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str8 = this.deprecatedUserAvatar;
         int hashCode11 = (hashCode10 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
         UserInfo userInfo2 = this.userInfo;
@@ -404,8 +404,8 @@ abstract class C$$AutoValue_Collection extends Collection {
         int hashCode19 = (((((((((((((((((hashCode18 ^ (str15 == null ? 0 : str15.hashCode())) * 1000003) ^ this.followNum) * 1000003) ^ this.copyNum) * 1000003) ^ this.replyNum) * 1000003) ^ this.likeNum) * 1000003) ^ this.feedNum) * 1000003) ^ this.apkNum) * 1000003) ^ this.shareNum) * 1000003) ^ this.itemNum) * 1000003;
         String str16 = this.coverPic;
         int hashCode20 = (((hashCode19 ^ (str16 == null ? 0 : str16.hashCode())) * 1000003) ^ this.isOpen) * 1000003;
-        Long l4 = this.createdate;
-        int hashCode21 = (hashCode20 ^ (l4 == null ? 0 : l4.hashCode())) * 1000003;
+        Long l3 = this.createdate;
+        int hashCode21 = (hashCode20 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
         UserAction userAction2 = this.userAction;
         int hashCode22 = (hashCode21 ^ (userAction2 == null ? 0 : userAction2.hashCode())) * 1000003;
         String str17 = this.description;
@@ -542,14 +542,14 @@ abstract class C$$AutoValue_Collection extends Collection {
         }
 
         @Override // com.coolapk.market.model.Collection.Builder
-        public Collection.Builder dateline(Long l2) {
-            this.dateline = l2;
+        public Collection.Builder dateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.Collection.Builder
-        public Collection.Builder lastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public Collection.Builder lastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 
@@ -680,8 +680,8 @@ abstract class C$$AutoValue_Collection extends Collection {
         }
 
         @Override // com.coolapk.market.model.Collection.Builder
-        public Collection.Builder createdate(Long l2) {
-            this.createdate = l2;
+        public Collection.Builder createdate(Long l) {
+            this.createdate = l;
             return this;
         }
 

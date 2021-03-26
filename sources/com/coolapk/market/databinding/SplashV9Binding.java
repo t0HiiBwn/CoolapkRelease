@@ -34,7 +34,7 @@ public abstract class SplashV9Binding extends ViewDataBinding {
 
     @Deprecated
     public static SplashV9Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SplashV9Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559145, viewGroup, z, obj);
+        return (SplashV9Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559152, viewGroup, z, obj);
     }
 
     public static SplashV9Binding inflate(LayoutInflater layoutInflater) {
@@ -43,7 +43,7 @@ public abstract class SplashV9Binding extends ViewDataBinding {
 
     @Deprecated
     public static SplashV9Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SplashV9Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559145, null, false, obj);
+        return (SplashV9Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559152, null, false, obj);
     }
 
     public static SplashV9Binding bind(View view) {
@@ -52,6 +52,6 @@ public abstract class SplashV9Binding extends ViewDataBinding {
 
     @Deprecated
     public static SplashV9Binding bind(View view, Object obj) {
-        return (SplashV9Binding) bind(obj, view, 2131559145);
+        return (SplashV9Binding) bind(obj, view, 2131559152);
     }
 }

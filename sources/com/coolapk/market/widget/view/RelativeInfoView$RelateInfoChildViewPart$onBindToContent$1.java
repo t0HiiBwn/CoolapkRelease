@@ -21,7 +21,7 @@ final class RelativeInfoView$RelateInfoChildViewPart$onBindToContent$1 implement
         if (RelativeInfoView.RelateInfoChildViewPart.Companion.getNUMS_REGEX().matches(this.$data.getImage())) {
             ((ItemRelativeChildBinding) this.this$0.getBinding()).iconView.setImageResource(Integer.parseInt(this.$data.getImage()));
         } else {
-            AppHolder.getContextImageLoader().displayImage(this.this$0.getContext(), this.$data.getImage(), ((ItemRelativeChildBinding) this.this$0.getBinding()).iconView, 2131231363);
+            AppHolder.getContextImageLoader().displayImage(this.this$0.getContext(), this.$data.getImage(), ((ItemRelativeChildBinding) this.this$0.getBinding()).iconView, 2131231374);
         }
     }
 }

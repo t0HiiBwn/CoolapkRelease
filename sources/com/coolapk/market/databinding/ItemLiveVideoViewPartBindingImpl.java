@@ -14,6 +14,7 @@ import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.coolapk.market.binding.ViewBindingAdapters;
 import com.coolapk.market.widget.view.MaxWidthFrameLayout;
+import com.coolapk.market.widget.view.TimeTextView;
 
 public class ItemLiveVideoViewPartBindingImpl extends ItemLiveVideoViewPartBinding {
     private static final ViewDataBinding.IncludedLayouts sIncludes = null;
@@ -28,30 +29,30 @@ public class ItemLiveVideoViewPartBindingImpl extends ItemLiveVideoViewPartBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363916, 10);
-        sparseIntArray.put(2131363870, 11);
-        sparseIntArray.put(2131362692, 12);
-        sparseIntArray.put(2131363582, 13);
-        sparseIntArray.put(2131363869, 14);
-        sparseIntArray.put(2131363459, 15);
-        sparseIntArray.put(2131362734, 16);
-        sparseIntArray.put(2131363868, 17);
-        sparseIntArray.put(2131362871, 18);
-        sparseIntArray.put(2131362356, 19);
-        sparseIntArray.put(2131362131, 20);
-        sparseIntArray.put(2131362868, 21);
-        sparseIntArray.put(2131362348, 22);
-        sparseIntArray.put(2131363332, 23);
-        sparseIntArray.put(2131362358, 24);
-        sparseIntArray.put(2131362359, 25);
-        sparseIntArray.put(2131362362, 26);
-        sparseIntArray.put(2131362361, 27);
-        sparseIntArray.put(2131363613, 28);
-        sparseIntArray.put(2131362873, 29);
-        sparseIntArray.put(2131362870, 30);
-        sparseIntArray.put(2131363604, 31);
-        sparseIntArray.put(2131363086, 32);
-        sparseIntArray.put(2131363336, 33);
+        sparseIntArray.put(2131363941, 10);
+        sparseIntArray.put(2131363892, 11);
+        sparseIntArray.put(2131362703, 12);
+        sparseIntArray.put(2131363604, 13);
+        sparseIntArray.put(2131363891, 14);
+        sparseIntArray.put(2131363477, 15);
+        sparseIntArray.put(2131362745, 16);
+        sparseIntArray.put(2131363890, 17);
+        sparseIntArray.put(2131362882, 18);
+        sparseIntArray.put(2131362362, 19);
+        sparseIntArray.put(2131362134, 20);
+        sparseIntArray.put(2131362879, 21);
+        sparseIntArray.put(2131362354, 22);
+        sparseIntArray.put(2131363348, 23);
+        sparseIntArray.put(2131362364, 24);
+        sparseIntArray.put(2131362365, 25);
+        sparseIntArray.put(2131362368, 26);
+        sparseIntArray.put(2131362367, 27);
+        sparseIntArray.put(2131363635, 28);
+        sparseIntArray.put(2131362884, 29);
+        sparseIntArray.put(2131362881, 30);
+        sparseIntArray.put(2131363626, 31);
+        sparseIntArray.put(2131363100, 32);
+        sparseIntArray.put(2131363352, 33);
     }
 
     public ItemLiveVideoViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -59,7 +60,7 @@ public class ItemLiveVideoViewPartBindingImpl extends ItemLiveVideoViewPartBindi
     }
 
     private ItemLiveVideoViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view, Object[] objArr) {
-        super(dataBindingComponent, view, 0, (LinearLayout) objArr[20], (TextView) objArr[22], (FrameLayout) objArr[19], (ImageView) objArr[4], (ImageView) objArr[24], (EditText) objArr[25], (LinearLayout) objArr[3], (ProgressBar) objArr[27], (ImageView) objArr[26], (ImageView) objArr[5], (ImageView) objArr[12], (TextView) objArr[16], (MaxWidthFrameLayout) objArr[0], (TextView) objArr[7], (TextView) objArr[21], (TextView) objArr[30], (TextView) objArr[18], (LinearLayout) objArr[29], (ImageView) objArr[9], (ImageView) objArr[6], (TextView) objArr[32], (ImageView) objArr[1], (ImageView) objArr[2], (SeekBar) objArr[23], (FrameLayout) objArr[33], (ImageView) objArr[8], (TextView) objArr[15], (TextView) objArr[13], (LinearLayout) objArr[31], (TextView) objArr[28], (LinearLayout) objArr[17], (RelativeLayout) objArr[14], (FrameLayout) objArr[11], (FrameLayout) objArr[10]);
+        super(dataBindingComponent, view, 0, (LinearLayout) objArr[20], (TimeTextView) objArr[22], (FrameLayout) objArr[19], (ImageView) objArr[4], (ImageView) objArr[24], (EditText) objArr[25], (LinearLayout) objArr[3], (ProgressBar) objArr[27], (ImageView) objArr[26], (ImageView) objArr[5], (ImageView) objArr[12], (TextView) objArr[16], (MaxWidthFrameLayout) objArr[0], (TextView) objArr[7], (TextView) objArr[21], (TextView) objArr[30], (TextView) objArr[18], (LinearLayout) objArr[29], (ImageView) objArr[9], (ImageView) objArr[6], (TextView) objArr[32], (ImageView) objArr[1], (ImageView) objArr[2], (SeekBar) objArr[23], (FrameLayout) objArr[33], (ImageView) objArr[8], (TextView) objArr[15], (TextView) objArr[13], (LinearLayout) objArr[31], (TimeTextView) objArr[28], (LinearLayout) objArr[17], (RelativeLayout) objArr[14], (FrameLayout) objArr[11], (FrameLayout) objArr[10]);
         this.mDirtyFlags = -1;
         this.danmakuOpenView.setTag(null);
         this.danmakuSendLayout.setTag(null);

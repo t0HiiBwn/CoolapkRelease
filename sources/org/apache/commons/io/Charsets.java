@@ -31,11 +31,11 @@ public class Charsets {
         return Collections.unmodifiableSortedMap(treeMap);
     }
 
-    public static Charset toCharset(Charset charset) {
-        return charset == null ? Charset.defaultCharset() : charset;
-    }
-
     public static Charset toCharset(String str) {
         return str == null ? Charset.defaultCharset() : Charset.forName(str);
+    }
+
+    public static Charset toCharset(Charset charset) {
+        return charset == null ? Charset.defaultCharset() : charset;
     }
 }

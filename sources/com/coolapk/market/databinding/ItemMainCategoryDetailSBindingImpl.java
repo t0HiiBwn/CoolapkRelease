@@ -30,9 +30,9 @@ public class ItemMainCategoryDetailSBindingImpl extends ItemMainCategoryDetailSB
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362837, 4);
-        sparseIntArray.put(2131362233, 5);
-        sparseIntArray.put(2131362707, 6);
+        sparseIntArray.put(2131362848, 4);
+        sparseIntArray.put(2131362238, 5);
+        sparseIntArray.put(2131362718, 6);
     }
 
     public ItemMainCategoryDetailSBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -78,7 +78,7 @@ public class ItemMainCategoryDetailSBindingImpl extends ItemMainCategoryDetailSB
     public boolean setVariable(int i, Object obj) {
         if (29 == i) {
             setAppCategory((AppCategory) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);
@@ -136,7 +136,7 @@ public class ItemMainCategoryDetailSBindingImpl extends ItemMainCategoryDetailSB
         }
         if ((j & 5) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
             this.mboundView2.setVisibility(i);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }

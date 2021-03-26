@@ -35,9 +35,7 @@ public class d {
     private r i;
     private e j;
     private BaseException k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private volatile boolean f1409l;
+    private volatile boolean l;
     private volatile boolean m;
     private final f n;
     private long o;
@@ -101,12 +99,12 @@ public class d {
     }
 
     private boolean f() {
-        return this.f1409l || this.m;
+        return this.l || this.m;
     }
 
     public void b() {
-        if (!this.f1409l) {
-            this.f1409l = true;
+        if (!this.l) {
+            this.l = true;
             g();
         }
     }
@@ -209,7 +207,7 @@ public class d {
         r11 = r31.c;
         r12 = r31.d;
         r13 = r31.f;
-        r14 = r31.f1409l;
+        r14 = r31.l;
         r15 = r31.m;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:193:0x0322, code lost:
@@ -279,7 +277,7 @@ public class d {
         r11 = r31.c;
         r12 = r31.d;
         r13 = r31.f;
-        r14 = r31.f1409l;
+        r14 = r31.l;
         r15 = r31.m;
         r16 = r31.k;
         r17 = r31.o - r31.p;
@@ -413,7 +411,7 @@ public class d {
     /* JADX WARNING: Code restructure failed: missing block: B:309:0x04e5, code lost:
         com.ss.android.socialbase.downloader.i.e.a(r31.j);
         r31.D = java.lang.System.nanoTime() - r8;
-        com.ss.android.socialbase.downloader.d.a.a(r31.t, r31.c, r31.d, r31.f, r31.f1409l, r31.m, r31.k, r31.o - r31.p, r31.D, r7, r31.A, r31.B, r31.C, null);
+        com.ss.android.socialbase.downloader.d.a.a(r31.t, r31.c, r31.d, r31.f, r31.l, r31.m, r31.k, r31.o - r31.p, r31.D, r7, r31.A, r31.B, r31.C, null);
      */
     /* JADX WARNING: Code restructure failed: missing block: B:310:0x0524, code lost:
         throw r0;
@@ -579,7 +577,7 @@ public class d {
                                         DownloadInfo downloadInfo = this.c;
                                         String str = this.d;
                                         i iVar2 = this.f;
-                                        boolean z5 = this.f1409l;
+                                        boolean z5 = this.l;
                                         boolean z6 = this.m;
                                         BaseException baseException = this.k;
                                         long j10 = this.o - this.p;
@@ -628,7 +626,7 @@ public class d {
                                     DownloadInfo downloadInfo2 = this.c;
                                     String str2 = this.d;
                                     i iVar4 = this.f;
-                                    boolean z7 = this.f1409l;
+                                    boolean z7 = this.l;
                                     z2 = z3;
                                     boolean z8 = this.m;
                                     com.ss.android.socialbase.downloader.d.a.a(aVar2, downloadInfo2, str2, iVar4, z7, z8, this.k, this.o - this.p, this.D, z2, this.A, this.B, this.C, null);

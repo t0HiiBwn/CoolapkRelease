@@ -51,6 +51,7 @@ import com.coolapk.market.view.base.BaseDialogFragment;
 import com.coolapk.market.view.base.WrapDialogFragmentKt;
 import com.coolapk.market.view.feedv8.draft.RoughDraft;
 import com.coolapk.market.view.feedv8.draft.RoughDraftHelper;
+import com.coolapk.market.view.feedv8.util.FeedGoodsAddHelper;
 import com.coolapk.market.widget.PrivacyAlertDialog;
 import com.coolapk.market.widget.emotion.EmotionPanel;
 import com.coolapk.market.widget.view.KeyBoardLayout;
@@ -73,7 +74,7 @@ import rx.schedulers.Schedulers;
 import rx.subjects.PublishSubject;
 import rx.subscriptions.CompositeSubscription;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\b\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010 \n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0018\u0018\u0000 f2\u00020\u00012\u00020\u0002:\u0002fgB\u0005¢\u0006\u0002\u0010\u0003J\b\u0010,\u001a\u00020-H\u0002J\b\u0010.\u001a\u00020-H\u0002J\u0010\u0010/\u001a\u00020-2\u0006\u00100\u001a\u00020\u0013H\u0002J\u0010\u00101\u001a\u00020-2\u0006\u00100\u001a\u00020\u0013H\u0002J\b\u00102\u001a\u00020-H\u0002J\b\u00103\u001a\u00020-H\u0002J\"\u00104\u001a\u00020-2\u0006\u00105\u001a\u0002062\u0006\u00107\u001a\u0002062\b\u00108\u001a\u0004\u0018\u000109H\u0014J\b\u0010:\u001a\u00020-H\u0016J\u0010\u0010;\u001a\u00020-2\u0006\u0010<\u001a\u00020\u001aH\u0016J\u0012\u0010=\u001a\u00020-2\b\u0010>\u001a\u0004\u0018\u00010?H\u0014J\b\u0010@\u001a\u00020\u0011H\u0002J\b\u0010A\u001a\u00020-H\u0014J\u000e\u0010B\u001a\u00020-2\u0006\u00108\u001a\u00020CJ\b\u0010D\u001a\u00020-H\u0014J\u0006\u0010E\u001a\u00020-J\u0006\u0010F\u001a\u00020-J\u0006\u0010G\u001a\u00020-J\u0006\u0010H\u001a\u00020-J\u001c\u0010I\u001a\u00020-2\u0006\u0010J\u001a\u0002062\f\u0010K\u001a\b\u0012\u0004\u0012\u00020\u00130LJ\u0006\u0010M\u001a\u00020-J\u001c\u0010N\u001a\u00020-2\u0006\u00100\u001a\u00020\u00132\f\u0010O\u001a\b\u0012\u0004\u0012\u00020\u00130PJ\b\u0010Q\u001a\u00020-H\u0014J\u0010\u0010R\u001a\u00020-2\u0006\u0010S\u001a\u00020?H\u0014J\b\u0010T\u001a\u00020-H\u0016J\b\u0010U\u001a\u00020-H\u0002J\b\u0010V\u001a\u00020-H\u0002J\b\u0010W\u001a\u00020-H\u0002J\u0012\u0010X\u001a\u00020-2\b\u0010>\u001a\u0004\u0018\u00010?H\u0002J\b\u0010Y\u001a\u00020-H\u0002J\u0018\u0010Z\u001a\u00020-2\u0006\u0010[\u001a\u00020\u00132\u0006\u0010\\\u001a\u00020\u0013H\u0002J \u0010]\u001a\u00020-2\u0006\u0010[\u001a\u00020\u00132\u0006\u0010\\\u001a\u00020\u00132\u0006\u0010^\u001a\u000206H\u0002J\u0010\u0010_\u001a\u00020-2\u0006\u0010`\u001a\u00020\u001aH\u0002J\b\u0010a\u001a\u00020-H\u0002J\u000e\u0010b\u001a\u00020-2\u0006\u0010c\u001a\u00020\"J\u000e\u0010d\u001a\u00020-2\u0006\u0010e\u001a\u00020(R\u001b\u0010\u0004\u001a\u00020\u00058BX\u0002¢\u0006\f\n\u0004\b\b\u0010\t\u001a\u0004\b\u0006\u0010\u0007R2\u0010\n\u001a&\u0012\f\u0012\n \r*\u0004\u0018\u00010\f0\f \r*\u0012\u0012\f\u0012\n \r*\u0004\u0018\u00010\f0\f\u0018\u00010\u000b0\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX.¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X.¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u000e¢\u0006\u0002\n\u0000R\u001b\u0010\u0014\u001a\u00020\u00158BX\u0002¢\u0006\f\n\u0004\b\u0018\u0010\t\u001a\u0004\b\u0016\u0010\u0017R\u0014\u0010\u0019\u001a\u00020\u001a8BX\u0004¢\u0006\u0006\u001a\u0004\b\u001b\u0010\u001cR\u0010\u0010\u001d\u001a\u0004\u0018\u00010\u001eX\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\u001f\u001a\u0004\u0018\u00010\fX\u000e¢\u0006\u0004\n\u0002\u0010 R\u001e\u0010#\u001a\u00020\"2\u0006\u0010!\u001a\u00020\"@BX.¢\u0006\b\n\u0000\u001a\u0004\b$\u0010%R\u000e\u0010&\u001a\u00020'X\u0004¢\u0006\u0002\n\u0000R\u001e\u0010)\u001a\u00020(2\u0006\u0010!\u001a\u00020(@BX.¢\u0006\b\n\u0000\u001a\u0004\b*\u0010+¨\u0006h"}, d2 = {"Lcom/coolapk/market/view/feedv8/SubmitFeedV8Activity;", "Lcom/coolapk/market/view/feedv8/FakeStatusBarActivity;", "Landroid/view/View$OnClickListener;", "()V", "addMoreBinding", "Lcom/coolapk/market/databinding/SubmitFeedBottomAddMoreV8Binding;", "getAddMoreBinding", "()Lcom/coolapk/market/databinding/SubmitFeedBottomAddMoreV8Binding;", "addMoreBinding$delegate", "Lkotlin/Lazy;", "autoSaveTrigger", "Lrx/subjects/PublishSubject;", "", "kotlin.jvm.PlatformType", "binding", "Lcom/coolapk/market/databinding/SubmitFeedV8Binding;", "contentHolder", "Lcom/coolapk/market/view/feedv8/BaseFeedContentHolder;", "draftId", "", "emotionPanel", "Lcom/coolapk/market/widget/emotion/EmotionPanel;", "getEmotionPanel", "()Lcom/coolapk/market/widget/emotion/EmotionPanel;", "emotionPanel$delegate", "focusEditorView", "Landroid/view/View;", "getFocusEditorView", "()Landroid/view/View;", "lastActiveMenu", "Landroid/widget/ImageView;", "lastSubmittableState", "Ljava/lang/Boolean;", "<set-?>", "Lcom/coolapk/market/model/FeedMultiPart;", "multiPart", "getMultiPart", "()Lcom/coolapk/market/model/FeedMultiPart;", "subscription", "Lrx/subscriptions/CompositeSubscription;", "Lcom/coolapk/market/model/FeedUIConfig;", "uiConfig", "getUiConfig", "()Lcom/coolapk/market/model/FeedUIConfig;", "closeKeyboardOrFakeKeyboard", "", "finishOrShowSaveDraftDialog", "loadShareInfo", "url", "loadVideoInfo", "makeKeyboardAndMenuInteractive", "notifyUIChange", "onActivityResult", "requestCode", "", "resultCode", "data", "Landroid/content/Intent;", "onBackPressed", "onClick", "v", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onCreateContentHolder", "onDestroy", "onFeedPosted", "Lcom/coolapk/market/model/Entity;", "onPause", "onRequestCheckSubmittable", "onRequestConvertToArticleMode", "onRequestPickApp", "onRequestPickContacts", "onRequestPickPhoto", "count", "currentList", "", "onRequestPickTopic", "onRequestWebViewUrl", "strings", "Ljava/util/ArrayList;", "onResume", "onSaveInstanceState", "outState", "recreate", "requestLoadProductPhoneTitleLogo", "saveDraftRightNow", "setupAutoSaveFunction", "setupInitValue", "setupInitView", "showAddVideoDialog", "title", "hint", "showShareDialog", "typeId", "switchBottomViewOrKeyboard", "view", "triggerAutoSave", "updateMultiPart", "part", "updateUIConfig", "config", "Companion", "SaveDialog", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\b\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010 \n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0018\u0018\u0000 g2\u00020\u00012\u00020\u0002:\u0002ghB\u0005¢\u0006\u0002\u0010\u0003J\b\u0010,\u001a\u00020-H\u0002J\b\u0010.\u001a\u00020-H\u0002J\u0010\u0010/\u001a\u00020-2\u0006\u00100\u001a\u00020\u0013H\u0002J\u0010\u00101\u001a\u00020-2\u0006\u00100\u001a\u00020\u0013H\u0002J\b\u00102\u001a\u00020-H\u0002J\b\u00103\u001a\u00020-H\u0002J\"\u00104\u001a\u00020-2\u0006\u00105\u001a\u0002062\u0006\u00107\u001a\u0002062\b\u00108\u001a\u0004\u0018\u000109H\u0014J\b\u0010:\u001a\u00020-H\u0016J\u0010\u0010;\u001a\u00020-2\u0006\u0010<\u001a\u00020\u001aH\u0016J\u0012\u0010=\u001a\u00020-2\b\u0010>\u001a\u0004\u0018\u00010?H\u0014J\b\u0010@\u001a\u00020\u0011H\u0002J\b\u0010A\u001a\u00020-H\u0014J\u000e\u0010B\u001a\u00020-2\u0006\u00108\u001a\u00020CJ\b\u0010D\u001a\u00020-H\u0014J\u0006\u0010E\u001a\u00020-J\u0006\u0010F\u001a\u00020-J\u0006\u0010G\u001a\u00020-J\u0006\u0010H\u001a\u00020-J\u0006\u0010I\u001a\u00020-J\u001c\u0010J\u001a\u00020-2\u0006\u0010K\u001a\u0002062\f\u0010L\u001a\b\u0012\u0004\u0012\u00020\u00130MJ\u0006\u0010N\u001a\u00020-J\u001c\u0010O\u001a\u00020-2\u0006\u00100\u001a\u00020\u00132\f\u0010P\u001a\b\u0012\u0004\u0012\u00020\u00130QJ\b\u0010R\u001a\u00020-H\u0014J\u0010\u0010S\u001a\u00020-2\u0006\u0010T\u001a\u00020?H\u0014J\b\u0010U\u001a\u00020-H\u0016J\b\u0010V\u001a\u00020-H\u0002J\b\u0010W\u001a\u00020-H\u0002J\b\u0010X\u001a\u00020-H\u0002J\u0012\u0010Y\u001a\u00020-2\b\u0010>\u001a\u0004\u0018\u00010?H\u0002J\b\u0010Z\u001a\u00020-H\u0002J\u0018\u0010[\u001a\u00020-2\u0006\u0010\\\u001a\u00020\u00132\u0006\u0010]\u001a\u00020\u0013H\u0002J \u0010^\u001a\u00020-2\u0006\u0010\\\u001a\u00020\u00132\u0006\u0010]\u001a\u00020\u00132\u0006\u0010_\u001a\u000206H\u0002J\u0010\u0010`\u001a\u00020-2\u0006\u0010a\u001a\u00020\u001aH\u0002J\b\u0010b\u001a\u00020-H\u0002J\u000e\u0010c\u001a\u00020-2\u0006\u0010d\u001a\u00020\"J\u000e\u0010e\u001a\u00020-2\u0006\u0010f\u001a\u00020(R\u001b\u0010\u0004\u001a\u00020\u00058BX\u0002¢\u0006\f\n\u0004\b\b\u0010\t\u001a\u0004\b\u0006\u0010\u0007R2\u0010\n\u001a&\u0012\f\u0012\n \r*\u0004\u0018\u00010\f0\f \r*\u0012\u0012\f\u0012\n \r*\u0004\u0018\u00010\f0\f\u0018\u00010\u000b0\u000bX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX.¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X.¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u000e¢\u0006\u0002\n\u0000R\u001b\u0010\u0014\u001a\u00020\u00158BX\u0002¢\u0006\f\n\u0004\b\u0018\u0010\t\u001a\u0004\b\u0016\u0010\u0017R\u0014\u0010\u0019\u001a\u00020\u001a8BX\u0004¢\u0006\u0006\u001a\u0004\b\u001b\u0010\u001cR\u0010\u0010\u001d\u001a\u0004\u0018\u00010\u001eX\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\u001f\u001a\u0004\u0018\u00010\fX\u000e¢\u0006\u0004\n\u0002\u0010 R\u001e\u0010#\u001a\u00020\"2\u0006\u0010!\u001a\u00020\"@BX.¢\u0006\b\n\u0000\u001a\u0004\b$\u0010%R\u000e\u0010&\u001a\u00020'X\u0004¢\u0006\u0002\n\u0000R\u001e\u0010)\u001a\u00020(2\u0006\u0010!\u001a\u00020(@BX.¢\u0006\b\n\u0000\u001a\u0004\b*\u0010+¨\u0006i"}, d2 = {"Lcom/coolapk/market/view/feedv8/SubmitFeedV8Activity;", "Lcom/coolapk/market/view/feedv8/FakeStatusBarActivity;", "Landroid/view/View$OnClickListener;", "()V", "addMoreBinding", "Lcom/coolapk/market/databinding/SubmitFeedBottomAddMoreV8Binding;", "getAddMoreBinding", "()Lcom/coolapk/market/databinding/SubmitFeedBottomAddMoreV8Binding;", "addMoreBinding$delegate", "Lkotlin/Lazy;", "autoSaveTrigger", "Lrx/subjects/PublishSubject;", "", "kotlin.jvm.PlatformType", "binding", "Lcom/coolapk/market/databinding/SubmitFeedV8Binding;", "contentHolder", "Lcom/coolapk/market/view/feedv8/BaseFeedContentHolder;", "draftId", "", "emotionPanel", "Lcom/coolapk/market/widget/emotion/EmotionPanel;", "getEmotionPanel", "()Lcom/coolapk/market/widget/emotion/EmotionPanel;", "emotionPanel$delegate", "focusEditorView", "Landroid/view/View;", "getFocusEditorView", "()Landroid/view/View;", "lastActiveMenu", "Landroid/widget/ImageView;", "lastSubmittableState", "Ljava/lang/Boolean;", "<set-?>", "Lcom/coolapk/market/model/FeedMultiPart;", "multiPart", "getMultiPart", "()Lcom/coolapk/market/model/FeedMultiPart;", "subscription", "Lrx/subscriptions/CompositeSubscription;", "Lcom/coolapk/market/model/FeedUIConfig;", "uiConfig", "getUiConfig", "()Lcom/coolapk/market/model/FeedUIConfig;", "closeKeyboardOrFakeKeyboard", "", "finishOrShowSaveDraftDialog", "loadShareInfo", "url", "loadVideoInfo", "makeKeyboardAndMenuInteractive", "notifyUIChange", "onActivityResult", "requestCode", "", "resultCode", "data", "Landroid/content/Intent;", "onBackPressed", "onClick", "v", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onCreateContentHolder", "onDestroy", "onFeedPosted", "Lcom/coolapk/market/model/Entity;", "onPause", "onReqeustPickGoods", "onRequestCheckSubmittable", "onRequestConvertToArticleMode", "onRequestPickApp", "onRequestPickContacts", "onRequestPickPhoto", "count", "currentList", "", "onRequestPickTopic", "onRequestWebViewUrl", "strings", "Ljava/util/ArrayList;", "onResume", "onSaveInstanceState", "outState", "recreate", "requestLoadProductPhoneTitleLogo", "saveDraftRightNow", "setupAutoSaveFunction", "setupInitValue", "setupInitView", "showAddVideoDialog", "title", "hint", "showShareDialog", "typeId", "switchBottomViewOrKeyboard", "view", "triggerAutoSave", "updateMultiPart", "part", "updateUIConfig", "config", "Companion", "SaveDialog", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: SubmitFeedV8Activity.kt */
 public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements View.OnClickListener {
     public static final Companion Companion = new Companion(null);
@@ -162,6 +163,9 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
         setupAutoSaveFunction();
     }
 
+    /* JADX WARNING: Code restructure failed: missing block: B:56:0x0146, code lost:
+        if (r7 != false) goto L_0x0148;
+     */
     private final void setupInitValue(Bundle bundle) {
         T t = null;
         FeedUIConfig feedUIConfig = null;
@@ -225,12 +229,10 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
                 if (!(relativeTitle == null || relativeTitle.length() == 0)) {
                     z = false;
                 }
-                if (!z) {
-                    return;
-                }
             }
             requestLoadProductPhoneTitleLogo();
         }
+        FeedGoodsAddHelper.INSTANCE.requireLoadGoodsTagList();
     }
 
     private final void requestLoadProductPhoneTitleLogo() {
@@ -269,7 +271,7 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
         SubmitFeedV8Binding submitFeedV8Binding2;
         SubmitFeedV8Binding submitFeedV8Binding3;
         FeedUIConfig feedUIConfig;
-        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131559162, new ContextBindingComponent(this));
+        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131559170, new ContextBindingComponent(this));
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…xtBindingComponent(this))");
         SubmitFeedV8Binding submitFeedV8Binding4 = (SubmitFeedV8Binding) contentView;
         this.binding = submitFeedV8Binding4;
@@ -709,7 +711,7 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
     }
 
     public final void onRequestPickContacts() {
-        ActionManager.startPickUserActivity(this, 8655, 5, getString(2131886950));
+        ActionManager.startPickUserActivity(this, 8655, 5, getString(2131887012));
     }
 
     public final void onRequestPickPhoto(int i, List<String> list) {
@@ -724,6 +726,20 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
 
     public final void onRequestPickApp() {
         ActionManager.startPickAppActivity(getActivity(), 1561);
+    }
+
+    public final void onReqeustPickGoods() {
+        ActionManager.startGoodsSearchActivity(this, 349);
+        SubmitFeedV8Binding submitFeedV8Binding = this.binding;
+        if (submitFeedV8Binding == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("binding");
+        }
+        View view = submitFeedV8Binding.menuAddGoodsBandageView;
+        Intrinsics.checkNotNullExpressionValue(view, "binding.menuAddGoodsBandageView");
+        view.setVisibility(8);
+        DataManager instance = DataManager.getInstance();
+        Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
+        instance.getPreferencesEditor().putBoolean("click_add_goods_bandage_before", true).apply();
     }
 
     public final void onRequestConvertToArticleMode() {
@@ -794,7 +810,7 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
                     if (submitFeedV8Binding == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("binding");
                     }
-                    submitFeedV8Binding.submitView.setTextColor(ResourceUtils.getColorInt(getActivity(), 2131099912));
+                    submitFeedV8Binding.submitView.setTextColor(ResourceUtils.getColorInt(getActivity(), 2131099917));
                     SubmitFeedV8Binding submitFeedV8Binding2 = this.binding;
                     if (submitFeedV8Binding2 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -874,36 +890,26 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         switch (view.getId()) {
-            case 2131362180:
-            case 2131362927:
+            case 2131362183:
+            case 2131362939:
                 onRequestPickApp();
                 return;
-            case 2131362181:
-                showShareDialog("添加网页链接", "添加网页链接", 2131362181);
+            case 2131362184:
+                showShareDialog("添加网页链接", "添加网页链接", 2131362184);
                 return;
-            case 2131362182:
-                showShareDialog("添加音乐链接", "支持网易云音乐、QQ音乐网址解析", 2131362182);
+            case 2131362185:
+                showShareDialog("添加音乐链接", "支持网易云音乐、QQ音乐网址解析", 2131362185);
                 return;
-            case 2131362183:
+            case 2131362186:
                 showAddVideoDialog("添加视频链接", "支持秒拍、微博、哔哩哔哩视频网站解析");
                 return;
-            case 2131362257:
+            case 2131362262:
                 finishOrShowSaveDraftDialog();
                 return;
-            case 2131362914:
-                ActionManager.startGoodsSearchActivity(this, 349);
-                SubmitFeedV8Binding submitFeedV8Binding = this.binding;
-                if (submitFeedV8Binding == null) {
-                    Intrinsics.throwUninitializedPropertyAccessException("binding");
-                }
-                View view2 = submitFeedV8Binding.menuAddGoodsBandageView;
-                Intrinsics.checkNotNullExpressionValue(view2, "binding.menuAddGoodsBandageView");
-                view2.setVisibility(8);
-                DataManager instance = DataManager.getInstance();
-                Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
-                instance.getPreferencesEditor().putBoolean("click_add_goods_bandage_before", true).apply();
+            case 2131362926:
+                onReqeustPickGoods();
                 return;
-            case 2131362916:
+            case 2131362928:
                 FeedUIConfig feedUIConfig = this.uiConfig;
                 if (feedUIConfig == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("uiConfig");
@@ -925,80 +931,80 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
                             }
                             break;
                         }
-                        showShareDialog("添加网页链接", "添加网页链接", 2131362181);
+                        showShareDialog("添加网页链接", "添加网页链接", 2131362184);
                         return;
                     }
                 }
                 View root = getAddMoreBinding().getRoot();
                 Intrinsics.checkNotNullExpressionValue(root, "addMoreBinding.root");
                 switchBottomViewOrKeyboard(root);
-                SubmitFeedV8Binding submitFeedV8Binding2 = this.binding;
-                if (submitFeedV8Binding2 == null) {
+                SubmitFeedV8Binding submitFeedV8Binding = this.binding;
+                if (submitFeedV8Binding == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
                 }
-                this.lastActiveMenu = submitFeedV8Binding2.menuAddMore;
+                this.lastActiveMenu = submitFeedV8Binding.menuAddMore;
                 return;
-            case 2131362917:
+            case 2131362929:
                 BaseFeedContentHolder baseFeedContentHolder = this.contentHolder;
                 if (baseFeedContentHolder == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("contentHolder");
                 }
                 baseFeedContentHolder.onRequestPickImage();
                 return;
-            case 2131362918:
+            case 2131362930:
                 onRequestPickContacts();
                 return;
-            case 2131362921:
-                SubmitFeedV8Binding submitFeedV8Binding3 = this.binding;
-                if (submitFeedV8Binding3 == null) {
+            case 2131362933:
+                SubmitFeedV8Binding submitFeedV8Binding2 = this.binding;
+                if (submitFeedV8Binding2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
                 }
-                KeyBoardLayout keyBoardLayout = submitFeedV8Binding3.keyBoardInteractLayout;
+                KeyBoardLayout keyBoardLayout = submitFeedV8Binding2.keyBoardInteractLayout;
                 Intrinsics.checkNotNullExpressionValue(keyBoardLayout, "binding.keyBoardInteractLayout");
                 if (keyBoardLayout.isRealKeyboard()) {
                     UiUtils.closeKeyboard(getFocusEditorView());
                     return;
                 }
-                SubmitFeedV8Binding submitFeedV8Binding4 = this.binding;
-                if (submitFeedV8Binding4 == null) {
+                SubmitFeedV8Binding submitFeedV8Binding3 = this.binding;
+                if (submitFeedV8Binding3 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
                 }
-                KeyBoardLayout keyBoardLayout2 = submitFeedV8Binding4.keyBoardInteractLayout;
+                KeyBoardLayout keyBoardLayout2 = submitFeedV8Binding3.keyBoardInteractLayout;
                 Intrinsics.checkNotNullExpressionValue(keyBoardLayout2, "binding.keyBoardInteractLayout");
                 if (keyBoardLayout2.isFakeKeyBoardShowed()) {
+                    SubmitFeedV8Binding submitFeedV8Binding4 = this.binding;
+                    if (submitFeedV8Binding4 == null) {
+                        Intrinsics.throwUninitializedPropertyAccessException("binding");
+                    }
+                    submitFeedV8Binding4.keyBoardInteractLayout.showFakeKeyBoardView(false);
                     SubmitFeedV8Binding submitFeedV8Binding5 = this.binding;
                     if (submitFeedV8Binding5 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("binding");
                     }
-                    submitFeedV8Binding5.keyBoardInteractLayout.showFakeKeyBoardView(false);
-                    SubmitFeedV8Binding submitFeedV8Binding6 = this.binding;
-                    if (submitFeedV8Binding6 == null) {
-                        Intrinsics.throwUninitializedPropertyAccessException("binding");
-                    }
-                    submitFeedV8Binding6.keyBoardInteractLayout.requestLayout();
+                    submitFeedV8Binding5.keyBoardInteractLayout.requestLayout();
                     return;
                 }
                 UiUtils.openKeyboard(getFocusEditorView());
                 return;
-            case 2131362923:
+            case 2131362935:
                 switchBottomViewOrKeyboard(getEmotionPanel());
-                SubmitFeedV8Binding submitFeedV8Binding7 = this.binding;
-                if (submitFeedV8Binding7 == null) {
+                SubmitFeedV8Binding submitFeedV8Binding6 = this.binding;
+                if (submitFeedV8Binding6 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
                 }
-                this.lastActiveMenu = submitFeedV8Binding7.menuEmotion;
+                this.lastActiveMenu = submitFeedV8Binding6.menuEmotion;
                 return;
-            case 2131362928:
+            case 2131362940:
                 onRequestPickTopic();
                 return;
-            case 2131363140:
+            case 2131363154:
                 BaseFeedContentHolder baseFeedContentHolder2 = this.contentHolder;
                 if (baseFeedContentHolder2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("contentHolder");
                 }
                 baseFeedContentHolder2.onPreviewClicked();
                 return;
-            case 2131363457:
+            case 2131363475:
                 if (PrivacyAlertDialog.Companion.shouldShowByIntent()) {
                     PrivacyAlertDialog newInstance = PrivacyAlertDialog.Companion.newInstance();
                     FragmentManager supportFragmentManager = getSupportFragmentManager();
@@ -1012,7 +1018,7 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
                 }
                 baseFeedContentHolder3.onSubmitButtonClick();
                 return;
-            case 2131363583:
+            case 2131363605:
                 onRequestConvertToArticleMode();
                 return;
             default:
@@ -1199,7 +1205,7 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
     }
 
     private final void showShareDialog(String str, String str2, int i) {
-        SubmitFeedAddMoreItemDialogBinding submitFeedAddMoreItemDialogBinding = (SubmitFeedAddMoreItemDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559147, null, false);
+        SubmitFeedAddMoreItemDialogBinding submitFeedAddMoreItemDialogBinding = (SubmitFeedAddMoreItemDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559155, null, false);
         AlertDialog.Builder title = new AlertDialog.Builder(getActivity()).setTitle(str);
         Intrinsics.checkNotNullExpressionValue(submitFeedAddMoreItemDialogBinding, "binding");
         AlertDialog create = title.setView(submitFeedAddMoreItemDialogBinding.getRoot()).create();
@@ -1229,7 +1235,7 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
     }
 
     private final void showAddVideoDialog(String str, String str2) {
-        SubmitFeedAddVideoItemDialogBinding submitFeedAddVideoItemDialogBinding = (SubmitFeedAddVideoItemDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559148, null, false);
+        SubmitFeedAddVideoItemDialogBinding submitFeedAddVideoItemDialogBinding = (SubmitFeedAddVideoItemDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559156, null, false);
         AlertDialog.Builder title = new AlertDialog.Builder(getActivity()).setTitle(str);
         Intrinsics.checkNotNullExpressionValue(submitFeedAddVideoItemDialogBinding, "binding");
         AlertDialog create = title.setView(submitFeedAddVideoItemDialogBinding.getRoot()).create();
@@ -1260,7 +1266,7 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
     /* access modifiers changed from: private */
     public final void loadShareInfo(String str) {
         ProgressDialog progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage(getString(2131886866));
+        progressDialog.setMessage(getString(2131886928));
         progressDialog.setProgressStyle(0);
         progressDialog.setCancelable(false);
         progressDialog.setCanceledOnTouchOutside(true);
@@ -1271,7 +1277,7 @@ public final class SubmitFeedV8Activity extends FakeStatusBarActivity implements
     /* access modifiers changed from: private */
     public final void loadVideoInfo(String str) {
         ProgressDialog progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage(getString(2131886866));
+        progressDialog.setMessage(getString(2131886928));
         progressDialog.setProgressStyle(0);
         progressDialog.setCancelable(false);
         progressDialog.setCanceledOnTouchOutside(true);

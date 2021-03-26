@@ -41,9 +41,7 @@ public class f implements g, l.a {
     private c i;
     private final IDownloadListener j;
     private boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private long f1403l;
+    private long l;
     private long m;
     private com.ss.android.a.a.b.c n;
     private com.ss.android.a.a.b.b o;
@@ -169,7 +167,7 @@ public class f implements g, l.a {
         boolean z = false;
         if (this.f.isEmpty()) {
             this.k = false;
-            this.f1403l = System.currentTimeMillis();
+            this.l = System.currentTimeMillis();
             if (this.h != null) {
                 Downloader.getInstance(k.a()).removeTaskMainListener(this.h.getId());
             }
@@ -222,7 +220,7 @@ public class f implements g, l.a {
 
     @Override // com.ss.android.downloadlib.addownload.g
     public long d() {
-        return this.f1403l;
+        return this.l;
     }
 
     @Override // com.ss.android.downloadlib.addownload.g

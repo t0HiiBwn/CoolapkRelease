@@ -45,7 +45,7 @@ public abstract class ItemAppUpdataManagerBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppUpdataManagerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAppUpdataManagerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558598, viewGroup, z, obj);
+        return (ItemAppUpdataManagerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558602, viewGroup, z, obj);
     }
 
     public static ItemAppUpdataManagerBinding inflate(LayoutInflater layoutInflater) {
@@ -54,7 +54,7 @@ public abstract class ItemAppUpdataManagerBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppUpdataManagerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAppUpdataManagerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558598, null, false, obj);
+        return (ItemAppUpdataManagerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558602, null, false, obj);
     }
 
     public static ItemAppUpdataManagerBinding bind(View view) {
@@ -63,6 +63,6 @@ public abstract class ItemAppUpdataManagerBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppUpdataManagerBinding bind(View view, Object obj) {
-        return (ItemAppUpdataManagerBinding) bind(obj, view, 2131558598);
+        return (ItemAppUpdataManagerBinding) bind(obj, view, 2131558602);
     }
 }

@@ -42,9 +42,7 @@ public final class f {
     final boolean i;
     final boolean j;
     final boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    final String f1338l;
+    final String l;
     final int m;
     final int n;
     final u o;
@@ -75,7 +73,7 @@ public final class f {
         this.j = z6;
         this.k = z7;
         this.o = uVar;
-        this.f1338l = str;
+        this.l = str;
         this.m = i2;
         this.n = i3;
         this.p = list;

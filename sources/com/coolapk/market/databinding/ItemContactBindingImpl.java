@@ -36,8 +36,8 @@ public class ItemContactBindingImpl extends ItemContactBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362385, 10);
-        sparseIntArray.put(2131362222, 11);
+        sparseIntArray.put(2131362391, 10);
+        sparseIntArray.put(2131362227, 11);
     }
 
     public ItemContactBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -85,21 +85,21 @@ public class ItemContactBindingImpl extends ItemContactBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Contacts) obj);
         } else if (102 == i) {
             setFans((String) obj);
-        } else if (183 == i) {
+        } else if (184 == i) {
             setListType(((Integer) obj).intValue());
-        } else if (289 == i) {
+        } else if (290 == i) {
             setUid((String) obj);
-        } else if (188 == i) {
+        } else if (189 == i) {
             setLoginTime((String) obj);
-        } else if (211 == i) {
+        } else if (212 == i) {
             setOnClick((View.OnClickListener) obj);
         } else if (116 == i) {
             setFollow((String) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);
@@ -113,7 +113,7 @@ public class ItemContactBindingImpl extends ItemContactBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -133,7 +133,7 @@ public class ItemContactBindingImpl extends ItemContactBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(183);
+        notifyPropertyChanged(184);
         super.requestRebind();
     }
 
@@ -148,7 +148,7 @@ public class ItemContactBindingImpl extends ItemContactBinding {
         synchronized (this) {
             this.mDirtyFlags |= 16;
         }
-        notifyPropertyChanged(188);
+        notifyPropertyChanged(189);
         super.requestRebind();
     }
 
@@ -158,7 +158,7 @@ public class ItemContactBindingImpl extends ItemContactBinding {
         synchronized (this) {
             this.mDirtyFlags |= 32;
         }
-        notifyPropertyChanged(211);
+        notifyPropertyChanged(212);
         super.requestRebind();
     }
 
@@ -178,7 +178,7 @@ public class ItemContactBindingImpl extends ItemContactBinding {
         synchronized (this) {
             this.mDirtyFlags |= 128;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -251,10 +251,10 @@ public class ItemContactBindingImpl extends ItemContactBinding {
             }
             if (z2) {
                 resources = this.actionButton.getResources();
-                i9 = 2131886678;
+                i9 = 2131886740;
             } else {
                 resources = this.actionButton.getResources();
-                i9 = 2131886679;
+                i9 = 2131886741;
             }
             str = resources.getString(i9);
         } else {
@@ -367,8 +367,8 @@ public class ItemContactBindingImpl extends ItemContactBinding {
                 }
                 if ((256 & j) != 0) {
                     ThemeBindingAdapters.setTextColor(this.actionButton, "colorAccent");
-                    Long l2 = null;
-                    ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "reveal", l2, l2);
+                    Long l = null;
+                    ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "reveal", l, l);
                 }
                 if ((288 & j) != 0) {
                     Boolean bool = null;
@@ -379,7 +379,7 @@ public class ItemContactBindingImpl extends ItemContactBinding {
                 if (i6 == 0) {
                     i7 = i4;
                     Boolean bool2 = null;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str12, null, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, null, null, onBitmapTransformListener, bool2, bool2, bool2, null, bool2);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str12, null, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, null, null, onBitmapTransformListener, bool2, bool2, bool2, null, bool2);
                 } else {
                     i7 = i4;
                 }

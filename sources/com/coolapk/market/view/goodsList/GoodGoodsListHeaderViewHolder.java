@@ -44,7 +44,7 @@ import kotlin.text.StringsKt;
 /* compiled from: GoodGoodsListHeaderViewHolder.kt */
 public final class GoodGoodsListHeaderViewHolder extends GenericBindHolder<ItemGoodGoodsListHeaderBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558754;
+    public static final int LAYOUT_ID = 2131558761;
     public static final String TYPE_GOODS_ITEM_ADD = "GOODS_ITEM_ADD";
     private DataAdapter adapter;
     private final ObservableArrayList<Entity> dataList = new ObservableArrayList<>();
@@ -144,7 +144,7 @@ public final class GoodGoodsListHeaderViewHolder extends GenericBindHolder<ItemG
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131362095) {
+        if (view.getId() == 2131362098) {
             Context context = getContext();
             ItemGoodGoodsListHeaderBinding itemGoodGoodsListHeaderBinding = (ItemGoodGoodsListHeaderBinding) getBinding();
             Intrinsics.checkNotNullExpressionValue(itemGoodGoodsListHeaderBinding, "binding");
@@ -195,10 +195,10 @@ public final class GoodGoodsListHeaderViewHolder extends GenericBindHolder<ItemG
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
             switch (i) {
-                case 2131558752:
+                case 2131558759:
                     Intrinsics.checkNotNullExpressionValue(inflate, "viewItem");
                     return new ItemGoodGoodsViewHolder(inflate, this.component, null);
-                case 2131558753:
+                case 2131558760:
                     Feed feed = GoodGoodsListHeaderViewHolder.this.getGoodGoodsViewModel().getFeed();
                     Intrinsics.checkNotNull(feed);
                     Intrinsics.checkNotNullExpressionValue(inflate, "viewItem");
@@ -222,7 +222,7 @@ public final class GoodGoodsListHeaderViewHolder extends GenericBindHolder<ItemG
         public int getItemViewType(int i) {
             Entity entity = (Entity) GoodGoodsListHeaderViewHolder.this.dataList.get(i);
             Intrinsics.checkNotNullExpressionValue(entity, "entity");
-            return Intrinsics.areEqual(entity.getEntityType(), "GOODS_ITEM_ADD") ? 2131558753 : 2131558752;
+            return Intrinsics.areEqual(entity.getEntityType(), "GOODS_ITEM_ADD") ? 2131558760 : 2131558759;
         }
     }
 }

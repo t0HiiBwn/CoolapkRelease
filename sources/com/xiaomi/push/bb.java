@@ -1,7 +1,7 @@
 package com.xiaomi.push;
 
-public interface bb {
-    String a();
+import android.database.sqlite.SQLiteOpenHelper;
 
-    String b();
+public abstract class bb extends SQLiteOpenHelper {
+    public abstract String a();
 }

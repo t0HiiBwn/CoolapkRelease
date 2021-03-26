@@ -43,7 +43,7 @@ public abstract class ItemRecentLoginBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRecentLoginBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemRecentLoginBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558892, viewGroup, z, obj);
+        return (ItemRecentLoginBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558899, viewGroup, z, obj);
     }
 
     public static ItemRecentLoginBinding inflate(LayoutInflater layoutInflater) {
@@ -52,7 +52,7 @@ public abstract class ItemRecentLoginBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRecentLoginBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemRecentLoginBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558892, null, false, obj);
+        return (ItemRecentLoginBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558899, null, false, obj);
     }
 
     public static ItemRecentLoginBinding bind(View view) {
@@ -61,6 +61,6 @@ public abstract class ItemRecentLoginBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRecentLoginBinding bind(View view, Object obj) {
-        return (ItemRecentLoginBinding) bind(obj, view, 2131558892);
+        return (ItemRecentLoginBinding) bind(obj, view, 2131558899);
     }
 }

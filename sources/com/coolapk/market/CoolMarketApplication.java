@@ -66,7 +66,7 @@ public class CoolMarketApplication extends Application implements LogUtils.OnLog
     private Subscription checkForNetworkStateSub;
     private Subscription checkForUpgradeSub;
     private Subscription clearMemoryStateSub;
-    private boolean isFirstVisible = true;
+    public boolean isFirstVisible = true;
     private boolean isShowPermissionCheckDialog = true;
 
     @Override // com.coolapk.market.util.LogUtils.OnLogListener
@@ -84,7 +84,7 @@ public class CoolMarketApplication extends Application implements LogUtils.OnLog
                 this.checkForUpgradeSub = Observable.interval(360000, TimeUnit.MILLISECONDS).subscribe((Subscriber<? super Long>) new EmptySubscriber<Long>() {
                     /* class com.coolapk.market.CoolMarketApplication.AnonymousClass1 */
 
-                    public void onNext(Long l2) {
+                    public void onNext(Long l) {
                         if (AppHolder.getActivityLifeCycle().isAppForeground()) {
                             LogUtils.v("Check for upgrade by auto interval", new Object[0]);
                             ActionManager.startCheckMobileAppForUpgrade(CoolMarketApplication.this.getApplicationContext(), false);
@@ -95,7 +95,7 @@ public class CoolMarketApplication extends Application implements LogUtils.OnLog
             this.checkCountSub = Observable.interval(60000, TimeUnit.MILLISECONDS).subscribe((Subscriber<? super Long>) new EmptySubscriber<Long>() {
                 /* class com.coolapk.market.CoolMarketApplication.AnonymousClass2 */
 
-                public void onNext(Long l2) {
+                public void onNext(Long l) {
                     if (AppHolder.getActivityLifeCycle().isAppForeground()) {
                         long lastCheckCountTime = AppHolder.getAppSetting().getLastCheckCountTime();
                         long j = 300000;
@@ -119,7 +119,7 @@ public class CoolMarketApplication extends Application implements LogUtils.OnLog
         }
     }
 
-    static /* synthetic */ void lambda$onCreate$0(Long l2) {
+    static /* synthetic */ void lambda$onCreate$0(Long l) {
         LoginCheckManager.checkLoginInfoInit();
         ClearCacheHelper.newClearCacheTask("clear_recent").subscribe((Subscriber<? super Object>) new EmptySubscriber());
         if (AppHolder.getAppSetting().shouldDisableXposed()) {
@@ -181,11 +181,17 @@ public class CoolMarketApplication extends Application implements LogUtils.OnLog
 
     private void createHighNotifyChannel(NotificationManager notificationManager, int i, String str) {
         if (Build.VERSION.SDK_INT >= 26) {
-            NotificationChannel notificationChannel = new NotificationChannel(String.valueOf(i), str, 4);
+            NotificationChannel notificationChannel = new NotificationChannel(String.valueOf(i), str, 5);
             notificationChannel.enableLights(true);
             notificationChannel.setLightColor(AppHolder.getAppTheme().getColorPrimary());
             notificationChannel.setShowBadge(true);
-            notificationManager.createNotificationChannel(notificationChannel);
+            try {
+                notificationManager.createNotificationChannel(notificationChannel);
+            } catch (Exception e) {
+                e.printStackTrace();
+                notificationChannel.setImportance(4);
+                notificationManager.createNotificationChannel(notificationChannel);
+            }
         }
     }
 
@@ -275,7 +281,7 @@ public class CoolMarketApplication extends Application implements LogUtils.OnLog
             if (AppHolder.getCurrentActivity() != null && !loadMobileAppEvent.isLoading && DataManager.getInstance().getMobileAppExistListFast().size() < 5 && DataManager.getInstance().getPreferencesBoolean("PREF_SHOW_PERMISSION_CHECK_DIALOG", true) && this.isShowPermissionCheckDialog) {
                 this.isShowPermissionCheckDialog = false;
                 SimpleDialog newInstance = SimpleDialog.newInstance();
-                newInstance.setMessage(getString(2131886986));
+                newInstance.setMessage(getString(2131887048));
                 newInstance.setPositiveButton(2131886135, new DialogInterface.OnClickListener() {
                     /* class com.coolapk.market.CoolMarketApplication.AnonymousClass3 */
 
@@ -329,6 +335,9 @@ public class CoolMarketApplication extends Application implements LogUtils.OnLog
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            if (AppHolder.getAppSetting().getBooleanPref("limited_background_enabled")) {
+                AppHolder.getAppPushManager().registerPush();
+            }
         }
         this.checkAdOnForeground = true;
         RxUtils.unsubscribe(this.checkForNetworkStateSub);
@@ -340,12 +349,11 @@ public class CoolMarketApplication extends Application implements LogUtils.OnLog
                 CoolMarketApplication.this.lambda$onForeground$1$CoolMarketApplication((Long) obj);
             }
         });
-        if (AppHolder.getAppSetting().getBooleanPref("limited_background_enabled")) {
-            AppHolder.getAppPushManager().initMiPush();
-        }
+        AppHolder.getAppIMManager().resume();
+        ActionManager.checkNotificationCount();
     }
 
-    public /* synthetic */ void lambda$onForeground$1$CoolMarketApplication(Long l2) {
+    public /* synthetic */ void lambda$onForeground$1$CoolMarketApplication(Long l) {
         LogUtils.v("Send broadcast check for network state", new Object[0]);
         ActionManager.sendCheckForNetworkStateBroadcast(getApplicationContext());
     }
@@ -362,10 +370,10 @@ public class CoolMarketApplication extends Application implements LogUtils.OnLog
             }
         });
         if (AppHolder.getAppSetting().getBooleanPref("limited_background_enabled")) {
-            if (SystemUtils.isProcessRunning(this, getPackageName() + ":pushservice")) {
+            if (SystemUtils.isProcessRunning(this, getPackageName() + ":xg_vip_service")) {
                 AppHolder.getAppPushManager().unregisterPush();
                 try {
-                    ActionManager.closeMiPushService(getApplicationContext());
+                    ActionManager.closePushService(getApplicationContext());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -379,9 +387,10 @@ public class CoolMarketApplication extends Application implements LogUtils.OnLog
         if (externalFilesDir2 != null && externalFilesDir2.exists()) {
             FileUtils.deleteAllInDir(externalFilesDir2);
         }
+        AppHolder.getAppIMManager().lazyRelease();
     }
 
-    public /* synthetic */ void lambda$onBackground$2$CoolMarketApplication(Long l2) {
+    public /* synthetic */ void lambda$onBackground$2$CoolMarketApplication(Long l) {
         GlideApp.get(this).clearMemory();
     }
 }

@@ -26,8 +26,8 @@ public class ArticleDetailImagePartBindingImpl extends ArticleDetailImagePartBin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362793, 1);
-        sparseIntArray.put(2131362376, 2);
+        sparseIntArray.put(2131362804, 1);
+        sparseIntArray.put(2131362382, 2);
     }
 
     public ArticleDetailImagePartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

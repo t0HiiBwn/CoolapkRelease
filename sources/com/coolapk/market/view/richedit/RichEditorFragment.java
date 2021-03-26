@@ -50,12 +50,12 @@ public class RichEditorFragment extends Fragment {
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        View inflate = layoutInflater.inflate(2131559117, viewGroup, false);
-        this.topLayout = inflate.findViewById(2131362899);
-        View findViewById = inflate.findViewById(2131362898);
+        View inflate = layoutInflater.inflate(2131559124, viewGroup, false);
+        this.topLayout = inflate.findViewById(2131362910);
+        View findViewById = inflate.findViewById(2131362909);
         this.optionLayout = findViewById;
         findViewById.setVisibility(8);
-        RichEditor richEditor2 = (RichEditor) inflate.findViewById(2131362448);
+        RichEditor richEditor2 = (RichEditor) inflate.findViewById(2131362455);
         this.richEditor = richEditor2;
         richEditor2.setEditorFontSize(16);
         this.richEditor.setEditorFontColor(AppHolder.getAppTheme().getTextColorPrimary());
@@ -125,7 +125,7 @@ public class RichEditorFragment extends Fragment {
                 RichEditorFragment.this.optionLayout.setVisibility(z ? 0 : 8);
             }
         });
-        ImageView imageView = (ImageView) inflate.findViewById(2131362793);
+        ImageView imageView = (ImageView) inflate.findViewById(2131362804);
         this.coverView = imageView;
         imageView.setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.richedit.RichEditorFragment.AnonymousClass6 */
@@ -135,7 +135,7 @@ public class RichEditorFragment extends Fragment {
                 ActionManager.startPhotoPickerActivity(RichEditorFragment.this, 1, (List<String>) null, 1);
             }
         });
-        inflate.findViewById(2131362786).setOnClickListener(new View.OnClickListener() {
+        inflate.findViewById(2131362797).setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.richedit.RichEditorFragment.AnonymousClass7 */
 
             @Override // android.view.View.OnClickListener
@@ -143,7 +143,7 @@ public class RichEditorFragment extends Fragment {
                 ActionManager.startPhotoPickerActivity(RichEditorFragment.this, 9, (List<String>) null, 2);
             }
         });
-        inflate.findViewById(2131362796).setOnClickListener(new View.OnClickListener() {
+        inflate.findViewById(2131362807).setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.richedit.RichEditorFragment.AnonymousClass8 */
 
             @Override // android.view.View.OnClickListener
@@ -151,7 +151,7 @@ public class RichEditorFragment extends Fragment {
                 RichEditorFragment.this.richEditor.setHeading(1);
             }
         });
-        inflate.findViewById(2131362797).setOnClickListener(new View.OnClickListener() {
+        inflate.findViewById(2131362808).setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.richedit.RichEditorFragment.AnonymousClass9 */
 
             @Override // android.view.View.OnClickListener
@@ -159,7 +159,7 @@ public class RichEditorFragment extends Fragment {
                 RichEditorFragment.this.richEditor.setHeading(2);
             }
         });
-        inflate.findViewById(2131362798).setOnClickListener(new View.OnClickListener() {
+        inflate.findViewById(2131362809).setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.richedit.RichEditorFragment.AnonymousClass10 */
 
             @Override // android.view.View.OnClickListener
@@ -167,7 +167,7 @@ public class RichEditorFragment extends Fragment {
                 RichEditorFragment.this.richEditor.setHeading(3);
             }
         });
-        inflate.findViewById(2131362789).setOnClickListener(new View.OnClickListener() {
+        inflate.findViewById(2131362800).setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.richedit.RichEditorFragment.AnonymousClass11 */
 
             @Override // android.view.View.OnClickListener
@@ -175,7 +175,7 @@ public class RichEditorFragment extends Fragment {
                 RichEditorFragment.this.richEditor.setBold();
             }
         });
-        inflate.findViewById(2131362804).setOnClickListener(new View.OnClickListener() {
+        inflate.findViewById(2131362815).setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.richedit.RichEditorFragment.AnonymousClass12 */
 
             @Override // android.view.View.OnClickListener
@@ -183,7 +183,7 @@ public class RichEditorFragment extends Fragment {
                 RichEditorFragment.this.richEditor.insertLink("https://github.com/wasabeef", "link");
             }
         });
-        inflate.findViewById(2131362802).setOnClickListener(new View.OnClickListener() {
+        inflate.findViewById(2131362813).setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.richedit.RichEditorFragment.AnonymousClass13 */
 
             @Override // android.view.View.OnClickListener
@@ -191,7 +191,7 @@ public class RichEditorFragment extends Fragment {
                 RichEditorFragment.this.richEditor.setItalic();
             }
         });
-        inflate.findViewById(2131362807).setOnClickListener(new View.OnClickListener() {
+        inflate.findViewById(2131362818).setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.richedit.RichEditorFragment.AnonymousClass14 */
 
             @Override // android.view.View.OnClickListener
@@ -199,7 +199,7 @@ public class RichEditorFragment extends Fragment {
                 RichEditorFragment.this.richEditor.setStrikeThrough();
             }
         });
-        inflate.findViewById(2131362809).setOnClickListener(new View.OnClickListener() {
+        inflate.findViewById(2131362820).setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.richedit.RichEditorFragment.AnonymousClass15 */
 
             @Override // android.view.View.OnClickListener
@@ -207,7 +207,7 @@ public class RichEditorFragment extends Fragment {
                 RichEditorFragment.this.richEditor.setUnderline();
             }
         });
-        this.titleView = (EditText) inflate.findViewById(2131362472);
+        this.titleView = (EditText) inflate.findViewById(2131362480);
         return inflate;
     }
 

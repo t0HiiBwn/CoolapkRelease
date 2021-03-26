@@ -31,9 +31,7 @@ public class k {
     static int f = -1;
     private static JSONArray j = new JSONArray();
     private static Object k = new Object();
-
-    /* renamed from: l  reason: collision with root package name */
-    private static Application f1472l = null;
+    private static Application l = null;
     private static boolean p = true;
     private static Object q = new Object();
     boolean c;
@@ -84,11 +82,11 @@ public class k {
     public static synchronized k a(Context context) {
         k kVar;
         synchronized (k.class) {
-            if (f1472l == null && context != null) {
+            if (l == null && context != null) {
                 if (context instanceof Activity) {
-                    f1472l = ((Activity) context).getApplication();
+                    l = ((Activity) context).getApplication();
                 } else if (context instanceof Application) {
-                    f1472l = (Application) context;
+                    l = (Application) context;
                 }
             }
             kVar = a.a;
@@ -243,7 +241,7 @@ public class k {
             }
         };
         synchronized (this) {
-            if (f1472l != null) {
+            if (l != null) {
                 f();
             }
         }
@@ -252,19 +250,19 @@ public class k {
     private void f() {
         if (!this.m) {
             this.m = true;
-            if (f1472l != null && Build.VERSION.SDK_INT >= 14) {
-                f1472l.registerActivityLifecycleCallbacks(this.h);
+            if (l != null && Build.VERSION.SDK_INT >= 14) {
+                l.registerActivityLifecycleCallbacks(this.h);
             }
         }
     }
 
     public void b() {
         this.m = false;
-        if (f1472l != null) {
+        if (l != null) {
             if (Build.VERSION.SDK_INT >= 14) {
-                f1472l.unregisterActivityLifecycleCallbacks(this.h);
+                l.unregisterActivityLifecycleCallbacks(this.h);
             }
-            f1472l = null;
+            l = null;
         }
     }
 

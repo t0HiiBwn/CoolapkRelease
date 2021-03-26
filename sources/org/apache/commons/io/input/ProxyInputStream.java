@@ -5,14 +5,47 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public abstract class ProxyInputStream extends FilterInputStream {
+    public ProxyInputStream(InputStream inputStream) {
+        super(inputStream);
+    }
+
     protected void afterRead(int i) throws IOException {
+    }
+
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public int available() throws IOException {
+        try {
+            return super.available();
+        } catch (IOException e) {
+            handleIOException(e);
+            return 0;
+        }
     }
 
     protected void beforeRead(int i) throws IOException {
     }
 
-    public ProxyInputStream(InputStream inputStream) {
-        super(inputStream);
+    @Override // java.io.FilterInputStream, java.io.Closeable, java.lang.AutoCloseable, java.io.InputStream
+    public void close() throws IOException {
+        try {
+            this.in.close();
+        } catch (IOException e) {
+            handleIOException(e);
+        }
+    }
+
+    protected void handleIOException(IOException iOException) throws IOException {
+        throw iOException;
+    }
+
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public synchronized void mark(int i) {
+        this.in.mark(i);
+    }
+
+    @Override // java.io.FilterInputStream, java.io.InputStream
+    public boolean markSupported() {
+        return this.in.markSupported();
     }
 
     @Override // java.io.FilterInputStream, java.io.InputStream
@@ -65,40 +98,6 @@ public abstract class ProxyInputStream extends FilterInputStream {
     }
 
     @Override // java.io.FilterInputStream, java.io.InputStream
-    public long skip(long j) throws IOException {
-        try {
-            return this.in.skip(j);
-        } catch (IOException e) {
-            handleIOException(e);
-            return 0;
-        }
-    }
-
-    @Override // java.io.FilterInputStream, java.io.InputStream
-    public int available() throws IOException {
-        try {
-            return super.available();
-        } catch (IOException e) {
-            handleIOException(e);
-            return 0;
-        }
-    }
-
-    @Override // java.io.FilterInputStream, java.io.Closeable, java.lang.AutoCloseable, java.io.InputStream
-    public void close() throws IOException {
-        try {
-            this.in.close();
-        } catch (IOException e) {
-            handleIOException(e);
-        }
-    }
-
-    @Override // java.io.FilterInputStream, java.io.InputStream
-    public synchronized void mark(int i) {
-        this.in.mark(i);
-    }
-
-    @Override // java.io.FilterInputStream, java.io.InputStream
     public synchronized void reset() throws IOException {
         try {
             this.in.reset();
@@ -109,11 +108,12 @@ public abstract class ProxyInputStream extends FilterInputStream {
     }
 
     @Override // java.io.FilterInputStream, java.io.InputStream
-    public boolean markSupported() {
-        return this.in.markSupported();
-    }
-
-    protected void handleIOException(IOException iOException) throws IOException {
-        throw iOException;
+    public long skip(long j) throws IOException {
+        try {
+            return this.in.skip(j);
+        } catch (IOException e) {
+            handleIOException(e);
+            return 0;
+        }
     }
 }

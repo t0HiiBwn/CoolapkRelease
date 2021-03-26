@@ -21,7 +21,7 @@ public abstract class ItemSearchExtendHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchExtendHeaderBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSearchExtendHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558910, viewGroup, z, obj);
+        return (ItemSearchExtendHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558917, viewGroup, z, obj);
     }
 
     public static ItemSearchExtendHeaderBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class ItemSearchExtendHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchExtendHeaderBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSearchExtendHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558910, null, false, obj);
+        return (ItemSearchExtendHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558917, null, false, obj);
     }
 
     public static ItemSearchExtendHeaderBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class ItemSearchExtendHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchExtendHeaderBinding bind(View view, Object obj) {
-        return (ItemSearchExtendHeaderBinding) bind(obj, view, 2131558910);
+        return (ItemSearchExtendHeaderBinding) bind(obj, view, 2131558917);
     }
 }

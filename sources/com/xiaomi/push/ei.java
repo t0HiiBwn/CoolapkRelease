@@ -1,79 +1,52 @@
 package com.xiaomi.push;
 
-import android.app.Service;
-import android.content.Context;
-import android.content.Intent;
-import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.service.f;
+import java.io.ByteArrayInputStream;
+import java.io.InputStreamReader;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
 
-class ei implements ef {
+public class ei {
+    private XmlPullParser a;
+
     ei() {
-    }
-
-    private void a(Service service, Intent intent) {
-        String stringExtra = intent.getStringExtra("awake_info");
-        if (!TextUtils.isEmpty(stringExtra)) {
-            String b = dx.b(stringExtra);
-            if (!TextUtils.isEmpty(b)) {
-                dy.a(service.getApplicationContext(), b, 1007, "play with service successfully");
-                return;
-            }
-        }
-        dy.a(service.getApplicationContext(), "service", 1008, "B get a incorrect message");
-    }
-
-    private void b(Context context, eb ebVar) {
-        String a = ebVar.m287a();
-        String b = ebVar.b();
-        String d = ebVar.d();
-        int a2 = ebVar.a();
-        if (context == null || TextUtils.isEmpty(a) || TextUtils.isEmpty(b) || TextUtils.isEmpty(d)) {
-            if (TextUtils.isEmpty(d)) {
-                dy.a(context, "service", 1008, "argument error");
-            } else {
-                dy.a(context, d, 1008, "argument error");
-            }
-        } else if (!f.a(context, a, b)) {
-            dy.a(context, d, 1003, "B is not ready");
-        } else {
-            dy.a(context, d, 1002, "B is ready");
-            dy.a(context, d, 1004, "A is ready");
-            try {
-                Intent intent = new Intent();
-                intent.setAction(b);
-                intent.setPackage(a);
-                intent.putExtra("awake_info", dx.a(d));
-                if (a2 == 1 && !ec.m288a(context)) {
-                    dy.a(context, d, 1008, "A not in foreground");
-                } else if (context.startService(intent) != null) {
-                    dy.a(context, d, 1005, "A is successful");
-                    dy.a(context, d, 1006, "The job is finished");
-                } else {
-                    dy.a(context, d, 1008, "A is fail to help B's service");
-                }
-            } catch (Exception e) {
-                b.a(e);
-                dy.a(context, d, 1008, "A meet a exception when help B's service");
-            }
+        try {
+            XmlPullParser newPullParser = XmlPullParserFactory.newInstance().newPullParser();
+            this.a = newPullParser;
+            newPullParser.setFeature("http://xmlpull.org/v1/doc/features.html#process-namespaces", true);
+        } catch (XmlPullParserException unused) {
         }
     }
 
-    @Override // com.xiaomi.push.ef
-    public void a(Context context, Intent intent, String str) {
-        if (context == null || !(context instanceof Service)) {
-            dy.a(context, "service", 1008, "A receive incorrect message");
-        } else {
-            a((Service) context, intent);
+    fe a(byte[] bArr, em emVar) {
+        this.a.setInput(new InputStreamReader(new ByteArrayInputStream(bArr)));
+        this.a.next();
+        int eventType = this.a.getEventType();
+        String name = this.a.getName();
+        if (eventType != 2) {
+            return null;
         }
-    }
-
-    @Override // com.xiaomi.push.ef
-    public void a(Context context, eb ebVar) {
-        if (ebVar != null) {
-            b(context, ebVar);
+        if (name.equals("message")) {
+            return fm.a(this.a);
+        }
+        if (name.equals("iq")) {
+            return fm.a(this.a, emVar);
+        }
+        if (name.equals("presence")) {
+            return fm.b(this.a);
+        }
+        if (this.a.getName().equals("stream")) {
+            return null;
+        }
+        if (this.a.getName().equals("error")) {
+            throw new ey(fm.c(this.a));
+        } else if (this.a.getName().equals("warning")) {
+            this.a.next();
+            this.a.getName().equals("multi-login");
+            return null;
         } else {
-            dy.a(context, "service", 1008, "A receive incorrect message");
+            this.a.getName().equals("bind");
+            return null;
         }
     }
 }

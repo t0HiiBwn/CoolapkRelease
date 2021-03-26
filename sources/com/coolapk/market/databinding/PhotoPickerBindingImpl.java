@@ -32,17 +32,17 @@ public class PhotoPickerBindingImpl extends PhotoPickerBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363221, 1);
-        sparseIntArray.put(2131362067, 2);
-        sparseIntArray.put(2131363588, 3);
-        sparseIntArray.put(2131362403, 4);
-        sparseIntArray.put(2131362150, 5);
-        sparseIntArray.put(2131362130, 6);
-        sparseIntArray.put(2131363533, 7);
-        sparseIntArray.put(2131362707, 8);
-        sparseIntArray.put(2131362486, 9);
-        sparseIntArray.put(2131362865, 10);
-        sparseIntArray.put(2131362417, 11);
+        sparseIntArray.put(2131363235, 1);
+        sparseIntArray.put(2131362069, 2);
+        sparseIntArray.put(2131363610, 3);
+        sparseIntArray.put(2131362409, 4);
+        sparseIntArray.put(2131362153, 5);
+        sparseIntArray.put(2131362133, 6);
+        sparseIntArray.put(2131363551, 7);
+        sparseIntArray.put(2131362718, 8);
+        sparseIntArray.put(2131362494, 9);
+        sparseIntArray.put(2131362876, 10);
+        sparseIntArray.put(2131362423, 11);
     }
 
     public PhotoPickerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

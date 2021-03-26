@@ -28,10 +28,10 @@ public class ItemAlbumExpandCardBindingImpl extends ItemAlbumExpandCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362121, 10);
-        sparseIntArray.put(2131362312, 11);
-        sparseIntArray.put(2131362671, 12);
-        sparseIntArray.put(2131362677, 13);
+        sparseIntArray.put(2131362124, 10);
+        sparseIntArray.put(2131362317, 11);
+        sparseIntArray.put(2131362682, 12);
+        sparseIntArray.put(2131362688, 13);
     }
 
     public ItemAlbumExpandCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -83,7 +83,7 @@ public class ItemAlbumExpandCardBindingImpl extends ItemAlbumExpandCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((AlbumDetailViewModel) obj);
         } else if (150 == i) {
             setIcon0((String) obj);
@@ -95,7 +95,7 @@ public class ItemAlbumExpandCardBindingImpl extends ItemAlbumExpandCardBinding {
             setIcon5((String) obj);
         } else if (151 == i) {
             setIcon1((String) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -112,7 +112,7 @@ public class ItemAlbumExpandCardBindingImpl extends ItemAlbumExpandCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -172,7 +172,7 @@ public class ItemAlbumExpandCardBindingImpl extends ItemAlbumExpandCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 64;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -205,12 +205,12 @@ public class ItemAlbumExpandCardBindingImpl extends ItemAlbumExpandCardBinding {
                 this.mDirtyFlags |= 256;
             }
             return true;
-        } else if (i == 296) {
+        } else if (i == 297) {
             synchronized (this) {
                 this.mDirtyFlags |= 512;
             }
             return true;
-        } else if (i == 293) {
+        } else if (i == 294) {
             synchronized (this) {
                 this.mDirtyFlags |= 1024;
             }
@@ -315,7 +315,7 @@ public class ItemAlbumExpandCardBindingImpl extends ItemAlbumExpandCardBinding {
         int i10 = ((j & 4224) > 0 ? 1 : ((j & 4224) == 0 ? 0 : -1));
         if ((j & 5121) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
         }
         if (i10 != 0) {
             Boolean bool2 = null;
@@ -344,7 +344,7 @@ public class ItemAlbumExpandCardBindingImpl extends ItemAlbumExpandCardBinding {
             str5 = str13;
             str7 = str12;
             str6 = str11;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView5, str10, null, 2131231363, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView5, str10, null, 2131231374, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
         } else {
             str9 = str2;
             onBitmapTransformListener = onBitmapTransformListener2;
@@ -358,21 +358,21 @@ public class ItemAlbumExpandCardBindingImpl extends ItemAlbumExpandCardBinding {
         }
         if ((j & 4192) != 0) {
             Boolean bool4 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView6, str8, null, 2131231363, 0, bool4, bool4, bool4, bool4, bool4, null, null, onBitmapTransformListener, bool4, bool4, bool4, null, bool4);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView6, str8, null, 2131231374, 0, bool4, bool4, bool4, bool4, bool4, null, null, onBitmapTransformListener, bool4, bool4, bool4, null, bool4);
         }
         if ((j & 4104) != 0) {
             this.mboundView7.setVisibility(i3);
         }
         if ((j & 4168) != 0) {
             Boolean bool5 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView7, str7, null, 2131231363, 0, bool5, bool5, bool5, bool5, bool5, null, null, onBitmapTransformListener, bool5, bool5, bool5, null, bool5);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView7, str7, null, 2131231374, 0, bool5, bool5, bool5, bool5, bool5, null, null, onBitmapTransformListener, bool5, bool5, bool5, null, bool5);
         }
         if ((j & 4100) != 0) {
             this.mboundView8.setVisibility(i2);
         }
         if ((j & 4164) != 0) {
             Boolean bool6 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView8, str6, null, 2131231363, 0, bool6, bool6, bool6, bool6, bool6, null, null, onBitmapTransformListener, bool6, bool6, bool6, null, bool6);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView8, str6, null, 2131231374, 0, bool6, bool6, bool6, bool6, bool6, null, null, onBitmapTransformListener, bool6, bool6, bool6, null, bool6);
         }
         if ((4112 & j) != 0) {
             TextViewBindingAdapter.setText(this.moreCountView5, str5);

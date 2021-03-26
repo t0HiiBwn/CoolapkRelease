@@ -34,8 +34,8 @@ public class ItemFeedRatingHeaderBindingImpl extends ItemFeedRatingHeaderBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363194, 9);
-        sparseIntArray.put(2131363281, 10);
+        sparseIntArray.put(2131363208, 9);
+        sparseIntArray.put(2131363295, 10);
     }
 
     public ItemFeedRatingHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -86,7 +86,7 @@ public class ItemFeedRatingHeaderBindingImpl extends ItemFeedRatingHeaderBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -102,7 +102,7 @@ public class ItemFeedRatingHeaderBindingImpl extends ItemFeedRatingHeaderBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -189,7 +189,7 @@ public class ItemFeedRatingHeaderBindingImpl extends ItemFeedRatingHeaderBinding
             this.setTopView.setVisibility(i2);
             TextViewBindingAdapters.setDatelineByEntity(this.timeView, feed);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str2, bool);
         }
         if (i5 != 0) {

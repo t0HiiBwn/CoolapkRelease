@@ -16,7 +16,7 @@ import com.coolapk.market.viewholder.ItemActionHandler;
 import com.coolapk.market.widget.decoration.PaddingDividerItemDecoration;
 
 public class DyhArticleCardViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558684;
+    public static final int LAYOUT_ID = 2131558690;
     private DataAdapter adapter;
     private final ItemDyhSourceTitleBinding binding;
     private final DataBindingComponent component;
@@ -121,7 +121,7 @@ public class DyhArticleCardViewHolder extends BindingViewHolder {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new DyhArticleVH(LayoutInflater.from(DyhArticleCardViewHolder.this.getContext()).inflate(2131558678, viewGroup, false), DyhArticleCardViewHolder.this.component, new ItemActionHandler());
+            return new DyhArticleVH(LayoutInflater.from(DyhArticleCardViewHolder.this.getContext()).inflate(2131558684, viewGroup, false), DyhArticleCardViewHolder.this.component, new ItemActionHandler());
         }
 
         public void onBindViewHolder(BindingViewHolder bindingViewHolder, int i) {

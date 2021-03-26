@@ -17,6 +17,7 @@ import com.coolapk.market.view.base.WrapDialogFragmentKt;
 import com.coolapk.market.widget.CoolFlowLayout;
 import java.util.ArrayList;
 import java.util.List;
+import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.functions.Function0;
@@ -25,6 +26,7 @@ import kotlin.text.Regex;
 import kotlin.text.StringsKt;
 import rx.Subscriber;
 
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\b\u0002\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0016\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00070\u00062\u0006\u0010\b\u001a\u00020\tH\u0002J.\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u00112\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006H\u0002J\u001e\u0010\u0013\u001a\u00020\u000b2\u0006\u0010\u0010\u001a\u00020\u00112\u000e\u0010\u0014\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\u0015J\u0016\u0010\u0016\u001a\u00020\u000b2\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\b\u001a\u00020\tJ\u001c\u0010\u0016\u001a\u00020\u000b2\u0006\u0010\u0010\u001a\u00020\u00112\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006J$\u0010\u0017\u001a\u00020\u000b2\f\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\u00070\u00192\f\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u00070\u0019H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0004¢\u0006\u0002\n\u0000¨\u0006\u001b"}, d2 = {"Lcom/coolapk/market/view/block/AddBlockDialog;", "", "()V", "TOPIC_REGEX", "Lkotlin/text/Regex;", "createBlockList", "", "Lcom/coolapk/market/view/block/BlockItem;", "feed", "Lcom/coolapk/market/model/Feed;", "setupCoolFlowLayout", "", "binding", "Lcom/coolapk/market/databinding/DialogBlockNodeBinding;", "dialog", "Landroidx/fragment/app/DialogFragment;", "activity", "Landroid/app/Activity;", "blockItemList", "showAddBlockDialog", "callback", "Lkotlin/Function0;", "showBlockNodeDialog", "updateBlockNodes", "startList", "", "endList", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: AddBlockDialog.kt */
 public final class AddBlockDialog {
     public static final AddBlockDialog INSTANCE = new AddBlockDialog();
@@ -36,7 +38,7 @@ public final class AddBlockDialog {
     public final void showAddBlockDialog(Activity activity, Function0<Unit> function0) {
         Intrinsics.checkNotNullParameter(activity, "activity");
         Activity activity2 = activity;
-        DialogAddBlockWordBinding dialogAddBlockWordBinding = (DialogAddBlockWordBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131558511, null, false);
+        DialogAddBlockWordBinding dialogAddBlockWordBinding = (DialogAddBlockWordBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131558513, null, false);
         AlertDialog.Builder builder = new AlertDialog.Builder(activity2);
         Intrinsics.checkNotNullExpressionValue(dialogAddBlockWordBinding, "binding");
         AlertDialog create = builder.setView(dialogAddBlockWordBinding.getRoot()).create();
@@ -58,7 +60,7 @@ public final class AddBlockDialog {
             }
         }
         Activity activity2 = activity;
-        DialogBlockNodeBinding dialogBlockNodeBinding = (DialogBlockNodeBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131558519, null, false);
+        DialogBlockNodeBinding dialogBlockNodeBinding = (DialogBlockNodeBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131558521, null, false);
         AlertDialog.Builder builder = new AlertDialog.Builder(activity2);
         Intrinsics.checkNotNullExpressionValue(dialogBlockNodeBinding, "binding");
         AlertDialog create = builder.setView(dialogBlockNodeBinding.getRoot()).create();
@@ -122,6 +124,7 @@ public final class AddBlockDialog {
         return arrayList;
     }
 
+    /* access modifiers changed from: private */
     public final void updateBlockNodes(List<BlockItem> list, List<BlockItem> list2) {
         ArrayList arrayList = new ArrayList();
         int size = list.size();

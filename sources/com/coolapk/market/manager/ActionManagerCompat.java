@@ -10,8 +10,15 @@ import androidx.fragment.app.Fragment;
 import com.coolapk.market.AppHolder;
 import com.coolapk.market.AppTheme;
 import com.coolapk.market.local.LoginSession;
+import com.coolapk.market.model.FeedGoods;
+import com.coolapk.market.model.Goods;
 import com.coolapk.market.model.UserProfile;
+import com.coolapk.market.util.ActivityResultAdapter;
+import com.coolapk.market.util.ActivityResultAdapterKt;
+import com.coolapk.market.util.ExpireCache;
 import com.coolapk.market.util.LogUtils;
+import com.coolapk.market.util.RxUtils;
+import com.coolapk.market.util.UiUtils;
 import com.coolapk.market.util.UriActionUtils;
 import com.coolapk.market.view.app.AppCategoryTabActivity;
 import com.coolapk.market.view.base.SimpleActivity;
@@ -21,6 +28,7 @@ import com.coolapk.market.view.feed.vote.VoteCommentConfig;
 import com.coolapk.market.view.feed.vote.VoteOptionDetailActivity;
 import com.coolapk.market.view.feed.vote.VoteUserListFragment;
 import com.coolapk.market.view.feedv8.FeedHistoryListFragment;
+import com.coolapk.market.view.goods.GoodsSearchActivity;
 import com.coolapk.market.view.goods.detail.GoodsDetailActivity;
 import com.coolapk.market.view.main.DataListFragment;
 import com.coolapk.market.view.main.PearGoodsFragment;
@@ -34,9 +42,14 @@ import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.yalantis.ucrop.UCrop;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 import kotlin.Unit;
+import kotlin.collections.ArraysKt;
+import kotlin.collections.CollectionsKt;
+import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
+import rx.Subscriber;
 
 /* compiled from: ActionManagerCompat.kt */
 public final class ActionManagerCompat {
@@ -247,5 +260,87 @@ public final class ActionManagerCompat {
         Intrinsics.checkNotNullParameter(context, "activity");
         Intrinsics.checkNotNullParameter(str, "feedId");
         new SimpleActivity.Builder(context).fragmentClass(FeedHistoryListFragment.class).title("动态编辑记录").addArgs("FEED_ID", str).start();
+    }
+
+    public final void startWithGoodsBuyUrl(Context context, Goods goods) {
+        Intrinsics.checkNotNullParameter(context, "context");
+        Intrinsics.checkNotNullParameter(goods, "goods");
+        StringBuilder sb = new StringBuilder();
+        sb.append("GOODS_BUY_URL_");
+        String goodsUrl = goods.getGoodsUrl();
+        int i = 0;
+        sb.append(goodsUrl != null ? goodsUrl.hashCode() : 0);
+        sb.append('_');
+        String goodsBuyUrl = goods.getGoodsBuyUrl();
+        if (goodsBuyUrl != null) {
+            i = goodsBuyUrl.hashCode();
+        }
+        sb.append(i);
+        String sb2 = sb.toString();
+        String str = (String) ExpireCache.INSTANCE.getOrNull(sb2, 14400000);
+        if (Intrinsics.areEqual(str, "Waiting...")) {
+            Toast.show$default(context, "正在打开，请稍等", 0, false, 12, null);
+        } else if (str != null) {
+            startActivityByUrl(context, str, goods.getTitle(), goods.getSubTitle());
+        } else {
+            ExpireCache.INSTANCE.put(sb2, "Waiting...");
+            DataManager.getInstance().getGoodsBuyUrl(goods.getGoodsUrl(), goods.getGoodsBuyUrl()).compose(RxUtils.apiCommonToData()).subscribe((Subscriber<? super R>) new ActionManagerCompat$startWithGoodsBuyUrl$1(sb2, context, goods));
+        }
+    }
+
+    public final void startGoodsSearchActivityWithCallback(Context context, Function1<? super FeedGoods, Unit> function1) {
+        Intrinsics.checkNotNullParameter(context, "context");
+        Intrinsics.checkNotNullParameter(function1, "callback");
+        ActivityResultAdapter findActivityResultAdapter = ActivityResultAdapterKt.findActivityResultAdapter(context);
+        if (findActivityResultAdapter != null) {
+            findActivityResultAdapter.startActivityForResult(new Intent(context, GoodsSearchActivity.class), new ActionManagerCompat$startGoodsSearchActivityWithCallback$1(function1));
+            return;
+        }
+        throw new IllegalArgumentException("Required value was null.".toString());
+    }
+
+    /* JADX DEBUG: Multi-variable search result rejected for r0v0, resolved type: com.coolapk.market.manager.ActionManagerCompat */
+    /* JADX WARN: Multi-variable type inference failed */
+    public static /* synthetic */ void startPhotoPickerActivityWithCallback$default(ActionManagerCompat actionManagerCompat, Context context, int i, List list, Function1 function1, int i2, Object obj) {
+        if ((i2 & 4) != 0) {
+            list = CollectionsKt.emptyList();
+        }
+        actionManagerCompat.startPhotoPickerActivityWithCallback(context, i, list, function1);
+    }
+
+    public static /* synthetic */ void startFeedGoodsSellPage$default(ActionManagerCompat actionManagerCompat, Context context, String str, String str2, int i, int i2, Object obj) {
+        if ((i2 & 8) != 0) {
+            i = 1;
+        }
+        actionManagerCompat.startFeedGoodsSellPage(context, str, str2, i);
+    }
+
+    public final void startFeedGoodsSellPage(Context context, String str, String str2, int i) {
+        String str3;
+        Intrinsics.checkNotNullParameter(context, "context");
+        Intrinsics.checkNotNullParameter(str, "mallName");
+        if (StringsKt.startsWith$default(str2 != null ? str2 : "", "http", false, 2, (Object) null) || !ArraysKt.contains(new String[]{"淘宝", "天猫"}, str)) {
+            if (str2 != null) {
+                str3 = str2;
+            } else {
+                str3 = "";
+            }
+            startActivityByUrl$default(context, str3, null, null, 12, null);
+            return;
+        }
+        BearStoryHelper bearStoryHelper = BearStoryHelper.INSTANCE;
+        if (str2 == null) {
+            str2 = "";
+        }
+        bearStoryHelper.copyTaobaoWordAndJump(context, str2);
+    }
+
+    public final void startPhotoPickerActivityWithCallback(Context context, int i, List<String> list, Function1<? super List<String>, Unit> function1) {
+        Intrinsics.checkNotNullParameter(context, "context");
+        Intrinsics.checkNotNullParameter(list, "pickedList");
+        Intrinsics.checkNotNullParameter(function1, "callback");
+        Activity activityNullable = UiUtils.getActivityNullable(context);
+        Intrinsics.checkNotNull(activityNullable);
+        ActionManager.doOnStoragePermissionPermit(activityNullable, new ActionManagerCompat$startPhotoPickerActivityWithCallback$1(activityNullable, list, i, function1));
     }
 }

@@ -26,7 +26,7 @@ public class UTAnalytics {
     private boolean N;
 
     /* renamed from: a  reason: collision with other field name */
-    private UTTracker f95a;
+    private UTTracker f94a;
     private Map<String, UTTracker> w = new HashMap();
     private Map<String, UTTracker> x = new HashMap();
 
@@ -109,13 +109,13 @@ public class UTAnalytics {
     }
 
     public synchronized UTTracker getDefaultTracker() {
-        if (this.f95a == null) {
-            this.f95a = new UTTracker();
+        if (this.f94a == null) {
+            this.f94a = new UTTracker();
         }
-        if (this.f95a == null) {
+        if (this.f94a == null) {
             i.a("getDefaultTracker error", "Fatal Error,must call setRequestAuthentication method first.");
         }
-        return this.f95a;
+        return this.f94a;
     }
 
     @Deprecated
@@ -193,7 +193,7 @@ public class UTAnalytics {
     }
 
     public void updateSessionProperties(Map<String, String> map) {
-        Map<String, String> a2 = c.a().m23a();
+        Map<String, String> a2 = c.a().m13a();
         HashMap hashMap = new HashMap();
         if (a2 != null) {
             hashMap.putAll(a2);

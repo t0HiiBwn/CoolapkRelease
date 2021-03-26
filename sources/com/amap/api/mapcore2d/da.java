@@ -24,9 +24,7 @@ public class da {
     private String i;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String[] f1231l;
+    private String[] l;
 
     public static String h() {
         return "a6=1";
@@ -34,23 +32,23 @@ public class da {
 
     private da() {
         this.c = 1;
-        this.f1231l = null;
+        this.l = null;
     }
 
     private da(a aVar) {
         this.c = 1;
-        this.f1231l = null;
+        this.l = null;
         this.g = aVar.a;
         this.h = aVar.b;
         this.j = aVar.c;
         this.i = aVar.d;
         this.c = aVar.e ? 1 : 0;
         this.k = aVar.f;
-        this.f1231l = aVar.g;
+        this.l = aVar.g;
         this.b = db.b(this.h);
         this.a = db.b(this.j);
         this.d = db.b(this.i);
-        this.e = db.b(a(this.f1231l));
+        this.e = db.b(a(this.l));
         this.f = db.b(this.k);
     }
 
@@ -135,11 +133,11 @@ public class da {
     }
 
     public String[] g() {
-        String[] strArr = this.f1231l;
+        String[] strArr = this.l;
         if ((strArr == null || strArr.length == 0) && !TextUtils.isEmpty(this.e)) {
-            this.f1231l = b(db.c(this.e));
+            this.l = b(db.c(this.e));
         }
-        return (String[]) this.f1231l.clone();
+        return (String[]) this.l.clone();
     }
 
     private String[] b(String str) {
@@ -189,7 +187,7 @@ public class da {
 
     public int hashCode() {
         dk dkVar = new dk();
-        dkVar.a(this.j).a(this.g).a(this.h).a((Object[]) this.f1231l);
+        dkVar.a(this.j).a(this.g).a(this.h).a((Object[]) this.l);
         return dkVar.a();
     }
 }

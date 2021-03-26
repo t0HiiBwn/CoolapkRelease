@@ -41,7 +41,7 @@ public abstract class ItemFavoriteBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFavoriteBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFavoriteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558689, viewGroup, z, obj);
+        return (ItemFavoriteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558695, viewGroup, z, obj);
     }
 
     public static ItemFavoriteBinding inflate(LayoutInflater layoutInflater) {
@@ -50,7 +50,7 @@ public abstract class ItemFavoriteBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFavoriteBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFavoriteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558689, null, false, obj);
+        return (ItemFavoriteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558695, null, false, obj);
     }
 
     public static ItemFavoriteBinding bind(View view) {
@@ -59,6 +59,6 @@ public abstract class ItemFavoriteBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFavoriteBinding bind(View view, Object obj) {
-        return (ItemFavoriteBinding) bind(obj, view, 2131558689);
+        return (ItemFavoriteBinding) bind(obj, view, 2131558695);
     }
 }

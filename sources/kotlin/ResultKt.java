@@ -22,20 +22,20 @@ public final class ResultKt {
     private static final <R> Object runCatching(Function0<? extends R> function0) {
         try {
             Result.Companion companion = Result.Companion;
-            return Result.m687constructorimpl(function0.invoke());
+            return Result.m85constructorimpl(function0.invoke());
         } catch (Throwable th) {
             Result.Companion companion2 = Result.Companion;
-            return Result.m687constructorimpl(createFailure(th));
+            return Result.m85constructorimpl(createFailure(th));
         }
     }
 
     private static final <T, R> Object runCatching(T t, Function1<? super T, ? extends R> function1) {
         try {
             Result.Companion companion = Result.Companion;
-            return Result.m687constructorimpl(function1.invoke(t));
+            return Result.m85constructorimpl(function1.invoke(t));
         } catch (Throwable th) {
             Result.Companion companion2 = Result.Companion;
-            return Result.m687constructorimpl(createFailure(th));
+            return Result.m85constructorimpl(createFailure(th));
         }
     }
 
@@ -49,67 +49,67 @@ public final class ResultKt {
     /* JADX DEBUG: Multi-variable search result rejected for r1v0, resolved type: java.lang.Object */
     /* JADX WARN: Multi-variable type inference failed */
     private static final <R, T extends R> R getOrElse(Object obj, Function1<? super Throwable, ? extends R> function1) {
-        Throwable r0 = Result.m690exceptionOrNullimpl(obj);
+        Throwable r0 = Result.m88exceptionOrNullimpl(obj);
         return r0 == null ? obj : (R) function1.invoke(r0);
     }
 
     /* JADX DEBUG: Multi-variable search result rejected for r1v0, resolved type: java.lang.Object */
     /* JADX WARN: Multi-variable type inference failed */
     private static final <R, T extends R> R getOrDefault(Object obj, R r) {
-        return Result.m693isFailureimpl(obj) ? r : obj;
+        return Result.m91isFailureimpl(obj) ? r : obj;
     }
 
     private static final <R, T> R fold(Object obj, Function1<? super T, ? extends R> function1, Function1<? super Throwable, ? extends R> function12) {
-        Throwable r0 = Result.m690exceptionOrNullimpl(obj);
+        Throwable r0 = Result.m88exceptionOrNullimpl(obj);
         return r0 == null ? (R) function1.invoke(obj) : (R) function12.invoke(r0);
     }
 
     private static final <R, T> Object map(Object obj, Function1<? super T, ? extends R> function1) {
-        if (!Result.m694isSuccessimpl(obj)) {
-            return Result.m687constructorimpl(obj);
+        if (!Result.m92isSuccessimpl(obj)) {
+            return Result.m85constructorimpl(obj);
         }
         Result.Companion companion = Result.Companion;
-        return Result.m687constructorimpl(function1.invoke(obj));
+        return Result.m85constructorimpl(function1.invoke(obj));
     }
 
     private static final <R, T> Object mapCatching(Object obj, Function1<? super T, ? extends R> function1) {
-        if (!Result.m694isSuccessimpl(obj)) {
-            return Result.m687constructorimpl(obj);
+        if (!Result.m92isSuccessimpl(obj)) {
+            return Result.m85constructorimpl(obj);
         }
         try {
             Result.Companion companion = Result.Companion;
-            return Result.m687constructorimpl(function1.invoke(obj));
+            return Result.m85constructorimpl(function1.invoke(obj));
         } catch (Throwable th) {
             Result.Companion companion2 = Result.Companion;
-            return Result.m687constructorimpl(createFailure(th));
+            return Result.m85constructorimpl(createFailure(th));
         }
     }
 
     private static final <R, T extends R> Object recover(Object obj, Function1<? super Throwable, ? extends R> function1) {
-        Throwable r0 = Result.m690exceptionOrNullimpl(obj);
+        Throwable r0 = Result.m88exceptionOrNullimpl(obj);
         if (r0 == null) {
             return obj;
         }
         Result.Companion companion = Result.Companion;
-        return Result.m687constructorimpl(function1.invoke(r0));
+        return Result.m85constructorimpl(function1.invoke(r0));
     }
 
     private static final <R, T extends R> Object recoverCatching(Object obj, Function1<? super Throwable, ? extends R> function1) {
-        Throwable r0 = Result.m690exceptionOrNullimpl(obj);
+        Throwable r0 = Result.m88exceptionOrNullimpl(obj);
         if (r0 == null) {
             return obj;
         }
         try {
             Result.Companion companion = Result.Companion;
-            return Result.m687constructorimpl(function1.invoke(r0));
+            return Result.m85constructorimpl(function1.invoke(r0));
         } catch (Throwable th) {
             Result.Companion companion2 = Result.Companion;
-            return Result.m687constructorimpl(createFailure(th));
+            return Result.m85constructorimpl(createFailure(th));
         }
     }
 
     private static final <T> Object onFailure(Object obj, Function1<? super Throwable, Unit> function1) {
-        Throwable r0 = Result.m690exceptionOrNullimpl(obj);
+        Throwable r0 = Result.m88exceptionOrNullimpl(obj);
         if (r0 != null) {
             function1.invoke(r0);
         }
@@ -117,7 +117,7 @@ public final class ResultKt {
     }
 
     private static final <T> Object onSuccess(Object obj, Function1<? super T, Unit> function1) {
-        if (Result.m694isSuccessimpl(obj)) {
+        if (Result.m92isSuccessimpl(obj)) {
             function1.invoke(obj);
         }
         return obj;

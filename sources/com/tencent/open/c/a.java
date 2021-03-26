@@ -11,11 +11,11 @@ public class a extends RelativeLayout {
     private static final String a = "com.tencent.open.c.a";
     private Rect b;
     private boolean c;
-    private AbstractC0136a d;
+    private AbstractC0154a d;
 
     /* renamed from: com.tencent.open.c.a$a  reason: collision with other inner class name */
     /* compiled from: ProGuard */
-    public interface AbstractC0136a {
+    public interface AbstractC0154a {
         void a();
 
         void a(int i);
@@ -29,7 +29,7 @@ public class a extends RelativeLayout {
         this.b = new Rect();
     }
 
-    public void a(AbstractC0136a aVar) {
+    public void a(AbstractC0154a aVar) {
         this.d = aVar;
     }
 
@@ -39,7 +39,7 @@ public class a extends RelativeLayout {
         Activity activity = (Activity) getContext();
         activity.getWindow().getDecorView().getWindowVisibleDisplayFrame(this.b);
         int height = (activity.getWindowManager().getDefaultDisplay().getHeight() - this.b.top) - size;
-        AbstractC0136a aVar = this.d;
+        AbstractC0154a aVar = this.d;
         if (!(aVar == null || size == 0)) {
             if (height > 100) {
                 aVar.a((Math.abs(this.b.height()) - getPaddingBottom()) - getPaddingTop());

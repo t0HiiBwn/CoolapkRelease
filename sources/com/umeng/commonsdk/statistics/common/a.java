@@ -17,11 +17,11 @@ public class a {
 
     /* renamed from: com.umeng.commonsdk.statistics.common.a$a  reason: collision with other inner class name */
     /* compiled from: AdvertisingId */
-    private static final class C0149a {
+    private static final class C0176a {
         private final String a;
         private final boolean b;
 
-        C0149a(String str, boolean z) {
+        C0176a(String str, boolean z) {
             this.a = str;
             this.b = z;
         }
@@ -38,7 +38,7 @@ public class a {
 
     public static String a(Context context) {
         try {
-            C0149a c2 = c(context);
+            C0176a c2 = c(context);
             if (c2 != null && !c2.a()) {
                 return c2.b();
             }
@@ -49,7 +49,7 @@ public class a {
 
     public static String b(Context context) {
         try {
-            C0149a c2 = c(context);
+            C0176a c2 = c(context);
             if (c2 == null) {
                 return null;
             }
@@ -59,7 +59,7 @@ public class a {
         }
     }
 
-    private static C0149a c(Context context) throws Exception {
+    private static C0176a c(Context context) throws Exception {
         if (Looper.myLooper() == Looper.getMainLooper()) {
             return null;
         }
@@ -76,7 +76,7 @@ public class a {
                     if (!a) {
                         str = cVar.a();
                     }
-                    C0149a aVar = new C0149a(str, a);
+                    C0176a aVar = new C0176a(str, a);
                     context.unbindService(bVar);
                     return aVar;
                 } catch (Exception e) {

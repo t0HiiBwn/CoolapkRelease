@@ -94,9 +94,9 @@ public final class RelativeMessageListFragment extends EntityListFragment {
     protected void onRegisterCards() {
         super.onRegisterCards();
         addEntityTemplate("liveMessage");
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), createFactor(new String[]{"liveMessage"}, 2131558808, new RelativeMessageListFragment$onRegisterCards$1(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), createFactor(new String[]{"liveMessage"}, 2131558815, new RelativeMessageListFragment$onRegisterCards$1(this)), 0, 2, null);
         addEntityTemplate("liveSystemMessage");
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), createFactor(new String[]{"liveSystemMessage"}, 2131558809, RelativeMessageListFragment$onRegisterCards$2.INSTANCE), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), createFactor(new String[]{"liveSystemMessage"}, 2131558816, RelativeMessageListFragment$onRegisterCards$2.INSTANCE), 0, 2, null);
     }
 
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListContract.View

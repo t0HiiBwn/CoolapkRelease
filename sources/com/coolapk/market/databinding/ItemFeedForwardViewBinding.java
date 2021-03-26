@@ -49,7 +49,7 @@ public abstract class ItemFeedForwardViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedForwardViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedForwardViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558701, viewGroup, z, obj);
+        return (ItemFeedForwardViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558708, viewGroup, z, obj);
     }
 
     public static ItemFeedForwardViewBinding inflate(LayoutInflater layoutInflater) {
@@ -58,7 +58,7 @@ public abstract class ItemFeedForwardViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedForwardViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedForwardViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558701, null, false, obj);
+        return (ItemFeedForwardViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558708, null, false, obj);
     }
 
     public static ItemFeedForwardViewBinding bind(View view) {
@@ -67,6 +67,6 @@ public abstract class ItemFeedForwardViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedForwardViewBinding bind(View view, Object obj) {
-        return (ItemFeedForwardViewBinding) bind(obj, view, 2131558701);
+        return (ItemFeedForwardViewBinding) bind(obj, view, 2131558708);
     }
 }

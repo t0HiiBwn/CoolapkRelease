@@ -35,7 +35,7 @@ public abstract class DialogAlbumCreateBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumCreateBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogAlbumCreateBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558513, viewGroup, z, obj);
+        return (DialogAlbumCreateBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558515, viewGroup, z, obj);
     }
 
     public static DialogAlbumCreateBinding inflate(LayoutInflater layoutInflater) {
@@ -44,7 +44,7 @@ public abstract class DialogAlbumCreateBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumCreateBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogAlbumCreateBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558513, null, false, obj);
+        return (DialogAlbumCreateBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558515, null, false, obj);
     }
 
     public static DialogAlbumCreateBinding bind(View view) {
@@ -53,6 +53,6 @@ public abstract class DialogAlbumCreateBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumCreateBinding bind(View view, Object obj) {
-        return (DialogAlbumCreateBinding) bind(obj, view, 2131558513);
+        return (DialogAlbumCreateBinding) bind(obj, view, 2131558515);
     }
 }

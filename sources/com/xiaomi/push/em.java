@@ -1,172 +1,268 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.clientreport.data.Config;
-import com.xiaomi.clientreport.data.EventClientReport;
-import com.xiaomi.clientreport.data.PerfClientReport;
-import com.xiaomi.clientreport.manager.ClientReportClient;
-import com.xiaomi.push.service.an;
-import com.xiaomi.push.service.bl;
-import com.xiaomi.push.service.bm;
-import java.util.HashMap;
-import java.util.List;
+import android.util.Pair;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.service.XMPushService;
+import com.xiaomi.push.service.q;
+import com.xiaomi.push.service.u;
+import java.io.Reader;
+import java.io.Writer;
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.Objects;
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 
-public class em {
-    private static a a;
+public abstract class em {
+    public static boolean a;
+    private static final AtomicInteger o = new AtomicInteger(0);
+    protected int b = 0;
+    protected long c = -1;
+    protected volatile long d = 0;
+    protected volatile long e = 0;
+    protected final Map<er, a> f = new ConcurrentHashMap();
+    protected final Map<er, a> g = new ConcurrentHashMap();
+    protected ez h = null;
+    protected String i = "";
+    protected String j = "";
+    protected final int k = o.getAndIncrement();
+    protected en l;
+    protected XMPushService m;
+    protected long n = 0;
+    private LinkedList<Pair<Integer, Long>> p = new LinkedList<>();
+    private final Collection<ep> q = new CopyOnWriteArrayList();
+    private int r = 2;
+    private long s = 0;
 
-    /* renamed from: a  reason: collision with other field name */
-    private static Map<String, hm> f400a;
+    public static class a {
+        private er a;
+        private fa b;
 
-    public interface a {
-        void uploader(Context context, hg hgVar);
-    }
-
-    public static int a(int i) {
-        if (i > 0) {
-            return i + 1000;
+        public a(er erVar, fa faVar) {
+            this.a = erVar;
+            this.b = faVar;
         }
-        return -1;
-    }
 
-    public static int a(Enum r1) {
-        if (r1 != null) {
-            if (r1 instanceof hc) {
-                return r1.ordinal() + 1001;
-            }
-            if (r1 instanceof hm) {
-                return r1.ordinal() + 2001;
-            }
-            if (r1 instanceof ew) {
-                return r1.ordinal() + 3001;
+        public void a(ef efVar) {
+            this.a.a(efVar);
+        }
+
+        public void a(fe feVar) {
+            fa faVar = this.b;
+            if (faVar == null || faVar.a(feVar)) {
+                this.a.b(feVar);
             }
         }
-        return -1;
     }
 
-    public static Config a(Context context) {
-        boolean a2 = an.a(context).a(hh.PerfUploadSwitch.a(), false);
-        boolean a3 = an.a(context).a(hh.EventUploadNewSwitch.a(), false);
-        int a4 = an.a(context).a(hh.PerfUploadFrequency.a(), 86400);
-        return Config.getBuilder().setEventUploadSwitchOpen(a3).setEventUploadFrequency((long) an.a(context).a(hh.EventUploadFrequency.a(), 86400)).setPerfUploadSwitchOpen(a2).setPerfUploadFrequency((long) a4).build(context);
-    }
-
-    public static EventClientReport a(Context context, String str, String str2, int i, long j, String str3) {
-        EventClientReport a2 = a(str);
-        a2.eventId = str2;
-        a2.eventType = i;
-        a2.eventTime = j;
-        a2.eventContent = str3;
-        return a2;
-    }
-
-    public static EventClientReport a(String str) {
-        EventClientReport eventClientReport = new EventClientReport();
-        eventClientReport.production = 1000;
-        eventClientReport.reportType = 1001;
-        eventClientReport.clientInterfaceId = str;
-        return eventClientReport;
-    }
-
-    public static PerfClientReport a() {
-        PerfClientReport perfClientReport = new PerfClientReport();
-        perfClientReport.production = 1000;
-        perfClientReport.reportType = 1000;
-        perfClientReport.clientInterfaceId = "P100000";
-        return perfClientReport;
-    }
-
-    public static PerfClientReport a(Context context, int i, long j, long j2) {
-        PerfClientReport a2 = a();
-        a2.code = i;
-        a2.perfCounts = j;
-        a2.perfLatencies = j2;
-        return a2;
-    }
-
-    public static hg a(Context context, String str) {
-        if (TextUtils.isEmpty(str)) {
-            return null;
+    static {
+        a = false;
+        try {
+            a = Boolean.getBoolean("smack.debugEnabled");
+        } catch (Exception unused) {
         }
-        hg hgVar = new hg();
-        hgVar.d("category_client_report_data");
-        hgVar.a("push_sdk_channel");
-        hgVar.a(1);
-        hgVar.b(str);
-        hgVar.a(true);
-        hgVar.b(System.currentTimeMillis());
-        hgVar.g(context.getPackageName());
-        hgVar.e("com.xiaomi.xmsf");
-        hgVar.f(bl.a());
-        hgVar.c("quality_support");
-        return hgVar;
+        es.a();
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public static hm m291a(String str) {
-        if (f400a == null) {
-            synchronized (hm.class) {
-                if (f400a == null) {
-                    f400a = new HashMap();
-                    hm[] values = hm.values();
-                    for (hm hmVar : values) {
-                        f400a.put(hmVar.f576a.toLowerCase(), hmVar);
-                    }
+    protected em(XMPushService xMPushService, en enVar) {
+        this.l = enVar;
+        this.m = xMPushService;
+        h();
+    }
+
+    private String a(int i2) {
+        return i2 == 1 ? "connected" : i2 == 0 ? "connecting" : i2 == 2 ? "disconnected" : "unknown";
+    }
+
+    private void b(int i2) {
+        synchronized (this.p) {
+            if (i2 == 1) {
+                this.p.clear();
+            } else {
+                this.p.add(new Pair<>(Integer.valueOf(i2), Long.valueOf(System.currentTimeMillis())));
+                if (this.p.size() > 6) {
+                    this.p.remove(0);
                 }
             }
         }
-        hm hmVar2 = f400a.get(str.toLowerCase());
-        return hmVar2 != null ? hmVar2 : hm.Invalid;
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public static String m292a(int i) {
-        return i == 1000 ? "E100000" : i == 3000 ? "E100002" : i == 2000 ? "E100001" : i == 6000 ? "E100003" : "";
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public static void m293a(Context context) {
-        ClientReportClient.updateConfig(context, a(context));
-    }
-
-    public static void a(Context context, Config config) {
-        ClientReportClient.init(context, config, new ek(context), new el(context));
-    }
-
-    private static void a(Context context, hg hgVar) {
-        if (m294a(context.getApplicationContext())) {
-            bm.a(context.getApplicationContext(), hgVar);
-            return;
+    public void a(int i2, int i3, Exception exc) {
+        int i4 = this.r;
+        if (i2 != i4) {
+            c.a(String.format("update the connection status. %1$s -> %2$s : %3$s ", a(i4), a(i2), u.a(i3)));
         }
-        a aVar = a;
-        if (aVar != null) {
-            aVar.uploader(context, hgVar);
+        if (aa.c(this.m)) {
+            b(i2);
+        }
+        if (i2 == 1) {
+            this.m.a(10);
+            if (this.r != 0) {
+                c.a("try set connected while not connecting.");
+            }
+            this.r = i2;
+            for (ep epVar : this.q) {
+                epVar.a(this);
+            }
+        } else if (i2 == 0) {
+            if (this.r != 2) {
+                c.a("try set connecting while not disconnected.");
+            }
+            this.r = i2;
+            for (ep epVar2 : this.q) {
+                epVar2.b(this);
+            }
+        } else if (i2 == 2) {
+            this.m.a(10);
+            int i5 = this.r;
+            if (i5 == 0) {
+                for (ep epVar3 : this.q) {
+                    epVar3.a(this, exc == null ? new CancellationException("disconnect while connecting") : exc);
+                }
+            } else if (i5 == 1) {
+                for (ep epVar4 : this.q) {
+                    epVar4.a(this, i3, exc);
+                }
+            }
+            this.r = i2;
         }
     }
 
-    public static void a(Context context, List<String> list) {
-        if (list != null) {
+    public void a(ep epVar) {
+        if (epVar != null && !this.q.contains(epVar)) {
+            this.q.add(epVar);
+        }
+    }
+
+    public void a(er erVar, fa faVar) {
+        Objects.requireNonNull(erVar, "Packet listener is null.");
+        this.f.put(erVar, new a(erVar, faVar));
+    }
+
+    public abstract void a(fe feVar);
+
+    public abstract void a(q.b bVar);
+
+    public synchronized void a(String str) {
+        if (this.r == 0) {
+            c.a("setChallenge hash = " + ag.a(str).substring(0, 8));
+            this.i = str;
+            a(1, 0, null);
+        } else {
+            c.a("ignore setChallenge because connection was disconnected");
+        }
+    }
+
+    public abstract void a(String str, String str2);
+
+    public abstract void a(ef[] efVarArr);
+
+    public synchronized boolean a(long j2) {
+        return this.s >= j2;
+    }
+
+    public abstract void b(int i2, Exception exc);
+
+    public abstract void b(ef efVar);
+
+    public void b(ep epVar) {
+        this.q.remove(epVar);
+    }
+
+    public void b(er erVar, fa faVar) {
+        Objects.requireNonNull(erVar, "Packet listener is null.");
+        this.g.put(erVar, new a(erVar, faVar));
+    }
+
+    public abstract void b(boolean z);
+
+    public boolean b() {
+        return false;
+    }
+
+    public en d() {
+        return this.l;
+    }
+
+    public String e() {
+        return this.l.e();
+    }
+
+    public String f() {
+        return this.l.b();
+    }
+
+    public long g() {
+        return this.e;
+    }
+
+    protected void h() {
+        String str;
+        if (this.l.f() && this.h == null) {
+            Class<?> cls = null;
             try {
-                for (String str : list) {
-                    hg a2 = a(context, str);
-                    if (!bl.a(a2, false)) {
-                        a(context, a2);
-                    }
+                str = System.getProperty("smack.debuggerClass");
+            } catch (Throwable unused) {
+                str = null;
+            }
+            if (str != null) {
+                try {
+                    cls = Class.forName(str);
+                } catch (Exception e2) {
+                    e2.printStackTrace();
                 }
-            } catch (Throwable th) {
-                b.d(th.getMessage());
+            }
+            if (cls == null) {
+                this.h = new ap(this);
+                return;
+            }
+            try {
+                this.h = (ez) cls.getConstructor(em.class, Writer.class, Reader.class).newInstance(this);
+            } catch (Exception e3) {
+                throw new IllegalArgumentException("Can't initialize the configured debugger!", e3);
             }
         }
     }
 
-    public static void a(a aVar) {
-        a = aVar;
+    public boolean i() {
+        return this.r == 0;
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public static boolean m294a(Context context) {
-        return context != null && !TextUtils.isEmpty(context.getPackageName()) && "com.xiaomi.xmsf".equals(context.getPackageName());
+    public boolean j() {
+        return this.r == 1;
+    }
+
+    public int k() {
+        return this.b;
+    }
+
+    public int l() {
+        return this.r;
+    }
+
+    public synchronized void m() {
+        this.s = System.currentTimeMillis();
+    }
+
+    public synchronized boolean n() {
+        return System.currentTimeMillis() - this.s < ((long) es.b());
+    }
+
+    public synchronized boolean o() {
+        boolean z;
+        z = true;
+        if (System.currentTimeMillis() - this.n >= ((long) (es.b() << 1))) {
+            z = false;
+        }
+        return z;
+    }
+
+    public void p() {
+        synchronized (this.p) {
+            this.p.clear();
+        }
     }
 }

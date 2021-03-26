@@ -27,9 +27,9 @@ public class VoteFeedContentBindingImpl extends VoteFeedContentBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 8);
-        sparseIntArray.put(2131362958, 9);
-        sparseIntArray.put(2131363946, 10);
+        sparseIntArray.put(2131363604, 8);
+        sparseIntArray.put(2131362970, 9);
+        sparseIntArray.put(2131363972, 10);
     }
 
     public VoteFeedContentBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -75,7 +75,7 @@ public class VoteFeedContentBindingImpl extends VoteFeedContentBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (288 == i) {
+        if (289 == i) {
             setUiConfig((FeedUIConfig) obj);
         } else if (50 != i) {
             return false;
@@ -91,7 +91,7 @@ public class VoteFeedContentBindingImpl extends VoteFeedContentBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(288);
+        notifyPropertyChanged(289);
         super.requestRebind();
     }
 

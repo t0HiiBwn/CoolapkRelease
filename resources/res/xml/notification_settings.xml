@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_push_service_enabled" android:key="push_service_enabled" android:summary="@string/pref_description_push_service_enabled"/>
+    <com.coolapk.market.widget.preference.CheckBoxPreference android:title="后台推送保活" android:key="tpns_keep_alive" android:summary="开启后系统会尽量保证酷安后台服务不被杀死，以保证稳定收取通知，关闭后可能导致无法收到通知（重启应用生效）"/>
     <com.coolapk.market.widget.preference.PreferenceGroup android:title="通知栏">
         <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_show_notice_notification_enabled" android:key="show_notice_notification_enabled" android:summary="@string/pref_description_show_notice_notification_enabled" android:dependency="push_service_enabled"/>
         <com.coolapk.market.widget.preference.CheckBoxPreference android:title="@string/pref_title_show_upgrade_notification_enabled" android:key="show_upgrade_notification_enabled" android:summary="@string/pref_title_show_upgrade_notification_enabled_content"/>

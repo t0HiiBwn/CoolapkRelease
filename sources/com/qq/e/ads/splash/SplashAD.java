@@ -1,5 +1,6 @@
 package com.qq.e.ads.splash;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Handler;
@@ -9,6 +10,9 @@ import android.view.ViewGroup;
 import com.qq.e.comm.a;
 import com.qq.e.comm.adevent.ADEvent;
 import com.qq.e.comm.adevent.ADListener;
+import com.qq.e.comm.compliance.ApkDownloadComplianceInterface;
+import com.qq.e.comm.compliance.DownloadConfirmCallBack;
+import com.qq.e.comm.compliance.DownloadConfirmListener;
 import com.qq.e.comm.constants.LoadAdParams;
 import com.qq.e.comm.managers.GDTADManager;
 import com.qq.e.comm.managers.plugin.c;
@@ -20,7 +24,7 @@ import com.qq.e.comm.util.StringUtil;
 import java.util.Map;
 import org.json.JSONObject;
 
-public final class SplashAD {
+public final class SplashAD implements ApkDownloadComplianceInterface, DownloadConfirmListener {
     public static final int EVENT_TYPE_AD_CLICKED = 4;
     public static final int EVENT_TYPE_AD_DISMISSED = 1;
     public static final int EVENT_TYPE_AD_EXPOSURE = 6;
@@ -39,6 +43,7 @@ public final class SplashAD {
     private int g;
     private int h;
     private volatile View i;
+    private DownloadConfirmListener j;
 
     private class ADListenerAdapter implements ADListener {
         private ADListenerAdapter() {
@@ -294,6 +299,14 @@ public final class SplashAD {
         return null;
     }
 
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public final String getApkInfoUrl() {
+        if (this.a != null) {
+            return this.a.getApkInfoUrl();
+        }
+        return null;
+    }
+
     public final String getECPMLevel() {
         if (this.a != null) {
             return this.a.getECPMLevel();
@@ -319,6 +332,14 @@ public final class SplashAD {
         return null;
     }
 
+    @Override // com.qq.e.comm.compliance.DownloadConfirmListener
+    public final void onDownloadConfirm(Activity activity, int i2, String str, DownloadConfirmCallBack downloadConfirmCallBack) {
+        DownloadConfirmListener downloadConfirmListener = this.j;
+        if (downloadConfirmListener != null) {
+            downloadConfirmListener.onDownloadConfirm(activity, i2, str, downloadConfirmCallBack);
+        }
+    }
+
     public final void preLoad() {
         if (this.a != null) {
             this.a.preload();
@@ -330,6 +351,14 @@ public final class SplashAD {
     public final void setAdLogoMargin(int i2, int i3) {
         this.g = i2;
         this.h = i3;
+    }
+
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public final void setDownloadConfirmListener(DownloadConfirmListener downloadConfirmListener) {
+        this.j = downloadConfirmListener;
+        if (this.a != null) {
+            this.a.setDownloadConfirmListener(this);
+        }
     }
 
     public final void setLoadAdParams(LoadAdParams loadAdParams) {

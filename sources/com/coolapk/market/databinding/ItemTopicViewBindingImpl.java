@@ -27,8 +27,8 @@ public class ItemTopicViewBindingImpl extends ItemTopicViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 3);
-        sparseIntArray.put(2131362376, 4);
+        sparseIntArray.put(2131363604, 3);
+        sparseIntArray.put(2131362382, 4);
     }
 
     public ItemTopicViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -67,7 +67,7 @@ public class ItemTopicViewBindingImpl extends ItemTopicViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Entity) obj);
         } else if (50 != i) {
             return false;
@@ -83,7 +83,7 @@ public class ItemTopicViewBindingImpl extends ItemTopicViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -143,7 +143,7 @@ public class ItemTopicViewBindingImpl extends ItemTopicViewBinding {
         }
         if (i3 != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str3, AppCompatResources.getDrawable(this.logoView.getContext(), 2131231617), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str3, AppCompatResources.getDrawable(this.logoView.getContext(), 2131231628), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
         }
         if ((j & 4) != 0) {
             ViewBindingAdapters.clipView(this.logoView, null, 12);

@@ -14,7 +14,7 @@ public class UTMCAppStatusMonitor implements Application.ActivityLifecycleCallba
     private boolean T = false;
 
     /* renamed from: a  reason: collision with other field name */
-    private ScheduledFuture<?> f99a = null;
+    private ScheduledFuture<?> f98a = null;
     private Object e = new Object();
     private Object f = new Object();
     private List<UTMCAppStatusCallbacks> m = new LinkedList();

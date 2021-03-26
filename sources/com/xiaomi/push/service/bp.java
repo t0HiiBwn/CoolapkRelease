@@ -1,52 +1,34 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.push.hc;
+import android.content.Context;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.ey;
+import com.xiaomi.push.hf;
+import com.xiaomi.push.service.XMPushService;
 
-/* synthetic */ class bp {
-    static final /* synthetic */ int[] a;
+final class bp extends XMPushService.i {
+    final /* synthetic */ XMPushService a;
+    final /* synthetic */ hf b;
 
-    static {
-        int[] iArr = new int[hc.values().length];
-        a = iArr;
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    bp(int i, XMPushService xMPushService, hf hfVar) {
+        super(i);
+        this.a = xMPushService;
+        this.b = hfVar;
+    }
+
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public void a() {
         try {
-            iArr[hc.Registration.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+            bu.a(this.a, bn.a((Context) this.a, this.b));
+        } catch (ey e) {
+            c.a(e);
+            this.a.a(10, e);
         }
-        try {
-            a[hc.UnRegistration.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            a[hc.Subscription.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            a[hc.UnSubscription.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            a[hc.SendMessage.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            a[hc.AckMessage.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            a[hc.SetConfig.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            a[hc.ReportFeedback.ordinal()] = 8;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            a[hc.Notification.ordinal()] = 9;
-        } catch (NoSuchFieldError unused9) {
-        }
-        try {
-            a[hc.Command.ordinal()] = 10;
-        } catch (NoSuchFieldError unused10) {
-        }
+    }
+
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public String b() {
+        return "send ack message for message.";
     }
 }

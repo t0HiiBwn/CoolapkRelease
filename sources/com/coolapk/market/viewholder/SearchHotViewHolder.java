@@ -33,7 +33,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SearchHotViewHolder.kt */
 public final class SearchHotViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131559126;
+    public static final int LAYOUT_ID = 2131559133;
     private DataAdapter adapter;
     private final SearchHotBinding binding;
     private Card<Entity> card;
@@ -140,7 +140,7 @@ public final class SearchHotViewHolder extends BindingViewHolder {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public DataViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558913, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558920, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             return new DataViewHolder(inflate, this.component);
         }
@@ -173,7 +173,7 @@ public final class SearchHotViewHolder extends BindingViewHolder {
     /* compiled from: SearchHotViewHolder.kt */
     public static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558913;
+        public static final int LAYOUT_ID = 2131558920;
         private final ItemSearchHotBinding binding;
         private Entity entity;
         private Entity parentEntity;
@@ -239,7 +239,7 @@ public final class SearchHotViewHolder extends BindingViewHolder {
                     linearLayout.setBackground(SearchHotViewHolder.Companion.createBackground());
                     TextView textView = this.binding.textView;
                     if (!z) {
-                        i = ResourceUtils.getColorInt(getContext(), 2131100035);
+                        i = ResourceUtils.getColorInt(getContext(), 2131100040);
                     } else {
                         i = AppHolder.getAppTheme().getTextColorPrimary();
                     }
@@ -260,7 +260,7 @@ public final class SearchHotViewHolder extends BindingViewHolder {
         public void onClick(View view) {
             Intrinsics.checkNotNullParameter(view, "view");
             super.onClick(view);
-            if (view.getId() == 2131362768) {
+            if (view.getId() == 2131362779) {
                 StatisticHelper instance = StatisticHelper.Companion.getInstance();
                 Entity entity2 = this.entity;
                 if (entity2 == null) {

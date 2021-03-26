@@ -96,7 +96,7 @@ public final class DyhIncludActivity extends BaseActivity {
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558544);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558546);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…ity, R.layout.dyh_includ)");
         this.binding = (DyhIncludBinding) contentView;
         String stringExtra = getIntent().getStringExtra("id");
@@ -302,7 +302,7 @@ public final class DyhIncludActivity extends BaseActivity {
     private final void setupFragment() {
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "supportFragmentManager");
-        Fragment findFragmentById = supportFragmentManager.findFragmentById(2131362306);
+        Fragment findFragmentById = supportFragmentManager.findFragmentById(2131362311);
         if (!(findFragmentById instanceof DyhEditorFragment)) {
             findFragmentById = null;
         }
@@ -310,7 +310,7 @@ public final class DyhIncludActivity extends BaseActivity {
             DyhEditorFragment.Companion companion = DyhEditorFragment.Companion;
             String str = this.feedId;
             Intrinsics.checkNotNull(str);
-            supportFragmentManager.beginTransaction().add(2131362306, companion.newInstance(str)).commit();
+            supportFragmentManager.beginTransaction().add(2131362311, companion.newInstance(str)).commit();
         }
     }
 

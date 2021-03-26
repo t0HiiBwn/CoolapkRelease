@@ -37,7 +37,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemThumbnailViewHolder.kt */
 public final class ItemThumbnailViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558596;
+    public static final int LAYOUT_ID = 2131558600;
     public static final float MAX_RATIO = 0.45f;
     private final ItemAppNodeThumbnailBinding binding;
     private final ItemThumbnailViewHolder$imageTarget$1 imageTarget;
@@ -83,7 +83,7 @@ public final class ItemThumbnailViewHolder extends BindingViewHolder {
     public void bindTo(Object obj) {
         Objects.requireNonNull(obj, "null cannot be cast to non-null type kotlin.String");
         this.url = (String) obj;
-        this.binding.imageView.setTag(2131362703, obj);
+        this.binding.imageView.setTag(2131362714, obj);
         this.binding.executePendingBindings();
         ImageView imageView = this.binding.imageView;
         Intrinsics.checkNotNullExpressionValue(imageView, "binding.imageView");
@@ -95,7 +95,7 @@ public final class ItemThumbnailViewHolder extends BindingViewHolder {
         Intrinsics.checkNotNullExpressionValue(textView, "binding.longPicTextView");
         textView.setVisibility(4);
         GlideImageHelper.setClickToLoad(this.binding.imageView, true);
-        Object tag = this.binding.imageView.getTag(2131362703);
+        Object tag = this.binding.imageView.getTag(2131362714);
         Objects.requireNonNull(tag, "null cannot be cast to non-null type kotlin.String");
         Size size = this.viewModel.getImageSizeCache().get((String) tag);
         if (size != null) {
@@ -185,7 +185,7 @@ public final class ItemThumbnailViewHolder extends BindingViewHolder {
     }
 
     private final int getPlaceholder() {
-        return AppHolder.getAppTheme().isNightTheme() ? 2131231692 : 2131231691;
+        return AppHolder.getAppTheme().isNightTheme() ? 2131231703 : 2131231702;
     }
 
     /* access modifiers changed from: private */

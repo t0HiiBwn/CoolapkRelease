@@ -28,11 +28,11 @@ public class RefreshRecyclerTabsBindingImpl extends RefreshRecyclerTabsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362067, 1);
-        sparseIntArray.put(2131363480, 2);
-        sparseIntArray.put(2131362416, 3);
-        sparseIntArray.put(2131363490, 4);
-        sparseIntArray.put(2131363934, 5);
+        sparseIntArray.put(2131362069, 1);
+        sparseIntArray.put(2131363498, 2);
+        sparseIntArray.put(2131362422, 3);
+        sparseIntArray.put(2131363508, 4);
+        sparseIntArray.put(2131363959, 5);
     }
 
     public RefreshRecyclerTabsBindingImpl(DataBindingComponent dataBindingComponent, View view) {

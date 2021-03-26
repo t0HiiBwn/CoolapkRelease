@@ -19,7 +19,7 @@ public class AlbumBaseInfoBindingImpl extends AlbumBaseInfoBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363219, 2);
+        sparseIntArray.put(2131363233, 2);
     }
 
     public AlbumBaseInfoBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -55,9 +55,9 @@ public class AlbumBaseInfoBindingImpl extends AlbumBaseInfoBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (307 == i) {
+        if (308 == i) {
             setViewHolder((AlbumBaseViewHolder) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((AlbumDetailViewModel) obj);
@@ -77,7 +77,7 @@ public class AlbumBaseInfoBindingImpl extends AlbumBaseInfoBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 

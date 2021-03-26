@@ -12,7 +12,7 @@ public abstract class LiveMessage implements Entity {
     public static abstract class Builder {
         public abstract LiveMessage build();
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         public abstract Builder setDatelineFormat(String str);
 
@@ -36,7 +36,7 @@ public abstract class LiveMessage implements Entity {
 
         public abstract Builder setIsRead(int i);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLiveId(String str);
 

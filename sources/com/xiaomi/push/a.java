@@ -2,15 +2,11 @@ package com.xiaomi.push;
 
 public final class a {
     public static final a a = new a(new byte[0]);
-
-    /* renamed from: a  reason: collision with other field name */
-    private volatile int f181a = 0;
-
-    /* renamed from: a  reason: collision with other field name */
-    private final byte[] f182a;
+    private final byte[] b;
+    private volatile int c = 0;
 
     private a(byte[] bArr) {
-        this.f182a = bArr;
+        this.b = bArr;
     }
 
     public static a a(byte[] bArr) {
@@ -24,12 +20,11 @@ public final class a {
     }
 
     public int a() {
-        return this.f182a.length;
+        return this.b.length;
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public byte[] m99a() {
-        byte[] bArr = this.f182a;
+    public byte[] b() {
+        byte[] bArr = this.b;
         int length = bArr.length;
         byte[] bArr2 = new byte[length];
         System.arraycopy(bArr, 0, bArr2, 0, length);
@@ -43,9 +38,9 @@ public final class a {
         if (!(obj instanceof a)) {
             return false;
         }
-        byte[] bArr = this.f182a;
+        byte[] bArr = this.b;
         int length = bArr.length;
-        byte[] bArr2 = ((a) obj).f182a;
+        byte[] bArr2 = ((a) obj).b;
         if (length != bArr2.length) {
             return false;
         }
@@ -58,16 +53,16 @@ public final class a {
     }
 
     public int hashCode() {
-        int i = this.f181a;
+        int i = this.c;
         if (i == 0) {
-            byte[] bArr = this.f182a;
+            byte[] bArr = this.b;
             int length = bArr.length;
             int i2 = length;
-            for (byte b : bArr) {
-                i2 = (i2 * 31) + b;
+            for (byte b2 : bArr) {
+                i2 = (i2 * 31) + b2;
             }
             i = i2 == 0 ? 1 : i2;
-            this.f181a = i;
+            this.c = i;
         }
         return i;
     }

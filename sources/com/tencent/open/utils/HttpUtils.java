@@ -735,7 +735,7 @@ public class HttpUtils {
     public static class b implements X509TrustManager {
         X509TrustManager a;
 
-        /* JADX WARNING: Removed duplicated region for block: B:16:0x0038  */
+        /* JADX WARNING: Removed duplicated region for block: B:16:0x0039  */
         b() throws Exception {
             KeyStore keyStore;
             TrustManager[] trustManagerArr;

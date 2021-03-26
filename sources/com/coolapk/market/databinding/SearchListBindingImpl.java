@@ -26,7 +26,7 @@ public class SearchListBindingImpl extends SearchListBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 3);
+        sparseIntArray.put(2131363604, 3);
     }
 
     public SearchListBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -67,7 +67,7 @@ public class SearchListBindingImpl extends SearchListBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (220 != i) {
+        if (221 != i) {
             return false;
         }
         setPic((String) obj);
@@ -80,7 +80,7 @@ public class SearchListBindingImpl extends SearchListBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(220);
+        notifyPropertyChanged(221);
         super.requestRebind();
     }
 

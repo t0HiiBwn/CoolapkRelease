@@ -27,7 +27,7 @@ public abstract class ItemAppNodeThumbnailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppNodeThumbnailBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAppNodeThumbnailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558596, viewGroup, z, obj);
+        return (ItemAppNodeThumbnailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558600, viewGroup, z, obj);
     }
 
     public static ItemAppNodeThumbnailBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class ItemAppNodeThumbnailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppNodeThumbnailBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAppNodeThumbnailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558596, null, false, obj);
+        return (ItemAppNodeThumbnailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558600, null, false, obj);
     }
 
     public static ItemAppNodeThumbnailBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class ItemAppNodeThumbnailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppNodeThumbnailBinding bind(View view, Object obj) {
-        return (ItemAppNodeThumbnailBinding) bind(obj, view, 2131558596);
+        return (ItemAppNodeThumbnailBinding) bind(obj, view, 2131558600);
     }
 }

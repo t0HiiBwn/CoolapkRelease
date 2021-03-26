@@ -51,7 +51,7 @@ public abstract class PhotoPickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static PhotoPickerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (PhotoPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559080, viewGroup, z, obj);
+        return (PhotoPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559087, viewGroup, z, obj);
     }
 
     public static PhotoPickerBinding inflate(LayoutInflater layoutInflater) {
@@ -60,7 +60,7 @@ public abstract class PhotoPickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static PhotoPickerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (PhotoPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559080, null, false, obj);
+        return (PhotoPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559087, null, false, obj);
     }
 
     public static PhotoPickerBinding bind(View view) {
@@ -69,6 +69,6 @@ public abstract class PhotoPickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static PhotoPickerBinding bind(View view, Object obj) {
-        return (PhotoPickerBinding) bind(obj, view, 2131559080);
+        return (PhotoPickerBinding) bind(obj, view, 2131559087);
     }
 }

@@ -756,11 +756,11 @@ public abstract class ViewDataBinding extends BaseObservable implements ViewBind
         return num.intValue();
     }
 
-    protected static long safeUnbox(Long l2) {
-        if (l2 == null) {
+    protected static long safeUnbox(Long l) {
+        if (l == null) {
             return 0;
         }
-        return l2.longValue();
+        return l.longValue();
     }
 
     protected static short safeUnbox(Short sh) {

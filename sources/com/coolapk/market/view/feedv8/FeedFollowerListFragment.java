@@ -42,7 +42,7 @@ public final class FeedFollowerListFragment extends EntityListFragment {
         getVxDividerDecoration$presentation_coolapkAppRelease().setDividerColor(AppHolder.getAppTheme().getContentBackgroundDividerColor());
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         BaseMultiTypeAdapter adapter$presentation_coolapkAppRelease = getAdapter$presentation_coolapkAppRelease();
-        SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558933).suitedEntityType("user").constructor(new FeedFollowerListFragment$onActivityCreated$1(this));
+        SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558940).suitedEntityType("user").constructor(new FeedFollowerListFragment$onActivityCreated$1(this));
         Integer num = getItemViewTypeByEntityType().get("user");
         Intrinsics.checkNotNull(num);
         Intrinsics.checkNotNullExpressionValue(num, "(itemViewTypeByEntityTyp…tils.ENTITY_TYPE_USER])!!");

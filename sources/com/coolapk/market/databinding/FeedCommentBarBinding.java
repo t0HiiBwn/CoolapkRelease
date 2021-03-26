@@ -63,7 +63,7 @@ public abstract class FeedCommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedCommentBarBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (FeedCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558555, viewGroup, z, obj);
+        return (FeedCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558558, viewGroup, z, obj);
     }
 
     public static FeedCommentBarBinding inflate(LayoutInflater layoutInflater) {
@@ -72,7 +72,7 @@ public abstract class FeedCommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedCommentBarBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (FeedCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558555, null, false, obj);
+        return (FeedCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558558, null, false, obj);
     }
 
     public static FeedCommentBarBinding bind(View view) {
@@ -81,6 +81,6 @@ public abstract class FeedCommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedCommentBarBinding bind(View view, Object obj) {
-        return (FeedCommentBarBinding) bind(obj, view, 2131558555);
+        return (FeedCommentBarBinding) bind(obj, view, 2131558558);
     }
 }

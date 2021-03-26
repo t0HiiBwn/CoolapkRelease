@@ -43,7 +43,7 @@ public abstract class ItemPhotoDirectoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPhotoDirectoryBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemPhotoDirectoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558850, viewGroup, z, obj);
+        return (ItemPhotoDirectoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558857, viewGroup, z, obj);
     }
 
     public static ItemPhotoDirectoryBinding inflate(LayoutInflater layoutInflater) {
@@ -52,7 +52,7 @@ public abstract class ItemPhotoDirectoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPhotoDirectoryBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemPhotoDirectoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558850, null, false, obj);
+        return (ItemPhotoDirectoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558857, null, false, obj);
     }
 
     public static ItemPhotoDirectoryBinding bind(View view) {
@@ -61,6 +61,6 @@ public abstract class ItemPhotoDirectoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPhotoDirectoryBinding bind(View view, Object obj) {
-        return (ItemPhotoDirectoryBinding) bind(obj, view, 2131558850);
+        return (ItemPhotoDirectoryBinding) bind(obj, view, 2131558857);
     }
 }

@@ -21,11 +21,11 @@ public class ProductBrandListBindingImpl extends ProductBrandListBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(4);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"loading_view"}, new int[]{1}, new int[]{2131559013});
+        includedLayouts.setIncludes(0, new String[]{"loading_view"}, new int[]{1}, new int[]{2131559020});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363221, 2);
-        sparseIntArray.put(2131362594, 3);
+        sparseIntArray.put(2131363235, 2);
+        sparseIntArray.put(2131362602, 3);
     }
 
     public ProductBrandListBindingImpl(DataBindingComponent dataBindingComponent, View view) {

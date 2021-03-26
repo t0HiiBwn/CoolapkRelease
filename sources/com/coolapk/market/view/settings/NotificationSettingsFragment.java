@@ -4,8 +4,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.preference.Preference;
 import com.coolapk.market.manager.DataManager;
+import com.coolapk.market.util.RomUtils;
 import com.coolapk.market.view.base.BasePreferenceFragment;
 import com.coolapk.market.view.settings.settingsynch.SettingSynchronized;
+import com.coolapk.market.widget.preference.CheckBoxPreference;
 import kotlin.Metadata;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
@@ -22,8 +24,13 @@ public final class NotificationSettingsFragment extends BasePreferenceFragment i
 
     @Override // com.coolapk.market.view.base.BasePreferenceFragment
     protected void initPreferences(boolean z) {
+        CheckBoxPreference checkBoxPreference;
         super.initPreferences(z);
         DataManager.getInstance().registerPreferenceChangeListener(this);
+        if ((RomUtils.isEmui() || RomUtils.isMIUI()) && (checkBoxPreference = (CheckBoxPreference) findPreference("tpns_keep_alive")) != null) {
+            Intrinsics.checkNotNullExpressionValue(checkBoxPreference, "it");
+            checkBoxPreference.setVisible(false);
+        }
     }
 
     @Override // androidx.fragment.app.Fragment
@@ -60,6 +67,11 @@ public final class NotificationSettingsFragment extends BasePreferenceFragment i
                 break;
             case -901830380:
                 if (!str.equals("show_installed_notification_enabled")) {
+                    return;
+                }
+                break;
+            case 475362641:
+                if (!str.equals("tpns_keep_alive")) {
                     return;
                 }
                 break;

@@ -25,8 +25,8 @@ public class ItemSettingBindingImpl extends ItemSettingBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363260, 3);
-        sparseIntArray.put(2131362707, 4);
+        sparseIntArray.put(2131363274, 3);
+        sparseIntArray.put(2131362718, 4);
     }
 
     public ItemSettingBindingImpl(DataBindingComponent dataBindingComponent, View view) {

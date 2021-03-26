@@ -55,7 +55,7 @@ public abstract class ItemTripleAvatarViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTripleAvatarViewPartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemTripleAvatarViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558963, viewGroup, z, obj);
+        return (ItemTripleAvatarViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558970, viewGroup, z, obj);
     }
 
     public static ItemTripleAvatarViewPartBinding inflate(LayoutInflater layoutInflater) {
@@ -64,7 +64,7 @@ public abstract class ItemTripleAvatarViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTripleAvatarViewPartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemTripleAvatarViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558963, null, false, obj);
+        return (ItemTripleAvatarViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558970, null, false, obj);
     }
 
     public static ItemTripleAvatarViewPartBinding bind(View view) {
@@ -73,6 +73,6 @@ public abstract class ItemTripleAvatarViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTripleAvatarViewPartBinding bind(View view, Object obj) {
-        return (ItemTripleAvatarViewPartBinding) bind(obj, view, 2131558963);
+        return (ItemTripleAvatarViewPartBinding) bind(obj, view, 2131558970);
     }
 }

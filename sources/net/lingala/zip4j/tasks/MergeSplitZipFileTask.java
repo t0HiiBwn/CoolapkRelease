@@ -32,19 +32,19 @@ public class MergeSplitZipFileTask extends AsyncZipTask<MergeSplitZipFileTaskPar
     }
 
     /* access modifiers changed from: protected */
-    /* JADX WARNING: Code restructure failed: missing block: B:56:0x00d4, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:56:0x00d5, code lost:
         r0 = move-exception;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:59:?, code lost:
         r15.close();
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:60:0x00da, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:60:0x00db, code lost:
         r0 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:61:0x00db, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:61:0x00dc, code lost:
         r0.addSuppressed(r0);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:62:0x00df, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:62:0x00e0, code lost:
         throw r0;
      */
     /* JADX WARNING: Removed duplicated region for block: B:23:0x0058 A[Catch:{ all -> 0x004d }] */

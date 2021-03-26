@@ -72,7 +72,7 @@ public final class CaptchaVerifyDialog extends BaseDialogFragment {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559172, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559180, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…tcha_dialog, null, false)");
         this.binding = (SubmitVertfiyCaptchaDialogBinding) inflate;
         AlertDialog.Builder title = new AlertDialog.Builder(requireActivity()).setTitle("图形验证码");

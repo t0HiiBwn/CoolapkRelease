@@ -28,13 +28,13 @@ public class ItemFeedSecondHandHeaderViewPartBindingImpl extends ItemFeedSecondH
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363568, 3);
-        sparseIntArray.put(2131363582, 4);
-        sparseIntArray.put(2131363533, 5);
-        sparseIntArray.put(2131362473, 6);
-        sparseIntArray.put(2131363364, 7);
-        sparseIntArray.put(2131363152, 8);
-        sparseIntArray.put(2131362933, 9);
+        sparseIntArray.put(2131363590, 3);
+        sparseIntArray.put(2131363604, 4);
+        sparseIntArray.put(2131363551, 5);
+        sparseIntArray.put(2131362481, 6);
+        sparseIntArray.put(2131363380, 7);
+        sparseIntArray.put(2131363166, 8);
+        sparseIntArray.put(2131362945, 9);
     }
 
     public ItemFeedSecondHandHeaderViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

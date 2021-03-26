@@ -48,9 +48,7 @@ public final class at {
     private long h;
     private String i;
     private b j;
-
-    /* renamed from: l  reason: collision with root package name */
-    private aq.a f1356l;
+    private aq.a l;
     private String n;
     private boolean o;
     private String p;
@@ -154,7 +152,7 @@ public final class at {
         if (p.b()) {
             this.c = false;
         }
-        this.f1356l = null;
+        this.l = null;
         try {
             this.i = UUID.randomUUID().toString().replaceAll("-", "").toLowerCase();
         } catch (Throwable th) {
@@ -789,7 +787,7 @@ public final class at {
                 a3 = p.a(a3);
             }
             URL url = new URL(a3);
-            aq.a aVar = this.f1356l;
+            aq.a aVar = this.l;
             URLConnection a5 = aVar != null ? aVar.a() : null;
             if (a5 == null) {
                 Proxy proxy = this.e;

@@ -22,8 +22,8 @@ public class UserKeyInputBindingImpl extends UserKeyInputBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362736, 3);
-        sparseIntArray.put(2131362656, 4);
+        sparseIntArray.put(2131362747, 3);
+        sparseIntArray.put(2131362664, 4);
     }
 
     public UserKeyInputBindingImpl(DataBindingComponent dataBindingComponent, View view) {

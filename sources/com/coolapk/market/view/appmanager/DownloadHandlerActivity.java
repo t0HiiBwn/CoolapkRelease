@@ -64,11 +64,11 @@ public class DownloadHandlerActivity extends FakeStatusBarActivity {
             objArr[1] = stringArrayExtra != null ? stringArrayExtra : "No";
             LogUtils.d("Title: %s, Headers: %s", objArr);
             if (!TextUtils.isEmpty(stringExtra)) {
-                str = getString(2131886748, stringExtra, uri);
+                str = getString(2131886810, stringExtra, uri);
             } else {
-                str = getString(2131886749, uri);
+                str = getString(2131886811, uri);
             }
-            return new AlertDialog.Builder(getActivity()).setTitle(2131886304).setMessage(str).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
+            return new AlertDialog.Builder(getActivity()).setTitle(2131886334).setMessage(str).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.view.appmanager.DownloadHandlerActivity.ConfirmDialog.AnonymousClass2 */
 
                 @Override // android.content.DialogInterface.OnClickListener

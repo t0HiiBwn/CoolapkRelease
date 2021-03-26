@@ -21,8 +21,8 @@ public class FeedTopBindingImpl extends FeedTopBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363606, 1);
-        sparseIntArray.put(2131363610, 2);
+        sparseIntArray.put(2131363628, 1);
+        sparseIntArray.put(2131363632, 2);
     }
 
     public FeedTopBindingImpl(DataBindingComponent dataBindingComponent, View view) {

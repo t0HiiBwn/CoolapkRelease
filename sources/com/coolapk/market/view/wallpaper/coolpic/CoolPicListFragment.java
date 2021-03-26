@@ -244,7 +244,7 @@ public final class CoolPicListFragment extends NewAsyncListFragment<List<? exten
         if (multiTypeAdapter2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(multiTypeAdapter2, SimpleViewHolderFactor.Companion.withLayoutId(2131558663).suitedMethod(CoolPicListFragment$onActivityCreated$1.INSTANCE).constructor(new CoolPicListFragment$onActivityCreated$2(this)).doAfterBind(new CoolPicListFragment$onActivityCreated$3(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(multiTypeAdapter2, SimpleViewHolderFactor.Companion.withLayoutId(2131558669).suitedMethod(CoolPicListFragment$onActivityCreated$1.INSTANCE).constructor(new CoolPicListFragment$onActivityCreated$2(this)).doAfterBind(new CoolPicListFragment$onActivityCreated$3(this)).build(), 0, 2, null);
         getEmptyView().setBackgroundColor(-16777216);
         setRefreshEnable(false);
         getRecyclerView().setHasFixedSize(true);

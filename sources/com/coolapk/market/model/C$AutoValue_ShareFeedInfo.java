@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_ShareFeedInfo  reason: invalid class name */
 abstract class C$AutoValue_ShareFeedInfo extends C$$AutoValue_ShareFeedInfo {
-    C$AutoValue_ShareFeedInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l2, Long l3, String str8, String str9, List<String> list, String str10, String str11, int i, String str12, String str13, String str14, int i2, String str15, String str16, String str17) {
-        super(str, str2, str3, num, str4, str5, str6, str7, l2, l3, str8, str9, list, str10, str11, i, str12, str13, str14, i2, str15, str16, str17);
+    C$AutoValue_ShareFeedInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l, Long l2, String str8, String str9, List<String> list, String str10, String str11, int i, String str12, String str13, String str14, int i2, String str15, String str16, String str17) {
+        super(str, str2, str3, num, str4, str5, str6, str7, l, l2, str8, str9, list, str10, str11, i, str12, str13, str14, i2, str15, str16, str17);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_ShareFeedInfo$GsonTypeAdapter */
@@ -131,13 +131,13 @@ abstract class C$AutoValue_ShareFeedInfo extends C$$AutoValue_ShareFeedInfo {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -276,8 +276,8 @@ abstract class C$AutoValue_ShareFeedInfo extends C$$AutoValue_ShareFeedInfo {
             String str5 = this.defaultSubTitle;
             String str6 = this.defaultId;
             String str7 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str8 = this.defaultLogo;
             String str9 = this.defaultDescription;
             List<String> list = this.defaultImgList;
@@ -298,8 +298,8 @@ abstract class C$AutoValue_ShareFeedInfo extends C$$AutoValue_ShareFeedInfo {
             String str21 = str5;
             String str22 = str6;
             String str23 = str7;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str24 = str8;
             String str25 = str9;
             List<String> list2 = list;
@@ -474,7 +474,7 @@ abstract class C$AutoValue_ShareFeedInfo extends C$$AutoValue_ShareFeedInfo {
                             str18 = this.entityTemplateAdapter.read(jsonReader);
                             continue;
                         case 4:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 5:
                             str30 = this.sourceNameAdapter.read(jsonReader);
@@ -513,7 +513,7 @@ abstract class C$AutoValue_ShareFeedInfo extends C$$AutoValue_ShareFeedInfo {
                             i3 = this.isDiscoveryAppAdapter.read(jsonReader).intValue();
                             continue;
                         case 17:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case 18:
                             list2 = this.imgListAdapter.read(jsonReader);
@@ -537,7 +537,7 @@ abstract class C$AutoValue_ShareFeedInfo extends C$$AutoValue_ShareFeedInfo {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_ShareFeedInfo(str27, str18, str19, num2, str20, str21, str22, str23, l4, l5, str24, str25, list2, str26, str28, i3, str29, str30, str31, i4, str32, str33, str17);
+            return new AutoValue_ShareFeedInfo(str27, str18, str19, num2, str20, str21, str22, str23, l3, l4, str24, str25, list2, str26, str28, i3, str29, str30, str31, i4, str32, str33, str17);
         }
     }
 }

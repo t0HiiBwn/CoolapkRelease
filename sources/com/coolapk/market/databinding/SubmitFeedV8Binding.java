@@ -87,7 +87,7 @@ public abstract class SubmitFeedV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedV8Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitFeedV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559162, viewGroup, z, obj);
+        return (SubmitFeedV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559170, viewGroup, z, obj);
     }
 
     public static SubmitFeedV8Binding inflate(LayoutInflater layoutInflater) {
@@ -96,7 +96,7 @@ public abstract class SubmitFeedV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedV8Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitFeedV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559162, null, false, obj);
+        return (SubmitFeedV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559170, null, false, obj);
     }
 
     public static SubmitFeedV8Binding bind(View view) {
@@ -105,6 +105,6 @@ public abstract class SubmitFeedV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedV8Binding bind(View view, Object obj) {
-        return (SubmitFeedV8Binding) bind(obj, view, 2131559162);
+        return (SubmitFeedV8Binding) bind(obj, view, 2131559170);
     }
 }

@@ -25,7 +25,7 @@ public class ItemUserNavigationBindingImpl extends ItemUserNavigationBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362672, 2);
+        sparseIntArray.put(2131362683, 2);
     }
 
     public ItemUserNavigationBindingImpl(DataBindingComponent dataBindingComponent, View view) {

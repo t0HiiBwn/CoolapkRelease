@@ -23,7 +23,7 @@ public abstract class ItemSimpleDividerBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSimpleDividerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSimpleDividerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558928, viewGroup, z, obj);
+        return (ItemSimpleDividerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558935, viewGroup, z, obj);
     }
 
     public static ItemSimpleDividerBinding inflate(LayoutInflater layoutInflater) {
@@ -32,7 +32,7 @@ public abstract class ItemSimpleDividerBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSimpleDividerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSimpleDividerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558928, null, false, obj);
+        return (ItemSimpleDividerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558935, null, false, obj);
     }
 
     public static ItemSimpleDividerBinding bind(View view) {
@@ -41,6 +41,6 @@ public abstract class ItemSimpleDividerBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSimpleDividerBinding bind(View view, Object obj) {
-        return (ItemSimpleDividerBinding) bind(obj, view, 2131558928);
+        return (ItemSimpleDividerBinding) bind(obj, view, 2131558935);
     }
 }

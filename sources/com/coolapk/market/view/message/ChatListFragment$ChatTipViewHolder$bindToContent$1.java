@@ -31,7 +31,7 @@ final class ChatListFragment$ChatTipViewHolder$bindToContent$1 implements View.O
                 EmotionPanel emotionPanel2 = chattingActivity.getBinding().emotionPanel;
                 Intrinsics.checkNotNullExpressionValue(emotionPanel2, "activity.binding.emotionPanel");
                 chattingActivity.setEmotionPanelVisibleWithAnim(!emotionPanel2.isShown());
-                chattingActivity.getBinding().menuEmotion.setImageResource(2131231278);
+                chattingActivity.getBinding().menuEmotion.setImageResource(2131231289);
             }
         }
     }

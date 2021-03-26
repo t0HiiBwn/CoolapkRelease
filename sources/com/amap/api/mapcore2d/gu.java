@@ -15,9 +15,7 @@ public final class gu {
     static boolean i = false;
     static boolean j = false;
     private static final String[] k = {"com.amap.api.location", "com.loc", "com.amap.api.fence"};
-
-    /* renamed from: l  reason: collision with root package name */
-    private static da f1241l = null;
+    private static da l = null;
     private static boolean m = false;
     private static boolean n = false;
 
@@ -52,13 +50,13 @@ public final class gu {
 
     public static da b() {
         try {
-            if (f1241l == null) {
-                f1241l = new da.a("loc", "4.7.0", "AMAP_Location_SDK_Android 4.7.0").a(c()).a("4.7.0").a();
+            if (l == null) {
+                l = new da.a("loc", "4.7.0", "AMAP_Location_SDK_Android 4.7.0").a(c()).a("4.7.0").a();
             }
         } catch (Throwable th) {
             a(th, "CoreUtil", "getSDKInfo");
         }
-        return f1241l;
+        return l;
     }
 
     private static String[] c() {

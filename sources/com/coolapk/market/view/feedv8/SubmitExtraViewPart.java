@@ -50,15 +50,15 @@ import kotlin.text.StringsKt;
 /* compiled from: SubmitExtraViewPart.kt */
 public final class SubmitExtraViewPart extends ViewPart {
     public static final Companion Companion = new Companion(null);
-    public static final int TYPE_CATEGORY = 2131363440;
-    public static final int TYPE_FORWARD_AND_REPLY = 2131363441;
-    public static final int TYPE_KAN_KAN_HAO = 2131363442;
-    public static final int TYPE_LOCATION = 2131363444;
-    public static final int TYPE_SH_OUT_LINK = 2131363446;
-    public static final int TYPE_SH_PARAMTER = 2131363448;
-    public static final int TYPE_SH_PRICE = 2131363450;
-    public static final int TYPE_SH_TYPE = 2131363454;
-    public static final int TYPE_VISIBILITY = 2131363458;
+    public static final int TYPE_CATEGORY = 2131363458;
+    public static final int TYPE_FORWARD_AND_REPLY = 2131363459;
+    public static final int TYPE_KAN_KAN_HAO = 2131363460;
+    public static final int TYPE_LOCATION = 2131363462;
+    public static final int TYPE_SH_OUT_LINK = 2131363464;
+    public static final int TYPE_SH_PARAMTER = 2131363466;
+    public static final int TYPE_SH_PRICE = 2131363468;
+    public static final int TYPE_SH_TYPE = 2131363472;
+    public static final int TYPE_VISIBILITY = 2131363476;
     private SubmitFeedV8Activity activity;
     private final SparseArray<SubmitFeedExtraChildBinding> bindingArray = new SparseArray<>();
     private LocationInfo locationInfo;
@@ -105,16 +105,16 @@ public final class SubmitExtraViewPart extends ViewPart {
                     z = false;
                 }
                 if (!z && linearLayout.getChildCount() <= 0) {
-                    SubmitFeedExtraLogoBinding submitFeedExtraLogoBinding = (SubmitFeedExtraLogoBinding) DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559158, linearLayout, false);
+                    SubmitFeedExtraLogoBinding submitFeedExtraLogoBinding = (SubmitFeedExtraLogoBinding) DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559166, linearLayout, false);
                     TextView textView = submitFeedExtraLogoBinding.titleView;
                     Intrinsics.checkNotNullExpressionValue(textView, "binding.titleView");
                     textView.setText(feedUIConfig.relativeTitle());
                     Intrinsics.checkNotNullExpressionValue(submitFeedExtraLogoBinding, "binding");
                     submitFeedExtraLogoBinding.setClick(new SubmitExtraViewPart$Companion$fillRelativeInfoViewIntoLayout$listener$1(context, feedUIConfig));
                     ImageLoaderOptions.Builder newBuilder = ImageLoaderOptions.newBuilder();
-                    int i = 2131231172;
+                    int i = 2131231183;
                     if (!feedUIConfig.isSecondHandViewVisible()) {
-                        i = 2131231363;
+                        i = 2131231374;
                     }
                     LinearLayout.LayoutParams layoutParams2 = null;
                     AppHolder.getContextImageLoader().displayImage(context, feedUIConfig.relativeLogo(), submitFeedExtraLogoBinding.imageView, newBuilder.placeHolderRes(i).build(), (OnImageLoadListener) null, (OnBitmapTransformListener) new CircleRadiusTransform(NumberExtendsKt.getDpf((Number) 4), false, 2, null));
@@ -184,8 +184,8 @@ public final class SubmitExtraViewPart extends ViewPart {
             newSubmitExtraBinding.setClick(this);
             View root = newSubmitExtraBinding.getRoot();
             Intrinsics.checkNotNullExpressionValue(root, "binding.root");
-            root.setId(2131363444);
-            this.bindingArray.put(2131363444, newSubmitExtraBinding);
+            root.setId(2131363462);
+            this.bindingArray.put(2131363462, newSubmitExtraBinding);
             linearLayout.addView(newSubmitExtraBinding.getRoot());
             updateLocationInfo();
             View newSmallDividerView = companion.newSmallDividerView(submitFeedV8Activity2);
@@ -208,8 +208,8 @@ public final class SubmitExtraViewPart extends ViewPart {
             newSubmitExtraBinding2.setClick(this);
             View root2 = newSubmitExtraBinding2.getRoot();
             Intrinsics.checkNotNullExpressionValue(root2, "binding.root");
-            root2.setId(2131363440);
-            this.bindingArray.put(2131363440, newSubmitExtraBinding2);
+            root2.setId(2131363458);
+            this.bindingArray.put(2131363458, newSubmitExtraBinding2);
             linearLayout.addView(newSubmitExtraBinding2.getRoot());
             linearLayout.addView(companion.newSmallDividerView(submitFeedV8Activity2));
             updateCategory();
@@ -233,8 +233,8 @@ public final class SubmitExtraViewPart extends ViewPart {
             newSubmitExtraBinding3.setClick(this);
             View root3 = newSubmitExtraBinding3.getRoot();
             Intrinsics.checkNotNullExpressionValue(root3, "binding.root");
-            root3.setId(2131363458);
-            this.bindingArray.put(2131363458, newSubmitExtraBinding3);
+            root3.setId(2131363476);
+            this.bindingArray.put(2131363476, newSubmitExtraBinding3);
             linearLayout.addView(newSubmitExtraBinding3.getRoot());
             linearLayout.addView(companion.newSmallDividerView(submitFeedV8Activity2));
             updateVisibilityInfo();
@@ -264,15 +264,15 @@ public final class SubmitExtraViewPart extends ViewPart {
             newSubmitExtraBinding.setClick(this);
             View root = newSubmitExtraBinding.getRoot();
             Intrinsics.checkNotNullExpressionValue(root, "binding.root");
-            root.setId(2131363441);
-            this.bindingArray.put(2131363441, newSubmitExtraBinding);
+            root.setId(2131363459);
+            this.bindingArray.put(2131363459, newSubmitExtraBinding);
             linearLayout.addView(newSubmitExtraBinding.getRoot());
             updateForwardAndReplyInfo();
         }
     }
 
     private final SubmitFeedExtraChildBinding newSubmitExtraBinding(LinearLayout linearLayout) {
-        return (SubmitFeedExtraChildBinding) DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559157, linearLayout, false);
+        return (SubmitFeedExtraChildBinding) DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559165, linearLayout, false);
     }
 
     private final void setTint(SubmitFeedExtraChildBinding submitFeedExtraChildBinding, int i) {
@@ -287,17 +287,17 @@ public final class SubmitExtraViewPart extends ViewPart {
         Intrinsics.checkNotNullParameter(view, "v");
         super.onClick(view);
         int id = view.getId();
-        if (id == 2131363444) {
+        if (id == 2131363462) {
             onRequestLocation();
-        } else if (id != 2131363458) {
+        } else if (id != 2131363476) {
             switch (id) {
-                case 2131363440:
+                case 2131363458:
                     onRequestCategory();
                     return;
-                case 2131363441:
+                case 2131363459:
                     onRequestForwardAndReply();
                     return;
-                case 2131363442:
+                case 2131363460:
                     onRequestDyh();
                     return;
                 default:
@@ -435,10 +435,10 @@ public final class SubmitExtraViewPart extends ViewPart {
     }
 
     private final void updateLocationInfo() {
-        SubmitFeedExtraChildBinding submitFeedExtraChildBinding = this.bindingArray.get(2131363444);
+        SubmitFeedExtraChildBinding submitFeedExtraChildBinding = this.bindingArray.get(2131363462);
         if (submitFeedExtraChildBinding != null) {
             SubmitFeedExtraChildBinding submitFeedExtraChildBinding2 = submitFeedExtraChildBinding;
-            submitFeedExtraChildBinding2.imageView.setImageResource(2131231418);
+            submitFeedExtraChildBinding2.imageView.setImageResource(2131231429);
             TextView textView = submitFeedExtraChildBinding2.descriptionView;
             Intrinsics.checkNotNullExpressionValue(textView, "binding.descriptionView");
             textView.setText("");
@@ -460,8 +460,8 @@ public final class SubmitExtraViewPart extends ViewPart {
             if (submitFeedV8Activity2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("activity");
             }
-            setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity2, 2131099891));
-            submitFeedExtraChildBinding2.titleView.setText(2131887172);
+            setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity2, 2131099896));
+            submitFeedExtraChildBinding2.titleView.setText(2131887234);
         }
     }
 
@@ -531,11 +531,11 @@ public final class SubmitExtraViewPart extends ViewPart {
             Intrinsics.checkNotNullExpressionValue(build, "uiBuilder.build()");
             submitFeedV8Activity4.updateUIConfig(build);
             String str = "";
-            if (i == 2131363446) {
+            if (i == 2131363464) {
                 TextView textView = submitFeedExtraChildBinding2.titleView;
                 Intrinsics.checkNotNullExpressionValue(textView, "binding.titleView");
                 textView.setText("闲鱼/转转链接");
-                submitFeedExtraChildBinding2.imageView.setImageResource(2131231401);
+                submitFeedExtraChildBinding2.imageView.setImageResource(2131231412);
                 TextView textView2 = submitFeedExtraChildBinding2.descriptionView;
                 Intrinsics.checkNotNullExpressionValue(textView2, "binding.descriptionView");
                 textView2.setText(!TextUtils.isEmpty(uiConfig.secondHandOutLink()) ? "已填写" : str);
@@ -548,18 +548,18 @@ public final class SubmitExtraViewPart extends ViewPart {
                     if (submitFeedV8Activity5 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("activity");
                     }
-                    setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity5, 2131099891));
+                    setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity5, 2131099896));
                     return;
                 }
                 setTint(submitFeedExtraChildBinding2, AppHolder.getAppTheme().getColorAccent());
-            } else if (i == 2131363448) {
+            } else if (i == 2131363466) {
                 LinearLayout linearLayout = submitFeedExtraChildBinding2.itemView;
                 Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.itemView");
                 linearLayout.setClickable(uiConfig.showParamsItem());
                 TextView textView3 = submitFeedExtraChildBinding2.titleView;
                 Intrinsics.checkNotNullExpressionValue(textView3, "binding.titleView");
                 textView3.setText("基本参数");
-                submitFeedExtraChildBinding2.imageView.setImageResource(2131231173);
+                submitFeedExtraChildBinding2.imageView.setImageResource(2131231184);
                 TextView textView4 = submitFeedExtraChildBinding2.descriptionView;
                 Intrinsics.checkNotNullExpressionValue(textView4, "binding.descriptionView");
                 String productConfigShowText = uiConfig.productConfigShowText();
@@ -574,7 +574,7 @@ public final class SubmitExtraViewPart extends ViewPart {
                     if (submitFeedV8Activity6 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("activity");
                     }
-                    setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity6, 2131099891));
+                    setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity6, 2131099896));
                 }
                 if (!TextUtils.isEmpty(uiConfig.productConfigShowText())) {
                     i2 = AppHolder.getAppTheme().getColorAccent();
@@ -585,10 +585,10 @@ public final class SubmitExtraViewPart extends ViewPart {
                     if (submitFeedV8Activity7 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("activity");
                     }
-                    i2 = ResourceUtils.getColorInt(submitFeedV8Activity7, 2131099891);
+                    i2 = ResourceUtils.getColorInt(submitFeedV8Activity7, 2131099896);
                 }
                 setTint(submitFeedExtraChildBinding2, i2);
-            } else if (i != 2131363450) {
+            } else if (i != 2131363468) {
                 TextView textView5 = submitFeedExtraChildBinding2.titleView;
                 Intrinsics.checkNotNullExpressionValue(textView5, "binding.titleView");
                 textView5.setText(str);
@@ -600,7 +600,7 @@ public final class SubmitExtraViewPart extends ViewPart {
                 TextView textView7 = submitFeedExtraChildBinding2.titleView;
                 Intrinsics.checkNotNullExpressionValue(textView7, "binding.titleView");
                 textView7.setText("开个价");
-                submitFeedExtraChildBinding2.imageView.setImageResource(2131231238);
+                submitFeedExtraChildBinding2.imageView.setImageResource(2131231249);
                 String secondHandPrice = uiConfig.secondHandPrice();
                 if (secondHandPrice == null) {
                     secondHandPrice = str;
@@ -623,7 +623,7 @@ public final class SubmitExtraViewPart extends ViewPart {
                     if (submitFeedV8Activity8 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("activity");
                     }
-                    setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity8, 2131099891));
+                    setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity8, 2131099896));
                     return;
                 }
                 setTint(submitFeedExtraChildBinding2, AppHolder.getAppTheme().getColorAccent());
@@ -632,10 +632,10 @@ public final class SubmitExtraViewPart extends ViewPart {
     }
 
     private final void updateDyhInfo() {
-        SubmitFeedExtraChildBinding submitFeedExtraChildBinding = this.bindingArray.get(2131363442);
+        SubmitFeedExtraChildBinding submitFeedExtraChildBinding = this.bindingArray.get(2131363460);
         if (submitFeedExtraChildBinding != null) {
             SubmitFeedExtraChildBinding submitFeedExtraChildBinding2 = submitFeedExtraChildBinding;
-            submitFeedExtraChildBinding2.imageView.setImageResource(2131231380);
+            submitFeedExtraChildBinding2.imageView.setImageResource(2131231391);
             TextView textView = submitFeedExtraChildBinding2.titleView;
             Intrinsics.checkNotNullExpressionValue(textView, "binding.titleView");
             textView.setText("发布到看看号");
@@ -650,7 +650,7 @@ public final class SubmitExtraViewPart extends ViewPart {
                 if (submitFeedV8Activity2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("activity");
                 }
-                setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity2, 2131099891));
+                setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity2, 2131099896));
                 TextView textView2 = submitFeedExtraChildBinding2.descriptionView;
                 Intrinsics.checkNotNullExpressionValue(textView2, "binding.descriptionView");
                 textView2.setText("");
@@ -668,7 +668,7 @@ public final class SubmitExtraViewPart extends ViewPart {
         if (submitFeedV8Activity == null) {
             Intrinsics.throwUninitializedPropertyAccessException("activity");
         }
-        SubmitFeedBottomSetVisibilityBinding submitFeedBottomSetVisibilityBinding = (SubmitFeedBottomSetVisibilityBinding) DataBindingUtil.inflate(LayoutInflater.from(submitFeedV8Activity), 2131559156, null, false);
+        SubmitFeedBottomSetVisibilityBinding submitFeedBottomSetVisibilityBinding = (SubmitFeedBottomSetVisibilityBinding) DataBindingUtil.inflate(LayoutInflater.from(submitFeedV8Activity), 2131559164, null, false);
         Intrinsics.checkNotNullExpressionValue(submitFeedBottomSetVisibilityBinding, "binding");
         SubmitFeedV8Activity submitFeedV8Activity2 = this.activity;
         if (submitFeedV8Activity2 == null) {
@@ -697,10 +697,10 @@ public final class SubmitExtraViewPart extends ViewPart {
     }
 
     public final void updateVisibilityInfo() {
-        SubmitFeedExtraChildBinding submitFeedExtraChildBinding = this.bindingArray.get(2131363458);
+        SubmitFeedExtraChildBinding submitFeedExtraChildBinding = this.bindingArray.get(2131363476);
         if (submitFeedExtraChildBinding != null) {
             SubmitFeedExtraChildBinding submitFeedExtraChildBinding2 = submitFeedExtraChildBinding;
-            submitFeedExtraChildBinding2.imageView.setImageResource(2131231287);
+            submitFeedExtraChildBinding2.imageView.setImageResource(2131231298);
             TextView textView = submitFeedExtraChildBinding2.titleView;
             Intrinsics.checkNotNullExpressionValue(textView, "binding.titleView");
             textView.setText("谁可以看");
@@ -710,15 +710,15 @@ public final class SubmitExtraViewPart extends ViewPart {
             }
             int visibleState = submitFeedV8Activity.getUiConfig().visibleState();
             if (visibleState == -1) {
-                submitFeedExtraChildBinding2.descriptionView.setText(2131887175);
+                submitFeedExtraChildBinding2.descriptionView.setText(2131887237);
                 setTint(submitFeedExtraChildBinding2, AppHolder.getAppTheme().getColorAccent());
             } else if (visibleState == 1) {
-                submitFeedExtraChildBinding2.descriptionView.setText(2131887174);
+                submitFeedExtraChildBinding2.descriptionView.setText(2131887236);
                 SubmitFeedV8Activity submitFeedV8Activity2 = this.activity;
                 if (submitFeedV8Activity2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("activity");
                 }
-                setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity2, 2131099891));
+                setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity2, 2131099896));
             }
         }
     }
@@ -747,10 +747,10 @@ public final class SubmitExtraViewPart extends ViewPart {
     }
 
     private final void updateCategory() {
-        SubmitFeedExtraChildBinding submitFeedExtraChildBinding = this.bindingArray.get(2131363440);
+        SubmitFeedExtraChildBinding submitFeedExtraChildBinding = this.bindingArray.get(2131363458);
         if (submitFeedExtraChildBinding != null) {
             SubmitFeedExtraChildBinding submitFeedExtraChildBinding2 = submitFeedExtraChildBinding;
-            submitFeedExtraChildBinding2.imageView.setImageResource(2131231170);
+            submitFeedExtraChildBinding2.imageView.setImageResource(2131231181);
             TextView textView = submitFeedExtraChildBinding2.titleView;
             Intrinsics.checkNotNullExpressionValue(textView, "binding.titleView");
             textView.setText("选择分类");
@@ -765,7 +765,7 @@ public final class SubmitExtraViewPart extends ViewPart {
                 if (submitFeedV8Activity2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("activity");
                 }
-                setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity2, 2131099891));
+                setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity2, 2131099896));
                 TextView textView2 = submitFeedExtraChildBinding2.descriptionView;
                 Intrinsics.checkNotNullExpressionValue(textView2, "binding.descriptionView");
                 textView2.setText("");
@@ -780,7 +780,7 @@ public final class SubmitExtraViewPart extends ViewPart {
 
     private final void updateForwardAndReplyInfo() {
         CheckBox checkBox;
-        SubmitFeedExtraChildBinding submitFeedExtraChildBinding = this.bindingArray.get(2131363441);
+        SubmitFeedExtraChildBinding submitFeedExtraChildBinding = this.bindingArray.get(2131363459);
         if (submitFeedExtraChildBinding != null) {
             SubmitFeedExtraChildBinding submitFeedExtraChildBinding2 = submitFeedExtraChildBinding;
             SubmitFeedV8Activity submitFeedV8Activity = this.activity;
@@ -788,7 +788,7 @@ public final class SubmitExtraViewPart extends ViewPart {
                 Intrinsics.throwUninitializedPropertyAccessException("activity");
             }
             FeedMultiPart multiPart = submitFeedV8Activity.getMultiPart();
-            submitFeedExtraChildBinding2.titleView.setText(2131886884);
+            submitFeedExtraChildBinding2.titleView.setText(2131886946);
             TextView textView = submitFeedExtraChildBinding2.descriptionView;
             Intrinsics.checkNotNullExpressionValue(textView, "binding.descriptionView");
             textView.setText("");
@@ -843,7 +843,7 @@ public final class SubmitExtraViewPart extends ViewPart {
                 if (submitFeedV8Activity4 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("activity");
                 }
-                setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity4, 2131099891));
+                setTint(submitFeedExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity4, 2131099896));
                 return;
             }
             setTint(submitFeedExtraChildBinding2, AppHolder.getAppTheme().getColorAccent());

@@ -19,8 +19,8 @@ final class AutoValue_TopGroupCard extends C$AutoValue_TopGroupCard {
         }
     };
 
-    AutoValue_TopGroupCard(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, String str10, String str11, List<TopCard> list) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, l2, l3, str9, str10, str11, list);
+    AutoValue_TopGroupCard(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, String str10, String str11, List<TopCard> list) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, l, l2, str9, str10, str11, list);
     }
 
     @Override // android.os.Parcelable

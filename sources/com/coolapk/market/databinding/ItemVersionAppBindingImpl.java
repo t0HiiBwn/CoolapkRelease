@@ -57,7 +57,7 @@ public class ItemVersionAppBindingImpl extends ItemVersionAppBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((VersionAppViewHolder) obj);
@@ -71,7 +71,7 @@ public class ItemVersionAppBindingImpl extends ItemVersionAppBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -89,7 +89,7 @@ public class ItemVersionAppBindingImpl extends ItemVersionAppBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 302) {
+        } else if (i == 303) {
             synchronized (this) {
                 this.mDirtyFlags |= 2;
             }
@@ -104,7 +104,7 @@ public class ItemVersionAppBindingImpl extends ItemVersionAppBinding {
                 this.mDirtyFlags |= 8;
             }
             return true;
-        } else if (i == 285) {
+        } else if (i == 286) {
             synchronized (this) {
                 this.mDirtyFlags |= 16;
             }

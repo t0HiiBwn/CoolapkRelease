@@ -19,8 +19,8 @@ final class AutoValue_EntityCard extends C$AutoValue_EntityCard {
         }
     };
 
-    AutoValue_EntityCard(String str, String str2, Integer num, String str3, String str4, String str5, Long l2, String str6, String str7, String str8, String str9, List<Entity> list, String str10, Long l3, String str11, String str12) {
-        super(str, str2, num, str3, str4, str5, l2, str6, str7, str8, str9, list, str10, l3, str11, str12);
+    AutoValue_EntityCard(String str, String str2, Integer num, String str3, String str4, String str5, Long l, String str6, String str7, String str8, String str9, List<Entity> list, String str10, Long l2, String str11, String str12) {
+        super(str, str2, num, str3, str4, str5, l, str6, str7, str8, str9, list, str10, l2, str11, str12);
     }
 
     @Override // android.os.Parcelable

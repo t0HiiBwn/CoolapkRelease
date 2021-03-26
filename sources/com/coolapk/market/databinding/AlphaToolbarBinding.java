@@ -38,7 +38,7 @@ public abstract class AlphaToolbarBinding extends ViewDataBinding {
 
     @Deprecated
     public static AlphaToolbarBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AlphaToolbarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558456, viewGroup, z, obj);
+        return (AlphaToolbarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558457, viewGroup, z, obj);
     }
 
     public static AlphaToolbarBinding inflate(LayoutInflater layoutInflater) {
@@ -47,7 +47,7 @@ public abstract class AlphaToolbarBinding extends ViewDataBinding {
 
     @Deprecated
     public static AlphaToolbarBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AlphaToolbarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558456, null, false, obj);
+        return (AlphaToolbarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558457, null, false, obj);
     }
 
     public static AlphaToolbarBinding bind(View view) {
@@ -56,6 +56,6 @@ public abstract class AlphaToolbarBinding extends ViewDataBinding {
 
     @Deprecated
     public static AlphaToolbarBinding bind(View view, Object obj) {
-        return (AlphaToolbarBinding) bind(obj, view, 2131558456);
+        return (AlphaToolbarBinding) bind(obj, view, 2131558457);
     }
 }

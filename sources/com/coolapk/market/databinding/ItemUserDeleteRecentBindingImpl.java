@@ -57,7 +57,7 @@ public class ItemUserDeleteRecentBindingImpl extends ItemUserDeleteRecentBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((HolderItem) obj);
@@ -70,7 +70,7 @@ public class ItemUserDeleteRecentBindingImpl extends ItemUserDeleteRecentBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

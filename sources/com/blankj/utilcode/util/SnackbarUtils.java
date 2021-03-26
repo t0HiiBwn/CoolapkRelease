@@ -24,7 +24,7 @@ public final class SnackbarUtils {
     public static final int LENGTH_INDEFINITE = -2;
     public static final int LENGTH_LONG = 0;
     public static final int LENGTH_SHORT = -1;
-    private static WeakReference<Snackbar> sReference;
+    private static WeakReference<Snackbar> sWeakSnackbar;
     private View.OnClickListener actionListener;
     private CharSequence actionText;
     private int actionTextColor;
@@ -135,11 +135,11 @@ public final class SnackbarUtils {
         if (this.messageColor != -16777217) {
             SpannableString spannableString = new SpannableString(this.message);
             spannableString.setSpan(new ForegroundColorSpan(this.messageColor), 0, spannableString.length(), 33);
-            sReference = new WeakReference<>(Snackbar.make(view2, spannableString, this.duration));
+            sWeakSnackbar = new WeakReference<>(Snackbar.make(view2, spannableString, this.duration));
         } else {
-            sReference = new WeakReference<>(Snackbar.make(view2, this.message, this.duration));
+            sWeakSnackbar = new WeakReference<>(Snackbar.make(view2, this.message, this.duration));
         }
-        Snackbar snackbar = sReference.get();
+        Snackbar snackbar = sWeakSnackbar.get();
         Snackbar.SnackbarLayout snackbarLayout = (Snackbar.SnackbarLayout) snackbar.getView();
         if (z) {
             for (int i = 0; i < snackbarLayout.getChildCount(); i++) {
@@ -203,15 +203,15 @@ public final class SnackbarUtils {
     }
 
     public static void dismiss() {
-        WeakReference<Snackbar> weakReference = sReference;
+        WeakReference<Snackbar> weakReference = sWeakSnackbar;
         if (weakReference != null && weakReference.get() != null) {
-            sReference.get().dismiss();
-            sReference = null;
+            sWeakSnackbar.get().dismiss();
+            sWeakSnackbar = null;
         }
     }
 
     public static View getView() {
-        Snackbar snackbar = sReference.get();
+        Snackbar snackbar = sWeakSnackbar.get();
         if (snackbar == null) {
             return null;
         }

@@ -77,8 +77,8 @@ public final class GoodsListSelectFragment extends EntityListFragment {
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         this.component = new FragmentBindingComponent(this);
-        setEmptyData(getString(2131886765), 0);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558576).suitedMethod(GoodsListSelectFragment$onActivityCreated$1.INSTANCE).constructor(new GoodsListSelectFragment$onActivityCreated$2(this)).build(), 0);
+        setEmptyData(getString(2131886827), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558580).suitedMethod(GoodsListSelectFragment$onActivityCreated$1.INSTANCE).constructor(new GoodsListSelectFragment$onActivityCreated$2(this)).build(), 0);
         getRecyclerView().setPadding(0, 0, 0, DisplayUtils.dp2px(getActivity(), 48.0f));
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         setRefreshEnable(false);
@@ -161,7 +161,7 @@ public final class GoodsListSelectFragment extends EntityListFragment {
     public boolean onRequestResponse(boolean z, List<? extends Entity> list) {
         boolean onRequestResponse = super.onRequestResponse(z, list);
         if (z && CollectionUtils.isEmpty(list)) {
-            setEmptyData(getString(2131886765), 0);
+            setEmptyData(getString(2131886827), 0);
         }
         getAdapter$presentation_coolapkAppRelease().notifyDataSetChanged();
         Intrinsics.checkNotNull(list);

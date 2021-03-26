@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="res_2131952313_widget_design_tablayout" parent="@style/res_2131951858_base_widget_design_tablayout">
+    <style name="res_2131952314_widget_design_tablayout" parent="@style/res_2131951859_base_widget_design_tablayout">
         <item name="tabGravity">1</item>
         <item name="tabMode">1</item>
     </style>
-    <style name="res_2131952373_widget_materialcomponents_materialcalendar_headerselection" parent="@style/res_2131952299_widget_appcompat_textview">
+    <style name="res_2131952374_widget_materialcomponents_materialcalendar_headerselection" parent="@style/res_2131952300_widget_appcompat_textview">
         <item name="android:textAppearance">?attr/textAppearanceHeadline6</item>
         <item name="android:textColor">?attr/colorOnPrimary</item>
         <item name="android:ellipsize">end</item>

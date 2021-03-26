@@ -27,9 +27,7 @@ public final class ce {
     private final Context h;
     private AtomicBoolean i = new AtomicBoolean(false);
     private Map<String, String> k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private Long f1261l;
+    private Long l;
 
     static {
         String str = ce.class.getSimpleName() + "#";
@@ -160,7 +158,7 @@ public final class ce {
                 if (i2 > 0) {
                     i3 = i2;
                 }
-                ch chVar2 = new ch((String) a3.first, str2, (Boolean) a3.second, Long.valueOf(elapsedRealtime2), Long.valueOf(System.currentTimeMillis()), Integer.valueOf(i3), this.f1261l);
+                ch chVar2 = new ch((String) a3.first, str2, (Boolean) a3.second, Long.valueOf(elapsedRealtime2), Long.valueOf(System.currentTimeMillis()), Integer.valueOf(i3), this.l);
                 this.g.a(chVar2);
                 chVar = chVar2;
             }
@@ -186,7 +184,7 @@ public final class ce {
             str = b2.b;
             bool = Boolean.valueOf(b2.c);
             if (b2 instanceof bz.a) {
-                this.f1261l = Long.valueOf(((bz.a) b2).a);
+                this.l = Long.valueOf(((bz.a) b2).a);
             }
         }
         return new Pair<>(str, bool);

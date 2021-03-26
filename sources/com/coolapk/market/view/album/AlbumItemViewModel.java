@@ -44,7 +44,7 @@ public class AlbumItemViewModel extends BaseObservable {
 
     public void setNote(String str) {
         this.note = str;
-        notifyPropertyChanged(207);
+        notifyPropertyChanged(208);
     }
 
     @Bindable
@@ -59,7 +59,7 @@ public class AlbumItemViewModel extends BaseObservable {
     @Bindable
     public String getSourceName() {
         if (!TextUtils.isEmpty(getAlbumItem().getSourceName())) {
-            return getContext().getString(2131886580, getAlbumItem().getSourceName());
+            return getContext().getString(2131886642, getAlbumItem().getSourceName());
         }
         return null;
     }

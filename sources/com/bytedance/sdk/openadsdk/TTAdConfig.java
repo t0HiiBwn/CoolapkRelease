@@ -17,9 +17,7 @@ public final class TTAdConfig {
     private boolean i;
     private int[] j;
     private boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1285l;
+    private boolean l;
     private IHttpStack m;
     private TTDownloadEventLogger n;
     private TTSecAbs o;
@@ -34,7 +32,7 @@ public final class TTAdConfig {
         this.h = false;
         this.i = false;
         this.k = false;
-        this.f1285l = false;
+        this.l = false;
         this.q = false;
     }
 
@@ -131,11 +129,11 @@ public final class TTAdConfig {
     }
 
     public boolean isSupportMultiProcess() {
-        return this.f1285l;
+        return this.l;
     }
 
     public void setSupportMultiProcess(boolean z) {
-        this.f1285l = z;
+        this.l = z;
     }
 
     public IHttpStack getHttpStack() {
@@ -207,9 +205,7 @@ public final class TTAdConfig {
         private boolean i = false;
         private int[] j;
         private boolean k = false;
-
-        /* renamed from: l  reason: collision with root package name */
-        private boolean f1286l = false;
+        private boolean l = false;
         private IHttpStack m;
         private TTDownloadEventLogger n;
         private TTSecAbs o;
@@ -279,7 +275,7 @@ public final class TTAdConfig {
         }
 
         public Builder supportMultiProcess(boolean z) {
-            this.f1286l = z;
+            this.l = z;
             return this;
         }
 
@@ -326,7 +322,7 @@ public final class TTAdConfig {
             tTAdConfig.setAllowShowPageWhenScreenLock(this.i);
             tTAdConfig.setDirectDownloadNetworkType(this.j);
             tTAdConfig.setUseTextureView(this.k);
-            tTAdConfig.setSupportMultiProcess(this.f1286l);
+            tTAdConfig.setSupportMultiProcess(this.l);
             tTAdConfig.setHttpStack(this.m);
             tTAdConfig.setTTDownloadEventLogger(this.n);
             tTAdConfig.setTTSecAbs(this.o);

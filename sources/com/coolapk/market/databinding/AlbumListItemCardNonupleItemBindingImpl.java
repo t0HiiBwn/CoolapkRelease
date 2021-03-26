@@ -57,7 +57,7 @@ public class AlbumListItemCardNonupleItemBindingImpl extends AlbumListItemCardNo
     public boolean setVariable(int i, Object obj) {
         if (8 == i) {
             setAlbum((Album) obj);
-        } else if (307 != i) {
+        } else if (308 != i) {
             return false;
         } else {
             setViewHolder((GridAlbumCardViewHolder.DataViewHolder) obj);

@@ -39,7 +39,7 @@ public final class AppNodeToolbar {
         Intrinsics.checkNotNullParameter(appNodePresenter, "presenter");
         Intrinsics.checkNotNullParameter(serviceApp, "data");
         Activity activity2 = activity;
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131558465, null, false, new ContextBindingComponent(activity2));
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131558466, null, false, new ContextBindingComponent(activity2));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ndingComponent(activity))");
         AppNodeToolbarContentBinding appNodeToolbarContentBinding = (AppNodeToolbarContentBinding) inflate;
         this.binding = appNodeToolbarContentBinding;

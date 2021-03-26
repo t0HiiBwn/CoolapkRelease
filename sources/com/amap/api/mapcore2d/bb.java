@@ -24,9 +24,7 @@ abstract class bb {
     float h = 1.0f;
     float i = 1.0f;
     boolean k = false;
-
-    /* renamed from: l  reason: collision with root package name */
-    boolean f1222l = false;
+    boolean l = false;
     boolean m = false;
     public int n = 0;
     public long o = 0;
@@ -144,7 +142,7 @@ abstract class bb {
                     return false;
                 }
                 a(this.f, motionEvent);
-                this.f1222l = false;
+                this.l = false;
                 this.m = false;
                 if (!this.k) {
                     return false;
@@ -181,7 +179,7 @@ abstract class bb {
                 this.r = this.g.x;
                 this.s = this.g.y;
                 boolean a3 = this.a.a(this.g.x - this.r, this.g.y - this.s) | false | this.a.a(this.i, this.f);
-                this.f1222l = true;
+                this.l = true;
                 return a3;
             }
         }

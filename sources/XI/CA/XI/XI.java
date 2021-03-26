@@ -7,10 +7,10 @@ import android.net.Uri;
 public class XI {
 
     /* renamed from: XI  reason: collision with root package name */
-    public Context f1166XI;
+    public Context f172XI;
 
     public XI(Context context) {
-        this.f1166XI = context;
+        this.f172XI = context;
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:18:0x0042 A[SYNTHETIC, Splitter:B:18:0x0042] */
@@ -39,7 +39,7 @@ public class XI {
                 str4 = "content://com.vivo.vms.IdProvider/IdentifierId/AAID_";
             } else if (i != 4) {
                 uri = null;
-                cursor = this.f1166XI.getContentResolver().query(uri, null, null, null, null);
+                cursor = this.f172XI.getContentResolver().query(uri, null, null, null, null);
                 if (cursor != null) {
                     try {
                         if (cursor.moveToNext()) {
@@ -75,7 +75,7 @@ public class XI {
         }
         uri = Uri.parse(str3);
         try {
-            cursor = this.f1166XI.getContentResolver().query(uri, null, null, null, null);
+            cursor = this.f172XI.getContentResolver().query(uri, null, null, null, null);
             if (cursor != null) {
             }
             if (cursor == null) {

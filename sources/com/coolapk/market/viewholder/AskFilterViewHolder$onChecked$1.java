@@ -14,6 +14,6 @@ final class AskFilterViewHolder$onChecked$1 implements RadioGroup.OnCheckedChang
 
     @Override // android.widget.RadioGroup.OnCheckedChangeListener
     public final void onCheckedChanged(RadioGroup radioGroup, int i) {
-        this.this$0.getViewModel().setAskFeedType(i != 2131362538 ? i != 2131362544 ? "all" : "question" : "answer");
+        this.this$0.getViewModel().setAskFeedType(i != 2131362546 ? i != 2131362552 ? "all" : "question" : "answer");
     }
 }

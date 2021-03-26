@@ -44,7 +44,7 @@ public abstract class AbsRestDns implements f<g> {
     @Override // com.tencent.msdk.dns.core.f
     public LookupResult b(l<g> lVar) {
         Statistics statistics = new Statistics();
-        statistics.retryTimes = lVar.f1450l;
+        statistics.retryTimes = lVar.l;
         statistics.asyncLookup = lVar.k;
         statistics.netChangeLookup = lVar.m;
         statistics.startLookup();
@@ -139,15 +139,15 @@ public abstract class AbsRestDns implements f<g> {
                 if (AbsRestDns.this.a(this.c.a(), this.f)) {
                     return this.f.ips;
                 }
-                com.tencent.msdk.dns.core.rest.share.a.a l2 = l();
-                if (!(l2 == com.tencent.msdk.dns.core.rest.share.a.a.a || l2 == com.tencent.msdk.dns.core.rest.share.a.a.b)) {
+                com.tencent.msdk.dns.core.rest.share.a.a l = l();
+                if (!(l == com.tencent.msdk.dns.core.rest.share.a.a.a || l == com.tencent.msdk.dns.core.rest.share.a.a.b)) {
                     this.f.errorCode = 0;
-                    AbsRestDns.this.c.a(this.c.a(), l2);
+                    AbsRestDns.this.c.a(this.c.a(), l);
                 }
-                this.f.clientIp = l2.c;
-                this.f.ttl = l2.e;
-                this.f.ips = l2.d;
-                if (l2 != com.tencent.msdk.dns.core.rest.share.a.a.b) {
+                this.f.clientIp = l.c;
+                this.f.ttl = l.e;
+                this.f.ips = l.d;
+                if (l != com.tencent.msdk.dns.core.rest.share.a.a.b) {
                     d();
                     o();
                 }
@@ -207,13 +207,13 @@ public abstract class AbsRestDns implements f<g> {
         }
 
         /* renamed from: com.tencent.msdk.dns.core.rest.share.AbsRestDns$a$a  reason: collision with other inner class name */
-        public class C0132a implements f.b.a {
+        public class C0150a implements f.b.a {
             @Override // com.tencent.msdk.dns.core.f.b.a
             public boolean b() {
                 return false;
             }
 
-            public C0132a() {
+            public C0150a() {
             }
 
             @Override // com.tencent.msdk.dns.core.f.b.a

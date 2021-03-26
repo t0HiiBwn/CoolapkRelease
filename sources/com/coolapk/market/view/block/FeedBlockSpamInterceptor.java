@@ -39,7 +39,7 @@ public abstract class FeedBlockSpamInterceptor implements SheetGroupModifier {
         Intrinsics.checkNotNullParameter(obj, "data");
         Intrinsics.checkNotNullParameter(list, "items");
         SheetGroupModifier.DefaultImpls.modifySheet(this, obj, list);
-        int colorInt = ResourceUtils.getColorInt(this.activity, 2131100049);
+        int colorInt = ResourceUtils.getColorInt(this.activity, 2131100054);
         int resolveData = ResourceUtils.resolveData(this.activity, 2130969438);
         Iterator<T> it2 = list.iterator();
         while (true) {
@@ -74,7 +74,7 @@ public abstract class FeedBlockSpamInterceptor implements SheetGroupModifier {
                 i++;
             }
             if (i >= 0) {
-                t2.getItems().add(i, new SheetDataItem(SheetGroupModifier.Action.One, "屏蔽", SheetDataItem.Companion.createIconBgApplyer(2131231302, resolveData, colorInt), new FeedBlockSpamInterceptor$modifySheet$$inlined$also$lambda$1(this, resolveData, colorInt, obj), null, 0, false, false, 240, null));
+                t2.getItems().add(i, new SheetDataItem(SheetGroupModifier.Action.One, "屏蔽", SheetDataItem.Companion.createIconBgApplyer(2131231313, resolveData, colorInt), new FeedBlockSpamInterceptor$modifySheet$$inlined$also$lambda$1(this, resolveData, colorInt, obj), null, 0, false, false, 240, null));
             }
         }
     }

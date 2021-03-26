@@ -23,7 +23,7 @@ public abstract class DialogTimePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogTimePickerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogTimePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558538, viewGroup, z, obj);
+        return (DialogTimePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558540, viewGroup, z, obj);
     }
 
     public static DialogTimePickerBinding inflate(LayoutInflater layoutInflater) {
@@ -32,7 +32,7 @@ public abstract class DialogTimePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogTimePickerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogTimePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558538, null, false, obj);
+        return (DialogTimePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558540, null, false, obj);
     }
 
     public static DialogTimePickerBinding bind(View view) {
@@ -41,6 +41,6 @@ public abstract class DialogTimePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogTimePickerBinding bind(View view, Object obj) {
-        return (DialogTimePickerBinding) bind(obj, view, 2131558538);
+        return (DialogTimePickerBinding) bind(obj, view, 2131558540);
     }
 }

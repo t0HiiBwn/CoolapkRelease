@@ -23,7 +23,7 @@ public abstract class ItemFeedReplyHotBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedReplyHotBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedReplyHotBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558717, viewGroup, z, obj);
+        return (ItemFeedReplyHotBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558724, viewGroup, z, obj);
     }
 
     public static ItemFeedReplyHotBinding inflate(LayoutInflater layoutInflater) {
@@ -32,7 +32,7 @@ public abstract class ItemFeedReplyHotBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedReplyHotBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedReplyHotBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558717, null, false, obj);
+        return (ItemFeedReplyHotBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558724, null, false, obj);
     }
 
     public static ItemFeedReplyHotBinding bind(View view) {
@@ -41,6 +41,6 @@ public abstract class ItemFeedReplyHotBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedReplyHotBinding bind(View view, Object obj) {
-        return (ItemFeedReplyHotBinding) bind(obj, view, 2131558717);
+        return (ItemFeedReplyHotBinding) bind(obj, view, 2131558724);
     }
 }

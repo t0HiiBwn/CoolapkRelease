@@ -45,9 +45,7 @@ public final class b implements ac {
     private boolean i = true;
     private ab j;
     private int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private ActivityManager.ProcessErrorStateInfo f1436l;
+    private ActivityManager.ProcessErrorStateInfo l;
 
     public static b a(Context context, com.tencent.bugly.crashreport.common.strategy.a aVar, a aVar2, w wVar, p pVar, com.tencent.bugly.crashreport.crash.b bVar, BuglyStrategy.a aVar3) {
         if (m == null) {
@@ -62,7 +60,7 @@ public final class b implements ac {
         this.d = aVar2;
         this.e = wVar;
         this.g = bVar;
-        this.f1436l = new ActivityManager.ProcessErrorStateInfo();
+        this.l = new ActivityManager.ProcessErrorStateInfo();
     }
 
     private ActivityManager.ProcessErrorStateInfo a(Context context, long j2) {
@@ -93,10 +91,10 @@ public final class b implements ac {
             x.b(e2);
             return null;
         } catch (OutOfMemoryError e3) {
-            this.f1436l.pid = Process.myPid();
-            ActivityManager.ProcessErrorStateInfo processErrorStateInfo2 = this.f1436l;
+            this.l.pid = Process.myPid();
+            ActivityManager.ProcessErrorStateInfo processErrorStateInfo2 = this.l;
             processErrorStateInfo2.shortMsg = "bugly sdk waitForAnrProcessStateChanged encount error:" + e3.getMessage();
-            return this.f1436l;
+            return this.l;
         }
     }
 
@@ -376,14 +374,14 @@ public final class b implements ac {
                         x.d("can't get all thread skip this anr", new Object[0]);
                     } else {
                         ActivityManager.ProcessErrorStateInfo a3 = a(this.c, 10000);
-                        this.f1436l = a3;
+                        this.l = a3;
                         if (a3 == null) {
                             x.c("proc state is unvisiable!", new Object[0]);
                         } else if (a3.pid != Process.myPid()) {
-                            x.c("not mind proc!", this.f1436l.processName);
+                            x.c("not mind proc!", this.l.processName);
                         } else {
                             x.a("found visiable anr , start to process!", new Object[0]);
-                            a(this.c, str, this.f1436l, j2, a2);
+                            a(this.c, str, this.l, j2, a2);
                         }
                     }
                 } catch (Throwable th) {

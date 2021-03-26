@@ -44,6 +44,6 @@ public final class FeedRatingDetailFragment extends FeedDetailFragmentV8 {
     @Override // com.coolapk.market.view.feed.reply.FeedDetailFragmentV8, com.coolapk.market.view.feed.reply.FeedReplyListFragmentV8, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558713).constructor(new FeedRatingDetailFragment$onActivityCreated$1(this)).suitedEntityType("ENTITY_TYPE_DETAIL_TOP").resetItemViewType(2131558696).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558720).constructor(new FeedRatingDetailFragment$onActivityCreated$1(this)).suitedEntityType("ENTITY_TYPE_DETAIL_TOP").resetItemViewType(2131558703).build(), 0, 2, null);
     }
 }

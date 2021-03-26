@@ -47,9 +47,7 @@ public final class ao implements Closeable {
     private final int i;
     private long j;
     private final int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private long f1355l = 0;
+    private long l = 0;
     private Writer m;
     private int n = 1000;
     private final LinkedHashMap<String, c> o = new LinkedHashMap<>(0, 0.75f, true);
@@ -84,12 +82,12 @@ public final class ao implements Closeable {
 
         /* renamed from: com.loc.ao$a$a  reason: collision with other inner class name */
         /* compiled from: DiskLruCache */
-        private class C0074a extends FilterOutputStream {
-            private C0074a(OutputStream outputStream) {
+        private class C0084a extends FilterOutputStream {
+            private C0084a(OutputStream outputStream) {
                 super(outputStream);
             }
 
-            /* synthetic */ C0074a(a aVar, OutputStream outputStream, byte b) {
+            /* synthetic */ C0084a(a aVar, OutputStream outputStream, byte b) {
                 this(outputStream);
             }
 
@@ -141,7 +139,7 @@ public final class ao implements Closeable {
 
         public final OutputStream a() throws IOException {
             FileOutputStream fileOutputStream;
-            C0074a aVar;
+            C0084a aVar;
             if (ao.this.k > 0) {
                 synchronized (ao.this) {
                     if (this.b.e == this) {
@@ -159,7 +157,7 @@ public final class ao implements Closeable {
                                 return ao.t;
                             }
                         }
-                        aVar = new C0074a(this, fileOutputStream, (byte) 0);
+                        aVar = new C0084a(this, fileOutputStream, (byte) 0);
                     } else {
                         throw new IllegalStateException();
                     }
@@ -356,7 +354,7 @@ public final class ao implements Closeable {
                     long j2 = cVar.c[i3];
                     long length = a2.length();
                     cVar.c[i3] = length;
-                    this.f1355l = (this.f1355l - j2) + length;
+                    this.l = (this.l - j2) + length;
                 }
             }
             this.p++;
@@ -374,7 +372,7 @@ public final class ao implements Closeable {
                 this.m.write("REMOVE " + cVar.b + '\n');
             }
             this.m.flush();
-            if (this.f1355l > this.j || j()) {
+            if (this.l > this.j || j()) {
                 f().submit(this.s);
             }
             return;
@@ -537,7 +535,7 @@ public final class ao implements Closeable {
             int i2 = 0;
             if (next.e == null) {
                 while (i2 < this.k) {
-                    this.f1355l += next.c[i2];
+                    this.l += next.c[i2];
                     i2++;
                 }
             } else {
@@ -601,7 +599,7 @@ public final class ao implements Closeable {
     /* access modifiers changed from: private */
     public void l() throws IOException {
         while (true) {
-            if (this.f1355l > this.j || this.o.size() > this.n) {
+            if (this.l > this.j || this.o.size() > this.n) {
                 c(this.o.entrySet().iterator().next().getKey());
             } else {
                 return;
@@ -676,7 +674,7 @@ public final class ao implements Closeable {
                             throw new IOException("failed to delete " + a2);
                         }
                     }
-                    this.f1355l -= cVar.c[i2];
+                    this.l -= cVar.c[i2];
                     cVar.c[i2] = 0;
                 }
                 this.p++;

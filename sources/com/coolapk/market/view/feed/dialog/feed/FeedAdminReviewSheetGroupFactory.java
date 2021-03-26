@@ -50,11 +50,11 @@ public final class FeedAdminReviewSheetGroupFactory extends FeedAdminBaseSheetGr
             return wrapAsSheetGroup();
         }
         if (isMachineBlocked()) {
-            insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.MachineBlock, "通过", 2131231600, -15233209);
+            insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.MachineBlock, "通过", 2131231611, -15233209);
         }
-        insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.UnbanWithOnlyHomeSelf, "通过并降权", 2131231262, -15233209);
+        insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.UnbanWithOnlyHomeSelf, "通过并降权", 2131231273, -15233209);
         if (!isBanned()) {
-            insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Ban, "不通过", 2131231288, -769226);
+            insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Ban, "不通过", 2131231299, -769226);
         }
         return wrapAsSheetGroup();
     }

@@ -128,8 +128,8 @@ public class BaseNodePageActivity extends FakeStatusBarActivity implements DrawS
     protected void onCreate(Bundle bundle) {
         setContentBarAlwaysTranslucent(true);
         super.onCreate(bundle);
-        getWindow().setBackgroundDrawableResource(AppHolder.getAppTheme().isDarkTheme() ? 2131100010 : 2131100009);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559204);
+        getWindow().setBackgroundDrawableResource(AppHolder.getAppTheme().isDarkTheme() ? 2131100015 : 2131100014);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559212);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…R.layout.topic_node_page)");
         TopicNodePageBinding topicNodePageBinding = (TopicNodePageBinding) contentView;
         this.binding = topicNodePageBinding;
@@ -164,14 +164,14 @@ public class BaseNodePageActivity extends FakeStatusBarActivity implements DrawS
         if (topicNodePageBinding == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
-        topicNodePageBinding.loadingContainer.setBackgroundResource(AppHolder.getAppTheme().isDarkTheme() ? 2131100010 : 2131100009);
+        topicNodePageBinding.loadingContainer.setBackgroundResource(AppHolder.getAppTheme().isDarkTheme() ? 2131100015 : 2131100014);
         TopicNodePageBinding topicNodePageBinding2 = this.binding;
         if (topicNodePageBinding2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
         Toolbar toolbar = topicNodePageBinding2.toolbar;
         Intrinsics.checkNotNullExpressionValue(toolbar, "binding.toolbar");
-        toolbar.setPopupTheme(AppHolder.getAppTheme().isDarkTheme() ? 2131952176 : 2131952182);
+        toolbar.setPopupTheme(AppHolder.getAppTheme().isDarkTheme() ? 2131952177 : 2131952183);
         TopicNodePageBinding topicNodePageBinding3 = this.binding;
         if (topicNodePageBinding3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -614,7 +614,7 @@ public class BaseNodePageActivity extends FakeStatusBarActivity implements DrawS
         }
         View view = topicNodePageBinding17.divider;
         Intrinsics.checkNotNullExpressionValue(view, "binding.divider");
-        view.setBackground(ResourceUtils.getDrawable(this, AppHolder.getAppTheme().isDarkTheme() ? 2131099924 : 2131099925));
+        view.setBackground(ResourceUtils.getDrawable(this, AppHolder.getAppTheme().isDarkTheme() ? 2131099929 : 2131099930));
         installFloatingButton();
     }
 

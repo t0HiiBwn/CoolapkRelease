@@ -30,20 +30,20 @@ public class CreateCollectListBindingImpl extends CreateCollectListBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363593, 8);
-        sparseIntArray.put(2131362316, 9);
-        sparseIntArray.put(2131362899, 10);
-        sparseIntArray.put(2131363230, 11);
-        sparseIntArray.put(2131362338, 12);
-        sparseIntArray.put(2131363100, 13);
-        sparseIntArray.put(2131362472, 14);
-        sparseIntArray.put(2131362471, 15);
-        sparseIntArray.put(2131362707, 16);
-        sparseIntArray.put(2131362376, 17);
-        sparseIntArray.put(2131362087, 18);
-        sparseIntArray.put(2131363478, 19);
-        sparseIntArray.put(2131362510, 20);
-        sparseIntArray.put(2131362509, 21);
+        sparseIntArray.put(2131363615, 8);
+        sparseIntArray.put(2131362322, 9);
+        sparseIntArray.put(2131362910, 10);
+        sparseIntArray.put(2131363244, 11);
+        sparseIntArray.put(2131362344, 12);
+        sparseIntArray.put(2131363114, 13);
+        sparseIntArray.put(2131362480, 14);
+        sparseIntArray.put(2131362479, 15);
+        sparseIntArray.put(2131362718, 16);
+        sparseIntArray.put(2131362382, 17);
+        sparseIntArray.put(2131362090, 18);
+        sparseIntArray.put(2131363496, 19);
+        sparseIntArray.put(2131362518, 20);
+        sparseIntArray.put(2131362517, 21);
     }
 
     public CreateCollectListBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -89,7 +89,7 @@ public class CreateCollectListBindingImpl extends CreateCollectListBinding {
             setActionTitle((String) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (283 != i) {
+        } else if (284 != i) {
             return false;
         } else {
             setToolbarTitle((String) obj);
@@ -123,7 +123,7 @@ public class CreateCollectListBindingImpl extends CreateCollectListBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(283);
+        notifyPropertyChanged(284);
         super.requestRebind();
     }
 

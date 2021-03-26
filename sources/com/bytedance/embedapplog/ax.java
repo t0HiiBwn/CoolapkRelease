@@ -10,9 +10,7 @@ public class ax extends aq {
     int i;
     public int j;
     private JSONArray k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private JSONArray f1258l;
+    private JSONArray l;
     private aw m;
     private JSONArray n;
     private ba o;
@@ -31,7 +29,7 @@ public class ax extends aq {
         this.o = baVar;
         this.n = jSONArray;
         this.k = jSONArray2;
-        this.f1258l = jSONArray3;
+        this.l = jSONArray3;
         this.q = jSONArray4;
     }
 
@@ -50,7 +48,7 @@ public class ax extends aq {
         this.o = null;
         this.n = null;
         this.k = null;
-        this.f1258l = null;
+        this.l = null;
         this.q = null;
         return this;
     }
@@ -105,17 +103,17 @@ public class ax extends aq {
         }
         JSONArray jSONArray7 = this.n;
         int length3 = jSONArray7 != null ? jSONArray7.length() : 0;
-        if (this.f1258l == null) {
-            this.f1258l = this.n;
+        if (this.l == null) {
+            this.l = this.n;
         } else if (length3 > 0) {
             for (int i4 = 0; i4 < length3; i4++) {
-                this.f1258l.put(this.n.get(i4));
+                this.l.put(this.n.get(i4));
             }
         }
-        JSONArray jSONArray8 = this.f1258l;
+        JSONArray jSONArray8 = this.l;
         int length4 = jSONArray8 != null ? jSONArray8.length() : 0;
         if (length4 > 0) {
-            jSONObject.put("event_v3", this.f1258l);
+            jSONObject.put("event_v3", this.l);
         }
         JSONArray jSONArray9 = this.q;
         if (jSONArray9 != null) {

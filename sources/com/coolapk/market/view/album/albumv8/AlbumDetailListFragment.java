@@ -46,12 +46,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
+import kotlin.Metadata;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000´\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010!\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0003\n\u0002\b\b\u0018\u0000 F2\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u0001:\u0002FGB\u0005¢\u0006\u0002\u0010\u0004J\u0010\u0010\u001f\u001a\u00020\u00152\u0006\u0010 \u001a\u00020!H\u0002J\u0012\u0010\"\u001a\u00020#2\b\u0010$\u001a\u0004\u0018\u00010%H\u0016J\u0010\u0010&\u001a\u00020#2\u0006\u0010 \u001a\u00020'H\u0007J\u0010\u0010(\u001a\u00020#2\u0006\u0010 \u001a\u00020)H\u0007J\u0010\u0010*\u001a\u00020#2\u0006\u0010 \u001a\u00020+H\u0007J\u0010\u0010,\u001a\u00020#2\u0006\u0010 \u001a\u00020-H\u0007J\u0010\u0010.\u001a\u00020#2\u0006\u0010 \u001a\u00020!H\u0007J\u0012\u0010/\u001a\u00020#2\b\u0010$\u001a\u0004\u0018\u00010%H\u0016J\u0018\u00100\u001a\u00020#2\u0006\u00101\u001a\u0002022\u0006\u00103\u001a\u000204H\u0016J$\u00105\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u0002062\u0006\u00107\u001a\u00020\u000b2\u0006\u00108\u001a\u00020\u0015H\u0016J\b\u00109\u001a\u00020#H\u0016J\u0010\u0010:\u001a\u00020#2\u0006\u0010 \u001a\u00020;H\u0007J\u0010\u0010<\u001a\u00020#2\u0006\u0010 \u001a\u00020=H\u0007J\u0018\u0010>\u001a\u00020#2\u0006\u00107\u001a\u00020\u000b2\u0006\u0010?\u001a\u00020@H\u0014J \u0010A\u001a\u00020\u000b2\u0006\u00107\u001a\u00020\u000b2\u000e\u0010B\u001a\n\u0012\u0004\u0012\u00020\u0003\u0018\u00010\u0002H\u0014J\u0010\u0010C\u001a\u00020#2\u0006\u0010D\u001a\u00020%H\u0016J\b\u0010E\u001a\u00020\u000bH\u0014R\u0014\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\f\u001a\b\u0018\u00010\rR\u00020\u0000X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0013X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\u0016\u001a\b\u0012\u0004\u0012\u00020\u00030\u0017X\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0018\u001a\u0004\u0018\u00010\u0019X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u001a\u001a\u0004\u0018\u00010\u0013X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u001b\u001a\u0004\u0018\u00010\u0013X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u0015X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u001d\u001a\u0004\u0018\u00010\u001eX\u000e¢\u0006\u0002\n\u0000¨\u0006H"}, d2 = {"Lcom/coolapk/market/view/album/albumv8/AlbumDetailListFragment;", "Lcom/coolapk/market/view/base/asynclist/NewAsyncListFragment;", "", "Lcom/coolapk/market/model/AlbumItem;", "()V", "dataList", "Landroidx/databinding/ObservableArrayList;", "Lcom/coolapk/market/model/Entity;", "downY", "", "isLoadedHeader", "", "mAdapter", "Lcom/coolapk/market/view/album/albumv8/AlbumDetailListFragment$DataAdapter;", "mAlbum", "Lcom/coolapk/market/model/Album;", "mAlbumDetailViewModel", "Lcom/coolapk/market/view/album/AlbumDetailViewModel;", "mAlbumId", "", "mDistanceY", "", "mItems", "", "mLinearLayoutManager", "Landroidx/recyclerview/widget/LinearLayoutManager;", "mReplyId", "mUid", "replyNum", "stateEventChangedAdapter", "Lcom/coolapk/market/util/RVStateEventChangedAdapter;", "findIndexForAlbumItem", "event", "Lcom/coolapk/market/event/AlbumItemEditEvent;", "onActivityCreated", "", "savedInstanceState", "Landroid/os/Bundle;", "onAlbumDeleted", "Lcom/coolapk/market/event/FeedDeleteEvent;", "onAlbumEdited", "Lcom/coolapk/market/event/AlbumEditEvent;", "onAlbumFavoriteChagne", "Lcom/coolapk/market/event/FeedFavoriteEvent;", "onAlbumItemDelEventChanged", "Lcom/coolapk/market/event/AlbumItemAddDelEvent;", "onAlbumItemEdit", "onCreate", "onCreateOptionsMenu", "menu", "Landroid/view/Menu;", "inflater", "Landroid/view/MenuInflater;", "onCreateRequest", "Lrx/Observable;", "isRefresh", "page", "onDestroyView", "onFeedReply", "Lcom/coolapk/market/event/FeedReplyEvent;", "onLikeChange", "Lcom/coolapk/market/event/AlbumLikeEvent;", "onRequestFailure", "error", "", "onRequestResponse", "result", "onSaveInstanceState", "outState", "shouldShowList", "Companion", "DataAdapter", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: AlbumDetailListFragment.kt */
 public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? extends AlbumItem>> {
     public static final Companion Companion = new Companion(null);
@@ -168,6 +172,7 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
         return compose;
     }
 
+    /* access modifiers changed from: protected */
     public boolean onRequestResponse(boolean z, List<? extends AlbumItem> list) {
         List<? extends AlbumItem> list2 = list;
         boolean z2 = true;
@@ -191,12 +196,12 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
                 Album album = this.mAlbum;
                 Intrinsics.checkNotNull(album);
                 if (!album.getAlbumHotReplies().isEmpty()) {
-                    this.dataList.add(HolderItem.newBuilder().entityType("hotReply").string(getString(2131886852)).build());
+                    this.dataList.add(HolderItem.newBuilder().entityType("hotReply").string(getString(2131886914)).build());
                     ObservableArrayList<Entity> observableArrayList2 = this.dataList;
                     Album album2 = this.mAlbum;
                     Intrinsics.checkNotNull(album2);
                     observableArrayList2.addAll(album2.getAlbumHotReplies());
-                    this.dataList.add(HolderItem.newBuilder().string(getString(2131887148)).entityType("seemore").build());
+                    this.dataList.add(HolderItem.newBuilder().string(getString(2131887210)).entityType("seemore").build());
                 }
                 Album album3 = this.mAlbum;
                 Intrinsics.checkNotNull(album3);
@@ -242,6 +247,7 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
         }
     }
 
+    @Subscribe
     public final void onAlbumEdited(AlbumEditEvent albumEditEvent) {
         Intrinsics.checkNotNullParameter(albumEditEvent, "event");
         Album album = this.mAlbum;
@@ -256,6 +262,7 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
         }
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public final void onAlbumItemDelEventChanged(AlbumItemAddDelEvent albumItemAddDelEvent) {
         Intrinsics.checkNotNullParameter(albumItemAddDelEvent, "event");
         if (albumItemAddDelEvent.getAdd()) {
@@ -280,6 +287,7 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
         }
     }
 
+    @Subscribe
     public final void onLikeChange(AlbumLikeEvent albumLikeEvent) {
         Intrinsics.checkNotNullParameter(albumLikeEvent, "event");
         Object obj = this.dataList.get(0);
@@ -304,6 +312,7 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
         }
     }
 
+    @Subscribe
     public final void onAlbumFavoriteChagne(FeedFavoriteEvent feedFavoriteEvent) {
         Intrinsics.checkNotNullParameter(feedFavoriteEvent, "event");
         Object obj = this.dataList.get(0);
@@ -324,6 +333,7 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
         return isDataLoaded();
     }
 
+    @Subscribe
     public final void onAlbumItemEdit(AlbumItemEditEvent albumItemEditEvent) {
         Intrinsics.checkNotNullParameter(albumItemEditEvent, "event");
         AlbumItem albumItem = albumItemEditEvent.getAlbumItem();
@@ -372,6 +382,7 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
         Toast.error(getActivity(), th);
     }
 
+    @Subscribe
     public final void onAlbumDeleted(FeedDeleteEvent feedDeleteEvent) {
         Intrinsics.checkNotNullParameter(feedDeleteEvent, "event");
         Album album = this.mAlbum;
@@ -383,6 +394,7 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
         }
     }
 
+    @Subscribe
     public final void onFeedReply(FeedReplyEvent feedReplyEvent) {
         Intrinsics.checkNotNullParameter(feedReplyEvent, "event");
         feedReplyEvent.getFeedReply();
@@ -397,13 +409,14 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
         dataAdapter.notifyDataSetChanged();
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0004\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0003J\b\u0010\u0006\u001a\u00020\u0007H\u0016J\u0010\u0010\b\u001a\u00020\u00072\u0006\u0010\t\u001a\u00020\u0007H\u0016J\u0018\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u0007H\u0016J\u0018\u0010\r\u001a\u00020\u00022\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u0007H\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0011"}, d2 = {"Lcom/coolapk/market/view/album/albumv8/AlbumDetailListFragment$DataAdapter;", "Landroidx/recyclerview/widget/RecyclerView$Adapter;", "Lcom/coolapk/market/viewholder/BindingViewHolder;", "(Lcom/coolapk/market/view/album/albumv8/AlbumDetailListFragment;)V", "component", "Lcom/coolapk/market/binding/FragmentBindingComponent;", "getItemCount", "", "getItemViewType", "position", "onBindViewHolder", "", "holder", "onCreateViewHolder", "parent", "Landroid/view/ViewGroup;", "viewType", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumDetailListFragment.kt */
     private final class DataAdapter extends RecyclerView.Adapter<BindingViewHolder> {
         private final FragmentBindingComponent component;
 
+        /* JADX WARN: Incorrect args count in method signature: ()V */
         public DataAdapter() {
-            AlbumDetailListFragment.this = r2;
-            this.component = new FragmentBindingComponent(r2.getFragment());
+            this.component = new FragmentBindingComponent(AlbumDetailListFragment.this.getFragment());
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
@@ -411,18 +424,18 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
             switch (i) {
-                case 2131558446:
+                case 2131558447:
                     Intrinsics.checkNotNullExpressionValue(inflate, "viewItem");
                     return new AlbumV8HeaderViewHolder(inflate, this.component, null);
-                case 2131558579:
+                case 2131558583:
                     return new AlbumItemViewHolder(AlbumDetailListFragment.this.mAlbum, AlbumDetailListFragment.this.getFragmentManager(), inflate, this.component, new AlbumDetailListFragment$DataAdapter$onCreateViewHolder$1(this));
-                case 2131558716:
+                case 2131558723:
                     Intrinsics.checkNotNullExpressionValue(inflate, "viewItem");
                     return new MultiFeedReplyViewHolder(inflate, this.component, new ItemActionHandler(), null, 8, null);
-                case 2131558833:
+                case 2131558840:
                     Intrinsics.checkNotNullExpressionValue(inflate, "viewItem");
                     return new AlbumEmptyViewHolder(inflate, this.component, null);
-                case 2131558899:
+                case 2131558906:
                     Intrinsics.checkNotNullExpressionValue(inflate, "viewItem");
                     return new FeedReplyMoreViewHolder(inflate, this.component, null);
                 default:
@@ -444,25 +457,26 @@ public final class AlbumDetailListFragment extends NewAsyncListFragment<List<? e
         public int getItemViewType(int i) {
             Entity entity = (Entity) AlbumDetailListFragment.this.dataList.get(i);
             if (entity instanceof AlbumItem) {
-                return 2131558579;
+                return 2131558583;
             }
             Intrinsics.checkNotNullExpressionValue(entity, "entity");
             if (TextUtils.equals(entity.getEntityTemplate(), "albumEmpty")) {
-                return 2131558833;
+                return 2131558840;
             }
             if (EntityUtils.isAlbumType(entity.getEntityType())) {
-                return 2131558446;
+                return 2131558447;
             }
             if (EntityUtils.isFeedreply(entity.getEntityType())) {
-                return 2131558716;
+                return 2131558723;
             }
             if (TextUtils.equals("seemore", entity.getEntityType())) {
-                return 2131558899;
+                return 2131558906;
             }
             throw new RuntimeException("unknown viewType :" + entity.getEntityType());
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0006\u0010\f\u001a\u00020\rJ\u0010\u0010\f\u001a\u00020\r2\b\u0010\u000e\u001a\u0004\u0018\u00010\u000fJ\u001a\u0010\f\u001a\u00020\r2\b\u0010\u000e\u001a\u0004\u0018\u00010\u000f2\b\u0010\u0010\u001a\u0004\u0018\u00010\u0004R\u0014\u0010\u0003\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006R\u0014\u0010\u0007\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\u0006R\u0014\u0010\t\u001a\u00020\u0004XD¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u0006R\u000e\u0010\u000b\u001a\u00020\u0004XD¢\u0006\u0002\n\u0000¨\u0006\u0011"}, d2 = {"Lcom/coolapk/market/view/album/albumv8/AlbumDetailListFragment$Companion;", "", "()V", "KEY_ALBUM", "", "getKEY_ALBUM", "()Ljava/lang/String;", "KEY_ALBUM_REPLY_ID", "getKEY_ALBUM_REPLY_ID", "KEY_DATA", "getKEY_DATA", "TYPE_ITEM_ALBUMINTRO", "newInstance", "Lcom/coolapk/market/view/album/albumv8/AlbumDetailListFragment;", "album", "Lcom/coolapk/market/model/Album;", "replyId", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumDetailListFragment.kt */
     public static final class Companion {
         private Companion() {

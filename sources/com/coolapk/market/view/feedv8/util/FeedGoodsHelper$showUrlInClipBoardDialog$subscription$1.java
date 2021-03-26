@@ -21,7 +21,7 @@ final class FeedGoodsHelper$showUrlInClipBoardDialog$subscription$1<T1, T2, R> i
     /* Return type fixed from 'java.lang.Object' to match base method */
     /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object, java.lang.Object] */
     @Override // rx.functions.Func2
-    public /* bridge */ /* synthetic */ FeedGoods call(FeedGoods feedGoods, Long l2) {
-        return call(feedGoods, l2.longValue());
+    public /* bridge */ /* synthetic */ FeedGoods call(FeedGoods feedGoods, Long l) {
+        return call(feedGoods, l.longValue());
     }
 }

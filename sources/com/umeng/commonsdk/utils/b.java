@@ -52,9 +52,7 @@ public class b {
     public static final String i = "header_device_id_android_id";
     public static final String j = "header_device_id_serialNo";
     public static final String k = "header_bulid";
-
-    /* renamed from: l  reason: collision with root package name */
-    public static final String f1496l = "header_os_version";
+    public static final String l = "header_os_version";
     public static final String m = "header_resolution";
     public static final String n = "header_mc";
     public static final String o = "header_timezone";

@@ -61,9 +61,7 @@ public class c implements f, Runnable {
     private boolean i;
     private boolean j;
     private boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1416l;
+    private boolean l;
     private final AtomicBoolean m;
     private volatile i n = i.RUN_STATUS_NONE;
     private final com.ss.android.socialbase.downloader.downloader.i o;
@@ -1072,7 +1070,7 @@ public class c implements f, Runnable {
         if (downloadInfo == null || downloadInfo.isExpiredRedownload()) {
             return false;
         }
-        if ((!this.i || this.p.getChunkCount() > 1) && !this.p.isChunkDowngradeRetryUsed() && this.j && !this.f1416l) {
+        if ((!this.i || this.p.getChunkCount() > 1) && !this.p.isChunkDowngradeRetryUsed() && this.j && !this.l) {
             return true;
         }
         return false;
@@ -1317,7 +1315,7 @@ public class c implements f, Runnable {
                         str2 = "";
                     }
                     boolean i3 = dVar.i();
-                    this.f1416l = i3;
+                    this.l = i3;
                     if (i3 || h2 != 0 || (gVar instanceof com.ss.android.socialbase.downloader.network.i)) {
                         if (!i3) {
                             String b3 = com.ss.android.socialbase.downloader.i.e.b(gVar, "Content-Range");

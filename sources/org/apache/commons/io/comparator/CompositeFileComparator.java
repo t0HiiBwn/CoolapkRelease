@@ -11,28 +11,6 @@ public class CompositeFileComparator extends AbstractFileComparator implements S
     private static final long serialVersionUID = -2224170307287243428L;
     private final Comparator<File>[] delegates;
 
-    @Override // org.apache.commons.io.comparator.AbstractFileComparator
-    public /* bridge */ /* synthetic */ List sort(List list) {
-        return super.sort(list);
-    }
-
-    @Override // org.apache.commons.io.comparator.AbstractFileComparator
-    public /* bridge */ /* synthetic */ File[] sort(File[] fileArr) {
-        return super.sort(fileArr);
-    }
-
-    /* JADX DEBUG: Multi-variable search result rejected for r4v1, resolved type: java.util.Comparator<?>[] */
-    /* JADX WARN: Multi-variable type inference failed */
-    public CompositeFileComparator(Comparator<File>... comparatorArr) {
-        if (comparatorArr == null) {
-            this.delegates = NO_COMPARATORS;
-            return;
-        }
-        Comparator<File>[] comparatorArr2 = new Comparator[comparatorArr.length];
-        this.delegates = comparatorArr2;
-        System.arraycopy(comparatorArr, 0, comparatorArr2, 0, comparatorArr.length);
-    }
-
     /* JADX DEBUG: Multi-variable search result rejected for r3v7, resolved type: java.util.Comparator<?>[] */
     /* JADX WARN: Multi-variable type inference failed */
     public CompositeFileComparator(Iterable<Comparator<File>> iterable) {
@@ -47,6 +25,18 @@ public class CompositeFileComparator extends AbstractFileComparator implements S
         this.delegates = (Comparator[]) arrayList.toArray(new Comparator[arrayList.size()]);
     }
 
+    /* JADX DEBUG: Multi-variable search result rejected for r4v1, resolved type: java.util.Comparator<?>[] */
+    /* JADX WARN: Multi-variable type inference failed */
+    public CompositeFileComparator(Comparator<File>... comparatorArr) {
+        if (comparatorArr == null) {
+            this.delegates = NO_COMPARATORS;
+            return;
+        }
+        Comparator<File>[] comparatorArr2 = new Comparator[comparatorArr.length];
+        this.delegates = comparatorArr2;
+        System.arraycopy(comparatorArr, 0, comparatorArr2, 0, comparatorArr.length);
+    }
+
     public int compare(File file, File file2) {
         int i = 0;
         for (Comparator<File> comparator : this.delegates) {
@@ -56,6 +46,16 @@ public class CompositeFileComparator extends AbstractFileComparator implements S
             }
         }
         return i;
+    }
+
+    @Override // org.apache.commons.io.comparator.AbstractFileComparator
+    public /* bridge */ /* synthetic */ List sort(List list) {
+        return super.sort(list);
+    }
+
+    @Override // org.apache.commons.io.comparator.AbstractFileComparator
+    public /* bridge */ /* synthetic */ File[] sort(File[] fileArr) {
+        return super.sort(fileArr);
     }
 
     @Override // org.apache.commons.io.comparator.AbstractFileComparator, java.lang.Object

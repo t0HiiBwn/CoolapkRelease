@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
 import java.util.Collection;
-import java.util.Objects;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.apache.commons.io.filefilter.IOFileFilter;
 import org.apache.commons.io.filefilter.TrueFileFilter;
@@ -13,34 +12,28 @@ public abstract class DirectoryWalker<T> {
     private final int depthLimit;
     private final FileFilter filter;
 
-    protected File[] filterDirectoryContents(File file, int i, File[] fileArr) throws IOException {
-        return fileArr;
-    }
+    public static class CancelException extends IOException {
+        private static final long serialVersionUID = 1347339620135041008L;
+        private final int depth;
+        private final File file;
 
-    protected boolean handleDirectory(File file, int i, Collection<T> collection) throws IOException {
-        return true;
-    }
+        public CancelException(File file2, int i) {
+            this("Operation Cancelled", file2, i);
+        }
 
-    protected void handleDirectoryEnd(File file, int i, Collection<T> collection) throws IOException {
-    }
+        public CancelException(String str, File file2, int i) {
+            super(str);
+            this.file = file2;
+            this.depth = i;
+        }
 
-    protected void handleDirectoryStart(File file, int i, Collection<T> collection) throws IOException {
-    }
+        public int getDepth() {
+            return this.depth;
+        }
 
-    protected void handleEnd(Collection<T> collection) throws IOException {
-    }
-
-    protected void handleFile(File file, int i, Collection<T> collection) throws IOException {
-    }
-
-    protected boolean handleIsCancelled(File file, int i, Collection<T> collection) throws IOException {
-        return false;
-    }
-
-    protected void handleRestricted(File file, int i, Collection<T> collection) throws IOException {
-    }
-
-    protected void handleStart(File file, Collection<T> collection) throws IOException {
+        public File getFile() {
+            return this.file;
+        }
     }
 
     protected DirectoryWalker() {
@@ -59,17 +52,6 @@ public abstract class DirectoryWalker<T> {
             this.filter = FileFilterUtils.or(FileFilterUtils.makeDirectoryOnly(iOFileFilter == null ? TrueFileFilter.TRUE : iOFileFilter), FileFilterUtils.makeFileOnly(iOFileFilter2 == null ? TrueFileFilter.TRUE : iOFileFilter2));
         }
         this.depthLimit = i;
-    }
-
-    protected final void walk(File file, Collection<T> collection) throws IOException {
-        Objects.requireNonNull(file, "Start Directory is null");
-        try {
-            handleStart(file, collection);
-            walk(file, 0, collection);
-            handleEnd(collection);
-        } catch (CancelException e) {
-            handleCancelled(file, collection, e);
-        }
     }
 
     private void walk(File file, int i, Collection<T> collection) throws IOException {
@@ -107,31 +89,51 @@ public abstract class DirectoryWalker<T> {
         }
     }
 
+    protected File[] filterDirectoryContents(File file, int i, File[] fileArr) throws IOException {
+        return fileArr;
+    }
+
     protected void handleCancelled(File file, Collection<T> collection, CancelException cancelException) throws IOException {
         throw cancelException;
     }
 
-    public static class CancelException extends IOException {
-        private static final long serialVersionUID = 1347339620135041008L;
-        private final int depth;
-        private final File file;
+    protected boolean handleDirectory(File file, int i, Collection<T> collection) throws IOException {
+        return true;
+    }
 
-        public CancelException(File file2, int i) {
-            this("Operation Cancelled", file2, i);
-        }
+    protected void handleDirectoryEnd(File file, int i, Collection<T> collection) throws IOException {
+    }
 
-        public CancelException(String str, File file2, int i) {
-            super(str);
-            this.file = file2;
-            this.depth = i;
-        }
+    protected void handleDirectoryStart(File file, int i, Collection<T> collection) throws IOException {
+    }
 
-        public File getFile() {
-            return this.file;
-        }
+    protected void handleEnd(Collection<T> collection) throws IOException {
+    }
 
-        public int getDepth() {
-            return this.depth;
+    protected void handleFile(File file, int i, Collection<T> collection) throws IOException {
+    }
+
+    protected boolean handleIsCancelled(File file, int i, Collection<T> collection) throws IOException {
+        return false;
+    }
+
+    protected void handleRestricted(File file, int i, Collection<T> collection) throws IOException {
+    }
+
+    protected void handleStart(File file, Collection<T> collection) throws IOException {
+    }
+
+    protected final void walk(File file, Collection<T> collection) throws IOException {
+        if (file != null) {
+            try {
+                handleStart(file, collection);
+                walk(file, 0, collection);
+                handleEnd(collection);
+            } catch (CancelException e) {
+                handleCancelled(file, collection, e);
+            }
+        } else {
+            throw new NullPointerException("Start Directory is null");
         }
     }
 }

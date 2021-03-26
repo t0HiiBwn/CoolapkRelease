@@ -43,19 +43,19 @@ public final class FullScreenActivity extends BaseActivity {
         getWindow().addFlags(1024);
         FrameLayout frameLayout = new FrameLayout(this);
         frameLayout.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
-        frameLayout.setId(2131362316);
+        frameLayout.setId(2131362322);
         frameLayout.setBackgroundColor(-16777216);
         setContentView(frameLayout);
         requestCreateFragment();
     }
 
     private final void requestCreateFragment() {
-        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362316);
+        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362322);
         if (findFragmentById == null) {
             findFragmentById = onCreateFragment();
         }
         if (findFragmentById != null && !findFragmentById.isAdded()) {
-            getSupportFragmentManager().beginTransaction().add(2131362316, findFragmentById).commit();
+            getSupportFragmentManager().beginTransaction().add(2131362322, findFragmentById).commit();
             getSupportFragmentManager().executePendingTransactions();
         }
     }
@@ -95,7 +95,7 @@ public final class FullScreenActivity extends BaseActivity {
     }
 
     public final Fragment getFragment() {
-        return getSupportFragmentManager().findFragmentById(2131362316);
+        return getSupportFragmentManager().findFragmentById(2131362322);
     }
 
     @Override // com.coolapk.market.view.base.BaseActivity

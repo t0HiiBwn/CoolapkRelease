@@ -8,8 +8,8 @@ public class AppendObjectResult extends OSSResult {
         return this.nextPosition;
     }
 
-    public void setNextPosition(Long l2) {
-        this.nextPosition = l2.longValue();
+    public void setNextPosition(Long l) {
+        this.nextPosition = l.longValue();
     }
 
     public String getObjectCRC64() {

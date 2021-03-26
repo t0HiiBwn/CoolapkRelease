@@ -37,7 +37,7 @@ public class AlbumListFragment extends SimpleAsyncListFragment<Result<List<Entit
 
     @Override // com.coolapk.market.view.base.asynclist.SimpleAsyncListFragment
     public int getItemViewType(int i) {
-        return 2131558578;
+        return 2131558582;
     }
 
     public static AlbumListFragment newInstance() {
@@ -83,7 +83,7 @@ public class AlbumListFragment extends SimpleAsyncListFragment<Result<List<Entit
             }
             this.shouldDeleteAllOnNextDataLoaded = false;
             if (!(getActivity() instanceof UserSpaceV9Activity) || !((UserSpaceV9Activity) getActivity()).isInBlackList()) {
-                setEmptyData(getString(2131886765), 0);
+                setEmptyData(getString(2131886827), 0);
             } else {
                 setEmptyData("由于你的黑名单设置，该用户动态对你不可见", 0);
             }

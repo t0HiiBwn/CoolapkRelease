@@ -28,7 +28,7 @@ public class ItemChatingUserBindingImpl extends ItemChatingUserBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362934, 6);
+        sparseIntArray.put(2131362946, 6);
     }
 
     public ItemChatingUserBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -68,15 +68,15 @@ public class ItemChatingUserBindingImpl extends ItemChatingUserBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Message) obj);
-        } else if (254 == i) {
+        } else if (255 == i) {
             setShowPic((Boolean) obj);
-        } else if (249 == i) {
+        } else if (250 == i) {
             setShowError((Boolean) obj);
-        } else if (220 == i) {
+        } else if (221 == i) {
             setPic((String) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -92,7 +92,7 @@ public class ItemChatingUserBindingImpl extends ItemChatingUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -102,7 +102,7 @@ public class ItemChatingUserBindingImpl extends ItemChatingUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(254);
+        notifyPropertyChanged(255);
         super.requestRebind();
     }
 
@@ -112,7 +112,7 @@ public class ItemChatingUserBindingImpl extends ItemChatingUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(249);
+        notifyPropertyChanged(250);
         super.requestRebind();
     }
 
@@ -122,7 +122,7 @@ public class ItemChatingUserBindingImpl extends ItemChatingUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 8;
         }
-        notifyPropertyChanged(220);
+        notifyPropertyChanged(221);
         super.requestRebind();
     }
 
@@ -132,7 +132,7 @@ public class ItemChatingUserBindingImpl extends ItemChatingUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 16;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -230,7 +230,7 @@ public class ItemChatingUserBindingImpl extends ItemChatingUserBinding {
                             this.messageView.setVisibility(i5);
                             Boolean bool4 = null;
                             onBitmapTransformListener = onBitmapTransformListener2;
-                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.picView, str3, null, 2131231691, 0, bool4, bool4, bool4, false, bool4, null, null, null, bool4, bool4, bool4, null, true);
+                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.picView, str3, null, 2131231702, 0, bool4, bool4, bool4, false, bool4, null, null, null, bool4, bool4, bool4, null, true);
                         } else {
                             onBitmapTransformListener = onBitmapTransformListener2;
                         }
@@ -243,7 +243,7 @@ public class ItemChatingUserBindingImpl extends ItemChatingUserBinding {
                         }
                         if ((j & 81) != 0) {
                             Boolean bool5 = null;
-                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool5, bool5, bool5, bool5, bool5, null, null, onBitmapTransformListener, bool5, bool5, bool5, null, bool5);
+                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool5, bool5, bool5, bool5, bool5, null, null, onBitmapTransformListener, bool5, bool5, bool5, null, bool5);
                             return;
                         }
                         return;

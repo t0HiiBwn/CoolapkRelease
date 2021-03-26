@@ -25,7 +25,7 @@ public class UTPageHitHelper {
     private boolean O = false;
 
     /* renamed from: a  reason: collision with other field name */
-    private Queue<UTPageEventObject> f96a = new LinkedList();
+    private Queue<UTPageEventObject> f95a = new LinkedList();
     private String ah = null;
     private String ai = null;
     private Map<String, String> z = new HashMap();
@@ -38,7 +38,7 @@ public class UTPageHitHelper {
         private Uri a = null;
 
         /* renamed from: a  reason: collision with other field name */
-        private UTPageStatus f97a = null;
+        private UTPageStatus f96a = null;
         private String aj = null;
         private String ak = null;
         private String al = null;
@@ -58,9 +58,9 @@ public class UTPageHitHelper {
             this.a = null;
             this.aj = null;
             this.ak = null;
-            UTPageStatus uTPageStatus = this.f97a;
+            UTPageStatus uTPageStatus = this.f96a;
             if (uTPageStatus == null || uTPageStatus != UTPageStatus.UT_H5_IN_WebView) {
-                this.f97a = null;
+                this.f96a = null;
             }
             this.P = false;
             this.R = false;
@@ -91,11 +91,11 @@ public class UTPageHitHelper {
         }
 
         public void setPageStatus(UTPageStatus uTPageStatus) {
-            this.f97a = uTPageStatus;
+            this.f96a = uTPageStatus;
         }
 
         public UTPageStatus getPageStatus() {
-            return this.f97a;
+            return this.f96a;
         }
 
         public Map<String, String> getPageProperties() {
@@ -156,12 +156,12 @@ public class UTPageHitHelper {
 
     synchronized void a(UTPageEventObject uTPageEventObject) {
         uTPageEventObject.resetPropertiesWithoutSkipFlagAndH5Flag();
-        if (!this.f96a.contains(uTPageEventObject)) {
-            this.f96a.add(uTPageEventObject);
+        if (!this.f95a.contains(uTPageEventObject)) {
+            this.f95a.add(uTPageEventObject);
         }
-        if (this.f96a.size() > 200) {
+        if (this.f95a.size() > 200) {
             for (int i = 0; i < 100; i++) {
-                UTPageEventObject poll = this.f96a.poll();
+                UTPageEventObject poll = this.f95a.poll();
                 if (poll != null && this.A.containsKey(poll.getCacheKey())) {
                     this.A.remove(poll.getCacheKey());
                 }
@@ -185,7 +185,7 @@ public class UTPageHitHelper {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    private String m35a(Object obj) {
+    private String m25a(Object obj) {
         String str;
         if (obj instanceof String) {
             str = (String) obj;
@@ -197,7 +197,7 @@ public class UTPageHitHelper {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    synchronized boolean m38a(Object obj) {
+    synchronized boolean m28a(Object obj) {
         if (obj != null) {
             UTPageEventObject a2 = a(obj);
             if (a2.getPageStatus() != null && a2.getPageStatus() == UTPageStatus.UT_H5_IN_WebView) {
@@ -208,7 +208,7 @@ public class UTPageHitHelper {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    synchronized void m37a(Object obj) {
+    synchronized void m27a(Object obj) {
         if (obj != null) {
             UTPageEventObject a2 = a(obj);
             if (a2.getPageStatus() != null) {
@@ -218,7 +218,7 @@ public class UTPageHitHelper {
     }
 
     private synchronized UTPageEventObject a(Object obj) {
-        String a2 = m35a(obj);
+        String a2 = m25a(obj);
         if (this.A.containsKey(a2)) {
             return this.A.get(a2);
         }
@@ -239,8 +239,8 @@ public class UTPageHitHelper {
     }
 
     /* renamed from: b  reason: collision with other method in class */
-    private synchronized void m36b(Object obj) {
-        String a2 = m35a(obj);
+    private synchronized void m26b(Object obj) {
+        String a2 = m25a(obj);
         if (this.A.containsKey(a2)) {
             this.A.remove(a2);
         }
@@ -253,7 +253,7 @@ public class UTPageHitHelper {
 
     synchronized void a(Object obj, String str, boolean z2) {
         if (obj != null) {
-            String a2 = m35a(obj);
+            String a2 = m25a(obj);
             if (a2 == null || !a2.equals(this.ah)) {
                 if (this.ah != null) {
                     i.a("lost 2001", "Last page requires leave(" + this.ah + ").");
@@ -293,9 +293,9 @@ public class UTPageHitHelper {
                         }
                     }
                     this.B = null;
-                    this.ah = m35a(obj);
+                    this.ah = m25a(obj);
                     b(a3);
-                    a(m35a(obj), a3);
+                    a(m25a(obj), a3);
                 } else {
                     i.a("skip page[pageAppear]", "page name:" + obj.getClass().getSimpleName());
                 }
@@ -475,7 +475,7 @@ public class UTPageHitHelper {
             if (a2.isSkipPage()) {
                 a(a2);
             } else if (a2.getPageStatus() == null || UTPageStatus.UT_H5_IN_WebView != a2.getPageStatus()) {
-                m36b(obj);
+                m26b(obj);
             } else {
                 a(a2);
             }

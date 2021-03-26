@@ -149,7 +149,7 @@ public abstract class ProductNodeHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductNodeHeaderBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ProductNodeHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559109, viewGroup, z, obj);
+        return (ProductNodeHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559116, viewGroup, z, obj);
     }
 
     public static ProductNodeHeaderBinding inflate(LayoutInflater layoutInflater) {
@@ -158,7 +158,7 @@ public abstract class ProductNodeHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductNodeHeaderBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ProductNodeHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559109, null, false, obj);
+        return (ProductNodeHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559116, null, false, obj);
     }
 
     public static ProductNodeHeaderBinding bind(View view) {
@@ -167,6 +167,6 @@ public abstract class ProductNodeHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductNodeHeaderBinding bind(View view, Object obj) {
-        return (ProductNodeHeaderBinding) bind(obj, view, 2131559109);
+        return (ProductNodeHeaderBinding) bind(obj, view, 2131559116);
     }
 }

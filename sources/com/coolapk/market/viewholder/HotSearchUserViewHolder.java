@@ -21,7 +21,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: HotSearchUserViewHolder.kt */
 public final class HotSearchUserViewHolder extends GenericBindHolder<ItemHotSearchUserBinding, User> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558776;
+    public static final int LAYOUT_ID = 2131558783;
     private final EntityListPresenter presenter;
     private User user;
 
@@ -36,8 +36,8 @@ public final class HotSearchUserViewHolder extends GenericBindHolder<ItemHotSear
         Intrinsics.checkNotNullParameter(dataBindingComponent, "component");
         Intrinsics.checkNotNullParameter(entityListPresenter, "presenter");
         this.presenter = entityListPresenter;
-        Drawable mutate = ResourceUtils.getDrawable(getContext(), 2131231605).mutate();
-        mutate.setTint(ResourceUtils.getColorInt(getContext(), 2131100011));
+        Drawable mutate = ResourceUtils.getDrawable(getContext(), 2131231616).mutate();
+        mutate.setTint(ResourceUtils.getColorInt(getContext(), 2131100016));
         mutate.setBounds(0, 0, NumberExtendsKt.getDp((Number) 12), NumberExtendsKt.getDp((Number) 12));
         Intrinsics.checkNotNullExpressionValue(mutate, "ResourceUtils.getDrawabl… 12.dp)\n                }");
         LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{mutate});
@@ -68,7 +68,7 @@ public final class HotSearchUserViewHolder extends GenericBindHolder<ItemHotSear
         itemHotSearchUserBinding2.setModel(user2);
         TextView textView = ((ItemHotSearchUserBinding) getBinding()).subTitleView;
         textView.setText(KotlinExtendKt.toDisplayString(user2.getLikeNum()));
-        textView.setTextColor(ResourceUtils.getColorInt(textView.getContext(), 2131100011));
+        textView.setTextColor(ResourceUtils.getColorInt(textView.getContext(), 2131100016));
         ((ItemHotSearchUserBinding) getBinding()).executePendingBindings();
     }
 
@@ -77,7 +77,7 @@ public final class HotSearchUserViewHolder extends GenericBindHolder<ItemHotSear
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
         int id = view.getId();
-        if (id == 2131361886) {
+        if (id == 2131361887) {
             User user2 = this.user;
             if (user2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("user");
@@ -101,7 +101,7 @@ public final class HotSearchUserViewHolder extends GenericBindHolder<ItemHotSear
             String uid2 = user4.getUid();
             Intrinsics.checkNotNullExpressionValue(uid2, "user.uid");
             entityListPresenter2.unfollowUser(uid2);
-        } else if (id == 2131362200) {
+        } else if (id == 2131362205) {
             UserAvatarView userAvatarView = ((ItemHotSearchUserBinding) getBinding()).iconView;
             User user5 = this.user;
             if (user5 == null) {

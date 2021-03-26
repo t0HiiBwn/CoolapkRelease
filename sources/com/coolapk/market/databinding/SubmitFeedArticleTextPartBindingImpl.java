@@ -25,8 +25,8 @@ public class SubmitFeedArticleTextPartBindingImpl extends SubmitFeedArticleTextP
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363160, 1);
-        sparseIntArray.put(2131362472, 2);
+        sparseIntArray.put(2131363174, 1);
+        sparseIntArray.put(2131362480, 2);
     }
 
     public SubmitFeedArticleTextPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

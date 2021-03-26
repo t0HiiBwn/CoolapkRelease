@@ -36,6 +36,7 @@ abstract class C$$AutoValue_Live extends Live {
     private final String presenterUid;
     private final List<User> presenterUserInfo;
     private final int rankScore;
+    private final String relationGroupId;
     private final String relationPageName;
     private final LiveProduct relationProduct;
     private final String relationTag;
@@ -53,7 +54,7 @@ abstract class C$$AutoValue_Live extends Live {
     private final int visitNum;
     private final String visitNumFormat;
 
-    C$$AutoValue_Live(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, String str11, String str12, long j, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, LiveProduct liveProduct, int i, String str22, int i2, int i3, String str23, int i4, String str24, int i5, long j2, long j3, int i6, int i7, int i8, int i9, String str25, int i10, User user, int i11, List<User> list) {
+    C$$AutoValue_Live(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, String str11, String str12, long j, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, LiveProduct liveProduct, int i, String str22, int i2, int i3, String str23, int i4, String str24, int i5, long j2, long j3, int i6, int i7, int i8, int i9, String str25, int i10, User user, int i11, List<User> list, String str26) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -65,8 +66,8 @@ abstract class C$$AutoValue_Live extends Live {
         this.subTitle = str7;
         this.id = str8;
         this.extraData = str9;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str10, "Null uid");
         this.uid = str10;
         Objects.requireNonNull(str11, "Null title");
@@ -111,6 +112,8 @@ abstract class C$$AutoValue_Live extends Live {
         this.isFollow = i11;
         Objects.requireNonNull(list, "Null presenterUserInfo");
         this.presenterUserInfo = list;
+        Objects.requireNonNull(str26, "Null relationGroupId");
+        this.relationGroupId = str26;
     }
 
     @Override // com.coolapk.market.model.Entity
@@ -377,9 +380,15 @@ abstract class C$$AutoValue_Live extends Live {
         return this.presenterUserInfo;
     }
 
+    @Override // com.coolapk.market.model.Live
+    @SerializedName("relation_group_id")
+    public String getRelationGroupId() {
+        return this.relationGroupId;
+    }
+
     @Override // java.lang.Object
     public String toString() {
-        return "Live{entityTypeName=" + this.entityTypeName + ", entityType=" + this.entityType + ", entityTemplate=" + this.entityTemplate + ", entityId=" + this.entityId + ", entityFixed=" + this.entityFixed + ", url=" + this.url + ", pic=" + this.pic + ", subTitle=" + this.subTitle + ", id=" + this.id + ", extraData=" + this.extraData + ", dateline=" + this.dateline + ", lastUpdate=" + this.lastUpdate + ", uid=" + this.uid + ", title=" + this.title + ", presenterUid=" + this.presenterUid + ", liveTime=" + this.liveTime + ", showLiveTime=" + this.showLiveTime + ", description=" + this.description + ", picUrl=" + this.picUrl + ", videoLiveUrl=" + this.videoLiveUrl + ", videoLiveInfo=" + this.videoLiveInfo + ", videoPlaybackUrl=" + this.videoPlaybackUrl + ", videoPlaybackUInfo=" + this.videoPlaybackUInfo + ", relationTag=" + this.relationTag + ", relationPageName=" + this.relationPageName + ", relationProduct=" + this.relationProduct + ", isShowBannerTitle=" + this.isShowBannerTitle + ", followNumFormat=" + this.followNumFormat + ", followNum=" + this.followNum + ", discussNum=" + this.discussNum + ", discussNumFormat=" + this.discussNumFormat + ", visitNum=" + this.visitNum + ", visitNumFormat=" + this.visitNumFormat + ", rankScore=" + this.rankScore + ", liveStartTime=" + this.liveStartTime + ", liveEndTime=" + this.liveEndTime + ", liveStatus=" + this.liveStatus + ", disallowPost=" + this.disallowPost + ", disallowPostPic=" + this.disallowPostPic + ", disableDiscussTab=" + this.disableDiscussTab + ", showTab=" + this.showTab + ", closeDiscuss=" + this.closeDiscuss + ", userInfo=" + this.userInfo + ", isFollow=" + this.isFollow + ", presenterUserInfo=" + this.presenterUserInfo + "}";
+        return "Live{entityTypeName=" + this.entityTypeName + ", entityType=" + this.entityType + ", entityTemplate=" + this.entityTemplate + ", entityId=" + this.entityId + ", entityFixed=" + this.entityFixed + ", url=" + this.url + ", pic=" + this.pic + ", subTitle=" + this.subTitle + ", id=" + this.id + ", extraData=" + this.extraData + ", dateline=" + this.dateline + ", lastUpdate=" + this.lastUpdate + ", uid=" + this.uid + ", title=" + this.title + ", presenterUid=" + this.presenterUid + ", liveTime=" + this.liveTime + ", showLiveTime=" + this.showLiveTime + ", description=" + this.description + ", picUrl=" + this.picUrl + ", videoLiveUrl=" + this.videoLiveUrl + ", videoLiveInfo=" + this.videoLiveInfo + ", videoPlaybackUrl=" + this.videoPlaybackUrl + ", videoPlaybackUInfo=" + this.videoPlaybackUInfo + ", relationTag=" + this.relationTag + ", relationPageName=" + this.relationPageName + ", relationProduct=" + this.relationProduct + ", isShowBannerTitle=" + this.isShowBannerTitle + ", followNumFormat=" + this.followNumFormat + ", followNum=" + this.followNum + ", discussNum=" + this.discussNum + ", discussNumFormat=" + this.discussNumFormat + ", visitNum=" + this.visitNum + ", visitNumFormat=" + this.visitNumFormat + ", rankScore=" + this.rankScore + ", liveStartTime=" + this.liveStartTime + ", liveEndTime=" + this.liveEndTime + ", liveStatus=" + this.liveStatus + ", disallowPost=" + this.disallowPost + ", disallowPostPic=" + this.disallowPostPic + ", disableDiscussTab=" + this.disableDiscussTab + ", showTab=" + this.showTab + ", closeDiscuss=" + this.closeDiscuss + ", userInfo=" + this.userInfo + ", isFollow=" + this.isFollow + ", presenterUserInfo=" + this.presenterUserInfo + ", relationGroupId=" + this.relationGroupId + "}";
     }
 
     @Override // java.lang.Object
@@ -392,8 +401,8 @@ abstract class C$$AutoValue_Live extends Live {
         String str5;
         String str6;
         String str7;
+        Long l;
         Long l2;
-        Long l3;
         String str8;
         String str9;
         String str10;
@@ -411,7 +420,7 @@ abstract class C$$AutoValue_Live extends Live {
         Live live = (Live) obj;
         String str15 = this.entityTypeName;
         if (str15 != null ? str15.equals(live.getEntityTypeName()) : live.getEntityTypeName() == null) {
-            if (this.entityType.equals(live.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(live.getEntityTemplate()) : live.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(live.getEntityId()) : live.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(live.getEntityFixed()) : live.getEntityFixed() == null) && ((str3 = this.url) != null ? str3.equals(live.getUrl()) : live.getUrl() == null) && ((str4 = this.pic) != null ? str4.equals(live.getPic()) : live.getPic() == null) && ((str5 = this.subTitle) != null ? str5.equals(live.getSubTitle()) : live.getSubTitle() == null) && ((str6 = this.id) != null ? str6.equals(live.getId()) : live.getId() == null) && ((str7 = this.extraData) != null ? str7.equals(live.getExtraData()) : live.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(live.getDateline()) : live.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(live.getLastUpdate()) : live.getLastUpdate() == null) && this.uid.equals(live.getUid()) && this.title.equals(live.getTitle()) && this.presenterUid.equals(live.getPresenterUid()) && this.liveTime == live.getLiveTime() && this.showLiveTime.equals(live.getShowLiveTime()) && this.description.equals(live.getDescription()) && ((str8 = this.picUrl) != null ? str8.equals(live.getPicUrl()) : live.getPicUrl() == null) && ((str9 = this.videoLiveUrl) != null ? str9.equals(live.getVideoLiveUrl()) : live.getVideoLiveUrl() == null) && ((str10 = this.videoLiveInfo) != null ? str10.equals(live.getVideoLiveInfo()) : live.getVideoLiveInfo() == null) && ((str11 = this.videoPlaybackUrl) != null ? str11.equals(live.getVideoPlaybackUrl()) : live.getVideoPlaybackUrl() == null) && ((str12 = this.videoPlaybackUInfo) != null ? str12.equals(live.getVideoPlaybackUInfo()) : live.getVideoPlaybackUInfo() == null) && ((str13 = this.relationTag) != null ? str13.equals(live.getRelationTag()) : live.getRelationTag() == null) && ((str14 = this.relationPageName) != null ? str14.equals(live.getRelationPageName()) : live.getRelationPageName() == null) && ((liveProduct = this.relationProduct) != null ? liveProduct.equals(live.getRelationProduct()) : live.getRelationProduct() == null) && this.isShowBannerTitle == live.getIsShowBannerTitle() && this.followNumFormat.equals(live.getFollowNumFormat()) && this.followNum == live.getFollowNum() && this.discussNum == live.getDiscussNum() && this.discussNumFormat.equals(live.getDiscussNumFormat()) && this.visitNum == live.getVisitNum() && this.visitNumFormat.equals(live.getVisitNumFormat()) && this.rankScore == live.getRankScore() && this.liveStartTime == live.getLiveStartTime() && this.liveEndTime == live.getLiveEndTime() && this.liveStatus == live.getLiveStatus() && this.disallowPost == live.getDisallowPost() && this.disallowPostPic == live.getDisallowPostPic() && this.disableDiscussTab == live.getDisableDiscussTab() && this.showTab.equals(live.getShowTab()) && this.closeDiscuss == live.getCloseDiscuss() && this.userInfo.equals(live.getUserInfo()) && this.isFollow == live.getIsFollow() && this.presenterUserInfo.equals(live.getPresenterUserInfo())) {
+            if (this.entityType.equals(live.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(live.getEntityTemplate()) : live.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(live.getEntityId()) : live.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(live.getEntityFixed()) : live.getEntityFixed() == null) && ((str3 = this.url) != null ? str3.equals(live.getUrl()) : live.getUrl() == null) && ((str4 = this.pic) != null ? str4.equals(live.getPic()) : live.getPic() == null) && ((str5 = this.subTitle) != null ? str5.equals(live.getSubTitle()) : live.getSubTitle() == null) && ((str6 = this.id) != null ? str6.equals(live.getId()) : live.getId() == null) && ((str7 = this.extraData) != null ? str7.equals(live.getExtraData()) : live.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(live.getDateline()) : live.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(live.getLastUpdate()) : live.getLastUpdate() == null) && this.uid.equals(live.getUid()) && this.title.equals(live.getTitle()) && this.presenterUid.equals(live.getPresenterUid()) && this.liveTime == live.getLiveTime() && this.showLiveTime.equals(live.getShowLiveTime()) && this.description.equals(live.getDescription()) && ((str8 = this.picUrl) != null ? str8.equals(live.getPicUrl()) : live.getPicUrl() == null) && ((str9 = this.videoLiveUrl) != null ? str9.equals(live.getVideoLiveUrl()) : live.getVideoLiveUrl() == null) && ((str10 = this.videoLiveInfo) != null ? str10.equals(live.getVideoLiveInfo()) : live.getVideoLiveInfo() == null) && ((str11 = this.videoPlaybackUrl) != null ? str11.equals(live.getVideoPlaybackUrl()) : live.getVideoPlaybackUrl() == null) && ((str12 = this.videoPlaybackUInfo) != null ? str12.equals(live.getVideoPlaybackUInfo()) : live.getVideoPlaybackUInfo() == null) && ((str13 = this.relationTag) != null ? str13.equals(live.getRelationTag()) : live.getRelationTag() == null) && ((str14 = this.relationPageName) != null ? str14.equals(live.getRelationPageName()) : live.getRelationPageName() == null) && ((liveProduct = this.relationProduct) != null ? liveProduct.equals(live.getRelationProduct()) : live.getRelationProduct() == null) && this.isShowBannerTitle == live.getIsShowBannerTitle() && this.followNumFormat.equals(live.getFollowNumFormat()) && this.followNum == live.getFollowNum() && this.discussNum == live.getDiscussNum() && this.discussNumFormat.equals(live.getDiscussNumFormat()) && this.visitNum == live.getVisitNum() && this.visitNumFormat.equals(live.getVisitNumFormat()) && this.rankScore == live.getRankScore() && this.liveStartTime == live.getLiveStartTime() && this.liveEndTime == live.getLiveEndTime() && this.liveStatus == live.getLiveStatus() && this.disallowPost == live.getDisallowPost() && this.disallowPostPic == live.getDisallowPostPic() && this.disableDiscussTab == live.getDisableDiscussTab() && this.showTab.equals(live.getShowTab()) && this.closeDiscuss == live.getCloseDiscuss() && this.userInfo.equals(live.getUserInfo()) && this.isFollow == live.getIsFollow() && this.presenterUserInfo.equals(live.getPresenterUserInfo()) && this.relationGroupId.equals(live.getRelationGroupId())) {
                 return true;
             }
         }
@@ -439,10 +448,10 @@ abstract class C$$AutoValue_Live extends Live {
         int hashCode8 = (hashCode7 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
         String str8 = this.extraData;
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode10 = (hashCode9 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode11 = l3 == null ? 0 : l3.hashCode();
+        Long l = this.dateline;
+        int hashCode10 = (hashCode9 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode11 = l2 == null ? 0 : l2.hashCode();
         long j = this.liveTime;
         int hashCode12 = (((this.showLiveTime.hashCode() ^ (((int) (((long) ((((((((hashCode10 ^ hashCode11) * 1000003) ^ this.uid.hashCode()) * 1000003) ^ this.title.hashCode()) * 1000003) ^ this.presenterUid.hashCode()) * 1000003)) ^ (j ^ (j >>> 32)))) * 1000003)) * 1000003) ^ this.description.hashCode()) * 1000003;
         String str9 = this.picUrl;
@@ -465,7 +474,7 @@ abstract class C$$AutoValue_Live extends Live {
         }
         long j2 = this.liveStartTime;
         long j3 = this.liveEndTime;
-        return ((((((((((((((((this.liveStatus ^ (((int) (((j3 >>> 32) ^ j3) ^ ((long) (((int) (((long) ((((((((((((((((((i ^ hashCode19) * 1000003) ^ this.isShowBannerTitle) * 1000003) ^ this.followNumFormat.hashCode()) * 1000003) ^ this.followNum) * 1000003) ^ this.discussNum) * 1000003) ^ this.discussNumFormat.hashCode()) * 1000003) ^ this.visitNum) * 1000003) ^ this.visitNumFormat.hashCode()) * 1000003) ^ this.rankScore) * 1000003)) ^ (j2 ^ (j2 >>> 32)))) * 1000003)))) * 1000003)) * 1000003) ^ this.disallowPost) * 1000003) ^ this.disallowPostPic) * 1000003) ^ this.disableDiscussTab) * 1000003) ^ this.showTab.hashCode()) * 1000003) ^ this.closeDiscuss) * 1000003) ^ this.userInfo.hashCode()) * 1000003) ^ this.isFollow) * 1000003) ^ this.presenterUserInfo.hashCode();
+        return ((((((((((((((((((this.liveStatus ^ (((int) (((j3 >>> 32) ^ j3) ^ ((long) (((int) (((long) ((((((((((((((((((i ^ hashCode19) * 1000003) ^ this.isShowBannerTitle) * 1000003) ^ this.followNumFormat.hashCode()) * 1000003) ^ this.followNum) * 1000003) ^ this.discussNum) * 1000003) ^ this.discussNumFormat.hashCode()) * 1000003) ^ this.visitNum) * 1000003) ^ this.visitNumFormat.hashCode()) * 1000003) ^ this.rankScore) * 1000003)) ^ (j2 ^ (j2 >>> 32)))) * 1000003)))) * 1000003)) * 1000003) ^ this.disallowPost) * 1000003) ^ this.disallowPostPic) * 1000003) ^ this.disableDiscussTab) * 1000003) ^ this.showTab.hashCode()) * 1000003) ^ this.closeDiscuss) * 1000003) ^ this.userInfo.hashCode()) * 1000003) ^ this.isFollow) * 1000003) ^ this.presenterUserInfo.hashCode()) * 1000003) ^ this.relationGroupId.hashCode();
     }
 
     /* renamed from: com.coolapk.market.model.$$AutoValue_Live$Builder */
@@ -500,6 +509,7 @@ abstract class C$$AutoValue_Live extends Live {
         private String presenterUid;
         private List<User> presenterUserInfo;
         private Integer rankScore;
+        private String relationGroupId;
         private String relationPageName;
         private LiveProduct relationProduct;
         private String relationTag;
@@ -566,6 +576,7 @@ abstract class C$$AutoValue_Live extends Live {
             this.userInfo = live.getUserInfo();
             this.isFollow = Integer.valueOf(live.getIsFollow());
             this.presenterUserInfo = live.getPresenterUserInfo();
+            this.relationGroupId = live.getRelationGroupId();
         }
 
         @Override // com.coolapk.market.model.Live.Builder
@@ -629,14 +640,14 @@ abstract class C$$AutoValue_Live extends Live {
         }
 
         @Override // com.coolapk.market.model.Live.Builder
-        public Live.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public Live.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.Live.Builder
-        public Live.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public Live.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 
@@ -839,6 +850,12 @@ abstract class C$$AutoValue_Live extends Live {
         }
 
         @Override // com.coolapk.market.model.Live.Builder
+        public Live.Builder setRelationGroupId(String str) {
+            this.relationGroupId = str;
+            return this;
+        }
+
+        @Override // com.coolapk.market.model.Live.Builder
         public Live build() {
             String str = "";
             if (this.entityType == null) {
@@ -919,8 +936,11 @@ abstract class C$$AutoValue_Live extends Live {
             if (this.presenterUserInfo == null) {
                 str = str + " presenterUserInfo";
             }
+            if (this.relationGroupId == null) {
+                str = str + " relationGroupId";
+            }
             if (str.isEmpty()) {
-                return new AutoValue_Live(this.entityTypeName, this.entityType, this.entityTemplate, this.entityId, this.entityFixed, this.url, this.pic, this.subTitle, this.id, this.extraData, this.dateline, this.lastUpdate, this.uid, this.title, this.presenterUid, this.liveTime.longValue(), this.showLiveTime, this.description, this.picUrl, this.videoLiveUrl, this.videoLiveInfo, this.videoPlaybackUrl, this.videoPlaybackUInfo, this.relationTag, this.relationPageName, this.relationProduct, this.isShowBannerTitle.intValue(), this.followNumFormat, this.followNum.intValue(), this.discussNum.intValue(), this.discussNumFormat, this.visitNum.intValue(), this.visitNumFormat, this.rankScore.intValue(), this.liveStartTime.longValue(), this.liveEndTime.longValue(), this.liveStatus.intValue(), this.disallowPost.intValue(), this.disallowPostPic.intValue(), this.disableDiscussTab.intValue(), this.showTab, this.closeDiscuss.intValue(), this.userInfo, this.isFollow.intValue(), this.presenterUserInfo);
+                return new AutoValue_Live(this.entityTypeName, this.entityType, this.entityTemplate, this.entityId, this.entityFixed, this.url, this.pic, this.subTitle, this.id, this.extraData, this.dateline, this.lastUpdate, this.uid, this.title, this.presenterUid, this.liveTime.longValue(), this.showLiveTime, this.description, this.picUrl, this.videoLiveUrl, this.videoLiveInfo, this.videoPlaybackUrl, this.videoPlaybackUInfo, this.relationTag, this.relationPageName, this.relationProduct, this.isShowBannerTitle.intValue(), this.followNumFormat, this.followNum.intValue(), this.discussNum.intValue(), this.discussNumFormat, this.visitNum.intValue(), this.visitNumFormat, this.rankScore.intValue(), this.liveStartTime.longValue(), this.liveEndTime.longValue(), this.liveStatus.intValue(), this.disallowPost.intValue(), this.disallowPostPic.intValue(), this.disableDiscussTab.intValue(), this.showTab, this.closeDiscuss.intValue(), this.userInfo, this.isFollow.intValue(), this.presenterUserInfo, this.relationGroupId);
             }
             throw new IllegalStateException("Missing required properties:" + str);
         }

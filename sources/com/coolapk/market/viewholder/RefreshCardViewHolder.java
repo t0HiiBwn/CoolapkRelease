@@ -25,7 +25,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: RefreshCardViewHolder.kt */
 public final class RefreshCardViewHolder extends GenericBindHolder<ItemRefreshCardBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558893;
+    public static final int LAYOUT_ID = 2131558900;
     private Entity data;
     private final EntityRefreshCardHelper refreshCardHelper;
 

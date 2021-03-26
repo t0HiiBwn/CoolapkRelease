@@ -19,9 +19,7 @@ public final class ap extends k implements Cloneable {
     public int i = 0;
     private String j = "";
     private String k = "";
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1441l = 0;
+    private int l = 0;
 
     @Override // java.lang.Object
     public final boolean equals(Object obj) {
@@ -29,7 +27,7 @@ public final class ap extends k implements Cloneable {
             return false;
         }
         ap apVar = (ap) obj;
-        if (!l.a(this.a, apVar.a) || !l.a(this.b, apVar.b) || !l.a(this.c, apVar.c) || !l.a(this.d, apVar.d) || !l.a(this.e, apVar.e) || !l.a(this.f, apVar.f) || !l.a(this.g, apVar.g) || !l.a(this.h, apVar.h) || !l.a(this.j, apVar.j) || !l.a(this.k, apVar.k) || !l.a(this.f1441l, apVar.f1441l) || !l.a(this.i, apVar.i)) {
+        if (!l.a(this.a, apVar.a) || !l.a(this.b, apVar.b) || !l.a(this.c, apVar.c) || !l.a(this.d, apVar.d) || !l.a(this.e, apVar.e) || !l.a(this.f, apVar.f) || !l.a(this.g, apVar.g) || !l.a(this.h, apVar.h) || !l.a(this.j, apVar.j) || !l.a(this.k, apVar.k) || !l.a(this.l, apVar.l) || !l.a(this.i, apVar.i)) {
             return false;
         }
         return true;
@@ -87,7 +85,7 @@ public final class ap extends k implements Cloneable {
         if (str4 != null) {
             jVar.a(str4, 9);
         }
-        jVar.a(this.f1441l, 10);
+        jVar.a(this.l, 10);
         jVar.a(this.i, 11);
     }
 
@@ -109,7 +107,7 @@ public final class ap extends k implements Cloneable {
         this.h = iVar.a(this.h, 7, false);
         this.j = iVar.b(8, false);
         this.k = iVar.b(9, false);
-        this.f1441l = iVar.a(this.f1441l, 10, false);
+        this.l = iVar.a(this.l, 10, false);
         this.i = iVar.a(this.i, 11, false);
     }
 
@@ -126,7 +124,7 @@ public final class ap extends k implements Cloneable {
         hVar.a(this.h, "strategylastUpdateTime");
         hVar.a(this.j, "httpsUrl");
         hVar.a(this.k, "httpsExpUrl");
-        hVar.a(this.f1441l, "eventRecordCount");
+        hVar.a(this.l, "eventRecordCount");
         hVar.a(this.i, "eventTimeInterval");
     }
 }

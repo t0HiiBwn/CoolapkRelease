@@ -36,9 +36,9 @@ public class ItemProductSeriesHorizontalBindingImpl extends ItemProductSeriesHor
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363461, 18);
-        sparseIntArray.put(2131363462, 19);
-        sparseIntArray.put(2131363463, 20);
+        sparseIntArray.put(2131363479, 18);
+        sparseIntArray.put(2131363480, 19);
+        sparseIntArray.put(2131363481, 20);
     }
 
     public ItemProductSeriesHorizontalBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -108,11 +108,11 @@ public class ItemProductSeriesHorizontalBindingImpl extends ItemProductSeriesHor
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (200 == i) {
+        if (201 == i) {
             setModel3((Product) obj);
-        } else if (199 == i) {
+        } else if (200 == i) {
             setModel2((Product) obj);
-        } else if (198 == i) {
+        } else if (199 == i) {
             setModel1((Product) obj);
         } else if (50 != i) {
             return false;
@@ -128,7 +128,7 @@ public class ItemProductSeriesHorizontalBindingImpl extends ItemProductSeriesHor
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(200);
+        notifyPropertyChanged(201);
         super.requestRebind();
     }
 
@@ -138,7 +138,7 @@ public class ItemProductSeriesHorizontalBindingImpl extends ItemProductSeriesHor
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(199);
+        notifyPropertyChanged(200);
         super.requestRebind();
     }
 
@@ -148,7 +148,7 @@ public class ItemProductSeriesHorizontalBindingImpl extends ItemProductSeriesHor
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(198);
+        notifyPropertyChanged(199);
         super.requestRebind();
     }
 
@@ -303,21 +303,21 @@ public class ItemProductSeriesHorizontalBindingImpl extends ItemProductSeriesHor
         if ((j & 20) != 0) {
             this.itemView1.setVisibility(i6);
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView2, str6, null, 2131231691, 0, bool2, bool2, bool2, true, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView2, str6, null, 2131231702, 0, bool2, bool2, bool2, true, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
             this.mboundView3.setVisibility(i5);
             TextViewBindingAdapter.setText(this.mboundView4, str5);
         }
         if ((j & 18) != 0) {
             this.itemView2.setVisibility(i4);
             Boolean bool3 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView7, str3, null, 2131231691, 0, bool3, bool3, bool3, true, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView7, str3, null, 2131231702, 0, bool3, bool3, bool3, true, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
             this.mboundView8.setVisibility(i3);
             TextViewBindingAdapter.setText(this.mboundView9, str4);
         }
         if ((j & 17) != 0) {
             this.itemView3.setVisibility(i2);
             Boolean bool4 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView12, str, null, 2131231691, 0, bool4, bool4, bool4, true, bool4, null, null, null, bool4, bool4, bool4, null, bool4);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView12, str, null, 2131231702, 0, bool4, bool4, bool4, true, bool4, null, null, null, bool4, bool4, bool4, null, bool4);
             this.mboundView13.setVisibility(i);
             TextViewBindingAdapter.setText(this.mboundView14, str2);
         }

@@ -19,6 +19,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -51,6 +52,7 @@ import com.coolapk.market.util.ViewUtil;
 import com.coolapk.market.view.dyhv8.viewholder.DyhArticleSourceViewPart;
 import com.coolapk.market.view.feed.CommentHelper;
 import com.coolapk.market.view.feedv8.SubmitExtraViewPart;
+import com.coolapk.market.view.feedv8.util.FeedGoodsAddHelper;
 import com.coolapk.market.viewholder.FeedGoodsInfoViewPart;
 import com.coolapk.market.viewholder.FeedGoodsInfoViewPartKt;
 import com.coolapk.market.viewholder.FeedSourceDeletedViewPart;
@@ -75,13 +77,14 @@ import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
 import rx.Observable;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010 \n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0016\u0018\u0000 X2\u00020\u00012\u00020\u0002:\u0001XB\r\u0012\u0006\u0010\u0003\u001a\u00020\u0004¢\u0006\u0002\u0010\u0005J\u0010\u0010\"\u001a\u00020#2\u0006\u0010$\u001a\u00020%H\u0002J\r\u0010&\u001a\u00020'H\u0010¢\u0006\u0002\b(J\b\u0010)\u001a\u00020#H\u0002J\b\u0010*\u001a\u00020#H\u0002J\r\u0010+\u001a\u00020,H\u0010¢\u0006\u0002\b-J\b\u0010.\u001a\u00020/H\u0002J\r\u00100\u001a\u00020#H\u0010¢\u0006\u0002\b1J \u00102\u001a\u00020#2\u0006\u00103\u001a\u0002042\u0006\u00105\u001a\u0002042\u0006\u0010$\u001a\u000206H\u0016J\u0010\u00107\u001a\u00020#2\u0006\u00108\u001a\u00020\u0017H\u0016J\u0015\u00109\u001a\u00020\u00172\u0006\u0010:\u001a\u00020;H\u0010¢\u0006\u0002\b<J\b\u0010=\u001a\u00020#H\u0016J\u0010\u0010>\u001a\u00020#2\u0006\u0010?\u001a\u00020@H\u0016J\u0010\u0010A\u001a\u00020#2\u0006\u0010B\u001a\u00020%H\u0016J\u0010\u0010C\u001a\u00020#2\u0006\u0010$\u001a\u000206H\u0016J\u0010\u0010D\u001a\u00020#2\u0006\u0010$\u001a\u000206H\u0016J\u0016\u0010E\u001a\u00020#2\f\u0010F\u001a\b\u0012\u0004\u0012\u00020/0GH\u0016J\u0010\u0010H\u001a\u00020#2\u0006\u0010$\u001a\u000206H\u0016J\b\u0010I\u001a\u00020#H\u0016J\b\u0010J\u001a\u00020#H\u0016J\u0010\u0010K\u001a\u00020#2\u0006\u0010L\u001a\u00020MH\u0016J\b\u0010N\u001a\u00020#H\u0016J\b\u0010O\u001a\u00020#H\u0016J\u0018\u0010P\u001a\u00020#2\u0006\u0010L\u001a\u00020/2\u0006\u0010Q\u001a\u00020/H\u0016J\b\u0010R\u001a\u00020#H\u0016J\u0013\u0010S\u001a\b\u0012\u0004\u0012\u00020,0TH\u0010¢\u0006\u0002\bUJ\b\u0010V\u001a\u00020#H\u0002J\b\u0010W\u001a\u00020#H\u0002R\u001a\u0010\u0006\u001a\u00020\u0007X.¢\u0006\u000e\n\u0000\u001a\u0004\b\b\u0010\t\"\u0004\b\n\u0010\u000bR\u001a\u0010\f\u001a\u00020\rX.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\u0014\u0010\u0012\u001a\u00020\u00138BX\u0004¢\u0006\u0006\u001a\u0004\b\u0014\u0010\u0015R\u0014\u0010\u0016\u001a\u00020\u00178VX\u0004¢\u0006\u0006\u001a\u0004\b\u0018\u0010\u0019R\u0010\u0010\u001a\u001a\u0004\u0018\u00010\u001bX\u000e¢\u0006\u0002\n\u0000R\u001b\u0010\u001c\u001a\u00020\u001d8BX\u0002¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\u001e\u0010\u001f¨\u0006Y"}, d2 = {"Lcom/coolapk/market/view/feedv8/NormalFeedContentHolder;", "Lcom/coolapk/market/view/feedv8/BaseFeedContentHolder;", "Landroid/view/View$OnClickListener;", "activity", "Landroid/app/Activity;", "(Landroid/app/Activity;)V", "adapter", "Lcom/coolapk/market/view/feedv8/PickPhotoAdapterV8;", "getAdapter$presentation_coolapkAppRelease", "()Lcom/coolapk/market/view/feedv8/PickPhotoAdapterV8;", "setAdapter$presentation_coolapkAppRelease", "(Lcom/coolapk/market/view/feedv8/PickPhotoAdapterV8;)V", "binding", "Lcom/coolapk/market/databinding/NormalFeedContentV8Binding;", "getBinding$presentation_coolapkAppRelease", "()Lcom/coolapk/market/databinding/NormalFeedContentV8Binding;", "setBinding$presentation_coolapkAppRelease", "(Lcom/coolapk/market/databinding/NormalFeedContentV8Binding;)V", "focusEditText", "Landroid/widget/EditText;", "getFocusEditText", "()Landroid/widget/EditText;", "focusEditorView", "Landroid/view/View;", "getFocusEditorView", "()Landroid/view/View;", "relativeInfoPickerViewPart", "Lcom/coolapk/market/view/feedv8/RelativeInfoPickerViewPart;", "videoViewHotPlug", "Lcom/coolapk/market/widget/hotplug/BaseVideoHotPlug;", "getVideoViewHotPlug", "()Lcom/coolapk/market/widget/hotplug/BaseVideoHotPlug;", "videoViewHotPlug$delegate", "Lkotlin/Lazy;", "addRelativeInfo", "", "data", "Lcom/coolapk/market/model/Entity;", "checkSubmittable", "", "checkSubmittable$presentation_coolapkAppRelease", "createForwardFeedView", "fillRelativeViewIfNeed", "generateDraftCopy", "Lcom/coolapk/market/model/FeedMultiPart;", "generateDraftCopy$presentation_coolapkAppRelease", "getForwardHint", "", "notifyUIChange", "notifyUIChange$presentation_coolapkAppRelease", "onActivityResult", "requestCode", "", "resultCode", "Landroid/content/Intent;", "onClick", "v", "onCreateContentView", "inflater", "Landroid/view/LayoutInflater;", "onCreateContentView$presentation_coolapkAppRelease", "onDeleteButtonClick", "onEmotionClick", "emotions", "Lcom/coolapk/market/widget/emotion/BaseEmotion;", "onExtraEntityLoaded", "entity", "onPickAppIntent", "onPickAtIntent", "onPickImageListChange", "pathList", "", "onPickTopicIntent", "onRemoveExtraEntity", "onRequestPickImage", "onShareInfoLoaded", "info", "Lcom/coolapk/market/model/ShareFeedInfo;", "onSubmitButtonClick", "onSubmitToButtonClick", "onVideoDataLoaded", "sourceUrl", "onVideoDataRemoved", "prepareMultiFeed", "Lrx/Observable;", "prepareMultiFeed$presentation_coolapkAppRelease", "removeRelativeInfo", "setLogoViewPlaceHolder", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000 \u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010 \n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0016\u0018\u0000 ]2\u00020\u00012\u00020\u0002:\u0001]B\r\u0012\u0006\u0010\u0003\u001a\u00020\u0004¢\u0006\u0002\u0010\u0005J\u0010\u0010(\u001a\u00020)2\u0006\u0010*\u001a\u00020+H\u0002J\r\u0010,\u001a\u00020\u0013H\u0010¢\u0006\u0002\b-J\b\u0010.\u001a\u00020)H\u0002J\b\u0010/\u001a\u00020)H\u0002J\r\u00100\u001a\u000201H\u0010¢\u0006\u0002\b2J\b\u00103\u001a\u000204H\u0002J\r\u00105\u001a\u00020)H\u0010¢\u0006\u0002\b6J \u00107\u001a\u00020)2\u0006\u00108\u001a\u0002092\u0006\u0010:\u001a\u0002092\u0006\u0010*\u001a\u00020;H\u0016J\u0010\u0010<\u001a\u00020)2\u0006\u0010=\u001a\u00020\u001dH\u0016J\u0015\u0010>\u001a\u00020\u001d2\u0006\u0010?\u001a\u00020@H\u0010¢\u0006\u0002\bAJ\b\u0010B\u001a\u00020)H\u0016J\u0010\u0010C\u001a\u00020)2\u0006\u0010D\u001a\u00020EH\u0016J\u0010\u0010F\u001a\u00020)2\u0006\u0010G\u001a\u00020+H\u0016J\u0010\u0010H\u001a\u00020)2\u0006\u0010*\u001a\u00020;H\u0016J\u0010\u0010I\u001a\u00020)2\u0006\u0010*\u001a\u00020;H\u0016J\u0016\u0010J\u001a\u00020)2\f\u0010K\u001a\b\u0012\u0004\u0012\u0002040LH\u0016J\u0010\u0010M\u001a\u00020)2\u0006\u0010*\u001a\u00020;H\u0016J\b\u0010N\u001a\u00020)H\u0016J\b\u0010O\u001a\u00020)H\u0016J\u0010\u0010P\u001a\u00020)2\u0006\u0010Q\u001a\u00020RH\u0016J\b\u0010S\u001a\u00020)H\u0016J\b\u0010T\u001a\u00020)H\u0016J\u0018\u0010U\u001a\u00020)2\u0006\u0010Q\u001a\u0002042\u0006\u0010V\u001a\u000204H\u0016J\b\u0010W\u001a\u00020)H\u0016J\u0013\u0010X\u001a\b\u0012\u0004\u0012\u0002010YH\u0010¢\u0006\u0002\bZJ\b\u0010[\u001a\u00020)H\u0002J\b\u0010\\\u001a\u00020)H\u0002R\u001a\u0010\u0006\u001a\u00020\u0007X.¢\u0006\u000e\n\u0000\u001a\u0004\b\b\u0010\t\"\u0004\b\n\u0010\u000bR\u001a\u0010\f\u001a\u00020\rX.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\u001a\u0010\u0012\u001a\u00020\u0013X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0014\u0010\u0015\"\u0004\b\u0016\u0010\u0017R\u0014\u0010\u0018\u001a\u00020\u00198BX\u0004¢\u0006\u0006\u001a\u0004\b\u001a\u0010\u001bR\u0014\u0010\u001c\u001a\u00020\u001d8VX\u0004¢\u0006\u0006\u001a\u0004\b\u001e\u0010\u001fR\u0010\u0010 \u001a\u0004\u0018\u00010!X\u000e¢\u0006\u0002\n\u0000R\u001b\u0010\"\u001a\u00020#8BX\u0002¢\u0006\f\n\u0004\b&\u0010'\u001a\u0004\b$\u0010%¨\u0006^"}, d2 = {"Lcom/coolapk/market/view/feedv8/NormalFeedContentHolder;", "Lcom/coolapk/market/view/feedv8/BaseFeedContentHolder;", "Landroid/view/View$OnClickListener;", "activity", "Landroid/app/Activity;", "(Landroid/app/Activity;)V", "adapter", "Lcom/coolapk/market/view/feedv8/PickPhotoAdapterV8;", "getAdapter$presentation_coolapkAppRelease", "()Lcom/coolapk/market/view/feedv8/PickPhotoAdapterV8;", "setAdapter$presentation_coolapkAppRelease", "(Lcom/coolapk/market/view/feedv8/PickPhotoAdapterV8;)V", "binding", "Lcom/coolapk/market/databinding/NormalFeedContentV8Binding;", "getBinding$presentation_coolapkAppRelease", "()Lcom/coolapk/market/databinding/NormalFeedContentV8Binding;", "setBinding$presentation_coolapkAppRelease", "(Lcom/coolapk/market/databinding/NormalFeedContentV8Binding;)V", "disableSuggestAddGoods", "", "getDisableSuggestAddGoods$presentation_coolapkAppRelease", "()Z", "setDisableSuggestAddGoods$presentation_coolapkAppRelease", "(Z)V", "focusEditText", "Landroid/widget/EditText;", "getFocusEditText", "()Landroid/widget/EditText;", "focusEditorView", "Landroid/view/View;", "getFocusEditorView", "()Landroid/view/View;", "relativeInfoPickerViewPart", "Lcom/coolapk/market/view/feedv8/RelativeInfoPickerViewPart;", "videoViewHotPlug", "Lcom/coolapk/market/widget/hotplug/BaseVideoHotPlug;", "getVideoViewHotPlug", "()Lcom/coolapk/market/widget/hotplug/BaseVideoHotPlug;", "videoViewHotPlug$delegate", "Lkotlin/Lazy;", "addRelativeInfo", "", "data", "Lcom/coolapk/market/model/Entity;", "checkSubmittable", "checkSubmittable$presentation_coolapkAppRelease", "createForwardFeedView", "fillRelativeViewIfNeed", "generateDraftCopy", "Lcom/coolapk/market/model/FeedMultiPart;", "generateDraftCopy$presentation_coolapkAppRelease", "getForwardHint", "", "notifyUIChange", "notifyUIChange$presentation_coolapkAppRelease", "onActivityResult", "requestCode", "", "resultCode", "Landroid/content/Intent;", "onClick", "v", "onCreateContentView", "inflater", "Landroid/view/LayoutInflater;", "onCreateContentView$presentation_coolapkAppRelease", "onDeleteButtonClick", "onEmotionClick", "emotions", "Lcom/coolapk/market/widget/emotion/BaseEmotion;", "onExtraEntityLoaded", "entity", "onPickAppIntent", "onPickAtIntent", "onPickImageListChange", "pathList", "", "onPickTopicIntent", "onRemoveExtraEntity", "onRequestPickImage", "onShareInfoLoaded", "info", "Lcom/coolapk/market/model/ShareFeedInfo;", "onSubmitButtonClick", "onSubmitToButtonClick", "onVideoDataLoaded", "sourceUrl", "onVideoDataRemoved", "prepareMultiFeed", "Lrx/Observable;", "prepareMultiFeed$presentation_coolapkAppRelease", "removeRelativeInfo", "setLogoViewPlaceHolder", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: NormalFeedContentHolder.kt */
 public class NormalFeedContentHolder extends BaseFeedContentHolder implements View.OnClickListener {
     public static final Companion Companion = new Companion(null);
     public static final int REQUEST_CODE_NODE = 3242;
     public PickPhotoAdapterV8 adapter;
     public NormalFeedContentV8Binding binding;
+    private boolean disableSuggestAddGoods;
     private RelativeInfoPickerViewPart relativeInfoPickerViewPart;
     private final Lazy videoViewHotPlug$delegate = LazyKt.lazy(new NormalFeedContentHolder$videoViewHotPlug$2(this));
 
@@ -132,6 +135,14 @@ public class NormalFeedContentHolder extends BaseFeedContentHolder implements Vi
         this.adapter = pickPhotoAdapterV8;
     }
 
+    public final boolean getDisableSuggestAddGoods$presentation_coolapkAppRelease() {
+        return this.disableSuggestAddGoods;
+    }
+
+    public final void setDisableSuggestAddGoods$presentation_coolapkAppRelease(boolean z) {
+        this.disableSuggestAddGoods = z;
+    }
+
     @Override // com.coolapk.market.view.feedv8.BaseFeedContentHolder
     public View getFocusEditorView() {
         return getFocusEditText();
@@ -152,7 +163,7 @@ public class NormalFeedContentHolder extends BaseFeedContentHolder implements Vi
         VideoModel videoModel;
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
         boolean z = false;
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559058, null, false, new ContextBindingComponent(getActivity()));
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559065, null, false, new ContextBindingComponent(getActivity()));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ndingComponent(activity))");
         NormalFeedContentV8Binding normalFeedContentV8Binding = (NormalFeedContentV8Binding) inflate;
         this.binding = normalFeedContentV8Binding;
@@ -319,13 +330,13 @@ public class NormalFeedContentHolder extends BaseFeedContentHolder implements Vi
                 if (normalFeedContentV8Binding == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
                 }
-                normalFeedContentV8Binding.logoView.setImageResource(2131231397);
+                normalFeedContentV8Binding.logoView.setImageResource(2131231408);
             } else {
                 NormalFeedContentV8Binding normalFeedContentV8Binding2 = this.binding;
                 if (normalFeedContentV8Binding2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
                 }
-                normalFeedContentV8Binding2.logoView.setImageResource(2131231410);
+                normalFeedContentV8Binding2.logoView.setImageResource(2131231421);
             }
             NormalFeedContentV8Binding normalFeedContentV8Binding3 = this.binding;
             if (normalFeedContentV8Binding3 == null) {
@@ -767,6 +778,21 @@ public class NormalFeedContentHolder extends BaseFeedContentHolder implements Vi
                 return;
             }
         }
+        if (Intrinsics.areEqual(getMultiPart().type(), "feed") && getUiConfig().extraEntities().isEmpty() && !this.disableSuggestAddGoods) {
+            NormalFeedContentV8Binding normalFeedContentV8Binding = this.binding;
+            if (normalFeedContentV8Binding == null) {
+                Intrinsics.throwUninitializedPropertyAccessException("binding");
+            }
+            EditText editText = normalFeedContentV8Binding.editText;
+            Intrinsics.checkNotNullExpressionValue(editText, "binding.editText");
+            if (FeedGoodsAddHelper.INSTANCE.didInputTextContainGoodsTag(CollectionsKt.listOf(editText.getText().toString()))) {
+                FeedGoodsAddHelper feedGoodsAddHelper = FeedGoodsAddHelper.INSTANCE;
+                Activity activity = getActivity();
+                Objects.requireNonNull(activity, "null cannot be cast to non-null type androidx.appcompat.app.AppCompatActivity");
+                feedGoodsAddHelper.showSuggestAddGoodsDialog((AppCompatActivity) activity, new NormalFeedContentHolder$onSubmitButtonClick$1(this), new NormalFeedContentHolder$onSubmitButtonClick$2(this));
+                return;
+            }
+        }
         startSubmitFeed$presentation_coolapkAppRelease();
     }
 
@@ -1048,13 +1074,13 @@ public class NormalFeedContentHolder extends BaseFeedContentHolder implements Vi
     private final String getForwardHint() {
         Entity forwardEntity = getUiConfig().forwardEntity();
         if (forwardEntity instanceof Feed) {
-            String string = getActivity().getString(2131887259);
+            String string = getActivity().getString(2131887321);
             Intrinsics.checkNotNullExpressionValue(string, "activity.getString(R.string.title_forward_feed)");
             return string;
         } else if (!(forwardEntity instanceof DyhArticle)) {
             return "";
         } else {
-            String string2 = getActivity().getString(2131887258);
+            String string2 = getActivity().getString(2131887320);
             Intrinsics.checkNotNullExpressionValue(string2, "activity.getString(R.string.title_forward_article)");
             return string2;
         }
@@ -1074,7 +1100,7 @@ public class NormalFeedContentHolder extends BaseFeedContentHolder implements Vi
         boolean z = false;
         ViewGroup viewGroup = null;
         switch (view.getId()) {
-            case 2131362256:
+            case 2131362261:
                 NormalFeedContentV8Binding normalFeedContentV8Binding = this.binding;
                 if (normalFeedContentV8Binding == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -1102,7 +1128,7 @@ public class NormalFeedContentHolder extends BaseFeedContentHolder implements Vi
                     return;
                 }
                 return;
-            case 2131362493:
+            case 2131362501:
                 String extraUrl = getMultiPart().extraUrl();
                 if (!TextUtils.isEmpty(extraUrl)) {
                     Intrinsics.checkNotNullExpressionValue(extraUrl, "url");
@@ -1131,10 +1157,10 @@ public class NormalFeedContentHolder extends BaseFeedContentHolder implements Vi
                 } else {
                     return;
                 }
-            case 2131363236:
+            case 2131363250:
                 onRemoveExtraEntity();
                 return;
-            case 2131363237:
+            case 2131363251:
                 String mediaInfo = getMultiPart().mediaInfo();
                 Intrinsics.checkNotNullExpressionValue(mediaInfo, "multiPart.mediaInfo()");
                 if (mediaInfo.length() == 0) {

@@ -22,7 +22,6 @@ import com.coolapk.market.model.UserAction;
 import com.coolapk.market.util.RxUtils;
 import com.coolapk.market.util.UiUtils;
 import com.coolapk.market.viewholder.iview.BindingViewPart;
-import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -30,7 +29,6 @@ import kotlin.jvm.internal.Intrinsics;
 import org.json.JSONObject;
 import rx.Subscriber;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\n\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u0000 !2\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u00012\u00020\u0004:\u0001!B\u0005¢\u0006\u0002\u0010\u0005J\b\u0010\u0015\u001a\u00020\tH\u0002J\b\u0010\u0016\u001a\u00020\tH\u0002J\u0010\u0010\u0017\u001a\u00020\t2\u0006\u0010\u0018\u001a\u00020\u0003H\u0014J\u0010\u0010\u0019\u001a\u00020\t2\u0006\u0010\u001a\u001a\u00020\bH\u0016J\u001a\u0010\u001b\u001a\u00020\u00022\u0006\u0010\u001c\u001a\u00020\u001d2\b\u0010\u001e\u001a\u0004\u0018\u00010\u001fH\u0014J\b\u0010 \u001a\u00020\tH\u0014R(\u0010\u0006\u001a\u0010\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\t\u0018\u00010\u0007X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\n\u0010\u000b\"\u0004\b\f\u0010\rR\u001c\u0010\u000e\u001a\u0004\u0018\u00010\u0003X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012R\u000e\u0010\u0013\u001a\u00020\u0014X\u000e¢\u0006\u0002\n\u0000¨\u0006\""}, d2 = {"Lcom/coolapk/market/view/feed/reply/AnswerCommentBarViewPart;", "Lcom/coolapk/market/viewholder/iview/BindingViewPart;", "Lcom/coolapk/market/databinding/FeedAnswerViewPartBinding;", "Lcom/coolapk/market/model/Feed;", "Landroid/view/View$OnClickListener;", "()V", "externalListener", "Lkotlin/Function1;", "Landroid/view/View;", "", "getExternalListener", "()Lkotlin/jvm/functions/Function1;", "setExternalListener", "(Lkotlin/jvm/functions/Function1;)V", "feed", "getFeed", "()Lcom/coolapk/market/model/Feed;", "setFeed", "(Lcom/coolapk/market/model/Feed;)V", "isCheckAnswerCount", "", "enterAnswerActivity", "onAddAnswerViewClick", "onBindToContent", "data", "onClick", "v", "onCreateBinding", "inflater", "Landroid/view/LayoutInflater;", "viewGroup", "Landroid/view/ViewGroup;", "onViewCreated", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: AnswerCommentBarViewPart.kt */
 public final class AnswerCommentBarViewPart extends BindingViewPart<FeedAnswerViewPartBinding, Feed> implements View.OnClickListener {
     public static final Companion Companion = new Companion(null);
@@ -38,7 +36,6 @@ public final class AnswerCommentBarViewPart extends BindingViewPart<FeedAnswerVi
     private Feed feed;
     private boolean isCheckAnswerCount;
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0016\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b¨\u0006\t"}, d2 = {"Lcom/coolapk/market/view/feed/reply/AnswerCommentBarViewPart$Companion;", "", "()V", "newInstance", "Lcom/coolapk/market/view/feed/reply/AnswerCommentBarViewPart;", "feed", "Lcom/coolapk/market/model/Feed;", "viewGroup", "Landroid/view/ViewGroup;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AnswerCommentBarViewPart.kt */
     public static final class Companion {
         private Companion() {
@@ -77,11 +74,10 @@ public final class AnswerCommentBarViewPart extends BindingViewPart<FeedAnswerVi
         this.externalListener = function1;
     }
 
-    /* access modifiers changed from: protected */
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public FeedAnswerViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558553, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558555, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…w_part, viewGroup, false)");
         return (FeedAnswerViewPartBinding) inflate;
     }
@@ -94,7 +90,6 @@ public final class AnswerCommentBarViewPart extends BindingViewPart<FeedAnswerVi
         ViewExtendsKt.setTopElevation$default(root, 0.0f, 1, null);
     }
 
-    /* access modifiers changed from: protected */
     public void onBindToContent(Feed feed2) {
         Intrinsics.checkNotNullParameter(feed2, "data");
         super.onBindToContent((AnswerCommentBarViewPart) feed2);
@@ -149,7 +144,7 @@ public final class AnswerCommentBarViewPart extends BindingViewPart<FeedAnswerVi
         if (function1 != null) {
             function1.invoke(view);
         }
-        if (view.getId() == 2131361998) {
+        if (view.getId() == 2131361999) {
             onAddAnswerViewClick();
         }
     }
@@ -174,7 +169,6 @@ public final class AnswerCommentBarViewPart extends BindingViewPart<FeedAnswerVi
         }
     }
 
-    /* access modifiers changed from: private */
     public final void enterAnswerActivity() {
         Activity activityNullable;
         Feed feed2 = this.feed;

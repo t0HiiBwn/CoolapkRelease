@@ -129,7 +129,7 @@ public class InteractivePeopleView extends LinearLayout {
             imageView.setLayoutParams(marginLayoutParams);
         }
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setImageResource(2131231383);
+        imageView.setImageResource(2131231394);
         imageView.setImageTintList(ColorStateList.valueOf(AppHolder.getAppTheme().getTextColorTertiary()));
         return imageView;
     }
@@ -153,10 +153,10 @@ public class InteractivePeopleView extends LinearLayout {
         this.secondAvatarView.setVisibility(8);
         this.moreView.setVisibility(8);
         if (!CollectionUtils.isEmpty(list)) {
-            AppHolder.getContextImageLoader().displayImage(getContext(), this.avatarList.get(0).getUserAvatar(), this.firstAvatarView, 2131231152);
+            AppHolder.getContextImageLoader().displayImage(getContext(), this.avatarList.get(0).getUserAvatar(), this.firstAvatarView, 2131231162);
             if (list.size() > 1) {
                 this.secondAvatarView.setVisibility(0);
-                AppHolder.getContextImageLoader().displayImage(getContext(), this.avatarList.get(1).getUserAvatar(), this.secondAvatarView, 2131231152);
+                AppHolder.getContextImageLoader().displayImage(getContext(), this.avatarList.get(1).getUserAvatar(), this.secondAvatarView, 2131231162);
                 if (list.size() > 2) {
                     int i = this.sumNum;
                     if (i == 0) {
@@ -179,10 +179,10 @@ public class InteractivePeopleView extends LinearLayout {
         this.secondAvatarView.setVisibility(8);
         this.moreView.setVisibility(8);
         if (!CollectionUtils.isEmpty(list)) {
-            AppHolder.getContextImageLoader().displayImage(getContext(), list.get(0), this.firstAvatarView, 2131231152);
+            AppHolder.getContextImageLoader().displayImage(getContext(), list.get(0), this.firstAvatarView, 2131231162);
             if (list.size() > 1) {
                 this.secondAvatarView.setVisibility(0);
-                AppHolder.getContextImageLoader().displayImage(getContext(), list.get(1), this.secondAvatarView, 2131231152);
+                AppHolder.getContextImageLoader().displayImage(getContext(), list.get(1), this.secondAvatarView, 2131231162);
                 if (list.size() > 2 || this.sumNum > 2) {
                     int i = this.sumNum;
                     if (i == 0) {

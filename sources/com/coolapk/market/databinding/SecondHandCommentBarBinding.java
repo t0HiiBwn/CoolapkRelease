@@ -64,7 +64,7 @@ public abstract class SecondHandCommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static SecondHandCommentBarBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SecondHandCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559132, viewGroup, z, obj);
+        return (SecondHandCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559139, viewGroup, z, obj);
     }
 
     public static SecondHandCommentBarBinding inflate(LayoutInflater layoutInflater) {
@@ -73,7 +73,7 @@ public abstract class SecondHandCommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static SecondHandCommentBarBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SecondHandCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559132, null, false, obj);
+        return (SecondHandCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559139, null, false, obj);
     }
 
     public static SecondHandCommentBarBinding bind(View view) {
@@ -82,6 +82,6 @@ public abstract class SecondHandCommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static SecondHandCommentBarBinding bind(View view, Object obj) {
-        return (SecondHandCommentBarBinding) bind(obj, view, 2131559132);
+        return (SecondHandCommentBarBinding) bind(obj, view, 2131559139);
     }
 }

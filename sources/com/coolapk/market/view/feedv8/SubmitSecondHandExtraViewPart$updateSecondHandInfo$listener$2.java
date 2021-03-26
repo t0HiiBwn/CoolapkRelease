@@ -21,22 +21,22 @@ final class SubmitSecondHandExtraViewPart$updateSecondHandInfo$listener$2 implem
     public final void onClick(View view) {
         Intrinsics.checkNotNullExpressionValue(view, "it");
         switch (view.getId()) {
-            case 2131363474:
+            case 2131363492:
                 CheckedTextView checkedTextView = this.$binding.switchLeft;
                 Intrinsics.checkNotNullExpressionValue(checkedTextView, "binding.switchLeft");
                 checkedTextView.setSelected(false);
                 this.this$0.updateSecondHandDealType(1, this.$binding);
                 return;
-            case 2131363475:
+            case 2131363493:
             default:
                 return;
-            case 2131363476:
+            case 2131363494:
                 CheckedTextView checkedTextView2 = this.$binding.switchLeft;
                 Intrinsics.checkNotNullExpressionValue(checkedTextView2, "binding.switchLeft");
                 checkedTextView2.setSelected(true);
                 this.this$0.updateSecondHandDealType(0, this.$binding);
                 return;
-            case 2131363477:
+            case 2131363495:
                 CheckedTextView checkedTextView3 = this.$binding.switchLeft;
                 Intrinsics.checkNotNullExpressionValue(checkedTextView3, "binding.switchLeft");
                 checkedTextView3.setSelected(false);

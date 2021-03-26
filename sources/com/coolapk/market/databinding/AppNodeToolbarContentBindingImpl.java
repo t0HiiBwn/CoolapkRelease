@@ -27,9 +27,9 @@ public class AppNodeToolbarContentBindingImpl extends AppNodeToolbarContentBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363282, 6);
-        sparseIntArray.put(2131363194, 7);
-        sparseIntArray.put(2131361876, 8);
+        sparseIntArray.put(2131363296, 6);
+        sparseIntArray.put(2131363208, 7);
+        sparseIntArray.put(2131361877, 8);
     }
 
     public AppNodeToolbarContentBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -71,7 +71,7 @@ public class AppNodeToolbarContentBindingImpl extends AppNodeToolbarContentBindi
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((AppNodeViewModel) obj);
@@ -85,7 +85,7 @@ public class AppNodeToolbarContentBindingImpl extends AppNodeToolbarContentBindi
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -200,7 +200,7 @@ public class AppNodeToolbarContentBindingImpl extends AppNodeToolbarContentBindi
                         if (i != 0) {
                             j |= z ? 64 : 32;
                         }
-                        str4 = this.followActionView.getResources().getString(z ? 2131887142 : 2131887143);
+                        str4 = this.followActionView.getResources().getString(z ? 2131887204 : 2131887205);
                         str = str6;
                         str2 = appHotNumString;
                         if ((j & 25) != 0) {
@@ -215,7 +215,7 @@ public class AppNodeToolbarContentBindingImpl extends AppNodeToolbarContentBindi
                         }
                         if ((19 & j) != 0) {
                             Boolean bool = null;
-                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.toolbarLogoView, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.toolbarLogoView, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
                             TextViewBindingAdapter.setText(this.toolbarTitleView, str3);
                         }
                         if ((j & 16) == 0) {

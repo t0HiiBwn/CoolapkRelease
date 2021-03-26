@@ -23,7 +23,7 @@ abstract class C$$AutoValue_DyhLogoCard extends DyhLogoCard {
     private final String title;
     private final String url;
 
-    C$$AutoValue_DyhLogoCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, Long l2, Long l3, String str8, String str9, String str10, List<Entity> list, String str11, String str12) {
+    C$$AutoValue_DyhLogoCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, Long l, Long l2, String str8, String str9, String str10, List<Entity> list, String str11, String str12) {
         this.entityTemplate = str;
         this.entityId = str2;
         this.entityFixed = num;
@@ -32,8 +32,8 @@ abstract class C$$AutoValue_DyhLogoCard extends DyhLogoCard {
         this.subTitle = str5;
         this.id = str6;
         this.extraData = str7;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.title = str8;
         this.url = str9;
         this.description = str10;
@@ -163,10 +163,10 @@ abstract class C$$AutoValue_DyhLogoCard extends DyhLogoCard {
                                 if (str6 != null ? str6.equals(dyhLogoCard.getId()) : dyhLogoCard.getId() == null) {
                                     String str7 = this.extraData;
                                     if (str7 != null ? str7.equals(dyhLogoCard.getExtraData()) : dyhLogoCard.getExtraData() == null) {
-                                        Long l2 = this.dateline;
-                                        if (l2 != null ? l2.equals(dyhLogoCard.getDateline()) : dyhLogoCard.getDateline() == null) {
-                                            Long l3 = this.lastUpdate;
-                                            if (l3 != null ? l3.equals(dyhLogoCard.getLastUpdate()) : dyhLogoCard.getLastUpdate() == null) {
+                                        Long l = this.dateline;
+                                        if (l != null ? l.equals(dyhLogoCard.getDateline()) : dyhLogoCard.getDateline() == null) {
+                                            Long l2 = this.lastUpdate;
+                                            if (l2 != null ? l2.equals(dyhLogoCard.getLastUpdate()) : dyhLogoCard.getLastUpdate() == null) {
                                                 String str8 = this.title;
                                                 if (str8 != null ? str8.equals(dyhLogoCard.getTitle()) : dyhLogoCard.getTitle() == null) {
                                                     String str9 = this.url;
@@ -217,10 +217,10 @@ abstract class C$$AutoValue_DyhLogoCard extends DyhLogoCard {
         int hashCode7 = (hashCode6 ^ (str6 == null ? 0 : str6.hashCode())) * 1000003;
         String str7 = this.extraData;
         int hashCode8 = (hashCode7 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode9 = (hashCode8 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode10 = (hashCode9 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode9 = (hashCode8 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode10 = (hashCode9 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str8 = this.title;
         int hashCode11 = (hashCode10 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
         String str9 = this.url;

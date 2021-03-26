@@ -38,10 +38,6 @@ public class BOMInputStream extends ProxyInputStream {
         this(inputStream, z, ByteOrderMark.UTF_8);
     }
 
-    public BOMInputStream(InputStream inputStream, ByteOrderMark... byteOrderMarkArr) {
-        this(inputStream, false, byteOrderMarkArr);
-    }
-
     public BOMInputStream(InputStream inputStream, boolean z, ByteOrderMark... byteOrderMarkArr) {
         super(inputStream);
         if (byteOrderMarkArr == null || byteOrderMarkArr.length == 0) {
@@ -53,17 +49,37 @@ public class BOMInputStream extends ProxyInputStream {
         this.boms = asList;
     }
 
-    public boolean hasBOM() throws IOException {
-        return getBOM() != null;
+    public BOMInputStream(InputStream inputStream, ByteOrderMark... byteOrderMarkArr) {
+        this(inputStream, false, byteOrderMarkArr);
     }
 
-    public boolean hasBOM(ByteOrderMark byteOrderMark2) throws IOException {
-        if (this.boms.contains(byteOrderMark2)) {
-            getBOM();
-            ByteOrderMark byteOrderMark3 = this.byteOrderMark;
-            return byteOrderMark3 != null && byteOrderMark3.equals(byteOrderMark2);
+    private ByteOrderMark find() {
+        for (ByteOrderMark byteOrderMark2 : this.boms) {
+            if (matches(byteOrderMark2)) {
+                return byteOrderMark2;
+            }
         }
-        throw new IllegalArgumentException("Stream not configure to detect " + byteOrderMark2);
+        return null;
+    }
+
+    private boolean matches(ByteOrderMark byteOrderMark2) {
+        for (int i = 0; i < byteOrderMark2.length(); i++) {
+            if (byteOrderMark2.get(i) != this.firstBytes[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private int readFirstBytes() throws IOException {
+        getBOM();
+        int i = this.fbIndex;
+        if (i >= this.fbLength) {
+            return -1;
+        }
+        int[] iArr = this.firstBytes;
+        this.fbIndex = i + 1;
+        return iArr[i];
     }
 
     public ByteOrderMark getBOM() throws IOException {
@@ -105,39 +121,35 @@ public class BOMInputStream extends ProxyInputStream {
         return byteOrderMark2.getCharsetName();
     }
 
-    private int readFirstBytes() throws IOException {
-        getBOM();
-        int i = this.fbIndex;
-        if (i >= this.fbLength) {
-            return -1;
-        }
-        int[] iArr = this.firstBytes;
-        this.fbIndex = i + 1;
-        return iArr[i];
+    public boolean hasBOM() throws IOException {
+        return getBOM() != null;
     }
 
-    private ByteOrderMark find() {
-        for (ByteOrderMark byteOrderMark2 : this.boms) {
-            if (matches(byteOrderMark2)) {
-                return byteOrderMark2;
-            }
+    public boolean hasBOM(ByteOrderMark byteOrderMark2) throws IOException {
+        if (this.boms.contains(byteOrderMark2)) {
+            getBOM();
+            ByteOrderMark byteOrderMark3 = this.byteOrderMark;
+            return byteOrderMark3 != null && byteOrderMark3.equals(byteOrderMark2);
         }
-        return null;
+        throw new IllegalArgumentException("Stream not configure to detect " + byteOrderMark2);
     }
 
-    private boolean matches(ByteOrderMark byteOrderMark2) {
-        for (int i = 0; i < byteOrderMark2.length(); i++) {
-            if (byteOrderMark2.get(i) != this.firstBytes[i]) {
-                return false;
-            }
-        }
-        return true;
+    @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.InputStream
+    public synchronized void mark(int i) {
+        this.markFbIndex = this.fbIndex;
+        this.markedAtStart = this.firstBytes == null;
+        this.in.mark(i);
     }
 
     @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.InputStream
     public int read() throws IOException {
         int readFirstBytes = readFirstBytes();
         return readFirstBytes >= 0 ? readFirstBytes : this.in.read();
+    }
+
+    @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.InputStream
+    public int read(byte[] bArr) throws IOException {
+        return read(bArr, 0, bArr.length);
     }
 
     @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.InputStream
@@ -161,18 +173,6 @@ public class BOMInputStream extends ProxyInputStream {
             return i4;
         }
         return -1;
-    }
-
-    @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.InputStream
-    public int read(byte[] bArr) throws IOException {
-        return read(bArr, 0, bArr.length);
-    }
-
-    @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.InputStream
-    public synchronized void mark(int i) {
-        this.markFbIndex = this.fbIndex;
-        this.markedAtStart = this.firstBytes == null;
-        this.in.mark(i);
     }
 
     @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.InputStream

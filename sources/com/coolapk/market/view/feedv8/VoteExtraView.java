@@ -104,15 +104,15 @@ public final class VoteExtraView {
         VoteViewData voteViewData = new VoteViewData("short_divider", 0, null, null, 0, 30, null);
         this.shortDivider = voteViewData;
         this.longDivider = new VoteViewData("long_divider", 0, null, null, 0, 30, null);
-        List<VoteViewData> mutableListOf = CollectionsKt.mutableListOf(new VoteViewData("option", 2131231453, "选项一", null, 0, 8, null), voteViewData, new VoteViewData("option", 2131231454, "选项二", null, 1, 8, null), voteViewData, new VoteViewData("option", 2131231455, "选项三", null, 2, 8, null), voteViewData, new VoteViewData("option", 2131231456, "选项四", null, 3, 8, null), voteViewData, new VoteViewData("option", 2131231457, "选项五", null, 4, 8, null), voteViewData, new VoteViewData("option", 2131231458, "选项六", null, 5, 8, null), voteViewData, new VoteViewData("option", 2131231459, "选项七", null, 6, 8, null), voteViewData, new VoteViewData("option", 2131231460, "选项八", null, 7, 8, null), voteViewData, new VoteViewData("option", 2131231461, "选项九", null, 8, 8, null), voteViewData, new VoteViewData("option", 2131231452, "选项十", null, 9, 8, null), voteViewData);
+        List<VoteViewData> mutableListOf = CollectionsKt.mutableListOf(new VoteViewData("option", 2131231464, "选项一", null, 0, 8, null), voteViewData, new VoteViewData("option", 2131231465, "选项二", null, 1, 8, null), voteViewData, new VoteViewData("option", 2131231466, "选项三", null, 2, 8, null), voteViewData, new VoteViewData("option", 2131231467, "选项四", null, 3, 8, null), voteViewData, new VoteViewData("option", 2131231468, "选项五", null, 4, 8, null), voteViewData, new VoteViewData("option", 2131231469, "选项六", null, 5, 8, null), voteViewData, new VoteViewData("option", 2131231470, "选项七", null, 6, 8, null), voteViewData, new VoteViewData("option", 2131231471, "选项八", null, 7, 8, null), voteViewData, new VoteViewData("option", 2131231472, "选项九", null, 8, 8, null), voteViewData, new VoteViewData("option", 2131231463, "选项十", null, 9, 8, null), voteViewData);
         int i2 = i - 10;
         for (int i3 = 0; i3 < i2; i3++) {
-            mutableListOf.add(new VoteViewData("option", 2131231111, "选项" + (i3 + 11), null, i3 + 10, 8, null));
+            mutableListOf.add(new VoteViewData("option", 2131231121, "选项" + (i3 + 11), null, i3 + 10, 8, null));
             mutableListOf.add(this.shortDivider);
         }
         Unit unit = Unit.INSTANCE;
         this.optionsDataList = mutableListOf;
-        this.pkOptionsDataList = CollectionsKt.mutableListOf(new VoteViewData("option", 2131231453, "正方观点", null, 0, 8, null), this.shortDivider, new VoteViewData("option", 2131231454, "反方观点", null, 1, 8, null), this.shortDivider);
+        this.pkOptionsDataList = CollectionsKt.mutableListOf(new VoteViewData("option", 2131231464, "正方观点", null, 0, 8, null), this.shortDivider, new VoteViewData("option", 2131231465, "反方观点", null, 1, 8, null), this.shortDivider);
         getContainer().setAdapter(getAdapter());
         getAdapter().setNotifyOnChange(false);
         List<String> voteOptions = getMultiPart().voteOptions();
@@ -137,6 +137,14 @@ public final class VoteExtraView {
         }
     }
 
+    public static final /* synthetic */ FeedMultiPart access$getMultiPart$p(VoteExtraView voteExtraView) {
+        return voteExtraView.getMultiPart();
+    }
+
+    public static final /* synthetic */ void access$setMultiPart$p(VoteExtraView voteExtraView, FeedMultiPart feedMultiPart) {
+        voteExtraView.setMultiPart(feedMultiPart);
+    }
+
     private final LinearMultiLayout getContainer() {
         LinearMultiLayout linearMultiLayout = this.holder.getBinding$presentation_coolapkAppRelease().moreContainer;
         Intrinsics.checkNotNullExpressionValue(linearMultiLayout, "holder.binding.moreContainer");
@@ -147,11 +155,11 @@ public final class VoteExtraView {
         return this.holder.getActivity();
     }
 
-    public final FeedMultiPart getMultiPart() {
+    private final FeedMultiPart getMultiPart() {
         return this.holder.getMultiPart();
     }
 
-    public final void setMultiPart(FeedMultiPart feedMultiPart) {
+    private final void setMultiPart(FeedMultiPart feedMultiPart) {
         this.holder.updateMultiPart$presentation_coolapkAppRelease(feedMultiPart);
     }
 
@@ -187,37 +195,37 @@ public final class VoteExtraView {
         if (voteType == 0) {
             this.dataList.addAll(this.pkOptionsDataList);
             if (UserPermissionChecker.INSTANCE.getCanUseAdvancedVoteOptions()) {
-                this.dataList.add(new VoteViewData("color", 2131231209, "自定义颜色", null, 0, 24, null));
+                this.dataList.add(new VoteViewData("color", 2131231220, "自定义颜色", null, 0, 24, null));
             }
             this.dataList.add(this.longDivider);
         } else if (voteType == 1) {
             int i = this.currentMultiOptionsCount;
             if (i < this.maxOptionCount) {
                 this.dataList.addAll(this.optionsDataList.subList(0, i * 2));
-                this.dataList.add(new VoteViewData("add_option", 2131231111, "添加选项", null, 0, 24, null));
+                this.dataList.add(new VoteViewData("add_option", 2131231121, "添加选项", null, 0, 24, null));
             } else {
                 this.dataList.addAll(this.optionsDataList);
             }
             this.dataList.add(this.longDivider);
         }
         if (this.showMoreSetting) {
-            this.dataList.add(new VoteViewData("anonymous", 2131231285, "允许匿名", voteAnonymousStatusToString(getMultiPart().voteAnonymousStatus()), 0, 16, null));
+            this.dataList.add(new VoteViewData("anonymous", 2131231296, "允许匿名", voteAnonymousStatusToString(getMultiPart().voteAnonymousStatus()), 0, 16, null));
             this.dataList.add(this.shortDivider);
-            this.dataList.add(new VoteViewData("end_time", 2131231198, "截止时间", voteEndTimeDataToString(getMultiPart().voteEndTime()), 0, 16, null));
+            this.dataList.add(new VoteViewData("end_time", 2131231209, "截止时间", voteEndTimeDataToString(getMultiPart().voteEndTime()), 0, 16, null));
             if (getMultiPart().voteType() == 1) {
                 this.dataList.add(this.shortDivider);
-                this.dataList.add(new VoteViewData("vote_limit", 2131231645, "投票上限", voteMaxSelectNumToString(getMultiPart().voteMaxSelectNum()), 0, 16, null));
+                this.dataList.add(new VoteViewData("vote_limit", 2131231656, "投票上限", voteMaxSelectNumToString(getMultiPart().voteMaxSelectNum()), 0, 16, null));
             }
             if (UserPermissionChecker.INSTANCE.getCanUseAdvancedVoteOptions()) {
                 this.dataList.add(this.shortDivider);
-                this.dataList.add(new VoteViewData("show_author", 2131231107, "显示发起者信息", voteShowAuthorToString(getMultiPart().voteShowAuthor()), 0, 16, null));
+                this.dataList.add(new VoteViewData("show_author", 2131231117, "显示发起者信息", voteShowAuthorToString(getMultiPart().voteShowAuthor()), 0, 16, null));
             }
             if (UserPermissionChecker.INSTANCE.getCanUseAdvancedVoteOptions()) {
                 this.dataList.add(this.shortDivider);
                 List<VoteViewData> list = this.dataList;
                 String votePage = getMultiPart().votePage();
                 Intrinsics.checkNotNullExpressionValue(votePage, "multiPart.votePage()");
-                list.add(new VoteViewData("bind_page", 2131231464, "绑定页面", KotlinExtendKt.limitLength(votePage, 10), 0, 16, null));
+                list.add(new VoteViewData("bind_page", 2131231475, "绑定页面", KotlinExtendKt.limitLength(votePage, 10), 0, 16, null));
             }
         }
         notifyDataSetChanged();
@@ -278,7 +286,7 @@ public final class VoteExtraView {
                     Intrinsics.checkNotNullExpressionValue(voteOptionColors, "multiPart.voteOptionColors()");
                     Integer stringToColor = ColorUtils.stringToColor((String) CollectionsKt.getOrNull(voteOptionColors, 0));
                     if (stringToColor == null) {
-                        stringToColor = Integer.valueOf(ResourceUtils.getColorInt(getActivity(), 2131099790));
+                        stringToColor = Integer.valueOf(ResourceUtils.getColorInt(getActivity(), 2131099792));
                     }
                     Intrinsics.checkNotNullExpressionValue(stringToColor, "ColorUtils.stringToColor…R.color.compare_view_red)");
                     int intValue3 = stringToColor.intValue();
@@ -286,7 +294,7 @@ public final class VoteExtraView {
                     Intrinsics.checkNotNullExpressionValue(voteOptionColors2, "multiPart.voteOptionColors()");
                     Integer stringToColor2 = ColorUtils.stringToColor((String) CollectionsKt.getOrNull(voteOptionColors2, 1));
                     if (stringToColor2 == null) {
-                        stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(getActivity(), 2131099789));
+                        stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(getActivity(), 2131099791));
                     }
                     Intrinsics.checkNotNullExpressionValue(stringToColor2, "ColorUtils.stringToColor….color.compare_view_blue)");
                     int intValue4 = stringToColor2.intValue();
@@ -593,7 +601,7 @@ public final class VoteExtraView {
 
     /* compiled from: VoteExtraView.kt */
     private final class DataAdapter extends ArrayAdapter<VoteViewData> {
-        private final int TAG_ID = 2131363492;
+        private final int TAG_ID = 2131363510;
         final /* synthetic */ VoteExtraView this$0;
 
         @Override // android.widget.Adapter, android.widget.BaseAdapter
@@ -667,7 +675,7 @@ public final class VoteExtraView {
 
         private final ItemViewHolder createItemViewHolder(ViewGroup viewGroup, int i) {
             VoteExtraView voteExtraView = this.this$0;
-            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(viewGroup.getContext()), 2131559174, viewGroup, false);
+            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(viewGroup.getContext()), 2131559182, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…tra_child, parent, false)");
             ItemViewHolder itemViewHolder = new ItemViewHolder(voteExtraView, (SubmitVoteExtraChildBinding) inflate);
             itemViewHolder.initView(i);
@@ -791,10 +799,10 @@ public final class VoteExtraView {
                 EditText editText3 = this.binding.editText;
                 Intrinsics.checkNotNullExpressionValue(editText3, "binding.editText");
                 editText3.setOnFocusChangeListener(new VoteExtraView$ItemViewHolder$initView$2(this));
-                this.binding.extraImageView.setImageResource(2131231200);
+                this.binding.extraImageView.setImageResource(2131231211);
                 ImageView imageView6 = this.binding.extraImageView;
                 Intrinsics.checkNotNullExpressionValue(imageView6, "binding.extraImageView");
-                imageView6.setImageTintList(ColorStateList.valueOf(ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099891)));
+                imageView6.setImageTintList(ColorStateList.valueOf(ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099896)));
                 this.binding.extraImageView.setOnClickListener(new VoteExtraView$ItemViewHolder$initView$3(this));
             } else if (i == 3) {
                 EditText editText4 = this.binding.editText;
@@ -833,19 +841,19 @@ public final class VoteExtraView {
                         imageView.setVisibility(4);
                     }
                 } else if (itemType.equals("color")) {
-                    List<String> voteOptionColors = this.this$0.getMultiPart().voteOptionColors();
+                    List<String> voteOptionColors = VoteExtraView.access$getMultiPart$p(this.this$0).voteOptionColors();
                     Intrinsics.checkNotNullExpressionValue(voteOptionColors, "multiPart.voteOptionColors()");
                     Integer stringToColor = ColorUtils.stringToColor((String) CollectionsKt.getOrNull(voteOptionColors, 0));
                     if (stringToColor == null) {
-                        stringToColor = Integer.valueOf(ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099790));
+                        stringToColor = Integer.valueOf(ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099792));
                     }
                     Intrinsics.checkNotNullExpressionValue(stringToColor, "ColorUtils.stringToColor…R.color.compare_view_red)");
                     int intValue = stringToColor.intValue();
-                    List<String> voteOptionColors2 = this.this$0.getMultiPart().voteOptionColors();
+                    List<String> voteOptionColors2 = VoteExtraView.access$getMultiPart$p(this.this$0).voteOptionColors();
                     Intrinsics.checkNotNullExpressionValue(voteOptionColors2, "multiPart.voteOptionColors()");
                     Integer stringToColor2 = ColorUtils.stringToColor((String) CollectionsKt.getOrNull(voteOptionColors2, 1));
                     if (stringToColor2 == null) {
-                        stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099789));
+                        stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099791));
                     }
                     Intrinsics.checkNotNullExpressionValue(stringToColor2, "ColorUtils.stringToColor….color.compare_view_blue)");
                     int intValue2 = stringToColor2.intValue();
@@ -864,8 +872,8 @@ public final class VoteExtraView {
                 this.binding.editText.setText((CharSequence) this.this$0.userInputOptions.get(voteViewData.getOptionIndex(), ""));
                 ImageView imageView4 = this.binding.extraImageView;
                 Intrinsics.checkNotNullExpressionValue(imageView4, "binding.extraImageView");
-                imageView4.setVisibility(this.this$0.getMultiPart().voteType() == 0 || this.this$0.currentMultiOptionsCount <= 2 ? 8 : 0);
-                int i = this.this$0.getMultiPart().voteType() == 0 ? 5 : 15;
+                imageView4.setVisibility(VoteExtraView.access$getMultiPart$p(this.this$0).voteType() == 0 || this.this$0.currentMultiOptionsCount <= 2 ? 8 : 0);
+                int i = VoteExtraView.access$getMultiPart$p(this.this$0).voteType() == 0 ? 5 : 15;
                 EditText editText = this.binding.editText;
                 Intrinsics.checkNotNullExpressionValue(editText, "binding.editText");
                 editText.setFilters(new InputFilter.LengthFilter[]{new InputFilter.LengthFilter(i)});

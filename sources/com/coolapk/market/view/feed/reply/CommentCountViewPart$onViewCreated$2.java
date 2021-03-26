@@ -19,7 +19,7 @@ final class CommentCountViewPart$onViewCreated$2<T> implements Observer<Integer>
         TextView textView = ((FeedCommentCountViewPartBinding) this.this$0.getBinding()).forwardView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.forwardView");
         CommentCountViewPart commentCountViewPart = this.this$0;
-        String string = commentCountViewPart.getContext().getString(2131886789);
+        String string = commentCountViewPart.getContext().getString(2131886851);
         Intrinsics.checkNotNullExpressionValue(string, "context.getString(R.string.str_feed_item_forward)");
         Intrinsics.checkNotNullExpressionValue(num, "it");
         textView.setText(commentCountViewPart.getLabelTitle(string, num.intValue()));

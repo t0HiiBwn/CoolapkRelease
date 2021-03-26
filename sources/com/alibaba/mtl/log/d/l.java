@@ -12,10 +12,10 @@ public class l {
     private static a a = new a();
 
     /* renamed from: a  reason: collision with other field name */
-    private static b f65a = new b();
+    private static b f64a = new b();
 
     /* renamed from: a  reason: collision with other field name */
-    private static String[] f66a = {"Unknown", "Unknown"};
+    private static String[] f65a = {"Unknown", "Unknown"};
 
     private static String a(int i) {
         switch (i) {
@@ -83,18 +83,18 @@ public class l {
     }
 
     public static String[] getNetworkState(Context context) {
-        return f66a;
+        return f65a;
     }
 
     public static void b(Context context) {
         if (context != null) {
-            context.registerReceiver(f65a, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
+            context.registerReceiver(f64a, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
         }
     }
 
     public static void c(Context context) {
         b bVar;
-        if (context != null && (bVar = f65a) != null) {
+        if (context != null && (bVar = f64a) != null) {
             context.unregisterReceiver(bVar);
         }
     }
@@ -128,21 +128,21 @@ public class l {
             if (context != null) {
                 try {
                     if (context.getPackageManager().checkPermission("android.permission.ACCESS_NETWORK_STATE", this.a.getPackageName()) != 0) {
-                        l.f66a[0] = "Unknown";
+                        l.f65a[0] = "Unknown";
                         return;
                     }
                     ConnectivityManager connectivityManager = (ConnectivityManager) this.a.getSystemService("connectivity");
                     if (connectivityManager == null) {
-                        l.f66a[0] = "Unknown";
+                        l.f65a[0] = "Unknown";
                         return;
                     }
                     NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
                     if (activeNetworkInfo != null && activeNetworkInfo.isConnected()) {
                         if (1 == activeNetworkInfo.getType()) {
-                            l.f66a[0] = "Wi-Fi";
+                            l.f65a[0] = "Wi-Fi";
                         } else if (activeNetworkInfo.getType() == 0) {
-                            l.f66a[0] = "2G/3G";
-                            l.f66a[1] = activeNetworkInfo.getSubtypeName();
+                            l.f65a[0] = "2G/3G";
+                            l.f65a[1] = activeNetworkInfo.getSubtypeName();
                         }
                     }
                 } catch (Exception unused) {

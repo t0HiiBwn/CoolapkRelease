@@ -37,10 +37,8 @@ public final class a {
     c h = null;
     Object i = new Object();
     Object j = new Object();
-    HandlerC0073a k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    b f1354l = null;
+    HandlerC0083a k = null;
+    b l = null;
     volatile boolean m = false;
     volatile boolean n = false;
     volatile boolean o = false;
@@ -102,8 +100,8 @@ public final class a {
 
     /* renamed from: com.loc.a$a  reason: collision with other inner class name */
     /* compiled from: GeoFenceManager */
-    class HandlerC0073a extends Handler {
-        public HandlerC0073a(Looper looper) {
+    class HandlerC0083a extends Handler {
+        public HandlerC0083a(Looper looper) {
             super(looper);
         }
 
@@ -773,10 +771,10 @@ public final class a {
             }
             try {
                 b bVar = new b("fenceActionThread");
-                this.f1354l = bVar;
+                this.l = bVar;
                 bVar.setPriority(5);
-                this.f1354l.start();
-                this.k = new HandlerC0073a(this.f1354l.getLooper());
+                this.l.start();
+                this.k = new HandlerC0083a(this.l.getLooper());
             } catch (Throwable th2) {
                 ej.a(th2, "GeoFenceManger", "init 2");
             }
@@ -922,7 +920,7 @@ public final class a {
     final void a(int i2, Bundle bundle, long j2) {
         try {
             synchronized (this.i) {
-                HandlerC0073a aVar = this.k;
+                HandlerC0083a aVar = this.k;
                 if (aVar != null) {
                     Message obtainMessage = aVar.obtainMessage();
                     obtainMessage.what = i2;
@@ -1144,7 +1142,7 @@ public final class a {
     final void b(int i2) {
         try {
             synchronized (this.i) {
-                HandlerC0073a aVar = this.k;
+                HandlerC0083a aVar = this.k;
                 if (aVar != null) {
                     aVar.removeMessages(i2);
                 }
@@ -1169,7 +1167,7 @@ public final class a {
                 if (!this.o) {
                     try {
                         synchronized (this.i) {
-                            HandlerC0073a aVar = this.k;
+                            HandlerC0083a aVar = this.k;
                             if (aVar != null) {
                                 aVar.removeCallbacksAndMessages(null);
                             }
@@ -1184,14 +1182,14 @@ public final class a {
                         this.r.onDestroy();
                     }
                     this.r = null;
-                    if (this.f1354l != null) {
+                    if (this.l != null) {
                         if (Build.VERSION.SDK_INT >= 18) {
-                            this.f1354l.quitSafely();
+                            this.l.quitSafely();
                         } else {
-                            this.f1354l.quit();
+                            this.l.quit();
                         }
                     }
-                    this.f1354l = null;
+                    this.l = null;
                     this.p = null;
                     synchronized (this.z) {
                         PendingIntent pendingIntent = this.c;

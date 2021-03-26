@@ -170,7 +170,7 @@ public final class DyhDetailFragment extends EntityListFragment implements Conve
             getRecyclerView().addOnScrollListener(new RecyclerScrollHeaderListener(DisplayUtils.dp2px(fragmentActivity, 40.0f), new DyhDetailFragment$onActivityCreated$3(this, activity)));
             getRecyclerView().addOnScrollListener(new RecyclerScrollHeaderListener(DisplayUtils.dp2px(fragmentActivity, 80.0f), new DyhDetailFragment$onActivityCreated$4(activity)));
         }
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558543).suitedMethod(DyhDetailFragment$onActivityCreated$5.INSTANCE).constructor(new DyhDetailFragment$onActivityCreated$6(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558545).suitedMethod(DyhDetailFragment$onActivityCreated$5.INSTANCE).constructor(new DyhDetailFragment$onActivityCreated$6(this)).build(), 0);
         EventBus eventBus = EventBus.getDefault();
         Intrinsics.checkNotNullExpressionValue(eventBus, "EventBus.getDefault()");
         EventBusExtendsKt.safeRegister(eventBus, this);
@@ -190,14 +190,14 @@ public final class DyhDetailFragment extends EntityListFragment implements Conve
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            menu.add(0, 2131361968, 100, "分享").setShowAsAction(8);
+            menu.add(0, 2131361969, 100, "分享").setShowAsAction(8);
         }
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361968) {
+        if (menuItem.getItemId() != 2131361969) {
             return super.onOptionsItemSelected(menuItem);
         }
         if (this.viewModel.getDyhModel() == null) {
@@ -469,20 +469,20 @@ public final class DyhDetailFragment extends EntityListFragment implements Conve
         Context context = frameLayout.getContext();
         Intrinsics.checkNotNullExpressionValue(context, "content.context");
         FabVerticalMenuLayout fabVerticalMenuLayout = new FabVerticalMenuLayout(context);
-        FabVerticalMenuLayout.setFabInfo$default(fabVerticalMenuLayout, 2131231489, Integer.valueOf(AppHolder.getAppTheme().getColorAccent()), (View.OnClickListener) null, 4, (Object) null);
+        FabVerticalMenuLayout.setFabInfo$default(fabVerticalMenuLayout, 2131231500, Integer.valueOf(AppHolder.getAppTheme().getColorAccent()), (View.OnClickListener) null, 4, (Object) null);
         DyhModel dyhModel = this.viewModel.getDyhModel();
-        Integer valueOf = Integer.valueOf(getResources().getColor(2131099876));
-        String string = getString(2131886321);
+        Integer valueOf = Integer.valueOf(getResources().getColor(2131099881));
+        String string = getString(2131886351);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.feed_entrance_simple_feed)");
-        fabVerticalMenuLayout.addSubFabInfo(2131231258, valueOf, string, new DyhDetailFragment$addFabMenu$1(this, dyhModel));
-        Integer valueOf2 = Integer.valueOf(getResources().getColor(2131099878));
-        String string2 = getString(2131886319);
+        fabVerticalMenuLayout.addSubFabInfo(2131231269, valueOf, string, new DyhDetailFragment$addFabMenu$1(this, dyhModel));
+        Integer valueOf2 = Integer.valueOf(getResources().getColor(2131099883));
+        String string2 = getString(2131886349);
         Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.feed_entrance_simple_article)");
-        fabVerticalMenuLayout.addSubFabInfo(2131231174, valueOf2, string2, new DyhDetailFragment$addFabMenu$2(this, dyhModel));
-        Integer valueOf3 = Integer.valueOf(getResources().getColor(2131099882));
-        String string3 = getString(2131886323);
+        fabVerticalMenuLayout.addSubFabInfo(2131231185, valueOf2, string2, new DyhDetailFragment$addFabMenu$2(this, dyhModel));
+        Integer valueOf3 = Integer.valueOf(getResources().getColor(2131099887));
+        String string3 = getString(2131886353);
         Intrinsics.checkNotNullExpressionValue(string3, "getString(R.string.feed_entrance_simple_question)");
-        fabVerticalMenuLayout.addSubFabInfo(2131231613, valueOf3, string3, new DyhDetailFragment$addFabMenu$3(this, dyhModel));
+        fabVerticalMenuLayout.addSubFabInfo(2131231624, valueOf3, string3, new DyhDetailFragment$addFabMenu$3(this, dyhModel));
         fabVerticalMenuLayout.setFabLongClickListener(new DyhDetailFragment$addFabMenu$4(this));
         frameLayout.addView(fabVerticalMenuLayout, new FrameLayout.LayoutParams(-1, -1));
         Lifecycle lifecycle = getLifecycle();

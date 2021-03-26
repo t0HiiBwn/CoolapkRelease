@@ -58,7 +58,7 @@ public abstract class ItemPlaceHolderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPlaceHolderBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemPlaceHolderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558858, viewGroup, z, obj);
+        return (ItemPlaceHolderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558865, viewGroup, z, obj);
     }
 
     public static ItemPlaceHolderBinding inflate(LayoutInflater layoutInflater) {
@@ -67,7 +67,7 @@ public abstract class ItemPlaceHolderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPlaceHolderBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemPlaceHolderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558858, null, false, obj);
+        return (ItemPlaceHolderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558865, null, false, obj);
     }
 
     public static ItemPlaceHolderBinding bind(View view) {
@@ -76,6 +76,6 @@ public abstract class ItemPlaceHolderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPlaceHolderBinding bind(View view, Object obj) {
-        return (ItemPlaceHolderBinding) bind(obj, view, 2131558858);
+        return (ItemPlaceHolderBinding) bind(obj, view, 2131558865);
     }
 }

@@ -16,7 +16,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FunThingsItemViewHolder.kt */
 public final class FunThingsItemViewHolder extends GenericBindHolder<ItemFunThingBinding, FunThings> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558750;
+    public static final int LAYOUT_ID = 2131558757;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public FunThingsItemViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -44,7 +44,7 @@ public final class FunThingsItemViewHolder extends GenericBindHolder<ItemFunThin
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131362768) {
+        if (view.getId() == 2131362779) {
             Context context = getContext();
             ItemFunThingBinding itemFunThingBinding = (ItemFunThingBinding) getBinding();
             Intrinsics.checkNotNullExpressionValue(itemFunThingBinding, "binding");

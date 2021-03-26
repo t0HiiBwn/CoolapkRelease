@@ -28,7 +28,7 @@ public class ItemNewFeedImageBindingImpl extends ItemNewFeedImageBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362257, 3);
+        sparseIntArray.put(2131362262, 3);
     }
 
     public ItemNewFeedImageBindingImpl(DataBindingComponent dataBindingComponent, View view) {

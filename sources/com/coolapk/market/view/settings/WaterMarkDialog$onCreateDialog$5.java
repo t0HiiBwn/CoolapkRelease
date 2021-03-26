@@ -21,7 +21,7 @@ final class WaterMarkDialog$onCreateDialog$5 implements RadioGroup.OnCheckedChan
     @Override // android.widget.RadioGroup.OnCheckedChangeListener
     public final void onCheckedChanged(RadioGroup radioGroup, int i) {
         switch (i) {
-            case 2131363167:
+            case 2131363181:
                 if (!(this.this$0.isPosition())) {
                     this.$value.element = "0";
                     DataManager instance = DataManager.getInstance();
@@ -35,13 +35,13 @@ final class WaterMarkDialog$onCreateDialog$5 implements RadioGroup.OnCheckedChan
                     instance2.getPreferencesEditor().putString("picture_watermark_position", this.$value.element).apply();
                     break;
                 }
-            case 2131363169:
+            case 2131363183:
                 this.$value.element = "9";
                 DataManager instance3 = DataManager.getInstance();
                 Intrinsics.checkNotNullExpressionValue(instance3, "DataManager.getInstance()");
                 instance3.getPreferencesEditor().putString("picture_watermark_position", this.$value.element).apply();
                 break;
-            case 2131363175:
+            case 2131363189:
                 if (!(this.this$0.isPosition())) {
                     this.$value.element = "1";
                     DataManager instance4 = DataManager.getInstance();
@@ -55,7 +55,7 @@ final class WaterMarkDialog$onCreateDialog$5 implements RadioGroup.OnCheckedChan
                     instance5.getPreferencesEditor().putString("picture_watermark_position", this.$value.element).apply();
                     break;
                 }
-            case 2131363178:
+            case 2131363192:
                 this.$value.element = "8";
                 DataManager instance6 = DataManager.getInstance();
                 Intrinsics.checkNotNullExpressionValue(instance6, "DataManager.getInstance()");

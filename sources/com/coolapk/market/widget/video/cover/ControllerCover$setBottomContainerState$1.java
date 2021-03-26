@@ -40,7 +40,7 @@ public final class ControllerCover$setBottomContainerState$1 extends AnimatorLis
             LinearLayout linearLayout = ControllerCover.access$getBinding$p(this.this$0).bottomContainer;
             Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.bottomContainer");
             linearLayout.setVisibility(8);
-            if (!(this.this$0.isUnseekable)) {
+            if (!this.this$0.isUnseekable) {
                 ProgressBar progressBar = ControllerCover.access$getBinding$p(this.this$0).progressBar;
                 Intrinsics.checkNotNullExpressionValue(progressBar, "binding.progressBar");
                 progressBar.setVisibility(0);

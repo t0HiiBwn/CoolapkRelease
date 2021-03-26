@@ -500,9 +500,9 @@ public class OSSUtils {
         return simOperator.equals("46003") ? "CTCC" : simOperator;
     }
 
-    public static void checkChecksum(Long l2, Long l3, String str) throws InconsistentException {
-        if (l2 != null && l3 != null && !l2.equals(l3)) {
-            throw new InconsistentException(l2, l3, str);
+    public static void checkChecksum(Long l, Long l2, String str) throws InconsistentException {
+        if (l != null && l2 != null && !l.equals(l2)) {
+            throw new InconsistentException(l, l2, str);
         }
     }
 

@@ -33,9 +33,7 @@ public class GifView extends ImageView {
     private float i;
     private int j;
     private int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private volatile boolean f1327l;
+    private volatile boolean l;
     private boolean m;
 
     public GifView(Context context) {
@@ -80,7 +78,7 @@ public class GifView extends ImageView {
     }
 
     public void a(byte[] bArr, boolean z) {
-        this.f1327l = z;
+        this.l = z;
         if (bArr == null) {
             return;
         }
@@ -166,7 +164,7 @@ public class GifView extends ImageView {
                 return null;
             }
             AnimatedImageDrawable animatedImageDrawable = (AnimatedImageDrawable) decodeDrawable;
-            if (!this.f1327l) {
+            if (!this.l) {
                 animatedImageDrawable.start();
             }
             return animatedImageDrawable;
@@ -219,7 +217,7 @@ public class GifView extends ImageView {
             return;
         }
         try {
-            if (!this.f1327l) {
+            if (!this.l) {
                 c();
                 a(canvas);
                 b();

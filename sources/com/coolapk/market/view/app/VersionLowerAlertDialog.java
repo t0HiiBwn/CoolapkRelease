@@ -29,7 +29,7 @@ public class VersionLowerAlertDialog extends BaseDialogFragment {
         }
         final int i = getArguments().getInt("urlType");
         final int i2 = getArguments().getInt("flag");
-        return new AlertDialog.Builder(getActivity()).setMessage(getString(2131886705, serviceApp.getAppName())).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
+        return new AlertDialog.Builder(getActivity()).setMessage(getString(2131886767, serviceApp.getAppName())).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
             /* class com.coolapk.market.view.app.VersionLowerAlertDialog.AnonymousClass2 */
 
             @Override // android.content.DialogInterface.OnClickListener

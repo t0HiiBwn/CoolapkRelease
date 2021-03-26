@@ -100,7 +100,7 @@ public interface c extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.ss.android.socialbase.downloader.db.ISqlDownloadCacheAidl");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof c)) {
-                return new C0094a(iBinder);
+                return new C0104a(iBinder);
             }
             return (c) queryLocalInterface;
         }
@@ -394,11 +394,11 @@ public interface c extends IInterface {
 
         /* renamed from: com.ss.android.socialbase.downloader.b.c$a$a  reason: collision with other inner class name */
         /* compiled from: ISqlDownloadCacheAidl */
-        private static class C0094a implements c {
+        private static class C0104a implements c {
             public static c a;
             private IBinder b;
 
-            C0094a(IBinder iBinder) {
+            C0104a(IBinder iBinder) {
                 this.b = iBinder;
             }
 
@@ -1185,7 +1185,7 @@ public interface c extends IInterface {
         }
 
         public static c e() {
-            return C0094a.a;
+            return C0104a.a;
         }
     }
 }

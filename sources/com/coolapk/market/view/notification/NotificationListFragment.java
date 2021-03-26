@@ -11,6 +11,7 @@ import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.coolapk.market.AppHolder;
+import com.coolapk.market.binding.FragmentBindingComponent;
 import com.coolapk.market.event.NotificationDeletedEvent;
 import com.coolapk.market.event.NotificationReadEvent;
 import com.coolapk.market.event.UserBlockedEvent;
@@ -47,6 +48,10 @@ public final class NotificationListFragment extends EntityListFragment {
     @JvmStatic
     public static final NotificationListFragment newInstance() {
         return Companion.newInstance();
+    }
+
+    public static final /* synthetic */ FragmentBindingComponent access$getBindingComponent$p(NotificationListFragment notificationListFragment) {
+        return notificationListFragment.getBindingComponent();
     }
 
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\n\u0010\u0005\u001a\u0004\u0018\u00010\u0006H\u0007R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0007"}, d2 = {"Lcom/coolapk/market/view/notification/NotificationListFragment$Companion;", "", "()V", "TYPE_NAVIGATION_ITEM", "", "newInstance", "Lcom/coolapk/market/view/notification/NotificationListFragment;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
@@ -88,9 +93,10 @@ public final class NotificationListFragment extends EntityListFragment {
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         ViewExtendsKt.removeAllItemDecorations(recyclerView);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558842).constructor(new NotificationListFragment$onActivityCreated$1(this)).suitedMethod(NotificationListFragment$onActivityCreated$2.INSTANCE).build(), -1);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558846).constructor(new NotificationListFragment$onActivityCreated$3(this)).suitedMethod(NotificationListFragment$onActivityCreated$4.INSTANCE).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558849).constructor(new NotificationListFragment$onActivityCreated$1(this)).suitedMethod(NotificationListFragment$onActivityCreated$2.INSTANCE).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558853).constructor(new NotificationListFragment$onActivityCreated$3(this)).suitedMethod(NotificationListFragment$onActivityCreated$4.INSTANCE).build(), -1);
         setHasOptionsMenu(true);
+        AppHolder.getAppNotification().interceptInLifeCycle(this, AppNotification.MessageIntercept.Companion.invoke(new NotificationListFragment$onActivityCreated$5(this)));
     }
 
     @Override // androidx.fragment.app.Fragment
@@ -99,19 +105,19 @@ public final class NotificationListFragment extends EntityListFragment {
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            MenuItemCompat.setShowAsAction(menu.add(0, 2131361891, 0, getString(2131886697)), 2);
+            MenuItemCompat.setShowAsAction(menu.add(0, 2131361892, 0, getString(2131886759)), 2);
         }
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361891) {
+        if (menuItem.getItemId() != 2131361892) {
             return true;
         }
-        String string = getString(2131886697);
+        String string = getString(2131886759);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_delete_notification)");
-        String string2 = getString(2131886695);
+        String string2 = getString(2131886757);
         Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_delete_all_notification)");
         ConfirmDialog newInstance = ConfirmDialog.newInstance(string, string2);
         newInstance.setOnOkRunnable(new NotificationListFragment$onOptionsItemSelected$1(this));

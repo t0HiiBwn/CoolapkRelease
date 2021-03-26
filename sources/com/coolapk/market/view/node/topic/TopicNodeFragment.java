@@ -190,8 +190,8 @@ public final class TopicNodeFragment extends BaseFragment implements TopicNodeFr
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         Intrinsics.checkNotNullParameter(menu, "menu");
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
-        MenuItem add = menu.add(0, 2131361960, 0, getString(2131886390));
-        add.setIcon(2131231534);
+        MenuItem add = menu.add(0, 2131361961, 0, getString(2131886450));
+        add.setIcon(2131231545);
         add.setShowAsAction(2);
     }
 
@@ -215,7 +215,7 @@ public final class TopicNodeFragment extends BaseFragment implements TopicNodeFr
         Intrinsics.checkNotNullParameter(menuItem, "item");
         int itemId = menuItem.getItemId();
         String str = "";
-        if (itemId == 2131361875) {
+        if (itemId == 2131361876) {
             Topic model = getViewModel().getModel();
             AddBlockDialog addBlockDialog = AddBlockDialog.INSTANCE;
             FragmentActivity requireActivity = requireActivity();
@@ -235,7 +235,7 @@ public final class TopicNodeFragment extends BaseFragment implements TopicNodeFr
             String logo = model.getLogo();
             blockItemArr[0] = new BlockItem(null, sb2, str2, logo != null ? logo : str, false, null, "node", 49, null);
             addBlockDialog.showBlockNodeDialog(fragmentActivity, CollectionsKt.mutableListOf(blockItemArr));
-        } else if (itemId == 2131361960) {
+        } else if (itemId == 2131361961) {
             FragmentActivity activity = getActivity();
             String title2 = getViewModel().getModel().getTitle();
             if (title2 != null) {
@@ -329,7 +329,7 @@ public final class TopicNodeFragment extends BaseFragment implements TopicNodeFr
     /* JADX WARN: Type inference failed for: r8v2, types: [com.coolapk.market.imageloader.GlideRequest] */
     /* JADX WARNING: Unknown variable types count: 1 */
     private final View createToolbarContentView(Topic topic) {
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559110, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559117, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…bar_content, null, false)");
         ProductNodeToolbarContentBinding productNodeToolbarContentBinding = (ProductNodeToolbarContentBinding) inflate;
         this.toolbarBinding = productNodeToolbarContentBinding;
@@ -354,7 +354,7 @@ public final class TopicNodeFragment extends BaseFragment implements TopicNodeFr
         TextView textView5 = productNodeToolbarContentBinding.subtitleView;
         Intrinsics.checkNotNullExpressionValue(textView5, "binding.subtitleView");
         textView5.setVisibility(0);
-        GlideApp.with(productNodeToolbarContentBinding.toolbarUserAvatarView).load(topic.getLogo()).placeholder(2131231617).diskCacheStrategy(DiskCacheStrategy.DATA).into(productNodeToolbarContentBinding.toolbarUserAvatarView);
+        GlideApp.with(productNodeToolbarContentBinding.toolbarUserAvatarView).load(topic.getLogo()).placeholder(2131231628).diskCacheStrategy(DiskCacheStrategy.DATA).into(productNodeToolbarContentBinding.toolbarUserAvatarView);
         View root = productNodeToolbarContentBinding.getRoot();
         Intrinsics.checkNotNullExpressionValue(root, "binding.root");
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(-1, -1);
@@ -380,9 +380,9 @@ public final class TopicNodeFragment extends BaseFragment implements TopicNodeFr
             Intrinsics.checkNotNullExpressionValue(textView, "binding.toolbarActionView");
             textView.setSelected(followState);
             if (followState) {
-                productNodeToolbarContentBinding.toolbarActionView.setText(2131887142);
+                productNodeToolbarContentBinding.toolbarActionView.setText(2131887204);
             } else {
-                productNodeToolbarContentBinding.toolbarActionView.setText(2131887143);
+                productNodeToolbarContentBinding.toolbarActionView.setText(2131887205);
             }
         }
     }

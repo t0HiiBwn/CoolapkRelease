@@ -6,7 +6,7 @@ import com.coolapk.market.util.ViewUtil;
 import com.coolapk.market.widget.SectionedAdapter;
 
 public class OptionsTitleSectionViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558847;
+    public static final int LAYOUT_ID = 2131558854;
 
     public OptionsTitleSectionViewHolder(View view, ItemActionHandler itemActionHandler) {
         super(view, itemActionHandler);

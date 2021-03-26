@@ -17,7 +17,7 @@ public class d {
 
     /* renamed from: com.tencent.open.a.d$d  reason: collision with other inner class name */
     /* compiled from: ProGuard */
-    public static final class C0135d {
+    public static final class C0153d {
         public static SimpleDateFormat a(String str) {
             return new SimpleDateFormat(str);
         }

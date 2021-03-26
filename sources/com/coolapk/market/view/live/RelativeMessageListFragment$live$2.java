@@ -1,6 +1,5 @@
 package com.coolapk.market.view.live;
 
-import android.os.Bundle;
 import android.os.Parcelable;
 import com.coolapk.market.model.Live;
 import kotlin.Metadata;
@@ -21,9 +20,7 @@ final class RelativeMessageListFragment$live$2 extends Lambda implements Functio
 
     @Override // kotlin.jvm.functions.Function0
     public final Live invoke() {
-        Bundle arguments = this.this$0.getArguments();
-        Intrinsics.checkNotNull(arguments);
-        Parcelable parcelable = arguments.getParcelable("LIVE");
+        Parcelable parcelable = this.this$0.requireArguments().getParcelable("LIVE");
         Intrinsics.checkNotNull(parcelable);
         return (Live) parcelable;
     }

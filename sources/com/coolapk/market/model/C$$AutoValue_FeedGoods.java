@@ -23,6 +23,7 @@ abstract class C$$AutoValue_FeedGoods extends FeedGoods {
     private final int entityTypeId;
     private final String entityTypeName;
     private final String extraData;
+    private final int fromApi;
     private final String id;
     private final String keyWords;
     private final Long lastUpdate;
@@ -42,7 +43,7 @@ abstract class C$$AutoValue_FeedGoods extends FeedGoods {
     private final String url;
     private final String wishCount;
 
-    C$$AutoValue_FeedGoods(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, String str11, String str12, String str13, long j, String str14, String str15, String str16, String str17, String str18, String str19, long j2, int i2, long j3, String str20, long j4, String str21, List<FeedGoodsCategory> list, String str22, String str23, String str24, List<ConfigPage> list2) {
+    C$$AutoValue_FeedGoods(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, String str11, String str12, String str13, long j, String str14, String str15, String str16, String str17, String str18, String str19, long j2, int i2, long j3, String str20, long j4, String str21, List<FeedGoodsCategory> list, String str22, String str23, String str24, List<ConfigPage> list2, int i3) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityTypeId = i;
@@ -54,8 +55,8 @@ abstract class C$$AutoValue_FeedGoods extends FeedGoods {
         this.logo = str7;
         this.subTitle = str8;
         this.extraData = str9;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str10, "Null id");
         this.id = str10;
         Objects.requireNonNull(str11, "Null mallName");
@@ -87,6 +88,7 @@ abstract class C$$AutoValue_FeedGoods extends FeedGoods {
         this.price = str24;
         Objects.requireNonNull(list2, "Null tabApiList");
         this.tabApiList = list2;
+        this.fromApi = i3;
     }
 
     @Override // com.coolapk.market.model.Entity
@@ -297,9 +299,15 @@ abstract class C$$AutoValue_FeedGoods extends FeedGoods {
         return this.tabApiList;
     }
 
+    @Override // com.coolapk.market.model.FeedGoods
+    @SerializedName("fromApi")
+    public int getFromApi() {
+        return this.fromApi;
+    }
+
     @Override // java.lang.Object
     public String toString() {
-        return "FeedGoods{entityTypeName=" + this.entityTypeName + ", entityTemplate=" + this.entityTemplate + ", entityTypeId=" + this.entityTypeId + ", entityId=" + this.entityId + ", entityFixed=" + this.entityFixed + ", url=" + this.url + ", description=" + this.description + ", pic=" + this.pic + ", logo=" + this.logo + ", subTitle=" + this.subTitle + ", extraData=" + this.extraData + ", dateline=" + this.dateline + ", lastUpdate=" + this.lastUpdate + ", id=" + this.id + ", mallName=" + this.mallName + ", skuId=" + this.skuId + ", mallSku=" + this.mallSku + ", categoryId=" + this.categoryId + ", title=" + this.title + ", cover=" + this.cover + ", wishCount=" + this.wishCount + ", buyCount=" + this.buyCount + ", keyWords=" + this.keyWords + ", sellUrl=" + this.sellUrl + ", sellTime=" + this.sellTime + ", blockStatus=" + this.blockStatus + ", createTime=" + this.createTime + ", createUid=" + this.createUid + ", updateTime=" + this.updateTime + ", updateUid=" + this.updateUid + ", categoryRows=" + this.categoryRows + ", bgColor=" + this.bgColor + ", backendCategoryName=" + this.backendCategoryName + ", price=" + this.price + ", tabApiList=" + this.tabApiList + "}";
+        return "FeedGoods{entityTypeName=" + this.entityTypeName + ", entityTemplate=" + this.entityTemplate + ", entityTypeId=" + this.entityTypeId + ", entityId=" + this.entityId + ", entityFixed=" + this.entityFixed + ", url=" + this.url + ", description=" + this.description + ", pic=" + this.pic + ", logo=" + this.logo + ", subTitle=" + this.subTitle + ", extraData=" + this.extraData + ", dateline=" + this.dateline + ", lastUpdate=" + this.lastUpdate + ", id=" + this.id + ", mallName=" + this.mallName + ", skuId=" + this.skuId + ", mallSku=" + this.mallSku + ", categoryId=" + this.categoryId + ", title=" + this.title + ", cover=" + this.cover + ", wishCount=" + this.wishCount + ", buyCount=" + this.buyCount + ", keyWords=" + this.keyWords + ", sellUrl=" + this.sellUrl + ", sellTime=" + this.sellTime + ", blockStatus=" + this.blockStatus + ", createTime=" + this.createTime + ", createUid=" + this.createUid + ", updateTime=" + this.updateTime + ", updateUid=" + this.updateUid + ", categoryRows=" + this.categoryRows + ", bgColor=" + this.bgColor + ", backendCategoryName=" + this.backendCategoryName + ", price=" + this.price + ", tabApiList=" + this.tabApiList + ", fromApi=" + this.fromApi + "}";
     }
 
     @Override // java.lang.Object
@@ -312,8 +320,8 @@ abstract class C$$AutoValue_FeedGoods extends FeedGoods {
         String str5;
         String str6;
         String str7;
+        Long l;
         Long l2;
-        Long l3;
         String str8;
         String str9;
         String str10;
@@ -333,7 +341,7 @@ abstract class C$$AutoValue_FeedGoods extends FeedGoods {
         if (str16 != null ? str16.equals(feedGoods.getEntityTypeName()) : feedGoods.getEntityTypeName() == null) {
             String str17 = this.entityTemplate;
             if (str17 != null ? str17.equals(feedGoods.getEntityTemplate()) : feedGoods.getEntityTemplate() == null) {
-                if (this.entityTypeId == feedGoods.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(feedGoods.getEntityId()) : feedGoods.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(feedGoods.getEntityFixed()) : feedGoods.getEntityFixed() == null) && ((str2 = this.url) != null ? str2.equals(feedGoods.getUrl()) : feedGoods.getUrl() == null) && ((str3 = this.description) != null ? str3.equals(feedGoods.getDescription()) : feedGoods.getDescription() == null) && ((str4 = this.pic) != null ? str4.equals(feedGoods.getPic()) : feedGoods.getPic() == null) && ((str5 = this.logo) != null ? str5.equals(feedGoods.getLogo()) : feedGoods.getLogo() == null) && ((str6 = this.subTitle) != null ? str6.equals(feedGoods.getSubTitle()) : feedGoods.getSubTitle() == null) && ((str7 = this.extraData) != null ? str7.equals(feedGoods.getExtraData()) : feedGoods.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(feedGoods.getDateline()) : feedGoods.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(feedGoods.getLastUpdate()) : feedGoods.getLastUpdate() == null) && this.id.equals(feedGoods.getId()) && this.mallName.equals(feedGoods.getMallName()) && ((str8 = this.skuId) != null ? str8.equals(feedGoods.getSkuId()) : feedGoods.getSkuId() == null) && ((str9 = this.mallSku) != null ? str9.equals(feedGoods.getMallSku()) : feedGoods.getMallSku() == null) && this.categoryId == feedGoods.getCategoryId() && this.title.equals(feedGoods.getTitle()) && ((str10 = this.cover) != null ? str10.equals(feedGoods.getCover()) : feedGoods.getCover() == null) && this.wishCount.equals(feedGoods.getWishCount()) && this.buyCount.equals(feedGoods.getBuyCount()) && ((str11 = this.keyWords) != null ? str11.equals(feedGoods.getKeyWords()) : feedGoods.getKeyWords() == null) && ((str12 = this.sellUrl) != null ? str12.equals(feedGoods.getSellUrl()) : feedGoods.getSellUrl() == null) && this.sellTime == feedGoods.getSellTime() && this.blockStatus == feedGoods.getBlockStatus() && this.createTime == feedGoods.getCreateTime() && this.createUid.equals(feedGoods.getCreateUid()) && this.updateTime == feedGoods.getUpdateTime() && this.updateUid.equals(feedGoods.getUpdateUid()) && this.categoryRows.equals(feedGoods.getCategoryRows()) && ((str13 = this.bgColor) != null ? str13.equals(feedGoods.getBgColor()) : feedGoods.getBgColor() == null) && ((str14 = this.backendCategoryName) != null ? str14.equals(feedGoods.getBackendCategoryName()) : feedGoods.getBackendCategoryName() == null) && ((str15 = this.price) != null ? str15.equals(feedGoods.getPrice()) : feedGoods.getPrice() == null) && this.tabApiList.equals(feedGoods.getTabApiList())) {
+                if (this.entityTypeId == feedGoods.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(feedGoods.getEntityId()) : feedGoods.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(feedGoods.getEntityFixed()) : feedGoods.getEntityFixed() == null) && ((str2 = this.url) != null ? str2.equals(feedGoods.getUrl()) : feedGoods.getUrl() == null) && ((str3 = this.description) != null ? str3.equals(feedGoods.getDescription()) : feedGoods.getDescription() == null) && ((str4 = this.pic) != null ? str4.equals(feedGoods.getPic()) : feedGoods.getPic() == null) && ((str5 = this.logo) != null ? str5.equals(feedGoods.getLogo()) : feedGoods.getLogo() == null) && ((str6 = this.subTitle) != null ? str6.equals(feedGoods.getSubTitle()) : feedGoods.getSubTitle() == null) && ((str7 = this.extraData) != null ? str7.equals(feedGoods.getExtraData()) : feedGoods.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(feedGoods.getDateline()) : feedGoods.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(feedGoods.getLastUpdate()) : feedGoods.getLastUpdate() == null) && this.id.equals(feedGoods.getId()) && this.mallName.equals(feedGoods.getMallName()) && ((str8 = this.skuId) != null ? str8.equals(feedGoods.getSkuId()) : feedGoods.getSkuId() == null) && ((str9 = this.mallSku) != null ? str9.equals(feedGoods.getMallSku()) : feedGoods.getMallSku() == null) && this.categoryId == feedGoods.getCategoryId() && this.title.equals(feedGoods.getTitle()) && ((str10 = this.cover) != null ? str10.equals(feedGoods.getCover()) : feedGoods.getCover() == null) && this.wishCount.equals(feedGoods.getWishCount()) && this.buyCount.equals(feedGoods.getBuyCount()) && ((str11 = this.keyWords) != null ? str11.equals(feedGoods.getKeyWords()) : feedGoods.getKeyWords() == null) && ((str12 = this.sellUrl) != null ? str12.equals(feedGoods.getSellUrl()) : feedGoods.getSellUrl() == null) && this.sellTime == feedGoods.getSellTime() && this.blockStatus == feedGoods.getBlockStatus() && this.createTime == feedGoods.getCreateTime() && this.createUid.equals(feedGoods.getCreateUid()) && this.updateTime == feedGoods.getUpdateTime() && this.updateUid.equals(feedGoods.getUpdateUid()) && this.categoryRows.equals(feedGoods.getCategoryRows()) && ((str13 = this.bgColor) != null ? str13.equals(feedGoods.getBgColor()) : feedGoods.getBgColor() == null) && ((str14 = this.backendCategoryName) != null ? str14.equals(feedGoods.getBackendCategoryName()) : feedGoods.getBackendCategoryName() == null) && ((str15 = this.price) != null ? str15.equals(feedGoods.getPrice()) : feedGoods.getPrice() == null) && this.tabApiList.equals(feedGoods.getTabApiList()) && this.fromApi == feedGoods.getFromApi()) {
                     return true;
                 }
             }
@@ -364,10 +372,10 @@ abstract class C$$AutoValue_FeedGoods extends FeedGoods {
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
         String str9 = this.extraData;
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode11 = (hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode12 = (((((hashCode11 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003) ^ this.id.hashCode()) * 1000003) ^ this.mallName.hashCode()) * 1000003;
+        Long l = this.dateline;
+        int hashCode11 = (hashCode10 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode12 = (((((hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003) ^ this.id.hashCode()) * 1000003) ^ this.mallName.hashCode()) * 1000003;
         String str10 = this.skuId;
         int hashCode13 = (hashCode12 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.mallSku;
@@ -394,6 +402,6 @@ abstract class C$$AutoValue_FeedGoods extends FeedGoods {
         if (str17 != null) {
             i = str17.hashCode();
         }
-        return ((hashCode22 ^ i) * 1000003) ^ this.tabApiList.hashCode();
+        return ((((hashCode22 ^ i) * 1000003) ^ this.tabApiList.hashCode()) * 1000003) ^ this.fromApi;
     }
 }

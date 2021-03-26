@@ -39,19 +39,19 @@ public class TeeInputStream extends ProxyInputStream {
     }
 
     @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.InputStream
-    public int read(byte[] bArr, int i, int i2) throws IOException {
-        int read = super.read(bArr, i, i2);
+    public int read(byte[] bArr) throws IOException {
+        int read = super.read(bArr);
         if (read != -1) {
-            this.branch.write(bArr, i, read);
+            this.branch.write(bArr, 0, read);
         }
         return read;
     }
 
     @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.InputStream
-    public int read(byte[] bArr) throws IOException {
-        int read = super.read(bArr);
+    public int read(byte[] bArr, int i, int i2) throws IOException {
+        int read = super.read(bArr, i, i2);
         if (read != -1) {
-            this.branch.write(bArr, 0, read);
+            this.branch.write(bArr, i, read);
         }
         return read;
     }

@@ -24,8 +24,8 @@ public class ItemLocalApkBindingImpl extends ItemLocalApkBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363906, 11);
-        sparseIntArray.put(2131363053, 12);
+        sparseIntArray.put(2131363929, 11);
+        sparseIntArray.put(2131363067, 12);
     }
 
     public ItemLocalApkBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -70,7 +70,7 @@ public class ItemLocalApkBindingImpl extends ItemLocalApkBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (306 == i) {
+        if (307 == i) {
             setVh((LocalApkViewHolder) obj);
         } else if (24 != i) {
             return false;
@@ -87,7 +87,7 @@ public class ItemLocalApkBindingImpl extends ItemLocalApkBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(306);
+        notifyPropertyChanged(307);
         super.requestRebind();
     }
 
@@ -120,7 +120,7 @@ public class ItemLocalApkBindingImpl extends ItemLocalApkBinding {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i != 241) {
+        } else if (i != 242) {
             return false;
         } else {
             synchronized (this) {
@@ -204,8 +204,8 @@ public class ItemLocalApkBindingImpl extends ItemLocalApkBinding {
             TextViewBindingAdapter.setText(this.actionButton, str);
         }
         if ((16 & j) != 0) {
-            Long l2 = null;
-            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "normal", l2, l2);
+            Long l = null;
+            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "normal", l, l);
         }
         if ((17 & j) != 0) {
             Boolean bool = null;
@@ -215,7 +215,7 @@ public class ItemLocalApkBindingImpl extends ItemLocalApkBinding {
         }
         if (i4 != 0) {
             TextViewBindingAdapter.setText(this.apkSizeView, str4);
-            ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, null, str3, null, 2131231363, null, true);
+            ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, null, str3, null, 2131231374, null, true);
             TextViewBindingAdapter.setText(this.pathView, str3);
             TextViewBindingAdapter.setText(this.titleView, str2);
             TextViewBindingAdapter.setText(this.versionCodeView, str5);

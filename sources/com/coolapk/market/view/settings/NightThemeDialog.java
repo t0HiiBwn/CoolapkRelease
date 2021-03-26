@@ -27,7 +27,7 @@ public class NightThemeDialog extends BaseDialogFragment implements DialogInterf
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        this.binding = (DialogTimePickerBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558538, null, false);
+        this.binding = (DialogTimePickerBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558540, null, false);
         int colorAccent = AppHolder.getAppTheme().getColorAccent();
         this.binding.startTimePicker.setSelectionDivider(new ColorDrawable(colorAccent));
         this.binding.endTimePicker.setSelectionDivider(new ColorDrawable(colorAccent));
@@ -43,7 +43,7 @@ public class NightThemeDialog extends BaseDialogFragment implements DialogInterf
     @Override // android.content.DialogInterface.OnClickListener
     public void onClick(DialogInterface dialogInterface, int i) {
         if (Math.abs(getTime(this.binding.startTimePicker) - getTime(this.binding.endTimePicker)) < 60) {
-            Toast.show(getActivity(), 2131886488);
+            Toast.show(getActivity(), 2131886548);
         } else {
             saveDataAndExit();
         }
@@ -55,7 +55,7 @@ public class NightThemeDialog extends BaseDialogFragment implements DialogInterf
 
     private void saveDataAndExit() {
         NightModeHelper.getInstance().modifyNightModeTime(getTime(this.binding.startTimePicker), getTime(this.binding.endTimePicker));
-        Toast.show(getActivity(), 2131886489);
+        Toast.show(getActivity(), 2131886549);
         this.binding.getRoot().postDelayed(new Runnable() {
             /* class com.coolapk.market.view.settings.NightThemeDialog.AnonymousClass1 */
 

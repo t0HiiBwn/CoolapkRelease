@@ -20,7 +20,7 @@ public class TransactionDelegate {
                 a(transaction);
             }
         } catch (Throwable th) {
-            b.m19a(th);
+            b.m9a(th);
         }
     }
 
@@ -42,7 +42,7 @@ public class TransactionDelegate {
                 e.a().a(transaction.r, str, false, transaction.e);
             }
         } catch (Throwable th) {
-            b.m19a(th);
+            b.m9a(th);
         }
     }
 }

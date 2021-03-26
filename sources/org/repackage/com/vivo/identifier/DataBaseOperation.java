@@ -17,16 +17,14 @@ public class DataBaseOperation {
     private static final int i = 1;
     private static final int j = 2;
     private static final int k = 4;
-
-    /* renamed from: l  reason: collision with root package name */
-    private Context f1514l;
+    private Context l;
 
     public DataBaseOperation(Context context) {
-        this.f1514l = context;
+        this.l = context;
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:16:0x0058  */
-    /* JADX WARNING: Removed duplicated region for block: B:20:0x006d  */
+    /* JADX WARNING: Removed duplicated region for block: B:20:0x006e  */
     public String a(int i2, String str) {
         Uri uri;
         Cursor query;
@@ -40,7 +38,7 @@ public class DataBaseOperation {
             uri2 = Uri.parse("content://com.vivo.vms.IdProvider/IdentifierId/AAID_" + str);
         } else if (i2 != 4) {
             uri = null;
-            query = this.f1514l.getContentResolver().query(uri, null, null, null, null);
+            query = this.l.getContentResolver().query(uri, null, null, null, null);
             if (query == null) {
                 if (query.moveToNext()) {
                     str2 = query.getString(query.getColumnIndex("value"));
@@ -54,7 +52,7 @@ public class DataBaseOperation {
             uri2 = Uri.parse("content://com.vivo.vms.IdProvider/IdentifierId/OAIDSTATUS");
         }
         uri = uri2;
-        query = this.f1514l.getContentResolver().query(uri, null, null, null, null);
+        query = this.l.getContentResolver().query(uri, null, null, null, null);
         if (query == null) {
         }
         return str2;

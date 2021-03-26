@@ -24,7 +24,7 @@ public class ItemGridCardItemBindingImpl extends ItemGridCardItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363435, 6);
+        sparseIntArray.put(2131363453, 6);
     }
 
     public ItemGridCardItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -64,9 +64,9 @@ public class ItemGridCardItemBindingImpl extends ItemGridCardItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 == i) {
+        if (309 == i) {
             setViewModel((GridCardViewHolder.DataViewHolder) obj);
-        } else if (244 != i) {
+        } else if (245 != i) {
             return false;
         } else {
             setShowAction(((Boolean) obj).booleanValue());
@@ -81,7 +81,7 @@ public class ItemGridCardItemBindingImpl extends ItemGridCardItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -91,7 +91,7 @@ public class ItemGridCardItemBindingImpl extends ItemGridCardItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(244);
+        notifyPropertyChanged(245);
         super.requestRebind();
     }
 
@@ -183,7 +183,7 @@ public class ItemGridCardItemBindingImpl extends ItemGridCardItemBinding {
                 if ((j & 5) != 0) {
                     ActionButtonBindingAdapters.setActionText(this.actionButton, serviceApp, true);
                     Boolean bool = null;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, true, bool, bool, null, bool);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, true, bool, bool, null, bool);
                     TextViewBindingAdapter.setText(this.infoView, str3);
                     this.infoView.setVisibility(i);
                     this.titleView.setLines(i2);

@@ -27,8 +27,8 @@ public class TopicNodeHeaderLineBindingImpl extends TopicNodeHeaderLineBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362376, 2);
-        sparseIntArray.put(2131362707, 3);
+        sparseIntArray.put(2131362382, 2);
+        sparseIntArray.put(2131362718, 3);
     }
 
     public TopicNodeHeaderLineBindingImpl(DataBindingComponent dataBindingComponent, View view) {

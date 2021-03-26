@@ -23,7 +23,7 @@ public class ItemMessageExtraBindingImpl extends ItemMessageExtraBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362904, 2);
+        sparseIntArray.put(2131362916, 2);
     }
 
     public ItemMessageExtraBindingImpl(DataBindingComponent dataBindingComponent, View view) {

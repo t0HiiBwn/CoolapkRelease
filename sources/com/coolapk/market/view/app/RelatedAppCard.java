@@ -92,7 +92,7 @@ public class RelatedAppCard implements Card<ServiceApp> {
 
     @Override // com.coolapk.market.model.Card, com.coolapk.market.model.Entity
     public String getTitle() {
-        return this.context.getString(2131886954);
+        return this.context.getString(2131887016);
     }
 
     @Override // com.coolapk.market.model.Card

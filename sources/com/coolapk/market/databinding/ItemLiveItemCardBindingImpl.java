@@ -25,13 +25,13 @@ public class ItemLiveItemCardBindingImpl extends ItemLiveItemCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362323, 2);
-        sparseIntArray.put(2131363578, 3);
-        sparseIntArray.put(2131363582, 4);
-        sparseIntArray.put(2131363433, 5);
-        sparseIntArray.put(2131363558, 6);
-        sparseIntArray.put(2131363034, 7);
-        sparseIntArray.put(2131361876, 8);
+        sparseIntArray.put(2131362329, 2);
+        sparseIntArray.put(2131363600, 3);
+        sparseIntArray.put(2131363604, 4);
+        sparseIntArray.put(2131363451, 5);
+        sparseIntArray.put(2131363579, 6);
+        sparseIntArray.put(2131363048, 7);
+        sparseIntArray.put(2131361877, 8);
     }
 
     public ItemLiveItemCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -67,7 +67,7 @@ public class ItemLiveItemCardBindingImpl extends ItemLiveItemCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (184 != i) {
+        if (185 != i) {
             return false;
         }
         setLive((Live) obj);
@@ -80,7 +80,7 @@ public class ItemLiveItemCardBindingImpl extends ItemLiveItemCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(184);
+        notifyPropertyChanged(185);
         super.requestRebind();
     }
 
@@ -96,7 +96,7 @@ public class ItemLiveItemCardBindingImpl extends ItemLiveItemCardBinding {
         String picUrl = (i == 0 || live == null) ? null : live.getPicUrl();
         if (i != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, picUrl, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231696), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, picUrl, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231707), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
         }
     }
 }

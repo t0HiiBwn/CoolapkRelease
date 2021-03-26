@@ -22,6 +22,6 @@ public final class ContinuationKt$Continuation$1 implements Continuation<T> {
 
     @Override // kotlin.coroutines.Continuation
     public void resumeWith(Object obj) {
-        this.$resumeWith.invoke(Result.m686boximpl(obj));
+        this.$resumeWith.invoke(Result.m84boximpl(obj));
     }
 }

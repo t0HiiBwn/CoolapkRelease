@@ -88,7 +88,7 @@ public final class RecentContactsFragment extends NewAsyncListFragment<List<? ex
         RecyclerView recyclerView2 = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView2, "recyclerView");
         recyclerView2.setClipToPadding(false);
-        VerticalItemDecoration create = ItemDecorations.vertical(getActivity()).type(2131558660, 2131231052).create();
+        VerticalItemDecoration create = ItemDecorations.vertical(getActivity()).type(2131558666, 2131231062).create();
         Intrinsics.checkNotNullExpressionValue(create, "ItemDecorations.vertical…                .create()");
         getRecyclerView().addItemDecoration(create);
         MultiTypeAdapter multiTypeAdapter = new MultiTypeAdapter(this.dataList);
@@ -105,12 +105,12 @@ public final class RecentContactsFragment extends NewAsyncListFragment<List<? ex
         if (multiTypeAdapter2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        multiTypeAdapter2.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558660).suitedMethod(RecentContactsFragment$onActivityCreated$1.INSTANCE).constructor(new RecentContactsFragment$onActivityCreated$2(this)).build(), 0);
+        multiTypeAdapter2.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558666).suitedMethod(RecentContactsFragment$onActivityCreated$1.INSTANCE).constructor(new RecentContactsFragment$onActivityCreated$2(this)).build(), 0);
         MultiTypeAdapter multiTypeAdapter3 = this.adapter;
         if (multiTypeAdapter3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        multiTypeAdapter3.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558954).suitedMethod(RecentContactsFragment$onActivityCreated$3.INSTANCE).constructor(RecentContactsFragment$onActivityCreated$4.INSTANCE).build(), 0);
+        multiTypeAdapter3.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558961).suitedMethod(RecentContactsFragment$onActivityCreated$3.INSTANCE).constructor(RecentContactsFragment$onActivityCreated$4.INSTANCE).build(), 0);
         this.dataList.addOnListChangedCallback(getListCallback());
     }
 

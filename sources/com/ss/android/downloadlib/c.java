@@ -18,7 +18,7 @@ public class c implements h {
     private static String a = "c";
     private Handler b = new Handler(Looper.getMainLooper());
 
-    /* JADX WARNING: Code restructure failed: missing block: B:27:0x007a, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:27:0x007b, code lost:
         r8 = com.ss.android.downloadlib.addownload.b.f.a().a(r0.b());
      */
     @Override // com.ss.android.socialbase.appdownloader.c.h
@@ -95,14 +95,14 @@ public class c implements h {
                 com.ss.android.downloadlib.addownload.e.a(downloadInfo.getId());
             }
         }
-        com.ss.android.socialbase.downloader.a.a.a().a(new a.AbstractC0092a() {
+        com.ss.android.socialbase.downloader.a.a.a().a(new a.AbstractC0102a() {
             /* class com.ss.android.downloadlib.c.AnonymousClass3 */
 
-            @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+            @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
             public void c() {
             }
 
-            @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+            @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
             public void b() {
                 if (!com.ss.android.downloadlib.h.k.b(bVar)) {
                     long j = a2;

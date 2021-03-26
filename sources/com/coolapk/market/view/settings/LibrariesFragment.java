@@ -17,7 +17,7 @@ import com.coolapk.market.viewholder.ItemActionHandler;
 public class LibrariesFragment extends LocalDataFragment<Library> {
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment
     public int getItemViewType(int i) {
-        return 2131558799;
+        return 2131558806;
     }
 
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
@@ -38,7 +38,7 @@ public class LibrariesFragment extends LocalDataFragment<Library> {
     }
 
     public class LibraryViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558799;
+        public static final int LAYOUT_ID = 2131558806;
 
         public LibraryViewHolder(View view, ItemActionHandler itemActionHandler) {
             super(view, itemActionHandler);

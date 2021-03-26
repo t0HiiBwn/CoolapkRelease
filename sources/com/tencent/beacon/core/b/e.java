@@ -221,8 +221,6 @@ public final class e {
                         break;
                     }
                 }
-                b.b("[core] Mac Address:" + str2, new Object[0]);
-                return str2;
             }
             str2 = str;
             b.b("[core] Mac Address:" + str2, new Object[0]);

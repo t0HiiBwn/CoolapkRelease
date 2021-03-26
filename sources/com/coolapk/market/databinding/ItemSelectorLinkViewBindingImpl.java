@@ -22,8 +22,8 @@ public class ItemSelectorLinkViewBindingImpl extends ItemSelectorLinkViewBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362594, 1);
-        sparseIntArray.put(2131362768, 2);
+        sparseIntArray.put(2131362602, 1);
+        sparseIntArray.put(2131362779, 2);
     }
 
     public ItemSelectorLinkViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -58,7 +58,7 @@ public class ItemSelectorLinkViewBindingImpl extends ItemSelectorLinkViewBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((Entity) obj);

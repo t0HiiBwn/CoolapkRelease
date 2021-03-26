@@ -30,13 +30,13 @@ final class SubmitFeedV8Activity$showShareDialog$3 implements View.OnClickListen
         Intrinsics.checkNotNullExpressionValue(editText, "binding.editText");
         String obj = editText.getText().toString();
         switch (this.$typeId) {
-            case 2131362181:
+            case 2131362184:
                 this.this$0.loadShareInfo(obj);
                 return;
-            case 2131362182:
+            case 2131362185:
                 Toast.show$default(this.this$0.getActivity(), "还不支持哟", 0, false, 12, null);
                 return;
-            case 2131362183:
+            case 2131362186:
                 this.this$0.loadVideoInfo(obj);
                 return;
             default:

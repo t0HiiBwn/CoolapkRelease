@@ -31,7 +31,7 @@ import kotlin.text.StringsKt;
 /* compiled from: GoodsV10ViewHolder.kt */
 public final class GoodsV10ViewHolder extends GenericBindHolder<ItemGoodsV10Binding, FeedGoods> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558763;
+    public static final int LAYOUT_ID = 2131558770;
     private final Lazy goodsInfoViewPart$delegate;
 
     private final FeedGoodsInfoViewPart getGoodsInfoViewPart() {
@@ -82,6 +82,7 @@ public final class GoodsV10ViewHolder extends GenericBindHolder<ItemGoodsV10Bind
         LinearLayout linearLayout2 = ((ItemFeedGoodsInfoBinding) getGoodsInfoViewPart().getBinding()).itemView;
         Intrinsics.checkNotNullExpressionValue(linearLayout2, "goodsInfoViewPart.binding.itemView");
         ViewExtendsKt.setCompatForeground(linearLayout2, drawable);
+        ((ItemFeedGoodsInfoBinding) getGoodsInfoViewPart().getBinding()).itemView.setOnClickListener(this);
         ((ItemGoodsV10Binding) getBinding()).executePendingBindings();
     }
 
@@ -89,7 +90,7 @@ public final class GoodsV10ViewHolder extends GenericBindHolder<ItemGoodsV10Bind
     public void onClick(View view) {
         String id;
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362768) {
+        if (view.getId() != 2131362779) {
             super.onClick(view);
             return;
         }

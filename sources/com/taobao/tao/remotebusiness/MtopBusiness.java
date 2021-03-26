@@ -40,9 +40,7 @@ public class MtopBusiness extends MtopBuilder {
     public boolean isCached = false;
     private boolean j = false;
     private MtopResponse k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1421l = false;
+    private boolean l = false;
     public MtopListener listener;
     private final String m = c();
     public long onBgFinishTime = 0;
@@ -168,7 +166,7 @@ public class MtopBusiness extends MtopBuilder {
         if (MtopUtils.isMainThread()) {
             TBSdkLog.e("mtopsdk.MtopBusiness", this.m, "do syncRequest in UI main thread!");
         }
-        this.f1421l = true;
+        this.l = true;
         if (this.listener == null) {
             this.listener = new a(this);
         }
@@ -320,7 +318,7 @@ public class MtopBusiness extends MtopBuilder {
     /* JADX WARNING: Removed duplicated region for block: B:85:0x01b0 A[Catch:{ all -> 0x01c7 }] */
     /* JADX WARNING: Removed duplicated region for block: B:94:0x01d9  */
     public void doFinish(MtopResponse mtopResponse, BaseOutDo baseOutDo) {
-        if (this.f1421l) {
+        if (this.l) {
             this.k = mtopResponse;
             synchronized (this.listener) {
                 try {

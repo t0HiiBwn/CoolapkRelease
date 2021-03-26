@@ -13,23 +13,18 @@ import com.coolapk.market.databinding.LayoutTabConfigBinding;
 import com.coolapk.market.manager.DataManager;
 import com.coolapk.market.view.base.BaseDialogFragment;
 import com.coolapk.market.widget.Toast;
-import kotlin.Metadata;
-import kotlin.jvm.JvmStatic;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.Ref;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \u000e2\u00020\u0001:\u0001\u000eB\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u0003\u001a\u00020\u00042\b\u0010\u0005\u001a\u0004\u0018\u00010\u0006H\u0016J\u0010\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nH\u0002J\u0010\u0010\u000b\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\rH\u0002¨\u0006\u000f"}, d2 = {"Lcom/coolapk/market/view/settings/DiscoveryTabConfigDialog;", "Lcom/coolapk/market/view/base/BaseDialogFragment;", "()V", "onCreateDialog", "Landroid/app/Dialog;", "savedInstanceState", "Landroid/os/Bundle;", "putString", "", "value", "", "showTabTitleToast", "view", "Landroid/view/View;", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: DiscoveryTabConfigDialog.kt */
 public final class DiscoveryTabConfigDialog extends BaseDialogFragment {
     public static final Companion Companion = new Companion(null);
 
-    @JvmStatic
     public static final DiscoveryTabConfigDialog newInstance() {
         return Companion.newInstance();
     }
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\b\u0010\u0003\u001a\u00020\u0004H\u0007¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/view/settings/DiscoveryTabConfigDialog$Companion;", "", "()V", "newInstance", "Lcom/coolapk/market/view/settings/DiscoveryTabConfigDialog;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: DiscoveryTabConfigDialog.kt */
     public static final class Companion {
         private Companion() {
@@ -39,7 +34,6 @@ public final class DiscoveryTabConfigDialog extends BaseDialogFragment {
             this();
         }
 
-        @JvmStatic
         public final DiscoveryTabConfigDialog newInstance() {
             Bundle bundle = new Bundle();
             DiscoveryTabConfigDialog discoveryTabConfigDialog = new DiscoveryTabConfigDialog();
@@ -50,7 +44,7 @@ public final class DiscoveryTabConfigDialog extends BaseDialogFragment {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        LayoutTabConfigBinding layoutTabConfigBinding = (LayoutTabConfigBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559003, null, false);
+        LayoutTabConfigBinding layoutTabConfigBinding = (LayoutTabConfigBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559010, null, false);
         TextView textView = layoutTabConfigBinding.titleView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.titleView");
         textView.setText("默认发现页");
@@ -82,31 +76,31 @@ public final class DiscoveryTabConfigDialog extends BaseDialogFragment {
             switch (preferencesString.hashCode()) {
                 case -1359284199:
                     if (preferencesString.equals("V11_FIND_GOODS")) {
-                        layoutTabConfigBinding.radioGroup.check(2131363169);
+                        layoutTabConfigBinding.radioGroup.check(2131363183);
                         break;
                     }
                     break;
                 case -556840286:
                     if (preferencesString.equals("V11_DISCOVERY_SECOND_HAND")) {
-                        layoutTabConfigBinding.radioGroup.check(2131363178);
+                        layoutTabConfigBinding.radioGroup.check(2131363192);
                         break;
                     }
                     break;
                 case -484098058:
                     if (preferencesString.equals("V11_FIND_DYH")) {
-                        layoutTabConfigBinding.radioGroup.check(2131363168);
+                        layoutTabConfigBinding.radioGroup.check(2131363182);
                         break;
                     }
                     break;
                 case 13821485:
                     if (preferencesString.equals("V11_FIND_GOOD_GOODS_HOME")) {
-                        layoutTabConfigBinding.radioGroup.check(2131363175);
+                        layoutTabConfigBinding.radioGroup.check(2131363189);
                         break;
                     }
                     break;
                 case 143133092:
                     if (preferencesString.equals("V11_FIND_COOLPIC")) {
-                        layoutTabConfigBinding.radioGroup.check(2131363167);
+                        layoutTabConfigBinding.radioGroup.check(2131363181);
                         break;
                     }
                     break;
@@ -119,7 +113,6 @@ public final class DiscoveryTabConfigDialog extends BaseDialogFragment {
         return create;
     }
 
-    /* access modifiers changed from: private */
     public final void showTabTitleToast(View view) {
         if (view instanceof TextView) {
             String obj = ((TextView) view).getText().toString();
@@ -128,7 +121,6 @@ public final class DiscoveryTabConfigDialog extends BaseDialogFragment {
         }
     }
 
-    /* access modifiers changed from: private */
     public final void putString(String str) {
         DataManager instance = DataManager.getInstance();
         Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");

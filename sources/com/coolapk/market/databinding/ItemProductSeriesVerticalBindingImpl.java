@@ -26,7 +26,7 @@ public class ItemProductSeriesVerticalBindingImpl extends ItemProductSeriesVerti
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363460, 5);
+        sparseIntArray.put(2131363478, 5);
     }
 
     public ItemProductSeriesVerticalBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -65,7 +65,7 @@ public class ItemProductSeriesVerticalBindingImpl extends ItemProductSeriesVerti
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Product) obj);
         } else if (50 != i) {
             return false;
@@ -81,7 +81,7 @@ public class ItemProductSeriesVerticalBindingImpl extends ItemProductSeriesVerti
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -139,7 +139,7 @@ public class ItemProductSeriesVerticalBindingImpl extends ItemProductSeriesVerti
         }
         if ((j & 5) != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231691, 0, bool2, bool2, bool2, true, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231702, 0, bool2, bool2, bool2, true, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
             this.maskView.setVisibility(i);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }

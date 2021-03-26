@@ -16,7 +16,7 @@ import com.coolapk.market.view.album.AlbumItemViewModel;
 import com.coolapk.market.widget.ActionButtonFrameLayout;
 
 public class AlbumItemViewHolder extends StateViewHolder {
-    public static final int LAYOUT_ID = 2131558579;
+    public static final int LAYOUT_ID = 2131558583;
     private Album mAlbum;
     private AlbumItem mAlbumItem;
     private AlbumAppBinding mBinding;
@@ -45,7 +45,7 @@ public class AlbumItemViewHolder extends StateViewHolder {
         this.mBinding.setViewModel(this.viewModel);
         int i = 8;
         if (TextUtils.equals(this.mAlbumItem.getApkId(), "0")) {
-            this.mBinding.sourceNameView.setText(getContext().getString(2131886580, this.mAlbumItem.getSourceName()));
+            this.mBinding.sourceNameView.setText(getContext().getString(2131886642, this.mAlbumItem.getSourceName()));
             this.mBinding.sourceNameView.setVisibility(0);
         } else {
             this.mBinding.sourceNameView.setVisibility(8);

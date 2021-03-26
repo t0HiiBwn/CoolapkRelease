@@ -43,7 +43,7 @@ public abstract class LiveIntroduceBinding extends ViewDataBinding {
 
     @Deprecated
     public static LiveIntroduceBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (LiveIntroduceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559011, viewGroup, z, obj);
+        return (LiveIntroduceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559018, viewGroup, z, obj);
     }
 
     public static LiveIntroduceBinding inflate(LayoutInflater layoutInflater) {
@@ -52,7 +52,7 @@ public abstract class LiveIntroduceBinding extends ViewDataBinding {
 
     @Deprecated
     public static LiveIntroduceBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (LiveIntroduceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559011, null, false, obj);
+        return (LiveIntroduceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559018, null, false, obj);
     }
 
     public static LiveIntroduceBinding bind(View view) {
@@ -61,6 +61,6 @@ public abstract class LiveIntroduceBinding extends ViewDataBinding {
 
     @Deprecated
     public static LiveIntroduceBinding bind(View view, Object obj) {
-        return (LiveIntroduceBinding) bind(obj, view, 2131559011);
+        return (LiveIntroduceBinding) bind(obj, view, 2131559018);
     }
 }

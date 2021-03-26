@@ -41,7 +41,7 @@ import rx.Subscriber;
 /* compiled from: AlbumItemEditViewHolder.kt */
 public final class AlbumItemEditViewHolder extends GenericBindHolder<ItemAlbumAppEditBinding, AlbumItem> implements ItemTouchHelperViewHolder, CompoundButton.OnCheckedChangeListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558580;
+    public static final int LAYOUT_ID = 2131558584;
     private final List<AlbumItem> albumItems;
     private final TouchCallBack callBack;
     private final HashSet<AlbumItem> delList;

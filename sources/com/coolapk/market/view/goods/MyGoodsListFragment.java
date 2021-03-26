@@ -33,6 +33,6 @@ public final class MyGoodsListFragment extends DataListFragment {
     @Override // com.coolapk.market.view.main.DataListFragment, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558882).constructor(new MyGoodsListFragment$onActivityCreated$1(this)).suitedMethod(MyGoodsListFragment$onActivityCreated$2.INSTANCE).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558889).constructor(new MyGoodsListFragment$onActivityCreated$1(this)).suitedMethod(MyGoodsListFragment$onActivityCreated$2.INSTANCE).build(), -1);
     }
 }

@@ -15,9 +15,7 @@ public class BuglyStrategy {
     private boolean i = true;
     private boolean j = true;
     private boolean k = true;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1430l = true;
+    private boolean l = true;
     private Class<?> m = null;
     private boolean n = true;
     private boolean o = true;
@@ -145,12 +143,12 @@ public class BuglyStrategy {
     }
 
     public synchronized BuglyStrategy setEnableUserInfo(boolean z) {
-        this.f1430l = z;
+        this.l = z;
         return this;
     }
 
     public synchronized boolean isEnableUserInfo() {
-        return this.f1430l;
+        return this.l;
     }
 
     public synchronized boolean isEnableCatchAnrTrace() {

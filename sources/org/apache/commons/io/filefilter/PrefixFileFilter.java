@@ -23,6 +23,19 @@ public class PrefixFileFilter extends AbstractFileFilter implements Serializable
         throw new IllegalArgumentException("The prefix must not be null");
     }
 
+    public PrefixFileFilter(List<String> list) {
+        this(list, IOCase.SENSITIVE);
+    }
+
+    public PrefixFileFilter(List<String> list, IOCase iOCase) {
+        if (list != null) {
+            this.prefixes = (String[]) list.toArray(new String[list.size()]);
+            this.caseSensitivity = iOCase == null ? IOCase.SENSITIVE : iOCase;
+            return;
+        }
+        throw new IllegalArgumentException("The list of prefixes must not be null");
+    }
+
     public PrefixFileFilter(String[] strArr) {
         this(strArr, IOCase.SENSITIVE);
     }
@@ -36,19 +49,6 @@ public class PrefixFileFilter extends AbstractFileFilter implements Serializable
             return;
         }
         throw new IllegalArgumentException("The array of prefixes must not be null");
-    }
-
-    public PrefixFileFilter(List<String> list) {
-        this(list, IOCase.SENSITIVE);
-    }
-
-    public PrefixFileFilter(List<String> list, IOCase iOCase) {
-        if (list != null) {
-            this.prefixes = (String[]) list.toArray(new String[list.size()]);
-            this.caseSensitivity = iOCase == null ? IOCase.SENSITIVE : iOCase;
-            return;
-        }
-        throw new IllegalArgumentException("The list of prefixes must not be null");
     }
 
     @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter

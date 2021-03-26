@@ -34,10 +34,10 @@ public class a {
     }
 
     public static boolean a(Activity activity, final ExitInstallListener exitInstallListener) {
-        return com.ss.android.downloadlib.addownload.a.a.a().a(activity, false, new a.AbstractC0085a() {
+        return com.ss.android.downloadlib.addownload.a.a.a().a(activity, false, new a.AbstractC0095a() {
             /* class com.bytedance.sdk.openadsdk.downloadnew.a.AnonymousClass1 */
 
-            @Override // com.ss.android.downloadlib.addownload.a.a.AbstractC0085a
+            @Override // com.ss.android.downloadlib.addownload.a.a.AbstractC0095a
             public void a() {
                 ExitInstallListener exitInstallListener = exitInstallListener;
                 if (exitInstallListener != null) {

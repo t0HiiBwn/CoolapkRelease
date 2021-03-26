@@ -22,9 +22,7 @@ public final class d {
     private Set<String> i = null;
     private Map<String, Float> j = null;
     private boolean k = false;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1426l = false;
+    private boolean l = false;
     private int m = 10485760;
     private boolean n = false;
     private float o = 1.0f;
@@ -60,7 +58,7 @@ public final class d {
                 this.f = h.a(map.get("comNumUp"), this.f, 1, 100);
                 this.h = h.a(map.get("heartOnOff"), this.h);
                 this.k = h.a(map.get("tidyEF"), this.k);
-                this.f1426l = h.a(map.get("lauEveSim"), this.f1426l);
+                this.l = h.a(map.get("lauEveSim"), this.l);
                 this.g = h.a(map.get("comPollUp"), this.g);
                 this.m = h.a(map.get("dailyNetFlowLimit"), this.m, 204800, 10485760);
                 b.b = h.a(map.get("accessTestOnOff"), b.b);
@@ -190,7 +188,7 @@ public final class d {
     }
 
     public final boolean j() {
-        return this.f1426l;
+        return this.l;
     }
 
     public final int k() {

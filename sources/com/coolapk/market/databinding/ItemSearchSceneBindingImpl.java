@@ -27,9 +27,9 @@ public class ItemSearchSceneBindingImpl extends ItemSearchSceneBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 1);
-        sparseIntArray.put(2131363934, 2);
-        sparseIntArray.put(2131363067, 3);
+        sparseIntArray.put(2131363604, 1);
+        sparseIntArray.put(2131363959, 2);
+        sparseIntArray.put(2131363081, 3);
     }
 
     public ItemSearchSceneBindingImpl(DataBindingComponent dataBindingComponent, View view) {

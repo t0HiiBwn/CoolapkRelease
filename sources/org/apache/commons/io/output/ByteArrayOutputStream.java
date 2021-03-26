@@ -22,10 +22,6 @@ public class ByteArrayOutputStream extends OutputStream {
     private int filledBufferSum;
     private boolean reuseBuffers;
 
-    @Override // java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
-    }
-
     public ByteArrayOutputStream() {
         this(1024);
     }
@@ -63,65 +59,18 @@ public class ByteArrayOutputStream extends OutputStream {
         this.buffers.add(bArr2);
     }
 
-    @Override // java.io.OutputStream
-    public void write(byte[] bArr, int i, int i2) {
-        int i3;
-        if (i < 0 || i > bArr.length || i2 < 0 || (i3 = i + i2) > bArr.length || i3 < 0) {
-            throw new IndexOutOfBoundsException();
-        } else if (i2 != 0) {
-            synchronized (this) {
-                int i4 = this.count;
-                int i5 = i4 + i2;
-                int i6 = i4 - this.filledBufferSum;
-                while (i2 > 0) {
-                    int min = Math.min(i2, this.currentBuffer.length - i6);
-                    System.arraycopy(bArr, i3 - i2, this.currentBuffer, i6, min);
-                    i2 -= min;
-                    if (i2 > 0) {
-                        needNewBuffer(i5);
-                        i6 = 0;
-                    }
-                }
-                this.count = i5;
-            }
-        }
+    public static InputStream toBufferedInputStream(InputStream inputStream) throws IOException {
+        return toBufferedInputStream(inputStream, 1024);
     }
 
-    @Override // java.io.OutputStream
-    public synchronized void write(int i) {
-        int i2 = this.count;
-        int i3 = i2 - this.filledBufferSum;
-        if (i3 == this.currentBuffer.length) {
-            needNewBuffer(i2 + 1);
-            i3 = 0;
-        }
-        this.currentBuffer[i3] = (byte) i;
-        this.count++;
+    public static InputStream toBufferedInputStream(InputStream inputStream, int i) throws IOException {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(i);
+        byteArrayOutputStream.write(inputStream);
+        return byteArrayOutputStream.toInputStream();
     }
 
-    public synchronized int write(InputStream inputStream) throws IOException {
-        int i;
-        int i2 = this.count - this.filledBufferSum;
-        byte[] bArr = this.currentBuffer;
-        int read = inputStream.read(bArr, i2, bArr.length - i2);
-        i = 0;
-        while (read != -1) {
-            i += read;
-            i2 += read;
-            this.count += read;
-            byte[] bArr2 = this.currentBuffer;
-            if (i2 == bArr2.length) {
-                needNewBuffer(bArr2.length);
-                i2 = 0;
-            }
-            byte[] bArr3 = this.currentBuffer;
-            read = inputStream.read(bArr3, i2, bArr3.length - i2);
-        }
-        return i;
-    }
-
-    public synchronized int size() {
-        return this.count;
+    @Override // java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
     }
 
     public synchronized void reset() {
@@ -139,44 +88,8 @@ public class ByteArrayOutputStream extends OutputStream {
         }
     }
 
-    public synchronized void writeTo(OutputStream outputStream) throws IOException {
-        int i = this.count;
-        for (byte[] bArr : this.buffers) {
-            int min = Math.min(bArr.length, i);
-            outputStream.write(bArr, 0, min);
-            i -= min;
-            if (i == 0) {
-                break;
-            }
-        }
-    }
-
-    public static InputStream toBufferedInputStream(InputStream inputStream) throws IOException {
-        return toBufferedInputStream(inputStream, 1024);
-    }
-
-    public static InputStream toBufferedInputStream(InputStream inputStream, int i) throws IOException {
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(i);
-        byteArrayOutputStream.write(inputStream);
-        return byteArrayOutputStream.toInputStream();
-    }
-
-    public synchronized InputStream toInputStream() {
-        int i = this.count;
-        if (i == 0) {
-            return new ClosedInputStream();
-        }
-        ArrayList arrayList = new ArrayList(this.buffers.size());
-        for (byte[] bArr : this.buffers) {
-            int min = Math.min(bArr.length, i);
-            arrayList.add(new ByteArrayInputStream(bArr, 0, min));
-            i -= min;
-            if (i == 0) {
-                break;
-            }
-        }
-        this.reuseBuffers = false;
-        return new SequenceInputStream(Collections.enumeration(arrayList));
+    public synchronized int size() {
+        return this.count;
     }
 
     public synchronized byte[] toByteArray() {
@@ -198,6 +111,24 @@ public class ByteArrayOutputStream extends OutputStream {
         return bArr;
     }
 
+    public synchronized InputStream toInputStream() {
+        int i = this.count;
+        if (i == 0) {
+            return new ClosedInputStream();
+        }
+        ArrayList arrayList = new ArrayList(this.buffers.size());
+        for (byte[] bArr : this.buffers) {
+            int min = Math.min(bArr.length, i);
+            arrayList.add(new ByteArrayInputStream(bArr, 0, min));
+            i -= min;
+            if (i == 0) {
+                break;
+            }
+        }
+        this.reuseBuffers = false;
+        return new SequenceInputStream(Collections.enumeration(arrayList));
+    }
+
     @Override // java.lang.Object
     @Deprecated
     public String toString() {
@@ -210,5 +141,69 @@ public class ByteArrayOutputStream extends OutputStream {
 
     public String toString(Charset charset) {
         return new String(toByteArray(), charset);
+    }
+
+    public synchronized int write(InputStream inputStream) throws IOException {
+        int i;
+        int i2 = this.count - this.filledBufferSum;
+        int read = inputStream.read(this.currentBuffer, i2, this.currentBuffer.length - i2);
+        i = 0;
+        while (read != -1) {
+            i += read;
+            i2 += read;
+            this.count += read;
+            if (i2 == this.currentBuffer.length) {
+                needNewBuffer(this.currentBuffer.length);
+                i2 = 0;
+            }
+            read = inputStream.read(this.currentBuffer, i2, this.currentBuffer.length - i2);
+        }
+        return i;
+    }
+
+    @Override // java.io.OutputStream
+    public synchronized void write(int i) {
+        int i2 = this.count - this.filledBufferSum;
+        if (i2 == this.currentBuffer.length) {
+            needNewBuffer(this.count + 1);
+            i2 = 0;
+        }
+        this.currentBuffer[i2] = (byte) i;
+        this.count++;
+    }
+
+    @Override // java.io.OutputStream
+    public void write(byte[] bArr, int i, int i2) {
+        int i3;
+        if (i < 0 || i > bArr.length || i2 < 0 || (i3 = i + i2) > bArr.length || i3 < 0) {
+            throw new IndexOutOfBoundsException();
+        } else if (i2 != 0) {
+            synchronized (this) {
+                int i4 = this.count + i2;
+                int i5 = this.count - this.filledBufferSum;
+                while (i2 > 0) {
+                    int min = Math.min(i2, this.currentBuffer.length - i5);
+                    System.arraycopy(bArr, i3 - i2, this.currentBuffer, i5, min);
+                    i2 -= min;
+                    if (i2 > 0) {
+                        needNewBuffer(i4);
+                        i5 = 0;
+                    }
+                }
+                this.count = i4;
+            }
+        }
+    }
+
+    public synchronized void writeTo(OutputStream outputStream) throws IOException {
+        int i = this.count;
+        for (byte[] bArr : this.buffers) {
+            int min = Math.min(bArr.length, i);
+            outputStream.write(bArr, 0, min);
+            i -= min;
+            if (i == 0) {
+                break;
+            }
+        }
     }
 }

@@ -32,12 +32,12 @@ public final class FollowStyleTextView extends AppCompatTextView {
         super.setSelected(z);
         if (z) {
             setText(getContext().getString(2131886114));
-            setBackgroundColor(ResourceUtils.getColorInt(getContext(), 2131099911));
-            setTextColor(ResourceUtils.getColorInt(getContext(), 2131099891));
+            setBackgroundColor(ResourceUtils.getColorInt(getContext(), 2131099916));
+            setTextColor(ResourceUtils.getColorInt(getContext(), 2131099896));
             return;
         }
         setText(getContext().getString(2131886133));
         setBackgroundColor(AppHolder.getAppTheme().getColorAccent());
-        setTextColor(ResourceUtils.getColorInt(getContext(), 2131099912));
+        setTextColor(ResourceUtils.getColorInt(getContext(), 2131099917));
     }
 }

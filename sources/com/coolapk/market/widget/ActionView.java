@@ -62,7 +62,7 @@ public class ActionView extends LinearLayout implements View.OnClickListener {
 
     private void initdefaultViews(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8) {
         boolean z = true;
-        ItemCommentbarChildViewBinding itemCommentbarChildViewBinding = (ItemCommentbarChildViewBinding) DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558659, this, true);
+        ItemCommentbarChildViewBinding itemCommentbarChildViewBinding = (ItemCommentbarChildViewBinding) DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558665, this, true);
         this.binding = itemCommentbarChildViewBinding;
         itemCommentbarChildViewBinding.iconView.setPadding(i, 0, i, 0);
         LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.binding.iconView.getLayoutParams();
@@ -78,7 +78,7 @@ public class ActionView extends LinearLayout implements View.OnClickListener {
                     z = false;
                 }
                 this.isLiked = z;
-                this.binding.iconView.setImageResource(this.isLiked ? 2131231602 : 2131231604);
+                this.binding.iconView.setImageResource(this.isLiked ? 2131231613 : 2131231615);
             } else if (i8 == 1) {
                 this.binding.textView.setText(String.valueOf(this.dyhArticle.getFavNum()));
                 DyhArticle dyhArticle3 = this.dyhArticle;
@@ -86,7 +86,7 @@ public class ActionView extends LinearLayout implements View.OnClickListener {
                     z = false;
                 }
                 this.isFaved = z;
-                this.binding.iconView.setImageResource(this.isFaved ? 2131231567 : 2131231573);
+                this.binding.iconView.setImageResource(this.isFaved ? 2131231578 : 2131231584);
             }
         }
         ViewUtil.clickListener(this.binding.getRoot(), this);

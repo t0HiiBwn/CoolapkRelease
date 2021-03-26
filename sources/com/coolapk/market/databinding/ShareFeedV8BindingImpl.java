@@ -25,12 +25,12 @@ public class ShareFeedV8BindingImpl extends ShareFeedV8Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363593, 5);
-        sparseIntArray.put(2131362441, 6);
-        sparseIntArray.put(2131363397, 7);
-        sparseIntArray.put(2131362127, 8);
-        sparseIntArray.put(2131362903, 9);
-        sparseIntArray.put(2131362883, 10);
+        sparseIntArray.put(2131363615, 5);
+        sparseIntArray.put(2131362448, 6);
+        sparseIntArray.put(2131363414, 7);
+        sparseIntArray.put(2131362130, 8);
+        sparseIntArray.put(2131362915, 9);
+        sparseIntArray.put(2131362894, 10);
     }
 
     public ShareFeedV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {

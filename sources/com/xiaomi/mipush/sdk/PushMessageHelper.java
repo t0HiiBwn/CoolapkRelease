@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.text.TextUtils;
-import com.xiaomi.push.Cif;
-import com.xiaomi.push.hp;
+import com.xiaomi.push.gv;
+import com.xiaomi.push.hm;
 import java.util.List;
 
 public class PushMessageHelper {
@@ -34,54 +34,54 @@ public class PushMessageHelper {
         return miPushCommandMessage;
     }
 
-    public static MiPushMessage generateMessage(Cif ifVar, hp hpVar, boolean z) {
+    public static MiPushMessage generateMessage(hm hmVar, gv gvVar, boolean z) {
         MiPushMessage miPushMessage = new MiPushMessage();
-        miPushMessage.setMessageId(ifVar.m501a());
-        if (!TextUtils.isEmpty(ifVar.d())) {
+        miPushMessage.setMessageId(hmVar.c());
+        if (!TextUtils.isEmpty(hmVar.j())) {
             miPushMessage.setMessageType(1);
-            miPushMessage.setAlias(ifVar.d());
-        } else if (!TextUtils.isEmpty(ifVar.c())) {
+            miPushMessage.setAlias(hmVar.j());
+        } else if (!TextUtils.isEmpty(hmVar.h())) {
             miPushMessage.setMessageType(2);
-            miPushMessage.setTopic(ifVar.c());
-        } else if (!TextUtils.isEmpty(ifVar.f())) {
+            miPushMessage.setTopic(hmVar.h());
+        } else if (!TextUtils.isEmpty(hmVar.r())) {
             miPushMessage.setMessageType(3);
-            miPushMessage.setUserAccount(ifVar.f());
+            miPushMessage.setUserAccount(hmVar.r());
         } else {
             miPushMessage.setMessageType(0);
         }
-        miPushMessage.setCategory(ifVar.e());
-        if (ifVar.a() != null) {
-            miPushMessage.setContent(ifVar.a().c());
+        miPushMessage.setCategory(hmVar.p());
+        if (hmVar.l() != null) {
+            miPushMessage.setContent(hmVar.l().f());
         }
-        if (hpVar != null) {
+        if (gvVar != null) {
             if (TextUtils.isEmpty(miPushMessage.getMessageId())) {
-                miPushMessage.setMessageId(hpVar.m422a());
+                miPushMessage.setMessageId(gvVar.b());
             }
             if (TextUtils.isEmpty(miPushMessage.getTopic())) {
-                miPushMessage.setTopic(hpVar.m427b());
+                miPushMessage.setTopic(gvVar.f());
             }
-            miPushMessage.setDescription(hpVar.d());
-            miPushMessage.setTitle(hpVar.m430c());
-            miPushMessage.setNotifyType(hpVar.a());
-            miPushMessage.setNotifyId(hpVar.c());
-            miPushMessage.setPassThrough(hpVar.b());
-            miPushMessage.setExtra(hpVar.m423a());
+            miPushMessage.setDescription(gvVar.j());
+            miPushMessage.setTitle(gvVar.h());
+            miPushMessage.setNotifyType(gvVar.l());
+            miPushMessage.setNotifyId(gvVar.q());
+            miPushMessage.setPassThrough(gvVar.o());
+            miPushMessage.setExtra(gvVar.s());
         }
         miPushMessage.setNotified(z);
         return miPushMessage;
     }
 
-    public static hp generateMessage(MiPushMessage miPushMessage) {
-        hp hpVar = new hp();
-        hpVar.a(miPushMessage.getMessageId());
-        hpVar.b(miPushMessage.getTopic());
-        hpVar.d(miPushMessage.getDescription());
-        hpVar.c(miPushMessage.getTitle());
-        hpVar.c(miPushMessage.getNotifyId());
-        hpVar.a(miPushMessage.getNotifyType());
-        hpVar.b(miPushMessage.getPassThrough());
-        hpVar.a(miPushMessage.getExtra());
-        return hpVar;
+    public static gv generateMessage(MiPushMessage miPushMessage) {
+        gv gvVar = new gv();
+        gvVar.a(miPushMessage.getMessageId());
+        gvVar.b(miPushMessage.getTopic());
+        gvVar.d(miPushMessage.getDescription());
+        gvVar.c(miPushMessage.getTitle());
+        gvVar.c(miPushMessage.getNotifyId());
+        gvVar.a(miPushMessage.getNotifyType());
+        gvVar.b(miPushMessage.getPassThrough());
+        gvVar.a(miPushMessage.getExtra());
+        return gvVar;
     }
 
     public static int getPushMode(Context context) {

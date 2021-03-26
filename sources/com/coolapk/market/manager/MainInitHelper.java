@@ -7,11 +7,11 @@ import com.coolapk.market.app.EmptySubscriber;
 import com.coolapk.market.event.ConfigJsonEvent;
 import com.coolapk.market.event.ConfigPageEvent;
 import com.coolapk.market.extend.EntityExtendsKt;
-import com.coolapk.market.imageloader.GlideImageHelper;
 import com.coolapk.market.local.DataConfig;
 import com.coolapk.market.model.Entity;
 import com.coolapk.market.model.EntityCard;
 import com.coolapk.market.util.EntityUtils;
+import com.coolapk.market.util.LogUtils;
 import com.coolapk.market.util.RxUtils;
 import java.io.File;
 import java.util.Iterator;
@@ -19,7 +19,6 @@ import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.JvmStatic;
 import kotlin.jvm.internal.Intrinsics;
-import kotlin.jvm.internal.Ref;
 import kotlin.text.StringsKt;
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONObject;
@@ -27,7 +26,7 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.schedulers.Schedulers;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0010\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0012\u0010\u0014\u001a\u00020\u00152\b\u0010\u0016\u001a\u0004\u0018\u00010\u0004H\u0002J\b\u0010\u0017\u001a\u00020\u0015H\u0007J\u0016\u0010\u0018\u001a\u00020\u00152\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u001b0\u001aH\u0002J\u0010\u0010\u001c\u001a\u00020\u00152\u0006\u0010\u001d\u001a\u00020\u001eH\u0007J\u0012\u0010\u001f\u001a\u00020\u00152\b\u0010\u001d\u001a\u0004\u0018\u00010\u001eH\u0002J\u0012\u0010 \u001a\u00020\u00152\b\u0010\u001d\u001a\u0004\u0018\u00010\u001eH\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006!"}, d2 = {"Lcom/coolapk/market/manager/MainInitHelper;", "", "()V", "CONFIG_CARD_DEFAULT_JSON", "", "DIGIT_CONFIG_CARD_JSON", "DISCOVERY_CONFIG_CARD_JSON", "KEY_AD_GDT_APP_ID", "KEY_AD_TT_APP_ID", "KEY_DOUYIN_OPEN_VIDEO", "KEY_GOODS_CLIPBOARD_LINK_DIALOG", "KEY_MAIN_LIST_REORDER", "KEY_MEDIA_PLAYER_JAR", "KEY_MEDIA_PLAYER_JAR_MD5", "KEY_RETURN_MAIN_ACTIVITY", "KEY_SPLASH_AD_EXPIRES", "KEY_SPLASH_AD_ON_RESUME", "KEY_SPLASH_AD_TYPE", "KEY_TRIM_ACTIVITYS", "KEY_USER_PRIVACY_VERSION", "configMediaPlayerJs", "", "mediaJsLink", "loadMainInitInfo", "onMainInitDataLoaded", "entities", "", "Lcom/coolapk/market/model/Entity;", "parseConfigCard", "entity", "Lcom/coolapk/market/model/EntityCard;", "parseSearchHintCard", "parseSplashCard", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0010\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0012\u0010\u0019\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u0004H\u0002J\u0016\u0010\u001c\u001a\u00020\u001a2\f\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u001f0\u001eH\u0002J\u0010\u0010 \u001a\u00020\u001a2\u0006\u0010!\u001a\u00020\"H\u0007J\u0012\u0010#\u001a\u00020\u001a2\b\u0010!\u001a\u0004\u0018\u00010\"H\u0002J\u0012\u0010$\u001a\u00020\u001a2\b\u0010!\u001a\u0004\u0018\u00010\"H\u0002J\b\u0010%\u001a\u00020\u001aH\u0007R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u001e\u0010\u0016\u001a\u00020\u00152\u0006\u0010\u0014\u001a\u00020\u0015@BX\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\u0017R\u001e\u0010\u0018\u001a\u00020\u00152\u0006\u0010\u0014\u001a\u00020\u0015@BX\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u0018\u0010\u0017¨\u0006&"}, d2 = {"Lcom/coolapk/market/manager/MainInitHelper;", "", "()V", "CONFIG_CARD_DEFAULT_JSON", "", "DIGIT_CONFIG_CARD_JSON", "DISCOVERY_CONFIG_CARD_JSON", "KEY_AD_GDT_APP_ID", "KEY_AD_TT_APP_ID", "KEY_DOUYIN_OPEN_VIDEO", "KEY_GOODS_CLIPBOARD_LINK_DIALOG", "KEY_MAIN_LIST_REORDER", "KEY_MEDIA_PLAYER_JAR", "KEY_MEDIA_PLAYER_JAR_MD5", "KEY_RETURN_MAIN_ACTIVITY", "KEY_SPLASH_AD_EXPIRES", "KEY_SPLASH_AD_ON_RESUME", "KEY_SPLASH_AD_TYPE", "KEY_TRIM_ACTIVITYS", "KEY_USER_PRIVACY_VERSION", "<set-?>", "", "isDataLoaded", "()Z", "isLoading", "configMediaPlayerJs", "", "mediaJsLink", "onMainInitDataLoaded", "entities", "", "Lcom/coolapk/market/model/Entity;", "parseConfigCard", "entity", "Lcom/coolapk/market/model/EntityCard;", "parseSearchHintCard", "parseSplashCard", "updateMainInitInfo", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: MainInitHelper.kt */
 public final class MainInitHelper {
     public static final String CONFIG_CARD_DEFAULT_JSON = "{\"entityType\":\"card\",\"entityTemplate\":\"configCard\",\"title\":\"客户端配置\",\"url\":\"\",\"entities\":[{\"id\":412,\"title\":\"关注\",\"page_name\":\"V9_HOME_TAB_FOLLOW\",\"url\":\"/page?url=V9_HOME_TAB_FOLLOW\",\"entityType\":\"page\",\"entityId\":412,\"page_visibility\":1,\"order\":0,\"page_fixed\":1},{\"id\":420,\"title\":\"头条\",\"page_name\":\"V9_HOME_TAB_HEADLINE\",\"url\":\"/main/headline\",\"entityType\":\"page\",\"entityId\":420,\"page_visibility\":1,\"order\":1,\"page_fixed\":1},{\"id\":415,\"title\":\"热榜\",\"page_name\":\"V9_HOME_TAB_RANKING\",\"url\":\"/page?url=V9_HOME_TAB_RANKING\",\"entityType\":\"page\",\"entityId\":415,\"page_visibility\":1,\"order\":2,\"page_fixed\":0},{\"id\":413,\"title\":\"视频\",\"page_name\":\"V9_HOME_TAB_SHIPIN\",\"url\":\"/page?url=V9_HOME_TAB_SHIPIN\",\"entityType\":\"page\",\"entityId\":413,\"page_visibility\":1,\"order\":3,\"page_fixed\":0}],\"entityId\":6390,\"extraData\":\"{\\\"selectedHomeTab\\\":\\\"V9_HOME_TAB_HEADLINE\\\"}\"}";
@@ -47,15 +46,28 @@ public final class MainInitHelper {
     public static final String KEY_SPLASH_AD_TYPE = "SplashAd.Type";
     public static final String KEY_TRIM_ACTIVITYS = "Trim.Activity";
     public static final String KEY_USER_PRIVACY_VERSION = "UserPrivacy.Version";
+    private static boolean isDataLoaded;
+    private static boolean isLoading;
 
     private MainInitHelper() {
     }
 
+    public final boolean isLoading() {
+        return isLoading;
+    }
+
+    public final boolean isDataLoaded() {
+        return isDataLoaded;
+    }
+
     @JvmStatic
-    public static final void loadMainInitInfo() {
-        DataManager instance = DataManager.getInstance();
-        Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
-        instance.getMainInit().map(RxUtils.checkResultToData()).compose(RxUtils.applyIOSchedulers()).subscribe((Subscriber<? super R>) new MainInitHelper$loadMainInitInfo$1());
+    public static final void updateMainInitInfo() {
+        if (!isLoading) {
+            LogUtils.d("开始加载配置文件", new Object[0]);
+            DataManager instance = DataManager.getInstance();
+            Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
+            instance.getMainInit().map(RxUtils.checkResultToData()).compose(RxUtils.applyIOSchedulers()).doOnSubscribe(MainInitHelper$updateMainInitInfo$1.INSTANCE).doOnUnsubscribe(MainInitHelper$updateMainInitInfo$2.INSTANCE).subscribe((Subscriber<? super R>) new MainInitHelper$updateMainInitInfo$3());
+        }
     }
 
     /* access modifiers changed from: private */
@@ -130,22 +142,6 @@ public final class MainInitHelper {
 
     private final void parseSplashCard(EntityCard entityCard) {
         AppHolder.getAppSetting().setSplashCard(entityCard);
-        Ref.ObjectRef objectRef = new Ref.ObjectRef();
-        objectRef.element = (T) null;
-        if (entityCard != null) {
-            AppSetting appSetting = AppHolder.getAppSetting();
-            Intrinsics.checkNotNullExpressionValue(appSetting, "AppHolder.getAppSetting()");
-            if (!appSetting.isSplashShowBefore()) {
-                objectRef.element = (T) entityCard.getPic();
-            }
-        }
-        File splashImageFile = AppHolder.getAppSetting().getSplashImageFile(AppHolder.getApplication());
-        if (splashImageFile != null && !splashImageFile.exists() && GlideImageHelper.shouldLoadOtherImage()) {
-            T t = objectRef.element;
-            if (!(t == null || t.length() == 0)) {
-                Observable.defer(new MainInitHelper$parseSplashCard$1(objectRef, splashImageFile)).subscribeOn(Schedulers.io()).subscribe((Subscriber) new EmptySubscriber());
-            }
-        }
     }
 
     @JvmStatic

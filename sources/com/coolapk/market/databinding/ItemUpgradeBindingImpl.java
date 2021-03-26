@@ -28,10 +28,10 @@ public class ItemUpgradeBindingImpl extends ItemUpgradeBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362824, 12);
-        sparseIntArray.put(2131363906, 13);
-        sparseIntArray.put(2131363053, 14);
-        sparseIntArray.put(2131363867, 15);
+        sparseIntArray.put(2131362835, 12);
+        sparseIntArray.put(2131363929, 13);
+        sparseIntArray.put(2131363067, 14);
+        sparseIntArray.put(2131363889, 15);
     }
 
     public ItemUpgradeBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -77,7 +77,7 @@ public class ItemUpgradeBindingImpl extends ItemUpgradeBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (307 == i) {
+        if (308 == i) {
             setViewHolder((UpgradeViewHolder) obj);
         } else if (27 != i) {
             return false;
@@ -94,7 +94,7 @@ public class ItemUpgradeBindingImpl extends ItemUpgradeBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(307);
+        notifyPropertyChanged(308);
         super.requestRebind();
     }
 
@@ -127,12 +127,12 @@ public class ItemUpgradeBindingImpl extends ItemUpgradeBinding {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i == 304) {
+        } else if (i == 305) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
             return true;
-        } else if (i == 276) {
+        } else if (i == 277) {
             synchronized (this) {
                 this.mDirtyFlags |= 16;
             }
@@ -337,15 +337,15 @@ public class ItemUpgradeBindingImpl extends ItemUpgradeBinding {
                                     ViewBindingAdapters.clickListener(this.moreView, upgradeViewHolder, bool);
                                 }
                                 if ((577 & j) != 0) {
-                                    Long l2 = null;
-                                    ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, str2, l2, l2);
+                                    Long l = null;
+                                    ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, str2, l, l);
                                 }
                                 if ((j & 514) != 0) {
                                     TextViewBindingAdapter.setText(this.apkSizeView, str6);
                                     TextViewBindingAdapter.setText(this.extraTextView, str9);
                                     this.extraTextView.setVisibility(i5);
                                     Boolean bool2 = null;
-                                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str5, null, 2131231363, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, true, null, bool2);
+                                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str5, null, 2131231374, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, true, null, bool2);
                                     this.moreView.setVisibility(i8);
                                     TextViewBindingAdapter.setText(this.patchSizeView, str7);
                                     this.patchSizeView.setVisibility(i6);

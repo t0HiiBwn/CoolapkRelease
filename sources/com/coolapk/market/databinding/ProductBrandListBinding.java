@@ -28,7 +28,7 @@ public abstract class ProductBrandListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductBrandListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ProductBrandListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559107, viewGroup, z, obj);
+        return (ProductBrandListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559114, viewGroup, z, obj);
     }
 
     public static ProductBrandListBinding inflate(LayoutInflater layoutInflater) {
@@ -37,7 +37,7 @@ public abstract class ProductBrandListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductBrandListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ProductBrandListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559107, null, false, obj);
+        return (ProductBrandListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559114, null, false, obj);
     }
 
     public static ProductBrandListBinding bind(View view) {
@@ -46,6 +46,6 @@ public abstract class ProductBrandListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductBrandListBinding bind(View view, Object obj) {
-        return (ProductBrandListBinding) bind(obj, view, 2131559107);
+        return (ProductBrandListBinding) bind(obj, view, 2131559114);
     }
 }

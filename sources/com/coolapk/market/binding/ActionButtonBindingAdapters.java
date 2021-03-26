@@ -29,7 +29,7 @@ public class ActionButtonBindingAdapters {
         }
     }
 
-    public static void setActionButtonBackground(View view, String str, Long l2, Long l3) {
+    public static void setActionButtonBackground(View view, String str, Long l, Long l2) {
         if (!TextUtils.isEmpty(str)) {
             str.hashCode();
             char c = 65535;
@@ -109,10 +109,10 @@ public class ActionButtonBindingAdapters {
                         }
                     }
                     Drawable createDownloadBg = ShapeUtils.createDownloadBg(view.getContext(), f);
-                    if (!(l2 == null || l3 == null || !(createDownloadBg instanceof RippleDrawable))) {
+                    if (!(l == null || l2 == null || !(createDownloadBg instanceof RippleDrawable))) {
                         RippleDrawable rippleDrawable = (RippleDrawable) createDownloadBg;
                         if (rippleDrawable.getDrawable(0) instanceof LayerDrawable) {
-                            ((LayerDrawable) rippleDrawable.getDrawable(0)).findDrawableByLayerId(16908301).setLevel(l3.longValue() != 0 ? (int) ((l2.longValue() * 10000) / l3.longValue()) : 0);
+                            ((LayerDrawable) rippleDrawable.getDrawable(0)).findDrawableByLayerId(16908301).setLevel(l2.longValue() != 0 ? (int) ((l.longValue() * 10000) / l2.longValue()) : 0);
                         }
                     }
                     view.setBackground(createDownloadBg);

@@ -14,8 +14,8 @@ public class JsonRpcRequest {
     public JsonRpcRequest() {
     }
 
-    public JsonRpcRequest(Long l2, String str, JSONObject jSONObject) {
-        this.id = l2;
+    public JsonRpcRequest(Long l, String str, JSONObject jSONObject) {
+        this.id = l;
         this.method = str;
         this.params = jSONObject;
     }

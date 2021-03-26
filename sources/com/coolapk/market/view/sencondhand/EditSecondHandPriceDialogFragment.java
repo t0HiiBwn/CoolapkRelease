@@ -86,7 +86,7 @@ public final class EditSecondHandPriceDialogFragment extends BaseDialogFragment 
         int i = requireArguments().getInt("extra_type");
         String string2 = requireArguments().getString("extra_content");
         int i2 = requireArguments().getInt("extra_rise_price_type");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558534, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558536, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…_hand_price, null, false)");
         DialogSecondHandPriceBinding dialogSecondHandPriceBinding = (DialogSecondHandPriceBinding) inflate;
         this.binding = dialogSecondHandPriceBinding;
@@ -411,7 +411,7 @@ public final class EditSecondHandPriceDialogFragment extends BaseDialogFragment 
         String str;
         Intrinsics.checkNotNull(view);
         int id = view.getId();
-        if (id == 2131362193) {
+        if (id == 2131362196) {
             UiUtils.closeKeyboard(getFocusedEditText());
             Dialog dialog = getDialog();
             if (dialog != null) {
@@ -421,7 +421,7 @@ public final class EditSecondHandPriceDialogFragment extends BaseDialogFragment 
             if (action1 != null && action1 != null) {
                 action1.call(false);
             }
-        } else if (id == 2131363457 && this.listener != null) {
+        } else if (id == 2131363475 && this.listener != null) {
             UiUtils.closeKeyboard(getFocusedEditText());
             int i = this.priceType;
             if (i == 1) {

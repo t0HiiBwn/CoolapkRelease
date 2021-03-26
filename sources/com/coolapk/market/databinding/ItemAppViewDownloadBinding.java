@@ -39,7 +39,7 @@ public abstract class ItemAppViewDownloadBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppViewDownloadBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAppViewDownloadBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558603, viewGroup, z, obj);
+        return (ItemAppViewDownloadBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558607, viewGroup, z, obj);
     }
 
     public static ItemAppViewDownloadBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class ItemAppViewDownloadBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppViewDownloadBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAppViewDownloadBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558603, null, false, obj);
+        return (ItemAppViewDownloadBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558607, null, false, obj);
     }
 
     public static ItemAppViewDownloadBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class ItemAppViewDownloadBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppViewDownloadBinding bind(View view, Object obj) {
-        return (ItemAppViewDownloadBinding) bind(obj, view, 2131558603);
+        return (ItemAppViewDownloadBinding) bind(obj, view, 2131558607);
     }
 }

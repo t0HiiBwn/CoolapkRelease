@@ -24,7 +24,7 @@ import java.util.Collections;
 import org.json.JSONObject;
 
 /* compiled from: RetryScheduler */
-public class r implements Handler.Callback, a.AbstractC0092a {
+public class r implements Handler.Callback, a.AbstractC0102a {
     private static volatile r a;
     private static b i;
     private final Context b = com.ss.android.socialbase.downloader.downloader.b.L();
@@ -114,8 +114,8 @@ public class r implements Handler.Callback, a.AbstractC0092a {
             }
             b2.j = z;
             synchronized (this.d) {
-                if (!b2.f1417l) {
-                    b2.f1417l = true;
+                if (!b2.l) {
+                    b2.l = true;
                     this.g++;
                 }
             }
@@ -239,8 +239,8 @@ public class r implements Handler.Callback, a.AbstractC0092a {
                 aVar = this.d.get(i2);
                 if (aVar != null) {
                     z2 = true;
-                    if (aVar.f1417l) {
-                        aVar.f1417l = false;
+                    if (aVar.l) {
+                        aVar.l = false;
                         int i4 = this.g - 1;
                         this.g = i4;
                         if (i4 < 0) {
@@ -389,12 +389,12 @@ public class r implements Handler.Callback, a.AbstractC0092a {
         }
     }
 
-    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
     public void b() {
         a(4, false);
     }
 
-    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
     public void c() {
         a(3, false);
     }
@@ -472,9 +472,7 @@ public class r implements Handler.Callback, a.AbstractC0092a {
         private int i;
         private boolean j;
         private long k;
-
-        /* renamed from: l  reason: collision with root package name */
-        private boolean f1417l;
+        private boolean l;
 
         a(int i2, int i3, int i4, int i5, int i6, boolean z, int[] iArr) {
             i5 = i5 < 3000 ? 3000 : i5;
@@ -490,7 +488,7 @@ public class r implements Handler.Callback, a.AbstractC0092a {
         }
 
         boolean a(long j2, int i2, int i3, boolean z) {
-            if (!this.f1417l) {
+            if (!this.l) {
                 com.ss.android.socialbase.downloader.c.a.c("RetryScheduler", "canRetry: mIsWaitingRetry is false, return false!!!");
                 return false;
             } else if (this.b < i2 || this.i >= this.c) {

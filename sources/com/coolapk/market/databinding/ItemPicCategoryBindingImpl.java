@@ -64,7 +64,7 @@ public class ItemPicCategoryBindingImpl extends ItemPicCategoryBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((PicCategory) obj);
@@ -77,7 +77,7 @@ public class ItemPicCategoryBindingImpl extends ItemPicCategoryBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -129,7 +129,7 @@ public class ItemPicCategoryBindingImpl extends ItemPicCategoryBinding {
         }
         if (i2 != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str4, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str4, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
             TextViewBindingAdapter.setText(this.mboundView2, str2);
         }
     }

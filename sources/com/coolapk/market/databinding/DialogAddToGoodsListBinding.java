@@ -39,7 +39,7 @@ public abstract class DialogAddToGoodsListBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAddToGoodsListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogAddToGoodsListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558512, viewGroup, z, obj);
+        return (DialogAddToGoodsListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558514, viewGroup, z, obj);
     }
 
     public static DialogAddToGoodsListBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class DialogAddToGoodsListBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAddToGoodsListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogAddToGoodsListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558512, null, false, obj);
+        return (DialogAddToGoodsListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558514, null, false, obj);
     }
 
     public static DialogAddToGoodsListBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class DialogAddToGoodsListBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAddToGoodsListBinding bind(View view, Object obj) {
-        return (DialogAddToGoodsListBinding) bind(obj, view, 2131558512);
+        return (DialogAddToGoodsListBinding) bind(obj, view, 2131558514);
     }
 }

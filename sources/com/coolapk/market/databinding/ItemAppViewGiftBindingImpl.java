@@ -28,7 +28,7 @@ public class ItemAppViewGiftBindingImpl extends ItemAppViewGiftBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362087, 8);
+        sparseIntArray.put(2131362090, 8);
     }
 
     public ItemAppViewGiftBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -86,7 +86,7 @@ public class ItemAppViewGiftBindingImpl extends ItemAppViewGiftBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppViewViewModel) obj);
@@ -100,7 +100,7 @@ public class ItemAppViewGiftBindingImpl extends ItemAppViewGiftBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -123,7 +123,7 @@ public class ItemAppViewGiftBindingImpl extends ItemAppViewGiftBinding {
                 this.mDirtyFlags |= 2;
             }
             return true;
-        } else if (i != 236) {
+        } else if (i != 237) {
             return false;
         } else {
             synchronized (this) {

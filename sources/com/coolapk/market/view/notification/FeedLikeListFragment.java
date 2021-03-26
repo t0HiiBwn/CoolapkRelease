@@ -13,6 +13,8 @@ import com.coolapk.market.databinding.ItemNotificationAlbumLikeBinding;
 import com.coolapk.market.databinding.ItemNotificationFeedLikeBinding;
 import com.coolapk.market.manager.ActionManager;
 import com.coolapk.market.manager.ActionManagerCompat;
+import com.coolapk.market.manager.AppNotification;
+import com.coolapk.market.manager.PushMessage;
 import com.coolapk.market.model.Album;
 import com.coolapk.market.model.Entity;
 import com.coolapk.market.model.Feed;
@@ -55,22 +57,49 @@ public class FeedLikeListFragment extends SimpleAsyncListFragment<Result<List<En
         simpleVXDividerDecoration.addDividerRule(new SingleDividerRule(DividerData.H8DP));
         simpleVXDividerDecoration.addDividerRule(new TopBottomDividerRule(DividerData.H8DP, DividerData.H8DP));
         getRecyclerView().addItemDecoration(simpleVXDividerDecoration);
+        AppHolder.getAppNotification().interceptInLifeCycle(this, new AppNotification.MessageIntercept() {
+            /* class com.coolapk.market.view.notification.$$Lambda$FeedLikeListFragment$mmsv2nGrDHiBF7dRoXpMZ7EOjyE */
+
+            @Override // com.coolapk.market.manager.AppNotification.MessageIntercept
+            public final boolean interceptNotification(PushMessage pushMessage) {
+                return FeedLikeListFragment.this.lambda$onActivityCreated$1$FeedLikeListFragment(pushMessage);
+            }
+        });
         if (getUserVisibleHint()) {
             initData();
         }
+    }
+
+    public /* synthetic */ boolean lambda$onActivityCreated$1$FeedLikeListFragment(PushMessage pushMessage) {
+        if (!"feedlike".equals(pushMessage.getType()) && (!"feedReplylike".equals(pushMessage.getType()) || !isResumed())) {
+            return false;
+        }
+        AppHolder.getMainThreadHandler().post(new Runnable() {
+            /* class com.coolapk.market.view.notification.$$Lambda$FeedLikeListFragment$6Kiyg2mNb6xVSn70LfEawwVmnTA */
+
+            @Override // java.lang.Runnable
+            public final void run() {
+                FeedLikeListFragment.this.lambda$null$0$FeedLikeListFragment();
+            }
+        });
+        return true;
+    }
+
+    public /* synthetic */ void lambda$null$0$FeedLikeListFragment() {
+        scrollToTop(true);
     }
 
     @Override // com.coolapk.market.view.base.asynclist.SimpleAsyncListFragment
     public int getItemViewType(int i) {
         Entity entity = (Entity) getDataList().get(i);
         if (EntityUtils.isFeedType(entity.getEntityType())) {
-            return 2131558844;
+            return 2131558851;
         }
         if (EntityUtils.isFeedreply(entity.getEntityType())) {
-            return 2131558897;
+            return 2131558904;
         }
         if (EntityUtils.isAlbumType(entity.getEntityType())) {
-            return 2131558843;
+            return 2131558850;
         }
         LogUtils.d("error viewType : %s", entity.toString());
         throw new RuntimeException("unknown type");
@@ -79,13 +108,13 @@ public class FeedLikeListFragment extends SimpleAsyncListFragment<Result<List<En
     @Override // com.coolapk.market.view.base.asynclist.SimpleAsyncListFragment
     public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View inflate = LayoutInflater.from(getActivity()).inflate(i, viewGroup, false);
-        if (i == 2131558844) {
+        if (i == 2131558851) {
             return new FeedLikeViewHolder(inflate, getComponent(), null);
         }
-        if (i == 2131558843) {
+        if (i == 2131558850) {
             return new AlbumLikeViewHolder(inflate, getComponent(), null);
         }
-        if (i == 2131558897) {
+        if (i == 2131558904) {
             return new UserReplyLikeViewHolder(getActivity(), inflate, getComponent(), null);
         }
         return null;
@@ -149,7 +178,7 @@ public class FeedLikeListFragment extends SimpleAsyncListFragment<Result<List<En
     }
 
     public class FeedLikeViewHolder extends GenericBindHolder<ItemNotificationFeedLikeBinding, Feed> {
-        public static final int LAYOUT_ID = 2131558844;
+        public static final int LAYOUT_ID = 2131558851;
 
         public FeedLikeViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);
@@ -157,7 +186,7 @@ public class FeedLikeListFragment extends SimpleAsyncListFragment<Result<List<En
 
         public void bindToContent(Feed feed) {
             ItemNotificationFeedLikeBinding itemNotificationFeedLikeBinding = (ItemNotificationFeedLikeBinding) getBinding();
-            itemNotificationFeedLikeBinding.textView.setText(FeedLikeListFragment.this.getString(2131886898, feed.getFeedTypeName()));
+            itemNotificationFeedLikeBinding.textView.setText(FeedLikeListFragment.this.getString(2131886960, feed.getFeedTypeName()));
             itemNotificationFeedLikeBinding.setClick(this);
             itemNotificationFeedLikeBinding.setModel(feed);
             itemNotificationFeedLikeBinding.setTransformer(new CircleTransform());
@@ -170,16 +199,16 @@ public class FeedLikeListFragment extends SimpleAsyncListFragment<Result<List<En
             super.onClick(view);
             Feed model = ((ItemNotificationFeedLikeBinding) getBinding()).getModel();
             int id = view.getId();
-            if (id == 2131362316) {
+            if (id == 2131362322) {
                 ActionManagerCompat.startActivityByUrl(getContext(), model.getUrl(), null, null);
-            } else if (id == 2131363877) {
+            } else if (id == 2131363900) {
                 ActionManager.startUserSpaceActivity(view, model.getLikeUid(), model.getLikeAvatar());
             }
         }
     }
 
     public class AlbumLikeViewHolder extends GenericBindHolder<ItemNotificationAlbumLikeBinding, Album> {
-        public static final int LAYOUT_ID = 2131558843;
+        public static final int LAYOUT_ID = 2131558850;
 
         public AlbumLikeViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);
@@ -190,7 +219,7 @@ public class FeedLikeListFragment extends SimpleAsyncListFragment<Result<List<En
             itemNotificationAlbumLikeBinding.desView.setText("赞了你的应用集");
             itemNotificationAlbumLikeBinding.setClick(this);
             int i = 0;
-            itemNotificationAlbumLikeBinding.userNameView.setText(String.format(getContext().getString(2131886581), album.getUserName(), Integer.valueOf(album.getTotalApkNum())));
+            itemNotificationAlbumLikeBinding.userNameView.setText(String.format(getContext().getString(2131886643), album.getUserName(), Integer.valueOf(album.getTotalApkNum())));
             TextView textView = itemNotificationAlbumLikeBinding.recommendView;
             if (album.getRecommend() <= 0) {
                 i = 8;
@@ -205,9 +234,9 @@ public class FeedLikeListFragment extends SimpleAsyncListFragment<Result<List<En
             super.onClick(view);
             Album model = ((ItemNotificationAlbumLikeBinding) getBinding()).getModel();
             int id = view.getId();
-            if (id == 2131362752) {
+            if (id == 2131362763) {
                 ActionManagerCompat.startActivityByUrl(getContext(), model.getUrl(), null, null);
-            } else if (id == 2131363877) {
+            } else if (id == 2131363900) {
                 ActionManager.startUserSpaceActivity(view, model.getLikeUid(), model.getLikeAvatar());
             }
         }

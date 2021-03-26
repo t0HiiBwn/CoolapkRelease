@@ -89,11 +89,11 @@ public class c {
                     return;
                 }
                 a(lVar, 1);
-                final String l2 = R.l();
-                if (TextUtils.isEmpty(l2)) {
-                    l2 = j.a(i);
+                final String l = R.l();
+                if (TextUtils.isEmpty(l)) {
+                    l = j.a(i);
                 }
-                final File a = a(p.a(), a.a(p.a()).a(String.valueOf(d), b.b()), l2);
+                final File a = a(p.a(), a.a(p.a()).a(String.valueOf(d), b.b()), l);
                 if (!p.h().e(String.valueOf(d)) || x.d(p.a())) {
                     com.bytedance.sdk.openadsdk.h.d.a(p.a()).a(i, new b.a() {
                         /* class com.bytedance.sdk.openadsdk.component.splash.c.AnonymousClass1 */
@@ -111,7 +111,7 @@ public class c {
                                 }
                                 u.f("splashLoadAd", "SplashUtils preLoadVideo getFile  s " + str);
                                 c.a(a);
-                                return i.d().p().a(l2, parentFile);
+                                return i.d().p().a(l, parentFile);
                             } catch (IOException e2) {
                                 u.f("SplashUtils", "datastoreGet throw IOException : " + e2.toString());
                                 return null;
@@ -148,7 +148,7 @@ public class c {
                             c.a(elapsedRealtime, true, false, lVar, mVar == null ? -2 : mVar.h, mVar);
                         }
                     });
-                } else if (l2 != null && a.exists()) {
+                } else if (l != null && a.exists()) {
                     u.b("preLoadVideo", "非wifi环境，已缓存相同url的视频文件也是可以播放的");
                     a.a(p.a()).b(new com.bytedance.sdk.openadsdk.core.d.p(aVar, lVar, null));
                 }

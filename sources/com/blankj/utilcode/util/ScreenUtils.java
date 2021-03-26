@@ -8,6 +8,7 @@ import android.graphics.Point;
 import android.os.Build;
 import android.provider.Settings;
 import android.util.DisplayMetrics;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import java.util.Objects;
@@ -71,6 +72,38 @@ public final class ScreenUtils {
 
     public static int getScreenDensityDpi() {
         return Resources.getSystem().getDisplayMetrics().densityDpi;
+    }
+
+    public static float getScreenXDpi() {
+        return Resources.getSystem().getDisplayMetrics().xdpi;
+    }
+
+    public static float getScreenYDpi() {
+        return Resources.getSystem().getDisplayMetrics().ydpi;
+    }
+
+    public int calculateDistanceByX(View view) {
+        int[] iArr = new int[2];
+        view.getLocationOnScreen(iArr);
+        return getScreenWidth() - iArr[0];
+    }
+
+    public int calculateDistanceByY(View view) {
+        int[] iArr = new int[2];
+        view.getLocationOnScreen(iArr);
+        return getScreenHeight() - iArr[1];
+    }
+
+    public int getViewX(View view) {
+        int[] iArr = new int[2];
+        view.getLocationOnScreen(iArr);
+        return iArr[0];
+    }
+
+    public int getViewY(View view) {
+        int[] iArr = new int[2];
+        view.getLocationOnScreen(iArr);
+        return iArr[1];
     }
 
     public static void setFullScreen(Activity activity) {

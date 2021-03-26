@@ -58,7 +58,7 @@ public abstract class DiscoverySubmitBinding extends ViewDataBinding {
 
     @Deprecated
     public static DiscoverySubmitBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DiscoverySubmitBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558540, viewGroup, z, obj);
+        return (DiscoverySubmitBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558542, viewGroup, z, obj);
     }
 
     public static DiscoverySubmitBinding inflate(LayoutInflater layoutInflater) {
@@ -67,7 +67,7 @@ public abstract class DiscoverySubmitBinding extends ViewDataBinding {
 
     @Deprecated
     public static DiscoverySubmitBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DiscoverySubmitBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558540, null, false, obj);
+        return (DiscoverySubmitBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558542, null, false, obj);
     }
 
     public static DiscoverySubmitBinding bind(View view) {
@@ -76,6 +76,6 @@ public abstract class DiscoverySubmitBinding extends ViewDataBinding {
 
     @Deprecated
     public static DiscoverySubmitBinding bind(View view, Object obj) {
-        return (DiscoverySubmitBinding) bind(obj, view, 2131558540);
+        return (DiscoverySubmitBinding) bind(obj, view, 2131558542);
     }
 }

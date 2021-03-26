@@ -72,7 +72,7 @@ public abstract class ItemReceiverdReplyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReceiverdReplyBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemReceiverdReplyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558890, viewGroup, z, obj);
+        return (ItemReceiverdReplyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558897, viewGroup, z, obj);
     }
 
     public static ItemReceiverdReplyBinding inflate(LayoutInflater layoutInflater) {
@@ -81,7 +81,7 @@ public abstract class ItemReceiverdReplyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReceiverdReplyBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemReceiverdReplyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558890, null, false, obj);
+        return (ItemReceiverdReplyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558897, null, false, obj);
     }
 
     public static ItemReceiverdReplyBinding bind(View view) {
@@ -90,6 +90,6 @@ public abstract class ItemReceiverdReplyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReceiverdReplyBinding bind(View view, Object obj) {
-        return (ItemReceiverdReplyBinding) bind(obj, view, 2131558890);
+        return (ItemReceiverdReplyBinding) bind(obj, view, 2131558897);
     }
 }

@@ -28,7 +28,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: MultiFeedReplyViewHolder.kt */
 public class MultiFeedReplyViewHolder extends FeedReplyViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558716;
+    public static final int LAYOUT_ID = 2131558723;
     private final String feedType;
     private FeedReply reply;
 
@@ -60,7 +60,7 @@ public class MultiFeedReplyViewHolder extends FeedReplyViewHolder {
             textView.setVisibility(0);
             TextView textView2 = itemFeedReplyBinding.moreSubReplyView;
             Intrinsics.checkNotNullExpressionValue(textView2, "binding.moreSubReplyView");
-            textView2.setText(getContext().getString(2131886802, Integer.valueOf(feedReply.getReplyNum())));
+            textView2.setText(getContext().getString(2131886864, Integer.valueOf(feedReply.getReplyNum())));
             itemFeedReplyBinding.moreSubReplyView.setOnClickListener(new MultiFeedReplyViewHolder$onPopulateSubReplyView$1(this, feedReply));
         } else {
             TextView textView3 = itemFeedReplyBinding.moreSubReplyView;
@@ -130,7 +130,7 @@ public class MultiFeedReplyViewHolder extends FeedReplyViewHolder {
                 Intrinsics.checkNotNull(bind);
                 itemFeedReplyTextBinding = (ItemFeedReplyTextBinding) bind;
             } else {
-                ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558720, viewGroup, false);
+                ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558727, viewGroup, false);
                 Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…eply_text, parent, false)");
                 itemFeedReplyTextBinding = (ItemFeedReplyTextBinding) inflate;
             }

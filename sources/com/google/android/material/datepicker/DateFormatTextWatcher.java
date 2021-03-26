@@ -27,7 +27,7 @@ abstract class DateFormatTextWatcher implements TextWatcher {
     void onInvalidDate() {
     }
 
-    abstract void onValidDate(Long l2);
+    abstract void onValidDate(Long l);
 
     DateFormatTextWatcher(String str, DateFormat dateFormat2, TextInputLayout textInputLayout2, CalendarConstraints calendarConstraints) {
         this.formatHint = str;

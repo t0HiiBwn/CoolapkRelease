@@ -49,7 +49,7 @@ public final class MyEditDyhListFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558680).suitedMethod(MyEditDyhListFragment$onActivityCreated$1.INSTANCE).constructor(new MyEditDyhListFragment$onActivityCreated$2(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558686).suitedMethod(MyEditDyhListFragment$onActivityCreated$1.INSTANCE).constructor(new MyEditDyhListFragment$onActivityCreated$2(this)).build(), 0);
         setHasOptionsMenu(true);
     }
 
@@ -59,7 +59,7 @@ public final class MyEditDyhListFragment extends EntityListFragment {
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            MenuItem add = menu.add(0, 2131362447, 0, "创建看看号");
+            MenuItem add = menu.add(0, 2131362454, 0, "创建看看号");
             add.setShowAsAction(2);
             Intrinsics.checkNotNullExpressionValue(add, "item");
             add.setVisible(true);
@@ -69,7 +69,7 @@ public final class MyEditDyhListFragment extends EntityListFragment {
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131362447) {
+        if (menuItem.getItemId() != 2131362454) {
             return super.onOptionsItemSelected(menuItem);
         }
         FragmentActivity requireActivity = requireActivity();

@@ -24,7 +24,7 @@ abstract class C$$AutoValue_MainSecondHandType extends MainSecondHandType {
     private final String title;
     private final String url;
 
-    C$$AutoValue_MainSecondHandType(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, int i) {
+    C$$AutoValue_MainSecondHandType(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, int i) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -39,8 +39,8 @@ abstract class C$$AutoValue_MainSecondHandType extends MainSecondHandType {
         this.subTitle = str10;
         this.id = str11;
         this.extraData = str12;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.secondHandFeedNum = str13;
         this.configType = i;
     }
@@ -165,8 +165,8 @@ abstract class C$$AutoValue_MainSecondHandType extends MainSecondHandType {
         String str8;
         String str9;
         String str10;
+        Long l;
         Long l2;
-        Long l3;
         String str11;
         if (obj == this) {
             return true;
@@ -177,7 +177,7 @@ abstract class C$$AutoValue_MainSecondHandType extends MainSecondHandType {
         MainSecondHandType mainSecondHandType = (MainSecondHandType) obj;
         String str12 = this.entityTypeName;
         if (str12 != null ? str12.equals(mainSecondHandType.getEntityTypeName()) : mainSecondHandType.getEntityTypeName() == null) {
-            if (this.entityType.equals(mainSecondHandType.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(mainSecondHandType.getEntityTemplate()) : mainSecondHandType.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(mainSecondHandType.getEntityId()) : mainSecondHandType.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(mainSecondHandType.getEntityFixed()) : mainSecondHandType.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(mainSecondHandType.getTitle()) : mainSecondHandType.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(mainSecondHandType.getUrl()) : mainSecondHandType.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(mainSecondHandType.getDescription()) : mainSecondHandType.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(mainSecondHandType.getPic()) : mainSecondHandType.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(mainSecondHandType.getLogo()) : mainSecondHandType.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(mainSecondHandType.getSubTitle()) : mainSecondHandType.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(mainSecondHandType.getId()) : mainSecondHandType.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(mainSecondHandType.getExtraData()) : mainSecondHandType.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(mainSecondHandType.getDateline()) : mainSecondHandType.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(mainSecondHandType.getLastUpdate()) : mainSecondHandType.getLastUpdate() == null) && ((str11 = this.secondHandFeedNum) != null ? str11.equals(mainSecondHandType.getSecondHandFeedNum()) : mainSecondHandType.getSecondHandFeedNum() == null) && this.configType == mainSecondHandType.getConfigType()) {
+            if (this.entityType.equals(mainSecondHandType.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(mainSecondHandType.getEntityTemplate()) : mainSecondHandType.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(mainSecondHandType.getEntityId()) : mainSecondHandType.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(mainSecondHandType.getEntityFixed()) : mainSecondHandType.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(mainSecondHandType.getTitle()) : mainSecondHandType.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(mainSecondHandType.getUrl()) : mainSecondHandType.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(mainSecondHandType.getDescription()) : mainSecondHandType.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(mainSecondHandType.getPic()) : mainSecondHandType.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(mainSecondHandType.getLogo()) : mainSecondHandType.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(mainSecondHandType.getSubTitle()) : mainSecondHandType.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(mainSecondHandType.getId()) : mainSecondHandType.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(mainSecondHandType.getExtraData()) : mainSecondHandType.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(mainSecondHandType.getDateline()) : mainSecondHandType.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(mainSecondHandType.getLastUpdate()) : mainSecondHandType.getLastUpdate() == null) && ((str11 = this.secondHandFeedNum) != null ? str11.equals(mainSecondHandType.getSecondHandFeedNum()) : mainSecondHandType.getSecondHandFeedNum() == null) && this.configType == mainSecondHandType.getConfigType()) {
                 return true;
             }
         }
@@ -211,10 +211,10 @@ abstract class C$$AutoValue_MainSecondHandType extends MainSecondHandType {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str12 = this.secondHandFeedNum;
         if (str12 != null) {
             i = str12.hashCode();
@@ -345,14 +345,14 @@ abstract class C$$AutoValue_MainSecondHandType extends MainSecondHandType {
         }
 
         @Override // com.coolapk.market.model.MainSecondHandType.Builder
-        public MainSecondHandType.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public MainSecondHandType.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.MainSecondHandType.Builder
-        public MainSecondHandType.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public MainSecondHandType.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

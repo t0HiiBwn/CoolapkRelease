@@ -59,7 +59,7 @@ public abstract class FeedAnswerViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedAnswerViewPartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (FeedAnswerViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558553, viewGroup, z, obj);
+        return (FeedAnswerViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558555, viewGroup, z, obj);
     }
 
     public static FeedAnswerViewPartBinding inflate(LayoutInflater layoutInflater) {
@@ -68,7 +68,7 @@ public abstract class FeedAnswerViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedAnswerViewPartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (FeedAnswerViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558553, null, false, obj);
+        return (FeedAnswerViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558555, null, false, obj);
     }
 
     public static FeedAnswerViewPartBinding bind(View view) {
@@ -77,6 +77,6 @@ public abstract class FeedAnswerViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedAnswerViewPartBinding bind(View view, Object obj) {
-        return (FeedAnswerViewPartBinding) bind(obj, view, 2131558553);
+        return (FeedAnswerViewPartBinding) bind(obj, view, 2131558555);
     }
 }

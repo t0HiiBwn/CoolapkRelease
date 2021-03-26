@@ -18,7 +18,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemGoodGoodsViewHolder.kt */
 public final class ItemGoodGoodsViewHolder extends GenericBindHolder<ItemGoodGoodsBinding, GoodsListItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558752;
+    public static final int LAYOUT_ID = 2131558759;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public ItemGoodGoodsViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -45,27 +45,27 @@ public final class ItemGoodGoodsViewHolder extends GenericBindHolder<ItemGoodGoo
         super.onClick(view);
         Intrinsics.checkNotNull(view);
         int id = view.getId();
-        String str = null;
-        if (id == 2131361981) {
-            Context context = getContext();
-            Intrinsics.checkNotNullExpressionValue(context, "context");
+        if (id == 2131361982) {
             ItemGoodGoodsBinding itemGoodGoodsBinding = (ItemGoodGoodsBinding) getBinding();
             Intrinsics.checkNotNullExpressionValue(itemGoodGoodsBinding, "binding");
             GoodsListItem model = itemGoodGoodsBinding.getModel();
             if (model != null) {
-                str = model.getGoodsUrl();
+                Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
+                ActionManagerCompat actionManagerCompat = ActionManagerCompat.INSTANCE;
+                Context context = getContext();
+                Intrinsics.checkNotNullExpressionValue(context, "context");
+                String mallName = model.getMallName();
+                String str = mallName != null ? mallName : "";
+                String goodsUrl = model.getGoodsUrl();
+                ActionManagerCompat.startFeedGoodsSellPage$default(actionManagerCompat, context, str, goodsUrl != null ? goodsUrl : "", 0, 8, null);
             }
-            ActionManagerCompat.startActivityByUrl$default(context, str, null, null, 12, null);
-        } else if (id == 2131362200) {
+        } else if (id == 2131362205) {
             Context context2 = getContext();
             Intrinsics.checkNotNullExpressionValue(context2, "context");
             ItemGoodGoodsBinding itemGoodGoodsBinding2 = (ItemGoodGoodsBinding) getBinding();
             Intrinsics.checkNotNullExpressionValue(itemGoodGoodsBinding2, "binding");
             GoodsListItem model2 = itemGoodGoodsBinding2.getModel();
-            if (model2 != null) {
-                str = model2.getUrl();
-            }
-            ActionManagerCompat.startActivityByUrl$default(context2, str, null, null, 12, null);
+            ActionManagerCompat.startActivityByUrl$default(context2, model2 != null ? model2.getUrl() : null, null, null, 12, null);
         }
     }
 

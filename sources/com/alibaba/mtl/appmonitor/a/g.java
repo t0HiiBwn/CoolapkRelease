@@ -41,22 +41,22 @@ public class g extends d {
         Metric metric = this.a;
         if (metric != null ? metric.valid(dimensionValueSet, measureValueSet) : false) {
             aVar.h();
-            aVar.m17a(measureValueSet);
+            aVar.m7a(measureValueSet);
         } else {
             aVar.i();
             if (this.a.isCommitDetail()) {
-                aVar.m17a(measureValueSet);
+                aVar.m7a(measureValueSet);
             }
         }
-        i.a("StatEvent", "entity  count:", Integer.valueOf(aVar.count), " noise:", Integer.valueOf(aVar.f1192l));
+        i.a("StatEvent", "entity  count:", Integer.valueOf(aVar.count), " noise:", Integer.valueOf(aVar.l));
     }
 
     @Override // com.alibaba.mtl.appmonitor.a.d
     /* renamed from: a */
-    public synchronized JSONObject mo13a() {
+    public synchronized JSONObject mo3a() {
         JSONObject a2;
         Set<String> keySet;
-        a2 = super.mo13a();
+        a2 = super.mo3a();
         try {
             Metric metric = this.a;
             if (metric != null) {
@@ -70,7 +70,7 @@ public class g extends d {
                     DimensionValueSet key = entry.getKey();
                     a value = entry.getValue();
                     Object valueOf = Integer.valueOf(value.count);
-                    Object valueOf2 = Integer.valueOf(value.f1192l);
+                    Object valueOf2 = Integer.valueOf(value.l);
                     jSONObject.put("count", valueOf);
                     jSONObject.put("noise", valueOf2);
                     jSONObject.put("dimensions", key != null ? new JSONObject(key.getMap()) : "");
@@ -123,15 +123,13 @@ public class g extends d {
     public class a {
         private List<MeasureValueSet> b = new ArrayList();
         private int count = 0;
-
-        /* renamed from: l  reason: collision with root package name */
-        private int f1192l = 0;
+        private int l = 0;
 
         public a() {
         }
 
         /* renamed from: a  reason: collision with other method in class */
-        public void m17a(MeasureValueSet measureValueSet) {
+        public void m7a(MeasureValueSet measureValueSet) {
             if (measureValueSet == null) {
                 return;
             }
@@ -198,7 +196,7 @@ public class g extends d {
         }
 
         public void i() {
-            this.f1192l++;
+            this.l++;
         }
     }
 }

@@ -54,7 +54,7 @@ public final class SecondHandAgreementDialogFragment extends BaseDialogFragment 
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558532, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558534, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…d_agreement, null, false)");
         DialogSecondHandAgreementBinding dialogSecondHandAgreementBinding = (DialogSecondHandAgreementBinding) inflate;
         this.binding = dialogSecondHandAgreementBinding;
@@ -141,7 +141,7 @@ public final class SecondHandAgreementDialogFragment extends BaseDialogFragment 
     public void onClick(View view) {
         Intrinsics.checkNotNull(view);
         int id = view.getId();
-        if (id == 2131362193) {
+        if (id == 2131362196) {
             Dialog dialog = getDialog();
             if (dialog != null) {
                 dialog.dismiss();
@@ -150,7 +150,7 @@ public final class SecondHandAgreementDialogFragment extends BaseDialogFragment 
             if (action1 != null && action1 != null) {
                 action1.call(0);
             }
-        } else if (id == 2131363457 && this.listener != null) {
+        } else if (id == 2131363475 && this.listener != null) {
             DialogSecondHandAgreementBinding dialogSecondHandAgreementBinding = this.binding;
             if (dialogSecondHandAgreementBinding == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");

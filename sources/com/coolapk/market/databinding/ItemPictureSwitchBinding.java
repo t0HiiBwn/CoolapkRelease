@@ -36,7 +36,7 @@ public abstract class ItemPictureSwitchBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPictureSwitchBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemPictureSwitchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558857, viewGroup, z, obj);
+        return (ItemPictureSwitchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558864, viewGroup, z, obj);
     }
 
     public static ItemPictureSwitchBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class ItemPictureSwitchBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPictureSwitchBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemPictureSwitchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558857, null, false, obj);
+        return (ItemPictureSwitchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558864, null, false, obj);
     }
 
     public static ItemPictureSwitchBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class ItemPictureSwitchBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPictureSwitchBinding bind(View view, Object obj) {
-        return (ItemPictureSwitchBinding) bind(obj, view, 2131558857);
+        return (ItemPictureSwitchBinding) bind(obj, view, 2131558864);
     }
 }

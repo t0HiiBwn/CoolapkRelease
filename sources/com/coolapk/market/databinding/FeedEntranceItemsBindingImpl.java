@@ -22,7 +22,7 @@ public class FeedEntranceItemsBindingImpl extends FeedEntranceItemsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 4);
+        sparseIntArray.put(2131363551, 4);
     }
 
     public FeedEntranceItemsBindingImpl(DataBindingComponent dataBindingComponent, View view) {

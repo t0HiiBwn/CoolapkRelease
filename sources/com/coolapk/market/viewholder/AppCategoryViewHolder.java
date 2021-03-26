@@ -17,7 +17,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: AppCategoryViewHolder.kt */
 public final class AppCategoryViewHolder extends GenericBindHolder<ItemMainCategoryDetailSBinding, AppCategory> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558819;
+    public static final int LAYOUT_ID = 2131558826;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public AppCategoryViewHolder(View view, DataBindingComponent dataBindingComponent) {
@@ -35,8 +35,8 @@ public final class AppCategoryViewHolder extends GenericBindHolder<ItemMainCateg
         itemMainCategoryDetailSBinding.setAppCategory(appCategory);
         itemMainCategoryDetailSBinding.childContainer.removeAllViews();
         for (String str : appCategory.getTagList()) {
-            View inflate = LayoutInflater.from(getContext()).inflate(2131558818, (ViewGroup) itemMainCategoryDetailSBinding.childContainer, false);
-            View findViewById = inflate.findViewById(2131363533);
+            View inflate = LayoutInflater.from(getContext()).inflate(2131558825, (ViewGroup) itemMainCategoryDetailSBinding.childContainer, false);
+            View findViewById = inflate.findViewById(2131363551);
             Objects.requireNonNull(findViewById, "null cannot be cast to non-null type android.widget.TextView");
             ((TextView) findViewById).setText(str);
             inflate.setOnClickListener(new AppCategoryViewHolder$bindToContent$2(this, appCategory, str));

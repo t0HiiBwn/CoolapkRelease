@@ -14,7 +14,7 @@ final class LiveDiscussPoll$launch$1<T, R> implements Func1<PushMessage, Boolean
     }
 
     public final Boolean call(PushMessage pushMessage) {
-        boolean z = this.this$0.isPolling.get();
+        boolean z = LiveDiscussPoll.access$isPolling$p(this.this$0).get();
         if (z) {
             LiveDiscussPollKt.liveDiscussPollLogD("轮询中，跳过请求API");
         }

@@ -22,7 +22,7 @@ final class CenterUserMenuPresenter$Companion$defaultActiveMenu$2 extends Lambda
         Intrinsics.checkNotNullParameter(list, "it");
         ArrayList arrayList = new ArrayList();
         for (T t : list) {
-            if (!CenterUserMenuPresenterKt.isAppType(t)) {
+            if (!CenterUserMenuPresenterKt.access$isAppType(t)) {
                 arrayList.add(t);
             }
         }

@@ -28,7 +28,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedSecondHandHeaderViewPart.kt */
 public final class FeedSecondHandHeaderViewPart extends BindingViewPart<ItemFeedSecondHandHeaderViewPartBinding, Feed> implements View.OnClickListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558724;
+    public static final int LAYOUT_ID = 2131558731;
     private final DataBindingComponent component;
     private Feed feed;
     private final List<String> list;
@@ -73,7 +73,7 @@ public final class FeedSecondHandHeaderViewPart extends BindingViewPart<ItemFeed
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedSecondHandHeaderViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558724, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558731, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemFeedSecondHandHeaderViewPartBinding) inflate;
     }
@@ -148,11 +148,11 @@ public final class FeedSecondHandHeaderViewPart extends BindingViewPart<ItemFeed
         textView10.setVisibility(TextUtils.isEmpty(secondHandInfo.getPrice()) ? 8 : 0);
         boolean z2 = UiUtils.getActivityNullable(getContext()) instanceof FeedDetailActivityV8;
         if (secondHandInfo.isXianyu()) {
-            i = 2131232047;
+            i = 2131232065;
         } else if (secondHandInfo.isZhuanzhuan()) {
-            i = 2131232049;
+            i = 2131232067;
         } else {
-            i = secondHandInfo.isJiaoYiMao() ? 2131231374 : 2131231788;
+            i = secondHandInfo.isJiaoYiMao() ? 2131231385 : 2131231799;
         }
         ((ItemFeedSecondHandHeaderViewPartBinding) getBinding()).signLink.setImageResource(i);
         TextView textView11 = ((ItemFeedSecondHandHeaderViewPartBinding) getBinding()).signLinkText;

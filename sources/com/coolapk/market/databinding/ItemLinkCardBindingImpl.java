@@ -26,7 +26,7 @@ public class ItemLinkCardBindingImpl extends ItemLinkCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363481, 1);
+        sparseIntArray.put(2131363499, 1);
     }
 
     public ItemLinkCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {

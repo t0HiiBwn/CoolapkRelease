@@ -21,7 +21,7 @@ public final class NinePicViewPart$onBindToContent$2 extends PausableTask {
 
     @Override // java.lang.Runnable
     public void run() {
-        int recycledViewPartCount = this.this$0.viewPool.getRecycledViewPartCount(2131558707);
+        int recycledViewPartCount = this.this$0.viewPool.getRecycledViewPartCount(2131558714);
         if (recycledViewPartCount < this.$requireCount) {
             ArrayList<ViewPart> arrayList = new ArrayList();
             int i = this.$requireCount - recycledViewPartCount;
@@ -33,7 +33,7 @@ public final class NinePicViewPart$onBindToContent$2 extends PausableTask {
                 checkNeedPause(false);
             }
             for (ViewPart viewPart : arrayList) {
-                this.this$0.viewPool.putRecycledViewPart(viewPart, 2131558707);
+                this.this$0.viewPool.putRecycledViewPart(viewPart, 2131558714);
             }
         }
     }

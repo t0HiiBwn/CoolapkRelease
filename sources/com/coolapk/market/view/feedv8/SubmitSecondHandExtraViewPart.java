@@ -51,12 +51,12 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SubmitSecondHandExtraViewPart.kt */
 public final class SubmitSecondHandExtraViewPart extends ViewPart {
     public static final Companion Companion = new Companion(null);
-    public static final int TYPE_LOCATION = 2131363444;
-    public static final int TYPE_SH_DEAL_TYPE = 2131363452;
-    public static final int TYPE_SH_OUT_LINK = 2131363446;
-    public static final int TYPE_SH_PARAMTER = 2131363448;
-    public static final int TYPE_SH_PRICE = 2131363450;
-    public static final int TYPE_SH_TYPE = 2131363454;
+    public static final int TYPE_LOCATION = 2131363462;
+    public static final int TYPE_SH_DEAL_TYPE = 2131363470;
+    public static final int TYPE_SH_OUT_LINK = 2131363464;
+    public static final int TYPE_SH_PARAMTER = 2131363466;
+    public static final int TYPE_SH_PRICE = 2131363468;
+    public static final int TYPE_SH_TYPE = 2131363472;
     private SubmitFeedV8Activity activity;
     private final SparseArray<SubmitSecondHandDealExtraChildBinding> bindingArray = new SparseArray<>();
     private LocationInfo locationInfo;
@@ -93,7 +93,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
     }
 
     private final SubmitSecondHandDealExtraChildBinding newSubmitSecondHandDealTypeExtraBinding(LinearLayout linearLayout) {
-        return (SubmitSecondHandDealExtraChildBinding) DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559169, linearLayout, false);
+        return (SubmitSecondHandDealExtraChildBinding) DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559177, linearLayout, false);
     }
 
     private final void setTint(SubmitSecondHandDealExtraChildBinding submitSecondHandDealExtraChildBinding, int i) {
@@ -121,7 +121,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
         Objects.requireNonNull(view, "null cannot be cast to non-null type android.widget.LinearLayout");
         LinearLayout linearLayout = (LinearLayout) view;
         SubmitFeedV8Activity submitFeedV8Activity2 = submitFeedV8Activity;
-        linearLayout.addView(newSmallDividerView(submitFeedV8Activity2, 2131363456));
+        linearLayout.addView(newSmallDividerView(submitFeedV8Activity2, 2131363474));
         boolean isLocationViewVisible = submitFeedV8Activity.getUiConfig().isLocationViewVisible();
         boolean isSecondHandViewVisible = submitFeedV8Activity.getUiConfig().isSecondHandViewVisible();
         if (isLocationViewVisible) {
@@ -130,11 +130,11 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
             newSubmitSecondHandDealTypeExtraBinding.setClick(this);
             View root = newSubmitSecondHandDealTypeExtraBinding.getRoot();
             Intrinsics.checkNotNullExpressionValue(root, "binding.root");
-            root.setId(2131363444);
-            this.bindingArray.put(2131363444, newSubmitSecondHandDealTypeExtraBinding);
+            root.setId(2131363462);
+            this.bindingArray.put(2131363462, newSubmitSecondHandDealTypeExtraBinding);
             linearLayout.addView(newSubmitSecondHandDealTypeExtraBinding.getRoot());
             updateLocationInfo();
-            View newSmallDividerView = newSmallDividerView(submitFeedV8Activity2, 2131363443);
+            View newSmallDividerView = newSmallDividerView(submitFeedV8Activity2, 2131363461);
             ViewGroup.LayoutParams layoutParams = newSmallDividerView.getLayoutParams();
             if (!(layoutParams instanceof LinearLayout.LayoutParams)) {
                 layoutParams = null;
@@ -149,10 +149,10 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
             linearLayout.addView(newSmallDividerView);
         }
         if (isSecondHandViewVisible) {
-            buildSecondHandInfo(linearLayout, 2131363450, 1.0f);
-            buildSecondHandInfo(linearLayout, 2131363454, 1.0f);
-            buildSecondHandInfo(linearLayout, 2131363448, 1.0f);
-            buildSecondHandInfo(linearLayout, 2131363446, 56.0f);
+            buildSecondHandInfo(linearLayout, 2131363468, 1.0f);
+            buildSecondHandInfo(linearLayout, 2131363472, 1.0f);
+            buildSecondHandInfo(linearLayout, 2131363466, 1.0f);
+            buildSecondHandInfo(linearLayout, 2131363464, 56.0f);
         }
     }
 
@@ -168,27 +168,27 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
         linearLayout.addView(newSubmitSecondHandDealTypeExtraBinding.getRoot());
         int i3 = 0;
         switch (i) {
-            case 2131363446:
-                i2 = 2131363445;
+            case 2131363464:
+                i2 = 2131363463;
                 break;
-            case 2131363447:
-            case 2131363449:
-            case 2131363451:
-            case 2131363453:
+            case 2131363465:
+            case 2131363467:
+            case 2131363469:
+            case 2131363471:
             default:
                 i2 = 0;
                 break;
-            case 2131363448:
-                i2 = 2131363447;
+            case 2131363466:
+                i2 = 2131363465;
                 break;
-            case 2131363450:
-                i2 = 2131363449;
+            case 2131363468:
+                i2 = 2131363467;
                 break;
-            case 2131363452:
-                i2 = 2131363451;
+            case 2131363470:
+                i2 = 2131363469;
                 break;
-            case 2131363454:
-                i2 = 2131363453;
+            case 2131363472:
+                i2 = 2131363471;
                 break;
         }
         updateSecondHandInfo(i);
@@ -310,10 +310,10 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
             }
             checkedTextView.setSelected(z);
         }
-        updateSecondHandInfo(2131363446);
-        updateSecondHandInfo(2131363450);
-        updateSecondHandInfo(2131363448);
-        updateSecondHandInfo(2131363454);
+        updateSecondHandInfo(2131363464);
+        updateSecondHandInfo(2131363468);
+        updateSecondHandInfo(2131363466);
+        updateSecondHandInfo(2131363472);
     }
 
     /* access modifiers changed from: private */
@@ -390,21 +390,21 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
         Intrinsics.checkNotNullParameter(view, "v");
         super.onClick(view);
         switch (view.getId()) {
-            case 2131363444:
+            case 2131363462:
                 onRequestLocation();
                 return;
-            case 2131363445:
-            case 2131363447:
-            case 2131363449:
-            case 2131363451:
-            case 2131363453:
+            case 2131363463:
+            case 2131363465:
+            case 2131363467:
+            case 2131363469:
+            case 2131363471:
             default:
                 return;
-            case 2131363446:
-            case 2131363448:
-            case 2131363450:
-            case 2131363452:
-            case 2131363454:
+            case 2131363464:
+            case 2131363466:
+            case 2131363468:
+            case 2131363470:
+            case 2131363472:
                 onRequestSecondHand(view.getId());
                 return;
         }
@@ -487,12 +487,12 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                 Intrinsics.checkNotNullExpressionValue(build4, "builder.build()");
                 submitFeedV8Activity8.updateMultiPart(build4);
             }
-            updateSecondHandInfo(2131363448);
+            updateSecondHandInfo(2131363466);
         }
     }
 
     public final void updataSecondParams() {
-        updateSecondHandInfo(2131363448);
+        updateSecondHandInfo(2131363466);
     }
 
     private final void onRequestLocation() {
@@ -554,10 +554,10 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
     }
 
     private final void updateLocationInfo() {
-        SubmitSecondHandDealExtraChildBinding submitSecondHandDealExtraChildBinding = this.bindingArray.get(2131363444);
+        SubmitSecondHandDealExtraChildBinding submitSecondHandDealExtraChildBinding = this.bindingArray.get(2131363462);
         if (submitSecondHandDealExtraChildBinding != null) {
             SubmitSecondHandDealExtraChildBinding submitSecondHandDealExtraChildBinding2 = submitSecondHandDealExtraChildBinding;
-            submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231418);
+            submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231429);
             TextView textView = submitSecondHandDealExtraChildBinding2.descriptionView;
             Intrinsics.checkNotNullExpressionValue(textView, "binding.descriptionView");
             textView.setText("");
@@ -571,8 +571,8 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                 if (submitFeedV8Activity2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("activity");
                 }
-                setTint(submitSecondHandDealExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity2, 2131099891));
-                submitSecondHandDealExtraChildBinding2.titleView.setText(2131887172);
+                setTint(submitSecondHandDealExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity2, 2131099896));
+                submitSecondHandDealExtraChildBinding2.titleView.setText(2131887234);
                 return;
             }
             setTint(submitSecondHandDealExtraChildBinding2, AppHolder.getAppTheme().getColorAccent());
@@ -651,11 +651,11 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
             int i4 = 8;
             String str = "";
             switch (i) {
-                case 2131363446:
+                case 2131363464:
                     TextView textView = submitSecondHandDealExtraChildBinding2.titleView;
                     Intrinsics.checkNotNullExpressionValue(textView, "binding.titleView");
                     textView.setText("商品链接");
-                    submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231401);
+                    submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231412);
                     TextView textView2 = submitSecondHandDealExtraChildBinding2.descriptionView;
                     Intrinsics.checkNotNullExpressionValue(textView2, "binding.descriptionView");
                     textView2.setText(!TextUtils.isEmpty(uiConfig.secondHandOutLink()) ? "已填写" : str);
@@ -664,7 +664,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                     linearLayout.setVisibility(uiConfig.secondHandDealType() == 1 ? 8 : 0);
                     View view = getView();
                     Objects.requireNonNull(view, "null cannot be cast to non-null type android.widget.LinearLayout");
-                    View findViewById = ((LinearLayout) view).findViewById(2131363445);
+                    View findViewById = ((LinearLayout) view).findViewById(2131363463);
                     if (findViewById != null) {
                         if (uiConfig.showParamsItem()) {
                             i4 = 0;
@@ -677,15 +677,15 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                         if (submitFeedV8Activity5 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("activity");
                         }
-                        setTint(submitSecondHandDealExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity5, 2131099891));
+                        setTint(submitSecondHandDealExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity5, 2131099896));
                         return;
                     }
                     setTint(submitSecondHandDealExtraChildBinding2, AppHolder.getAppTheme().getColorAccent());
                     return;
-                case 2131363447:
-                case 2131363449:
-                case 2131363451:
-                case 2131363453:
+                case 2131363465:
+                case 2131363467:
+                case 2131363469:
+                case 2131363471:
                 default:
                     TextView textView3 = submitSecondHandDealExtraChildBinding2.titleView;
                     Intrinsics.checkNotNullExpressionValue(textView3, "binding.titleView");
@@ -695,7 +695,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                     Intrinsics.checkNotNullExpressionValue(textView4, "binding.descriptionView");
                     textView4.setText(str);
                     return;
-                case 2131363448:
+                case 2131363466:
                     LinearLayout linearLayout2 = submitSecondHandDealExtraChildBinding2.itemView;
                     Intrinsics.checkNotNullExpressionValue(linearLayout2, "binding.itemView");
                     linearLayout2.setClickable(uiConfig.showParamsItem());
@@ -704,7 +704,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                     linearLayout3.setVisibility(uiConfig.showParamsItem() ? 0 : 8);
                     View view2 = getView();
                     Objects.requireNonNull(view2, "null cannot be cast to non-null type android.widget.LinearLayout");
-                    View findViewById2 = ((LinearLayout) view2).findViewById(2131363447);
+                    View findViewById2 = ((LinearLayout) view2).findViewById(2131363465);
                     if (findViewById2 != null) {
                         if (!uiConfig.showParamsItem()) {
                             i3 = 8;
@@ -715,7 +715,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                     TextView textView5 = submitSecondHandDealExtraChildBinding2.titleView;
                     Intrinsics.checkNotNullExpressionValue(textView5, "binding.titleView");
                     textView5.setText(str2);
-                    submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231173);
+                    submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231184);
                     TextView textView6 = submitSecondHandDealExtraChildBinding2.descriptionView;
                     Intrinsics.checkNotNullExpressionValue(textView6, "binding.descriptionView");
                     String productConfigShowText = uiConfig.productConfigShowText();
@@ -730,7 +730,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                         if (submitFeedV8Activity6 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("activity");
                         }
-                        setTint(submitSecondHandDealExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity6, 2131099891));
+                        setTint(submitSecondHandDealExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity6, 2131099896));
                     }
                     if (!TextUtils.isEmpty(uiConfig.productConfigShowText())) {
                         i2 = AppHolder.getAppTheme().getColorAccent();
@@ -741,11 +741,11 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                         if (submitFeedV8Activity7 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("activity");
                         }
-                        i2 = ResourceUtils.getColorInt(submitFeedV8Activity7, 2131099891);
+                        i2 = ResourceUtils.getColorInt(submitFeedV8Activity7, 2131099896);
                     }
                     setTint(submitSecondHandDealExtraChildBinding2, i2);
                     return;
-                case 2131363450:
+                case 2131363468:
                     int secondHandDealType = uiConfig.secondHandDealType();
                     String str3 = "开个价";
                     if (secondHandDealType != 0) {
@@ -761,7 +761,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                     TextView textView8 = submitSecondHandDealExtraChildBinding2.descriptionView;
                     Intrinsics.checkNotNullExpressionValue(textView8, "binding.descriptionView");
                     textView8.setVisibility(0);
-                    submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231238);
+                    submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231249);
                     String secondHandPrice = uiConfig.secondHandPrice();
                     if (secondHandPrice == null) {
                         secondHandPrice = str;
@@ -785,12 +785,12 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                         if (submitFeedV8Activity8 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("activity");
                         }
-                        setTint(submitSecondHandDealExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity8, 2131099891));
+                        setTint(submitSecondHandDealExtraChildBinding2, ResourceUtils.getColorInt(submitFeedV8Activity8, 2131099896));
                         return;
                     }
                     setTint(submitSecondHandDealExtraChildBinding2, AppHolder.getAppTheme().getColorAccent());
                     return;
-                case 2131363452:
+                case 2131363470:
                     LinearLayout linearLayout4 = submitSecondHandDealExtraChildBinding2.itemView;
                     Intrinsics.checkNotNullExpressionValue(linearLayout4, "binding.itemView");
                     linearLayout4.setBackground(null);
@@ -798,7 +798,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                     LinearLayout linearLayout5 = submitSecondHandDealExtraChildBinding2.switchContainer;
                     Intrinsics.checkNotNullExpressionValue(linearLayout5, "binding.switchContainer");
                     linearLayout5.setVisibility(0);
-                    submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231596);
+                    submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231607);
                     TextView textView10 = submitSecondHandDealExtraChildBinding2.titleView;
                     Intrinsics.checkNotNullExpressionValue(textView10, "binding.titleView");
                     textView10.setText("交易类型");
@@ -820,7 +820,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                     submitSecondHandDealExtraChildBinding2.titleView.setTextColor(colorAccent);
                     updateSecondHandDealType(uiConfig.secondHandDealType(), submitSecondHandDealExtraChildBinding2);
                     return;
-                case 2131363454:
+                case 2131363472:
                     LinearLayout linearLayout6 = submitSecondHandDealExtraChildBinding2.itemView;
                     Intrinsics.checkNotNullExpressionValue(linearLayout6, "binding.itemView");
                     linearLayout6.setBackground(null);
@@ -828,7 +828,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                     LinearLayout linearLayout7 = submitSecondHandDealExtraChildBinding2.switchContainer;
                     Intrinsics.checkNotNullExpressionValue(linearLayout7, "binding.switchContainer");
                     linearLayout7.setVisibility(0);
-                    submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231357);
+                    submitSecondHandDealExtraChildBinding2.imageView.setImageResource(2131231368);
                     TextView textView12 = submitSecondHandDealExtraChildBinding2.titleView;
                     Intrinsics.checkNotNullExpressionValue(textView12, "binding.titleView");
                     textView12.setText("我的身份");
@@ -854,7 +854,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                     if (submitFeedV8Activity9 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("activity");
                     }
-                    int colorInt = ResourceUtils.getColorInt(submitFeedV8Activity9, 2131099891);
+                    int colorInt = ResourceUtils.getColorInt(submitFeedV8Activity9, 2131099896);
                     submitSecondHandDealExtraChildBinding2.arrowView.setColorFilter(colorInt, PorterDuff.Mode.SRC_IN);
                     submitSecondHandDealExtraChildBinding2.imageView.setColorFilter(colorInt, PorterDuff.Mode.SRC_IN);
                     submitSecondHandDealExtraChildBinding2.titleView.setTextColor(colorInt);
@@ -865,9 +865,9 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
     }
 
     private final void onRequestSecondHand(int i) {
-        if (i != 2131363446) {
+        if (i != 2131363464) {
             boolean z = true;
-            if (i == 2131363448) {
+            if (i == 2131363466) {
                 SubmitFeedV8Activity submitFeedV8Activity = this.activity;
                 if (submitFeedV8Activity == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("activity");
@@ -909,7 +909,7 @@ public final class SubmitSecondHandExtraViewPart extends ViewPart {
                     Intrinsics.throwUninitializedPropertyAccessException("activity");
                 }
                 ActionManager.startSelectParamsAction(submitFeedV8Activity7, multiPart.productId(), multiPart.secondHandSthType(), arrayList, String.valueOf(uiConfig.secondHandDealType()));
-            } else if (i == 2131363450) {
+            } else if (i == 2131363468) {
                 SubmitFeedV8Activity submitFeedV8Activity8 = this.activity;
                 if (submitFeedV8Activity8 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("activity");

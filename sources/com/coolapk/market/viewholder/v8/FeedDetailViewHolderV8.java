@@ -51,7 +51,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedDetailViewHolderV8.kt */
 public final class FeedDetailViewHolderV8 extends GenericBindHolder<ItemFeedDetailViewV8Binding, HolderItem> implements RVStateEventChangedAdapter.IStateViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558696;
+    public static final int LAYOUT_ID = 2131558703;
     private final Lazy extraEntityViewPart$delegate;
     private final Lazy extraTypeViewPart$delegate;
     private Feed feed;
@@ -221,7 +221,7 @@ public final class FeedDetailViewHolderV8 extends GenericBindHolder<ItemFeedDeta
             TextView textView3 = itemFeedDetailViewV8Binding.titleTagView;
             Intrinsics.checkNotNullExpressionValue(textView3, "binding.titleTagView");
             textView3.setText(secondHandInfo.getStoreTypeText());
-            int colorInt = ResourceUtils.getColorInt(getContext(), 2131100035);
+            int colorInt = ResourceUtils.getColorInt(getContext(), 2131100040);
             int colorInt2 = ResourceUtils.getColorInt(getContext(), 2131099687);
             if (!z2) {
                 colorInt = colorInt2;

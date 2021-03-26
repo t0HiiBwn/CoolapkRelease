@@ -18,11 +18,11 @@ final class ImageModeDialog$onCreateDialog$4 implements RadioGroup.OnCheckedChan
 
     @Override // android.widget.RadioGroup.OnCheckedChangeListener
     public final void onCheckedChanged(RadioGroup radioGroup, int i) {
-        if (i == 2131363167) {
+        if (i == 2131363181) {
             this.$value.element = "AUTO";
-        } else if (i == 2131363175) {
+        } else if (i == 2131363189) {
             this.$value.element = "SOURCE";
-        } else if (i == 2131363178) {
+        } else if (i == 2131363192) {
             this.$value.element = "NORMAL";
         }
         DataManager instance = DataManager.getInstance();

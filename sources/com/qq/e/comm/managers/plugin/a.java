@@ -36,7 +36,7 @@ public class a {
             if (str2 == null) {
                 str2 = "";
             }
-            StringUtil.writeTo("1202#####" + str2, file2);
+            StringUtil.writeTo("1203#####" + str2, file2);
             if (StringUtil.isEmpty(CustomPkgConstants.getAssetPluginXorKey())) {
                 return FileUtil.copyTo(assets.open(str), file);
             }

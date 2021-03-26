@@ -34,11 +34,11 @@ final class FeedArticleAnswerDetailFragment$setupCommentBar$1 extends Lambda imp
         Activity currentActivity;
         Intrinsics.checkNotNullParameter(view, "v");
         int id = view.getId();
-        if (id == 2131362284) {
+        if (id == 2131362289) {
             ActionManager.startFeedCommentActivity(this.this$0.getActivity(), this.this$0.getFeed$presentation_coolapkAppRelease().getId(), this.this$0.getFeed$presentation_coolapkAppRelease().getUserName());
-        } else if (id == 2131362291) {
+        } else if (id == 2131362296) {
             this.this$0.scrollToCommentPosition();
-        } else if (id == 2131362851 && (currentActivity = AppHolder.getCurrentActivity()) != null) {
+        } else if (id == 2131362862 && (currentActivity = AppHolder.getCurrentActivity()) != null) {
             Boolean checkLogin = ActionManager.checkLogin(currentActivity);
             Intrinsics.checkNotNullExpressionValue(checkLogin, "ActionManager.checkLogin(it)");
             if (checkLogin.booleanValue()) {

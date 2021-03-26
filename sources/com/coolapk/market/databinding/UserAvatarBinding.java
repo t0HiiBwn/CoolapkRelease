@@ -33,7 +33,7 @@ public abstract class UserAvatarBinding extends ViewDataBinding {
 
     @Deprecated
     public static UserAvatarBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (UserAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559280, viewGroup, z, obj);
+        return (UserAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559290, viewGroup, z, obj);
     }
 
     public static UserAvatarBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class UserAvatarBinding extends ViewDataBinding {
 
     @Deprecated
     public static UserAvatarBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (UserAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559280, null, false, obj);
+        return (UserAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559290, null, false, obj);
     }
 
     public static UserAvatarBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class UserAvatarBinding extends ViewDataBinding {
 
     @Deprecated
     public static UserAvatarBinding bind(View view, Object obj) {
-        return (UserAvatarBinding) bind(obj, view, 2131559280);
+        return (UserAvatarBinding) bind(obj, view, 2131559290);
     }
 }

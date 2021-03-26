@@ -24,9 +24,9 @@ public class ItemBlockHeaderBindingImpl extends ItemBlockHeaderBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362123, 1);
-        sparseIntArray.put(2131362124, 2);
-        sparseIntArray.put(2131362122, 3);
+        sparseIntArray.put(2131362126, 1);
+        sparseIntArray.put(2131362127, 2);
+        sparseIntArray.put(2131362125, 3);
     }
 
     public ItemBlockHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {

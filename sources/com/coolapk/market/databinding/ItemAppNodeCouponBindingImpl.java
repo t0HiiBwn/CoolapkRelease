@@ -125,10 +125,10 @@ public class ItemAppNodeCouponBindingImpl extends ItemAppNodeCouponBinding {
             }
             if (z) {
                 resources = this.fetchCouponTextView.getResources();
-                i = 2131886823;
+                i = 2131886885;
             } else {
                 resources = this.fetchCouponTextView.getResources();
-                i = 2131886821;
+                i = 2131886883;
             }
             str3 = resources.getString(i);
         } else {

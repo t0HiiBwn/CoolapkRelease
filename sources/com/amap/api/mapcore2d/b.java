@@ -275,9 +275,7 @@ class b extends View implements GestureDetector.OnDoubleTapListener, GestureDete
             }
         }
     };
-
-    /* renamed from: l  reason: collision with root package name */
-    int f1221l = 0;
+    int l = 0;
     float m = -1.0f;
     private Context n;
     private boolean o = false;
@@ -2180,7 +2178,7 @@ class b extends View implements GestureDetector.OnDoubleTapListener, GestureDete
     public void a(int i2, int i3, s sVar) {
         PointF pointF = new PointF((float) i2, (float) i3);
         av avVar = this.O;
-        w a2 = avVar.a(pointF, avVar.f1218l, this.O.n, this.O.k, this.O.o);
+        w a2 = avVar.a(pointF, avVar.l, this.O.n, this.O.k, this.O.o);
         if (sVar != null) {
             double a3 = r.a((long) a2.b());
             double a4 = r.a((long) a2.a());
@@ -2193,7 +2191,7 @@ class b extends View implements GestureDetector.OnDoubleTapListener, GestureDete
         getZoomLevel();
         PointF pointF = new PointF((float) i2, (float) i3);
         av avVar = this.O;
-        w a2 = avVar.a(pointF, avVar.f1218l, this.O.n, this.O.k, this.O.o);
+        w a2 = avVar.a(pointF, avVar.l, this.O.n, this.O.k, this.O.o);
         if (aeVar != null) {
             aeVar.a = (int) a2.e();
             aeVar.b = (int) a2.f();
@@ -2205,7 +2203,7 @@ class b extends View implements GestureDetector.OnDoubleTapListener, GestureDete
         getZoomLevel();
         w wVar = new w((int) r.a(d2), (int) r.a(d3));
         av avVar = this.O;
-        PointF b2 = avVar.b(wVar, avVar.f1218l, this.O.n, this.O.k);
+        PointF b2 = avVar.b(wVar, avVar.l, this.O.n, this.O.k);
         if (sVar != null) {
             sVar.a = (double) b2.x;
             sVar.b = (double) b2.y;
@@ -2236,7 +2234,7 @@ class b extends View implements GestureDetector.OnDoubleTapListener, GestureDete
             getZoomLevel();
             w wVar = new w((int) r.a(d2), (int) r.a(d3));
             av avVar = this.O;
-            PointF b2 = avVar.b(wVar, avVar.f1218l, this.O.n, this.O.k);
+            PointF b2 = avVar.b(wVar, avVar.l, this.O.n, this.O.k);
             if (aeVar != null) {
                 aeVar.a = (int) b2.x;
                 aeVar.b = (int) b2.y;

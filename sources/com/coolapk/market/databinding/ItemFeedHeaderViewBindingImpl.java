@@ -12,7 +12,6 @@ import androidx.databinding.adapters.TextViewBindingAdapter;
 import androidx.lifecycle.LifecycleOwner;
 import com.coolapk.market.binding.ImageViewBindingAdapters;
 import com.coolapk.market.binding.TextViewBindingAdapters;
-import com.coolapk.market.binding.ThemeBindingAdapters;
 import com.coolapk.market.binding.ViewBindingAdapters;
 import com.coolapk.market.model.Feed;
 import com.coolapk.market.model.UserInfo;
@@ -31,10 +30,10 @@ public class ItemFeedHeaderViewBindingImpl extends ItemFeedHeaderViewBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(13);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"feed_top", "feed_warning"}, new int[]{10, 11}, new int[]{2131558562, 2131558563});
+        includedLayouts.setIncludes(0, new String[]{"feed_top", "feed_warning"}, new int[]{10, 11}, new int[]{2131558565, 2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363605, 12);
+        sparseIntArray.put(2131363627, 12);
     }
 
     public ItemFeedHeaderViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -93,7 +92,7 @@ public class ItemFeedHeaderViewBindingImpl extends ItemFeedHeaderViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -109,7 +108,7 @@ public class ItemFeedHeaderViewBindingImpl extends ItemFeedHeaderViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -252,7 +251,7 @@ public class ItemFeedHeaderViewBindingImpl extends ItemFeedHeaderViewBinding {
             str = null;
         }
         int i10 = ((j & 24) > 0 ? 1 : ((j & 24) == 0 ? 0 : -1));
-        if ((20 & j) != 0) {
+        if ((j & 20) != 0) {
             this.fromWhereView.setVisibility(i3);
             TextViewBindingAdapter.setText(this.mboundView4, str4);
             this.mboundView4.setVisibility(i4);
@@ -264,7 +263,7 @@ public class ItemFeedHeaderViewBindingImpl extends ItemFeedHeaderViewBinding {
             TextViewBindingAdapters.setDatelineByEntity(this.timeView, feed);
             bool = null;
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, null, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, null, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str3, bool2);
         } else {
             bool = null;
@@ -275,9 +274,6 @@ public class ItemFeedHeaderViewBindingImpl extends ItemFeedHeaderViewBinding {
             ViewBindingAdapters.clickListener(this.modifyView, onClickListener, bool3);
             ViewBindingAdapters.clickListener(this.moreView, onClickListener, bool3);
             ViewBindingAdapters.clickListener(this.userAvatarView, onClickListener, bool3);
-        }
-        if ((j & 16) != 0) {
-            ThemeBindingAdapters.setTextColor(this.modifyView, "colorAccent");
         }
         executeBindingsOn(this.topView);
         executeBindingsOn(this.alertView);

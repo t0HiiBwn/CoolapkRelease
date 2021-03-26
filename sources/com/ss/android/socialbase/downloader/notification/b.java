@@ -76,9 +76,9 @@ public class b {
         if (L != null && i != 0 && notification != null) {
             if (i2 == 4) {
                 synchronized (this.b) {
-                    Long l2 = this.b.get(Integer.valueOf(i));
+                    Long l = this.b.get(Integer.valueOf(i));
                     long currentTimeMillis = System.currentTimeMillis();
-                    if (l2 == null || Math.abs(currentTimeMillis - l2.longValue()) >= 1000) {
+                    if (l == null || Math.abs(currentTimeMillis - l.longValue()) >= 1000) {
                         this.b.put(Integer.valueOf(i), Long.valueOf(currentTimeMillis));
                     } else {
                         return;

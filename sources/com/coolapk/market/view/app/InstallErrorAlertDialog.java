@@ -53,7 +53,7 @@ public class InstallErrorAlertDialog extends BaseDialogFragment {
                     super.setShowsDialog(false);
                     return builder.create();
                 case -7:
-                    builder.setMessage(getString(2131887208, string, installState.getErrorMessage().split(",")[1].split(":")[1].trim()));
+                    builder.setMessage(getString(2131887270, string, installState.getErrorMessage().split(",")[1].split(":")[1].trim()));
                     builder.setPositiveButton(2131886129, new DialogInterface.OnClickListener() {
                         /* class com.coolapk.market.view.app.InstallErrorAlertDialog.AnonymousClass9 */
 
@@ -76,7 +76,7 @@ public class InstallErrorAlertDialog extends BaseDialogFragment {
                     if (!TextUtils.isEmpty(trim2)) {
                         trim = trim2 + "(" + trim + ")";
                     }
-                    builder.setMessage(getString(2131887199, trim, string + "(" + string2 + ")"));
+                    builder.setMessage(getString(2131887261, trim, string + "(" + string2 + ")"));
                     builder.setPositiveButton(2131886129, new DialogInterface.OnClickListener() {
                         /* class com.coolapk.market.view.app.InstallErrorAlertDialog.AnonymousClass7 */
 
@@ -94,7 +94,7 @@ public class InstallErrorAlertDialog extends BaseDialogFragment {
                     });
                     break;
                 case -5:
-                    builder.setMessage(getString(2131887198, string));
+                    builder.setMessage(getString(2131887260, string));
                     builder.setPositiveButton(2131886129, new DialogInterface.OnClickListener() {
                         /* class com.coolapk.market.view.app.InstallErrorAlertDialog.AnonymousClass3 */
 
@@ -112,8 +112,8 @@ public class InstallErrorAlertDialog extends BaseDialogFragment {
                     });
                     break;
                 case -4:
-                    builder.setMessage(getString(2131886728, string));
-                    builder.setNegativeButton(2131886729, new DialogInterface.OnClickListener(string2, string, installState) {
+                    builder.setMessage(getString(2131886790, string));
+                    builder.setNegativeButton(2131886791, new DialogInterface.OnClickListener(string2, string, installState) {
                         /* class com.coolapk.market.view.app.$$Lambda$InstallErrorAlertDialog$HFhhsocTwPOAWxSb4JS4IEmmKU */
                         public final /* synthetic */ String f$1;
                         public final /* synthetic */ String f$2;
@@ -130,7 +130,7 @@ public class InstallErrorAlertDialog extends BaseDialogFragment {
                             InstallErrorAlertDialog.this.lambda$onCreateDialog$0$InstallErrorAlertDialog(this.f$1, this.f$2, this.f$3, dialogInterface, i);
                         }
                     });
-                    builder.setPositiveButton(2131886727, new DialogInterface.OnClickListener(installState) {
+                    builder.setPositiveButton(2131886789, new DialogInterface.OnClickListener(installState) {
                         /* class com.coolapk.market.view.app.$$Lambda$InstallErrorAlertDialog$VsP2XsNzca_nfoWTgj6YGjhl6p8 */
                         public final /* synthetic */ InstallState f$1;
 
@@ -143,10 +143,10 @@ public class InstallErrorAlertDialog extends BaseDialogFragment {
                             InstallErrorAlertDialog.this.lambda$onCreateDialog$1$InstallErrorAlertDialog(this.f$1, dialogInterface, i);
                         }
                     });
-                    builder.setNeutralButton(2131886726, $$Lambda$InstallErrorAlertDialog$MpH7oJ2Tj1aitTgv6IfLixWA9Q.INSTANCE);
+                    builder.setNeutralButton(2131886788, $$Lambda$InstallErrorAlertDialog$MpH7oJ2Tj1aitTgv6IfLixWA9Q.INSTANCE);
                     break;
                 case -3:
-                    builder.setMessage(getString(2131887200, string));
+                    builder.setMessage(getString(2131887262, string));
                     builder.setPositiveButton(2131886129, new DialogInterface.OnClickListener() {
                         /* class com.coolapk.market.view.app.InstallErrorAlertDialog.AnonymousClass5 */
 
@@ -164,7 +164,7 @@ public class InstallErrorAlertDialog extends BaseDialogFragment {
                     });
                     break;
                 case -2:
-                    builder.setMessage(getString(2131887197, string));
+                    builder.setMessage(getString(2131887259, string));
                     builder.setPositiveButton(2131886129, new DialogInterface.OnClickListener() {
                         /* class com.coolapk.market.view.app.InstallErrorAlertDialog.AnonymousClass1 */
 
@@ -182,7 +182,7 @@ public class InstallErrorAlertDialog extends BaseDialogFragment {
                     });
                     break;
                 default:
-                    builder.setMessage(getString(2131887207, string));
+                    builder.setMessage(getString(2131887269, string));
                     builder.setPositiveButton(2131886129, new DialogInterface.OnClickListener() {
                         /* class com.coolapk.market.view.app.InstallErrorAlertDialog.AnonymousClass11 */
 

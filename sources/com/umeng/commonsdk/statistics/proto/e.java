@@ -31,8 +31,8 @@ import java.util.Iterator;
 import java.util.Map;
 
 /* compiled from: ImprintValue */
-public class e implements bi<e, EnumC0155e>, Serializable, Cloneable {
-    public static final Map<EnumC0155e, bu> d;
+public class e implements bi<e, EnumC0182e>, Serializable, Cloneable {
+    public static final Map<EnumC0182e, bu> d;
     private static final long e = 7501688097813630241L;
     private static final cm f = new cm("ImprintValue");
     private static final cc g = new cc("value", (byte) 11, 1);
@@ -43,45 +43,43 @@ public class e implements bi<e, EnumC0155e>, Serializable, Cloneable {
     public String a;
     public long b;
     public String c;
-
-    /* renamed from: l  reason: collision with root package name */
-    private byte f1495l;
-    private EnumC0155e[] m;
+    private byte l;
+    private EnumC0182e[] m;
 
     static {
         HashMap hashMap = new HashMap();
         j = hashMap;
         hashMap.put(cr.class, new b());
         hashMap.put(cs.class, new d());
-        EnumMap enumMap = new EnumMap(EnumC0155e.class);
-        enumMap.put((EnumMap) EnumC0155e.VALUE, (EnumC0155e) new bu("value", (byte) 2, new bv((byte) 11)));
-        enumMap.put((EnumMap) EnumC0155e.TS, (EnumC0155e) new bu("ts", (byte) 1, new bv((byte) 10)));
-        enumMap.put((EnumMap) EnumC0155e.GUID, (EnumC0155e) new bu("guid", (byte) 1, new bv((byte) 11)));
-        Map<EnumC0155e, bu> unmodifiableMap = Collections.unmodifiableMap(enumMap);
+        EnumMap enumMap = new EnumMap(EnumC0182e.class);
+        enumMap.put((EnumMap) EnumC0182e.VALUE, (EnumC0182e) new bu("value", (byte) 2, new bv((byte) 11)));
+        enumMap.put((EnumMap) EnumC0182e.TS, (EnumC0182e) new bu("ts", (byte) 1, new bv((byte) 10)));
+        enumMap.put((EnumMap) EnumC0182e.GUID, (EnumC0182e) new bu("guid", (byte) 1, new bv((byte) 11)));
+        Map<EnumC0182e, bu> unmodifiableMap = Collections.unmodifiableMap(enumMap);
         d = unmodifiableMap;
         bu.a(e.class, unmodifiableMap);
     }
 
     /* renamed from: com.umeng.commonsdk.statistics.proto.e$e  reason: collision with other inner class name */
     /* compiled from: ImprintValue */
-    public enum EnumC0155e implements bp {
+    public enum EnumC0182e implements bp {
         VALUE(1, "value"),
         TS(2, "ts"),
         GUID(3, "guid");
         
-        private static final Map<String, EnumC0155e> d = new HashMap();
+        private static final Map<String, EnumC0182e> d = new HashMap();
         private final short e;
         private final String f;
 
         static {
-            Iterator it2 = EnumSet.allOf(EnumC0155e.class).iterator();
+            Iterator it2 = EnumSet.allOf(EnumC0182e.class).iterator();
             while (it2.hasNext()) {
-                EnumC0155e eVar = (EnumC0155e) it2.next();
+                EnumC0182e eVar = (EnumC0182e) it2.next();
                 d.put(eVar.b(), eVar);
             }
         }
 
-        public static EnumC0155e a(int i) {
+        public static EnumC0182e a(int i) {
             if (i == 1) {
                 return VALUE;
             }
@@ -94,19 +92,19 @@ public class e implements bi<e, EnumC0155e>, Serializable, Cloneable {
             return GUID;
         }
 
-        public static EnumC0155e b(int i) {
-            EnumC0155e a = a(i);
+        public static EnumC0182e b(int i) {
+            EnumC0182e a = a(i);
             if (a != null) {
                 return a;
             }
             throw new IllegalArgumentException("Field " + i + " doesn't exist!");
         }
 
-        public static EnumC0155e a(String str) {
+        public static EnumC0182e a(String str) {
             return d.get(str);
         }
 
-        private EnumC0155e(short s, String str) {
+        private EnumC0182e(short s, String str) {
             this.e = s;
             this.f = str;
         }
@@ -123,8 +121,8 @@ public class e implements bi<e, EnumC0155e>, Serializable, Cloneable {
     }
 
     public e() {
-        this.f1495l = 0;
-        this.m = new EnumC0155e[]{EnumC0155e.VALUE};
+        this.l = 0;
+        this.m = new EnumC0182e[]{EnumC0182e.VALUE};
     }
 
     public e(long j2, String str) {
@@ -135,9 +133,9 @@ public class e implements bi<e, EnumC0155e>, Serializable, Cloneable {
     }
 
     public e(e eVar) {
-        this.f1495l = 0;
-        this.m = new EnumC0155e[]{EnumC0155e.VALUE};
-        this.f1495l = eVar.f1495l;
+        this.l = 0;
+        this.m = new EnumC0182e[]{EnumC0182e.VALUE};
+        this.l = eVar.l;
         if (eVar.d()) {
             this.a = eVar.a;
         }
@@ -194,15 +192,15 @@ public class e implements bi<e, EnumC0155e>, Serializable, Cloneable {
     }
 
     public void f() {
-        this.f1495l = bf.b(this.f1495l, 0);
+        this.l = bf.b(this.l, 0);
     }
 
     public boolean g() {
-        return bf.a(this.f1495l, 0);
+        return bf.a(this.l, 0);
     }
 
     public void b(boolean z) {
-        this.f1495l = bf.a(this.f1495l, 0, z);
+        this.l = bf.a(this.l, 0, z);
     }
 
     public String h() {
@@ -229,8 +227,8 @@ public class e implements bi<e, EnumC0155e>, Serializable, Cloneable {
     }
 
     /* renamed from: a */
-    public EnumC0155e fieldForId(int i2) {
-        return EnumC0155e.a(i2);
+    public EnumC0182e fieldForId(int i2) {
+        return EnumC0182e.a(i2);
     }
 
     @Override // com.umeng.analytics.pro.bi
@@ -292,7 +290,7 @@ public class e implements bi<e, EnumC0155e>, Serializable, Cloneable {
 
     private void a(ObjectInputStream objectInputStream) throws IOException, ClassNotFoundException {
         try {
-            this.f1495l = 0;
+            this.l = 0;
             read(new cb(new ct(objectInputStream)));
         } catch (bo e2) {
             throw new IOException(e2.getMessage());
@@ -319,32 +317,32 @@ public class e implements bi<e, EnumC0155e>, Serializable, Cloneable {
         public void b(ch chVar, e eVar) throws bo {
             chVar.j();
             while (true) {
-                cc l2 = chVar.l();
-                if (l2.b == 0) {
+                cc l = chVar.l();
+                if (l.b == 0) {
                     break;
                 }
-                short s = l2.c;
+                short s = l.c;
                 if (s != 1) {
                     if (s != 2) {
                         if (s != 3) {
-                            ck.a(chVar, l2.b);
-                        } else if (l2.b == 11) {
+                            ck.a(chVar, l.b);
+                        } else if (l.b == 11) {
                             eVar.c = chVar.z();
                             eVar.c(true);
                         } else {
-                            ck.a(chVar, l2.b);
+                            ck.a(chVar, l.b);
                         }
-                    } else if (l2.b == 10) {
+                    } else if (l.b == 10) {
                         eVar.b = chVar.x();
                         eVar.b(true);
                     } else {
-                        ck.a(chVar, l2.b);
+                        ck.a(chVar, l.b);
                     }
-                } else if (l2.b == 11) {
+                } else if (l.b == 11) {
                     eVar.a = chVar.z();
                     eVar.a(true);
                 } else {
-                    ck.a(chVar, l2.b);
+                    ck.a(chVar, l.b);
                 }
                 chVar.m();
             }

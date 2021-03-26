@@ -50,7 +50,7 @@ public abstract class ItemLargeScrollCardItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLargeScrollCardItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemLargeScrollCardItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558796, viewGroup, z, obj);
+        return (ItemLargeScrollCardItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558803, viewGroup, z, obj);
     }
 
     public static ItemLargeScrollCardItemBinding inflate(LayoutInflater layoutInflater) {
@@ -59,7 +59,7 @@ public abstract class ItemLargeScrollCardItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLargeScrollCardItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemLargeScrollCardItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558796, null, false, obj);
+        return (ItemLargeScrollCardItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558803, null, false, obj);
     }
 
     public static ItemLargeScrollCardItemBinding bind(View view) {
@@ -68,6 +68,6 @@ public abstract class ItemLargeScrollCardItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLargeScrollCardItemBinding bind(View view, Object obj) {
-        return (ItemLargeScrollCardItemBinding) bind(obj, view, 2131558796);
+        return (ItemLargeScrollCardItemBinding) bind(obj, view, 2131558803);
     }
 }

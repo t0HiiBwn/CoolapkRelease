@@ -117,7 +117,7 @@ public final class Cdo implements dk {
                             dcVar.j = this.c.isFromMockProvider();
                             dcVar.a = this.c.getProvider();
                             dcVar.g = this.c.getSpeed();
-                            dcVar.f1362l = (byte) i2;
+                            dcVar.l = (byte) i2;
                             dcVar.b = System.currentTimeMillis();
                             dcVar.c = this.c.getTime();
                             dcVar.k = this.c.getTime();

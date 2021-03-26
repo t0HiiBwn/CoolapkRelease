@@ -37,7 +37,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedHeaderViewPart.kt */
 public final class FeedHeaderViewPart extends BindingViewPart<ItemFeedHeaderViewBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558706;
+    public static final int LAYOUT_ID = 2131558713;
     private final DataBindingComponent component;
     private Feed feed;
 
@@ -65,7 +65,7 @@ public final class FeedHeaderViewPart extends BindingViewPart<ItemFeedHeaderView
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedHeaderViewBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558706, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558713, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemFeedHeaderViewBinding) inflate;
     }
@@ -150,7 +150,7 @@ public final class FeedHeaderViewPart extends BindingViewPart<ItemFeedHeaderView
         Feed feed2 = this.feed;
         if (feed2 != null) {
             switch (view.getId()) {
-                case 2131362595:
+                case 2131362603:
                     CharSequence text = ((TextView) view).getText();
                     if (text instanceof SpannableString) {
                         URLSpan[] uRLSpanArr = (URLSpan[]) ((SpannableString) text).getSpans(0, text.length(), URLSpan.class);
@@ -162,7 +162,7 @@ public final class FeedHeaderViewPart extends BindingViewPart<ItemFeedHeaderView
                         return;
                     }
                     return;
-                case 2131362942:
+                case 2131362954:
                     if (feed2.getIsModified() == 1) {
                         ActionManagerCompat actionManagerCompat = ActionManagerCompat.INSTANCE;
                         Context context = getContext();
@@ -174,10 +174,10 @@ public final class FeedHeaderViewPart extends BindingViewPart<ItemFeedHeaderView
                         return;
                     }
                     return;
-                case 2131362970:
+                case 2131362982:
                     showItemDialog();
                     return;
-                case 2131363877:
+                case 2131363900:
                     ActionManager.startUserSpaceActivity(view, feed2.getUid(), feed2.getUserAvatar());
                     return;
                 default:

@@ -31,7 +31,7 @@ final class SponsorSelfDrawNewsViewHolder$updateContentView$6 extends Lambda imp
     }
 
     public final void invoke(int i) {
-        MaxWidthFrameLayout maxWidthFrameLayout = this.this$0.binding.contentView;
+        MaxWidthFrameLayout maxWidthFrameLayout = SponsorSelfDrawNewsViewHolder.access$getBinding$p(this.this$0).contentView;
         Intrinsics.checkNotNullExpressionValue(maxWidthFrameLayout, "binding.contentView");
         maxWidthFrameLayout.getLayoutParams().height = (int) (((double) i) / (((double) this.$videoWidth) / ((double) this.$videoHeight)));
     }

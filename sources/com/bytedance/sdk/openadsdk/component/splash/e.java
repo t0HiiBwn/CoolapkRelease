@@ -41,9 +41,7 @@ public class e implements TTSplashAd {
     private long i = 0;
     private a j;
     private d k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1297l = null;
+    private String l = null;
     private boolean m = false;
     private boolean n = false;
     private boolean o;
@@ -70,7 +68,7 @@ public class e implements TTSplashAd {
         this.d = context;
         this.e = lVar;
         this.n = lVar.ar();
-        this.f1297l = str;
+        this.l = str;
         this.t = adSlot;
         this.s = str2;
         b();
@@ -130,7 +128,7 @@ public class e implements TTSplashAd {
 
     private boolean c() {
         this.k = new d(this.d, this.f.getVideoContainer(), this.e);
-        u.f("wzj", "mVideoCachePath:" + this.f1297l);
+        u.f("wzj", "mVideoCachePath:" + this.l);
         this.k.a(new c.a() {
             /* class com.bytedance.sdk.openadsdk.component.splash.e.AnonymousClass2 */
 
@@ -156,7 +154,7 @@ public class e implements TTSplashAd {
                 }
             }
         });
-        boolean a2 = this.k.a(this.f1297l, this.e.ag(), this.f.getVideoContainer().getWidth(), this.f.getVideoContainer().getHeight(), null, this.e.aj(), 0, this.p);
+        boolean a2 = this.k.a(this.l, this.e.ag(), this.f.getVideoContainer().getWidth(), this.f.getVideoContainer().getHeight(), null, this.e.aj(), 0, this.p);
         this.o = a2;
         return a2;
     }
@@ -175,8 +173,8 @@ public class e implements TTSplashAd {
         if (lVar != null && lVar.d() != 1) {
             if (this.e.R() == null) {
                 this.r = new NativeExpressView(this.d, this.e, this.t, this.s);
-            } else if (!TextUtils.isEmpty(this.f1297l)) {
-                com.bytedance.sdk.openadsdk.core.video.a.a.a(this.e.R().i(), this.f1297l);
+            } else if (!TextUtils.isEmpty(this.l)) {
+                com.bytedance.sdk.openadsdk.core.video.a.a.a(this.e.R().i(), this.l);
                 this.r = new NativeExpressVideoView(this.d, this.e, this.t, this.s);
             }
             NativeExpressView nativeExpressView = this.r;
@@ -384,7 +382,7 @@ public class e implements TTSplashAd {
     private void e() {
         if (this.e.R() == null) {
             this.q = 0;
-        } else if (this.f1297l != null) {
+        } else if (this.l != null) {
             this.q = 1;
         } else {
             this.q = 2;
@@ -454,7 +452,7 @@ public class e implements TTSplashAd {
                 if (e.this.e != null) {
                     if (e.this.e.R() == null) {
                         hashMap.put("splash_show_type", 0);
-                    } else if (e.this.f1297l != null) {
+                    } else if (e.this.l != null) {
                         hashMap.put("splash_show_type", 1);
                     } else {
                         hashMap.put("splash_show_type", 2);
@@ -566,7 +564,7 @@ public class e implements TTSplashAd {
     @Override // com.bytedance.sdk.openadsdk.TTSplashAd
     public View getSplashView() {
         l lVar = this.e;
-        if (lVar == null || lVar.R() == null || this.f.getVideoContainer() == null || this.f1297l == null || c()) {
+        if (lVar == null || lVar.R() == null || this.f.getVideoContainer() == null || this.l == null || c()) {
             return this.f;
         }
         return null;

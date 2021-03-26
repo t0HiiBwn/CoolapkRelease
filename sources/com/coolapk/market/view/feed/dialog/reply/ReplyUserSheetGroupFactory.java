@@ -62,7 +62,7 @@ public final class ReplyUserSheetGroupFactory implements SheetCallback {
         Intrinsics.checkNotNullParameter(activity2, "activity");
         this.data = feedReply;
         this.activity = activity2;
-        this.bgColor = ResourceUtils.getColorInt(activity2, 2131100049);
+        this.bgColor = ResourceUtils.getColorInt(activity2, 2131100054);
         this.userItemColor = ResourceUtils.resolveData(activity2, 2130969438);
     }
 
@@ -85,20 +85,20 @@ public final class ReplyUserSheetGroupFactory implements SheetCallback {
         String uid = this.data.getUid();
         Intrinsics.checkNotNullExpressionValue(loginSession, "session");
         boolean areEqual = Intrinsics.areEqual(uid, loginSession.getUid());
-        insertItem$default(this, ReplyAction.ViewChat, "查看会话", 2131231597, 0, null, 24, null);
-        insertItem$default(this, ReplyAction.Copy, "复制", 2131231233, 0, null, 24, null);
+        insertItem$default(this, ReplyAction.ViewChat, "查看会话", 2131231608, 0, null, 24, null);
+        insertItem$default(this, ReplyAction.Copy, "复制", 2131231244, 0, null, 24, null);
         String pic = this.data.getPic();
         if (!(pic == null || pic.length() == 0)) {
             z = false;
         }
         if (!z) {
-            insertItem$default(this, ReplyAction.ViewPic, "查看图片", 2131231478, 0, null, 24, null);
+            insertItem$default(this, ReplyAction.ViewPic, "查看图片", 2131231489, 0, null, 24, null);
         }
         if (areEqual || loginSession.isAdmin()) {
-            insertItem$default(this, ReplyAction.Delete, "删除", 2131231241, 0, null, 24, null);
+            insertItem$default(this, ReplyAction.Delete, "删除", 2131231252, 0, null, 24, null);
         }
         if (!areEqual) {
-            insertItem$default(this, ReplyAction.Report, "举报", 2131231646, 0, null, 24, null);
+            insertItem$default(this, ReplyAction.Report, "举报", 2131231657, 0, null, 24, null);
         }
         return wrapAsSheetGroup();
     }
@@ -126,9 +126,9 @@ public final class ReplyUserSheetGroupFactory implements SheetCallback {
                 Intrinsics.checkNotNullExpressionValue(id, "data.id!!");
                 ActionManager.startWebViewActivity(this.activity, UriUtils.buildFeedReplyReportUrl(id));
             } else if (i == 5) {
-                String string = this.activity.getString(2131886722);
+                String string = this.activity.getString(2131886784);
                 Intrinsics.checkNotNullExpressionValue(string, "activity.getString(R.str….str_dialog_delete_title)");
-                String string2 = this.activity.getString(2131886719, new Object[]{this.data.getUserName(), this.data.getMessage()});
+                String string2 = this.activity.getString(2131886781, new Object[]{this.data.getUserName(), this.data.getMessage()});
                 Intrinsics.checkNotNullExpressionValue(string2, "activity.getString(R.str…a.userName, data.message)");
                 ConfirmDeleteDialog newInstance = ConfirmDeleteDialog.newInstance(string, string2);
                 newInstance.setDeleteTarget(this.data);

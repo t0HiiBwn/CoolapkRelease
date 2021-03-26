@@ -75,6 +75,11 @@ public class SwappedDataInputStream extends ProxyInputStream implements DataInpu
     }
 
     @Override // java.io.DataInput
+    public String readUTF() throws IOException, EOFException {
+        throw new UnsupportedOperationException("Operation not supported: readUTF()");
+    }
+
+    @Override // java.io.DataInput
     public int readUnsignedByte() throws IOException, EOFException {
         return this.in.read();
     }
@@ -82,11 +87,6 @@ public class SwappedDataInputStream extends ProxyInputStream implements DataInpu
     @Override // java.io.DataInput
     public int readUnsignedShort() throws IOException, EOFException {
         return EndianUtils.readSwappedUnsignedShort(this.in);
-    }
-
-    @Override // java.io.DataInput
-    public String readUTF() throws IOException, EOFException {
-        throw new UnsupportedOperationException("Operation not supported: readUTF()");
     }
 
     @Override // java.io.DataInput

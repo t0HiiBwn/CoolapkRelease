@@ -46,7 +46,7 @@ public abstract class ItemLiveImageTextCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveImageTextCardBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemLiveImageTextCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558805, viewGroup, z, obj);
+        return (ItemLiveImageTextCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558812, viewGroup, z, obj);
     }
 
     public static ItemLiveImageTextCardBinding inflate(LayoutInflater layoutInflater) {
@@ -55,7 +55,7 @@ public abstract class ItemLiveImageTextCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveImageTextCardBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemLiveImageTextCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558805, null, false, obj);
+        return (ItemLiveImageTextCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558812, null, false, obj);
     }
 
     public static ItemLiveImageTextCardBinding bind(View view) {
@@ -64,6 +64,6 @@ public abstract class ItemLiveImageTextCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveImageTextCardBinding bind(View view, Object obj) {
-        return (ItemLiveImageTextCardBinding) bind(obj, view, 2131558805);
+        return (ItemLiveImageTextCardBinding) bind(obj, view, 2131558812);
     }
 }

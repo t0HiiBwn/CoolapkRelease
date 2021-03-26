@@ -70,7 +70,7 @@ public final class WaterMarkDialog extends BaseDialogFragment {
      */
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        LayoutWaterMarkBinding layoutWaterMarkBinding = (LayoutWaterMarkBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559008, null, false);
+        LayoutWaterMarkBinding layoutWaterMarkBinding = (LayoutWaterMarkBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559015, null, false);
         this.key = isPosition() ? "picture_watermark_position" : "watermark_icon_type";
         String str = isPosition() ? "水印位置" : "水印类型";
         TextView textView = layoutWaterMarkBinding.titleView;
@@ -113,22 +113,22 @@ public final class WaterMarkDialog extends BaseDialogFragment {
                         switch (hashCode) {
                             case 56:
                                 if (preferencesString.equals("8")) {
-                                    layoutWaterMarkBinding.radioGroup.check(2131363178);
+                                    layoutWaterMarkBinding.radioGroup.check(2131363192);
                                     break;
                                 }
                                 break;
                             case 57:
                                 if (preferencesString.equals("9")) {
-                                    layoutWaterMarkBinding.radioGroup.check(2131363169);
+                                    layoutWaterMarkBinding.radioGroup.check(2131363183);
                                     break;
                                 }
                                 break;
                         }
                     }
                 }
-                layoutWaterMarkBinding.radioGroup.check(2131363175);
+                layoutWaterMarkBinding.radioGroup.check(2131363189);
             }
-            layoutWaterMarkBinding.radioGroup.check(2131363167);
+            layoutWaterMarkBinding.radioGroup.check(2131363181);
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         Intrinsics.checkNotNullExpressionValue(layoutWaterMarkBinding, "binding");

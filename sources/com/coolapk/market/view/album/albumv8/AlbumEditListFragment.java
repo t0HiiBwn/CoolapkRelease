@@ -150,7 +150,7 @@ public final class AlbumEditListFragment extends NewAsyncListFragment<List<? ext
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         this.mLinearLayoutManager = linearLayoutManager;
         setLayoutManager(linearLayoutManager);
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558580, 2131231056).type(2131558581, 2131231056).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558584, 2131231066).type(2131558585, 2131231066).create());
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -164,7 +164,7 @@ public final class AlbumEditListFragment extends NewAsyncListFragment<List<? ext
         setLoadMoreEnable(false);
         this.callback = new AlbumEditListFragment$onActivityCreated$1(this, this.mAdapter);
         FrameLayout.LayoutParams layoutParams = null;
-        LayoutListEditButtonBinding layoutListEditButtonBinding = (LayoutListEditButtonBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558997, null, false);
+        LayoutListEditButtonBinding layoutListEditButtonBinding = (LayoutListEditButtonBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559004, null, false);
         this.editButtonBinding = layoutListEditButtonBinding;
         if (!(layoutListEditButtonBinding == null || (linearLayout3 = layoutListEditButtonBinding.actionAdd) == null)) {
             linearLayout3.setBackgroundColor(AppHolder.getAppTheme().getColorAccent());
@@ -288,7 +288,7 @@ public final class AlbumEditListFragment extends NewAsyncListFragment<List<? ext
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            MenuItem add = menu.add(0, 2131361899, 0, "完成");
+            MenuItem add = menu.add(0, 2131361900, 0, "完成");
             add.setVisible(true);
             add.setShowAsAction(2);
         }
@@ -300,7 +300,7 @@ public final class AlbumEditListFragment extends NewAsyncListFragment<List<? ext
         if (this.mAlbum == null) {
             return true;
         }
-        if (menuItem.getItemId() != 2131361899) {
+        if (menuItem.getItemId() != 2131361900) {
             return super.onOptionsItemSelected(menuItem);
         }
         requireActivity().finish();
@@ -379,7 +379,7 @@ public final class AlbumEditListFragment extends NewAsyncListFragment<List<? ext
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
             switch (i) {
-                case 2131558580:
+                case 2131558584:
                     AlbumItemEditViewHolder.TouchCallBack touchCallBack2 = this.touchCallBack;
                     Album album = AlbumEditListFragment.this.mAlbum;
                     Intrinsics.checkNotNull(album);
@@ -387,10 +387,10 @@ public final class AlbumEditListFragment extends NewAsyncListFragment<List<? ext
                     FragmentManager childFragmentManager = AlbumEditListFragment.this.getChildFragmentManager();
                     Intrinsics.checkNotNullExpressionValue(childFragmentManager, "childFragmentManager");
                     return new AlbumItemEditViewHolder(touchCallBack2, album, mItems, childFragmentManager, inflate, this.component, null, AlbumEditListFragment.this.delList);
-                case 2131558581:
+                case 2131558585:
                     Intrinsics.checkNotNullExpressionValue(inflate, "viewItem");
                     return new AlbumEditHeaderViewHolder(inflate, this.component, null);
-                case 2131558833:
+                case 2131558840:
                     Intrinsics.checkNotNullExpressionValue(inflate, "viewItem");
                     return new AlbumEmptyViewHolder(inflate, this.component, null);
                 default:
@@ -412,10 +412,10 @@ public final class AlbumEditListFragment extends NewAsyncListFragment<List<? ext
         public int getItemViewType(int i) {
             Entity entity = (Entity) AlbumEditListFragment.this.dataList.get(i);
             if (entity instanceof AlbumItem) {
-                return 2131558580;
+                return 2131558584;
             }
             if (entity instanceof Album) {
-                return TextUtils.equals(((Album) entity).getEntityTemplate(), "albumEmpty") ? 2131558833 : 2131558581;
+                return TextUtils.equals(((Album) entity).getEntityTemplate(), "albumEmpty") ? 2131558840 : 2131558585;
             }
             StringBuilder sb = new StringBuilder();
             sb.append("unknown viewType :");
@@ -441,7 +441,7 @@ public final class AlbumEditListFragment extends NewAsyncListFragment<List<? ext
         public boolean canMove(int i) {
             DataAdapter dataAdapter = AlbumEditListFragment.this.mAdapter;
             Intrinsics.checkNotNull(dataAdapter);
-            return dataAdapter.getItemViewType(i) == 2131558580;
+            return dataAdapter.getItemViewType(i) == 2131558584;
         }
 
         @Override // com.coolapk.market.widget.touchhelper.OnStartDragListener

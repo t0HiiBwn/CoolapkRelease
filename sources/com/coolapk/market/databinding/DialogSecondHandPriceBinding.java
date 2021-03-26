@@ -64,7 +64,7 @@ public abstract class DialogSecondHandPriceBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSecondHandPriceBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogSecondHandPriceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558534, viewGroup, z, obj);
+        return (DialogSecondHandPriceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558536, viewGroup, z, obj);
     }
 
     public static DialogSecondHandPriceBinding inflate(LayoutInflater layoutInflater) {
@@ -73,7 +73,7 @@ public abstract class DialogSecondHandPriceBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSecondHandPriceBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogSecondHandPriceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558534, null, false, obj);
+        return (DialogSecondHandPriceBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558536, null, false, obj);
     }
 
     public static DialogSecondHandPriceBinding bind(View view) {
@@ -82,6 +82,6 @@ public abstract class DialogSecondHandPriceBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSecondHandPriceBinding bind(View view, Object obj) {
-        return (DialogSecondHandPriceBinding) bind(obj, view, 2131558534);
+        return (DialogSecondHandPriceBinding) bind(obj, view, 2131558536);
     }
 }

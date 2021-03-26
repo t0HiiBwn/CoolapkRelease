@@ -16,13 +16,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\r\u0018\u0000 '2\u00020\u0001:\u0002'(B\u0017\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0005¢\u0006\u0002\u0010\u0006J\u0010\u0010\u0017\u001a\u00020\u000e2\u0006\u0010\u0018\u001a\u00020\u000bH\u0002J\u0010\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001cH\u0002J0\u0010\u001d\u001a\u00020\u001a2\u0006\u0010\u001e\u001a\u00020\u00102\u0006\u0010\u001f\u001a\u00020\u00122\u0006\u0010 \u001a\u00020\u00122\u0006\u0010!\u001a\u00020\u00122\u0006\u0010\"\u001a\u00020\u0012H\u0014J\u0010\u0010#\u001a\u00020\u001a2\u0006\u0010$\u001a\u00020\u0010H\u0016J\b\u0010%\u001a\u00020\u001aH\u0002J\b\u0010&\u001a\u00020\u001aH\u0002R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\bX\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u000b0\nX\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000e0\rX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u000eX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0012X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0016X\u0004¢\u0006\u0002\n\u0000¨\u0006)"}, d2 = {"Lcom/coolapk/market/widget/view/GoodsLoadingView;", "Landroid/widget/FrameLayout;", "context", "Landroid/content/Context;", "attrs", "Landroid/util/AttributeSet;", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "animatorSet", "Landroid/animation/AnimatorSet;", "dotDataList", "", "Lcom/coolapk/market/widget/view/GoodsLoadingView$DotData;", "dotViews", "", "Landroidx/appcompat/widget/AppCompatImageView;", "isVisibilityAggregated", "", "marginButton", "", "squareView", "squareWidth", "startAnimationRunnable", "Ljava/lang/Runnable;", "createDotView", "dotData", "delayStartAnimation", "", "delay", "", "onLayout", "changed", "left", "top", "right", "bottom", "onVisibilityAggregated", "isVisible", "startAnimation", "stopAnimation", "Companion", "DotData", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: GoodsLoadingView.kt */
 public final class GoodsLoadingView extends FrameLayout {
     public static final Companion Companion = new Companion(null);
@@ -40,7 +38,7 @@ public final class GoodsLoadingView extends FrameLayout {
     public GoodsLoadingView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         Intrinsics.checkNotNullParameter(context, "context");
-        List<DotData> mutableListOf = CollectionsKt.mutableListOf(new DotData(NumberExtendsKt.getDp((Number) 24), 2131231556, -NumberExtendsKt.getDp((Number) 60), -NumberExtendsKt.getDp((Number) 20)), new DotData(NumberExtendsKt.getDp((Number) 24), 2131231594, -NumberExtendsKt.getDp((Number) 30), -NumberExtendsKt.getDp((Number) 40)), new DotData(NumberExtendsKt.getDp((Number) 24), 2131231472, NumberExtendsKt.getDp((Number) 0), -NumberExtendsKt.getDp((Number) 60)), new DotData(NumberExtendsKt.getDp((Number) 24), 2131231225, NumberExtendsKt.getDp((Number) 30), -NumberExtendsKt.getDp((Number) 40)), new DotData(NumberExtendsKt.getDp((Number) 24), 2131231166, NumberExtendsKt.getDp((Number) 60), -NumberExtendsKt.getDp((Number) 20)));
+        List<DotData> mutableListOf = CollectionsKt.mutableListOf(new DotData(NumberExtendsKt.getDp((Number) 24), 2131231567, -NumberExtendsKt.getDp((Number) 60), -NumberExtendsKt.getDp((Number) 20)), new DotData(NumberExtendsKt.getDp((Number) 24), 2131231605, -NumberExtendsKt.getDp((Number) 30), -NumberExtendsKt.getDp((Number) 40)), new DotData(NumberExtendsKt.getDp((Number) 24), 2131231483, NumberExtendsKt.getDp((Number) 0), -NumberExtendsKt.getDp((Number) 60)), new DotData(NumberExtendsKt.getDp((Number) 24), 2131231236, NumberExtendsKt.getDp((Number) 30), -NumberExtendsKt.getDp((Number) 40)), new DotData(NumberExtendsKt.getDp((Number) 24), 2131231177, NumberExtendsKt.getDp((Number) 60), -NumberExtendsKt.getDp((Number) 20)));
         this.dotDataList = mutableListOf;
         List<DotData> list = mutableListOf;
         ArrayList arrayList = new ArrayList(CollectionsKt.collectionSizeOrDefault(list, 10));
@@ -53,14 +51,13 @@ public final class GoodsLoadingView extends FrameLayout {
         this.startAnimationRunnable = new GoodsLoadingView$startAnimationRunnable$1(this);
         this.squareWidth = NumberExtendsKt.getDp((Number) 40);
         this.marginButton = NumberExtendsKt.getDp((Number) 20);
-        this.squareView = createDotView(new DotData(NumberExtendsKt.getDp((Number) 40), 2131231158, 0, 0));
+        this.squareView = createDotView(new DotData(NumberExtendsKt.getDp((Number) 40), 2131231168, 0, 0));
         for (AppCompatImageView appCompatImageView : arrayList2) {
             addView(appCompatImageView);
         }
         addView(this.squareView);
     }
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\t\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/widget/view/GoodsLoadingView$Companion;", "", "()V", "DURATION_PER_LOOP", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: GoodsLoadingView.kt */
     public static final class Companion {
         private Companion() {
@@ -71,7 +68,6 @@ public final class GoodsLoadingView extends FrameLayout {
         }
     }
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0002\b\u000f\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\b\b\u0018\u00002\u00020\u0001B%\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0003¢\u0006\u0002\u0010\u0007J\t\u0010\r\u001a\u00020\u0003HÆ\u0003J\t\u0010\u000e\u001a\u00020\u0003HÆ\u0003J\t\u0010\u000f\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0010\u001a\u00020\u0003HÆ\u0003J1\u0010\u0011\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00032\b\b\u0002\u0010\u0005\u001a\u00020\u00032\b\b\u0002\u0010\u0006\u001a\u00020\u0003HÆ\u0001J\u0013\u0010\u0012\u001a\u00020\u00132\b\u0010\u0014\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u0015\u001a\u00020\u0003HÖ\u0001J\t\u0010\u0016\u001a\u00020\u0017HÖ\u0001R\u0011\u0010\u0004\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u0011\u0010\u0005\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\tR\u0011\u0010\u0006\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\tR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\t¨\u0006\u0018"}, d2 = {"Lcom/coolapk/market/widget/view/GoodsLoadingView$DotData;", "", "size", "", "drawable", "offsetX", "offsetY", "(IIII)V", "getDrawable", "()I", "getOffsetX", "getOffsetY", "getSize", "component1", "component2", "component3", "component4", "copy", "equals", "", "other", "hashCode", "toString", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: GoodsLoadingView.kt */
     public static final class DotData {
         private final int drawable;
@@ -198,7 +194,6 @@ public final class GoodsLoadingView extends FrameLayout {
         }
     }
 
-    /* access modifiers changed from: private */
     public final void startAnimation() {
         removeCallbacks(this.startAnimationRunnable);
         AnimatorSet animatorSet2 = this.animatorSet;
@@ -270,7 +265,6 @@ public final class GoodsLoadingView extends FrameLayout {
         }
     }
 
-    /* access modifiers changed from: private */
     public final void delayStartAnimation(long j) {
         removeCallbacks(this.startAnimationRunnable);
         postDelayed(this.startAnimationRunnable, j);

@@ -71,32 +71,32 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362099, 51);
-        sparseIntArray.put(2131362101, 52);
-        sparseIntArray.put(2131362102, 53);
-        sparseIntArray.put(2131362098, 54);
-        sparseIntArray.put(2131362768, 55);
-        sparseIntArray.put(2131362339, 56);
-        sparseIntArray.put(2131362715, 57);
-        sparseIntArray.put(2131362908, 58);
-        sparseIntArray.put(2131362730, 59);
-        sparseIntArray.put(2131362643, 60);
-        sparseIntArray.put(2131362054, 61);
-        sparseIntArray.put(2131363623, 62);
-        sparseIntArray.put(2131363200, 63);
-        sparseIntArray.put(2131363210, 64);
-        sparseIntArray.put(2131363192, 65);
-        sparseIntArray.put(2131363191, 66);
-        sparseIntArray.put(2131363190, 67);
-        sparseIntArray.put(2131363189, 68);
-        sparseIntArray.put(2131363188, 69);
-        sparseIntArray.put(2131362615, 70);
-        sparseIntArray.put(2131362334, 71);
-        sparseIntArray.put(2131363555, 72);
-        sparseIntArray.put(2131362203, 73);
-        sparseIntArray.put(2131362215, 74);
-        sparseIntArray.put(2131362742, 75);
-        sparseIntArray.put(2131363227, 76);
+        sparseIntArray.put(2131362102, 51);
+        sparseIntArray.put(2131362104, 52);
+        sparseIntArray.put(2131362105, 53);
+        sparseIntArray.put(2131362101, 54);
+        sparseIntArray.put(2131362779, 55);
+        sparseIntArray.put(2131362345, 56);
+        sparseIntArray.put(2131362726, 57);
+        sparseIntArray.put(2131362920, 58);
+        sparseIntArray.put(2131362741, 59);
+        sparseIntArray.put(2131362651, 60);
+        sparseIntArray.put(2131362056, 61);
+        sparseIntArray.put(2131363645, 62);
+        sparseIntArray.put(2131363214, 63);
+        sparseIntArray.put(2131363224, 64);
+        sparseIntArray.put(2131363206, 65);
+        sparseIntArray.put(2131363205, 66);
+        sparseIntArray.put(2131363204, 67);
+        sparseIntArray.put(2131363203, 68);
+        sparseIntArray.put(2131363202, 69);
+        sparseIntArray.put(2131362623, 70);
+        sparseIntArray.put(2131362340, 71);
+        sparseIntArray.put(2131363576, 72);
+        sparseIntArray.put(2131362208, 73);
+        sparseIntArray.put(2131362220, 74);
+        sparseIntArray.put(2131362753, 75);
+        sparseIntArray.put(2131363241, 76);
     }
 
     public AppNodeHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -225,11 +225,11 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (197 != i) {
+        } else if (198 != i) {
             return false;
         } else {
             setModel((AppNodeViewModel) obj);
@@ -259,7 +259,7 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
         synchronized (this) {
             this.mDirtyFlags |= 256;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -384,7 +384,7 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
                 this.mDirtyFlags |= 8192;
             }
             return true;
-        } else if (i == 248) {
+        } else if (i == 249) {
             synchronized (this) {
                 this.mDirtyFlags |= 16384;
             }
@@ -633,7 +633,7 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
                 if (i45 != 0) {
                     j |= z8 ? 2147483648L : 1073741824;
                 }
-                str22 = z8 ? this.scoreActionView.getResources().getString(2131886610) : this.scoreActionView.getResources().getString(2131886616);
+                str22 = z8 ? this.scoreActionView.getResources().getString(2131886672) : this.scoreActionView.getResources().getString(2131886678);
             } else {
                 str22 = null;
                 z8 = false;
@@ -651,7 +651,7 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
                 if (i46 != 0) {
                     j |= z9 ? 34359738368L : 17179869184L;
                 }
-                str23 = this.followActionView.getResources().getString(z9 ? 2131887142 : 2131887143);
+                str23 = this.followActionView.getResources().getString(z9 ? 2131887204 : 2131887205);
             } else {
                 str23 = null;
                 z9 = false;
@@ -677,7 +677,7 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
                 }
                 i24 = z18 ? Integer.MAX_VALUE : 3;
                 i23 = z18 ? 180 : 0;
-                str24 = z18 ? this.mboundView41.getResources().getString(2131886612) : this.mboundView41.getResources().getString(2131886615);
+                str24 = z18 ? this.mboundView41.getResources().getString(2131886674) : this.mboundView41.getResources().getString(2131886677);
             } else {
                 str24 = null;
                 i24 = 0;
@@ -704,7 +704,7 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
                                 updateRegistration(4, voteNum);
                                 str27 = str24;
                                 str26 = changeLogSubtitle;
-                                str28 = this.countView.getResources().getString(2131886617, Integer.valueOf(voteNum != null ? voteNum.get() : 0));
+                                str28 = this.countView.getResources().getString(2131886679, Integer.valueOf(voteNum != null ? voteNum.get() : 0));
                             } else {
                                 str27 = str24;
                                 str26 = changeLogSubtitle;
@@ -748,7 +748,7 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
                                         if (i28 != 0) {
                                             j |= z14 ? 2305843009213693952L : 1152921504606846976L;
                                         }
-                                        Drawable drawable2 = AppCompatResources.getDrawable(this.logoView.getContext(), z14 ? 2131231409 : 2131231408);
+                                        Drawable drawable2 = AppCompatResources.getDrawable(this.logoView.getContext(), z14 ? 2131231420 : 2131231419);
                                         serviceApp2 = observableField != null ? observableField.get() : null;
                                         int i48 = ((j & 524672) > 0 ? 1 : ((j & 524672) == 0 ? 0 : -1));
                                         if (i48 != 0) {
@@ -800,7 +800,7 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
                                             boolean z21 = i40 != 1;
                                             str30 = appSubtitle;
                                             z11 = z9;
-                                            String string = this.followNumView.getResources().getString(2131886613, str47);
+                                            String string = this.followNumView.getResources().getString(2131886675, str47);
                                             boolean isEmpty2 = TextUtils.isEmpty(str46);
                                             boolean isEmpty3 = TextUtils.isEmpty(str45);
                                             boolean isEmpty4 = TextUtils.isEmpty(str44);
@@ -850,10 +850,10 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
                                             boolean z22 = size == 0;
                                             if (z16) {
                                                 i29 = i52;
-                                                str38 = this.mboundView46.getResources().getString(2131886614);
+                                                str38 = this.mboundView46.getResources().getString(2131886676);
                                             } else {
                                                 i29 = i52;
-                                                str38 = this.mboundView46.getResources().getString(2131886611);
+                                                str38 = this.mboundView46.getResources().getString(2131886673);
                                             }
                                             if ((j & 524672) != 0) {
                                                 j |= z22 ? 36028797018963968L : 18014398509481984L;
@@ -973,7 +973,7 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
                                             j = j9 | j8;
                                         }
                                         int i56 = z13 ? Integer.MAX_VALUE : 4;
-                                        String string2 = this.mboundView47.getResources().getString(z13 ? 2131886612 : 2131886615);
+                                        String string2 = this.mboundView47.getResources().getString(z13 ? 2131886674 : 2131886677);
                                         int i57 = z13 ? 180 : 0;
                                         str41 = string2;
                                         i38 = i56;
@@ -1383,7 +1383,7 @@ public class AppNodeHeaderBindingImpl extends AppNodeHeaderBinding {
                         }
                         if ((557312 & j) != 0) {
                             Boolean bool3 = null;
-                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str, AppCompatResources.getDrawable(this.avatarView.getContext(), 2131231363), 0, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
+                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str, AppCompatResources.getDrawable(this.avatarView.getContext(), 2131231374), 0, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
                         }
                         if ((j & 590080) != 0) {
                             ImageViewBindingAdapters.setVipSignView(this.avatarView, str2, null);

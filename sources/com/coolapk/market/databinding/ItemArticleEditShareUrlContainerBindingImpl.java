@@ -22,8 +22,8 @@ public class ItemArticleEditShareUrlContainerBindingImpl extends ItemArticleEdit
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363397, 1);
-        sparseIntArray.put(2131362257, 2);
+        sparseIntArray.put(2131363414, 1);
+        sparseIntArray.put(2131362262, 2);
     }
 
     public ItemArticleEditShareUrlContainerBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -58,9 +58,9 @@ public class ItemArticleEditShareUrlContainerBindingImpl extends ItemArticleEdit
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((GoodsSimpleInfo) obj);
-        } else if (271 == i) {
+        } else if (272 == i) {
             setSubTitle((String) obj);
         } else if (50 != i) {
             return false;

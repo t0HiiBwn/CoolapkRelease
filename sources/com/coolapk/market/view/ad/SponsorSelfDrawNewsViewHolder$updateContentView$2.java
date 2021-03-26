@@ -23,7 +23,7 @@ final class SponsorSelfDrawNewsViewHolder$updateContentView$2 extends Lambda imp
 
     @Override // kotlin.jvm.functions.Function0
     public final void invoke() {
-        MediaView mediaView = this.this$0.binding.mediaView;
+        MediaView mediaView = SponsorSelfDrawNewsViewHolder.access$getBinding$p(this.this$0).mediaView;
         Intrinsics.checkNotNullExpressionValue(mediaView, "binding.mediaView");
         EntityAdHelperKt.makeADVideoDelayAutoPlay(mediaView, this.$ad);
     }

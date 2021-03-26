@@ -78,7 +78,7 @@ public abstract class ItemIconButtonGridCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemIconButtonGridCardBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemIconButtonGridCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558777, viewGroup, z, obj);
+        return (ItemIconButtonGridCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558784, viewGroup, z, obj);
     }
 
     public static ItemIconButtonGridCardBinding inflate(LayoutInflater layoutInflater) {
@@ -87,7 +87,7 @@ public abstract class ItemIconButtonGridCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemIconButtonGridCardBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemIconButtonGridCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558777, null, false, obj);
+        return (ItemIconButtonGridCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558784, null, false, obj);
     }
 
     public static ItemIconButtonGridCardBinding bind(View view) {
@@ -96,6 +96,6 @@ public abstract class ItemIconButtonGridCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemIconButtonGridCardBinding bind(View view, Object obj) {
-        return (ItemIconButtonGridCardBinding) bind(obj, view, 2131558777);
+        return (ItemIconButtonGridCardBinding) bind(obj, view, 2131558784);
     }
 }

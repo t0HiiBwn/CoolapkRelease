@@ -15,7 +15,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: CardManagerTitleViewHolder.kt */
 public final class CardManagerTitleViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558633;
+    public static final int LAYOUT_ID = 2131558639;
     private final ItemCardManagerTitleBinding binding = ((ItemCardManagerTitleBinding) getBinding());
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -59,7 +59,7 @@ public final class CardManagerTitleViewHolder extends BindingViewHolder {
     public void onClick(View view) {
         super.onClick(view);
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf != null && valueOf.intValue() == 2131363437) {
+        if (valueOf != null && valueOf.intValue() == 2131363455) {
             ActionManager.startCardManagerActivity(getContext());
         }
     }

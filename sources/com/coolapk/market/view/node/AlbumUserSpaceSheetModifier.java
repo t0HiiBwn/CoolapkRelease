@@ -39,7 +39,7 @@ public final class AlbumUserSpaceSheetModifier implements SheetGroupModifier {
         this.topIds = list;
         this.nodeType = str;
         this.nodeId = str2;
-        this.bgColor = ResourceUtils.getColorInt(activity2, 2131100049);
+        this.bgColor = ResourceUtils.getColorInt(activity2, 2131100054);
         this.userItemColor = ResourceUtils.resolveData(activity2, 2130969438);
     }
 
@@ -105,9 +105,9 @@ public final class AlbumUserSpaceSheetModifier implements SheetGroupModifier {
             boolean contains = list.contains(id);
             AlbumUserSpaceSheetModifier$buildTopItem$callback$1 albumUserSpaceSheetModifier$buildTopItem$callback$1 = new AlbumUserSpaceSheetModifier$buildTopItem$callback$1(this, contains, obj);
             if (contains) {
-                return new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, this.userItemColor, this.bgColor), albumUserSpaceSheetModifier$buildTopItem$callback$1, null, 0, false, false, 240, null);
+                return new SheetDataItem(SheetGroupModifier.Action.Three, "取消置顶", SheetDataItem.Companion.createIconBgApplyer(2131231637, this.userItemColor, this.bgColor), albumUserSpaceSheetModifier$buildTopItem$callback$1, null, 0, false, false, 240, null);
             }
-            return new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231615, this.userItemColor, this.bgColor), albumUserSpaceSheetModifier$buildTopItem$callback$1, null, 0, false, false, 240, null);
+            return new SheetDataItem(SheetGroupModifier.Action.Three, "置顶", SheetDataItem.Companion.createIconBgApplyer(2131231626, this.userItemColor, this.bgColor), albumUserSpaceSheetModifier$buildTopItem$callback$1, null, 0, false, false, 240, null);
         }
         throw new IllegalArgumentException("Failed requirement.".toString());
     }

@@ -23,7 +23,7 @@ abstract class C$$AutoValue_DocListCard extends DocListCard {
     private final String title;
     private final String url;
 
-    C$$AutoValue_DocListCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, Long l2, Long l3, String str8, String str9, String str10, String str11, List<Entity> list) {
+    C$$AutoValue_DocListCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, Long l, Long l2, String str8, String str9, String str10, String str11, List<Entity> list) {
         this.entityTemplate = str;
         this.entityId = str2;
         this.entityFixed = num;
@@ -32,8 +32,8 @@ abstract class C$$AutoValue_DocListCard extends DocListCard {
         this.subTitle = str5;
         this.id = str6;
         this.extraData = str7;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.title = str8;
         this.url = str9;
         this.description = str10;
@@ -157,10 +157,10 @@ abstract class C$$AutoValue_DocListCard extends DocListCard {
                                 if (str6 != null ? str6.equals(docListCard.getId()) : docListCard.getId() == null) {
                                     String str7 = this.extraData;
                                     if (str7 != null ? str7.equals(docListCard.getExtraData()) : docListCard.getExtraData() == null) {
-                                        Long l2 = this.dateline;
-                                        if (l2 != null ? l2.equals(docListCard.getDateline()) : docListCard.getDateline() == null) {
-                                            Long l3 = this.lastUpdate;
-                                            if (l3 != null ? l3.equals(docListCard.getLastUpdate()) : docListCard.getLastUpdate() == null) {
+                                        Long l = this.dateline;
+                                        if (l != null ? l.equals(docListCard.getDateline()) : docListCard.getDateline() == null) {
+                                            Long l2 = this.lastUpdate;
+                                            if (l2 != null ? l2.equals(docListCard.getLastUpdate()) : docListCard.getLastUpdate() == null) {
                                                 String str8 = this.title;
                                                 if (str8 != null ? str8.equals(docListCard.getTitle()) : docListCard.getTitle() == null) {
                                                     String str9 = this.url;
@@ -208,10 +208,10 @@ abstract class C$$AutoValue_DocListCard extends DocListCard {
         int hashCode7 = (hashCode6 ^ (str6 == null ? 0 : str6.hashCode())) * 1000003;
         String str7 = this.extraData;
         int hashCode8 = (hashCode7 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode9 = (hashCode8 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode10 = (hashCode9 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode9 = (hashCode8 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode10 = (hashCode9 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str8 = this.title;
         int hashCode11 = (hashCode10 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
         String str9 = this.url;
@@ -314,14 +314,14 @@ abstract class C$$AutoValue_DocListCard extends DocListCard {
         }
 
         @Override // com.coolapk.market.model.DocListCard.Builder
-        public DocListCard.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public DocListCard.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.DocListCard.Builder
-        public DocListCard.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public DocListCard.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

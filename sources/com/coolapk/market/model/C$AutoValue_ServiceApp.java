@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_ServiceApp  reason: invalid class name */
 abstract class C$AutoValue_ServiceApp extends C$$AutoValue_ServiceApp {
-    C$AutoValue_ServiceApp(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, String str10, String str11, String str12, String str13, String str14, int i, String str15, long j, long j2, String str16, String str17, int i2, int i3, String str18, String str19, String str20, String str21, String str22, String str23, float f, String str24, String str25, String str26, String str27, List<String> list, List<String> list2, String str28, String str29, String str30, String str31, int i4, String str32, int i5, List<Gift> list3, int i6, int i7, int i8, int i9, int i10, int i11, UserAction userAction, List<RelatedData> list4, List<RelatedData> list5, List<User> list6, List<RelatedData> list7, String str33, String str34, List<String> list8, String str35, String str36, List<String> list9, List<ServiceApp> list10, List<ServiceApp> list11, List<Album> list12, String str37, int i12, User user, String str38, String str39, String str40, int i13, List<MenuCard> list13, String str41, int i14, int i15, int i16, Collection collection, CollectionItem collectionItem, boolean z, String str42, String str43, List<CouponInfo> list14, List<ConfigPage> list15, String str44, int i17, String str45, String str46, List<NewHeadLine> list16, List<String> list17, String str47) {
-        super(str, str2, num, str3, str4, str5, str6, str7, str8, l2, l3, str9, str10, str11, str12, str13, str14, i, str15, j, j2, str16, str17, i2, i3, str18, str19, str20, str21, str22, str23, f, str24, str25, str26, str27, list, list2, str28, str29, str30, str31, i4, str32, i5, list3, i6, i7, i8, i9, i10, i11, userAction, list4, list5, list6, list7, str33, str34, list8, str35, str36, list9, list10, list11, list12, str37, i12, user, str38, str39, str40, i13, list13, str41, i14, i15, i16, collection, collectionItem, z, str42, str43, list14, list15, str44, i17, str45, str46, list16, list17, str47);
+    C$AutoValue_ServiceApp(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, String str10, String str11, String str12, String str13, String str14, int i, String str15, long j, long j2, String str16, String str17, int i2, int i3, String str18, String str19, String str20, String str21, String str22, String str23, float f, String str24, String str25, String str26, String str27, List<String> list, List<String> list2, String str28, String str29, String str30, String str31, int i4, String str32, int i5, List<Gift> list3, int i6, int i7, int i8, int i9, int i10, int i11, UserAction userAction, List<RelatedData> list4, List<RelatedData> list5, List<User> list6, List<RelatedData> list7, String str33, String str34, List<String> list8, String str35, String str36, List<String> list9, List<ServiceApp> list10, List<ServiceApp> list11, List<Album> list12, String str37, int i12, User user, String str38, String str39, String str40, int i13, List<MenuCard> list13, String str41, int i14, int i15, int i16, Collection collection, CollectionItem collectionItem, boolean z, String str42, String str43, List<CouponInfo> list14, List<ConfigPage> list15, String str44, int i17, String str45, String str46, List<NewHeadLine> list16, List<String> list17, String str47) {
+        super(str, str2, num, str3, str4, str5, str6, str7, str8, l, l2, str9, str10, str11, str12, str13, str14, i, str15, j, j2, str16, str17, i2, i3, str18, str19, str20, str21, str22, str23, f, str24, str25, str26, str27, list, list2, str28, str29, str30, str31, i4, str32, i5, list3, i6, i7, i8, i9, i10, i11, userAction, list4, list5, list6, list7, str33, str34, list8, str35, str36, list9, list10, list11, list12, str37, i12, user, str38, str39, str40, i13, list13, str41, i14, i15, i16, collection, collectionItem, z, str42, str43, list14, list15, str44, i17, str45, str46, list16, list17, str47);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_ServiceApp$GsonTypeAdapter */
@@ -343,13 +343,13 @@ abstract class C$AutoValue_ServiceApp extends C$$AutoValue_ServiceApp {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -967,8 +967,8 @@ abstract class C$AutoValue_ServiceApp extends C$$AutoValue_ServiceApp {
             String str6 = this.defaultSubTitle;
             String str7 = this.defaultId;
             String str8 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str9 = this.defaultEntityTypeName;
             String str10 = this.defaultPackageName;
             String str11 = this.defaultTargetId;
@@ -1058,8 +1058,8 @@ abstract class C$AutoValue_ServiceApp extends C$$AutoValue_ServiceApp {
             String str52 = str6;
             String str53 = str7;
             String str54 = str8;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str55 = str9;
             String str56 = str10;
             String str57 = str11;
@@ -1773,7 +1773,7 @@ abstract class C$AutoValue_ServiceApp extends C$$AutoValue_ServiceApp {
                             str82 = this.apkUrlAdapter.read(jsonReader);
                             continue;
                         case 23:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 24:
                             i20 = this.digestAdapter.read(jsonReader).intValue();
@@ -1971,7 +1971,7 @@ abstract class C$AutoValue_ServiceApp extends C$$AutoValue_ServiceApp {
                             list23 = this.recentFollowListAdapter.read(jsonReader);
                             continue;
                         case 'Y':
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case 'Z':
                             j4 = this.apkLengthAdapter.read(jsonReader).longValue();
@@ -1986,7 +1986,7 @@ abstract class C$AutoValue_ServiceApp extends C$$AutoValue_ServiceApp {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_ServiceApp(str58, str62, num2, str49, str50, str51, str52, str53, str54, l4, l5, str55, str56, str57, str59, str60, str61, i18, str63, j3, j4, str64, str48, i19, i20, str65, str66, str67, str68, str69, str70, f2, str71, str72, str73, str74, list18, list19, str75, str76, str77, str78, i21, str79, i22, list20, i23, i24, i25, i26, i27, i28, userAction2, list21, list22, list23, list24, str80, str81, list25, str82, str83, list26, list27, list28, list29, str84, i29, user2, str85, str86, str87, i30, list30, str88, i31, i32, i33, collection2, collectionItem2, z2, str89, str90, list31, list32, str91, i34, str92, str93, list33, list34, str47);
+            return new AutoValue_ServiceApp(str58, str62, num2, str49, str50, str51, str52, str53, str54, l3, l4, str55, str56, str57, str59, str60, str61, i18, str63, j3, j4, str64, str48, i19, i20, str65, str66, str67, str68, str69, str70, f2, str71, str72, str73, str74, list18, list19, str75, str76, str77, str78, i21, str79, i22, list20, i23, i24, i25, i26, i27, i28, userAction2, list21, list22, list23, list24, str80, str81, list25, str82, str83, list26, list27, list28, list29, str84, i29, user2, str85, str86, str87, i30, list30, str88, i31, i32, i33, collection2, collectionItem2, z2, str89, str90, list31, list32, str91, i34, str92, str93, list33, list34, str47);
         }
     }
 }

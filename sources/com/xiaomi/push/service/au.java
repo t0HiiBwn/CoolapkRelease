@@ -1,30 +1,21 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.channel.commonutils.logger.b;
 import com.xiaomi.push.service.XMPushService;
-import com.xiaomi.push.service.as;
+import com.xiaomi.push.service.q;
 
-class au extends XMPushService.i {
-    final /* synthetic */ as.b.c a;
+class au implements q.a {
+    final /* synthetic */ XMPushService a;
 
-    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    au(as.b.c cVar, int i) {
-        super(i);
-        this.a = cVar;
+    au(XMPushService xMPushService) {
+        this.a = xMPushService;
     }
 
-    @Override // com.xiaomi.push.service.XMPushService.i
-    /* renamed from: a */
-    public String mo344a() {
-        return "clear peer job";
-    }
-
-    @Override // com.xiaomi.push.service.XMPushService.i
-    /* renamed from: a  reason: collision with other method in class */
-    public void mo632a() {
-        if (this.a.a == this.a.f975a.f962a) {
-            b.b("clean peer, chid = " + this.a.f975a.g);
-            this.a.f975a.f962a = null;
+    @Override // com.xiaomi.push.service.q.a
+    public void a() {
+        this.a.s();
+        if (q.a().c() <= 0) {
+            XMPushService xMPushService = this.a;
+            xMPushService.a(new XMPushService.f(12, null));
         }
     }
 }

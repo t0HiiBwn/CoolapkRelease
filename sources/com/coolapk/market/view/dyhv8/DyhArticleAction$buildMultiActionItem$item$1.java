@@ -41,15 +41,15 @@ final class DyhArticleAction$buildMultiActionItem$item$1 extends Lambda implemen
 
     public final void invoke(List<ActionItem> list) {
         Intrinsics.checkNotNullParameter(list, "it");
-        String string = this.this$0.getString(2131886363);
+        String string = this.this$0.getString(2131886423);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.menu_action_copy_link)");
         String redirectUrl = this.$dyhArticle.getRedirectUrl();
         Intrinsics.checkNotNull(redirectUrl);
         Intrinsics.checkNotNullExpressionValue(redirectUrl, "dyhArticle.redirectUrl!!");
         MultiItemDialogFragmentKt.addItem(list, new CopyActionItem(string, redirectUrl));
-        String string2 = this.this$0.getString(2131886712);
+        String string2 = this.this$0.getString(2131886774);
         Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_dialog_copy_content)");
-        String string3 = this.this$0.getString(2131886713);
+        String string3 = this.this$0.getString(2131886775);
         Intrinsics.checkNotNullExpressionValue(string3, "getString(R.string.str_dialog_copy_free)");
         String allLinkAndText = StringUtils.getAllLinkAndText(this.$dyhArticle.getMessage());
         Intrinsics.checkNotNullExpressionValue(allLinkAndText, "StringUtils.getAllLinkAndText(dyhArticle.message)");

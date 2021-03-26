@@ -21,7 +21,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SimpleEntityViewHolder.kt */
 public final class SimpleEntityViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558929;
+    public static final int LAYOUT_ID = 2131558936;
     private final ItemSimpleEntityHolderBinding binding = ((ItemSimpleEntityHolderBinding) getBinding());
     private Object data;
 
@@ -125,7 +125,7 @@ public final class SimpleEntityViewHolder extends BindingViewHolder {
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
-        if (view.getId() == 2131363260) {
+        if (view.getId() == 2131363274) {
             Object obj = this.data;
             if (obj instanceof Entity) {
                 Entity entity = (Entity) obj;

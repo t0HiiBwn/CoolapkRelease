@@ -25,8 +25,8 @@ public class VideoCompleteBindingImpl extends VideoCompleteBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363240, 1);
-        sparseIntArray.put(2131363358, 2);
+        sparseIntArray.put(2131363254, 1);
+        sparseIntArray.put(2131363374, 2);
     }
 
     public VideoCompleteBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -43,9 +43,9 @@ final class DislikeAdapter extends BaseAdapter {
         DislikeViewHolder dislikeViewHolder;
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
         if (view == null) {
-            view = LayoutInflater.from(viewGroup.getContext()).inflate(2131558542, viewGroup, false);
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(2131558544, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(view, "LayoutInflater.from(pare…alog_item, parent, false)");
-            View findViewById = view.findViewById(2131363533);
+            View findViewById = view.findViewById(2131363551);
             Intrinsics.checkNotNullExpressionValue(findViewById, "root.findViewById(R.id.text_view)");
             dislikeViewHolder = new DislikeViewHolder((TextView) findViewById);
             view.setTag(dislikeViewHolder);

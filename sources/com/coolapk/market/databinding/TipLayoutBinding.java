@@ -26,7 +26,7 @@ public abstract class TipLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static TipLayoutBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (TipLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559198, viewGroup, z, obj);
+        return (TipLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559206, viewGroup, z, obj);
     }
 
     public static TipLayoutBinding inflate(LayoutInflater layoutInflater) {
@@ -35,7 +35,7 @@ public abstract class TipLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static TipLayoutBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (TipLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559198, null, false, obj);
+        return (TipLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559206, null, false, obj);
     }
 
     public static TipLayoutBinding bind(View view) {
@@ -44,6 +44,6 @@ public abstract class TipLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static TipLayoutBinding bind(View view, Object obj) {
-        return (TipLayoutBinding) bind(obj, view, 2131559198);
+        return (TipLayoutBinding) bind(obj, view, 2131559206);
     }
 }

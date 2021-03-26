@@ -90,9 +90,7 @@ final /* synthetic */ class JobKt__JobKt {
         Job job = (Job) coroutineContext.get(Job.Key);
         if (job != null) {
             JobKt.ensureActive(job);
-            return;
         }
-        throw new IllegalStateException(("Context cannot be checked for liveness because it does not have a job: " + coroutineContext).toString());
     }
 
     public static final void cancel(Job job, String str, Throwable th) {
@@ -141,6 +139,14 @@ final /* synthetic */ class JobKt__JobKt {
                 job2.cancel(cancellationException);
             }
         }
+    }
+
+    public static final Job getJob(CoroutineContext coroutineContext) {
+        Job job = (Job) coroutineContext.get(Job.Key);
+        if (job != null) {
+            return job;
+        }
+        throw new IllegalStateException(("Current context doesn't contain Job in it: " + coroutineContext).toString());
     }
 
     public static /* synthetic */ void cancelChildren$default(CoroutineContext coroutineContext, Throwable th, int i, Object obj) {

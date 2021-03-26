@@ -50,7 +50,7 @@ final class RankingAppFragment$onActivityCreated$3 extends Lambda implements Fun
 
             public final void invoke(String str) {
                 Intrinsics.checkNotNullParameter(str, "it");
-                this.this$0.this$0.resetRankType(str);
+                RankingAppFragment.access$resetRankType(this.this$0.this$0, str);
             }
         });
     }

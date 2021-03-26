@@ -122,17 +122,17 @@ public final class HttpLoggingInterceptor implements Interceptor {
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to var", replaceWith = @ReplaceWith(expression = "level", imports = {}))
     /* renamed from: -deprecated_level  reason: not valid java name */
-    public final Level m2333deprecated_level() {
+    public final Level m1582deprecated_level() {
         return this.level;
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:100:0x035b, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:100:0x035c, code lost:
         kotlin.io.CloseableKt.closeFinally(r2, r0);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:101:0x035f, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:101:0x0360, code lost:
         throw r0;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:99:0x035a, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:99:0x035b, code lost:
         r0 = move-exception;
      */
     @Override // okhttp3.Interceptor
@@ -248,9 +248,9 @@ public final class HttpLoggingInterceptor implements Interceptor {
                     BufferedSource source = body2.source();
                     source.request(Long.MAX_VALUE);
                     Buffer buffer2 = source.getBuffer();
-                    Long l2 = null;
+                    Long l = null;
                     if (StringsKt.equals("gzip", headers2.get("Content-Encoding"), true)) {
-                        l2 = Long.valueOf(buffer2.size());
+                        l = Long.valueOf(buffer2.size());
                         GzipSource gzipSource = new GzipSource(buffer2.clone());
                         Throwable th = null;
                         Buffer buffer3 = new Buffer();
@@ -272,8 +272,8 @@ public final class HttpLoggingInterceptor implements Interceptor {
                         this.logger.log("");
                         this.logger.log(buffer2.clone().readString(charset));
                     }
-                    if (l2 != null) {
-                        this.logger.log("<-- END HTTP (" + buffer2.size() + "-byte, " + l2 + "-gzipped-byte body)");
+                    if (l != null) {
+                        this.logger.log("<-- END HTTP (" + buffer2.size() + "-byte, " + l + "-gzipped-byte body)");
                     } else {
                         this.logger.log("<-- END HTTP (" + buffer2.size() + "-byte body)");
                     }

@@ -18,9 +18,7 @@ import org.json.JSONObject;
 public final class y extends w<ab, PoiResult> {
     private int j = 0;
     private boolean k = false;
-
-    /* renamed from: l  reason: collision with root package name */
-    private List<String> f1211l = new ArrayList();
+    private List<String> l = new ArrayList();
     private List<SuggestionCity> m = new ArrayList();
 
     private static String b(boolean z) {
@@ -52,22 +50,22 @@ public final class y extends w<ab, PoiResult> {
     public PoiResult a(String str) throws AMapException {
         ArrayList<PoiItem> arrayList = new ArrayList<>();
         if (str == null) {
-            return PoiResult.createPagedResult(((ab) this.b).a, ((ab) this.b).b, this.f1211l, this.m, ((ab) this.b).a.getPageSize(), this.j, arrayList);
+            return PoiResult.createPagedResult(((ab) this.b).a, ((ab) this.b).b, this.l, this.m, ((ab) this.b).a.getPageSize(), this.j, arrayList);
         }
         try {
             JSONObject jSONObject = new JSONObject(str);
             this.j = jSONObject.optInt("count");
             arrayList = p.c(jSONObject);
             if (!jSONObject.has("suggestion")) {
-                return PoiResult.createPagedResult(((ab) this.b).a, ((ab) this.b).b, this.f1211l, this.m, ((ab) this.b).a.getPageSize(), this.j, arrayList);
+                return PoiResult.createPagedResult(((ab) this.b).a, ((ab) this.b).b, this.l, this.m, ((ab) this.b).a.getPageSize(), this.j, arrayList);
             }
             JSONObject optJSONObject = jSONObject.optJSONObject("suggestion");
             if (optJSONObject == null) {
-                return PoiResult.createPagedResult(((ab) this.b).a, ((ab) this.b).b, this.f1211l, this.m, ((ab) this.b).a.getPageSize(), this.j, arrayList);
+                return PoiResult.createPagedResult(((ab) this.b).a, ((ab) this.b).b, this.l, this.m, ((ab) this.b).a.getPageSize(), this.j, arrayList);
             }
             this.m = p.a(optJSONObject);
-            this.f1211l = p.b(optJSONObject);
-            return PoiResult.createPagedResult(((ab) this.b).a, ((ab) this.b).b, this.f1211l, this.m, ((ab) this.b).a.getPageSize(), this.j, arrayList);
+            this.l = p.b(optJSONObject);
+            return PoiResult.createPagedResult(((ab) this.b).a, ((ab) this.b).b, this.l, this.m, ((ab) this.b).a.getPageSize(), this.j, arrayList);
         } catch (JSONException e) {
             i.a(e, "PoiSearchKeywordHandler", "paseJSONJSONException");
         } catch (Exception e2) {

@@ -43,23 +43,24 @@ public final class s {
         return b;
     }
 
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x011f: APUT  (r6v7 java.lang.Object[]), (1 ??[boolean, int, float, short, byte, char]), (r4v21 java.lang.String) */
-    /* JADX WARNING: Code restructure failed: missing block: B:101:0x0185, code lost:
-        if (com.tencent.bugly.proguard.x.a(r4) != false) goto L_0x018a;
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x0120: APUT  (r6v7 java.lang.Object[]), (1 ??[boolean, int, float, short, byte, char]), (r4v21 java.lang.String) */
+    /* JADX WARNING: Code restructure failed: missing block: B:101:0x0186, code lost:
+        if (com.tencent.bugly.proguard.x.a(r4) != false) goto L_0x018b;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:102:0x0187, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:102:0x0188, code lost:
         r4.printStackTrace();
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:86:0x0167, code lost:
-        if (com.tencent.bugly.proguard.x.a(r4) != false) goto L_0x018a;
+    /* JADX WARNING: Code restructure failed: missing block: B:86:0x0168, code lost:
+        if (com.tencent.bugly.proguard.x.a(r4) != false) goto L_0x018b;
      */
-    /* JADX WARNING: Removed duplicated region for block: B:96:0x0178 A[Catch:{ all -> 0x016c, all -> 0x0192 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:96:0x0179 A[Catch:{ all -> 0x016d, all -> 0x0193 }] */
     public final byte[] a(String str, byte[] bArr, v vVar, Map<String, String> map) {
         long j;
         int i;
         Throwable th;
         IOException e;
         long j2;
+        Object[] objArr;
         byte[] bArr2 = null;
         int i2 = 0;
         if (str == null) {
@@ -138,7 +139,6 @@ public final class s {
                                         z = true;
                                         try {
                                             if (!x.a(e)) {
-                                                e.printStackTrace();
                                             }
                                             try {
                                                 a2.disconnect();
@@ -158,27 +158,28 @@ public final class s {
                                 } else {
                                     i5++;
                                     try {
-                                        Object[] objArr = new Object[2];
+                                        objArr = new Object[2];
                                         objArr[0] = Integer.valueOf(responseCode);
-                                        try {
-                                            objArr[1] = headerField;
-                                            x.c("redirect code: %d ,to:%s", objArr);
-                                            str2 = headerField;
-                                            i = 0;
-                                            z = true;
-                                        } catch (IOException e3) {
-                                            e = e3;
-                                            str2 = headerField;
-                                            i = 0;
-                                            z = true;
-                                            if (!x.a(e)) {
-                                            }
-                                            a2.disconnect();
-                                            i4 = i;
-                                            bArr2 = null;
-                                            i2 = 0;
-                                            i3 = 1;
+                                    } catch (IOException e3) {
+                                        e = e3;
+                                        str2 = headerField;
+                                        i = 0;
+                                        z = true;
+                                        if (!x.a(e)) {
+                                            e.printStackTrace();
                                         }
+                                        a2.disconnect();
+                                        i4 = i;
+                                        bArr2 = null;
+                                        i2 = 0;
+                                        i3 = 1;
+                                    }
+                                    try {
+                                        objArr[1] = headerField;
+                                        x.c("redirect code: %d ,to:%s", objArr);
+                                        str2 = headerField;
+                                        i = 0;
+                                        z = true;
                                     } catch (IOException e4) {
                                         e = e4;
                                         str2 = headerField;

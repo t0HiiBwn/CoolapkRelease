@@ -24,13 +24,13 @@ public class VideoSimpleControllerBindingImpl extends VideoSimpleControllerBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363146, 2);
-        sparseIntArray.put(2131363234, 3);
-        sparseIntArray.put(2131362873, 4);
-        sparseIntArray.put(2131362872, 5);
-        sparseIntArray.put(2131363941, 6);
-        sparseIntArray.put(2131362908, 7);
-        sparseIntArray.put(2131363129, 8);
+        sparseIntArray.put(2131363160, 2);
+        sparseIntArray.put(2131363248, 3);
+        sparseIntArray.put(2131362884, 4);
+        sparseIntArray.put(2131362883, 5);
+        sparseIntArray.put(2131363967, 6);
+        sparseIntArray.put(2131362920, 7);
+        sparseIntArray.put(2131363143, 8);
     }
 
     public VideoSimpleControllerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

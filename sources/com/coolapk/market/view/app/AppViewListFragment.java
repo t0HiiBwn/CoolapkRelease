@@ -99,11 +99,11 @@ public final class AppViewListFragment extends EntityListFragment {
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0010\b\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B-\b\u0002\u0012\b\b\u0002\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0003\u0012\u0006\u0010\u0007\u001a\u00020\u0003¢\u0006\u0002\u0010\bJ\u0006\u0010\u000f\u001a\u00020\u0003R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nR\u0011\u0010\u0006\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\nR\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\rR\u0011\u0010\u0007\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u000e\u0010\nj\u0002\b\u0010j\u0002\b\u0011j\u0002\b\u0012j\u0002\b\u0013j\u0002\b\u0014¨\u0006\u0015"}, d2 = {"Lcom/coolapk/market/view/app/AppViewListFragment$FilterArgs;", "", "blockStatus", "", "listType", "", "fromAuthor", "textId", "(Ljava/lang/String;IILjava/lang/String;II)V", "getBlockStatus", "()I", "getFromAuthor", "getListType", "()Ljava/lang/String;", "getTextId", "validId", "FILTER_BY_RECENT_REPLY", "FILTER_BY_DATELINE_DESC", "FILTER_BY_POPULAR", "FILTER_BY_AUTHOR", "FILTER_BY_BLOCK_STATUS", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AppViewListFragment.kt */
     public enum FilterArgs {
-        FILTER_BY_RECENT_REPLY(0, "lastupdate_desc", 0, 2131886922, 5, null),
-        FILTER_BY_DATELINE_DESC(0, "dateline_desc", 0, 2131886918, 5, null),
-        FILTER_BY_POPULAR(0, "popular", 0, 2131886921, 5, null),
-        FILTER_BY_AUTHOR(0, null, 1, 2131886916, 3, null),
-        FILTER_BY_BLOCK_STATUS(1, null, 0, 2131887022, 6, null);
+        FILTER_BY_RECENT_REPLY(0, "lastupdate_desc", 0, 2131886984, 5, null),
+        FILTER_BY_DATELINE_DESC(0, "dateline_desc", 0, 2131886980, 5, null),
+        FILTER_BY_POPULAR(0, "popular", 0, 2131886983, 5, null),
+        FILTER_BY_AUTHOR(0, null, 1, 2131886978, 3, null),
+        FILTER_BY_BLOCK_STATUS(1, null, 0, 2131887084, 6, null);
         
         private final int blockStatus;
         private final int fromAuthor;
@@ -187,7 +187,7 @@ public final class AppViewListFragment extends EntityListFragment {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
         View onCreateView = super.onCreateView(layoutInflater, viewGroup, bundle);
         Intrinsics.checkNotNull(onCreateView);
-        View findViewById = onCreateView.findViewById(2131362882);
+        View findViewById = onCreateView.findViewById(2131362893);
         Intrinsics.checkNotNullExpressionValue(findViewById, "view!!.findViewById<View>(R.id.loading_view)");
         findViewById.setAlpha(0.0f);
         return onCreateView;
@@ -197,13 +197,13 @@ public final class AppViewListFragment extends EntityListFragment {
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         FragmentBindingComponent fragmentBindingComponent = new FragmentBindingComponent(this);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558599).suitedMethod(AppViewListFragment$onActivityCreated$1.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$2(this, fragmentBindingComponent)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558606).suitedMethod(AppViewListFragment$onActivityCreated$3.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$4(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558668).suitedMethod(AppViewListFragment$onActivityCreated$5.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$6(this, fragmentBindingComponent)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558894).suitedMethod(AppViewListFragment$onActivityCreated$7.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$8(this, fragmentBindingComponent)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558602).suitedMethod(AppViewListFragment$onActivityCreated$9.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$10(this, fragmentBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558603).suitedMethod(AppViewListFragment$onActivityCreated$1.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$2(this, fragmentBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558610).suitedMethod(AppViewListFragment$onActivityCreated$3.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$4(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558674).suitedMethod(AppViewListFragment$onActivityCreated$5.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$6(this, fragmentBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558901).suitedMethod(AppViewListFragment$onActivityCreated$7.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$8(this, fragmentBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558606).suitedMethod(AppViewListFragment$onActivityCreated$9.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$10(this, fragmentBindingComponent)).build(), 0, 2, null);
         BaseMultiTypeAdapter adapter$presentation_coolapkAppRelease = getAdapter$presentation_coolapkAppRelease();
-        SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558708).suitedMethod(AppViewListFragment$onActivityCreated$11.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$12(this));
+        SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558715).suitedMethod(AppViewListFragment$onActivityCreated$11.INSTANCE).constructor(new AppViewListFragment$onActivityCreated$12(this));
         Integer num = getItemViewTypeByEntityType().get("feed");
         Intrinsics.checkNotNull(num);
         Intrinsics.checkNotNullExpressionValue(num, "itemViewTypeByEntityType…Utils.ENTITY_TYPE_FEED]!!");
@@ -368,18 +368,18 @@ public final class AppViewListFragment extends EntityListFragment {
         boolean onRequestResponse = super.onRequestResponse(z, list);
         if (EntityListFragment.findFirstEntityIndex$default(this, "feed", null, false, false, 14, null) <= 0) {
             if (this.filterArgs == FilterArgs.FILTER_BY_BLOCK_STATUS) {
-                String string = getString(2131886833);
+                String string = getString(2131886895);
                 Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_has_not_reply)");
                 addHintView(string, null);
             } else {
                 ServiceApp serviceApp = getServiceApp();
                 Intrinsics.checkNotNull(serviceApp);
                 if (serviceApp.getCommentStatus() == -1) {
-                    String string2 = getString(2131886673);
+                    String string2 = getString(2131886735);
                     Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_comment_is_not_allowed)");
                     addHintView(string2, null);
                 } else {
-                    String string3 = getString(2131886865);
+                    String string3 = getString(2131886927);
                     Intrinsics.checkNotNullExpressionValue(string3, "getString(R.string.str_left_a_comment)");
                     addHintView(string3, new AppViewListFragment$onRequestResponse$1(this));
                 }

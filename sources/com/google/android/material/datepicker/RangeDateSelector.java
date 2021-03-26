@@ -56,10 +56,10 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
 
     @Override // com.google.android.material.datepicker.DateSelector
     public void select(long j) {
-        Long l2 = this.selectedStartItem;
-        if (l2 == null) {
+        Long l = this.selectedStartItem;
+        if (l == null) {
             this.selectedStartItem = Long.valueOf(j);
-        } else if (this.selectedEndItem != null || !isValidRange(l2.longValue(), j)) {
+        } else if (this.selectedEndItem != null || !isValidRange(l.longValue(), j)) {
             this.selectedEndItem = null;
             this.selectedStartItem = Long.valueOf(j);
         } else {
@@ -69,26 +69,26 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
 
     @Override // com.google.android.material.datepicker.DateSelector
     public boolean isSelectionComplete() {
-        Long l2 = this.selectedStartItem;
-        return (l2 == null || this.selectedEndItem == null || !isValidRange(l2.longValue(), this.selectedEndItem.longValue())) ? false : true;
+        Long l = this.selectedStartItem;
+        return (l == null || this.selectedEndItem == null || !isValidRange(l.longValue(), this.selectedEndItem.longValue())) ? false : true;
     }
 
     public void setSelection(Pair<Long, Long> pair) {
-        Long l2;
+        Long l;
         if (!(pair.first == null || pair.second == null)) {
             Preconditions.checkArgument(isValidRange(pair.first.longValue(), pair.second.longValue()));
         }
-        Long l3 = null;
+        Long l2 = null;
         if (pair.first == null) {
-            l2 = null;
+            l = null;
         } else {
-            l2 = Long.valueOf(UtcDates.canonicalYearMonthDay(pair.first.longValue()));
+            l = Long.valueOf(UtcDates.canonicalYearMonthDay(pair.first.longValue()));
         }
-        this.selectedStartItem = l2;
+        this.selectedStartItem = l;
         if (pair.second != null) {
-            l3 = Long.valueOf(UtcDates.canonicalYearMonthDay(pair.second.longValue()));
+            l2 = Long.valueOf(UtcDates.canonicalYearMonthDay(pair.second.longValue()));
         }
-        this.selectedEndItem = l3;
+        this.selectedEndItem = l2;
     }
 
     @Override // com.google.android.material.datepicker.DateSelector
@@ -109,13 +109,13 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
     @Override // com.google.android.material.datepicker.DateSelector
     public Collection<Long> getSelectedDays() {
         ArrayList arrayList = new ArrayList();
-        Long l2 = this.selectedStartItem;
+        Long l = this.selectedStartItem;
+        if (l != null) {
+            arrayList.add(l);
+        }
+        Long l2 = this.selectedEndItem;
         if (l2 != null) {
             arrayList.add(l2);
-        }
-        Long l3 = this.selectedEndItem;
-        if (l3 != null) {
-            arrayList.add(l3);
         }
         return arrayList;
     }
@@ -130,18 +130,18 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
     @Override // com.google.android.material.datepicker.DateSelector
     public String getSelectionDisplayString(Context context) {
         Resources resources = context.getResources();
-        Long l2 = this.selectedStartItem;
-        if (l2 == null && this.selectedEndItem == null) {
+        Long l = this.selectedStartItem;
+        if (l == null && this.selectedEndItem == null) {
             return resources.getString(R.string.mtrl_picker_range_header_unselected);
         }
-        Long l3 = this.selectedEndItem;
-        if (l3 == null) {
+        Long l2 = this.selectedEndItem;
+        if (l2 == null) {
             return resources.getString(R.string.mtrl_picker_range_header_only_start_selected, DateStrings.getDateString(this.selectedStartItem.longValue()));
         }
-        if (l2 == null) {
+        if (l == null) {
             return resources.getString(R.string.mtrl_picker_range_header_only_end_selected, DateStrings.getDateString(this.selectedEndItem.longValue()));
         }
-        Pair<String, String> dateRangeString = DateStrings.getDateRangeString(l2, l3);
+        Pair<String, String> dateRangeString = DateStrings.getDateRangeString(l, l2);
         return resources.getString(R.string.mtrl_picker_range_header_selected, dateRangeString.first, dateRangeString.second);
     }
 
@@ -163,14 +163,14 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
         }
         this.invalidRangeStartError = inflate.getResources().getString(R.string.mtrl_picker_invalid_range);
         SimpleDateFormat textInputFormat = UtcDates.getTextInputFormat();
-        Long l2 = this.selectedStartItem;
-        if (l2 != null) {
-            editText.setText(textInputFormat.format(l2));
+        Long l = this.selectedStartItem;
+        if (l != null) {
+            editText.setText(textInputFormat.format(l));
             this.proposedTextStart = this.selectedStartItem;
         }
-        Long l3 = this.selectedEndItem;
-        if (l3 != null) {
-            editText2.setText(textInputFormat.format(l3));
+        Long l2 = this.selectedEndItem;
+        if (l2 != null) {
+            editText2.setText(textInputFormat.format(l2));
             this.proposedTextEnd = this.selectedEndItem;
         }
         String textInputHint = UtcDates.getTextInputHint(inflate.getResources(), textInputFormat);
@@ -178,8 +178,8 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
             /* class com.google.android.material.datepicker.RangeDateSelector.AnonymousClass1 */
 
             @Override // com.google.android.material.datepicker.DateFormatTextWatcher
-            void onValidDate(Long l2) {
-                RangeDateSelector.this.proposedTextStart = l2;
+            void onValidDate(Long l) {
+                RangeDateSelector.this.proposedTextStart = l;
                 RangeDateSelector.this.updateIfValidTextProposal(textInputLayout, textInputLayout2, onSelectionChangedListener);
             }
 
@@ -193,8 +193,8 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
             /* class com.google.android.material.datepicker.RangeDateSelector.AnonymousClass2 */
 
             @Override // com.google.android.material.datepicker.DateFormatTextWatcher
-            void onValidDate(Long l2) {
-                RangeDateSelector.this.proposedTextEnd = l2;
+            void onValidDate(Long l) {
+                RangeDateSelector.this.proposedTextEnd = l;
                 RangeDateSelector.this.updateIfValidTextProposal(textInputLayout, textInputLayout2, onSelectionChangedListener);
             }
 
@@ -210,11 +210,11 @@ public class RangeDateSelector implements DateSelector<Pair<Long, Long>> {
 
     /* access modifiers changed from: private */
     public void updateIfValidTextProposal(TextInputLayout textInputLayout, TextInputLayout textInputLayout2, OnSelectionChangedListener<Pair<Long, Long>> onSelectionChangedListener) {
-        Long l2 = this.proposedTextStart;
-        if (l2 == null || this.proposedTextEnd == null) {
+        Long l = this.proposedTextStart;
+        if (l == null || this.proposedTextEnd == null) {
             clearInvalidRange(textInputLayout, textInputLayout2);
             onSelectionChangedListener.onIncompleteSelectionChanged();
-        } else if (isValidRange(l2.longValue(), this.proposedTextEnd.longValue())) {
+        } else if (isValidRange(l.longValue(), this.proposedTextEnd.longValue())) {
             this.selectedStartItem = this.proposedTextStart;
             this.selectedEndItem = this.proposedTextEnd;
             onSelectionChangedListener.onSelectionChanged(getSelection());

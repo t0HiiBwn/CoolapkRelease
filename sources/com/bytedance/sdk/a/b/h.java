@@ -109,9 +109,7 @@ public final class h {
     public static final h i = a("SSL_RSA_WITH_3DES_EDE_CBC_SHA", 10);
     public static final h j = a("SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA", 17);
     public static final h k = a("SSL_DHE_DSS_WITH_DES_CBC_SHA", 18);
-
-    /* renamed from: l  reason: collision with root package name */
-    public static final h f1276l = a("SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA", 19);
+    public static final h l = a("SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA", 19);
     public static final h m = a("SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA", 20);
     public static final h n = a("SSL_DHE_RSA_WITH_DES_CBC_SHA", 21);
     public static final h o = a("SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA", 22);

@@ -61,7 +61,7 @@ public final class FeedCopySheetGroupFactory implements SheetCallback {
         if (!this.dataList.isEmpty()) {
             return wrapAsSheetGroup();
         }
-        insertItem(new CopyTextAction(null, false, new FeedCopySheetGroupFactory$create$1(this), 3, null), "复制全部内容", 2131231232);
+        insertItem(new CopyTextAction(null, false, new FeedCopySheetGroupFactory$create$1(this), 3, null), "复制全部内容", 2131231243);
         Intrinsics.checkNotNullExpressionValue(loginSession, "session");
         if (loginSession.isAdmin()) {
             String messageTitle = this.data.getMessageTitle();
@@ -72,17 +72,17 @@ public final class FeedCopySheetGroupFactory implements SheetCallback {
                 } else {
                     str3 = "";
                 }
-                insertItem(new CopyTextAction(str3, false, null, 6, null), "复制内容标题", 2131231235);
+                insertItem(new CopyTextAction(str3, false, null, 6, null), "复制内容标题", 2131231246);
             }
         }
         CopyTextAction copyTextAction = new CopyTextAction(null, true, new FeedCopySheetGroupFactory$create$2(this), 1, null);
-        String string = this.activity.getString(2131886713);
+        String string = this.activity.getString(2131886775);
         Intrinsics.checkNotNullExpressionValue(string, "activity.getString(R.string.str_dialog_copy_free)");
-        insertItem(copyTextAction, string, 2131231325);
-        insertItem(new CopyTextAction('@' + this.data.getUserName() + ' ', false, null, 6, null), "复制用户名", 2131231236);
+        insertItem(copyTextAction, string, 2131231336);
+        insertItem(new CopyTextAction('@' + this.data.getUserName() + ' ', false, null, 6, null), "复制用户名", 2131231247);
         boolean z3 = this.data.getPicArray().size() > 0 && !TextUtils.isEmpty(this.data.getPicArray().get(0));
         if (loginSession.isAdmin() && z3) {
-            insertItem(new CopyTextAction(null, false, new FeedCopySheetGroupFactory$create$3(this), 3, null), "复制图片链接", 2131231234);
+            insertItem(new CopyTextAction(null, false, new FeedCopySheetGroupFactory$create$3(this), 3, null), "复制图片链接", 2131231245);
         }
         if (this.data.getIsHtmlArticle() == 1) {
             String messageCover2 = this.data.getMessageCover();
@@ -95,7 +95,7 @@ public final class FeedCopySheetGroupFactory implements SheetCallback {
                     } else {
                         str2 = "";
                     }
-                    insertItem(new CopyTextAction(str2, false, null, 6, null), "复制封面图片链接", 2131231234);
+                    insertItem(new CopyTextAction(str2, false, null, 6, null), "复制封面图片链接", 2131231245);
                 }
                 if (loginSession.isAdmin()) {
                     String spamReason = this.data.getSpamReason();
@@ -109,7 +109,7 @@ public final class FeedCopySheetGroupFactory implements SheetCallback {
                         } else {
                             str = "";
                         }
-                        insertItem(new CopyTextAction(str, false, null, 6, null), "复制违规内容", 2131231235);
+                        insertItem(new CopyTextAction(str, false, null, 6, null), "复制违规内容", 2131231246);
                     }
                 }
                 return wrapAsSheetGroup();
@@ -119,7 +119,7 @@ public final class FeedCopySheetGroupFactory implements SheetCallback {
         messageCover = this.data.getMessageCover();
         if (messageCover == null) {
         }
-        insertItem(new CopyTextAction(str2, false, null, 6, null), "复制封面图片链接", 2131231234);
+        insertItem(new CopyTextAction(str2, false, null, 6, null), "复制封面图片链接", 2131231245);
         if (loginSession.isAdmin()) {
         }
         return wrapAsSheetGroup();
@@ -143,7 +143,7 @@ public final class FeedCopySheetGroupFactory implements SheetCallback {
             StringUtils.copyText(this.activity, str);
             Application application = AppHolder.getApplication();
             Intrinsics.checkNotNullExpressionValue(application, "AppHolder.getApplication()");
-            Toast.show(application, 2131887190);
+            Toast.show(application, 2131887252);
         }
         return SheetResult.Companion.getClose();
     }

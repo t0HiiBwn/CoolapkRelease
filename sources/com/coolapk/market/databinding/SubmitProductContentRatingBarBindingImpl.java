@@ -22,9 +22,9 @@ public class SubmitProductContentRatingBarBindingImpl extends SubmitProductConte
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363194, 1);
-        sparseIntArray.put(2131363212, 2);
-        sparseIntArray.put(2131363208, 3);
+        sparseIntArray.put(2131363208, 1);
+        sparseIntArray.put(2131363226, 2);
+        sparseIntArray.put(2131363222, 3);
     }
 
     public SubmitProductContentRatingBarBindingImpl(DataBindingComponent dataBindingComponent, View view) {

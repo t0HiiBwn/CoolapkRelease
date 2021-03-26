@@ -28,10 +28,10 @@ public class ItemMessageSelectViewBindingImpl extends ItemMessageSelectViewBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362053, 2);
-        sparseIntArray.put(2131363533, 3);
-        sparseIntArray.put(2131362374, 4);
-        sparseIntArray.put(2131362882, 5);
+        sparseIntArray.put(2131362054, 2);
+        sparseIntArray.put(2131363551, 3);
+        sparseIntArray.put(2131362380, 4);
+        sparseIntArray.put(2131362893, 5);
     }
 
     public ItemMessageSelectViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

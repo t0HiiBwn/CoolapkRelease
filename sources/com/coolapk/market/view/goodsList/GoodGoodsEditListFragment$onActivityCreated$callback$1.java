@@ -26,6 +26,6 @@ public final class GoodGoodsEditListFragment$onActivityCreated$callback$1 implem
 
     @Override // com.coolapk.market.widget.touchhelper.ItemTouchHelperAdapter
     public boolean canMove(int i) {
-        return this.this$0.getAdapter$presentation_coolapkAppRelease().getItemViewType(i) == 2131558686;
+        return this.this$0.getAdapter$presentation_coolapkAppRelease().getItemViewType(i) == 2131558692;
     }
 }

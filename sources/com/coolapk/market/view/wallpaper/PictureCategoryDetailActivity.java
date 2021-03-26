@@ -36,7 +36,7 @@ public final class PictureCategoryDetailActivity extends TabActivity {
 
     @Override // com.coolapk.market.view.base.TabActivity
     protected String[] onCreateTabs() {
-        return new String[]{getString(2131887044), getString(2131887042), getString(2131887043)};
+        return new String[]{getString(2131887106), getString(2131887104), getString(2131887105)};
     }
 
     @Override // com.coolapk.market.view.base.TabActivity, com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity

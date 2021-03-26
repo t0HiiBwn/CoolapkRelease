@@ -188,6 +188,7 @@ public final class SettingSynchronized {
         arrayList.add("auto_load_video_when_wifi");
         arrayList.add("statistic_toast");
         arrayList.add("developer_api");
+        arrayList.add("tpns_keep_alive");
         arrayList.add("clear_cache_on_exit");
         arrayList.add("cool_picture_watermark_option");
         arrayList.add("theme_custom_theme_dark");
@@ -291,6 +292,12 @@ public final class SettingSynchronized {
                 }
                 editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));
                 return;
+            case -1475562831:
+                if (!str.equals("share_goods_dialog")) {
+                    return;
+                }
+                editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));
+                return;
             case -1453740702:
                 if (!str.equals("check_beta_version_enabled")) {
                     return;
@@ -299,6 +306,12 @@ public final class SettingSynchronized {
                 return;
             case -1442637777:
                 if (!str.equals("use_internal_webview")) {
+                    return;
+                }
+                editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));
+                return;
+            case -1347074618:
+                if (!str.equals("user_space_show_recent_like")) {
                     return;
                 }
                 editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));
@@ -340,6 +353,12 @@ public final class SettingSynchronized {
                 }
                 editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));
                 return;
+            case -901794566:
+                if (!str.equals("record_hit_history")) {
+                    return;
+                }
+                editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));
+                return;
             case -505714741:
                 if (!str.equals("theme_custom_color")) {
                     return;
@@ -376,8 +395,20 @@ public final class SettingSynchronized {
                 }
                 editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));
                 return;
+            case 167226925:
+                if (!str.equals("read_clipboard")) {
+                    return;
+                }
+                editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));
+                return;
             case 266738532:
                 if (!str.equals("set_night_mode_to_pure_black")) {
+                    return;
+                }
+                editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));
+                return;
+            case 475362641:
+                if (!str.equals("tpns_keep_alive")) {
                     return;
                 }
                 editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));
@@ -469,6 +500,12 @@ public final class SettingSynchronized {
                 return;
             case 1954592595:
                 if (!str.equals("auto_install_on_downloaded")) {
+                    return;
+                }
+                editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));
+                return;
+            case 1961557086:
+                if (!str.equals("record_recent_history")) {
                     return;
                 }
                 editorHelper.putBoolean(str, Intrinsics.areEqual(str2, "1"));

@@ -27,7 +27,7 @@ public class NodePickerBindingImpl extends NodePickerBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363934, 2);
+        sparseIntArray.put(2131363959, 2);
     }
 
     public NodePickerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -33,18 +33,18 @@ public class DyhIncludBindingImpl extends DyhIncludBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362146, 4);
-        sparseIntArray.put(2131362639, 5);
-        sparseIntArray.put(2131363481, 6);
-        sparseIntArray.put(2131362257, 7);
-        sparseIntArray.put(2131362656, 8);
-        sparseIntArray.put(2131363321, 9);
-        sparseIntArray.put(2131362244, 10);
-        sparseIntArray.put(2131363305, 11);
-        sparseIntArray.put(2131363322, 12);
-        sparseIntArray.put(2131363934, 13);
-        sparseIntArray.put(2131362306, 14);
-        sparseIntArray.put(2131361899, 15);
+        sparseIntArray.put(2131362149, 4);
+        sparseIntArray.put(2131362647, 5);
+        sparseIntArray.put(2131363499, 6);
+        sparseIntArray.put(2131362262, 7);
+        sparseIntArray.put(2131362664, 8);
+        sparseIntArray.put(2131363337, 9);
+        sparseIntArray.put(2131362249, 10);
+        sparseIntArray.put(2131363320, 11);
+        sparseIntArray.put(2131363338, 12);
+        sparseIntArray.put(2131363959, 13);
+        sparseIntArray.put(2131362311, 14);
+        sparseIntArray.put(2131361900, 15);
     }
 
     public DyhIncludBindingImpl(DataBindingComponent dataBindingComponent, View view) {

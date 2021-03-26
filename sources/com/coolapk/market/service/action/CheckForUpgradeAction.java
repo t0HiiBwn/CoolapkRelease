@@ -160,7 +160,7 @@ public final class CheckForUpgradeAction implements ServiceAction {
         if (mobileAppUpgradeListFast != null && !mobileAppUpgradeListFast.isEmpty() && DataManager.getInstance().getPreferencesBoolean("show_upgrade_notification_enabled", true)) {
             CollectionsKt.sortWith(mobileAppUpgradeListFast, CheckForUpgradeAction$notifyUpgrade$1.INSTANCE);
             PendingIntent activity = PendingIntent.getActivity(context, 0, new Intent(context, UpgradeManagerActivity.class), 134217728);
-            String string = context.getString(2131886442, Integer.valueOf(mobileAppUpgradeListFast.size()));
+            String string = context.getString(2131886502, Integer.valueOf(mobileAppUpgradeListFast.size()));
             Intrinsics.checkNotNullExpressionValue(string, "context.getString(R.stri…e_update_apps, data.size)");
             int min = Math.min(mobileAppUpgradeListFast.size(), 3);
             String str = "";
@@ -174,7 +174,7 @@ public final class CheckForUpgradeAction implements ServiceAction {
                 str = sb.toString();
             }
             if (mobileAppUpgradeListFast.size() > 3) {
-                str = str + context.getString(2131886441, Integer.valueOf(mobileAppUpgradeListFast.size()));
+                str = str + context.getString(2131886501, Integer.valueOf(mobileAppUpgradeListFast.size()));
             }
             if (str.length() > 2) {
                 Objects.requireNonNull(str, "null cannot be cast to non-null type java.lang.String");
@@ -183,9 +183,9 @@ public final class CheckForUpgradeAction implements ServiceAction {
             }
             String str2 = string;
             String str3 = str;
-            NotificationCompat.Builder style = new NotificationCompat.Builder(context, String.valueOf(3)).setTicker(str2).setContentTitle(str2).setContentText(str3).setSmallIcon(2131231756).setColor(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099784)).setShowWhen(true).setAutoCancel(true).setContentIntent(activity).setStyle(new NotificationCompat.BigTextStyle().bigText(str3));
-            style.addAction(2131231584, context.getString(2131886156), PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_CHECK_UPDATE_ON_UPGRADE_ALL_APP_CLICK"), 134217728));
-            style.addAction(2131231585, context.getString(2131886158), PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_CHECK_UPDATE_ON_START_APP_UPGRADE_CLICK"), 134217728));
+            NotificationCompat.Builder style = new NotificationCompat.Builder(context, String.valueOf(3)).setTicker(str2).setContentTitle(str2).setContentText(str3).setSmallIcon(2131231767).setColor(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099786)).setShowWhen(true).setAutoCancel(true).setContentIntent(activity).setStyle(new NotificationCompat.BigTextStyle().bigText(str3));
+            style.addAction(2131231595, context.getString(2131886156), PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_CHECK_UPDATE_ON_UPGRADE_ALL_APP_CLICK"), 134217728));
+            style.addAction(2131231596, context.getString(2131886158), PendingIntent.getBroadcast(context, 0, new Intent("com.coolapk.market.action.ACTION_CHECK_UPDATE_ON_START_APP_UPGRADE_CLICK"), 134217728));
             try {
                 Object systemService = context.getSystemService("notification");
                 if (systemService != null) {

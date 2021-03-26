@@ -38,9 +38,7 @@ public class ImprintHandler implements FileLockCallback {
     private static Object g = new Object();
     private static ImprintHandler j = null;
     private static Context k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static FileLockUtil f1491l = null;
+    private static FileLockUtil l = null;
     private static final int m = 0;
     private static final int n = 1;
     private static Map<String, UMImprintPreProcessCallback> o = new HashMap();
@@ -79,9 +77,9 @@ public class ImprintHandler implements FileLockCallback {
             if (j == null) {
                 j = new ImprintHandler(context);
                 FileLockUtil fileLockUtil = new FileLockUtil();
-                f1491l = fileLockUtil;
+                l = fileLockUtil;
                 if (fileLockUtil != null) {
-                    f1491l.doFileOperateion(new File(k.getFilesDir(), ".imprint"), j, 0);
+                    l.doFileOperateion(new File(k.getFilesDir(), ".imprint"), j, 0);
                 }
             }
             imprintHandler = j;
@@ -526,7 +524,7 @@ public class ImprintHandler implements FileLockCallback {
     }
 
     public void d() {
-        if (this.i != null && f1491l != null) {
+        if (this.i != null && l != null) {
             File file = new File(k.getFilesDir(), ".imprint");
             if (!file.exists()) {
                 try {
@@ -539,7 +537,7 @@ public class ImprintHandler implements FileLockCallback {
                     }
                 }
             }
-            f1491l.doFileOperateion(file, j, 1);
+            l.doFileOperateion(file, j, 1);
         }
     }
 

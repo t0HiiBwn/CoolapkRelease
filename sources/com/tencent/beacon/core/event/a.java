@@ -31,9 +31,7 @@ public final class a implements h {
             a.this.a();
         }
     };
-
-    /* renamed from: l  reason: collision with root package name */
-    private Runnable f1424l = new Runnable() {
+    private Runnable l = new Runnable() {
         /* class com.tencent.beacon.core.event.a.AnonymousClass2 */
 
         @Override // java.lang.Runnable
@@ -216,7 +214,7 @@ public final class a implements h {
         if (z) {
             b();
         } else {
-            com.tencent.beacon.core.a.b.a().a(this.f1424l);
+            com.tencent.beacon.core.a.b.a().a(this.l);
         }
     }
 

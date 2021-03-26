@@ -13,9 +13,7 @@ public final class co {
     public static final byte i = 11;
     public static final byte j = 12;
     public static final byte k = 13;
-
-    /* renamed from: l  reason: collision with root package name */
-    public static final byte f1467l = 14;
+    public static final byte l = 14;
     public static final byte m = 15;
     public static final byte n = 16;
 }

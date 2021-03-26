@@ -58,7 +58,7 @@ final class SuperSearchFragment$onActivityCreated$8 extends Lambda implements Fu
                 throw new RuntimeException("Unknown searchType to apkType: " + SuperSearchFragment.access$getSearchType$p(this.this$0.this$0));
                 int id = view.getId();
                 AppFilterViewHolder appFilterViewHolder = null;
-                if (id == 2131362071) {
+                if (id == 2131362073) {
                     SuperSearchFilterView superSearchFilterView = this.this$0.this$0.sortFilterView;
                     if (superSearchFilterView != null) {
                         superSearchFilterView.hide(true);
@@ -75,7 +75,7 @@ final class SuperSearchFragment$onActivityCreated$8 extends Lambda implements Fu
                         SuperSearchFragment superSearchFragment = this.this$0.this$0;
                         FragmentActivity requireActivity = this.this$0.this$0.requireActivity();
                         Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-                        superSearchFragment.appFilterView = new SuperSearchFilterView(requireActivity, 2131362076, ((float) this.this$0.this$0.height) * 7.5f);
+                        superSearchFragment.appFilterView = new SuperSearchFilterView(requireActivity, 2131362078, ((float) this.this$0.this$0.height) * 7.5f);
                         SuperSearchFilterView superSearchFilterView2 = this.this$0.this$0.appFilterView;
                         if (superSearchFilterView2 != null) {
                             superSearchFilterView2.setOnClickListener(new SuperSearchFragment$onActivityCreated$8$1$onItemClick$1(this));
@@ -131,7 +131,7 @@ final class SuperSearchFragment$onActivityCreated$8 extends Lambda implements Fu
                     if (appFilterViewHolder4 != null) {
                         AppFilterViewHolder.resetCategoryChevronView$default(appFilterViewHolder4, false, 1, null);
                     }
-                } else if (id == 2131362080) {
+                } else if (id == 2131362082) {
                     SuperSearchFilterView superSearchFilterView8 = this.this$0.this$0.appFilterView;
                     if (superSearchFilterView8 != null) {
                         superSearchFilterView8.hide(true);
@@ -148,7 +148,7 @@ final class SuperSearchFragment$onActivityCreated$8 extends Lambda implements Fu
                         SuperSearchFragment superSearchFragment2 = this.this$0.this$0;
                         FragmentActivity requireActivity2 = this.this$0.this$0.requireActivity();
                         Intrinsics.checkNotNullExpressionValue(requireActivity2, "requireActivity()");
-                        superSearchFragment2.sortFilterView = new SuperSearchFilterView(requireActivity2, 2131363382, ((float) this.this$0.this$0.height) * 7.0f);
+                        superSearchFragment2.sortFilterView = new SuperSearchFilterView(requireActivity2, 2131363399, ((float) this.this$0.this$0.height) * 7.0f);
                         SuperSearchFilterView superSearchFilterView9 = this.this$0.this$0.sortFilterView;
                         if (superSearchFilterView9 != null) {
                             superSearchFilterView9.setOnClickListener(new SuperSearchFragment$onActivityCreated$8$1$onItemClick$3(this));

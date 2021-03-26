@@ -109,10 +109,10 @@ public final class ProductNodeHeaderViewPart extends BindingViewPart<ProductNode
                     if (i == 122) {
                         this.this$0.updateFollowState();
                         return;
-                    } else if (i == 228) {
+                    } else if (i == 229) {
                         this.this$0.updateRatingState();
                         return;
-                    } else if (i != 321) {
+                    } else if (i != 322) {
                         return;
                     }
                 }
@@ -148,7 +148,7 @@ public final class ProductNodeHeaderViewPart extends BindingViewPart<ProductNode
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ProductNodeHeaderBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559109, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559116, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…header, viewGroup, false)");
         return (ProductNodeHeaderBinding) inflate;
     }
@@ -288,12 +288,12 @@ public final class ProductNodeHeaderViewPart extends BindingViewPart<ProductNode
 
     private final void createTagsIntoContainer(String str) {
         int dp = NumberExtendsKt.getDp((Number) 6);
-        int colorInt = ResourceUtils.getColorInt(getContext(), 2131100152);
+        int colorInt = ResourceUtils.getColorInt(getContext(), 2131100165);
         TextView textView = new TextView(getContext());
         TextView textView2 = textView;
         ViewExtendsKt.clipView(textView2, 0, (float) NumberExtendsKt.getDp((Number) 2));
         textView.setPadding(dp, dp, dp, dp);
-        textView.setTextColor(ResourceUtils.getColorInt(textView.getContext(), 2131100149));
+        textView.setTextColor(ResourceUtils.getColorInt(textView.getContext(), 2131100162));
         textView.setBackground(ShapeUtils.createSelectableItemBackgroundWith(textView.getContext(), new ColorDrawable(colorInt)));
         textView.setIncludeFontPadding(false);
         textView.setTextSize(12.0f);
@@ -312,9 +312,9 @@ public final class ProductNodeHeaderViewPart extends BindingViewPart<ProductNode
         Intrinsics.checkNotNullExpressionValue(textView, "binding.actionView");
         textView.setSelected(followState);
         if (followState) {
-            ((ProductNodeHeaderBinding) getBinding()).actionView.setText(2131887142);
+            ((ProductNodeHeaderBinding) getBinding()).actionView.setText(2131887204);
         } else {
-            ((ProductNodeHeaderBinding) getBinding()).actionView.setText(2131887143);
+            ((ProductNodeHeaderBinding) getBinding()).actionView.setText(2131887205);
         }
         TextView textView2 = ((ProductNodeHeaderBinding) getBinding()).followNumView;
         Intrinsics.checkNotNullExpressionValue(textView2, "binding.followNumView");
@@ -412,7 +412,7 @@ public final class ProductNodeHeaderViewPart extends BindingViewPart<ProductNode
         int i = 0;
         String str = "";
         switch (view.getId()) {
-            case 2131361981:
+            case 2131361982:
                 ProductPresenter productPresenter = this.presenter;
                 String id = this.viewModel.getModel().getId();
                 if (id != null) {
@@ -420,17 +420,17 @@ public final class ProductNodeHeaderViewPart extends BindingViewPart<ProductNode
                 }
                 productPresenter.followProduct(str, this.viewModel.getFollowState(), true ^ this.viewModel.getFollowState());
                 return;
-            case 2131362187:
+            case 2131362190:
                 ActionManager.startProductBuyAndWishListActivity(getContext(), this.viewModel.getModel().getId(), 1);
                 return;
-            case 2131362189:
-            case 2131363969:
+            case 2131362192:
+            case 2131363995:
                 ActionManager.startProductBuyAndWishListActivity(getContext(), this.viewModel.getModel().getId(), 0);
                 return;
-            case 2131362546:
+            case 2131362554:
                 ActionManager.startProductCouponActivity(getContext(), this.viewModel.getModel());
                 return;
-            case 2131362961:
+            case 2131362973:
                 Context context = getContext();
                 String id2 = this.viewModel.getModel().getId();
                 if (id2 != null) {
@@ -438,11 +438,11 @@ public final class ProductNodeHeaderViewPart extends BindingViewPart<ProductNode
                 }
                 ActionManager.startProductFansListActivity(context, str);
                 return;
-            case 2131363213:
+            case 2131363227:
                 StatisticHelper.Companion.getInstance().recordPhoneBarAction("点击写点评");
                 ProductPresenter.ratingProduct$default(this.presenter, this.viewModel, this.activity, 0, true, 4, null);
                 return;
-            case 2131363214:
+            case 2131363228:
                 Product model = this.viewModel.getModel();
                 Context context2 = getContext();
                 String str2 = model.getTitle() + "的评分";
@@ -453,13 +453,13 @@ public final class ProductNodeHeaderViewPart extends BindingViewPart<ProductNode
                 }
                 ActionManager.startNodeRatingListActivity(context2, str2, "7", id3, null, i2, i);
                 return;
-            case 2131363920:
+            case 2131363945:
                 updateRatingType(2);
                 return;
-            case 2131363933:
+            case 2131363958:
                 updateRatingType(1);
                 return;
-            case 2131363970:
+            case 2131363996:
                 boolean wishState = this.viewModel.getWishState();
                 ProductPresenter productPresenter2 = this.presenter;
                 String id4 = this.viewModel.getModel().getId();
@@ -483,9 +483,9 @@ public final class ProductNodeHeaderViewPart extends BindingViewPart<ProductNode
         String str = squareLogo;
         boolean z = false;
         if (str == null || str.length() == 0) {
-            GlideApp.with(this.activity).load((Integer) 2131231617).into(((ProductNodeHeaderBinding) getBinding()).logoView);
+            GlideApp.with(this.activity).load((Integer) 2131231628).into(((ProductNodeHeaderBinding) getBinding()).logoView);
         } else {
-            GlideApp.with(this.activity).load(squareLogo).placeholder(2131231617).diskCacheStrategy(DiskCacheStrategy.DATA).into(((ProductNodeHeaderBinding) getBinding()).logoView);
+            GlideApp.with(this.activity).load(squareLogo).placeholder(2131231628).diskCacheStrategy(DiskCacheStrategy.DATA).into(((ProductNodeHeaderBinding) getBinding()).logoView);
         }
         List<String> coverPicList = product.getCoverPicList();
         Intrinsics.checkNotNullExpressionValue(coverPicList, "data.coverPicList");
@@ -560,13 +560,13 @@ public final class ProductNodeHeaderViewPart extends BindingViewPart<ProductNode
         TextView textView5 = ((ProductNodeHeaderBinding) getBinding()).rateNum5;
         Intrinsics.checkNotNullExpressionValue(textView5, "binding.rateNum5");
         textView5.setText(String.valueOf(buildRatingData.getRatingNum5()));
-        ((ProductNodeHeaderBinding) getBinding()).ratingImageView.setImageResource(z ? 2131231736 : 2131231741);
-        int i4 = 2131100148;
-        ((ProductNodeHeaderBinding) getBinding()).viewAllView.setTextColor(ResourceUtils.getColorInt(this.activity, z ? 2131100148 : 2131100149));
+        ((ProductNodeHeaderBinding) getBinding()).ratingImageView.setImageResource(z ? 2131231747 : 2131231752);
+        int i4 = 2131100161;
+        ((ProductNodeHeaderBinding) getBinding()).viewAllView.setTextColor(ResourceUtils.getColorInt(this.activity, z ? 2131100161 : 2131100162));
         TextView textView6 = ((ProductNodeHeaderBinding) getBinding()).viewOwnerView;
         Activity activity2 = this.activity;
         if (z) {
-            i4 = 2131100149;
+            i4 = 2131100162;
         }
         textView6.setTextColor(ResourceUtils.getColorInt(activity2, i4));
         RatingBar ratingBar = ((ProductNodeHeaderBinding) getBinding()).ratingBar;

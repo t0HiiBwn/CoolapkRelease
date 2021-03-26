@@ -20,7 +20,7 @@ public class K0 {
     public static String WI;
 
     /* renamed from: XI  reason: collision with root package name */
-    public static Context f1165XI;
+    public static Context f171XI;
     public static String bs;
     public static String cs;
     public static kM kM;
@@ -53,7 +53,7 @@ public class K0 {
                 } catch (Exception e) {
                     e.toString();
                 }
-                Context context = K0.f1165XI;
+                Context context = K0.f171XI;
                 synchronized (K0.vs) {
                     K0.vs.notify();
                 }
@@ -63,7 +63,7 @@ public class K0 {
 
     public K0() {
         XI();
-        CV = new XI(f1165XI);
+        CV = new XI(f171XI);
     }
 
     public static boolean K0() {
@@ -83,7 +83,7 @@ public class K0 {
         if (!K0()) {
             return null;
         }
-        if (f1165XI == null) {
+        if (f171XI == null) {
             if (context == null) {
                 return null;
             }
@@ -91,7 +91,7 @@ public class K0 {
             if (applicationContext != null) {
                 context = applicationContext;
             }
-            f1165XI = context;
+            f171XI = context;
         }
         if (q6 == null) {
             synchronized (K0.class) {

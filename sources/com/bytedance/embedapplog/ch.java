@@ -15,14 +15,14 @@ final class ch {
     final Integer f;
     final Long g;
 
-    ch(String str, String str2, Boolean bool, Long l2, Long l3, Integer num, Long l4) {
+    ch(String str, String str2, Boolean bool, Long l, Long l2, Integer num, Long l3) {
         this.a = str;
         this.b = str2;
         this.c = bool;
-        this.d = l2;
-        this.e = l3;
+        this.d = l;
+        this.e = l2;
         this.f = num;
-        this.g = l4;
+        this.g = l3;
     }
 
     public String toString() {

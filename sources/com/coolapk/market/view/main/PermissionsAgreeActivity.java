@@ -130,7 +130,7 @@ public final class PermissionsAgreeActivity extends FakeStatusBarActivity implem
         getWindow().requestFeature(1);
         setContentBarAlwaysTranslucent(true);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558999, null);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559006, null);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…out_privacy_clause, null)");
         LayoutPrivacyClauseBinding layoutPrivacyClauseBinding = (LayoutPrivacyClauseBinding) contentView;
         this.binding = layoutPrivacyClauseBinding;
@@ -417,11 +417,11 @@ public final class PermissionsAgreeActivity extends FakeStatusBarActivity implem
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf == null || valueOf.intValue() != 2131362316) {
-            if (valueOf == null || valueOf.intValue() != 2131362900) {
-                if (valueOf != null && valueOf.intValue() == 2131363042) {
+        if (valueOf == null || valueOf.intValue() != 2131362322) {
+            if (valueOf == null || valueOf.intValue() != 2131362911) {
+                if (valueOf != null && valueOf.intValue() == 2131363056) {
                     onlyView();
-                } else if (valueOf != null && valueOf.intValue() == 2131362008) {
+                } else if (valueOf != null && valueOf.intValue() == 2131362009) {
                     agree();
                 }
             }

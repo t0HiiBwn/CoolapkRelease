@@ -17,7 +17,7 @@ final class AlphaToolbarActivity$onCreate$4 implements ViewUtil.OnDoubleClickLis
 
     @Override // com.coolapk.market.util.ViewUtil.OnDoubleClickListener
     public final boolean onDoubleClick(View view) {
-        Fragment findFragmentById = this.this$0.getSupportFragmentManager().findFragmentById(2131362316);
+        Fragment findFragmentById = this.this$0.getSupportFragmentManager().findFragmentById(2131362322);
         if (findFragmentById != null && (findFragmentById instanceof ScrollableFragment)) {
             ((ScrollableFragment) findFragmentById).scrollToTop(true);
         }

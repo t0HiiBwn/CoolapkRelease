@@ -37,9 +37,7 @@ public class b implements Parcelable {
     private long i;
     private List<b> j;
     private b k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1419l;
+    private int l;
     private boolean m;
     private AtomicBoolean n;
     private com.ss.android.socialbase.downloader.h.b o;
@@ -131,28 +129,28 @@ public class b implements Parcelable {
 
     public void a(SQLiteStatement sQLiteStatement) {
         if (sQLiteStatement != null) {
-            this.f1419l = 0;
+            this.l = 0;
             sQLiteStatement.clearBindings();
-            int i2 = this.f1419l + 1;
-            this.f1419l = i2;
+            int i2 = this.l + 1;
+            this.l = i2;
             sQLiteStatement.bindLong(i2, (long) this.b);
-            int i3 = this.f1419l + 1;
-            this.f1419l = i3;
+            int i3 = this.l + 1;
+            this.l = i3;
             sQLiteStatement.bindLong(i3, (long) this.g);
-            int i4 = this.f1419l + 1;
-            this.f1419l = i4;
+            int i4 = this.l + 1;
+            this.l = i4;
             sQLiteStatement.bindLong(i4, this.c);
-            int i5 = this.f1419l + 1;
-            this.f1419l = i5;
+            int i5 = this.l + 1;
+            this.l = i5;
             sQLiteStatement.bindLong(i5, n());
-            int i6 = this.f1419l + 1;
-            this.f1419l = i6;
+            int i6 = this.l + 1;
+            this.l = i6;
             sQLiteStatement.bindLong(i6, this.e);
-            int i7 = this.f1419l + 1;
-            this.f1419l = i7;
+            int i7 = this.l + 1;
+            this.l = i7;
             sQLiteStatement.bindLong(i7, this.f);
-            int i8 = this.f1419l + 1;
-            this.f1419l = i8;
+            int i8 = this.l + 1;
+            this.l = i8;
             sQLiteStatement.bindLong(i8, (long) b());
         }
     }

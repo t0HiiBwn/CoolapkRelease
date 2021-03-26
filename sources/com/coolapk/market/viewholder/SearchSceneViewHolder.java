@@ -41,7 +41,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SearchSceneViewHolder.kt */
 public final class SearchSceneViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558915;
+    public static final int LAYOUT_ID = 2131558922;
     private final ItemSearchSceneBinding binding = ((ItemSearchSceneBinding) getBinding());
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -198,7 +198,7 @@ public final class SearchSceneViewHolder extends BindingViewHolder {
         @Override // androidx.fragment.app.Fragment
         public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
             Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-            SearchSceneListBinding searchSceneListBinding = (SearchSceneListBinding) DataBindingUtil.inflate(layoutInflater, 2131559131, viewGroup, false);
+            SearchSceneListBinding searchSceneListBinding = (SearchSceneListBinding) DataBindingUtil.inflate(layoutInflater, 2131559138, viewGroup, false);
             RecyclerView recyclerView = searchSceneListBinding.recyclerView;
             Intrinsics.checkNotNullExpressionValue(recyclerView, "binding.recyclerView");
             recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 4));
@@ -239,7 +239,7 @@ public final class SearchSceneViewHolder extends BindingViewHolder {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public DataViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131559130, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131559137, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             return new DataViewHolder(inflate, true);
         }
@@ -267,7 +267,7 @@ public final class SearchSceneViewHolder extends BindingViewHolder {
     /* compiled from: SearchSceneViewHolder.kt */
     public static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131559130;
+        public static final int LAYOUT_ID = 2131559137;
         private final SearchSceneItemBinding binding;
         private Entity entity;
         private final boolean stretch;

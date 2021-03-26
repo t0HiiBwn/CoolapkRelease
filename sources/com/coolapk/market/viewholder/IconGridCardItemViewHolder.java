@@ -31,7 +31,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: IconGridCardItemViewHolder.kt */
 public class IconGridCardItemViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558778;
+    public static final int LAYOUT_ID = 2131558785;
     public String actionText;
     private final ItemIconGridCardItemBinding binding = ((ItemIconGridCardItemBinding) getBinding());
     private boolean isFollow;
@@ -149,7 +149,7 @@ public class IconGridCardItemViewHolder extends BindingViewHolder {
     @Override // com.coolapk.market.viewholder.BindingViewHolder
     public void bindTo(Object obj) {
         boolean z;
-        this.binding.itemView.setTag(2131362753, obj);
+        this.binding.itemView.setTag(2131362764, obj);
         IconGridCardItemViewHolder iconGridCardItemViewHolder = this;
         ViewUtil.clickListener(this.binding.itemView, iconGridCardItemViewHolder);
         int i = 0;
@@ -175,11 +175,11 @@ public class IconGridCardItemViewHolder extends BindingViewHolder {
             if (AppHolder.getAppTheme().isDarkTheme()) {
                 ItemIconGridCardItemBinding itemIconGridCardItemBinding = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemIconGridCardItemBinding, "binding");
-                itemIconGridCardItemBinding.setPlaceHolder(2131231272);
+                itemIconGridCardItemBinding.setPlaceHolder(2131231283);
             } else {
                 ItemIconGridCardItemBinding itemIconGridCardItemBinding2 = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemIconGridCardItemBinding2, "binding");
-                itemIconGridCardItemBinding2.setPlaceHolder(2131231271);
+                itemIconGridCardItemBinding2.setPlaceHolder(2131231282);
             }
         } else {
             if (obj instanceof Product) {
@@ -196,7 +196,7 @@ public class IconGridCardItemViewHolder extends BindingViewHolder {
                 this.titleLine = 2;
                 ItemIconGridCardItemBinding itemIconGridCardItemBinding3 = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemIconGridCardItemBinding3, "binding");
-                itemIconGridCardItemBinding3.setPlaceHolder(2131231363);
+                itemIconGridCardItemBinding3.setPlaceHolder(2131231374);
             } else if (obj instanceof Entity) {
                 Entity entity = (Entity) obj;
                 this.logo = EntityExtendsKt.picOrLogo(entity);
@@ -211,7 +211,7 @@ public class IconGridCardItemViewHolder extends BindingViewHolder {
                 this.titleLine = 2;
                 ItemIconGridCardItemBinding itemIconGridCardItemBinding4 = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemIconGridCardItemBinding4, "binding");
-                itemIconGridCardItemBinding4.setPlaceHolder(2131231363);
+                itemIconGridCardItemBinding4.setPlaceHolder(2131231374);
             } else {
                 throw new RuntimeException("unable to bind the not-entity-type ");
             }
@@ -220,7 +220,7 @@ public class IconGridCardItemViewHolder extends BindingViewHolder {
         ItemIconGridCardItemBinding itemIconGridCardItemBinding5 = this.binding;
         Intrinsics.checkNotNullExpressionValue(itemIconGridCardItemBinding5, "binding");
         itemIconGridCardItemBinding5.setModel(this);
-        this.binding.actionView.setTag(2131362753, obj);
+        this.binding.actionView.setTag(2131362764, obj);
         TextView textView = this.binding.actionView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.actionView");
         if (!z) {
@@ -241,12 +241,12 @@ public class IconGridCardItemViewHolder extends BindingViewHolder {
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        Object tag = view.getTag(2131362753);
+        Object tag = view.getTag(2131362764);
         Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.model.Entity");
         Entity entity = (Entity) tag;
         int id = view.getId();
-        if (id != 2131361981) {
-            if (id != 2131362768) {
+        if (id != 2131361982) {
+            if (id != 2131362779) {
                 super.onClick(view);
                 return;
             }

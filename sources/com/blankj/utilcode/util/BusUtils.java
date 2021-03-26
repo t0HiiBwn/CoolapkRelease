@@ -10,6 +10,7 @@ import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -77,18 +78,23 @@ public final class BusUtils {
     }
 
     public static void post(String str) {
+        Objects.requireNonNull(str, "Argument 'tag' of type String (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         post(str, NULL);
     }
 
     public static void post(String str, Object obj) {
+        Objects.requireNonNull(str, "Argument 'tag' of type String (#0 out of 2, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
+        Objects.requireNonNull(obj, "Argument 'arg' of type Object (#1 out of 2, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         getInstance().postInner(str, obj);
     }
 
     public static void postSticky(String str) {
+        Objects.requireNonNull(str, "Argument 'tag' of type String (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         postSticky(str, NULL);
     }
 
     public static void postSticky(String str, Object obj) {
+        Objects.requireNonNull(str, "Argument 'tag' of type String (#0 out of 2, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         getInstance().postStickyInner(str, obj);
     }
 

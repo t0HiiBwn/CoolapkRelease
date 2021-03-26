@@ -18,8 +18,8 @@ final class AutoValue_Ads extends C$AutoValue_Ads {
         }
     };
 
-    AutoValue_Ads(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l2, Long l3, String str7, String str8, int i, String str9, String str10, String str11, String str12, String str13, String str14) {
-        super(str, str2, num, str3, str4, str5, str6, l2, l3, str7, str8, i, str9, str10, str11, str12, str13, str14);
+    AutoValue_Ads(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l, Long l2, String str7, String str8, int i, String str9, String str10, String str11, String str12, String str13, String str14) {
+        super(str, str2, num, str3, str4, str5, str6, l, l2, str7, str8, i, str9, str10, str11, str12, str13, str14);
     }
 
     @Override // android.os.Parcelable

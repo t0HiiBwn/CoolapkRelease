@@ -24,7 +24,7 @@ final class SubmitSecondHandExtraViewPart$updateSecondHandInfo$listener$1 implem
         if (!this.$inChangeMode) {
             Intrinsics.checkNotNullExpressionValue(view, "it");
             switch (view.getId()) {
-                case 2131363476:
+                case 2131363494:
                     CheckedTextView checkedTextView = this.$binding.switchLeft;
                     Intrinsics.checkNotNullExpressionValue(checkedTextView, "binding.switchLeft");
                     checkedTextView.setSelected(true);
@@ -34,7 +34,7 @@ final class SubmitSecondHandExtraViewPart$updateSecondHandInfo$listener$1 implem
                     this.this$0.updateSecondHandSthType(2);
                     this.this$0.bindDataSecondHandType(this.$binding);
                     return;
-                case 2131363477:
+                case 2131363495:
                     CheckedTextView checkedTextView3 = this.$binding.switchLeft;
                     Intrinsics.checkNotNullExpressionValue(checkedTextView3, "binding.switchLeft");
                     checkedTextView3.setSelected(false);

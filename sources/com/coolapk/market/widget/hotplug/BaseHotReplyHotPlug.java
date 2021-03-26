@@ -31,7 +31,7 @@ public class BaseHotReplyHotPlug extends ViewPartHotPlug<FeedHotReplyViewPart, F
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public BaseHotReplyHotPlug(View view, DataBindingComponent dataBindingComponent, ViewPartPool viewPartPool, boolean z) {
-        super(2131558774, viewPartPool, z);
+        super(2131558781, viewPartPool, z);
         Intrinsics.checkNotNullParameter(view, "viewToReplace");
         Intrinsics.checkNotNullParameter(dataBindingComponent, "component");
         Intrinsics.checkNotNullParameter(viewPartPool, "viewPartPool");

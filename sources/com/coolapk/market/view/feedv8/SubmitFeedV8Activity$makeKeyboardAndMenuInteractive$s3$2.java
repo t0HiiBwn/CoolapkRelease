@@ -21,9 +21,9 @@ public final class SubmitFeedV8Activity$makeKeyboardAndMenuInteractive$s3$2 exte
     public void onNext(boolean z) {
         super.onNext((SubmitFeedV8Activity$makeKeyboardAndMenuInteractive$s3$2) Boolean.valueOf(z));
         if (z) {
-            SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuCloseKeyboard.setImageResource(2131231384);
+            SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuCloseKeyboard.setImageResource(2131231395);
         } else {
-            SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuCloseKeyboard.setImageResource(2131231385);
+            SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuCloseKeyboard.setImageResource(2131231396);
         }
     }
 }

@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_FunThings  reason: invalid class name */
 abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
-    C$AutoValue_FunThings(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, UserInfo userInfo, String str10, String str11, String str12, String str13, String str14, String str15, int i, String str16, int i2, int i3, int i4, int i5, int i6, int i7, int i8, String str17, int i9, Long l4, UserAction userAction, String str18) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, l2, l3, str9, userInfo, str10, str11, str12, str13, str14, str15, i, str16, i2, i3, i4, i5, i6, i7, i8, str17, i9, l4, userAction, str18);
+    C$AutoValue_FunThings(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, UserInfo userInfo, String str10, String str11, String str12, String str13, String str14, String str15, int i, String str16, int i2, int i3, int i4, int i5, int i6, int i7, int i8, String str17, int i9, int i10, Long l3, UserAction userAction, String str18) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, l, l2, str9, userInfo, str10, str11, str12, str13, str14, str15, i, str16, i2, i3, i4, i5, i6, i7, i8, str17, i9, i10, l3, userAction, str18);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_FunThings$GsonTypeAdapter */
@@ -43,6 +43,7 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
         private String defaultLogo = null;
         private String defaultMessage = null;
         private String defaultPic = null;
+        private int defaultRecommend = 0;
         private int defaultReplyNum = 0;
         private int defaultShareNum = 0;
         private String defaultSourceId = null;
@@ -72,6 +73,7 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
         private final TypeAdapter<String> logoAdapter;
         private final TypeAdapter<String> messageAdapter;
         private final TypeAdapter<String> picAdapter;
+        private final TypeAdapter<Integer> recommendAdapter;
         private final TypeAdapter<Integer> replyNumAdapter;
         private final TypeAdapter<Integer> shareNumAdapter;
         private final TypeAdapter<String> sourceIdAdapter;
@@ -113,6 +115,7 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
             this.itemNumAdapter = gson.getAdapter(Integer.class);
             this.coverPicAdapter = gson.getAdapter(String.class);
             this.isOpenAdapter = gson.getAdapter(Integer.class);
+            this.recommendAdapter = gson.getAdapter(Integer.class);
             this.createdateAdapter = gson.getAdapter(Long.class);
             this.userActionAdapter = gson.getAdapter(UserAction.class);
             this.messageAdapter = gson.getAdapter(String.class);
@@ -163,13 +166,13 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -268,8 +271,13 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultCreatedate(Long l2) {
-            this.defaultCreatedate = l2;
+        public GsonTypeAdapter setDefaultRecommend(int i) {
+            this.defaultRecommend = i;
+            return this;
+        }
+
+        public GsonTypeAdapter setDefaultCreatedate(Long l) {
+            this.defaultCreatedate = l;
             return this;
         }
 
@@ -349,6 +357,8 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
             this.coverPicAdapter.write(jsonWriter, funThings.getCoverPic());
             jsonWriter.name("is_open");
             this.isOpenAdapter.write(jsonWriter, Integer.valueOf(funThings.getIsOpen()));
+            jsonWriter.name("recommend");
+            this.recommendAdapter.write(jsonWriter, Integer.valueOf(funThings.getRecommend()));
             jsonWriter.name("createdate");
             this.createdateAdapter.write(jsonWriter, funThings.getCreatedate());
             jsonWriter.name("userAction");
@@ -374,8 +384,8 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
             String str6 = this.defaultPic;
             String str7 = this.defaultSubTitle;
             String str8 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str9 = this.defaultDeprecatedUserAvatar;
             UserInfo userInfo = this.defaultUserInfo;
             String str10 = this.defaultDeprecatedUserName;
@@ -395,7 +405,8 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
             int i8 = this.defaultItemNum;
             String str17 = this.defaultCoverPic;
             int i9 = this.defaultIsOpen;
-            Long l4 = this.defaultCreatedate;
+            int i10 = this.defaultRecommend;
+            Long l3 = this.defaultCreatedate;
             UserAction userAction = this.defaultUserAction;
             String str18 = this.defaultMessage;
             String str19 = str2;
@@ -406,8 +417,8 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
             String str23 = str6;
             String str24 = str7;
             String str25 = str8;
+            Long l4 = l;
             Long l5 = l2;
-            Long l6 = l3;
             String str26 = str9;
             UserInfo userInfo2 = userInfo;
             String str27 = str10;
@@ -417,18 +428,19 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
             String str31 = str13;
             String str32 = str14;
             String str33 = str15;
-            int i10 = i;
+            int i11 = i;
             String str34 = str16;
-            int i11 = i2;
-            int i12 = i3;
-            int i13 = i4;
-            int i14 = i5;
-            int i15 = i6;
-            int i16 = i7;
-            int i17 = i8;
+            int i12 = i2;
+            int i13 = i3;
+            int i14 = i4;
+            int i15 = i5;
+            int i16 = i6;
+            int i17 = i7;
+            int i18 = i8;
             String str35 = str17;
-            int i18 = i9;
-            Long l7 = l4;
+            int i19 = i9;
+            int i20 = i10;
+            Long l6 = l3;
             UserAction userAction2 = userAction;
             while (jsonReader.hasNext()) {
                 String nextName = jsonReader.nextName();
@@ -582,57 +594,63 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
                                 break;
                             }
                             break;
+                        case 989204668:
+                            if (nextName.equals("recommend")) {
+                                c = 24;
+                                break;
+                            }
+                            break;
                         case 1061163489:
                             if (nextName.equals("userAction")) {
-                                c = 24;
+                                c = 25;
                                 break;
                             }
                             break;
                         case 1078154500:
                             if (nextName.equals("userAvatar")) {
-                                c = 25;
+                                c = 26;
                                 break;
                             }
                             break;
                         case 1103095518:
                             if (nextName.equals("like_num")) {
-                                c = 26;
+                                c = 27;
                                 break;
                             }
                             break;
                         case 1177850970:
                             if (nextName.equals("item_num")) {
-                                c = 27;
+                                c = 28;
                                 break;
                             }
                             break;
                         case 1258293585:
                             if (nextName.equals("entityFixed")) {
-                                c = 28;
+                                c = 29;
                                 break;
                             }
                             break;
                         case 1369682602:
                             if (nextName.equals("createdate")) {
-                                c = 29;
+                                c = 30;
                                 break;
                             }
                             break;
                         case 1793464482:
                             if (nextName.equals("dateline")) {
-                                c = 30;
+                                c = 31;
                                 break;
                             }
                             break;
                         case 2054065654:
                             if (nextName.equals("isAdded")) {
-                                c = 31;
+                                c = ' ';
                                 break;
                             }
                             break;
                         case 2082110527:
                             if (nextName.equals("is_open")) {
-                                c = ' ';
+                                c = '!';
                                 break;
                             }
                             break;
@@ -645,7 +663,7 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
                             str24 = this.subTitleAdapter.read(jsonReader);
                             continue;
                         case 2:
-                            i11 = this.followNumAdapter.read(jsonReader).intValue();
+                            i12 = this.followNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 3:
                             str22 = this.descriptionAdapter.read(jsonReader);
@@ -654,7 +672,7 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
                             str34 = this.sourceIdAdapter.read(jsonReader);
                             continue;
                         case 5:
-                            i16 = this.shareNumAdapter.read(jsonReader).intValue();
+                            i17 = this.shareNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 6:
                             str19 = this.entityTemplateAdapter.read(jsonReader);
@@ -663,19 +681,19 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
                             str29 = this.displayUserNameAdapter.read(jsonReader);
                             continue;
                         case '\b':
-                            l6 = this.lastUpdateAdapter.read(jsonReader);
+                            l5 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\t':
-                            i15 = this.favNumAdapter.read(jsonReader).intValue();
+                            i16 = this.favNumAdapter.read(jsonReader).intValue();
                             continue;
                         case '\n':
                             str28 = this.entityTypeNameAdapter.read(jsonReader);
                             continue;
                         case 11:
-                            i12 = this.copyNumAdapter.read(jsonReader).intValue();
+                            i13 = this.copyNumAdapter.read(jsonReader).intValue();
                             continue;
                         case '\f':
-                            i13 = this.replyNumAdapter.read(jsonReader).intValue();
+                            i14 = this.replyNumAdapter.read(jsonReader).intValue();
                             continue;
                         case '\r':
                             userInfo2 = this.userInfoAdapter.read(jsonReader);
@@ -711,31 +729,34 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
                             str18 = this.messageAdapter.read(jsonReader);
                             continue;
                         case 24:
-                            userAction2 = this.userActionAdapter.read(jsonReader);
+                            i20 = this.recommendAdapter.read(jsonReader).intValue();
                             continue;
                         case 25:
-                            str26 = this.deprecatedUserAvatarAdapter.read(jsonReader);
+                            userAction2 = this.userActionAdapter.read(jsonReader);
                             continue;
                         case 26:
-                            i14 = this.likeNumAdapter.read(jsonReader).intValue();
+                            str26 = this.deprecatedUserAvatarAdapter.read(jsonReader);
                             continue;
                         case 27:
-                            i17 = this.itemNumAdapter.read(jsonReader).intValue();
+                            i15 = this.likeNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 28:
-                            num2 = this.entityFixedAdapter.read(jsonReader);
+                            i18 = this.itemNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 29:
-                            l7 = this.createdateAdapter.read(jsonReader);
+                            num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 30:
-                            l5 = this.datelineAdapter.read(jsonReader);
+                            l6 = this.createdateAdapter.read(jsonReader);
                             continue;
                         case 31:
-                            i10 = this.isAddedAdapter.read(jsonReader).intValue();
+                            l4 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case ' ':
-                            i18 = this.isOpenAdapter.read(jsonReader).intValue();
+                            i11 = this.isAddedAdapter.read(jsonReader).intValue();
+                            continue;
+                        case '!':
+                            i19 = this.isOpenAdapter.read(jsonReader).intValue();
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -744,7 +765,7 @@ abstract class C$AutoValue_FunThings extends C$$AutoValue_FunThings {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_FunThings(str28, str19, str20, num2, str21, str22, str23, str24, str25, l5, l6, str26, userInfo2, str27, str29, str30, str31, str32, str33, i10, str34, i11, i12, i13, i14, i15, i16, i17, str35, i18, l7, userAction2, str18);
+            return new AutoValue_FunThings(str28, str19, str20, num2, str21, str22, str23, str24, str25, l4, l5, str26, userInfo2, str27, str29, str30, str31, str32, str33, i11, str34, i12, i13, i14, i15, i16, i17, i18, str35, i19, i20, l6, userAction2, str18);
         }
     }
 }

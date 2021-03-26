@@ -73,11 +73,11 @@ public class ItemReceiverdReplyBindingImpl extends ItemReceiverdReplyBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FeedReply) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (307 == i) {
+        } else if (308 == i) {
             setViewHolder((UserReceivedReplyListFragment.ReceivedFeedReplyViewHolder) obj);
         } else if (50 != i) {
             return false;
@@ -93,7 +93,7 @@ public class ItemReceiverdReplyBindingImpl extends ItemReceiverdReplyBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -103,7 +103,7 @@ public class ItemReceiverdReplyBindingImpl extends ItemReceiverdReplyBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -114,7 +114,7 @@ public class ItemReceiverdReplyBindingImpl extends ItemReceiverdReplyBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(307);
+        notifyPropertyChanged(308);
         super.requestRebind();
     }
 
@@ -142,17 +142,17 @@ public class ItemReceiverdReplyBindingImpl extends ItemReceiverdReplyBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 267) {
+        } else if (i == 268) {
             synchronized (this) {
                 this.mDirtyFlags |= 16;
             }
             return true;
-        } else if (i == 268) {
+        } else if (i == 269) {
             synchronized (this) {
                 this.mDirtyFlags |= 32;
             }
             return true;
-        } else if (i != 265) {
+        } else if (i != 266) {
             return false;
         } else {
             synchronized (this) {
@@ -323,7 +323,7 @@ public class ItemReceiverdReplyBindingImpl extends ItemReceiverdReplyBinding {
         if ((130 & j) != 0) {
             this.imageView.setVisibility(i);
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, null, 2131231363, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, null, 2131231374, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
             TextViewBindingAdapters.setDatelineByEntity(this.mboundView3, feedReply);
             TextViewBindingAdapters.replyListReplyMe(this.textView, feedReply);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str3, bool2);
@@ -335,14 +335,14 @@ public class ItemReceiverdReplyBindingImpl extends ItemReceiverdReplyBinding {
         if ((j & 145) != 0) {
             this.mboundView7.setVisibility(i2);
             Boolean bool3 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView7, str5, null, 2131231363, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView7, str5, null, 2131231374, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
         }
         if ((j & 161) != 0) {
             TextViewBindingAdapter.setText(this.mboundView8, str6);
         }
         if ((j & 134) != 0) {
             Boolean bool4 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, null, 2131231152, 0, bool4, bool4, bool4, bool4, bool4, null, null, onBitmapTransformListener, bool4, bool4, bool4, null, bool4);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, null, 2131231162, 0, bool4, bool4, bool4, bool4, bool4, null, null, onBitmapTransformListener, bool4, bool4, bool4, null, bool4);
         }
     }
 }

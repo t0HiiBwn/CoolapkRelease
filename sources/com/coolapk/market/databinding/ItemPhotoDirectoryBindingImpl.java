@@ -26,8 +26,8 @@ public class ItemPhotoDirectoryBindingImpl extends ItemPhotoDirectoryBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 3);
-        sparseIntArray.put(2131363533, 4);
+        sparseIntArray.put(2131363604, 3);
+        sparseIntArray.put(2131363551, 4);
     }
 
     public ItemPhotoDirectoryBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -68,9 +68,9 @@ public class ItemPhotoDirectoryBindingImpl extends ItemPhotoDirectoryBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (216 == i) {
+        if (217 == i) {
             setPath((String) obj);
-        } else if (241 != i) {
+        } else if (242 != i) {
             return false;
         } else {
             setSelected((Boolean) obj);
@@ -84,7 +84,7 @@ public class ItemPhotoDirectoryBindingImpl extends ItemPhotoDirectoryBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(216);
+        notifyPropertyChanged(217);
         super.requestRebind();
     }
 
@@ -94,7 +94,7 @@ public class ItemPhotoDirectoryBindingImpl extends ItemPhotoDirectoryBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(241);
+        notifyPropertyChanged(242);
         super.requestRebind();
     }
 
@@ -124,7 +124,7 @@ public class ItemPhotoDirectoryBindingImpl extends ItemPhotoDirectoryBinding {
         }
         if ((5 & j) != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str, null, 2131231691, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, true, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str, null, 2131231702, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, true, null, bool2);
         }
         if ((4 & j) != 0) {
             ThemeBindingAdapters.setTintColor(this.mboundView2, "colorAccent");

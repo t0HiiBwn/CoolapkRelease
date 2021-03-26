@@ -37,6 +37,7 @@ public final class ProduceKt {
                         produceKt$awaitClose$1.L$1 = function0;
                         produceKt$awaitClose$1.label = 1;
                         CancellableContinuationImpl cancellableContinuationImpl = new CancellableContinuationImpl(IntrinsicsKt.intercepted(produceKt$awaitClose$1), 1);
+                        cancellableContinuationImpl.initCancellability();
                         producerScope.invokeOnClose(new ProduceKt$awaitClose$4$1(cancellableContinuationImpl));
                         Object result = cancellableContinuationImpl.getResult();
                         if (result == IntrinsicsKt.getCOROUTINE_SUSPENDED()) {
@@ -92,9 +93,7 @@ public final class ProduceKt {
     }
 
     public static final <E> ReceiveChannel<E> produce(CoroutineScope coroutineScope, CoroutineContext coroutineContext, int i, Function2<? super ProducerScope<? super E>, ? super Continuation<? super Unit>, ? extends Object> function2) {
-        ProducerCoroutine producerCoroutine = new ProducerCoroutine(CoroutineContextKt.newCoroutineContext(coroutineScope, coroutineContext), ChannelKt.Channel(i));
-        producerCoroutine.start(CoroutineStart.DEFAULT, producerCoroutine, function2);
-        return producerCoroutine;
+        return produce(coroutineScope, coroutineContext, i, BufferOverflow.SUSPEND, CoroutineStart.DEFAULT, null, function2);
     }
 
     public static /* synthetic */ ReceiveChannel produce$default(CoroutineScope coroutineScope, CoroutineContext coroutineContext, int i, CoroutineStart coroutineStart, Function1 function1, Function2 function2, int i2, Object obj) {
@@ -112,7 +111,28 @@ public final class ProduceKt {
     }
 
     public static final <E> ReceiveChannel<E> produce(CoroutineScope coroutineScope, CoroutineContext coroutineContext, int i, CoroutineStart coroutineStart, Function1<? super Throwable, Unit> function1, Function2<? super ProducerScope<? super E>, ? super Continuation<? super Unit>, ? extends Object> function2) {
-        ProducerCoroutine producerCoroutine = new ProducerCoroutine(CoroutineContextKt.newCoroutineContext(coroutineScope, coroutineContext), ChannelKt.Channel(i));
+        return produce(coroutineScope, coroutineContext, i, BufferOverflow.SUSPEND, coroutineStart, function1, function2);
+    }
+
+    public static /* synthetic */ ReceiveChannel produce$default(CoroutineScope coroutineScope, CoroutineContext coroutineContext, int i, BufferOverflow bufferOverflow, CoroutineStart coroutineStart, Function1 function1, Function2 function2, int i2, Object obj) {
+        if ((i2 & 1) != 0) {
+            coroutineContext = EmptyCoroutineContext.INSTANCE;
+        }
+        int i3 = (i2 & 2) != 0 ? 0 : i;
+        if ((i2 & 4) != 0) {
+            bufferOverflow = BufferOverflow.SUSPEND;
+        }
+        if ((i2 & 8) != 0) {
+            coroutineStart = CoroutineStart.DEFAULT;
+        }
+        if ((i2 & 16) != 0) {
+            function1 = null;
+        }
+        return produce(coroutineScope, coroutineContext, i3, bufferOverflow, coroutineStart, function1, function2);
+    }
+
+    public static final <E> ReceiveChannel<E> produce(CoroutineScope coroutineScope, CoroutineContext coroutineContext, int i, BufferOverflow bufferOverflow, CoroutineStart coroutineStart, Function1<? super Throwable, Unit> function1, Function2<? super ProducerScope<? super E>, ? super Continuation<? super Unit>, ? extends Object> function2) {
+        ProducerCoroutine producerCoroutine = new ProducerCoroutine(CoroutineContextKt.newCoroutineContext(coroutineScope, coroutineContext), ChannelKt.Channel$default(i, bufferOverflow, null, 4, null));
         if (function1 != null) {
             producerCoroutine.invokeOnCompletion(function1);
         }

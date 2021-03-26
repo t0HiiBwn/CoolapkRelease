@@ -40,7 +40,7 @@ public abstract class ItemTipEmptyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTipEmptyBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemTipEmptyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558953, viewGroup, z, obj);
+        return (ItemTipEmptyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558960, viewGroup, z, obj);
     }
 
     public static ItemTipEmptyBinding inflate(LayoutInflater layoutInflater) {
@@ -49,7 +49,7 @@ public abstract class ItemTipEmptyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTipEmptyBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemTipEmptyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558953, null, false, obj);
+        return (ItemTipEmptyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558960, null, false, obj);
     }
 
     public static ItemTipEmptyBinding bind(View view) {
@@ -58,6 +58,6 @@ public abstract class ItemTipEmptyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTipEmptyBinding bind(View view, Object obj) {
-        return (ItemTipEmptyBinding) bind(obj, view, 2131558953);
+        return (ItemTipEmptyBinding) bind(obj, view, 2131558960);
     }
 }

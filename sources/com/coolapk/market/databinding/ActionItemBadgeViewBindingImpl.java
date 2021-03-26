@@ -27,8 +27,8 @@ public class ActionItemBadgeViewBindingImpl extends ActionItemBadgeViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362920, 1);
-        sparseIntArray.put(2131362919, 2);
+        sparseIntArray.put(2131362932, 1);
+        sparseIntArray.put(2131362931, 2);
     }
 
     public ActionItemBadgeViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

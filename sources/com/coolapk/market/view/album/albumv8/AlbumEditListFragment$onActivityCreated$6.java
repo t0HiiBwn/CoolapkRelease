@@ -46,7 +46,7 @@ final class AlbumEditListFragment$onActivityCreated$6 implements View.OnClickLis
         }
         SimpleDialog newInstance = SimpleDialog.newInstance();
         newInstance.setMessage("确定要移除" + this.this$0.delList.size() + "个应用吗？");
-        newInstance.setPositiveButton(2131886708, new DialogInterface.OnClickListener(this) {
+        newInstance.setPositiveButton(2131886770, new DialogInterface.OnClickListener(this) {
             /* class com.coolapk.market.view.album.albumv8.AlbumEditListFragment$onActivityCreated$6.AnonymousClass1 */
             final /* synthetic */ AlbumEditListFragment$onActivityCreated$6 this$0;
 
@@ -161,7 +161,7 @@ final class AlbumEditListFragment$onActivityCreated$6 implements View.OnClickLis
                 });
             }
         });
-        newInstance.setNegativeButton(2131886706, AnonymousClass2.INSTANCE);
+        newInstance.setNegativeButton(2131886768, AnonymousClass2.INSTANCE);
         FragmentManager childFragmentManager = this.this$0.getChildFragmentManager();
         Intrinsics.checkNotNullExpressionValue(childFragmentManager, "childFragmentManager");
         newInstance.show(childFragmentManager, (String) null);

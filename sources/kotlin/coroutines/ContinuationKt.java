@@ -20,12 +20,12 @@ public final class ContinuationKt {
 
     private static final <T> void resume(Continuation<? super T> continuation, T t) {
         Result.Companion companion = Result.Companion;
-        continuation.resumeWith(Result.m687constructorimpl(t));
+        continuation.resumeWith(Result.m85constructorimpl(t));
     }
 
     private static final <T> void resumeWithException(Continuation<? super T> continuation, Throwable th) {
         Result.Companion companion = Result.Companion;
-        continuation.resumeWith(Result.m687constructorimpl(ResultKt.createFailure(th)));
+        continuation.resumeWith(Result.m85constructorimpl(ResultKt.createFailure(th)));
     }
 
     private static final <T> Continuation<T> Continuation(CoroutineContext coroutineContext, Function1<? super Result<? extends T>, Unit> function1) {
@@ -50,7 +50,7 @@ public final class ContinuationKt {
         Continuation intercepted = IntrinsicsKt.intercepted(IntrinsicsKt.createCoroutineUnintercepted(function1, continuation));
         Unit unit = Unit.INSTANCE;
         Result.Companion companion = Result.Companion;
-        intercepted.resumeWith(Result.m687constructorimpl(unit));
+        intercepted.resumeWith(Result.m85constructorimpl(unit));
     }
 
     public static final <R, T> void startCoroutine(Function2<? super R, ? super Continuation<? super T>, ? extends Object> function2, R r, Continuation<? super T> continuation) {
@@ -59,7 +59,7 @@ public final class ContinuationKt {
         Continuation intercepted = IntrinsicsKt.intercepted(IntrinsicsKt.createCoroutineUnintercepted(function2, r, continuation));
         Unit unit = Unit.INSTANCE;
         Result.Companion companion = Result.Companion;
-        intercepted.resumeWith(Result.m687constructorimpl(unit));
+        intercepted.resumeWith(Result.m85constructorimpl(unit));
     }
 
     private static final <T> Object suspendCoroutine(Function1<? super Continuation<? super T>, Unit> function1, Continuation<? super T> continuation) {

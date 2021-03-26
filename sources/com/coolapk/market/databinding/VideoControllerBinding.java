@@ -12,10 +12,11 @@ import android.widget.TextView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.coolapk.market.widget.view.TimeTextView;
 
 public abstract class VideoControllerBinding extends ViewDataBinding {
     public final LinearLayout bottomContainer;
-    public final TextView currentTimeView;
+    public final TimeTextView currentTimeView;
     public final ImageView fullScreenView;
     public final FrameLayout itemView;
     public final TextView liveView;
@@ -32,17 +33,17 @@ public abstract class VideoControllerBinding extends ViewDataBinding {
     public final ImageView shareView;
     public final TextView titleView;
     public final LinearLayout topContainer;
-    public final TextView totalTimeView;
+    public final TimeTextView totalTimeView;
 
     public abstract void setClick(View.OnClickListener onClickListener);
 
-    protected VideoControllerBinding(Object obj, View view, int i, LinearLayout linearLayout, TextView textView, ImageView imageView, FrameLayout frameLayout, TextView textView2, LinearLayout linearLayout2, ImageView imageView2, ImageView imageView3, ImageView imageView4, ImageView imageView5, ProgressBar progressBar2, LinearLayout linearLayout3, SeekBar seekBar2, ImageView imageView6, TextView textView3, LinearLayout linearLayout4, TextView textView4) {
+    protected VideoControllerBinding(Object obj, View view, int i, LinearLayout linearLayout, TimeTextView timeTextView, ImageView imageView, FrameLayout frameLayout, TextView textView, LinearLayout linearLayout2, ImageView imageView2, ImageView imageView3, ImageView imageView4, ImageView imageView5, ProgressBar progressBar2, LinearLayout linearLayout3, SeekBar seekBar2, ImageView imageView6, TextView textView2, LinearLayout linearLayout4, TimeTextView timeTextView2) {
         super(obj, view, i);
         this.bottomContainer = linearLayout;
-        this.currentTimeView = textView;
+        this.currentTimeView = timeTextView;
         this.fullScreenView = imageView;
         this.itemView = frameLayout;
-        this.liveView = textView2;
+        this.liveView = textView;
         this.liveViewContainer = linearLayout2;
         this.moreView = imageView2;
         this.navigationView = imageView3;
@@ -52,9 +53,9 @@ public abstract class VideoControllerBinding extends ViewDataBinding {
         this.replayView = linearLayout3;
         this.seekBar = seekBar2;
         this.shareView = imageView6;
-        this.titleView = textView3;
+        this.titleView = textView2;
         this.topContainer = linearLayout4;
-        this.totalTimeView = textView4;
+        this.totalTimeView = timeTextView2;
     }
 
     public View.OnClickListener getClick() {
@@ -67,7 +68,7 @@ public abstract class VideoControllerBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoControllerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (VideoControllerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559289, viewGroup, z, obj);
+        return (VideoControllerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559299, viewGroup, z, obj);
     }
 
     public static VideoControllerBinding inflate(LayoutInflater layoutInflater) {
@@ -76,7 +77,7 @@ public abstract class VideoControllerBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoControllerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (VideoControllerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559289, null, false, obj);
+        return (VideoControllerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559299, null, false, obj);
     }
 
     public static VideoControllerBinding bind(View view) {
@@ -85,6 +86,6 @@ public abstract class VideoControllerBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoControllerBinding bind(View view, Object obj) {
-        return (VideoControllerBinding) bind(obj, view, 2131559289);
+        return (VideoControllerBinding) bind(obj, view, 2131559299);
     }
 }

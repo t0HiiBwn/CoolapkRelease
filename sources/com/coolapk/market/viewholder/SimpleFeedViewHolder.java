@@ -32,7 +32,7 @@ import kotlin.text.Regex;
 /* compiled from: FeedGroupListViewHolder.kt */
 public final class SimpleFeedViewHolder extends GenericBindHolder<ItemSimpleFeedBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558930;
+    public static final int LAYOUT_ID = 2131558937;
     private final Lazy headerViewPart$delegate;
     private Feed mFeed;
     private final Lazy picPart$delegate;
@@ -99,7 +99,7 @@ public final class SimpleFeedViewHolder extends GenericBindHolder<ItemSimpleFeed
         String message = feed.getMessage();
         Intrinsics.checkNotNullExpressionValue(message, "data.message");
         String replace = new Regex("[\\n\\r]").replace(message, " ");
-        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886656));
+        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886718));
         spannableStringBuilder.setSpan(new ForegroundColorSpan(AppHolder.getAppTheme().getColorAccent()), 0, spannableStringBuilder.length(), 33);
         Unit unit = Unit.INSTANCE;
         ViewExtendsKt.setBriefMessage(textView, 90, replace, spannableStringBuilder);
@@ -129,12 +129,12 @@ public final class SimpleFeedViewHolder extends GenericBindHolder<ItemSimpleFeed
             Intrinsics.throwUninitializedPropertyAccessException("mFeed");
         }
         switch (view.getId()) {
-            case 2131362200:
+            case 2131362205:
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");
                 ActionManagerCompat.startActivityByUrl$default(context, FeedUriAction.Companion.buildUrl(feed), null, null, 12, null);
                 return;
-            case 2131362595:
+            case 2131362603:
                 CharSequence text = ((TextView) view).getText();
                 if (text instanceof SpannableString) {
                     URLSpan[] uRLSpanArr = (URLSpan[]) ((SpannableString) text).getSpans(0, text.length(), URLSpan.class);
@@ -145,10 +145,10 @@ public final class SimpleFeedViewHolder extends GenericBindHolder<ItemSimpleFeed
                     return;
                 }
                 return;
-            case 2131362970:
+            case 2131362982:
                 showItemDialog();
                 return;
-            case 2131363877:
+            case 2131363900:
                 ActionManager.startUserSpaceActivity(view, feed.getUid(), feed.getUserAvatar());
                 return;
             default:

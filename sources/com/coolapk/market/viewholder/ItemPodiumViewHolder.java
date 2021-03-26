@@ -45,7 +45,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemPodiumViewHolder.kt */
 public final class ItemPodiumViewHolder extends StateViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558859;
+    public static final int LAYOUT_ID = 2131558866;
     private final ItemPodiumCardBinding binding;
     private final BlurTransform bitmapTransformation = new BlurTransform();
     private EntityCard card;
@@ -74,9 +74,9 @@ public final class ItemPodiumViewHolder extends StateViewHolder {
         itemPodiumCardBinding.secondPlaceView.actionButton2.setOnClickListener(itemPodiumViewHolder);
         itemPodiumCardBinding.championView.actionButton2.setOnClickListener(itemPodiumViewHolder);
         itemPodiumCardBinding.thirdPlaceView.actionButton2.setOnClickListener(itemPodiumViewHolder);
-        itemPodiumCardBinding.secondPlaceView.numView.setImageResource(2131231699);
-        itemPodiumCardBinding.championView.numView.setImageResource(2131231698);
-        itemPodiumCardBinding.thirdPlaceView.numView.setImageResource(2131231700);
+        itemPodiumCardBinding.secondPlaceView.numView.setImageResource(2131231710);
+        itemPodiumCardBinding.championView.numView.setImageResource(2131231709);
+        itemPodiumCardBinding.thirdPlaceView.numView.setImageResource(2131231711);
     }
 
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/viewholder/ItemPodiumViewHolder$Companion;", "", "()V", "LAYOUT_ID", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
@@ -284,7 +284,7 @@ public final class ItemPodiumViewHolder extends StateViewHolder {
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131361886) {
+        if (view.getId() != 2131361887) {
             Object tag = view.getTag();
             if (tag instanceof ServiceApp) {
                 ServiceApp serviceApp = (ServiceApp) tag;

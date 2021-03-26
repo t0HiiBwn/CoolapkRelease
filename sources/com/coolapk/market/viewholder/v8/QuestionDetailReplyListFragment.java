@@ -109,7 +109,7 @@ public final class QuestionDetailReplyListFragment extends FeedDetailFragmentV8 
     @Override // com.coolapk.market.view.feed.reply.FeedDetailFragmentV8, com.coolapk.market.view.feed.reply.FeedReplyListFragmentV8, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558608).suitedMethod(QuestionDetailReplyListFragment$onActivityCreated$1.INSTANCE).constructor(new QuestionDetailReplyListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558612).suitedMethod(QuestionDetailReplyListFragment$onActivityCreated$1.INSTANCE).constructor(new QuestionDetailReplyListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
     }
 
     @Override // com.coolapk.market.view.feed.reply.FeedDetailFragmentV8, androidx.fragment.app.Fragment
@@ -117,7 +117,7 @@ public final class QuestionDetailReplyListFragment extends FeedDetailFragmentV8 
         Intrinsics.checkNotNullParameter(menu, "menu");
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
-        MenuItem findItem = menu.findItem(2131361968);
+        MenuItem findItem = menu.findItem(2131361969);
         if (findItem != null) {
             findItem.setVisible(true);
         }
@@ -127,7 +127,7 @@ public final class QuestionDetailReplyListFragment extends FeedDetailFragmentV8 
     /* compiled from: QuestionDetailReplyListFragment.kt */
     public static final class ArticleAnswerTopViewHolder extends GenericBindHolder<ItemArticleAnswerPreviewTopBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558608;
+        public static final int LAYOUT_ID = 2131558612;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public ArticleAnswerTopViewHolder(View view, DataBindingComponent dataBindingComponent) {
@@ -196,7 +196,7 @@ public final class QuestionDetailReplyListFragment extends FeedDetailFragmentV8 
             FeedDetailFragmentV8 feedDetailFragmentV8 = (FeedDetailFragmentV8) lifecycleOwner;
             if (feedDetailFragmentV8 != null) {
                 Feed feed$presentation_coolapkAppRelease = feedDetailFragmentV8.getFeed$presentation_coolapkAppRelease();
-                if (view.getId() == 2131363568) {
+                if (view.getId() == 2131363590) {
                     Context context = getContext();
                     Intrinsics.checkNotNullExpressionValue(context, "context");
                     ActionManagerCompat.startActivityByUrl$default(context, FeedUriAction.Companion.buildUrl(feed$presentation_coolapkAppRelease), null, null, 12, null);

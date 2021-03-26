@@ -120,30 +120,30 @@ public final class PostButtonView2 extends FrameLayout {
             switch (preferencesString.hashCode()) {
                 case 2459034:
                     if (preferencesString.equals("PLUS")) {
-                        i = 2131231489;
+                        i = 2131231500;
                         break;
                     }
                     break;
                 case 105615186:
                     if (preferencesString.equals("AIRPLANE")) {
-                        i = 2131231484;
+                        i = 2131231495;
                         break;
                     }
                     break;
                 case 1670194707:
                     if (preferencesString.equals("COOLAPK")) {
-                        i = 2131231410;
+                        i = 2131231421;
                         break;
                     }
                     break;
                 case 1999208305:
                     if (preferencesString.equals("CUSTOM")) {
-                        i = 2131231478;
+                        i = 2131231489;
                         break;
                     }
                     break;
             }
-            if (!(i != 2131231478 && getOutputFiles().exists())) {
+            if (!(i != 2131231489 && getOutputFiles().exists())) {
                 ImageView imageView = this.iconView;
                 if (imageView == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("iconView");
@@ -167,7 +167,7 @@ public final class PostButtonView2 extends FrameLayout {
                 frameLayout.setBackgroundTintList(ColorStateList.valueOf(-1));
                 return;
             }
-            if (i == 2131231484) {
+            if (i == 2131231495) {
                 ImageView imageView4 = this.iconView;
                 if (imageView4 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("iconView");
@@ -198,19 +198,19 @@ public final class PostButtonView2 extends FrameLayout {
             return;
         }
         i = 0;
-        if (!(i != 2131231478 && getOutputFiles().exists())) {
+        if (!(i != 2131231489 && getOutputFiles().exists())) {
         }
     }
 
     private final Drawable createIconPlay() {
         Context context = getContext();
         Intrinsics.checkNotNullExpressionValue(context, "context");
-        return PostButtonView2Kt.createSvgIconCompat(context, 2131231484, -1);
+        return PostButtonView2Kt.createSvgIconCompat(context, 2131231495, -1);
     }
 
     private final Drawable createPostButtonBg() {
         Context context = getContext();
         Intrinsics.checkNotNullExpressionValue(context, "context");
-        return PostButtonView2Kt.createSvgIconCompat(context, 2131231494, AppHolder.getAppTheme().getColorAccent());
+        return PostButtonView2Kt.createSvgIconCompat(context, 2131231505, AppHolder.getAppTheme().getColorAccent());
     }
 }

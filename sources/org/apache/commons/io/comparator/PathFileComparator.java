@@ -16,16 +16,6 @@ public class PathFileComparator extends AbstractFileComparator implements Serial
     private static final long serialVersionUID = 6527501707585768673L;
     private final IOCase caseSensitivity;
 
-    @Override // org.apache.commons.io.comparator.AbstractFileComparator
-    public /* bridge */ /* synthetic */ List sort(List list) {
-        return super.sort(list);
-    }
-
-    @Override // org.apache.commons.io.comparator.AbstractFileComparator
-    public /* bridge */ /* synthetic */ File[] sort(File[] fileArr) {
-        return super.sort(fileArr);
-    }
-
     static {
         PathFileComparator pathFileComparator = new PathFileComparator();
         PATH_COMPARATOR = pathFileComparator;
@@ -48,6 +38,16 @@ public class PathFileComparator extends AbstractFileComparator implements Serial
 
     public int compare(File file, File file2) {
         return this.caseSensitivity.checkCompareTo(file.getPath(), file2.getPath());
+    }
+
+    @Override // org.apache.commons.io.comparator.AbstractFileComparator
+    public /* bridge */ /* synthetic */ List sort(List list) {
+        return super.sort(list);
+    }
+
+    @Override // org.apache.commons.io.comparator.AbstractFileComparator
+    public /* bridge */ /* synthetic */ File[] sort(File[] fileArr) {
+        return super.sort(fileArr);
     }
 
     @Override // org.apache.commons.io.comparator.AbstractFileComparator, java.lang.Object

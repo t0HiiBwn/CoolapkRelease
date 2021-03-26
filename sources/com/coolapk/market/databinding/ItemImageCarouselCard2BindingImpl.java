@@ -26,8 +26,8 @@ public class ItemImageCarouselCard2BindingImpl extends ItemImageCarouselCard2Bin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362594, 1);
-        sparseIntArray.put(2131362116, 2);
+        sparseIntArray.put(2131362602, 1);
+        sparseIntArray.put(2131362119, 2);
     }
 
     public ItemImageCarouselCard2BindingImpl(DataBindingComponent dataBindingComponent, View view) {

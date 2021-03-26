@@ -31,7 +31,7 @@ public class a {
 
     /* renamed from: com.ss.android.downloadlib.addownload.a.a$a  reason: collision with other inner class name */
     /* compiled from: AdDownloadDialogManager */
-    public interface AbstractC0085a {
+    public interface AbstractC0095a {
         void a();
     }
 
@@ -48,7 +48,7 @@ public class a {
         return b;
     }
 
-    private boolean a(Activity activity, DownloadInfo downloadInfo, boolean z, AbstractC0085a aVar) {
+    private boolean a(Activity activity, DownloadInfo downloadInfo, boolean z, AbstractC0095a aVar) {
         if (downloadInfo == null) {
             try {
                 if (this.c.isEmpty()) {
@@ -97,14 +97,14 @@ public class a {
         return false;
     }
 
-    public boolean a(Activity activity, boolean z, AbstractC0085a aVar) {
+    public boolean a(Activity activity, boolean z, AbstractC0095a aVar) {
         if (com.ss.android.downloadlib.addownload.k.i().optInt("disable_install_app_dialog") == 1 || this.d) {
             return false;
         }
         return a(activity, a(activity), z, aVar);
     }
 
-    public void a(Context context, com.ss.android.downloadlib.addownload.b.a aVar, boolean z, AbstractC0085a aVar2) {
+    public void a(Context context, com.ss.android.downloadlib.addownload.b.a aVar, boolean z, AbstractC0095a aVar2) {
         this.c.clear();
         a(context, aVar, aVar2, z);
         this.d = true;
@@ -164,8 +164,8 @@ public class a {
         this.f.a("sp_ad_install_back_dialog", "key_uninstalled_list", this.c);
     }
 
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x0035: APUT  (r3v1 java.lang.Object[]), (0 ??[int, short, byte, char]), (r4v2 java.lang.String) */
-    private void a(final Context context, final com.ss.android.downloadlib.addownload.b.a aVar, final AbstractC0085a aVar2, boolean z) {
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x0038: APUT  (r3v1 java.lang.Object[]), (0 ??[int, short, byte, char]), (r4v2 java.lang.String) */
+    private void a(final Context context, final com.ss.android.downloadlib.addownload.b.a aVar, final AbstractC0095a aVar2, boolean z) {
         String str;
         final b d2 = f.a().d(aVar.b);
         if (d2 == null) {
@@ -195,7 +195,7 @@ public class a {
             @Override // com.ss.android.a.a.c.c.b
             public void b(DialogInterface dialogInterface) {
                 com.ss.android.downloadlib.e.a.a().a("backdialog_exit", (com.ss.android.downloadad.a.b.a) d2);
-                AbstractC0085a aVar = aVar2;
+                AbstractC0095a aVar = aVar2;
                 if (aVar != null) {
                     aVar.a();
                 }

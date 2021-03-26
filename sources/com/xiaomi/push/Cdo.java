@@ -1,102 +1,93 @@
 package com.xiaomi.push;
 
-import android.app.Application;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.os.Build;
+import android.content.Intent;
+import android.net.Uri;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.ai;
-import com.xiaomi.push.service.an;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.service.bd;
 
 /* renamed from: com.xiaomi.push.do  reason: invalid class name */
-public class Cdo {
-    private static volatile Cdo a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private Context f320a;
-
-    private Cdo(Context context) {
-        this.f320a = context;
+class Cdo implements dm {
+    Cdo() {
     }
 
-    private int a(int i) {
-        return Math.max(60, i);
-    }
-
-    public static Cdo a(Context context) {
-        if (a == null) {
-            synchronized (Cdo.class) {
-                if (a == null) {
-                    a = new Cdo(context);
+    private void a(Context context, String str) {
+        try {
+            if (!TextUtils.isEmpty(str) && context != null) {
+                String[] split = str.split("/");
+                if (split.length > 0 && !TextUtils.isEmpty(split[split.length - 1])) {
+                    String str2 = split[split.length - 1];
+                    if (TextUtils.isEmpty(str2)) {
+                        df.a(context, "provider", 1008, "B get a incorrect message");
+                        return;
+                    }
+                    String decode = Uri.decode(str2);
+                    if (TextUtils.isEmpty(decode)) {
+                        df.a(context, "provider", 1008, "B get a incorrect message");
+                        return;
+                    }
+                    String b = de.b(decode);
+                    if (!TextUtils.isEmpty(b)) {
+                        df.a(context, b, 1007, "play with provider successfully");
+                        return;
+                    }
                 }
             }
+            df.a(context, "provider", 1008, "B get a incorrect message");
+        } catch (Exception e) {
+            df.a(context, "provider", 1008, "B meet a exception" + e.getMessage());
         }
-        return a;
     }
 
-    private void a(an anVar, ai aiVar, boolean z) {
-        if (anVar.a(hh.UploadSwitch.a(), true)) {
-            du duVar = new du(this.f320a);
-            if (z) {
-                aiVar.a((ai.a) duVar, a(anVar.a(hh.UploadFrequency.a(), 86400)));
+    private void b(Context context, di diVar) {
+        String b = diVar.b();
+        String d = diVar.d();
+        int e = diVar.e();
+        if (context == null || TextUtils.isEmpty(b) || TextUtils.isEmpty(d)) {
+            if (TextUtils.isEmpty(d)) {
+                df.a(context, "provider", 1008, "argument error");
             } else {
-                aiVar.m102a((ai.a) duVar);
+                df.a(context, d, 1008, "argument error");
             }
-        }
-    }
-
-    private boolean a() {
-        if (Build.VERSION.SDK_INT >= 14) {
+        } else if (!bd.b(context, b)) {
+            df.a(context, d, 1003, "B is not ready");
+        } else {
+            df.a(context, d, 1002, "B is ready");
+            df.a(context, d, 1004, "A is ready");
+            String a = de.a(d);
             try {
-                Context context = this.f320a;
-                if (!(context instanceof Application)) {
-                    context = context.getApplicationContext();
+                if (TextUtils.isEmpty(a)) {
+                    df.a(context, d, 1008, "info is empty");
+                } else if (e != 1 || dj.b(context)) {
+                    String type = context.getContentResolver().getType(de.a(b, a));
+                    if (TextUtils.isEmpty(type) || !"success".equals(type)) {
+                        df.a(context, d, 1008, "A is fail to help B's provider");
+                        return;
+                    }
+                    df.a(context, d, 1005, "A is successful");
+                    df.a(context, d, 1006, "The job is finished");
+                } else {
+                    df.a(context, d, 1008, "A not in foreground");
                 }
-                ((Application) context).registerActivityLifecycleCallbacks(new df(this.f320a, String.valueOf(System.currentTimeMillis() / 1000)));
-                return true;
-            } catch (Exception e) {
-                b.a(e);
+            } catch (Exception e2) {
+                c.a(e2);
+                df.a(context, d, 1008, "A meet a exception when help B's provider");
             }
-        }
-        return false;
-    }
-
-    /* access modifiers changed from: private */
-    public void b() {
-        ai a2 = ai.a(this.f320a);
-        an a3 = an.a(this.f320a);
-        SharedPreferences sharedPreferences = this.f320a.getSharedPreferences("mipush_extra", 0);
-        long currentTimeMillis = System.currentTimeMillis();
-        long j = sharedPreferences.getLong("first_try_ts", currentTimeMillis);
-        if (j == currentTimeMillis) {
-            sharedPreferences.edit().putLong("first_try_ts", currentTimeMillis).commit();
-        }
-        if (Math.abs(currentTimeMillis - j) >= 172800000) {
-            a(a3, a2, false);
-            if (a3.a(hh.StorageCollectionSwitch.a(), true)) {
-                int a4 = a(a3.a(hh.StorageCollectionFrequency.a(), 86400));
-                a2.a(new dt(this.f320a, a4), a4, 0);
-            }
-            boolean a5 = a3.a(hh.AppIsInstalledCollectionSwitch.a(), false);
-            String a6 = a3.a(hh.AppIsInstalledList.a(), (String) null);
-            if (a5 && !TextUtils.isEmpty(a6)) {
-                int a7 = a(a3.a(hh.AppIsInstalledCollectionFrequency.a(), 86400));
-                a2.a(new dq(this.f320a, a7, a6), a7, 0);
-            }
-            if (a3.a(hh.BroadcastActionCollectionSwitch.a(), true)) {
-                int a8 = a(a3.a(hh.BroadcastActionCollectionFrequency.a(), 900));
-                a2.a(new dr(this.f320a, a8), a8, 0);
-            }
-            if (a3.a(hh.ActivityTSSwitch.a(), false)) {
-                a();
-            }
-            a(a3, a2, true);
         }
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public void m201a() {
-        ai.a(this.f320a).a(new dp(this));
+    @Override // com.xiaomi.push.dm
+    public void a(Context context, Intent intent, String str) {
+        a(context, str);
+    }
+
+    @Override // com.xiaomi.push.dm
+    public void a(Context context, di diVar) {
+        if (diVar != null) {
+            b(context, diVar);
+        } else {
+            df.a(context, "provider", 1008, "A receive incorrect message");
+        }
     }
 }

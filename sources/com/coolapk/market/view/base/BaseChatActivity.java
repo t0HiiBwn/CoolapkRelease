@@ -37,13 +37,13 @@ public abstract class BaseChatActivity extends FakeStatusBarActivity implements 
     @Override // com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        BaseChattingBinding baseChattingBinding = (BaseChattingBinding) DataBindingUtil.setContentView(this, 2131558473);
+        BaseChattingBinding baseChattingBinding = (BaseChattingBinding) DataBindingUtil.setContentView(this, 2131558474);
         this.mBinding = baseChattingBinding;
         Toolbar toolbar = baseChattingBinding.toolbar;
         this.mToolbar = toolbar;
         setSupportActionBar(toolbar);
         this.mToolbar.setTitle(getTitle());
-        this.mToolbar.setNavigationIcon(2131231156);
+        this.mToolbar.setNavigationIcon(2131231166);
         ViewExtendsKt.setTintColor(this.mToolbar);
         this.mBinding.setClick(this);
         ViewMode viewMode = new ViewMode();
@@ -78,7 +78,7 @@ public abstract class BaseChatActivity extends FakeStatusBarActivity implements 
 
             @Override // com.coolapk.market.util.ViewUtil.OnDoubleClickListener
             public boolean onDoubleClick(View view) {
-                Fragment findFragmentById = BaseChatActivity.this.getSupportFragmentManager().findFragmentById(2131363592);
+                Fragment findFragmentById = BaseChatActivity.this.getSupportFragmentManager().findFragmentById(2131363614);
                 if (!(findFragmentById instanceof ScrollableFragment) || !findFragmentById.isVisible()) {
                     return false;
                 }
@@ -130,7 +130,7 @@ public abstract class BaseChatActivity extends FakeStatusBarActivity implements 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         switch (view.getId()) {
-            case 2131362441:
+            case 2131362448:
                 if (!this.mViewMode.isKeyBoardShow() && this.mBinding.emotionPanel.isShown()) {
                     LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.mBinding.toolbarContentFragment.getLayoutParams();
                     layoutParams.weight = 0.0f;
@@ -151,10 +151,10 @@ public abstract class BaseChatActivity extends FakeStatusBarActivity implements 
                     return;
                 }
                 return;
-            case 2131362918:
+            case 2131362930:
                 ActionManager.startPickUserActivity(this, 8655);
                 return;
-            case 2131362923:
+            case 2131362935:
                 if (this.mViewMode.isKeyBoardShow()) {
                     UiUtils.closeKeyboard(this.mBinding.editText);
                     this.mShouldShowEmotionBoardAfterKeyBoardClosed = true;
@@ -193,7 +193,7 @@ public abstract class BaseChatActivity extends FakeStatusBarActivity implements 
                     setEmotionPanelVisibleWithAnim(!this.mBinding.emotionPanel.isShown());
                     return;
                 }
-            case 2131362926:
+            case 2131362938:
                 postReply(this.mBinding.editText.getText().toString());
                 return;
             default:
@@ -248,7 +248,7 @@ public abstract class BaseChatActivity extends FakeStatusBarActivity implements 
 
         public void setPosting(boolean z) {
             this.posting = z;
-            notifyPropertyChanged(225);
+            notifyPropertyChanged(226);
             BaseChatActivity.this.mBinding.executePendingBindings();
         }
 
@@ -265,9 +265,9 @@ public abstract class BaseChatActivity extends FakeStatusBarActivity implements 
                 @Override // java.lang.Runnable
                 public void run() {
                     if (BaseChatActivity.this.mBinding.emotionPanel.isShown()) {
-                        BaseChatActivity.this.mBinding.menuEmotion.setImageResource(2131231386);
+                        BaseChatActivity.this.mBinding.menuEmotion.setImageResource(2131231397);
                     } else {
-                        BaseChatActivity.this.mBinding.menuEmotion.setImageResource(2131231278);
+                        BaseChatActivity.this.mBinding.menuEmotion.setImageResource(2131231289);
                     }
                 }
             });

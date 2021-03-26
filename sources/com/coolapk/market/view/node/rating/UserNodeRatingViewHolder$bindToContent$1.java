@@ -14,7 +14,7 @@ final class UserNodeRatingViewHolder$bindToContent$1 implements View.OnLongClick
 
     @Override // android.view.View.OnLongClickListener
     public final boolean onLongClick(View view) {
-        this.this$0.showAdminDialog();
+        UserNodeRatingViewHolder.access$showAdminDialog(this.this$0);
         return true;
     }
 }

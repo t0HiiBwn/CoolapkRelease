@@ -32,10 +32,10 @@ public class ToolbarLayoutBindingImpl extends ToolbarLayoutBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362900, 2);
-        sparseIntArray.put(2131363588, 3);
-        sparseIntArray.put(2131363592, 4);
-        sparseIntArray.put(2131362503, 5);
+        sparseIntArray.put(2131362911, 2);
+        sparseIntArray.put(2131363610, 3);
+        sparseIntArray.put(2131363614, 4);
+        sparseIntArray.put(2131362511, 5);
     }
 
     public ToolbarLayoutBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -29,16 +29,16 @@ public class ItemFeedVotePkResultBindingImpl extends ItemFeedVotePkResultBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363116, 2);
-        sparseIntArray.put(2131363118, 3);
-        sparseIntArray.put(2131363126, 4);
-        sparseIntArray.put(2131363124, 5);
-        sparseIntArray.put(2131363115, 6);
-        sparseIntArray.put(2131363114, 7);
-        sparseIntArray.put(2131363122, 8);
-        sparseIntArray.put(2131363123, 9);
-        sparseIntArray.put(2131362837, 10);
-        sparseIntArray.put(2131363256, 11);
+        sparseIntArray.put(2131363130, 2);
+        sparseIntArray.put(2131363132, 3);
+        sparseIntArray.put(2131363140, 4);
+        sparseIntArray.put(2131363138, 5);
+        sparseIntArray.put(2131363129, 6);
+        sparseIntArray.put(2131363128, 7);
+        sparseIntArray.put(2131363136, 8);
+        sparseIntArray.put(2131363137, 9);
+        sparseIntArray.put(2131362848, 10);
+        sparseIntArray.put(2131363270, 11);
     }
 
     public ItemFeedVotePkResultBindingImpl(DataBindingComponent dataBindingComponent, View view) {

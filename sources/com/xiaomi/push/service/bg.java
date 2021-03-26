@@ -1,39 +1,23 @@
 package com.xiaomi.push.service;
 
-import android.content.ComponentName;
-import android.content.ServiceConnection;
-import android.os.IBinder;
-import android.os.Message;
-import android.os.Messenger;
-import android.os.RemoteException;
-import com.xiaomi.channel.commonutils.logger.b;
+import com.xiaomi.push.gh;
+import com.xiaomi.push.gm;
+import java.util.List;
 
-class bg implements ServiceConnection {
-    final /* synthetic */ be a;
+public class bg implements gh {
+    private final XMPushService a;
 
-    bg(be beVar) {
-        this.a = beVar;
+    public bg(XMPushService xMPushService) {
+        this.a = xMPushService;
     }
 
-    @Override // android.content.ServiceConnection
-    public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-        synchronized (this.a) {
-            be.a(this.a, new Messenger(iBinder));
-            be.a(this.a, false);
-            for (Message message : be.a(this.a)) {
-                try {
-                    be.a(this.a).send(message);
-                } catch (RemoteException e) {
-                    b.a(e);
-                }
-            }
-            be.a(this.a).clear();
-        }
+    /* access modifiers changed from: private */
+    public String a(String str) {
+        return "com.xiaomi.xmsf".equals(str) ? "1000271" : this.a.getSharedPreferences("pref_registered_pkg_names", 0).getString(str, null);
     }
 
-    @Override // android.content.ServiceConnection
-    public void onServiceDisconnected(ComponentName componentName) {
-        be.a(this.a, (Messenger) null);
-        be.a(this.a, false);
+    @Override // com.xiaomi.push.gh
+    public void a(List<gm> list, String str, String str2) {
+        this.a.a(new bh(this, 4, str, list, str2));
     }
 }

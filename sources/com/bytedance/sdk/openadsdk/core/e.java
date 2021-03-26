@@ -30,9 +30,7 @@ public class e {
     private static String j = "low_memory";
     private static String k = "total_max_memory_rate";
     private Map<String, String> c;
-
-    /* renamed from: l  reason: collision with root package name */
-    private long f1309l = a.a("tt_sp_app_env", "last_app_env_time", 0L);
+    private long l = a.a("tt_sp_app_env", "last_app_env_time", 0L);
     private boolean m = false;
 
     private e() {
@@ -103,7 +101,7 @@ public class e {
     }
 
     public void c() {
-        if (!this.m && !aj.a(this.f1309l, System.currentTimeMillis())) {
+        if (!this.m && !aj.a(this.l, System.currentTimeMillis())) {
             this.m = true;
             com.bytedance.sdk.openadsdk.j.e.a(new Runnable() {
                 /* class com.bytedance.sdk.openadsdk.core.e.AnonymousClass1 */
@@ -113,7 +111,7 @@ public class e {
                     JSONObject e = e.this.e();
                     if (e != null) {
                         long currentTimeMillis = System.currentTimeMillis();
-                        e.this.f1309l = currentTimeMillis;
+                        e.this.l = currentTimeMillis;
                         a.a("tt_sp_app_env", "last_app_env_time", Long.valueOf(currentTimeMillis));
                         com.bytedance.sdk.openadsdk.g.a.a().a(e);
                     }

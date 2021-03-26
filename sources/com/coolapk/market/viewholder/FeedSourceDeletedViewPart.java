@@ -17,7 +17,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedSourceDeletedViewPart.kt */
 public final class FeedSourceDeletedViewPart extends BindingViewPart<ItemFeedSourceDeletedBinding, String> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558729;
+    public static final int LAYOUT_ID = 2131558736;
     private final DataBindingComponent component;
 
     @JvmStatic
@@ -46,19 +46,19 @@ public final class FeedSourceDeletedViewPart extends BindingViewPart<ItemFeedSou
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedSourceDeletedBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558729, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558736, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemFeedSourceDeletedBinding) inflate;
     }
 
     public final void setDeletedHint() {
-        String string = getContext().getString(2131886782);
+        String string = getContext().getString(2131886844);
         Intrinsics.checkNotNullExpressionValue(string, "context.getString(R.stri…str_feed_forward_deleted)");
         bindToContent(string);
     }
 
     public final void setUpdateHint() {
-        String string = getContext().getString(2131886783);
+        String string = getContext().getString(2131886845);
         Intrinsics.checkNotNullExpressionValue(string, "context.getString(R.stri…feed_forward_low_version)");
         bindToContent(string);
     }

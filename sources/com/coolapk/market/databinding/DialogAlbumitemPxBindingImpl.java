@@ -29,8 +29,8 @@ public class DialogAlbumitemPxBindingImpl extends DialogAlbumitemPxBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362022, 2);
-        sparseIntArray.put(2131362400, 3);
+        sparseIntArray.put(2131362023, 2);
+        sparseIntArray.put(2131362406, 3);
     }
 
     public DialogAlbumitemPxBindingImpl(DataBindingComponent dataBindingComponent, View view) {

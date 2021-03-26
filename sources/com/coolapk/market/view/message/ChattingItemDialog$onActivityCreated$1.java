@@ -44,7 +44,7 @@ final class ChattingItemDialog$onActivityCreated$1 extends Lambda implements Fun
             } else {
                 if (TextUtils.isEmpty(message.getMessagePic())) {
                     String message2 = message.getMessage();
-                    String string = this.this$0.getString(2131886712);
+                    String string = this.this$0.getString(2131886774);
                     Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_dialog_copy_content)");
                     Intrinsics.checkNotNullExpressionValue(message2, "content");
                     list.add(new CopyActionItem(string, LinkTextUtils.reconvert(message2)));
@@ -62,7 +62,7 @@ final class ChattingItemDialog$onActivityCreated$1 extends Lambda implements Fun
                 String url = uRLSpanArr2[i].getURL();
                 Intrinsics.checkNotNullExpressionValue(url, "url");
                 if (StringsKt.startsWith$default(url, "http", false, 2, (Object) null)) {
-                    String string2 = this.this$0.getString(2131886714, url);
+                    String string2 = this.this$0.getString(2131886776, url);
                     Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_dialog_copy_something, url)");
                     list.add(new CopyActionItem(string2, url));
                 }

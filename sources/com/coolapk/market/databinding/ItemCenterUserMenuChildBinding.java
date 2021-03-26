@@ -27,7 +27,7 @@ public abstract class ItemCenterUserMenuChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCenterUserMenuChildBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemCenterUserMenuChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558645, viewGroup, z, obj);
+        return (ItemCenterUserMenuChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558651, viewGroup, z, obj);
     }
 
     public static ItemCenterUserMenuChildBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class ItemCenterUserMenuChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCenterUserMenuChildBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemCenterUserMenuChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558645, null, false, obj);
+        return (ItemCenterUserMenuChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558651, null, false, obj);
     }
 
     public static ItemCenterUserMenuChildBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class ItemCenterUserMenuChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCenterUserMenuChildBinding bind(View view, Object obj) {
-        return (ItemCenterUserMenuChildBinding) bind(obj, view, 2131558645);
+        return (ItemCenterUserMenuChildBinding) bind(obj, view, 2131558651);
     }
 }

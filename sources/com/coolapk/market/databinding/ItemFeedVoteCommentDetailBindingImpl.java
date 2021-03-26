@@ -28,14 +28,14 @@ public class ItemFeedVoteCommentDetailBindingImpl extends ItemFeedVoteCommentDet
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(9);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"item_feed_target_view"}, new int[]{3}, new int[]{2131558732});
+        includedLayouts.setIncludes(0, new String[]{"item_feed_target_view"}, new int[]{3}, new int[]{2131558739});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 4);
-        sparseIntArray.put(2131363539, 5);
-        sparseIntArray.put(2131363016, 6);
-        sparseIntArray.put(2131363947, 7);
-        sparseIntArray.put(2131363229, 8);
+        sparseIntArray.put(2131362657, 4);
+        sparseIntArray.put(2131363557, 5);
+        sparseIntArray.put(2131363030, 6);
+        sparseIntArray.put(2131363973, 7);
+        sparseIntArray.put(2131363243, 8);
     }
 
     public ItemFeedVoteCommentDetailBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -81,7 +81,7 @@ public class ItemFeedVoteCommentDetailBindingImpl extends ItemFeedVoteCommentDet
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -97,7 +97,7 @@ public class ItemFeedVoteCommentDetailBindingImpl extends ItemFeedVoteCommentDet
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

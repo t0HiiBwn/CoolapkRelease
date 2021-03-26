@@ -60,9 +60,9 @@ public class Transaction implements Parcelable {
     }
 
     public void begin(String str) {
-        if (AppMonitor.f19a != null) {
+        if (AppMonitor.f18a != null) {
             try {
-                AppMonitor.f19a.transaction_begin(this, str);
+                AppMonitor.f18a.transaction_begin(this, str);
             } catch (RemoteException e2) {
                 e2.printStackTrace();
             }
@@ -70,9 +70,9 @@ public class Transaction implements Parcelable {
     }
 
     public void end(String str) {
-        if (AppMonitor.f19a != null) {
+        if (AppMonitor.f18a != null) {
             try {
-                AppMonitor.f19a.transaction_end(this, str);
+                AppMonitor.f18a.transaction_end(this, str);
             } catch (RemoteException e2) {
                 e2.printStackTrace();
             }

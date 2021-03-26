@@ -33,7 +33,7 @@ abstract class C$$AutoValue_Goods extends Goods {
     private final String title;
     private final String url;
 
-    C$$AutoValue_Goods(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, GoodsCategoryInfo goodsCategoryInfo, int i2, MallInfo mallInfo2, String str20, String str21) {
+    C$$AutoValue_Goods(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, GoodsCategoryInfo goodsCategoryInfo, int i2, MallInfo mallInfo2, String str20, String str21) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityTypeId = i;
@@ -46,8 +46,8 @@ abstract class C$$AutoValue_Goods extends Goods {
         this.logo = str8;
         this.subTitle = str9;
         this.extraData = str10;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.id = str11;
         this.goodsTitle = str12;
         this.promoTitle = str13;
@@ -247,8 +247,8 @@ abstract class C$$AutoValue_Goods extends Goods {
         String str6;
         String str7;
         String str8;
+        Long l;
         Long l2;
-        Long l3;
         String str9;
         String str10;
         String str11;
@@ -272,7 +272,7 @@ abstract class C$$AutoValue_Goods extends Goods {
         if (str19 != null ? str19.equals(goods.getEntityTypeName()) : goods.getEntityTypeName() == null) {
             String str20 = this.entityTemplate;
             if (str20 != null ? str20.equals(goods.getEntityTemplate()) : goods.getEntityTemplate() == null) {
-                if (this.entityTypeId == goods.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(goods.getEntityId()) : goods.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(goods.getEntityFixed()) : goods.getEntityFixed() == null) && ((str2 = this.title) != null ? str2.equals(goods.getTitle()) : goods.getTitle() == null) && ((str3 = this.url) != null ? str3.equals(goods.getUrl()) : goods.getUrl() == null) && ((str4 = this.description) != null ? str4.equals(goods.getDescription()) : goods.getDescription() == null) && ((str5 = this.pic) != null ? str5.equals(goods.getPic()) : goods.getPic() == null) && ((str6 = this.logo) != null ? str6.equals(goods.getLogo()) : goods.getLogo() == null) && ((str7 = this.subTitle) != null ? str7.equals(goods.getSubTitle()) : goods.getSubTitle() == null) && ((str8 = this.extraData) != null ? str8.equals(goods.getExtraData()) : goods.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(goods.getDateline()) : goods.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(goods.getLastUpdate()) : goods.getLastUpdate() == null) && ((str9 = this.id) != null ? str9.equals(goods.getId()) : goods.getId() == null) && ((str10 = this.goodsTitle) != null ? str10.equals(goods.getGoodsTitle()) : goods.getGoodsTitle() == null) && ((str11 = this.promoTitle) != null ? str11.equals(goods.getPromoTitle()) : goods.getPromoTitle() == null) && ((str12 = this.promoPrice) != null ? str12.equals(goods.getPromoPrice()) : goods.getPromoPrice() == null) && ((str13 = this.goodsPic) != null ? str13.equals(goods.getGoodsPic()) : goods.getGoodsPic() == null) && ((str14 = this.goodsTags) != null ? str14.equals(goods.getGoodsTags()) : goods.getGoodsTags() == null) && ((str15 = this.goodsUrl) != null ? str15.equals(goods.getGoodsUrl()) : goods.getGoodsUrl() == null) && ((str16 = this.goodsBuyUrl) != null ? str16.equals(goods.getGoodsBuyUrl()) : goods.getGoodsBuyUrl() == null) && ((str17 = this.goodsBuyText) != null ? str17.equals(goods.getGoodsBuyText()) : goods.getGoodsBuyText() == null) && ((goodsCategoryInfo = this.categoryInfo) != null ? goodsCategoryInfo.equals(goods.getCategoryInfo()) : goods.getCategoryInfo() == null) && this.goodIsDirect == goods.getGoodIsDirect() && ((mallInfo2 = this.mallInfo) != null ? mallInfo2.equals(goods.getMallInfo()) : goods.getMallInfo() == null) && ((str18 = this.categoryTitle) != null ? str18.equals(goods.getCategoryTitle()) : goods.getCategoryTitle() == null)) {
+                if (this.entityTypeId == goods.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(goods.getEntityId()) : goods.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(goods.getEntityFixed()) : goods.getEntityFixed() == null) && ((str2 = this.title) != null ? str2.equals(goods.getTitle()) : goods.getTitle() == null) && ((str3 = this.url) != null ? str3.equals(goods.getUrl()) : goods.getUrl() == null) && ((str4 = this.description) != null ? str4.equals(goods.getDescription()) : goods.getDescription() == null) && ((str5 = this.pic) != null ? str5.equals(goods.getPic()) : goods.getPic() == null) && ((str6 = this.logo) != null ? str6.equals(goods.getLogo()) : goods.getLogo() == null) && ((str7 = this.subTitle) != null ? str7.equals(goods.getSubTitle()) : goods.getSubTitle() == null) && ((str8 = this.extraData) != null ? str8.equals(goods.getExtraData()) : goods.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(goods.getDateline()) : goods.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(goods.getLastUpdate()) : goods.getLastUpdate() == null) && ((str9 = this.id) != null ? str9.equals(goods.getId()) : goods.getId() == null) && ((str10 = this.goodsTitle) != null ? str10.equals(goods.getGoodsTitle()) : goods.getGoodsTitle() == null) && ((str11 = this.promoTitle) != null ? str11.equals(goods.getPromoTitle()) : goods.getPromoTitle() == null) && ((str12 = this.promoPrice) != null ? str12.equals(goods.getPromoPrice()) : goods.getPromoPrice() == null) && ((str13 = this.goodsPic) != null ? str13.equals(goods.getGoodsPic()) : goods.getGoodsPic() == null) && ((str14 = this.goodsTags) != null ? str14.equals(goods.getGoodsTags()) : goods.getGoodsTags() == null) && ((str15 = this.goodsUrl) != null ? str15.equals(goods.getGoodsUrl()) : goods.getGoodsUrl() == null) && ((str16 = this.goodsBuyUrl) != null ? str16.equals(goods.getGoodsBuyUrl()) : goods.getGoodsBuyUrl() == null) && ((str17 = this.goodsBuyText) != null ? str17.equals(goods.getGoodsBuyText()) : goods.getGoodsBuyText() == null) && ((goodsCategoryInfo = this.categoryInfo) != null ? goodsCategoryInfo.equals(goods.getCategoryInfo()) : goods.getCategoryInfo() == null) && this.goodIsDirect == goods.getGoodIsDirect() && ((mallInfo2 = this.mallInfo) != null ? mallInfo2.equals(goods.getMallInfo()) : goods.getMallInfo() == null) && ((str18 = this.categoryTitle) != null ? str18.equals(goods.getCategoryTitle()) : goods.getCategoryTitle() == null)) {
                     String str21 = this.mallTitle;
                     if (str21 == null) {
                         if (goods.getMallTitle() == null) {
@@ -312,10 +312,10 @@ abstract class C$$AutoValue_Goods extends Goods {
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.extraData;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode13 = (hashCode12 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode12 = (hashCode11 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str11 = this.id;
         int hashCode14 = (hashCode13 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
         String str12 = this.goodsTitle;

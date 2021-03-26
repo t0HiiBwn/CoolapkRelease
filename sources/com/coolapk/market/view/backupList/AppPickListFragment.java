@@ -26,7 +26,7 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import rx.Observable;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010%\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0003\n\u0002\b\t\u0018\u0000 02\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u0001:\u00010B\u0005¢\u0006\u0002\u0010\u0004J\b\u0010\u0013\u001a\u00020\u0007H\u0002J\u0012\u0010\u0014\u001a\u00020\u00152\b\u0010\u0016\u001a\u0004\u0018\u00010\u0017H\u0016J\u0012\u0010\u0018\u001a\u00020\u00152\b\u0010\u0016\u001a\u0004\u0018\u00010\u0017H\u0016J\u0018\u0010\u0019\u001a\u00020\u00152\u0006\u0010\u001a\u001a\u00020\u001b2\u0006\u0010\u001c\u001a\u00020\u001dH\u0016J$\u0010\u001e\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u001f2\u0006\u0010 \u001a\u00020\u000e2\u0006\u0010!\u001a\u00020\"H\u0016J\u0010\u0010#\u001a\u00020\u000e2\u0006\u0010$\u001a\u00020%H\u0016J\u001a\u0010&\u001a\u00020\u00152\u0006\u0010 \u001a\u00020\u000e2\b\u0010'\u001a\u0004\u0018\u00010(H\u0014J \u0010)\u001a\u00020\u000e2\u0006\u0010 \u001a\u00020\u000e2\u000e\u0010*\u001a\n\u0012\u0004\u0012\u00020\u0003\u0018\u00010\u0002H\u0014J\u0010\u0010+\u001a\u00020\u00152\u0006\u0010,\u001a\u00020\u0017H\u0016J\u000e\u0010-\u001a\u00020\u00152\u0006\u0010.\u001a\u00020\u000eJ\b\u0010/\u001a\u00020\u000eH\u0014R\u001c\u0010\u0005\u001a\u0010\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0007X.¢\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\u00030\fX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\r\u001a\u00020\u000eX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\r\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\u000e\u0010\u0012\u001a\u00020\u000eX\u000e¢\u0006\u0002\n\u0000¨\u00061"}, d2 = {"Lcom/coolapk/market/view/backupList/AppPickListFragment;", "Lcom/coolapk/market/view/base/asynclist/NewAsyncListFragment;", "", "Lcom/coolapk/market/model/MobileApp;", "()V", "appMap", "", "", "backupTitle", "dataAdapter", "Lcom/coolapk/market/widget/multitype/MultiTypeAdapter;", "dataList", "Landroidx/databinding/ObservableArrayList;", "isShowSystem", "", "()Z", "setShowSystem", "(Z)V", "menuState", "getJson", "onActivityCreated", "", "savedInstanceState", "Landroid/os/Bundle;", "onCreate", "onCreateOptionsMenu", "menu", "Landroid/view/Menu;", "inflater", "Landroid/view/MenuInflater;", "onCreateRequest", "Lrx/Observable;", "isRefresh", "page", "", "onOptionsItemSelected", "item", "Landroid/view/MenuItem;", "onRequestFailure", "error", "", "onRequestResponse", "result", "onSaveInstanceState", "outState", "onSelectAll", "check", "shouldShowList", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010%\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0003\n\u0002\b\t\u0018\u0000 02\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u0001:\u00010B\u0005¢\u0006\u0002\u0010\u0004J\b\u0010\u0013\u001a\u00020\u0007H\u0002J\u0012\u0010\u0014\u001a\u00020\u00152\b\u0010\u0016\u001a\u0004\u0018\u00010\u0017H\u0016J\u0012\u0010\u0018\u001a\u00020\u00152\b\u0010\u0016\u001a\u0004\u0018\u00010\u0017H\u0016J\u0018\u0010\u0019\u001a\u00020\u00152\u0006\u0010\u001a\u001a\u00020\u001b2\u0006\u0010\u001c\u001a\u00020\u001dH\u0016J$\u0010\u001e\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u001f2\u0006\u0010 \u001a\u00020\u000e2\u0006\u0010!\u001a\u00020\"H\u0016J\u0010\u0010#\u001a\u00020\u000e2\u0006\u0010$\u001a\u00020%H\u0016J\u001a\u0010&\u001a\u00020\u00152\u0006\u0010 \u001a\u00020\u000e2\b\u0010'\u001a\u0004\u0018\u00010(H\u0014J \u0010)\u001a\u00020\u000e2\u0006\u0010 \u001a\u00020\u000e2\u000e\u0010*\u001a\n\u0012\u0004\u0012\u00020\u0003\u0018\u00010\u0002H\u0014J\u0010\u0010+\u001a\u00020\u00152\u0006\u0010,\u001a\u00020\u0017H\u0016J\u0010\u0010-\u001a\u00020\u00152\u0006\u0010.\u001a\u00020\u000eH\u0002J\b\u0010/\u001a\u00020\u000eH\u0014R\u001c\u0010\u0005\u001a\u0010\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0007X.¢\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\u00030\fX\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\r\u001a\u00020\u000eX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\r\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\u000e\u0010\u0012\u001a\u00020\u000eX\u000e¢\u0006\u0002\n\u0000¨\u00061"}, d2 = {"Lcom/coolapk/market/view/backupList/AppPickListFragment;", "Lcom/coolapk/market/view/base/asynclist/NewAsyncListFragment;", "", "Lcom/coolapk/market/model/MobileApp;", "()V", "appMap", "", "", "backupTitle", "dataAdapter", "Lcom/coolapk/market/widget/multitype/MultiTypeAdapter;", "dataList", "Landroidx/databinding/ObservableArrayList;", "isShowSystem", "", "()Z", "setShowSystem", "(Z)V", "menuState", "getJson", "onActivityCreated", "", "savedInstanceState", "Landroid/os/Bundle;", "onCreate", "onCreateOptionsMenu", "menu", "Landroid/view/Menu;", "inflater", "Landroid/view/MenuInflater;", "onCreateRequest", "Lrx/Observable;", "isRefresh", "page", "", "onOptionsItemSelected", "item", "Landroid/view/MenuItem;", "onRequestFailure", "error", "", "onRequestResponse", "result", "onSaveInstanceState", "outState", "onSelectAll", "check", "shouldShowList", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: AppPickListFragment.kt */
 public final class AppPickListFragment extends NewAsyncListFragment<List<? extends MobileApp>> {
     public static final Companion Companion = new Companion(null);
@@ -84,8 +84,8 @@ public final class AppPickListFragment extends NewAsyncListFragment<List<? exten
         super.onActivityCreated(bundle);
         FragmentActivity requireActivity = requireActivity();
         Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-        requireActivity.setTitle(getString(2131887286));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558812, 2131231052).last(2131231052).create());
+        requireActivity.setTitle(getString(2131887348));
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558819, 2131231062).last(2131231062).create());
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         RecyclerView.ItemAnimator itemAnimator = recyclerView.getItemAnimator();
@@ -116,7 +116,7 @@ public final class AppPickListFragment extends NewAsyncListFragment<List<? exten
         setAdapter(multiTypeAdapter);
         MultiTypeAdapter multiTypeAdapter2 = this.dataAdapter;
         Intrinsics.checkNotNull(multiTypeAdapter2);
-        multiTypeAdapter2.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558812).suitedMethod(AppPickListFragment$onActivityCreated$1.INSTANCE).constructor(new AppPickListFragment$onActivityCreated$2(this)).build(), 0);
+        multiTypeAdapter2.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558819).suitedMethod(AppPickListFragment$onActivityCreated$1.INSTANCE).constructor(new AppPickListFragment$onActivityCreated$2(this)).build(), 0);
         this.dataList.addOnListChangedCallback(new AdapterListChangedCallback(this.dataAdapter));
         if (getUserVisibleHint()) {
             initData();
@@ -135,8 +135,8 @@ public final class AppPickListFragment extends NewAsyncListFragment<List<? exten
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            menu.add(0, 2131361965, 100, "全选").setShowAsAction(2);
-            menu.add(0, 2131361899, 101, "完成").setShowAsAction(2);
+            menu.add(0, 2131361966, 100, "全选").setShowAsAction(2);
+            menu.add(0, 2131361900, 101, "完成").setShowAsAction(2);
         }
     }
 
@@ -144,7 +144,7 @@ public final class AppPickListFragment extends NewAsyncListFragment<List<? exten
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
         int itemId = menuItem.getItemId();
-        if (itemId == 2131361899) {
+        if (itemId == 2131361900) {
             Intent intent = new Intent();
             intent.putExtra("app_json", getJson());
             String str = this.backupTitle;
@@ -154,11 +154,11 @@ public final class AppPickListFragment extends NewAsyncListFragment<List<? exten
             intent.putExtra("TITLE_BACKUP", str);
             requireActivity().setResult(-1, intent);
             requireActivity().finish();
-        } else if (itemId == 2131361965) {
+        } else if (itemId == 2131361966) {
             onSelectAll(this.menuState);
             boolean z = !this.menuState;
             this.menuState = z;
-            menuItem.setTitle(z ? 2131886586 : 2131886584);
+            menuItem.setTitle(z ? 2131886648 : 2131886646);
             return true;
         }
         return super.onOptionsItemSelected(menuItem);
@@ -170,7 +170,7 @@ public final class AppPickListFragment extends NewAsyncListFragment<List<? exten
         return json;
     }
 
-    public final void onSelectAll(boolean z) {
+    private final void onSelectAll(boolean z) {
         int size = this.dataList.size();
         for (int i = 0; i < size; i++) {
             MobileApp mobileApp = (MobileApp) this.dataList.get(i);

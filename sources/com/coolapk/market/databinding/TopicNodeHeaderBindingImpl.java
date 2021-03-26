@@ -33,20 +33,20 @@ public class TopicNodeHeaderBindingImpl extends TopicNodeHeaderBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362099, 6);
-        sparseIntArray.put(2131362101, 7);
-        sparseIntArray.put(2131362102, 8);
-        sparseIntArray.put(2131362098, 9);
-        sparseIntArray.put(2131362768, 10);
-        sparseIntArray.put(2131362339, 11);
-        sparseIntArray.put(2131362715, 12);
-        sparseIntArray.put(2131362908, 13);
-        sparseIntArray.put(2131362730, 14);
-        sparseIntArray.put(2131362643, 15);
-        sparseIntArray.put(2131362664, 16);
-        sparseIntArray.put(2131363623, 17);
-        sparseIntArray.put(2131362580, 18);
-        sparseIntArray.put(2131362376, 19);
+        sparseIntArray.put(2131362102, 6);
+        sparseIntArray.put(2131362104, 7);
+        sparseIntArray.put(2131362105, 8);
+        sparseIntArray.put(2131362101, 9);
+        sparseIntArray.put(2131362779, 10);
+        sparseIntArray.put(2131362345, 11);
+        sparseIntArray.put(2131362726, 12);
+        sparseIntArray.put(2131362920, 13);
+        sparseIntArray.put(2131362741, 14);
+        sparseIntArray.put(2131362651, 15);
+        sparseIntArray.put(2131362675, 16);
+        sparseIntArray.put(2131363645, 17);
+        sparseIntArray.put(2131362588, 18);
+        sparseIntArray.put(2131362382, 19);
     }
 
     public TopicNodeHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -90,7 +90,7 @@ public class TopicNodeHeaderBindingImpl extends TopicNodeHeaderBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Topic) obj);
         } else if (50 != i) {
             return false;
@@ -106,7 +106,7 @@ public class TopicNodeHeaderBindingImpl extends TopicNodeHeaderBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

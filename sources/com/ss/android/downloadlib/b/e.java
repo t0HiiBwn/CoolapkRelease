@@ -5,7 +5,7 @@ import com.ss.android.downloadlib.d;
 import com.ss.android.socialbase.downloader.a.a;
 
 /* compiled from: AppLinkMonitor */
-public class e implements a.AbstractC0092a {
+public class e implements a.AbstractC0102a {
     private long a;
 
     /* compiled from: AppLinkMonitor */
@@ -13,7 +13,7 @@ public class e implements a.AbstractC0092a {
         private static e a = new e(null);
     }
 
-    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
     public void c() {
     }
 
@@ -30,7 +30,7 @@ public class e implements a.AbstractC0092a {
         com.ss.android.socialbase.downloader.a.a.a().a(this);
     }
 
-    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
     public void b() {
         this.a = System.currentTimeMillis();
     }

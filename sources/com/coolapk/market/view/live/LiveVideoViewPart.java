@@ -77,7 +77,7 @@ import org.greenrobot.eventbus.Subscribe;
 /* compiled from: LiveVideoViewPart.kt */
 public final class LiveVideoViewPart extends BindingViewPart<ItemLiveVideoViewPartBinding, Live> implements VideoPlayerBridge {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558810;
+    public static final int LAYOUT_ID = 2131558817;
     private final LiveActivity activity;
     private RelationAssist assist;
     public DanmakuManager danmakuManager;
@@ -192,7 +192,7 @@ public final class LiveVideoViewPart extends BindingViewPart<ItemLiveVideoViewPa
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemLiveVideoViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558810, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558817, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemLiveVideoViewPartBinding) inflate;
     }
@@ -259,7 +259,7 @@ public final class LiveVideoViewPart extends BindingViewPart<ItemLiveVideoViewPa
         Intrinsics.checkNotNullExpressionValue(editText, "binding.danmakuSendEdit");
         String obj = editText.getText().toString();
         if (obj.length() == 0) {
-            Toast.show(((ItemLiveVideoViewPartBinding) getBinding()).getRoot(), 2131886785);
+            Toast.show(((ItemLiveVideoViewPartBinding) getBinding()).getRoot(), 2131886847);
             return;
         }
         Live live = this.viewModel.getLive();
@@ -487,10 +487,10 @@ public final class LiveVideoViewPart extends BindingViewPart<ItemLiveVideoViewPa
         Intrinsics.checkNotNullParameter(view, "v");
         super.onClick(view);
         switch (view.getId()) {
-            case 2131362856:
+            case 2131362867:
                 showSelectLineView();
                 return;
-            case 2131362970:
+            case 2131362982:
                 Live live = this.viewModel.getLive();
                 if (live != null) {
                     BasePopMenu basePopMenu = new BasePopMenu(AppHolder.getCurrentActivity(), view);
@@ -501,10 +501,10 @@ public final class LiveVideoViewPart extends BindingViewPart<ItemLiveVideoViewPa
                     Intrinsics.checkNotNullExpressionValue(loginSession, "DataManager.getInstance().loginSession");
                     boolean z = false;
                     boolean z2 = loginSession.isAdmin() || LiveUtils.INSTANCE.currentUserIsPresenter(live);
-                    MenuItem findItem = basePopMenu.getMenu().findItem(2131361864);
-                    MenuItem findItem2 = basePopMenu.getMenu().findItem(2131361865);
-                    MenuItem findItem3 = basePopMenu.getMenu().findItem(2131361919);
-                    MenuItem findItem4 = basePopMenu.getMenu().findItem(2131361866);
+                    MenuItem findItem = basePopMenu.getMenu().findItem(2131361865);
+                    MenuItem findItem2 = basePopMenu.getMenu().findItem(2131361866);
+                    MenuItem findItem3 = basePopMenu.getMenu().findItem(2131361920);
+                    MenuItem findItem4 = basePopMenu.getMenu().findItem(2131361867);
                     Intrinsics.checkNotNullExpressionValue(findItem, "banPost");
                     findItem.setVisible(z2);
                     Intrinsics.checkNotNullExpressionValue(findItem2, "banPostPic");
@@ -514,8 +514,8 @@ public final class LiveVideoViewPart extends BindingViewPart<ItemLiveVideoViewPa
                     Intrinsics.checkNotNullExpressionValue(findItem4, "banUserManager");
                     findItem4.setVisible(z2);
                     VideoModel videoModel = VideoModelKt.toVideoModel(live, Integer.valueOf(this.viewModel.getLiveStatus()));
-                    MenuItem findItem5 = basePopMenu.getMenu().findItem(2131361981);
-                    MenuItem findItem6 = basePopMenu.getMenu().findItem(2131361907);
+                    MenuItem findItem5 = basePopMenu.getMenu().findItem(2131361982);
+                    MenuItem findItem6 = basePopMenu.getMenu().findItem(2131361908);
                     Intrinsics.checkNotNullExpressionValue(findItem5, "viewSource");
                     if (videoModel.isValid() && videoModel.isRedirectSource()) {
                         z = true;
@@ -536,10 +536,10 @@ public final class LiveVideoViewPart extends BindingViewPart<ItemLiveVideoViewPa
                     return;
                 }
                 return;
-            case 2131363008:
+            case 2131363022:
                 this.activity.onBackPressed();
                 return;
-            case 2131363358:
+            case 2131363374:
                 Live live2 = this.viewModel.getLive();
                 if (live2 != null) {
                     ActionManager.shareText(getContext(), live2);

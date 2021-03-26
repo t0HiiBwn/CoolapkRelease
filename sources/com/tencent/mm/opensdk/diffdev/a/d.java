@@ -14,9 +14,7 @@ public final class d extends AsyncTask<Void, Void, a> {
     private String i;
     private String j;
     private OAuthListener k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private f f1447l;
+    private f l;
     private String scope;
     private String signature;
 
@@ -41,48 +39,48 @@ public final class d extends AsyncTask<Void, Void, a> {
                 oAuthErrCode = OAuthErrCode.WechatAuth_Err_NetworkErr;
             } else {
                 try {
-                    try {
-                        JSONObject jSONObject = new JSONObject(new String(bArr, "utf-8"));
-                        int i = jSONObject.getInt("errcode");
-                        if (i != 0) {
-                            Log.e("MicroMsg.SDK.GetQRCodeResult", String.format("resp errcode = %d", Integer.valueOf(i)));
-                            aVar.m = OAuthErrCode.WechatAuth_Err_NormalErr;
-                            aVar.q = i;
-                            aVar.r = jSONObject.optString("errmsg");
-                            return aVar;
-                        }
-                        String string = jSONObject.getJSONObject("qrcode").getString("qrcodebase64");
-                        if (string != null) {
-                            if (string.length() != 0) {
-                                byte[] decode = Base64.decode(string, 0);
-                                if (decode != null) {
-                                    if (decode.length != 0) {
-                                        aVar.m = OAuthErrCode.WechatAuth_Err_OK;
-                                        aVar.s = decode;
-                                        aVar.n = jSONObject.getString("uuid");
-                                        String string2 = jSONObject.getString("appname");
-                                        aVar.o = string2;
-                                        Log.d("MicroMsg.SDK.GetQRCodeResult", String.format("parse succ, save in memory, uuid = %s, appname = %s, imgBufLength = %d", aVar.n, string2, Integer.valueOf(aVar.s.length)));
-                                        return aVar;
-                                    }
-                                }
-                                Log.e("MicroMsg.SDK.GetQRCodeResult", "parse fail, qrcodeBuf is null");
-                                aVar.m = OAuthErrCode.WechatAuth_Err_JsonDecodeErr;
-                                return aVar;
-                            }
-                        }
-                        Log.e("MicroMsg.SDK.GetQRCodeResult", "parse fail, qrcodeBase64 is null");
-                        aVar.m = OAuthErrCode.WechatAuth_Err_JsonDecodeErr;
-                        return aVar;
-                    } catch (Exception e) {
-                        format = String.format("parse json fail, ex = %s", e.getMessage());
-                        Log.e("MicroMsg.SDK.GetQRCodeResult", format);
-                        oAuthErrCode = OAuthErrCode.WechatAuth_Err_NormalErr;
-                        aVar.m = oAuthErrCode;
+                } catch (Exception e) {
+                    format = String.format("parse fail, build String fail, ex = %s", e.getMessage());
+                    Log.e("MicroMsg.SDK.GetQRCodeResult", format);
+                    oAuthErrCode = OAuthErrCode.WechatAuth_Err_NormalErr;
+                    aVar.m = oAuthErrCode;
+                    return aVar;
+                }
+                try {
+                    JSONObject jSONObject = new JSONObject(new String(bArr, "utf-8"));
+                    int i = jSONObject.getInt("errcode");
+                    if (i != 0) {
+                        Log.e("MicroMsg.SDK.GetQRCodeResult", String.format("resp errcode = %d", Integer.valueOf(i)));
+                        aVar.m = OAuthErrCode.WechatAuth_Err_NormalErr;
+                        aVar.q = i;
+                        aVar.r = jSONObject.optString("errmsg");
                         return aVar;
                     }
+                    String string = jSONObject.getJSONObject("qrcode").getString("qrcodebase64");
+                    if (string != null) {
+                        if (string.length() != 0) {
+                            byte[] decode = Base64.decode(string, 0);
+                            if (decode != null) {
+                                if (decode.length != 0) {
+                                    aVar.m = OAuthErrCode.WechatAuth_Err_OK;
+                                    aVar.s = decode;
+                                    aVar.n = jSONObject.getString("uuid");
+                                    String string2 = jSONObject.getString("appname");
+                                    aVar.o = string2;
+                                    Log.d("MicroMsg.SDK.GetQRCodeResult", String.format("parse succ, save in memory, uuid = %s, appname = %s, imgBufLength = %d", aVar.n, string2, Integer.valueOf(aVar.s.length)));
+                                    return aVar;
+                                }
+                            }
+                            Log.e("MicroMsg.SDK.GetQRCodeResult", "parse fail, qrcodeBuf is null");
+                            aVar.m = OAuthErrCode.WechatAuth_Err_JsonDecodeErr;
+                            return aVar;
+                        }
+                    }
+                    Log.e("MicroMsg.SDK.GetQRCodeResult", "parse fail, qrcodeBase64 is null");
+                    aVar.m = OAuthErrCode.WechatAuth_Err_JsonDecodeErr;
+                    return aVar;
                 } catch (Exception e2) {
-                    format = String.format("parse fail, build String fail, ex = %s", e2.getMessage());
+                    format = String.format("parse json fail, ex = %s", e2.getMessage());
                     Log.e("MicroMsg.SDK.GetQRCodeResult", format);
                     oAuthErrCode = OAuthErrCode.WechatAuth_Err_NormalErr;
                     aVar.m = oAuthErrCode;
@@ -105,7 +103,7 @@ public final class d extends AsyncTask<Void, Void, a> {
 
     public final boolean a() {
         Log.i("MicroMsg.SDK.GetQRCodeTask", "cancelTask");
-        f fVar = this.f1447l;
+        f fVar = this.l;
         return fVar == null ? cancel(true) : fVar.cancel(true);
     }
 
@@ -130,7 +128,7 @@ public final class d extends AsyncTask<Void, Void, a> {
             Log.d("MicroMsg.SDK.GetQRCodeTask", "onPostExecute, get qrcode success imgBufSize = " + aVar2.s.length);
             this.k.onAuthGotQrcode(aVar2.p, aVar2.s);
             f fVar = new f(aVar2.n, this.k);
-            this.f1447l = fVar;
+            this.l = fVar;
             if (Build.VERSION.SDK_INT >= 11) {
                 fVar.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
             } else {

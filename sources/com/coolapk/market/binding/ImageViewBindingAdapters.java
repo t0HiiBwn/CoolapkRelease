@@ -29,7 +29,7 @@ public class ImageViewBindingAdapters {
     public static void setAppIconWithContext(DataBindingComponent dataBindingComponent, ImageView imageView, String str, String str2, Drawable drawable, int i, Boolean bool, Boolean bool2) {
         Fragment fragment;
         if (bool2 != null) {
-            imageView.setTag(2131362693, bool2);
+            imageView.setTag(2131362704, bool2);
         }
         ImageLoaderOptions.Builder newBuilder = ImageLoaderOptions.newBuilder();
         if (drawable != null) {
@@ -59,13 +59,13 @@ public class ImageViewBindingAdapters {
 
     public static void setImageUriWithContext(DataBindingComponent dataBindingComponent, ImageView imageView, String str, Drawable drawable, int i, int i2, Boolean bool, Boolean bool2, Boolean bool3, Boolean bool4, Boolean bool5, String str2, OnImageLoadListener onImageLoadListener, OnBitmapTransformListener onBitmapTransformListener, Boolean bool6, Boolean bool7, Boolean bool8, View.OnClickListener onClickListener, Boolean bool9) {
         if (bool6 != null) {
-            imageView.setTag(2131362696, bool6);
+            imageView.setTag(2131362707, bool6);
         }
         if (bool7 != null) {
-            imageView.setTag(2131362689, bool7);
+            imageView.setTag(2131362700, bool7);
         }
         if (bool8 != null) {
-            imageView.setTag(2131362693, bool8);
+            imageView.setTag(2131362704, bool8);
         }
         if (onClickListener != null) {
             ViewUtil.clickListener(imageView, onClickListener);

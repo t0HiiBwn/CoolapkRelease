@@ -71,140 +71,140 @@ public final class AutoInstallUtilKt {
 
     public static final String getBtnTextInstall(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$btnTextInstall");
-        String string = accessibilityService.getString(2131886259);
+        String string = accessibilityService.getString(2131886289);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.btn_accessibility_install)");
         return string;
     }
 
     public static final String getBtnTextContinueInstall(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$btnTextContinueInstall");
-        String string = accessibilityService.getString(2131886257);
+        String string = accessibilityService.getString(2131886287);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…ibility_continue_install)");
         return string;
     }
 
     public static final String getBtnTextOk(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$btnTextOk");
-        String string = accessibilityService.getString(2131886262);
+        String string = accessibilityService.getString(2131886292);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.btn_accessibility_ok)");
         return string;
     }
 
     public static final String getBtnTextAllowOnce(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$btnTextAllowOnce");
-        String string = accessibilityService.getString(2131886255);
+        String string = accessibilityService.getString(2131886285);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…accessibility_allow_once)");
         return string;
     }
 
     public static final String getBtnTextNext(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$btnTextNext");
-        String string = accessibilityService.getString(2131886261);
+        String string = accessibilityService.getString(2131886291);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.btn_accessibility_next)");
         return string;
     }
 
     public static final String getBtnTextOpen(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$btnTextOpen");
-        String string = accessibilityService.getString(2131886263);
+        String string = accessibilityService.getString(2131886293);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.btn_accessibility_open)");
         return string;
     }
 
     public static final String getBtnTextRun(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$btnTextRun");
-        String string = accessibilityService.getString(2131886264);
+        String string = accessibilityService.getString(2131886294);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.btn_accessibility_run)");
         return string;
     }
 
     public static final String getTextInstalled(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$textInstalled");
-        String string = accessibilityService.getString(2131886558);
+        String string = accessibilityService.getString(2131886620);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…_accessibility_installed)");
         return string;
     }
 
     public static final String getTextInstalled2(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$textInstalled2");
-        String string = accessibilityService.getString(2131886559);
+        String string = accessibilityService.getString(2131886621);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…accessibility_installed2)");
         return string;
     }
 
     public static final String getTextInstalled3(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$textInstalled3");
-        String string = accessibilityService.getString(2131886560);
+        String string = accessibilityService.getString(2131886622);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…accessibility_installed3)");
         return string;
     }
 
     public static final String getBtnTextDone(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$btnTextDone");
-        String string = accessibilityService.getString(2131886258);
+        String string = accessibilityService.getString(2131886288);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.btn_accessibility_done)");
         return string;
     }
 
     public static final String getBtnTextComplete(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$btnTextComplete");
-        String string = accessibilityService.getString(2131886256);
+        String string = accessibilityService.getString(2131886286);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…n_accessibility_complete)");
         return string;
     }
 
     public static final String getBtnTextKnow(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$btnTextKnow");
-        String string = accessibilityService.getString(2131886260);
+        String string = accessibilityService.getString(2131886290);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.btn_accessibility_know)");
         return string;
     }
 
     public static final String getTextUninstall(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$textUninstall");
-        String string = accessibilityService.getString(2131886561);
+        String string = accessibilityService.getString(2131886623);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…_accessibility_uninstall)");
         return string;
     }
 
     public static final String getBtnTextUninstall(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$btnTextUninstall");
-        String string = accessibilityService.getString(2131886265);
+        String string = accessibilityService.getString(2131886295);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…_accessibility_uninstall)");
         return string;
     }
 
     public static final String getTextUninstalled(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$textUninstalled");
-        String string = accessibilityService.getString(2131886563);
+        String string = accessibilityService.getString(2131886625);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…ccessibility_uninstalled)");
         return string;
     }
 
     public static final String getTextUninstalled2(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$textUninstalled2");
-        String string = accessibilityService.getString(2131886564);
+        String string = accessibilityService.getString(2131886626);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…cessibility_uninstalled2)");
         return string;
     }
 
     public static final String getTextUninstalled3(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$textUninstalled3");
-        String string = accessibilityService.getString(2131886565);
+        String string = accessibilityService.getString(2131886627);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…cessibility_uninstalled3)");
         return string;
     }
 
     public static final String getTextDialogReplaceTitle(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$textDialogReplaceTitle");
-        String string = accessibilityService.getString(2131886301);
+        String string = accessibilityService.getString(2131886331);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…essibility_replace_title)");
         return string;
     }
 
     public static final String getTextUninstallTitle(AccessibilityService accessibilityService) {
         Intrinsics.checkNotNullParameter(accessibilityService, "$this$textUninstallTitle");
-        String string = accessibilityService.getString(2131886562);
+        String string = accessibilityService.getString(2131886624);
         Intrinsics.checkNotNullExpressionValue(string, "this.getString(R.string.…sibility_uninstall_title)");
         return string;
     }

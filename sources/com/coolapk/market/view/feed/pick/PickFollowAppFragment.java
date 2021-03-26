@@ -76,10 +76,10 @@ public class PickFollowAppFragment extends StateEventListFragment<Result<List<En
     @Override // com.coolapk.market.view.base.asynclist.AsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        setEmptyData(getString(2131886764), 0);
+        setEmptyData(getString(2131886826), 0);
         setAdapter(new DataAdapter(this));
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558924, 2131231052).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558931, 2131231062).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         if (getUserVisibleHint()) {
@@ -138,7 +138,7 @@ public class PickFollowAppFragment extends StateEventListFragment<Result<List<En
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558924;
+            return 2131558931;
         }
 
         public DataAdapter(Fragment fragment) {
@@ -154,7 +154,7 @@ public class PickFollowAppFragment extends StateEventListFragment<Result<List<En
                 public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                     if (viewHolder.getAdapterPosition() != -1) {
                         Entity entity = (Entity) PickFollowAppFragment.this.getDataList().get(viewHolder.getAdapterPosition());
-                        if (view.getId() == 2131362768 && EntityUtils.isApkType(entity.getEntityType())) {
+                        if (view.getId() == 2131362779 && EntityUtils.isApkType(entity.getEntityType())) {
                             PickFollowAppFragment.this.getActivity().setResult(-1, new Intent().putExtra("pick_app_result", ((ServiceApp) entity).getPackageName()));
                             PickFollowAppFragment.this.getActivity().finish();
                         }

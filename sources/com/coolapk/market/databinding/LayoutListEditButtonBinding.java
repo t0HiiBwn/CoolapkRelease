@@ -25,7 +25,7 @@ public abstract class LayoutListEditButtonBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutListEditButtonBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (LayoutListEditButtonBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558997, viewGroup, z, obj);
+        return (LayoutListEditButtonBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559004, viewGroup, z, obj);
     }
 
     public static LayoutListEditButtonBinding inflate(LayoutInflater layoutInflater) {
@@ -34,7 +34,7 @@ public abstract class LayoutListEditButtonBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutListEditButtonBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (LayoutListEditButtonBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558997, null, false, obj);
+        return (LayoutListEditButtonBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559004, null, false, obj);
     }
 
     public static LayoutListEditButtonBinding bind(View view) {
@@ -43,6 +43,6 @@ public abstract class LayoutListEditButtonBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutListEditButtonBinding bind(View view, Object obj) {
-        return (LayoutListEditButtonBinding) bind(obj, view, 2131558997);
+        return (LayoutListEditButtonBinding) bind(obj, view, 2131559004);
     }
 }

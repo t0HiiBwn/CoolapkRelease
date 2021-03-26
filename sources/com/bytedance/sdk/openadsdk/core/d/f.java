@@ -18,9 +18,7 @@ public class f {
     private final long i;
     private final long j;
     private final int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final int f1303l;
+    private final int l;
     private final int m;
     private final int n;
     private SparseArray<c.a> o;
@@ -37,7 +35,7 @@ public class f {
         this.i = aVar.b;
         this.j = aVar.a;
         this.k = aVar.k;
-        this.f1303l = aVar.f1304l;
+        this.l = aVar.l;
         this.m = aVar.m;
         this.n = aVar.o;
         this.o = aVar.n;
@@ -75,7 +73,7 @@ public class f {
                 }
             }
             jSONObject2.putOpt("ftc", Integer.valueOf(this.n)).putOpt("info", jSONArray);
-            jSONObject.putOpt("down_x", Integer.valueOf(this.e)).putOpt("down_y", Integer.valueOf(this.f)).putOpt("up_x", Integer.valueOf(this.g)).putOpt("up_y", Integer.valueOf(this.h)).putOpt("down_time", Long.valueOf(this.i)).putOpt("up_time", Long.valueOf(this.j)).putOpt("toolType", Integer.valueOf(this.k)).putOpt("deviceId", Integer.valueOf(this.f1303l)).putOpt("source", Integer.valueOf(this.m)).putOpt("ft", jSONObject2);
+            jSONObject.putOpt("down_x", Integer.valueOf(this.e)).putOpt("down_y", Integer.valueOf(this.f)).putOpt("up_x", Integer.valueOf(this.g)).putOpt("up_y", Integer.valueOf(this.h)).putOpt("down_time", Long.valueOf(this.i)).putOpt("up_time", Long.valueOf(this.j)).putOpt("toolType", Integer.valueOf(this.k)).putOpt("deviceId", Integer.valueOf(this.l)).putOpt("source", Integer.valueOf(this.m)).putOpt("ft", jSONObject2);
         } catch (Exception unused) {
         }
         return jSONObject;
@@ -94,9 +92,7 @@ public class f {
         private int[] i;
         private int[] j;
         private int k;
-
-        /* renamed from: l  reason: collision with root package name */
-        private int f1304l;
+        private int l;
         private int m;
         private SparseArray<c.a> n;
         private int o;
@@ -167,7 +163,7 @@ public class f {
         }
 
         public a g(int i2) {
-            this.f1304l = i2;
+            this.l = i2;
             return this;
         }
 

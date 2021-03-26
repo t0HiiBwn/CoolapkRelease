@@ -42,7 +42,7 @@ public abstract class SubmitFeedRelativeInfoPickerBinding extends ViewDataBindin
 
     @Deprecated
     public static SubmitFeedRelativeInfoPickerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitFeedRelativeInfoPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559161, viewGroup, z, obj);
+        return (SubmitFeedRelativeInfoPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559169, viewGroup, z, obj);
     }
 
     public static SubmitFeedRelativeInfoPickerBinding inflate(LayoutInflater layoutInflater) {
@@ -51,7 +51,7 @@ public abstract class SubmitFeedRelativeInfoPickerBinding extends ViewDataBindin
 
     @Deprecated
     public static SubmitFeedRelativeInfoPickerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitFeedRelativeInfoPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559161, null, false, obj);
+        return (SubmitFeedRelativeInfoPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559169, null, false, obj);
     }
 
     public static SubmitFeedRelativeInfoPickerBinding bind(View view) {
@@ -60,6 +60,6 @@ public abstract class SubmitFeedRelativeInfoPickerBinding extends ViewDataBindin
 
     @Deprecated
     public static SubmitFeedRelativeInfoPickerBinding bind(View view, Object obj) {
-        return (SubmitFeedRelativeInfoPickerBinding) bind(obj, view, 2131559161);
+        return (SubmitFeedRelativeInfoPickerBinding) bind(obj, view, 2131559169);
     }
 }

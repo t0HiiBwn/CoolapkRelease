@@ -474,7 +474,7 @@ public final class g {
             public JSONObject a() {
                 return g.i();
             }
-        }).a(new com.bytedance.sdk.openadsdk.downloadnew.a.a.a(applicationContext)).a(new a.C0079a().b("143").a("open_news").c("3.4.1.2").d(String.valueOf(3412)).a());
+        }).a(new com.bytedance.sdk.openadsdk.downloadnew.a.a.a(applicationContext)).a(new a.C0089a().b("143").a("open_news").c("3.4.1.2").d(String.valueOf(3412)).a());
         a3.a(packageName + ".TTFileProvider").a(a(applicationContext, i()));
         com.ss.android.downloadlib.h.a.a();
         com.ss.android.downloadlib.g.a(applicationContext).d().a(1);

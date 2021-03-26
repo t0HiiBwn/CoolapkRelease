@@ -27,8 +27,8 @@ public class ItemChannelTitleBindingImpl extends ItemChannelTitleBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131363460, 3);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131363478, 3);
     }
 
     public ItemChannelTitleBindingImpl(DataBindingComponent dataBindingComponent, View view) {

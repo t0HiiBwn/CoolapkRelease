@@ -54,7 +54,7 @@ public abstract class Feed implements Entity, IUser {
 
         public abstract Builder commentGoodPic(String str);
 
-        public abstract Builder dateline(Long l2);
+        public abstract Builder dateline(Long l);
 
         public abstract Builder description(String str);
 
@@ -136,6 +136,8 @@ public abstract class Feed implements Entity, IUser {
 
         public abstract Builder id(String str);
 
+        public abstract Builder includeGoods(List<FeedGoods> list);
+
         public abstract Builder info(String str);
 
         public abstract Builder infoHtml(String str);
@@ -168,7 +170,7 @@ public abstract class Feed implements Entity, IUser {
 
         public abstract Builder label(String str);
 
-        public abstract Builder lastUpdate(Long l2);
+        public abstract Builder lastUpdate(Long l);
 
         public abstract Builder likeAvatar(String str);
 
@@ -462,6 +464,9 @@ public abstract class Feed implements Entity, IUser {
 
     @Override // com.coolapk.market.model.Entity
     public abstract String getId();
+
+    @SerializedName("include_goods")
+    public abstract List<FeedGoods> getIncludeGoods();
 
     public abstract String getInfo();
 

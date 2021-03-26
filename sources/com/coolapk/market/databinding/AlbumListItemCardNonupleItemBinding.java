@@ -45,7 +45,7 @@ public abstract class AlbumListItemCardNonupleItemBinding extends ViewDataBindin
 
     @Deprecated
     public static AlbumListItemCardNonupleItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AlbumListItemCardNonupleItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558449, viewGroup, z, obj);
+        return (AlbumListItemCardNonupleItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558450, viewGroup, z, obj);
     }
 
     public static AlbumListItemCardNonupleItemBinding inflate(LayoutInflater layoutInflater) {
@@ -54,7 +54,7 @@ public abstract class AlbumListItemCardNonupleItemBinding extends ViewDataBindin
 
     @Deprecated
     public static AlbumListItemCardNonupleItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AlbumListItemCardNonupleItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558449, null, false, obj);
+        return (AlbumListItemCardNonupleItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558450, null, false, obj);
     }
 
     public static AlbumListItemCardNonupleItemBinding bind(View view) {
@@ -63,6 +63,6 @@ public abstract class AlbumListItemCardNonupleItemBinding extends ViewDataBindin
 
     @Deprecated
     public static AlbumListItemCardNonupleItemBinding bind(View view, Object obj) {
-        return (AlbumListItemCardNonupleItemBinding) bind(obj, view, 2131558449);
+        return (AlbumListItemCardNonupleItemBinding) bind(obj, view, 2131558450);
     }
 }

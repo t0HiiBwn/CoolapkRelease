@@ -32,7 +32,7 @@ public final class bx {
             } else if ((cwVar instanceof cx) && (cwVar2 instanceof cx)) {
                 cx cxVar = (cx) cwVar;
                 cx cxVar2 = (cx) cwVar2;
-                return cxVar.f1357l == cxVar2.f1357l && cxVar.k == cxVar2.k && cxVar.j == cxVar2.j;
+                return cxVar.l == cxVar2.l && cxVar.k == cxVar2.k && cxVar.j == cxVar2.j;
             } else if (!(cwVar instanceof cz) || !(cwVar2 instanceof cz)) {
                 if ((cwVar instanceof da) && (cwVar2 instanceof da)) {
                     da daVar = (da) cwVar;

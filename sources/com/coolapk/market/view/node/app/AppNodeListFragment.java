@@ -167,9 +167,9 @@ public class AppNodeListFragment extends EntityListFragment {
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new NodeHelper.NodeDividerRule());
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558934).suitedEntityType("singleRatingCard").constructor(new AppNodeListFragment$onActivityCreated$1(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558889).suitedEntityType("ratingCard").constructor(new AppNodeListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558956).constructor(new AppNodeListFragment$onActivityCreated$3(this)).suitedMethod(AppNodeListFragment$onActivityCreated$4.INSTANCE).resetItemViewType(NodeTopContentViewHolder.Companion.getVIEW_TYPE()).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558941).suitedEntityType("singleRatingCard").constructor(new AppNodeListFragment$onActivityCreated$1(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558896).suitedEntityType("ratingCard").constructor(new AppNodeListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558963).constructor(new AppNodeListFragment$onActivityCreated$3(this)).suitedMethod(AppNodeListFragment$onActivityCreated$4.INSTANCE).resetItemViewType(NodeTopContentViewHolder.Companion.getVIEW_TYPE()).build(), 0, 2, null);
     }
 
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.feed.FeedEventProcessor.EventInterceptor
@@ -210,11 +210,11 @@ public class AppNodeListFragment extends EntityListFragment {
                         }
                         ServiceApp serviceApp = appNodeViewModel.getServiceApp().get();
                         if (serviceApp == null || serviceApp.getCommentStatus() != -1) {
-                            String string = getString(2131886865);
+                            String string = getString(2131886927);
                             Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_left_a_comment)");
                             addHintView(string, new AppNodeListFragment$onRequestResponse$1(this));
                         } else {
-                            String string2 = getString(2131886673);
+                            String string2 = getString(2131886735);
                             Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_comment_is_not_allowed)");
                             addHintView(string2, null);
                         }

@@ -91,7 +91,7 @@ public abstract class SubmitRatingNoramlContentBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitRatingNoramlContentBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitRatingNoramlContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559168, viewGroup, z, obj);
+        return (SubmitRatingNoramlContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559176, viewGroup, z, obj);
     }
 
     public static SubmitRatingNoramlContentBinding inflate(LayoutInflater layoutInflater) {
@@ -100,7 +100,7 @@ public abstract class SubmitRatingNoramlContentBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitRatingNoramlContentBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitRatingNoramlContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559168, null, false, obj);
+        return (SubmitRatingNoramlContentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559176, null, false, obj);
     }
 
     public static SubmitRatingNoramlContentBinding bind(View view) {
@@ -109,6 +109,6 @@ public abstract class SubmitRatingNoramlContentBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitRatingNoramlContentBinding bind(View view, Object obj) {
-        return (SubmitRatingNoramlContentBinding) bind(obj, view, 2131559168);
+        return (SubmitRatingNoramlContentBinding) bind(obj, view, 2131559176);
     }
 }

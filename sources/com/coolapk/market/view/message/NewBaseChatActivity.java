@@ -67,7 +67,7 @@ public abstract class NewBaseChatActivity extends FakeStatusBarActivity implemen
     @Override // com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558474);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558475);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…layout.base_new_chatting)");
         BaseNewChattingBinding baseNewChattingBinding = (BaseNewChattingBinding) contentView;
         this.mBinding = baseNewChattingBinding;
@@ -90,7 +90,7 @@ public abstract class NewBaseChatActivity extends FakeStatusBarActivity implemen
         if (toolbar3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("mToolbar");
         }
-        toolbar3.setNavigationIcon(2131231156);
+        toolbar3.setNavigationIcon(2131231166);
         Toolbar toolbar4 = this.mToolbar;
         if (toolbar4 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("mToolbar");
@@ -201,7 +201,7 @@ public abstract class NewBaseChatActivity extends FakeStatusBarActivity implemen
     @Override // android.app.Activity
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131362659) {
+        if (menuItem.getItemId() != 2131362670) {
             return super.onOptionsItemSelected(menuItem);
         }
         finish();
@@ -217,7 +217,7 @@ public abstract class NewBaseChatActivity extends FakeStatusBarActivity implemen
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         switch (view.getId()) {
-            case 2131362441:
+            case 2131362448:
                 ViewMode viewMode2 = this.viewMode;
                 if (viewMode2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("viewMode");
@@ -266,13 +266,13 @@ public abstract class NewBaseChatActivity extends FakeStatusBarActivity implemen
                     return;
                 }
                 return;
-            case 2131362701:
+            case 2131362712:
                 ActionManager.startPhotoPickerActivity(this, true);
                 return;
-            case 2131362918:
+            case 2131362930:
                 ActionManager.startPickUserActivity(this, 8655);
                 return;
-            case 2131362923:
+            case 2131362935:
                 ViewMode viewMode3 = this.viewMode;
                 if (viewMode3 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("viewMode");
@@ -346,7 +346,7 @@ public abstract class NewBaseChatActivity extends FakeStatusBarActivity implemen
                 Intrinsics.checkNotNull(viewMode4);
                 viewMode4.setKeyBoardShow(false);
                 return;
-            case 2131362926:
+            case 2131362938:
                 BaseNewChattingBinding baseNewChattingBinding14 = this.mBinding;
                 if (baseNewChattingBinding14 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("mBinding");
@@ -494,8 +494,8 @@ public abstract class NewBaseChatActivity extends FakeStatusBarActivity implemen
 
         public final void setEditing(boolean z) {
             this.editing = z;
-            notifyPropertyChanged(255);
-            notifyPropertyChanged(251);
+            notifyPropertyChanged(256);
+            notifyPropertyChanged(252);
             notifyPropertyChanged(89);
         }
 
@@ -511,9 +511,9 @@ public abstract class NewBaseChatActivity extends FakeStatusBarActivity implemen
 
         public final void setPosting(boolean z) {
             this.posting = z;
-            notifyPropertyChanged(255);
-            notifyPropertyChanged(251);
-            notifyPropertyChanged(225);
+            notifyPropertyChanged(256);
+            notifyPropertyChanged(252);
+            notifyPropertyChanged(226);
             NewBaseChatActivity.access$getMBinding$p(NewBaseChatActivity.this).executePendingBindings();
         }
     }

@@ -25,11 +25,11 @@ public class AlbumDetailtViewBindingImpl extends AlbumDetailtViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363934, 3);
-        sparseIntArray.put(2131362281, 4);
-        sparseIntArray.put(2131362908, 5);
-        sparseIntArray.put(2131362067, 6);
-        sparseIntArray.put(2131363588, 7);
+        sparseIntArray.put(2131363959, 3);
+        sparseIntArray.put(2131362286, 4);
+        sparseIntArray.put(2131362920, 5);
+        sparseIntArray.put(2131362069, 6);
+        sparseIntArray.put(2131363610, 7);
     }
 
     public AlbumDetailtViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -68,11 +68,11 @@ public class AlbumDetailtViewBindingImpl extends AlbumDetailtViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((AlbumDetailViewModel) obj);
@@ -97,7 +97,7 @@ public class AlbumDetailtViewBindingImpl extends AlbumDetailtViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -115,7 +115,7 @@ public class AlbumDetailtViewBindingImpl extends AlbumDetailtViewBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i != 247) {
+        } else if (i != 248) {
             return false;
         } else {
             synchronized (this) {

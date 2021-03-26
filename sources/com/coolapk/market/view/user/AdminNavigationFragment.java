@@ -25,7 +25,7 @@ public class AdminNavigationFragment extends LocalDataFragment<HolderItem> {
 
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment
     public int getItemViewType(int i) {
-        return 2131558977;
+        return 2131558984;
     }
 
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
@@ -83,14 +83,14 @@ public class AdminNavigationFragment extends LocalDataFragment<HolderItem> {
     @Override // com.coolapk.market.app.InitBehavior
     public void initData() {
         ArrayList arrayList = new ArrayList();
-        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231425).string("全站动态").build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231555).string("网易鉴黄").build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231482).string("举报管理").build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231436).string("全站动态").build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231566).string("网易鉴黄").build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231493).string("举报管理").build());
         getDataList().addAll(arrayList);
     }
 
     public static class UserNavigationViewHolder extends GenericBindHolder<ItemUserNavigationBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558977;
+        public static final int LAYOUT_ID = 2131558984;
 
         public UserNavigationViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);

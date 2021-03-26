@@ -32,7 +32,7 @@ public final class SaveImageDialog$onActivityCreated$1$8$takeAction$2 extends Em
         super.onNext((SaveImageDialog$onActivityCreated$1$8$takeAction$2) str);
         Toast.show$default(AppHolder.getApplication(), str, 0, false, 12, null);
         EventBus eventBus = EventBus.getDefault();
-        boolean z = !z;
+        boolean z = !r1;
         Feed feed = this.this$0.this$0.this$0.feed;
         eventBus.post(new FeedRecommendEvent(z, feed != null ? feed.getId() : null));
     }

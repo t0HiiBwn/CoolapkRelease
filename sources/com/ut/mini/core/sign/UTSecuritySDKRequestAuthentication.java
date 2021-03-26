@@ -14,18 +14,18 @@ public class UTSecuritySDKRequestAuthentication implements IUTRequestAuthenticat
     private Class a = null;
 
     /* renamed from: a  reason: collision with other field name */
-    private Field f100a = null;
+    private Field f99a = null;
 
     /* renamed from: a  reason: collision with other field name */
-    private Method f101a = null;
+    private Method f100a = null;
     private Object b = null;
 
     /* renamed from: b  reason: collision with other field name */
-    private Field f102b = null;
+    private Field f101b = null;
     private Object c = null;
 
     /* renamed from: c  reason: collision with other field name */
-    private Field f103c = null;
+    private Field f102c = null;
     private String g = null;
     private int z = 1;
 
@@ -67,9 +67,9 @@ public class UTSecuritySDKRequestAuthentication implements IUTRequestAuthenticat
                 try {
                     Class<?> cls3 = Class.forName("com.alibaba.wireless.security.open.SecurityGuardParamContext");
                     this.a = cls3;
-                    this.f100a = cls3.getDeclaredField("appKey");
-                    this.f102b = this.a.getDeclaredField("paramMap");
-                    this.f103c = this.a.getDeclaredField("requestType");
+                    this.f99a = cls3.getDeclaredField("appKey");
+                    this.f101b = this.a.getDeclaredField("paramMap");
+                    this.f102c = this.a.getDeclaredField("requestType");
                     try {
                         method = cls.getMethod("isOpen", new Class[0]);
                     } catch (Throwable th4) {
@@ -87,7 +87,7 @@ public class UTSecuritySDKRequestAuthentication implements IUTRequestAuthenticat
                         z2 = cls2 == null;
                     }
                     this.z = z2 ? 1 : 12;
-                    this.f101a = Class.forName("com.alibaba.wireless.security.open.securesignature.ISecureSignatureComponent").getMethod("signRequest", this.a, String.class);
+                    this.f100a = Class.forName("com.alibaba.wireless.security.open.securesignature.ISecureSignatureComponent").getMethod("signRequest", this.a, String.class);
                 } catch (Throwable th6) {
                     i.a("initSecurityCheck", th6.getMessage());
                 }
@@ -105,15 +105,15 @@ public class UTSecuritySDKRequestAuthentication implements IUTRequestAuthenticat
         if (this.g == null) {
             i.a("UTSecuritySDKRequestAuthentication:getSign", "There is no appkey,please check it!");
             return null;
-        } else if (str == null || this.b == null || (cls = this.a) == null || this.f100a == null || this.f102b == null || this.f103c == null || this.f101a == null || this.c == null) {
+        } else if (str == null || this.b == null || (cls = this.a) == null || this.f99a == null || this.f101b == null || this.f102c == null || this.f100a == null || this.c == null) {
             return null;
         } else {
             try {
                 Object newInstance = cls.newInstance();
-                this.f100a.set(newInstance, this.g);
-                ((Map) this.f102b.get(newInstance)).put("INPUT", str);
-                this.f103c.set(newInstance, Integer.valueOf(this.z));
-                return (String) this.f101a.invoke(this.c, newInstance, this.Z);
+                this.f99a.set(newInstance, this.g);
+                ((Map) this.f101b.get(newInstance)).put("INPUT", str);
+                this.f102c.set(newInstance, Integer.valueOf(this.z));
+                return (String) this.f100a.invoke(this.c, newInstance, this.Z);
             } catch (InstantiationException e) {
                 e.printStackTrace();
                 return null;

@@ -44,16 +44,18 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
+import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
 
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0003\u0018\u0000 \u00162\u00020\u0001:\u0001\u0016B'\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nJ\u0010\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u0014H\u0016J\b\u0010\u0015\u001a\u00020\u0012H\u0002R\u000e\u0010\u000b\u001a\u00020\fX.¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u000e¢\u0006\u0002\n\u0000R\u0011\u0010\b\u001a\u00020\t¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010¨\u0006\u0017"}, d2 = {"Lcom/coolapk/market/view/feed/article/ArticleImageViewHolder;", "Lcom/coolapk/market/viewholder/BindingViewHolder;", "itemView", "Landroid/view/View;", "comp", "Landroidx/databinding/DataBindingComponent;", "itemActionHandler", "Lcom/coolapk/market/viewholder/ItemActionHandler;", "presenter", "Lcom/coolapk/market/view/feed/article/ArticleFragmentPresenter;", "(Landroid/view/View;Landroidx/databinding/DataBindingComponent;Lcom/coolapk/market/viewholder/ItemActionHandler;Lcom/coolapk/market/view/feed/article/ArticleFragmentPresenter;)V", "model", "Lcom/coolapk/market/view/feedv8/ArticleImage;", "modelPicIndex", "", "getPresenter", "()Lcom/coolapk/market/view/feed/article/ArticleFragmentPresenter;", "bindTo", "", "data", "", "onImageClick", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: ArticleImageViewHolder.kt */
 public final class ArticleImageViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558616;
+    public static final int LAYOUT_ID = 2131558620;
     private ArticleImage model;
     private int modelPicIndex;
     private final ArticleFragmentPresenter presenter;
@@ -75,6 +77,7 @@ public final class ArticleImageViewHolder extends BindingViewHolder {
         frameLayout.setBackground(gradientDrawable);
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/view/feed/article/ArticleImageViewHolder$Companion;", "", "()V", "LAYOUT_ID", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: ArticleImageViewHolder.kt */
     public static final class Companion {
         private Companion() {
@@ -228,16 +231,17 @@ public final class ArticleImageViewHolder extends BindingViewHolder {
         ViewExtendsKt.setUtilClickListener(scalingImageView5, new ArticleImageViewHolder$bindTo$5(this));
         itemArticleViewImageBinding.executePendingBindings();
         if (z2) {
-            GlideRequest thumbnail = GlideApp.with(getContext()).load(str).diskCacheStrategy(DiskCacheStrategy.DATA).placeholder(2131231691).thumbnail((RequestBuilder) GlideApp.with(getContext()).load(s2xSizeProvider).diskCacheStrategy(DiskCacheStrategy.DATA));
+            GlideRequest thumbnail = GlideApp.with(getContext()).load(str).diskCacheStrategy(DiskCacheStrategy.DATA).placeholder(2131231702).thumbnail((RequestBuilder) GlideApp.with(getContext()).load(s2xSizeProvider).diskCacheStrategy(DiskCacheStrategy.DATA));
             if (articleImageViewHolder$bindTo$4 != null) {
                 thumbnail = thumbnail.listener((RequestListener) new RequestListenerAdapter(str, articleImageViewHolder$bindTo$4));
             }
             Intrinsics.checkNotNullExpressionValue(thumbnail.into(itemArticleViewImageBinding.ivCover), "GlideApp.with(context)\n …   .into(binding.ivCover)");
             return;
         }
-        AppHolder.getContextImageLoader().displayImage(getContext(), str, (ImageView) itemArticleViewImageBinding.ivCover, ImageLoaderOptions.newBuilder().placeHolderRes(2131231691).build(), articleImageViewHolder$bindTo$4, (OnBitmapTransformListener) null);
+        AppHolder.getContextImageLoader().displayImage(getContext(), str, (ImageView) itemArticleViewImageBinding.ivCover, ImageLoaderOptions.newBuilder().placeHolderRes(2131231702).build(), articleImageViewHolder$bindTo$4, (OnBitmapTransformListener) null);
     }
 
+    /* access modifiers changed from: private */
     public final void onImageClick() {
         DataBindingComponent component = getComponent();
         LifecycleOwner lifecycleOwner = null;

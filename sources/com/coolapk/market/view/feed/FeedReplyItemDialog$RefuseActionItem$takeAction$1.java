@@ -23,7 +23,7 @@ public final class FeedReplyItemDialog$RefuseActionItem$takeAction$1 extends Emp
         Intrinsics.checkNotNullParameter(result, "stringResult");
         super.onNext((FeedReplyItemDialog$RefuseActionItem$takeAction$1) result);
         Toast.show$default(this.this$0.this$0.getActivity(), result.getData(), 0, false, 12, null);
-        EventBus.getDefault().post(new FeedReplyDeleteEvent(FeedReplyItemDialog.RefuseActionItem.access$getFeedReply$p(this.this$0)));
+        EventBus.getDefault().post(new FeedReplyDeleteEvent(this.this$0.feedReply));
     }
 
     @Override // com.coolapk.market.app.EmptySubscriber, rx.Observer

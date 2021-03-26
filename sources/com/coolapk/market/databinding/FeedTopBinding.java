@@ -36,7 +36,7 @@ public abstract class FeedTopBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedTopBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (FeedTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558562, viewGroup, z, obj);
+        return (FeedTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558565, viewGroup, z, obj);
     }
 
     public static FeedTopBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class FeedTopBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedTopBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (FeedTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558562, null, false, obj);
+        return (FeedTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558565, null, false, obj);
     }
 
     public static FeedTopBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class FeedTopBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedTopBinding bind(View view, Object obj) {
-        return (FeedTopBinding) bind(obj, view, 2131558562);
+        return (FeedTopBinding) bind(obj, view, 2131558565);
     }
 }

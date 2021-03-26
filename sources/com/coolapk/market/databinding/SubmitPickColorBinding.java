@@ -30,7 +30,7 @@ public abstract class SubmitPickColorBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitPickColorBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitPickColorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559163, viewGroup, z, obj);
+        return (SubmitPickColorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559171, viewGroup, z, obj);
     }
 
     public static SubmitPickColorBinding inflate(LayoutInflater layoutInflater) {
@@ -39,7 +39,7 @@ public abstract class SubmitPickColorBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitPickColorBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitPickColorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559163, null, false, obj);
+        return (SubmitPickColorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559171, null, false, obj);
     }
 
     public static SubmitPickColorBinding bind(View view) {
@@ -48,6 +48,6 @@ public abstract class SubmitPickColorBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitPickColorBinding bind(View view, Object obj) {
-        return (SubmitPickColorBinding) bind(obj, view, 2131559163);
+        return (SubmitPickColorBinding) bind(obj, view, 2131559171);
     }
 }

@@ -69,7 +69,7 @@ final class DyhArticleAction$onActivityCreated$1 extends Lambda implements Funct
         }
         list.add(this.this$0.buildMultiActionItem(this.$dyhArticle));
         boolean z5 = this.$dyhArticle.getRecommend() > 0;
-        String string = this.this$0.getString(2131886730);
+        String string = this.this$0.getString(2131886792);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_dialog_report)");
         MultiItemDialogFragmentKt.addItem(list, string, new Function0<Unit>(this) {
             /* class com.coolapk.market.view.dyhv8.DyhArticleAction$onActivityCreated$1.AnonymousClass1 */

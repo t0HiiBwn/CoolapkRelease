@@ -34,7 +34,7 @@ public class ItemAdsBindingImpl extends ItemAdsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 7);
+        sparseIntArray.put(2131362779, 7);
     }
 
     public ItemAdsBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -83,7 +83,7 @@ public class ItemAdsBindingImpl extends ItemAdsBinding {
     public boolean setVariable(int i, Object obj) {
         if (44 == i) {
             setCard((Ads) obj);
-        } else if (244 == i) {
+        } else if (245 == i) {
             setShowAction(((Boolean) obj).booleanValue());
         } else if (49 != i) {
             return false;
@@ -109,7 +109,7 @@ public class ItemAdsBindingImpl extends ItemAdsBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(244);
+        notifyPropertyChanged(245);
         super.requestRebind();
     }
 
@@ -165,7 +165,7 @@ public class ItemAdsBindingImpl extends ItemAdsBinding {
                     }
                     j = j3 | j2;
                 }
-                drawable = z2 ? AppCompatResources.getDrawable(this.mboundView5.getContext(), 2131231471) : AppCompatResources.getDrawable(this.mboundView5.getContext(), 2131231469);
+                drawable = z2 ? AppCompatResources.getDrawable(this.mboundView5.getContext(), 2131231482) : AppCompatResources.getDrawable(this.mboundView5.getContext(), 2131231480);
                 str3 = this.actionText.getResources().getString(z2 ? 2131886114 : 2131886134);
             } else {
                 drawable = null;
@@ -204,7 +204,7 @@ public class ItemAdsBindingImpl extends ItemAdsBinding {
         }
         if ((j & 13) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str4, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, circleTransform, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str4, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, circleTransform, true, bool, bool, null, bool);
         }
     }
 }

@@ -29,13 +29,13 @@ final class AppNodeFragment$onCreateOptionsMenu$1 extends Lambda implements Func
 
     public final void invoke(AppNodeFragment appNodeFragment) {
         Intrinsics.checkNotNullParameter(appNodeFragment, "it");
-        MenuItem findItem = this.$menu.findItem(2131361854);
+        MenuItem findItem = this.$menu.findItem(2131361855);
         Intrinsics.checkNotNullExpressionValue(findItem, "menu.findItem(R.id.action_add_album)");
         findItem.setVisible(false);
-        MenuItem findItem2 = this.$menu.findItem(2131361912);
+        MenuItem findItem2 = this.$menu.findItem(2131361913);
         Intrinsics.checkNotNullExpressionValue(findItem2, "menu.findItem(R.id.action_history)");
         findItem2.setVisible(false);
-        MenuItem findItem3 = this.$menu.findItem(2131361900);
+        MenuItem findItem3 = this.$menu.findItem(2131361901);
         Intrinsics.checkNotNullExpressionValue(findItem3, "menu.findItem(R.id.action_download_again)");
         findItem3.setVisible(false);
     }

@@ -25,12 +25,12 @@ public class AppViewV8BindingImpl extends AppViewV8Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362879, 4);
-        sparseIntArray.put(2131362306, 5);
-        sparseIntArray.put(2131362083, 6);
-        sparseIntArray.put(2131362067, 7);
-        sparseIntArray.put(2131363588, 8);
-        sparseIntArray.put(2131362882, 9);
+        sparseIntArray.put(2131362890, 4);
+        sparseIntArray.put(2131362311, 5);
+        sparseIntArray.put(2131362085, 6);
+        sparseIntArray.put(2131362069, 7);
+        sparseIntArray.put(2131363610, 8);
+        sparseIntArray.put(2131362893, 9);
     }
 
     public AppViewV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -68,7 +68,7 @@ public class AppViewV8BindingImpl extends AppViewV8Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppViewViewModel) obj);
@@ -82,7 +82,7 @@ public class AppViewV8BindingImpl extends AppViewV8Binding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -100,12 +100,12 @@ public class AppViewV8BindingImpl extends AppViewV8Binding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 186) {
+        } else if (i == 187) {
             synchronized (this) {
                 this.mDirtyFlags |= 2;
             }
             return true;
-        } else if (i != 242) {
+        } else if (i != 243) {
             return false;
         } else {
             synchronized (this) {

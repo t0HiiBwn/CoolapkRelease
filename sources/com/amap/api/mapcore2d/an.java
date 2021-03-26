@@ -22,9 +22,7 @@ class an extends ao {
     public long i = 0;
     public cb j = null;
     TileProvider k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    public int f1216l = -1;
+    public int l = -1;
     public String m = "";
     ba n = null;
     u o = null;
@@ -61,7 +59,7 @@ class an extends ao {
     }
 
     public int hashCode() {
-        return this.f1216l;
+        return this.l;
     }
 
     public String toString() {

@@ -14,7 +14,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: BackupHeaderTitleViewholder.kt */
 public final class BackupHeaderTitleViewholder extends GenericBindHolder<ItemBackupHeaderTitleBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558623;
+    public static final int LAYOUT_ID = 2131558627;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public BackupHeaderTitleViewholder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {

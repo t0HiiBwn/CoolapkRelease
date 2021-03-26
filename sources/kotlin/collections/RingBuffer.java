@@ -31,10 +31,6 @@ final class RingBuffer<T> extends AbstractList<T> implements RandomAccess {
         throw new IllegalArgumentException(("ring buffer filled size should not be negative but it is " + i).toString());
     }
 
-    public static final /* synthetic */ int access$getStartIndex$p(RingBuffer ringBuffer) {
-        return ringBuffer.startIndex;
-    }
-
     public RingBuffer(int i) {
         this(new Object[i], 0);
     }

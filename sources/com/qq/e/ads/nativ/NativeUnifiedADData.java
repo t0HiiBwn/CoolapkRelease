@@ -6,11 +6,12 @@ import android.widget.FrameLayout;
 import com.qq.e.ads.cfg.VideoOption;
 import com.qq.e.ads.nativ.widget.NativeAdContainer;
 import com.qq.e.comm.adevent.ADEvent;
+import com.qq.e.comm.compliance.ApkDownloadComplianceInterface;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public interface NativeUnifiedADData {
+public interface NativeUnifiedADData extends ApkDownloadComplianceInterface {
     public static final int AD_CLICKED = 2;
     public static final int AD_ERROR = 3;
     public static final int AD_EXPOSED = 1;
@@ -92,6 +93,8 @@ public interface NativeUnifiedADData {
     @Deprecated
     void onVideoADExposured(View view);
 
+    void pauseAppDownload();
+
     void pauseVideo();
 
     void preloadVideo(VideoPreloadListener videoPreloadListener);
@@ -100,6 +103,8 @@ public interface NativeUnifiedADData {
     void reportVastEvent(ADEvent aDEvent);
 
     void resume();
+
+    void resumeAppDownload();
 
     void resumeVideo();
 

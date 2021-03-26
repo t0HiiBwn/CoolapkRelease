@@ -34,7 +34,7 @@ public class a {
 
     /* renamed from: com.umeng.commonsdk.internal.utils.a$a  reason: collision with other inner class name */
     /* compiled from: ApplicationLayerUtil */
-    public static class C0148a {
+    public static class C0175a {
         public String a;
         public String b;
     }
@@ -52,9 +52,7 @@ public class a {
         public int i;
         public int j;
         public int k;
-
-        /* renamed from: l  reason: collision with root package name */
-        public long f1485l;
+        public long l;
     }
 
     public static String n(Context context) {
@@ -189,7 +187,7 @@ public class a {
             bVar.i = c.getNetworkId();
             bVar.j = c.getRssi();
             bVar.k = g(context);
-            bVar.f1485l = System.currentTimeMillis();
+            bVar.l = System.currentTimeMillis();
             if (c != null) {
                 try {
                     JSONArray a = f.a(context);
@@ -296,7 +294,7 @@ public class a {
         return inputMethodManager.getInputMethodList();
     }
 
-    public static List<C0148a> l(Context context) {
+    public static List<C0175a> l(Context context) {
         String[] list;
         if (context == null) {
             return null;
@@ -307,7 +305,7 @@ public class a {
             if (file.isDirectory() && (list = file.list()) != null && list.length > 0) {
                 for (String str : list) {
                     if (str != null && !str.startsWith(".")) {
-                        C0148a aVar = new C0148a();
+                        C0175a aVar = new C0175a();
                         aVar.a = str;
                         aVar.b = e(context, str);
                         arrayList.add(aVar);

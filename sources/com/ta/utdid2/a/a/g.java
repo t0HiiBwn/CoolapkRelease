@@ -6,7 +6,7 @@ public class g {
     private static final Pattern a = Pattern.compile("([\t\r\n])+");
 
     /* renamed from: a  reason: collision with other method in class */
-    public static boolean m30a(String str) {
+    public static boolean m20a(String str) {
         return str == null || str.length() <= 0;
     }
 

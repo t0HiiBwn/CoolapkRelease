@@ -10,7 +10,7 @@ final class AutoValue_FeedGoods extends C$AutoValue_FeedGoods {
 
         @Override // android.os.Parcelable.Creator
         public AutoValue_FeedGoods createFromParcel(Parcel parcel) {
-            return new AutoValue_FeedGoods(parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? Integer.valueOf(parcel.readInt()) : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? Long.valueOf(parcel.readLong()) : null, parcel.readInt() == 0 ? Long.valueOf(parcel.readLong()) : null, parcel.readString(), parcel.readString(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readLong(), parcel.readString(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readString(), parcel.readString(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readLong(), parcel.readInt(), parcel.readLong(), parcel.readString(), parcel.readLong(), parcel.readString(), parcel.readArrayList(FeedGoodsCategory.class.getClassLoader()), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readArrayList(ConfigPage.class.getClassLoader()));
+            return new AutoValue_FeedGoods(parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? Integer.valueOf(parcel.readInt()) : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? Long.valueOf(parcel.readLong()) : null, parcel.readInt() == 0 ? Long.valueOf(parcel.readLong()) : null, parcel.readString(), parcel.readString(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readLong(), parcel.readString(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readString(), parcel.readString(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readLong(), parcel.readInt(), parcel.readLong(), parcel.readString(), parcel.readLong(), parcel.readString(), parcel.readArrayList(FeedGoodsCategory.class.getClassLoader()), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readArrayList(ConfigPage.class.getClassLoader()), parcel.readInt());
         }
 
         @Override // android.os.Parcelable.Creator
@@ -24,8 +24,8 @@ final class AutoValue_FeedGoods extends C$AutoValue_FeedGoods {
         return 0;
     }
 
-    AutoValue_FeedGoods(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, String str11, String str12, String str13, long j, String str14, String str15, String str16, String str17, String str18, String str19, long j2, int i2, long j3, String str20, long j4, String str21, List<FeedGoodsCategory> list, String str22, String str23, String str24, List<ConfigPage> list2) {
-        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, l2, l3, str10, str11, str12, str13, j, str14, str15, str16, str17, str18, str19, j2, i2, j3, str20, j4, str21, list, str22, str23, str24, list2);
+    AutoValue_FeedGoods(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, String str11, String str12, String str13, long j, String str14, String str15, String str16, String str17, String str18, String str19, long j2, int i2, long j3, String str20, long j4, String str21, List<FeedGoodsCategory> list, String str22, String str23, String str24, List<ConfigPage> list2, int i3) {
+        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, l, l2, str10, str11, str12, str13, j, str14, str15, str16, str17, str18, str19, j2, i2, j3, str20, j4, str21, list, str22, str23, str24, list2, i3);
     }
 
     @Override // android.os.Parcelable
@@ -165,5 +165,6 @@ final class AutoValue_FeedGoods extends C$AutoValue_FeedGoods {
             parcel.writeString(getPrice());
         }
         parcel.writeList(getTabApiList());
+        parcel.writeInt(getFromApi());
     }
 }

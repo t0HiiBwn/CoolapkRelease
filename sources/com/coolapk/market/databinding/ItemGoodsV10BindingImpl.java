@@ -21,7 +21,7 @@ public class ItemGoodsV10BindingImpl extends ItemGoodsV10Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362631, 1);
+        sparseIntArray.put(2131362639, 1);
     }
 
     public ItemGoodsV10BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -56,7 +56,7 @@ public class ItemGoodsV10BindingImpl extends ItemGoodsV10Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FeedGoods) obj);
         } else if (50 != i) {
             return false;

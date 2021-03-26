@@ -26,8 +26,8 @@ public class ItemMoreActionBindingImpl extends ItemMoreActionBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131361913, 1);
-        sparseIntArray.put(2131361979, 2);
+        sparseIntArray.put(2131361914, 1);
+        sparseIntArray.put(2131361980, 2);
     }
 
     public ItemMoreActionBindingImpl(DataBindingComponent dataBindingComponent, View view) {

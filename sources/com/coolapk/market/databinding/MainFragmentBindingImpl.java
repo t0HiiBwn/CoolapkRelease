@@ -28,11 +28,11 @@ public class MainFragmentBindingImpl extends MainFragmentBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362597, 2);
-        sparseIntArray.put(2131362327, 3);
-        sparseIntArray.put(2131362128, 4);
-        sparseIntArray.put(2131362137, 5);
-        sparseIntArray.put(2131362901, 6);
+        sparseIntArray.put(2131362605, 2);
+        sparseIntArray.put(2131362333, 3);
+        sparseIntArray.put(2131362131, 4);
+        sparseIntArray.put(2131362140, 5);
+        sparseIntArray.put(2131362912, 6);
     }
 
     public MainFragmentBindingImpl(DataBindingComponent dataBindingComponent, View view) {

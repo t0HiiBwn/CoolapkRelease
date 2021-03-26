@@ -46,7 +46,7 @@ public abstract class ItemCenterLoginBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCenterLoginBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemCenterLoginBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558638, viewGroup, z, obj);
+        return (ItemCenterLoginBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558644, viewGroup, z, obj);
     }
 
     public static ItemCenterLoginBinding inflate(LayoutInflater layoutInflater) {
@@ -55,7 +55,7 @@ public abstract class ItemCenterLoginBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCenterLoginBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemCenterLoginBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558638, null, false, obj);
+        return (ItemCenterLoginBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558644, null, false, obj);
     }
 
     public static ItemCenterLoginBinding bind(View view) {
@@ -64,6 +64,6 @@ public abstract class ItemCenterLoginBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCenterLoginBinding bind(View view, Object obj) {
-        return (ItemCenterLoginBinding) bind(obj, view, 2131558638);
+        return (ItemCenterLoginBinding) bind(obj, view, 2131558644);
     }
 }

@@ -22,7 +22,7 @@ abstract class C$$AutoValue_FileDetail extends FileDetail {
     private final String url;
     private final String urlMd5;
 
-    C$$AutoValue_FileDetail(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, String str10, Long l3, int i, int i2, int i3, int i4, int i5) {
+    C$$AutoValue_FileDetail(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, Long l, String str10, Long l2, int i, int i2, int i3, int i4, int i5) {
         this.id = str;
         this.fileMd5 = str2;
         this.url = str3;
@@ -32,9 +32,9 @@ abstract class C$$AutoValue_FileDetail extends FileDetail {
         this.fileSize = str7;
         this.fileExt = str8;
         this.firstUid = str9;
-        this.dateline = l2;
+        this.dateline = l;
         this.lastUid = str10;
-        this.lastUpdateTime = l3;
+        this.lastUpdateTime = l2;
         this.uploadCount = i;
         this.isBlock = i2;
         this.isForbid = i3;
@@ -173,12 +173,12 @@ abstract class C$$AutoValue_FileDetail extends FileDetail {
                                     if (str8 != null ? str8.equals(fileDetail.fileExt()) : fileDetail.fileExt() == null) {
                                         String str9 = this.firstUid;
                                         if (str9 != null ? str9.equals(fileDetail.firstUid()) : fileDetail.firstUid() == null) {
-                                            Long l2 = this.dateline;
-                                            if (l2 != null ? l2.equals(fileDetail.dateline()) : fileDetail.dateline() == null) {
+                                            Long l = this.dateline;
+                                            if (l != null ? l.equals(fileDetail.dateline()) : fileDetail.dateline() == null) {
                                                 String str10 = this.lastUid;
                                                 if (str10 != null ? str10.equals(fileDetail.lastUid()) : fileDetail.lastUid() == null) {
-                                                    Long l3 = this.lastUpdateTime;
-                                                    if (l3 != null ? l3.equals(fileDetail.lastUpdateTime()) : fileDetail.lastUpdateTime() == null) {
+                                                    Long l2 = this.lastUpdateTime;
+                                                    if (l2 != null ? l2.equals(fileDetail.lastUpdateTime()) : fileDetail.lastUpdateTime() == null) {
                                                         if (this.uploadCount == fileDetail.uploadCount() && this.isBlock == fileDetail.isBlock() && this.isForbid == fileDetail.isForbid() && this.isBanned == fileDetail.isBanned() && this.spamStatus == fileDetail.spamStatus()) {
                                                             return true;
                                                         }
@@ -218,13 +218,13 @@ abstract class C$$AutoValue_FileDetail extends FileDetail {
         int hashCode8 = (hashCode7 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
         String str9 = this.firstUid;
         int hashCode9 = (hashCode8 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode10 = (hashCode9 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode10 = (hashCode9 ^ (l == null ? 0 : l.hashCode())) * 1000003;
         String str10 = this.lastUid;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l3 = this.lastUpdateTime;
-        if (l3 != null) {
-            i = l3.hashCode();
+        Long l2 = this.lastUpdateTime;
+        if (l2 != null) {
+            i = l2.hashCode();
         }
         return ((((((((((hashCode11 ^ i) * 1000003) ^ this.uploadCount) * 1000003) ^ this.isBlock) * 1000003) ^ this.isForbid) * 1000003) ^ this.isBanned) * 1000003) ^ this.spamStatus;
     }

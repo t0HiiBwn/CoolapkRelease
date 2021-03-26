@@ -89,11 +89,11 @@ public final class CircleFeedV8Fragment extends EntityListFragment {
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0002\b\f\b\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\u0017\b\u0002\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\u0006\u0010\u000b\u001a\u00020\u0005R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nj\u0002\b\fj\u0002\b\rj\u0002\b\u000ej\u0002\b\u000fj\u0002\b\u0010¨\u0006\u0011"}, d2 = {"Lcom/coolapk/market/view/main/CircleFeedV8Fragment$FeedGroupType;", "", "type", "", "textId", "", "(Ljava/lang/String;ILjava/lang/String;I)V", "getTextId", "()I", "getType", "()Ljava/lang/String;", "validId", "FEED_TYPE_ALL", "FEED_TYPE_CIRCLE", "FEED_TYPE_APK", "FEED_TYPE_TOPIC", "FEED_TYPE_QUESTION", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: CircleFeedV8Fragment.kt */
     public enum FeedGroupType {
-        FEED_TYPE_ALL("all", 2131886329),
-        FEED_TYPE_CIRCLE("circle", 2131886331),
-        FEED_TYPE_APK("apk", 2131886330),
-        FEED_TYPE_TOPIC("tag", 2131886333),
-        FEED_TYPE_QUESTION("question", 2131886332);
+        FEED_TYPE_ALL("all", 2131886359),
+        FEED_TYPE_CIRCLE("circle", 2131886361),
+        FEED_TYPE_APK("apk", 2131886360),
+        FEED_TYPE_TOPIC("tag", 2131886363),
+        FEED_TYPE_QUESTION("question", 2131886362);
         
         private final int textId;
         private final String type;
@@ -144,7 +144,7 @@ public final class CircleFeedV8Fragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558652, 2131231056).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558658, 2131231066).create());
         RecyclerView recyclerView = getRecyclerView();
         RecyclerView recyclerView2 = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView2, "recyclerView");
@@ -152,7 +152,7 @@ public final class CircleFeedV8Fragment extends EntityListFragment {
         if (getUserVisibleHint()) {
             initData();
         }
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558652).suitedEntityType(ENTITY_TYPE_ACTION_TOP).constructor(new CircleFeedV8Fragment$onActivityCreated$1(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558658).suitedEntityType(ENTITY_TYPE_ACTION_TOP).constructor(new CircleFeedV8Fragment$onActivityCreated$1(this)).build(), 0, 2, null);
     }
 
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.feed.FeedEventProcessor.EventInterceptor
@@ -300,7 +300,7 @@ public final class CircleFeedV8Fragment extends EntityListFragment {
         if (i == 3925 && i2 == -1 && intent != null) {
             ArrayList<String> stringArrayListExtra = intent.getStringArrayListExtra("PICKED_PHOTO_PATHS");
             if (stringArrayListExtra == null || stringArrayListExtra.isEmpty()) {
-                Toast.show$default(getActivity(), getString(2131886934), 0, false, 12, null);
+                Toast.show$default(getActivity(), getString(2131886996), 0, false, 12, null);
                 return;
             }
             FragmentActivity requireActivity = requireActivity();
@@ -321,7 +321,7 @@ public final class CircleFeedV8Fragment extends EntityListFragment {
     /* compiled from: CircleFeedV8Fragment.kt */
     private static final class CircleTopViewHolder extends GenericBindHolder<ItemCircleFeedTopBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558652;
+        public static final int LAYOUT_ID = 2131558658;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public CircleTopViewHolder(View view, FragmentBindingComponent fragmentBindingComponent) {
@@ -354,7 +354,7 @@ public final class CircleFeedV8Fragment extends EntityListFragment {
             if (activityNullable != null) {
                 LifecycleOwner lifecycleOwner = null;
                 switch (view.getId()) {
-                    case 2131362194:
+                    case 2131362197:
                         DataBindingComponent component = getComponent();
                         if (!(component instanceof FragmentBindingComponent)) {
                             component = null;
@@ -371,12 +371,12 @@ public final class CircleFeedV8Fragment extends EntityListFragment {
                             return;
                         }
                         return;
-                    case 2131362447:
-                    case 2131363582:
+                    case 2131362454:
+                    case 2131363604:
                         ActionManager.startNewFeedV8Activity(activityNullable);
                         StatisticHelper.Companion.getInstance().recordEvent("V9圈子头部", "动态");
                         return;
-                    case 2131362555:
+                    case 2131362563:
                         DataBindingComponent component2 = getComponent();
                         if (!(component2 instanceof FragmentBindingComponent)) {
                             component2 = null;
@@ -392,7 +392,7 @@ public final class CircleFeedV8Fragment extends EntityListFragment {
                         }
                         StatisticHelper.Companion.getInstance().recordEvent("V9圈子头部", "切换");
                         return;
-                    case 2131362889:
+                    case 2131362900:
                         StatisticHelper.Companion.getInstance().recordEvent("V9圈子头部", "个人主页");
                         Context context2 = getContext();
                         DataManager instance = DataManager.getInstance();
@@ -421,7 +421,7 @@ public final class CircleFeedV8Fragment extends EntityListFragment {
             CircleFeedV8Fragment circleFeedV8Fragment = (CircleFeedV8Fragment) fragment;
             if (circleFeedV8Fragment != null) {
                 ((ItemCircleFeedTopBinding) getBinding()).executePendingBindings();
-                ImageLoaderOptions build = ImageLoaderOptions.newBuilder().placeHolderRes(2131231152).build();
+                ImageLoaderOptions build = ImageLoaderOptions.newBuilder().placeHolderRes(2131231162).build();
                 GlideFragmentImageLoader fragmentImageLoader = AppHolder.getFragmentImageLoader();
                 CircleFeedV8Fragment circleFeedV8Fragment2 = circleFeedV8Fragment;
                 DataManager instance = DataManager.getInstance();

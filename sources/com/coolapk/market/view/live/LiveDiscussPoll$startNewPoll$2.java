@@ -23,7 +23,7 @@ final class LiveDiscussPoll$startNewPoll$2<T, R> implements Func1<Observable<? e
                 this.this$0 = r1;
             }
 
-            public final Boolean call(Long l2) {
+            public final Boolean call(Long l) {
                 return Boolean.valueOf(this.this$0.this$0.enableSubscription.get());
             }
         });

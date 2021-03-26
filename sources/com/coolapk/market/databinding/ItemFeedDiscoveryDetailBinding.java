@@ -65,7 +65,7 @@ public abstract class ItemFeedDiscoveryDetailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedDiscoveryDetailBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedDiscoveryDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558697, viewGroup, z, obj);
+        return (ItemFeedDiscoveryDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558704, viewGroup, z, obj);
     }
 
     public static ItemFeedDiscoveryDetailBinding inflate(LayoutInflater layoutInflater) {
@@ -74,7 +74,7 @@ public abstract class ItemFeedDiscoveryDetailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedDiscoveryDetailBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedDiscoveryDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558697, null, false, obj);
+        return (ItemFeedDiscoveryDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558704, null, false, obj);
     }
 
     public static ItemFeedDiscoveryDetailBinding bind(View view) {
@@ -83,6 +83,6 @@ public abstract class ItemFeedDiscoveryDetailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedDiscoveryDetailBinding bind(View view, Object obj) {
-        return (ItemFeedDiscoveryDetailBinding) bind(obj, view, 2131558697);
+        return (ItemFeedDiscoveryDetailBinding) bind(obj, view, 2131558704);
     }
 }

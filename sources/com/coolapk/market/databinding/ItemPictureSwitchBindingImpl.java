@@ -28,10 +28,10 @@ public class ItemPictureSwitchBindingImpl extends ItemPictureSwitchBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362246, 5);
-        sparseIntArray.put(2131362247, 6);
-        sparseIntArray.put(2131362249, 7);
-        sparseIntArray.put(2131362250, 8);
+        sparseIntArray.put(2131362251, 5);
+        sparseIntArray.put(2131362252, 6);
+        sparseIntArray.put(2131362254, 7);
+        sparseIntArray.put(2131362255, 8);
     }
 
     public ItemPictureSwitchBindingImpl(DataBindingComponent dataBindingComponent, View view) {

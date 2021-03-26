@@ -102,28 +102,28 @@ public final class TopicPickFragment extends EntityListFragment {
                 }
             } else if (string.equals("ACTION_TYPE_WRITE")) {
                 BaseMultiTypeAdapter adapter$presentation_coolapkAppRelease = getAdapter$presentation_coolapkAppRelease();
-                SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558962).suitedMethod(TopicPickFragment$onActivityCreated$1.INSTANCE).constructor(new TopicPickFragment$onActivityCreated$2(this));
+                SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558969).suitedMethod(TopicPickFragment$onActivityCreated$1.INSTANCE).constructor(new TopicPickFragment$onActivityCreated$2(this));
                 Integer num = getItemViewTypeByEntityType().get("topic");
                 Intrinsics.checkNotNull(num);
                 Intrinsics.checkNotNullExpressionValue(num, "itemViewTypeByEntityType…tils.ENTITY_TYPE_TOPIC]!!");
                 BaseMultiTypeAdapter.register$default(adapter$presentation_coolapkAppRelease, constructor.resetItemViewType(num.intValue()).build(), 0, 2, null);
-                BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558954).suitedMethod(TopicPickFragment$onActivityCreated$5.INSTANCE).constructor(TopicPickFragment$onActivityCreated$6.INSTANCE).build(), 0, 2, null);
-                BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558971).suitedMethod(TopicPickFragment$onActivityCreated$7.INSTANCE).constructor(new TopicPickFragment$onActivityCreated$8(this)).build(), 0, 2, null);
-                BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558586).suitedMethod(TopicPickFragment$onActivityCreated$9.INSTANCE).constructor(TopicPickFragment$onActivityCreated$10.INSTANCE).build(), 0, 2, null);
+                BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558961).suitedMethod(TopicPickFragment$onActivityCreated$5.INSTANCE).constructor(TopicPickFragment$onActivityCreated$6.INSTANCE).build(), 0, 2, null);
+                BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558978).suitedMethod(TopicPickFragment$onActivityCreated$7.INSTANCE).constructor(new TopicPickFragment$onActivityCreated$8(this)).build(), 0, 2, null);
+                BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558590).suitedMethod(TopicPickFragment$onActivityCreated$9.INSTANCE).constructor(TopicPickFragment$onActivityCreated$10.INSTANCE).build(), 0, 2, null);
                 getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(TopBottomDividerRule.TB12DP);
                 getVxDividerDecoration$presentation_coolapkAppRelease().addViewMarginRule(new TopicPickFragment$onActivityCreated$11());
                 initData();
             }
         }
         BaseMultiTypeAdapter adapter$presentation_coolapkAppRelease2 = getAdapter$presentation_coolapkAppRelease();
-        SimpleHolderFactorBuilder constructor2 = SimpleViewHolderFactor.Companion.withLayoutId(2131558962).suitedMethod(TopicPickFragment$onActivityCreated$3.INSTANCE).constructor(new TopicPickFragment$onActivityCreated$4(this));
+        SimpleHolderFactorBuilder constructor2 = SimpleViewHolderFactor.Companion.withLayoutId(2131558969).suitedMethod(TopicPickFragment$onActivityCreated$3.INSTANCE).constructor(new TopicPickFragment$onActivityCreated$4(this));
         Integer num2 = getItemViewTypeByEntityType().get("topic");
         Intrinsics.checkNotNull(num2);
         Intrinsics.checkNotNullExpressionValue(num2, "itemViewTypeByEntityType…tils.ENTITY_TYPE_TOPIC]!!");
         BaseMultiTypeAdapter.register$default(adapter$presentation_coolapkAppRelease2, constructor2.resetItemViewType(num2.intValue()).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558954).suitedMethod(TopicPickFragment$onActivityCreated$5.INSTANCE).constructor(TopicPickFragment$onActivityCreated$6.INSTANCE).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558971).suitedMethod(TopicPickFragment$onActivityCreated$7.INSTANCE).constructor(new TopicPickFragment$onActivityCreated$8(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558586).suitedMethod(TopicPickFragment$onActivityCreated$9.INSTANCE).constructor(TopicPickFragment$onActivityCreated$10.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558961).suitedMethod(TopicPickFragment$onActivityCreated$5.INSTANCE).constructor(TopicPickFragment$onActivityCreated$6.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558978).suitedMethod(TopicPickFragment$onActivityCreated$7.INSTANCE).constructor(new TopicPickFragment$onActivityCreated$8(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558590).suitedMethod(TopicPickFragment$onActivityCreated$9.INSTANCE).constructor(TopicPickFragment$onActivityCreated$10.INSTANCE).build(), 0, 2, null);
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(TopBottomDividerRule.TB12DP);
         getVxDividerDecoration$presentation_coolapkAppRelease().addViewMarginRule(new TopicPickFragment$onActivityCreated$11());
         initData();
@@ -200,7 +200,7 @@ public final class TopicPickFragment extends EntityListFragment {
         @Override // com.coolapk.market.viewholder.TopicViewHolder, com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
         public void onClick(View view) {
             Intrinsics.checkNotNullParameter(view, "view");
-            if (view.getId() != 2131363260) {
+            if (view.getId() != 2131363274) {
                 super.onClick(view);
                 return;
             }
@@ -233,7 +233,7 @@ public final class TopicPickFragment extends EntityListFragment {
         @Override // com.coolapk.market.view.feedv8.TopicPickFragment.TopicPickerViewHolder, com.coolapk.market.viewholder.TopicViewHolder, com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
         public void onClick(View view) {
             Intrinsics.checkNotNullParameter(view, "view");
-            if (view.getId() != 2131363260) {
+            if (view.getId() != 2131363274) {
                 super.onClick(view);
                 return;
             }
@@ -260,7 +260,7 @@ public final class TopicPickFragment extends EntityListFragment {
     /* compiled from: TopicPickFragment.kt */
     private static final class DeleteRecentViewHolder extends GenericBindHolder<ItemUserDeleteRecentBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558971;
+        public static final int LAYOUT_ID = 2131558978;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public DeleteRecentViewHolder(View view, ItemActionHandler itemActionHandler) {

@@ -23,7 +23,7 @@ public abstract class NightTimePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static NightTimePickerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (NightTimePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559055, viewGroup, z, obj);
+        return (NightTimePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559062, viewGroup, z, obj);
     }
 
     public static NightTimePickerBinding inflate(LayoutInflater layoutInflater) {
@@ -32,7 +32,7 @@ public abstract class NightTimePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static NightTimePickerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (NightTimePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559055, null, false, obj);
+        return (NightTimePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559062, null, false, obj);
     }
 
     public static NightTimePickerBinding bind(View view) {
@@ -41,6 +41,6 @@ public abstract class NightTimePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static NightTimePickerBinding bind(View view, Object obj) {
-        return (NightTimePickerBinding) bind(obj, view, 2131559055);
+        return (NightTimePickerBinding) bind(obj, view, 2131559062);
     }
 }

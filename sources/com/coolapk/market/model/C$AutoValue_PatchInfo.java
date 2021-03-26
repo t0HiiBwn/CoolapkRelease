@@ -23,7 +23,7 @@ abstract class C$AutoValue_PatchInfo extends PatchInfo {
     private final int versionCode;
     private final String versionName;
 
-    C$AutoValue_PatchInfo(String str, String str2, String str3, String str4, int i, String str5, long j, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, String str13, String str14) {
+    C$AutoValue_PatchInfo(String str, String str2, String str3, String str4, int i, String str5, long j, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, String str13, String str14) {
         Objects.requireNonNull(str, "Null packageName");
         this.packageName = str;
         Objects.requireNonNull(str2, "Null apkId");
@@ -46,7 +46,7 @@ abstract class C$AutoValue_PatchInfo extends PatchInfo {
         this.extraAnalysisData = str10;
         this.patchKey = str11;
         this.patchSize = str12;
-        this.patchLength = l2;
+        this.patchLength = l;
         this.patchMd5 = str13;
         this.extraFlag = str14;
     }
@@ -154,7 +154,7 @@ abstract class C$AutoValue_PatchInfo extends PatchInfo {
         String str2;
         String str3;
         String str4;
-        Long l2;
+        Long l;
         String str5;
         if (obj == this) {
             return true;
@@ -163,7 +163,7 @@ abstract class C$AutoValue_PatchInfo extends PatchInfo {
             return false;
         }
         PatchInfo patchInfo = (PatchInfo) obj;
-        if (this.packageName.equals(patchInfo.getPackageName()) && this.apkId.equals(patchInfo.getApkId()) && this.displayVersionName.equals(patchInfo.getDisplayVersionName()) && this.versionName.equals(patchInfo.getVersionName()) && this.versionCode == patchInfo.getVersionCode() && this.apkSize.equals(patchInfo.getApkSize()) && this.lastUpdate == patchInfo.getLastUpdate() && ((str = this.changeLog) != null ? str.equals(patchInfo.getChangeLog()) : patchInfo.getChangeLog() == null) && this.logo.equals(patchInfo.getLogo()) && this.appFullName.equals(patchInfo.getAppFullName()) && this.appName.equals(patchInfo.getAppName()) && ((str2 = this.extraAnalysisData) != null ? str2.equals(patchInfo.getExtraAnalysisData()) : patchInfo.getExtraAnalysisData() == null) && ((str3 = this.patchKey) != null ? str3.equals(patchInfo.getPatchKey()) : patchInfo.getPatchKey() == null) && ((str4 = this.patchSize) != null ? str4.equals(patchInfo.getPatchSize()) : patchInfo.getPatchSize() == null) && ((l2 = this.patchLength) != null ? l2.equals(patchInfo.getPatchLength()) : patchInfo.getPatchLength() == null) && ((str5 = this.patchMd5) != null ? str5.equals(patchInfo.getPatchMd5()) : patchInfo.getPatchMd5() == null)) {
+        if (this.packageName.equals(patchInfo.getPackageName()) && this.apkId.equals(patchInfo.getApkId()) && this.displayVersionName.equals(patchInfo.getDisplayVersionName()) && this.versionName.equals(patchInfo.getVersionName()) && this.versionCode == patchInfo.getVersionCode() && this.apkSize.equals(patchInfo.getApkSize()) && this.lastUpdate == patchInfo.getLastUpdate() && ((str = this.changeLog) != null ? str.equals(patchInfo.getChangeLog()) : patchInfo.getChangeLog() == null) && this.logo.equals(patchInfo.getLogo()) && this.appFullName.equals(patchInfo.getAppFullName()) && this.appName.equals(patchInfo.getAppName()) && ((str2 = this.extraAnalysisData) != null ? str2.equals(patchInfo.getExtraAnalysisData()) : patchInfo.getExtraAnalysisData() == null) && ((str3 = this.patchKey) != null ? str3.equals(patchInfo.getPatchKey()) : patchInfo.getPatchKey() == null) && ((str4 = this.patchSize) != null ? str4.equals(patchInfo.getPatchSize()) : patchInfo.getPatchSize() == null) && ((l = this.patchLength) != null ? l.equals(patchInfo.getPatchLength()) : patchInfo.getPatchLength() == null) && ((str5 = this.patchMd5) != null ? str5.equals(patchInfo.getPatchMd5()) : patchInfo.getPatchMd5() == null)) {
             String str6 = this.extraFlag;
             if (str6 == null) {
                 if (patchInfo.getExtraFlag() == null) {
@@ -188,8 +188,8 @@ abstract class C$AutoValue_PatchInfo extends PatchInfo {
         int hashCode4 = (hashCode3 ^ (str3 == null ? 0 : str3.hashCode())) * 1000003;
         String str4 = this.patchSize;
         int hashCode5 = (hashCode4 ^ (str4 == null ? 0 : str4.hashCode())) * 1000003;
-        Long l2 = this.patchLength;
-        int hashCode6 = (hashCode5 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
+        Long l = this.patchLength;
+        int hashCode6 = (hashCode5 ^ (l == null ? 0 : l.hashCode())) * 1000003;
         String str5 = this.patchMd5;
         int hashCode7 = (hashCode6 ^ (str5 == null ? 0 : str5.hashCode())) * 1000003;
         String str6 = this.extraFlag;

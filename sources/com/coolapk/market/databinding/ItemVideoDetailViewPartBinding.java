@@ -12,11 +12,12 @@ import android.widget.TextView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.coolapk.market.widget.view.TimeTextView;
 
 public abstract class ItemVideoDetailViewPartBinding extends ViewDataBinding {
     public final LinearLayout bottomContainer;
     public final FrameLayout commentContainer;
-    public final TextView currentTimeView;
+    public final TimeTextView currentTimeView;
     public final ImageView fullScreenView;
     public final FrameLayout itemView;
     public final TextView liveView;
@@ -32,21 +33,21 @@ public abstract class ItemVideoDetailViewPartBinding extends ViewDataBinding {
     public final SeekBar seekBar;
     public final TextView titleView;
     public final LinearLayout topContainer;
-    public final TextView totalTimeView;
+    public final TimeTextView totalTimeView;
     public final FrameLayout videoContainer;
     public final FrameLayout videoTopView;
     public final ImageView volumeView;
 
     public abstract void setClick(View.OnClickListener onClickListener);
 
-    protected ItemVideoDetailViewPartBinding(Object obj, View view, int i, LinearLayout linearLayout, FrameLayout frameLayout, TextView textView, ImageView imageView, FrameLayout frameLayout2, TextView textView2, LinearLayout linearLayout2, ImageView imageView2, ImageView imageView3, ImageView imageView4, ImageView imageView5, ProgressBar progressBar2, LinearLayout linearLayout3, SeekBar seekBar2, TextView textView3, LinearLayout linearLayout4, TextView textView4, FrameLayout frameLayout3, FrameLayout frameLayout4, ImageView imageView6) {
+    protected ItemVideoDetailViewPartBinding(Object obj, View view, int i, LinearLayout linearLayout, FrameLayout frameLayout, TimeTextView timeTextView, ImageView imageView, FrameLayout frameLayout2, TextView textView, LinearLayout linearLayout2, ImageView imageView2, ImageView imageView3, ImageView imageView4, ImageView imageView5, ProgressBar progressBar2, LinearLayout linearLayout3, SeekBar seekBar2, TextView textView2, LinearLayout linearLayout4, TimeTextView timeTextView2, FrameLayout frameLayout3, FrameLayout frameLayout4, ImageView imageView6) {
         super(obj, view, i);
         this.bottomContainer = linearLayout;
         this.commentContainer = frameLayout;
-        this.currentTimeView = textView;
+        this.currentTimeView = timeTextView;
         this.fullScreenView = imageView;
         this.itemView = frameLayout2;
-        this.liveView = textView2;
+        this.liveView = textView;
         this.liveViewContainer = linearLayout2;
         this.moreView = imageView2;
         this.navigationView = imageView3;
@@ -55,9 +56,9 @@ public abstract class ItemVideoDetailViewPartBinding extends ViewDataBinding {
         this.progressBar = progressBar2;
         this.replayView = linearLayout3;
         this.seekBar = seekBar2;
-        this.titleView = textView3;
+        this.titleView = textView2;
         this.topContainer = linearLayout4;
-        this.totalTimeView = textView4;
+        this.totalTimeView = timeTextView2;
         this.videoContainer = frameLayout3;
         this.videoTopView = frameLayout4;
         this.volumeView = imageView6;
@@ -73,7 +74,7 @@ public abstract class ItemVideoDetailViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVideoDetailViewPartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemVideoDetailViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558984, viewGroup, z, obj);
+        return (ItemVideoDetailViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558991, viewGroup, z, obj);
     }
 
     public static ItemVideoDetailViewPartBinding inflate(LayoutInflater layoutInflater) {
@@ -82,7 +83,7 @@ public abstract class ItemVideoDetailViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVideoDetailViewPartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemVideoDetailViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558984, null, false, obj);
+        return (ItemVideoDetailViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558991, null, false, obj);
     }
 
     public static ItemVideoDetailViewPartBinding bind(View view) {
@@ -91,6 +92,6 @@ public abstract class ItemVideoDetailViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVideoDetailViewPartBinding bind(View view, Object obj) {
-        return (ItemVideoDetailViewPartBinding) bind(obj, view, 2131558984);
+        return (ItemVideoDetailViewPartBinding) bind(obj, view, 2131558991);
     }
 }

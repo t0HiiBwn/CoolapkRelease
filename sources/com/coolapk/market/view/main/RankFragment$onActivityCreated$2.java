@@ -51,8 +51,8 @@ final class RankFragment$onActivityCreated$2 extends Lambda implements Function1
                 Intrinsics.checkNotNullParameter(view, "view");
                 if (viewHolder.getAdapterPosition() != -1) {
                     int id = view.getId();
-                    if (id == 2131361886) {
-                        Object tag = view.getTag(2131362753);
+                    if (id == 2131361887) {
+                        Object tag = view.getTag(2131362764);
                         Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.model.ServiceApp");
                         ServiceApp serviceApp = (ServiceApp) tag;
                         String str = null;
@@ -73,8 +73,8 @@ final class RankFragment$onActivityCreated$2 extends Lambda implements Function1
                         }
                         strArr[3] = str;
                         StateUtils.handleClick(this.this$0.this$0.getActivity(), targetUrl.downloadKeys(strArr).build(), view);
-                    } else if (id == 2131362768) {
-                        Object tag2 = view.getTag(2131362753);
+                    } else if (id == 2131362779) {
+                        Object tag2 = view.getTag(2131362764);
                         Objects.requireNonNull(tag2, "null cannot be cast to non-null type com.coolapk.market.model.ServiceApp");
                         ServiceApp serviceApp2 = (ServiceApp) tag2;
                         ViewDataBinding binding = ((BindingViewHolder) viewHolder).getBinding();

@@ -54,7 +54,7 @@ public class ItemImageCarouselCard1ItemBindingImpl extends ItemImageCarouselCard
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (291 != i) {
+        if (292 != i) {
             return false;
         }
         setUrl((String) obj);
@@ -67,7 +67,7 @@ public class ItemImageCarouselCard1ItemBindingImpl extends ItemImageCarouselCard
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(291);
+        notifyPropertyChanged(292);
         super.requestRebind();
     }
 
@@ -81,7 +81,7 @@ public class ItemImageCarouselCard1ItemBindingImpl extends ItemImageCarouselCard
         String str = this.mUrl;
         if ((j & 3) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, null, 2131231696, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, null, 2131231707, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
         }
     }
 }

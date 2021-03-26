@@ -161,7 +161,7 @@ public abstract class ItemAlbumWithAvatarBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAlbumWithAvatarBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAlbumWithAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558585, viewGroup, z, obj);
+        return (ItemAlbumWithAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558589, viewGroup, z, obj);
     }
 
     public static ItemAlbumWithAvatarBinding inflate(LayoutInflater layoutInflater) {
@@ -170,7 +170,7 @@ public abstract class ItemAlbumWithAvatarBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAlbumWithAvatarBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAlbumWithAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558585, null, false, obj);
+        return (ItemAlbumWithAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558589, null, false, obj);
     }
 
     public static ItemAlbumWithAvatarBinding bind(View view) {
@@ -179,6 +179,6 @@ public abstract class ItemAlbumWithAvatarBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAlbumWithAvatarBinding bind(View view, Object obj) {
-        return (ItemAlbumWithAvatarBinding) bind(obj, view, 2131558585);
+        return (ItemAlbumWithAvatarBinding) bind(obj, view, 2131558589);
     }
 }

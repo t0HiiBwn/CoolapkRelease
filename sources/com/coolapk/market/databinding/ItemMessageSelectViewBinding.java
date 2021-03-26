@@ -34,7 +34,7 @@ public abstract class ItemMessageSelectViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMessageSelectViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemMessageSelectViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558827, viewGroup, z, obj);
+        return (ItemMessageSelectViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558834, viewGroup, z, obj);
     }
 
     public static ItemMessageSelectViewBinding inflate(LayoutInflater layoutInflater) {
@@ -43,7 +43,7 @@ public abstract class ItemMessageSelectViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMessageSelectViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemMessageSelectViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558827, null, false, obj);
+        return (ItemMessageSelectViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558834, null, false, obj);
     }
 
     public static ItemMessageSelectViewBinding bind(View view) {
@@ -52,6 +52,6 @@ public abstract class ItemMessageSelectViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMessageSelectViewBinding bind(View view, Object obj) {
-        return (ItemMessageSelectViewBinding) bind(obj, view, 2131558827);
+        return (ItemMessageSelectViewBinding) bind(obj, view, 2131558834);
     }
 }

@@ -10,17 +10,29 @@ import kotlinx.coroutines.internal.SystemPropsKt__SystemProps_commonKt;
 
 /* compiled from: Semaphore.kt */
 public final class SemaphoreKt {
+    private static final Symbol BROKEN = new Symbol("BROKEN");
     private static final Symbol CANCELLED = new Symbol("CANCELLED");
-    private static final Symbol RESUMED = new Symbol("RESUMED");
+    private static final int MAX_SPIN_CYCLES = SystemPropsKt__SystemProps_commonKt.systemProp$default("kotlinx.coroutines.semaphore.maxSpinCycles", 100, 0, 0, 12, (Object) null);
+    private static final Symbol PERMIT = new Symbol("PERMIT");
     private static final int SEGMENT_SIZE = SystemPropsKt__SystemProps_commonKt.systemProp$default("kotlinx.coroutines.semaphore.segmentSize", 16, 0, 0, 12, (Object) null);
+    private static final Symbol TAKEN = new Symbol("TAKEN");
 
-    private static /* synthetic */ void CANCELLED$annotations() {
+    private static /* synthetic */ void getBROKEN$annotations() {
     }
 
-    private static /* synthetic */ void RESUMED$annotations() {
+    private static /* synthetic */ void getCANCELLED$annotations() {
     }
 
-    private static /* synthetic */ void SEGMENT_SIZE$annotations() {
+    private static /* synthetic */ void getMAX_SPIN_CYCLES$annotations() {
+    }
+
+    private static /* synthetic */ void getPERMIT$annotations() {
+    }
+
+    private static /* synthetic */ void getSEGMENT_SIZE$annotations() {
+    }
+
+    private static /* synthetic */ void getTAKEN$annotations() {
     }
 
     public static final Semaphore Semaphore(int i, int i2) {
@@ -94,5 +106,9 @@ public final class SemaphoreKt {
             semaphore.release();
             InlineMarker.finallyEnd(i);
         }
+    }
+
+    public static final SemaphoreSegment createSegment(long j, SemaphoreSegment semaphoreSegment) {
+        return new SemaphoreSegment(j, semaphoreSegment, 0);
     }
 }

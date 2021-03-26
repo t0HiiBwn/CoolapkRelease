@@ -7,7 +7,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /* compiled from: ProGuard */
-public class c extends a.C0134a {
+public class c extends a.C0152a {
     private String d;
 
     public c(WebView webView, long j, String str, String str2) {
@@ -15,17 +15,17 @@ public class c extends a.C0134a {
         this.d = str2;
     }
 
-    @Override // com.tencent.open.a.C0134a
+    @Override // com.tencent.open.a.C0152a
     public void a(Object obj) {
         f.a("openSDK_LOG.SecureJsListener", "-->onComplete, result: " + obj);
     }
 
-    @Override // com.tencent.open.a.C0134a
+    @Override // com.tencent.open.a.C0152a
     public void a() {
         f.b("openSDK_LOG.SecureJsListener", "-->onNoMatchMethod...");
     }
 
-    @Override // com.tencent.open.a.C0134a
+    @Override // com.tencent.open.a.C0152a
     public void a(String str) {
         f.a("openSDK_LOG.SecureJsListener", "-->onCustomCallback, js: " + str);
         JSONObject jSONObject = new JSONObject();

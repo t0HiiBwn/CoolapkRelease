@@ -39,7 +39,7 @@ public abstract class ItemDyhSourcePartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDyhSourcePartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemDyhSourcePartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558683, viewGroup, z, obj);
+        return (ItemDyhSourcePartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558689, viewGroup, z, obj);
     }
 
     public static ItemDyhSourcePartBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class ItemDyhSourcePartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDyhSourcePartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemDyhSourcePartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558683, null, false, obj);
+        return (ItemDyhSourcePartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558689, null, false, obj);
     }
 
     public static ItemDyhSourcePartBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class ItemDyhSourcePartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDyhSourcePartBinding bind(View view, Object obj) {
-        return (ItemDyhSourcePartBinding) bind(obj, view, 2131558683);
+        return (ItemDyhSourcePartBinding) bind(obj, view, 2131558689);
     }
 }

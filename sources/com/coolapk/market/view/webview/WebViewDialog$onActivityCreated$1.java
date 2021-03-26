@@ -37,12 +37,12 @@ final class WebViewDialog$onActivityCreated$1 extends Lambda implements Function
     public final void invoke(List<ActionItem> list) {
         Intrinsics.checkNotNullParameter(list, "it");
         if (this.this$0.mCopyLink) {
-            String string = this.this$0.getString(2131886363);
+            String string = this.this$0.getString(2131886423);
             Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.menu_action_copy_link)");
             list.add(new CopyActionItem(string, this.this$0.mUrl));
         }
         if (this.this$0.mSaveImage) {
-            String string2 = this.this$0.getString(2131886930);
+            String string2 = this.this$0.getString(2131886992);
             Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_photo_view_save_photo)");
             MultiItemDialogFragmentKt.addItem(list, string2, new Function0<Unit>(this) {
                 /* class com.coolapk.market.view.webview.WebViewDialog$onActivityCreated$1.AnonymousClass1 */
@@ -66,7 +66,7 @@ final class WebViewDialog$onActivityCreated$1 extends Lambda implements Function
             });
         }
         if (this.this$0.mAddToFeed) {
-            String string3 = this.this$0.getString(2131886303);
+            String string3 = this.this$0.getString(2131886333);
             Intrinsics.checkNotNullExpressionValue(string3, "getString(R.string.dialog_add_to_feed_photo)");
             MultiItemDialogFragmentKt.addItem(list, string3, new Function0<Unit>(this) {
                 /* class com.coolapk.market.view.webview.WebViewDialog$onActivityCreated$1.AnonymousClass2 */

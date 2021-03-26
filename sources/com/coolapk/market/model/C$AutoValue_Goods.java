@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Goods  reason: invalid class name */
 abstract class C$AutoValue_Goods extends C$$AutoValue_Goods {
-    C$AutoValue_Goods(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, GoodsCategoryInfo goodsCategoryInfo, int i2, MallInfo mallInfo, String str20, String str21) {
-        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, l2, l3, str11, str12, str13, str14, str15, str16, str17, str18, str19, goodsCategoryInfo, i2, mallInfo, str20, str21);
+    C$AutoValue_Goods(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, GoodsCategoryInfo goodsCategoryInfo, int i2, MallInfo mallInfo, String str20, String str21) {
+        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, l, l2, str11, str12, str13, str14, str15, str16, str17, str18, str19, goodsCategoryInfo, i2, mallInfo, str20, str21);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Goods$GsonTypeAdapter */
@@ -163,13 +163,13 @@ abstract class C$AutoValue_Goods extends C$$AutoValue_Goods {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -327,8 +327,8 @@ abstract class C$AutoValue_Goods extends C$$AutoValue_Goods {
             String str8 = this.defaultLogo;
             String str9 = this.defaultSubTitle;
             String str10 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str11 = this.defaultId;
             String str12 = this.defaultGoodsTitle;
             String str13 = this.defaultPromoTitle;
@@ -354,8 +354,8 @@ abstract class C$AutoValue_Goods extends C$$AutoValue_Goods {
             String str28 = str8;
             String str29 = str9;
             String str30 = str10;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str31 = str;
             String str32 = str11;
             String str33 = str12;
@@ -561,7 +561,7 @@ abstract class C$AutoValue_Goods extends C$$AutoValue_Goods {
                             str22 = this.entityTemplateAdapter.read(jsonReader);
                             continue;
                         case 4:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 5:
                             str31 = this.entityTypeNameAdapter.read(jsonReader);
@@ -618,7 +618,7 @@ abstract class C$AutoValue_Goods extends C$$AutoValue_Goods {
                             str38 = this.goodsUrlAdapter.read(jsonReader);
                             continue;
                         case 23:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case 24:
                             str41 = this.categoryTitleAdapter.read(jsonReader);
@@ -639,7 +639,7 @@ abstract class C$AutoValue_Goods extends C$$AutoValue_Goods {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Goods(str31, str22, i3, str23, num2, str24, str25, str26, str27, str28, str29, str30, l4, l5, str32, str33, str34, str35, str36, str37, str38, str39, str40, goodsCategoryInfo2, i4, mallInfo2, str41, str21);
+            return new AutoValue_Goods(str31, str22, i3, str23, num2, str24, str25, str26, str27, str28, str29, str30, l3, l4, str32, str33, str34, str35, str36, str37, str38, str39, str40, goodsCategoryInfo2, i4, mallInfo2, str41, str21);
         }
     }
 }

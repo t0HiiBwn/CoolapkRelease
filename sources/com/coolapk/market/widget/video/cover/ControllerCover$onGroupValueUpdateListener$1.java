@@ -40,14 +40,14 @@ public final class ControllerCover$onGroupValueUpdateListener$1 implements IRece
                 return;
             case -1333894576:
                 if (str.equals("data_source")) {
-                    this.this$0.setTitle((DataSource) obj);
+                    this.this$0.setTitle((ControllerCover) ((DataSource) obj));
                     return;
                 }
                 return;
             case 886112304:
                 if (str.equals("controller_top_enable")) {
                     this.this$0.controllerTopEnable = ((Boolean) obj).booleanValue();
-                    if (!(this.this$0.controllerTopEnable)) {
+                    if (!this.this$0.controllerTopEnable) {
                         this.this$0.setTopContainerState(false);
                         return;
                     }

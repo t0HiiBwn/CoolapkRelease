@@ -25,8 +25,8 @@ public class LayoutListEditButtonBindingImpl extends LayoutListEditButtonBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131361853, 1);
-        sparseIntArray.put(2131361890, 2);
+        sparseIntArray.put(2131361854, 1);
+        sparseIntArray.put(2131361891, 2);
     }
 
     public LayoutListEditButtonBindingImpl(DataBindingComponent dataBindingComponent, View view) {

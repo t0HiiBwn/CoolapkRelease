@@ -8,7 +8,7 @@ import java.util.List;
 /* compiled from: ResVersionUtils */
 public class k {
     public static Long a(File file) {
-        Long l2 = null;
+        Long l = null;
         if (file == null) {
             return null;
         }
@@ -24,16 +24,16 @@ public class k {
             for (File file2 : listFiles) {
                 try {
                     long longValue = Long.valueOf(file2.getName()).longValue();
-                    if (l2 == null) {
-                        l2 = Long.valueOf(longValue);
-                    } else if (longValue > l2.longValue()) {
-                        l2 = Long.valueOf(longValue);
+                    if (l == null) {
+                        l = Long.valueOf(longValue);
+                    } else if (longValue > l.longValue()) {
+                        l = Long.valueOf(longValue);
                     }
                 } catch (Exception unused) {
                 }
             }
         }
-        return l2;
+        return l;
     }
 
     public static List<Long> b(File file) {

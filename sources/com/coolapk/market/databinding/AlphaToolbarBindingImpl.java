@@ -30,11 +30,11 @@ public class AlphaToolbarBindingImpl extends AlphaToolbarBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362316, 2);
-        sparseIntArray.put(2131362880, 3);
-        sparseIntArray.put(2131362656, 4);
-        sparseIntArray.put(2131362067, 5);
-        sparseIntArray.put(2131363588, 6);
+        sparseIntArray.put(2131362322, 2);
+        sparseIntArray.put(2131362891, 3);
+        sparseIntArray.put(2131362664, 4);
+        sparseIntArray.put(2131362069, 5);
+        sparseIntArray.put(2131363610, 6);
     }
 
     public AlphaToolbarBindingImpl(DataBindingComponent dataBindingComponent, View view) {

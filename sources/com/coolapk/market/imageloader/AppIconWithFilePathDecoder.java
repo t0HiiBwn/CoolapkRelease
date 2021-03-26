@@ -51,7 +51,7 @@ public final class AppIconWithFilePathDecoder implements ResourceDecoder<Uri, Bi
                         bitmap = AppIconDecoderKt.getAppIconLoader().loadIcon(packageArchiveInfo.applicationInfo);
                     }
                     if (bitmap == null) {
-                        bitmap = BitmapFactory.decodeResource(this.context.getResources(), 2131231363);
+                        bitmap = BitmapFactory.decodeResource(this.context.getResources(), 2131231374);
                     }
                     Intrinsics.checkNotNull(bitmap);
                     return new BitmapResource(bitmap, this.bitmapPool);

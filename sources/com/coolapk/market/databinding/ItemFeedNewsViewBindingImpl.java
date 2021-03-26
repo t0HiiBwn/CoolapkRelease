@@ -31,10 +31,10 @@ public class ItemFeedNewsViewBindingImpl extends ItemFeedNewsViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362417, 5);
-        sparseIntArray.put(2131363582, 6);
-        sparseIntArray.put(2131363016, 7);
-        sparseIntArray.put(2131362833, 8);
+        sparseIntArray.put(2131362423, 5);
+        sparseIntArray.put(2131363604, 6);
+        sparseIntArray.put(2131363030, 7);
+        sparseIntArray.put(2131362844, 8);
     }
 
     public ItemFeedNewsViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -73,9 +73,9 @@ public class ItemFeedNewsViewBindingImpl extends ItemFeedNewsViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (157 == i) {
+        } else if (158 == i) {
             setImageUrl((String) obj);
         } else if (50 != i) {
             return false;
@@ -91,7 +91,7 @@ public class ItemFeedNewsViewBindingImpl extends ItemFeedNewsViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -101,7 +101,7 @@ public class ItemFeedNewsViewBindingImpl extends ItemFeedNewsViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(157);
+        notifyPropertyChanged(158);
         super.requestRebind();
     }
 
@@ -145,7 +145,7 @@ public class ItemFeedNewsViewBindingImpl extends ItemFeedNewsViewBinding {
         }
         if ((j & 10) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extraImageView, str, null, 2131231691, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extraImageView, str, null, 2131231702, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             this.imageCardView.setVisibility(i);
         }
         if ((8 & j) != 0) {

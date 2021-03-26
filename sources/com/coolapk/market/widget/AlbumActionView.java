@@ -39,14 +39,14 @@ import org.greenrobot.eventbus.EventBus;
 import rx.Subscriber;
 
 public class AlbumActionView extends LinearLayout implements View.OnClickListener {
-    public static final FeedItem COLLECT = new FeedItem(2131886786, 2131231205, 2131362012);
-    public static final int COLLECTED = 2131231207;
-    public static final FeedItem DELETE = new FeedItem(2131886787, null, 2131362013);
-    public static final FeedItem DOWNLOAD = new FeedItem(2131886788, 2131231269, 2131362014);
-    public static final int DOWNLOADING = 2131231466;
-    public static final FeedItem LIKE = new FeedItem(2131886790, 2131231606, 2131362016);
-    public static final int LIKED = 2131231608;
-    public static final FeedItem REPLY = new FeedItem(2131886791, 2131231215, 2131362017);
+    public static final FeedItem COLLECT = new FeedItem(2131886848, 2131231216, 2131362013);
+    public static final int COLLECTED = 2131231218;
+    public static final FeedItem DELETE = new FeedItem(2131886849, null, 2131362014);
+    public static final FeedItem DOWNLOAD = new FeedItem(2131886850, 2131231280, 2131362015);
+    public static final int DOWNLOADING = 2131231477;
+    public static final FeedItem LIKE = new FeedItem(2131886852, 2131231617, 2131362017);
+    public static final int LIKED = 2131231619;
+    public static final FeedItem REPLY = new FeedItem(2131886853, 2131231226, 2131362018);
     private Album album;
     private AlbumActionBarBinding binding;
     boolean collectState;
@@ -70,7 +70,7 @@ public class AlbumActionView extends LinearLayout implements View.OnClickListene
     }
 
     private void init(Context context, AttributeSet attributeSet) {
-        this.binding = (AlbumActionBarBinding) DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558438, this, true);
+        this.binding = (AlbumActionBarBinding) DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558439, this, true);
         this.binding.downloadLayout.setVisibility(AppHolder.getAppMetadata().isCommunityMode() ? 8 : 0);
         ViewUtil.clickListener(this.binding.starLayout, this);
         ViewUtil.clickListener(this.binding.likeLayout, this);
@@ -114,8 +114,8 @@ public class AlbumActionView extends LinearLayout implements View.OnClickListene
                 this.binding.likeView.setImageResource(LIKE.icon.intValue());
                 this.binding.starView.setImageResource(COLLECT.icon.intValue());
             } else {
-                this.binding.likeView.setImageResource(userAction.getLike() > 0 ? 2131231608 : LIKE.icon.intValue());
-                this.binding.starView.setImageResource(userAction.getCollect() > 0 ? 2131231207 : COLLECT.icon.intValue());
+                this.binding.likeView.setImageResource(userAction.getLike() > 0 ? 2131231619 : LIKE.icon.intValue());
+                this.binding.starView.setImageResource(userAction.getCollect() > 0 ? 2131231218 : COLLECT.icon.intValue());
                 this.collectState = userAction.getCollect() > 0;
             }
             if (DataManager.getInstance().getDownloadTaskCount() <= 0) {
@@ -141,17 +141,17 @@ public class AlbumActionView extends LinearLayout implements View.OnClickListene
     public void onClick(View view) {
         if (this.album != null) {
             switch (view.getId()) {
-                case 2131362288:
+                case 2131362293:
                     Activity activity = UiUtils.getActivity(getContext());
                     if (activity instanceof AlbumDetailActivity) {
                         ((AlbumDetailActivity) activity).selectPage(1);
                         break;
                     }
                     break;
-                case 2131362420:
+                case 2131362427:
                     if (!this.isDownloading) {
                         SimpleDialog newInstance = SimpleDialog.newInstance();
-                        newInstance.setMessage(getContext().getString(2131886725));
+                        newInstance.setMessage(getContext().getString(2131886787));
                         newInstance.setPositiveButton(2131886128, new DialogInterface.OnClickListener() {
                             /* class com.coolapk.market.widget.AlbumActionView.AnonymousClass2 */
 
@@ -185,7 +185,7 @@ public class AlbumActionView extends LinearLayout implements View.OnClickListene
                         onDownload(this.album.getAlbumItems());
                         break;
                     }
-                case 2131362844:
+                case 2131362855:
                     ActionManager.checkLogin(getContext(), new Runnable() {
                         /* class com.coolapk.market.widget.AlbumActionView.AnonymousClass1 */
 
@@ -195,7 +195,7 @@ public class AlbumActionView extends LinearLayout implements View.OnClickListene
                         }
                     });
                     break;
-                case 2131363416:
+                case 2131363434:
                     onCollectClick();
                     break;
             }
@@ -236,7 +236,7 @@ public class AlbumActionView extends LinearLayout implements View.OnClickListene
                 });
                 this.likeState = true;
                 this.binding.likeText.setText(String.valueOf(album2.getLikeNum() + 1));
-                this.binding.likeView.setImageResource(2131231608);
+                this.binding.likeView.setImageResource(2131231619);
                 return;
             }
             this.mAlbumActionPresenter.unlikeAlbum(album2).compose(RxUtils.applyIOSchedulers()).subscribe((Subscriber<? super R>) new Subscriber<Result<LikeResult>>() {
@@ -297,7 +297,7 @@ public class AlbumActionView extends LinearLayout implements View.OnClickListene
                 }
             }
             this.binding.downloadText.setText(2131886130);
-            this.binding.downloadView.setImageResource(2131231466);
+            this.binding.downloadView.setImageResource(2131231477);
             return;
         }
         Iterator<DownloadInfo> it2 = DataManager.getInstance().getDownloadInfoList().iterator();

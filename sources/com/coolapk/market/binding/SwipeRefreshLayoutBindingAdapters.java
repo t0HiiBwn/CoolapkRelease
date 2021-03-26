@@ -27,7 +27,7 @@ public class SwipeRefreshLayoutBindingAdapters {
                 }
             }
         };
-        if (((SwipeRefreshLayout.OnRefreshListener) ListenerUtil.trackListener(swipeRefreshLayout, r0, 2131363041)) != null) {
+        if (((SwipeRefreshLayout.OnRefreshListener) ListenerUtil.trackListener(swipeRefreshLayout, r0, 2131363055)) != null) {
             swipeRefreshLayout.setOnRefreshListener(null);
         }
         swipeRefreshLayout.setOnRefreshListener(r0);

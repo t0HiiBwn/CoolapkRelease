@@ -104,7 +104,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
         ForwardEntityActivity forwardEntityActivity = this;
         ThemeUtils.setSystemBarDrawFlags(forwardEntityActivity);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(forwardEntityActivity, 2131558566, null);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(forwardEntityActivity, 2131558569, null);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…ut.forward_preview, null)");
         this.binding = (ForwardPreviewBinding) contentView;
         Parcelable parcelableExtra = getIntent().getParcelableExtra("extra_entity");
@@ -344,7 +344,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
             if (forwardPreviewBinding3 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");
             }
-            contextImageLoader.displayImage(forwardEntityActivity, thumbSquarePic, forwardPreviewBinding3.iconView, 2131231363);
+            contextImageLoader.displayImage(forwardEntityActivity, thumbSquarePic, forwardPreviewBinding3.iconView, 2131231374);
         }
         SpannableStringBuilder convert = LinkTextUtils.convert(FeedArgsFactory.multiPartForForwardFeed(feed).message(), AppHolder.getAppTheme().getColorAccent(), null);
         ForwardPreviewBinding forwardPreviewBinding4 = this.binding;
@@ -399,7 +399,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
             if (forwardPreviewBinding3 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");
             }
-            contextImageLoader.displayImage(forwardEntityActivity, logo, forwardPreviewBinding3.iconView, 2131231363);
+            contextImageLoader.displayImage(forwardEntityActivity, logo, forwardPreviewBinding3.iconView, 2131231374);
         }
         ForwardPreviewBinding forwardPreviewBinding4 = this.binding;
         if (forwardPreviewBinding4 == null) {
@@ -478,11 +478,11 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         switch (view.getId()) {
-            case 2131362196:
-            case 2131362908:
+            case 2131362200:
+            case 2131362920:
                 onBackPressed();
                 return;
-            case 2131362588:
+            case 2131362596:
                 ForwardPreviewBinding forwardPreviewBinding = this.binding;
                 if (forwardPreviewBinding == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -491,11 +491,11 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                 Intrinsics.checkNotNullExpressionValue(checkBox, "binding.forwardAndReplyView");
                 checkBox.setChecked(!this.forwardAndReply);
                 return;
-            case 2131362599:
+            case 2131362607:
                 ActionManager.startSubmitFeedV8Activity(this, buildUiConfig(), buildMultiPart(""));
                 finish();
                 return;
-            case 2131363134:
+            case 2131363148:
                 submitForwardFeed();
                 return;
             default:
@@ -617,11 +617,11 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
             Intrinsics.throwUninitializedPropertyAccessException("entity");
         }
         if (entity2 instanceof Feed) {
-            String string = getString(2131887259);
+            String string = getString(2131887321);
             Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.title_forward_feed)");
             return string;
         } else if (entity2 instanceof DyhArticle) {
-            String string2 = getString(2131887258);
+            String string2 = getString(2131887320);
             Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.title_forward_article)");
             return string2;
         } else {
@@ -797,7 +797,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public SimpleViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(this.context).inflate(2131558749, viewGroup, false);
+            View inflate = LayoutInflater.from(this.context).inflate(2131558756, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "LayoutInflater.from(cont…LAYOUT_ID, parent, false)");
             return new SimpleViewHolder(inflate);
         }
@@ -816,7 +816,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                 switch (entityType.hashCode()) {
                     case -1530160821:
                         if (entityType.equals("private_message")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231496);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231507);
                             TextView textView = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView, "binding.titleView");
                             textView.setText("私信");
@@ -826,7 +826,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                         return;
                     case -1462912464:
                         if (entityType.equals("wexin_moment")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231318);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231329);
                             TextView textView2 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView2, "binding.titleView");
                             textView2.setText("朋友圈");
@@ -836,7 +836,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                         return;
                     case -872750698:
                         if (entityType.equals("kankanhao")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231316);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231327);
                             TextView textView3 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView3, "binding.titleView");
                             textView3.setText("看看号");
@@ -846,7 +846,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                         return;
                     case 3616:
                         if (entityType.equals("qq")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231319);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231330);
                             TextView textView4 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView4, "binding.titleView");
                             textView4.setText("QQ");
@@ -856,7 +856,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                         return;
                     case 114840:
                         if (entityType.equals("tim")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231320);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231331);
                             TextView textView5 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView5, "binding.titleView");
                             textView5.setText("TIM");
@@ -866,7 +866,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                         return;
                     case 3357525:
                         if (entityType.equals("more")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231317);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231328);
                             TextView textView6 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView6, "binding.titleView");
                             textView6.setText("更多");
@@ -876,7 +876,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                         return;
                     case 113011944:
                         if (entityType.equals("weibo")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231322);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231333);
                             TextView textView7 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView7, "binding.titleView");
                             textView7.setText("微博");
@@ -886,7 +886,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                         return;
                     case 113026575:
                         if (entityType.equals("wexin")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231321);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231332);
                             TextView textView8 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView8, "binding.titleView");
                             textView8.setText("微信");
@@ -896,7 +896,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                         return;
                     case 115872072:
                         if (entityType.equals("zhihu")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231323);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231334);
                             TextView textView9 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView9, "binding.titleView");
                             textView9.setText("知乎");
@@ -906,7 +906,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                         return;
                     case 1376909533:
                         if (entityType.equals("new_feed")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231315);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231326);
                             TextView textView10 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView10, "binding.titleView");
                             textView10.setText("动态");
@@ -916,7 +916,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
                         return;
                     case 1505434244:
                         if (entityType.equals("copy_link")) {
-                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231314);
+                            itemForwardEntityShareAppBinding.iconView.setImageResource(2131231325);
                             TextView textView11 = itemForwardEntityShareAppBinding.titleView;
                             Intrinsics.checkNotNullExpressionValue(textView11, "binding.titleView");
                             textView11.setText("复制链接");
@@ -950,7 +950,7 @@ public final class ForwardEntityActivity extends BaseActivity implements View.On
     /* compiled from: ForwardEntityActivity.kt */
     private static final class SimpleViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558749;
+        public static final int LAYOUT_ID = 2131558756;
 
         @Override // com.coolapk.market.viewholder.BindingViewHolder
         public void bindTo(Object obj) {

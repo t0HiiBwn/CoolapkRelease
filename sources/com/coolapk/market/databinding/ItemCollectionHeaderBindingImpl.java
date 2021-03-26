@@ -84,11 +84,11 @@ public class ItemCollectionHeaderBindingImpl extends ItemCollectionHeaderBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((CollectionViewModel) obj);
@@ -102,7 +102,7 @@ public class ItemCollectionHeaderBindingImpl extends ItemCollectionHeaderBinding
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -123,7 +123,7 @@ public class ItemCollectionHeaderBindingImpl extends ItemCollectionHeaderBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -292,7 +292,7 @@ public class ItemCollectionHeaderBindingImpl extends ItemCollectionHeaderBinding
             i5 = i2;
             i4 = i3;
             onClickListener = onClickListener2;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str4, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str4, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
         } else {
             str11 = str8;
             str12 = str7;

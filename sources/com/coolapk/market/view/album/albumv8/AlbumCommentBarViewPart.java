@@ -82,7 +82,7 @@ public final class AlbumCommentBarViewPart extends BindingViewPart<AlbumCommentB
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public AlbumCommentBarBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558442, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558443, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…nt_bar, viewGroup, false)");
         return (AlbumCommentBarBinding) inflate;
     }
@@ -155,7 +155,7 @@ public final class AlbumCommentBarViewPart extends BindingViewPart<AlbumCommentB
         if (this.showReturnAlbumView) {
             TextView textView5 = ((AlbumCommentBarBinding) getBinding()).commentCount;
             Intrinsics.checkNotNullExpressionValue(textView5, "binding.commentCount");
-            textView5.setText(getContext().getString(2131886569));
+            textView5.setText(getContext().getString(2131886631));
             TextView textView6 = ((AlbumCommentBarBinding) getBinding()).commentCount;
             Intrinsics.checkNotNullExpressionValue(textView6, "binding.commentCount");
             ViewGroup.LayoutParams layoutParams = textView6.getLayoutParams();
@@ -166,7 +166,7 @@ public final class AlbumCommentBarViewPart extends BindingViewPart<AlbumCommentB
             Intrinsics.checkNotNullExpressionValue(textView7, "binding.commentCount");
             textView7.setLayoutParams(layoutParams2);
             ((AlbumCommentBarBinding) getBinding()).commentCount.setTextColor(appTheme3.getColorAccent());
-            ((AlbumCommentBarBinding) getBinding()).commentIcon.setImageResource(2131231184);
+            ((AlbumCommentBarBinding) getBinding()).commentIcon.setImageResource(2131231195);
             ((AlbumCommentBarBinding) getBinding()).commentIcon.setColorFilter(appTheme3.getColorAccent());
             return;
         }

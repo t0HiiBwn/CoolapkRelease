@@ -60,7 +60,7 @@ import kotlin.text.StringsKt;
 /* compiled from: FeedViewHolderV8.kt */
 public class FeedViewHolderV8 extends GenericBindHolder<ItemFeedLayoutV8Binding, Feed> implements RVStateEventChangedAdapter.IStateViewHolder, Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558708;
+    public static final int LAYOUT_ID = 2131558715;
     private final Lazy extraEntityViewPart$delegate;
     private final FeedViewHolderV8$extraTypeHotPlug$1 extraTypeHotPlug;
     private Feed feed;
@@ -135,7 +135,7 @@ public class FeedViewHolderV8 extends GenericBindHolder<ItemFeedLayoutV8Binding,
         Space space4 = ((ItemFeedLayoutV8Binding) getBinding()).articleSourceSpaceView;
         Intrinsics.checkNotNullExpressionValue(space4, "binding.articleSourceSpaceView");
         this.feedArticleSourcePlug = new BaseFeedArticleSourceHotPlug(space4, dataBindingComponent, null, false, 12, null);
-        this.extraTypeHotPlug = new FeedViewHolderV8$extraTypeHotPlug$1(this, dataBindingComponent, 2131558698, viewPartPool2);
+        this.extraTypeHotPlug = new FeedViewHolderV8$extraTypeHotPlug$1(this, dataBindingComponent, 2131558705, viewPartPool2);
         this.headerViewPart$delegate = LazyKt.lazy(new FeedViewHolderV8$headerViewPart$2(this, dataBindingComponent));
         Space space5 = ((ItemFeedLayoutV8Binding) getBinding()).sourceSpaceView;
         Intrinsics.checkNotNullExpressionValue(space5, "binding.sourceSpaceView");
@@ -213,7 +213,7 @@ public class FeedViewHolderV8 extends GenericBindHolder<ItemFeedLayoutV8Binding,
             TextView textView3 = itemFeedLayoutV8Binding.titleTagView;
             Intrinsics.checkNotNullExpressionValue(textView3, "binding.titleTagView");
             textView3.setText(secondHandInfo.getStoreTypeText());
-            int colorInt = ResourceUtils.getColorInt(getContext(), 2131100035);
+            int colorInt = ResourceUtils.getColorInt(getContext(), 2131100040);
             int colorInt2 = ResourceUtils.getColorInt(getContext(), 2131099687);
             if (!z) {
                 colorInt = colorInt2;
@@ -288,7 +288,7 @@ public class FeedViewHolderV8 extends GenericBindHolder<ItemFeedLayoutV8Binding,
             TextView textView10 = itemFeedLayoutV8Binding.textView;
             Intrinsics.checkNotNullExpressionValue(textView10, "binding.textView");
             String message = feed2.getMessage();
-            SpannableStringBuilder spannableStringBuilder2 = new SpannableStringBuilder(getContext().getString(2131886656));
+            SpannableStringBuilder spannableStringBuilder2 = new SpannableStringBuilder(getContext().getString(2131886718));
             spannableStringBuilder2.setSpan(new ForegroundColorSpan(AppHolder.getAppTheme().getColorAccent()), 0, spannableStringBuilder2.length(), 33);
             Unit unit = Unit.INSTANCE;
             ViewExtendsKt.setBriefMessage(textView10, 90, message, spannableStringBuilder2);
@@ -313,7 +313,7 @@ public class FeedViewHolderV8 extends GenericBindHolder<ItemFeedLayoutV8Binding,
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

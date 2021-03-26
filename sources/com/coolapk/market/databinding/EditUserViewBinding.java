@@ -53,7 +53,7 @@ public abstract class EditUserViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static EditUserViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (EditUserViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558545, viewGroup, z, obj);
+        return (EditUserViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558547, viewGroup, z, obj);
     }
 
     public static EditUserViewBinding inflate(LayoutInflater layoutInflater) {
@@ -62,7 +62,7 @@ public abstract class EditUserViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static EditUserViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (EditUserViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558545, null, false, obj);
+        return (EditUserViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558547, null, false, obj);
     }
 
     public static EditUserViewBinding bind(View view) {
@@ -71,6 +71,6 @@ public abstract class EditUserViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static EditUserViewBinding bind(View view, Object obj) {
-        return (EditUserViewBinding) bind(obj, view, 2131558545);
+        return (EditUserViewBinding) bind(obj, view, 2131558547);
     }
 }

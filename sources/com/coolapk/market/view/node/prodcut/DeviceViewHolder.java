@@ -12,7 +12,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ProductCouponViewHolder.kt */
 final class DeviceViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558865;
+    public static final int LAYOUT_ID = 2131558872;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public DeviceViewHolder(View view) {

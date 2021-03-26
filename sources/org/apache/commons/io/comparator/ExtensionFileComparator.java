@@ -17,16 +17,6 @@ public class ExtensionFileComparator extends AbstractFileComparator implements S
     private static final long serialVersionUID = 1928235200184222815L;
     private final IOCase caseSensitivity;
 
-    @Override // org.apache.commons.io.comparator.AbstractFileComparator
-    public /* bridge */ /* synthetic */ List sort(List list) {
-        return super.sort(list);
-    }
-
-    @Override // org.apache.commons.io.comparator.AbstractFileComparator
-    public /* bridge */ /* synthetic */ File[] sort(File[] fileArr) {
-        return super.sort(fileArr);
-    }
-
     static {
         ExtensionFileComparator extensionFileComparator = new ExtensionFileComparator();
         EXTENSION_COMPARATOR = extensionFileComparator;
@@ -49,6 +39,16 @@ public class ExtensionFileComparator extends AbstractFileComparator implements S
 
     public int compare(File file, File file2) {
         return this.caseSensitivity.checkCompareTo(FilenameUtils.getExtension(file.getName()), FilenameUtils.getExtension(file2.getName()));
+    }
+
+    @Override // org.apache.commons.io.comparator.AbstractFileComparator
+    public /* bridge */ /* synthetic */ List sort(List list) {
+        return super.sort(list);
+    }
+
+    @Override // org.apache.commons.io.comparator.AbstractFileComparator
+    public /* bridge */ /* synthetic */ File[] sort(File[] fileArr) {
+        return super.sort(fileArr);
     }
 
     @Override // org.apache.commons.io.comparator.AbstractFileComparator, java.lang.Object

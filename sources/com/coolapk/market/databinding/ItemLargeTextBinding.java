@@ -34,7 +34,7 @@ public abstract class ItemLargeTextBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLargeTextBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemLargeTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558797, viewGroup, z, obj);
+        return (ItemLargeTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558804, viewGroup, z, obj);
     }
 
     public static ItemLargeTextBinding inflate(LayoutInflater layoutInflater) {
@@ -43,7 +43,7 @@ public abstract class ItemLargeTextBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLargeTextBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemLargeTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558797, null, false, obj);
+        return (ItemLargeTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558804, null, false, obj);
     }
 
     public static ItemLargeTextBinding bind(View view) {
@@ -52,6 +52,6 @@ public abstract class ItemLargeTextBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLargeTextBinding bind(View view, Object obj) {
-        return (ItemLargeTextBinding) bind(obj, view, 2131558797);
+        return (ItemLargeTextBinding) bind(obj, view, 2131558804);
     }
 }

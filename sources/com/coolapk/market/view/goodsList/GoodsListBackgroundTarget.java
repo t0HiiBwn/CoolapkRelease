@@ -46,8 +46,8 @@ public final class GoodsListBackgroundTarget extends CustomTarget<PaletteBitmap>
         this.usePureColor = z;
         Context context2 = view.getContext();
         this.context = context2;
-        this.windowsBackground = ResourceUtils.getDrawable(context2, 2131100010);
-        this.contentBackground = ResourceUtils.getColorInt(context2, 2131100007);
+        this.windowsBackground = ResourceUtils.getDrawable(context2, 2131100015);
+        this.contentBackground = ResourceUtils.getColorInt(context2, 2131100012);
     }
 
     /* JADX INFO: this call moved to the top of the method (can break code semantics) */

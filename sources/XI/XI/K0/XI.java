@@ -13,7 +13,7 @@ public class XI {
     public static boolean K0;
 
     /* renamed from: XI  reason: collision with root package name */
-    public static boolean f1175XI;
+    public static boolean f181XI;
 
     public static Context CA(Context context) {
         return (context == null || context.getApplicationContext() == null) ? context : context.getApplicationContext();
@@ -30,7 +30,7 @@ public class XI {
         }
         XI2.XI(0, null);
         if (K0.kM == null) {
-            K0.XI(K0.f1165XI, 0, null);
+            K0.XI(K0.f171XI, 0, null);
         }
         return K0.WI;
     }
@@ -46,7 +46,7 @@ public class XI {
         }
         XI2.XI(2, str);
         if (K0.CA == null && K0.cs != null) {
-            K0.XI(K0.f1165XI, 2, str);
+            K0.XI(K0.f171XI, 2, str);
         }
         return K0.cs;
     }
@@ -75,17 +75,17 @@ public class XI {
         if (str != null) {
             return str;
         }
-        String packageName = K0.f1165XI.getPackageName();
+        String packageName = K0.f171XI.getPackageName();
         XI2.XI(1, packageName);
         if (K0.xo == null && K0.bs != null) {
-            K0.XI(K0.f1165XI, 1, packageName);
+            K0.XI(K0.f171XI, 1, packageName);
         }
         return K0.bs;
     }
 
     public static void xo(Context context) {
-        if (!f1175XI) {
-            XI.K0 k0 = XI.K0.C0000K0.f1169XI;
+        if (!f181XI) {
+            XI.K0 k0 = XI.K0.C0000K0.f175XI;
             Context CA = CA(context);
             k0.getClass();
             boolean z = false;
@@ -97,7 +97,7 @@ public class XI {
             } catch (PackageManager.NameNotFoundException unused) {
             }
             K0 = z;
-            f1175XI = true;
+            f181XI = true;
         }
     }
 
@@ -112,7 +112,7 @@ public class XI {
         }
         XI2.XI(1, str);
         if (K0.xo == null && K0.bs != null) {
-            K0.XI(K0.f1165XI, 1, str);
+            K0.XI(K0.f171XI, 1, str);
         }
         return K0.bs;
     }
@@ -126,10 +126,10 @@ public class XI {
         if (str != null) {
             return str;
         }
-        String packageName = K0.f1165XI.getPackageName();
+        String packageName = K0.f171XI.getPackageName();
         XI2.XI(2, packageName);
         if (K0.CA == null && K0.cs != null) {
-            K0.XI(K0.f1165XI, 2, packageName);
+            K0.XI(K0.f171XI, 2, packageName);
         }
         return K0.cs;
     }

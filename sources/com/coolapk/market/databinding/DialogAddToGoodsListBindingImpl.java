@@ -49,7 +49,7 @@ public class DialogAddToGoodsListBindingImpl extends DialogAddToGoodsListBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FunThings) obj);
         } else if (50 != i) {
             return false;

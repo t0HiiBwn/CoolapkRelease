@@ -29,11 +29,11 @@ public class CoolBrowserBindingImpl extends CoolBrowserBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362860, 17);
-        sparseIntArray.put(2131361886, 18);
-        sparseIntArray.put(2131363592, 19);
-        sparseIntArray.put(2131362150, 20);
-        sparseIntArray.put(2131363068, 21);
+        sparseIntArray.put(2131362871, 17);
+        sparseIntArray.put(2131361887, 18);
+        sparseIntArray.put(2131363614, 19);
+        sparseIntArray.put(2131362153, 20);
+        sparseIntArray.put(2131363082, 21);
     }
 
     public CoolBrowserBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -18,13 +18,13 @@ public final class MobileCodeVerifyDialog$setRequestMobileCodeEnable$1 extends C
 
     @Override // android.os.CountDownTimer
     public void onFinish() {
-        this.this$0.setRequestMobileCodeEnable(true);
+        MobileCodeVerifyDialog.access$setRequestMobileCodeEnable(this.this$0, true);
     }
 
     @Override // android.os.CountDownTimer
     public void onTick(long j) {
         TextView textView = MobileCodeVerifyDialog.access$getBinding$p(this.this$0).actionView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.actionView");
-        textView.setText(this.this$0.getString(2131886961) + '(' + (j / ((long) 1000)) + ')');
+        textView.setText(this.this$0.getString(2131887023) + '(' + (j / ((long) 1000)) + ')');
     }
 }

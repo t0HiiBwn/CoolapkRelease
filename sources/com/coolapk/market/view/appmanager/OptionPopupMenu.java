@@ -130,26 +130,26 @@ public final class OptionPopupMenu extends BasePopMenu implements PopupMenu.OnMe
             String string3 = requireArguments().getString("versionName");
             int i = requireArguments().getInt("versionCode");
             this.filePath = requireArguments().getString("filePath");
-            View inflate = LayoutInflater.from(getActivity()).inflate(2131559297, (ViewGroup) null, false);
-            View findViewById = inflate.findViewById(2131363582);
+            View inflate = LayoutInflater.from(getActivity()).inflate(2131559307, (ViewGroup) null, false);
+            View findViewById = inflate.findViewById(2131363604);
             Objects.requireNonNull(findViewById, "null cannot be cast to non-null type android.widget.TextView");
             ((TextView) findViewById).setText(string);
-            View findViewById2 = inflate.findViewById(2131363065);
+            View findViewById2 = inflate.findViewById(2131363079);
             Objects.requireNonNull(findViewById2, "null cannot be cast to non-null type android.widget.TextView");
             ((TextView) findViewById2).setText(string2);
-            View findViewById3 = inflate.findViewById(2131363909);
+            View findViewById3 = inflate.findViewById(2131363934);
             Objects.requireNonNull(findViewById3, "null cannot be cast to non-null type android.widget.TextView");
             StringCompanionObject stringCompanionObject = StringCompanionObject.INSTANCE;
             String format = String.format("%s (%d)", Arrays.copyOf(new Object[]{string3, Integer.valueOf(i)}, 2));
             Intrinsics.checkNotNullExpressionValue(format, "java.lang.String.format(format, *args)");
             ((TextView) findViewById3).setText(format);
-            View findViewById4 = inflate.findViewById(2131363508);
+            View findViewById4 = inflate.findViewById(2131363526);
             Intrinsics.checkNotNullExpressionValue(findViewById4, "view.findViewById(R.id.target_api_view)");
             this.targetApiView = (TextView) findViewById4;
-            View findViewById5 = inflate.findViewById(2131362911);
+            View findViewById5 = inflate.findViewById(2131362923);
             Intrinsics.checkNotNullExpressionValue(findViewById5, "view.findViewById(R.id.md5_view)");
             this.md5View = (TextView) findViewById5;
-            View findViewById6 = inflate.findViewById(2131362086);
+            View findViewById6 = inflate.findViewById(2131362089);
             Intrinsics.checkNotNullExpressionValue(findViewById6, "view.findViewById(R.id.arm64b_view)");
             this.arm64bView = (TextView) findViewById6;
             AlertDialog create = new AlertDialog.Builder(getActivity()).setView(inflate).setPositiveButton(2131886118, OptionPopupMenu$PackageMD5DialogFragment$onCreateDialog$1.INSTANCE).setNegativeButton(2131886121, new OptionPopupMenu$PackageMD5DialogFragment$onCreateDialog$2(this, string, string3, i, string2)).create();
@@ -164,17 +164,17 @@ public final class OptionPopupMenu extends BasePopMenu implements PopupMenu.OnMe
             if (textView == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("targetApiView");
             }
-            textView.setText(2131886952);
+            textView.setText(2131887014);
             TextView textView2 = this.arm64bView;
             if (textView2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("arm64bView");
             }
-            textView2.setText(2131886952);
+            textView2.setText(2131887014);
             TextView textView3 = this.md5View;
             if (textView3 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("md5View");
             }
-            textView3.setText(2131886952);
+            textView3.setText(2131887014);
             PackageMD5DialogFragment packageMD5DialogFragment = this;
             PackageMD5DialogFragment packageMD5DialogFragment2 = this;
             LoaderManager.getInstance(packageMD5DialogFragment).initLoader(1, null, packageMD5DialogFragment2).forceLoad();
@@ -254,37 +254,37 @@ public final class OptionPopupMenu extends BasePopMenu implements PopupMenu.OnMe
             return true;
         }
         switch (menuItem.getItemId()) {
-            case 2131361895:
+            case 2131361896:
                 ActionManager.startShareFeedV8Activity(UiUtils.getActivity(this.context), this.packageName);
                 return true;
-            case 2131361938:
+            case 2131361939:
                 try {
                     ActionManager.openApp(this.context, this.packageName);
                 } catch (ActivityNotFoundException unused) {
                     Context context2 = this.context;
-                    Toast.show$default(context2, context2.getString(2131887214), 0, false, 12, null);
+                    Toast.show$default(context2, context2.getString(2131887276), 0, false, 12, null);
                 }
                 return true;
-            case 2131361939:
+            case 2131361940:
                 try {
                     ActionManager.openApplicationInfo(this.context, this.packageName);
                 } catch (ActivityNotFoundException unused2) {
                     Context context3 = this.context;
-                    Toast.show$default(context3, context3.getString(2131887214), 0, false, 12, null);
+                    Toast.show$default(context3, context3.getString(2131887276), 0, false, 12, null);
                 }
                 return true;
-            case 2131361940:
+            case 2131361941:
                 ActionManager.startExternalMarketByName(this.context, null, null, this.packageName);
                 return true;
-            case 2131361980:
+            case 2131361981:
                 if (TextUtils.equals(this.packageName, this.context.getPackageName())) {
-                    Toast.show(this.context, 2131887216);
+                    Toast.show(this.context, 2131887278);
                 } else {
                     AppSetting appSetting = AppHolder.getAppSetting();
                     Intrinsics.checkNotNullExpressionValue(appSetting, "AppHolder.getAppSetting()");
                     if (appSetting.isInstallSilent()) {
                         SimpleDialog newInstance = SimpleDialog.newInstance();
-                        newInstance.setMessage(this.context.getString(2131887048, this.title));
+                        newInstance.setMessage(this.context.getString(2131887110, this.title));
                         newInstance.setNegativeButton(2131886140);
                         newInstance.setPositiveButton(2131886162, new OptionPopupMenu$onMenuItemClick$1(this));
                         FragmentManager fragmentManager = this.fm;
@@ -295,10 +295,10 @@ public final class OptionPopupMenu extends BasePopMenu implements PopupMenu.OnMe
                     }
                 }
                 return true;
-            case 2131361981:
+            case 2131361982:
                 ActionManager.startAppViewActivity(this.context, this.packageName);
                 return true;
-            case 2131361986:
+            case 2131361987:
                 PackageMD5DialogFragment newInstance2 = PackageMD5DialogFragment.Companion.newInstance(this.title, this.packageName, this.versionName, this.versionCode, this.filePath);
                 FragmentManager fragmentManager2 = this.fm;
                 Intrinsics.checkNotNull(fragmentManager2);

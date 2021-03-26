@@ -59,7 +59,7 @@ public abstract class ItemSponsorBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSponsorBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSponsorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558938, viewGroup, z, obj);
+        return (ItemSponsorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558945, viewGroup, z, obj);
     }
 
     public static ItemSponsorBinding inflate(LayoutInflater layoutInflater) {
@@ -68,7 +68,7 @@ public abstract class ItemSponsorBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSponsorBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSponsorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558938, null, false, obj);
+        return (ItemSponsorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558945, null, false, obj);
     }
 
     public static ItemSponsorBinding bind(View view) {
@@ -77,6 +77,6 @@ public abstract class ItemSponsorBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSponsorBinding bind(View view, Object obj) {
-        return (ItemSponsorBinding) bind(obj, view, 2131558938);
+        return (ItemSponsorBinding) bind(obj, view, 2131558945);
     }
 }

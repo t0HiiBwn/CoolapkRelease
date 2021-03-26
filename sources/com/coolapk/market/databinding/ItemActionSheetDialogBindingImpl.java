@@ -29,9 +29,9 @@ public class ItemActionSheetDialogBindingImpl extends ItemActionSheetDialogBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362672, 4);
-        sparseIntArray.put(2131363582, 5);
-        sparseIntArray.put(2131363249, 6);
+        sparseIntArray.put(2131362683, 4);
+        sparseIntArray.put(2131363604, 5);
+        sparseIntArray.put(2131363263, 6);
     }
 
     public ItemActionSheetDialogBindingImpl(DataBindingComponent dataBindingComponent, View view) {

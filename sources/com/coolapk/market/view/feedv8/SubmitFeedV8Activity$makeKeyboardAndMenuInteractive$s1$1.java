@@ -20,14 +20,14 @@ final class SubmitFeedV8Activity$makeKeyboardAndMenuInteractive$s1$1<T> implemen
             if (bool.booleanValue()) {
                 ImageView imageView = this.this$0.lastActiveMenu;
                 if (imageView != null) {
-                    imageView.setImageResource(2131231277);
+                    imageView.setImageResource(2131231288);
                     return;
                 }
                 return;
             }
             ImageView imageView2 = this.this$0.lastActiveMenu;
             if (imageView2 != null) {
-                imageView2.setImageResource(2131231386);
+                imageView2.setImageResource(2131231397);
             }
         }
     }

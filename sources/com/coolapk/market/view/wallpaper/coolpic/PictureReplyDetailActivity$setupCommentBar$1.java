@@ -34,17 +34,17 @@ final class PictureReplyDetailActivity$setupCommentBar$1 extends Lambda implemen
     public final void invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         switch (view.getId()) {
-            case 2131362284:
+            case 2131362289:
                 ActionManager.startFeedCommentActivity(this.this$0.getActivity(), PictureReplyDetailActivity.access$getFeed$p(this.this$0).getId(), PictureReplyDetailActivity.access$getFeed$p(this.this$0).getUserName());
                 return;
-            case 2131362291:
+            case 2131362296:
                 PictureDetailReplyListFragment pictureDetailReplyListFragment = this.this$0.contentFragment;
                 if (pictureDetailReplyListFragment != null) {
                     pictureDetailReplyListFragment.scrollToCommentPosition();
                     return;
                 }
                 return;
-            case 2131362851:
+            case 2131362862:
                 Activity currentActivity = AppHolder.getCurrentActivity();
                 if (currentActivity != null) {
                     Boolean checkLogin = ActionManager.checkLogin(currentActivity);
@@ -62,10 +62,10 @@ final class PictureReplyDetailActivity$setupCommentBar$1 extends Lambda implemen
                     return;
                 }
                 return;
-            case 2131363358:
+            case 2131363374:
                 ActionManager.startForwardEntityActivity(this.this$0.getActivity(), PictureReplyDetailActivity.access$getFeed$p(this.this$0));
                 return;
-            case 2131363418:
+            case 2131363436:
                 Activity currentActivity2 = AppHolder.getCurrentActivity();
                 if (currentActivity2 != null) {
                     Boolean checkLogin2 = ActionManager.checkLogin(currentActivity2);

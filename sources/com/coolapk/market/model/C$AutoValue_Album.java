@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Album  reason: invalid class name */
 abstract class C$AutoValue_Album extends C$$AutoValue_Album {
-    C$AutoValue_Album(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, UserInfo userInfo, String str10, String str11, String str12, String str13, String str14, String str15, String str16, UserInfo userInfo2, String str17, String str18, long j, String str19, String str20, int i, String str21, int i2, int i3, int i4, int i5, int i6, int i7, String str22, int i8, String str23, int i9, String str24, int i10, String str25, String str26, List<AlbumItem> list, String str27, Collection collection, CollectionItem collectionItem, List<FeedReply> list2, UserAction userAction, List<FeedReply> list3, int i11, FeedStatus feedStatus, SimpleInfo simpleInfo, SimpleInfo simpleInfo2) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, l2, l3, str9, userInfo, str10, str11, str12, str13, str14, str15, str16, userInfo2, str17, str18, j, str19, str20, i, str21, i2, i3, i4, i5, i6, i7, str22, i8, str23, i9, str24, i10, str25, str26, list, str27, collection, collectionItem, list2, userAction, list3, i11, feedStatus, simpleInfo, simpleInfo2);
+    C$AutoValue_Album(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, UserInfo userInfo, String str10, String str11, String str12, String str13, String str14, String str15, String str16, UserInfo userInfo2, String str17, String str18, long j, String str19, String str20, int i, String str21, int i2, int i3, int i4, int i5, int i6, int i7, String str22, int i8, String str23, int i9, String str24, int i10, String str25, String str26, List<AlbumItem> list, String str27, Collection collection, CollectionItem collectionItem, List<FeedReply> list2, UserAction userAction, List<FeedReply> list3, int i11, FeedStatus feedStatus, SimpleInfo simpleInfo, SimpleInfo simpleInfo2) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, l, l2, str9, userInfo, str10, str11, str12, str13, str14, str15, str16, userInfo2, str17, str18, j, str19, str20, i, str21, i2, i3, i4, i5, i6, i7, str22, i8, str23, i9, str24, i10, str25, str26, list, str27, collection, collectionItem, list2, userAction, list3, i11, feedStatus, simpleInfo, simpleInfo2);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Album$GsonTypeAdapter */
@@ -226,13 +226,13 @@ abstract class C$AutoValue_Album extends C$$AutoValue_Album {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -577,8 +577,8 @@ abstract class C$AutoValue_Album extends C$$AutoValue_Album {
             String str6 = this.defaultSubTitle;
             String str7 = this.defaultId;
             String str8 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str9 = this.defaultDeprecatedUserAvatar;
             UserInfo userInfo = this.defaultUserInfo;
             String str10 = this.defaultUid;
@@ -629,8 +629,8 @@ abstract class C$AutoValue_Album extends C$$AutoValue_Album {
             String str32 = str6;
             String str33 = str7;
             String str34 = str8;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str35 = str9;
             UserInfo userInfo3 = userInfo;
             String str36 = str10;
@@ -1026,7 +1026,7 @@ abstract class C$AutoValue_Album extends C$$AutoValue_Album {
                             i14 = this.totalApkNumAdapter.read(jsonReader).intValue();
                             continue;
                         case '\b':
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\t':
                             i15 = this.favoriteNumAdapter.read(jsonReader).intValue();
@@ -1158,7 +1158,7 @@ abstract class C$AutoValue_Album extends C$$AutoValue_Album {
                             str50 = this.albumUrlAdapter.read(jsonReader);
                             continue;
                         case '4':
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -1167,7 +1167,7 @@ abstract class C$AutoValue_Album extends C$$AutoValue_Album {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Album(str37, str45, str29, num2, str30, str31, str32, str33, str34, l4, l5, str35, userInfo3, str36, str38, str39, str40, str41, str42, str43, userInfo4, str44, str46, j2, str47, str28, i12, str48, i13, i14, i15, i16, i17, i18, str49, i19, str50, i20, str51, i21, str52, str53, list4, str54, collection2, collectionItem2, list5, userAction2, list6, i22, feedStatus2, simpleInfo3, simpleInfo2);
+            return new AutoValue_Album(str37, str45, str29, num2, str30, str31, str32, str33, str34, l3, l4, str35, userInfo3, str36, str38, str39, str40, str41, str42, str43, userInfo4, str44, str46, j2, str47, str28, i12, str48, i13, i14, i15, i16, i17, i18, str49, i19, str50, i20, str51, i21, str52, str53, list4, str54, collection2, collectionItem2, list5, userAction2, list6, i22, feedStatus2, simpleInfo3, simpleInfo2);
         }
     }
 }

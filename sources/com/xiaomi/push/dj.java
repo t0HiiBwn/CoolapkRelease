@@ -3,89 +3,101 @@ package com.xiaomi.push;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
-import com.xiaomi.push.service.an;
+import com.xiaomi.push.service.b;
+import java.util.HashMap;
 
-final class dj implements dn {
-    dj() {
+public final class dj {
+    private static volatile dj a;
+    private Context b;
+    private HashMap<dl, dm> c;
+    private String d;
+    private String e;
+    private int f;
+    private dn g;
+
+    private dj(Context context) {
+        HashMap<dl, dm> hashMap = new HashMap<>();
+        this.c = hashMap;
+        this.b = context;
+        hashMap.put(dl.SERVICE_ACTION, new dp());
+        this.c.put(dl.SERVICE_COMPONENT, new dq());
+        this.c.put(dl.ACTIVITY, new dh());
+        this.c.put(dl.PROVIDER, new Cdo());
     }
 
-    private void a(Context context, String str, String str2) {
-        if (!TextUtils.isEmpty(str2) && !TextUtils.isEmpty(str)) {
-            try {
-                if (!dl.a(context, "12", 1)) {
-                    hk hkVar = new hk();
-                    hkVar.a(str + ":" + str2);
-                    hkVar.a(System.currentTimeMillis());
-                    hkVar.a(he.BroadcastAction);
-                    ds.a(context, hkVar);
+    public static dj a(Context context) {
+        if (a == null) {
+            synchronized (dj.class) {
+                if (a == null) {
+                    a = new dj(context);
                 }
-            } catch (Throwable unused) {
             }
         }
+        return a;
     }
 
     /* access modifiers changed from: private */
-    public void b(Context context, Intent intent) {
-        int a;
-        try {
-            String dataString = intent.getDataString();
-            if (!TextUtils.isEmpty(dataString)) {
-                String[] split = dataString.split(":");
-                if (split.length < 2) {
-                    return;
-                }
-                if (!TextUtils.isEmpty(split[1])) {
-                    String str = split[1];
-                    long currentTimeMillis = System.currentTimeMillis();
-                    boolean a2 = an.a(context).a(hh.BroadcastActionCollectionSwitch.a(), true);
-                    if (TextUtils.equals("android.intent.action.PACKAGE_RESTARTED", intent.getAction())) {
-                        if (!dl.a(context, "12", 1) && a2) {
-                            if (TextUtils.isEmpty(dr.a)) {
-                                dr.a += dm.f319a + ":";
-                            }
-                            dr.a += str + "(" + currentTimeMillis + "),";
-                        }
-                    } else if (!TextUtils.equals("android.intent.action.PACKAGE_CHANGED", intent.getAction())) {
-                        if (TextUtils.equals("android.intent.action.PACKAGE_ADDED", intent.getAction())) {
-                            if (!intent.getExtras().getBoolean("android.intent.extra.REPLACING") && a2) {
-                                a = he.BroadcastActionAdded.a();
-                            } else {
-                                return;
-                            }
-                        } else if (TextUtils.equals("android.intent.action.PACKAGE_REMOVED", intent.getAction())) {
-                            if (!intent.getExtras().getBoolean("android.intent.extra.REPLACING") && a2) {
-                                a = he.BroadcastActionRemoved.a();
-                            } else {
-                                return;
-                            }
-                        } else if (TextUtils.equals("android.intent.action.PACKAGE_REPLACED", intent.getAction())) {
-                            if (a2) {
-                                a = he.BroadcastActionReplaced.a();
-                            } else {
-                                return;
-                            }
-                        } else if (TextUtils.equals("android.intent.action.PACKAGE_DATA_CLEARED", intent.getAction()) && a2) {
-                            a = he.BroadcastActionDataCleared.a();
-                        } else {
-                            return;
-                        }
-                        a(context, String.valueOf(a), str);
-                    } else if (!dl.a(context, "12", 1) && a2) {
-                        if (TextUtils.isEmpty(dr.b)) {
-                            dr.b += dm.b + ":";
-                        }
-                        dr.b += str + "(" + currentTimeMillis + "),";
-                    }
-                }
-            }
-        } catch (Throwable unused) {
+    public void a(dl dlVar, Context context, di diVar) {
+        this.c.get(dlVar).a(context, diVar);
+    }
+
+    public static boolean b(Context context) {
+        return b.a(context, context.getPackageName());
+    }
+
+    public dn a() {
+        return this.g;
+    }
+
+    public void a(int i) {
+        this.f = i;
+    }
+
+    public void a(Context context, String str, int i, String str2, String str3) {
+        if (context == null || TextUtils.isEmpty(str) || TextUtils.isEmpty(str2) || TextUtils.isEmpty(str3)) {
+            df.a(context, "" + str, 1008, "A receive a incorrect message");
+            return;
+        }
+        a(i);
+        j.a(this.b).a(new dk(this, str, context, str2, str3));
+    }
+
+    public void a(dl dlVar, Context context, Intent intent, String str) {
+        if (dlVar != null) {
+            this.c.get(dlVar).a(context, intent, str);
+        } else {
+            df.a(context, "null", 1008, "A receive a incorrect message with empty type");
         }
     }
 
-    @Override // com.xiaomi.push.dn
-    public void a(Context context, Intent intent) {
-        if (intent != null) {
-            ai.a(context).a(new dk(this, context, intent));
-        }
+    public void a(dn dnVar) {
+        this.g = dnVar;
+    }
+
+    public void a(String str) {
+        this.d = str;
+    }
+
+    public void a(String str, String str2, int i, dn dnVar) {
+        a(str);
+        b(str2);
+        a(i);
+        a(dnVar);
+    }
+
+    public String b() {
+        return this.d;
+    }
+
+    public void b(String str) {
+        this.e = str;
+    }
+
+    public String c() {
+        return this.e;
+    }
+
+    public int d() {
+        return this.f;
     }
 }

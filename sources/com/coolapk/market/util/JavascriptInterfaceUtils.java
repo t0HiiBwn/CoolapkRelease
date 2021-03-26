@@ -69,8 +69,8 @@ public class JavascriptInterfaceUtils {
             FetchGiftDialog.newInstance(this.mGift, this.serviceApp).show(ContextExtendsKt.requireAppCompatActivity(this.context).getSupportFragmentManager(), (String) null);
         } else {
             SimpleDialog newInstance = SimpleDialog.newInstance();
-            newInstance.setMessage(this.context.getString(2131886822));
-            newInstance.setPositiveButton(2131886751, new DialogInterface.OnClickListener() {
+            newInstance.setMessage(this.context.getString(2131886884));
+            newInstance.setPositiveButton(2131886813, new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.util.JavascriptInterfaceUtils.AnonymousClass1 */
 
                 @Override // android.content.DialogInterface.OnClickListener

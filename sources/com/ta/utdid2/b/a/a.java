@@ -17,22 +17,22 @@ class a implements XmlSerializer {
     private static String a = "xmlpull.org/v1/doc/features.html#indent-output";
 
     /* renamed from: a  reason: collision with other field name */
-    private static final String[] f77a = {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "&quot;", null, null, null, "&amp;", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "&lt;", null, "&gt;", null};
+    private static final String[] f76a = {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "&quot;", null, null, null, "&amp;", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "&lt;", null, "&gt;", null};
 
     /* renamed from: a  reason: collision with other field name */
-    private OutputStream f78a;
+    private OutputStream f77a;
 
     /* renamed from: a  reason: collision with other field name */
-    private Writer f79a;
+    private Writer f78a;
 
     /* renamed from: a  reason: collision with other field name */
-    private ByteBuffer f80a = ByteBuffer.allocate(8192);
+    private ByteBuffer f79a = ByteBuffer.allocate(8192);
 
     /* renamed from: a  reason: collision with other field name */
-    private CharsetEncoder f81a;
+    private CharsetEncoder f80a;
 
     /* renamed from: a  reason: collision with other field name */
-    private final char[] f82a = new char[8192];
+    private final char[] f81a = new char[8192];
     private boolean e;
     private int mPos;
 
@@ -45,7 +45,7 @@ class a implements XmlSerializer {
             flush();
             i = this.mPos;
         }
-        this.f82a[i] = c;
+        this.f81a[i] = c;
         this.mPos = i + 1;
     }
 
@@ -64,7 +64,7 @@ class a implements XmlSerializer {
             flush();
             i5 = this.mPos;
         }
-        str.getChars(i, i + i2, this.f82a, i5);
+        str.getChars(i, i + i2, this.f81a, i5);
         this.mPos = i5 + i2;
     }
 
@@ -83,7 +83,7 @@ class a implements XmlSerializer {
             flush();
             i5 = this.mPos;
         }
-        System.arraycopy(cArr, i, this.f82a, i5, i2);
+        System.arraycopy(cArr, i, this.f81a, i5, i2);
         this.mPos = i5 + i2;
     }
 
@@ -94,7 +94,7 @@ class a implements XmlSerializer {
     private void a(String str) throws IOException {
         String str2;
         int length = str.length();
-        String[] strArr = f77a;
+        String[] strArr = f76a;
         char length2 = (char) strArr.length;
         int i = 0;
         int i2 = 0;
@@ -116,7 +116,7 @@ class a implements XmlSerializer {
 
     private void a(char[] cArr, int i, int i2) throws IOException {
         String str;
-        String[] strArr = f77a;
+        String[] strArr = f76a;
         char length = (char) strArr.length;
         int i3 = i2 + i;
         int i4 = i;
@@ -193,11 +193,11 @@ class a implements XmlSerializer {
     }
 
     private void a() throws IOException {
-        int position = this.f80a.position();
+        int position = this.f79a.position();
         if (position > 0) {
-            this.f80a.flip();
-            this.f78a.write(this.f80a.array(), 0, position);
-            this.f80a.clear();
+            this.f79a.flip();
+            this.f77a.write(this.f79a.array(), 0, position);
+            this.f79a.clear();
         }
     }
 
@@ -205,22 +205,22 @@ class a implements XmlSerializer {
     public void flush() throws IOException {
         int i = this.mPos;
         if (i > 0) {
-            if (this.f78a != null) {
-                CharBuffer wrap = CharBuffer.wrap(this.f82a, 0, i);
-                CoderResult encode = this.f81a.encode(wrap, this.f80a, true);
+            if (this.f77a != null) {
+                CharBuffer wrap = CharBuffer.wrap(this.f81a, 0, i);
+                CoderResult encode = this.f80a.encode(wrap, this.f79a, true);
                 while (!encode.isError()) {
                     if (encode.isOverflow()) {
                         a();
-                        encode = this.f81a.encode(wrap, this.f80a, true);
+                        encode = this.f80a.encode(wrap, this.f79a, true);
                     } else {
                         a();
-                        this.f78a.flush();
+                        this.f77a.flush();
                     }
                 }
                 throw new IOException(encode.toString());
             }
-            this.f79a.write(this.f82a, 0, i);
-            this.f79a.flush();
+            this.f78a.write(this.f81a, 0, i);
+            this.f78a.flush();
             this.mPos = 0;
         }
     }
@@ -280,8 +280,8 @@ class a implements XmlSerializer {
     public void setOutput(OutputStream outputStream, String str) throws IOException, IllegalArgumentException, IllegalStateException {
         if (outputStream != null) {
             try {
-                this.f81a = Charset.forName(str).newEncoder();
-                this.f78a = outputStream;
+                this.f80a = Charset.forName(str).newEncoder();
+                this.f77a = outputStream;
             } catch (IllegalCharsetNameException e2) {
                 throw ((UnsupportedEncodingException) new UnsupportedEncodingException(str).initCause(e2));
             } catch (UnsupportedCharsetException e3) {
@@ -294,7 +294,7 @@ class a implements XmlSerializer {
 
     @Override // org.xmlpull.v1.XmlSerializer
     public void setOutput(Writer writer) throws IOException, IllegalArgumentException, IllegalStateException {
-        this.f79a = writer;
+        this.f78a = writer;
     }
 
     @Override // org.xmlpull.v1.XmlSerializer

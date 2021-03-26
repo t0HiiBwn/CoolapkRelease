@@ -35,8 +35,8 @@ public class b {
             if (l.isConnected()) {
                 for (int i = 0; i < 8; i++) {
                     HashMap hashMap = new HashMap();
-                    String b2 = a.m21b("b01n15");
-                    String b3 = a.m21b("b01na");
+                    String b2 = a.m11b("b01n15");
+                    String b3 = a.m11b("b01na");
                     hashMap.put("_b01n15", b2);
                     hashMap.put("_b01na", b3);
                     try {

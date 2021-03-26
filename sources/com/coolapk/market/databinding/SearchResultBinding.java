@@ -50,7 +50,7 @@ public abstract class SearchResultBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchResultBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SearchResultBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559129, viewGroup, z, obj);
+        return (SearchResultBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559136, viewGroup, z, obj);
     }
 
     public static SearchResultBinding inflate(LayoutInflater layoutInflater) {
@@ -59,7 +59,7 @@ public abstract class SearchResultBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchResultBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SearchResultBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559129, null, false, obj);
+        return (SearchResultBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559136, null, false, obj);
     }
 
     public static SearchResultBinding bind(View view) {
@@ -68,6 +68,6 @@ public abstract class SearchResultBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchResultBinding bind(View view, Object obj) {
-        return (SearchResultBinding) bind(obj, view, 2131559129);
+        return (SearchResultBinding) bind(obj, view, 2131559136);
     }
 }

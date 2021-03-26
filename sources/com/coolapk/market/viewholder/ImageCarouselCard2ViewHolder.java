@@ -39,7 +39,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ImageCarouselCard2ViewHolder.kt */
 public final class ImageCarouselCard2ViewHolder extends BindingViewHolder implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558789;
+    public static final int LAYOUT_ID = 2131558796;
     private final ItemImageCarouselCard2Binding binding;
     private Integer displayedChild;
     private EntityCard entityCard;
@@ -315,7 +315,7 @@ public final class ImageCarouselCard2ViewHolder extends BindingViewHolder implem
         @Override // com.youth.banner.loader.ImageLoaderInterface
         public View createImageView(Context context) {
             Intrinsics.checkNotNullParameter(context, "context");
-            ItemImageCarouselCard2ItemBinding itemImageCarouselCard2ItemBinding = (ItemImageCarouselCard2ItemBinding) DataBindingUtil.inflate(LayoutInflater.from(context), 2131558790, null, false, ImageCarouselCard2ViewHolder.this.getComponent());
+            ItemImageCarouselCard2ItemBinding itemImageCarouselCard2ItemBinding = (ItemImageCarouselCard2ItemBinding) DataBindingUtil.inflate(LayoutInflater.from(context), 2131558797, null, false, ImageCarouselCard2ViewHolder.this.getComponent());
             Intrinsics.checkNotNullExpressionValue(itemImageCarouselCard2ItemBinding, "binding");
             View root = itemImageCarouselCard2ItemBinding.getRoot();
             Intrinsics.checkNotNullExpressionValue(root, "binding.root");

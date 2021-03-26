@@ -27,10 +27,10 @@ public class ItemCenterMoreMenuBindingImpl extends ItemCenterMoreMenuBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 2);
-        sparseIntArray.put(2131363533, 3);
-        sparseIntArray.put(2131362003, 4);
-        sparseIntArray.put(2131362970, 5);
+        sparseIntArray.put(2131362718, 2);
+        sparseIntArray.put(2131363551, 3);
+        sparseIntArray.put(2131362004, 4);
+        sparseIntArray.put(2131362982, 5);
     }
 
     public ItemCenterMoreMenuBindingImpl(DataBindingComponent dataBindingComponent, View view) {

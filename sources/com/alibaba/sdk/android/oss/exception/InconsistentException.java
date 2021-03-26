@@ -7,9 +7,9 @@ public class InconsistentException extends IOException {
     private String requestId;
     private Long serverChecksum;
 
-    public InconsistentException(Long l2, Long l3, String str) {
-        this.clientChecksum = l2;
-        this.serverChecksum = l3;
+    public InconsistentException(Long l, Long l2, String str) {
+        this.clientChecksum = l;
+        this.serverChecksum = l2;
         this.requestId = str;
     }
 

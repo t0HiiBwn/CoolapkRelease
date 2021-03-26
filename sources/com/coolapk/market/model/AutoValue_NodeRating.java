@@ -18,8 +18,8 @@ final class AutoValue_NodeRating extends C$AutoValue_NodeRating {
         }
     };
 
-    AutoValue_NodeRating(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, String str13, int i, String str14, UserInfo userInfo, NodeTargetInfo nodeTargetInfo, int i2, int i3, int i4) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l2, l3, str12, str13, i, str14, userInfo, nodeTargetInfo, i2, i3, i4);
+    AutoValue_NodeRating(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, String str13, int i, String str14, UserInfo userInfo, NodeTargetInfo nodeTargetInfo, int i2, int i3, int i4) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l, l2, str12, str13, i, str14, userInfo, nodeTargetInfo, i2, i3, i4);
     }
 
     @Override // android.os.Parcelable

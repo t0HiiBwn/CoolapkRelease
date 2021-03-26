@@ -61,9 +61,9 @@ public class FansListFragment extends SimpleAsyncListFragment<Result<List<Entity
         String entityType = ((Entity) getDataList().get(i)).getEntityType();
         entityType.hashCode();
         if (!entityType.equals("holder_title")) {
-            return !entityType.equals("contacts") ? 0 : 2131558660;
+            return !entityType.equals("contacts") ? 0 : 2131558666;
         }
-        return 2131558954;
+        return 2131558961;
     }
 
     @Override // com.coolapk.market.view.base.asynclist.AsyncListFragment
@@ -124,14 +124,14 @@ public class FansListFragment extends SimpleAsyncListFragment<Result<List<Entity
     @Override // com.coolapk.market.view.base.asynclist.SimpleAsyncListFragment
     public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-        if (i == 2131558660) {
+        if (i == 2131558666) {
             return new FansViewHolder(inflate, getComponent(), new ItemActionHandler() {
                 /* class com.coolapk.market.view.contact.FansListFragment.AnonymousClass1 */
 
                 @Override // com.coolapk.market.viewholder.ItemActionHandler
                 public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                     super.onItemClick(viewHolder, view);
-                    if (view.getId() == 2131361886) {
+                    if (view.getId() == 2131361887) {
                         int adapterPosition = viewHolder.getAdapterPosition();
                         if (!UiUtils.isInvalidPosition(adapterPosition)) {
                             Contacts contacts = (Contacts) FansListFragment.this.getDataList().get(adapterPosition);
@@ -145,7 +145,7 @@ public class FansListFragment extends SimpleAsyncListFragment<Result<List<Entity
                 }
             });
         }
-        if (i != 2131558954) {
+        if (i != 2131558961) {
             return null;
         }
         return new TitleViewHolder(inflate, null);

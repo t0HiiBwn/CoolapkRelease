@@ -20,10 +20,10 @@ public class a {
 
     /* renamed from: com.umeng.commonsdk.statistics.internal.a$a  reason: collision with other inner class name */
     /* compiled from: HeaderHelper */
-    private static class C0150a {
+    private static class C0177a {
         private static final a a = new a();
 
-        private C0150a() {
+        private C0177a() {
         }
     }
 
@@ -31,7 +31,7 @@ public class a {
         if (a == null && context != null) {
             a = context.getApplicationContext();
         }
-        return C0150a.a;
+        return C0177a.a;
     }
 
     public boolean a(String str) {

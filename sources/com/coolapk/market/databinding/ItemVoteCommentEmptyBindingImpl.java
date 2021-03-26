@@ -21,7 +21,7 @@ public class ItemVoteCommentEmptyBindingImpl extends ItemVoteCommentEmptyBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 1);
+        sparseIntArray.put(2131363551, 1);
     }
 
     public ItemVoteCommentEmptyBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -56,7 +56,7 @@ public class ItemVoteCommentEmptyBindingImpl extends ItemVoteCommentEmptyBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((User) obj);

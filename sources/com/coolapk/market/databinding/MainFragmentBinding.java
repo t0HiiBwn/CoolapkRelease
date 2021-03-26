@@ -36,7 +36,7 @@ public abstract class MainFragmentBinding extends ViewDataBinding {
 
     @Deprecated
     public static MainFragmentBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (MainFragmentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559018, viewGroup, z, obj);
+        return (MainFragmentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559025, viewGroup, z, obj);
     }
 
     public static MainFragmentBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class MainFragmentBinding extends ViewDataBinding {
 
     @Deprecated
     public static MainFragmentBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (MainFragmentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559018, null, false, obj);
+        return (MainFragmentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559025, null, false, obj);
     }
 
     public static MainFragmentBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class MainFragmentBinding extends ViewDataBinding {
 
     @Deprecated
     public static MainFragmentBinding bind(View view, Object obj) {
-        return (MainFragmentBinding) bind(obj, view, 2131559018);
+        return (MainFragmentBinding) bind(obj, view, 2131559025);
     }
 }

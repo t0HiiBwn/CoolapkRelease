@@ -39,7 +39,7 @@ public abstract class ItemTextTitleScrollChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTextTitleScrollChildBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemTextTitleScrollChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558952, viewGroup, z, obj);
+        return (ItemTextTitleScrollChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558959, viewGroup, z, obj);
     }
 
     public static ItemTextTitleScrollChildBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class ItemTextTitleScrollChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTextTitleScrollChildBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemTextTitleScrollChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558952, null, false, obj);
+        return (ItemTextTitleScrollChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558959, null, false, obj);
     }
 
     public static ItemTextTitleScrollChildBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class ItemTextTitleScrollChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTextTitleScrollChildBinding bind(View view, Object obj) {
-        return (ItemTextTitleScrollChildBinding) bind(obj, view, 2131558952);
+        return (ItemTextTitleScrollChildBinding) bind(obj, view, 2131558959);
     }
 }

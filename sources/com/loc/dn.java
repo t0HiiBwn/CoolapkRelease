@@ -46,9 +46,7 @@ public final class dn {
     a i = null;
     AMapLocationClientOption j = new AMapLocationClientOption();
     ds k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    long f1364l = 0;
+    long l = 0;
     eh m = null;
     boolean n = false;
     ee o = null;
@@ -238,7 +236,7 @@ public final class dn {
             this.m.a(this.a, this.j.isNeedAddress(), this.j.isOffset(), this.d, this.c, this.b, this.F);
             byte[] a3 = this.m.a();
             long b2 = ep.b();
-            this.f1364l = b2;
+            this.l = b2;
             dmVar.a(b2);
             try {
                 ej.c(this.a);
@@ -391,7 +389,7 @@ public final class dn {
                             ds a6 = a(i2, this.p.toString());
                             a6.h(this.x.toString());
                             return a6;
-                        } else if (jVar.f() == 23 || Math.abs((ep.b() - this.f1364l) - this.j.getHttpTimeOut()) < 500) {
+                        } else if (jVar.f() == 23 || Math.abs((ep.b() - this.l) - this.j.getHttpTimeOut()) < 500) {
                             dmVar.f("#0402");
                             sb2 = this.p;
                             str = "网络异常，连接超时#0402";
@@ -746,7 +744,7 @@ public final class dn {
         if (i2 == 1 && (dxVar = this.c) != null) {
             dxVar.a(this.n);
         }
-        long j2 = this.f1364l;
+        long j2 = this.l;
         if (!this.M) {
             this.M = true;
         } else if (ep.b() - j2 < 800) {
@@ -780,7 +778,7 @@ public final class dn {
                                 a2.setTrustedLevel(4);
                                 return a2;
                             }
-                            ds a3 = this.e.a(this.d, this.f1364l == 0 || ep.b() - this.f1364l > 20000, this.k, this.c, this.x, this.L, this.a, false);
+                            ds a3 = this.e.a(this.d, this.l == 0 || ep.b() - this.l > 20000, this.k, this.c, this.x, this.L, this.a, false);
                             if (ep.a(a3)) {
                                 a3.setTrustedLevel(2);
                             } else {

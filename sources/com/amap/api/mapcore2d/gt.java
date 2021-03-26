@@ -50,9 +50,7 @@ public final class gt {
     static boolean i = false;
     private static boolean j = false;
     private static boolean k = true;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static boolean f1240l = false;
+    private static boolean l = false;
     private static long m = 0;
     private static long n = 0;
     private static long o = 5000;

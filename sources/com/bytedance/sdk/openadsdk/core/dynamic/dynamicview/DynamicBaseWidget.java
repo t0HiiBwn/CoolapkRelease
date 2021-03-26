@@ -26,9 +26,7 @@ public abstract class DynamicBaseWidget extends ViewGroup {
     protected Context i;
     protected e j;
     protected f k;
-
-    /* renamed from: l  reason: collision with root package name */
-    protected List<DynamicBaseWidget> f1308l;
+    protected List<DynamicBaseWidget> l;
     protected DynamicRootView m;
     protected View n;
     protected boolean o;
@@ -64,12 +62,12 @@ public abstract class DynamicBaseWidget extends ViewGroup {
     }
 
     public void a(DynamicBaseWidget dynamicBaseWidget) {
-        if (this.f1308l == null) {
-            this.f1308l = new ArrayList();
+        if (this.l == null) {
+            this.l = new ArrayList();
         }
         if (dynamicBaseWidget != null) {
             dynamicBaseWidget.setShouldInvisible(this.o);
-            this.f1308l.add(dynamicBaseWidget);
+            this.l.add(dynamicBaseWidget);
         }
     }
 
@@ -83,7 +81,7 @@ public abstract class DynamicBaseWidget extends ViewGroup {
         if (!d2 || !c2) {
             this.p = false;
         }
-        List<DynamicBaseWidget> list = this.f1308l;
+        List<DynamicBaseWidget> list = this.l;
         if (list != null) {
             for (DynamicBaseWidget dynamicBaseWidget : list) {
                 if (!dynamicBaseWidget.a()) {

@@ -17,7 +17,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: CollectionHeaderViewholder.kt */
 public final class CollectionHeaderViewholder extends GenericBindHolder<ItemCollectionHeaderBinding, Collection> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558655;
+    public static final int LAYOUT_ID = 2131558661;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public CollectionHeaderViewholder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -47,7 +47,7 @@ public final class CollectionHeaderViewholder extends GenericBindHolder<ItemColl
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131362095) {
+        if (view.getId() == 2131362098) {
             Context context = getContext();
             ItemCollectionHeaderBinding itemCollectionHeaderBinding = (ItemCollectionHeaderBinding) getBinding();
             Intrinsics.checkNotNullExpressionValue(itemCollectionHeaderBinding, "binding");

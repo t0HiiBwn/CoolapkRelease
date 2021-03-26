@@ -18,8 +18,8 @@ final class AutoValue_UserHistory extends C$AutoValue_UserHistory {
         }
     };
 
-    AutoValue_UserHistory(String str, String str2, Integer num, String str3, String str4, String str5, Long l2, Long l3, String str6, String str7, String str8, String str9, String str10, String str11, String str12, String str13) {
-        super(str, str2, num, str3, str4, str5, l2, l3, str6, str7, str8, str9, str10, str11, str12, str13);
+    AutoValue_UserHistory(String str, String str2, Integer num, String str3, String str4, String str5, Long l, Long l2, String str6, String str7, String str8, String str9, String str10, String str11, String str12, String str13) {
+        super(str, str2, num, str3, str4, str5, l, l2, str6, str7, str8, str9, str10, str11, str12, str13);
     }
 
     @Override // android.os.Parcelable

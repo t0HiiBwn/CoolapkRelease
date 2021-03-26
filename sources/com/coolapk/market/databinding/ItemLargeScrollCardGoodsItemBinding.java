@@ -50,7 +50,7 @@ public abstract class ItemLargeScrollCardGoodsItemBinding extends ViewDataBindin
 
     @Deprecated
     public static ItemLargeScrollCardGoodsItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemLargeScrollCardGoodsItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558795, viewGroup, z, obj);
+        return (ItemLargeScrollCardGoodsItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558802, viewGroup, z, obj);
     }
 
     public static ItemLargeScrollCardGoodsItemBinding inflate(LayoutInflater layoutInflater) {
@@ -59,7 +59,7 @@ public abstract class ItemLargeScrollCardGoodsItemBinding extends ViewDataBindin
 
     @Deprecated
     public static ItemLargeScrollCardGoodsItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemLargeScrollCardGoodsItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558795, null, false, obj);
+        return (ItemLargeScrollCardGoodsItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558802, null, false, obj);
     }
 
     public static ItemLargeScrollCardGoodsItemBinding bind(View view) {
@@ -68,6 +68,6 @@ public abstract class ItemLargeScrollCardGoodsItemBinding extends ViewDataBindin
 
     @Deprecated
     public static ItemLargeScrollCardGoodsItemBinding bind(View view, Object obj) {
-        return (ItemLargeScrollCardGoodsItemBinding) bind(obj, view, 2131558795);
+        return (ItemLargeScrollCardGoodsItemBinding) bind(obj, view, 2131558802);
     }
 }

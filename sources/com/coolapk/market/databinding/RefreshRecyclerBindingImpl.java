@@ -26,8 +26,8 @@ public class RefreshRecyclerBindingImpl extends RefreshRecyclerBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363471, 6);
-        sparseIntArray.put(2131362208, 7);
+        sparseIntArray.put(2131363489, 6);
+        sparseIntArray.put(2131362213, 7);
     }
 
     public RefreshRecyclerBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -69,7 +69,7 @@ public class RefreshRecyclerBindingImpl extends RefreshRecyclerBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((RefreshRecyclerViewModel) obj);
@@ -83,7 +83,7 @@ public class RefreshRecyclerBindingImpl extends RefreshRecyclerBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -101,12 +101,12 @@ public class RefreshRecyclerBindingImpl extends RefreshRecyclerBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 229) {
+        } else if (i == 230) {
             synchronized (this) {
                 this.mDirtyFlags |= 2;
             }
             return true;
-        } else if (i == 186) {
+        } else if (i == 187) {
             synchronized (this) {
                 this.mDirtyFlags |= 4;
             }

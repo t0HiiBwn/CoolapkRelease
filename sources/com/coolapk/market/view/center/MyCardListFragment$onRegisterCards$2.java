@@ -21,6 +21,6 @@ final class MyCardListFragment$onRegisterCards$2 extends Lambda implements Funct
 
     public final RecyclerView.ViewHolder invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "it");
-        return new UserHistoryViewHolder(view, MyCardListFragment.access$getBindingComponent$p(this.this$0), null);
+        return new UserHistoryViewHolder(view, this.this$0.getBindingComponent(), null);
     }
 }

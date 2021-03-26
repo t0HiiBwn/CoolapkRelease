@@ -22,9 +22,7 @@ public final class ce {
     public static final String i = "f";
     public static final String j = "j";
     public static final String k = "k";
-
-    /* renamed from: l  reason: collision with root package name */
-    private static long f1206l;
+    private static long l;
     private static Vector<br> m = new Vector<>();
 
     public static String a(Context context, String str) {
@@ -49,8 +47,8 @@ public final class ce {
 
     public static void a(final Context context) {
         try {
-            if (System.currentTimeMillis() - f1206l >= 60000) {
-                f1206l = System.currentTimeMillis();
+            if (System.currentTimeMillis() - l >= 60000) {
+                l = System.currentTimeMillis();
                 ExecutorService c2 = cg.c();
                 if (c2 == null) {
                     return;

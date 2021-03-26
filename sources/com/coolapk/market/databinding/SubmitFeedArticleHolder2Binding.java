@@ -21,7 +21,7 @@ public abstract class SubmitFeedArticleHolder2Binding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedArticleHolder2Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitFeedArticleHolder2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559150, viewGroup, z, obj);
+        return (SubmitFeedArticleHolder2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559158, viewGroup, z, obj);
     }
 
     public static SubmitFeedArticleHolder2Binding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class SubmitFeedArticleHolder2Binding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedArticleHolder2Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitFeedArticleHolder2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559150, null, false, obj);
+        return (SubmitFeedArticleHolder2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559158, null, false, obj);
     }
 
     public static SubmitFeedArticleHolder2Binding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class SubmitFeedArticleHolder2Binding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedArticleHolder2Binding bind(View view, Object obj) {
-        return (SubmitFeedArticleHolder2Binding) bind(obj, view, 2131559150);
+        return (SubmitFeedArticleHolder2Binding) bind(obj, view, 2131559158);
     }
 }

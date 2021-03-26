@@ -21,8 +21,8 @@ public class ItemVoteDetailSplitedTitleBindingImpl extends ItemVoteDetailSplited
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363117, 1);
-        sparseIntArray.put(2131363125, 2);
+        sparseIntArray.put(2131363131, 1);
+        sparseIntArray.put(2131363139, 2);
     }
 
     public ItemVoteDetailSplitedTitleBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -57,7 +57,7 @@ public class ItemVoteDetailSplitedTitleBindingImpl extends ItemVoteDetailSplited
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((User) obj);

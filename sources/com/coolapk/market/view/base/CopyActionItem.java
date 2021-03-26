@@ -29,6 +29,6 @@ public class CopyActionItem extends ActionItem {
         StringUtils.copyText(AppHolder.getCurrentActivity(), this.content);
         Application application = AppHolder.getApplication();
         Intrinsics.checkNotNullExpressionValue(application, "AppHolder.getApplication()");
-        Toast.show(application, 2131887190);
+        Toast.show(application, 2131887252);
     }
 }

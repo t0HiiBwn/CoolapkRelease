@@ -596,7 +596,7 @@ public final class FeedConvertUtilsKt {
                         case -1165870106:
                             if (feedType.equals("question")) {
                                 Intrinsics.checkNotNullExpressionValue(isRemoveExtraViewVisible, "builder");
-                                FeedArgsFactoryKt.applyQuestion(isRemoveExtraViewVisible).title("提问").submitText(context.getString(2131886370)).editTitleHint("请填下你的问题并以问号结尾").editTextHint("描述你的问题...").isLocationViewVisible(false).isEditTitleViewVisible(true).isAddExtraItemVisible(false);
+                                FeedArgsFactoryKt.applyQuestion(isRemoveExtraViewVisible).title("提问").submitText(context.getString(2131886430)).editTitleHint("请填下你的问题并以问号结尾").editTextHint("描述你的问题...").isLocationViewVisible(false).isEditTitleViewVisible(true).isAddExtraItemVisible(false);
                                 break;
                             }
                             break;

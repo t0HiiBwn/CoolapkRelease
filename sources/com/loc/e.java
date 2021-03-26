@@ -42,9 +42,7 @@ public final class e {
     en i = null;
     long j = 0;
     long k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    String f1371l = null;
+    String l = null;
     AMapLocationClientOption m = null;
     AMapLocationClientOption n = new AMapLocationClientOption();
     ServerSocket o = null;
@@ -85,11 +83,11 @@ public final class e {
                             if (!bundle.isEmpty()) {
                                 String string = bundle.getString("c");
                                 e eVar = e.this;
-                                if (TextUtils.isEmpty(eVar.f1371l)) {
-                                    eVar.f1371l = ej.b(eVar.e);
+                                if (TextUtils.isEmpty(eVar.l)) {
+                                    eVar.l = ej.b(eVar.e);
                                 }
                                 if (!TextUtils.isEmpty(string)) {
-                                    if (string.equals(eVar.f1371l)) {
+                                    if (string.equals(eVar.l)) {
                                         z = true;
                                         if (!z) {
                                             if (message.what == 1) {

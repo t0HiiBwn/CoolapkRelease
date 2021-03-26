@@ -192,7 +192,7 @@ public final class SecondhandFilterListFragment extends NewAsyncListFragment<Lis
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public DataViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558589, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558593, viewGroup, false);
             int index = SecondhandFilterListFragment.this.getIndex();
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             return new DataViewHolder(index, inflate, SecondhandFilterListFragment.access$getViewModel$p(SecondhandFilterListFragment.this), new SecondhandFilterListFragment$DataAdapter$onCreateViewHolder$1(this));
@@ -213,7 +213,7 @@ public final class SecondhandFilterListFragment extends NewAsyncListFragment<Lis
     /* compiled from: SecondhandFilterListFragment.kt */
     private static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558589;
+        public static final int LAYOUT_ID = 2131558593;
         private final ItemAppCategoryBinding binding;
         private final int dealType;
         private final SuperSearchViewModel viewModel;

@@ -44,7 +44,7 @@ public class FansContactPresenter extends ContactContract.FansPresenter {
                 if (result.isSuccess()) {
                     EventBus.getDefault().post(new ContactsEvent(true, str));
                 } else {
-                    Toast.show(AppHolder.getApplication(), 2131886677);
+                    Toast.show(AppHolder.getApplication(), 2131886739);
                 }
             }
         });
@@ -65,7 +65,7 @@ public class FansContactPresenter extends ContactContract.FansPresenter {
                 if (result.isSuccess()) {
                     EventBus.getDefault().post(new ContactsEvent(false, str));
                 } else {
-                    Toast.show(AppHolder.getApplication(), 2131886680);
+                    Toast.show(AppHolder.getApplication(), 2131886742);
                 }
             }
         });

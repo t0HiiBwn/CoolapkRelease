@@ -21,11 +21,11 @@ class FocusStrategy {
         return (i * 13 * i) + (i2 * i2);
     }
 
-    public static <L, T> T findNextFocusInRelativeDirection(L l2, CollectionAdapter<L, T> collectionAdapter, BoundsAdapter<T> boundsAdapter, T t, int i, boolean z, boolean z2) {
-        int size = collectionAdapter.size(l2);
+    public static <L, T> T findNextFocusInRelativeDirection(L l, CollectionAdapter<L, T> collectionAdapter, BoundsAdapter<T> boundsAdapter, T t, int i, boolean z, boolean z2) {
+        int size = collectionAdapter.size(l);
         ArrayList arrayList = new ArrayList(size);
         for (int i2 = 0; i2 < size; i2++) {
-            arrayList.add(collectionAdapter.get(l2, i2));
+            arrayList.add(collectionAdapter.get(l, i2));
         }
         Collections.sort(arrayList, new SequentialComparator(z, boundsAdapter));
         if (i == 1) {
@@ -129,7 +129,7 @@ class FocusStrategy {
         }
     }
 
-    public static <L, T> T findNextFocusInAbsoluteDirection(L l2, CollectionAdapter<L, T> collectionAdapter, BoundsAdapter<T> boundsAdapter, T t, Rect rect, int i) {
+    public static <L, T> T findNextFocusInAbsoluteDirection(L l, CollectionAdapter<L, T> collectionAdapter, BoundsAdapter<T> boundsAdapter, T t, Rect rect, int i) {
         Rect rect2 = new Rect(rect);
         if (i == 17) {
             rect2.offset(rect.width() + 1, 0);
@@ -143,10 +143,10 @@ class FocusStrategy {
             throw new IllegalArgumentException("direction must be one of {FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
         }
         T t2 = null;
-        int size = collectionAdapter.size(l2);
+        int size = collectionAdapter.size(l);
         Rect rect3 = new Rect();
         for (int i2 = 0; i2 < size; i2++) {
-            T t3 = collectionAdapter.get(l2, i2);
+            T t3 = collectionAdapter.get(l, i2);
             if (t3 != t) {
                 boundsAdapter.obtainBounds(t3, rect3);
                 if (isBetterCandidate(i, rect, rect3, rect2)) {

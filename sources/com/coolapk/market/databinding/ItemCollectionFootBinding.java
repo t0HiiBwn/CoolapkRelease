@@ -50,7 +50,7 @@ public abstract class ItemCollectionFootBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCollectionFootBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemCollectionFootBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558654, viewGroup, z, obj);
+        return (ItemCollectionFootBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558660, viewGroup, z, obj);
     }
 
     public static ItemCollectionFootBinding inflate(LayoutInflater layoutInflater) {
@@ -59,7 +59,7 @@ public abstract class ItemCollectionFootBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCollectionFootBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemCollectionFootBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558654, null, false, obj);
+        return (ItemCollectionFootBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558660, null, false, obj);
     }
 
     public static ItemCollectionFootBinding bind(View view) {
@@ -68,6 +68,6 @@ public abstract class ItemCollectionFootBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCollectionFootBinding bind(View view, Object obj) {
-        return (ItemCollectionFootBinding) bind(obj, view, 2131558654);
+        return (ItemCollectionFootBinding) bind(obj, view, 2131558660);
     }
 }

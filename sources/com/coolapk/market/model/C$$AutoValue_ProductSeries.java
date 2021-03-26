@@ -26,7 +26,7 @@ abstract class C$$AutoValue_ProductSeries extends ProductSeries {
     private final String title;
     private final String url;
 
-    C$$AutoValue_ProductSeries(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, int i2, int i3, int i4, List<Product> list) {
+    C$$AutoValue_ProductSeries(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, int i2, int i3, int i4, List<Product> list) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityTypeId = i;
@@ -40,8 +40,8 @@ abstract class C$$AutoValue_ProductSeries extends ProductSeries {
         this.subTitle = str9;
         this.id = str10;
         this.extraData = str11;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.brandId = i2;
         this.displayOrder = i3;
         this.productNum = i4;
@@ -179,8 +179,8 @@ abstract class C$$AutoValue_ProductSeries extends ProductSeries {
         String str7;
         String str8;
         String str9;
+        Long l;
         Long l2;
-        Long l3;
         if (obj == this) {
             return true;
         }
@@ -192,7 +192,7 @@ abstract class C$$AutoValue_ProductSeries extends ProductSeries {
         if (str10 != null ? str10.equals(productSeries.getEntityTypeName()) : productSeries.getEntityTypeName() == null) {
             String str11 = this.entityTemplate;
             if (str11 != null ? str11.equals(productSeries.getEntityTemplate()) : productSeries.getEntityTemplate() == null) {
-                if (this.entityTypeId == productSeries.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(productSeries.getEntityId()) : productSeries.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(productSeries.getEntityFixed()) : productSeries.getEntityFixed() == null) && ((str2 = this.title) != null ? str2.equals(productSeries.getTitle()) : productSeries.getTitle() == null) && ((str3 = this.url) != null ? str3.equals(productSeries.getUrl()) : productSeries.getUrl() == null) && ((str4 = this.description) != null ? str4.equals(productSeries.getDescription()) : productSeries.getDescription() == null) && ((str5 = this.pic) != null ? str5.equals(productSeries.getPic()) : productSeries.getPic() == null) && ((str6 = this.logo) != null ? str6.equals(productSeries.getLogo()) : productSeries.getLogo() == null) && ((str7 = this.subTitle) != null ? str7.equals(productSeries.getSubTitle()) : productSeries.getSubTitle() == null) && ((str8 = this.id) != null ? str8.equals(productSeries.getId()) : productSeries.getId() == null) && ((str9 = this.extraData) != null ? str9.equals(productSeries.getExtraData()) : productSeries.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(productSeries.getDateline()) : productSeries.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(productSeries.getLastUpdate()) : productSeries.getLastUpdate() == null) && this.brandId == productSeries.getBrandId() && this.displayOrder == productSeries.getDisplayOrder() && this.productNum == productSeries.getProductNum() && this.productRows.equals(productSeries.getProductRows())) {
+                if (this.entityTypeId == productSeries.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(productSeries.getEntityId()) : productSeries.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(productSeries.getEntityFixed()) : productSeries.getEntityFixed() == null) && ((str2 = this.title) != null ? str2.equals(productSeries.getTitle()) : productSeries.getTitle() == null) && ((str3 = this.url) != null ? str3.equals(productSeries.getUrl()) : productSeries.getUrl() == null) && ((str4 = this.description) != null ? str4.equals(productSeries.getDescription()) : productSeries.getDescription() == null) && ((str5 = this.pic) != null ? str5.equals(productSeries.getPic()) : productSeries.getPic() == null) && ((str6 = this.logo) != null ? str6.equals(productSeries.getLogo()) : productSeries.getLogo() == null) && ((str7 = this.subTitle) != null ? str7.equals(productSeries.getSubTitle()) : productSeries.getSubTitle() == null) && ((str8 = this.id) != null ? str8.equals(productSeries.getId()) : productSeries.getId() == null) && ((str9 = this.extraData) != null ? str9.equals(productSeries.getExtraData()) : productSeries.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(productSeries.getDateline()) : productSeries.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(productSeries.getLastUpdate()) : productSeries.getLastUpdate() == null) && this.brandId == productSeries.getBrandId() && this.displayOrder == productSeries.getDisplayOrder() && this.productNum == productSeries.getProductNum() && this.productRows.equals(productSeries.getProductRows())) {
                     return true;
                 }
             }
@@ -227,11 +227,11 @@ abstract class C$$AutoValue_ProductSeries extends ProductSeries {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        if (l3 != null) {
-            i = l3.hashCode();
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        if (l2 != null) {
+            i = l2.hashCode();
         }
         return ((((((((hashCode13 ^ i) * 1000003) ^ this.brandId) * 1000003) ^ this.displayOrder) * 1000003) ^ this.productNum) * 1000003) ^ this.productRows.hashCode();
     }

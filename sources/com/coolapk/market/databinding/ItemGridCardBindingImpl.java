@@ -21,7 +21,7 @@ public class ItemGridCardBindingImpl extends ItemGridCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362634, 1);
+        sparseIntArray.put(2131362642, 1);
     }
 
     public ItemGridCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -58,7 +58,7 @@ public class ItemGridCardBindingImpl extends ItemGridCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (278 != i) {
+        if (279 != i) {
             return false;
         }
         setTitle((String) obj);

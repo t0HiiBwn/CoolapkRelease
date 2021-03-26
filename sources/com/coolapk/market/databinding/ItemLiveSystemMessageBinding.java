@@ -24,7 +24,7 @@ public abstract class ItemLiveSystemMessageBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveSystemMessageBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemLiveSystemMessageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558809, viewGroup, z, obj);
+        return (ItemLiveSystemMessageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558816, viewGroup, z, obj);
     }
 
     public static ItemLiveSystemMessageBinding inflate(LayoutInflater layoutInflater) {
@@ -33,7 +33,7 @@ public abstract class ItemLiveSystemMessageBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveSystemMessageBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemLiveSystemMessageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558809, null, false, obj);
+        return (ItemLiveSystemMessageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558816, null, false, obj);
     }
 
     public static ItemLiveSystemMessageBinding bind(View view) {
@@ -42,6 +42,6 @@ public abstract class ItemLiveSystemMessageBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveSystemMessageBinding bind(View view, Object obj) {
-        return (ItemLiveSystemMessageBinding) bind(obj, view, 2131558809);
+        return (ItemLiveSystemMessageBinding) bind(obj, view, 2131558816);
     }
 }

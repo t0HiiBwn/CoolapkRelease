@@ -65,7 +65,12 @@ public final class CacheDoubleUtils implements CacheConstants {
         if (bArr2 != null) {
             return bArr2;
         }
-        return this.mCacheDiskUtils.getBytes(str, bArr);
+        byte[] bytes = this.mCacheDiskUtils.getBytes(str);
+        if (bytes == null) {
+            return bArr;
+        }
+        this.mCacheMemoryUtils.put(str, bytes);
+        return bytes;
     }
 
     public void put(String str, String str2) {
@@ -90,7 +95,12 @@ public final class CacheDoubleUtils implements CacheConstants {
         if (str3 != null) {
             return str3;
         }
-        return this.mCacheDiskUtils.getString(str, str2);
+        String string = this.mCacheDiskUtils.getString(str);
+        if (string == null) {
+            return str2;
+        }
+        this.mCacheMemoryUtils.put(str, string);
+        return string;
     }
 
     public void put(String str, JSONObject jSONObject) {
@@ -115,7 +125,12 @@ public final class CacheDoubleUtils implements CacheConstants {
         if (jSONObject2 != null) {
             return jSONObject2;
         }
-        return this.mCacheDiskUtils.getJSONObject(str, jSONObject);
+        JSONObject jSONObject3 = this.mCacheDiskUtils.getJSONObject(str);
+        if (jSONObject3 == null) {
+            return jSONObject;
+        }
+        this.mCacheMemoryUtils.put(str, jSONObject3);
+        return jSONObject3;
     }
 
     public void put(String str, JSONArray jSONArray) {
@@ -140,7 +155,12 @@ public final class CacheDoubleUtils implements CacheConstants {
         if (jSONArray2 != null) {
             return jSONArray2;
         }
-        return this.mCacheDiskUtils.getJSONArray(str, jSONArray);
+        JSONArray jSONArray3 = this.mCacheDiskUtils.getJSONArray(str);
+        if (jSONArray3 == null) {
+            return jSONArray;
+        }
+        this.mCacheMemoryUtils.put(str, jSONArray3);
+        return jSONArray3;
     }
 
     public void put(String str, Bitmap bitmap) {
@@ -165,7 +185,12 @@ public final class CacheDoubleUtils implements CacheConstants {
         if (bitmap2 != null) {
             return bitmap2;
         }
-        return this.mCacheDiskUtils.getBitmap(str, bitmap);
+        Bitmap bitmap3 = this.mCacheDiskUtils.getBitmap(str);
+        if (bitmap3 == null) {
+            return bitmap;
+        }
+        this.mCacheMemoryUtils.put(str, bitmap3);
+        return bitmap3;
     }
 
     public void put(String str, Drawable drawable) {
@@ -190,7 +215,12 @@ public final class CacheDoubleUtils implements CacheConstants {
         if (drawable2 != null) {
             return drawable2;
         }
-        return this.mCacheDiskUtils.getDrawable(str, drawable);
+        Drawable drawable3 = this.mCacheDiskUtils.getDrawable(str);
+        if (drawable3 == null) {
+            return drawable;
+        }
+        this.mCacheMemoryUtils.put(str, drawable3);
+        return drawable3;
     }
 
     public void put(String str, Parcelable parcelable) {
@@ -214,7 +244,15 @@ public final class CacheDoubleUtils implements CacheConstants {
         Objects.requireNonNull(str, "Argument 'key' of type String (#0 out of 3, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         Objects.requireNonNull(creator, "Argument 'creator' of type Parcelable.Creator<T> (#1 out of 3, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         T t2 = (T) this.mCacheMemoryUtils.get(str);
-        return t2 != null ? t2 : (T) this.mCacheDiskUtils.getParcelable(str, creator, t);
+        if (t2 != null) {
+            return t2;
+        }
+        T t3 = (T) this.mCacheDiskUtils.getParcelable(str, creator);
+        if (t3 == null) {
+            return t;
+        }
+        this.mCacheMemoryUtils.put(str, t3);
+        return t3;
     }
 
     public void put(String str, Serializable serializable) {
@@ -239,7 +277,12 @@ public final class CacheDoubleUtils implements CacheConstants {
         if (obj2 != null) {
             return obj2;
         }
-        return this.mCacheDiskUtils.getSerializable(str, obj);
+        Object serializable = this.mCacheDiskUtils.getSerializable(str);
+        if (serializable == null) {
+            return obj;
+        }
+        this.mCacheMemoryUtils.put(str, serializable);
+        return serializable;
     }
 
     public long getCacheDiskSize() {

@@ -26,7 +26,7 @@ public class ItemAppViewBaseInfoGiftBindingImpl extends ItemAppViewBaseInfoGiftB
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362618, 10);
+        sparseIntArray.put(2131362626, 10);
     }
 
     public ItemAppViewBaseInfoGiftBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -82,7 +82,7 @@ public class ItemAppViewBaseInfoGiftBindingImpl extends ItemAppViewBaseInfoGiftB
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppViewViewModel) obj);
@@ -96,7 +96,7 @@ public class ItemAppViewBaseInfoGiftBindingImpl extends ItemAppViewBaseInfoGiftB
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -124,7 +124,7 @@ public class ItemAppViewBaseInfoGiftBindingImpl extends ItemAppViewBaseInfoGiftB
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i == 236) {
+        } else if (i == 237) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
@@ -183,7 +183,7 @@ public class ItemAppViewBaseInfoGiftBindingImpl extends ItemAppViewBaseInfoGiftB
                 if ((j & 37) != 0) {
                     j = z ? j | 32768 : j | 16384;
                 }
-                str2 = z4 ? this.fetchGiftView.getResources().getString(2131886593) : this.fetchGiftView.getResources().getString(2131886821);
+                str2 = z4 ? this.fetchGiftView.getResources().getString(2131886655) : this.fetchGiftView.getResources().getString(2131886883);
             } else {
                 gift2 = null;
                 str2 = null;
@@ -204,7 +204,7 @@ public class ItemAppViewBaseInfoGiftBindingImpl extends ItemAppViewBaseInfoGiftB
                 if ((j & 41) != 0) {
                     j = i4 != 0 ? j | 512 | 8192 : j | 256 | 4096;
                 }
-                str = z3 ? this.fetchGiftView2.getResources().getString(2131886593) : this.fetchGiftView2.getResources().getString(2131886821);
+                str = z3 ? this.fetchGiftView2.getResources().getString(2131886655) : this.fetchGiftView2.getResources().getString(2131886883);
                 i2 = i4 != 0 ? 0 : 8;
                 j2 = 35;
             } else {

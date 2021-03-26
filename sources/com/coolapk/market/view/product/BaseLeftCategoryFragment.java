@@ -49,7 +49,7 @@ public abstract class BaseLeftCategoryFragment extends BaseFragment {
     private static final String EXTRA_INIT_INDEX = "EXTRA_INIT_INDEX";
     private static final String KEY_SELECT_INDEX = "EXTRA_SELECT_INDEX";
     private static final String KEY_VERTICAL_MODE = "PRODUCT_VERTICAL_MODE";
-    private static final int LEFT_LAYOUT_ID = 2131558861;
+    private static final int LEFT_LAYOUT_ID = 2131558868;
     protected MultiTypeAdapter adapter;
     protected ProductBrandListBinding binding;
     private final ArrayList<Entity> dataList = new ArrayList<>();
@@ -154,7 +154,7 @@ public abstract class BaseLeftCategoryFragment extends BaseFragment {
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559107, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559114, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…d_list, container, false)");
         ProductBrandListBinding productBrandListBinding = (ProductBrandListBinding) inflate;
         this.binding = productBrandListBinding;
@@ -208,7 +208,7 @@ public abstract class BaseLeftCategoryFragment extends BaseFragment {
         if (multiTypeAdapter2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(multiTypeAdapter2, SimpleViewHolderFactor.Companion.withLayoutId(2131558861).constructor(new BaseLeftCategoryFragment$onActivityCreated$2(this)).suitedEntityType("productBrand").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(multiTypeAdapter2, SimpleViewHolderFactor.Companion.withLayoutId(2131558868).constructor(new BaseLeftCategoryFragment$onActivityCreated$2(this)).suitedEntityType("productBrand").build(), 0, 2, null);
         if (bundle == null) {
             int i = requireArguments().getInt("EXTRA_INIT_INDEX", -1);
             if (i >= 0 && i < this.dataList.size()) {
@@ -230,7 +230,7 @@ public abstract class BaseLeftCategoryFragment extends BaseFragment {
         int indexOf = this.dataList.indexOf(entity);
         this.selectedIndex = indexOf;
         if (i != indexOf) {
-            Fragment findFragmentById = getChildFragmentManager().findFragmentById(2131362594);
+            Fragment findFragmentById = getChildFragmentManager().findFragmentById(2131362602);
             String str = "";
             if (!(findFragmentById == null || (entity2 = (Entity) CollectionsKt.getOrNull(this.dataList, i)) == null || (saveFragmentInstanceState = getChildFragmentManager().saveFragmentInstanceState(findFragmentById)) == null)) {
                 HashMap<String, Fragment.SavedState> hashMap = this.savedStateMaps;
@@ -270,7 +270,7 @@ public abstract class BaseLeftCategoryFragment extends BaseFragment {
             if (findFragmentById != null) {
                 beginTransaction.remove(findFragmentById);
             }
-            beginTransaction.add(2131362594, onCreateFragment).commitAllowingStateLoss();
+            beginTransaction.add(2131362602, onCreateFragment).commitAllowingStateLoss();
             getChildFragmentManager().executePendingTransactions();
             if (onCreateFragment instanceof ISupportDisplayVerticalModeFragment) {
                 ISupportDisplayVerticalModeFragment.DefaultImpls.setDisplayInVerticalMode$default((ISupportDisplayVerticalModeFragment) onCreateFragment, isDisplayInVerticalMode(), false, 2, null);
@@ -284,7 +284,7 @@ public abstract class BaseLeftCategoryFragment extends BaseFragment {
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isSupportDisplayInVerticalMode()) {
-            MenuItem add = menu.add(0, 2131361860, 101, "切换");
+            MenuItem add = menu.add(0, 2131361861, 101, "切换");
             if (isDisplayInVerticalMode()) {
                 add.setIcon(2131689480);
             } else {
@@ -297,7 +297,7 @@ public abstract class BaseLeftCategoryFragment extends BaseFragment {
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361860) {
+        if (menuItem.getItemId() != 2131361861) {
             return super.onOptionsItemSelected(menuItem);
         }
         setDisplayInVerticalMode(!isDisplayInVerticalMode());
@@ -309,7 +309,7 @@ public abstract class BaseLeftCategoryFragment extends BaseFragment {
         } else {
             menuItem.setIcon(2131689484);
         }
-        Fragment findFragmentById = getChildFragmentManager().findFragmentById(2131362594);
+        Fragment findFragmentById = getChildFragmentManager().findFragmentById(2131362602);
         if (findFragmentById instanceof ISupportDisplayVerticalModeFragment) {
             ISupportDisplayVerticalModeFragment.DefaultImpls.setDisplayInVerticalMode$default((ISupportDisplayVerticalModeFragment) findFragmentById, isDisplayInVerticalMode(), false, 2, null);
         }

@@ -15,9 +15,7 @@ public class a {
     private static long i;
     private static long j;
     private static long k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static long f1193l;
+    private static long l;
     private static long m;
     private static long n;
     private static long o;
@@ -29,15 +27,15 @@ public class a {
     private static int u;
 
     /* renamed from: u  reason: collision with other field name */
-    private static long f56u;
+    private static long f55u;
     private static int v;
 
     /* renamed from: v  reason: collision with other field name */
-    private static long f57v;
+    private static long f56v;
     private static int w;
 
     /* renamed from: w  reason: collision with other field name */
-    private static long f58w;
+    private static long f57w;
     private static long x;
     private static long y;
 
@@ -47,11 +45,11 @@ public class a {
                 if ("65501".equalsIgnoreCase(str)) {
                     y++;
                 } else if ("65133".equalsIgnoreCase(str)) {
-                    f58w++;
+                    f57w++;
                 } else if ("65502".equalsIgnoreCase(str)) {
                     x++;
                 } else if ("65503".equalsIgnoreCase(str)) {
-                    f57v++;
+                    f56v++;
                 }
                 e++;
             }
@@ -156,7 +154,7 @@ public class a {
 
     public static synchronized void B() {
         synchronized (a.class) {
-            f56u++;
+            f55u++;
         }
     }
 
@@ -172,7 +170,7 @@ public class a {
         } else if ("3G".equalsIgnoreCase(w2)) {
             k++;
         } else if ("4G".equalsIgnoreCase(w2)) {
-            f1193l++;
+            l++;
         } else if ("2G".equalsIgnoreCase(w2)) {
             j++;
         } else {

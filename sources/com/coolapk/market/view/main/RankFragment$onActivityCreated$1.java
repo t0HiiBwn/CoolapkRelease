@@ -36,13 +36,13 @@ final class RankFragment$onActivityCreated$1 extends Lambda implements Function1
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
                 switch (view.getId()) {
-                    case 2131362246:
+                    case 2131362251:
                         this.this$0.this$0.apkType = "0";
                         break;
-                    case 2131362247:
+                    case 2131362252:
                         this.this$0.this$0.apkType = "1";
                         break;
-                    case 2131362248:
+                    case 2131362253:
                         this.this$0.this$0.apkType = "2";
                         break;
                 }

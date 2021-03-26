@@ -24,7 +24,7 @@ public abstract class DialogItemTextViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogItemTextViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogItemTextViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558527, viewGroup, z, obj);
+        return (DialogItemTextViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558529, viewGroup, z, obj);
     }
 
     public static DialogItemTextViewBinding inflate(LayoutInflater layoutInflater) {
@@ -33,7 +33,7 @@ public abstract class DialogItemTextViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogItemTextViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogItemTextViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558527, null, false, obj);
+        return (DialogItemTextViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558529, null, false, obj);
     }
 
     public static DialogItemTextViewBinding bind(View view) {
@@ -42,6 +42,6 @@ public abstract class DialogItemTextViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogItemTextViewBinding bind(View view, Object obj) {
-        return (DialogItemTextViewBinding) bind(obj, view, 2131558527);
+        return (DialogItemTextViewBinding) bind(obj, view, 2131558529);
     }
 }

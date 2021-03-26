@@ -27,7 +27,7 @@ public class ItemTabGroupCardItemBindingImpl extends ItemTabGroupCardItemBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362734, 4);
+        sparseIntArray.put(2131362745, 4);
     }
 
     public ItemTabGroupCardItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -65,7 +65,7 @@ public class ItemTabGroupCardItemBindingImpl extends ItemTabGroupCardItemBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (242 != i) {
+        if (243 != i) {
             return false;
         }
         setServiceApp((ServiceApp) obj);
@@ -78,7 +78,7 @@ public class ItemTabGroupCardItemBindingImpl extends ItemTabGroupCardItemBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(242);
+        notifyPropertyChanged(243);
         super.requestRebind();
     }
 
@@ -106,7 +106,7 @@ public class ItemTabGroupCardItemBindingImpl extends ItemTabGroupCardItemBinding
         if (i != 0) {
             ActionButtonBindingAdapters.setActionText(this.actionButton, serviceApp, true);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }
     }

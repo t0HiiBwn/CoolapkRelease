@@ -24,8 +24,8 @@ public class ItemImageScrollCardBindingImpl extends ItemImageScrollCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362970, 2);
-        sparseIntArray.put(2131363221, 3);
+        sparseIntArray.put(2131362982, 2);
+        sparseIntArray.put(2131363235, 3);
     }
 
     public ItemImageScrollCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -65,7 +65,7 @@ public class ItemImageScrollCardBindingImpl extends ItemImageScrollCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (278 != i) {
+        if (279 != i) {
             return false;
         }
         setTitle((String) obj);
@@ -78,7 +78,7 @@ public class ItemImageScrollCardBindingImpl extends ItemImageScrollCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(278);
+        notifyPropertyChanged(279);
         super.requestRebind();
     }
 

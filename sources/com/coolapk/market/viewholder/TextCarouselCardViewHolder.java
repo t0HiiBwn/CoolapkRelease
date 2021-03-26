@@ -31,7 +31,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: TextCarouselCardViewHolder.kt */
 public final class TextCarouselCardViewHolder extends BindingViewHolder implements IAnimationBehavior {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558948;
+    public static final int LAYOUT_ID = 2131558955;
     private final ItemTextCarouselCardBinding binding;
     private int displayedChild;
     private boolean shouldAnim;
@@ -189,7 +189,7 @@ public final class TextCarouselCardViewHolder extends BindingViewHolder implemen
 
         public View generateMarqueeItemView(Entity entity) {
             Intrinsics.checkNotNullParameter(entity, "data");
-            View inflate = this.inflater.inflate(2131558950, (ViewGroup) null, false);
+            View inflate = this.inflater.inflate(2131558957, (ViewGroup) null, false);
             ViewDataBinding bind = DataBindingUtil.bind(inflate, this.component);
             Intrinsics.checkNotNull(bind);
             Intrinsics.checkNotNullExpressionValue(bind, "DataBindingUtil.bind<Ite…g>(viewItem, component)!!");

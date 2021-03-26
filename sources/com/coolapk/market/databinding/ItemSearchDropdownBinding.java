@@ -33,7 +33,7 @@ public abstract class ItemSearchDropdownBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchDropdownBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSearchDropdownBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558907, viewGroup, z, obj);
+        return (ItemSearchDropdownBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558914, viewGroup, z, obj);
     }
 
     public static ItemSearchDropdownBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class ItemSearchDropdownBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchDropdownBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSearchDropdownBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558907, null, false, obj);
+        return (ItemSearchDropdownBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558914, null, false, obj);
     }
 
     public static ItemSearchDropdownBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class ItemSearchDropdownBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchDropdownBinding bind(View view, Object obj) {
-        return (ItemSearchDropdownBinding) bind(obj, view, 2131558907);
+        return (ItemSearchDropdownBinding) bind(obj, view, 2131558914);
     }
 }

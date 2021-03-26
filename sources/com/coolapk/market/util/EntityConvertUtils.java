@@ -87,7 +87,7 @@ public class EntityConvertUtils {
 
     public static Result<Entity> convertEntity(Gson gson, String str) {
         Entity entity;
-        JsonObject asJsonObject = new JsonParser().parse(str).getAsJsonObject();
+        JsonObject asJsonObject = JsonParser.parseString(str).getAsJsonObject();
         JsonElement jsonElement = asJsonObject.get("data");
         if (jsonElement != null) {
             JsonObject asJsonObject2 = jsonElement.getAsJsonObject();
@@ -99,7 +99,7 @@ public class EntityConvertUtils {
     }
 
     public static Result<List<Entity>> convertEntityList(Gson gson, String str) {
-        JsonObject asJsonObject = new JsonParser().parse(str).getAsJsonObject();
+        JsonObject asJsonObject = JsonParser.parseString(str).getAsJsonObject();
         JsonElement jsonElement = asJsonObject.get("data");
         Object handleType = jsonElement != null ? handleType(gson, jsonElement.getAsJsonArray()) : null;
         if (handleType == null) {
@@ -109,7 +109,7 @@ public class EntityConvertUtils {
     }
 
     public static Result<UserProfile> convertUserProfile(Gson gson, String str) {
-        JsonObject asJsonObject = new JsonParser().parse(str).getAsJsonObject();
+        JsonObject asJsonObject = JsonParser.parseString(str).getAsJsonObject();
         JsonElement jsonElement = asJsonObject.get("data");
         UserProfile userProfile = null;
         List<Entity> list = null;

@@ -33,7 +33,7 @@ public abstract class ToolbarLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static ToolbarLayoutBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ToolbarLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559199, viewGroup, z, obj);
+        return (ToolbarLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559207, viewGroup, z, obj);
     }
 
     public static ToolbarLayoutBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class ToolbarLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static ToolbarLayoutBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ToolbarLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559199, null, false, obj);
+        return (ToolbarLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559207, null, false, obj);
     }
 
     public static ToolbarLayoutBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class ToolbarLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static ToolbarLayoutBinding bind(View view, Object obj) {
-        return (ToolbarLayoutBinding) bind(obj, view, 2131559199);
+        return (ToolbarLayoutBinding) bind(obj, view, 2131559207);
     }
 }

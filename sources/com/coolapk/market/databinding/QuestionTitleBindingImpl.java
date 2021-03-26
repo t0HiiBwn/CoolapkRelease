@@ -25,11 +25,11 @@ public class QuestionTitleBindingImpl extends QuestionTitleBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363593, 3);
-        sparseIntArray.put(2131363230, 4);
-        sparseIntArray.put(2131362441, 5);
-        sparseIntArray.put(2131363955, 6);
-        sparseIntArray.put(2131363221, 7);
+        sparseIntArray.put(2131363615, 3);
+        sparseIntArray.put(2131363244, 4);
+        sparseIntArray.put(2131362448, 5);
+        sparseIntArray.put(2131363981, 6);
+        sparseIntArray.put(2131363235, 7);
     }
 
     public QuestionTitleBindingImpl(DataBindingComponent dataBindingComponent, View view) {

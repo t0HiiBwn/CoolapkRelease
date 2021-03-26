@@ -34,7 +34,7 @@ public class c {
                 hashMap.put("meta", SdkMeta.getSDKMetaData());
                 com.alibaba.mtl.appmonitor.c.d dVar = (com.alibaba.mtl.appmonitor.c.d) a.a().a(com.alibaba.mtl.appmonitor.c.d.class, new Object[0]);
                 for (d dVar2 : value) {
-                    dVar.put(dVar2.mo13a());
+                    dVar.put(dVar2.mo3a());
                     if (i == 0) {
                         sb.append(dVar2.o);
                         sb2.append(dVar2.p);
@@ -48,7 +48,7 @@ public class c {
                     a.a().a((a) dVar2);
                 }
                 hashMap.put("data", dVar);
-                hVar.m.put(a.m16a(), new JSONObject(hashMap).toString());
+                hVar.m.put(a.m6a(), new JSONObject(hashMap).toString());
                 String sb3 = sb.toString();
                 String sb4 = sb2.toString();
                 hVar.m.put(LogField.ARG1.toString(), sb3);
@@ -75,10 +75,10 @@ public class c {
             hashMap.put("meta", SdkMeta.getSDKMetaData());
             hashMap.put("_event_id", eventId);
             com.alibaba.mtl.appmonitor.c.d dVar2 = (com.alibaba.mtl.appmonitor.c.d) a.a().a(com.alibaba.mtl.appmonitor.c.d.class, new Object[0]);
-            dVar2.put(dVar.mo13a());
+            dVar2.put(dVar.mo3a());
             a.a().a((a) dVar);
             hashMap.put("data", dVar2);
-            hVar.m.put(a.m16a(), new JSONObject(hashMap).toString());
+            hVar.m.put(a.m6a(), new JSONObject(hashMap).toString());
             hVar.m.put(LogField.EVENTID.toString(), String.valueOf(6699));
             b(hVar);
             a.a().a((a) dVar2);

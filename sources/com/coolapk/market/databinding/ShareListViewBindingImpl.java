@@ -28,7 +28,7 @@ public class ShareListViewBindingImpl extends ShareListViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363221, 2);
+        sparseIntArray.put(2131363235, 2);
     }
 
     public ShareListViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -18,7 +18,16 @@ public class FileAlterationObserver implements Serializable {
     private final List<FileAlterationListener> listeners;
     private final FileEntry rootEntry;
 
-    public void destroy() throws Exception {
+    public FileAlterationObserver(File file) {
+        this(file, (FileFilter) null);
+    }
+
+    public FileAlterationObserver(File file, FileFilter fileFilter2) {
+        this(file, fileFilter2, (IOCase) null);
+    }
+
+    public FileAlterationObserver(File file, FileFilter fileFilter2, IOCase iOCase) {
+        this(new FileEntry(file), fileFilter2, iOCase);
     }
 
     public FileAlterationObserver(String str) {
@@ -31,18 +40,6 @@ public class FileAlterationObserver implements Serializable {
 
     public FileAlterationObserver(String str, FileFilter fileFilter2, IOCase iOCase) {
         this(new File(str), fileFilter2, iOCase);
-    }
-
-    public FileAlterationObserver(File file) {
-        this(file, (FileFilter) null);
-    }
-
-    public FileAlterationObserver(File file, FileFilter fileFilter2) {
-        this(file, fileFilter2, (IOCase) null);
-    }
-
-    public FileAlterationObserver(File file, FileFilter fileFilter2, IOCase iOCase) {
-        this(new FileEntry(file), fileFilter2, iOCase);
     }
 
     protected FileAlterationObserver(FileEntry fileEntry, FileFilter fileFilter2, IOCase iOCase) {
@@ -61,54 +58,6 @@ public class FileAlterationObserver implements Serializable {
             }
         } else {
             throw new IllegalArgumentException("Root directory is missing");
-        }
-    }
-
-    public File getDirectory() {
-        return this.rootEntry.getFile();
-    }
-
-    public FileFilter getFileFilter() {
-        return this.fileFilter;
-    }
-
-    public void addListener(FileAlterationListener fileAlterationListener) {
-        if (fileAlterationListener != null) {
-            this.listeners.add(fileAlterationListener);
-        }
-    }
-
-    public void removeListener(FileAlterationListener fileAlterationListener) {
-        if (fileAlterationListener != null) {
-            do {
-            } while (this.listeners.remove(fileAlterationListener));
-        }
-    }
-
-    public Iterable<FileAlterationListener> getListeners() {
-        return this.listeners;
-    }
-
-    public void initialize() throws Exception {
-        FileEntry fileEntry = this.rootEntry;
-        fileEntry.refresh(fileEntry.getFile());
-        this.rootEntry.setChildren(doListFiles(this.rootEntry.getFile(), this.rootEntry));
-    }
-
-    public void checkAndNotify() {
-        for (FileAlterationListener fileAlterationListener : this.listeners) {
-            fileAlterationListener.onStart(this);
-        }
-        File file = this.rootEntry.getFile();
-        if (file.exists()) {
-            FileEntry fileEntry = this.rootEntry;
-            checkAndNotify(fileEntry, fileEntry.getChildren(), listFiles(file));
-        } else if (this.rootEntry.isExists()) {
-            FileEntry fileEntry2 = this.rootEntry;
-            checkAndNotify(fileEntry2, fileEntry2.getChildren(), FileUtils.EMPTY_FILE_ARRAY);
-        }
-        for (FileAlterationListener fileAlterationListener2 : this.listeners) {
-            fileAlterationListener2.onStop(this);
         }
     }
 
@@ -148,15 +97,6 @@ public class FileAlterationObserver implements Serializable {
         return newChildInstance;
     }
 
-    private FileEntry[] doListFiles(File file, FileEntry fileEntry) {
-        File[] listFiles = listFiles(file);
-        FileEntry[] fileEntryArr = listFiles.length > 0 ? new FileEntry[listFiles.length] : FileEntry.EMPTY_ENTRIES;
-        for (int i = 0; i < listFiles.length; i++) {
-            fileEntryArr[i] = createFileEntry(fileEntry, listFiles[i]);
-        }
-        return fileEntryArr;
-    }
-
     private void doCreate(FileEntry fileEntry) {
         for (FileAlterationListener fileAlterationListener : this.listeners) {
             if (fileEntry.isDirectory()) {
@@ -170,6 +110,25 @@ public class FileAlterationObserver implements Serializable {
         }
     }
 
+    private void doDelete(FileEntry fileEntry) {
+        for (FileAlterationListener fileAlterationListener : this.listeners) {
+            if (fileEntry.isDirectory()) {
+                fileAlterationListener.onDirectoryDelete(fileEntry.getFile());
+            } else {
+                fileAlterationListener.onFileDelete(fileEntry.getFile());
+            }
+        }
+    }
+
+    private FileEntry[] doListFiles(File file, FileEntry fileEntry) {
+        File[] listFiles = listFiles(file);
+        FileEntry[] fileEntryArr = listFiles.length > 0 ? new FileEntry[listFiles.length] : FileEntry.EMPTY_ENTRIES;
+        for (int i = 0; i < listFiles.length; i++) {
+            fileEntryArr[i] = createFileEntry(fileEntry, listFiles[i]);
+        }
+        return fileEntryArr;
+    }
+
     private void doMatch(FileEntry fileEntry, File file) {
         if (fileEntry.refresh(file)) {
             for (FileAlterationListener fileAlterationListener : this.listeners) {
@@ -178,16 +137,6 @@ public class FileAlterationObserver implements Serializable {
                 } else {
                     fileAlterationListener.onFileChange(file);
                 }
-            }
-        }
-    }
-
-    private void doDelete(FileEntry fileEntry) {
-        for (FileAlterationListener fileAlterationListener : this.listeners) {
-            if (fileEntry.isDirectory()) {
-                fileAlterationListener.onDirectoryDelete(fileEntry.getFile());
-            } else {
-                fileAlterationListener.onFileDelete(fileEntry.getFile());
             }
         }
     }
@@ -208,6 +157,57 @@ public class FileAlterationObserver implements Serializable {
             Arrays.sort(fileArr, comparator2);
         }
         return fileArr;
+    }
+
+    public void addListener(FileAlterationListener fileAlterationListener) {
+        if (fileAlterationListener != null) {
+            this.listeners.add(fileAlterationListener);
+        }
+    }
+
+    public void checkAndNotify() {
+        for (FileAlterationListener fileAlterationListener : this.listeners) {
+            fileAlterationListener.onStart(this);
+        }
+        File file = this.rootEntry.getFile();
+        if (file.exists()) {
+            FileEntry fileEntry = this.rootEntry;
+            checkAndNotify(fileEntry, fileEntry.getChildren(), listFiles(file));
+        } else if (this.rootEntry.isExists()) {
+            FileEntry fileEntry2 = this.rootEntry;
+            checkAndNotify(fileEntry2, fileEntry2.getChildren(), FileUtils.EMPTY_FILE_ARRAY);
+        }
+        for (FileAlterationListener fileAlterationListener2 : this.listeners) {
+            fileAlterationListener2.onStop(this);
+        }
+    }
+
+    public void destroy() throws Exception {
+    }
+
+    public File getDirectory() {
+        return this.rootEntry.getFile();
+    }
+
+    public FileFilter getFileFilter() {
+        return this.fileFilter;
+    }
+
+    public Iterable<FileAlterationListener> getListeners() {
+        return this.listeners;
+    }
+
+    public void initialize() throws Exception {
+        FileEntry fileEntry = this.rootEntry;
+        fileEntry.refresh(fileEntry.getFile());
+        this.rootEntry.setChildren(doListFiles(this.rootEntry.getFile(), this.rootEntry));
+    }
+
+    public void removeListener(FileAlterationListener fileAlterationListener) {
+        if (fileAlterationListener != null) {
+            do {
+            } while (this.listeners.remove(fileAlterationListener));
+        }
     }
 
     @Override // java.lang.Object

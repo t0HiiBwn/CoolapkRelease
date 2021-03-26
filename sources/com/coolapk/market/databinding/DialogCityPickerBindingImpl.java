@@ -26,8 +26,8 @@ public class DialogCityPickerBindingImpl extends DialogCityPickerBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363151, 1);
-        sparseIntArray.put(2131362242, 2);
+        sparseIntArray.put(2131363165, 1);
+        sparseIntArray.put(2131362247, 2);
     }
 
     public DialogCityPickerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

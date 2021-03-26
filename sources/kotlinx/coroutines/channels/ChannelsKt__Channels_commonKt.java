@@ -8,11 +8,11 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
+import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.CancellationException;
 import kotlin.Pair;
 import kotlin.ResultKt;
-import kotlin.TypeCastException;
 import kotlin.Unit;
 import kotlin.collections.IndexedValue;
 import kotlin.coroutines.Continuation;
@@ -47,18 +47,14 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
     }
 
     public static final <E> Object receiveOrNull(ReceiveChannel<? extends E> receiveChannel, Continuation<? super E> continuation) {
-        if (receiveChannel != null) {
-            return receiveChannel.receiveOrNull(continuation);
-        }
-        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.channels.ReceiveChannel<E?>");
+        Objects.requireNonNull(receiveChannel, "null cannot be cast to non-null type kotlinx.coroutines.channels.ReceiveChannel<E?>");
+        return receiveChannel.receiveOrNull(continuation);
     }
 
-    /* JADX DEBUG: Type inference failed for r1v2. Raw type applied. Possible types: kotlinx.coroutines.selects.SelectClause1<? extends E>, kotlinx.coroutines.selects.SelectClause1<E> */
+    /* JADX DEBUG: Type inference failed for r1v1. Raw type applied. Possible types: kotlinx.coroutines.selects.SelectClause1<? extends E>, kotlinx.coroutines.selects.SelectClause1<E> */
     public static final <E> SelectClause1<E> onReceiveOrNull(ReceiveChannel<? extends E> receiveChannel) {
-        if (receiveChannel != null) {
-            return (SelectClause1<? extends E>) receiveChannel.getOnReceiveOrNull();
-        }
-        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.channels.ReceiveChannel<E?>");
+        Objects.requireNonNull(receiveChannel, "null cannot be cast to non-null type kotlinx.coroutines.channels.ReceiveChannel<E?>");
+        return (SelectClause1<? extends E>) receiveChannel.getOnReceiveOrNull();
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:15:0x0053  */
@@ -4092,10 +4088,8 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
 
     public static final <E> ReceiveChannel<E> filterNotNull(ReceiveChannel<? extends E> receiveChannel) {
         ReceiveChannel<E> receiveChannel2 = filter$default(receiveChannel, null, new ChannelsKt__Channels_commonKt$filterNotNull$1(null), 1, null);
-        if (receiveChannel2 != null) {
-            return receiveChannel2;
-        }
-        throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.channels.ReceiveChannel<E>");
+        Objects.requireNonNull(receiveChannel2, "null cannot be cast to non-null type kotlinx.coroutines.channels.ReceiveChannel<E>");
+        return receiveChannel2;
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:17:0x005b  */
@@ -6606,8 +6600,8 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
     /* JADX DEBUG: Multi-variable search result rejected for r14v2, resolved type: java.util.List */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARNING: Removed duplicated region for block: B:17:0x006a  */
-    /* JADX WARNING: Removed duplicated region for block: B:25:0x00a3 A[Catch:{ all -> 0x00d7 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:28:0x00ae A[Catch:{ all -> 0x00d7 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:25:0x00a3 A[Catch:{ all -> 0x00d9 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:28:0x00ae A[Catch:{ all -> 0x00d9 }] */
     /* JADX WARNING: Removed duplicated region for block: B:8:0x0026  */
     public static final <E, K> Object groupBy(ReceiveChannel<? extends E> receiveChannel, Function1<? super E, ? extends K> function1, Continuation<? super Map<K, ? extends List<? extends E>>> continuation) {
         ChannelsKt__Channels_commonKt$groupBy$1 channelsKt__Channels_commonKt$groupBy$1;
@@ -6682,7 +6676,7 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
                             Object invoke = function12.invoke(obj3);
                             Object obj4 = map.get(invoke);
                             if (obj4 == null) {
-                                obj4 = new ArrayList();
+                                obj4 = (List) new ArrayList();
                                 map.put(invoke, obj4);
                             }
                             ((List) obj4).add(obj3);
@@ -6764,15 +6758,15 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
         }
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:15:0x004c, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:15:0x004e, code lost:
         r9 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:16:0x004d, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:16:0x004f, code lost:
         kotlin.jvm.internal.InlineMarker.finallyStart(1);
         kotlinx.coroutines.channels.ChannelsKt.cancelConsumed(r7, r8);
         kotlin.jvm.internal.InlineMarker.finallyEnd(1);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:17:0x0056, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:17:0x0058, code lost:
         throw r9;
      */
     private static final Object groupBy$$forInline(ReceiveChannel receiveChannel, Function1 function1, Continuation continuation) {
@@ -6788,7 +6782,7 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
                 Object invoke = function1.invoke(next);
                 Object obj = linkedHashMap.get(invoke);
                 if (obj == null) {
-                    obj = new ArrayList();
+                    obj = (List) new ArrayList();
                     linkedHashMap.put(invoke, obj);
                 }
                 ((List) obj).add(next);
@@ -6805,8 +6799,8 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
     /* JADX DEBUG: Multi-variable search result rejected for r15v2, resolved type: java.util.List */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARNING: Removed duplicated region for block: B:17:0x006e  */
-    /* JADX WARNING: Removed duplicated region for block: B:25:0x00ab A[Catch:{ all -> 0x00e5 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:28:0x00b8 A[Catch:{ all -> 0x00e5 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:25:0x00ab A[Catch:{ all -> 0x00e7 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:28:0x00b8 A[Catch:{ all -> 0x00e7 }] */
     /* JADX WARNING: Removed duplicated region for block: B:8:0x0026  */
     public static final <E, K, V> Object groupBy(ReceiveChannel<? extends E> receiveChannel, Function1<? super E, ? extends K> function1, Function1<? super E, ? extends V> function12, Continuation<? super Map<K, ? extends List<? extends V>>> continuation) {
         ChannelsKt__Channels_commonKt$groupBy$2 channelsKt__Channels_commonKt$groupBy$2;
@@ -6885,7 +6879,7 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
                             Object invoke = function14.invoke(obj3);
                             Object obj4 = map.get(invoke);
                             if (obj4 == null) {
-                                obj4 = new ArrayList();
+                                obj4 = (List) new ArrayList();
                                 map.put(invoke, obj4);
                             }
                             ((List) obj4).add(function13.invoke(obj3));
@@ -6969,15 +6963,15 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
         }
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:15:0x0050, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:15:0x0052, code lost:
         r9 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:16:0x0051, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:16:0x0053, code lost:
         kotlin.jvm.internal.InlineMarker.finallyStart(1);
         kotlinx.coroutines.channels.ChannelsKt.cancelConsumed(r7, r8);
         kotlin.jvm.internal.InlineMarker.finallyEnd(1);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:17:0x005a, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:17:0x005c, code lost:
         throw r9;
      */
     private static final Object groupBy$$forInline(ReceiveChannel receiveChannel, Function1 function1, Function1 function12, Continuation continuation) {
@@ -6993,7 +6987,7 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
                 Object invoke = function1.invoke(next);
                 Object obj = linkedHashMap.get(invoke);
                 if (obj == null) {
-                    obj = new ArrayList();
+                    obj = (List) new ArrayList();
                     linkedHashMap.put(invoke, obj);
                 }
                 ((List) obj).add(function12.invoke(next));
@@ -7082,7 +7076,7 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
                             Object invoke = function12.invoke(obj4);
                             Object obj5 = map.get(invoke);
                             if (obj5 == null) {
-                                obj5 = new ArrayList();
+                                obj5 = (List) new ArrayList();
                                 map.put(invoke, obj5);
                             }
                             ((List) obj5).add(obj4);
@@ -7170,8 +7164,8 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
     /* JADX DEBUG: Multi-variable search result rejected for r14v2, resolved type: java.util.List */
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARNING: Removed duplicated region for block: B:17:0x006e  */
-    /* JADX WARNING: Removed duplicated region for block: B:25:0x00a2 A[Catch:{ all -> 0x00da }] */
-    /* JADX WARNING: Removed duplicated region for block: B:28:0x00ad A[Catch:{ all -> 0x00da }] */
+    /* JADX WARNING: Removed duplicated region for block: B:25:0x00a2 A[Catch:{ all -> 0x00dc }] */
+    /* JADX WARNING: Removed duplicated region for block: B:28:0x00ad A[Catch:{ all -> 0x00dc }] */
     /* JADX WARNING: Removed duplicated region for block: B:8:0x0026  */
     public static final <E, K, V, M extends Map<? super K, List<V>>> Object groupByTo(ReceiveChannel<? extends E> receiveChannel, M m, Function1<? super E, ? extends K> function1, Function1<? super E, ? extends V> function12, Continuation<? super M> continuation) {
         ChannelsKt__Channels_commonKt$groupByTo$3 channelsKt__Channels_commonKt$groupByTo$3;
@@ -7246,7 +7240,7 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
                             Object invoke = function14.invoke(obj3);
                             Object obj4 = map.get(invoke);
                             if (obj4 == null) {
-                                obj4 = new ArrayList();
+                                obj4 = (List) new ArrayList();
                                 map.put(invoke, obj4);
                             }
                             ((List) obj4).add(function13.invoke(obj3));
@@ -7362,8 +7356,8 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:17:0x006e  */
-    /* JADX WARNING: Removed duplicated region for block: B:25:0x00ac A[Catch:{ all -> 0x00f1 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:28:0x00b9 A[Catch:{ all -> 0x00f1 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:25:0x00ac A[Catch:{ all -> 0x00ed }] */
+    /* JADX WARNING: Removed duplicated region for block: B:28:0x00b9 A[Catch:{ all -> 0x00ed }] */
     /* JADX WARNING: Removed duplicated region for block: B:8:0x0026  */
     public static final <E, R, C extends Collection<? super R>> Object mapIndexedNotNullTo(ReceiveChannel<? extends E> receiveChannel, C c, Function2<? super Integer, ? super E, ? extends R> function2, Continuation<? super C> continuation) {
         ChannelsKt__Channels_commonKt$mapIndexedNotNullTo$1 channelsKt__Channels_commonKt$mapIndexedNotNullTo$1;
@@ -7446,7 +7440,7 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
                             IndexedValue indexedValue = new IndexedValue(i3, next);
                             Object invoke = function22.invoke(Boxing.boxInt(indexedValue.component1()), (Object) indexedValue.component2());
                             if (invoke != null) {
-                                Boxing.boxBoolean(collection.add(invoke));
+                                collection.add(invoke);
                             }
                             receiveChannel7 = receiveChannel3;
                             i2 = 1;
@@ -8236,7 +8230,7 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
                         if (((Boolean) obj3).booleanValue()) {
                             Object invoke = function12.invoke((Object) channelIterator.next());
                             if (invoke != null) {
-                                Boxing.boxBoolean(collection.add(invoke));
+                                collection.add(invoke);
                             }
                             receiveChannel2 = receiveChannel5;
                             function13 = function12;
@@ -12400,15 +12394,15 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
         }
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:15:0x0045, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:15:0x0047, code lost:
         r8 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:16:0x0046, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:16:0x0048, code lost:
         kotlin.jvm.internal.InlineMarker.finallyStart(1);
         kotlinx.coroutines.channels.ChannelsKt.cancelConsumed(r6, r7);
         kotlin.jvm.internal.InlineMarker.finallyEnd(1);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:17:0x004f, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:17:0x0051, code lost:
         throw r8;
      */
     private static final Object groupByTo$$forInline(ReceiveChannel receiveChannel, Map map, Function1 function1, Continuation continuation) {
@@ -12423,7 +12417,7 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
                 Object invoke = function1.invoke(next);
                 Object obj = map.get(invoke);
                 if (obj == null) {
-                    obj = new ArrayList();
+                    obj = (List) new ArrayList();
                     map.put(invoke, obj);
                 }
                 ((List) obj).add(next);
@@ -12437,15 +12431,15 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
         }
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:15:0x0049, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:15:0x004b, code lost:
         r8 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:16:0x004a, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:16:0x004c, code lost:
         kotlin.jvm.internal.InlineMarker.finallyStart(1);
         kotlinx.coroutines.channels.ChannelsKt.cancelConsumed(r6, r7);
         kotlin.jvm.internal.InlineMarker.finallyEnd(1);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:17:0x0053, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:17:0x0055, code lost:
         throw r8;
      */
     private static final Object groupByTo$$forInline(ReceiveChannel receiveChannel, Map map, Function1 function1, Function1 function12, Continuation continuation) {
@@ -12460,7 +12454,7 @@ final /* synthetic */ class ChannelsKt__Channels_commonKt {
                 Object invoke = function1.invoke(next);
                 Object obj = map.get(invoke);
                 if (obj == null) {
-                    obj = new ArrayList();
+                    obj = (List) new ArrayList();
                     map.put(invoke, obj);
                 }
                 ((List) obj).add(function12.invoke(next));

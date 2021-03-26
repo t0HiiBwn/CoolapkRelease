@@ -56,11 +56,11 @@ public class ItemRightCoverViewBindingImpl extends ItemRightCoverViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (220 == i) {
+        if (221 == i) {
             setPic((String) obj);
-        } else if (196 == i) {
+        } else if (197 == i) {
             setMessage((String) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -76,7 +76,7 @@ public class ItemRightCoverViewBindingImpl extends ItemRightCoverViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(220);
+        notifyPropertyChanged(221);
         super.requestRebind();
     }
 
@@ -86,7 +86,7 @@ public class ItemRightCoverViewBindingImpl extends ItemRightCoverViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(196);
+        notifyPropertyChanged(197);
         super.requestRebind();
     }
 
@@ -124,7 +124,7 @@ public class ItemRightCoverViewBindingImpl extends ItemRightCoverViewBinding {
         if (i != 0) {
             Boolean bool = null;
             onClickListener = onClickListener2;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extraImageView, str, null, 2131231691, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extraImageView, str, null, 2131231702, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
         } else {
             onClickListener = onClickListener2;
         }

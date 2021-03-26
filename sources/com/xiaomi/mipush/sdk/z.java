@@ -1,21 +1,18 @@
 package com.xiaomi.mipush.sdk;
 
-import com.xiaomi.mipush.sdk.MiTinyDataClient;
+import android.text.TextUtils;
 
-class z implements Runnable {
-    final /* synthetic */ MiTinyDataClient.a.C0156a a;
+class z {
+    int a = 0;
 
-    z(MiTinyDataClient.a.C0156a aVar) {
-        this.a = aVar;
-    }
+    /* renamed from: a  reason: collision with other field name */
+    String f167a = "";
 
-    @Override // java.lang.Runnable
-    public void run() {
-        if (this.a.f135a.size() != 0) {
-            this.a.b();
-        } else if (MiTinyDataClient.a.C0156a.a(this.a) != null) {
-            MiTinyDataClient.a.C0156a.a(this.a).cancel(false);
-            this.a.f136a = null;
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof z)) {
+            return false;
         }
+        z zVar = (z) obj;
+        return !TextUtils.isEmpty(zVar.f167a) && zVar.f167a.equals(this.f167a);
     }
 }

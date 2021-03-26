@@ -14,6 +14,10 @@ public class CountingOutputStream extends ProxyOutputStream {
         this.count += (long) i;
     }
 
+    public synchronized long getByteCount() {
+        return this.count;
+    }
+
     public int getCount() {
         long byteCount = getByteCount();
         if (byteCount <= 2147483647L) {
@@ -22,22 +26,18 @@ public class CountingOutputStream extends ProxyOutputStream {
         throw new ArithmeticException("The byte count " + byteCount + " is too large to be converted to an int");
     }
 
+    public synchronized long resetByteCount() {
+        long j;
+        j = this.count;
+        this.count = 0;
+        return j;
+    }
+
     public int resetCount() {
         long resetByteCount = resetByteCount();
         if (resetByteCount <= 2147483647L) {
             return (int) resetByteCount;
         }
         throw new ArithmeticException("The byte count " + resetByteCount + " is too large to be converted to an int");
-    }
-
-    public synchronized long getByteCount() {
-        return this.count;
-    }
-
-    public synchronized long resetByteCount() {
-        long j;
-        j = this.count;
-        this.count = 0;
-        return j;
     }
 }

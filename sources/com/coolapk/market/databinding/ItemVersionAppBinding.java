@@ -40,7 +40,7 @@ public abstract class ItemVersionAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVersionAppBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemVersionAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558983, viewGroup, z, obj);
+        return (ItemVersionAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558990, viewGroup, z, obj);
     }
 
     public static ItemVersionAppBinding inflate(LayoutInflater layoutInflater) {
@@ -49,7 +49,7 @@ public abstract class ItemVersionAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVersionAppBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemVersionAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558983, null, false, obj);
+        return (ItemVersionAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558990, null, false, obj);
     }
 
     public static ItemVersionAppBinding bind(View view) {
@@ -58,6 +58,6 @@ public abstract class ItemVersionAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVersionAppBinding bind(View view, Object obj) {
-        return (ItemVersionAppBinding) bind(obj, view, 2131558983);
+        return (ItemVersionAppBinding) bind(obj, view, 2131558990);
     }
 }

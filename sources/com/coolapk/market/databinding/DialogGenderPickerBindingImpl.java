@@ -26,7 +26,7 @@ public class DialogGenderPickerBindingImpl extends DialogGenderPickerBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363105, 1);
+        sparseIntArray.put(2131363119, 1);
     }
 
     public DialogGenderPickerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

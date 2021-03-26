@@ -27,9 +27,9 @@ public class SubmitPickColorBindingImpl extends SubmitPickColorBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362317, 3);
-        sparseIntArray.put(2131362268, 4);
-        sparseIntArray.put(2131362269, 5);
+        sparseIntArray.put(2131362323, 3);
+        sparseIntArray.put(2131362273, 4);
+        sparseIntArray.put(2131362274, 5);
     }
 
     public SubmitPickColorBindingImpl(DataBindingComponent dataBindingComponent, View view) {

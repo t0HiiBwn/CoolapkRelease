@@ -2,7 +2,7 @@ package com.coolapk.market.view.cardlist;
 
 import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
-import com.coolapk.market.view.ad.SponsorSelfDrawViewHolder;
+import com.coolapk.market.view.ad.SponsorSelfDrawNewsViewHolder;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
@@ -21,6 +21,6 @@ final class EntityListFragment$onRegisterCards$112 extends Lambda implements Fun
 
     public final RecyclerView.ViewHolder invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "it");
-        return new SponsorSelfDrawViewHolder(view, this.this$0.getEntityAdHelper$presentation_coolapkAppRelease());
+        return new SponsorSelfDrawNewsViewHolder(view, this.this$0.getEntityAdHelper$presentation_coolapkAppRelease(), this.this$0.getBindingComponent());
     }
 }

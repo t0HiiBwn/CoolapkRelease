@@ -52,7 +52,7 @@ public abstract class ItemFeedGoodsInfoBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedGoodsInfoBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedGoodsInfoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558705, viewGroup, z, obj);
+        return (ItemFeedGoodsInfoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558712, viewGroup, z, obj);
     }
 
     public static ItemFeedGoodsInfoBinding inflate(LayoutInflater layoutInflater) {
@@ -61,7 +61,7 @@ public abstract class ItemFeedGoodsInfoBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedGoodsInfoBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedGoodsInfoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558705, null, false, obj);
+        return (ItemFeedGoodsInfoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558712, null, false, obj);
     }
 
     public static ItemFeedGoodsInfoBinding bind(View view) {
@@ -70,6 +70,6 @@ public abstract class ItemFeedGoodsInfoBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedGoodsInfoBinding bind(View view, Object obj) {
-        return (ItemFeedGoodsInfoBinding) bind(obj, view, 2131558705);
+        return (ItemFeedGoodsInfoBinding) bind(obj, view, 2131558712);
     }
 }

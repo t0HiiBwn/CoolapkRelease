@@ -22,8 +22,8 @@ public class ItemLoginUserNodeRatingSelectorBindingImpl extends ItemLoginUserNod
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363057, 1);
-        sparseIntArray.put(2131363056, 2);
+        sparseIntArray.put(2131363071, 1);
+        sparseIntArray.put(2131363070, 2);
     }
 
     public ItemLoginUserNodeRatingSelectorBindingImpl(DataBindingComponent dataBindingComponent, View view) {

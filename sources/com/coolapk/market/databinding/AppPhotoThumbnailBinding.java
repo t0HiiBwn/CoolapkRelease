@@ -39,7 +39,7 @@ public abstract class AppPhotoThumbnailBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppPhotoThumbnailBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AppPhotoThumbnailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558597, viewGroup, z, obj);
+        return (AppPhotoThumbnailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558601, viewGroup, z, obj);
     }
 
     public static AppPhotoThumbnailBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class AppPhotoThumbnailBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppPhotoThumbnailBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AppPhotoThumbnailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558597, null, false, obj);
+        return (AppPhotoThumbnailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558601, null, false, obj);
     }
 
     public static AppPhotoThumbnailBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class AppPhotoThumbnailBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppPhotoThumbnailBinding bind(View view, Object obj) {
-        return (AppPhotoThumbnailBinding) bind(obj, view, 2131558597);
+        return (AppPhotoThumbnailBinding) bind(obj, view, 2131558601);
     }
 }

@@ -36,7 +36,7 @@ public abstract class ItemTextLinkItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTextLinkItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemTextLinkItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558951, viewGroup, z, obj);
+        return (ItemTextLinkItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558958, viewGroup, z, obj);
     }
 
     public static ItemTextLinkItemBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class ItemTextLinkItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTextLinkItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemTextLinkItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558951, null, false, obj);
+        return (ItemTextLinkItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558958, null, false, obj);
     }
 
     public static ItemTextLinkItemBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class ItemTextLinkItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTextLinkItemBinding bind(View view, Object obj) {
-        return (ItemTextLinkItemBinding) bind(obj, view, 2131558951);
+        return (ItemTextLinkItemBinding) bind(obj, view, 2131558958);
     }
 }

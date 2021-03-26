@@ -35,7 +35,7 @@ final class CollectionDetailFragment$setupCommentBar$1 extends Lambda implements
         Intrinsics.checkNotNullParameter(view, "v");
         int id = view.getId();
         boolean z = false;
-        if (id == 2131362582) {
+        if (id == 2131362590) {
             Activity currentActivity = AppHolder.getCurrentActivity();
             if (currentActivity != null) {
                 Boolean checkLogin = ActionManager.checkLogin(currentActivity);
@@ -49,7 +49,7 @@ final class CollectionDetailFragment$setupCommentBar$1 extends Lambda implements
                     collectionPresenter$presentation_coolapkAppRelease.followCollection(z);
                 }
             }
-        } else if (id == 2131362851) {
+        } else if (id == 2131362862) {
             Activity currentActivity2 = AppHolder.getCurrentActivity();
             if (currentActivity2 != null) {
                 Boolean checkLogin2 = ActionManager.checkLogin(currentActivity2);
@@ -63,7 +63,7 @@ final class CollectionDetailFragment$setupCommentBar$1 extends Lambda implements
                     collectionPresenter$presentation_coolapkAppRelease2.likeCollection(z);
                 }
             }
-        } else if (id == 2131363358) {
+        } else if (id == 2131363374) {
             if (!CollectionDetailFragment.access$getCollection$p(this.this$0).getIsOpened()) {
                 Toast.show$default(this.this$0.getActivity(), "该收藏单为私密收藏单，无法分享", 0, false, 12, null);
             } else {

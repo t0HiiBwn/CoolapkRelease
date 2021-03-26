@@ -25,8 +25,8 @@ public class ItemMobileAppBindingImpl extends ItemMobileAppBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363906, 8);
-        sparseIntArray.put(2131363053, 9);
+        sparseIntArray.put(2131363929, 8);
+        sparseIntArray.put(2131363067, 9);
     }
 
     public ItemMobileAppBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -70,7 +70,7 @@ public class ItemMobileAppBindingImpl extends ItemMobileAppBinding {
     public boolean setVariable(int i, Object obj) {
         if (27 == i) {
             setApp((MobileApp) obj);
-        } else if (307 != i) {
+        } else if (308 != i) {
             return false;
         } else {
             setViewHolder((MobileAppViewHolder) obj);
@@ -95,7 +95,7 @@ public class ItemMobileAppBindingImpl extends ItemMobileAppBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(307);
+        notifyPropertyChanged(308);
         super.requestRebind();
     }
 
@@ -171,12 +171,12 @@ public class ItemMobileAppBindingImpl extends ItemMobileAppBinding {
             ViewBindingAdapters.clickListener(this.moreView, mobileAppViewHolder, bool);
         }
         if ((j & 8) != 0) {
-            Long l2 = null;
-            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "uninstall", l2, l2);
+            Long l = null;
+            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "uninstall", l, l);
         }
         if (i != 0) {
             TextViewBindingAdapter.setText(this.apkSizeView, str4);
-            ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, str, null, null, 2131231363, null, true);
+            ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, str, null, null, 2131231374, null, true);
             TextViewBindingAdapter.setText(this.titleView, str3);
             TextViewBindingAdapter.setText(this.versionView, str2);
         }

@@ -19,6 +19,6 @@ final class VoteExtraView$adapter$2 extends Lambda implements Function0<VoteExtr
     @Override // kotlin.jvm.functions.Function0
     public final VoteExtraView.DataAdapter invoke() {
         VoteExtraView voteExtraView = this.this$0;
-        return new VoteExtraView.DataAdapter(voteExtraView, voteExtraView.getActivity());
+        return new VoteExtraView.DataAdapter(voteExtraView, VoteExtraView.access$getActivity$p(voteExtraView));
     }
 }

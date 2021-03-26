@@ -27,12 +27,12 @@ public final class TraceUtils {
     public final void endTrace(String str, Object... objArr) {
         Intrinsics.checkNotNullParameter(str, "tag");
         Intrinsics.checkNotNullParameter(objArr, "args");
-        Long l2 = startTime.get(str);
-        if (l2 == null) {
-            l2 = 0L;
+        Long l = startTime.get(str);
+        if (l == null) {
+            l = 0L;
         }
-        Intrinsics.checkNotNullExpressionValue(l2, "startTime.get(tag) ?: 0");
-        long longValue = l2.longValue();
+        Intrinsics.checkNotNullExpressionValue(l, "startTime.get(tag) ?: 0");
+        long longValue = l.longValue();
         Log.d(str, " cost " + ((System.nanoTime() - longValue) / ((long) 1000)) + " us, args: " + Arrays.toString(objArr));
     }
 }

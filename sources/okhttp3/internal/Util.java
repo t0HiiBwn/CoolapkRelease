@@ -434,19 +434,19 @@ public final class Util {
         return and(bufferedSource.readByte(), 255) | (and(bufferedSource.readByte(), 255) << 16) | (and(bufferedSource.readByte(), 255) << 8);
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:11:0x0051, code lost:
-        if (r5 == Long.MAX_VALUE) goto L_0x0053;
+    /* JADX WARNING: Code restructure failed: missing block: B:11:0x0052, code lost:
+        if (r5 == Long.MAX_VALUE) goto L_0x0054;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:12:0x0053, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:12:0x0054, code lost:
         r11.timeout().clearDeadline();
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:13:0x005b, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:13:0x005c, code lost:
         r11.timeout().deadlineNanoTime(r0 + r5);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:22:0x007e, code lost:
-        if (r5 != Long.MAX_VALUE) goto L_0x005b;
+    /* JADX WARNING: Code restructure failed: missing block: B:22:0x007f, code lost:
+        if (r5 != Long.MAX_VALUE) goto L_0x005c;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:23:0x0081, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:23:0x0082, code lost:
         return r12;
      */
     public static final boolean skipAll(Source source, int i, TimeUnit timeUnit) {

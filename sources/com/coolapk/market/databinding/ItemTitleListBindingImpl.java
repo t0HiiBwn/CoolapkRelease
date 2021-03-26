@@ -21,8 +21,8 @@ public class ItemTitleListBindingImpl extends ItemTitleListBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362100, 1);
-        sparseIntArray.put(2131362865, 2);
+        sparseIntArray.put(2131362103, 1);
+        sparseIntArray.put(2131362876, 2);
     }
 
     public ItemTitleListBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -57,7 +57,7 @@ public class ItemTitleListBindingImpl extends ItemTitleListBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (278 != i) {
+        if (279 != i) {
             return false;
         }
         setTitle((String) obj);

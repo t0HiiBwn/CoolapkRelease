@@ -22,10 +22,10 @@ public class SubmitFeedExtraChildBindingImpl extends SubmitFeedExtraChildBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 1);
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131362376, 3);
-        sparseIntArray.put(2131362087, 4);
+        sparseIntArray.put(2131362718, 1);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131362382, 3);
+        sparseIntArray.put(2131362090, 4);
     }
 
     public SubmitFeedExtraChildBindingImpl(DataBindingComponent dataBindingComponent, View view) {

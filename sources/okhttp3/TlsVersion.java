@@ -35,7 +35,7 @@ public enum TlsVersion {
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "javaName", imports = {}))
     /* renamed from: -deprecated_javaName  reason: not valid java name */
-    public final String m2332deprecated_javaName() {
+    public final String m1581deprecated_javaName() {
         return this.javaName;
     }
 

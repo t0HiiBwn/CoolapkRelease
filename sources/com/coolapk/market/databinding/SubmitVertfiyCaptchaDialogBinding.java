@@ -39,7 +39,7 @@ public abstract class SubmitVertfiyCaptchaDialogBinding extends ViewDataBinding 
 
     @Deprecated
     public static SubmitVertfiyCaptchaDialogBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitVertfiyCaptchaDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559172, viewGroup, z, obj);
+        return (SubmitVertfiyCaptchaDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559180, viewGroup, z, obj);
     }
 
     public static SubmitVertfiyCaptchaDialogBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class SubmitVertfiyCaptchaDialogBinding extends ViewDataBinding 
 
     @Deprecated
     public static SubmitVertfiyCaptchaDialogBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitVertfiyCaptchaDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559172, null, false, obj);
+        return (SubmitVertfiyCaptchaDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559180, null, false, obj);
     }
 
     public static SubmitVertfiyCaptchaDialogBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class SubmitVertfiyCaptchaDialogBinding extends ViewDataBinding 
 
     @Deprecated
     public static SubmitVertfiyCaptchaDialogBinding bind(View view, Object obj) {
-        return (SubmitVertfiyCaptchaDialogBinding) bind(obj, view, 2131559172);
+        return (SubmitVertfiyCaptchaDialogBinding) bind(obj, view, 2131559180);
     }
 }

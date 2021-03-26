@@ -26,7 +26,7 @@ public abstract class NetworkDiagnosisBinding extends ViewDataBinding {
 
     @Deprecated
     public static NetworkDiagnosisBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (NetworkDiagnosisBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559052, viewGroup, z, obj);
+        return (NetworkDiagnosisBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559059, viewGroup, z, obj);
     }
 
     public static NetworkDiagnosisBinding inflate(LayoutInflater layoutInflater) {
@@ -35,7 +35,7 @@ public abstract class NetworkDiagnosisBinding extends ViewDataBinding {
 
     @Deprecated
     public static NetworkDiagnosisBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (NetworkDiagnosisBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559052, null, false, obj);
+        return (NetworkDiagnosisBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559059, null, false, obj);
     }
 
     public static NetworkDiagnosisBinding bind(View view) {
@@ -44,6 +44,6 @@ public abstract class NetworkDiagnosisBinding extends ViewDataBinding {
 
     @Deprecated
     public static NetworkDiagnosisBinding bind(View view, Object obj) {
-        return (NetworkDiagnosisBinding) bind(obj, view, 2131559052);
+        return (NetworkDiagnosisBinding) bind(obj, view, 2131559059);
     }
 }

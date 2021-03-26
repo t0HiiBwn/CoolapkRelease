@@ -14,7 +14,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemTagViewHolder.kt */
 public final class ItemTagViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558595;
+    public static final int LAYOUT_ID = 2131558599;
     private final ItemAppNodeTagBinding binding;
     private final AppNodeViewModel viewModel;
 

@@ -120,7 +120,7 @@ public final class CoolPicDetailActivity extends FakeStatusBarActivity implement
         this.id = getIntent().getStringExtra("id");
         this.index = getIntent().getIntExtra("index", 0);
         this.listIndex = getIntent().getIntExtra("list_index", 0);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558487);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558488);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…out.cool_pic_full_screen)");
         this.binding = (CoolPicFullScreenBinding) contentView;
         if (this.feed != null || TextUtils.isEmpty(this.id)) {
@@ -173,7 +173,7 @@ public final class CoolPicDetailActivity extends FakeStatusBarActivity implement
     }
 
     public final CoolPicListFragment getFragment() {
-        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362318);
+        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362324);
         if (!(findFragmentById instanceof CoolPicListFragment)) {
             findFragmentById = null;
         }
@@ -192,12 +192,12 @@ public final class CoolPicDetailActivity extends FakeStatusBarActivity implement
 
     /* access modifiers changed from: private */
     public final void setupFragment(Feed feed2, String str, String str2, String str3, int i) {
-        CoolPicListFragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362318);
+        CoolPicListFragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362324);
         if (findFragmentById == null) {
             findFragmentById = CoolPicListFragment.Companion.newInstance(feed2, str, str2, str3, i, this.listIndex);
         }
         if (findFragmentById != null && !findFragmentById.isAdded()) {
-            getSupportFragmentManager().beginTransaction().add(2131362318, findFragmentById).commitAllowingStateLoss();
+            getSupportFragmentManager().beginTransaction().add(2131362324, findFragmentById).commitAllowingStateLoss();
             getSupportFragmentManager().executePendingTransactions();
         }
     }

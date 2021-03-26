@@ -23,9 +23,9 @@ public class DialogSecondHandAgreementBindingImpl extends DialogSecondHandAgreem
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363581, 4);
-        sparseIntArray.put(2131362314, 5);
-        sparseIntArray.put(2131363457, 6);
+        sparseIntArray.put(2131363603, 4);
+        sparseIntArray.put(2131362319, 5);
+        sparseIntArray.put(2131363475, 6);
     }
 
     public DialogSecondHandAgreementBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -63,7 +63,7 @@ public class DialogSecondHandAgreementBindingImpl extends DialogSecondHandAgreem
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (186 != i) {
+        if (187 != i) {
             return false;
         }
         setLoading(((Boolean) obj).booleanValue());
@@ -76,7 +76,7 @@ public class DialogSecondHandAgreementBindingImpl extends DialogSecondHandAgreem
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(186);
+        notifyPropertyChanged(187);
         super.requestRebind();
     }
 

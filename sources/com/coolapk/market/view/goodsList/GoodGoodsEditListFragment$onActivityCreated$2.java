@@ -51,7 +51,7 @@ final class GoodGoodsEditListFragment$onActivityCreated$2 extends Lambda impleme
         }
         final SimpleDialog newInstance = SimpleDialog.newInstance();
         newInstance.setMessage("确定要移除" + this.this$0.delList.size() + "个好物吗？");
-        newInstance.setPositiveButton(2131886708, new DialogInterface.OnClickListener(this) {
+        newInstance.setPositiveButton(2131886770, new DialogInterface.OnClickListener(this) {
             /* class com.coolapk.market.view.goodsList.GoodGoodsEditListFragment$onActivityCreated$2.AnonymousClass1 */
             final /* synthetic */ GoodGoodsEditListFragment$onActivityCreated$2 this$0;
 

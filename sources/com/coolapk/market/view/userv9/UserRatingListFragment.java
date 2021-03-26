@@ -71,7 +71,7 @@ public final class UserRatingListFragment extends DataListFragment {
                 setEmptyData("由于你的黑名单设置，该用户动态对你不可见", 0);
             }
         }
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131559057).constructor(new UserRatingListFragment$onActivityCreated$1(this)).suitedMethod(UserRatingListFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131559064).constructor(new UserRatingListFragment$onActivityCreated$1(this)).suitedMethod(UserRatingListFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
     }
 
     public final void onNodeRatingDeleteEvent(NodeRatingDeleteEvent nodeRatingDeleteEvent) {

@@ -23,8 +23,8 @@ public class ItemAlbumIconBindingImpl extends ItemAlbumIconBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362020, 1);
-        sparseIntArray.put(2131362959, 2);
+        sparseIntArray.put(2131362021, 1);
+        sparseIntArray.put(2131362971, 2);
     }
 
     public ItemAlbumIconBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -61,7 +61,7 @@ public class ItemAlbumIconBindingImpl extends ItemAlbumIconBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (149 != i) {
             return false;

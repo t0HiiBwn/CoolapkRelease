@@ -25,11 +25,11 @@ public class BaseNewChattingBindingImpl extends BaseNewChattingBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362067, 7);
-        sparseIntArray.put(2131362316, 8);
-        sparseIntArray.put(2131363592, 9);
-        sparseIntArray.put(2131361922, 10);
-        sparseIntArray.put(2131362450, 11);
+        sparseIntArray.put(2131362069, 7);
+        sparseIntArray.put(2131362322, 8);
+        sparseIntArray.put(2131363614, 9);
+        sparseIntArray.put(2131361923, 10);
+        sparseIntArray.put(2131362457, 11);
     }
 
     public BaseNewChattingBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -72,7 +72,7 @@ public class BaseNewChattingBindingImpl extends BaseNewChattingBinding {
     public boolean setVariable(int i, Object obj) {
         if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((NewBaseChatActivity.ViewMode) obj);
@@ -97,7 +97,7 @@ public class BaseNewChattingBindingImpl extends BaseNewChattingBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -115,17 +115,17 @@ public class BaseNewChattingBindingImpl extends BaseNewChattingBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 255) {
+        } else if (i == 256) {
             synchronized (this) {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i == 251) {
+        } else if (i == 252) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
             return true;
-        } else if (i != 225) {
+        } else if (i != 226) {
             return false;
         } else {
             synchronized (this) {

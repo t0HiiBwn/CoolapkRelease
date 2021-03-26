@@ -40,10 +40,10 @@ public class ItemReplyListBindingImpl extends ItemReplyListBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(19);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"feed_warning"}, new int[]{17}, new int[]{2131558563});
+        includedLayouts.setIncludes(1, new String[]{"feed_warning"}, new int[]{17}, new int[]{2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362490, 18);
+        sparseIntArray.put(2131362498, 18);
     }
 
     public ItemReplyListBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -113,15 +113,15 @@ public class ItemReplyListBindingImpl extends ItemReplyListBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FeedReply) obj);
-        } else if (277 == i) {
+        } else if (278 == i) {
             setTimeDescription((String) obj);
-        } else if (307 == i) {
+        } else if (308 == i) {
             setViewHolder((UserReplyViewHolder) obj);
-        } else if (160 == i) {
+        } else if (161 == i) {
             setInLikeList(((Boolean) obj).booleanValue());
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -137,7 +137,7 @@ public class ItemReplyListBindingImpl extends ItemReplyListBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -147,7 +147,7 @@ public class ItemReplyListBindingImpl extends ItemReplyListBinding {
         synchronized (this) {
             this.mDirtyFlags |= 8;
         }
-        notifyPropertyChanged(277);
+        notifyPropertyChanged(278);
         super.requestRebind();
     }
 
@@ -158,7 +158,7 @@ public class ItemReplyListBindingImpl extends ItemReplyListBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(307);
+        notifyPropertyChanged(308);
         super.requestRebind();
     }
 
@@ -168,7 +168,7 @@ public class ItemReplyListBindingImpl extends ItemReplyListBinding {
         synchronized (this) {
             this.mDirtyFlags |= 16;
         }
-        notifyPropertyChanged(160);
+        notifyPropertyChanged(161);
         super.requestRebind();
     }
 
@@ -210,22 +210,22 @@ public class ItemReplyListBindingImpl extends ItemReplyListBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 260) {
+        } else if (i == 261) {
             synchronized (this) {
                 this.mDirtyFlags |= 128;
             }
             return true;
-        } else if (i == 267) {
+        } else if (i == 268) {
             synchronized (this) {
                 this.mDirtyFlags |= 256;
             }
             return true;
-        } else if (i == 268) {
+        } else if (i == 269) {
             synchronized (this) {
                 this.mDirtyFlags |= 512;
             }
             return true;
-        } else if (i != 257) {
+        } else if (i != 258) {
             return false;
         } else {
             synchronized (this) {
@@ -512,7 +512,7 @@ public class ItemReplyListBindingImpl extends ItemReplyListBinding {
             this.textview1.setVisibility(i2);
             TextViewBindingAdapter.setText(this.textview2, str5);
             this.textview3.setVisibility(i);
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, null, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, str19, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, null, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, str19, null, null, bool2, bool2, bool2, null, bool2);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str7, bool2);
             TextViewBindingAdapter.setText(this.userNameView, str6);
         }
@@ -531,7 +531,7 @@ public class ItemReplyListBindingImpl extends ItemReplyListBinding {
         if ((j & 2305) != 0) {
             this.mboundView8.setVisibility(i5);
             Boolean bool3 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView8, str9, null, 2131231691, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView8, str9, null, 2131231702, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
         }
         if ((j & 2561) != 0) {
             String str20 = null;

@@ -22,12 +22,6 @@ public class BoundedReader extends Reader {
     }
 
     @Override // java.io.Reader
-    public void reset() throws IOException {
-        this.charsRead = this.markedAt;
-        this.target.reset();
-    }
-
-    @Override // java.io.Reader
     public void mark(int i) throws IOException {
         int i2 = this.charsRead;
         this.readAheadLimit = i - i2;
@@ -45,7 +39,7 @@ public class BoundedReader extends Reader {
         if (i2 >= 0 && i - i2 >= this.readAheadLimit) {
             return -1;
         }
-        this.charsRead = i + 1;
+        this.charsRead++;
         return this.target.read();
     }
 
@@ -62,5 +56,11 @@ public class BoundedReader extends Reader {
             }
         }
         return i2;
+    }
+
+    @Override // java.io.Reader
+    public void reset() throws IOException {
+        this.charsRead = this.markedAt;
+        this.target.reset();
     }
 }

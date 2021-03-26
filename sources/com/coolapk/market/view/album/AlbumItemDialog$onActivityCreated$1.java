@@ -111,8 +111,8 @@ final class AlbumItemDialog$onActivityCreated$1 extends Lambda implements Functi
                     }
                 });
             }
-            list.add(this.this$0.buildMultiActionItem(album));
-            String string2 = this.this$0.getString(2131886730);
+            list.add(AlbumItemDialog.access$buildMultiActionItem(this.this$0, album));
+            String string2 = this.this$0.getString(2131886792);
             Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_dialog_report)");
             MultiItemDialogFragmentKt.addItem(list, string2, new Function0<Unit>(this) {
                 /* class com.coolapk.market.view.album.AlbumItemDialog$onActivityCreated$1.AnonymousClass2 */
@@ -133,11 +133,11 @@ final class AlbumItemDialog$onActivityCreated$1 extends Lambda implements Functi
                 }
             });
             if (loginSession.isLogin() && loginSession.isAdmin()) {
-                list.add(this.this$0.buildAdminActionItem(album));
+                list.add(AlbumItemDialog.access$buildAdminActionItem(this.this$0, album));
             }
             if (loginSession.isLogin() && (Intrinsics.areEqual(album.getUid(), loginSession.getUid()) || loginSession.isAdmin())) {
                 AlbumItemDialog albumItemDialog2 = this.this$0;
-                list.add(new AlbumItemDialog.DeleteActionItem(albumItemDialog2, albumItemDialog2.getString(2131886716), album));
+                list.add(new AlbumItemDialog.DeleteActionItem(albumItemDialog2, albumItemDialog2.getString(2131886778), album));
             }
             if (loginSession.isLogin() && loginSession.isAdmin()) {
                 list.add(new AlbumItemDialog.RecommendActionItem(this.this$0, album.getRecommend() > 0, album));

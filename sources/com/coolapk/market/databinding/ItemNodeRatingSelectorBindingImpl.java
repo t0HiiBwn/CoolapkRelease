@@ -22,11 +22,11 @@ public class ItemNodeRatingSelectorBindingImpl extends ItemNodeRatingSelectorBin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362637, 7);
-        sparseIntArray.put(2131363018, 8);
-        sparseIntArray.put(2131363903, 9);
-        sparseIntArray.put(2131362185, 10);
-        sparseIntArray.put(2131363062, 11);
+        sparseIntArray.put(2131362645, 7);
+        sparseIntArray.put(2131363032, 8);
+        sparseIntArray.put(2131363926, 9);
+        sparseIntArray.put(2131362188, 10);
+        sparseIntArray.put(2131363076, 11);
     }
 
     public ItemNodeRatingSelectorBindingImpl(DataBindingComponent dataBindingComponent, View view) {

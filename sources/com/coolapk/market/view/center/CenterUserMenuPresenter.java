@@ -2,6 +2,7 @@ package com.coolapk.market.view.center;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Handler;
 import android.view.View;
 import androidx.appcompat.app.AlertDialog;
@@ -17,6 +18,7 @@ import com.coolapk.market.manager.DataManager;
 import com.coolapk.market.manager.StatisticHelper;
 import com.coolapk.market.model.UserProfile;
 import com.coolapk.market.network.Result;
+import com.coolapk.market.util.DateUtils;
 import com.coolapk.market.util.NightModeHelper;
 import com.coolapk.market.util.ThemeUtils;
 import com.coolapk.market.util.UriUtils;
@@ -108,7 +110,7 @@ public final class CenterUserMenuPresenter {
         int i4 = (int) 4289098239L;
         int i5 = (int) 4294077914L;
         int i6 = (int) 4294940672L;
-        List mutableListOf = CollectionsKt.mutableListOf(new UserMenu("TYPE_FOLLOW", 2131887102, 2131231658, i, false, false, null, null, false, 496, null), new UserMenu("TYPE_COLLECTION", 2131887238, 2131231664, i2, false, false, null, null, false, 496, null), new UserMenu("TYPE_ARTICLE", 2131887071, 2131231665, i3, false, false, null, null, false, 496, null), new UserMenu("TYPE_ALBUM", 2131887070, 2131231681, i2, false, false, null, null, false, 496, null), new UserMenu("TYPE_APP_MANAGER", 2131887227, 2131231680, i4, false, false, null, null, false, 496, null), new UserMenu("TYPE_THEMES", 2131887303, 2131231686, i5, false, false, null, null, false, 496, null), new UserMenu("TYPE_DARK_MODE", 2131886998, 2131689486, i4, false, false, null, null, false, 496, null), new UserMenu("TYPE_MORE", 2131886875, 2131231435, i, false, false, null, null, false, 240, null), new UserMenu("TYPE_DIGIT", 2131887073, 2131231476, i6, false, false, null, null, false, 496, null), new UserMenu("TYPE_GOODS", 2131887078, 2131231331, i6, false, false, null, null, false, 496, null), new UserMenu("TYPE_QA", 2131887081, 2131689472, i6, false, false, null, null, false, 496, null), new UserMenu("TYPE_PIC", 2131887082, 2131231387, i6, false, false, null, null, false, 496, null), new UserMenu("TYPE_KKH", 2131887104, 2131231656, i3, false, false, null, null, false, 496, null), new UserMenu("TYPE_ADMIN", 2131886997, 2131231677, i6, false, false, null, null, false, 496, null), new UserMenu("TYPE_DEV", 2131887083, 2131231378, (int) 4283215696L, false, false, null, null, false, 496, null), new UserMenu("TYPE_REPLY", 2131887103, 2131231660, i3, false, false, null, null, false, 496, null), new UserMenu("TYPE_BLOCK", 2131887068, 2131231346, i6, false, false, null, null, false, 496, null), new UserMenu("TYPE_BLOCK_CONTENT", 2131887069, 2131231286, (int) 4278241063L, false, false, null, null, false, 496, null), new UserMenu("TYPE_BACKUP", 2131887066, 2131231201, i2, false, false, null, null, false, 496, null), new UserMenu("TYPE_SETTING", 2131887301, 2131231553, (int) 4285887861L, false, false, null, null, false, 496, null), new UserMenu("TYPE_LIKE", 2131887098, 2131689494, i5, false, false, null, null, false, 496, null), new UserMenu("TYPE_RATING", 2131887122, 2131689488, i5, false, false, null, null, false, 496, null), new UserMenu("TYPE_MOBILE", 2131886877, 2131231172, i6, false, false, null, null, false, 496, null), new UserMenu("TYPE_GIFT", 2131886878, 2131231168, i3, false, false, null, null, false, 496, null), new UserMenu("TYPE_DRAFT", 2131887084, 2131231655, i4, false, false, null, null, false, 496, null), new UserMenu("TYPE_GOODS_LIST", 2131887095, 2131231333, i4, false, false, null, null, false, 496, null));
+        List mutableListOf = CollectionsKt.mutableListOf(new UserMenu("TYPE_FOLLOW", 2131887164, 2131231669, i, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_COLLECTION", 2131887300, 2131231675, i2, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_ARTICLE", 2131887133, 2131231676, i3, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_ALBUM", 2131887132, 2131231692, i2, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_APP_MANAGER", 2131887289, 2131231691, i4, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_THEMES", 2131887365, 2131231697, i5, false, DateUtils.isTimeLimit(), "限时", null, false, Color.parseColor("#db4437"), 400, null), new UserMenu("TYPE_DARK_MODE", 2131887060, 2131689486, i4, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_MORE", 2131886937, 2131231446, i, false, false, null, null, false, 0, 752, null), new UserMenu("TYPE_DIGIT", 2131887135, 2131231487, i6, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_GOODS", 2131887140, 2131231342, i6, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_QA", 2131887143, 2131689472, i6, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_PIC", 2131887144, 2131231398, i6, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_KKH", 2131887166, 2131231667, i3, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_ADMIN", 2131887059, 2131231688, i6, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_DEV", 2131887145, 2131231389, (int) 4283215696L, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_REPLY", 2131887165, 2131231671, i3, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_BLOCK", 2131887130, 2131231357, i6, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_BLOCK_CONTENT", 2131887131, 2131231297, (int) 4278241063L, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_BACKUP", 2131887128, 2131231212, i2, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_SETTING", 2131887363, 2131231564, (int) 4285887861L, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_LIKE", 2131887160, 2131689494, i5, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_RATING", 2131887184, 2131689488, i5, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_MOBILE", 2131886939, 2131231183, i6, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_GIFT", 2131886940, 2131231179, i3, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_DRAFT", 2131887146, 2131231666, i4, false, false, null, null, false, 0, 1008, null), new UserMenu("TYPE_GOODS_LIST", 2131887157, 2131231344, i4, false, false, null, null, false, 0, 1008, null));
         LinkedHashMap linkedHashMap = new LinkedHashMap(RangesKt.coerceAtLeast(MapsKt.mapCapacity(CollectionsKt.collectionSizeOrDefault(mutableListOf, 10)), 16));
         for (Object obj : mutableListOf) {
             linkedHashMap.put(((UserMenu) obj).getType(), obj);
@@ -246,17 +248,17 @@ public final class CenterUserMenuPresenter {
                     str2 = "";
                 }
                 if (z) {
-                    str3 = AppHolder.getApplication().getString(2131886981, new Object[]{Integer.valueOf(size)});
+                    str3 = AppHolder.getApplication().getString(2131887043, new Object[]{Integer.valueOf(size)});
                 } else {
                     str3 = "";
                 }
                 Intrinsics.checkNotNullExpressionValue(str3, "if (showBubble) AppHolde…unt, updateCount) else \"\"");
-                return UserMenu.copy$default(userMenu, null, 0, 0, 0, false, z, str2, str3, false, 287, null);
+                return UserMenu.copy$default(userMenu, null, 0, 0, 0, false, z, str2, str3, false, 0, 799, null);
             case 1915715079:
                 if (!type.equals("TYPE_DARK_MODE") || AppHolder.getAppTheme().isDayTheme()) {
                     return userMenu;
                 }
-                return UserMenu.copy$default(userMenu, null, 2131886691, 2131689493, (int) 4294940672L, false, false, null, null, false, 497, null);
+                return UserMenu.copy$default(userMenu, null, 2131886753, 2131689493, (int) 4294940672L, false, false, null, null, false, 0, 1009, null);
             default:
                 return userMenu;
         }
@@ -390,7 +392,7 @@ public final class CenterUserMenuPresenter {
                         Intrinsics.checkNotNullExpressionValue(checkLogin2, "ActionManager.checkLogin(it)");
                         if (checkLogin2.booleanValue()) {
                             Intrinsics.checkNotNullExpressionValue(loginSession, "session");
-                            ActionManager.startUserQAListActivity(currentActivity19, loginSession.getUid(), currentActivity19.getString(2131887081));
+                            ActionManager.startUserQAListActivity(currentActivity19, loginSession.getUid(), currentActivity19.getString(2131887143));
                         }
                         Unit unit2 = Unit.INSTANCE;
                         return;
@@ -401,7 +403,7 @@ public final class CenterUserMenuPresenter {
                         Boolean checkLogin3 = ActionManager.checkLogin(currentActivity3);
                         Intrinsics.checkNotNullExpressionValue(checkLogin3, "ActionManager.checkLogin(it)");
                         if (checkLogin3.booleanValue()) {
-                            String string = currentActivity19.getString(2131886699);
+                            String string = currentActivity19.getString(2131886761);
                             Intrinsics.checkNotNullExpressionValue(loginSession, "session");
                             ActionManager.startDeveloperAppListActivity(currentActivity19, string, loginSession.getUid());
                         }
@@ -534,7 +536,7 @@ public final class CenterUserMenuPresenter {
                         Intrinsics.checkNotNullExpressionValue(checkLogin14, "ActionManager.checkLogin(it)");
                         if (checkLogin14.booleanValue()) {
                             Intrinsics.checkNotNullExpressionValue(loginSession, "session");
-                            ActionManager.startUserHtmlFeedListFragment(currentActivity19, loginSession.getUid(), currentActivity19.getString(2131887071));
+                            ActionManager.startUserHtmlFeedListFragment(currentActivity19, loginSession.getUid(), currentActivity19.getString(2131887133));
                         }
                         Unit unit14 = Unit.INSTANCE;
                         return;
@@ -568,7 +570,7 @@ public final class CenterUserMenuPresenter {
                         Boolean checkLogin17 = ActionManager.checkLogin(currentActivity17);
                         Intrinsics.checkNotNullExpressionValue(checkLogin17, "ActionManager.checkLogin(it)");
                         if (checkLogin17.booleanValue()) {
-                            ActionManager.startWebViewTitleActivity(currentActivity19, "https://m.coolapk.com/mp/do?c=userDevice&m=myDevice", currentActivity19.getString(2131886877));
+                            ActionManager.startWebViewTitleActivity(currentActivity19, "https://m.coolapk.com/mp/do?c=userDevice&m=myDevice", currentActivity19.getString(2131886939));
                         }
                         Unit unit17 = Unit.INSTANCE;
                         return;

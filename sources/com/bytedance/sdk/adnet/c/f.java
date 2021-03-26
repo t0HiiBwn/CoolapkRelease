@@ -39,9 +39,7 @@ public class f implements c {
     private int i = 0;
     private HashMap<String, Integer> j = new HashMap<>();
     private HashMap<String, Integer> k = new HashMap<>();
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1281l = 0;
+    private int l = 0;
     private HashMap<String, Integer> m = new HashMap<>();
     private HashMap<String, Integer> n = new HashMap<>();
     private boolean o = true;
@@ -183,18 +181,18 @@ public class f implements c {
                                 a(mVar, host);
                             }
                             if (c2 != null) {
-                                c.b("TNCManager", "onResponse, url matched: " + protocol + "://" + host + "#" + ipAddrStr + "#" + i2 + " " + this.i + "#" + this.j.size() + "#" + this.k.size() + " " + this.f1281l + "#" + this.m.size() + "#" + this.n.size());
+                                c.b("TNCManager", "onResponse, url matched: " + protocol + "://" + host + "#" + ipAddrStr + "#" + i2 + " " + this.i + "#" + this.j.size() + "#" + this.k.size() + " " + this.l + "#" + this.m.size() + "#" + this.n.size());
                                 if (i2 > 0) {
                                     if (a(i2)) {
-                                        if (this.i > 0 || this.f1281l > 0) {
+                                        if (this.i > 0 || this.l > 0) {
                                             g();
                                         }
                                         c(host);
                                     } else if (!b(i2)) {
-                                        this.f1281l++;
+                                        this.l++;
                                         this.m.put(path, 0);
                                         this.n.put(ipAddrStr, 0);
-                                        if (this.f1281l >= c2.h && this.m.size() >= c2.i && this.n.size() >= c2.j) {
+                                        if (this.l >= c2.h && this.m.size() >= c2.i && this.n.size() >= c2.j) {
                                             c.b("TNCManager", "onResponse, url doUpdate: " + protocol + "://" + host + "#" + ipAddrStr + "#" + i2);
                                             a(false, 0L);
                                             g();
@@ -259,7 +257,7 @@ public class f implements c {
                         if ("http".equals(protocol) || "https".equals(protocol)) {
                             d c2 = c();
                             if (c2 != null) {
-                                c.b("TNCManager", "onError, url matched: " + protocol + "://" + host + "#" + ipAddrStr + "# " + this.i + "#" + this.j.size() + "#" + this.k.size() + " " + this.f1281l + "#" + this.m.size() + "#" + this.n.size());
+                                c.b("TNCManager", "onError, url matched: " + protocol + "://" + host + "#" + ipAddrStr + "# " + this.i + "#" + this.j.size() + "#" + this.k.size() + " " + this.l + "#" + this.m.size() + "#" + this.n.size());
                                 this.i = this.i + 1;
                                 this.j.put(path, 0);
                                 this.k.put(ipAddrStr, 0);
@@ -320,8 +318,8 @@ public class f implements c {
                 this.e.getSharedPreferences("ttnet_tnc_config", 0).edit().putInt("tnc_probe_cmd", i2).putLong("tnc_probe_version", j2).apply();
                 if (this.g == 10000 && (c2 = c()) != null) {
                     Random random = new Random(System.currentTimeMillis());
-                    if (c2.f1280l > 0) {
-                        j3 = ((long) random.nextInt(c2.f1280l)) * 1000;
+                    if (c2.l > 0) {
+                        j3 = ((long) random.nextInt(c2.l)) * 1000;
                     }
                     c.b("TNCManager", "handleTncProbe, updateConfig delay: " + j3 + " " + str);
                     a(true, j3);
@@ -363,7 +361,7 @@ public class f implements c {
         this.i = 0;
         this.j.clear();
         this.k.clear();
-        this.f1281l = 0;
+        this.l = 0;
         this.m.clear();
         this.n.clear();
     }

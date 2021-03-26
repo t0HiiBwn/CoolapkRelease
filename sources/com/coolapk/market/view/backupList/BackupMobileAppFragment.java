@@ -52,18 +52,18 @@ public class BackupMobileAppFragment extends StateEventListFragment<List<MobileA
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setHasOptionsMenu(true);
-        getActivity().setTitle(getString(2131887286));
+        getActivity().setTitle(getString(2131887348));
         this.backupTitle = getArguments().getString("TITLE_BACKUP");
     }
 
     @Override // com.coolapk.market.view.base.StateEventListFragment, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
-        setEmptyData(getString(2131886769), 0);
+        setEmptyData(getString(2131886831), 0);
         setRefreshEnable(false);
         setLoadMoreEnable(false);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558812, 2131231052).type(2131558618, 2131231052).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558819, 2131231062).type(2131558622, 2131231062).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
     }
@@ -86,7 +86,7 @@ public class BackupMobileAppFragment extends StateEventListFragment<List<MobileA
         this.adapter = new TitleAdapter(getRecyclerView().getAdapter());
         getRecyclerView().setAdapter(this.adapter);
         ArrayList arrayList = new ArrayList();
-        arrayList.add(new SectionedAdapter.Section(0, 2131558618, this.presenter));
+        arrayList.add(new SectionedAdapter.Section(0, 2131558622, this.presenter));
         this.adapter.setSections(arrayList);
         this.presenter.setTaskLoading(AppHolder.getInstance().isMobileAppLoading());
         if (!(bundle == null || (parcelableArrayList = bundle.getParcelableArrayList("apps")) == null)) {
@@ -101,28 +101,28 @@ public class BackupMobileAppFragment extends StateEventListFragment<List<MobileA
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            menu.add(0, 2131361965, 100, "全选").setShowAsAction(2);
-            menu.add(0, 2131361899, 101, "创建").setShowAsAction(2);
+            menu.add(0, 2131361966, 100, "全选").setShowAsAction(2);
+            menu.add(0, 2131361900, 101, "创建").setShowAsAction(2);
         }
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         int itemId = menuItem.getItemId();
-        if (itemId == 2131361899) {
+        if (itemId == 2131361900) {
             Intent intent = new Intent();
             intent.putExtra("app_json", getJson());
             intent.putExtra("TITLE_BACKUP", this.backupTitle);
             getActivity().setResult(-1, intent);
             getActivity().finish();
             return true;
-        } else if (itemId != 2131361965) {
+        } else if (itemId != 2131361966) {
             return super.onOptionsItemSelected(menuItem);
         } else {
             onSelectAll(this.menuState);
             boolean z = !this.menuState;
             this.menuState = z;
-            menuItem.setTitle(z ? 2131886586 : 2131886584);
+            menuItem.setTitle(z ? 2131886648 : 2131886646);
             return true;
         }
     }
@@ -195,8 +195,8 @@ public class BackupMobileAppFragment extends StateEventListFragment<List<MobileA
 
         @Override // com.coolapk.market.widget.SectionedAdapter
         public RecyclerView.ViewHolder onCreateSectionViewHolder(ViewGroup viewGroup, int i) {
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558618, viewGroup, false);
-            if (i == 2131558618) {
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558622, viewGroup, false);
+            if (i == 2131558622) {
                 return new SwitchViewHolder(inflate);
             }
             throw new RuntimeException("Unknown view type " + i);
@@ -213,7 +213,7 @@ public class BackupMobileAppFragment extends StateEventListFragment<List<MobileA
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558812;
+            return 2131558819;
         }
 
         public DataAdapter(Fragment fragment) {
@@ -242,7 +242,7 @@ public class BackupMobileAppFragment extends StateEventListFragment<List<MobileA
     }
 
     public static class SwitchViewHolder extends BindingViewHolder implements CompoundButton.OnCheckedChangeListener {
-        private static final int LAYOUT_ID = 2131558618;
+        private static final int LAYOUT_ID = 2131558622;
         private BackupMobileAppPresenter presenter;
 
         public SwitchViewHolder(View view) {

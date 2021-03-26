@@ -7,6 +7,7 @@ import kotlin.jvm.internal.Intrinsics;
 public final class UserMenu {
     private final String bubbleLongText;
     private final String bubbleText;
+    private final int bubbleTintColor;
     private final boolean deletable;
     private final int iconRes;
     private final boolean showBubble;
@@ -15,12 +16,16 @@ public final class UserMenu {
     private final int titleRes;
     private final String type;
 
-    public static /* synthetic */ UserMenu copy$default(UserMenu userMenu, String str, int i, int i2, int i3, boolean z, boolean z2, String str2, String str3, boolean z3, int i4, Object obj) {
-        return userMenu.copy((i4 & 1) != 0 ? userMenu.type : str, (i4 & 2) != 0 ? userMenu.titleRes : i, (i4 & 4) != 0 ? userMenu.iconRes : i2, (i4 & 8) != 0 ? userMenu.tintColor : i3, (i4 & 16) != 0 ? userMenu.showDot : z, (i4 & 32) != 0 ? userMenu.showBubble : z2, (i4 & 64) != 0 ? userMenu.bubbleText : str2, (i4 & 128) != 0 ? userMenu.bubbleLongText : str3, (i4 & 256) != 0 ? userMenu.deletable : z3);
+    public static /* synthetic */ UserMenu copy$default(UserMenu userMenu, String str, int i, int i2, int i3, boolean z, boolean z2, String str2, String str3, boolean z3, int i4, int i5, Object obj) {
+        return userMenu.copy((i5 & 1) != 0 ? userMenu.type : str, (i5 & 2) != 0 ? userMenu.titleRes : i, (i5 & 4) != 0 ? userMenu.iconRes : i2, (i5 & 8) != 0 ? userMenu.tintColor : i3, (i5 & 16) != 0 ? userMenu.showDot : z, (i5 & 32) != 0 ? userMenu.showBubble : z2, (i5 & 64) != 0 ? userMenu.bubbleText : str2, (i5 & 128) != 0 ? userMenu.bubbleLongText : str3, (i5 & 256) != 0 ? userMenu.deletable : z3, (i5 & 512) != 0 ? userMenu.bubbleTintColor : i4);
     }
 
     public final String component1() {
         return this.type;
+    }
+
+    public final int component10() {
+        return this.bubbleTintColor;
     }
 
     public final int component2() {
@@ -55,11 +60,11 @@ public final class UserMenu {
         return this.deletable;
     }
 
-    public final UserMenu copy(String str, int i, int i2, int i3, boolean z, boolean z2, String str2, String str3, boolean z3) {
+    public final UserMenu copy(String str, int i, int i2, int i3, boolean z, boolean z2, String str2, String str3, boolean z3, int i4) {
         Intrinsics.checkNotNullParameter(str, "type");
         Intrinsics.checkNotNullParameter(str2, "bubbleText");
         Intrinsics.checkNotNullParameter(str3, "bubbleLongText");
-        return new UserMenu(str, i, i2, i3, z, z2, str2, str3, z3);
+        return new UserMenu(str, i, i2, i3, z, z2, str2, str3, z3, i4);
     }
 
     public boolean equals(Object obj) {
@@ -70,7 +75,7 @@ public final class UserMenu {
             return false;
         }
         UserMenu userMenu = (UserMenu) obj;
-        return Intrinsics.areEqual(this.type, userMenu.type) && this.titleRes == userMenu.titleRes && this.iconRes == userMenu.iconRes && this.tintColor == userMenu.tintColor && this.showDot == userMenu.showDot && this.showBubble == userMenu.showBubble && Intrinsics.areEqual(this.bubbleText, userMenu.bubbleText) && Intrinsics.areEqual(this.bubbleLongText, userMenu.bubbleLongText) && this.deletable == userMenu.deletable;
+        return Intrinsics.areEqual(this.type, userMenu.type) && this.titleRes == userMenu.titleRes && this.iconRes == userMenu.iconRes && this.tintColor == userMenu.tintColor && this.showDot == userMenu.showDot && this.showBubble == userMenu.showBubble && Intrinsics.areEqual(this.bubbleText, userMenu.bubbleText) && Intrinsics.areEqual(this.bubbleLongText, userMenu.bubbleLongText) && this.deletable == userMenu.deletable && this.bubbleTintColor == userMenu.bubbleTintColor;
     }
 
     public int hashCode() {
@@ -105,14 +110,14 @@ public final class UserMenu {
         if (!z3) {
             i2 = z3 ? 1 : 0;
         }
-        return i11 + i2;
+        return ((i11 + i2) * 31) + this.bubbleTintColor;
     }
 
     public String toString() {
-        return "UserMenu(type=" + this.type + ", titleRes=" + this.titleRes + ", iconRes=" + this.iconRes + ", tintColor=" + this.tintColor + ", showDot=" + this.showDot + ", showBubble=" + this.showBubble + ", bubbleText=" + this.bubbleText + ", bubbleLongText=" + this.bubbleLongText + ", deletable=" + this.deletable + ")";
+        return "UserMenu(type=" + this.type + ", titleRes=" + this.titleRes + ", iconRes=" + this.iconRes + ", tintColor=" + this.tintColor + ", showDot=" + this.showDot + ", showBubble=" + this.showBubble + ", bubbleText=" + this.bubbleText + ", bubbleLongText=" + this.bubbleLongText + ", deletable=" + this.deletable + ", bubbleTintColor=" + this.bubbleTintColor + ")";
     }
 
-    public UserMenu(String str, int i, int i2, int i3, boolean z, boolean z2, String str2, String str3, boolean z3) {
+    public UserMenu(String str, int i, int i2, int i3, boolean z, boolean z2, String str2, String str3, boolean z3, int i4) {
         Intrinsics.checkNotNullParameter(str, "type");
         Intrinsics.checkNotNullParameter(str2, "bubbleText");
         Intrinsics.checkNotNullParameter(str3, "bubbleLongText");
@@ -125,6 +130,7 @@ public final class UserMenu {
         this.bubbleText = str2;
         this.bubbleLongText = str3;
         this.deletable = z3;
+        this.bubbleTintColor = i4;
     }
 
     public final int getIconRes() {
@@ -160,8 +166,12 @@ public final class UserMenu {
     }
 
     /* JADX INFO: this call moved to the top of the method (can break code semantics) */
-    public /* synthetic */ UserMenu(String str, int i, int i2, int i3, boolean z, boolean z2, String str2, String str3, boolean z3, int i4, DefaultConstructorMarker defaultConstructorMarker) {
-        this(str, i, i2, i3, (i4 & 16) != 0 ? false : z, (i4 & 32) != 0 ? false : z2, (i4 & 64) != 0 ? "" : str2, (i4 & 128) != 0 ? "" : str3, (i4 & 256) != 0 ? true : z3);
+    public /* synthetic */ UserMenu(String str, int i, int i2, int i3, boolean z, boolean z2, String str2, String str3, boolean z3, int i4, int i5, DefaultConstructorMarker defaultConstructorMarker) {
+        this(str, i, i2, i3, (i5 & 16) != 0 ? false : z, (i5 & 32) != 0 ? false : z2, (i5 & 64) != 0 ? "" : str2, (i5 & 128) != 0 ? "" : str3, (i5 & 256) != 0 ? true : z3, (i5 & 512) != 0 ? 0 : i4);
+    }
+
+    public final int getBubbleTintColor() {
+        return this.bubbleTintColor;
     }
 
     public final boolean getDeletable() {

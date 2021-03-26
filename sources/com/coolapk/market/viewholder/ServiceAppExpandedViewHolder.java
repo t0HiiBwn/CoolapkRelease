@@ -23,7 +23,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ServiceAppExpandedViewHolder.kt */
 public final class ServiceAppExpandedViewHolder extends ServiceAppViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int VIEW_TYPE_EXPANDED_CARD = 2131123382;
+    public static final int VIEW_TYPE_EXPANDED_CARD = 2131123389;
     private final ServiceAppBinding binding;
     private final Lazy imageViewPart$delegate;
 

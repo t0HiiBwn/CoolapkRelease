@@ -71,7 +71,7 @@ public final class UserDataFragment extends BaseFragment {
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559281, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559291, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…r_data, container, false)");
         UserDataBinding userDataBinding = (UserDataBinding) inflate;
         this.binding = userDataBinding;
@@ -97,7 +97,7 @@ public final class UserDataFragment extends BaseFragment {
         boolean areEqual = Intrinsics.areEqual(uid, loginSession.getUid());
         String signature = userProfile.getSignature();
         boolean z = false;
-        String signature2 = !(signature == null || signature.length() == 0) ? userProfile.getSignature() : requireActivity().getString(2131886692);
+        String signature2 = !(signature == null || signature.length() == 0) ? userProfile.getSignature() : requireActivity().getString(2131886754);
         UserDataBinding userDataBinding = this.binding;
         if (userDataBinding == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");

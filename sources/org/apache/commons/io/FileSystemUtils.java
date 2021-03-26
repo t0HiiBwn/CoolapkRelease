@@ -68,16 +68,6 @@ public class FileSystemUtils {
     }
 
     @Deprecated
-    public static long freeSpaceKb(String str) throws IOException {
-        return freeSpaceKb(str, -1);
-    }
-
-    @Deprecated
-    public static long freeSpaceKb(String str, long j) throws IOException {
-        return INSTANCE.freeSpaceOS(str, OS, true, j);
-    }
-
-    @Deprecated
     public static long freeSpaceKb() throws IOException {
         return freeSpaceKb(-1);
     }
@@ -85,6 +75,16 @@ public class FileSystemUtils {
     @Deprecated
     public static long freeSpaceKb(long j) throws IOException {
         return freeSpaceKb(new File(".").getAbsolutePath(), j);
+    }
+
+    @Deprecated
+    public static long freeSpaceKb(String str) throws IOException {
+        return freeSpaceKb(str, -1);
+    }
+
+    @Deprecated
+    public static long freeSpaceKb(String str, long j) throws IOException {
+        return INSTANCE.freeSpaceOS(str, OS, true, j);
     }
 
     long freeSpaceOS(String str, int i, boolean z, long j) throws IOException {
@@ -105,6 +105,34 @@ public class FileSystemUtils {
         }
     }
 
+    long freeSpaceUnix(String str, boolean z, boolean z2, long j) throws IOException {
+        if (!str.isEmpty()) {
+            String str2 = "-";
+            if (z) {
+                str2 = str2 + "k";
+            }
+            if (z2) {
+                str2 = str2 + "P";
+            }
+            List<String> performCommand = performCommand(str2.length() > 1 ? new String[]{DF, str2, str} : new String[]{DF, str}, 3, j);
+            if (performCommand.size() >= 2) {
+                StringTokenizer stringTokenizer = new StringTokenizer(performCommand.get(1), " ");
+                if (stringTokenizer.countTokens() >= 4) {
+                    stringTokenizer.nextToken();
+                } else if (stringTokenizer.countTokens() != 1 || performCommand.size() < 3) {
+                    throw new IOException("Command line '" + DF + "' did not return data as expected for path '" + str + "'- check path is valid");
+                } else {
+                    stringTokenizer = new StringTokenizer(performCommand.get(2), " ");
+                }
+                stringTokenizer.nextToken();
+                stringTokenizer.nextToken();
+                return parseBytes(stringTokenizer.nextToken(), str);
+            }
+            throw new IOException("Command line '" + DF + "' did not return info as expected for path '" + str + "'- response was " + performCommand);
+        }
+        throw new IllegalArgumentException("Path must not be empty");
+    }
+
     long freeSpaceWindows(String str, long j) throws IOException {
         String normalize = FilenameUtils.normalize(str, false);
         if (normalize != null) {
@@ -121,6 +149,22 @@ public class FileSystemUtils {
             throw new IOException("Command line 'dir /-c' did not return any info for path '" + normalize + "'");
         }
         throw new IllegalArgumentException(str);
+    }
+
+    Process openProcess(String[] strArr) throws IOException {
+        return Runtime.getRuntime().exec(strArr);
+    }
+
+    long parseBytes(String str, String str2) throws IOException {
+        try {
+            long parseLong = Long.parseLong(str);
+            if (parseLong >= 0) {
+                return parseLong;
+            }
+            throw new IOException("Command line '" + DF + "' did not find free space in response for path '" + str2 + "'- check path is valid");
+        } catch (NumberFormatException e) {
+            throw new IOException("Command line '" + DF + "' did not return numeric data as expected for path '" + str2 + "'- check path is valid", e);
+        }
     }
 
     long parseDir(String str, String str2) throws IOException {
@@ -163,46 +207,6 @@ public class FileSystemUtils {
             return parseBytes(sb.toString(), str2);
         }
         throw new IOException("Command line 'dir /-c' did not return valid info for path '" + str2 + "'");
-    }
-
-    long freeSpaceUnix(String str, boolean z, boolean z2, long j) throws IOException {
-        if (!str.isEmpty()) {
-            String str2 = "-";
-            if (z) {
-                str2 = str2 + "k";
-            }
-            if (z2) {
-                str2 = str2 + "P";
-            }
-            List<String> performCommand = performCommand(str2.length() > 1 ? new String[]{DF, str2, str} : new String[]{DF, str}, 3, j);
-            if (performCommand.size() >= 2) {
-                StringTokenizer stringTokenizer = new StringTokenizer(performCommand.get(1), " ");
-                if (stringTokenizer.countTokens() >= 4) {
-                    stringTokenizer.nextToken();
-                } else if (stringTokenizer.countTokens() != 1 || performCommand.size() < 3) {
-                    throw new IOException("Command line '" + DF + "' did not return data as expected for path '" + str + "'- check path is valid");
-                } else {
-                    stringTokenizer = new StringTokenizer(performCommand.get(2), " ");
-                }
-                stringTokenizer.nextToken();
-                stringTokenizer.nextToken();
-                return parseBytes(stringTokenizer.nextToken(), str);
-            }
-            throw new IOException("Command line '" + DF + "' did not return info as expected for path '" + str + "'- response was " + performCommand);
-        }
-        throw new IllegalArgumentException("Path must not be empty");
-    }
-
-    long parseBytes(String str, String str2) throws IOException {
-        try {
-            long parseLong = Long.parseLong(str);
-            if (parseLong >= 0) {
-                return parseLong;
-            }
-            throw new IOException("Command line '" + DF + "' did not find free space in response for path '" + str2 + "'- check path is valid");
-        } catch (NumberFormatException e) {
-            throw new IOException("Command line '" + DF + "' did not return numeric data as expected for path '" + str2 + "'- check path is valid", e);
-        }
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -428,9 +432,5 @@ public class FileSystemUtils {
             }
             throw th;
         }
-    }
-
-    Process openProcess(String[] strArr) throws IOException {
-        return Runtime.getRuntime().exec(strArr);
     }
 }

@@ -59,7 +59,7 @@ import org.greenrobot.eventbus.Subscribe;
 /* compiled from: NinePicViewPart.kt */
 public final class NinePicViewPart extends BindingViewPart<ItemCoolPicImageViewBinding, List<? extends String>> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558662;
+    public static final int LAYOUT_ID = 2131558668;
     private static final SparseIntArray sProgressMap = new SparseIntArray();
     private List<String> bindList;
     private boolean centerCropWhenOne;
@@ -272,7 +272,7 @@ public final class NinePicViewPart extends BindingViewPart<ItemCoolPicImageViewB
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemCoolPicImageViewBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558662, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558668, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemCoolPicImageViewBinding) inflate;
     }
@@ -398,7 +398,7 @@ public final class NinePicViewPart extends BindingViewPart<ItemCoolPicImageViewB
 
     /* access modifiers changed from: private */
     public final ImageViewPart getUnusedImageViewPart(ViewGroup viewGroup) {
-        ImageViewPart imageViewPart = (ImageViewPart) this.viewPool.getRecycledViewPart(2131558707);
+        ImageViewPart imageViewPart = (ImageViewPart) this.viewPool.getRecycledViewPart(2131558714);
         if (imageViewPart != null) {
             imageViewPart.setParentViewPart(this);
             return imageViewPart;
@@ -416,7 +416,7 @@ public final class NinePicViewPart extends BindingViewPart<ItemCoolPicImageViewB
         ((ItemCoolPicImageViewBinding) getBinding()).frameView.removeAllViews();
         Iterator<T> it2 = this.currentImageViewPartList.iterator();
         while (it2.hasNext()) {
-            this.viewPool.putRecycledViewPart(it2.next(), 2131558707);
+            this.viewPool.putRecycledViewPart(it2.next(), 2131558714);
         }
         this.currentImageViewPartList.clear();
     }
@@ -472,7 +472,7 @@ public final class NinePicViewPart extends BindingViewPart<ItemCoolPicImageViewB
     /* compiled from: NinePicViewPart.kt */
     public static final class ImageViewPart extends BindingViewPart<ItemFeedImageBinding, ImageArgs> implements ControlGifImageView.Callback, Runnable {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558707;
+        public static final int LAYOUT_ID = 2131558714;
         private final DataBindingComponent component;
         private ImageArgs data;
         private NinePicViewPart parentViewPart;
@@ -502,7 +502,7 @@ public final class NinePicViewPart extends BindingViewPart<ItemCoolPicImageViewB
         @Override // com.coolapk.market.viewholder.iview.BindingViewPart
         public ItemFeedImageBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
             Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-            ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558707, viewGroup, false, this.component);
+            ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558714, viewGroup, false, this.component);
             Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
             return (ItemFeedImageBinding) inflate;
         }
@@ -560,7 +560,7 @@ public final class NinePicViewPart extends BindingViewPart<ItemCoolPicImageViewB
             View root2 = ((ItemFeedImageBinding) getBinding()).getRoot();
             root2.setX(imageArgs.getOutOffsetX());
             root2.setY(imageArgs.getOutOffsetY());
-            ((ItemFeedImageBinding) getBinding()).imageView.setImageResource(ResourceUtils.getDayNightPlaceHolder(2131231691));
+            ((ItemFeedImageBinding) getBinding()).imageView.setImageResource(ResourceUtils.getDayNightPlaceHolder(2131231702));
             this.data = imageArgs;
             ((ItemFeedImageBinding) getBinding()).imageView.post(this);
         }
@@ -631,7 +631,7 @@ public final class NinePicViewPart extends BindingViewPart<ItemCoolPicImageViewB
                     Intrinsics.checkNotNullExpressionValue(controlGifImageView7, "binding.imageView");
                     controlGifImageView7.setScaleType(ImageView.ScaleType.MATRIX);
                 }
-                AppHolder.getContextImageLoader().displayImage(getContext(), str != null ? str : invoke, (ImageView) ((ItemFeedImageBinding) getBinding()).imageView, ImageLoaderOptions.newBuilder().useAnimate(true).thumbnail(str == null ? null : invoke).placeHolderRes(2131231691).build(), ninePicViewPart$ImageViewPart$run$3, (OnBitmapTransformListener) null);
+                AppHolder.getContextImageLoader().displayImage(getContext(), str != null ? str : invoke, (ImageView) ((ItemFeedImageBinding) getBinding()).imageView, ImageLoaderOptions.newBuilder().useAnimate(true).thumbnail(str == null ? null : invoke).placeHolderRes(2131231702).build(), ninePicViewPart$ImageViewPart$run$3, (OnBitmapTransformListener) null);
                 ControlGifImageView controlGifImageView8 = ((ItemFeedImageBinding) getBinding()).imageView;
                 Intrinsics.checkNotNullExpressionValue(controlGifImageView8, "binding.imageView");
                 controlGifImageView8.setScaleType(ImageView.ScaleType.MATRIX);

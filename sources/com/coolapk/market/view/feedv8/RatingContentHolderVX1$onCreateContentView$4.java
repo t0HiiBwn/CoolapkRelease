@@ -19,7 +19,7 @@ public final class RatingContentHolderVX1$onCreateContentView$4 extends EmptySub
         Intrinsics.checkNotNullParameter(product, "t");
         super.onNext((RatingContentHolderVX1$onCreateContentView$4) product);
         if (product.getIsOwner() == 1) {
-            RatingContentHolderVX1.access$insertOwnerLabel(this.this$0);
+            this.this$0.insertOwnerLabel();
         }
     }
 }

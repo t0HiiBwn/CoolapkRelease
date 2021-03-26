@@ -46,7 +46,7 @@ public abstract class ItemPickServiceAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPickServiceAppBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemPickServiceAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558856, viewGroup, z, obj);
+        return (ItemPickServiceAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558863, viewGroup, z, obj);
     }
 
     public static ItemPickServiceAppBinding inflate(LayoutInflater layoutInflater) {
@@ -55,7 +55,7 @@ public abstract class ItemPickServiceAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPickServiceAppBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemPickServiceAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558856, null, false, obj);
+        return (ItemPickServiceAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558863, null, false, obj);
     }
 
     public static ItemPickServiceAppBinding bind(View view) {
@@ -64,6 +64,6 @@ public abstract class ItemPickServiceAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPickServiceAppBinding bind(View view, Object obj) {
-        return (ItemPickServiceAppBinding) bind(obj, view, 2131558856);
+        return (ItemPickServiceAppBinding) bind(obj, view, 2131558863);
     }
 }

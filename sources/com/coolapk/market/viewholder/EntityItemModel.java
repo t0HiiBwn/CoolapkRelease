@@ -113,7 +113,7 @@ public final class EntityItemModel {
                 stringExtraDataOrNull = EntityExtendsKt.getStringExtraDataOrNull(this.item, "subTitle");
             }
             if (TextUtils.isEmpty(stringExtraDataOrNull)) {
-                stringExtraDataOrNull = this.context.getString(2131886850, ((ServiceApp) this.item).getDownCount(), ((ServiceApp) this.item).getCommentCount());
+                stringExtraDataOrNull = this.context.getString(2131886912, ((ServiceApp) this.item).getDownCount(), ((ServiceApp) this.item).getCommentCount());
             }
             if (stringExtraDataOrNull == null) {
                 return str;
@@ -187,7 +187,7 @@ public final class EntityItemModel {
         Intrinsics.checkNotNullParameter(view, "view");
         Entity entity = this.item;
         if (entity instanceof ServiceApp) {
-            if (view.getId() != 2131361886) {
+            if (view.getId() != 2131361887) {
                 ActionManager.startAppViewActivity(this.context, ((ServiceApp) entity).getPackageName());
                 return;
             }

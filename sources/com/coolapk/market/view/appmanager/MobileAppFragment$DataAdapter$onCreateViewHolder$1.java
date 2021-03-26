@@ -36,21 +36,21 @@ public final class MobileAppFragment$DataAdapter$onCreateViewHolder$1 extends It
             if (selectionTracker == null || !selectionTracker.hasSelection()) {
                 MobileApp mobileApp = (MobileApp) this.this$0.this$0.getDataList().get(MobileAppFragment.access$getAdapter$p(this.this$0.this$0).sectionedPositionToPosition(viewHolder.getAdapterPosition()));
                 int id = view.getId();
-                if (id == 2131361886) {
+                if (id == 2131361887) {
                     Intrinsics.checkNotNullExpressionValue(mobileApp, "mobileApp");
                     FragmentActivity requireActivity = this.this$0.this$0.requireActivity();
                     Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
                     if (TextUtils.equals(mobileApp.getPackageName(), requireActivity.getPackageName())) {
                         FragmentActivity requireActivity2 = this.this$0.this$0.requireActivity();
                         Intrinsics.checkNotNullExpressionValue(requireActivity2, "requireActivity()");
-                        Toast.show(requireActivity2, 2131887216);
+                        Toast.show(requireActivity2, 2131887278);
                         return;
                     }
                     AppSetting appSetting = AppHolder.getAppSetting();
                     Intrinsics.checkNotNullExpressionValue(appSetting, "AppHolder.getAppSetting()");
                     if (appSetting.isInstallSilent()) {
                         SimpleDialog newInstance = SimpleDialog.newInstance();
-                        newInstance.setMessage(this.this$0.this$0.getString(2131887048, mobileApp.getAppName()));
+                        newInstance.setMessage(this.this$0.this$0.getString(2131887110, mobileApp.getAppName()));
                         newInstance.setNegativeButton(2131886140);
                         newInstance.setPositiveButton(2131886162, new MobileAppFragment$DataAdapter$onCreateViewHolder$1$onItemClick$1(this, mobileApp));
                         FragmentManager childFragmentManager = this.this$0.this$0.getChildFragmentManager();
@@ -59,10 +59,10 @@ public final class MobileAppFragment$DataAdapter$onCreateViewHolder$1 extends It
                         return;
                     }
                     ActionManager.uninstall(this.this$0.this$0.getActivity(), mobileApp.getPackageName(), mobileApp.getAppName());
-                } else if (id == 2131362768) {
+                } else if (id == 2131362779) {
                     Intrinsics.checkNotNullExpressionValue(mobileApp, "mobileApp");
                     ActionManager.startAppViewActivity(this.this$0.this$0.getActivity(), mobileApp.getPackageName());
-                } else if (id == 2131362970) {
+                } else if (id == 2131362982) {
                     Intrinsics.checkNotNullExpressionValue(mobileApp, "mobileApp");
                     String appName = mobileApp.getAppName();
                     String packageName = mobileApp.getPackageName();

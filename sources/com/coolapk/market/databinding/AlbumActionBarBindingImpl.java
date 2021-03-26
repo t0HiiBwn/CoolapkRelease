@@ -27,18 +27,18 @@ public class AlbumActionBarBindingImpl extends AlbumActionBarBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363416, 1);
-        sparseIntArray.put(2131363418, 2);
-        sparseIntArray.put(2131363417, 3);
-        sparseIntArray.put(2131362844, 4);
-        sparseIntArray.put(2131362851, 5);
-        sparseIntArray.put(2131362847, 6);
-        sparseIntArray.put(2131362288, 7);
-        sparseIntArray.put(2131362291, 8);
-        sparseIntArray.put(2131362290, 9);
-        sparseIntArray.put(2131362420, 10);
-        sparseIntArray.put(2131362423, 11);
-        sparseIntArray.put(2131362422, 12);
+        sparseIntArray.put(2131363434, 1);
+        sparseIntArray.put(2131363436, 2);
+        sparseIntArray.put(2131363435, 3);
+        sparseIntArray.put(2131362855, 4);
+        sparseIntArray.put(2131362862, 5);
+        sparseIntArray.put(2131362858, 6);
+        sparseIntArray.put(2131362293, 7);
+        sparseIntArray.put(2131362296, 8);
+        sparseIntArray.put(2131362295, 9);
+        sparseIntArray.put(2131362427, 10);
+        sparseIntArray.put(2131362430, 11);
+        sparseIntArray.put(2131362429, 12);
     }
 
     public AlbumActionBarBindingImpl(DataBindingComponent dataBindingComponent, View view) {

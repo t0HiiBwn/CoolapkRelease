@@ -1,8 +1,8 @@
 package kotlinx.coroutines;
 
+import java.util.Objects;
 import kotlin.Metadata;
 import kotlin.ResultKt;
-import kotlin.TypeCastException;
 import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.intrinsics.IntrinsicsKt;
@@ -14,7 +14,7 @@ import kotlin.sequences.SequenceScope;
 import kotlinx.coroutines.internal.LockFreeLinkedListHead;
 import kotlinx.coroutines.internal.LockFreeLinkedListNode;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u0001*\b\u0012\u0004\u0012\u00020\u00030\u0002H@¢\u0006\u0004\b\u0004\u0010\u0005"}, d2 = {"<anonymous>", "", "Lkotlin/sequences/SequenceScope;", "Lkotlinx/coroutines/ChildJob;", "invoke", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"}, k = 3, mv = {1, 1, 16})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u0001*\b\u0012\u0004\u0012\u00020\u00030\u0002H@¢\u0006\u0004\b\u0004\u0010\u0005"}, d2 = {"<anonymous>", "", "Lkotlin/sequences/SequenceScope;", "Lkotlinx/coroutines/ChildJob;", "invoke", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"}, k = 3, mv = {1, 4, 0})
 @DebugMetadata(c = "kotlinx.coroutines.JobSupport$children$1", f = "JobSupport.kt", i = {0, 0, 1, 1, 1, 1, 1, 1}, l = {949, 951}, m = "invokeSuspend", n = {"$this$sequence", "state", "$this$sequence", "state", "list", "this_$iv", "cur$iv", "it"}, s = {"L$0", "L$1", "L$0", "L$1", "L$2", "L$3", "L$4", "L$5"})
 /* compiled from: JobSupport.kt */
 final class JobSupport$children$1 extends RestrictedSuspendLambda implements Function2<SequenceScope<? super ChildJob>, Continuation<? super Unit>, Object> {
@@ -47,7 +47,7 @@ final class JobSupport$children$1 extends RestrictedSuspendLambda implements Fun
         return ((JobSupport$children$1) create(sequenceScope, continuation)).invokeSuspend(Unit.INSTANCE);
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:22:0x0083  */
+    /* JADX WARNING: Removed duplicated region for block: B:20:0x0086  */
     @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
     public final Object invokeSuspend(Object obj) {
         JobSupport$children$1 jobSupport$children$1;
@@ -74,17 +74,14 @@ final class JobSupport$children$1 extends RestrictedSuspendLambda implements Fun
             } else if ((state$kotlinx_coroutines_core instanceof Incomplete) && (list = ((Incomplete) state$kotlinx_coroutines_core).getList()) != null) {
                 NodeList nodeList2 = list;
                 Object next = nodeList2.getNext();
-                if (next != null) {
-                    LockFreeLinkedListNode lockFreeLinkedListNode2 = (LockFreeLinkedListNode) next;
-                    sequenceScope = sequenceScope2;
-                    jobSupport$children$1 = this;
-                    obj2 = state$kotlinx_coroutines_core;
-                    lockFreeLinkedListNode = lockFreeLinkedListNode2;
-                    nodeList = list;
-                    lockFreeLinkedListHead = nodeList2;
-                } else {
-                    throw new TypeCastException("null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
-                }
+                Objects.requireNonNull(next, "null cannot be cast to non-null type kotlinx.coroutines.internal.Node /* = kotlinx.coroutines.internal.LockFreeLinkedListNode */");
+                LockFreeLinkedListNode lockFreeLinkedListNode2 = (LockFreeLinkedListNode) next;
+                sequenceScope = sequenceScope2;
+                jobSupport$children$1 = this;
+                obj2 = state$kotlinx_coroutines_core;
+                lockFreeLinkedListNode = lockFreeLinkedListNode2;
+                nodeList = list;
+                lockFreeLinkedListHead = nodeList2;
             }
             return Unit.INSTANCE;
         } else if (i == 1) {

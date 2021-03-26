@@ -46,7 +46,7 @@ public abstract class AlbumBaseInfoBinding extends ViewDataBinding {
 
     @Deprecated
     public static AlbumBaseInfoBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AlbumBaseInfoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558441, viewGroup, z, obj);
+        return (AlbumBaseInfoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558442, viewGroup, z, obj);
     }
 
     public static AlbumBaseInfoBinding inflate(LayoutInflater layoutInflater) {
@@ -55,7 +55,7 @@ public abstract class AlbumBaseInfoBinding extends ViewDataBinding {
 
     @Deprecated
     public static AlbumBaseInfoBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AlbumBaseInfoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558441, null, false, obj);
+        return (AlbumBaseInfoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558442, null, false, obj);
     }
 
     public static AlbumBaseInfoBinding bind(View view) {
@@ -64,6 +64,6 @@ public abstract class AlbumBaseInfoBinding extends ViewDataBinding {
 
     @Deprecated
     public static AlbumBaseInfoBinding bind(View view, Object obj) {
-        return (AlbumBaseInfoBinding) bind(obj, view, 2131558441);
+        return (AlbumBaseInfoBinding) bind(obj, view, 2131558442);
     }
 }

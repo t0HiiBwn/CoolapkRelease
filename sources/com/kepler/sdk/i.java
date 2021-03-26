@@ -12,9 +12,7 @@ public class i {
     public static boolean i = false;
     public static boolean j = false;
     public static boolean k = false;
-
-    /* renamed from: l  reason: collision with root package name */
-    public static boolean f1353l = false;
+    public static boolean l = false;
     public static boolean m = false;
     public static boolean n = true;
     public static boolean o = false;
@@ -38,7 +36,7 @@ public class i {
         h = false;
         i = false;
         k = false;
-        f1353l = false;
+        l = false;
         m = false;
         n = false;
         j = false;

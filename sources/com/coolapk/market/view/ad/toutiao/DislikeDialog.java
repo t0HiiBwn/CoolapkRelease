@@ -29,17 +29,17 @@ public final class DislikeDialog extends TTDislikeDialogAbstract {
 
     @Override // com.bytedance.sdk.openadsdk.TTDislikeDialogAbstract
     public int getLayoutId() {
-        return 2131558541;
+        return 2131558543;
     }
 
     @Override // com.bytedance.sdk.openadsdk.TTDislikeDialogAbstract
     public int[] getPersonalizationPromptIds() {
-        return new int[]{2131363096};
+        return new int[]{2131363110};
     }
 
     @Override // com.bytedance.sdk.openadsdk.TTDislikeDialogAbstract
     public int[] getTTDislikeListViewIds() {
-        return new int[]{2131362411};
+        return new int[]{2131362417};
     }
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -75,7 +75,7 @@ public final class DislikeDialog extends TTDislikeDialogAbstract {
     @Override // com.bytedance.sdk.openadsdk.TTDislikeDialogAbstract, android.app.Dialog
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        View findViewById = findViewById(2131362411);
+        View findViewById = findViewById(2131362417);
         Objects.requireNonNull(findViewById, "null cannot be cast to non-null type com.bytedance.sdk.openadsdk.dislike.TTDislikeListView");
         TTDislikeListView tTDislikeListView = (TTDislikeListView) findViewById;
         tTDislikeListView.setAdapter((ListAdapter) new DislikeAdapter(this.filterWordList));

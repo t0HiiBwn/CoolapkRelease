@@ -23,9 +23,7 @@ class cd extends View {
     private int i = 0;
     private int j = 10;
     private int k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1226l = 0;
+    private int l = 0;
     private int m = 10;
     private int n = 8;
     private int o = 0;
@@ -178,19 +176,19 @@ class cd extends View {
     }
 
     public void a(int i2) {
-        this.f1226l = 0;
+        this.l = 0;
         this.i = i2;
         e();
     }
 
     public void b(int i2) {
-        this.f1226l = 1;
+        this.l = 1;
         this.n = i2;
         e();
     }
 
     public void c(int i2) {
-        this.f1226l = 1;
+        this.l = 1;
         this.m = i2;
         e();
     }
@@ -224,7 +222,7 @@ class cd extends View {
     }
 
     private void f() {
-        int i2 = this.f1226l;
+        int i2 = this.l;
         if (i2 == 0) {
             h();
         } else if (i2 == 2) {

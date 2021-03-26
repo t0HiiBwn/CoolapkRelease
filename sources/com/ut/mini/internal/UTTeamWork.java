@@ -67,6 +67,6 @@ public class UTTeamWork {
     }
 
     public void enableUpload(boolean z) {
-        a.f53s = z;
+        a.f52s = z;
     }
 }

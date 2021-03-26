@@ -24,7 +24,7 @@ public abstract class MessageTopTipBinding extends ViewDataBinding {
 
     @Deprecated
     public static MessageTopTipBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (MessageTopTipBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559020, viewGroup, z, obj);
+        return (MessageTopTipBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559027, viewGroup, z, obj);
     }
 
     public static MessageTopTipBinding inflate(LayoutInflater layoutInflater) {
@@ -33,7 +33,7 @@ public abstract class MessageTopTipBinding extends ViewDataBinding {
 
     @Deprecated
     public static MessageTopTipBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (MessageTopTipBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559020, null, false, obj);
+        return (MessageTopTipBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559027, null, false, obj);
     }
 
     public static MessageTopTipBinding bind(View view) {
@@ -42,6 +42,6 @@ public abstract class MessageTopTipBinding extends ViewDataBinding {
 
     @Deprecated
     public static MessageTopTipBinding bind(View view, Object obj) {
-        return (MessageTopTipBinding) bind(obj, view, 2131559020);
+        return (MessageTopTipBinding) bind(obj, view, 2131559027);
     }
 }

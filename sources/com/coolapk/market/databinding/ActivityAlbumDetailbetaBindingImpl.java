@@ -24,9 +24,9 @@ public class ActivityAlbumDetailbetaBindingImpl extends ActivityAlbumDetailbetaB
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363588, 4);
-        sparseIntArray.put(2131362023, 5);
-        sparseIntArray.put(2131362279, 6);
+        sparseIntArray.put(2131363610, 4);
+        sparseIntArray.put(2131362024, 5);
+        sparseIntArray.put(2131362284, 6);
     }
 
     public ActivityAlbumDetailbetaBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -66,9 +66,9 @@ public class ActivityAlbumDetailbetaBindingImpl extends ActivityAlbumDetailbetaB
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((AlbumDetailViewModel) obj);
@@ -88,7 +88,7 @@ public class ActivityAlbumDetailbetaBindingImpl extends ActivityAlbumDetailbetaB
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -106,12 +106,12 @@ public class ActivityAlbumDetailbetaBindingImpl extends ActivityAlbumDetailbetaB
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 246) {
+        } else if (i == 247) {
             synchronized (this) {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i != 170) {
+        } else if (i != 171) {
             return false;
         } else {
             synchronized (this) {

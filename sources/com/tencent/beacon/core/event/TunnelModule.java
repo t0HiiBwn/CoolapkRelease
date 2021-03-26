@@ -105,7 +105,7 @@ public class TunnelModule extends c {
 
     @Override // com.tencent.beacon.core.c
     public void onStrategyUpdated(com.tencent.beacon.core.strategy.a aVar) {
-        a.C0123a b2;
+        a.C0141a b2;
         super.onStrategyUpdated(aVar);
         if (aVar != null && (b2 = aVar.b(1)) != null) {
             boolean a2 = b2.a();
@@ -167,7 +167,7 @@ public class TunnelModule extends c {
     }
 
     public void setModuleUserEnable(boolean z) {
-        a.C0123a b2;
+        a.C0141a b2;
         StrategyQueryModule instance = StrategyQueryModule.getInstance(this.mContext);
         if (instance != null && (b2 = instance.getStrategy().b(1)) != null && b2.a() != z) {
             b2.a(z);

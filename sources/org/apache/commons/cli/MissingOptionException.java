@@ -15,10 +15,6 @@ public class MissingOptionException extends ParseException {
         this.missingOptions = list;
     }
 
-    public List getMissingOptions() {
-        return this.missingOptions;
-    }
-
     private static String createMessage(List list) {
         StringBuffer stringBuffer = new StringBuffer("Missing required option");
         stringBuffer.append(list.size() == 1 ? "" : "s");
@@ -31,5 +27,9 @@ public class MissingOptionException extends ParseException {
             }
         }
         return stringBuffer.toString();
+    }
+
+    public List getMissingOptions() {
+        return this.missingOptions;
     }
 }

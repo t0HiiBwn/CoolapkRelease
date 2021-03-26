@@ -33,7 +33,7 @@ public abstract class ItemSeeMoreBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSeeMoreBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSeeMoreBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558922, viewGroup, z, obj);
+        return (ItemSeeMoreBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558929, viewGroup, z, obj);
     }
 
     public static ItemSeeMoreBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class ItemSeeMoreBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSeeMoreBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSeeMoreBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558922, null, false, obj);
+        return (ItemSeeMoreBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558929, null, false, obj);
     }
 
     public static ItemSeeMoreBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class ItemSeeMoreBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSeeMoreBinding bind(View view, Object obj) {
-        return (ItemSeeMoreBinding) bind(obj, view, 2131558922);
+        return (ItemSeeMoreBinding) bind(obj, view, 2131558929);
     }
 }

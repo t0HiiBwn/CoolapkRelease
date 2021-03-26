@@ -26,8 +26,8 @@ public class ItemCommentbarChildViewBindingImpl extends ItemCommentbarChildViewB
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362672, 1);
-        sparseIntArray.put(2131363533, 2);
+        sparseIntArray.put(2131362683, 1);
+        sparseIntArray.put(2131363551, 2);
     }
 
     public ItemCommentbarChildViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

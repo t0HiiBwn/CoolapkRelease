@@ -44,14 +44,14 @@ public final class AlbumDetailListFragment$onActivityCreated$1 implements Recycl
         float y = motionEvent.getY();
         int action = motionEvent.getAction();
         if (action == 0) {
-            AlbumDetailListFragment.access$setDownY$p(this.this$0, y);
+            this.this$0.downY = y;
         } else if (action != 1 || albumDetailActivity.getFilter() == 1.0f) {
             return false;
         } else {
-            if (y > AlbumDetailListFragment.access$getDownY$p(this.this$0)) {
+            if (y > this.this$0.downY) {
                 this.this$0.getRecyclerView().post(new AlbumDetailListFragment$onActivityCreated$1$onInterceptTouchEvent$1(this));
                 return true;
-            } else if (AlbumDetailListFragment.access$getDownY$p(this.this$0) - y > ((float) 10)) {
+            } else if (this.this$0.downY - y > ((float) 10)) {
                 this.this$0.getRecyclerView().post(new AlbumDetailListFragment$onActivityCreated$1$onInterceptTouchEvent$2(this, albumDetailActivity));
                 return true;
             }

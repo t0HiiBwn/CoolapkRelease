@@ -41,10 +41,10 @@ final class GoodsSearchMainListFragment$onActivityCreated$2 extends Lambda imple
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
                 int id = view.getId();
-                if (id == 2131362257) {
+                if (id == 2131362262) {
                     GoodsSearchHistoryHelper.INSTANCE.clear();
                     this.this$0.this$0.loadHistory();
-                } else if (id == 2131363587) {
+                } else if (id == 2131363609) {
                     this.this$0.this$0.showAllHistory.set(!this.this$0.this$0.showAllHistory.get());
                     this.this$0.this$0.loadHistory();
                 }
@@ -54,7 +54,7 @@ final class GoodsSearchMainListFragment$onActivityCreated$2 extends Lambda imple
             public boolean onItemLongClick(RecyclerView.ViewHolder viewHolder, View view) {
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
-                if (view.getId() == 2131362768) {
+                if (view.getId() == 2131362779) {
                     Object tag = view.getTag();
                     Objects.requireNonNull(tag, "null cannot be cast to non-null type kotlin.String");
                     String[] strArr = {(String) tag};

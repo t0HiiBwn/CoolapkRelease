@@ -49,7 +49,7 @@ final class SaveImageDialog$onActivityCreated$1 extends Lambda implements Functi
 
     public final void invoke(List<ActionItem> list) {
         Intrinsics.checkNotNullParameter(list, "it");
-        String string = this.this$0.getString(2131886982);
+        String string = this.this$0.getString(2131887044);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_share_image)");
         MultiItemDialogFragmentKt.addItem(list, new ActionItem(this, string) {
             /* class com.coolapk.market.view.photo.SaveImageDialog$onActivityCreated$1.AnonymousClass1 */
@@ -76,7 +76,7 @@ final class SaveImageDialog$onActivityCreated$1 extends Lambda implements Functi
                 saveImageDialog.saveImageAndShare(glideUrl);
             }
         });
-        String string2 = this.this$0.getString(2131886930);
+        String string2 = this.this$0.getString(2131886992);
         Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_photo_view_save_photo)");
         MultiItemDialogFragmentKt.addItem(list, new ActionItem(this, string2) {
             /* class com.coolapk.market.view.photo.SaveImageDialog$onActivityCreated$1.AnonymousClass2 */
@@ -127,7 +127,7 @@ final class SaveImageDialog$onActivityCreated$1 extends Lambda implements Functi
             });
         }
         if (TextUtils.equals(this.this$0.feedType, "picture")) {
-            String string3 = this.this$0.getString(2131887154);
+            String string3 = this.this$0.getString(2131887216);
             Intrinsics.checkNotNullExpressionValue(string3, "getString(R.string.str_wallpaper_set)");
             MultiItemDialogFragmentKt.addItem(list, new ActionItem(this, string3) {
                 /* class com.coolapk.market.view.photo.SaveImageDialog$onActivityCreated$1.AnonymousClass4 */

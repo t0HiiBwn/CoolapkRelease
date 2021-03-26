@@ -16,8 +16,8 @@ import kotlinx.coroutines.channels.ReceiveChannel;
 import kotlinx.coroutines.flow.internal.NullSurrogateKt;
 import kotlinx.coroutines.selects.SelectBuilderImpl;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0016\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u0001\"\u0004\b\u0000\u0010\u0002*\u00020\u00032\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u0002H\u00020\u0005H@¢\u0006\u0004\b\u0006\u0010\u0007"}, d2 = {"<anonymous>", "", "T", "Lkotlinx/coroutines/CoroutineScope;", "downstream", "Lkotlinx/coroutines/flow/FlowCollector;", "invoke", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"}, k = 3, mv = {1, 1, 16})
-@DebugMetadata(c = "kotlinx.coroutines.flow.FlowKt__DelayKt$sample$2", f = "Delay.kt", i = {0, 0, 0, 0, 0}, l = {137}, m = "invokeSuspend", n = {"$this$scopedFlow", "downstream", "values", "lastValue", "ticker"}, s = {"L$0", "L$1", "L$2", "L$3", "L$4"})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0016\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0000\u001a\u00020\u0001\"\u0004\b\u0000\u0010\u0002*\u00020\u00032\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u0002H\u00020\u0005H@¢\u0006\u0004\b\u0006\u0010\u0007"}, d2 = {"<anonymous>", "", "T", "Lkotlinx/coroutines/CoroutineScope;", "downstream", "Lkotlinx/coroutines/flow/FlowCollector;", "invoke", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"}, k = 3, mv = {1, 4, 0})
+@DebugMetadata(c = "kotlinx.coroutines.flow.FlowKt__DelayKt$sample$2", f = "Delay.kt", i = {0, 0, 0, 0, 0}, l = {355}, m = "invokeSuspend", n = {"$this$scopedFlow", "downstream", "values", "lastValue", "ticker"}, s = {"L$0", "L$1", "L$2", "L$3", "L$4"})
 /* compiled from: Delay.kt */
 final class FlowKt__DelayKt$sample$2 extends SuspendLambda implements Function3<CoroutineScope, FlowCollector<? super T>, Continuation<? super Unit>, Object> {
     final /* synthetic */ long $periodMillis;
@@ -53,26 +53,26 @@ final class FlowKt__DelayKt$sample$2 extends SuspendLambda implements Function3<
     }
 
     /* JADX WARNING: Can't wrap try/catch for region: R(13:9|10|11|12|13|14|15|21|(1:23)|(1:25)|26|7|(0)(0)) */
-    /* JADX WARNING: Code restructure failed: missing block: B:16:0x00bb, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:16:0x00c7, code lost:
         r0 = th;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:17:0x00bc, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:17:0x00c8, code lost:
         r3 = r8;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:20:0x00c3, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:20:0x00cf, code lost:
         r3.handleBuilderException(r0);
      */
-    /* JADX WARNING: Removed duplicated region for block: B:23:0x00d0  */
-    /* JADX WARNING: Removed duplicated region for block: B:25:0x00d5 A[RETURN] */
-    /* JADX WARNING: Removed duplicated region for block: B:9:0x006c  */
+    /* JADX WARNING: Removed duplicated region for block: B:23:0x00dc  */
+    /* JADX WARNING: Removed duplicated region for block: B:25:0x00e1 A[RETURN] */
+    /* JADX WARNING: Removed duplicated region for block: B:9:0x0074  */
     @Override // kotlin.coroutines.jvm.internal.BaseContinuationImpl
     public final Object invokeSuspend(Object obj) {
         FlowKt__DelayKt$sample$2 flowKt__DelayKt$sample$2;
         CoroutineScope coroutineScope;
         Ref.ObjectRef objectRef;
-        ReceiveChannel receiveChannel;
+        Ref.ObjectRef objectRef2;
         FlowCollector flowCollector;
-        ReceiveChannel receiveChannel2;
+        ReceiveChannel receiveChannel;
         Object obj2;
         FlowKt__DelayKt$sample$2 flowKt__DelayKt$sample$22;
         SelectBuilderImpl selectBuilderImpl;
@@ -84,20 +84,21 @@ final class FlowKt__DelayKt$sample$2 extends SuspendLambda implements Function3<
             ResultKt.throwOnFailure(obj);
             CoroutineScope coroutineScope2 = this.p$;
             flowCollector = this.p$0;
-            receiveChannel = ProduceKt.produce$default(coroutineScope2, null, -1, new FlowKt__DelayKt$sample$2$values$1(this, null), 1, null);
+            objectRef2 = new Ref.ObjectRef();
+            objectRef2.element = (T) ProduceKt.produce$default(coroutineScope2, null, -1, new FlowKt__DelayKt$sample$2$values$1(this, null), 1, null);
             objectRef = new Ref.ObjectRef();
             objectRef.element = null;
             flowKt__DelayKt$sample$2 = this;
             coroutineScope = coroutineScope2;
-            receiveChannel2 = FlowKt__DelayKt.fixedPeriodTicker$default(coroutineScope2, this.$periodMillis, 0, 2, null);
+            receiveChannel = FlowKt__DelayKt.fixedPeriodTicker$default(coroutineScope2, this.$periodMillis, 0, 2, null);
             obj2 = coroutine_suspended;
         } else if (i == 1) {
             FlowKt__DelayKt$sample$2 flowKt__DelayKt$sample$23 = (FlowKt__DelayKt$sample$2) this.L$5;
             ResultKt.throwOnFailure(obj);
             flowKt__DelayKt$sample$2 = this;
-            receiveChannel2 = (ReceiveChannel) this.L$4;
+            receiveChannel = (ReceiveChannel) this.L$4;
             objectRef = (Ref.ObjectRef) this.L$3;
-            receiveChannel = (ReceiveChannel) this.L$2;
+            objectRef2 = (Ref.ObjectRef) this.L$2;
             flowCollector = (FlowCollector) this.L$1;
             coroutineScope = (CoroutineScope) this.L$0;
             obj2 = coroutine_suspended;
@@ -108,9 +109,9 @@ final class FlowKt__DelayKt$sample$2 extends SuspendLambda implements Function3<
         if (objectRef.element != NullSurrogateKt.DONE) {
             flowKt__DelayKt$sample$2.L$0 = coroutineScope;
             flowKt__DelayKt$sample$2.L$1 = flowCollector;
-            flowKt__DelayKt$sample$2.L$2 = receiveChannel;
+            flowKt__DelayKt$sample$2.L$2 = objectRef2;
             flowKt__DelayKt$sample$2.L$3 = objectRef;
-            flowKt__DelayKt$sample$2.L$4 = receiveChannel2;
+            flowKt__DelayKt$sample$2.L$4 = receiveChannel;
             flowKt__DelayKt$sample$2.L$5 = flowKt__DelayKt$sample$2;
             flowKt__DelayKt$sample$2.label = i2;
             FlowKt__DelayKt$sample$2 flowKt__DelayKt$sample$24 = flowKt__DelayKt$sample$2;
@@ -123,8 +124,8 @@ final class FlowKt__DelayKt$sample$2 extends SuspendLambda implements Function3<
                 selectBuilderImpl = selectBuilderImpl3;
             }
             flowKt__DelayKt$sample$22 = flowKt__DelayKt$sample$24;
-            selectBuilderImpl2.invoke(receiveChannel.getOnReceiveOrNull(), new FlowKt__DelayKt$sample$2$invokeSuspend$$inlined$select$lambda$1(null, receiveChannel, receiveChannel2, objectRef, flowCollector));
-            selectBuilderImpl2.invoke(receiveChannel2.getOnReceive(), new FlowKt__DelayKt$sample$2$invokeSuspend$$inlined$select$lambda$2(null, receiveChannel, receiveChannel2, objectRef, flowCollector));
+            selectBuilderImpl2.invoke(objectRef2.element.getOnReceiveOrNull(), new FlowKt__DelayKt$sample$2$invokeSuspend$$inlined$select$lambda$1(null, objectRef2, receiveChannel, objectRef, flowCollector));
+            selectBuilderImpl2.invoke(receiveChannel.getOnReceive(), new FlowKt__DelayKt$sample$2$invokeSuspend$$inlined$select$lambda$2(null, objectRef2, receiveChannel, objectRef, flowCollector));
             selectBuilderImpl = selectBuilderImpl3;
             Object result = selectBuilderImpl.getResult();
             if (result == IntrinsicsKt.getCOROUTINE_SUSPENDED()) {

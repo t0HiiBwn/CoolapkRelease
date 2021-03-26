@@ -23,8 +23,8 @@ final class AutoValue_Collection extends C$AutoValue_Collection {
         return 0;
     }
 
-    AutoValue_Collection(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l2, Long l3, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, int i, int i2, String str15, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10, String str16, int i11, Long l4, UserAction userAction, String str17) {
-        super(str, str2, str3, num, str4, str5, str6, str7, l2, l3, str8, userInfo, str9, str10, str11, str12, str13, str14, i, i2, str15, i3, i4, i5, i6, i7, i8, i9, i10, str16, i11, l4, userAction, str17);
+    AutoValue_Collection(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l, Long l2, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, int i, int i2, String str15, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10, String str16, int i11, Long l3, UserAction userAction, String str17) {
+        super(str, str2, str3, num, str4, str5, str6, str7, l, l2, str8, userInfo, str9, str10, str11, str12, str13, str14, i, i2, str15, i3, i4, i5, i6, i7, i8, i9, i10, str16, i11, l3, userAction, str17);
     }
 
     @Override // android.os.Parcelable

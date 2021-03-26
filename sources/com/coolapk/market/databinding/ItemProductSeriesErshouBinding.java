@@ -51,7 +51,7 @@ public abstract class ItemProductSeriesErshouBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductSeriesErshouBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemProductSeriesErshouBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558874, viewGroup, z, obj);
+        return (ItemProductSeriesErshouBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558881, viewGroup, z, obj);
     }
 
     public static ItemProductSeriesErshouBinding inflate(LayoutInflater layoutInflater) {
@@ -60,7 +60,7 @@ public abstract class ItemProductSeriesErshouBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductSeriesErshouBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemProductSeriesErshouBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558874, null, false, obj);
+        return (ItemProductSeriesErshouBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558881, null, false, obj);
     }
 
     public static ItemProductSeriesErshouBinding bind(View view) {
@@ -69,6 +69,6 @@ public abstract class ItemProductSeriesErshouBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductSeriesErshouBinding bind(View view, Object obj) {
-        return (ItemProductSeriesErshouBinding) bind(obj, view, 2131558874);
+        return (ItemProductSeriesErshouBinding) bind(obj, view, 2131558881);
     }
 }

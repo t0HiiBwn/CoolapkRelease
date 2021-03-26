@@ -57,7 +57,7 @@ public abstract class ItemCoolpicFallBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCoolpicFallBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemCoolpicFallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558664, viewGroup, z, obj);
+        return (ItemCoolpicFallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558670, viewGroup, z, obj);
     }
 
     public static ItemCoolpicFallBinding inflate(LayoutInflater layoutInflater) {
@@ -66,7 +66,7 @@ public abstract class ItemCoolpicFallBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCoolpicFallBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemCoolpicFallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558664, null, false, obj);
+        return (ItemCoolpicFallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558670, null, false, obj);
     }
 
     public static ItemCoolpicFallBinding bind(View view) {
@@ -75,6 +75,6 @@ public abstract class ItemCoolpicFallBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCoolpicFallBinding bind(View view, Object obj) {
-        return (ItemCoolpicFallBinding) bind(obj, view, 2131558664);
+        return (ItemCoolpicFallBinding) bind(obj, view, 2131558670);
     }
 }

@@ -93,7 +93,7 @@ public class a {
             return null;
         }
         if ((i & 64) != 0 && packageArchiveInfo.signatures == null) {
-            packageArchiveInfo.signatures = C0071a.a(str);
+            packageArchiveInfo.signatures = C0081a.a(str);
         }
         return packageArchiveInfo;
     }
@@ -110,7 +110,7 @@ public class a {
     }
 
     /* renamed from: com.kepler.sdk.a$a  reason: collision with other inner class name */
-    public static class C0071a {
+    public static class C0081a {
         public static final String[] a = {"AndroidManifest.xml"};
         public static final String[] b = {"AndroidManifest.xml", "classes.dex"};
         private static final Object c = new Object();
@@ -327,16 +327,16 @@ public class a {
             if (strArr == null || strArr.length == 0) {
                 return jarFile.entries();
             }
-            return new C0072a(jarFile, strArr);
+            return new C0082a(jarFile, strArr);
         }
 
         /* renamed from: com.kepler.sdk.a$a$a  reason: collision with other inner class name */
-        static class C0072a implements Enumeration<JarEntry> {
+        static class C0082a implements Enumeration<JarEntry> {
             private final JarFile a;
             private final String[] b;
             private int c = 0;
 
-            public C0072a(JarFile jarFile, String... strArr) {
+            public C0082a(JarFile jarFile, String... strArr) {
                 this.a = jarFile;
                 this.b = strArr;
             }

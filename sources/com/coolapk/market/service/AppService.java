@@ -54,7 +54,7 @@ public final class AppService extends TaskService {
         if (this.isFirstForeground && Build.VERSION.SDK_INT >= 26) {
             if (intent != null ? intent.getBooleanExtra("FOREGROUND", false) : false) {
                 this.isFirstForeground = false;
-                startForeground(6, new NotificationCompat.Builder(getApplicationContext(), String.valueOf(6)).setContentTitle("酷安后台服务").setSmallIcon(2131231756).setColor(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099784)).setContentText("").setAutoCancel(true).build());
+                startForeground(6, new NotificationCompat.Builder(getApplicationContext(), String.valueOf(6)).setContentTitle("酷安后台服务").setSmallIcon(2131231767).setColor(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099786)).setContentText("").setAutoCancel(true).build());
             }
         }
         return super.onStartCommand(intent, i, i2);

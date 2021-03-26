@@ -15,9 +15,7 @@ public class ca extends ch {
     private byte[] i;
     private byte[] j;
     private byte[] k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private byte[] f1464l;
+    private byte[] l;
     private byte[] m;
     private byte[] n;
     private byte[] o;
@@ -120,7 +118,7 @@ public class ca extends ch {
         this.i = new byte[1];
         this.j = new byte[2];
         this.k = new byte[4];
-        this.f1464l = new byte[8];
+        this.l = new byte[8];
         this.m = new byte[1];
         this.n = new byte[2];
         this.o = new byte[4];
@@ -203,7 +201,7 @@ public class ca extends ch {
 
     @Override // com.umeng.analytics.pro.ch
     public void a(long j2) throws bo {
-        byte[] bArr = this.f1464l;
+        byte[] bArr = this.l;
         bArr[0] = (byte) ((int) ((j2 >> 56) & 255));
         bArr[1] = (byte) ((int) ((j2 >> 48) & 255));
         bArr[2] = (byte) ((int) ((j2 >> 40) & 255));
@@ -212,7 +210,7 @@ public class ca extends ch {
         bArr[5] = (byte) ((int) ((j2 >> 16) & 255));
         bArr[6] = (byte) ((int) ((j2 >> 8) & 255));
         bArr[7] = (byte) ((int) (j2 & 255));
-        this.g.b(this.f1464l, 0, 8);
+        this.g.b(this.l, 0, 8);
     }
 
     @Override // com.umeng.analytics.pro.ch

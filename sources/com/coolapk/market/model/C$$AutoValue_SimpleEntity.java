@@ -22,7 +22,7 @@ abstract class C$$AutoValue_SimpleEntity extends SimpleEntity {
     private final String title;
     private final String url;
 
-    C$$AutoValue_SimpleEntity(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3) {
+    C$$AutoValue_SimpleEntity(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -37,8 +37,8 @@ abstract class C$$AutoValue_SimpleEntity extends SimpleEntity {
         this.subTitle = str10;
         this.id = str11;
         this.extraData = str12;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
     }
 
     @Override // com.coolapk.market.model.Entity
@@ -149,7 +149,7 @@ abstract class C$$AutoValue_SimpleEntity extends SimpleEntity {
         String str8;
         String str9;
         String str10;
-        Long l2;
+        Long l;
         if (obj == this) {
             return true;
         }
@@ -159,13 +159,13 @@ abstract class C$$AutoValue_SimpleEntity extends SimpleEntity {
         SimpleEntity simpleEntity = (SimpleEntity) obj;
         String str11 = this.entityTypeName;
         if (str11 != null ? str11.equals(simpleEntity.getEntityTypeName()) : simpleEntity.getEntityTypeName() == null) {
-            if (this.entityType.equals(simpleEntity.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(simpleEntity.getEntityTemplate()) : simpleEntity.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(simpleEntity.getEntityId()) : simpleEntity.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(simpleEntity.getEntityFixed()) : simpleEntity.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(simpleEntity.getTitle()) : simpleEntity.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(simpleEntity.getUrl()) : simpleEntity.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(simpleEntity.getDescription()) : simpleEntity.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(simpleEntity.getPic()) : simpleEntity.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(simpleEntity.getLogo()) : simpleEntity.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(simpleEntity.getSubTitle()) : simpleEntity.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(simpleEntity.getId()) : simpleEntity.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(simpleEntity.getExtraData()) : simpleEntity.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(simpleEntity.getDateline()) : simpleEntity.getDateline() == null)) {
-                Long l3 = this.lastUpdate;
-                if (l3 == null) {
+            if (this.entityType.equals(simpleEntity.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(simpleEntity.getEntityTemplate()) : simpleEntity.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(simpleEntity.getEntityId()) : simpleEntity.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(simpleEntity.getEntityFixed()) : simpleEntity.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(simpleEntity.getTitle()) : simpleEntity.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(simpleEntity.getUrl()) : simpleEntity.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(simpleEntity.getDescription()) : simpleEntity.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(simpleEntity.getPic()) : simpleEntity.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(simpleEntity.getLogo()) : simpleEntity.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(simpleEntity.getSubTitle()) : simpleEntity.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(simpleEntity.getId()) : simpleEntity.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(simpleEntity.getExtraData()) : simpleEntity.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(simpleEntity.getDateline()) : simpleEntity.getDateline() == null)) {
+                Long l2 = this.lastUpdate;
+                if (l2 == null) {
                     if (simpleEntity.getLastUpdate() == null) {
                         return true;
                     }
-                } else if (l3.equals(simpleEntity.getLastUpdate())) {
+                } else if (l2.equals(simpleEntity.getLastUpdate())) {
                     return true;
                 }
             }
@@ -200,11 +200,11 @@ abstract class C$$AutoValue_SimpleEntity extends SimpleEntity {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        if (l3 != null) {
-            i = l3.hashCode();
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        if (l2 != null) {
+            i = l2.hashCode();
         }
         return hashCode13 ^ i;
     }
@@ -328,14 +328,14 @@ abstract class C$$AutoValue_SimpleEntity extends SimpleEntity {
         }
 
         @Override // com.coolapk.market.model.SimpleEntity.Builder
-        public SimpleEntity.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public SimpleEntity.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.SimpleEntity.Builder
-        public SimpleEntity.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public SimpleEntity.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Topic  reason: invalid class name */
 abstract class C$AutoValue_Topic extends C$$AutoValue_Topic {
-    C$AutoValue_Topic(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l2, Long l3, String str8, String str9, String str10, int i, int i2, int i3, int i4, String str11, UserAction userAction, String str12, int i5, String str13, List<RelatedData> list, int i6, long j, long j2, String str14, List<NewHeadLine> list2, int i7, String str15, String str16, int i8, int i9, int i10, int i11, int i12, int i13, String str17, String str18, String str19, String str20, String str21, String str22, List<String> list3, List<String> list4, List<ConfigPage> list5, String str23, int i14, String str24, String str25) {
-        super(str, str2, str3, str4, num, str5, str6, str7, l2, l3, str8, str9, str10, i, i2, i3, i4, str11, userAction, str12, i5, str13, list, i6, j, j2, str14, list2, i7, str15, str16, i8, i9, i10, i11, i12, i13, str17, str18, str19, str20, str21, str22, list3, list4, list5, str23, i14, str24, str25);
+    C$AutoValue_Topic(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l, Long l2, String str8, String str9, String str10, int i, int i2, int i3, int i4, String str11, UserAction userAction, String str12, int i5, String str13, List<RelatedData> list, int i6, long j, long j2, String str14, List<NewHeadLine> list2, int i7, String str15, String str16, int i8, int i9, int i10, int i11, int i12, int i13, String str17, String str18, String str19, String str20, String str21, String str22, List<String> list3, List<String> list4, List<ConfigPage> list5, String str23, int i14, String str24, String str25) {
+        super(str, str2, str3, str4, num, str5, str6, str7, l, l2, str8, str9, str10, i, i2, i3, i4, str11, userAction, str12, i5, str13, list, i6, j, j2, str14, list2, i7, str15, str16, i8, i9, i10, i11, i12, i13, str17, str18, str19, str20, str21, str22, list3, list4, list5, str23, i14, str24, str25);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Topic$GsonTypeAdapter */
@@ -212,13 +212,13 @@ abstract class C$AutoValue_Topic extends C$$AutoValue_Topic {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -546,8 +546,8 @@ abstract class C$AutoValue_Topic extends C$$AutoValue_Topic {
             String str5 = this.defaultPic;
             String str6 = this.defaultSubTitle;
             String str7 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str8 = this.defaultId;
             String str9 = this.defaultLogo;
             String str10 = this.defaultDescription;
@@ -595,8 +595,8 @@ abstract class C$AutoValue_Topic extends C$$AutoValue_Topic {
             String str28 = str5;
             String str29 = str6;
             String str30 = str7;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str31 = str8;
             String str32 = str9;
             String str33 = str10;
@@ -996,7 +996,7 @@ abstract class C$AutoValue_Topic extends C$$AutoValue_Topic {
                             str49 = this.hotNumTextAdapter.read(jsonReader);
                             continue;
                         case 16:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 17:
                             list6 = this.recommendRowsAdapter.read(jsonReader);
@@ -1092,7 +1092,7 @@ abstract class C$AutoValue_Topic extends C$$AutoValue_Topic {
                             list7 = this.recentFollowListAdapter.read(jsonReader);
                             continue;
                         case '0':
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case '1':
                             i19 = this.isLiveAdapter.read(jsonReader).intValue();
@@ -1104,7 +1104,7 @@ abstract class C$AutoValue_Topic extends C$$AutoValue_Topic {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Topic(str34, str38, str26, str27, num2, str28, str29, str30, l4, l5, str31, str32, str33, i15, i16, i17, i18, str35, userAction2, str36, i19, str37, list7, i20, j3, j4, str39, list6, i21, str40, str41, i22, i23, i24, i25, i26, i27, str42, str43, str44, str45, str46, str47, list8, list9, list10, str48, i28, str49, str25);
+            return new AutoValue_Topic(str34, str38, str26, str27, num2, str28, str29, str30, l3, l4, str31, str32, str33, i15, i16, i17, i18, str35, userAction2, str36, i19, str37, list7, i20, j3, j4, str39, list6, i21, str40, str41, i22, i23, i24, i25, i26, i27, str42, str43, str44, str45, str46, str47, list8, list9, list10, str48, i28, str49, str25);
         }
     }
 }

@@ -115,7 +115,7 @@ public abstract class ItemTripleCoolPicBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTripleCoolPicBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemTripleCoolPicBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558964, viewGroup, z, obj);
+        return (ItemTripleCoolPicBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558971, viewGroup, z, obj);
     }
 
     public static ItemTripleCoolPicBinding inflate(LayoutInflater layoutInflater) {
@@ -124,7 +124,7 @@ public abstract class ItemTripleCoolPicBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTripleCoolPicBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemTripleCoolPicBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558964, null, false, obj);
+        return (ItemTripleCoolPicBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558971, null, false, obj);
     }
 
     public static ItemTripleCoolPicBinding bind(View view) {
@@ -133,6 +133,6 @@ public abstract class ItemTripleCoolPicBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTripleCoolPicBinding bind(View view, Object obj) {
-        return (ItemTripleCoolPicBinding) bind(obj, view, 2131558964);
+        return (ItemTripleCoolPicBinding) bind(obj, view, 2131558971);
     }
 }

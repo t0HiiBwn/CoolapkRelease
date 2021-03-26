@@ -24,8 +24,8 @@ public class ItemSortSelectBindingImpl extends ItemSortSelectBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 3);
-        sparseIntArray.put(2131363338, 4);
+        sparseIntArray.put(2131363604, 3);
+        sparseIntArray.put(2131363354, 4);
     }
 
     public ItemSortSelectBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -64,7 +64,7 @@ public class ItemSortSelectBindingImpl extends ItemSortSelectBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((Entity) obj);

@@ -45,7 +45,7 @@ public class V8SettingsFragment extends LocalDataFragment<HolderItem> {
 
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment
     public int getItemViewType(int i) {
-        return 2131558926;
+        return 2131558933;
     }
 
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
@@ -137,7 +137,7 @@ public class V8SettingsFragment extends LocalDataFragment<HolderItem> {
         arrayList.add(HolderItem.newBuilder().entityType("holder_item").string("界面显示").intValue(2).build());
         arrayList.add(HolderItem.newBuilder().entityType("holder_item").string("消息提醒").intValue(3).build());
         arrayList.add(HolderItem.newBuilder().entityType("holder_item").string("下载安装").intValue(4).build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_item").string(getString(2131886514)).intValue(5).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_item").string(getString(2131886574)).intValue(5).build());
         arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(14).build());
         arrayList.add(HolderItem.newBuilder().entityType("holder_item").string("实验室").intValue(6).build());
         arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(14).build());
@@ -155,7 +155,7 @@ public class V8SettingsFragment extends LocalDataFragment<HolderItem> {
     }
 
     public static class SettingViewHolder extends GenericBindHolder<ItemSettingBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558926;
+        public static final int LAYOUT_ID = 2131558933;
 
         public SettingViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);
@@ -184,7 +184,7 @@ public class V8SettingsFragment extends LocalDataFragment<HolderItem> {
     }
 
     public static class SettingDividerViewHolder extends GenericBindHolder<ItemSimpleDividerBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558928;
+        public static final int LAYOUT_ID = 2131558935;
 
         public SettingDividerViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);

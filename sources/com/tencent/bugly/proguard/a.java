@@ -56,12 +56,12 @@ public class a {
         return e;
     }
 
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: int : 0x0070: IGET  (r6v18 int) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.p int)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: int : 0x0089: IGET  (r6v16 int) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.q int)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0134: IGET  (r6v3 long) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.g long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0149: IGET  (r6v5 long) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.h long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0173: IGET  (r6v9 long) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.i long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x019d: IGET  (r6v13 long) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.k long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: int : 0x0071: IGET  (r6v18 int) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.p int)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: int : 0x008a: IGET  (r6v16 int) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.q int)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0135: IGET  (r6v3 long) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.g long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x014a: IGET  (r6v5 long) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.h long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0174: IGET  (r6v9 long) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.i long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x019e: IGET  (r6v13 long) = (r9v0 com.tencent.bugly.crashreport.biz.UserInfoBean) com.tencent.bugly.crashreport.biz.UserInfoBean.k long)] */
     public static aq a(UserInfoBean userInfoBean) {
         if (userInfoBean == null) {
             return null;
@@ -114,7 +114,7 @@ public class a {
         }
         Map<String, String> map5 = aqVar.f;
         StringBuilder sb3 = new StringBuilder();
-        sb3.append(!userInfoBean.f1431l);
+        sb3.append(!userInfoBean.l);
         map5.put("A36", sb3.toString());
         Map<String, String> map6 = aqVar.f;
         StringBuilder sb4 = new StringBuilder();
@@ -336,7 +336,7 @@ public class a {
                 amVar.i = b2.h;
                 amVar.j = b2.i;
                 amVar.k = new HashMap();
-                amVar.f1440l = b2.e();
+                amVar.l = b2.e();
                 amVar.m = c2.n;
                 amVar.o = b2.h();
                 amVar.p = b.b(context);
@@ -365,7 +365,7 @@ public class a {
                 sb4.append(b2.A);
                 map5.put("F12", sb4.toString());
                 Map<String, String> map6 = amVar.k;
-                map6.put("D3", b2.f1433l);
+                map6.put("D3", b2.l);
                 if (com.tencent.bugly.b.b != null) {
                     for (com.tencent.bugly.a aVar : com.tencent.bugly.b.b) {
                         if (!(aVar.versionKey == null || aVar.version == null)) {

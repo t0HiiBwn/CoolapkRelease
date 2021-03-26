@@ -118,7 +118,7 @@ class bv extends f<bs, bs> implements cc {
                 bs bsVar = arrayList.get(i);
                 if (bsVar != null) {
                     int a = anVar.n.a(bsVar.c());
-                    bs bsVar2 = new bs(bsVar.b, bsVar.c, bsVar.d, anVar.f1216l);
+                    bs bsVar2 = new bs(bsVar.b, bsVar.c, bsVar.d, anVar.l);
                     bsVar2.h = a;
                     bsVar2.g = bsVar.g;
                     anVar.p.add(bsVar2);
@@ -139,7 +139,7 @@ class bv extends f<bs, bs> implements cc {
     public void a(boolean z, boolean z2) {
         ArrayList<bs> a;
         try {
-            if (j() && (a = this.b.h.a(this.b.h.f1218l, this.b.h.b(), this.b.c.c(), this.b.c.d())) != null && a.size() > 0) {
+            if (j() && (a = this.b.h.a(this.b.h.l, this.b.h.b(), this.b.c.c(), this.b.c.d())) != null && a.size() > 0) {
                 ArrayList<bs> a2 = a(a, this.c, this.b.c.e(), z2);
                 if (a2 != null) {
                     a(a2, true);

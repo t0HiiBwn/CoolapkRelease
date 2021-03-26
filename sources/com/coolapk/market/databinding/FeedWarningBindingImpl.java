@@ -22,7 +22,7 @@ public class FeedWarningBindingImpl extends FeedWarningBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362027, 3);
+        sparseIntArray.put(2131362028, 3);
     }
 
     public FeedWarningBindingImpl(DataBindingComponent dataBindingComponent, View view) {

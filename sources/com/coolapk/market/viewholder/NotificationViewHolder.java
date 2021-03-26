@@ -28,7 +28,7 @@ import rx.Subscriber;
 import rx.functions.Func1;
 
 public class NotificationViewHolder extends GenericBindHolder<ItemNotificationBinding, Notification> {
-    public static final int LAYOUT_ID = 2131558842;
+    public static final int LAYOUT_ID = 2131558849;
     private Notification mNotification;
 
     public NotificationViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -119,13 +119,13 @@ public class NotificationViewHolder extends GenericBindHolder<ItemNotificationBi
     public void onClick(View view) {
         super.onClick(view);
         int id = view.getId();
-        if (id == 2131361891) {
+        if (id == 2131361892) {
             deleteNotification(this.mNotification, getContext());
-        } else if (id == 2131362200) {
+        } else if (id == 2131362205) {
             URLSpan[] urls = ((ItemNotificationBinding) getBinding()).infoView.getUrls();
             if (urls != null && urls.length > 0) {
                 if (urls[0].getURL().equals("/contacts/fans")) {
-                    ActionManager.startUserSpaceActivity(this.itemView.findViewById(2131363877), this.mNotification.getFromUid(), this.mNotification.getUserAvatar());
+                    ActionManager.startUserSpaceActivity(this.itemView.findViewById(2131363900), this.mNotification.getFromUid(), this.mNotification.getUserAvatar());
                 } else {
                     urls[0].onClick(view);
                 }
@@ -133,7 +133,7 @@ public class NotificationViewHolder extends GenericBindHolder<ItemNotificationBi
             if (this.mNotification.getIsNew() > 0) {
                 EventBus.getDefault().post(new NotificationReadEvent(this.mNotification.getId()));
             }
-        } else if (id == 2131363877) {
+        } else if (id == 2131363900) {
             ActionManagerCompat.startActivityByUrl(getContext(), this.mNotification.getUrl(), null, null);
         }
     }

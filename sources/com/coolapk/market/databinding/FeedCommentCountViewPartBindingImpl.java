@@ -29,17 +29,17 @@ public class FeedCommentCountViewPartBindingImpl extends FeedCommentCountViewPar
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362562, 1);
-        sparseIntArray.put(2131361886, 2);
-        sparseIntArray.put(2131362257, 3);
-        sparseIntArray.put(2131362851, 4);
-        sparseIntArray.put(2131362555, 5);
-        sparseIntArray.put(2131362554, 6);
-        sparseIntArray.put(2131362553, 7);
-        sparseIntArray.put(2131363397, 8);
-        sparseIntArray.put(2131362592, 9);
-        sparseIntArray.put(2131362417, 10);
-        sparseIntArray.put(2131362730, 11);
+        sparseIntArray.put(2131362570, 1);
+        sparseIntArray.put(2131361887, 2);
+        sparseIntArray.put(2131362262, 3);
+        sparseIntArray.put(2131362862, 4);
+        sparseIntArray.put(2131362563, 5);
+        sparseIntArray.put(2131362562, 6);
+        sparseIntArray.put(2131362561, 7);
+        sparseIntArray.put(2131363414, 8);
+        sparseIntArray.put(2131362600, 9);
+        sparseIntArray.put(2131362423, 10);
+        sparseIntArray.put(2131362741, 11);
     }
 
     public FeedCommentCountViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

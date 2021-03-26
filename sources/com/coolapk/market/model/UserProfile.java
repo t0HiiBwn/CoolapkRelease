@@ -41,7 +41,7 @@ public abstract class UserProfile implements Entity, IUser {
 
         public abstract Builder setCover(String str);
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         public abstract Builder setDescription(String str);
 
@@ -87,7 +87,7 @@ public abstract class UserProfile implements Entity, IUser {
 
         public abstract Builder setIsInLimitList(int i);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLevel(int i);
 

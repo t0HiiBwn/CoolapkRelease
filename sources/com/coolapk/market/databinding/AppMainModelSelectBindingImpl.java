@@ -28,11 +28,11 @@ public class AppMainModelSelectBindingImpl extends AppMainModelSelectBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362704, 1);
-        sparseIntArray.put(2131362699, 2);
-        sparseIntArray.put(2131363170, 3);
-        sparseIntArray.put(2131363177, 4);
-        sparseIntArray.put(2131363172, 5);
+        sparseIntArray.put(2131362715, 1);
+        sparseIntArray.put(2131362710, 2);
+        sparseIntArray.put(2131363184, 3);
+        sparseIntArray.put(2131363191, 4);
+        sparseIntArray.put(2131363186, 5);
     }
 
     public AppMainModelSelectBindingImpl(DataBindingComponent dataBindingComponent, View view) {

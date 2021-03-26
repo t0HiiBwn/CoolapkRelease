@@ -16,7 +16,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: BackupLocalAppViewholder.kt */
 public final class BackupLocalAppViewholder extends GenericBindHolder<ItemBackupAppBinding, LocalApp> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558620;
+    public static final int LAYOUT_ID = 2131558624;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public BackupLocalAppViewholder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -43,7 +43,7 @@ public final class BackupLocalAppViewholder extends GenericBindHolder<ItemBackup
         super.onClick(view);
         Intrinsics.checkNotNull(view);
         int id = view.getId();
-        if (id == 2131361886 || id == 2131362081) {
+        if (id == 2131361887 || id == 2131362083) {
             Context context = getContext();
             ItemBackupAppBinding itemBackupAppBinding = (ItemBackupAppBinding) getBinding();
             Intrinsics.checkNotNullExpressionValue(itemBackupAppBinding, "binding");

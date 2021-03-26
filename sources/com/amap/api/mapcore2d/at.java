@@ -44,9 +44,7 @@ class at extends View {
     private ab i;
     private ab j = null;
     private float k = 0.0f;
-
-    /* renamed from: l  reason: collision with root package name */
-    private CopyOnWriteArrayList<Integer> f1217l = new CopyOnWriteArrayList<>();
+    private CopyOnWriteArrayList<Integer> l = new CopyOnWriteArrayList<>();
 
     private int h() {
         int i2 = this.e;

@@ -36,24 +36,24 @@ public class UserSpaceV9BindingImpl extends UserSpaceV9Binding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(27);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(2, new String[]{"user_toolbar"}, new int[]{12}, new int[]{2131559286});
-        includedLayouts.setIncludes(6, new String[]{"item_user_info_part"}, new int[]{11}, new int[]{2131558976});
+        includedLayouts.setIncludes(2, new String[]{"user_toolbar"}, new int[]{12}, new int[]{2131559296});
+        includedLayouts.setIncludes(6, new String[]{"item_user_info_part"}, new int[]{11}, new int[]{2131558983});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362067, 13);
-        sparseIntArray.put(2131362068, 14);
-        sparseIntArray.put(2131363934, 15);
-        sparseIntArray.put(2131362104, 16);
-        sparseIntArray.put(2131362103, 17);
-        sparseIntArray.put(2131363396, 18);
-        sparseIntArray.put(2131362890, 19);
-        sparseIntArray.put(2131361983, 20);
-        sparseIntArray.put(2131362735, 21);
-        sparseIntArray.put(2131363490, 22);
-        sparseIntArray.put(2131363588, 23);
-        sparseIntArray.put(2131363223, 24);
-        sparseIntArray.put(2131363222, 25);
-        sparseIntArray.put(2131362416, 26);
+        sparseIntArray.put(2131362069, 13);
+        sparseIntArray.put(2131362070, 14);
+        sparseIntArray.put(2131363959, 15);
+        sparseIntArray.put(2131362107, 16);
+        sparseIntArray.put(2131362106, 17);
+        sparseIntArray.put(2131363413, 18);
+        sparseIntArray.put(2131362901, 19);
+        sparseIntArray.put(2131361984, 20);
+        sparseIntArray.put(2131362746, 21);
+        sparseIntArray.put(2131363508, 22);
+        sparseIntArray.put(2131363610, 23);
+        sparseIntArray.put(2131363237, 24);
+        sparseIntArray.put(2131363236, 25);
+        sparseIntArray.put(2131362422, 26);
     }
 
     public UserSpaceV9BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -107,11 +107,11 @@ public class UserSpaceV9BindingImpl extends UserSpaceV9Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((UserSpaceV9ViewModel) obj);
@@ -125,7 +125,7 @@ public class UserSpaceV9BindingImpl extends UserSpaceV9Binding {
         synchronized (this) {
             this.mDirtyFlags |= 8;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -146,7 +146,7 @@ public class UserSpaceV9BindingImpl extends UserSpaceV9Binding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -197,27 +197,27 @@ public class UserSpaceV9BindingImpl extends UserSpaceV9Binding {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i == 246) {
+        } else if (i == 247) {
             synchronized (this) {
                 this.mDirtyFlags |= 32;
             }
             return true;
-        } else if (i == 293) {
+        } else if (i == 294) {
             synchronized (this) {
                 this.mDirtyFlags |= 64;
             }
             return true;
-        } else if (i == 299) {
+        } else if (i == 300) {
             synchronized (this) {
                 this.mDirtyFlags |= 128;
             }
             return true;
-        } else if (i == 298) {
+        } else if (i == 299) {
             synchronized (this) {
                 this.mDirtyFlags |= 256;
             }
             return true;
-        } else if (i == 186) {
+        } else if (i == 187) {
             synchronized (this) {
                 this.mDirtyFlags |= 512;
             }
@@ -374,7 +374,7 @@ public class UserSpaceV9BindingImpl extends UserSpaceV9Binding {
                                             str5 = str3;
                                             Boolean bool2 = null;
                                             str6 = str2;
-                                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str6, null, 2131231152, 0, bool2, bool2, bool2, true, bool2, null, null, onBitmapTransformListener, bool2, true, true, onClickListener, bool2);
+                                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str6, null, 2131231162, 0, bool2, bool2, bool2, true, bool2, null, null, onBitmapTransformListener, bool2, true, true, onClickListener, bool2);
                                         } else {
                                             str5 = str3;
                                             str6 = str2;

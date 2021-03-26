@@ -37,7 +37,7 @@ public abstract class ItemSelectorLinkViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSelectorLinkViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSelectorLinkViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558923, viewGroup, z, obj);
+        return (ItemSelectorLinkViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558930, viewGroup, z, obj);
     }
 
     public static ItemSelectorLinkViewBinding inflate(LayoutInflater layoutInflater) {
@@ -46,7 +46,7 @@ public abstract class ItemSelectorLinkViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSelectorLinkViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSelectorLinkViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558923, null, false, obj);
+        return (ItemSelectorLinkViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558930, null, false, obj);
     }
 
     public static ItemSelectorLinkViewBinding bind(View view) {
@@ -55,6 +55,6 @@ public abstract class ItemSelectorLinkViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSelectorLinkViewBinding bind(View view, Object obj) {
-        return (ItemSelectorLinkViewBinding) bind(obj, view, 2131558923);
+        return (ItemSelectorLinkViewBinding) bind(obj, view, 2131558930);
     }
 }

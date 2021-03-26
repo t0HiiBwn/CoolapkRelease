@@ -30,7 +30,7 @@ import kotlin.text.Regex;
 /* compiled from: AlbumFeedViewHolder.kt */
 public final class AlbumFeedViewHolder extends GenericBindHolder<ItemFeedAlbumLayoutBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558691;
+    public static final int LAYOUT_ID = 2131558697;
     private Feed feed;
     private final Lazy headerViewPart$delegate;
 
@@ -102,7 +102,7 @@ public final class AlbumFeedViewHolder extends GenericBindHolder<ItemFeedAlbumLa
         String message = feed2.getMessage();
         Intrinsics.checkNotNullExpressionValue(message, "feed.message");
         String replace = new Regex("[\\n\\r]").replace(message, " ");
-        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886656));
+        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886718));
         spannableStringBuilder.setSpan(new ForegroundColorSpan(AppHolder.getAppTheme().getColorAccent()), 0, spannableStringBuilder.length(), 33);
         Unit unit = Unit.INSTANCE;
         ViewExtendsKt.setBriefMessage(textView, 75, replace, spannableStringBuilder);
@@ -116,7 +116,7 @@ public final class AlbumFeedViewHolder extends GenericBindHolder<ItemFeedAlbumLa
         if (feed2 == null) {
             return;
         }
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

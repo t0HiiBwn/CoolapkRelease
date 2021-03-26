@@ -50,6 +50,10 @@ public final class SearchMainListFragment extends EntityListFragment {
         return Companion.newInstance(str);
     }
 
+    public static final /* synthetic */ void access$updateItemSearchHistory(SearchMainListFragment searchMainListFragment) {
+        searchMainListFragment.updateItemSearchHistory();
+    }
+
     /* compiled from: SearchMainListFragment.kt */
     public static final class Companion {
         private Companion() {
@@ -78,9 +82,9 @@ public final class SearchMainListFragment extends EntityListFragment {
         setLoadMoreEnable(false);
         String returnType = getReturnType();
         if (returnType == null || returnType.hashCode() != -1626262208 || !returnType.equals("onlyQuickLinkWithAll")) {
-            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131559125).suitedMethod(SearchMainListFragment$onActivityCreated$1.INSTANCE).constructor(new SearchMainListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
-            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131559126).suitedMethod(SearchMainListFragment$onActivityCreated$3.INSTANCE).constructor(new SearchMainListFragment$onActivityCreated$4(this)).build(), 0, 2, null);
-            getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131559128).suitedMethod(SearchMainListFragment$onActivityCreated$5.INSTANCE).constructor(new SearchMainListFragment$onActivityCreated$6(this)).build(), -1);
+            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131559132).suitedMethod(SearchMainListFragment$onActivityCreated$1.INSTANCE).constructor(new SearchMainListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131559133).suitedMethod(SearchMainListFragment$onActivityCreated$3.INSTANCE).constructor(new SearchMainListFragment$onActivityCreated$4(this)).build(), 0, 2, null);
+            getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131559135).suitedMethod(SearchMainListFragment$onActivityCreated$5.INSTANCE).constructor(new SearchMainListFragment$onActivityCreated$6(this)).build(), -1);
             getVxDividerDecoration$presentation_coolapkAppRelease().addViewMarginRule(new SearchMainListFragment$onActivityCreated$7());
             getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new SearchMainListFragment$onActivityCreated$8());
             loadHistory();
@@ -156,7 +160,7 @@ public final class SearchMainListFragment extends EntityListFragment {
         this.historyQuery = Observable.fromCallable(new SearchMainListFragment$loadHistory$1(this, "")).subscribe(new SearchMainListFragment$loadHistory$2(this));
     }
 
-    public final void updateItemSearchHistory() {
+    private final void updateItemSearchHistory() {
         if (this.historyDataSet.isEmpty()) {
             Iterator<Parcelable> it2 = getDataList().iterator();
             int i = 0;

@@ -22,7 +22,7 @@ abstract class C$$AutoValue_PicCategory extends PicCategory {
     private final String title;
     private final String url;
 
-    C$$AutoValue_PicCategory(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, String str12) {
+    C$$AutoValue_PicCategory(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, String str12) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -36,8 +36,8 @@ abstract class C$$AutoValue_PicCategory extends PicCategory {
         this.subTitle = str8;
         this.id = str9;
         this.extraData = str10;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str11, "Null pic");
         this.pic = str11;
         Objects.requireNonNull(str12, "Null title");
@@ -153,8 +153,8 @@ abstract class C$$AutoValue_PicCategory extends PicCategory {
         String str6;
         String str7;
         String str8;
+        Long l;
         Long l2;
-        Long l3;
         if (obj == this) {
             return true;
         }
@@ -164,7 +164,7 @@ abstract class C$$AutoValue_PicCategory extends PicCategory {
         PicCategory picCategory = (PicCategory) obj;
         String str9 = this.entityTypeName;
         if (str9 != null ? str9.equals(picCategory.getEntityTypeName()) : picCategory.getEntityTypeName() == null) {
-            if (this.entityType.equals(picCategory.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(picCategory.getEntityTemplate()) : picCategory.getEntityTemplate() == null) && this.entityTypeId == picCategory.getEntityTypeId() && ((str2 = this.entityId) != null ? str2.equals(picCategory.getEntityId()) : picCategory.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(picCategory.getEntityFixed()) : picCategory.getEntityFixed() == null) && ((str3 = this.url) != null ? str3.equals(picCategory.getUrl()) : picCategory.getUrl() == null) && ((str4 = this.description) != null ? str4.equals(picCategory.getDescription()) : picCategory.getDescription() == null) && ((str5 = this.logo) != null ? str5.equals(picCategory.getLogo()) : picCategory.getLogo() == null) && ((str6 = this.subTitle) != null ? str6.equals(picCategory.getSubTitle()) : picCategory.getSubTitle() == null) && ((str7 = this.id) != null ? str7.equals(picCategory.getId()) : picCategory.getId() == null) && ((str8 = this.extraData) != null ? str8.equals(picCategory.getExtraData()) : picCategory.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(picCategory.getDateline()) : picCategory.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(picCategory.getLastUpdate()) : picCategory.getLastUpdate() == null) && this.pic.equals(picCategory.getPic()) && this.title.equals(picCategory.getTitle())) {
+            if (this.entityType.equals(picCategory.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(picCategory.getEntityTemplate()) : picCategory.getEntityTemplate() == null) && this.entityTypeId == picCategory.getEntityTypeId() && ((str2 = this.entityId) != null ? str2.equals(picCategory.getEntityId()) : picCategory.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(picCategory.getEntityFixed()) : picCategory.getEntityFixed() == null) && ((str3 = this.url) != null ? str3.equals(picCategory.getUrl()) : picCategory.getUrl() == null) && ((str4 = this.description) != null ? str4.equals(picCategory.getDescription()) : picCategory.getDescription() == null) && ((str5 = this.logo) != null ? str5.equals(picCategory.getLogo()) : picCategory.getLogo() == null) && ((str6 = this.subTitle) != null ? str6.equals(picCategory.getSubTitle()) : picCategory.getSubTitle() == null) && ((str7 = this.id) != null ? str7.equals(picCategory.getId()) : picCategory.getId() == null) && ((str8 = this.extraData) != null ? str8.equals(picCategory.getExtraData()) : picCategory.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(picCategory.getDateline()) : picCategory.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(picCategory.getLastUpdate()) : picCategory.getLastUpdate() == null) && this.pic.equals(picCategory.getPic()) && this.title.equals(picCategory.getTitle())) {
                 return true;
             }
         }
@@ -194,11 +194,11 @@ abstract class C$$AutoValue_PicCategory extends PicCategory {
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
         String str9 = this.extraData;
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode11 = (hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        if (l3 != null) {
-            i = l3.hashCode();
+        Long l = this.dateline;
+        int hashCode11 = (hashCode10 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        if (l2 != null) {
+            i = l2.hashCode();
         }
         return ((((hashCode11 ^ i) * 1000003) ^ this.pic.hashCode()) * 1000003) ^ this.title.hashCode();
     }

@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_ConfigPage  reason: invalid class name */
 abstract class C$AutoValue_ConfigPage extends C$$AutoValue_ConfigPage {
-    C$AutoValue_ConfigPage(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, int i, int i2, int i3, List<SimpleEntity> list) {
-        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l2, l3, str13, i, i2, i3, list);
+    C$AutoValue_ConfigPage(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, int i, int i2, int i3, List<SimpleEntity> list) {
+        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l, l2, str13, i, i2, i3, list);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_ConfigPage$GsonTypeAdapter */
@@ -147,13 +147,13 @@ abstract class C$AutoValue_ConfigPage extends C$$AutoValue_ConfigPage {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -251,8 +251,8 @@ abstract class C$AutoValue_ConfigPage extends C$$AutoValue_ConfigPage {
             String str10 = this.defaultSubTitle;
             String str11 = this.defaultId;
             String str12 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str13 = this.defaultPageName;
             int i = this.defaultVisibility;
             int i2 = this.defaultOrder;
@@ -270,9 +270,9 @@ abstract class C$AutoValue_ConfigPage extends C$$AutoValue_ConfigPage {
             String str22 = str10;
             String str23 = str11;
             String str24 = str12;
-            Long l4 = l2;
+            Long l3 = l;
             String str25 = str;
-            Long l5 = l3;
+            Long l4 = l2;
             String str26 = str13;
             int i4 = i;
             int i5 = i2;
@@ -429,7 +429,7 @@ abstract class C$AutoValue_ConfigPage extends C$$AutoValue_ConfigPage {
                             str14 = this.entityTypeAdapter.read(jsonReader);
                             continue;
                         case 7:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\b':
                             str25 = this.entityTypeNameAdapter.read(jsonReader);
@@ -465,7 +465,7 @@ abstract class C$AutoValue_ConfigPage extends C$$AutoValue_ConfigPage {
                             i6 = this.pageFixedAdapter.read(jsonReader).intValue();
                             continue;
                         case 19:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -474,7 +474,7 @@ abstract class C$AutoValue_ConfigPage extends C$$AutoValue_ConfigPage {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_ConfigPage(str25, str14, str15, str16, num2, str17, str18, str19, str20, str21, str22, str23, str24, l4, l5, str26, i4, i5, i6, list);
+            return new AutoValue_ConfigPage(str25, str14, str15, str16, num2, str17, str18, str19, str20, str21, str22, str23, str24, l3, l4, str26, i4, i5, i6, list);
         }
     }
 }

@@ -22,10 +22,10 @@ public class ModuleImpl extends c implements f {
         @Override // java.lang.Runnable
         public final void run() {
             b.b("[qimei] start query qimei", new Object[0]);
-            i.a(ModuleImpl.this.context).a(new b(ModuleImpl.this.context, com.tencent.beacon.core.b.b.a(ModuleImpl.this.context).a(), new a.AbstractC0121a() {
+            i.a(ModuleImpl.this.context).a(new b(ModuleImpl.this.context, com.tencent.beacon.core.b.b.a(ModuleImpl.this.context).a(), new a.AbstractC0139a() {
                 /* class com.tencent.beacon.qimei.ModuleImpl.AnonymousClass1.AnonymousClass1 */
 
-                @Override // com.tencent.beacon.core.c.a.AbstractC0121a
+                @Override // com.tencent.beacon.core.c.a.AbstractC0139a
                 public final void a(boolean z) {
                     b.b("[qimei] query qimei finish, result: " + z, new Object[0]);
                     if (z) {

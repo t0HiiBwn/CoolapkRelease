@@ -34,7 +34,7 @@ public abstract class ItemFeedSourceDeletedBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedSourceDeletedBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedSourceDeletedBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558729, viewGroup, z, obj);
+        return (ItemFeedSourceDeletedBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558736, viewGroup, z, obj);
     }
 
     public static ItemFeedSourceDeletedBinding inflate(LayoutInflater layoutInflater) {
@@ -43,7 +43,7 @@ public abstract class ItemFeedSourceDeletedBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedSourceDeletedBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedSourceDeletedBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558729, null, false, obj);
+        return (ItemFeedSourceDeletedBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558736, null, false, obj);
     }
 
     public static ItemFeedSourceDeletedBinding bind(View view) {
@@ -52,6 +52,6 @@ public abstract class ItemFeedSourceDeletedBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedSourceDeletedBinding bind(View view, Object obj) {
-        return (ItemFeedSourceDeletedBinding) bind(obj, view, 2131558729);
+        return (ItemFeedSourceDeletedBinding) bind(obj, view, 2131558736);
     }
 }

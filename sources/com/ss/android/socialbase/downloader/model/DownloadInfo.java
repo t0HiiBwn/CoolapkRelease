@@ -214,7 +214,7 @@ public class DownloadInfo implements Parcelable {
             this.onlyWifi = aVar.f;
             this.extraHeaders = aVar.h;
             this.maxBytes = aVar.i;
-            this.retryCount = aVar.f1418l;
+            this.retryCount = aVar.l;
             this.backUpUrlRetryCount = aVar.m;
             this.force = aVar.n;
             this.outIp = aVar.j;
@@ -2531,9 +2531,7 @@ public class DownloadInfo implements Parcelable {
         private int i;
         private String[] j;
         private int[] k;
-
-        /* renamed from: l  reason: collision with root package name */
-        private int f1418l;
+        private int l;
         private int m;
         private boolean n;
         private boolean o = true;
@@ -2612,7 +2610,7 @@ public class DownloadInfo implements Parcelable {
         }
 
         public a b(int i2) {
-            this.f1418l = i2;
+            this.l = i2;
             return this;
         }
 

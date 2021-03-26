@@ -27,9 +27,7 @@ public class ContainerActivity extends Activity {
     final int i = 7;
     final int j = 0;
     final int k = 100107;
-
-    /* renamed from: l  reason: collision with root package name */
-    final int f1197l = 2303;
+    final int l = 2303;
 
     private String a(String str) throws MalformedURLException {
         String query = new URL(str).getQuery();

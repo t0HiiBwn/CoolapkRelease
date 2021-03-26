@@ -168,7 +168,7 @@ public final class AppSortListFragment extends NewAsyncListFragment<List<? exten
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public DataViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558589, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558593, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             return new DataViewHolder(inflate, AppSortListFragment.access$getApkType$p(AppSortListFragment.this), AppSortListFragment.access$getViewModel$p(AppSortListFragment.this), new AppSortListFragment$DataAdapter$onCreateViewHolder$1(this));
         }
@@ -187,7 +187,7 @@ public final class AppSortListFragment extends NewAsyncListFragment<List<? exten
     /* compiled from: AppSortListFragment.kt */
     private static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558589;
+        public static final int LAYOUT_ID = 2131558593;
         private final String apkType;
         private final ItemAppCategoryBinding binding;
         private final SuperSearchViewModel viewModel;

@@ -16,7 +16,7 @@ public final class a {
 
     /* renamed from: com.tencent.beacon.core.wup.a$a  reason: collision with other inner class name */
     /* compiled from: JceInputStream */
-    public static class C0124a {
+    public static class C0142a {
         public byte a;
         public int b;
     }
@@ -38,7 +38,7 @@ public final class a {
         this.a = ByteBuffer.wrap(bArr);
     }
 
-    private static int a(C0124a aVar, ByteBuffer byteBuffer) {
+    private static int a(C0142a aVar, ByteBuffer byteBuffer) {
         byte b2 = byteBuffer.get();
         aVar.a = (byte) (b2 & 15);
         aVar.b = (b2 & 240) >> 4;
@@ -49,7 +49,7 @@ public final class a {
         return 2;
     }
 
-    private void a(C0124a aVar) {
+    private void a(C0142a aVar) {
         a(aVar, this.a);
     }
 
@@ -60,7 +60,7 @@ public final class a {
 
     private boolean b(int i) {
         try {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             while (true) {
                 int a2 = a(aVar, this.a.duplicate());
                 if (aVar.a == 11) {
@@ -81,7 +81,7 @@ public final class a {
     }
 
     private void a() {
-        C0124a aVar = new C0124a();
+        C0142a aVar = new C0142a();
         do {
             a(aVar);
             a(aVar.a);
@@ -89,7 +89,7 @@ public final class a {
     }
 
     private void b() {
-        C0124a aVar = new C0124a();
+        C0142a aVar = new C0142a();
         a(aVar);
         a(aVar.a);
     }
@@ -146,7 +146,7 @@ public final class a {
             case 12:
                 return;
             case 13:
-                C0124a aVar = new C0124a();
+                C0142a aVar = new C0142a();
                 a(aVar);
                 if (aVar.a == 0) {
                     a(a(0, 0, true));
@@ -164,7 +164,7 @@ public final class a {
 
     public final byte a(byte b2, int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             byte b3 = aVar.a;
             if (b3 == 0) {
@@ -183,7 +183,7 @@ public final class a {
 
     public final short a(short s, int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             byte b2 = aVar.a;
             if (b2 == 0) {
@@ -205,7 +205,7 @@ public final class a {
 
     public final int a(int i, int i2, boolean z) {
         if (b(i2)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             byte b2 = aVar.a;
             if (b2 == 0) {
@@ -231,7 +231,7 @@ public final class a {
     public final long a(long j, int i, boolean z) {
         int i2;
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             byte b2 = aVar.a;
             if (b2 == 0) {
@@ -258,7 +258,7 @@ public final class a {
 
     private float a(float f, int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             byte b2 = aVar.a;
             if (b2 == 4) {
@@ -277,7 +277,7 @@ public final class a {
 
     private double a(double d, int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             byte b2 = aVar.a;
             if (b2 == 4) {
@@ -299,7 +299,7 @@ public final class a {
 
     public final String b(int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             byte b2 = aVar.a;
             if (b2 == 6) {
@@ -350,7 +350,7 @@ public final class a {
         K key = next.getKey();
         V value = next.getValue();
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             if (aVar.a == 8) {
                 int a2 = a(0, 0, true);
@@ -372,7 +372,7 @@ public final class a {
 
     private boolean[] d(int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             if (aVar.a == 9) {
                 int a2 = a(0, 0, true);
@@ -395,7 +395,7 @@ public final class a {
 
     public final byte[] c(int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             byte b2 = aVar.a;
             if (b2 == 9) {
@@ -409,7 +409,7 @@ public final class a {
                 }
                 return bArr;
             } else if (b2 == 13) {
-                C0124a aVar2 = new C0124a();
+                C0142a aVar2 = new C0142a();
                 a(aVar2);
                 if (aVar2.a == 0) {
                     int a3 = a(0, 0, true);
@@ -433,7 +433,7 @@ public final class a {
 
     private short[] e(int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             if (aVar.a == 9) {
                 int a2 = a(0, 0, true);
@@ -456,7 +456,7 @@ public final class a {
 
     private int[] f(int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             if (aVar.a == 9) {
                 int a2 = a(0, 0, true);
@@ -479,7 +479,7 @@ public final class a {
 
     private long[] g(int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             if (aVar.a == 9) {
                 int a2 = a(0, 0, true);
@@ -502,7 +502,7 @@ public final class a {
 
     private float[] h(int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             if (aVar.a == 9) {
                 int a2 = a(0, 0, true);
@@ -525,7 +525,7 @@ public final class a {
 
     private double[] i(int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             if (aVar.a == 9) {
                 int a2 = a(0, 0, true);
@@ -550,7 +550,7 @@ public final class a {
     /* JADX WARN: Multi-variable type inference failed */
     private <T> T[] b(T t, int i, boolean z) {
         if (b(i)) {
-            C0124a aVar = new C0124a();
+            C0142a aVar = new C0142a();
             a(aVar);
             if (aVar.a == 9) {
                 int a2 = a(0, 0, true);
@@ -575,7 +575,7 @@ public final class a {
         if (b(i)) {
             try {
                 JceStruct jceStruct2 = (JceStruct) jceStruct.getClass().newInstance();
-                C0124a aVar = new C0124a();
+                C0142a aVar = new C0142a();
                 a(aVar);
                 if (aVar.a == 10) {
                     jceStruct2.readFrom(this);

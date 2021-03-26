@@ -39,9 +39,7 @@ public class b {
     private a h;
     private int i = 5;
     private ScheduledFuture<?> k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private ScheduledFuture<?> f1316l = null;
+    private ScheduledFuture<?> l = null;
     private ScheduledFuture<?> m = null;
 
     /* compiled from: ExpressAdLoadManager */
@@ -237,9 +235,9 @@ public class b {
 
     private void a(boolean z) {
         try {
-            ScheduledFuture<?> scheduledFuture = this.f1316l;
+            ScheduledFuture<?> scheduledFuture = this.l;
             if (scheduledFuture != null && !scheduledFuture.isCancelled()) {
-                boolean cancel = this.f1316l.cancel(z);
+                boolean cancel = this.l.cancel(z);
                 u.f("ExpressAdLoadManager", "CheckValidFutureTask-->cancel......success=" + cancel);
             }
         } catch (Throwable unused) {

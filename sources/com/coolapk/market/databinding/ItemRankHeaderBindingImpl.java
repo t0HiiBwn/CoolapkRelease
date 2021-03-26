@@ -27,9 +27,9 @@ public class ItemRankHeaderBindingImpl extends ItemRankHeaderBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362246, 4);
-        sparseIntArray.put(2131362247, 5);
-        sparseIntArray.put(2131362248, 6);
+        sparseIntArray.put(2131362251, 4);
+        sparseIntArray.put(2131362252, 5);
+        sparseIntArray.put(2131362253, 6);
     }
 
     public ItemRankHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {

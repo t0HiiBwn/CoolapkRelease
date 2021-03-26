@@ -13,7 +13,7 @@ import com.coolapk.market.widget.decoration.ItemDecorations;
 
 @Deprecated
 public class ScrollCardViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558904;
+    public static final int LAYOUT_ID = 2131558911;
     private EntityCard entityCard;
 
     public ScrollCardViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -22,7 +22,7 @@ public class ScrollCardViewHolder extends BindingViewHolder {
         itemScrollCardBinding.moreView.setOnClickListener(this);
         itemScrollCardBinding.recyclerView.setAdapter(new DataAdapter(dataBindingComponent));
         itemScrollCardBinding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), 0, false));
-        itemScrollCardBinding.recyclerView.addItemDecoration(ItemDecorations.horizontal(getContext()).type(0, 2131231062).create());
+        itemScrollCardBinding.recyclerView.addItemDecoration(ItemDecorations.horizontal(getContext()).type(0, 2131231072).create());
     }
 
     @Override // com.coolapk.market.viewholder.BindingViewHolder
@@ -44,7 +44,7 @@ public class ScrollCardViewHolder extends BindingViewHolder {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new LargeScrollCardItemViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558796, viewGroup, false), this.component, null);
+            return new LargeScrollCardItemViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558803, viewGroup, false), this.component, null);
         }
 
         public void onBindViewHolder(BindingViewHolder bindingViewHolder, int i) {

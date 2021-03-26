@@ -46,9 +46,9 @@ public final class FeedVoteHeaderViewPart$populateMultiVoteType$2 extends ArrayA
             LayoutInflater from = LayoutInflater.from(getContext());
             Intrinsics.checkNotNullExpressionValue(from, "LayoutInflater.from(context)");
             voteDetailMultiViewPart.createView(from, viewGroup);
-            voteDetailMultiViewPart.getView().setTag(2131363492, voteDetailMultiViewPart);
+            voteDetailMultiViewPart.getView().setTag(2131363510, voteDetailMultiViewPart);
         } else {
-            Object tag = view.getTag(2131363492);
+            Object tag = view.getTag(2131363510);
             Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.view.feed.vote.VoteDetailMultiViewPart");
             voteDetailMultiViewPart = (VoteDetailMultiViewPart) tag;
         }

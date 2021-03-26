@@ -34,22 +34,22 @@ import kotlin.jvm.internal.Intrinsics;
 @Metadata(bv = {1, 0, 3}, d1 = {"\u0000F\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b#\n\u0002\u0010 \n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\u000e\u00103\u001a\u0002042\u0006\u00105\u001a\u00020\bJ\u000e\u00106\u001a\u00020\b2\u0006\u00107\u001a\u000208J\u0016\u00109\u001a\b\u0012\u0004\u0012\u00020\b0,2\u0006\u0010:\u001a\u000208H\u0002J\u0010\u0010;\u001a\u00020<2\b\u0010=\u001a\u0004\u0018\u00010>J\u0016\u0010?\u001a\u00020<2\u0006\u0010@\u001a\u0002042\u0006\u00105\u001a\u00020\bR\u0014\u0010\u0007\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nR\u0014\u0010\u000b\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\nR\u0014\u0010\r\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\u000e\u0010\nR\u0014\u0010\u000f\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\nR\u0014\u0010\u0011\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\nR\u0014\u0010\u0013\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\u0014\u0010\nR\u0014\u0010\u0015\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\nR\u0014\u0010\u0017\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\u0018\u0010\nR\u0014\u0010\u0019\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\u001a\u0010\nR\u0014\u0010\u001b\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\u001c\u0010\nR\u0014\u0010\u001d\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\u001e\u0010\nR\u0014\u0010\u001f\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b \u0010\nR\u0014\u0010!\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b\"\u0010\nR\u0014\u0010#\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b$\u0010\nR\u0014\u0010%\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b&\u0010\nR\u0014\u0010'\u001a\u00020\bXD¢\u0006\b\n\u0000\u001a\u0004\b(\u0010\nR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b)\u0010*R \u0010+\u001a\b\u0012\u0004\u0012\u00020\b0,X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b-\u0010.\"\u0004\b/\u00100R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b1\u00102¨\u0006A"}, d2 = {"Lcom/coolapk/market/view/userv9/UserSpaceV9TabHelper;", "", "context", "Landroid/app/Activity;", "viewModel", "Lcom/coolapk/market/view/userv9/UserSpaceV9ViewModel;", "(Landroid/app/Activity;Lcom/coolapk/market/view/userv9/UserSpaceV9ViewModel;)V", "VIEW_PAGER_ALBUM", "", "getVIEW_PAGER_ALBUM", "()I", "VIEW_PAGER_APK_FOLLOW", "getVIEW_PAGER_APK_FOLLOW", "VIEW_PAGER_ARTICLE", "getVIEW_PAGER_ARTICLE", "VIEW_PAGER_COLLECTION", "getVIEW_PAGER_COLLECTION", "VIEW_PAGER_COOLPIC", "getVIEW_PAGER_COOLPIC", "VIEW_PAGER_DEVELOPER_APP", "getVIEW_PAGER_DEVELOPER_APP", "VIEW_PAGER_DISCOVERY", "getVIEW_PAGER_DISCOVERY", "VIEW_PAGER_FEEDS", "getVIEW_PAGER_FEEDS", "VIEW_PAGER_MAIN", "getVIEW_PAGER_MAIN", "VIEW_PAGER_QA", "getVIEW_PAGER_QA", "VIEW_PAGER_RATING", "getVIEW_PAGER_RATING", "VIEW_PAGER_REPLY", "getVIEW_PAGER_REPLY", "VIEW_PAGE_BLOCK", "getVIEW_PAGE_BLOCK", "VIEW_PAGE_GOODS", "getVIEW_PAGE_GOODS", "VIEW_PAGE_GOODS_LIST", "getVIEW_PAGE_GOODS_LIST", "VIEW_PAGE_RECYCLE_BIN", "getVIEW_PAGE_RECYCLE_BIN", "getContext", "()Landroid/app/Activity;", "tabList", "", "getTabList", "()Ljava/util/List;", "setTabList", "(Ljava/util/List;)V", "getViewModel", "()Lcom/coolapk/market/view/userv9/UserSpaceV9ViewModel;", "getFragmentItem", "Landroidx/fragment/app/Fragment;", "position", "getPreferDisplayPage", "userProfile", "Lcom/coolapk/market/model/UserProfile;", "onCreateTabTitleList", "profile", "restorePresenter", "", "savedInstanceState", "Landroid/os/Bundle;", "setPresenter", "pendingFragment", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: UserSpaceV9TabHelper.kt */
 public final class UserSpaceV9TabHelper {
-    private final int VIEW_PAGER_ALBUM = 2131887128;
-    private final int VIEW_PAGER_APK_FOLLOW = 2131887129;
-    private final int VIEW_PAGER_ARTICLE = 2131887131;
-    private final int VIEW_PAGER_COLLECTION = 2131887133;
-    private final int VIEW_PAGER_COOLPIC = 2131886687;
-    private final int VIEW_PAGER_DEVELOPER_APP = 2131887134;
-    private final int VIEW_PAGER_DISCOVERY = 2131887136;
-    private final int VIEW_PAGER_FEEDS = 2131887137;
-    private final int VIEW_PAGER_MAIN = 2131887139;
-    private final int VIEW_PAGER_QA = 2131887140;
-    private final int VIEW_PAGER_RATING = 2131887130;
-    private final int VIEW_PAGER_REPLY = 2131887297;
-    private final int VIEW_PAGE_BLOCK = 2131887132;
-    private final int VIEW_PAGE_GOODS = 2131887138;
-    private final int VIEW_PAGE_GOODS_LIST = 2131886828;
-    private final int VIEW_PAGE_RECYCLE_BIN = 2131887141;
+    private final int VIEW_PAGER_ALBUM = 2131887190;
+    private final int VIEW_PAGER_APK_FOLLOW = 2131887191;
+    private final int VIEW_PAGER_ARTICLE = 2131887193;
+    private final int VIEW_PAGER_COLLECTION = 2131887195;
+    private final int VIEW_PAGER_COOLPIC = 2131886749;
+    private final int VIEW_PAGER_DEVELOPER_APP = 2131887196;
+    private final int VIEW_PAGER_DISCOVERY = 2131887198;
+    private final int VIEW_PAGER_FEEDS = 2131887199;
+    private final int VIEW_PAGER_MAIN = 2131887201;
+    private final int VIEW_PAGER_QA = 2131887202;
+    private final int VIEW_PAGER_RATING = 2131887192;
+    private final int VIEW_PAGER_REPLY = 2131887359;
+    private final int VIEW_PAGE_BLOCK = 2131887194;
+    private final int VIEW_PAGE_GOODS = 2131887200;
+    private final int VIEW_PAGE_GOODS_LIST = 2131886890;
+    private final int VIEW_PAGE_RECYCLE_BIN = 2131887203;
     private final Activity context;
     private List<Integer> tabList;
     private final UserSpaceV9ViewModel viewModel;

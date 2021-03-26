@@ -33,23 +33,23 @@ public class ItemFeedLayoutV8BindingImpl extends ItemFeedLayoutV8Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 6);
-        sparseIntArray.put(2131363209, 7);
-        sparseIntArray.put(2131363568, 8);
-        sparseIntArray.put(2131363582, 9);
-        sparseIntArray.put(2131363325, 10);
-        sparseIntArray.put(2131363533, 11);
-        sparseIntArray.put(2131363388, 12);
-        sparseIntArray.put(2131362487, 13);
-        sparseIntArray.put(2131363016, 14);
-        sparseIntArray.put(2131363917, 15);
-        sparseIntArray.put(2131362488, 16);
-        sparseIntArray.put(2131362492, 17);
-        sparseIntArray.put(2131363198, 18);
-        sparseIntArray.put(2131362089, 19);
-        sparseIntArray.put(2131363229, 20);
-        sparseIntArray.put(2131362665, 21);
-        sparseIntArray.put(2131362722, 22);
+        sparseIntArray.put(2131362657, 6);
+        sparseIntArray.put(2131363223, 7);
+        sparseIntArray.put(2131363590, 8);
+        sparseIntArray.put(2131363604, 9);
+        sparseIntArray.put(2131363341, 10);
+        sparseIntArray.put(2131363551, 11);
+        sparseIntArray.put(2131363405, 12);
+        sparseIntArray.put(2131362495, 13);
+        sparseIntArray.put(2131363030, 14);
+        sparseIntArray.put(2131363942, 15);
+        sparseIntArray.put(2131362496, 16);
+        sparseIntArray.put(2131362500, 17);
+        sparseIntArray.put(2131363212, 18);
+        sparseIntArray.put(2131362092, 19);
+        sparseIntArray.put(2131363243, 20);
+        sparseIntArray.put(2131362676, 21);
+        sparseIntArray.put(2131362733, 22);
     }
 
     public ItemFeedLayoutV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -91,9 +91,9 @@ public class ItemFeedLayoutV8BindingImpl extends ItemFeedLayoutV8Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -109,7 +109,7 @@ public class ItemFeedLayoutV8BindingImpl extends ItemFeedLayoutV8Binding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

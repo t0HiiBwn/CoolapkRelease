@@ -48,7 +48,7 @@ public final class OnSubscribeGroupJoin<T1, T2, D1, D2, R> implements Observable
         final RefCountSubscription cancel;
 
         /* renamed from: group  reason: collision with root package name */
-        final CompositeSubscription f1517group;
+        final CompositeSubscription f201group;
         boolean leftDone;
         int leftIds;
         boolean rightDone;
@@ -63,15 +63,15 @@ public final class OnSubscribeGroupJoin<T1, T2, D1, D2, R> implements Observable
         public ResultManager(Subscriber<? super R> subscriber2) {
             this.subscriber = subscriber2;
             CompositeSubscription compositeSubscription = new CompositeSubscription();
-            this.f1517group = compositeSubscription;
+            this.f201group = compositeSubscription;
             this.cancel = new RefCountSubscription(compositeSubscription);
         }
 
         public void init() {
             LeftObserver leftObserver = new LeftObserver();
             RightObserver rightObserver = new RightObserver();
-            this.f1517group.add(leftObserver);
-            this.f1517group.add(rightObserver);
+            this.f201group.add(leftObserver);
+            this.f201group.add(rightObserver);
             OnSubscribeGroupJoin.this.left.unsafeSubscribe(leftObserver);
             OnSubscribeGroupJoin.this.right.unsafeSubscribe(rightObserver);
         }
@@ -138,7 +138,7 @@ public final class OnSubscribeGroupJoin<T1, T2, D1, D2, R> implements Observable
                     }
                     Observable unsafeCreate = Observable.unsafeCreate(new WindowObservableFunc(create, ResultManager.this.cancel));
                     LeftDurationObserver leftDurationObserver = new LeftDurationObserver(i);
-                    ResultManager.this.f1517group.add(leftDurationObserver);
+                    ResultManager.this.f201group.add(leftDurationObserver);
                     ((Observable) OnSubscribeGroupJoin.this.leftDuration.call(t1)).unsafeSubscribe(leftDurationObserver);
                     Object call = OnSubscribeGroupJoin.this.resultSelector.call(t1, unsafeCreate);
                     synchronized (ResultManager.this) {
@@ -191,7 +191,7 @@ public final class OnSubscribeGroupJoin<T1, T2, D1, D2, R> implements Observable
                         ResultManager.this.rightMap.put(Integer.valueOf(i), t2);
                     }
                     RightDurationObserver rightDurationObserver = new RightDurationObserver(i);
-                    ResultManager.this.f1517group.add(rightDurationObserver);
+                    ResultManager.this.f201group.add(rightDurationObserver);
                     ((Observable) OnSubscribeGroupJoin.this.rightDuration.call(t2)).unsafeSubscribe(rightDurationObserver);
                     synchronized (ResultManager.this) {
                         arrayList = new ArrayList(ResultManager.this.leftMap().values());
@@ -245,7 +245,7 @@ public final class OnSubscribeGroupJoin<T1, T2, D1, D2, R> implements Observable
                     if (remove != null) {
                         remove.onCompleted();
                     }
-                    ResultManager.this.f1517group.remove(this);
+                    ResultManager.this.f201group.remove(this);
                 }
             }
 
@@ -275,7 +275,7 @@ public final class OnSubscribeGroupJoin<T1, T2, D1, D2, R> implements Observable
                     synchronized (ResultManager.this) {
                         ResultManager.this.rightMap.remove(Integer.valueOf(this.id));
                     }
-                    ResultManager.this.f1517group.remove(this);
+                    ResultManager.this.f201group.remove(this);
                 }
             }
 

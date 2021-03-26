@@ -28,15 +28,15 @@ public class ItemFeedGoodsDetailBindingImpl extends ItemFeedGoodsDetailBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363935, 3);
-        sparseIntArray.put(2131363934, 4);
-        sparseIntArray.put(2131362730, 5);
-        sparseIntArray.put(2131362649, 6);
-        sparseIntArray.put(2131363211, 7);
-        sparseIntArray.put(2131363194, 8);
-        sparseIntArray.put(2131362190, 9);
-        sparseIntArray.put(2131362631, 10);
-        sparseIntArray.put(2131363229, 11);
+        sparseIntArray.put(2131363960, 3);
+        sparseIntArray.put(2131363959, 4);
+        sparseIntArray.put(2131362741, 5);
+        sparseIntArray.put(2131362657, 6);
+        sparseIntArray.put(2131363225, 7);
+        sparseIntArray.put(2131363208, 8);
+        sparseIntArray.put(2131362193, 9);
+        sparseIntArray.put(2131362639, 10);
+        sparseIntArray.put(2131363243, 11);
     }
 
     public ItemFeedGoodsDetailBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -73,7 +73,7 @@ public class ItemFeedGoodsDetailBindingImpl extends ItemFeedGoodsDetailBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -89,7 +89,7 @@ public class ItemFeedGoodsDetailBindingImpl extends ItemFeedGoodsDetailBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

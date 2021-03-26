@@ -33,9 +33,7 @@ public class StrategyBean implements Parcelable {
     public boolean i;
     public boolean j;
     public boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    public boolean f1434l;
+    public boolean l;
     public boolean m;
     public long n;
     public long o;
@@ -62,7 +60,7 @@ public class StrategyBean implements Parcelable {
         this.i = false;
         this.j = true;
         this.k = true;
-        this.f1434l = true;
+        this.l = true;
         this.m = true;
         this.o = 30000;
         this.p = a;
@@ -92,7 +90,7 @@ public class StrategyBean implements Parcelable {
         this.i = false;
         this.j = true;
         this.k = true;
-        this.f1434l = true;
+        this.l = true;
         this.m = true;
         this.o = 30000;
         this.p = a;
@@ -111,7 +109,7 @@ public class StrategyBean implements Parcelable {
             this.s = z.b(parcel);
             this.h = parcel.readByte() == 1;
             this.i = parcel.readByte() == 1;
-            this.f1434l = parcel.readByte() == 1;
+            this.l = parcel.readByte() == 1;
             this.m = parcel.readByte() == 1;
             this.o = parcel.readLong();
             this.j = parcel.readByte() == 1;
@@ -140,7 +138,7 @@ public class StrategyBean implements Parcelable {
         z.b(parcel, this.s);
         parcel.writeByte(this.h ? (byte) 1 : 0);
         parcel.writeByte(this.i ? (byte) 1 : 0);
-        parcel.writeByte(this.f1434l ? (byte) 1 : 0);
+        parcel.writeByte(this.l ? (byte) 1 : 0);
         parcel.writeByte(this.m ? (byte) 1 : 0);
         parcel.writeLong(this.o);
         parcel.writeByte(this.j ? (byte) 1 : 0);

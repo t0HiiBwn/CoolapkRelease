@@ -23,19 +23,31 @@ import kotlin.jvm.functions.Function7;
 import kotlin.ranges.IntRange;
 import kotlin.ranges.LongRange;
 import kotlin.sequences.Sequence;
+import kotlin.time.Duration;
 import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.CoroutineStart;
 import kotlinx.coroutines.Job;
 import kotlinx.coroutines.channels.BroadcastChannel;
+import kotlinx.coroutines.channels.BufferOverflow;
 import kotlinx.coroutines.channels.ProducerScope;
 import kotlinx.coroutines.channels.ReceiveChannel;
 import kotlinx.coroutines.channels.SendChannel;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"kotlinx/coroutines/flow/FlowKt__BuildersKt", "kotlinx/coroutines/flow/FlowKt__ChannelsKt", "kotlinx/coroutines/flow/FlowKt__CollectKt", "kotlinx/coroutines/flow/FlowKt__CollectionKt", "kotlinx/coroutines/flow/FlowKt__ContextKt", "kotlinx/coroutines/flow/FlowKt__CountKt", "kotlinx/coroutines/flow/FlowKt__DelayKt", "kotlinx/coroutines/flow/FlowKt__DistinctKt", "kotlinx/coroutines/flow/FlowKt__EmittersKt", "kotlinx/coroutines/flow/FlowKt__ErrorsKt", "kotlinx/coroutines/flow/FlowKt__LimitKt", "kotlinx/coroutines/flow/FlowKt__MergeKt", "kotlinx/coroutines/flow/FlowKt__MigrationKt", "kotlinx/coroutines/flow/FlowKt__ReduceKt", "kotlinx/coroutines/flow/FlowKt__TransformKt", "kotlinx/coroutines/flow/FlowKt__ZipKt"}, k = 4, mv = {1, 1, 16})
+@Metadata(bv = {1, 0, 3}, d1 = {"kotlinx/coroutines/flow/FlowKt__BuildersKt", "kotlinx/coroutines/flow/FlowKt__ChannelsKt", "kotlinx/coroutines/flow/FlowKt__CollectKt", "kotlinx/coroutines/flow/FlowKt__CollectionKt", "kotlinx/coroutines/flow/FlowKt__ContextKt", "kotlinx/coroutines/flow/FlowKt__CountKt", "kotlinx/coroutines/flow/FlowKt__DelayKt", "kotlinx/coroutines/flow/FlowKt__DistinctKt", "kotlinx/coroutines/flow/FlowKt__EmittersKt", "kotlinx/coroutines/flow/FlowKt__ErrorsKt", "kotlinx/coroutines/flow/FlowKt__LimitKt", "kotlinx/coroutines/flow/FlowKt__MergeKt", "kotlinx/coroutines/flow/FlowKt__MigrationKt", "kotlinx/coroutines/flow/FlowKt__ReduceKt", "kotlinx/coroutines/flow/FlowKt__ShareKt", "kotlinx/coroutines/flow/FlowKt__TransformKt", "kotlinx/coroutines/flow/FlowKt__ZipKt"}, k = 4, mv = {1, 4, 0})
 public final class FlowKt {
     public static final String DEFAULT_CONCURRENCY_PROPERTY_NAME = "kotlinx.coroutines.flow.defaultConcurrency";
 
-    public static /* synthetic */ void DEFAULT_CONCURRENCY_PROPERTY_NAME$annotations() {
+    @Metadata(bv = {1, 0, 3}, k = 3, mv = {1, 4, 0})
+    public final /* synthetic */ class WhenMappings {
+        public static final /* synthetic */ int[] $EnumSwitchMapping$0;
+
+        static {
+            int[] iArr = new int[SharingCommand.values().length];
+            $EnumSwitchMapping$0 = iArr;
+            iArr[SharingCommand.START.ordinal()] = 1;
+            iArr[SharingCommand.STOP.ordinal()] = 2;
+            iArr[SharingCommand.STOP_AND_RESET_REPLAY_CACHE.ordinal()] = 3;
+        }
     }
 
     public static final <T> Flow<T> asFlow(Iterable<? extends T> iterable) {
@@ -82,21 +94,39 @@ public final class FlowKt {
         return FlowKt__BuildersKt.asFlow(tArr);
     }
 
+    public static final <T> SharedFlow<T> asSharedFlow(MutableSharedFlow<T> mutableSharedFlow) {
+        return FlowKt__ShareKt.asSharedFlow(mutableSharedFlow);
+    }
+
+    public static final <T> StateFlow<T> asStateFlow(MutableStateFlow<T> mutableStateFlow) {
+        return FlowKt__ShareKt.asStateFlow(mutableStateFlow);
+    }
+
+    @Deprecated(level = DeprecationLevel.WARNING, message = "Use shareIn operator and the resulting SharedFlow as a replacement for BroadcastChannel", replaceWith = @ReplaceWith(expression = "shareIn(scope, 0, SharingStarted.Lazily)", imports = {}))
     public static final <T> BroadcastChannel<T> broadcastIn(Flow<? extends T> flow, CoroutineScope coroutineScope, CoroutineStart coroutineStart) {
         return FlowKt__ChannelsKt.broadcastIn(flow, coroutineScope, coroutineStart);
     }
 
-    public static final <T> Flow<T> buffer(Flow<? extends T> flow, int i) {
-        return FlowKt__ContextKt.buffer(flow, i);
+    public static final <T> Flow<T> buffer(Flow<? extends T> flow, int i, BufferOverflow bufferOverflow) {
+        return FlowKt__ContextKt.buffer(flow, i, bufferOverflow);
+    }
+
+    @Deprecated(level = DeprecationLevel.ERROR, message = "Flow analogue of 'cache()' is 'shareIn' with unlimited replay and 'started = SharingStared.Lazily' argument'", replaceWith = @ReplaceWith(expression = "this.shareIn(scope, Int.MAX_VALUE, started = SharingStared.Lazily)", imports = {}))
+    public static final <T> Flow<T> cache(Flow<? extends T> flow) {
+        return FlowKt__MigrationKt.cache(flow);
     }
 
     public static final <T> Flow<T> callbackFlow(Function2<? super ProducerScope<? super T>, ? super Continuation<? super Unit>, ? extends Object> function2) {
         return FlowKt__BuildersKt.callbackFlow(function2);
     }
 
+    public static final <T> Flow<T> cancellable(Flow<? extends T> flow) {
+        return FlowKt__ContextKt.cancellable(flow);
+    }
+
     /* renamed from: catch  reason: not valid java name */
-    public static final <T> Flow<T> m2013catch(Flow<? extends T> flow, Function3<? super FlowCollector<? super T>, ? super Throwable, ? super Continuation<? super Unit>, ? extends Object> function3) {
-        return FlowKt__ErrorsKt.m2014catch(flow, function3);
+    public static final <T> Flow<T> m1419catch(Flow<? extends T> flow, Function3<? super FlowCollector<? super T>, ? super Throwable, ? super Continuation<? super Unit>, ? extends Object> function3) {
+        return FlowKt__ErrorsKt.m1424catch(flow, function3);
     }
 
     public static final <T> Object catchImpl(Flow<? extends T> flow, FlowCollector<? super T> flowCollector, Continuation<? super Throwable> continuation) {
@@ -129,6 +159,14 @@ public final class FlowKt {
 
     public static final <T> Object collectLatest(Flow<? extends T> flow, Function2<? super T, ? super Continuation<? super Unit>, ? extends Object> function2, Continuation<? super Unit> continuation) {
         return FlowKt__CollectKt.collectLatest(flow, function2, continuation);
+    }
+
+    public static final <T> Object collectWhile(Flow<? extends T> flow, Function2<? super T, ? super Continuation<? super Boolean>, ? extends Object> function2, Continuation<? super Unit> continuation) {
+        return FlowKt__LimitKt.collectWhile(flow, function2, continuation);
+    }
+
+    private static final Object collectWhile$$forInline(Flow flow, Function2 function2, Continuation continuation) {
+        return FlowKt__LimitKt.collectWhile(flow, function2, continuation);
     }
 
     public static final <T1, T2, R> Flow<R> combine(Flow<? extends T1> flow, Flow<? extends T2> flow2, Function3<? super T1, ? super T2, ? super Continuation<? super R>, ? extends Object> function3) {
@@ -223,6 +261,19 @@ public final class FlowKt {
         return FlowKt__DelayKt.debounce(flow, j);
     }
 
+    public static final <T> Flow<T> debounce(Flow<? extends T> flow, Function1<? super T, Long> function1) {
+        return FlowKt__DelayKt.debounce(flow, function1);
+    }
+
+    /* renamed from: debounce-8GFy2Ro  reason: not valid java name */
+    public static final <T> Flow<T> m1420debounce8GFy2Ro(Flow<? extends T> flow, double d) {
+        return FlowKt__DelayKt.m1422debounce8GFy2Ro(flow, d);
+    }
+
+    public static final <T> Flow<T> debounceDuration(Flow<? extends T> flow, Function1<? super T, Duration> function1) {
+        return FlowKt__DelayKt.debounceDuration(flow, function1);
+    }
+
     @Deprecated(level = DeprecationLevel.WARNING, message = "Use 'onEach { delay(timeMillis) }'", replaceWith = @ReplaceWith(expression = "onEach { delay(timeMillis) }", imports = {}))
     public static final <T> Flow<T> delayEach(Flow<? extends T> flow, long j) {
         return FlowKt__MigrationKt.delayEach(flow, j);
@@ -289,11 +340,19 @@ public final class FlowKt {
         return FlowKt__ReduceKt.first(flow, function2, continuation);
     }
 
+    public static final <T> Object firstOrNull(Flow<? extends T> flow, Continuation<? super T> continuation) {
+        return FlowKt__ReduceKt.firstOrNull(flow, continuation);
+    }
+
+    public static final <T> Object firstOrNull(Flow<? extends T> flow, Function2<? super T, ? super Continuation<? super Boolean>, ? extends Object> function2, Continuation<? super T> continuation) {
+        return FlowKt__ReduceKt.firstOrNull(flow, function2, continuation);
+    }
+
     public static final ReceiveChannel<Unit> fixedPeriodTicker(CoroutineScope coroutineScope, long j, long j2) {
         return FlowKt__DelayKt.fixedPeriodTicker(coroutineScope, j, j2);
     }
 
-    @Deprecated(level = DeprecationLevel.ERROR, message = "Flow analogue is named flatMapConcat", replaceWith = @ReplaceWith(expression = "flatMapConcat(mapper)", imports = {}))
+    @Deprecated(level = DeprecationLevel.ERROR, message = "Flow analogue is 'flatMapConcat'", replaceWith = @ReplaceWith(expression = "flatMapConcat(mapper)", imports = {}))
     public static final <T, R> Flow<R> flatMap(Flow<? extends T> flow, Function2<? super T, ? super Continuation<? super Flow<? extends R>>, ? extends Object> function2) {
         return FlowKt__MigrationKt.flatMap(flow, function2);
     }
@@ -347,7 +406,7 @@ public final class FlowKt {
         return FlowKt__ContextKt.flowOn(flow, coroutineContext);
     }
 
-    @Deprecated(level = DeprecationLevel.WARNING, message = "Use channelFlow with awaitClose { } instead of flowViaChannel and invokeOnClose { }.")
+    @Deprecated(level = DeprecationLevel.ERROR, message = "Use channelFlow with awaitClose { } instead of flowViaChannel and invokeOnClose { }.")
     public static final <T> Flow<T> flowViaChannel(int i, Function2<? super CoroutineScope, ? super SendChannel<? super T>, Unit> function2) {
         return FlowKt__BuildersKt.flowViaChannel(i, function2);
     }
@@ -372,6 +431,9 @@ public final class FlowKt {
 
     public static final int getDEFAULT_CONCURRENCY() {
         return FlowKt__MergeKt.getDEFAULT_CONCURRENCY();
+    }
+
+    public static /* synthetic */ void getDEFAULT_CONCURRENCY_PROPERTY_NAME$annotations() {
     }
 
     public static final <T> Job launchIn(Flow<? extends T> flow, CoroutineScope coroutineScope) {
@@ -403,6 +465,10 @@ public final class FlowKt {
         return FlowKt__MergeKt.merge(flowArr);
     }
 
+    public static final Void noImpl() {
+        return FlowKt__MigrationKt.noImpl();
+    }
+
     @Deprecated(level = DeprecationLevel.ERROR, message = "Collect flow in the desired context instead")
     public static final <T> Flow<T> observeOn(Flow<? extends T> flow, CoroutineContext coroutineContext) {
         return FlowKt__MigrationKt.observeOn(flow, coroutineContext);
@@ -414,6 +480,10 @@ public final class FlowKt {
 
     public static final <T> Flow<T> onEach(Flow<? extends T> flow, Function2<? super T, ? super Continuation<? super Unit>, ? extends Object> function2) {
         return FlowKt__TransformKt.onEach(flow, function2);
+    }
+
+    public static final <T> Flow<T> onEmpty(Flow<? extends T> flow, Function2<? super FlowCollector<? super T>, ? super Continuation<? super Unit>, ? extends Object> function2) {
+        return FlowKt__EmittersKt.onEmpty(flow, function2);
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "Use catch { e -> if (predicate(e)) emitAll(fallback) else throw e }", replaceWith = @ReplaceWith(expression = "catch { e -> if (predicate(e)) emitAll(fallback) else throw e }", imports = {}))
@@ -445,8 +515,22 @@ public final class FlowKt {
         return FlowKt__EmittersKt.onStart(flow, function2);
     }
 
+    public static final <T> SharedFlow<T> onSubscription(SharedFlow<? extends T> sharedFlow, Function2<? super FlowCollector<? super T>, ? super Continuation<? super Unit>, ? extends Object> function2) {
+        return FlowKt__ShareKt.onSubscription(sharedFlow, function2);
+    }
+
     public static final <T> ReceiveChannel<T> produceIn(Flow<? extends T> flow, CoroutineScope coroutineScope) {
         return FlowKt__ChannelsKt.produceIn(flow, coroutineScope);
+    }
+
+    @Deprecated(level = DeprecationLevel.ERROR, message = "Flow analogue of 'publish()' is 'shareIn'. \npublish().connect() is the default strategy (no extra call is needed), \npublish().autoConnect() translates to 'started = SharingStared.Lazily' argument, \npublish().refCount() translates to 'started = SharingStared.WhileSubscribed()' argument.", replaceWith = @ReplaceWith(expression = "this.shareIn(scope, 0)", imports = {}))
+    public static final <T> Flow<T> publish(Flow<? extends T> flow) {
+        return FlowKt__MigrationKt.publish(flow);
+    }
+
+    @Deprecated(level = DeprecationLevel.ERROR, message = "Flow analogue of 'publish(bufferSize)' is 'buffer' followed by 'shareIn'. \npublish().connect() is the default strategy (no extra call is needed), \npublish().autoConnect() translates to 'started = SharingStared.Lazily' argument, \npublish().refCount() translates to 'started = SharingStared.WhileSubscribed()' argument.", replaceWith = @ReplaceWith(expression = "this.buffer(bufferSize).shareIn(scope, 0)", imports = {}))
+    public static final <T> Flow<T> publish(Flow<? extends T> flow, int i) {
+        return FlowKt__MigrationKt.publish(flow, i);
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "Collect flow in the desired context instead")
@@ -462,6 +546,16 @@ public final class FlowKt {
         return FlowKt__ReduceKt.reduce(flow, function3, continuation);
     }
 
+    @Deprecated(level = DeprecationLevel.ERROR, message = "Flow analogue of 'replay()' is 'shareIn' with unlimited replay. \nreplay().connect() is the default strategy (no extra call is needed), \nreplay().autoConnect() translates to 'started = SharingStared.Lazily' argument, \nreplay().refCount() translates to 'started = SharingStared.WhileSubscribed()' argument.", replaceWith = @ReplaceWith(expression = "this.shareIn(scope, Int.MAX_VALUE)", imports = {}))
+    public static final <T> Flow<T> replay(Flow<? extends T> flow) {
+        return FlowKt__MigrationKt.replay(flow);
+    }
+
+    @Deprecated(level = DeprecationLevel.ERROR, message = "Flow analogue of 'replay(bufferSize)' is 'shareIn' with the specified replay parameter. \nreplay().connect() is the default strategy (no extra call is needed), \nreplay().autoConnect() translates to 'started = SharingStared.Lazily' argument, \nreplay().refCount() translates to 'started = SharingStared.WhileSubscribed()' argument.", replaceWith = @ReplaceWith(expression = "this.shareIn(scope, bufferSize)", imports = {}))
+    public static final <T> Flow<T> replay(Flow<? extends T> flow, int i) {
+        return FlowKt__MigrationKt.replay(flow, i);
+    }
+
     public static final <T> Flow<T> retry(Flow<? extends T> flow, long j, Function2<? super Throwable, ? super Continuation<? super Boolean>, ? extends Object> function2) {
         return FlowKt__ErrorsKt.retry(flow, j, function2);
     }
@@ -470,8 +564,17 @@ public final class FlowKt {
         return FlowKt__ErrorsKt.retryWhen(flow, function4);
     }
 
+    public static final <T> Flow<T> runningReduce(Flow<? extends T> flow, Function3<? super T, ? super T, ? super Continuation<? super T>, ? extends Object> function3) {
+        return FlowKt__TransformKt.runningReduce(flow, function3);
+    }
+
     public static final <T> Flow<T> sample(Flow<? extends T> flow, long j) {
         return FlowKt__DelayKt.sample(flow, j);
+    }
+
+    /* renamed from: sample-8GFy2Ro  reason: not valid java name */
+    public static final <T> Flow<T> m1421sample8GFy2Ro(Flow<? extends T> flow, double d) {
+        return FlowKt__DelayKt.m1423sample8GFy2Ro(flow, d);
     }
 
     public static final <T, R> Flow<R> scan(Flow<? extends T> flow, R r, Function3<? super R, ? super T, ? super Continuation<? super R>, ? extends Object> function3) {
@@ -483,8 +586,13 @@ public final class FlowKt {
         return FlowKt__MigrationKt.scanFold(flow, r, function3);
     }
 
+    @Deprecated(level = DeprecationLevel.WARNING, message = "'scanReduce' was renamed to 'runningReduce' to be consistent with Kotlin standard library", replaceWith = @ReplaceWith(expression = "runningReduce(operation)", imports = {}))
     public static final <T> Flow<T> scanReduce(Flow<? extends T> flow, Function3<? super T, ? super T, ? super Continuation<? super T>, ? extends Object> function3) {
-        return FlowKt__TransformKt.scanReduce(flow, function3);
+        return FlowKt__MigrationKt.scanReduce(flow, function3);
+    }
+
+    public static final <T> SharedFlow<T> shareIn(Flow<? extends T> flow, CoroutineScope coroutineScope, SharingStarted sharingStarted, int i) {
+        return FlowKt__ShareKt.shareIn(flow, coroutineScope, sharingStarted, i);
     }
 
     public static final <T> Object single(Flow<? extends T> flow, Continuation<? super T> continuation) {
@@ -510,22 +618,30 @@ public final class FlowKt {
         return FlowKt__MigrationKt.startWith((Flow) flow, (Flow) flow2);
     }
 
-    @Deprecated(level = DeprecationLevel.ERROR, message = "Use launchIn with onEach, onCompletion and catch operators instead")
+    public static final <T> Object stateIn(Flow<? extends T> flow, CoroutineScope coroutineScope, Continuation<? super StateFlow<? extends T>> continuation) {
+        return FlowKt__ShareKt.stateIn(flow, coroutineScope, continuation);
+    }
+
+    public static final <T> StateFlow<T> stateIn(Flow<? extends T> flow, CoroutineScope coroutineScope, SharingStarted sharingStarted, T t) {
+        return FlowKt__ShareKt.stateIn(flow, coroutineScope, sharingStarted, t);
+    }
+
+    @Deprecated(level = DeprecationLevel.ERROR, message = "Use 'launchIn' with 'onEach', 'onCompletion' and 'catch' instead")
     public static final <T> void subscribe(Flow<? extends T> flow) {
         FlowKt__MigrationKt.subscribe(flow);
     }
 
-    @Deprecated(level = DeprecationLevel.ERROR, message = "Use launchIn with onEach, onCompletion and catch operators instead")
+    @Deprecated(level = DeprecationLevel.ERROR, message = "Use 'launchIn' with 'onEach', 'onCompletion' and 'catch' instead")
     public static final <T> void subscribe(Flow<? extends T> flow, Function2<? super T, ? super Continuation<? super Unit>, ? extends Object> function2) {
         FlowKt__MigrationKt.subscribe(flow, function2);
     }
 
-    @Deprecated(level = DeprecationLevel.ERROR, message = "Use launchIn with onEach, onCompletion and catch operators instead")
+    @Deprecated(level = DeprecationLevel.ERROR, message = "Use 'launchIn' with 'onEach', 'onCompletion' and 'catch' instead")
     public static final <T> void subscribe(Flow<? extends T> flow, Function2<? super T, ? super Continuation<? super Unit>, ? extends Object> function2, Function2<? super Throwable, ? super Continuation<? super Unit>, ? extends Object> function22) {
         FlowKt__MigrationKt.subscribe(flow, function2, function22);
     }
 
-    @Deprecated(level = DeprecationLevel.ERROR, message = "Use flowOn instead")
+    @Deprecated(level = DeprecationLevel.ERROR, message = "Use 'flowOn' instead")
     public static final <T> Flow<T> subscribeOn(Flow<? extends T> flow, CoroutineContext coroutineContext) {
         return FlowKt__MigrationKt.subscribeOn(flow, coroutineContext);
     }
@@ -561,6 +677,10 @@ public final class FlowKt {
 
     public static final <T, R> Flow<R> transformLatest(Flow<? extends T> flow, Function3<? super FlowCollector<? super R>, ? super T, ? super Continuation<? super Unit>, ? extends Object> function3) {
         return FlowKt__MergeKt.transformLatest(flow, function3);
+    }
+
+    public static final <T, R> Flow<R> transformWhile(Flow<? extends T> flow, Function3<? super FlowCollector<? super R>, ? super T, ? super Continuation<? super Boolean>, ? extends Object> function3) {
+        return FlowKt__LimitKt.transformWhile(flow, function3);
     }
 
     public static final <T, R> Flow<R> unsafeTransform(Flow<? extends T> flow, Function3<? super FlowCollector<? super R>, ? super T, ? super Continuation<? super Unit>, ? extends Object> function3) {

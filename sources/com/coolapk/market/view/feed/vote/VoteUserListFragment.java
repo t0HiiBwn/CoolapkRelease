@@ -55,7 +55,7 @@ public final class VoteUserListFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558989).constructor(new VoteUserListFragment$onActivityCreated$1(this)).suitedMethod(VoteUserListFragment$onActivityCreated$2.INSTANCE).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558996).constructor(new VoteUserListFragment$onActivityCreated$1(this)).suitedMethod(VoteUserListFragment$onActivityCreated$2.INSTANCE).build(), 0);
         getVxDividerDecoration$presentation_coolapkAppRelease().setDefaultNoMargin();
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new SingleDividerRule(DividerData.Companion.createImmutable$default(DividerData.Companion, NumberExtendsKt.getDp((Number) 56), 0, NumberExtendsKt.getDp(Double.valueOf(0.5d)), null, 8, null)));
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(TopBottomDividerRule.Companion.getEMPTY());

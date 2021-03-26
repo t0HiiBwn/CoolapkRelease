@@ -6,23 +6,23 @@ import kotlin.Metadata;
 /* compiled from: TimeSource.kt */
 public abstract class TimeMark {
     /* renamed from: elapsedNow-UwyO8pc */
-    public abstract double mo1938elapsedNowUwyO8pc();
+    public abstract double mo1336elapsedNowUwyO8pc();
 
     /* renamed from: plus-LRDsOJo */
-    public TimeMark mo1939plusLRDsOJo(double d) {
+    public TimeMark mo1337plusLRDsOJo(double d) {
         return new AdjustedTimeMark(this, d, null);
     }
 
     /* renamed from: minus-LRDsOJo  reason: not valid java name */
-    public TimeMark m1995minusLRDsOJo(double d) {
-        return mo1939plusLRDsOJo(Duration.m1986unaryMinusUwyO8pc(d));
+    public TimeMark m1393minusLRDsOJo(double d) {
+        return mo1337plusLRDsOJo(Duration.m1384unaryMinusUwyO8pc(d));
     }
 
     public final boolean hasPassedNow() {
-        return !Duration.m1966isNegativeimpl(mo1938elapsedNowUwyO8pc());
+        return !Duration.m1364isNegativeimpl(mo1336elapsedNowUwyO8pc());
     }
 
     public final boolean hasNotPassedNow() {
-        return Duration.m1966isNegativeimpl(mo1938elapsedNowUwyO8pc());
+        return Duration.m1364isNegativeimpl(mo1336elapsedNowUwyO8pc());
     }
 }

@@ -37,7 +37,7 @@ public class ColorPickerDialog extends BaseDialogFragment {
     public Dialog onCreateDialog(Bundle bundle) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         setCancelable(false);
-        ThemePickDialogBinding themePickDialogBinding = (ThemePickDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559195, null, false);
+        ThemePickDialogBinding themePickDialogBinding = (ThemePickDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559203, null, false);
         this.binding = themePickDialogBinding;
         themePickDialogBinding.iconView.setBackgroundTintList(ColorStateList.valueOf(this.initColor));
         this.binding.colorPickerView.setColor(this.initColor);
@@ -57,7 +57,7 @@ public class ColorPickerDialog extends BaseDialogFragment {
                 Toast.show(ColorPickerDialog.this.getActivity(), ColorUtils.toColorString(ColorPickerDialog.this.initColor));
             }
         });
-        builder.setTitle(2131886666).setView(this.binding.getRoot()).setCancelable(false);
+        builder.setTitle(2131886728).setView(this.binding.getRoot()).setCancelable(false);
         this.binding.okButton.setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.widget.ColorPickerDialog.AnonymousClass3 */
 
@@ -154,7 +154,7 @@ public class ColorPickerDialog extends BaseDialogFragment {
             linearLayout.addView(this.mEditText);
             this.mEditText.setSingleLine();
             this.mEditText.setHint("输入颜色代码 如 #4CAF50");
-            builder.setTitle(2131886999).setView(linearLayout).setPositiveButton(17039370, new DialogInterface.OnClickListener() {
+            builder.setTitle(2131887061).setView(linearLayout).setPositiveButton(17039370, new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.widget.ColorPickerDialog.EditTextDialog.AnonymousClass1 */
 
                 @Override // android.content.DialogInterface.OnClickListener

@@ -33,7 +33,7 @@ public final class ProductNodeLoader implements Loader {
 
     @Override // com.coolapk.market.view.node.Loader
     public int loadingPlaceHolderRes() {
-        return AppHolder.getAppTheme().isDarkTheme() ? 2131231783 : 2131231784;
+        return AppHolder.getAppTheme().isDarkTheme() ? 2131231794 : 2131231795;
     }
 
     @Override // com.coolapk.market.view.node.Loader

@@ -37,17 +37,17 @@ public class ItemGoodGoodsListHeaderBindingImpl extends ItemGoodGoodsListHeaderB
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(19);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(2, new String[]{"feed_warning"}, new int[]{10}, new int[]{2131558563});
+        includedLayouts.setIncludes(2, new String[]{"feed_warning"}, new int[]{10}, new int[]{2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362099, 11);
-        sparseIntArray.put(2131362101, 12);
-        sparseIntArray.put(2131362102, 13);
-        sparseIntArray.put(2131362098, 14);
-        sparseIntArray.put(2131362768, 15);
-        sparseIntArray.put(2131362339, 16);
-        sparseIntArray.put(2131362908, 17);
-        sparseIntArray.put(2131362864, 18);
+        sparseIntArray.put(2131362102, 11);
+        sparseIntArray.put(2131362104, 12);
+        sparseIntArray.put(2131362105, 13);
+        sparseIntArray.put(2131362101, 14);
+        sparseIntArray.put(2131362779, 15);
+        sparseIntArray.put(2131362345, 16);
+        sparseIntArray.put(2131362920, 17);
+        sparseIntArray.put(2131362875, 18);
     }
 
     public ItemGoodGoodsListHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -108,7 +108,7 @@ public class ItemGoodGoodsListHeaderBindingImpl extends ItemGoodGoodsListHeaderB
     public boolean setVariable(int i, Object obj) {
         if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((FunThingsViewModel) obj);
@@ -132,7 +132,7 @@ public class ItemGoodGoodsListHeaderBindingImpl extends ItemGoodGoodsListHeaderB
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -262,7 +262,7 @@ public class ItemGoodGoodsListHeaderBindingImpl extends ItemGoodGoodsListHeaderB
             OnImageLoadListener onImageLoadListener = null;
             OnBitmapTransformListener onBitmapTransformListener = null;
             View.OnClickListener onClickListener2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str, drawable, 2131231152, 0, bool, bool, bool, bool, bool, str15, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str, drawable, 2131231162, 0, bool, bool, bool, bool, bool, str15, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
             ImageViewBindingAdapters.setVipSignView(this.avatarView, str7, bool);
             this.coverView.setVisibility(i3);
             ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.coverView, str5, drawable, 0, 0, bool, bool, bool, bool, bool, str15, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);

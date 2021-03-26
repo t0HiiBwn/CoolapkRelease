@@ -1,134 +1,84 @@
 package com.xiaomi.push.service;
 
 import android.content.Context;
-import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.ac;
-import com.xiaomi.push.ai;
-import com.xiaomi.push.bf;
-import com.xiaomi.push.bi;
-import com.xiaomi.push.h;
-import com.xiaomi.push.hg;
-import com.xiaomi.push.im;
-import com.xiaomi.push.p;
-import com.xiaomi.push.y;
-import java.io.BufferedOutputStream;
-import java.io.Closeable;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Arrays;
+import android.content.Intent;
+import android.util.Pair;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.ey;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class bm {
-    public static final Object a = new Object();
+    private static final Map<String, byte[]> a = new HashMap();
+    private static ArrayList<Pair<String, byte[]>> b = new ArrayList<>();
 
-    public static void a(Context context, hg hgVar) {
-        if (bl.a(hgVar.e())) {
-            ai.a(context).a(new bn(context, hgVar));
-        }
-    }
-
-    public static byte[] a(Context context) {
-        String a2 = p.a(context).a("mipush", "td_key", "");
-        if (TextUtils.isEmpty(a2)) {
-            a2 = bi.a(20);
-            p.a(context).m573a("mipush", "td_key", a2);
-        }
-        return a(a2);
-    }
-
-    private static byte[] a(String str) {
-        byte[] copyOf = Arrays.copyOf(bf.m137a(str), 16);
-        copyOf[0] = 68;
-        copyOf[15] = 84;
-        return copyOf;
-    }
-
-    /* JADX DEBUG: Failed to insert an additional move for type inference into block B:1:0x0005 */
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r0v1, types: [java.io.Closeable] */
-    /* JADX WARN: Type inference failed for: r0v3, types: [java.io.Closeable] */
-    /* JADX WARN: Type inference failed for: r0v8 */
-    /* JADX WARN: Type inference failed for: r7v13, types: [java.io.Closeable, java.io.BufferedOutputStream] */
-    /* JADX WARN: Type inference failed for: r0v16 */
-    /* JADX WARN: Type inference failed for: r0v19 */
-    /* JADX WARN: Type inference failed for: r0v20 */
-    /* JADX WARN: Type inference failed for: r0v21 */
-    /* access modifiers changed from: private */
-    /* JADX WARNING: Unknown variable types count: 3 */
-    public static void c(Context context, hg hgVar) {
-        Throwable th;
-        ?? r0;
-        String str;
-        IOException e;
-        ?? r02;
-        Object obj;
-        String str2;
-        byte[] a2 = a(context);
-        try {
-            byte[] b = h.b(a2, im.a(hgVar));
-            if (b == null || b.length < 1) {
-                str2 = "TinyData write to cache file failed case encryption fail item:" + hgVar.d() + "  ts:" + System.currentTimeMillis();
-            } else if (b.length > 10240) {
-                str2 = "TinyData write to cache file failed case too much data content item:" + hgVar.d() + "  ts:" + System.currentTimeMillis();
-            } else {
-                ?? bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(new File(context.getFilesDir(), "tiny_data.data"), true));
-                try {
-                    bufferedOutputStream.write(ac.a(b.length));
-                    bufferedOutputStream.write(b);
-                    bufferedOutputStream.flush();
-                    y.a((Closeable) null);
-                    y.a((Closeable) bufferedOutputStream);
-                    return;
-                } catch (IOException e2) {
-                    obj = bufferedOutputStream;
-                    e = e2;
-                    str = "TinyData write to cache file failed cause io exception item:" + hgVar.d();
-                    r02 = obj;
-                    b.a(str, e);
-                    y.a((Closeable) null);
-                    y.a((Closeable) r02);
-                } catch (Exception e3) {
-                    a2 = bufferedOutputStream;
-                    e = e3;
-                    str = "TinyData write to cache file  failed item:" + hgVar.d();
-                    r02 = a2;
-                    b.a(str, e);
-                    y.a((Closeable) null);
-                    y.a((Closeable) r02);
-                } catch (Throwable th2) {
-                    r0 = bufferedOutputStream;
-                    th = th2;
-                    y.a((Closeable) null);
-                    y.a((Closeable) r0);
-                    throw th;
-                }
+    public static void a(Context context, int i, String str) {
+        Map<String, byte[]> map = a;
+        synchronized (map) {
+            for (String str2 : map.keySet()) {
+                a(context, str2, a.get(str2), i, str);
             }
-            b.m41a(str2);
-            y.a((Closeable) null);
-            y.a((Closeable) null);
-        } catch (IOException e4) {
-            e = e4;
-            obj = null;
-            str = "TinyData write to cache file failed cause io exception item:" + hgVar.d();
-            r02 = obj;
-            b.a(str, e);
-            y.a((Closeable) null);
-            y.a((Closeable) r02);
-        } catch (Exception e5) {
-            e = e5;
-            a2 = null;
-            str = "TinyData write to cache file  failed item:" + hgVar.d();
-            r02 = a2;
-            b.a(str, e);
-            y.a((Closeable) null);
-            y.a((Closeable) r02);
-        } catch (Throwable th3) {
-            th = th3;
-            r0 = a2;
-            y.a((Closeable) null);
-            y.a((Closeable) r0);
-            throw th;
+            a.clear();
+        }
+    }
+
+    public static void a(Context context, String str, byte[] bArr, int i, String str2) {
+        Intent intent = new Intent("com.xiaomi.mipush.ERROR");
+        intent.setPackage(str);
+        intent.putExtra("mipush_payload", bArr);
+        intent.putExtra("mipush_error_code", i);
+        intent.putExtra("mipush_error_msg", str2);
+        context.sendBroadcast(intent, bu.a(str));
+    }
+
+    public static void a(XMPushService xMPushService) {
+        try {
+            Map<String, byte[]> map = a;
+            synchronized (map) {
+                for (String str : map.keySet()) {
+                    bu.a(xMPushService, str, a.get(str));
+                }
+                a.clear();
+            }
+        } catch (ey e) {
+            c.a(e);
+            xMPushService.a(10, e);
+        }
+    }
+
+    public static void a(String str, byte[] bArr) {
+        Map<String, byte[]> map = a;
+        synchronized (map) {
+            map.put(str, bArr);
+        }
+    }
+
+    public static void b(XMPushService xMPushService) {
+        ArrayList<Pair<String, byte[]>> arrayList;
+        try {
+            synchronized (b) {
+                arrayList = b;
+                b = new ArrayList<>();
+            }
+            Iterator<Pair<String, byte[]>> it2 = arrayList.iterator();
+            while (it2.hasNext()) {
+                Pair<String, byte[]> next = it2.next();
+                bu.a(xMPushService, (String) next.first, (byte[]) next.second);
+            }
+        } catch (ey e) {
+            c.a(e);
+            xMPushService.a(10, e);
+        }
+    }
+
+    public static void b(String str, byte[] bArr) {
+        synchronized (b) {
+            b.add(new Pair<>(str, bArr));
+            if (b.size() > 50) {
+                b.remove(0);
+            }
         }
     }
 }

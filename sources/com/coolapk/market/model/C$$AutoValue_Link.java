@@ -21,7 +21,7 @@ abstract class C$$AutoValue_Link extends Link {
     private final String title;
     private final String url;
 
-    C$$AutoValue_Link(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, String str10, String str11, String str12) {
+    C$$AutoValue_Link(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, String str10, String str11, String str12) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -31,8 +31,8 @@ abstract class C$$AutoValue_Link extends Link {
         this.logo = str6;
         this.id = str7;
         this.extraData = str8;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str9, "Null title");
         this.title = str9;
         this.subTitle = str10;
@@ -160,10 +160,10 @@ abstract class C$$AutoValue_Link extends Link {
                                     if (str8 != null ? str8.equals(link.getId()) : link.getId() == null) {
                                         String str9 = this.extraData;
                                         if (str9 != null ? str9.equals(link.getExtraData()) : link.getExtraData() == null) {
-                                            Long l2 = this.dateline;
-                                            if (l2 != null ? l2.equals(link.getDateline()) : link.getDateline() == null) {
-                                                Long l3 = this.lastUpdate;
-                                                if (l3 != null ? l3.equals(link.getLastUpdate()) : link.getLastUpdate() == null) {
+                                            Long l = this.dateline;
+                                            if (l != null ? l.equals(link.getDateline()) : link.getDateline() == null) {
+                                                Long l2 = this.lastUpdate;
+                                                if (l2 != null ? l2.equals(link.getLastUpdate()) : link.getLastUpdate() == null) {
                                                     if (this.title.equals(link.getTitle()) && ((str = this.subTitle) != null ? str.equals(link.getSubTitle()) : link.getSubTitle() == null) && this.url.equals(link.getUrl())) {
                                                         String str10 = this.color;
                                                         if (str10 == null) {
@@ -209,10 +209,10 @@ abstract class C$$AutoValue_Link extends Link {
         int hashCode8 = (hashCode7 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
         String str8 = this.extraData;
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode10 = (hashCode9 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode11 = (((hashCode10 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003) ^ this.title.hashCode()) * 1000003;
+        Long l = this.dateline;
+        int hashCode10 = (hashCode9 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode11 = (((hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003) ^ this.title.hashCode()) * 1000003;
         String str9 = this.subTitle;
         int hashCode12 = (((hashCode11 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003) ^ this.url.hashCode()) * 1000003;
         String str10 = this.color;

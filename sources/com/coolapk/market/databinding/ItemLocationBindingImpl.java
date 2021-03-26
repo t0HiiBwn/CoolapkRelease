@@ -27,8 +27,8 @@ public class ItemLocationBindingImpl extends ItemLocationBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131362316, 3);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131362322, 3);
     }
 
     public ItemLocationBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -29,7 +29,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: TextTitleScrollCardViewHolder.kt */
 final class TextTitleCardChildViewHolder extends GenericBindHolder<ItemTextTitleScrollChildBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558952;
+    public static final int LAYOUT_ID = 2131558959;
     private Entity entity;
     private final TitleRecycleViewCardViewHolder parentHolder;
 
@@ -97,7 +97,7 @@ final class TextTitleCardChildViewHolder extends GenericBindHolder<ItemTextTitle
         if (entity2 == null) {
             return;
         }
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

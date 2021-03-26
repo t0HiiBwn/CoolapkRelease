@@ -60,7 +60,7 @@ public abstract class ItemFeedScrollItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedScrollItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedScrollItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558723, viewGroup, z, obj);
+        return (ItemFeedScrollItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558730, viewGroup, z, obj);
     }
 
     public static ItemFeedScrollItemBinding inflate(LayoutInflater layoutInflater) {
@@ -69,7 +69,7 @@ public abstract class ItemFeedScrollItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedScrollItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedScrollItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558723, null, false, obj);
+        return (ItemFeedScrollItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558730, null, false, obj);
     }
 
     public static ItemFeedScrollItemBinding bind(View view) {
@@ -78,6 +78,6 @@ public abstract class ItemFeedScrollItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedScrollItemBinding bind(View view, Object obj) {
-        return (ItemFeedScrollItemBinding) bind(obj, view, 2131558723);
+        return (ItemFeedScrollItemBinding) bind(obj, view, 2131558730);
     }
 }

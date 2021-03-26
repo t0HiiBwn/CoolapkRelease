@@ -32,7 +32,7 @@ import kotlin.text.StringsKt;
 /* compiled from: GoodsSearchHotViewHolder.kt */
 public final class GoodsSearchHotViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131559126;
+    public static final int LAYOUT_ID = 2131559133;
     private DataAdapter adapter;
     private final SearchHotBinding binding;
     private HolderItem card;
@@ -152,7 +152,7 @@ public final class GoodsSearchHotViewHolder extends BindingViewHolder {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public DataViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558913, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558920, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             return new DataViewHolder(inflate, this.component);
         }
@@ -180,7 +180,7 @@ public final class GoodsSearchHotViewHolder extends BindingViewHolder {
     /* compiled from: GoodsSearchHotViewHolder.kt */
     public static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558913;
+        public static final int LAYOUT_ID = 2131558920;
         private final ItemSearchHotBinding binding = ((ItemSearchHotBinding) getBinding());
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */

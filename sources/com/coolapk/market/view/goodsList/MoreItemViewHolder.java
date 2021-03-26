@@ -19,7 +19,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: MoreItemViewHolder.kt */
 public final class MoreItemViewHolder extends GenericBindHolder<ItemSeeMoreBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558922;
+    public static final int LAYOUT_ID = 2131558929;
     private HolderItem data;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -47,7 +47,7 @@ public final class MoreItemViewHolder extends GenericBindHolder<ItemSeeMoreBindi
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131362768) {
+        if (view.getId() == 2131362779) {
             Context context = getContext();
             Intrinsics.checkNotNullExpressionValue(context, "context");
             HolderItem holderItem = this.data;

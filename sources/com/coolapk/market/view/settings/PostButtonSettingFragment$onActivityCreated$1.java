@@ -24,7 +24,7 @@ final class PostButtonSettingFragment$onActivityCreated$1 implements RadioGroupP
     public final void onCheckedChanged(RadioGroupPlus radioGroupPlus, int i) {
         String str;
         switch (i) {
-            case 2131363162:
+            case 2131363176:
                 LinearLayout linearLayout = PostButtonSettingFragment.access$getBinding$p(this.this$0).plusLayout;
                 Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.plusLayout");
                 linearLayout.setElevation(0.0f);
@@ -41,7 +41,7 @@ final class PostButtonSettingFragment$onActivityCreated$1 implements RadioGroupP
                 Intrinsics.checkNotNullExpressionValue(linearLayout5, "binding.plusLayout");
                 Drawable drawable = null;
                 linearLayout5.setBackground(drawable);
-                PostButtonSettingFragment.access$getBinding$p(this.this$0).airplaneLayout.setBackgroundResource(2131231816);
+                PostButtonSettingFragment.access$getBinding$p(this.this$0).airplaneLayout.setBackgroundResource(2131231828);
                 LinearLayout linearLayout6 = PostButtonSettingFragment.access$getBinding$p(this.this$0).coolapkLayout;
                 Intrinsics.checkNotNullExpressionValue(linearLayout6, "binding.coolapkLayout");
                 linearLayout6.setBackground(drawable);
@@ -50,7 +50,7 @@ final class PostButtonSettingFragment$onActivityCreated$1 implements RadioGroupP
                 linearLayout7.setBackground(drawable);
                 str = "AIRPLANE";
                 break;
-            case 2131363164:
+            case 2131363178:
                 LinearLayout linearLayout8 = PostButtonSettingFragment.access$getBinding$p(this.this$0).plusLayout;
                 Intrinsics.checkNotNullExpressionValue(linearLayout8, "binding.plusLayout");
                 linearLayout8.setElevation(0.0f);
@@ -70,13 +70,13 @@ final class PostButtonSettingFragment$onActivityCreated$1 implements RadioGroupP
                 LinearLayout linearLayout13 = PostButtonSettingFragment.access$getBinding$p(this.this$0).airplaneLayout;
                 Intrinsics.checkNotNullExpressionValue(linearLayout13, "binding.airplaneLayout");
                 linearLayout13.setBackground(drawable2);
-                PostButtonSettingFragment.access$getBinding$p(this.this$0).coolapkLayout.setBackgroundResource(2131231816);
+                PostButtonSettingFragment.access$getBinding$p(this.this$0).coolapkLayout.setBackgroundResource(2131231828);
                 LinearLayout linearLayout14 = PostButtonSettingFragment.access$getBinding$p(this.this$0).customLayout;
                 Intrinsics.checkNotNullExpressionValue(linearLayout14, "binding.customLayout");
                 linearLayout14.setBackground(drawable2);
                 str = "COOLAPK";
                 break;
-            case 2131363165:
+            case 2131363179:
                 LinearLayout linearLayout15 = PostButtonSettingFragment.access$getBinding$p(this.this$0).plusLayout;
                 Intrinsics.checkNotNullExpressionValue(linearLayout15, "binding.plusLayout");
                 linearLayout15.setElevation(0.0f);
@@ -99,10 +99,10 @@ final class PostButtonSettingFragment$onActivityCreated$1 implements RadioGroupP
                 LinearLayout linearLayout21 = PostButtonSettingFragment.access$getBinding$p(this.this$0).coolapkLayout;
                 Intrinsics.checkNotNullExpressionValue(linearLayout21, "binding.coolapkLayout");
                 linearLayout21.setBackground(drawable3);
-                PostButtonSettingFragment.access$getBinding$p(this.this$0).customLayout.setBackgroundResource(2131231816);
+                PostButtonSettingFragment.access$getBinding$p(this.this$0).customLayout.setBackgroundResource(2131231828);
                 str = "CUSTOM";
                 break;
-            case 2131363174:
+            case 2131363188:
                 LinearLayout linearLayout22 = PostButtonSettingFragment.access$getBinding$p(this.this$0).plusLayout;
                 Intrinsics.checkNotNullExpressionValue(linearLayout22, "binding.plusLayout");
                 linearLayout22.setElevation(this.$elevation);
@@ -115,7 +115,7 @@ final class PostButtonSettingFragment$onActivityCreated$1 implements RadioGroupP
                 LinearLayout linearLayout25 = PostButtonSettingFragment.access$getBinding$p(this.this$0).customLayout;
                 Intrinsics.checkNotNullExpressionValue(linearLayout25, "binding.customLayout");
                 linearLayout25.setElevation(0.0f);
-                PostButtonSettingFragment.access$getBinding$p(this.this$0).plusLayout.setBackgroundResource(2131231816);
+                PostButtonSettingFragment.access$getBinding$p(this.this$0).plusLayout.setBackgroundResource(2131231828);
                 LinearLayout linearLayout26 = PostButtonSettingFragment.access$getBinding$p(this.this$0).airplaneLayout;
                 Intrinsics.checkNotNullExpressionValue(linearLayout26, "binding.airplaneLayout");
                 Drawable drawable4 = null;

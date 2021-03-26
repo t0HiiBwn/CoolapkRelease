@@ -14,16 +14,6 @@ public class SizeFileComparator extends AbstractFileComparator implements Serial
     private static final long serialVersionUID = -1201561106411416190L;
     private final boolean sumDirectoryContents;
 
-    @Override // org.apache.commons.io.comparator.AbstractFileComparator
-    public /* bridge */ /* synthetic */ List sort(List list) {
-        return super.sort(list);
-    }
-
-    @Override // org.apache.commons.io.comparator.AbstractFileComparator
-    public /* bridge */ /* synthetic */ File[] sort(File[] fileArr) {
-        return super.sort(fileArr);
-    }
-
     static {
         SizeFileComparator sizeFileComparator = new SizeFileComparator();
         SIZE_COMPARATOR = sizeFileComparator;
@@ -42,23 +32,21 @@ public class SizeFileComparator extends AbstractFileComparator implements Serial
     }
 
     public int compare(File file, File file2) {
-        long j;
-        long j2;
-        if (file.isDirectory()) {
-            j = (!this.sumDirectoryContents || !file.exists()) ? 0 : FileUtils.sizeOfDirectory(file);
-        } else {
-            j = file.length();
-        }
-        if (file2.isDirectory()) {
-            j2 = (!this.sumDirectoryContents || !file2.exists()) ? 0 : FileUtils.sizeOfDirectory(file2);
-        } else {
-            j2 = file2.length();
-        }
-        int i = ((j - j2) > 0 ? 1 : ((j - j2) == 0 ? 0 : -1));
+        int i = (((file.isDirectory() ? (!this.sumDirectoryContents || !file.exists()) ? 0 : FileUtils.sizeOfDirectory(file) : file.length()) - (file2.isDirectory() ? (!this.sumDirectoryContents || !file2.exists()) ? 0 : FileUtils.sizeOfDirectory(file2) : file2.length())) > 0 ? 1 : (((file.isDirectory() ? (!this.sumDirectoryContents || !file.exists()) ? 0 : FileUtils.sizeOfDirectory(file) : file.length()) - (file2.isDirectory() ? (!this.sumDirectoryContents || !file2.exists()) ? 0 : FileUtils.sizeOfDirectory(file2) : file2.length())) == 0 ? 0 : -1));
         if (i < 0) {
             return -1;
         }
         return i > 0 ? 1 : 0;
+    }
+
+    @Override // org.apache.commons.io.comparator.AbstractFileComparator
+    public /* bridge */ /* synthetic */ List sort(List list) {
+        return super.sort(list);
+    }
+
+    @Override // org.apache.commons.io.comparator.AbstractFileComparator
+    public /* bridge */ /* synthetic */ File[] sort(File[] fileArr) {
+        return super.sort(fileArr);
     }
 
     @Override // org.apache.commons.io.comparator.AbstractFileComparator, java.lang.Object

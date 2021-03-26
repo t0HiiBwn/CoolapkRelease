@@ -7,12 +7,12 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.ai;
-import com.xiaomi.push.bc;
-import com.xiaomi.push.r;
-import com.xiaomi.push.service.an;
-import com.xiaomi.push.t;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.aa;
+import com.xiaomi.push.iz;
+import com.xiaomi.push.j;
+import com.xiaomi.push.jb;
+import com.xiaomi.push.service.l;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -78,7 +78,7 @@ public class h {
                     }
                 }
             } catch (Exception e) {
-                b.d(e.toString());
+                c.d(e.toString());
             }
         }
         return miPushMessage;
@@ -104,7 +104,7 @@ public class h {
                     }
                 }
                 if (resolveInfo == null) {
-                    return (PushMessageReceiver) t.a(context, resolveInfo.activityInfo.name).newInstance();
+                    return (PushMessageReceiver) jb.a(context, resolveInfo.activityInfo.name).newInstance();
                 }
                 return null;
             }
@@ -112,7 +112,7 @@ public class h {
             if (resolveInfo == null) {
             }
         } catch (Exception e) {
-            b.d(e.toString());
+            c.d(e.toString());
             return null;
         }
     }
@@ -147,7 +147,7 @@ public class h {
 
     public static HashMap<String, String> a(Context context, d dVar) {
         StringBuilder sb;
-        ac acVar;
+        ah ahVar;
         HashMap<String, String> hashMap = new HashMap<>();
         String a2 = a(dVar);
         if (TextUtils.isEmpty(a2)) {
@@ -160,17 +160,17 @@ public class h {
             if (i == 2) {
                 sb = new StringBuilder();
                 sb.append("brand:");
-                acVar = ac.FCM;
+                ahVar = ah.FCM;
             } else if (i == 3) {
                 sb = new StringBuilder();
                 sb.append("brand:");
-                acVar = ac.OPPO;
+                ahVar = ah.OPPO;
             } else if (i == 4) {
                 sb = new StringBuilder();
                 sb.append("brand:");
-                acVar = ac.VIVO;
+                ahVar = ah.VIVO;
             }
-            sb.append(acVar.name());
+            sb.append(ahVar.name());
             sb.append("~");
             sb.append("token");
             sb.append(":");
@@ -184,7 +184,7 @@ public class h {
             try {
                 applicationInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), 128);
             } catch (Exception e) {
-                b.d(e.toString());
+                c.d(e.toString());
             }
             int i2 = -1;
             if (applicationInfo != null) {
@@ -197,7 +197,7 @@ public class h {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    static void m92a(Context context) {
+    static void m71a(Context context) {
         boolean z = false;
         SharedPreferences sharedPreferences = context.getSharedPreferences("mipush_extra", 0);
         String a2 = a(d.ASSEMBLE_PUSH_HUAWEI);
@@ -206,15 +206,15 @@ public class h {
             z = true;
         }
         if (z) {
-            ak.a(context).a(2, a2);
+            aq.a(context).a(2, a2);
         }
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public static void m93a(Context context, d dVar) {
+    public static void m72a(Context context, d dVar) {
         String a2 = a(dVar);
         if (!TextUtils.isEmpty(a2)) {
-            r.a(context.getSharedPreferences("mipush_extra", 0).edit().putString(a2, ""));
+            iz.a(context.getSharedPreferences("mipush_extra", 0).edit().putString(a2, ""));
         }
     }
 
@@ -223,21 +223,21 @@ public class h {
             SharedPreferences sharedPreferences = context.getSharedPreferences("mipush_extra", 0);
             String a2 = a(dVar);
             if (TextUtils.isEmpty(a2)) {
-                b.m41a("ASSEMBLE_PUSH : can not find the key of token used in sp file");
+                c.a("ASSEMBLE_PUSH : can not find the key of token used in sp file");
                 return;
             }
             String string = sharedPreferences.getString(a2, "");
             if (TextUtils.isEmpty(string) || !str.equals(string)) {
-                b.m41a("ASSEMBLE_PUSH : send token upload");
+                c.a("ASSEMBLE_PUSH : send token upload");
                 a(dVar, str);
-                ap a3 = k.a(dVar);
+                av a3 = k.a(dVar);
                 if (a3 != null) {
-                    ak.a(context).a((String) null, a3, dVar);
+                    aq.a(context).a((String) null, a3, dVar);
                     return;
                 }
                 return;
             }
-            b.m41a("ASSEMBLE_PUSH : do not need to send token");
+            c.a("ASSEMBLE_PUSH : do not need to send token");
         }
     }
 
@@ -252,9 +252,9 @@ public class h {
         synchronized (h.class) {
             String a2 = a(dVar);
             if (TextUtils.isEmpty(a2)) {
-                b.m41a("ASSEMBLE_PUSH : can not find the key of token used in sp file");
+                c.a("ASSEMBLE_PUSH : can not find the key of token used in sp file");
             } else if (TextUtils.isEmpty(str)) {
-                b.m41a("ASSEMBLE_PUSH : token is null");
+                c.a("ASSEMBLE_PUSH : token is null");
             } else {
                 a.put(a2, str);
             }
@@ -266,17 +266,17 @@ public class h {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public static boolean m94a(Context context) {
+    public static boolean m73a(Context context) {
         if (context == null) {
             return false;
         }
-        return bc.b(context);
+        return aa.c(context);
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public static boolean m95a(Context context, d dVar) {
-        if (k.m97a(dVar) != null) {
-            return an.a(context).a(k.m97a(dVar).a(), true);
+    public static boolean m74a(Context context, d dVar) {
+        if (k.m76a(dVar) != null) {
+            return l.a(context).a(k.m76a(dVar).a(), true);
         }
         return false;
     }
@@ -303,7 +303,7 @@ public class h {
     }
 
     public static void b(Context context, d dVar, String str) {
-        ai.a(context).a(new i(str, context, dVar));
+        j.a(context).a(new i(str, context, dVar));
     }
 
     public static void c(Context context) {
@@ -315,11 +315,11 @@ public class h {
         synchronized (h.class) {
             String a2 = a(dVar);
             if (TextUtils.isEmpty(a2)) {
-                b.m41a("ASSEMBLE_PUSH : can not find the key of token used in sp file");
+                c.a("ASSEMBLE_PUSH : can not find the key of token used in sp file");
                 return;
             }
-            r.a(context.getSharedPreferences("mipush_extra", 0).edit().putString(a2, str));
-            b.m41a("ASSEMBLE_PUSH : update sp file success!  " + str);
+            iz.a(context.getSharedPreferences("mipush_extra", 0).edit().putString(a2, str));
+            c.a("ASSEMBLE_PUSH : update sp file success!  " + str);
         }
     }
 }

@@ -23,8 +23,8 @@ final class AutoValue_ProductMedia extends C$AutoValue_ProductMedia {
         return 0;
     }
 
-    AutoValue_ProductMedia(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, int i2) {
-        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, str11, l2, l3, str12, str13, str14, str15, str16, str17, str18, str19, i2);
+    AutoValue_ProductMedia(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, int i2) {
+        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, str11, l, l2, str12, str13, str14, str15, str16, str17, str18, str19, i2);
     }
 
     @Override // android.os.Parcelable

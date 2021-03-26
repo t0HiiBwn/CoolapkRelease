@@ -27,10 +27,10 @@ public class DialogSeletorContainerBindingImpl extends DialogSeletorContainerBin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131363221, 3);
-        sparseIntArray.put(2131361886, 4);
-        sparseIntArray.put(2131362196, 5);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131363235, 3);
+        sparseIntArray.put(2131361887, 4);
+        sparseIntArray.put(2131362200, 5);
     }
 
     public DialogSeletorContainerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -35,9 +35,7 @@ public class BusLineItem implements Parcelable {
     private String i;
     private Date j;
     private Date k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1248l;
+    private String l;
     private float m;
     private float n;
     private List<BusStationItem> o = new ArrayList();
@@ -155,11 +153,11 @@ public class BusLineItem implements Parcelable {
     }
 
     public String getBusCompany() {
-        return this.f1248l;
+        return this.l;
     }
 
     public void setBusCompany(String str) {
-        this.f1248l = str;
+        this.l = str;
     }
 
     public float getBasicPrice() {
@@ -236,7 +234,7 @@ public class BusLineItem implements Parcelable {
         parcel.writeString(this.i);
         parcel.writeString(i.a(this.j));
         parcel.writeString(i.a(this.k));
-        parcel.writeString(this.f1248l);
+        parcel.writeString(this.l);
         parcel.writeFloat(this.m);
         parcel.writeFloat(this.n);
         parcel.writeList(this.o);
@@ -254,7 +252,7 @@ public class BusLineItem implements Parcelable {
         this.i = parcel.readString();
         this.j = i.e(parcel.readString());
         this.k = i.e(parcel.readString());
-        this.f1248l = parcel.readString();
+        this.l = parcel.readString();
         this.m = parcel.readFloat();
         this.n = parcel.readFloat();
         this.o = parcel.readArrayList(BusStationItem.class.getClassLoader());

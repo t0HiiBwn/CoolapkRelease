@@ -22,7 +22,7 @@ final class AppMainModelDialog$onCreateDialog$3 implements RadioGroup.OnCheckedC
     @Override // android.widget.RadioGroup.OnCheckedChangeListener
     public final void onCheckedChanged(RadioGroup radioGroup, int i) {
         String str = "SOCIAL";
-        if (i == 2131363172) {
+        if (i == 2131363186) {
             ImageView imageView = this.$binding.imageSocial;
             Intrinsics.checkNotNullExpressionValue(imageView, "binding.imageSocial");
             imageView.setElevation(0.0f);
@@ -32,7 +32,7 @@ final class AppMainModelDialog$onCreateDialog$3 implements RadioGroup.OnCheckedC
             DataManager instance = DataManager.getInstance();
             Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
             instance.getPreferencesEditor().putString("APP_MAIN_MODE_KEY", "MARKET").apply();
-        } else if (i == 2131363177) {
+        } else if (i == 2131363191) {
             ImageView imageView3 = this.$binding.imageSocial;
             Intrinsics.checkNotNullExpressionValue(imageView3, "binding.imageSocial");
             imageView3.setElevation(this.$shadow);
@@ -43,7 +43,7 @@ final class AppMainModelDialog$onCreateDialog$3 implements RadioGroup.OnCheckedC
             Intrinsics.checkNotNullExpressionValue(instance2, "DataManager.getInstance()");
             instance2.getPreferencesEditor().putString("APP_MAIN_MODE_KEY", str).apply();
         }
-        if (i != 2131363177) {
+        if (i != 2131363191) {
             str = "MARKET";
         }
         SettingSynchronized.INSTANCE.uploadSetting("APP_MAIN_MODE_KEY", str, 1);

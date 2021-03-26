@@ -6,6 +6,8 @@ import android.os.Looper;
 import android.widget.FrameLayout;
 import com.qq.e.ads.cfg.DownAPPConfirmPolicy;
 import com.qq.e.comm.a;
+import com.qq.e.comm.compliance.ApkDownloadComplianceInterface;
+import com.qq.e.comm.compliance.DownloadConfirmListener;
 import com.qq.e.comm.constants.LoadAdParams;
 import com.qq.e.comm.managers.GDTADManager;
 import com.qq.e.comm.pi.POFactory;
@@ -17,7 +19,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import org.json.JSONObject;
 
-public class UnifiedBannerView extends FrameLayout {
+public class UnifiedBannerView extends FrameLayout implements ApkDownloadComplianceInterface {
     private UBVI a;
     private boolean b;
     private boolean c;
@@ -139,6 +141,15 @@ public class UnifiedBannerView extends FrameLayout {
         }
     }
 
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public String getApkInfoUrl() {
+        UBVI ubvi = this.a;
+        if (ubvi != null) {
+            return ubvi.getApkInfoUrl();
+        }
+        return null;
+    }
+
     public Map getExt() {
         try {
             if (this.a != null) {
@@ -180,6 +191,14 @@ public class UnifiedBannerView extends FrameLayout {
         this.e = downAPPConfirmPolicy;
         if (downAPPConfirmPolicy != null && (ubvi = this.a) != null) {
             ubvi.setDownAPPConfirmPolicy(downAPPConfirmPolicy);
+        }
+    }
+
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public void setDownloadConfirmListener(DownloadConfirmListener downloadConfirmListener) {
+        UBVI ubvi = this.a;
+        if (ubvi != null) {
+            ubvi.setDownloadConfirmListener(downloadConfirmListener);
         }
     }
 

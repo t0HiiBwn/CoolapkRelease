@@ -47,7 +47,7 @@ public abstract class ShareGoodDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static ShareGoodDialogBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ShareGoodDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559139, viewGroup, z, obj);
+        return (ShareGoodDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559146, viewGroup, z, obj);
     }
 
     public static ShareGoodDialogBinding inflate(LayoutInflater layoutInflater) {
@@ -56,7 +56,7 @@ public abstract class ShareGoodDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static ShareGoodDialogBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ShareGoodDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559139, null, false, obj);
+        return (ShareGoodDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559146, null, false, obj);
     }
 
     public static ShareGoodDialogBinding bind(View view) {
@@ -65,6 +65,6 @@ public abstract class ShareGoodDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static ShareGoodDialogBinding bind(View view, Object obj) {
-        return (ShareGoodDialogBinding) bind(obj, view, 2131559139);
+        return (ShareGoodDialogBinding) bind(obj, view, 2131559146);
     }
 }

@@ -24,7 +24,7 @@ public abstract class ItemFeedFilterBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedFilterBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedFilterBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558699, viewGroup, z, obj);
+        return (ItemFeedFilterBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558706, viewGroup, z, obj);
     }
 
     public static ItemFeedFilterBinding inflate(LayoutInflater layoutInflater) {
@@ -33,7 +33,7 @@ public abstract class ItemFeedFilterBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedFilterBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedFilterBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558699, null, false, obj);
+        return (ItemFeedFilterBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558706, null, false, obj);
     }
 
     public static ItemFeedFilterBinding bind(View view) {
@@ -42,6 +42,6 @@ public abstract class ItemFeedFilterBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedFilterBinding bind(View view, Object obj) {
-        return (ItemFeedFilterBinding) bind(obj, view, 2131558699);
+        return (ItemFeedFilterBinding) bind(obj, view, 2131558706);
     }
 }

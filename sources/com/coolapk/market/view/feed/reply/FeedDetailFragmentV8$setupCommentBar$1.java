@@ -32,13 +32,13 @@ final class FeedDetailFragmentV8$setupCommentBar$1 extends Lambda implements Fun
     public final void invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         switch (view.getId()) {
-            case 2131362284:
+            case 2131362289:
                 ActionManager.startFeedCommentActivity(this.this$0.getActivity(), this.this$0.getFeed$presentation_coolapkAppRelease().getId(), this.this$0.getFeed$presentation_coolapkAppRelease().getUserName());
                 return;
-            case 2131362291:
+            case 2131362296:
                 this.this$0.scrollToCommentPosition();
                 return;
-            case 2131362851:
+            case 2131362862:
                 Boolean checkLogin = ActionManager.checkLogin(this.this$0.getActivity());
                 Intrinsics.checkNotNullExpressionValue(checkLogin, "ActionManager.checkLogin(activity)");
                 if (checkLogin.booleanValue()) {
@@ -53,7 +53,7 @@ final class FeedDetailFragmentV8$setupCommentBar$1 extends Lambda implements Fun
                 }
                 StatisticHelper.Companion.getInstance().recordLoginClickEvent("点赞");
                 return;
-            case 2131363358:
+            case 2131363374:
                 StatisticHelper instance = StatisticHelper.Companion.getInstance();
                 String feedTypeName = this.this$0.getFeed$presentation_coolapkAppRelease().getFeedTypeName();
                 if (feedTypeName == null) {
@@ -63,7 +63,7 @@ final class FeedDetailFragmentV8$setupCommentBar$1 extends Lambda implements Fun
                 instance.recordShareFeedEvent(feedTypeName, "点击底部toolbar上的分享");
                 ActionManager.startForwardEntityActivity(this.this$0.getActivity(), this.this$0.getFeed$presentation_coolapkAppRelease());
                 return;
-            case 2131363418:
+            case 2131363436:
                 Boolean checkLogin2 = ActionManager.checkLogin(this.this$0.getActivity());
                 Intrinsics.checkNotNullExpressionValue(checkLogin2, "ActionManager.checkLogin(activity)");
                 if (checkLogin2.booleanValue()) {

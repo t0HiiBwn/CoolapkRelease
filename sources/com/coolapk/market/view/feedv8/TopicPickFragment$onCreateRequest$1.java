@@ -53,7 +53,7 @@ final class TopicPickFragment$onCreateRequest$1<T, R> implements Func1<List<Enti
                     z = true;
                 }
                 if (!z) {
-                    arrayList.add(HolderItem.newBuilder().entityType("HOLDER_TYPE_DELETE_RECENT").entityId("-1").string("最近参与").value(application.getString(2131886772)).build());
+                    arrayList.add(HolderItem.newBuilder().entityType("HOLDER_TYPE_DELETE_RECENT").entityId("-1").string("最近参与").value(application.getString(2131886834)).build());
                     list.remove(t3);
                     List<Entity> entities2 = t2.getEntities();
                     Intrinsics.checkNotNull(entities2);

@@ -18,8 +18,8 @@ final class AutoValue_SecondHandInfo extends C$AutoValue_SecondHandInfo {
         }
     };
 
-    AutoValue_SecondHandInfo(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, int i, String str13, String str14, int i2, Long l2, Long l3, String str15, int i3, int i4, int i5, String str16) {
-        super(str, str2, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12, i, str13, str14, i2, l2, l3, str15, i3, i4, i5, str16);
+    AutoValue_SecondHandInfo(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, int i, String str13, String str14, int i2, Long l, Long l2, String str15, int i3, int i4, int i5, String str16) {
+        super(str, str2, str3, str4, str5, str6, str7, str8, str9, str10, str11, str12, i, str13, str14, i2, l, l2, str15, i3, i4, i5, str16);
     }
 
     @Override // android.os.Parcelable

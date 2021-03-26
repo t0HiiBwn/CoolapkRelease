@@ -16,6 +16,7 @@ import com.coolapk.market.event.SettingEvent;
 import com.coolapk.market.extend.ViewExtents2Kt;
 import com.coolapk.market.manager.ActionManager;
 import com.coolapk.market.manager.DataManager;
+import com.coolapk.market.util.ActivityResultAdapter;
 import com.coolapk.market.util.ResourceUtils;
 import com.coolapk.market.util.SaveInstanceHelper;
 import com.coolapk.market.util.ThemeUtils;
@@ -38,6 +39,7 @@ public abstract class BaseActivity extends BaseVideoActivity {
     private OnBackPressListener mOnBackPressListener;
     protected SliderPanel mPanelView;
     private SlidrInterface mSlidrControler;
+    private ActivityResultAdapter resultAdapter = null;
     private boolean shouldInitSlidr = true;
 
     public interface OnBackPressListener {
@@ -119,6 +121,10 @@ public abstract class BaseActivity extends BaseVideoActivity {
     @Override // androidx.fragment.app.FragmentActivity, android.app.Activity
     protected void onActivityResult(int i, int i2, Intent intent) {
         super.onActivityResult(i, i2, intent);
+        ActivityResultAdapter activityResultAdapter = this.resultAdapter;
+        if (activityResultAdapter != null) {
+            activityResultAdapter.onActivityResult(i, i2, intent);
+        }
         this.mFragmentStateSaved = false;
     }
 
@@ -399,5 +405,12 @@ public abstract class BaseActivity extends BaseVideoActivity {
         if (!this.mFragmentStateSaved) {
             super.onBackPressed();
         }
+    }
+
+    public ActivityResultAdapter getActivityResultAdapter() {
+        if (this.resultAdapter == null) {
+            this.resultAdapter = new ActivityResultAdapter(this);
+        }
+        return this.resultAdapter;
     }
 }

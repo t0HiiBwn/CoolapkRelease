@@ -57,7 +57,7 @@ public abstract class ItemArticleDetailAnswerTopBinding extends ViewDataBinding 
 
     @Deprecated
     public static ItemArticleDetailAnswerTopBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemArticleDetailAnswerTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558610, viewGroup, z, obj);
+        return (ItemArticleDetailAnswerTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558614, viewGroup, z, obj);
     }
 
     public static ItemArticleDetailAnswerTopBinding inflate(LayoutInflater layoutInflater) {
@@ -66,7 +66,7 @@ public abstract class ItemArticleDetailAnswerTopBinding extends ViewDataBinding 
 
     @Deprecated
     public static ItemArticleDetailAnswerTopBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemArticleDetailAnswerTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558610, null, false, obj);
+        return (ItemArticleDetailAnswerTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558614, null, false, obj);
     }
 
     public static ItemArticleDetailAnswerTopBinding bind(View view) {
@@ -75,6 +75,6 @@ public abstract class ItemArticleDetailAnswerTopBinding extends ViewDataBinding 
 
     @Deprecated
     public static ItemArticleDetailAnswerTopBinding bind(View view, Object obj) {
-        return (ItemArticleDetailAnswerTopBinding) bind(obj, view, 2131558610);
+        return (ItemArticleDetailAnswerTopBinding) bind(obj, view, 2131558614);
     }
 }

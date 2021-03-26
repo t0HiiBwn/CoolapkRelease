@@ -13,9 +13,7 @@ public final class de {
     private static volatile String i = "";
     private static volatile String j = "";
     private static volatile String k = "";
-
-    /* renamed from: l  reason: collision with root package name */
-    private static volatile String f1363l = "";
+    private static volatile String l = "";
     private static volatile String m = "";
     private static volatile String n = "";
     private static volatile String o = "";
@@ -121,7 +119,7 @@ public final class de {
     }
 
     public static String j() {
-        return f1363l;
+        return l;
     }
 
     public static void j(String str) {
@@ -136,7 +134,7 @@ public final class de {
 
     public static void k(String str) {
         if (str != null) {
-            f1363l = str;
+            l = str;
         }
     }
 

@@ -80,9 +80,9 @@ public final class AppDetailListFragment extends EntityListFragment implements A
         setRefreshEnable(false);
         setLoadMoreEnable(false);
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new AppDetailListFragment$onActivityCreated$1());
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558590).suitedEntityType("DETAIL").constructor(new AppDetailListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558590).suitedEntityType("DETAIL").constructor(new AppDetailListFragment$onActivityCreated$3(this)).build(), 0, 2, null);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558956).suitedEntityType("apkScrollCard").constructor(new AppDetailListFragment$onActivityCreated$4(this)).doAfterBind(new AppDetailListFragment$onActivityCreated$5(this)).build(), 0);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558594).suitedEntityType("DETAIL").constructor(new AppDetailListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558594).suitedEntityType("DETAIL").constructor(new AppDetailListFragment$onActivityCreated$3(this)).build(), 0, 2, null);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558963).suitedEntityType("apkScrollCard").constructor(new AppDetailListFragment$onActivityCreated$4(this)).doAfterBind(new AppDetailListFragment$onActivityCreated$5(this)).build(), 0);
         AppDetailPresenter presenter = getPresenter();
         ServiceApp serviceApp = getServiceApp();
         Intrinsics.checkNotNullExpressionValue(serviceApp, "serviceApp");

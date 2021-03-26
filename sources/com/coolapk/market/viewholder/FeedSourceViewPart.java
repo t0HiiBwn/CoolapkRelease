@@ -39,7 +39,7 @@ import kotlin.text.Regex;
 /* compiled from: FeedSourceViewPart.kt */
 public final class FeedSourceViewPart extends BindingViewPart<ItemFeedSourcePartBinding, Feed> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558730;
+    public static final int LAYOUT_ID = 2131558737;
     private final DataBindingComponent component;
     private final Lazy ninePicViewPart$delegate;
     private BaseVideoHotPlug videoViewHotPlug;
@@ -79,7 +79,7 @@ public final class FeedSourceViewPart extends BindingViewPart<ItemFeedSourcePart
         String message = feed.getMessage();
         Intrinsics.checkNotNullExpressionValue(message, "source.message");
         SpannableStringBuilder convert2 = LinkTextUtils.convert(new Regex("[\\n\\r]").replace(message, " "), AppHolder.getAppTheme().getColorAccent(), null);
-        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886656));
+        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886718));
         boolean z = false;
         spannableStringBuilder.setSpan(new ForegroundColorSpan(AppHolder.getAppTheme().getColorAccent()), 0, spannableStringBuilder.length(), 33);
         String str = "";
@@ -227,7 +227,7 @@ public final class FeedSourceViewPart extends BindingViewPart<ItemFeedSourcePart
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedSourcePartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558730, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558737, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemFeedSourcePartBinding) inflate;
     }

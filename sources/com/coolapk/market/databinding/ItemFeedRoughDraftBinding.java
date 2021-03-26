@@ -32,7 +32,7 @@ public abstract class ItemFeedRoughDraftBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedRoughDraftBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedRoughDraftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558722, viewGroup, z, obj);
+        return (ItemFeedRoughDraftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558729, viewGroup, z, obj);
     }
 
     public static ItemFeedRoughDraftBinding inflate(LayoutInflater layoutInflater) {
@@ -41,7 +41,7 @@ public abstract class ItemFeedRoughDraftBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedRoughDraftBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedRoughDraftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558722, null, false, obj);
+        return (ItemFeedRoughDraftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558729, null, false, obj);
     }
 
     public static ItemFeedRoughDraftBinding bind(View view) {
@@ -50,6 +50,6 @@ public abstract class ItemFeedRoughDraftBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedRoughDraftBinding bind(View view, Object obj) {
-        return (ItemFeedRoughDraftBinding) bind(obj, view, 2131558722);
+        return (ItemFeedRoughDraftBinding) bind(obj, view, 2131558729);
     }
 }

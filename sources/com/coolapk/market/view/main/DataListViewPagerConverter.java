@@ -275,7 +275,7 @@ public final class DataListViewPagerConverter {
             FrameLayout frameLayout = (FrameLayout) view;
             if (frameLayout != null) {
                 RecyclerView recyclerView = this.fragment.getRecyclerView();
-                ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(frameLayout.getContext()), 2131559115, frameLayout, false, new FragmentBindingComponent(this.fragment));
+                ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(frameLayout.getContext()), 2131559122, frameLayout, false, new FragmentBindingComponent(this.fragment));
                 Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ndingComponent(fragment))");
                 RefreshRecyclerTabsBinding refreshRecyclerTabsBinding = (RefreshRecyclerTabsBinding) inflate;
                 this.tabBinding = refreshRecyclerTabsBinding;

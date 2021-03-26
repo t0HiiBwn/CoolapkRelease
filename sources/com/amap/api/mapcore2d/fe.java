@@ -22,13 +22,13 @@ public class fe {
                 public void run() {
                     try {
                         synchronized (fe.class) {
-                            String l2 = Long.toString(System.currentTimeMillis());
+                            String l = Long.toString(System.currentTimeMillis());
                             fa a2 = fh.a(fe.d);
                             fh.a(context, a2, dm.i, fe.a, 2097152, "6");
                             if (a2.e == null) {
                                 a2.e = new de(new dg(new di(new dg())));
                             }
-                            fb.a(l2, fdVar.a(), a2);
+                            fb.a(l, fdVar.a(), a2);
                         }
                     } catch (Throwable th) {
                         Cdo.c(th, "ofm", "aple");

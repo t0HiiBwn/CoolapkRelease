@@ -26,9 +26,7 @@ public final class ak extends k {
     public String i = "";
     public ai j = null;
     public int k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    public String f1439l = "";
+    public String l = "";
     public String m = "";
     public ah n = null;
     public ArrayList<ah> o = null;
@@ -73,7 +71,7 @@ public final class ak extends k {
             jVar.a((k) aiVar, 9);
         }
         jVar.a(this.k, 10);
-        String str6 = this.f1439l;
+        String str6 = this.l;
         if (str6 != null) {
             jVar.a(str6, 11);
         }
@@ -140,7 +138,7 @@ public final class ak extends k {
         this.i = iVar.b(8, false);
         this.j = (ai) iVar.a((k) w, 9, false);
         this.k = iVar.a(this.k, 10, false);
-        this.f1439l = iVar.b(11, false);
+        this.l = iVar.b(11, false);
         this.m = iVar.b(12, false);
         this.n = (ah) iVar.a((k) x, 13, false);
         this.o = (ArrayList) iVar.a((i) y, 14, false);

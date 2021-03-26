@@ -69,7 +69,7 @@ public abstract class PostButtonSettingBinding extends ViewDataBinding {
 
     @Deprecated
     public static PostButtonSettingBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (PostButtonSettingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559089, viewGroup, z, obj);
+        return (PostButtonSettingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559096, viewGroup, z, obj);
     }
 
     public static PostButtonSettingBinding inflate(LayoutInflater layoutInflater) {
@@ -78,7 +78,7 @@ public abstract class PostButtonSettingBinding extends ViewDataBinding {
 
     @Deprecated
     public static PostButtonSettingBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (PostButtonSettingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559089, null, false, obj);
+        return (PostButtonSettingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559096, null, false, obj);
     }
 
     public static PostButtonSettingBinding bind(View view) {
@@ -87,6 +87,6 @@ public abstract class PostButtonSettingBinding extends ViewDataBinding {
 
     @Deprecated
     public static PostButtonSettingBinding bind(View view, Object obj) {
-        return (PostButtonSettingBinding) bind(obj, view, 2131559089);
+        return (PostButtonSettingBinding) bind(obj, view, 2131559096);
     }
 }

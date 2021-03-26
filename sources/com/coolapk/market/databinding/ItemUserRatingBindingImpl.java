@@ -25,8 +25,8 @@ public class ItemUserRatingBindingImpl extends ItemUserRatingBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363053, 5);
-        sparseIntArray.put(2131361876, 6);
+        sparseIntArray.put(2131363067, 5);
+        sparseIntArray.put(2131361877, 6);
     }
 
     public ItemUserRatingBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -67,7 +67,7 @@ public class ItemUserRatingBindingImpl extends ItemUserRatingBinding {
     public boolean setVariable(int i, Object obj) {
         if (27 == i) {
             setApp((ServiceApp) obj);
-        } else if (307 != i) {
+        } else if (308 != i) {
             return false;
         } else {
             setViewHolder((BindingViewHolder) obj);
@@ -92,7 +92,7 @@ public class ItemUserRatingBindingImpl extends ItemUserRatingBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(307);
+        notifyPropertyChanged(308);
         super.requestRebind();
     }
 
@@ -150,12 +150,12 @@ public class ItemUserRatingBindingImpl extends ItemUserRatingBinding {
             ViewBindingAdapters.clickListener(this.cardView, bindingViewHolder, null);
         }
         if ((j & 4) != 0) {
-            Long l2 = null;
-            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "uninstall", l2, l2);
+            Long l = null;
+            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "uninstall", l, l);
         }
         if (i != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
             RatingBarBindingAdapter.setRating(this.ratingBar, f);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }

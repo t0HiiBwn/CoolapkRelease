@@ -54,7 +54,7 @@ public abstract class ShareFeedV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ShareFeedV8Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ShareFeedV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559138, viewGroup, z, obj);
+        return (ShareFeedV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559145, viewGroup, z, obj);
     }
 
     public static ShareFeedV8Binding inflate(LayoutInflater layoutInflater) {
@@ -63,7 +63,7 @@ public abstract class ShareFeedV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ShareFeedV8Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ShareFeedV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559138, null, false, obj);
+        return (ShareFeedV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559145, null, false, obj);
     }
 
     public static ShareFeedV8Binding bind(View view) {
@@ -72,6 +72,6 @@ public abstract class ShareFeedV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ShareFeedV8Binding bind(View view, Object obj) {
-        return (ShareFeedV8Binding) bind(obj, view, 2131559138);
+        return (ShareFeedV8Binding) bind(obj, view, 2131559145);
     }
 }

@@ -36,9 +36,7 @@ public class j {
     private long i = 0;
     private long j = 0;
     private long k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    private long f1292l = 0;
+    private long l = 0;
     private long m = 0;
     private boolean n = false;
     private AtomicInteger o = new AtomicInteger(0);
@@ -90,8 +88,8 @@ public class j {
         u.b("LandingPageLog", "onWebProgress: " + i2);
         if (this.k == 0 && i2 > 0) {
             this.k = System.currentTimeMillis();
-        } else if (this.f1292l == 0 && i2 == 100) {
-            this.f1292l = System.currentTimeMillis();
+        } else if (this.l == 0 && i2 == 100) {
+            this.l = System.currentTimeMillis();
         }
     }
 
@@ -139,7 +137,7 @@ public class j {
                 z = false;
             }
             if (z) {
-                long j2 = this.f1292l - this.k;
+                long j2 = this.l - this.k;
                 JSONObject jSONObject = new JSONObject();
                 try {
                     jSONObject.put("error_code", this.c);

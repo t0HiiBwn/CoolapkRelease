@@ -26,7 +26,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: CardAccountTipsViewHolder.kt */
 public final class CardAccountTipsViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558572;
+    public static final int LAYOUT_ID = 2131558576;
     private final ItemAccountTipsBinding binding;
     private CenterV9Fragment fragment;
     private final HashSet<Tips> ignoreTipSet;
@@ -79,7 +79,7 @@ public final class CardAccountTipsViewHolder extends BindingViewHolder {
         Tips tips2 = null;
         str = null;
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf != null && valueOf.intValue() == 2131362257) {
+        if (valueOf != null && valueOf.intValue() == 2131362262) {
             UserProfile userProfile = this.presenter.getUserProfile();
             if (userProfile != null) {
                 tips2 = userProfile.getTips();
@@ -87,7 +87,7 @@ public final class CardAccountTipsViewHolder extends BindingViewHolder {
             if (tips2 != null) {
                 hideTips(tips2);
             }
-        } else if (valueOf != null && valueOf.intValue() == 2131363562) {
+        } else if (valueOf != null && valueOf.intValue() == 2131363584) {
             this.presenter.requestForceReloadUserProfile();
             UserProfile userProfile2 = this.presenter.getUserProfile();
             if (!(userProfile2 == null || (tips = userProfile2.getTips()) == null)) {

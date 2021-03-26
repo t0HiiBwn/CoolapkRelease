@@ -36,7 +36,7 @@ public abstract class ItemBlockWordBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBlockWordBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemBlockWordBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558628, viewGroup, z, obj);
+        return (ItemBlockWordBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558633, viewGroup, z, obj);
     }
 
     public static ItemBlockWordBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class ItemBlockWordBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBlockWordBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemBlockWordBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558628, null, false, obj);
+        return (ItemBlockWordBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558633, null, false, obj);
     }
 
     public static ItemBlockWordBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class ItemBlockWordBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBlockWordBinding bind(View view, Object obj) {
-        return (ItemBlockWordBinding) bind(obj, view, 2131558628);
+        return (ItemBlockWordBinding) bind(obj, view, 2131558633);
     }
 }

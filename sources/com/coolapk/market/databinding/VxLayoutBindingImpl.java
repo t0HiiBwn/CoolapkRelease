@@ -32,14 +32,14 @@ public class VxLayoutBindingImpl extends VxLayoutBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363009, 1);
-        sparseIntArray.put(2131362103, 2);
-        sparseIntArray.put(2131362084, 3);
-        sparseIntArray.put(2131362575, 4);
-        sparseIntArray.put(2131362316, 5);
-        sparseIntArray.put(2131363480, 6);
-        sparseIntArray.put(2131363490, 7);
-        sparseIntArray.put(2131363934, 8);
+        sparseIntArray.put(2131363023, 1);
+        sparseIntArray.put(2131362106, 2);
+        sparseIntArray.put(2131362086, 3);
+        sparseIntArray.put(2131362583, 4);
+        sparseIntArray.put(2131362322, 5);
+        sparseIntArray.put(2131363498, 6);
+        sparseIntArray.put(2131363508, 7);
+        sparseIntArray.put(2131363959, 8);
     }
 
     public VxLayoutBindingImpl(DataBindingComponent dataBindingComponent, View view) {

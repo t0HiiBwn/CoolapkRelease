@@ -49,7 +49,7 @@ public abstract class KkViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static KkViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (KkViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558995, viewGroup, z, obj);
+        return (KkViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559002, viewGroup, z, obj);
     }
 
     public static KkViewBinding inflate(LayoutInflater layoutInflater) {
@@ -58,7 +58,7 @@ public abstract class KkViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static KkViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (KkViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558995, null, false, obj);
+        return (KkViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559002, null, false, obj);
     }
 
     public static KkViewBinding bind(View view) {
@@ -67,6 +67,6 @@ public abstract class KkViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static KkViewBinding bind(View view, Object obj) {
-        return (KkViewBinding) bind(obj, view, 2131558995);
+        return (KkViewBinding) bind(obj, view, 2131559002);
     }
 }

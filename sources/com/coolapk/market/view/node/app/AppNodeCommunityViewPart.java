@@ -78,7 +78,7 @@ public final class AppNodeCommunityViewPart extends BaseAppNodeViewPart<AppNodeC
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public AppNodeCommunityHeaderBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558463, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558464, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (AppNodeCommunityHeaderBinding) inflate;
     }
@@ -185,7 +185,7 @@ public final class AppNodeCommunityViewPart extends BaseAppNodeViewPart<AppNodeC
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
         switch (view.getId()) {
-            case 2131362578:
+            case 2131362586:
                 ServiceApp serviceApp = this.viewModel.getServiceApp().get();
                 Intrinsics.checkNotNull(serviceApp);
                 Intrinsics.checkNotNullExpressionValue(serviceApp, "viewModel.serviceApp.get()!!");
@@ -194,17 +194,17 @@ public final class AppNodeCommunityViewPart extends BaseAppNodeViewPart<AppNodeC
                 this.presenter.followApp(serviceApp.getApkId(), z, z2);
                 this.viewModel.isFollow().set(z2);
                 return;
-            case 2131362584:
+            case 2131362592:
                 Context context = getContext();
                 ServiceApp serviceApp2 = this.viewModel.getServiceApp().get();
                 Intrinsics.checkNotNull(serviceApp2);
                 Intrinsics.checkNotNullExpressionValue(serviceApp2, "viewModel.serviceApp.get()!!");
                 ActionManager.startAppFollowerListActivity(context, serviceApp2.getApkId());
                 return;
-            case 2131362746:
+            case 2131362757:
                 this.viewModel.getShowAllIntroduce().set(!this.viewModel.getShowAllIntroduce().get());
                 return;
-            case 2131362889:
+            case 2131362900:
                 ServiceApp serviceApp3 = this.viewModel.getServiceApp().get();
                 Intrinsics.checkNotNull(serviceApp3);
                 Intrinsics.checkNotNullExpressionValue(serviceApp3, "viewModel.serviceApp.get()!!");

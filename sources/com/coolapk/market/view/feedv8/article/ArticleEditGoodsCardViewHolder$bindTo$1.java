@@ -34,7 +34,6 @@ final class ArticleEditGoodsCardViewHolder$bindTo$1 extends Lambda implements Fu
 
     public final void invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "it");
-        this.this$0.getViewModel().getUrlEntityMap().remove(this.$card.getUrlKey());
         ArticleViewModel.updateDataList$default(this.this$0.getViewModel(), false, false, new Function1<List<ArticleModel>, Unit>(this) {
             /* class com.coolapk.market.view.feedv8.article.ArticleEditGoodsCardViewHolder$bindTo$1.AnonymousClass1 */
             final /* synthetic */ ArticleEditGoodsCardViewHolder$bindTo$1 this$0;
@@ -58,5 +57,6 @@ final class ArticleEditGoodsCardViewHolder$bindTo$1 extends Lambda implements Fu
                 }
             }
         }, 3, null);
+        this.this$0.getViewModel().removeEntityByUrl(this.$card.getUrlKey());
     }
 }

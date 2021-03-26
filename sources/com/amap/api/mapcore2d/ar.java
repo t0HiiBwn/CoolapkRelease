@@ -97,7 +97,7 @@ public class ar implements IMapFragmentDelegate {
 
     void a() {
         int i = a.getResources().getDisplayMetrics().densityDpi;
-        q.f1243l = i;
+        q.l = i;
         if (i <= 320) {
             q.j = 256;
         } else if (i <= 480) {

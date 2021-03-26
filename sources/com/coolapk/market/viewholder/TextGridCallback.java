@@ -23,7 +23,7 @@ final class TextGridCallback extends TitleRecycleViewCardViewHolder.Callback {
         recyclerView.setClipToPadding(false);
         recyclerView.setClipChildren(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(titleRecycleViewCardViewHolder.getContext(), 0, false));
-        recyclerView.addItemDecoration(ItemDecorations.horizontal(recyclerView.getContext()).type(0, 2131231064).create());
+        recyclerView.addItemDecoration(ItemDecorations.horizontal(recyclerView.getContext()).type(0, 2131231074).create());
     }
 
     @Override // com.coolapk.market.viewholder.TitleRecycleViewCardViewHolder.Callback
@@ -38,7 +38,7 @@ final class TextGridCallback extends TitleRecycleViewCardViewHolder.Callback {
     public BindingViewHolder onCreateViewHolder(TitleRecycleViewCardViewHolder titleRecycleViewCardViewHolder, ViewGroup viewGroup, int i) {
         Intrinsics.checkNotNullParameter(titleRecycleViewCardViewHolder, "holder");
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
-        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558952, viewGroup, false);
+        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558959, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "view");
         DataBindingComponent component = titleRecycleViewCardViewHolder.getComponent();
         Intrinsics.checkNotNullExpressionValue(component, "holder.component");

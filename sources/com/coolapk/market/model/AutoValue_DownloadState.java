@@ -18,8 +18,8 @@ final class AutoValue_DownloadState extends DownloadState {
     private final long updateTime;
     private final String url;
 
-    private AutoValue_DownloadState(Long l2, String str, int i, long j, long j2, long j3, String str2, String str3, String str4, Extra extra2, long j4, long j5, long j6, Throwable th) {
-        this.dbId = l2;
+    private AutoValue_DownloadState(Long l, String str, int i, long j, long j2, long j3, String str2, String str3, String str4, Extra extra2, long j4, long j5, long j6, Throwable th) {
+        this.dbId = l;
         this.url = str;
         this.state = i;
         this.currentLength = j;
@@ -120,8 +120,8 @@ final class AutoValue_DownloadState extends DownloadState {
             return false;
         }
         DownloadState downloadState = (DownloadState) obj;
-        Long l2 = this.dbId;
-        if (l2 != null ? l2.equals(downloadState.getDbId()) : downloadState.getDbId() == null) {
+        Long l = this.dbId;
+        if (l != null ? l.equals(downloadState.getDbId()) : downloadState.getDbId() == null) {
             if (this.url.equals(downloadState.getUrl()) && this.state == downloadState.getState() && this.currentLength == downloadState.getCurrentLength() && this.totalLength == downloadState.getTotalLength() && this.diffLength == downloadState.getDiffLength() && ((str = this.filePath) != null ? str.equals(downloadState.getFilePath()) : downloadState.getFilePath() == null) && this.fileName.equals(downloadState.getFileName()) && ((str2 = this.mimeType) != null ? str2.equals(downloadState.getMimeType()) : downloadState.getMimeType() == null) && ((extra2 = this.extra) != null ? extra2.equals(downloadState.getExtra()) : downloadState.getExtra() == null) && this.startTime == downloadState.getStartTime() && this.updateTime == downloadState.getUpdateTime() && this.diffTime == downloadState.getDiffTime()) {
                 Throwable th = this.error;
                 if (th == null) {
@@ -137,9 +137,9 @@ final class AutoValue_DownloadState extends DownloadState {
     }
 
     public int hashCode() {
-        Long l2 = this.dbId;
+        Long l = this.dbId;
         int i = 0;
-        int hashCode = l2 == null ? 0 : l2.hashCode();
+        int hashCode = l == null ? 0 : l.hashCode();
         long j = this.currentLength;
         long j2 = this.totalLength;
         long j3 = this.diffLength;
@@ -198,8 +198,8 @@ final class AutoValue_DownloadState extends DownloadState {
         }
 
         @Override // com.coolapk.market.model.DownloadState.Builder
-        public DownloadState.Builder dbId(Long l2) {
-            this.dbId = l2;
+        public DownloadState.Builder dbId(Long l) {
+            this.dbId = l;
             return this;
         }
 

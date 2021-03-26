@@ -22,39 +22,39 @@ public final class UIntRange extends UIntProgression implements ClosedRange<UInt
     /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Comparable] */
     @Override // kotlin.ranges.ClosedRange
     public /* bridge */ /* synthetic */ boolean contains(UInt uInt) {
-        return m1871containsWZ4Q5Ns(uInt.m816unboximpl());
+        return m1269containsWZ4Q5Ns(uInt.m214unboximpl());
     }
 
     /* Return type fixed from 'java.lang.Comparable' to match base method */
     @Override // kotlin.ranges.ClosedRange
     public /* bridge */ /* synthetic */ UInt getEndInclusive() {
-        return UInt.m767boximpl(m1872getEndInclusivepVg5ArA());
+        return UInt.m165boximpl(m1270getEndInclusivepVg5ArA());
     }
 
     /* Return type fixed from 'java.lang.Comparable' to match base method */
     @Override // kotlin.ranges.ClosedRange
     public /* bridge */ /* synthetic */ UInt getStart() {
-        return UInt.m767boximpl(m1873getStartpVg5ArA());
+        return UInt.m165boximpl(m1271getStartpVg5ArA());
     }
 
     /* renamed from: getStart-pVg5ArA  reason: not valid java name */
-    public int m1873getStartpVg5ArA() {
-        return m1868getFirstpVg5ArA();
+    public int m1271getStartpVg5ArA() {
+        return m1266getFirstpVg5ArA();
     }
 
     /* renamed from: getEndInclusive-pVg5ArA  reason: not valid java name */
-    public int m1872getEndInclusivepVg5ArA() {
-        return m1869getLastpVg5ArA();
+    public int m1270getEndInclusivepVg5ArA() {
+        return m1267getLastpVg5ArA();
     }
 
     /* renamed from: contains-WZ4Q5Ns  reason: not valid java name */
-    public boolean m1871containsWZ4Q5Ns(int i) {
-        return UnsignedKt.uintCompare(m1868getFirstpVg5ArA(), i) <= 0 && UnsignedKt.uintCompare(i, m1869getLastpVg5ArA()) <= 0;
+    public boolean m1269containsWZ4Q5Ns(int i) {
+        return UnsignedKt.uintCompare(m1266getFirstpVg5ArA(), i) <= 0 && UnsignedKt.uintCompare(i, m1267getLastpVg5ArA()) <= 0;
     }
 
     @Override // kotlin.ranges.UIntProgression, kotlin.ranges.ClosedRange
     public boolean isEmpty() {
-        return UnsignedKt.uintCompare(m1868getFirstpVg5ArA(), m1869getLastpVg5ArA()) > 0;
+        return UnsignedKt.uintCompare(m1266getFirstpVg5ArA(), m1267getLastpVg5ArA()) > 0;
     }
 
     @Override // kotlin.ranges.UIntProgression, java.lang.Object
@@ -62,7 +62,7 @@ public final class UIntRange extends UIntProgression implements ClosedRange<UInt
         if (obj instanceof UIntRange) {
             if (!isEmpty() || !((UIntRange) obj).isEmpty()) {
                 UIntRange uIntRange = (UIntRange) obj;
-                if (!(m1868getFirstpVg5ArA() == uIntRange.m1868getFirstpVg5ArA() && m1869getLastpVg5ArA() == uIntRange.m1869getLastpVg5ArA())) {
+                if (!(m1266getFirstpVg5ArA() == uIntRange.m1266getFirstpVg5ArA() && m1267getLastpVg5ArA() == uIntRange.m1267getLastpVg5ArA())) {
                 }
             }
             return true;
@@ -75,12 +75,12 @@ public final class UIntRange extends UIntProgression implements ClosedRange<UInt
         if (isEmpty()) {
             return -1;
         }
-        return (m1868getFirstpVg5ArA() * 31) + m1869getLastpVg5ArA();
+        return (m1266getFirstpVg5ArA() * 31) + m1267getLastpVg5ArA();
     }
 
     @Override // kotlin.ranges.UIntProgression, java.lang.Object
     public String toString() {
-        return UInt.m810toStringimpl(m1868getFirstpVg5ArA()) + ".." + UInt.m810toStringimpl(m1869getLastpVg5ArA());
+        return UInt.m208toStringimpl(m1266getFirstpVg5ArA()) + ".." + UInt.m208toStringimpl(m1267getLastpVg5ArA());
     }
 
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u0011\u0010\u0003\u001a\u00020\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"Lkotlin/ranges/UIntRange$Companion;", "", "()V", "EMPTY", "Lkotlin/ranges/UIntRange;", "getEMPTY", "()Lkotlin/ranges/UIntRange;", "kotlin-stdlib"}, k = 1, mv = {1, 4, 1})

@@ -33,9 +33,7 @@ public class DriveStep implements Parcelable {
     private List<LatLonPoint> i = new ArrayList();
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private List<RouteSearchCity> f1253l = new ArrayList();
+    private List<RouteSearchCity> l = new ArrayList();
     private List<TMC> m = new ArrayList();
 
     @Override // android.os.Parcelable
@@ -132,11 +130,11 @@ public class DriveStep implements Parcelable {
     }
 
     public List<RouteSearchCity> getRouteSearchCityList() {
-        return this.f1253l;
+        return this.l;
     }
 
     public void setRouteSearchCityList(List<RouteSearchCity> list) {
-        this.f1253l = list;
+        this.l = list;
     }
 
     public List<TMC> getTMCs() {
@@ -160,7 +158,7 @@ public class DriveStep implements Parcelable {
         parcel.writeTypedList(this.i);
         parcel.writeString(this.j);
         parcel.writeString(this.k);
-        parcel.writeTypedList(this.f1253l);
+        parcel.writeTypedList(this.l);
         parcel.writeTypedList(this.m);
     }
 
@@ -176,7 +174,7 @@ public class DriveStep implements Parcelable {
         this.i = parcel.createTypedArrayList(LatLonPoint.CREATOR);
         this.j = parcel.readString();
         this.k = parcel.readString();
-        this.f1253l = parcel.createTypedArrayList(RouteSearchCity.CREATOR);
+        this.l = parcel.createTypedArrayList(RouteSearchCity.CREATOR);
         this.m = parcel.createTypedArrayList(TMC.CREATOR);
     }
 

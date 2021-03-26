@@ -29,7 +29,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: VideoViewHolder.kt */
 public final class VideoViewHolder extends BindingViewHolder implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558985;
+    public static final int LAYOUT_ID = 2131558992;
     private final ItemVideoViewBinding binding;
     private EntityCard card;
     private final TitleViewPart titleViewPart;

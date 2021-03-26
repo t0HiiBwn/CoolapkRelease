@@ -69,9 +69,7 @@ public final class a {
     public final String i;
     public long j;
     public String k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    public String f1433l = null;
+    public String l = null;
     public String m = null;
     public String n = null;
     public String o = null;
@@ -107,7 +105,7 @@ public final class a {
         this.d = AppInfo.a(Process.myPid());
         this.g = b.k();
         this.h = b.a();
-        this.f1433l = AppInfo.c(context);
+        this.l = AppInfo.c(context);
         this.i = "Android " + b.b() + ",level " + b.c();
         Map<String, String> d2 = AppInfo.d(context);
         if (d2 != null) {

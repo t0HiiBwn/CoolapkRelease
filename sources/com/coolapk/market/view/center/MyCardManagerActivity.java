@@ -20,7 +20,7 @@ public final class MyCardManagerActivity extends ToolbarActivity<MyCardManagerFr
 
     @Override // com.coolapk.market.view.base.BaseActivity
     protected void onSlideClosed() {
-        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131363592);
+        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131363614);
         if (findFragmentById != null && (findFragmentById instanceof MyCardManagerFragment)) {
             MyCardManagerFragment myCardManagerFragment = (MyCardManagerFragment) findFragmentById;
             if (myCardManagerFragment.isEdited()) {
@@ -33,7 +33,7 @@ public final class MyCardManagerActivity extends ToolbarActivity<MyCardManagerFr
 
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.activity.ComponentActivity, android.app.Activity
     public void onBackPressed() {
-        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131363592);
+        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131363614);
         if (findFragmentById != null && (findFragmentById instanceof MyCardManagerFragment)) {
             MyCardManagerFragment myCardManagerFragment = (MyCardManagerFragment) findFragmentById;
             if (myCardManagerFragment.isEdited()) {

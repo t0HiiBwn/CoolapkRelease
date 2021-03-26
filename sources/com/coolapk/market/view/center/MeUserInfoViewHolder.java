@@ -37,7 +37,7 @@ import rx.Observable;
 /* compiled from: MeUserInfoViewHolder.kt */
 public final class MeUserInfoViewHolder extends GenericBindHolder<ItemCenterUserInfoBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558643;
+    public static final int LAYOUT_ID = 2131558649;
     private final CenterPresenter presenter;
     private String userAvatar = "";
 
@@ -113,7 +113,7 @@ public final class MeUserInfoViewHolder extends GenericBindHolder<ItemCenterUser
         Intrinsics.checkNotNull(model2);
         Intrinsics.checkNotNullExpressionValue(model2, "binding.model!!");
         int level = model2.getLevel();
-        int colorInt = ResourceUtils.getColorInt(getContext(), level >= 10 ? 2131099902 : level == 9 ? 2131099910 : level == 8 ? 2131099909 : level == 7 ? 2131099908 : level == 6 ? 2131099907 : level == 5 ? 2131099906 : level == 4 ? 2131099905 : level == 3 ? 2131099904 : level == 2 ? 2131099903 : 2131099901);
+        int colorInt = ResourceUtils.getColorInt(getContext(), level >= 10 ? 2131099907 : level == 9 ? 2131099915 : level == 8 ? 2131099914 : level == 7 ? 2131099913 : level == 6 ? 2131099912 : level == 5 ? 2131099911 : level == 4 ? 2131099910 : level == 3 ? 2131099909 : level == 2 ? 2131099908 : 2131099906);
         if (!AppHolder.getAppTheme().isMatchLevelBarTheme()) {
             colorInt = -1;
         }
@@ -193,25 +193,25 @@ public final class MeUserInfoViewHolder extends GenericBindHolder<ItemCenterUser
             Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
             LoginSession loginSession = instance.getLoginSession();
             switch (view.getId()) {
-                case 2131363154:
+                case 2131363168:
                     ItemCenterUserInfoBinding itemCenterUserInfoBinding = (ItemCenterUserInfoBinding) getBinding();
                     Intrinsics.checkNotNullExpressionValue(itemCenterUserInfoBinding, "binding");
                     ActionManagerCompat.startUserQRCodeActivity(activityNullable, itemCenterUserInfoBinding.getModel());
                     return;
-                case 2131363882:
+                case 2131363905:
                     Activity currentActivity = AppHolder.getCurrentActivity();
                     if (currentActivity != null) {
                         Boolean checkLogin = ActionManager.checkLogin(currentActivity);
                         Intrinsics.checkNotNullExpressionValue(checkLogin, "ActionManager.checkLogin(it)");
                         if (checkLogin.booleanValue()) {
                             Intrinsics.checkNotNullExpressionValue(loginSession, "session");
-                            ActionManager.startFansListActivity(activityNullable, loginSession.getUid(), getContext().getString(2131887255));
+                            ActionManager.startFansListActivity(activityNullable, loginSession.getUid(), getContext().getString(2131887317));
                             return;
                         }
                         return;
                     }
                     return;
-                case 2131363883:
+                case 2131363906:
                     Activity currentActivity2 = AppHolder.getCurrentActivity();
                     if (currentActivity2 != null) {
                         Boolean checkLogin2 = ActionManager.checkLogin(currentActivity2);
@@ -224,20 +224,20 @@ public final class MeUserInfoViewHolder extends GenericBindHolder<ItemCenterUser
                         return;
                     }
                     return;
-                case 2131363885:
+                case 2131363908:
                     Activity currentActivity3 = AppHolder.getCurrentActivity();
                     if (currentActivity3 != null) {
                         Boolean checkLogin3 = ActionManager.checkLogin(currentActivity3);
                         Intrinsics.checkNotNullExpressionValue(checkLogin3, "ActionManager.checkLogin(it)");
                         if (checkLogin3.booleanValue()) {
                             Intrinsics.checkNotNullExpressionValue(loginSession, "session");
-                            ActionManager.startFriendListActivity(activityNullable, loginSession.getUid(), getContext().getString(2131887260));
+                            ActionManager.startFriendListActivity(activityNullable, loginSession.getUid(), getContext().getString(2131887322));
                             return;
                         }
                         return;
                     }
                     return;
-                case 2131363887:
+                case 2131363910:
                     Intrinsics.checkNotNullExpressionValue(loginSession, "session");
                     if (!loginSession.isLogin()) {
                         ActionManager.startLoginActivity(activityNullable);

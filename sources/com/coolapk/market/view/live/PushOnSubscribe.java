@@ -1,6 +1,7 @@
 package com.coolapk.market.view.live;
 
 import com.coolapk.market.AppHolder;
+import com.coolapk.market.manager.AppNotification;
 import com.coolapk.market.manager.PushMessage;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
@@ -12,8 +13,8 @@ import rx.Subscriber;
 public final class PushOnSubscribe implements Observable.OnSubscribe<PushMessage> {
     public void call(Subscriber<? super PushMessage> subscriber) {
         Intrinsics.checkNotNullParameter(subscriber, "subscriber");
-        PushOnSubscribe$call$messageIntercept$1 pushOnSubscribe$call$messageIntercept$1 = new PushOnSubscribe$call$messageIntercept$1(subscriber);
-        AppHolder.getAppNotification().addIntercept(pushOnSubscribe$call$messageIntercept$1);
-        subscriber.add(new PushOnSubscribe$call$1(pushOnSubscribe$call$messageIntercept$1));
+        AppNotification.MessageIntercept invoke = AppNotification.MessageIntercept.Companion.invoke(new PushOnSubscribe$call$messageIntercept$1(subscriber));
+        AppHolder.getAppNotification().addIntercept(invoke);
+        subscriber.add(new PushOnSubscribe$call$1(invoke));
     }
 }

@@ -34,7 +34,7 @@ public abstract class ItemProductScoreViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductScoreViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemProductScoreViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558871, viewGroup, z, obj);
+        return (ItemProductScoreViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558878, viewGroup, z, obj);
     }
 
     public static ItemProductScoreViewBinding inflate(LayoutInflater layoutInflater) {
@@ -43,7 +43,7 @@ public abstract class ItemProductScoreViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductScoreViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemProductScoreViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558871, null, false, obj);
+        return (ItemProductScoreViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558878, null, false, obj);
     }
 
     public static ItemProductScoreViewBinding bind(View view) {
@@ -52,6 +52,6 @@ public abstract class ItemProductScoreViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductScoreViewBinding bind(View view, Object obj) {
-        return (ItemProductScoreViewBinding) bind(obj, view, 2131558871);
+        return (ItemProductScoreViewBinding) bind(obj, view, 2131558878);
     }
 }

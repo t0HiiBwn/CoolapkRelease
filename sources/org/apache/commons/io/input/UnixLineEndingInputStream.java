@@ -15,6 +15,14 @@ public class UnixLineEndingInputStream extends InputStream {
         this.ensureLineFeedAtEndOfFile = z;
     }
 
+    private int eofGame(boolean z) {
+        if (z || !this.ensureLineFeedAtEndOfFile || this.slashNSeen) {
+            return -1;
+        }
+        this.slashNSeen = true;
+        return 10;
+    }
+
     private int readWithUpdate() throws IOException {
         int read = this.target.read();
         boolean z = true;
@@ -31,6 +39,17 @@ public class UnixLineEndingInputStream extends InputStream {
         return read;
     }
 
+    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
+        super.close();
+        this.target.close();
+    }
+
+    @Override // java.io.InputStream
+    public synchronized void mark(int i) {
+        throw new UnsupportedOperationException("Mark notsupported");
+    }
+
     @Override // java.io.InputStream
     public int read() throws IOException {
         boolean z = this.slashRSeen;
@@ -45,24 +64,5 @@ public class UnixLineEndingInputStream extends InputStream {
             return 10;
         }
         return (!z || !this.slashNSeen) ? readWithUpdate : read();
-    }
-
-    private int eofGame(boolean z) {
-        if (z || !this.ensureLineFeedAtEndOfFile || this.slashNSeen) {
-            return -1;
-        }
-        this.slashNSeen = true;
-        return 10;
-    }
-
-    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
-        super.close();
-        this.target.close();
-    }
-
-    @Override // java.io.InputStream
-    public synchronized void mark(int i) {
-        throw new UnsupportedOperationException("Mark notsupported");
     }
 }

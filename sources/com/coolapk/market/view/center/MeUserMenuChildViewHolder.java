@@ -22,7 +22,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: MeUserMenuViewHolder.kt */
 final class MeUserMenuChildViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558640;
+    public static final int LAYOUT_ID = 2131558646;
     private final ItemCenterMoreEntranceChildBinding binding = ((ItemCenterMoreEntranceChildBinding) getBinding());
     private final CenterUserMenuPresenter presenter;
 
@@ -48,17 +48,22 @@ final class MeUserMenuChildViewHolder extends BindingViewHolder {
     public void bindTo(Object obj) {
         Objects.requireNonNull(obj, "null cannot be cast to non-null type com.coolapk.market.view.center.UserMenu");
         UserMenu userMenu = (UserMenu) obj;
+        TextView textView = this.binding.bubbleTextView;
+        Intrinsics.checkNotNullExpressionValue(textView, "binding.bubbleTextView");
         this.binding.textView.setText(userMenu.getTitleRes());
         this.binding.imageView.setImageResource(userMenu.getIconRes());
         ImageView imageView = this.binding.imageView;
         Intrinsics.checkNotNullExpressionValue(imageView, "binding.imageView");
         imageView.setImageTintList(ColorStateList.valueOf(userMenu.getTintColor()));
+        if (userMenu.getBubbleTintColor() != 0) {
+            textView.setBackgroundTintList(ColorStateList.valueOf(userMenu.getBubbleTintColor()));
+        } else {
+            textView.setBackgroundTintList(ColorStateList.valueOf(AppHolder.getAppTheme().getColorAccent()));
+        }
         FrameLayout frameLayout = this.binding.itemView;
         Intrinsics.checkNotNullExpressionValue(frameLayout, "binding.itemView");
         ViewExtendsKt.setUtilClickListener(frameLayout, new MeUserMenuChildViewHolder$bindTo$1(this, userMenu));
         this.binding.executePendingBindings();
-        TextView textView = this.binding.bubbleTextView;
-        Intrinsics.checkNotNullExpressionValue(textView, "binding.bubbleTextView");
         textView.setText(userMenu.getBubbleText());
         textView.setVisibility(userMenu.getShowBubble() ? 0 : 8);
         if (textView.getVisibility() == 8) {

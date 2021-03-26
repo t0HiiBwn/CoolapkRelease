@@ -9,7 +9,7 @@ import com.coolapk.market.util.UiUtils;
 import com.coolapk.market.util.ViewUtil;
 
 public class RelatedDataViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558895;
+    public static final int LAYOUT_ID = 2131558902;
 
     public RelatedDataViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
         super(view, dataBindingComponent, itemActionHandler);

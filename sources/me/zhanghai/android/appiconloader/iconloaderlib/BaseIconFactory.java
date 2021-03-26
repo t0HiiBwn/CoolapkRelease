@@ -17,6 +17,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Process;
 import android.os.UserHandle;
+import me.zhanghai.android.appiconloader.iconloaderlib.BitmapInfo;
+import me.zhanghai.android.appiconloader.iconloaderlib.BitmapRenderer;
 
 public class BaseIconFactory implements AutoCloseable {
     static final boolean ATLEAST_OREO = (Build.VERSION.SDK_INT >= 26);
@@ -24,6 +26,7 @@ public class BaseIconFactory implements AutoCloseable {
     private static final int DEFAULT_WRAPPER_BACKGROUND = -1;
     private static final float ICON_BADGE_SCALE = 0.444f;
     private static final String TAG = "BaseIconFactory";
+    private boolean mBadgeOnLeft;
     private final Canvas mCanvas;
     private final ColorExtractor mColorExtractor;
     protected final Context mContext;
@@ -52,6 +55,7 @@ public class BaseIconFactory implements AutoCloseable {
 
     protected BaseIconFactory(Context context, int i, int i2, boolean z) {
         this.mOldBounds = new Rect();
+        this.mBadgeOnLeft = false;
         this.mWrapperBackgroundColor = -1;
         Context applicationContext = context.getApplicationContext();
         this.mContext = applicationContext;
@@ -73,6 +77,7 @@ public class BaseIconFactory implements AutoCloseable {
     protected void clear() {
         this.mWrapperBackgroundColor = -1;
         this.mDisableColorExtractor = false;
+        this.mBadgeOnLeft = false;
     }
 
     public ShadowGenerator getShadowGenerator() {
@@ -104,7 +109,7 @@ public class BaseIconFactory implements AutoCloseable {
         if (!(this.mIconBitmapSize == bitmap.getWidth() && this.mIconBitmapSize == bitmap.getHeight())) {
             bitmap = createIconBitmap(new BitmapDrawable(this.mContext.getResources(), bitmap), 1.0f);
         }
-        return BitmapInfo.fromBitmap(bitmap, this.mDisableColorExtractor ? null : this.mColorExtractor);
+        return BitmapInfo.of(bitmap, extractColor(bitmap));
     }
 
     public BitmapInfo createBadgedIconBitmap(Drawable drawable, UserHandle userHandle, boolean z) {
@@ -131,7 +136,6 @@ public class BaseIconFactory implements AutoCloseable {
         if (fArr == null) {
             fArr = new float[1];
         }
-        ColorExtractor colorExtractor = null;
         Drawable normalizeAndWrapToAdaptiveIcon = normalizeAndWrapToAdaptiveIcon(drawable, z, null, fArr);
         Bitmap createIconBitmap = createIconBitmap(normalizeAndWrapToAdaptiveIcon, fArr[0]);
         if (ATLEAST_OREO && (normalizeAndWrapToAdaptiveIcon instanceof AdaptiveIconDrawable)) {
@@ -150,16 +154,21 @@ public class BaseIconFactory implements AutoCloseable {
                 createIconBitmap = createIconBitmap(userBadgedIcon, 1.0f);
             }
         }
-        if (!this.mDisableColorExtractor) {
-            colorExtractor = this.mColorExtractor;
+        int extractColor = extractColor(createIconBitmap);
+        if (normalizeAndWrapToAdaptiveIcon instanceof BitmapInfo.Extender) {
+            return ((BitmapInfo.Extender) normalizeAndWrapToAdaptiveIcon).getExtendedInfo(createIconBitmap, extractColor, this);
         }
-        return BitmapInfo.fromBitmap(createIconBitmap, colorExtractor);
+        return BitmapInfo.of(createIconBitmap, extractColor);
     }
 
     public Bitmap createScaledBitmapWithoutShadow(Drawable drawable, boolean z) {
         RectF rectF = new RectF();
         float[] fArr = new float[1];
         return createIconBitmap(normalizeAndWrapToAdaptiveIcon(drawable, z, rectF, fArr), Math.min(fArr[0], ShadowGenerator.getScaleForBounds(rectF)));
+    }
+
+    public void setBadgeOnLeft(boolean z) {
+        this.mBadgeOnLeft = z;
     }
 
     public void setWrapperBackgroundColor(int i) {
@@ -209,8 +218,13 @@ public class BaseIconFactory implements AutoCloseable {
 
     public void badgeWithDrawable(Canvas canvas, Drawable drawable) {
         int badgeSizeForIconSize = getBadgeSizeForIconSize(this.mIconBitmapSize);
-        int i = this.mIconBitmapSize;
-        drawable.setBounds(i - badgeSizeForIconSize, i - badgeSizeForIconSize, i, i);
+        if (this.mBadgeOnLeft) {
+            int i = this.mIconBitmapSize;
+            drawable.setBounds(0, i - badgeSizeForIconSize, badgeSizeForIconSize, i);
+        } else {
+            int i2 = this.mIconBitmapSize;
+            drawable.setBounds(i2 - badgeSizeForIconSize, i2 - badgeSizeForIconSize, i2, i2);
+        }
         drawable.draw(canvas);
     }
 
@@ -288,6 +302,37 @@ public class BaseIconFactory implements AutoCloseable {
 
     public static Drawable getFullResDefaultActivityIcon(int i) {
         return Resources.getSystem().getDrawableForDensity(Build.VERSION.SDK_INT >= 26 ? 17301651 : 17629184, i);
+    }
+
+    public BitmapInfo badgeBitmap(Bitmap bitmap, BitmapInfo bitmapInfo) {
+        int i = this.mIconBitmapSize;
+        return BitmapInfo.of(BitmapRenderer.CC.createHardwareBitmap(i, i, new BitmapRenderer(bitmap, bitmapInfo) {
+            /* class me.zhanghai.android.appiconloader.iconloaderlib.$$Lambda$BaseIconFactory$WKaNHhPFc7hBFdpOGatywPgvA */
+            public final /* synthetic */ Bitmap f$1;
+            public final /* synthetic */ BitmapInfo f$2;
+
+            {
+                this.f$1 = r2;
+                this.f$2 = r3;
+            }
+
+            @Override // me.zhanghai.android.appiconloader.iconloaderlib.BitmapRenderer
+            public final void draw(Canvas canvas) {
+                BaseIconFactory.this.lambda$badgeBitmap$0$BaseIconFactory(this.f$1, this.f$2, canvas);
+            }
+        }), bitmapInfo.color);
+    }
+
+    public /* synthetic */ void lambda$badgeBitmap$0$BaseIconFactory(Bitmap bitmap, BitmapInfo bitmapInfo, Canvas canvas) {
+        getShadowGenerator().recreateIcon(bitmap, canvas);
+        badgeWithDrawable(canvas, new FixedSizeBitmapDrawable(bitmapInfo.icon));
+    }
+
+    private int extractColor(Bitmap bitmap) {
+        if (this.mDisableColorExtractor) {
+            return 0;
+        }
+        return this.mColorExtractor.findDominantColorByHue(bitmap);
     }
 
     private static class FixedSizeBitmapDrawable extends BitmapDrawable {

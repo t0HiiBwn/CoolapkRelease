@@ -23,8 +23,8 @@ final class AutoValue_LiveUser extends C$AutoValue_LiveUser {
         return 0;
     }
 
-    AutoValue_LiveUser(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, String str14, String str15, int i2, int i3, User user) {
-        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l2, l3, str13, str14, str15, i2, i3, user);
+    AutoValue_LiveUser(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, String str14, String str15, int i2, int i3, User user) {
+        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l, l2, str13, str14, str15, i2, i3, user);
     }
 
     @Override // android.os.Parcelable

@@ -17,9 +17,7 @@ public final class MarkerOptions implements Parcelable {
     private boolean i = false;
     private float j;
     private ArrayList<BitmapDescriptor> k = new ArrayList<>();
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1246l = 20;
+    private int l = 20;
 
     @Override // android.os.Parcelable
     public int describeContents() {
@@ -37,15 +35,15 @@ public final class MarkerOptions implements Parcelable {
 
     public MarkerOptions period(int i2) {
         if (i2 <= 1) {
-            this.f1246l = 1;
+            this.l = 1;
         } else {
-            this.f1246l = i2;
+            this.l = i2;
         }
         return this;
     }
 
     public int getPeriod() {
-        return this.f1246l;
+        return this.l;
     }
 
     public MarkerOptions position(LatLng latLng) {

@@ -38,7 +38,7 @@ public abstract class ProductCouponActivityBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductCouponActivityBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ProductCouponActivityBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559108, viewGroup, z, obj);
+        return (ProductCouponActivityBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559115, viewGroup, z, obj);
     }
 
     public static ProductCouponActivityBinding inflate(LayoutInflater layoutInflater) {
@@ -47,7 +47,7 @@ public abstract class ProductCouponActivityBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductCouponActivityBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ProductCouponActivityBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559108, null, false, obj);
+        return (ProductCouponActivityBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559115, null, false, obj);
     }
 
     public static ProductCouponActivityBinding bind(View view) {
@@ -56,6 +56,6 @@ public abstract class ProductCouponActivityBinding extends ViewDataBinding {
 
     @Deprecated
     public static ProductCouponActivityBinding bind(View view, Object obj) {
-        return (ProductCouponActivityBinding) bind(obj, view, 2131559108);
+        return (ProductCouponActivityBinding) bind(obj, view, 2131559115);
     }
 }

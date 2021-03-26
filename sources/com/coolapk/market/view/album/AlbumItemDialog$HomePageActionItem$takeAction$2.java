@@ -23,7 +23,7 @@ public final class AlbumItemDialog$HomePageActionItem$takeAction$2 extends Empty
     public void onError(Throwable th) {
         Intrinsics.checkNotNullParameter(th, "e");
         super.onError(th);
-        this.this$0.onErrorEvent(th);
+        AlbumItemDialog.HomePageActionItem.access$onErrorEvent(this.this$0, th);
     }
 
     public void onNext(String str) {

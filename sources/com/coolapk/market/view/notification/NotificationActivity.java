@@ -10,7 +10,9 @@ import com.coolapk.market.AppHolder;
 import com.coolapk.market.event.FeedReplyDeleteEvent;
 import com.coolapk.market.event.FeedReplyEvent;
 import com.coolapk.market.event.UserBlockedEvent;
+import com.coolapk.market.manager.AppNotification;
 import com.coolapk.market.manager.DataManager;
+import com.coolapk.market.manager.PushMessage;
 import com.coolapk.market.model.Entity;
 import com.coolapk.market.model.FeedReply;
 import com.coolapk.market.network.Result;
@@ -21,6 +23,7 @@ import com.coolapk.market.view.base.AlphaToolbarActivity;
 import com.coolapk.market.view.base.BaseFragment;
 import com.coolapk.market.view.cardlist.CompatFeedListFragment;
 import com.coolapk.market.view.message.NewMessageListFragment;
+import com.coolapk.market.view.notification.NotificationActivity;
 import com.coolapk.market.view.user.UserReceivedReplyListFragment;
 import com.coolapk.market.widget.DrawSystemBarFrameLayout;
 import java.util.List;
@@ -62,22 +65,22 @@ public class NotificationActivity extends AlphaToolbarActivity {
 
     public void setMessageState(int i) {
         this.messageState = i;
-        getToolbar().setNavigationIcon(i == 1 ? 2131231200 : 2131231156);
-        NewMessageListFragment newMessageListFragment = (NewMessageListFragment) getSupportFragmentManager().findFragmentById(2131362316);
+        getToolbar().setNavigationIcon(i == 1 ? 2131231211 : 2131231166);
+        NewMessageListFragment newMessageListFragment = (NewMessageListFragment) getSupportFragmentManager().findFragmentById(2131362322);
         if (newMessageListFragment != null) {
             newMessageListFragment.updateEditState(i);
         }
     }
 
     public void updateDelView() {
-        NewMessageListFragment newMessageListFragment = (NewMessageListFragment) getSupportFragmentManager().findFragmentById(2131362316);
+        NewMessageListFragment newMessageListFragment = (NewMessageListFragment) getSupportFragmentManager().findFragmentById(2131362322);
         if (newMessageListFragment != null) {
             newMessageListFragment.updateDelView();
         }
     }
 
     public void setSelectAllState(boolean z) {
-        NewMessageListFragment newMessageListFragment = (NewMessageListFragment) getSupportFragmentManager().findFragmentById(2131362316);
+        NewMessageListFragment newMessageListFragment = (NewMessageListFragment) getSupportFragmentManager().findFragmentById(2131362322);
         if (newMessageListFragment != null) {
             newMessageListFragment.setSelectAllState(z);
         }
@@ -112,25 +115,25 @@ public class NotificationActivity extends AlphaToolbarActivity {
         String str;
         switch (getIntent().getIntExtra("tab", 1)) {
             case 0:
-                str = getString(2131886903);
+                str = getString(2131886965);
                 break;
             case 1:
-                str = getString(2131886894);
+                str = getString(2131886956);
                 break;
             case 2:
-                str = getString(2131886892);
+                str = getString(2131886954);
                 break;
             case 3:
-                str = getString(2131886906);
+                str = getString(2131886968);
                 break;
             case 4:
-                str = getString(2131886904);
+                str = getString(2131886966);
                 break;
             case 5:
-                str = getString(2131886897);
+                str = getString(2131886959);
                 break;
             case 6:
-                str = getString(2131886895);
+                str = getString(2131886957);
                 break;
             default:
                 throw new IllegalArgumentException();
@@ -216,6 +219,38 @@ public class NotificationActivity extends AlphaToolbarActivity {
             AtMeCommentFragment atMeCommentFragment = new AtMeCommentFragment();
             atMeCommentFragment.setArguments(bundle);
             return atMeCommentFragment;
+        }
+
+        @Override // com.coolapk.market.view.user.UserReceivedReplyListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
+        public void onActivityCreated(Bundle bundle) {
+            super.onActivityCreated(bundle);
+            AppHolder.getAppNotification().interceptInLifeCycle(this, new AppNotification.MessageIntercept() {
+                /* class com.coolapk.market.view.notification.$$Lambda$NotificationActivity$AtMeCommentFragment$DMKtTN9qKbo_2IWNgAq3Ka4zZ8s */
+
+                @Override // com.coolapk.market.manager.AppNotification.MessageIntercept
+                public final boolean interceptNotification(PushMessage pushMessage) {
+                    return NotificationActivity.AtMeCommentFragment.this.lambda$onActivityCreated$1$NotificationActivity$AtMeCommentFragment(pushMessage);
+                }
+            });
+        }
+
+        public /* synthetic */ boolean lambda$onActivityCreated$1$NotificationActivity$AtMeCommentFragment(PushMessage pushMessage) {
+            if (!"atcommentme".equals(pushMessage.getType()) || !isResumed()) {
+                return false;
+            }
+            AppHolder.getMainThreadHandler().post(new Runnable() {
+                /* class com.coolapk.market.view.notification.$$Lambda$NotificationActivity$AtMeCommentFragment$kniLhD8pDK6HOnUwvWMh0j2iu4 */
+
+                @Override // java.lang.Runnable
+                public final void run() {
+                    NotificationActivity.AtMeCommentFragment.this.lambda$null$0$NotificationActivity$AtMeCommentFragment();
+                }
+            });
+            return true;
+        }
+
+        public /* synthetic */ void lambda$null$0$NotificationActivity$AtMeCommentFragment() {
+            scrollToTop(true);
         }
 
         @Override // com.coolapk.market.view.user.UserReceivedReplyListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListContract.View

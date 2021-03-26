@@ -24,9 +24,9 @@ public class KkViewBindingImpl extends KkViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362431, 1);
-        sparseIntArray.put(2131362067, 2);
-        sparseIntArray.put(2131363588, 3);
+        sparseIntArray.put(2131362438, 1);
+        sparseIntArray.put(2131362069, 2);
+        sparseIntArray.put(2131363610, 3);
     }
 
     public KkViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -61,9 +61,9 @@ public class KkViewBindingImpl extends KkViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((DyhModel) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);

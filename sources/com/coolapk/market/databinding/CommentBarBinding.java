@@ -39,7 +39,7 @@ public abstract class CommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static CommentBarBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (CommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558485, viewGroup, z, obj);
+        return (CommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558486, viewGroup, z, obj);
     }
 
     public static CommentBarBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class CommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static CommentBarBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (CommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558485, null, false, obj);
+        return (CommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558486, null, false, obj);
     }
 
     public static CommentBarBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class CommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static CommentBarBinding bind(View view, Object obj) {
-        return (CommentBarBinding) bind(obj, view, 2131558485);
+        return (CommentBarBinding) bind(obj, view, 2131558486);
     }
 }

@@ -64,7 +64,7 @@ public class r {
         String str4;
         try {
             if (!a(str) || !b(str2)) {
-                UMLog.aq(i.f1471l, 0, "\\|");
+                UMLog.aq(i.l, 0, "\\|");
             } else if (Arrays.asList(c.aN).contains(str)) {
                 MLog.e("key is " + str + ", please check key, illegal");
                 UMLog.aq(i.m, 0, "\\|");

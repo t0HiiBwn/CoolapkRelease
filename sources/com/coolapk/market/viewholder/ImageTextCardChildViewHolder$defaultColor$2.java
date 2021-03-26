@@ -21,6 +21,6 @@ final class ImageTextCardChildViewHolder$defaultColor$2 extends Lambda implement
     /* JADX WARNING: Unknown variable types count: 1 */
     @Override // kotlin.jvm.functions.Function0
     public final Integer invoke() {
-        return ResourceUtils.getColorInt(this.this$0.getContext(), 2131099890);
+        return ResourceUtils.getColorInt(this.this$0.getContext(), 2131099895);
     }
 }

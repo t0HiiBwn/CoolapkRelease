@@ -36,7 +36,7 @@ public abstract class ItemGoodGoodsAddBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemGoodGoodsAddBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemGoodGoodsAddBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558753, viewGroup, z, obj);
+        return (ItemGoodGoodsAddBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558760, viewGroup, z, obj);
     }
 
     public static ItemGoodGoodsAddBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class ItemGoodGoodsAddBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemGoodGoodsAddBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemGoodGoodsAddBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558753, null, false, obj);
+        return (ItemGoodGoodsAddBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558760, null, false, obj);
     }
 
     public static ItemGoodGoodsAddBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class ItemGoodGoodsAddBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemGoodGoodsAddBinding bind(View view, Object obj) {
-        return (ItemGoodGoodsAddBinding) bind(obj, view, 2131558753);
+        return (ItemGoodGoodsAddBinding) bind(obj, view, 2131558760);
     }
 }

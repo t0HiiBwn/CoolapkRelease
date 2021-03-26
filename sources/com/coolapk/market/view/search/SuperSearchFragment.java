@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
+import com.coolapk.market.binding.FragmentBindingComponent;
 import com.coolapk.market.extend.EntityExtendsKt;
 import com.coolapk.market.extend.NumberExtendsKt;
 import com.coolapk.market.manager.DataManager;
@@ -97,6 +98,10 @@ public final class SuperSearchFragment extends EntityListFragment implements Sup
 
     private final TranslucentHeaderConverter getTranslucentHeaderConverter() {
         return (TranslucentHeaderConverter) this.translucentHeaderConverter$delegate.getValue();
+    }
+
+    public static final /* synthetic */ FragmentBindingComponent access$getBindingComponent$p(SuperSearchFragment superSearchFragment) {
+        return superSearchFragment.getBindingComponent();
     }
 
     public static final /* synthetic */ String access$getSearchType$p(SuperSearchFragment superSearchFragment) {
@@ -227,11 +232,11 @@ public final class SuperSearchFragment extends EntityListFragment implements Sup
         RecyclerView recyclerView2 = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView2, "recyclerView");
         recyclerView2.setClipToPadding(false);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558761).constructor(new SuperSearchFragment$onActivityCreated$1(this)).suitedMethod(SuperSearchFragment$onActivityCreated$2.INSTANCE).build(), -1);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558911).suitedMethod(SuperSearchFragment$onActivityCreated$3.INSTANCE).constructor(new SuperSearchFragment$onActivityCreated$4(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558906).suitedMethod(SuperSearchFragment$onActivityCreated$5.INSTANCE).constructor(new SuperSearchFragment$onActivityCreated$6(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558905).suitedMethod(SuperSearchFragment$onActivityCreated$7.INSTANCE).constructor(new SuperSearchFragment$onActivityCreated$8(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558916).suitedMethod(SuperSearchFragment$onActivityCreated$9.INSTANCE).constructor(new SuperSearchFragment$onActivityCreated$10(this)).build(), 0, 2, null);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558768).constructor(new SuperSearchFragment$onActivityCreated$1(this)).suitedMethod(SuperSearchFragment$onActivityCreated$2.INSTANCE).build(), -1);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558918).suitedMethod(SuperSearchFragment$onActivityCreated$3.INSTANCE).constructor(new SuperSearchFragment$onActivityCreated$4(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558913).suitedMethod(SuperSearchFragment$onActivityCreated$5.INSTANCE).constructor(new SuperSearchFragment$onActivityCreated$6(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558912).suitedMethod(SuperSearchFragment$onActivityCreated$7.INSTANCE).constructor(new SuperSearchFragment$onActivityCreated$8(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558923).suitedMethod(SuperSearchFragment$onActivityCreated$9.INSTANCE).constructor(new SuperSearchFragment$onActivityCreated$10(this)).build(), 0, 2, null);
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new SuperSearchFragment$onActivityCreated$11());
         getVxDividerDecoration$presentation_coolapkAppRelease().addViewMarginRule(new SuperSearchFragment$onActivityCreated$12());
         if (bundle == null) {
@@ -429,7 +434,7 @@ public final class SuperSearchFragment extends EntityListFragment implements Sup
         if (r1.equals("ershou") != false) goto L_0x0099;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:34:0x0099, code lost:
-        r10 = getString(2131886765);
+        r10 = getString(2131886827);
         kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r10, "getString(R.string.str_empty_data_hint)");
         addFullHintView(r10, null);
      */
@@ -472,7 +477,7 @@ public final class SuperSearchFragment extends EntityListFragment implements Sup
             }
         }
         if (t == null) {
-            setEmptyData(getString(2131886765), 0);
+            setEmptyData(getString(2131886827), 0);
             String str = this.searchType;
             if (str == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("searchType");

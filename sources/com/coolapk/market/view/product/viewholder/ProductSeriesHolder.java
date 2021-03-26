@@ -31,7 +31,7 @@ import kotlin.text.StringsKt;
 /* compiled from: ProductSeriesHolder.kt */
 public final class ProductSeriesHolder extends GenericBindHolder<ItemProductSeriesBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558872;
+    public static final int LAYOUT_ID = 2131558879;
     private final TitleViewPart titleViewPart;
     private final ProductViewModel viewModel;
 
@@ -110,7 +110,7 @@ public final class ProductSeriesHolder extends GenericBindHolder<ItemProductSeri
                 Intrinsics.checkNotNull(bind);
                 itemProductSeriesChildBinding = (ItemProductSeriesChildBinding) bind;
             } else {
-                ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558873, viewGroup, false);
+                ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558880, viewGroup, false);
                 Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ies_child, parent, false)");
                 itemProductSeriesChildBinding = (ItemProductSeriesChildBinding) inflate;
             }

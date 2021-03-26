@@ -47,9 +47,7 @@ public final class cv {
     private long h;
     private String i;
     private b j;
-
-    /* renamed from: l  reason: collision with root package name */
-    private cs.a f1208l;
+    private cs.a l;
     private String n;
     private boolean o;
     private String p;
@@ -98,7 +96,7 @@ public final class cv {
         if (bo.b()) {
             this.c = false;
         }
-        this.f1208l = null;
+        this.l = null;
         try {
             this.i = UUID.randomUUID().toString().replaceAll("-", "").toLowerCase();
         } catch (Throwable th) {
@@ -647,7 +645,7 @@ public final class cv {
             a4 = bo.a(a4);
         }
         URL url = new URL(a4);
-        cs.a aVar = this.f1208l;
+        cs.a aVar = this.l;
         URLConnection a5 = aVar != null ? aVar.a() : null;
         if (a5 == null) {
             Proxy proxy = this.e;

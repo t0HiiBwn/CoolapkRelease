@@ -51,14 +51,12 @@ import java.util.Map;
 import java.util.Objects;
 import kotlin.Lazy;
 import kotlin.LazyKt;
-import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
 import rx.Observable;
 import rx.Subscriber;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000¨\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0000\b\u0016\u0018\u00002\u00020\u00012\u00020\u0002B\r\u0012\u0006\u0010\u0003\u001a\u00020\u0004¢\u0006\u0002\u0010\u0005J\b\u0010&\u001a\u00020'H\u0002J\r\u0010(\u001a\u00020)H\u0010¢\u0006\u0002\b*J\r\u0010+\u001a\u00020,H\u0010¢\u0006\u0002\b-J\u0010\u0010.\u001a\u00020\u001d2\u0006\u0010/\u001a\u000200H\u0002J\r\u00101\u001a\u00020'H\u0010¢\u0006\u0002\b2J \u00103\u001a\u00020'2\u0006\u00104\u001a\u0002052\u0006\u00106\u001a\u0002052\u0006\u00107\u001a\u000208H\u0016J\u0010\u00109\u001a\u00020'2\u0006\u0010:\u001a\u00020\u001dH\u0016J\u0015\u0010;\u001a\u00020\u001d2\u0006\u0010<\u001a\u00020=H\u0010¢\u0006\u0002\b>J\b\u0010?\u001a\u00020'H\u0016J\b\u0010@\u001a\u00020'H\u0016J\u0010\u0010A\u001a\u00020'2\u0006\u0010B\u001a\u00020CH\u0016J\b\u0010D\u001a\u00020'H\u0016J\u0010\u0010E\u001a\u00020'2\u0006\u00107\u001a\u000208H\u0016J\u0010\u0010F\u001a\u00020'2\u0006\u00107\u001a\u000208H\u0016J\u0016\u0010G\u001a\u00020'2\f\u0010H\u001a\b\u0012\u0004\u0012\u00020J0IH\u0016J\u0010\u0010K\u001a\u00020'2\u0006\u00107\u001a\u000208H\u0016J\b\u0010L\u001a\u00020'H\u0016J\b\u0010M\u001a\u00020'H\u0016J\b\u0010N\u001a\u00020'H\u0016J\u0013\u0010O\u001a\b\u0012\u0004\u0012\u00020,0PH\u0010¢\u0006\u0002\bQJ\b\u0010R\u001a\u00020'H\u0002J\b\u0010S\u001a\u00020'H\u0002J\b\u0010T\u001a\u00020'H\u0002J\u000e\u0010U\u001a\u00020'2\u0006\u0010V\u001a\u00020,J\u000e\u0010W\u001a\u00020'2\u0006\u0010X\u001a\u00020YR\u001a\u0010\u0006\u001a\u00020\u0007X.¢\u0006\u000e\n\u0000\u001a\u0004\b\b\u0010\t\"\u0004\b\n\u0010\u000bR\u001a\u0010\f\u001a\u00020\rX.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R\u001b\u0010\u0012\u001a\u00020\u00138BX\u0002¢\u0006\f\n\u0004\b\u0016\u0010\u0017\u001a\u0004\b\u0014\u0010\u0015R\u0014\u0010\u0018\u001a\u00020\u00198BX\u0004¢\u0006\u0006\u001a\u0004\b\u001a\u0010\u001bR\u0014\u0010\u001c\u001a\u00020\u001d8VX\u0004¢\u0006\u0006\u001a\u0004\b\u001e\u0010\u001fR\u0010\u0010 \u001a\u0004\u0018\u00010!X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020#X\u0004¢\u0006\u0002\n\u0000R\u000e\u0010$\u001a\u00020%X.¢\u0006\u0002\n\u0000¨\u0006Z"}, d2 = {"Lcom/coolapk/market/view/feedv8/SecondHandContentHolder;", "Lcom/coolapk/market/view/feedv8/BaseFeedContentHolder;", "Landroid/view/View$OnClickListener;", "activity", "Landroid/app/Activity;", "(Landroid/app/Activity;)V", "adapter", "Lcom/coolapk/market/view/feedv8/PickPhotoAdapterV8;", "getAdapter$presentation_coolapkAppRelease", "()Lcom/coolapk/market/view/feedv8/PickPhotoAdapterV8;", "setAdapter$presentation_coolapkAppRelease", "(Lcom/coolapk/market/view/feedv8/PickPhotoAdapterV8;)V", "binding", "Lcom/coolapk/market/databinding/SecondHandContentV8Binding;", "getBinding$presentation_coolapkAppRelease", "()Lcom/coolapk/market/databinding/SecondHandContentV8Binding;", "setBinding$presentation_coolapkAppRelease", "(Lcom/coolapk/market/databinding/SecondHandContentV8Binding;)V", "extraView", "Lcom/coolapk/market/view/feedv8/SubmitSecondHandExtraViewPart;", "getExtraView", "()Lcom/coolapk/market/view/feedv8/SubmitSecondHandExtraViewPart;", "extraView$delegate", "Lkotlin/Lazy;", "focusEditText", "Landroid/widget/EditText;", "getFocusEditText", "()Landroid/widget/EditText;", "focusEditorView", "Landroid/view/View;", "getFocusEditorView", "()Landroid/view/View;", "locationClientSingle", "Lcom/amap/api/location/AMapLocationClient;", "locationSingleListener", "Lcom/amap/api/location/AMapLocationListener;", "pickGoodsBinding", "Lcom/coolapk/market/databinding/SubmitFeedExtraLogoBinding;", "checkAgree", "", "checkSubmittable", "", "checkSubmittable$presentation_coolapkAppRelease", "generateDraftCopy", "Lcom/coolapk/market/model/FeedMultiPart;", "generateDraftCopy$presentation_coolapkAppRelease", "newSmallDividerView", "context", "Landroid/content/Context;", "notifyUIChange", "notifyUIChange$presentation_coolapkAppRelease", "onActivityResult", "requestCode", "", "resultCode", "data", "Landroid/content/Intent;", "onClick", "v", "onCreateContentView", "inflater", "Landroid/view/LayoutInflater;", "onCreateContentView$presentation_coolapkAppRelease", "onDeleteButtonClick", "onDestroy", "onEmotionClick", "emotions", "Lcom/coolapk/market/widget/emotion/BaseEmotion;", "onPause", "onPickAppIntent", "onPickAtIntent", "onPickImageListChange", "pathList", "", "", "onPickTopicIntent", "onRequestPickImage", "onSubmitButtonClick", "onSubmitToButtonClick", "prepareMultiFeed", "Lrx/Observable;", "prepareMultiFeed$presentation_coolapkAppRelease", "setPickTopicUI", "startSingleLocation", "stopSingleLocation", "updateFeedMultiPart", "part", "updateUIConfig", "uiConfig", "Lcom/coolapk/market/model/FeedUIConfig;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: SecondHandContentHolder.kt */
 public class SecondHandContentHolder extends BaseFeedContentHolder implements View.OnClickListener {
     public PickPhotoAdapterV8 adapter;
@@ -68,7 +66,6 @@ public class SecondHandContentHolder extends BaseFeedContentHolder implements Vi
     private final AMapLocationListener locationSingleListener = new SecondHandContentHolder$locationSingleListener$1(this);
     private SubmitFeedExtraLogoBinding pickGoodsBinding;
 
-    /* access modifiers changed from: private */
     public final SubmitSecondHandExtraViewPart getExtraView() {
         return (SubmitSecondHandExtraViewPart) this.extraView$delegate.getValue();
     }
@@ -129,7 +126,6 @@ public class SecondHandContentHolder extends BaseFeedContentHolder implements Vi
         return editText;
     }
 
-    /* access modifiers changed from: private */
     public final void startSingleLocation() {
         if (this.locationClientSingle == null) {
             this.locationClientSingle = new AMapLocationClient(getActivity().getApplicationContext());
@@ -175,7 +171,7 @@ public class SecondHandContentHolder extends BaseFeedContentHolder implements Vi
     public View onCreateContentView$presentation_coolapkAppRelease(LayoutInflater layoutInflater) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
         boolean z = false;
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559133, null, false, new ContextBindingComponent(getActivity()));
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559140, null, false, new ContextBindingComponent(getActivity()));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ndingComponent(activity))");
         SecondHandContentV8Binding secondHandContentV8Binding = (SecondHandContentV8Binding) inflate;
         this.binding = secondHandContentV8Binding;
@@ -297,7 +293,7 @@ public class SecondHandContentHolder extends BaseFeedContentHolder implements Vi
             }
             LinearLayout linearLayout = secondHandContentV8Binding.relativeView;
             Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.relativeView");
-            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559158, linearLayout, false);
+            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559166, linearLayout, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…a_logo, container, false)");
             SubmitFeedExtraLogoBinding submitFeedExtraLogoBinding = (SubmitFeedExtraLogoBinding) inflate;
             this.pickGoodsBinding = submitFeedExtraLogoBinding;
@@ -339,7 +335,7 @@ public class SecondHandContentHolder extends BaseFeedContentHolder implements Vi
         ImageView imageView = submitFeedExtraLogoBinding4.imageView;
         Intrinsics.checkNotNullExpressionValue(imageView, "pickGoodsBinding.imageView");
         ViewExtendsKt.clipView(imageView, 0, (float) NumberExtendsKt.getDp((Number) 4));
-        ImageLoaderOptions build = ImageLoaderOptions.newBuilder().placeHolderRes(2131231172).build();
+        ImageLoaderOptions build = ImageLoaderOptions.newBuilder().placeHolderRes(2131231183).build();
         GlideContextImageLoader contextImageLoader = AppHolder.getContextImageLoader();
         Activity activity = getActivity();
         String relativeLogo = getUiConfig().relativeLogo();
@@ -687,7 +683,7 @@ public class SecondHandContentHolder extends BaseFeedContentHolder implements Vi
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
-        if (view.getId() == 2131362256) {
+        if (view.getId() == 2131362261) {
             SecondHandContentV8Binding secondHandContentV8Binding = this.binding;
             if (secondHandContentV8Binding == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");

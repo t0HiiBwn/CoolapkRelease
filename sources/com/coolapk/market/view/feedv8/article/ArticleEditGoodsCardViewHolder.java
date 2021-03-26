@@ -23,7 +23,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ArticleEditGoodsCardViewHolder.kt */
 public final class ArticleEditGoodsCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558941;
+    public static final int LAYOUT_ID = 2131558948;
     private final ItemSubmitGoodsCardBinding binding = ((ItemSubmitGoodsCardBinding) getBinding());
     private final Lazy goodsInfoViewPart$delegate;
     private final ArticleViewModel viewModel;
@@ -61,9 +61,9 @@ public final class ArticleEditGoodsCardViewHolder extends BindingViewHolder {
     public void bindTo(Object obj) {
         Objects.requireNonNull(obj, "null cannot be cast to non-null type com.coolapk.market.view.feedv8.ArticleCard");
         ArticleCard articleCard = (ArticleCard) obj;
-        Entity entity = this.viewModel.getUrlEntityMap().get(articleCard.getUrlKey());
-        Objects.requireNonNull(entity, "null cannot be cast to non-null type com.coolapk.market.model.FeedGoods");
-        getGoodsInfoViewPart().bindToContent(FeedGoodsInfoViewPartKt.toGoodsSimpleInfo((FeedGoods) entity));
+        Entity entityByUrl = this.viewModel.getEntityByUrl(articleCard.getUrlKey());
+        Objects.requireNonNull(entityByUrl, "null cannot be cast to non-null type com.coolapk.market.model.FeedGoods");
+        getGoodsInfoViewPart().bindToContent(FeedGoodsInfoViewPartKt.toGoodsSimpleInfo((FeedGoods) entityByUrl));
         ImageView imageView = this.binding.closeView;
         Intrinsics.checkNotNullExpressionValue(imageView, "binding.closeView");
         ViewExtendsKt.setUtilClickListener(imageView, new ArticleEditGoodsCardViewHolder$bindTo$1(this, articleCard));

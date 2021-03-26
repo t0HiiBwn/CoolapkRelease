@@ -26,17 +26,17 @@ public class MarketBindingImpl extends MarketBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(15);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(2, new String[]{"item_headline_title"}, new int[]{6}, new int[]{2131558773});
+        includedLayouts.setIncludes(2, new String[]{"item_headline_title"}, new int[]{6}, new int[]{2131558780});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363490, 7);
-        sparseIntArray.put(2131363934, 8);
-        sparseIntArray.put(2131363224, 9);
-        sparseIntArray.put(2131363223, 10);
-        sparseIntArray.put(2131362501, 11);
-        sparseIntArray.put(2131362499, 12);
-        sparseIntArray.put(2131362502, 13);
-        sparseIntArray.put(2131362498, 14);
+        sparseIntArray.put(2131363508, 7);
+        sparseIntArray.put(2131363959, 8);
+        sparseIntArray.put(2131363238, 9);
+        sparseIntArray.put(2131363237, 10);
+        sparseIntArray.put(2131362509, 11);
+        sparseIntArray.put(2131362507, 12);
+        sparseIntArray.put(2131362510, 13);
+        sparseIntArray.put(2131362506, 14);
     }
 
     public MarketBindingImpl(DataBindingComponent dataBindingComponent, View view) {

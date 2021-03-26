@@ -55,7 +55,7 @@ public class ItemUserInfoPartBindingImpl extends ItemUserInfoPartBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (181 != i) {
+        if (182 != i) {
             return false;
         }
         setLevel((Integer) obj);
@@ -68,7 +68,7 @@ public class ItemUserInfoPartBindingImpl extends ItemUserInfoPartBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(181);
+        notifyPropertyChanged(182);
         super.requestRebind();
     }
 

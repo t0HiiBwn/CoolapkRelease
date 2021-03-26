@@ -28,11 +28,11 @@ public class SubmitVerifyMobileCodeDialogBindingImpl extends SubmitVerifyMobileC
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 4);
-        sparseIntArray.put(2131363034, 5);
-        sparseIntArray.put(2131362441, 6);
-        sparseIntArray.put(2131361981, 7);
-        sparseIntArray.put(2131362470, 8);
+        sparseIntArray.put(2131363551, 4);
+        sparseIntArray.put(2131363048, 5);
+        sparseIntArray.put(2131362448, 6);
+        sparseIntArray.put(2131361982, 7);
+        sparseIntArray.put(2131362478, 8);
     }
 
     public SubmitVerifyMobileCodeDialogBindingImpl(DataBindingComponent dataBindingComponent, View view) {

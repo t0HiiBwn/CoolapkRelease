@@ -28,7 +28,7 @@ public abstract class UserDataBinding extends ViewDataBinding {
 
     @Deprecated
     public static UserDataBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (UserDataBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559281, viewGroup, z, obj);
+        return (UserDataBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559291, viewGroup, z, obj);
     }
 
     public static UserDataBinding inflate(LayoutInflater layoutInflater) {
@@ -37,7 +37,7 @@ public abstract class UserDataBinding extends ViewDataBinding {
 
     @Deprecated
     public static UserDataBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (UserDataBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559281, null, false, obj);
+        return (UserDataBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559291, null, false, obj);
     }
 
     public static UserDataBinding bind(View view) {
@@ -46,6 +46,6 @@ public abstract class UserDataBinding extends ViewDataBinding {
 
     @Deprecated
     public static UserDataBinding bind(View view, Object obj) {
-        return (UserDataBinding) bind(obj, view, 2131559281);
+        return (UserDataBinding) bind(obj, view, 2131559291);
     }
 }

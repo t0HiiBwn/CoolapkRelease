@@ -11,7 +11,7 @@ public class e {
 
     public String e(String str) {
         String b = a.b(str);
-        if (!g.m30a(b)) {
+        if (!g.m20a(b)) {
             try {
                 return new String(b.decode(b, 0));
             } catch (IllegalArgumentException unused) {

@@ -28,7 +28,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: IconMiniGridCardViewHolder.kt */
 public final class IconMiniGridCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558782;
+    public static final int LAYOUT_ID = 2131558789;
     private final ItemIconMiniGridCardBinding binding;
     private EntityCard card;
     private final TitleViewPart viewPart;
@@ -128,7 +128,7 @@ public final class IconMiniGridCardViewHolder extends BindingViewHolder {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(IconMiniGridCardViewHolder.this.getContext()).inflate(2131558783, viewGroup, false);
+            View inflate = LayoutInflater.from(IconMiniGridCardViewHolder.this.getContext()).inflate(2131558790, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "view");
             DataBindingComponent component = IconMiniGridCardViewHolder.this.getComponent();
             Intrinsics.checkNotNullExpressionValue(component, "component");
@@ -151,7 +151,7 @@ public final class IconMiniGridCardViewHolder extends BindingViewHolder {
     /* compiled from: IconMiniGridCardViewHolder.kt */
     public static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558783;
+        public static final int LAYOUT_ID = 2131558790;
         private final ItemIconMiniGridCardItemBinding binding = ((ItemIconMiniGridCardItemBinding) getBinding());
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */

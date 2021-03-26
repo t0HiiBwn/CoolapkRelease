@@ -19,7 +19,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedShareActionViewHolder.kt */
 public final class FeedShareActionViewHolder extends GenericBindHolder<ItemFeedShareActionViewBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558726;
+    public static final int LAYOUT_ID = 2131558733;
     private final FeedDetailPresenter presenter;
 
     public final FeedDetailPresenter getPresenter() {
@@ -71,21 +71,21 @@ public final class FeedShareActionViewHolder extends GenericBindHolder<ItemFeedS
         Intrinsics.checkNotNullExpressionValue(feedTypeName, "feed.feedTypeName.elvis { feed.feedType }");
         instance.recordShareFeedEvent(feedTypeName, "在详情页内快速分享入口点击分享");
         int id = view.getId();
-        if (id == 2131362970) {
+        if (id == 2131362982) {
             ActionManager.startForwardEntityActivity(getContext(), shortFeed);
-        } else if (id != 2131363153) {
+        } else if (id != 2131363167) {
             switch (id) {
-                case 2131363964:
+                case 2131363990:
                     Context context = getContext();
                     Intrinsics.checkNotNullExpressionValue(context, "context");
                     ShareUtils.shareToWechatUrl(context, shortFeed, true);
                     return;
-                case 2131363965:
+                case 2131363991:
                     Context context2 = getContext();
                     Intrinsics.checkNotNullExpressionValue(context2, "context");
                     ShareUtils.shareToWechatUrl(context2, shortFeed, false);
                     return;
-                case 2131363966:
+                case 2131363992:
                     Context context3 = getContext();
                     Intrinsics.checkNotNullExpressionValue(context3, "context");
                     ShareUtils.shareToWeibo(context3, shortFeed);

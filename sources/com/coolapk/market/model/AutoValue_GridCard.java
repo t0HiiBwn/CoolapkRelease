@@ -19,8 +19,8 @@ final class AutoValue_GridCard extends C$AutoValue_GridCard {
         }
     };
 
-    AutoValue_GridCard(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l2, Long l3, String str8, String str9, String str10, String str11, List<ServiceApp> list) {
-        super(str, str2, str3, num, str4, str5, str6, str7, l2, l3, str8, str9, str10, str11, list);
+    AutoValue_GridCard(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l, Long l2, String str8, String str9, String str10, String str11, List<ServiceApp> list) {
+        super(str, str2, str3, num, str4, str5, str6, str7, l, l2, str8, str9, str10, str11, list);
     }
 
     @Override // android.os.Parcelable

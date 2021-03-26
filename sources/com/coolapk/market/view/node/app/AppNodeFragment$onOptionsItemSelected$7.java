@@ -37,7 +37,7 @@ final class AppNodeFragment$onOptionsItemSelected$7 extends Lambda implements Fu
         if (TextUtils.equals(serviceApp.getPackageName(), requireActivity.getPackageName())) {
             FragmentActivity requireActivity2 = this.this$0.requireActivity();
             Intrinsics.checkNotNullExpressionValue(requireActivity2, "requireActivity()");
-            Toast.show(requireActivity2, 2131887216);
+            Toast.show(requireActivity2, 2131887278);
             return;
         }
         ActionManager.uninstall(this.this$0.getActivity(), serviceApp.getPackageName(), serviceApp.getAppName());

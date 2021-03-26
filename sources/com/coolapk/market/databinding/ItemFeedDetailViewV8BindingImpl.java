@@ -32,24 +32,24 @@ public class ItemFeedDetailViewV8BindingImpl extends ItemFeedDetailViewV8Binding
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(22);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"item_feed_target_view"}, new int[]{6}, new int[]{2131558732});
+        includedLayouts.setIncludes(1, new String[]{"item_feed_target_view"}, new int[]{6}, new int[]{2131558739});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 7);
-        sparseIntArray.put(2131363209, 8);
-        sparseIntArray.put(2131363568, 9);
-        sparseIntArray.put(2131363325, 10);
-        sparseIntArray.put(2131363326, 11);
-        sparseIntArray.put(2131363539, 12);
-        sparseIntArray.put(2131363388, 13);
-        sparseIntArray.put(2131362488, 14);
-        sparseIntArray.put(2131362487, 15);
-        sparseIntArray.put(2131363016, 16);
-        sparseIntArray.put(2131363917, 17);
-        sparseIntArray.put(2131362492, 18);
-        sparseIntArray.put(2131363527, 19);
-        sparseIntArray.put(2131363229, 20);
-        sparseIntArray.put(2131362722, 21);
+        sparseIntArray.put(2131362657, 7);
+        sparseIntArray.put(2131363223, 8);
+        sparseIntArray.put(2131363590, 9);
+        sparseIntArray.put(2131363341, 10);
+        sparseIntArray.put(2131363342, 11);
+        sparseIntArray.put(2131363557, 12);
+        sparseIntArray.put(2131363405, 13);
+        sparseIntArray.put(2131362496, 14);
+        sparseIntArray.put(2131362495, 15);
+        sparseIntArray.put(2131363030, 16);
+        sparseIntArray.put(2131363942, 17);
+        sparseIntArray.put(2131362500, 18);
+        sparseIntArray.put(2131363545, 19);
+        sparseIntArray.put(2131363243, 20);
+        sparseIntArray.put(2131362733, 21);
     }
 
     public ItemFeedDetailViewV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -100,7 +100,7 @@ public class ItemFeedDetailViewV8BindingImpl extends ItemFeedDetailViewV8Binding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -116,7 +116,7 @@ public class ItemFeedDetailViewV8BindingImpl extends ItemFeedDetailViewV8Binding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

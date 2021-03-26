@@ -22,9 +22,7 @@ public class bp implements aj {
     private Typeface i;
     private boolean j;
     private float k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1224l;
+    private int l;
     private int m;
     private Object n;
     private int o;
@@ -40,7 +38,7 @@ public class bp implements aj {
         this.i = textOptions.getTypeface();
         this.j = textOptions.isVisible();
         this.k = textOptions.getZIndex();
-        this.f1224l = textOptions.getAlignX();
+        this.l = textOptions.getAlignX();
         this.m = textOptions.getAlignY();
         this.n = textOptions.getObject();
         this.a = (b) yVar;
@@ -98,15 +96,15 @@ public class bp implements aj {
             canvas.save();
             canvas.rotate(-(this.g % 360.0f), (float) point.x, (float) point.y);
             Paint.FontMetrics fontMetrics = textPaint.getFontMetrics();
-            int i3 = this.f1224l;
+            int i3 = this.l;
             if (i3 < 1 || i3 > 3) {
-                this.f1224l = 3;
+                this.l = 3;
             }
             int i4 = this.m;
             if (i4 < 4 || i4 > 6) {
                 this.m = 6;
             }
-            int i5 = this.f1224l;
+            int i5 = this.l;
             int i6 = 0;
             if (i5 != 1) {
                 if (i5 == 2) {
@@ -219,7 +217,7 @@ public class bp implements aj {
 
     @Override // com.amap.api.interfaces.IText
     public int getAlignX() {
-        return this.f1224l;
+        return this.l;
     }
 
     @Override // com.amap.api.interfaces.IText
@@ -229,7 +227,7 @@ public class bp implements aj {
 
     @Override // com.amap.api.interfaces.IText
     public void setAlign(int i2, int i3) {
-        this.f1224l = i2;
+        this.l = i2;
         this.m = i3;
         this.a.postInvalidate();
     }

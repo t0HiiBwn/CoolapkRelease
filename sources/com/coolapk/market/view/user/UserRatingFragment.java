@@ -47,7 +47,7 @@ public class UserRatingFragment extends StateEventListFragment<Result<List<Entit
         this.mComponent = new FragmentBindingComponent(this);
         setAdapter(new DataAdapter());
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558981, 2131231052).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558988, 2131231062).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         if (getUserVisibleHint()) {
@@ -115,7 +115,7 @@ public class UserRatingFragment extends StateEventListFragment<Result<List<Entit
     public class DataAdapter extends RecyclerView.Adapter<RatingViewHolder> {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558981;
+            return 2131558988;
         }
 
         public DataAdapter() {
@@ -132,7 +132,7 @@ public class UserRatingFragment extends StateEventListFragment<Result<List<Entit
                 public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                     super.onItemClick(viewHolder, view);
                     int adapterPosition = viewHolder.getAdapterPosition();
-                    if (!UiUtils.isInvalidPosition(adapterPosition) && view.getId() == 2131361886) {
+                    if (!UiUtils.isInvalidPosition(adapterPosition) && view.getId() == 2131361887) {
                         UserRatingFragment.this.mPresenter.unrateApp((ServiceApp) UserRatingFragment.this.getDataList().get(adapterPosition));
                     }
                 }
@@ -150,7 +150,7 @@ public class UserRatingFragment extends StateEventListFragment<Result<List<Entit
     }
 
     private class RatingViewHolder extends GenericBindHolder<ItemUserRatingBinding, ServiceApp> {
-        public static final int LAYOUT_ID = 2131558981;
+        public static final int LAYOUT_ID = 2131558988;
 
         public RatingViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);
@@ -172,7 +172,7 @@ public class UserRatingFragment extends StateEventListFragment<Result<List<Entit
         @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
         public void onClick(View view) {
             super.onClick(view);
-            if (view.getId() == 2131362200) {
+            if (view.getId() == 2131362205) {
                 ServiceApp app = ((ItemUserRatingBinding) getBinding()).getApp();
                 ActionManager.startAppViewActivity(UserRatingFragment.this.getActivity(), ((ItemUserRatingBinding) getBinding()).iconView, app.getPackageName(), app.getLogo(), app.getAppName(), app.getExtraAnalysisData(), app.getRequestContext(), app.getExtraFromApi());
             }

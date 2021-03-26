@@ -27,7 +27,7 @@ public class ItemSearchViewBindingImpl extends ItemSearchViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 2);
+        sparseIntArray.put(2131362718, 2);
     }
 
     public ItemSearchViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

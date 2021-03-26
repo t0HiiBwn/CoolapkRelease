@@ -70,7 +70,7 @@ abstract class C$$AutoValue_FeedReply extends FeedReply {
     private final String userAgent;
     private final UserInfo userInfo;
 
-    C$$AutoValue_FeedReply(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, String str10, String str11, String str12, String str13, String str14, UserInfo userInfo2, int i, int i2, String str15, String str16, String str17, String str18, int i3, int i4, String str19, String str20, String str21, String str22, String str23, List<FeedReply> list, int i5, int i6, String str24, String str25, String str26, UserInfo userInfo3, int i7, String str27, int i8, int i9, int i10, int i11, String str28, String str29, String str30, String str31, String str32, String str33, String str34, FeedReply.ReplyUserAction replyUserAction, long j, String str35, String str36, long j2, String str37, String str38, String str39, FeedReply.ReplyFeed replyFeed2, DyhArticle dyhArticle, SimpleInfo simpleInfo) {
+    C$$AutoValue_FeedReply(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, String str10, String str11, String str12, String str13, String str14, UserInfo userInfo2, int i, int i2, String str15, String str16, String str17, String str18, int i3, int i4, String str19, String str20, String str21, String str22, String str23, List<FeedReply> list, int i5, int i6, String str24, String str25, String str26, UserInfo userInfo3, int i7, String str27, int i8, int i9, int i10, int i11, String str28, String str29, String str30, String str31, String str32, String str33, String str34, FeedReply.ReplyUserAction replyUserAction, long j, String str35, String str36, long j2, String str37, String str38, String str39, FeedReply.ReplyFeed replyFeed2, DyhArticle dyhArticle, SimpleInfo simpleInfo) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -80,8 +80,8 @@ abstract class C$$AutoValue_FeedReply extends FeedReply {
         this.logo = str6;
         this.subTitle = str7;
         this.extraData = str8;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str9;
         this.displayUserName = str10;
         Objects.requireNonNull(str11, "Null id");
@@ -559,10 +559,10 @@ abstract class C$$AutoValue_FeedReply extends FeedReply {
                                     if (str31 != null ? str31.equals(feedReply.getSubTitle()) : feedReply.getSubTitle() == null) {
                                         String str32 = this.extraData;
                                         if (str32 != null ? str32.equals(feedReply.getExtraData()) : feedReply.getExtraData() == null) {
-                                            Long l2 = this.dateline;
-                                            if (l2 != null ? l2.equals(feedReply.getDateline()) : feedReply.getDateline() == null) {
-                                                Long l3 = this.lastUpdate;
-                                                if (l3 != null ? l3.equals(feedReply.getLastUpdate()) : feedReply.getLastUpdate() == null) {
+                                            Long l = this.dateline;
+                                            if (l != null ? l.equals(feedReply.getDateline()) : feedReply.getDateline() == null) {
+                                                Long l2 = this.lastUpdate;
+                                                if (l2 != null ? l2.equals(feedReply.getLastUpdate()) : feedReply.getLastUpdate() == null) {
                                                     String str33 = this.deprecatedUserAvatar;
                                                     if (str33 != null ? str33.equals(feedReply.getDeprecatedUserAvatar()) : feedReply.getDeprecatedUserAvatar() == null) {
                                                         String str34 = this.displayUserName;
@@ -614,10 +614,10 @@ abstract class C$$AutoValue_FeedReply extends FeedReply {
         int hashCode8 = (hashCode7 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
         String str8 = this.extraData;
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode10 = (hashCode9 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode11 = (hashCode10 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode10 = (hashCode9 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode11 = (hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str9 = this.deprecatedUserAvatar;
         int hashCode12 = (hashCode11 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.displayUserName;
@@ -880,14 +880,14 @@ abstract class C$$AutoValue_FeedReply extends FeedReply {
         }
 
         @Override // com.coolapk.market.model.FeedReply.Builder
-        public FeedReply.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public FeedReply.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.FeedReply.Builder
-        public FeedReply.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public FeedReply.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

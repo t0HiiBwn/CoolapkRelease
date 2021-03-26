@@ -23,7 +23,7 @@ public final class RegexUtils {
     }
 
     public static boolean isMobileExact(CharSequence charSequence, List<String> list) {
-        if (isMatch("^((13[0-9])|(14[57])|(15[0-35-9])|(16[2567])|(17[01235-8])|(18[0-9])|(19[189]))\\d{8}$", charSequence)) {
+        if (isMatch("^((13[0-9])|(14[579])|(15[0-35-9])|(16[2567])|(17[0-35-8])|(18[0-9])|(19[0-35-9]))\\d{8}$", charSequence)) {
             return true;
         }
         if (!(list == null || charSequence == null || charSequence.length() != 11)) {

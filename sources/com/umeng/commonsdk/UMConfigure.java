@@ -199,26 +199,26 @@ public class UMConfigure {
         }
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:186:0x03f4, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:186:0x03f9, code lost:
         r11 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:188:0x03f7, code lost:
-        if (com.umeng.commonsdk.UMConfigure.debugLog != false) goto L_0x03f9;
+    /* JADX WARNING: Code restructure failed: missing block: B:188:0x03fc, code lost:
+        if (com.umeng.commonsdk.UMConfigure.debugLog != false) goto L_0x03fe;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:189:0x03f9, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:189:0x03fe, code lost:
         android.util.Log.e("UMConfigure", "init e is " + r11);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:190:0x0410, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:190:0x0415, code lost:
         r11 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:192:0x0413, code lost:
-        if (com.umeng.commonsdk.UMConfigure.debugLog != false) goto L_0x0415;
+    /* JADX WARNING: Code restructure failed: missing block: B:192:0x0418, code lost:
+        if (com.umeng.commonsdk.UMConfigure.debugLog != false) goto L_0x041a;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:193:0x0415, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:193:0x041a, code lost:
         android.util.Log.e("UMConfigure", "init e is " + r11);
      */
     /* JADX WARNING: Failed to process nested try/catch */
-    /* JADX WARNING: Removed duplicated region for block: B:186:0x03f4 A[ExcHandler: all (r11v4 'th' java.lang.Object A[CUSTOM_DECLARE]), Splitter:B:1:0x0001] */
+    /* JADX WARNING: Removed duplicated region for block: B:186:0x03f9 A[ExcHandler: all (r11v4 'th' java.lang.Object A[CUSTOM_DECLARE]), Splitter:B:1:0x0001] */
     public static void init(Context context, String str, String str2, int i, String str3) {
         Method declaredMethod;
         Method declaredMethod2;

@@ -12,7 +12,7 @@ public final class PendingCheckStateApp {
     private final String packageName;
     private final Long timestamp;
 
-    public static /* synthetic */ PendingCheckStateApp copy$default(PendingCheckStateApp pendingCheckStateApp, String str, String str2, String str3, Long l2, int i, Object obj) {
+    public static /* synthetic */ PendingCheckStateApp copy$default(PendingCheckStateApp pendingCheckStateApp, String str, String str2, String str3, Long l, int i, Object obj) {
         if ((i & 1) != 0) {
             str = pendingCheckStateApp.action;
         }
@@ -23,9 +23,9 @@ public final class PendingCheckStateApp {
             str3 = pendingCheckStateApp.key;
         }
         if ((i & 8) != 0) {
-            l2 = pendingCheckStateApp.timestamp;
+            l = pendingCheckStateApp.timestamp;
         }
-        return pendingCheckStateApp.copy(str, str2, str3, l2);
+        return pendingCheckStateApp.copy(str, str2, str3, l);
     }
 
     public final String component1() {
@@ -44,10 +44,10 @@ public final class PendingCheckStateApp {
         return this.timestamp;
     }
 
-    public final PendingCheckStateApp copy(String str, String str2, String str3, Long l2) {
+    public final PendingCheckStateApp copy(String str, String str2, String str3, Long l) {
         Intrinsics.checkNotNullParameter(str, "action");
         Intrinsics.checkNotNullParameter(str2, "packageName");
-        return new PendingCheckStateApp(str, str2, str3, l2);
+        return new PendingCheckStateApp(str, str2, str3, l);
     }
 
     public boolean equals(Object obj) {
@@ -69,9 +69,9 @@ public final class PendingCheckStateApp {
         int hashCode2 = (hashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
         String str3 = this.key;
         int hashCode3 = (hashCode2 + (str3 != null ? str3.hashCode() : 0)) * 31;
-        Long l2 = this.timestamp;
-        if (l2 != null) {
-            i = l2.hashCode();
+        Long l = this.timestamp;
+        if (l != null) {
+            i = l.hashCode();
         }
         return hashCode3 + i;
     }
@@ -80,13 +80,13 @@ public final class PendingCheckStateApp {
         return "PendingCheckStateApp(action=" + this.action + ", packageName=" + this.packageName + ", key=" + this.key + ", timestamp=" + this.timestamp + ")";
     }
 
-    public PendingCheckStateApp(String str, String str2, String str3, Long l2) {
+    public PendingCheckStateApp(String str, String str2, String str3, Long l) {
         Intrinsics.checkNotNullParameter(str, "action");
         Intrinsics.checkNotNullParameter(str2, "packageName");
         this.action = str;
         this.packageName = str2;
         this.key = str3;
-        this.timestamp = l2;
+        this.timestamp = l;
     }
 
     public final String getAction() {
@@ -98,8 +98,8 @@ public final class PendingCheckStateApp {
     }
 
     /* JADX INFO: this call moved to the top of the method (can break code semantics) */
-    public /* synthetic */ PendingCheckStateApp(String str, String str2, String str3, Long l2, int i, DefaultConstructorMarker defaultConstructorMarker) {
-        this(str, str2, (i & 4) != 0 ? null : str3, (i & 8) != 0 ? null : l2);
+    public /* synthetic */ PendingCheckStateApp(String str, String str2, String str3, Long l, int i, DefaultConstructorMarker defaultConstructorMarker) {
+        this(str, str2, (i & 4) != 0 ? null : str3, (i & 8) != 0 ? null : l);
     }
 
     public final String getKey() {

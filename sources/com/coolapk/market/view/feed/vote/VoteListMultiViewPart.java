@@ -30,7 +30,7 @@ public final class VoteListMultiViewPart extends VoteMultiViewPart {
         Intrinsics.checkNotNullParameter(voteOption, "option");
         ((ItemFeedVoteMultiBinding) getBinding()).executePendingBindings();
         int dp = NumberExtendsKt.getDp((Number) 1);
-        int adjustAlpha = ColorUtils.adjustAlpha(ResourceUtils.getColorInt(getContext(), 2131099893), 0.2f);
+        int adjustAlpha = ColorUtils.adjustAlpha(ResourceUtils.getColorInt(getContext(), 2131099898), 0.2f);
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setStroke(dp, adjustAlpha);
         gradientDrawable.setCornerRadius((float) NumberExtendsKt.getDp((Number) 3));

@@ -48,19 +48,19 @@ public class AppNodeCommunityHeaderBindingImpl extends AppNodeCommunityHeaderBin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362099, 17);
-        sparseIntArray.put(2131362101, 18);
-        sparseIntArray.put(2131362102, 19);
-        sparseIntArray.put(2131362098, 20);
-        sparseIntArray.put(2131362768, 21);
-        sparseIntArray.put(2131362339, 22);
-        sparseIntArray.put(2131362715, 23);
-        sparseIntArray.put(2131362908, 24);
-        sparseIntArray.put(2131362730, 25);
-        sparseIntArray.put(2131362643, 26);
-        sparseIntArray.put(2131362054, 27);
-        sparseIntArray.put(2131363623, 28);
-        sparseIntArray.put(2131362742, 29);
+        sparseIntArray.put(2131362102, 17);
+        sparseIntArray.put(2131362104, 18);
+        sparseIntArray.put(2131362105, 19);
+        sparseIntArray.put(2131362101, 20);
+        sparseIntArray.put(2131362779, 21);
+        sparseIntArray.put(2131362345, 22);
+        sparseIntArray.put(2131362726, 23);
+        sparseIntArray.put(2131362920, 24);
+        sparseIntArray.put(2131362741, 25);
+        sparseIntArray.put(2131362651, 26);
+        sparseIntArray.put(2131362056, 27);
+        sparseIntArray.put(2131363645, 28);
+        sparseIntArray.put(2131362753, 29);
     }
 
     public AppNodeCommunityHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -129,9 +129,9 @@ public class AppNodeCommunityHeaderBindingImpl extends AppNodeCommunityHeaderBin
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((AppNodeViewModel) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -148,7 +148,7 @@ public class AppNodeCommunityHeaderBindingImpl extends AppNodeCommunityHeaderBin
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -318,7 +318,7 @@ public class AppNodeCommunityHeaderBindingImpl extends AppNodeCommunityHeaderBin
                     j |= z7 ? 2048 : 1024;
                 }
                 serviceApp2 = observableField != null ? observableField.get() : null;
-                drawable2 = AppCompatResources.getDrawable(this.logoView.getContext(), z7 ? 2131231409 : 2131231408);
+                drawable2 = AppCompatResources.getDrawable(this.logoView.getContext(), z7 ? 2131231420 : 2131231419);
                 str18 = serviceApp2 != null ? serviceApp2.getLogo() : null;
                 int i14 = ((j & 131) > 0 ? 1 : ((j & 131) == 0 ? 0 : -1));
                 if (i14 != 0) {
@@ -346,7 +346,7 @@ public class AppNodeCommunityHeaderBindingImpl extends AppNodeCommunityHeaderBin
                         i10 = 0;
                     }
                     str13 = appSubtitle;
-                    str19 = this.followNumView.getResources().getString(2131886613, str23);
+                    str19 = this.followNumView.getResources().getString(2131886675, str23);
                     z3 = i10 != 1;
                     boolean isEmpty = TextUtils.isEmpty(str20);
                     if (i14 != 0) {
@@ -366,10 +366,10 @@ public class AppNodeCommunityHeaderBindingImpl extends AppNodeCommunityHeaderBin
                     i = isEmpty ? 8 : 0;
                     if (z8) {
                         resources = this.mboundView13.getResources();
-                        i11 = 2131886614;
+                        i11 = 2131886676;
                     } else {
                         resources = this.mboundView13.getResources();
-                        i11 = 2131886611;
+                        i11 = 2131886673;
                     }
                     str7 = resources.getString(i11);
                     i8 = ((j & 133) > 0 ? 1 : ((j & 133) == 0 ? 0 : -1));
@@ -390,7 +390,7 @@ public class AppNodeCommunityHeaderBindingImpl extends AppNodeCommunityHeaderBin
                         if (i8 != 0) {
                             j |= z4 ? 8388608 : 4194304;
                         }
-                        str21 = this.followActionView.getResources().getString(z4 ? 2131887142 : 2131887143);
+                        str21 = this.followActionView.getResources().getString(z4 ? 2131887204 : 2131887205);
                     } else {
                         z = z3;
                         str21 = null;
@@ -424,10 +424,10 @@ public class AppNodeCommunityHeaderBindingImpl extends AppNodeCommunityHeaderBin
                         int i15 = z6 ? Integer.MAX_VALUE : 4;
                         if (z6) {
                             j2 = j;
-                            str22 = this.mboundView14.getResources().getString(2131886612);
+                            str22 = this.mboundView14.getResources().getString(2131886674);
                         } else {
                             j2 = j;
-                            str22 = this.mboundView14.getResources().getString(2131886615);
+                            str22 = this.mboundView14.getResources().getString(2131886677);
                         }
                         i3 = z6 ? 180 : 0;
                         str5 = str15;

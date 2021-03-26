@@ -32,8 +32,8 @@ public class GoodsSearchBindingImpl extends GoodsSearchBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363490, 4);
-        sparseIntArray.put(2131363934, 5);
+        sparseIntArray.put(2131363508, 4);
+        sparseIntArray.put(2131363959, 5);
     }
 
     public GoodsSearchBindingImpl(DataBindingComponent dataBindingComponent, View view) {

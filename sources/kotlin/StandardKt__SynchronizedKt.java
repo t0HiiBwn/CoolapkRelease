@@ -7,7 +7,7 @@ import kotlin.jvm.internal.InlineMarker;
 /* compiled from: Synchronized.kt */
 class StandardKt__SynchronizedKt extends StandardKt__StandardKt {
     /* renamed from: synchronized  reason: not valid java name */
-    private static final <R> R m697synchronized(Object obj, Function0<? extends R> function0) {
+    private static final <R> R m95synchronized(Object obj, Function0<? extends R> function0) {
         R r;
         synchronized (obj) {
             try {

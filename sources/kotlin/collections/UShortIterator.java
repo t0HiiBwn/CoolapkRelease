@@ -9,7 +9,7 @@ import kotlin.jvm.internal.markers.KMappedMarker;
 /* compiled from: UIterators.kt */
 public abstract class UShortIterator implements Iterator<UShort>, KMappedMarker {
     /* renamed from: nextUShort-Mh2AYeg */
-    public abstract short mo1000nextUShortMh2AYeg();
+    public abstract short mo398nextUShortMh2AYeg();
 
     @Override // java.util.Iterator
     public void remove() {
@@ -19,11 +19,11 @@ public abstract class UShortIterator implements Iterator<UShort>, KMappedMarker 
     /* Return type fixed from 'java.lang.Object' to match base method */
     @Override // java.util.Iterator
     public /* bridge */ /* synthetic */ UShort next() {
-        return UShort.m935boximpl(m1117nextMh2AYeg());
+        return UShort.m333boximpl(m515nextMh2AYeg());
     }
 
     /* renamed from: next-Mh2AYeg  reason: not valid java name */
-    public final short m1117nextMh2AYeg() {
-        return mo1000nextUShortMh2AYeg();
+    public final short m515nextMh2AYeg() {
+        return mo398nextUShortMh2AYeg();
     }
 }

@@ -32,9 +32,9 @@ final class VoteExtraView$showPickDurationDialog$1 extends Lambda implements Fun
         Intrinsics.checkNotNullParameter(dialogItemData, "it");
         if (Long.parseLong(dialogItemData.getType()) != -2 || Build.VERSION.SDK_INT < 26) {
             VoteExtraView voteExtraView = this.this$0;
-            FeedMultiPart build = voteExtraView.getMultiPart().newBuilder().voteEndTime(Long.parseLong(dialogItemData.getType())).build();
+            FeedMultiPart build = VoteExtraView.access$getMultiPart$p(voteExtraView).newBuilder().voteEndTime(Long.parseLong(dialogItemData.getType())).build();
             Intrinsics.checkNotNullExpressionValue(build, "multiPart.newBuilder()\n …                 .build()");
-            voteExtraView.setMultiPart(build);
+            VoteExtraView.access$setMultiPart$p(voteExtraView, build);
             this.this$0.requestUpdateDataList();
             return;
         }

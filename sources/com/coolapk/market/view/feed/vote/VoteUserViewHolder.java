@@ -15,7 +15,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: VoteUserViewHolder.kt */
 public final class VoteUserViewHolder extends GenericBindHolder<ItemVoteUserBinding, User> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558989;
+    public static final int LAYOUT_ID = 2131558996;
     private User user;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -52,7 +52,7 @@ public final class VoteUserViewHolder extends GenericBindHolder<ItemVoteUserBind
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
-        if (view.getId() == 2131362200) {
+        if (view.getId() == 2131362205) {
             UserAvatarView userAvatarView = ((ItemVoteUserBinding) getBinding()).userAvatarView;
             User user2 = this.user;
             if (user2 == null) {

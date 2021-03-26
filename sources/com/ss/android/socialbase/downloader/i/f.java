@@ -53,7 +53,7 @@ public class f {
         if (downloadTask == null) {
             return null;
         }
-        return new a.AbstractBinderC0112a() {
+        return new a.AbstractBinderC0122a() {
             /* class com.ss.android.socialbase.downloader.i.f.AnonymousClass1 */
 
             @Override // com.ss.android.socialbase.downloader.model.a

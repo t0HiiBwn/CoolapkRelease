@@ -45,7 +45,7 @@ import rx.Subscriber;
 /* compiled from: TripleCoolPicViewHolder.kt */
 public final class TripleCoolPicViewHolder extends GenericBindHolder<ItemTripleCoolPicBinding, EntityCard> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558964;
+    public static final int LAYOUT_ID = 2131558971;
     private EntityCard card;
     private boolean isPosting;
     private Integer position;
@@ -215,30 +215,30 @@ public final class TripleCoolPicViewHolder extends GenericBindHolder<ItemTripleC
             Feed feed = null;
             boolean z = true;
             switch (view.getId()) {
-                case 2131362708:
-                case 2131362724:
-                case 2131362769:
-                case 2131363878:
+                case 2131362719:
+                case 2131362735:
+                case 2131362780:
+                case 2131363901:
                     List<Entity> entities = entityCard.getEntities();
                     Intrinsics.checkNotNull(entities);
                     Entity entity = entities.get(0);
                     Objects.requireNonNull(entity, "null cannot be cast to non-null type com.coolapk.market.model.Feed");
                     feed = (Feed) entity;
                     break;
-                case 2131362709:
-                case 2131362725:
-                case 2131362773:
-                case 2131363879:
+                case 2131362720:
+                case 2131362736:
+                case 2131362784:
+                case 2131363902:
                     List<Entity> entities2 = entityCard.getEntities();
                     Intrinsics.checkNotNull(entities2);
                     Entity entity2 = entities2.get(1);
                     Objects.requireNonNull(entity2, "null cannot be cast to non-null type com.coolapk.market.model.Feed");
                     feed = (Feed) entity2;
                     break;
-                case 2131362710:
-                case 2131362726:
-                case 2131362774:
-                case 2131363880:
+                case 2131362721:
+                case 2131362737:
+                case 2131362785:
+                case 2131363903:
                     List<Entity> entities3 = entityCard.getEntities();
                     Intrinsics.checkNotNull(entities3);
                     Entity entity3 = entities3.get(2);
@@ -248,9 +248,9 @@ public final class TripleCoolPicViewHolder extends GenericBindHolder<ItemTripleC
             }
             if (feed != null) {
                 switch (view.getId()) {
-                    case 2131362708:
-                    case 2131362709:
-                    case 2131362710:
+                    case 2131362719:
+                    case 2131362720:
+                    case 2131362721:
                         Rect[] rectArr = new Rect[feed.getPicArray().size()];
                         rectArr[0] = ViewExtendsKt.getGlobalRect(view);
                         Context context = getContext();
@@ -274,22 +274,22 @@ public final class TripleCoolPicViewHolder extends GenericBindHolder<ItemTripleC
                         Objects.requireNonNull(array2, "null cannot be cast to non-null type kotlin.Array<T>");
                         ActionManager.startPhotoViewActivity(activityNullable, strArr, (String[]) array2, 0, feed.getFeedType(), null, rectArr);
                         return;
-                    case 2131362724:
-                    case 2131362725:
-                    case 2131362726:
+                    case 2131362735:
+                    case 2131362736:
+                    case 2131362737:
                         ActionManager.checkLogin(getContext(), new TripleCoolPicViewHolder$onClick$2(this, feed));
                         return;
-                    case 2131362769:
-                    case 2131362773:
-                    case 2131362774:
+                    case 2131362780:
+                    case 2131362784:
+                    case 2131362785:
                         switch (view.getId()) {
-                            case 2131362769:
+                            case 2131362780:
                                 num = Integer.valueOf(getAdapterPosition() + 0);
                                 break;
-                            case 2131362773:
+                            case 2131362784:
                                 num = Integer.valueOf(getAdapterPosition() + 1);
                                 break;
-                            case 2131362774:
+                            case 2131362785:
                                 num = Integer.valueOf(getAdapterPosition() + 2);
                                 break;
                             default:
@@ -303,9 +303,9 @@ public final class TripleCoolPicViewHolder extends GenericBindHolder<ItemTripleC
                         }
                         ActionManager.startCoolPicActivity(context2, feed, "list", z ? "old" : "both", this.urlParams);
                         return;
-                    case 2131363878:
-                    case 2131363879:
-                    case 2131363880:
+                    case 2131363901:
+                    case 2131363902:
+                    case 2131363903:
                         ActionManager.startUserSpaceActivity(getContext(), feed.getUid());
                         return;
                     default:
@@ -370,17 +370,17 @@ public final class TripleCoolPicViewHolder extends GenericBindHolder<ItemTripleC
         Intrinsics.checkNotNullParameter(view, "view");
         Feed feed = null;
         switch (view.getId()) {
-            case 2131362769:
+            case 2131362780:
                 ItemTripleCoolPicBinding itemTripleCoolPicBinding = (ItemTripleCoolPicBinding) getBinding();
                 Intrinsics.checkNotNullExpressionValue(itemTripleCoolPicBinding, "binding");
                 feed = itemTripleCoolPicBinding.getFeed1();
                 break;
-            case 2131362773:
+            case 2131362784:
                 ItemTripleCoolPicBinding itemTripleCoolPicBinding2 = (ItemTripleCoolPicBinding) getBinding();
                 Intrinsics.checkNotNullExpressionValue(itemTripleCoolPicBinding2, "binding");
                 feed = itemTripleCoolPicBinding2.getFeed2();
                 break;
-            case 2131362774:
+            case 2131362785:
                 ItemTripleCoolPicBinding itemTripleCoolPicBinding3 = (ItemTripleCoolPicBinding) getBinding();
                 Intrinsics.checkNotNullExpressionValue(itemTripleCoolPicBinding3, "binding");
                 feed = itemTripleCoolPicBinding3.getFeed3();

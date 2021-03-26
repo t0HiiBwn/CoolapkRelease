@@ -48,7 +48,7 @@ public final class AppRatingDialog extends MinimumWidthDialog {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        DialogAppRatingBinding dialogAppRatingBinding = (DialogAppRatingBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558517, null, false);
+        DialogAppRatingBinding dialogAppRatingBinding = (DialogAppRatingBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558519, null, false);
         Intrinsics.checkNotNullExpressionValue(dialogAppRatingBinding, "binding");
         AppNodeViewModel appNodeViewModel = this.viewModel;
         if (appNodeViewModel == null) {

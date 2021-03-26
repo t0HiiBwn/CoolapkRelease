@@ -188,9 +188,7 @@ public abstract class TTBaseVideoActivity extends Activity implements b, f, Home
     ImageView i;
     RelativeLayout j;
     TTRoundRectImageView k;
-
-    /* renamed from: l  reason: collision with root package name */
-    TextView f1287l;
+    TextView l;
     TextView m;
     TextView n;
     FrameLayout o;
@@ -330,12 +328,12 @@ public abstract class TTBaseVideoActivity extends Activity implements b, f, Home
 
     void d() {
         if (this.R == 15) {
-            TextView textView = this.f1287l;
+            TextView textView = this.l;
             if (textView != null) {
                 textView.setMaxWidth((int) ak.a(this, 153.0f));
             }
         } else {
-            TextView textView2 = this.f1287l;
+            TextView textView2 = this.l;
             if (textView2 != null) {
                 textView2.setMaxWidth((int) ak.a(this, 404.0f));
             }
@@ -381,7 +379,7 @@ public abstract class TTBaseVideoActivity extends Activity implements b, f, Home
         this.n = (TextView) findViewById(ac.e(this, "tt_reward_ad_download"));
         this.d = (RelativeLayout) findViewById(ac.e(this, "tt_video_reward_bar"));
         this.k = (TTRoundRectImageView) findViewById(ac.e(this, "tt_reward_ad_icon"));
-        this.f1287l = (TextView) findViewById(ac.e(this, "tt_reward_ad_appname"));
+        this.l = (TextView) findViewById(ac.e(this, "tt_reward_ad_appname"));
         this.m = (TextView) findViewById(ac.e(this, "tt_comment_vertical"));
         TTRatingBar tTRatingBar = (TTRatingBar) findViewById(ac.e(this, "tt_rb_score"));
         this.r = tTRatingBar;
@@ -402,7 +400,7 @@ public abstract class TTBaseVideoActivity extends Activity implements b, f, Home
                 ak.a((View) this.p, 8);
                 ak.a((View) this.q, 8);
                 ak.a((View) this.d, 8);
-                ak.a((View) this.f1287l, 8);
+                ak.a((View) this.l, 8);
                 ak.a((View) this.k, 8);
                 ak.a((View) this.m, 8);
                 ak.a((View) this.r, 8);
@@ -897,13 +895,13 @@ public abstract class TTBaseVideoActivity extends Activity implements b, f, Home
                 com.bytedance.sdk.openadsdk.h.d.a(this.e).a(this.s.U().a(), this.k);
             }
         }
-        if (this.f1287l == null) {
+        if (this.l == null) {
             return;
         }
         if (this.R != 15 || this.s.ah() == null || TextUtils.isEmpty(this.s.ah().c())) {
-            this.f1287l.setText(this.s.ad());
+            this.l.setText(this.s.ad());
         } else {
-            this.f1287l.setText(this.s.ah().c());
+            this.l.setText(this.s.ah().c());
         }
     }
 
@@ -1572,8 +1570,8 @@ public abstract class TTBaseVideoActivity extends Activity implements b, f, Home
                     if (this.s.o().a) {
                         ak.a((View) this.d, (View.OnClickListener) this.aT, "TTBaseVideoActivity#mRlDownloadBar");
                         ak.a((View) this.d, (View.OnTouchListener) this.aT, "TTBaseVideoActivity#mRlDownloadBar");
-                        this.f1287l.setOnClickListener(this.aT);
-                        this.f1287l.setOnTouchListener(this.aT);
+                        this.l.setOnClickListener(this.aT);
+                        this.l.setOnTouchListener(this.aT);
                         this.m.setOnClickListener(this.aT);
                         this.m.setOnTouchListener(this.aT);
                         this.r.setOnClickListener(this.aT);
@@ -1582,7 +1580,7 @@ public abstract class TTBaseVideoActivity extends Activity implements b, f, Home
                         this.k.setOnTouchListener(this.aT);
                     } else {
                         ak.a(this.d, this.bi, "TTBaseVideoActivity#mRlDownloadBar");
-                        this.f1287l.setOnClickListener(this.bi);
+                        this.l.setOnClickListener(this.bi);
                         this.m.setOnClickListener(this.bi);
                         this.r.setOnClickListener(this.bi);
                         this.k.setOnClickListener(this.bi);

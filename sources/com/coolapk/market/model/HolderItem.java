@@ -10,7 +10,7 @@ public abstract class HolderItem implements Entity {
     public static abstract class Builder {
         public abstract HolderItem build();
 
-        public abstract Builder dateline(Long l2);
+        public abstract Builder dateline(Long l);
 
         public abstract Builder description(String str);
 
@@ -30,7 +30,7 @@ public abstract class HolderItem implements Entity {
 
         public abstract Builder intValue(Integer num);
 
-        public abstract Builder lastUpdate(Long l2);
+        public abstract Builder lastUpdate(Long l);
 
         public abstract Builder logo(String str);
 

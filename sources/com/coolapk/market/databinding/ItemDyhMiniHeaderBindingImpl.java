@@ -69,17 +69,17 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((DyhViewModel) obj);
         } else if (115 == i) {
             setFoldText((String) obj);
-        } else if (183 == i) {
+        } else if (184 == i) {
             setListType((String) obj);
         } else if (147 == i) {
             setHolder((DyhArticleVH) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (263 == i) {
+        } else if (264 == i) {
             setSingleImg((String) obj);
         } else if (50 != i) {
             return false;
@@ -96,7 +96,7 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -121,7 +121,7 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
         synchronized (this) {
             this.mDirtyFlags |= 16;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -162,7 +162,7 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
                 this.mDirtyFlags |= 128;
             }
             return true;
-        } else if (i == 252) {
+        } else if (i == 253) {
             synchronized (this) {
                 this.mDirtyFlags |= 256;
             }
@@ -221,11 +221,11 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
         String str;
         int i;
         String str2;
-        Long l2;
+        Long l;
         int i2;
         int i3;
         int i4;
-        Long l3;
+        Long l2;
         String str3;
         int i5;
         int i6;
@@ -233,7 +233,7 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
         int i8;
         String str4;
         int i9;
-        Long l4;
+        Long l3;
         boolean z;
         boolean z2;
         boolean z3;
@@ -283,10 +283,10 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
                                     if (i9 == 0) {
                                         DyhArticle dyhArticle = dyhViewModel != null ? dyhViewModel.getDyhArticle() : null;
                                         if (dyhArticle != null) {
-                                            l4 = dyhArticle.getCreatDate();
+                                            l3 = dyhArticle.getCreatDate();
                                             z = dyhArticle.isTop();
                                         } else {
-                                            l4 = null;
+                                            l3 = null;
                                             z = false;
                                         }
                                         if (i9 != 0) {
@@ -300,7 +300,7 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
                                         i10 = i8;
                                         str = str4;
                                         str2 = dyhTitle;
-                                        l2 = l4;
+                                        l = l3;
                                         i3 = ((8721 & j) > 0 ? 1 : ((8721 & j) == 0 ? 0 : -1));
                                         i4 = ((8256 & j) > 0 ? 1 : ((8256 & j) == 0 ? 0 : -1));
                                         if ((8449 & j) != 0) {
@@ -313,10 +313,10 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
                                             Boolean bool = null;
                                             i5 = i;
                                             str3 = str2;
-                                            l3 = l2;
-                                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.dyhLogoView, str, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
+                                            l2 = l;
+                                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.dyhLogoView, str, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
                                         } else {
-                                            l3 = l2;
+                                            l2 = l;
                                             str3 = str2;
                                             i5 = i;
                                         }
@@ -327,7 +327,7 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
                                             this.dyhTimeView.setVisibility(i2);
                                         }
                                         if ((j & 8321) == 0) {
-                                            TextViewBindingAdapters.setTime(this.dyhTimeView, l3);
+                                            TextViewBindingAdapters.setTime(this.dyhTimeView, l2);
                                             this.mboundView1.setVisibility(i5);
                                             this.mboundView2.setVisibility(i5);
                                             return;
@@ -338,7 +338,7 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
                                     i10 = i8;
                                     str = str4;
                                     str2 = dyhTitle;
-                                    l2 = null;
+                                    l = null;
                                 }
                             }
                             str4 = null;
@@ -374,7 +374,7 @@ public class ItemDyhMiniHeaderBindingImpl extends ItemDyhMiniHeaderBinding {
             if (i9 == 0) {
             }
         } else {
-            l2 = null;
+            l = null;
             str2 = null;
             str = null;
             i2 = 0;

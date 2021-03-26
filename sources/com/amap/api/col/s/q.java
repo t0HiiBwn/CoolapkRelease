@@ -124,7 +124,7 @@ public final class q {
                 ag.a().f = a6;
                 ag.a().k = optInt3;
                 ag.a().g = a7;
-                ag.a().f1198l = optInt4;
+                ag.a().l = optInt4;
             } catch (Throwable th) {
                 th.printStackTrace();
             }

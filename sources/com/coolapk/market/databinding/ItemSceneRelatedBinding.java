@@ -30,7 +30,7 @@ public abstract class ItemSceneRelatedBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSceneRelatedBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSceneRelatedBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558903, viewGroup, z, obj);
+        return (ItemSceneRelatedBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558910, viewGroup, z, obj);
     }
 
     public static ItemSceneRelatedBinding inflate(LayoutInflater layoutInflater) {
@@ -39,7 +39,7 @@ public abstract class ItemSceneRelatedBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSceneRelatedBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSceneRelatedBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558903, null, false, obj);
+        return (ItemSceneRelatedBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558910, null, false, obj);
     }
 
     public static ItemSceneRelatedBinding bind(View view) {
@@ -48,6 +48,6 @@ public abstract class ItemSceneRelatedBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSceneRelatedBinding bind(View view, Object obj) {
-        return (ItemSceneRelatedBinding) bind(obj, view, 2131558903);
+        return (ItemSceneRelatedBinding) bind(obj, view, 2131558910);
     }
 }

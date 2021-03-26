@@ -46,10 +46,10 @@ public final class UserSpaceV9ViewModel extends BaseObservable {
         }
         z = false;
         this.isLoginUser = z;
-        notifyPropertyChanged(246);
-        notifyPropertyChanged(293);
-        notifyPropertyChanged(298);
+        notifyPropertyChanged(247);
+        notifyPropertyChanged(294);
         notifyPropertyChanged(299);
+        notifyPropertyChanged(300);
     }
 
     public final String getErrorMessage() {
@@ -59,7 +59,7 @@ public final class UserSpaceV9ViewModel extends BaseObservable {
     public final void setErrorMessage(String str) {
         this.errorMessage = str;
         notifyPropertyChanged(99);
-        notifyPropertyChanged(246);
+        notifyPropertyChanged(247);
     }
 
     public final boolean getLoading() {
@@ -68,7 +68,7 @@ public final class UserSpaceV9ViewModel extends BaseObservable {
 
     public final void setLoading(boolean z) {
         this.loading = z;
-        notifyPropertyChanged(186);
+        notifyPropertyChanged(187);
     }
 
     public final boolean getFollow() {
@@ -86,7 +86,7 @@ public final class UserSpaceV9ViewModel extends BaseObservable {
 
     public final void setBlackList(boolean z) {
         this.isBlackList = z;
-        notifyPropertyChanged(163);
+        notifyPropertyChanged(164);
     }
 
     public final boolean getMutualConcern() {

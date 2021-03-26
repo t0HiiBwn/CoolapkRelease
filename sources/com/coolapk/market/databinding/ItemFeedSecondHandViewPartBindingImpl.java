@@ -23,7 +23,7 @@ public class ItemFeedSecondHandViewPartBindingImpl extends ItemFeedSecondHandVie
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(6);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"item_second_hand_detail"}, new int[]{5}, new int[]{2131558918});
+        includedLayouts.setIncludes(0, new String[]{"item_second_hand_detail"}, new int[]{5}, new int[]{2131558925});
     }
 
     public ItemFeedSecondHandViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

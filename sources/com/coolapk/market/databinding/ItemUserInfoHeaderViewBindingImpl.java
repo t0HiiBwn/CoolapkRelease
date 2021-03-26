@@ -29,20 +29,20 @@ public class ItemUserInfoHeaderViewBindingImpl extends ItemUserInfoHeaderViewBin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363901, 2);
-        sparseIntArray.put(2131363900, 3);
-        sparseIntArray.put(2131363365, 4);
-        sparseIntArray.put(2131362439, 5);
-        sparseIntArray.put(2131362852, 6);
-        sparseIntArray.put(2131362846, 7);
-        sparseIntArray.put(2131362849, 8);
-        sparseIntArray.put(2131362583, 9);
-        sparseIntArray.put(2131362580, 10);
-        sparseIntArray.put(2131362581, 11);
-        sparseIntArray.put(2131362513, 12);
-        sparseIntArray.put(2131362511, 13);
-        sparseIntArray.put(2131362512, 14);
-        sparseIntArray.put(2131362576, 15);
+        sparseIntArray.put(2131363924, 2);
+        sparseIntArray.put(2131363923, 3);
+        sparseIntArray.put(2131363381, 4);
+        sparseIntArray.put(2131362446, 5);
+        sparseIntArray.put(2131362863, 6);
+        sparseIntArray.put(2131362857, 7);
+        sparseIntArray.put(2131362860, 8);
+        sparseIntArray.put(2131362591, 9);
+        sparseIntArray.put(2131362588, 10);
+        sparseIntArray.put(2131362589, 11);
+        sparseIntArray.put(2131362521, 12);
+        sparseIntArray.put(2131362519, 13);
+        sparseIntArray.put(2131362520, 14);
+        sparseIntArray.put(2131362584, 15);
     }
 
     public ItemUserInfoHeaderViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

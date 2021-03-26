@@ -32,18 +32,18 @@ public class ItemFeedVoteHeaderBindingImpl extends ItemFeedVoteHeaderBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362068, 8);
-        sparseIntArray.put(2131363582, 9);
-        sparseIntArray.put(2131362093, 10);
-        sparseIntArray.put(2131362376, 11);
-        sparseIntArray.put(2131363949, 12);
-        sparseIntArray.put(2131363950, 13);
-        sparseIntArray.put(2131363948, 14);
-        sparseIntArray.put(2131363951, 15);
-        sparseIntArray.put(2131363944, 16);
-        sparseIntArray.put(2131362058, 17);
-        sparseIntArray.put(2131362059, 18);
-        sparseIntArray.put(2131362417, 19);
+        sparseIntArray.put(2131362070, 8);
+        sparseIntArray.put(2131363604, 9);
+        sparseIntArray.put(2131362096, 10);
+        sparseIntArray.put(2131362382, 11);
+        sparseIntArray.put(2131363975, 12);
+        sparseIntArray.put(2131363976, 13);
+        sparseIntArray.put(2131363974, 14);
+        sparseIntArray.put(2131363977, 15);
+        sparseIntArray.put(2131363970, 16);
+        sparseIntArray.put(2131362060, 17);
+        sparseIntArray.put(2131362061, 18);
+        sparseIntArray.put(2131362423, 19);
     }
 
     public ItemFeedVoteHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -89,7 +89,7 @@ public class ItemFeedVoteHeaderBindingImpl extends ItemFeedVoteHeaderBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -105,7 +105,7 @@ public class ItemFeedVoteHeaderBindingImpl extends ItemFeedVoteHeaderBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -124,7 +124,7 @@ public class ItemFeedVoteHeaderBindingImpl extends ItemFeedVoteHeaderBinding {
         long j;
         String str;
         String str2;
-        Long l2;
+        Long l;
         String str3;
         String str4;
         UserInfo userInfo;
@@ -137,13 +137,13 @@ public class ItemFeedVoteHeaderBindingImpl extends ItemFeedVoteHeaderBinding {
         int i = ((5 & j) > 0 ? 1 : ((5 & j) == 0 ? 0 : -1));
         if (i != 0) {
             if (feed != null) {
-                l2 = feed.getDateline();
+                l = feed.getDateline();
                 str2 = feed.getUserName();
                 str4 = feed.getUserAvatar();
                 userInfo = feed.getUserInfo();
             } else {
                 userInfo = null;
-                l2 = null;
+                l = null;
                 str2 = null;
                 str4 = null;
             }
@@ -151,7 +151,7 @@ public class ItemFeedVoteHeaderBindingImpl extends ItemFeedVoteHeaderBinding {
             str = str4;
         } else {
             str3 = null;
-            l2 = null;
+            l = null;
             str2 = null;
             str = null;
         }
@@ -167,9 +167,9 @@ public class ItemFeedVoteHeaderBindingImpl extends ItemFeedVoteHeaderBinding {
             ViewBindingAdapters.clipView(this.actionView, null, 3);
         }
         if (i != 0) {
-            TextViewBindingAdapters.setTime(this.mboundView3, l2);
+            TextViewBindingAdapters.setTime(this.mboundView3, l);
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str3, bool2);
             TextViewBindingAdapter.setText(this.userNameView, str2);
         }

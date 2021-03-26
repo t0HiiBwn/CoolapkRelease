@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_FeedTarget  reason: invalid class name */
 abstract class C$AutoValue_FeedTarget extends C$$AutoValue_FeedTarget {
-    C$AutoValue_FeedTarget(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, int i, float f) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l2, l3, i, f);
+    C$AutoValue_FeedTarget(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, int i, float f) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l, l2, i, f);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_FeedTarget$GsonTypeAdapter */
@@ -127,13 +127,13 @@ abstract class C$AutoValue_FeedTarget extends C$$AutoValue_FeedTarget {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -207,8 +207,8 @@ abstract class C$AutoValue_FeedTarget extends C$$AutoValue_FeedTarget {
             String str9 = this.defaultSubTitle;
             String str10 = this.defaultId;
             String str11 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             int i = this.defaultStarTotalCount;
             float f = this.defaultStarAverageScore;
             String str12 = str2;
@@ -222,8 +222,8 @@ abstract class C$AutoValue_FeedTarget extends C$$AutoValue_FeedTarget {
             String str19 = str9;
             String str20 = str10;
             String str21 = str11;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str22 = str;
             int i2 = i;
             while (jsonReader.hasNext()) {
@@ -348,7 +348,7 @@ abstract class C$AutoValue_FeedTarget extends C$$AutoValue_FeedTarget {
                             str12 = this.entityTemplateAdapter.read(jsonReader);
                             continue;
                         case 5:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 6:
                             str22 = this.entityTypeNameAdapter.read(jsonReader);
@@ -378,7 +378,7 @@ abstract class C$AutoValue_FeedTarget extends C$$AutoValue_FeedTarget {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 15:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -387,7 +387,7 @@ abstract class C$AutoValue_FeedTarget extends C$$AutoValue_FeedTarget {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_FeedTarget(str22, str12, str13, num2, str14, str15, str16, str17, str18, str19, str20, str21, l4, l5, i2, f);
+            return new AutoValue_FeedTarget(str22, str12, str13, num2, str14, str15, str16, str17, str18, str19, str20, str21, l3, l4, i2, f);
         }
     }
 }

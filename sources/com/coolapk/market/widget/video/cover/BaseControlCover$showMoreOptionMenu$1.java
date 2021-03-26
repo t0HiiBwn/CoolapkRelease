@@ -17,7 +17,7 @@ final class BaseControlCover$showMoreOptionMenu$1 implements PopupMenu.OnMenuIte
     @Override // androidx.appcompat.widget.PopupMenu.OnMenuItemClickListener
     public final boolean onMenuItemClick(MenuItem menuItem) {
         Intrinsics.checkNotNullExpressionValue(menuItem, "item");
-        if (menuItem.getItemId() != 2131361981) {
+        if (menuItem.getItemId() != 2131361982) {
             return true;
         }
         this.this$0.notifyReceiverEvent(-122, null);

@@ -82,7 +82,7 @@ public class ViewBindingAdapters {
     }
 
     public static void setBackgroundCircleColor(ImageView imageView, Integer num) {
-        Drawable drawable = ResourceUtils.getDrawable(imageView.getContext(), 2131231885);
+        Drawable drawable = ResourceUtils.getDrawable(imageView.getContext(), 2131231897);
         drawable.setColorFilter(num.intValue(), PorterDuff.Mode.SRC_IN);
         imageView.setBackground(drawable);
     }
@@ -213,23 +213,23 @@ public class ViewBindingAdapters {
             view.setVisibility(0);
         }
         if (num.intValue() >= 10) {
-            i = 2131099902;
-        } else if (num.intValue() == 9) {
-            i = 2131099910;
-        } else if (num.intValue() == 8) {
-            i = 2131099909;
-        } else if (num.intValue() == 7) {
-            i = 2131099908;
-        } else if (num.intValue() == 6) {
             i = 2131099907;
+        } else if (num.intValue() == 9) {
+            i = 2131099915;
+        } else if (num.intValue() == 8) {
+            i = 2131099914;
+        } else if (num.intValue() == 7) {
+            i = 2131099913;
+        } else if (num.intValue() == 6) {
+            i = 2131099912;
         } else if (num.intValue() == 5) {
-            i = 2131099906;
+            i = 2131099911;
         } else if (num.intValue() == 4) {
-            i = 2131099905;
+            i = 2131099910;
         } else if (num.intValue() == 3) {
-            i = 2131099904;
+            i = 2131099909;
         } else {
-            i = num.intValue() == 2 ? 2131099903 : 2131099901;
+            i = num.intValue() == 2 ? 2131099908 : 2131099906;
         }
         view.setBackgroundTintList(ColorStateList.valueOf(ResourceUtils.getColorInt(view.getContext(), i)));
     }

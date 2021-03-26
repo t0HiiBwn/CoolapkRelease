@@ -38,7 +38,7 @@ abstract class C$$AutoValue_Favorite extends Favorite {
     private final String url;
     private final UserInfo userInfo;
 
-    C$$AutoValue_Favorite(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l2, Long l3, String str8, UserInfo userInfo2, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, int i, List<String> list) {
+    C$$AutoValue_Favorite(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l, Long l2, String str8, UserInfo userInfo2, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, int i, List<String> list) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -48,8 +48,8 @@ abstract class C$$AutoValue_Favorite extends Favorite {
         this.logo = str5;
         this.subTitle = str6;
         this.extraData = str7;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str8;
         this.userInfo = userInfo2;
         this.deprecatedUserName = str9;
@@ -263,8 +263,8 @@ abstract class C$$AutoValue_Favorite extends Favorite {
         String str3;
         String str4;
         String str5;
+        Long l;
         Long l2;
-        Long l3;
         String str6;
         UserInfo userInfo2;
         String str7;
@@ -288,7 +288,7 @@ abstract class C$$AutoValue_Favorite extends Favorite {
         Favorite favorite = (Favorite) obj;
         String str19 = this.entityTypeName;
         if (str19 != null ? str19.equals(favorite.getEntityTypeName()) : favorite.getEntityTypeName() == null) {
-            if (this.entityType.equals(favorite.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(favorite.getEntityTemplate()) : favorite.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(favorite.getEntityId()) : favorite.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(favorite.getEntityFixed()) : favorite.getEntityFixed() == null) && ((str3 = this.logo) != null ? str3.equals(favorite.getLogo()) : favorite.getLogo() == null) && ((str4 = this.subTitle) != null ? str4.equals(favorite.getSubTitle()) : favorite.getSubTitle() == null) && ((str5 = this.extraData) != null ? str5.equals(favorite.getExtraData()) : favorite.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(favorite.getDateline()) : favorite.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(favorite.getLastUpdate()) : favorite.getLastUpdate() == null) && ((str6 = this.deprecatedUserAvatar) != null ? str6.equals(favorite.getDeprecatedUserAvatar()) : favorite.getDeprecatedUserAvatar() == null) && ((userInfo2 = this.userInfo) != null ? userInfo2.equals(favorite.getUserInfo()) : favorite.getUserInfo() == null) && ((str7 = this.deprecatedUserName) != null ? str7.equals(favorite.getDeprecatedUserName()) : favorite.getDeprecatedUserName() == null) && ((str8 = this.displayUserName) != null ? str8.equals(favorite.getDisplayUserName()) : favorite.getDisplayUserName() == null) && this.id.equals(favorite.getId()) && this.uid.equals(favorite.getUid()) && this.targetType.equals(favorite.getTargetType()) && ((str9 = this.targetId) != null ? str9.equals(favorite.getTargetId()) : favorite.getTargetId() == null) && ((str10 = this.targetUid) != null ? str10.equals(favorite.getTargetUid()) : favorite.getTargetUid() == null) && ((str11 = this.targetUserName) != null ? str11.equals(favorite.getTargetUserName()) : favorite.getTargetUserName() == null) && ((str12 = this.targetUserAvatar) != null ? str12.equals(favorite.getTargetUserAvatar()) : favorite.getTargetUserAvatar() == null) && ((str13 = this.targetKey) != null ? str13.equals(favorite.getTargetKey()) : favorite.getTargetKey() == null) && ((str14 = this.description) != null ? str14.equals(favorite.getDescription()) : favorite.getDescription() == null) && ((str15 = this.pic) != null ? str15.equals(favorite.getPic()) : favorite.getPic() == null) && ((str16 = this.url) != null ? str16.equals(favorite.getUrl()) : favorite.getUrl() == null) && ((str17 = this.content) != null ? str17.equals(favorite.getContent()) : favorite.getContent() == null) && ((str18 = this.title) != null ? str18.equals(favorite.getTitle()) : favorite.getTitle() == null) && this.extra.equals(favorite.getExtra()) && this.tag.equals(favorite.getTag()) && this.isEdit == favorite.getIsEdit() && this.tagList.equals(favorite.getTagList())) {
+            if (this.entityType.equals(favorite.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(favorite.getEntityTemplate()) : favorite.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(favorite.getEntityId()) : favorite.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(favorite.getEntityFixed()) : favorite.getEntityFixed() == null) && ((str3 = this.logo) != null ? str3.equals(favorite.getLogo()) : favorite.getLogo() == null) && ((str4 = this.subTitle) != null ? str4.equals(favorite.getSubTitle()) : favorite.getSubTitle() == null) && ((str5 = this.extraData) != null ? str5.equals(favorite.getExtraData()) : favorite.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(favorite.getDateline()) : favorite.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(favorite.getLastUpdate()) : favorite.getLastUpdate() == null) && ((str6 = this.deprecatedUserAvatar) != null ? str6.equals(favorite.getDeprecatedUserAvatar()) : favorite.getDeprecatedUserAvatar() == null) && ((userInfo2 = this.userInfo) != null ? userInfo2.equals(favorite.getUserInfo()) : favorite.getUserInfo() == null) && ((str7 = this.deprecatedUserName) != null ? str7.equals(favorite.getDeprecatedUserName()) : favorite.getDeprecatedUserName() == null) && ((str8 = this.displayUserName) != null ? str8.equals(favorite.getDisplayUserName()) : favorite.getDisplayUserName() == null) && this.id.equals(favorite.getId()) && this.uid.equals(favorite.getUid()) && this.targetType.equals(favorite.getTargetType()) && ((str9 = this.targetId) != null ? str9.equals(favorite.getTargetId()) : favorite.getTargetId() == null) && ((str10 = this.targetUid) != null ? str10.equals(favorite.getTargetUid()) : favorite.getTargetUid() == null) && ((str11 = this.targetUserName) != null ? str11.equals(favorite.getTargetUserName()) : favorite.getTargetUserName() == null) && ((str12 = this.targetUserAvatar) != null ? str12.equals(favorite.getTargetUserAvatar()) : favorite.getTargetUserAvatar() == null) && ((str13 = this.targetKey) != null ? str13.equals(favorite.getTargetKey()) : favorite.getTargetKey() == null) && ((str14 = this.description) != null ? str14.equals(favorite.getDescription()) : favorite.getDescription() == null) && ((str15 = this.pic) != null ? str15.equals(favorite.getPic()) : favorite.getPic() == null) && ((str16 = this.url) != null ? str16.equals(favorite.getUrl()) : favorite.getUrl() == null) && ((str17 = this.content) != null ? str17.equals(favorite.getContent()) : favorite.getContent() == null) && ((str18 = this.title) != null ? str18.equals(favorite.getTitle()) : favorite.getTitle() == null) && this.extra.equals(favorite.getExtra()) && this.tag.equals(favorite.getTag()) && this.isEdit == favorite.getIsEdit() && this.tagList.equals(favorite.getTagList())) {
                 return true;
             }
         }
@@ -312,10 +312,10 @@ abstract class C$$AutoValue_Favorite extends Favorite {
         int hashCode6 = (hashCode5 ^ (str5 == null ? 0 : str5.hashCode())) * 1000003;
         String str6 = this.extraData;
         int hashCode7 = (hashCode6 ^ (str6 == null ? 0 : str6.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode8 = (hashCode7 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode9 = (hashCode8 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode8 = (hashCode7 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode9 = (hashCode8 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str7 = this.deprecatedUserAvatar;
         int hashCode10 = (hashCode9 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
         UserInfo userInfo2 = this.userInfo;

@@ -4,9 +4,7 @@ package com.loc;
 public final class cy extends cw {
     public int j = 0;
     public int k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    public int f1358l = Integer.MAX_VALUE;
+    public int l = Integer.MAX_VALUE;
     public int m = Integer.MAX_VALUE;
     public int n = Integer.MAX_VALUE;
     public int o = Integer.MAX_VALUE;
@@ -22,7 +20,7 @@ public final class cy extends cw {
         cyVar.a(this);
         cyVar.j = this.j;
         cyVar.k = this.k;
-        cyVar.f1358l = this.f1358l;
+        cyVar.l = this.l;
         cyVar.m = this.m;
         cyVar.n = this.n;
         cyVar.o = this.o;
@@ -31,6 +29,6 @@ public final class cy extends cw {
 
     @Override // com.loc.cw
     public final String toString() {
-        return "AmapCellGsm{lac=" + this.j + ", cid=" + this.k + ", psc=" + this.f1358l + ", arfcn=" + this.m + ", bsic=" + this.n + ", timingAdvance=" + this.o + '}' + super.toString();
+        return "AmapCellGsm{lac=" + this.j + ", cid=" + this.k + ", psc=" + this.l + ", arfcn=" + this.m + ", bsic=" + this.n + ", timingAdvance=" + this.o + '}' + super.toString();
     }
 }

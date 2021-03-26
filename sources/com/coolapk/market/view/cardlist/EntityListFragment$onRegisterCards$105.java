@@ -2,7 +2,7 @@ package com.coolapk.market.view.cardlist;
 
 import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
-import com.coolapk.market.view.goods.GoodsV10ViewHolder;
+import com.coolapk.market.view.goodsList.FunThingsItemViewHolder;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
@@ -21,6 +21,6 @@ final class EntityListFragment$onRegisterCards$105 extends Lambda implements Fun
 
     public final RecyclerView.ViewHolder invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "it");
-        return new GoodsV10ViewHolder(view, this.this$0.getBindingComponent());
+        return new FunThingsItemViewHolder(view, this.this$0.getBindingComponent(), null);
     }
 }

@@ -24,7 +24,7 @@ public class ItemSimpleDividerBindingImpl extends ItemSimpleDividerBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362417, 1);
+        sparseIntArray.put(2131362423, 1);
     }
 
     public ItemSimpleDividerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

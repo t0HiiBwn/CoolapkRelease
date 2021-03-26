@@ -49,7 +49,7 @@ public final class QuestionDetailBottomViewPart extends BindingViewPart<ItemQues
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemQuestionDetailBottomBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558884, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558891, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…bottom, viewGroup, false)");
         return (ItemQuestionDetailBottomBinding) inflate;
     }
@@ -86,9 +86,9 @@ public final class QuestionDetailBottomViewPart extends BindingViewPart<ItemQues
         Intrinsics.checkNotNullParameter(view, "v");
         super.onClick(view);
         int id = view.getId();
-        if (id == 2131361998) {
+        if (id == 2131361999) {
             onAddAnswerViewClick();
-        } else if (id == 2131362582) {
+        } else if (id == 2131362590) {
             Activity currentActivity = AppHolder.getCurrentActivity();
             if (currentActivity != null) {
                 Boolean checkLogin = ActionManager.checkLogin(currentActivity);
@@ -117,7 +117,7 @@ public final class QuestionDetailBottomViewPart extends BindingViewPart<ItemQues
                     questionPresenter2.followQuestion(z, id2);
                 }
             }
-        } else if (id == 2131362749) {
+        } else if (id == 2131362760) {
             this.questionView.pickUserToInvite();
         }
     }

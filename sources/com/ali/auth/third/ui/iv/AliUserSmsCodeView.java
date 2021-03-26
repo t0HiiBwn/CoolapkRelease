@@ -30,9 +30,7 @@ public class AliUserSmsCodeView extends View {
     private PointF[] i;
     private int j = -16777216;
     private int k = -16777216;
-
-    /* renamed from: l  reason: collision with root package name */
-    private float f1187l = 1.0f;
+    private float l = 1.0f;
     private Paint m;
     private RectF[] n;
     private RectF[] o;
@@ -77,7 +75,7 @@ public class AliUserSmsCodeView extends View {
         }
         this.m.setStyle(Paint.Style.STROKE);
         this.m.setColor(this.j);
-        this.m.setStrokeWidth(this.f1187l);
+        this.m.setStrokeWidth(this.l);
     }
 
     private void a(Context context, AttributeSet attributeSet) {
@@ -87,7 +85,7 @@ public class AliUserSmsCodeView extends View {
             this.b = obtainStyledAttributes.getColor(R.styleable.AliUserSmsCodeView_scTextColor, this.b);
             this.c = obtainStyledAttributes.getDimension(R.styleable.AliUserSmsCodeView_scTextSize, TypedValue.applyDimension(2, this.c, context.getResources().getDisplayMetrics()));
             this.f = obtainStyledAttributes.getDimension(R.styleable.AliUserSmsCodeView_scDividerWidth, TypedValue.applyDimension(1, this.f, context.getResources().getDisplayMetrics()));
-            this.f1187l = obtainStyledAttributes.getDimension(R.styleable.AliUserSmsCodeView_scUnderLineStrokeWidth, TypedValue.applyDimension(1, this.f1187l, context.getResources().getDisplayMetrics()));
+            this.l = obtainStyledAttributes.getDimension(R.styleable.AliUserSmsCodeView_scUnderLineStrokeWidth, TypedValue.applyDimension(1, this.l, context.getResources().getDisplayMetrics()));
             this.j = obtainStyledAttributes.getColor(R.styleable.AliUserSmsCodeView_scUnderLineColor, this.j);
             this.k = obtainStyledAttributes.getColor(R.styleable.AliUserSmsCodeView_scNextUnderLineColor, this.k);
             obtainStyledAttributes.recycle();

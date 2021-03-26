@@ -22,7 +22,7 @@ abstract class C$$AutoValue_LinkCard extends LinkCard {
     private final String title;
     private final String url;
 
-    C$$AutoValue_LinkCard(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, String str10, String str11, List<Link> list) {
+    C$$AutoValue_LinkCard(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, String str10, String str11, List<Link> list) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -32,8 +32,8 @@ abstract class C$$AutoValue_LinkCard extends LinkCard {
         this.subTitle = str6;
         this.id = str7;
         this.extraData = str8;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.title = str9;
         this.url = str10;
         this.description = str11;
@@ -159,10 +159,10 @@ abstract class C$$AutoValue_LinkCard extends LinkCard {
                                     if (str7 != null ? str7.equals(linkCard.getId()) : linkCard.getId() == null) {
                                         String str8 = this.extraData;
                                         if (str8 != null ? str8.equals(linkCard.getExtraData()) : linkCard.getExtraData() == null) {
-                                            Long l2 = this.dateline;
-                                            if (l2 != null ? l2.equals(linkCard.getDateline()) : linkCard.getDateline() == null) {
-                                                Long l3 = this.lastUpdate;
-                                                if (l3 != null ? l3.equals(linkCard.getLastUpdate()) : linkCard.getLastUpdate() == null) {
+                                            Long l = this.dateline;
+                                            if (l != null ? l.equals(linkCard.getDateline()) : linkCard.getDateline() == null) {
+                                                Long l2 = this.lastUpdate;
+                                                if (l2 != null ? l2.equals(linkCard.getLastUpdate()) : linkCard.getLastUpdate() == null) {
                                                     String str9 = this.title;
                                                     if (str9 != null ? str9.equals(linkCard.getTitle()) : linkCard.getTitle() == null) {
                                                         String str10 = this.url;
@@ -210,10 +210,10 @@ abstract class C$$AutoValue_LinkCard extends LinkCard {
         int hashCode8 = (hashCode7 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
         String str8 = this.extraData;
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode10 = (hashCode9 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode11 = (hashCode10 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode10 = (hashCode9 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode11 = (hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str9 = this.title;
         int hashCode12 = (hashCode11 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.url;

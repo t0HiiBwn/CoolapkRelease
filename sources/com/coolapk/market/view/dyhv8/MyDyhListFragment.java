@@ -77,7 +77,7 @@ public final class MyDyhListFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558680).suitedMethod(MyDyhListFragment$onActivityCreated$1.INSTANCE).constructor(new MyDyhListFragment$onActivityCreated$2(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558686).suitedMethod(MyDyhListFragment$onActivityCreated$1.INSTANCE).constructor(new MyDyhListFragment$onActivityCreated$2(this)).build(), 0);
         EventBus eventBus = EventBus.getDefault();
         Intrinsics.checkNotNullExpressionValue(eventBus, "EventBus.getDefault()");
         EventBusExtendsKt.safeRegister(eventBus, this);
@@ -97,8 +97,8 @@ public final class MyDyhListFragment extends EntityListFragment {
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            MenuItem add = menu.add(0, 2131362970, 0, "添加更多");
-            add.setIcon(2131231489);
+            MenuItem add = menu.add(0, 2131362982, 0, "添加更多");
+            add.setIcon(2131231500);
             add.setShowAsAction(1);
         }
     }
@@ -106,7 +106,7 @@ public final class MyDyhListFragment extends EntityListFragment {
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131362970) {
+        if (menuItem.getItemId() != 2131362982) {
             return super.onOptionsItemSelected(menuItem);
         }
         FragmentActivity requireActivity = requireActivity();

@@ -56,7 +56,7 @@ public final class SearchHeaderViewPart extends BindingViewPart<SearchBackHeader
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public SearchBackHeaderBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559122, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559129, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…header, viewGroup, false)");
         return (SearchBackHeaderBinding) inflate;
     }

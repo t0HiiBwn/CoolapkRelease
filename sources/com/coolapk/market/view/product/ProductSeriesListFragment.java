@@ -75,10 +75,10 @@ public final class ProductSeriesListFragment extends SupportVerticalModeFragment
             getRecyclerView().setPadding(0, 0, 0, navigationBarHeight);
         }
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new ProductSeriesListFragment$onActivityCreated$1());
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558878).suitedMethod(ProductSeriesListFragment$onActivityCreated$2.INSTANCE).constructor(new ProductSeriesListFragment$onActivityCreated$3(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558877).suitedMethod(ProductSeriesListFragment$onActivityCreated$4.INSTANCE).constructor(new ProductSeriesListFragment$onActivityCreated$5(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558876).suitedMethod(ProductSeriesListFragment$onActivityCreated$6.INSTANCE).constructor(new ProductSeriesListFragment$onActivityCreated$7(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558875).suitedMethod(ProductSeriesListFragment$onActivityCreated$8.INSTANCE).constructor(new ProductSeriesListFragment$onActivityCreated$9(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558885).suitedMethod(ProductSeriesListFragment$onActivityCreated$2.INSTANCE).constructor(new ProductSeriesListFragment$onActivityCreated$3(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558884).suitedMethod(ProductSeriesListFragment$onActivityCreated$4.INSTANCE).constructor(new ProductSeriesListFragment$onActivityCreated$5(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558883).suitedMethod(ProductSeriesListFragment$onActivityCreated$6.INSTANCE).constructor(new ProductSeriesListFragment$onActivityCreated$7(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558882).suitedMethod(ProductSeriesListFragment$onActivityCreated$8.INSTANCE).constructor(new ProductSeriesListFragment$onActivityCreated$9(this)).build(), 0, 2, null);
     }
 
     @Subscribe

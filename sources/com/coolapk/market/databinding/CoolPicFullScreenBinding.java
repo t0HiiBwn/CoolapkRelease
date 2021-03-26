@@ -53,7 +53,7 @@ public abstract class CoolPicFullScreenBinding extends ViewDataBinding {
 
     @Deprecated
     public static CoolPicFullScreenBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (CoolPicFullScreenBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558487, viewGroup, z, obj);
+        return (CoolPicFullScreenBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558488, viewGroup, z, obj);
     }
 
     public static CoolPicFullScreenBinding inflate(LayoutInflater layoutInflater) {
@@ -62,7 +62,7 @@ public abstract class CoolPicFullScreenBinding extends ViewDataBinding {
 
     @Deprecated
     public static CoolPicFullScreenBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (CoolPicFullScreenBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558487, null, false, obj);
+        return (CoolPicFullScreenBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558488, null, false, obj);
     }
 
     public static CoolPicFullScreenBinding bind(View view) {
@@ -71,6 +71,6 @@ public abstract class CoolPicFullScreenBinding extends ViewDataBinding {
 
     @Deprecated
     public static CoolPicFullScreenBinding bind(View view, Object obj) {
-        return (CoolPicFullScreenBinding) bind(obj, view, 2131558487);
+        return (CoolPicFullScreenBinding) bind(obj, view, 2131558488);
     }
 }

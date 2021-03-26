@@ -15,9 +15,7 @@ class cf extends e {
     private float i;
     private float j;
     private float k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1227l;
+    private boolean l;
     private boolean m;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -44,7 +42,7 @@ class cf extends e {
                 return;
             }
             if (bVar.a != null) {
-                if (this.f1227l) {
+                if (this.l) {
                     this.f.a.h.c += this.k;
                 } else {
                     this.f.a.h.c -= this.k;
@@ -78,7 +76,7 @@ class cf extends e {
                     if (this.d) {
                         Point point = new Point((int) this.g, (int) this.h);
                         w a = this.f.d().a((int) this.g, (int) this.h);
-                        this.f.a().h.f1218l = this.f.a().h.a(a);
+                        this.f.a().h.l = this.f.a().h.a(a);
                         this.f.a().h.a(point);
                         this.f.a().c.a(false, false);
                     }
@@ -87,7 +85,7 @@ class cf extends e {
                     if (this.d) {
                         Point point2 = new Point(this.f.a().c.c() / 2, this.f.a().c.d() / 2);
                         w a2 = this.f.d().a(this.f.a().c.c() / 2, this.f.a().c.d() / 2);
-                        this.f.a().h.f1218l = this.f.a().h.a(a2);
+                        this.f.a().h.l = this.f.a().h.a(a2);
                         this.f.a().h.a(point2);
                         this.f.a().c.a(false, false);
                     }
@@ -104,12 +102,12 @@ class cf extends e {
     }
 
     public void a(float f2, float f3, boolean z, float f4, float f5) {
-        this.f1227l = z;
+        this.l = z;
         this.g = f4;
         this.h = f5;
         this.i = f2;
         this.f.a.h.c = this.i;
-        if (this.f1227l) {
+        if (this.l) {
             this.k = (this.f.a.h.c * ((float) this.b)) / ((float) this.a);
             this.j = this.i * 2.0f;
             return;

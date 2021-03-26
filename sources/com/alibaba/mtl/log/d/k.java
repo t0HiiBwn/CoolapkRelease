@@ -13,10 +13,10 @@ public class k {
     static File a;
 
     /* renamed from: a  reason: collision with other field name */
-    static FileChannel f63a;
+    static FileChannel f62a;
 
     /* renamed from: a  reason: collision with other field name */
-    static FileLock f64a;
+    static FileLock f63a;
 
     public static synchronized boolean c(Context context) {
         FileLock fileLock;
@@ -34,17 +34,17 @@ public class k {
             if (!exists) {
                 return true;
             }
-            if (f63a == null) {
+            if (f62a == null) {
                 try {
-                    f63a = new RandomAccessFile(a, "rw").getChannel();
+                    f62a = new RandomAccessFile(a, "rw").getChannel();
                 } catch (Exception unused2) {
                     return false;
                 }
             }
             try {
-                fileLock = f63a.tryLock();
+                fileLock = f62a.tryLock();
                 if (fileLock != null) {
-                    f64a = fileLock;
+                    f63a = fileLock;
                     return true;
                 }
             } catch (Throwable unused3) {
@@ -57,27 +57,27 @@ public class k {
 
     public static synchronized void release() {
         synchronized (k.class) {
-            FileLock fileLock = f64a;
+            FileLock fileLock = f63a;
             if (fileLock != null) {
                 try {
                     fileLock.release();
                 } catch (IOException unused) {
                 } catch (Throwable th) {
-                    f64a = null;
+                    f63a = null;
                     throw th;
                 }
-                f64a = null;
+                f63a = null;
             }
-            FileChannel fileChannel = f63a;
+            FileChannel fileChannel = f62a;
             if (fileChannel != null) {
                 try {
                     fileChannel.close();
                 } catch (Exception unused2) {
                 } catch (Throwable th2) {
-                    f63a = null;
+                    f62a = null;
                     throw th2;
                 }
-                f63a = null;
+                f62a = null;
             }
         }
     }

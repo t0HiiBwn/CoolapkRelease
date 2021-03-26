@@ -15,6 +15,6 @@ final class AppMainModelDialog$onCreateDialog$1 implements View.OnClickListener 
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        this.$binding.radioGroup.check(2131363177);
+        this.$binding.radioGroup.check(2131363191);
     }
 }

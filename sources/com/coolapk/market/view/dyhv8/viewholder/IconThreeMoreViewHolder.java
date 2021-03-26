@@ -25,7 +25,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: IconThreeMoreViewHolder.kt */
 public final class IconThreeMoreViewHolder extends GenericBindHolder<ItemIconTitleViewBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558784;
+    public static final int LAYOUT_ID = 2131558791;
     private boolean isShowFirstIcon;
     private boolean isShowSecondIcon;
 
@@ -76,10 +76,10 @@ public final class IconThreeMoreViewHolder extends GenericBindHolder<ItemIconTit
         } else if (arrayList2.size() == 1) {
             setShowSecondIcon(true);
             setShowFirstIcon(false);
-            AppHolder.getContextImageLoader().displayImage(getContext(), (String) arrayList2.get(0), ((ItemIconTitleViewBinding) getBinding()).iconView1, 2131231152);
+            AppHolder.getContextImageLoader().displayImage(getContext(), (String) arrayList2.get(0), ((ItemIconTitleViewBinding) getBinding()).iconView1, 2131231162);
         } else {
-            AppHolder.getContextImageLoader().displayImage(getContext(), (String) arrayList2.get(0), ((ItemIconTitleViewBinding) getBinding()).iconView0, 2131231152);
-            AppHolder.getContextImageLoader().displayImage(getContext(), (String) arrayList2.get(1), ((ItemIconTitleViewBinding) getBinding()).iconView1, 2131231152);
+            AppHolder.getContextImageLoader().displayImage(getContext(), (String) arrayList2.get(0), ((ItemIconTitleViewBinding) getBinding()).iconView0, 2131231162);
+            AppHolder.getContextImageLoader().displayImage(getContext(), (String) arrayList2.get(1), ((ItemIconTitleViewBinding) getBinding()).iconView1, 2131231162);
             setShowSecondIcon(true);
             setShowFirstIcon(true);
         }
@@ -107,12 +107,12 @@ public final class IconThreeMoreViewHolder extends GenericBindHolder<ItemIconTit
 
     public final void setShowFirstIcon(boolean z) {
         this.isShowFirstIcon = z;
-        notifyPropertyChanged(173);
+        notifyPropertyChanged(174);
     }
 
     public final void setShowSecondIcon(boolean z) {
         this.isShowSecondIcon = z;
-        notifyPropertyChanged(174);
+        notifyPropertyChanged(175);
     }
 
     private final String getMoreCount(EntityCard entityCard) {

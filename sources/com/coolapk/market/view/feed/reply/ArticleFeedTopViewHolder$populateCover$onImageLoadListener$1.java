@@ -29,7 +29,7 @@ final class ArticleFeedTopViewHolder$populateCover$onImageLoadListener$1 impleme
         Intrinsics.checkNotNullExpressionValue(context, "context");
         Activity activityNullable = UiUtils.getActivityNullable(context);
         if (activityNullable != null && !activityNullable.isFinishing() && drawable != null) {
-            this.this$0.doCoverAnim();
+            ArticleFeedTopViewHolder.access$doCoverAnim(this.this$0);
         }
     }
 }

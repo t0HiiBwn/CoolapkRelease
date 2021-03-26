@@ -32,7 +32,7 @@ public final class ProductCategoryFragmentV11$loadData$1 extends EmptySubscriber
         if (clientException == null || (str = clientException.getMessage()) == null) {
             str = "获取信息失败，请重试";
         }
-        LoadingViewBinding loadingViewBinding = ProductCategoryFragmentV11.access$getBinding$p(this.this$0).loadingView;
+        LoadingViewBinding loadingViewBinding = this.this$0.getBinding().loadingView;
         Intrinsics.checkNotNullExpressionValue(loadingViewBinding, "binding.loadingView");
         BindingExtensionKt.setLoadingError(loadingViewBinding, str, new ProductCategoryFragmentV11$loadData$1$onError$1(this));
         Toast.error(this.this$0.getActivity(), th);
@@ -41,17 +41,17 @@ public final class ProductCategoryFragmentV11$loadData$1 extends EmptySubscriber
     public void onNext(List<? extends ProductBrand> list) {
         Intrinsics.checkNotNullParameter(list, "t");
         super.onNext((ProductCategoryFragmentV11$loadData$1) list);
-        PreventAutoScrollRecyclerView preventAutoScrollRecyclerView = ProductCategoryFragmentV11.access$getBinding$p(this.this$0).recyclerView;
+        PreventAutoScrollRecyclerView preventAutoScrollRecyclerView = this.this$0.getBinding().recyclerView;
         Intrinsics.checkNotNullExpressionValue(preventAutoScrollRecyclerView, "binding.recyclerView");
         preventAutoScrollRecyclerView.setVisibility(0);
-        LoadingViewBinding loadingViewBinding = ProductCategoryFragmentV11.access$getBinding$p(this.this$0).loadingView;
+        LoadingViewBinding loadingViewBinding = this.this$0.getBinding().loadingView;
         Intrinsics.checkNotNullExpressionValue(loadingViewBinding, "binding.loadingView");
         BindingExtensionKt.setLoadingFinished(loadingViewBinding);
         List<? extends ProductBrand> list2 = list;
-        ProductCategoryFragmentV11.access$getDataList$p(this.this$0).addAll(list2);
-        ProductCategoryFragmentV11.access$getAdapter$p(this.this$0).notifyDataSetChanged();
+        this.this$0.getDataList().addAll(list2);
+        this.this$0.getAdapter().notifyDataSetChanged();
         if ((!list2.isEmpty()) && this.this$0.isAdded()) {
-            ProductCategoryFragmentV11.access$onBrandClick(this.this$0, (Entity) CollectionsKt.first((List<? extends Object>) list));
+            this.this$0.onBrandClick((Entity) CollectionsKt.first((List<? extends Object>) list));
         }
     }
 }

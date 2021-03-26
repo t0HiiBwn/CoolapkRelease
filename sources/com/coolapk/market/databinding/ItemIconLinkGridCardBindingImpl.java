@@ -26,8 +26,8 @@ public class ItemIconLinkGridCardBindingImpl extends ItemIconLinkGridCardBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 1);
-        sparseIntArray.put(2131362634, 2);
+        sparseIntArray.put(2131362779, 1);
+        sparseIntArray.put(2131362642, 2);
     }
 
     public ItemIconLinkGridCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {

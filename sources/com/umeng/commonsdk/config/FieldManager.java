@@ -46,7 +46,7 @@ public class FieldManager {
     public void a(Context context) {
         String str;
         String str2 = "1001@3758096383,2147483647,262143,2047";
-        String[] strArr = {d.a.class.getName(), d.b.class.getName(), d.c.class.getName(), d.EnumC0146d.class.getName()};
+        String[] strArr = {d.a.class.getName(), d.b.class.getName(), d.c.class.getName(), d.EnumC0173d.class.getName()};
         String imprintProperty = UMEnvelopeBuild.imprintProperty(context, "cfgfd", str2);
         synchronized (d) {
             Pair<Long, String> a2 = a(imprintProperty);
@@ -70,7 +70,7 @@ public class FieldManager {
     public void a(Context context, String str) {
         String str2;
         String str3 = "1001@3758096383,2147483647,262143,2047";
-        String[] strArr = {d.a.class.getName(), d.b.class.getName(), d.c.class.getName(), d.EnumC0146d.class.getName()};
+        String[] strArr = {d.a.class.getName(), d.b.class.getName(), d.c.class.getName(), d.EnumC0173d.class.getName()};
         synchronized (d) {
             b.a();
             if (str != null) {

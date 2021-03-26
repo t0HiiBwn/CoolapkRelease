@@ -20,9 +20,7 @@ public class f {
     private static final String i = "a_mac";
     private static final String j = "a_nid";
     private static final String k = "rssi";
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final String f1487l = "sta";
+    private static final String l = "sta";
     private static final String m = "ts";
     private static final String n = "wifiinfo";
     private static final String o = "ua";
@@ -72,7 +70,7 @@ public class f {
                 jSONObject.put("a_nid", bVar.i);
                 jSONObject.put("rssi", bVar.j);
                 jSONObject.put("sta", bVar.k);
-                jSONObject.put("ts", bVar.f1485l);
+                jSONObject.put("ts", bVar.l);
                 jSONArray.put(jSONObject);
                 str = jSONArray.toString();
             }

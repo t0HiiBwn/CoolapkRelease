@@ -55,7 +55,7 @@ import kotlin.text.StringsKt;
 /* compiled from: SelectorLinkViewHolder.kt */
 public final class SelectorLinkViewHolder extends GenericBindHolder<ItemSelectorLinkViewBinding, EntityCard> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558923;
+    public static final int LAYOUT_ID = 2131558930;
     public static final String LAYOUT_TYPE_BUTTON = "button";
     public static final String LAYOUT_TYPE_CAPSULE = "capsule";
     public static final String LAYOUT_TYPE_MINI_BUTTON = "miniButton";
@@ -478,7 +478,7 @@ public final class SelectorLinkViewHolder extends GenericBindHolder<ItemSelector
         if (r4 == null) goto L_0x0036;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:12:0x0031, code lost:
-        r4 = r4.getTag(2131363492);
+        r4 = r4.getTag(2131363510);
      */
     /* JADX WARNING: Code restructure failed: missing block: B:13:0x0036, code lost:
         r4 = null;
@@ -500,7 +500,7 @@ public final class SelectorLinkViewHolder extends GenericBindHolder<ItemSelector
         r4 = android.view.LayoutInflater.from(getContext());
         kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r4, "LayoutInflater.from(context)");
         r1.createView(r4, r5);
-        r1.getView().setTag(2131363492, r1);
+        r1.getView().setTag(2131363510, r1);
      */
     /* JADX WARNING: Code restructure failed: missing block: B:20:0x005e, code lost:
         r1.setShape(r6);

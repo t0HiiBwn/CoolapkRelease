@@ -28,10 +28,10 @@ public final class ImageIndicatorView extends LinearLayout {
     private ClickItem click;
     private int currentPosition = -1;
     private List<String> pic = new ArrayList();
-    private int selectedColor = ResourceUtils.getColorInt(getContext(), 2131099891);
+    private int selectedColor = ResourceUtils.getColorInt(getContext(), 2131099896);
     private int selectedIndex = -1;
     private int totalCount = -1;
-    private int unselectedColor = ResourceUtils.getColorInt(getContext(), 2131099893);
+    private int unselectedColor = ResourceUtils.getColorInt(getContext(), 2131099898);
 
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\bf\u0018\u00002\u00020\u0001J\u0010\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0005H&¨\u0006\u0006"}, d2 = {"Lcom/coolapk/market/widget/view/ImageIndicatorView$ClickItem;", "", "onClick", "", "index", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: ImageIndicatorView.kt */
@@ -144,7 +144,7 @@ public final class ImageIndicatorView extends LinearLayout {
         niceImageView.isCoverSrc(true);
         niceImageView.setBorderWidth(1);
         niceImageView.setBorderColor(Color.parseColor("#99FFFFFF"));
-        Object tag = niceImageView.getTag(2131363492);
+        Object tag = niceImageView.getTag(2131363510);
         if (tag != null) {
             int i2 = this.currentPosition;
             if (!(tag instanceof Integer) || i2 != ((Integer) tag).intValue()) {
@@ -153,8 +153,8 @@ public final class ImageIndicatorView extends LinearLayout {
             }
         }
         NiceImageView niceImageView3 = niceImageView;
-        GlideApp.with(getContext()).load(this.pic.get(i)).centerCrop().placeholder(2131231872).diskCacheStrategy(DiskCacheStrategy.DATA).into(niceImageView3);
-        niceImageView.setTag(2131363492, Integer.valueOf(this.currentPosition));
+        GlideApp.with(getContext()).load(this.pic.get(i)).centerCrop().placeholder(2131231884).diskCacheStrategy(DiskCacheStrategy.DATA).into(niceImageView3);
+        niceImageView.setTag(2131363510, Integer.valueOf(this.currentPosition));
         niceImageView.setOnClickListener(new ImageIndicatorView$createIndicatorView$2(this, i));
         return niceImageView3;
     }

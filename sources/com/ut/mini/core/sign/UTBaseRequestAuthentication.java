@@ -40,7 +40,7 @@ public class UTBaseRequestAuthentication implements IUTRequestAuthentication {
         } else if (str == null) {
             return null;
         } else {
-            return j.a(j.m27a((str + this.Y).getBytes()));
+            return j.a(j.m17a((str + this.Y).getBytes()));
         }
     }
 }

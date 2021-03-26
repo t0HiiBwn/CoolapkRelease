@@ -22,7 +22,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: CollectionItemViewholder.kt */
 public final class CollectionItemViewholder extends GenericBindHolder<ItemCollectionBinding, Collection> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558653;
+    public static final int LAYOUT_ID = 2131558659;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public CollectionItemViewholder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -50,7 +50,7 @@ public final class CollectionItemViewholder extends GenericBindHolder<ItemCollec
         int i = 0;
         if (currentActivity != null) {
             try {
-                Fragment findFragmentById = ContextExtendsKt.requireAppCompatActivity(currentActivity).getSupportFragmentManager().findFragmentById(2131363592);
+                Fragment findFragmentById = ContextExtendsKt.requireAppCompatActivity(currentActivity).getSupportFragmentManager().findFragmentById(2131363614);
                 boolean z2 = currentActivity instanceof CollectionSelectActivity;
                 z = true;
                 if (!(findFragmentById != null && (findFragmentById instanceof CollectionListFragment))) {
@@ -87,7 +87,7 @@ public final class CollectionItemViewholder extends GenericBindHolder<ItemCollec
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131362768) {
+        if (view.getId() == 2131362779) {
             Context context = getContext();
             ItemCollectionBinding itemCollectionBinding = (ItemCollectionBinding) getBinding();
             Intrinsics.checkNotNullExpressionValue(itemCollectionBinding, "binding");

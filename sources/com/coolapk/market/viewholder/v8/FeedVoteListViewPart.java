@@ -30,7 +30,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedVoteListViewPart.kt */
 public final class FeedVoteListViewPart extends BindingViewPart<ItemFeedVoteCommentViewPartBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558739;
+    public static final int LAYOUT_ID = 2131558746;
     private final DataBindingComponent component;
     private Feed feed;
     private final Lazy voteMultiView$delegate = LazyKt.lazy(new FeedVoteListViewPart$voteMultiView$2(this));
@@ -68,7 +68,7 @@ public final class FeedVoteListViewPart extends BindingViewPart<ItemFeedVoteComm
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedVoteCommentViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558739, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558746, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemFeedVoteCommentViewPartBinding) inflate;
     }
@@ -143,7 +143,7 @@ public final class FeedVoteListViewPart extends BindingViewPart<ItemFeedVoteComm
         if (feed2 == null) {
             return;
         }
-        if (view.getId() != 2131363585) {
+        if (view.getId() != 2131363607) {
             super.onClick(view);
             return;
         }

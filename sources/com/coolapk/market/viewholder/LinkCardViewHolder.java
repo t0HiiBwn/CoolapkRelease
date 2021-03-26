@@ -11,7 +11,7 @@ import com.coolapk.market.util.CollectionUtils;
 import com.coolapk.market.util.ViewUtil;
 
 public class LinkCardViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558800;
+    public static final int LAYOUT_ID = 2131558807;
 
     public LinkCardViewHolder(View view, ItemActionHandler itemActionHandler) {
         super(view, itemActionHandler);
@@ -35,7 +35,7 @@ public class LinkCardViewHolder extends BindingViewHolder {
             boolean z = true;
             if (size > childCount) {
                 while (childCount < size) {
-                    itemLinkCardBinding.tabLayout.addView(from.inflate(2131558801, (ViewGroup) itemLinkCardBinding.tabLayout, false), new LinearLayout.LayoutParams(0, -1, 1.0f));
+                    itemLinkCardBinding.tabLayout.addView(from.inflate(2131558808, (ViewGroup) itemLinkCardBinding.tabLayout, false), new LinearLayout.LayoutParams(0, -1, 1.0f));
                     childCount++;
                 }
             } else if (size < childCount) {
@@ -47,7 +47,7 @@ public class LinkCardViewHolder extends BindingViewHolder {
                 View childAt = itemLinkCardBinding.tabLayout.getChildAt(i4);
                 childAt.setTag(Integer.valueOf(i4));
                 ViewUtil.clickListener(childAt, this);
-                ((TextView) childAt.findViewById(2131363533)).setText(strArr[i4]);
+                ((TextView) childAt.findViewById(2131363551)).setText(strArr[i4]);
                 ViewGroup.LayoutParams layoutParams = childAt.getLayoutParams();
                 layoutParams.width = -2;
                 childAt.setLayoutParams(layoutParams);

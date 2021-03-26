@@ -40,7 +40,7 @@ public abstract class Product implements Entity {
 
         public abstract Builder setCreateUid(String str);
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         public abstract Builder setDescription(String str);
 
@@ -72,7 +72,7 @@ public abstract class Product implements Entity {
 
         public abstract Builder setIsOwner(int i);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLogo(String str);
 

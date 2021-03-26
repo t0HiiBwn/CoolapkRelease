@@ -24,7 +24,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: IconButtonGridCardViewHolder.kt */
 public final class IconButtonGridCardViewHolder extends BindingViewHolder implements CoolapkCardView.CardStyleCallback {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558777;
+    public static final int LAYOUT_ID = 2131558784;
     private final ItemIconButtonGridCardBinding binding;
     private EntityCard card;
     private final TitleViewPart viewPart;
@@ -95,7 +95,7 @@ public final class IconButtonGridCardViewHolder extends BindingViewHolder implem
         Intrinsics.checkNotNull(view);
         String str = null;
         switch (view.getId()) {
-            case 2131362201:
+            case 2131362206:
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");
                 EntityCard entityCard = this.card;
@@ -146,7 +146,7 @@ public final class IconButtonGridCardViewHolder extends BindingViewHolder implem
                 }
                 StatisticHelper.recordEntityEvent$default(instance, str, entity4, adapterPosition, entityCard4, null, 16, null);
                 return;
-            case 2131362202:
+            case 2131362207:
                 Context context2 = getContext();
                 Intrinsics.checkNotNullExpressionValue(context2, "context");
                 EntityCard entityCard5 = this.card;

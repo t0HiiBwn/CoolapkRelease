@@ -36,15 +36,18 @@ import com.google.android.material.appbar.AppBarLayout;
 import java.util.concurrent.TimeUnit;
 import kotlin.Metadata;
 import kotlin.Unit;
+import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.subjects.PublishSubject;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000r\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u00012\u00020\u0002:\u0001+B\u0005¢\u0006\u0002\u0010\u0003J\u000e\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u0019J\u0010\u0010\u001a\u001a\u0004\u0018\u00010\u00172\u0006\u0010\u0018\u001a\u00020\u0019J\b\u0010\u001b\u001a\u00020\u001cH\u0002J\u0018\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u001e\u001a\u00020\r2\b\b\u0002\u0010\u001f\u001a\u00020\tJ\b\u0010 \u001a\u00020\tH\u0016J\u0010\u0010!\u001a\u00020\u001c2\u0006\u0010\"\u001a\u00020#H\u0016J\u0012\u0010$\u001a\u00020\u001c2\b\u0010%\u001a\u0004\u0018\u00010&H\u0014J\b\u0010'\u001a\u00020\u001cH\u0014J\b\u0010(\u001a\u00020)H\u0002J\b\u0010*\u001a\u00020\u001cH\u0002R\u0012\u0010\u0004\u001a\u00060\u0005R\u00020\u0000X.¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X.¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\f\u001a\u0004\u0018\u00010\rX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u000e¢\u0006\u0002\n\u0000R2\u0010\u0010\u001a&\u0012\f\u0012\n \u0012*\u0004\u0018\u00010\r0\r \u0012*\u0012\u0012\f\u0012\n \u0012*\u0004\u0018\u00010\r0\r\u0018\u00010\u00110\u0011X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\tX\u000e¢\u0006\u0002\n\u0000¨\u0006,"}, d2 = {"Lcom/coolapk/market/view/goods/GoodsCouponSearchActivity;", "Lcom/coolapk/market/view/feedv8/FakeStatusBarActivity;", "Lcom/coolapk/market/app/TranslucentActivity;", "()V", "adapter", "Lcom/coolapk/market/view/goods/GoodsCouponSearchActivity$DataAdapter;", "binding", "Lcom/coolapk/market/databinding/GoodsCouponSearchBinding;", "isAscPriceSort", "", "priceIndicatorView", "Landroid/view/View;", "searchKeyWord", "", "searchViewPart", "Lcom/coolapk/market/view/feed/pick/SearchHeaderViewPart;", "subject", "Lrx/subjects/PublishSubject;", "kotlin.jvm.PlatformType", "subscriber", "Lrx/Subscription;", "updatePricePageOnly", "getFragmentItem", "Landroidx/fragment/app/Fragment;", "position", "", "getViewPagerFragment", "initPriceSortIndicatorView", "", "inputKeywords", "keywords", "updateSearchText", "isNavigationBarTranslucent", "onAppThemeChange", "appTheme", "Lcom/coolapk/market/AppTheme;", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onDestroy", "onPageChangeListener", "Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;", "setupSearchBar", "DataAdapter", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000r\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u0000 +2\u00020\u00012\u00020\u0002:\u0002+,B\u0005¢\u0006\u0002\u0010\u0003J\u000e\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u0019J\u0010\u0010\u001a\u001a\u0004\u0018\u00010\u00172\u0006\u0010\u0018\u001a\u00020\u0019J\b\u0010\u001b\u001a\u00020\u001cH\u0002J\u0018\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u001e\u001a\u00020\r2\b\b\u0002\u0010\u001f\u001a\u00020\tJ\b\u0010 \u001a\u00020\tH\u0016J\u0010\u0010!\u001a\u00020\u001c2\u0006\u0010\"\u001a\u00020#H\u0016J\u0012\u0010$\u001a\u00020\u001c2\b\u0010%\u001a\u0004\u0018\u00010&H\u0014J\b\u0010'\u001a\u00020\u001cH\u0014J\b\u0010(\u001a\u00020)H\u0002J\b\u0010*\u001a\u00020\u001cH\u0002R\u0012\u0010\u0004\u001a\u00060\u0005R\u00020\u0000X.¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X.¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u000bX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\f\u001a\u0004\u0018\u00010\rX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u000e¢\u0006\u0002\n\u0000R2\u0010\u0010\u001a&\u0012\f\u0012\n \u0012*\u0004\u0018\u00010\r0\r \u0012*\u0012\u0012\f\u0012\n \u0012*\u0004\u0018\u00010\r0\r\u0018\u00010\u00110\u0011X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\tX\u000e¢\u0006\u0002\n\u0000¨\u0006-"}, d2 = {"Lcom/coolapk/market/view/goods/GoodsCouponSearchActivity;", "Lcom/coolapk/market/view/feedv8/FakeStatusBarActivity;", "Lcom/coolapk/market/app/TranslucentActivity;", "()V", "adapter", "Lcom/coolapk/market/view/goods/GoodsCouponSearchActivity$DataAdapter;", "binding", "Lcom/coolapk/market/databinding/GoodsCouponSearchBinding;", "isAscPriceSort", "", "priceIndicatorView", "Landroid/view/View;", "searchKeyWord", "", "searchViewPart", "Lcom/coolapk/market/view/feed/pick/SearchHeaderViewPart;", "subject", "Lrx/subjects/PublishSubject;", "kotlin.jvm.PlatformType", "subscriber", "Lrx/Subscription;", "updatePricePageOnly", "getFragmentItem", "Landroidx/fragment/app/Fragment;", "position", "", "getViewPagerFragment", "initPriceSortIndicatorView", "", "inputKeywords", "keywords", "updateSearchText", "isNavigationBarTranslucent", "onAppThemeChange", "appTheme", "Lcom/coolapk/market/AppTheme;", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onDestroy", "onPageChangeListener", "Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;", "setupSearchBar", "Companion", "DataAdapter", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: GoodsCouponSearchActivity.kt */
 public final class GoodsCouponSearchActivity extends FakeStatusBarActivity implements TranslucentActivity {
+    public static final Companion Companion = new Companion(null);
+    public static final String EXTRA_KEYWORD = "extra_key_word";
     private DataAdapter adapter;
     private GoodsCouponSearchBinding binding;
     private boolean isAscPriceSort = true;
@@ -68,10 +71,21 @@ public final class GoodsCouponSearchActivity extends FakeStatusBarActivity imple
         return goodsCouponSearchBinding;
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/view/goods/GoodsCouponSearchActivity$Companion;", "", "()V", "EXTRA_KEYWORD", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+    /* compiled from: GoodsCouponSearchActivity.kt */
+    public static final class Companion {
+        private Companion() {
+        }
+
+        public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
+            this();
+        }
+    }
+
     @Override // com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558567);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558570);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…yout.goods_coupon_search)");
         this.binding = (GoodsCouponSearchBinding) contentView;
         setupSearchBar();
@@ -114,20 +128,25 @@ public final class GoodsCouponSearchActivity extends FakeStatusBarActivity imple
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
         goodsCouponSearchBinding6.tabs.addOnTabSelectedListener(new GoodsCouponSearchActivity$onCreate$2(this));
+        String stringExtra = getIntent().getStringExtra("extra_key_word");
+        if (stringExtra == null) {
+            stringExtra = "";
+        }
+        Intrinsics.checkNotNullExpressionValue(stringExtra, "intent.getStringExtra(EXTRA_KEYWORD) ?: \"\"");
         SearchHeaderViewPart searchHeaderViewPart = this.searchViewPart;
         if (searchHeaderViewPart != null) {
             AutoCompleteTextView autoCompleteTextView = ((SearchBackHeaderBinding) searchHeaderViewPart.getBinding()).searchText;
             Intrinsics.checkNotNullExpressionValue(autoCompleteTextView, "it.binding.searchText");
             autoCompleteTextView.setHint("搜索海量优惠券");
         }
-        inputKeywords$default(this, "", false, 2, null);
+        inputKeywords(stringExtra, true);
         GoodsCouponSearchBinding goodsCouponSearchBinding7 = this.binding;
         if (goodsCouponSearchBinding7 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
         goodsCouponSearchBinding7.tabs.post(new GoodsCouponSearchActivity$sam$java_lang_Runnable$0(new GoodsCouponSearchActivity$onCreate$4(this)));
-        if (getSupportFragmentManager().findFragmentById(2131362316) == null) {
-            getSupportFragmentManager().beginTransaction().add(2131362316, GoodsSearchMainListFragment.Companion.newInstance()).commit();
+        if (getSupportFragmentManager().findFragmentById(2131362322) == null) {
+            getSupportFragmentManager().beginTransaction().add(2131362322, GoodsSearchMainListFragment.Companion.newInstance()).commit();
         }
     }
 
@@ -162,7 +181,7 @@ public final class GoodsCouponSearchActivity extends FakeStatusBarActivity imple
             imageView.setLayoutParams(layoutParams);
             imageView.setScaleX(0.75f);
             imageView.setScaleY(0.75f);
-            imageView.setImageResource(2131231156);
+            imageView.setImageResource(2131231166);
             AppTheme appTheme = AppHolder.getAppTheme();
             Context context = imageView.getContext();
             Intrinsics.checkNotNullExpressionValue(context, "context");
@@ -290,7 +309,7 @@ public final class GoodsCouponSearchActivity extends FakeStatusBarActivity imple
                 ViewKt.setVisible(view, true);
             }
             GoodsSearchHistoryHelper.INSTANCE.addWords(str);
-            Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362316);
+            Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362322);
             if (!(findFragmentById instanceof GoodsSearchMainListFragment)) {
                 findFragmentById = null;
             }

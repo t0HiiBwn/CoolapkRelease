@@ -15,9 +15,7 @@ public class ab {
     public static String i = "http://kepler.jd.com/oauth/code.do";
     public static String j = "https://kploauth.jd.com/oauth/token?";
     public static String k = "http://plogin.m.jd.com/user/login.action?qbautologin=false";
-
-    /* renamed from: l  reason: collision with root package name */
-    public static String[] f1351l = {"https://plogin.m.jd.com/user/login", "https://plogin.m.jd.com/cgi-bin/m/mlogin", "https://kepler.jd.com/oauth/sdk/do"};
+    public static String[] l = {"https://plogin.m.jd.com/user/login", "https://plogin.m.jd.com/cgi-bin/m/mlogin", "https://kepler.jd.com/oauth/sdk/do"};
     public static String m = "https://passport.m.jd.com/user/logout.action";
     public static String[] n = {".*\\.jd\\.com.*$", ".*\\.jd\\.hk.*$", ".*\\.yiyaojd\\.com.*$", ".*\\.admaster\\.com\\.cn.*$"};
     @Deprecated

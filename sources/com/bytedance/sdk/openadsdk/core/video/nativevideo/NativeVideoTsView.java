@@ -46,9 +46,7 @@ public class NativeVideoTsView extends FrameLayout implements c.a, f.a, al.a {
     protected ImageView i;
     protected boolean j;
     protected String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    protected int f1320l;
+    protected int l;
     AtomicBoolean m;
     boolean n;
     public a o;
@@ -141,7 +139,7 @@ public class NativeVideoTsView extends FrameLayout implements c.a, f.a, al.a {
         this.u = false;
         this.j = true;
         this.k = "embeded_ad";
-        this.f1320l = 50;
+        this.l = 50;
         this.v = true;
         this.m = new AtomicBoolean(false);
         this.x = new al(this);
@@ -256,7 +254,7 @@ public class NativeVideoTsView extends FrameLayout implements c.a, f.a, al.a {
         if ((this instanceof NativeDrawVideoTsView) && !this.m.get() && i.d().t() != null) {
             this.i.setImageBitmap(i.d().t());
             RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) this.i.getLayoutParams();
-            int a2 = (int) ak.a(getContext(), (float) this.f1320l);
+            int a2 = (int) ak.a(getContext(), (float) this.l);
             layoutParams.width = a2;
             layoutParams.height = a2;
             this.i.setLayoutParams(layoutParams);
@@ -748,7 +746,7 @@ public class NativeVideoTsView extends FrameLayout implements c.a, f.a, al.a {
                 this.h.setImageResource(ac.d(p.a(), "tt_new_play_video"));
             }
             this.h.setScaleType(ImageView.ScaleType.FIT_XY);
-            int a2 = (int) ak.a(getContext(), (float) this.f1320l);
+            int a2 = (int) ak.a(getContext(), (float) this.l);
             int a3 = (int) ak.a(getContext(), 10.0f);
             FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(a2, a2);
             layoutParams.gravity = 17;

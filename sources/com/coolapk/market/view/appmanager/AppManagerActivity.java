@@ -25,7 +25,7 @@ public class AppManagerActivity extends TabActivity {
 
     @Override // com.coolapk.market.view.base.TabActivity
     protected String[] onCreateTabs() {
-        return new String[]{getString(2131887223), getString(2131887306), getString(2131887247), getString(2131887276)};
+        return new String[]{getString(2131887285), getString(2131887368), getString(2131887309), getString(2131887338)};
     }
 
     @Override // com.coolapk.market.view.base.TabActivity, com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity

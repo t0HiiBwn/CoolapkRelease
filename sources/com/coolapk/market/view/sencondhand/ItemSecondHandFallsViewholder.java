@@ -38,7 +38,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemSecondHandFallsViewholder.kt */
 public final class ItemSecondHandFallsViewholder extends GenericBindHolder<ItemSecondHandFallBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558919;
+    public static final int LAYOUT_ID = 2131558926;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public ItemSecondHandFallsViewholder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -120,7 +120,7 @@ public final class ItemSecondHandFallsViewholder extends GenericBindHolder<ItemS
             TextView textView4 = ((ItemSecondHandFallBinding) getBinding()).titleTagView;
             Intrinsics.checkNotNullExpressionValue(textView4, "binding.titleTagView");
             textView4.setText(secondHandInfo.getStoreTypeText());
-            int colorInt = ResourceUtils.getColorInt(getContext(), 2131100035);
+            int colorInt = ResourceUtils.getColorInt(getContext(), 2131100040);
             int colorInt2 = ResourceUtils.getColorInt(getContext(), 2131099687);
             if (!z2) {
                 colorInt = colorInt2;
@@ -131,11 +131,11 @@ public final class ItemSecondHandFallsViewholder extends GenericBindHolder<ItemS
             String timeDescription = DateUtils.getTimeDescription(getContext(), secondHandInfo.getDateline());
             secondHandInfo.getProvince();
             if (secondHandInfo.isXianyu()) {
-                i = 2131232047;
+                i = 2131232065;
             } else if (secondHandInfo.isZhuanzhuan()) {
-                i = 2131232049;
+                i = 2131232067;
             } else {
-                i = secondHandInfo.isJiaoYiMao() ? 2131231374 : 2131231788;
+                i = secondHandInfo.isJiaoYiMao() ? 2131231385 : 2131231799;
             }
             ((ItemSecondHandFallBinding) getBinding()).signLink.setImageResource(i);
             TextView textView6 = ((ItemSecondHandFallBinding) getBinding()).signLinkText;
@@ -192,11 +192,11 @@ public final class ItemSecondHandFallsViewholder extends GenericBindHolder<ItemS
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
             Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-            if (valueOf != null && valueOf.intValue() == 2131362200) {
+            if (valueOf != null && valueOf.intValue() == 2131362205) {
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");
                 ActionManagerCompat.startActivityByUrl$default(context, FeedUriAction.Companion.buildUrl(model), null, null, 12, null);
-            } else if (valueOf != null && valueOf.intValue() == 2131362095) {
+            } else if (valueOf != null && valueOf.intValue() == 2131362098) {
                 ActionManager.startUserSpaceActivity(getContext(), model.getUid());
             } else {
                 super.onClick(view);

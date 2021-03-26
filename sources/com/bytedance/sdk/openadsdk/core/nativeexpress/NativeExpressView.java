@@ -73,9 +73,7 @@ public class NativeExpressView extends FrameLayout implements j {
     protected x i;
     protected String j = "embeded_ad";
     protected AdSlot k;
-
-    /* renamed from: l  reason: collision with root package name */
-    protected l f1315l;
+    protected l l;
     protected TTNativeExpressAd.ExpressVideoAdListener m;
     protected FrameLayout n;
     protected boolean o;
@@ -94,7 +92,7 @@ public class NativeExpressView extends FrameLayout implements j {
         super(context);
         this.j = str;
         this.g = context;
-        this.f1315l = lVar;
+        this.l = lVar;
         d();
         a(adSlot);
         a();
@@ -121,8 +119,8 @@ public class NativeExpressView extends FrameLayout implements j {
     }
 
     private void c() {
-        this.c = this.f1315l.ag();
-        this.d = this.f1315l.aj();
+        this.c = this.l.ag();
+        this.d = this.l.aj();
         this.v = 3412;
         this.e = aj.a(this.j);
         this.C = this.k.getCodeId();
@@ -139,14 +137,14 @@ public class NativeExpressView extends FrameLayout implements j {
 
     protected void b() {
         JSONObject jSONObject;
-        this.H = new p(1, this.j, this.f1315l);
+        this.H = new p(1, this.j, this.l);
         this.i = new x(this.g);
         if ("feed_video_middle_page".equals(this.j)) {
             jSONObject = getMiddleTemplateInfo();
         } else {
             jSONObject = getTemplateInfo();
         }
-        this.i.b(getWebView()).a(this.f1315l).b(this.c).c(this.d).a(this.j).a(this.e).d(aj.i(this.f1315l)).a((j) this).a(jSONObject).a(getWebView()).a(this.H);
+        this.i.b(getWebView()).a(this.l).b(this.c).c(this.d).a(this.j).a(this.e).d(aj.i(this.l)).a((j) this).a(jSONObject).a(getWebView()).a(this.H);
         e();
     }
 
@@ -154,7 +152,7 @@ public class NativeExpressView extends FrameLayout implements j {
         if (this.J) {
             com.bytedance.sdk.openadsdk.core.dynamic.a.a aVar = new com.bytedance.sdk.openadsdk.core.dynamic.a.a(this.g);
             this.I = aVar;
-            aVar.a(getWebView()).a(this.f1315l).a(this.c).b(this.d).a(this.e).c(aj.i(this.f1315l)).a(this).a(getTemplateInfo()).b(getWebView()).a(this.H);
+            aVar.a(getWebView()).a(this.l).a(this.c).b(this.d).a(this.e).c(aj.i(this.l)).a(this).a(getTemplateInfo()).b(getWebView()).a(this.H);
         }
     }
 
@@ -170,10 +168,10 @@ public class NativeExpressView extends FrameLayout implements j {
 
     private void f() {
         a(getWebView());
-        j a2 = new j(this.g, this.f1315l, getWebView()).a(false);
+        j a2 = new j(this.g, this.l, getWebView()).a(false);
         this.G = a2;
         a2.a(this.H);
-        getWebView().setWebViewClient(new f(this.g, this.i, this.f1315l, this.G, n()));
+        getWebView().setWebViewClient(new f(this.g, this.i, this.l, this.G, n()));
         getWebView().setWebChromeClient(new com.bytedance.sdk.openadsdk.core.widget.webview.b(this.i, this.G));
         getWebView().setDownloadListener(new DownloadListener() {
             /* class com.bytedance.sdk.openadsdk.core.nativeexpress.NativeExpressView.AnonymousClass1 */
@@ -188,10 +186,10 @@ public class NativeExpressView extends FrameLayout implements j {
                     }
                     return;
                 }
-                if (!(NativeExpressView.this.f1315l == null || NativeExpressView.this.f1315l.U() == null)) {
-                    NativeExpressView.this.f1315l.U().a();
+                if (!(NativeExpressView.this.l == null || NativeExpressView.this.l.U() == null)) {
+                    NativeExpressView.this.l.U().a();
                 }
-                com.bytedance.sdk.openadsdk.downloadnew.core.a a2 = com.bytedance.sdk.openadsdk.downloadnew.a.a(NativeExpressView.this.g, str, NativeExpressView.this.f1315l, NativeExpressView.this.j);
+                com.bytedance.sdk.openadsdk.downloadnew.core.a a2 = com.bytedance.sdk.openadsdk.downloadnew.a.a(NativeExpressView.this.g, str, NativeExpressView.this.l, NativeExpressView.this.j);
                 NativeExpressView.this.z.put(str, a2);
                 a2.e();
             }
@@ -313,8 +311,8 @@ public class NativeExpressView extends FrameLayout implements j {
             return;
         }
         if ("feed_video_middle_page".equals(this.j)) {
-            rVar = com.bytedance.sdk.openadsdk.core.widget.webview.a.a.d(this.f1315l);
-            l lVar = this.f1315l;
+            rVar = com.bytedance.sdk.openadsdk.core.widget.webview.a.a.d(this.l);
+            l lVar = this.l;
             if (lVar != null) {
                 aVar = lVar.N();
                 if (rVar == null || a(aVar)) {
@@ -337,8 +335,8 @@ public class NativeExpressView extends FrameLayout implements j {
                 return;
             }
         } else {
-            rVar = com.bytedance.sdk.openadsdk.core.widget.webview.a.a.c(this.f1315l);
-            l lVar2 = this.f1315l;
+            rVar = com.bytedance.sdk.openadsdk.core.widget.webview.a.a.c(this.l);
+            l lVar2 = this.l;
             if (lVar2 != null) {
                 aVar = lVar2.M();
                 if (rVar == null) {
@@ -385,17 +383,17 @@ public class NativeExpressView extends FrameLayout implements j {
             }
             jSONObject.put("AdSize", jSONObject2);
             jSONObject.put("creative", a(false));
-            if (this.f1315l.M() != null) {
-                str2 = this.f1315l.M().e();
-                str = this.f1315l.M().f();
+            if (this.l.M() != null) {
+                str2 = this.l.M().e();
+                str = this.l.M().f();
             } else {
                 str2 = null;
                 str = null;
             }
             if (!TextUtils.isEmpty(str2)) {
                 this.P = str2;
-            } else if (com.bytedance.sdk.openadsdk.core.widget.webview.a.a.c(this.f1315l) != null) {
-                this.P = com.bytedance.sdk.openadsdk.core.widget.webview.a.a.c(this.f1315l).e();
+            } else if (com.bytedance.sdk.openadsdk.core.widget.webview.a.a.c(this.l) != null) {
+                this.P = com.bytedance.sdk.openadsdk.core.widget.webview.a.a.c(this.l).e();
             }
             jSONObject.put("template_Plugin", this.P);
             jSONObject.put("diff_template_Plugin", str);
@@ -408,14 +406,14 @@ public class NativeExpressView extends FrameLayout implements j {
     private JSONObject a(boolean z2) {
         JSONObject jSONObject = new JSONObject();
         try {
-            jSONObject.put("button_text", this.f1315l.af());
-            if (this.f1315l.U() != null) {
-                jSONObject.put("icon", this.f1315l.U().a());
+            jSONObject.put("button_text", this.l.af());
+            if (this.l.U() != null) {
+                jSONObject.put("icon", this.l.U().a());
             }
             JSONArray jSONArray = new JSONArray();
-            if (this.f1315l.Z() != null) {
-                for (int i2 = 0; i2 < this.f1315l.Z().size(); i2++) {
-                    k kVar = this.f1315l.Z().get(i2);
+            if (this.l.Z() != null) {
+                for (int i2 = 0; i2 < this.l.Z().size(); i2++) {
+                    k kVar = this.l.Z().get(i2);
                     JSONObject jSONObject2 = new JSONObject();
                     jSONObject2.put("height", kVar.c());
                     jSONObject2.put("width", kVar.b());
@@ -424,27 +422,27 @@ public class NativeExpressView extends FrameLayout implements j {
                 }
             }
             jSONObject.put("image", jSONArray);
-            jSONObject.put("image_mode", this.f1315l.ak());
-            jSONObject.put("interaction_type", this.f1315l.T());
-            jSONObject.put("is_compliance_template", a(this.f1315l));
-            jSONObject.put("title", this.f1315l.ad());
-            jSONObject.put("description", this.f1315l.ae());
-            jSONObject.put("source", this.f1315l.S());
-            if (this.f1315l.ah() != null) {
-                jSONObject.put("comment_num", this.f1315l.ah().f());
-                jSONObject.put("score", this.f1315l.ah().e());
-                jSONObject.put("app_size", this.f1315l.ah().g());
-                jSONObject.put("app", this.f1315l.ah().h());
+            jSONObject.put("image_mode", this.l.ak());
+            jSONObject.put("interaction_type", this.l.T());
+            jSONObject.put("is_compliance_template", a(this.l));
+            jSONObject.put("title", this.l.ad());
+            jSONObject.put("description", this.l.ae());
+            jSONObject.put("source", this.l.S());
+            if (this.l.ah() != null) {
+                jSONObject.put("comment_num", this.l.ah().f());
+                jSONObject.put("score", this.l.ah().e());
+                jSONObject.put("app_size", this.l.ah().g());
+                jSONObject.put("app", this.l.ah().h());
             }
-            if (this.f1315l.R() != null) {
-                jSONObject.put("video", this.f1315l.R().m());
+            if (this.l.R() != null) {
+                jSONObject.put("video", this.l.R().m());
             }
             if (z2) {
-                if (this.f1315l.N() != null) {
-                    jSONObject.put("dynamic_creative", this.f1315l.N().g());
+                if (this.l.N() != null) {
+                    jSONObject.put("dynamic_creative", this.l.N().g());
                 }
-            } else if (this.f1315l.M() != null) {
-                jSONObject.put("dynamic_creative", this.f1315l.M().g());
+            } else if (this.l.M() != null) {
+                jSONObject.put("dynamic_creative", this.l.M().g());
             }
             return jSONObject;
         } catch (Exception unused) {
@@ -466,16 +464,16 @@ public class NativeExpressView extends FrameLayout implements j {
             jSONObject.put("AdSize", jSONObject2);
             jSONObject.put("creative", a(true));
             String str2 = null;
-            if (this.f1315l.N() != null) {
-                str2 = this.f1315l.N().e();
-                str = this.f1315l.N().f();
+            if (this.l.N() != null) {
+                str2 = this.l.N().e();
+                str = this.l.N().f();
             } else {
                 str = null;
             }
             if (!TextUtils.isEmpty(str2)) {
                 this.P = str2;
-            } else if (com.bytedance.sdk.openadsdk.core.widget.webview.a.a.d(this.f1315l) != null) {
-                this.P = com.bytedance.sdk.openadsdk.core.widget.webview.a.a.d(this.f1315l).e();
+            } else if (com.bytedance.sdk.openadsdk.core.widget.webview.a.a.d(this.l) != null) {
+                this.P = com.bytedance.sdk.openadsdk.core.widget.webview.a.a.d(this.l).e();
             }
             jSONObject.put("template_Plugin", this.P);
             jSONObject.put("diff_template_Plugin", str);
@@ -578,7 +576,7 @@ public class NativeExpressView extends FrameLayout implements j {
                 }
                 TTNativeExpressAd.ExpressAdInteractionListener expressAdInteractionListener = this.w;
                 if (expressAdInteractionListener != null) {
-                    expressAdInteractionListener.onAdClicked(this, this.f1315l.T());
+                    expressAdInteractionListener.onAdClicked(this, this.l.T());
                 }
             } else if (i2 == 2) {
                 d dVar = this.x;
@@ -588,7 +586,7 @@ public class NativeExpressView extends FrameLayout implements j {
                 }
                 TTNativeExpressAd.ExpressAdInteractionListener expressAdInteractionListener2 = this.w;
                 if (expressAdInteractionListener2 != null) {
-                    expressAdInteractionListener2.onAdClicked(this, this.f1315l.T());
+                    expressAdInteractionListener2.onAdClicked(this, this.l.T());
                 }
             } else if (i2 == 3) {
                 TTDislikeDialogAbstract tTDislikeDialogAbstract = this.b;
@@ -600,15 +598,15 @@ public class NativeExpressView extends FrameLayout implements j {
                 if (bVar != null) {
                     bVar.showDislikeDialog(0);
                 } else {
-                    TTDelegateActivity.a(this.f1315l);
+                    TTDelegateActivity.a(this.l);
                 }
             } else if (i2 == 4) {
                 FrameLayout frameLayout2 = this.n;
                 if (frameLayout2 != null) {
                     frameLayout2.dispatchTouchEvent(MotionEvent.obtain(0, 0, 0, 0.0f, 0.0f, 0));
                 }
-                u.b("ClickCreativeListener", "创意....mAdType=" + this.j + ",!mVideoPause=" + (true ^ this.o) + "，isAutoPlay=" + aj.j(this.f1315l));
-                if (!"embeded_ad".equals(this.j) || !r() || this.o || !aj.j(this.f1315l)) {
+                u.b("ClickCreativeListener", "创意....mAdType=" + this.j + ",!mVideoPause=" + (true ^ this.o) + "，isAutoPlay=" + aj.j(this.l));
+                if (!"embeded_ad".equals(this.j) || !r() || this.o || !aj.j(this.l)) {
                     u.b("ClickCreativeListener", "普通....");
                     e eVar2 = this.y;
                     if (eVar2 != null) {
@@ -625,7 +623,7 @@ public class NativeExpressView extends FrameLayout implements j {
                 }
                 TTNativeExpressAd.ExpressAdInteractionListener expressAdInteractionListener3 = this.w;
                 if (expressAdInteractionListener3 != null) {
-                    expressAdInteractionListener3.onAdClicked(this, this.f1315l.T());
+                    expressAdInteractionListener3.onAdClicked(this, this.l.T());
                 }
             }
         }
@@ -651,7 +649,7 @@ public class NativeExpressView extends FrameLayout implements j {
                 }
                 TTNativeExpressAd.ExpressAdInteractionListener expressAdInteractionListener = this.w;
                 if (expressAdInteractionListener != null) {
-                    expressAdInteractionListener.onAdClicked(this, this.f1315l.T());
+                    expressAdInteractionListener.onAdClicked(this, this.l.T());
                 }
             } else if (i2 == 2) {
                 d dVar = this.x;
@@ -662,7 +660,7 @@ public class NativeExpressView extends FrameLayout implements j {
                 }
                 TTNativeExpressAd.ExpressAdInteractionListener expressAdInteractionListener2 = this.w;
                 if (expressAdInteractionListener2 != null) {
-                    expressAdInteractionListener2.onAdClicked(this, this.f1315l.T());
+                    expressAdInteractionListener2.onAdClicked(this, this.l.T());
                 }
             } else if (i2 == 3) {
                 TTDislikeDialogAbstract tTDislikeDialogAbstract = this.b;
@@ -674,15 +672,15 @@ public class NativeExpressView extends FrameLayout implements j {
                 if (bVar != null) {
                     bVar.showDislikeDialog(0);
                 } else {
-                    TTDelegateActivity.a(this.f1315l);
+                    TTDelegateActivity.a(this.l);
                 }
             } else if (i2 == 4) {
                 FrameLayout frameLayout2 = this.n;
                 if (frameLayout2 != null) {
                     frameLayout2.dispatchTouchEvent(MotionEvent.obtain(0, 0, 0, 0.0f, 0.0f, 0));
                 }
-                u.b("ClickCreativeListener", "创意....mAdType=" + this.j + ",!mVideoPause=" + (true ^ this.o) + "，isAutoPlay=" + aj.j(this.f1315l));
-                if (!"embeded_ad".equals(this.j) || !r() || this.o || !aj.j(this.f1315l)) {
+                u.b("ClickCreativeListener", "创意....mAdType=" + this.j + ",!mVideoPause=" + (true ^ this.o) + "，isAutoPlay=" + aj.j(this.l));
+                if (!"embeded_ad".equals(this.j) || !r() || this.o || !aj.j(this.l)) {
                     u.b("ClickCreativeListener", "普通....");
                     if (this.y != null) {
                         a(this.x.d(), z2);
@@ -700,7 +698,7 @@ public class NativeExpressView extends FrameLayout implements j {
                 }
                 TTNativeExpressAd.ExpressAdInteractionListener expressAdInteractionListener3 = this.w;
                 if (expressAdInteractionListener3 != null) {
-                    expressAdInteractionListener3.onAdClicked(this, this.f1315l.T());
+                    expressAdInteractionListener3.onAdClicked(this, this.l.T());
                 }
             }
         }
@@ -715,14 +713,14 @@ public class NativeExpressView extends FrameLayout implements j {
     }
 
     private void a(String str) {
-        if (this.f1315l != null && !TextUtils.isEmpty(str) && str.equals("feed_video_middle_page")) {
-            com.bytedance.sdk.openadsdk.c.d.b(com.bytedance.sdk.openadsdk.core.p.a(), this.f1315l, "feed_video_middle_page", "middle_page_click");
+        if (this.l != null && !TextUtils.isEmpty(str) && str.equals("feed_video_middle_page")) {
+            com.bytedance.sdk.openadsdk.c.d.b(com.bytedance.sdk.openadsdk.core.p.a(), this.l, "feed_video_middle_page", "middle_page_click");
         }
     }
 
     private boolean r() {
-        l lVar = this.f1315l;
-        if (lVar == null || lVar.k() != 1 || !l.c(this.f1315l)) {
+        l lVar = this.l;
+        if (lVar == null || lVar.k() != 1 || !l.c(this.l)) {
             return false;
         }
         return true;
@@ -857,7 +855,7 @@ public class NativeExpressView extends FrameLayout implements j {
             this.a = null;
             this.b = null;
             this.k = null;
-            this.f1315l = null;
+            this.l = null;
             this.w = null;
             this.x = null;
             this.y = null;
@@ -928,7 +926,7 @@ public class NativeExpressView extends FrameLayout implements j {
 
                 @Override // java.lang.Runnable
                 public void run() {
-                    if (NativeExpressView.this.f1315l != null) {
+                    if (NativeExpressView.this.l != null) {
                         NativeExpressView.this.b(z2, f2, f3, i2, i3);
                     }
                 }
@@ -1008,7 +1006,7 @@ public class NativeExpressView extends FrameLayout implements j {
                 this.O = 2;
                 w();
                 p();
-                com.bytedance.sdk.openadsdk.c.d.h(com.bytedance.sdk.openadsdk.core.p.a(), this.f1315l, this.j, "dynamic_backup_native_render", null);
+                com.bytedance.sdk.openadsdk.c.d.h(com.bytedance.sdk.openadsdk.core.p.a(), this.l, this.j, "dynamic_backup_native_render", null);
                 this.t = (BackupView) findViewWithTag("tt_express_backup_fl_tag_26");
                 a(true, (View) this, f2, f3, i2);
             } else if (z4 || (this.M && this.N)) {
@@ -1024,7 +1022,7 @@ public class NativeExpressView extends FrameLayout implements j {
                 if (this.s) {
                     this.O = 1;
                     s();
-                    com.bytedance.sdk.openadsdk.c.d.h(com.bytedance.sdk.openadsdk.core.p.a(), this.f1315l, this.j, "dynamic_backup_render", null);
+                    com.bytedance.sdk.openadsdk.c.d.h(com.bytedance.sdk.openadsdk.core.p.a(), this.l, this.j, "dynamic_backup_render", null);
                     BackupView backupView = (BackupView) findViewWithTag("tt_express_backup_fl_tag_26");
                     this.t = backupView;
                     if (backupView == null) {

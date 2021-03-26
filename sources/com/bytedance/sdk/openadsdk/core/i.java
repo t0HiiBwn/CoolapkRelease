@@ -41,9 +41,7 @@ public class i {
     private TTGlobalAppDownloadListener i;
     private final Set<Integer> j;
     private boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private Bitmap f1313l;
+    private Bitmap l;
     private a m;
     private TTDownloadEventLogger n;
     private TTSecAbs o;
@@ -75,7 +73,7 @@ public class i {
         Set<Integer> synchronizedSet = Collections.synchronizedSet(new HashSet());
         this.j = synchronizedSet;
         this.k = false;
-        this.f1313l = null;
+        this.l = null;
         this.m = new a();
         this.t = false;
         com.bytedance.sdk.openadsdk.i.g.a.a(p.a());
@@ -368,7 +366,7 @@ public class i {
         if (b.b()) {
             return f.a(com.bytedance.sdk.openadsdk.multipro.d.a.b("sp_global_info", "pause_icon", (String) null));
         }
-        return this.f1313l;
+        return this.l;
     }
 
     public void a(Bitmap bitmap) {
@@ -378,7 +376,7 @@ public class i {
                 com.bytedance.sdk.openadsdk.multipro.d.a.a("sp_global_info", "pause_icon", a2);
             }
         }
-        this.f1313l = bitmap;
+        this.l = bitmap;
     }
 
     public void a(String[] strArr) {

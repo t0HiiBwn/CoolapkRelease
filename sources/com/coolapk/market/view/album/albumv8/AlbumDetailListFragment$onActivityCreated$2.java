@@ -25,7 +25,7 @@ public final class AlbumDetailListFragment$onActivityCreated$2 extends RecyclerV
         Intrinsics.checkNotNullParameter(recyclerView, "recyclerView");
         super.onScrolled(recyclerView, i, i2);
         AlbumDetailListFragment albumDetailListFragment = this.this$0;
-        AlbumDetailListFragment.access$setMDistanceY$p(albumDetailListFragment, AlbumDetailListFragment.access$getMDistanceY$p(albumDetailListFragment) + i2);
+        albumDetailListFragment.mDistanceY = albumDetailListFragment.mDistanceY + i2;
         Rect rect = new Rect();
         RecyclerView.ViewHolder findViewHolderForAdapterPosition = recyclerView.findViewHolderForAdapterPosition(0);
         if (!(findViewHolderForAdapterPosition == null || (view = findViewHolderForAdapterPosition.itemView) == null)) {

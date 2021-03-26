@@ -3,13 +3,25 @@ package me.zhanghai.android.appiconloader.iconloaderlib;
 import android.graphics.Bitmap;
 
 public class BitmapInfo {
-    public static final Bitmap LOW_RES_ICON = Bitmap.createBitmap(1, 1, Bitmap.Config.ALPHA_8);
-    public int color;
-    public Bitmap icon;
+    public static final Bitmap LOW_RES_ICON;
+    public static final BitmapInfo LOW_RES_INFO;
+    public final int color;
+    public final Bitmap icon;
 
-    public void applyTo(BitmapInfo bitmapInfo) {
-        bitmapInfo.icon = this.icon;
-        bitmapInfo.color = this.color;
+    static {
+        Bitmap createBitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ALPHA_8);
+        LOW_RES_ICON = createBitmap;
+        LOW_RES_INFO = fromBitmap(createBitmap);
+    }
+
+    public BitmapInfo(Bitmap bitmap, int i) {
+        this.icon = bitmap;
+        this.color = i;
+    }
+
+    public final boolean isNullOrLowRes() {
+        Bitmap bitmap = this.icon;
+        return bitmap == null || bitmap == LOW_RES_ICON;
     }
 
     public final boolean isLowRes() {
@@ -17,13 +29,26 @@ public class BitmapInfo {
     }
 
     public static BitmapInfo fromBitmap(Bitmap bitmap) {
-        return fromBitmap(bitmap, null);
+        return of(bitmap, 0);
     }
 
-    public static BitmapInfo fromBitmap(Bitmap bitmap, ColorExtractor colorExtractor) {
-        BitmapInfo bitmapInfo = new BitmapInfo();
-        bitmapInfo.icon = bitmap;
-        bitmapInfo.color = colorExtractor != null ? colorExtractor.findDominantColorByHue(bitmap) : 0;
-        return bitmapInfo;
+    public static BitmapInfo of(Bitmap bitmap, int i) {
+        return new BitmapInfo(bitmap, i);
+    }
+
+    public interface Extender {
+        BitmapInfo getExtendedInfo(Bitmap bitmap, int i, BaseIconFactory baseIconFactory);
+
+        void prepareToDrawOnUi();
+
+        /* renamed from: me.zhanghai.android.appiconloader.iconloaderlib.BitmapInfo$Extender$-CC  reason: invalid class name */
+        public final /* synthetic */ class CC {
+            public static void $default$prepareToDrawOnUi(Extender extender) {
+            }
+
+            public static BitmapInfo $default$getExtendedInfo(Extender _this, Bitmap bitmap, int i, BaseIconFactory baseIconFactory) {
+                return BitmapInfo.of(bitmap, i);
+            }
+        }
     }
 }

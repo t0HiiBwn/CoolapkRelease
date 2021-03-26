@@ -15,9 +15,9 @@ final class GestureCover$seekEventRunnable$1 implements Runnable {
 
     @Override // java.lang.Runnable
     public final void run() {
-        if (this.this$0.seekProgress >= 0) {
+        if (GestureCover.access$getSeekProgress$p(this.this$0) >= 0) {
             Bundle obtain = BundlePool.obtain();
-            obtain.putInt("int_data", this.this$0.seekProgress);
+            obtain.putInt("int_data", GestureCover.access$getSeekProgress$p(this.this$0));
             this.this$0.requestSeek(obtain);
         }
     }

@@ -35,17 +35,17 @@ public class QrCodeBindingImpl extends QrCodeBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362198, 8);
-        sparseIntArray.put(2131363157, 9);
-        sparseIntArray.put(2131363608, 10);
-        sparseIntArray.put(2131362135, 11);
-        sparseIntArray.put(2131362835, 12);
-        sparseIntArray.put(2131363253, 13);
-        sparseIntArray.put(2131363243, 14);
-        sparseIntArray.put(2131363533, 15);
-        sparseIntArray.put(2131362707, 16);
-        sparseIntArray.put(2131362067, 17);
-        sparseIntArray.put(2131363588, 18);
+        sparseIntArray.put(2131362203, 8);
+        sparseIntArray.put(2131363171, 9);
+        sparseIntArray.put(2131363630, 10);
+        sparseIntArray.put(2131362138, 11);
+        sparseIntArray.put(2131362846, 12);
+        sparseIntArray.put(2131363267, 13);
+        sparseIntArray.put(2131363257, 14);
+        sparseIntArray.put(2131363551, 15);
+        sparseIntArray.put(2131362718, 16);
+        sparseIntArray.put(2131362069, 17);
+        sparseIntArray.put(2131363610, 18);
     }
 
     public QrCodeBindingImpl(DataBindingComponent dataBindingComponent, View view) {

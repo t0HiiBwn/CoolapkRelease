@@ -10,6 +10,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.coolapk.market.extend.ViewExtendsKt;
 import com.coolapk.market.model.Entity;
 import com.coolapk.market.model.Feed;
+import com.coolapk.market.model.FeedGoods;
 import com.coolapk.market.model.HolderItem;
 import com.coolapk.market.util.DisplayUtils;
 import com.coolapk.market.util.UiUtils;
@@ -113,10 +114,18 @@ public class FeedArticleDetailFragment extends FeedDetailFragmentV8 {
             Intrinsics.checkNotNullExpressionValue(holderItem2, "bottomSpaceHolder");
             dataList3.add(holderItem2);
             if (!getViewModel().getHideAllComments()) {
-                List<Parcelable> dataList4 = getDataList();
+                List<FeedGoods> includeGoods = getFeed$presentation_coolapkAppRelease().getIncludeGoods();
+                Intrinsics.checkNotNullExpressionValue(includeGoods, "feed.includeGoods");
+                if (!includeGoods.isEmpty()) {
+                    List<Parcelable> dataList4 = getDataList();
+                    HolderItem bindGoodsHolder$presentation_coolapkAppRelease = getBindGoodsHolder$presentation_coolapkAppRelease();
+                    Intrinsics.checkNotNullExpressionValue(bindGoodsHolder$presentation_coolapkAppRelease, "bindGoodsHolder");
+                    dataList4.add(bindGoodsHolder$presentation_coolapkAppRelease);
+                }
+                List<Parcelable> dataList5 = getDataList();
                 HolderItem shareActionHolder$presentation_coolapkAppRelease = getShareActionHolder$presentation_coolapkAppRelease();
                 Intrinsics.checkNotNullExpressionValue(shareActionHolder$presentation_coolapkAppRelease, "shareActionHolder");
-                dataList4.add(shareActionHolder$presentation_coolapkAppRelease);
+                dataList5.add(shareActionHolder$presentation_coolapkAppRelease);
                 Entity detailSponsorCard = getFeed$presentation_coolapkAppRelease().getDetailSponsorCard();
                 if (detailSponsorCard != null) {
                     getDataList().add(detailSponsorCard);
@@ -154,12 +163,12 @@ public class FeedArticleDetailFragment extends FeedDetailFragmentV8 {
     @Override // com.coolapk.market.view.feed.reply.FeedDetailFragmentV8, com.coolapk.market.view.feed.reply.FeedReplyListFragmentV8, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558617).suitedMethod(FeedArticleDetailFragment$onActivityCreated$1.INSTANCE).constructor(new FeedArticleDetailFragment$onActivityCreated$2(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558616).suitedMethod(FeedArticleDetailFragment$onActivityCreated$3.INSTANCE).constructor(new FeedArticleDetailFragment$onActivityCreated$4(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558611).suitedEntityType("ARTICLE_FEED_TOP").constructor(new FeedArticleDetailFragment$onActivityCreated$5(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558609).constructor(new FeedArticleDetailFragment$onActivityCreated$6(this)).suitedMethod(FeedArticleDetailFragment$onActivityCreated$7.INSTANCE).resetItemViewType(2131562034).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558617).suitedMethod(FeedArticleDetailFragment$onActivityCreated$8.INSTANCE).constructor(new FeedArticleDetailFragment$onActivityCreated$9(this)).resetItemViewType(20897633).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558609).suitedMethod(new FeedArticleDetailFragment$onActivityCreated$10(this)).constructor(new FeedArticleDetailFragment$onActivityCreated$11(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558621).suitedMethod(FeedArticleDetailFragment$onActivityCreated$1.INSTANCE).constructor(new FeedArticleDetailFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558620).suitedMethod(FeedArticleDetailFragment$onActivityCreated$3.INSTANCE).constructor(new FeedArticleDetailFragment$onActivityCreated$4(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558615).suitedEntityType("ARTICLE_FEED_TOP").constructor(new FeedArticleDetailFragment$onActivityCreated$5(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558613).constructor(new FeedArticleDetailFragment$onActivityCreated$6(this)).suitedMethod(FeedArticleDetailFragment$onActivityCreated$7.INSTANCE).resetItemViewType(2131562038).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558621).suitedMethod(FeedArticleDetailFragment$onActivityCreated$8.INSTANCE).constructor(new FeedArticleDetailFragment$onActivityCreated$9(this)).resetItemViewType(20897633).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558613).suitedMethod(new FeedArticleDetailFragment$onActivityCreated$10(this)).constructor(new FeedArticleDetailFragment$onActivityCreated$11(this)).build(), 0, 2, null);
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new FeedArticleDetailFragment$onActivityCreated$12());
     }
 

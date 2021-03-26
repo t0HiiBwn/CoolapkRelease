@@ -86,57 +86,57 @@ public class c extends WebViewClient {
                 return true;
             }
             if (!(!com.ss.android.downloadlib.b.j.a(parse) || (xVar2 = this.b) == null || xVar2.c() == null)) {
-                String l2 = this.b.l();
+                String l = this.b.l();
                 l c2 = this.b.c();
-                boolean a2 = g.d().e().a(this.c, parse, b.a(l2, c2, null).a(), b.a(c2, this.b.l()).a(), b.a(c2).a());
+                boolean a2 = g.d().e().a(this.c, parse, b.a(l, c2, null).a(), b.a(c2, this.b.l()).a(), b.a(c2).a());
                 k.a(true);
                 if (a2) {
                     return true;
                 }
             }
             if (!(com.bytedance.sdk.openadsdk.utils.x.a(str) || (xVar = this.b) == null || xVar.c() == null)) {
-                final String l3 = this.b.l();
-                u.f("TTWebViewClient", "TTWebView shouldOverrideUrlLoading tag " + l3);
+                final String l2 = this.b.l();
+                u.f("TTWebViewClient", "TTWebView shouldOverrideUrlLoading tag " + l2);
                 final l c3 = this.b.c();
                 Intent intent = new Intent("android.intent.action.VIEW");
                 intent.setData(parse);
                 intent.addFlags(268435456);
-                d.a(this.c, c3, l3, "lp_open_dpl", lowerCase);
+                d.a(this.c, c3, l2, "lp_open_dpl", lowerCase);
                 if (!aj.c(this.c)) {
                     try {
                         this.c.startActivity(intent);
                         u.f("TTWebViewClient", "TTWebView shouldOverrideUrlLoading startActivitySuccess ");
-                        d.b(this.c, c3, l3, "lp_openurl");
-                        com.bytedance.sdk.openadsdk.c.k.a().a(c3, l3, true);
+                        d.b(this.c, c3, l2, "lp_openurl");
+                        com.bytedance.sdk.openadsdk.c.k.a().a(c3, l2, true);
                     } catch (Throwable unused) {
-                        d.b(this.c, c3, l3, "lp_openurl_failed");
-                        d.b(p.a(), c3, l3, "lp_deeplink_fail_realtime");
+                        d.b(this.c, c3, l2, "lp_openurl_failed");
+                        d.b(p.a(), c3, l2, "lp_deeplink_fail_realtime");
                     }
                 } else if (aj.a(this.c, intent)) {
-                    u.f("TTWebViewClient", "TTWebView shouldOverrideUrlLoading 该app已经安装 tag " + l3 + " URL " + str);
+                    u.f("TTWebViewClient", "TTWebView shouldOverrideUrlLoading 该app已经安装 tag " + l2 + " URL " + str);
                     com.bytedance.sdk.openadsdk.utils.b.a(this.c, intent, new b.a() {
                         /* class com.bytedance.sdk.openadsdk.core.widget.webview.c.AnonymousClass1 */
 
                         @Override // com.bytedance.sdk.openadsdk.utils.b.a
                         public void a() {
                             u.f("TTWebViewClient", "TTWebView shouldOverrideUrlLoading startActivitySuccess ");
-                            d.b(c.this.c, c3, l3, "lp_openurl");
-                            d.b(p.a(), c3, l3, "lp_deeplink_success_realtime");
+                            d.b(c.this.c, c3, l2, "lp_openurl");
+                            d.b(p.a(), c3, l2, "lp_deeplink_success_realtime");
                         }
 
                         @Override // com.bytedance.sdk.openadsdk.utils.b.a
                         public void a(Throwable th) {
                             u.f("TTWebViewClient", "TTWebView shouldOverrideUrlLoading 调起该app失败 ");
-                            d.b(c.this.c, c3, l3, "lp_openurl_failed");
-                            d.b(p.a(), c3, l3, "lp_deeplink_fail_realtime");
+                            d.b(c.this.c, c3, l2, "lp_openurl_failed");
+                            d.b(p.a(), c3, l2, "lp_deeplink_fail_realtime");
                         }
                     });
                     u.f("TTWebViewClient", "TTWebView shouldOverrideUrlLoading OpenAppSuccEvent.obtain().send true ");
-                    com.bytedance.sdk.openadsdk.c.k.a().a(c3, l3, true);
+                    com.bytedance.sdk.openadsdk.c.k.a().a(c3, l2, true);
                 } else {
-                    u.f("TTWebViewClient", "TTWebView shouldOverrideUrlLoading 该app没有安装 tag " + l3 + " url " + str);
-                    d.b(this.c, c3, l3, "lp_openurl_failed");
-                    d.b(p.a(), c3, l3, "lp_deeplink_fail_realtime");
+                    u.f("TTWebViewClient", "TTWebView shouldOverrideUrlLoading 该app没有安装 tag " + l2 + " url " + str);
+                    d.b(this.c, c3, l2, "lp_openurl_failed");
+                    d.b(p.a(), c3, l2, "lp_deeplink_fail_realtime");
                 }
                 return true;
             }

@@ -10,9 +10,7 @@ import com.amap.api.services.route.TruckRouteRestult;
 public final class ao extends b<RouteSearch.TruckRouteQuery, TruckRouteRestult> {
     private final String j = "/direction/truck?";
     private final String k = "|";
-
-    /* renamed from: l  reason: collision with root package name */
-    private final String f1199l = ",";
+    private final String l = ",";
 
     public ao(Context context, RouteSearch.TruckRouteQuery truckRouteQuery) {
         super(context, truckRouteQuery);

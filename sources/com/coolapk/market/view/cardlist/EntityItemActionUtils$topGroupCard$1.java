@@ -39,7 +39,7 @@ public final class EntityItemActionUtils$topGroupCard$1 extends ItemActionHandle
         if (viewHolder.getAdapterPosition() != -1) {
             Parcelable parcelable = this.$fragment.getDataList().get(this.$fragment.getDataIndex(viewHolder.getAdapterPosition()));
             int id = view.getId();
-            if (id == 2131361876) {
+            if (id == 2131361877) {
                 Object tag = view.getTag();
                 Objects.requireNonNull(tag, "null cannot be cast to non-null type kotlin.Int");
                 int intValue = ((Integer) tag).intValue();
@@ -65,9 +65,9 @@ public final class EntityItemActionUtils$topGroupCard$1 extends ItemActionHandle
                 strArr[2] = upgradeInfo != null ? upgradeInfo.getDownloadUrlMd5(0) : null;
                 strArr[3] = upgradeInfo != null ? upgradeInfo.getDownloadUrlMd5(1) : null;
                 StateUtils.handleClick(this.$activity, targetUrl.downloadKeys(strArr).build(), null);
-            } else if (id != 2131362768) {
+            } else if (id != 2131362779) {
                 switch (id) {
-                    case 2131362781:
+                    case 2131362792:
                         Objects.requireNonNull(parcelable, "null cannot be cast to non-null type com.coolapk.market.model.TopGroupCard");
                         List<TopCard> entities3 = ((TopGroupCard) parcelable).getEntities();
                         Intrinsics.checkNotNull(entities3);
@@ -75,7 +75,7 @@ public final class EntityItemActionUtils$topGroupCard$1 extends ItemActionHandle
                         Intrinsics.checkNotNullExpressionValue(topCard2, "topCard");
                         ActionManagerCompat.startActivityByUrl(this.$activity, topCard2.getSubUrl(), topCard2.getTitle(), topCard2.getSubTitle());
                         return;
-                    case 2131362782:
+                    case 2131362793:
                         Objects.requireNonNull(parcelable, "null cannot be cast to non-null type com.coolapk.market.model.TopGroupCard");
                         List<TopCard> entities4 = ((TopGroupCard) parcelable).getEntities();
                         Intrinsics.checkNotNull(entities4);
@@ -83,7 +83,7 @@ public final class EntityItemActionUtils$topGroupCard$1 extends ItemActionHandle
                         Intrinsics.checkNotNullExpressionValue(topCard3, "topCard");
                         ActionManagerCompat.startActivityByUrl(this.$activity, topCard3.getSubUrl(), topCard3.getTitle(), topCard3.getSubTitle());
                         return;
-                    case 2131362783:
+                    case 2131362794:
                         Objects.requireNonNull(parcelable, "null cannot be cast to non-null type com.coolapk.market.model.TopGroupCard");
                         List<TopCard> entities5 = ((TopGroupCard) parcelable).getEntities();
                         Intrinsics.checkNotNull(entities5);
@@ -91,7 +91,7 @@ public final class EntityItemActionUtils$topGroupCard$1 extends ItemActionHandle
                         Intrinsics.checkNotNullExpressionValue(topCard4, "topCard");
                         ActionManagerCompat.startActivityByUrl(this.$activity, topCard4.getUrl(), topCard4.getTitle(), topCard4.getSubTitle());
                         return;
-                    case 2131362784:
+                    case 2131362795:
                         Objects.requireNonNull(parcelable, "null cannot be cast to non-null type com.coolapk.market.model.TopGroupCard");
                         List<TopCard> entities6 = ((TopGroupCard) parcelable).getEntities();
                         Intrinsics.checkNotNull(entities6);
@@ -114,7 +114,7 @@ public final class EntityItemActionUtils$topGroupCard$1 extends ItemActionHandle
                 List<ServiceApp> entities8 = topCard6.getEntities();
                 Intrinsics.checkNotNull(entities8);
                 ServiceApp serviceApp2 = entities8.get(intValue2);
-                View findViewById = view.findViewById(2131362672);
+                View findViewById = view.findViewById(2131362683);
                 Intrinsics.checkNotNullExpressionValue(serviceApp2, "serviceApp");
                 ActionManager.startAppViewActivity(this.$activity, findViewById, serviceApp2.getPackageName(), serviceApp2.getLogo(), serviceApp2.getAppName(), serviceApp2.getExtraAnalysisData(), serviceApp2.getRequestContext(), serviceApp2.getExtraFromApi());
             }

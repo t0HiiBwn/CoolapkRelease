@@ -46,19 +46,19 @@ public class AppViewBindingImpl extends AppViewBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(36);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(17, new String[]{"item_app_view_download"}, new int[]{25}, new int[]{2131558603});
+        includedLayouts.setIncludes(17, new String[]{"item_app_view_download"}, new int[]{25}, new int[]{2131558607});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362340, 26);
-        sparseIntArray.put(2131362652, 27);
-        sparseIntArray.put(2131362734, 28);
-        sparseIntArray.put(2131363588, 29);
-        sparseIntArray.put(2131362083, 30);
-        sparseIntArray.put(2131362284, 31);
-        sparseIntArray.put(2131362291, 32);
-        sparseIntArray.put(2131362970, 33);
-        sparseIntArray.put(2131361983, 34);
-        sparseIntArray.put(2131361903, 35);
+        sparseIntArray.put(2131362346, 26);
+        sparseIntArray.put(2131362660, 27);
+        sparseIntArray.put(2131362745, 28);
+        sparseIntArray.put(2131363610, 29);
+        sparseIntArray.put(2131362085, 30);
+        sparseIntArray.put(2131362289, 31);
+        sparseIntArray.put(2131362296, 32);
+        sparseIntArray.put(2131362982, 33);
+        sparseIntArray.put(2131361984, 34);
+        sparseIntArray.put(2131361904, 35);
     }
 
     public AppViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -146,7 +146,7 @@ public class AppViewBindingImpl extends AppViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppViewViewModel) obj);
@@ -160,7 +160,7 @@ public class AppViewBindingImpl extends AppViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -197,7 +197,7 @@ public class AppViewBindingImpl extends AppViewBinding {
                 this.mDirtyFlags |= 2;
             }
             return true;
-        } else if (i == 189) {
+        } else if (i == 190) {
             synchronized (this) {
                 this.mDirtyFlags |= 4;
             }
@@ -207,12 +207,12 @@ public class AppViewBindingImpl extends AppViewBinding {
                 this.mDirtyFlags |= 8;
             }
             return true;
-        } else if (i == 242) {
+        } else if (i == 243) {
             synchronized (this) {
                 this.mDirtyFlags |= 16;
             }
             return true;
-        } else if (i == 178) {
+        } else if (i == 179) {
             synchronized (this) {
                 this.mDirtyFlags |= 32;
             }
@@ -227,7 +227,7 @@ public class AppViewBindingImpl extends AppViewBinding {
                 this.mDirtyFlags |= 128;
             }
             return true;
-        } else if (i == 233) {
+        } else if (i == 234) {
             synchronized (this) {
                 this.mDirtyFlags |= 256;
             }
@@ -237,7 +237,7 @@ public class AppViewBindingImpl extends AppViewBinding {
                 this.mDirtyFlags |= 512;
             }
             return true;
-        } else if (i != 186) {
+        } else if (i != 187) {
             return false;
         } else {
             synchronized (this) {
@@ -342,7 +342,7 @@ public class AppViewBindingImpl extends AppViewBinding {
                 i7 = 0;
             }
             if ((j & 2306) != 0) {
-                str8 = this.mboundView14.getResources().getString(2131886964, appViewViewModel != null ? appViewViewModel.getScore() : null);
+                str8 = this.mboundView14.getResources().getString(2131887026, appViewViewModel != null ? appViewViewModel.getScore() : null);
             } else {
                 str8 = null;
             }

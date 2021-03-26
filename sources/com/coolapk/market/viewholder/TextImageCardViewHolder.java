@@ -9,7 +9,7 @@ import com.coolapk.market.model.EntityCard;
 import com.coolapk.market.util.ViewUtil;
 
 public class TextImageCardViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558949;
+    public static final int LAYOUT_ID = 2131558956;
     private EntityCard card;
     private TitleViewPart viewPart;
 
@@ -32,7 +32,7 @@ public class TextImageCardViewHolder extends BindingViewHolder {
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         super.onClick(view);
-        if (view.getId() == 2131362768) {
+        if (view.getId() == 2131362779) {
             ActionManager.startActivityByUrl(getContext(), this.card.getUrl());
             StatisticHelper.getInstance().recordEntityEvent("", this.card, getAdapterPosition(), null, "");
         }

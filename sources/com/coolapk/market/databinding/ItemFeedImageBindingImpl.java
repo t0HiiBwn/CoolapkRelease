@@ -24,9 +24,9 @@ public class ItemFeedImageBindingImpl extends ItemFeedImageBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362609, 2);
-        sparseIntArray.put(2131363146, 3);
-        sparseIntArray.put(2131362417, 4);
+        sparseIntArray.put(2131362617, 2);
+        sparseIntArray.put(2131363160, 3);
+        sparseIntArray.put(2131362423, 4);
     }
 
     public ItemFeedImageBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -64,7 +64,7 @@ public class ItemFeedImageBindingImpl extends ItemFeedImageBinding {
     public boolean setVariable(int i, Object obj) {
         if (130 == i) {
             setGifImage((String) obj);
-        } else if (159 != i) {
+        } else if (160 != i) {
             return false;
         } else {
             setImgUrl((String) obj);

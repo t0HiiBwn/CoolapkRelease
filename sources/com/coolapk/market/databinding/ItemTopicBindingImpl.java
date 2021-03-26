@@ -26,8 +26,8 @@ public class ItemTopicBindingImpl extends ItemTopicBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363612, 4);
-        sparseIntArray.put(2131362580, 5);
+        sparseIntArray.put(2131363634, 4);
+        sparseIntArray.put(2131362588, 5);
     }
 
     public ItemTopicBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -65,9 +65,9 @@ public class ItemTopicBindingImpl extends ItemTopicBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Topic) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);
@@ -81,7 +81,7 @@ public class ItemTopicBindingImpl extends ItemTopicBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -91,7 +91,7 @@ public class ItemTopicBindingImpl extends ItemTopicBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -141,7 +141,7 @@ public class ItemTopicBindingImpl extends ItemTopicBinding {
                     Boolean bool = null;
                     str4 = str2;
                     i2 = i;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
                 } else {
                     i2 = i;
                     str4 = str2;

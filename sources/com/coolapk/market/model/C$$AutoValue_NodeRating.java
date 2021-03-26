@@ -28,7 +28,7 @@ abstract class C$$AutoValue_NodeRating extends NodeRating {
     private final String url;
     private final UserInfo userInfo;
 
-    C$$AutoValue_NodeRating(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, String str13, int i, String str14, UserInfo userInfo2, NodeTargetInfo nodeTargetInfo, int i2, int i3, int i4) {
+    C$$AutoValue_NodeRating(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, String str13, int i, String str14, UserInfo userInfo2, NodeTargetInfo nodeTargetInfo, int i2, int i3, int i4) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -41,8 +41,8 @@ abstract class C$$AutoValue_NodeRating extends NodeRating {
         this.subTitle = str9;
         this.id = str10;
         this.extraData = str11;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.targetType = str12;
         this.targetId = str13;
         this.star = i;
@@ -232,10 +232,10 @@ abstract class C$$AutoValue_NodeRating extends NodeRating {
                                                 if (str11 != null ? str11.equals(nodeRating.getId()) : nodeRating.getId() == null) {
                                                     String str12 = this.extraData;
                                                     if (str12 != null ? str12.equals(nodeRating.getExtraData()) : nodeRating.getExtraData() == null) {
-                                                        Long l2 = this.dateline;
-                                                        if (l2 != null ? l2.equals(nodeRating.getDateline()) : nodeRating.getDateline() == null) {
-                                                            Long l3 = this.lastUpdate;
-                                                            if (l3 != null ? l3.equals(nodeRating.getLastUpdate()) : nodeRating.getLastUpdate() == null) {
+                                                        Long l = this.dateline;
+                                                        if (l != null ? l.equals(nodeRating.getDateline()) : nodeRating.getDateline() == null) {
+                                                            Long l2 = this.lastUpdate;
+                                                            if (l2 != null ? l2.equals(nodeRating.getLastUpdate()) : nodeRating.getLastUpdate() == null) {
                                                                 String str13 = this.targetType;
                                                                 if (str13 != null ? str13.equals(nodeRating.getTargetType()) : nodeRating.getTargetType() == null) {
                                                                     String str14 = this.targetId;
@@ -289,10 +289,10 @@ abstract class C$$AutoValue_NodeRating extends NodeRating {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str12 = this.targetType;
         int hashCode15 = (hashCode14 ^ (str12 == null ? 0 : str12.hashCode())) * 1000003;
         String str13 = this.targetId;

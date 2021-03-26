@@ -36,9 +36,7 @@ public final class ei {
     private static boolean i = true;
     private static int j = 1000;
     private static int k = 200;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static boolean f1375l = false;
+    private static boolean l = false;
     private static int m = 20;
     private static int n = 0;
     private static volatile int o = 0;
@@ -122,18 +120,18 @@ public final class ei {
                         if (k < 30) {
                             k = 30;
                         }
-                        f1375l = l.a(jSONObject2.optString("igu"), f1375l);
+                        l = l.a(jSONObject2.optString("igu"), l);
                         m = jSONObject2.optInt("ms", m);
                         o = jSONObject2.optInt("rot", 0);
                         n = jSONObject2.optInt("pms", 0);
                     }
                     str = "c";
                     try {
-                        ba.a(j, f1375l, m, n);
-                        bc.a(f1375l, n);
+                        ba.a(j, l, m, n);
+                        bc.a(l, n);
                         eo.a(editor, "fn", j);
                         eo.a(editor, "mpn", k);
-                        eo.a(editor, "igu", f1375l);
+                        eo.a(editor, "igu", l);
                         eo.a(editor, "ms", m);
                         eo.a(editor, "rot", o);
                         eo.a(editor, "pms", n);
@@ -415,13 +413,13 @@ public final class ei {
             try {
                 j = eo.a(context, "pref", "fn", j);
                 k = eo.a(context, "pref", "mpn", k);
-                f1375l = eo.a(context, "pref", "igu", f1375l);
+                l = eo.a(context, "pref", "igu", l);
                 m = eo.a(context, "pref", "ms", m);
                 o = eo.a(context, "pref", "rot", 0);
                 int a2 = eo.a(context, "pref", "pms", 0);
                 n = a2;
-                ba.a(j, f1375l, m, a2);
-                bc.a(f1375l, n);
+                ba.a(j, l, m, a2);
+                bc.a(l, n);
             } catch (Throwable unused) {
             }
             try {

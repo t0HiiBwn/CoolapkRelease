@@ -58,7 +58,7 @@ public class ItemVoteUserBindingImpl extends ItemVoteUserBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((User) obj);
@@ -71,7 +71,7 @@ public class ItemVoteUserBindingImpl extends ItemVoteUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -80,7 +80,7 @@ public class ItemVoteUserBindingImpl extends ItemVoteUserBinding {
         long j;
         String str;
         String str2;
-        Long l2;
+        Long l;
         String str3;
         String str4;
         UserInfo userInfo;
@@ -92,13 +92,13 @@ public class ItemVoteUserBindingImpl extends ItemVoteUserBinding {
         int i = ((j & 3) > 0 ? 1 : ((j & 3) == 0 ? 0 : -1));
         if (i != 0) {
             if (user != null) {
-                l2 = user.getDateline();
+                l = user.getDateline();
                 str2 = user.getUserName();
                 str4 = user.getUserAvatar();
                 userInfo = user.getUserInfo();
             } else {
                 userInfo = null;
-                l2 = null;
+                l = null;
                 str2 = null;
                 str4 = null;
             }
@@ -111,15 +111,15 @@ public class ItemVoteUserBindingImpl extends ItemVoteUserBinding {
             }
         } else {
             str3 = null;
-            l2 = null;
+            l = null;
             str2 = null;
             str = null;
         }
         if (i != 0) {
-            TextViewBindingAdapters.setTime(this.loginTimeView, l2);
+            TextViewBindingAdapters.setTime(this.loginTimeView, l);
             TextViewBindingAdapter.setText(this.titleView, str2);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str3, bool);
         }
     }

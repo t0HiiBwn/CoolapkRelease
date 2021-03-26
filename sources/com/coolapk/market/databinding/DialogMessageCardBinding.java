@@ -124,7 +124,7 @@ public abstract class DialogMessageCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogMessageCardBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogMessageCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558530, viewGroup, z, obj);
+        return (DialogMessageCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558532, viewGroup, z, obj);
     }
 
     public static DialogMessageCardBinding inflate(LayoutInflater layoutInflater) {
@@ -133,7 +133,7 @@ public abstract class DialogMessageCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogMessageCardBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogMessageCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558530, null, false, obj);
+        return (DialogMessageCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558532, null, false, obj);
     }
 
     public static DialogMessageCardBinding bind(View view) {
@@ -142,6 +142,6 @@ public abstract class DialogMessageCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogMessageCardBinding bind(View view, Object obj) {
-        return (DialogMessageCardBinding) bind(obj, view, 2131558530);
+        return (DialogMessageCardBinding) bind(obj, view, 2131558532);
     }
 }

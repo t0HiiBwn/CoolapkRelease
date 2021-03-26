@@ -36,6 +36,6 @@ final class AlbumEditListFragment$onActivityCreated$5 implements View.OnClickLis
             ActionManager.startAlbumPickActivity(this.this$0.getActivity(), this.this$0.mAlbum);
             return;
         }
-        Toast.show$default(this.this$0.getActivity(), this.this$0.getString(2131886587), 0, false, 12, null);
+        Toast.show$default(this.this$0.getActivity(), this.this$0.getString(2131886649), 0, false, 12, null);
     }
 }

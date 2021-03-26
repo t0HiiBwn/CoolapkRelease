@@ -25,7 +25,7 @@ public class ItemDocMarqueeCardBindingImpl extends ItemDocMarqueeCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362906, 1);
+        sparseIntArray.put(2131362918, 1);
     }
 
     public ItemDocMarqueeCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {

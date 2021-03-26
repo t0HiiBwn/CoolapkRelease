@@ -12,7 +12,9 @@ import androidx.databinding.ViewDataBinding;
 import com.coolapk.market.databinding.ItemFeedVoteCommentViewPartBinding;
 import com.coolapk.market.extend.EntityExtendsKt;
 import com.coolapk.market.extend.ViewExtendsKt;
+import com.coolapk.market.local.LoginSession;
 import com.coolapk.market.manager.ActionManager;
+import com.coolapk.market.manager.DataManager;
 import com.coolapk.market.model.Feed;
 import com.coolapk.market.model.Vote;
 import com.coolapk.market.model.VoteOption;
@@ -33,7 +35,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: VoteCommentDetailViewPart.kt */
 public class VoteCommentDetailViewPart extends BindingViewPart<ItemFeedVoteCommentViewPartBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558739;
+    public static final int LAYOUT_ID = 2131558746;
     private final DataBindingComponent component;
     private Feed feed;
     private boolean haveShownAnimation;
@@ -88,7 +90,7 @@ public class VoteCommentDetailViewPart extends BindingViewPart<ItemFeedVoteComme
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedVoteCommentViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558739, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558746, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemFeedVoteCommentViewPartBinding) inflate;
     }
@@ -160,9 +162,15 @@ public class VoteCommentDetailViewPart extends BindingViewPart<ItemFeedVoteComme
         TextView textView = ((ItemFeedVoteCommentViewPartBinding) getBinding()).subTitleView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.subTitleView");
         textView.setVisibility(0);
+        String uid = feed2.getUid();
+        DataManager instance = DataManager.getInstance();
+        Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
+        LoginSession loginSession = instance.getLoginSession();
+        Intrinsics.checkNotNullExpressionValue(loginSession, "DataManager.getInstance().loginSession");
+        String str = Intrinsics.areEqual(uid, loginSession.getUid()) ? "我" : "他";
         TextView textView2 = ((ItemFeedVoteCommentViewPartBinding) getBinding()).subTitleView;
         Intrinsics.checkNotNullExpressionValue(textView2, "binding.subTitleView");
-        textView2.setText("我选了" + feedUserVoteIds.size() + (char) 39033);
+        textView2.setText(str + "选了" + feedUserVoteIds.size() + (char) 39033);
         getVoteMultiView$presentation_coolapkAppRelease().setAdapter(new VoteCommentDetailViewPart$populateMultiVote$1(this, vote, feed2, i, feedUserVoteIds, getContext(), 0, feedUserVoteIds));
         this.haveShownAnimation = true;
         getVoteMultiView$presentation_coolapkAppRelease().notifyDataSetChange();
@@ -174,7 +182,7 @@ public class VoteCommentDetailViewPart extends BindingViewPart<ItemFeedVoteComme
         Feed feed2 = this.feed;
         if (feed2 != null) {
             int id = view.getId();
-            if (id == 2131363260 || id == 2131363585) {
+            if (id == 2131363274 || id == 2131363607) {
                 Context context = getContext();
                 Vote vote = feed2.getVote();
                 Intrinsics.checkNotNull(vote);

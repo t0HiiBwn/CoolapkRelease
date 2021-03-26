@@ -29,18 +29,18 @@ public class SearchBackHeaderBindingImpl extends SearchBackHeaderBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363004, 1);
-        sparseIntArray.put(2131363007, 2);
-        sparseIntArray.put(2131363318, 3);
-        sparseIntArray.put(2131362882, 4);
-        sparseIntArray.put(2131363319, 5);
-        sparseIntArray.put(2131363320, 6);
-        sparseIntArray.put(2131362087, 7);
-        sparseIntArray.put(2131363156, 8);
-        sparseIntArray.put(2131363157, 9);
-        sparseIntArray.put(2131362244, 10);
-        sparseIntArray.put(2131363304, 11);
-        sparseIntArray.put(2131363311, 12);
+        sparseIntArray.put(2131363018, 1);
+        sparseIntArray.put(2131363021, 2);
+        sparseIntArray.put(2131363334, 3);
+        sparseIntArray.put(2131362893, 4);
+        sparseIntArray.put(2131363335, 5);
+        sparseIntArray.put(2131363336, 6);
+        sparseIntArray.put(2131362090, 7);
+        sparseIntArray.put(2131363170, 8);
+        sparseIntArray.put(2131363171, 9);
+        sparseIntArray.put(2131362249, 10);
+        sparseIntArray.put(2131363319, 11);
+        sparseIntArray.put(2131363327, 12);
     }
 
     public SearchBackHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {

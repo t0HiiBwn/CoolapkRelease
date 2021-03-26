@@ -25,10 +25,13 @@ import com.coolapk.market.widget.multitype.SimpleViewHolderFactor;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import kotlin.Metadata;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
+import org.greenrobot.eventbus.Subscribe;
 import rx.Observable;
 
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000l\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u0000 )2\u00020\u0001:\u0001)B\u0005¢\u0006\u0002\u0010\u0002J\u0014\u0010\u0007\u001a\u00020\b2\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\nH\u0002J,\u0010\u000b\u001a\u00020\u00062\u0006\u0010\f\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u00062\u0012\u0010\u000f\u001a\u000e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\r0\u0010H\u0014J\u0018\u0010\u0012\u001a\u0004\u0018\u00010\n2\f\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\u00150\u0014H\u0002J$\u0010\u0016\u001a\b\u0012\u0004\u0012\u00020\u00180\u00172\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u00180\u00172\u0006\u0010\u001a\u001a\u00020\u0004H\u0014J\u0012\u0010\u001b\u001a\u00020\u001c2\b\u0010\u001d\u001a\u0004\u0018\u00010\u001eH\u0016J\u0010\u0010\u001f\u001a\u00020\u001c2\u0006\u0010 \u001a\u00020!H\u0007J$\u0010\"\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00180\u00170#2\u0006\u0010\u001a\u001a\u00020\u00042\u0006\u0010$\u001a\u00020\u0006H\u0016J\b\u0010%\u001a\u00020\u001cH\u0014J \u0010&\u001a\u00020\u00042\u0006\u0010\u001a\u001a\u00020\u00042\u000e\u0010\u0019\u001a\n\u0012\u0004\u0012\u00020\u0018\u0018\u00010\u0017H\u0014J\u0018\u0010'\u001a\u00020\u001c2\u0006\u0010\t\u001a\u00020\n2\b\b\u0002\u0010(\u001a\u00020\u0004R\u000e\u0010\u0003\u001a\u00020\u0004X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u000e¢\u0006\u0002\n\u0000¨\u0006*"}, d2 = {"Lcom/coolapk/market/view/backupList/BackupListFragment;", "Lcom/coolapk/market/view/cardlist/EntityListFragment;", "()V", "isLoadHeader", "", "listNum", "", "createHeaderData", "Lcom/coolapk/market/model/HolderItem;", "back", "Lcom/coolapk/market/model/BackupInfo;", "filterDataWhenRefresh", "originData", "", "index", "newDataByCardId", "", "", "findBackup", "list", "", "Landroid/os/Parcelable;", "modifyDataBeforeHandle", "", "Lcom/coolapk/market/model/Entity;", "data", "isRefresh", "onActivityCreated", "", "savedInstanceState", "Landroid/os/Bundle;", "onBackupDel", "event", "Lcom/coolapk/market/event/BackupDelEvent;", "onCreateRequest", "Lrx/Observable;", "page", "onRegisterCards", "onRequestResponse", "putBackupInfo", "isCover", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: BackupListFragment.kt */
 public final class BackupListFragment extends EntityListFragment {
     public static final Companion Companion = new Companion(null);
@@ -53,7 +56,7 @@ public final class BackupListFragment extends EntityListFragment {
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         ViewExtendsKt.removeAllItemDecorations(recyclerView);
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(activity).type(2131558619, 2131231051).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(activity).type(2131558623, 2131231061).create());
     }
 
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListContract.View
@@ -74,10 +77,11 @@ public final class BackupListFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment
     protected void onRegisterCards() {
         super.onRegisterCards();
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558621).suitedMethod(BackupListFragment$onRegisterCards$1.INSTANCE).constructor(new BackupListFragment$onRegisterCards$2(this)).build(), 0);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558619).suitedMethod(BackupListFragment$onRegisterCards$3.INSTANCE).constructor(new BackupListFragment$onRegisterCards$4(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558625).suitedMethod(BackupListFragment$onRegisterCards$1.INSTANCE).constructor(new BackupListFragment$onRegisterCards$2(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558623).suitedMethod(BackupListFragment$onRegisterCards$3.INSTANCE).constructor(new BackupListFragment$onRegisterCards$4(this)).build(), 0);
     }
 
+    /* access modifiers changed from: protected */
     @Override // com.coolapk.market.view.cardlist.EntityListFragment
     public boolean onRequestResponse(boolean z, List<? extends Entity> list) {
         boolean onRequestResponse = super.onRequestResponse(z, list);
@@ -177,6 +181,7 @@ public final class BackupListFragment extends EntityListFragment {
         getDataList().set(0, createHeaderData(backupInfo));
     }
 
+    @Subscribe
     public final void onBackupDel(BackupDelEvent backupDelEvent) {
         Intrinsics.checkNotNullParameter(backupDelEvent, "event");
         int i = 0;
@@ -201,6 +206,7 @@ public final class BackupListFragment extends EntityListFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0006\u0010\u0005\u001a\u00020\u0006R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0007"}, d2 = {"Lcom/coolapk/market/view/backupList/BackupListFragment$Companion;", "", "()V", "KEY_BACKUP_HEADER", "", "newInstance", "Lcom/coolapk/market/view/backupList/BackupListFragment;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: BackupListFragment.kt */
     public static final class Companion {
         private Companion() {

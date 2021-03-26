@@ -35,9 +35,7 @@ public class h {
     private List<String> i;
     private List<Integer> j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private List<String> f1470l;
+    private List<String> l;
 
     /* compiled from: UMStoreManager */
     public enum a {
@@ -61,7 +59,7 @@ public class h {
         this.i = new ArrayList();
         this.j = new ArrayList();
         this.k = null;
-        this.f1470l = new ArrayList();
+        this.l = new ArrayList();
     }
 
     public static h a(Context context) {
@@ -77,7 +75,7 @@ public class h {
         synchronized (this) {
             l();
             this.i.clear();
-            this.f1470l.clear();
+            this.l.clear();
             this.j.clear();
         }
     }
@@ -87,11 +85,11 @@ public class h {
     }
 
     public void b() {
-        this.f1470l.clear();
+        this.l.clear();
     }
 
     public boolean c() {
-        return this.f1470l.isEmpty();
+        return this.l.isEmpty();
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:27:0x009a, code lost:
@@ -201,17 +199,17 @@ public class h {
         throw th;
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:14:0x006a, code lost:
-        if (r0 != null) goto L_0x006f;
+    /* JADX WARNING: Code restructure failed: missing block: B:14:0x006b, code lost:
+        if (r0 != null) goto L_0x0070;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:15:0x006d, code lost:
-        if (r0 == null) goto L_0x0072;
+    /* JADX WARNING: Code restructure failed: missing block: B:15:0x006e, code lost:
+        if (r0 == null) goto L_0x0073;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:18:?, code lost:
         r0.endTransaction();
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:24:0x0081, code lost:
-        if (r0 == null) goto L_0x0072;
+    /* JADX WARNING: Code restructure failed: missing block: B:24:0x0082, code lost:
+        if (r0 == null) goto L_0x0073;
      */
     public void d() {
         SQLiteDatabase sQLiteDatabase = null;
@@ -420,7 +418,7 @@ public class h {
         return j2;
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:31:0x00ea  */
+    /* JADX WARNING: Removed duplicated region for block: B:31:0x00ed  */
     /* JADX WARNING: Removed duplicated region for block: B:36:? A[RETURN, SYNTHETIC] */
     private void c(String str, JSONObject jSONObject, SQLiteDatabase sQLiteDatabase) {
         Cursor cursor;
@@ -478,7 +476,7 @@ public class h {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:46:0x00ee  */
+    /* JADX WARNING: Removed duplicated region for block: B:46:0x00ef  */
     /* JADX WARNING: Removed duplicated region for block: B:60:? A[RETURN, SYNTHETIC] */
     private void a(String str, JSONObject jSONObject, SQLiteDatabase sQLiteDatabase, String str2) throws JSONException {
         JSONArray jSONArray;
@@ -586,14 +584,14 @@ public class h {
         r3 = null;
         cursor = null;
         Cursor cursor2 = null;
-        if (this.f1470l.isEmpty()) {
+        if (this.l.isEmpty()) {
             return null;
         }
         try {
             sQLiteDatabase = f.a(d).a();
             try {
                 sQLiteDatabase.beginTransaction();
-                Cursor rawQuery = sQLiteDatabase.rawQuery("select *  from __is where __ii=?", new String[]{this.f1470l.get(0)});
+                Cursor rawQuery = sQLiteDatabase.rawQuery("select *  from __is where __ii=?", new String[]{this.l.get(0)});
                 if (rawQuery != null) {
                     try {
                         if (rawQuery.moveToNext()) {
@@ -1005,20 +1003,20 @@ public class h {
         return jSONArray2;
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:109:0x0224, code lost:
-        if (r12 != null) goto L_0x0236;
+    /* JADX WARNING: Code restructure failed: missing block: B:109:0x0225, code lost:
+        if (r12 != null) goto L_0x0237;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:116:0x0234, code lost:
-        if (r12 != null) goto L_0x0236;
+    /* JADX WARNING: Code restructure failed: missing block: B:116:0x0235, code lost:
+        if (r12 != null) goto L_0x0237;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:118:?, code lost:
         r12.endTransaction();
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:97:0x020c, code lost:
-        if (r12 != null) goto L_0x0236;
+    /* JADX WARNING: Code restructure failed: missing block: B:97:0x020d, code lost:
+        if (r12 != null) goto L_0x0237;
      */
-    /* JADX WARNING: Removed duplicated region for block: B:108:0x0221  */
-    /* JADX WARNING: Removed duplicated region for block: B:115:0x0231  */
+    /* JADX WARNING: Removed duplicated region for block: B:108:0x0222  */
+    /* JADX WARNING: Removed duplicated region for block: B:115:0x0232  */
     private String a(JSONObject jSONObject, boolean z) {
         SQLiteDatabase sQLiteDatabase;
         Cursor cursor;
@@ -1273,7 +1271,7 @@ public class h {
                             JSONObject jSONObject2 = new JSONObject();
                             String string = rawQuery.getString(rawQuery.getColumnIndex("__e"));
                             str2 = rawQuery.getString(rawQuery.getColumnIndex("__ii"));
-                            this.f1470l.add(str2);
+                            this.l.add(str2);
                             String string2 = rawQuery.getString(rawQuery.getColumnIndex("__sp"));
                             String string3 = rawQuery.getString(rawQuery.getColumnIndex("__pp"));
                             if (!TextUtils.isEmpty(string2)) {
@@ -1369,12 +1367,12 @@ public class h {
             sQLiteDatabase = f.a(d).a();
             sQLiteDatabase.beginTransaction();
             if (!z2) {
-                int size = this.f1470l.size();
+                int size = this.l.size();
                 int i2 = 0;
                 if (size > 0) {
                     int i3 = 0;
                     while (i2 < size) {
-                        String str = this.f1470l.get(i2);
+                        String str = this.l.get(i2);
                         if (str == null) {
                             i3 = 1;
                         }

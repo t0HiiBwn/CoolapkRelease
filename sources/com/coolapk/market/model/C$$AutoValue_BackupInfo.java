@@ -31,7 +31,7 @@ abstract class C$$AutoValue_BackupInfo extends BackupInfo {
     private final String userName;
     private final String versionMD5;
 
-    C$$AutoValue_BackupInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, String str11, String str12, String str13, String str14, String str15, String str16, int i, int i2, Long l4, Long l5, List<ServiceApp> list, List<LocalApp> list2) {
+    C$$AutoValue_BackupInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, String str11, String str12, String str13, String str14, String str15, String str16, int i, int i2, Long l3, Long l4, List<ServiceApp> list, List<LocalApp> list2) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -42,8 +42,8 @@ abstract class C$$AutoValue_BackupInfo extends BackupInfo {
         this.logo = str7;
         this.subTitle = str8;
         this.extraData = str9;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.id = str10;
         this.title = str11;
         this.uid = str12;
@@ -53,8 +53,8 @@ abstract class C$$AutoValue_BackupInfo extends BackupInfo {
         this.deviceTitle = str16;
         this.apkNum = i;
         this.backNum = i2;
-        this.recoveryTime = l4;
-        this.createTime = l5;
+        this.recoveryTime = l3;
+        this.createTime = l4;
         this.serviceApps = list;
         this.localApps = list2;
     }
@@ -216,8 +216,8 @@ abstract class C$$AutoValue_BackupInfo extends BackupInfo {
 
     @Override // java.lang.Object
     public boolean equals(Object obj) {
+        Long l;
         Long l2;
-        Long l3;
         List<ServiceApp> list;
         if (obj == this) {
             return true;
@@ -246,10 +246,10 @@ abstract class C$$AutoValue_BackupInfo extends BackupInfo {
                                         if (str8 != null ? str8.equals(backupInfo.getSubTitle()) : backupInfo.getSubTitle() == null) {
                                             String str9 = this.extraData;
                                             if (str9 != null ? str9.equals(backupInfo.getExtraData()) : backupInfo.getExtraData() == null) {
-                                                Long l4 = this.dateline;
-                                                if (l4 != null ? l4.equals(backupInfo.getDateline()) : backupInfo.getDateline() == null) {
-                                                    Long l5 = this.lastUpdate;
-                                                    if (l5 != null ? l5.equals(backupInfo.getLastUpdate()) : backupInfo.getLastUpdate() == null) {
+                                                Long l3 = this.dateline;
+                                                if (l3 != null ? l3.equals(backupInfo.getDateline()) : backupInfo.getDateline() == null) {
+                                                    Long l4 = this.lastUpdate;
+                                                    if (l4 != null ? l4.equals(backupInfo.getLastUpdate()) : backupInfo.getLastUpdate() == null) {
                                                         String str10 = this.id;
                                                         if (str10 != null ? str10.equals(backupInfo.getId()) : backupInfo.getId() == null) {
                                                             String str11 = this.title;
@@ -264,7 +264,7 @@ abstract class C$$AutoValue_BackupInfo extends BackupInfo {
                                                                             if (str15 != null ? str15.equals(backupInfo.getDeviceName()) : backupInfo.getDeviceName() == null) {
                                                                                 String str16 = this.deviceTitle;
                                                                                 if (str16 != null ? str16.equals(backupInfo.getDeviceTitle()) : backupInfo.getDeviceTitle() == null) {
-                                                                                    if (this.apkNum == backupInfo.getApkNum() && this.backNum == backupInfo.getBackNum() && ((l2 = this.recoveryTime) != null ? l2.equals(backupInfo.getRecoveryTime()) : backupInfo.getRecoveryTime() == null) && ((l3 = this.createTime) != null ? l3.equals(backupInfo.getCreateTime()) : backupInfo.getCreateTime() == null) && ((list = this.serviceApps) != null ? list.equals(backupInfo.getServiceApps()) : backupInfo.getServiceApps() == null)) {
+                                                                                    if (this.apkNum == backupInfo.getApkNum() && this.backNum == backupInfo.getBackNum() && ((l = this.recoveryTime) != null ? l.equals(backupInfo.getRecoveryTime()) : backupInfo.getRecoveryTime() == null) && ((l2 = this.createTime) != null ? l2.equals(backupInfo.getCreateTime()) : backupInfo.getCreateTime() == null) && ((list = this.serviceApps) != null ? list.equals(backupInfo.getServiceApps()) : backupInfo.getServiceApps() == null)) {
                                                                                         List<LocalApp> list2 = this.localApps;
                                                                                         if (list2 == null) {
                                                                                             if (backupInfo.getLocalApps() == null) {
@@ -319,10 +319,10 @@ abstract class C$$AutoValue_BackupInfo extends BackupInfo {
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
         String str9 = this.extraData;
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode11 = (hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode12 = (hashCode11 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode11 = (hashCode10 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str10 = this.id;
         int hashCode13 = (hashCode12 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.title;
@@ -337,10 +337,10 @@ abstract class C$$AutoValue_BackupInfo extends BackupInfo {
         int hashCode18 = (hashCode17 ^ (str15 == null ? 0 : str15.hashCode())) * 1000003;
         String str16 = this.deviceTitle;
         int hashCode19 = (((((hashCode18 ^ (str16 == null ? 0 : str16.hashCode())) * 1000003) ^ this.apkNum) * 1000003) ^ this.backNum) * 1000003;
-        Long l4 = this.recoveryTime;
-        int hashCode20 = (hashCode19 ^ (l4 == null ? 0 : l4.hashCode())) * 1000003;
-        Long l5 = this.createTime;
-        int hashCode21 = (hashCode20 ^ (l5 == null ? 0 : l5.hashCode())) * 1000003;
+        Long l3 = this.recoveryTime;
+        int hashCode20 = (hashCode19 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l4 = this.createTime;
+        int hashCode21 = (hashCode20 ^ (l4 == null ? 0 : l4.hashCode())) * 1000003;
         List<ServiceApp> list = this.serviceApps;
         int hashCode22 = (hashCode21 ^ (list == null ? 0 : list.hashCode())) * 1000003;
         List<LocalApp> list2 = this.localApps;

@@ -23,15 +23,13 @@ public class a {
     private static String f = "";
     private static volatile a g;
     public c a;
-    public final List<AbstractC0082a> b = new ArrayList();
+    public final List<AbstractC0092a> b = new ArrayList();
     public final Object c = new Object();
     private boolean h = true;
     private boolean i = false;
     private volatile boolean j = false;
     private Context k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final List<Pair<b, d>> f1401l = new ArrayList();
+    private final List<Pair<b, d>> l = new ArrayList();
     private final ServiceConnection m = new ServiceConnection() {
         /* class com.ss.android.downloadlib.a.c.a.AnonymousClass1 */
 
@@ -41,7 +39,7 @@ public class a {
                 a.this.a(false);
                 a.this.a = c.a.a(iBinder);
                 a.this.c();
-                for (AbstractC0082a aVar : a.this.b) {
+                for (AbstractC0092a aVar : a.this.b) {
                     aVar.a();
                 }
             }
@@ -52,7 +50,7 @@ public class a {
             synchronized (a.this.c) {
                 a.this.a(false);
                 a.this.a = null;
-                for (AbstractC0082a aVar : a.this.b) {
+                for (AbstractC0092a aVar : a.this.b) {
                     aVar.b();
                 }
             }
@@ -62,7 +60,7 @@ public class a {
 
     /* renamed from: com.ss.android.downloadlib.a.c.a$a  reason: collision with other inner class name */
     /* compiled from: AidlClient */
-    public interface AbstractC0082a {
+    public interface AbstractC0092a {
         void a();
 
         void b();
@@ -110,7 +108,7 @@ public class a {
             this.a = null;
         }
         this.b.clear();
-        this.f1401l.clear();
+        this.l.clear();
     }
 
     public Intent a(Context context) {
@@ -147,20 +145,20 @@ public class a {
                     e2.printStackTrace();
                 }
             } else if (d() || a(this.k, this.i)) {
-                this.f1401l.add(Pair.create(bVar, dVar));
+                this.l.add(Pair.create(bVar, dVar));
             }
         }
     }
 
     public void c() {
-        for (Pair<b, d> pair : this.f1401l) {
+        for (Pair<b, d> pair : this.l) {
             try {
                 this.a.a((b) pair.first, (d) pair.second);
             } catch (RemoteException e2) {
                 e2.printStackTrace();
             }
         }
-        this.f1401l.clear();
+        this.l.clear();
     }
 
     public boolean d() {

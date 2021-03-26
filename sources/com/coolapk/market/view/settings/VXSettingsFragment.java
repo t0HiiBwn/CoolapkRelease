@@ -140,7 +140,7 @@ public final class VXSettingsFragment extends LocalDataFragment<HolderItem> {
     /* compiled from: VXSettingsFragment.kt */
     public static final class SettingViewHolder extends GenericBindHolder<ItemSettingBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        private static final int LAYOUT_ID = 2131558926;
+        private static final int LAYOUT_ID = 2131558933;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public SettingViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -205,7 +205,7 @@ public final class VXSettingsFragment extends LocalDataFragment<HolderItem> {
     /* compiled from: VXSettingsFragment.kt */
     public static final class SettingDividerViewHolder extends GenericBindHolder<ItemSimpleDividerBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        private static final int LAYOUT_ID = 2131558928;
+        private static final int LAYOUT_ID = 2131558935;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public SettingDividerViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {

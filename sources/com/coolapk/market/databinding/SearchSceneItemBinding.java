@@ -21,7 +21,7 @@ public abstract class SearchSceneItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchSceneItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SearchSceneItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559130, viewGroup, z, obj);
+        return (SearchSceneItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559137, viewGroup, z, obj);
     }
 
     public static SearchSceneItemBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class SearchSceneItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchSceneItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SearchSceneItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559130, null, false, obj);
+        return (SearchSceneItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559137, null, false, obj);
     }
 
     public static SearchSceneItemBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class SearchSceneItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchSceneItemBinding bind(View view, Object obj) {
-        return (SearchSceneItemBinding) bind(obj, view, 2131559130);
+        return (SearchSceneItemBinding) bind(obj, view, 2131559137);
     }
 }

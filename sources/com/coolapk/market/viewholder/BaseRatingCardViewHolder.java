@@ -22,7 +22,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: RatingCardViewHolder.kt */
 public class BaseRatingCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558889;
+    public static final int LAYOUT_ID = 2131558896;
     private static final float MIN_PERCENT = 0.01f;
     private int voteNumMax;
 

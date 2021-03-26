@@ -22,7 +22,7 @@ public class ItemRecentLoginBindingImpl extends ItemRecentLoginBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 1);
+        sparseIntArray.put(2131363604, 1);
     }
 
     public ItemRecentLoginBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -57,9 +57,9 @@ public class ItemRecentLoginBindingImpl extends ItemRecentLoginBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((RecentHistory) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);

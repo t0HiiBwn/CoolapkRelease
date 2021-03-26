@@ -32,7 +32,7 @@ import org.json.JSONObject;
 public class TitleRecycleViewCardViewHolder extends StateViewHolder implements CoolapkCardView.CardStyleCallback {
     public static final Companion Companion = new Companion(null);
     public static final String ENTITY_TYPE_SEE_MORE = "see_more";
-    public static final int LAYOUT_ID = 2131558956;
+    public static final int LAYOUT_ID = 2131558963;
     private DataAdapter adapter;
     private final ItemTitleListBinding binding;
     private final Callback callback;

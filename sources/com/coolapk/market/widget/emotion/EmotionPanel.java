@@ -55,7 +55,7 @@ public class EmotionPanel extends FrameLayout implements View.OnClickListener, A
         }
     };
     private static final int COLUMN_COUNT = 7;
-    private static final BaseEmotion DELETE_EMOTION = new Emotions.DrawableEmotion(2131231157, "删除");
+    private static final BaseEmotion DELETE_EMOTION = new Emotions.DrawableEmotion(2131231167, "删除");
     private static final BaseEmotion EMPTY_EMOTION = new Emotions.EmptyEmotion();
     private static final int MAX_EMOTION_ONE_PAGE = 20;
     private static final RecentEmotionControl RECENT_EMOTION_CONTROL = new RecentEmotionControl();
@@ -96,10 +96,10 @@ public class EmotionPanel extends FrameLayout implements View.OnClickListener, A
         this.mEmotionItems = new ArrayList();
         int i = 1;
         if (isInEditMode()) {
-            this.mLayoutInflater.inflate(2131558546, (ViewGroup) this, true);
+            this.mLayoutInflater.inflate(2131558548, (ViewGroup) this, true);
             return;
         }
-        this.mBinding = (EmotionPanelBinding) DataBindingUtil.inflate(this.mLayoutInflater, 2131558546, this, true);
+        this.mBinding = (EmotionPanelBinding) DataBindingUtil.inflate(this.mLayoutInflater, 2131558548, this, true);
         createBottomItem();
         this.mBinding.emotionPanelViewPager.setAdapter(new GridViewPageAdapter());
         this.mBinding.emotionPanelViewPager.addOnPageChangeListener(new IndicatorPageListener());
@@ -122,11 +122,11 @@ public class EmotionPanel extends FrameLayout implements View.OnClickListener, A
     private void createBottomItem() {
         LinearLayout linearLayout = this.mBinding.emotionPanelBottom;
         List<EmotionAlbum> emotionListCopyForPanel = EmotionUtils.getEmotionListCopyForPanel();
-        emotionListCopyForPanel.add(0, new EmotionAlbum(null, false, RECENT_EMOTION_CONTROL.getList(), getContext().getString(2131887253)));
+        emotionListCopyForPanel.add(0, new EmotionAlbum(null, false, RECENT_EMOTION_CONTROL.getList(), getContext().getString(2131887315)));
         this.mRecentGridViewPage = 0;
         linearLayout.removeAllViews();
         for (int i = 0; i < emotionListCopyForPanel.size(); i++) {
-            EmotionPanelBottomTextBinding emotionPanelBottomTextBinding = (EmotionPanelBottomTextBinding) DataBindingUtil.inflate(this.mLayoutInflater, 2131558547, linearLayout, true);
+            EmotionPanelBottomTextBinding emotionPanelBottomTextBinding = (EmotionPanelBottomTextBinding) DataBindingUtil.inflate(this.mLayoutInflater, 2131558549, linearLayout, true);
             EmotionItem emotionItem = new EmotionItem(emotionListCopyForPanel.get(i));
             emotionItem.setItemView(emotionPanelBottomTextBinding.textView);
             emotionPanelBottomTextBinding.textView.setOnClickListener(this);
@@ -165,7 +165,7 @@ public class EmotionPanel extends FrameLayout implements View.OnClickListener, A
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        if (view.getId() == 2131363533 && view.getParent() == this.mBinding.emotionPanelBottom) {
+        if (view.getId() == 2131363551 && view.getParent() == this.mBinding.emotionPanelBottom) {
             scrollToItem(this.mBinding.emotionPanelBottom.indexOfChild(view));
         }
     }
@@ -225,7 +225,7 @@ public class EmotionPanel extends FrameLayout implements View.OnClickListener, A
                 ImageView imageView = new ImageView(getContext());
                 imageView.setLayoutParams(layoutParams);
                 imageView.setPadding(dp2px, dp2px, dp2px, dp2px);
-                imageView.setImageDrawable(ResourceUtils.getDrawable(getContext(), 2131231279));
+                imageView.setImageDrawable(ResourceUtils.getDrawable(getContext(), 2131231290));
                 linearLayout.addView(imageView);
                 childCount++;
             }

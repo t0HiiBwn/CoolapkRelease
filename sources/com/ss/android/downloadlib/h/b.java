@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 
 /* compiled from: AsyncTaskUtils */
 public class b {
-    static final a a = new C0088b();
+    static final a a = new C0098b();
 
     /* compiled from: AsyncTaskUtils */
     private static class a {
@@ -21,8 +21,8 @@ public class b {
 
     /* renamed from: com.ss.android.downloadlib.h.b$b  reason: collision with other inner class name */
     /* compiled from: AsyncTaskUtils */
-    private static class C0088b extends a {
-        private C0088b() {
+    private static class C0098b extends a {
+        private C0098b() {
             super();
         }
 

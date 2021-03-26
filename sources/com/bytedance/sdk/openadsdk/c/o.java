@@ -14,7 +14,7 @@ public class o extends g<c.a> {
 
     public o(String str, String str2, e eVar, q qVar, g.b bVar, g.a aVar) {
         super(str, str2, eVar, qVar, bVar, aVar);
-        this.f1291l = true;
+        this.l = true;
     }
 
     @Override // com.bytedance.sdk.openadsdk.c.g

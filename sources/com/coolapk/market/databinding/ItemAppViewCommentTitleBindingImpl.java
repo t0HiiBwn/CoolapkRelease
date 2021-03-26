@@ -27,7 +27,7 @@ public class ItemAppViewCommentTitleBindingImpl extends ItemAppViewCommentTitleB
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362555, 4);
+        sparseIntArray.put(2131362563, 4);
     }
 
     public ItemAppViewCommentTitleBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -99,7 +99,7 @@ public class ItemAppViewCommentTitleBindingImpl extends ItemAppViewCommentTitleB
         String str2 = null;
         int i = ((3 & j) > 0 ? 1 : ((3 & j) == 0 ? 0 : -1));
         if (i != 0) {
-            str2 = StringUtils.titleWithNum(this.mboundView1.getResources().getString(2131886667), str);
+            str2 = StringUtils.titleWithNum(this.mboundView1.getResources().getString(2131886729), str);
         }
         if ((j & 2) != 0) {
             ThemeBindingAdapters.setTextColor(this.filterTextView, "colorAccent");

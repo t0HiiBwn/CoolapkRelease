@@ -35,7 +35,7 @@ abstract class C$$AutoValue_UserCount extends UserCount {
     private final String url;
     private final UserInfo userInfo;
 
-    C$$AutoValue_UserCount(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, UserInfo userInfo2, String str13, String str14, String str15, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10) {
+    C$$AutoValue_UserCount(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, UserInfo userInfo2, String str13, String str14, String str15, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -48,8 +48,8 @@ abstract class C$$AutoValue_UserCount extends UserCount {
         this.subTitle = str9;
         this.id = str10;
         this.extraData = str11;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str12;
         this.userInfo = userInfo2;
         this.deprecatedUserName = str13;
@@ -274,10 +274,10 @@ abstract class C$$AutoValue_UserCount extends UserCount {
                                                 if (str10 != null ? str10.equals(userCount.getId()) : userCount.getId() == null) {
                                                     String str11 = this.extraData;
                                                     if (str11 != null ? str11.equals(userCount.getExtraData()) : userCount.getExtraData() == null) {
-                                                        Long l2 = this.dateline;
-                                                        if (l2 != null ? l2.equals(userCount.getDateline()) : userCount.getDateline() == null) {
-                                                            Long l3 = this.lastUpdate;
-                                                            if (l3 != null ? l3.equals(userCount.getLastUpdate()) : userCount.getLastUpdate() == null) {
+                                                        Long l = this.dateline;
+                                                        if (l != null ? l.equals(userCount.getDateline()) : userCount.getDateline() == null) {
+                                                            Long l2 = this.lastUpdate;
+                                                            if (l2 != null ? l2.equals(userCount.getLastUpdate()) : userCount.getLastUpdate() == null) {
                                                                 String str12 = this.deprecatedUserAvatar;
                                                                 if (str12 != null ? str12.equals(userCount.getDeprecatedUserAvatar()) : userCount.getDeprecatedUserAvatar() == null) {
                                                                     UserInfo userInfo2 = this.userInfo;
@@ -340,10 +340,10 @@ abstract class C$$AutoValue_UserCount extends UserCount {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str12 = this.deprecatedUserAvatar;
         int hashCode15 = (hashCode14 ^ (str12 == null ? 0 : str12.hashCode())) * 1000003;
         UserInfo userInfo2 = this.userInfo;
@@ -500,14 +500,14 @@ abstract class C$$AutoValue_UserCount extends UserCount {
         }
 
         @Override // com.coolapk.market.model.UserCount.Builder
-        public UserCount.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public UserCount.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.UserCount.Builder
-        public UserCount.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public UserCount.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

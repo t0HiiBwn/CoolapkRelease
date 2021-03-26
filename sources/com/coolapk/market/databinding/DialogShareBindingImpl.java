@@ -27,9 +27,9 @@ public class DialogShareBindingImpl extends DialogShareBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362400, 3);
-        sparseIntArray.put(2131362933, 4);
-        sparseIntArray.put(2131363873, 5);
+        sparseIntArray.put(2131362406, 3);
+        sparseIntArray.put(2131362945, 4);
+        sparseIntArray.put(2131363896, 5);
     }
 
     public DialogShareBindingImpl(DataBindingComponent dataBindingComponent, View view) {

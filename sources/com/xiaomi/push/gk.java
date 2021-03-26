@@ -1,120 +1,93 @@
 package com.xiaomi.push;
 
-import java.util.Random;
+public enum gk {
+    DeviceInfo(1),
+    AppInstallList(2),
+    AppActiveList(3),
+    Bluetooth(4),
+    Location(5),
+    Account(6),
+    WIFI(7),
+    Cellular(8),
+    TopApp(9),
+    BroadcastAction(10),
+    BroadcastActionAdded(11),
+    BroadcastActionRemoved(12),
+    BroadcastActionReplaced(13),
+    BroadcastActionDataCleared(14),
+    BroadcastActionRestarted(15),
+    BroadcastActionChanged(16),
+    AppPermission(17),
+    WifiDevicesMac(18),
+    ActivityActiveTimeStamp(19),
+    DeviceBaseInfo(20),
+    DeviceInfoV2(21),
+    Battery(22),
+    Storage(23),
+    AppIsInstalled(24);
+    
+    private final int y;
 
-public class gk {
-    private static Random a = new Random();
-
-    /* renamed from: a  reason: collision with other field name */
-    private static final char[] f506a = "&quot;".toCharArray();
-    private static final char[] b = "&apos;".toCharArray();
-    private static final char[] c = "&amp;".toCharArray();
-    private static final char[] d = "&lt;".toCharArray();
-    private static final char[] e = "&gt;".toCharArray();
-    private static char[] f = "0123456789abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
-
-    public static String a(int i) {
-        if (i < 1) {
-            return null;
-        }
-        char[] cArr = new char[i];
-        for (int i2 = 0; i2 < i; i2++) {
-            cArr[i2] = f[a.nextInt(71)];
-        }
-        return new String(cArr);
+    private gk(int i) {
+        this.y = i;
     }
 
-    public static String a(String str) {
-        if (str == null) {
-            return null;
-        }
-        char[] charArray = str.toCharArray();
-        int length = charArray.length;
-        StringBuilder sb = new StringBuilder((int) (((double) length) * 1.3d));
-        int i = 0;
-        int i2 = 0;
-        while (i < length) {
-            char c2 = charArray[i];
-            if (c2 <= '>') {
-                if (c2 == '<') {
-                    if (i > i2) {
-                        sb.append(charArray, i2, i - i2);
-                    }
-                    i2 = i + 1;
-                    sb.append(d);
-                } else if (c2 == '>') {
-                    if (i > i2) {
-                        sb.append(charArray, i2, i - i2);
-                    }
-                    i2 = i + 1;
-                    sb.append(e);
-                } else if (c2 == '&') {
-                    if (i > i2) {
-                        sb.append(charArray, i2, i - i2);
-                    }
-                    int i3 = i + 5;
-                    if (length <= i3 || charArray[i + 1] != '#' || !Character.isDigit(charArray[i + 2]) || !Character.isDigit(charArray[i + 3]) || !Character.isDigit(charArray[i + 4]) || charArray[i3] != ';') {
-                        i2 = i + 1;
-                        sb.append(c);
-                    }
-                } else if (c2 == '\"') {
-                    if (i > i2) {
-                        sb.append(charArray, i2, i - i2);
-                    }
-                    i2 = i + 1;
-                    sb.append(f506a);
-                } else if (c2 == '\'') {
-                    if (i > i2) {
-                        sb.append(charArray, i2, i - i2);
-                    }
-                    i2 = i + 1;
-                    sb.append(b);
-                }
-            }
-            i++;
-        }
-        if (i2 == 0) {
-            return str;
-        }
-        if (i > i2) {
-            sb.append(charArray, i2, i - i2);
-        }
-        return sb.toString();
-    }
-
-    public static final String a(String str, String str2, String str3) {
-        if (str == null) {
-            return null;
-        }
-        int indexOf = str.indexOf(str2, 0);
-        if (indexOf < 0) {
-            return str;
-        }
-        char[] charArray = str.toCharArray();
-        char[] charArray2 = str3.toCharArray();
-        int length = str2.length();
-        StringBuilder sb = new StringBuilder(charArray.length);
-        sb.append(charArray, 0, indexOf);
-        sb.append(charArray2);
-        int i = indexOf + length;
-        while (true) {
-            int indexOf2 = str.indexOf(str2, i);
-            if (indexOf2 > 0) {
-                sb.append(charArray, i, indexOf2 - i);
-                sb.append(charArray2);
-                i = indexOf2 + length;
-            } else {
-                sb.append(charArray, i, charArray.length - i);
-                return sb.toString();
-            }
+    public static gk a(int i) {
+        switch (i) {
+            case 1:
+                return DeviceInfo;
+            case 2:
+                return AppInstallList;
+            case 3:
+                return AppActiveList;
+            case 4:
+                return Bluetooth;
+            case 5:
+                return Location;
+            case 6:
+                return Account;
+            case 7:
+                return WIFI;
+            case 8:
+                return Cellular;
+            case 9:
+                return TopApp;
+            case 10:
+                return BroadcastAction;
+            case 11:
+                return BroadcastActionAdded;
+            case 12:
+                return BroadcastActionRemoved;
+            case 13:
+                return BroadcastActionReplaced;
+            case 14:
+                return BroadcastActionDataCleared;
+            case 15:
+                return BroadcastActionRestarted;
+            case 16:
+                return BroadcastActionChanged;
+            case 17:
+                return AppPermission;
+            case 18:
+                return WifiDevicesMac;
+            case 19:
+                return ActivityActiveTimeStamp;
+            case 20:
+                return DeviceBaseInfo;
+            case 21:
+                return DeviceInfoV2;
+            case 22:
+                return Battery;
+            case 23:
+                return Storage;
+            case 24:
+                return AppIsInstalled;
+            default:
+                return null;
         }
     }
 
-    public static String a(byte[] bArr) {
-        return String.valueOf(bf.a(bArr));
-    }
-
-    public static final String b(String str) {
-        return a(a(a(a(a(str, "&lt;", "<"), "&gt;", ">"), "&quot;", "\""), "&apos;", "'"), "&amp;", "&");
+    public int a() {
+        return this.y;
     }
 }

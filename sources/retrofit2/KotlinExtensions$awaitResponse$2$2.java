@@ -20,7 +20,7 @@ public final class KotlinExtensions$awaitResponse$2$2 implements Callback<T> {
         Intrinsics.checkParameterIsNotNull(call, "call");
         Intrinsics.checkParameterIsNotNull(response, "response");
         Result.Companion companion = Result.Companion;
-        this.$continuation.resumeWith(Result.m687constructorimpl(response));
+        this.$continuation.resumeWith(Result.m85constructorimpl(response));
     }
 
     @Override // retrofit2.Callback
@@ -28,6 +28,6 @@ public final class KotlinExtensions$awaitResponse$2$2 implements Callback<T> {
         Intrinsics.checkParameterIsNotNull(call, "call");
         Intrinsics.checkParameterIsNotNull(th, "t");
         Result.Companion companion = Result.Companion;
-        this.$continuation.resumeWith(Result.m687constructorimpl(ResultKt.createFailure(th)));
+        this.$continuation.resumeWith(Result.m85constructorimpl(ResultKt.createFailure(th)));
     }
 }

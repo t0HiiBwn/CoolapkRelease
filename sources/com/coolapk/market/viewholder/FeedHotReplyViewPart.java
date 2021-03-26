@@ -31,7 +31,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedHotReplyViewPart.kt */
 public final class FeedHotReplyViewPart extends BindingViewPart<ItemHotFeedReplyViewPartBinding, Feed> implements View.OnClickListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558774;
+    public static final int LAYOUT_ID = 2131558781;
     private final DataBindingComponent component;
     private Feed feed;
 
@@ -73,7 +73,7 @@ public final class FeedHotReplyViewPart extends BindingViewPart<ItemHotFeedReply
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemHotFeedReplyViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558774, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558781, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemHotFeedReplyViewPartBinding) inflate;
     }

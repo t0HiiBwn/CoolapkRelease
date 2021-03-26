@@ -26,8 +26,8 @@ public class FeedReplyDetailBindingImpl extends FeedReplyDetailBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363373, 1);
-        sparseIntArray.put(2131363592, 2);
+        sparseIntArray.put(2131363390, 1);
+        sparseIntArray.put(2131363614, 2);
     }
 
     public FeedReplyDetailBindingImpl(DataBindingComponent dataBindingComponent, View view) {

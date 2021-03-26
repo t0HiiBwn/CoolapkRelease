@@ -16,7 +16,7 @@ import com.coolapk.market.util.ViewUtil;
 import com.coolapk.market.widget.decoration.ItemDecorations;
 
 public class ImageScrollCardViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558792;
+    public static final int LAYOUT_ID = 2131558799;
     private EntityCard entityCard;
 
     public ImageScrollCardViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -25,7 +25,7 @@ public class ImageScrollCardViewHolder extends BindingViewHolder {
         itemImageScrollCardBinding.moreView.setOnClickListener(this);
         itemImageScrollCardBinding.recyclerView.setAdapter(new DataAdapter(dataBindingComponent));
         itemImageScrollCardBinding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), 0, false));
-        itemImageScrollCardBinding.recyclerView.addItemDecoration(ItemDecorations.horizontal(getContext()).type(0, 2131231062).create());
+        itemImageScrollCardBinding.recyclerView.addItemDecoration(ItemDecorations.horizontal(getContext()).type(0, 2131231072).create());
     }
 
     @Override // com.coolapk.market.viewholder.BindingViewHolder
@@ -47,7 +47,7 @@ public class ImageScrollCardViewHolder extends BindingViewHolder {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558793, viewGroup, false), this.component, new ItemActionHandler() {
+            return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558800, viewGroup, false), this.component, new ItemActionHandler() {
                 /* class com.coolapk.market.viewholder.ImageScrollCardViewHolder.DataAdapter.AnonymousClass1 */
 
                 @Override // com.coolapk.market.viewholder.ItemActionHandler
@@ -69,7 +69,7 @@ public class ImageScrollCardViewHolder extends BindingViewHolder {
     }
 
     private static class ViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558793;
+        public static final int LAYOUT_ID = 2131558800;
 
         public ViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);

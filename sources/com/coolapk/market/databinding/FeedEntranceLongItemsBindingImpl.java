@@ -22,8 +22,8 @@ public class FeedEntranceLongItemsBindingImpl extends FeedEntranceLongItemsBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 3);
-        sparseIntArray.put(2131363533, 4);
+        sparseIntArray.put(2131362718, 3);
+        sparseIntArray.put(2131363551, 4);
     }
 
     public FeedEntranceLongItemsBindingImpl(DataBindingComponent dataBindingComponent, View view) {

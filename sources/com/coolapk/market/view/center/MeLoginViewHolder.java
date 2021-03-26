@@ -35,7 +35,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: MeLoginViewHolder.kt */
 public final class MeLoginViewHolder extends GenericBindHolder<ItemCenterLoginBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558638;
+    public static final int LAYOUT_ID = 2131558644;
     private final GradientDrawable bottomDrawable;
     private final GradientDrawable topDrawable;
 
@@ -123,17 +123,17 @@ public final class MeLoginViewHolder extends GenericBindHolder<ItemCenterLoginBi
             return;
         }
         int id = view.getId();
-        if (id != 2131362885) {
+        if (id != 2131362896) {
             switch (id) {
-                case 2131362174:
+                case 2131362177:
                     StatisticHelper.Companion.getInstance().recordLoginClickEvent("点【手机短信登录】");
                     ActionManager.startLoginActivity(activityNullable, "https://account.coolapk.com/auth/login?type=mobile");
                     return;
-                case 2131362175:
+                case 2131362178:
                     StatisticHelper.Companion.getInstance().recordLoginClickEvent("点【QQ登录】");
                     ActionManager.startLoginActivity(activityNullable, "https://account.coolapk.com/auth/loginByOpenId?type=qq");
                     return;
-                case 2131362176:
+                case 2131362179:
                     StatisticHelper.Companion.getInstance().recordLoginClickEvent("点【社交账号登录】");
                     boolean isCommunityMode = AppHolder.getAppMetadata().isCommunityMode();
                     if (isCommunityMode) {
@@ -143,15 +143,15 @@ public final class MeLoginViewHolder extends GenericBindHolder<ItemCenterLoginBi
                         showSocialLoginHint(isCommunityMode);
                         return;
                     }
-                case 2131362177:
+                case 2131362180:
                     StatisticHelper.Companion.getInstance().recordLoginClickEvent("点【微信登录】");
                     ActionManager.startLoginActivity(activityNullable, "https://account.coolapk.com/auth/loginByOpenId?type=weixin");
                     return;
-                case 2131362178:
+                case 2131362181:
                     StatisticHelper.Companion.getInstance().recordLoginClickEvent("点【微博登录】");
                     ActionManager.startLoginActivity(activityNullable, "https://account.coolapk.com/auth/loginByOpenId?type=weibo");
                     return;
-                case 2131362179:
+                case 2131362182:
                     StatisticHelper.Companion.getInstance().recordLoginClickEvent("点【还没有账号？使用手机短信快速注册】");
                     ActionManager.startLoginActivity(activityNullable, "https://account.coolapk.com/auth/login?type=register");
                     return;
@@ -186,7 +186,7 @@ public final class MeLoginViewHolder extends GenericBindHolder<ItemCenterLoginBi
         if (activityNullable != null) {
             Activity activity = activityNullable;
             int i = 0;
-            CenterV9SocialDialogBinding centerV9SocialDialogBinding = (CenterV9SocialDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(activity), 2131558479, null, false);
+            CenterV9SocialDialogBinding centerV9SocialDialogBinding = (CenterV9SocialDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(activity), 2131558480, null, false);
             LinearLayout linearLayout = centerV9SocialDialogBinding.buttonLoginByQq;
             Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.buttonLoginByQq");
             linearLayout.setVisibility(z ? 8 : 0);

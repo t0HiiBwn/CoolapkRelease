@@ -62,7 +62,7 @@ public class AddToAlbumDialog extends MinimumWidthDialog implements AddToAlbumDi
         this.adapter = titleAdapter;
         this.recyclerView.setAdapter(titleAdapter);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        this.recyclerView.addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558924, 2131231052).create());
+        this.recyclerView.addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558931, 2131231062).create());
         this.recyclerView.getItemAnimator().setChangeDuration(0);
         this.recyclerView.setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         int dp2px = DisplayUtils.dp2px(getActivity(), 8.0f);
@@ -99,7 +99,7 @@ public class AddToAlbumDialog extends MinimumWidthDialog implements AddToAlbumDi
 
         @Override // com.coolapk.market.widget.SectionedAdapter
         public RecyclerView.ViewHolder onCreateSectionViewHolder(ViewGroup viewGroup, int i) {
-            return new HeaderViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558575, viewGroup, false), new ItemActionHandler() {
+            return new HeaderViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558579, viewGroup, false), new ItemActionHandler() {
                 /* class com.coolapk.market.view.app.AddToAlbumDialog.TitleAdapter.AnonymousClass1 */
 
                 @Override // com.coolapk.market.viewholder.ItemActionHandler
@@ -114,7 +114,7 @@ public class AddToAlbumDialog extends MinimumWidthDialog implements AddToAlbumDi
     }
 
     private static class HeaderViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558575;
+        public static final int LAYOUT_ID = 2131558579;
 
         @Override // com.coolapk.market.viewholder.BindingViewHolder
         public void bindTo(Object obj) {
@@ -135,7 +135,7 @@ public class AddToAlbumDialog extends MinimumWidthDialog implements AddToAlbumDi
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new DataViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558574, viewGroup, false), this.component, new ItemActionHandler() {
+            return new DataViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558578, viewGroup, false), this.component, new ItemActionHandler() {
                 /* class com.coolapk.market.view.app.AddToAlbumDialog.DataAdapter.AnonymousClass1 */
 
                 @Override // com.coolapk.market.viewholder.ItemActionHandler
@@ -158,7 +158,7 @@ public class AddToAlbumDialog extends MinimumWidthDialog implements AddToAlbumDi
     }
 
     private static class DataViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558574;
+        public static final int LAYOUT_ID = 2131558578;
 
         public DataViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);

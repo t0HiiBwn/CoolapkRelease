@@ -25,7 +25,7 @@ import com.coolapk.market.view.base.SimpleDialog;
 import com.coolapk.market.widget.decoration.ItemDecorations;
 
 public class DocListCardViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558672;
+    public static final int LAYOUT_ID = 2131558678;
     private final RecyclerView.Adapter adapter;
     private final DataBindingComponent component;
     private EntityCard entityCard;
@@ -38,7 +38,7 @@ public class DocListCardViewHolder extends BindingViewHolder {
         this.adapter = dataAdapter;
         itemDocListCardBinding.recyclerView.setAdapter(dataAdapter);
         itemDocListCardBinding.recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        itemDocListCardBinding.recyclerView.addItemDecoration(ItemDecorations.vertical(getContext()).type(0, 2131231052).create());
+        itemDocListCardBinding.recyclerView.addItemDecoration(ItemDecorations.vertical(getContext()).type(0, 2131231062).create());
         itemDocListCardBinding.recyclerView.setItemAnimator(null);
     }
 
@@ -54,7 +54,7 @@ public class DocListCardViewHolder extends BindingViewHolder {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new DataViewHolder(LayoutInflater.from(DocListCardViewHolder.this.getContext()).inflate(2131558673, viewGroup, false), DocListCardViewHolder.this.component);
+            return new DataViewHolder(LayoutInflater.from(DocListCardViewHolder.this.getContext()).inflate(2131558679, viewGroup, false), DocListCardViewHolder.this.component);
         }
 
         public void onBindViewHolder(BindingViewHolder bindingViewHolder, int i) {
@@ -68,7 +68,7 @@ public class DocListCardViewHolder extends BindingViewHolder {
     }
 
     public static class DataViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558673;
+        public static final int LAYOUT_ID = 2131558679;
         private Entity entity;
 
         public DataViewHolder(View view, DataBindingComponent dataBindingComponent) {
@@ -101,7 +101,7 @@ public class DocListCardViewHolder extends BindingViewHolder {
         @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
         public void onClick(View view) {
             super.onClick(view);
-            if (view.getId() != 2131362605) {
+            if (view.getId() != 2131362613) {
                 Entity entity2 = this.entity;
                 if (entity2 instanceof Gift) {
                     Gift gift = (Gift) entity2;
@@ -117,7 +117,7 @@ public class DocListCardViewHolder extends BindingViewHolder {
                         return;
                     }
                     SimpleDialog newInstance = SimpleDialog.newInstance();
-                    newInstance.setMessage(getContext().getString(2131886822));
+                    newInstance.setMessage(getContext().getString(2131886884));
                     newInstance.setPositiveButton(2131886128, new DialogInterface.OnClickListener() {
                         /* class com.coolapk.market.viewholder.DocListCardViewHolder.DataViewHolder.AnonymousClass1 */
 

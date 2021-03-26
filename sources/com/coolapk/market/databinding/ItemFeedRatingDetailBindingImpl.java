@@ -33,21 +33,21 @@ public class ItemFeedRatingDetailBindingImpl extends ItemFeedRatingDetailBinding
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(19);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"item_feed_target_view"}, new int[]{6}, new int[]{2131558732});
+        includedLayouts.setIncludes(0, new String[]{"item_feed_target_view"}, new int[]{6}, new int[]{2131558739});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 7);
-        sparseIntArray.put(2131363211, 8);
-        sparseIntArray.put(2131363194, 9);
-        sparseIntArray.put(2131363281, 10);
-        sparseIntArray.put(2131363063, 11);
-        sparseIntArray.put(2131362627, 12);
-        sparseIntArray.put(2131362626, 13);
-        sparseIntArray.put(2131362109, 14);
-        sparseIntArray.put(2131362108, 15);
-        sparseIntArray.put(2131362603, 16);
-        sparseIntArray.put(2131362602, 17);
-        sparseIntArray.put(2131363229, 18);
+        sparseIntArray.put(2131362657, 7);
+        sparseIntArray.put(2131363225, 8);
+        sparseIntArray.put(2131363208, 9);
+        sparseIntArray.put(2131363295, 10);
+        sparseIntArray.put(2131363077, 11);
+        sparseIntArray.put(2131362635, 12);
+        sparseIntArray.put(2131362634, 13);
+        sparseIntArray.put(2131362112, 14);
+        sparseIntArray.put(2131362111, 15);
+        sparseIntArray.put(2131362611, 16);
+        sparseIntArray.put(2131362610, 17);
+        sparseIntArray.put(2131363243, 18);
     }
 
     public ItemFeedRatingDetailBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -102,7 +102,7 @@ public class ItemFeedRatingDetailBindingImpl extends ItemFeedRatingDetailBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -118,7 +118,7 @@ public class ItemFeedRatingDetailBindingImpl extends ItemFeedRatingDetailBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

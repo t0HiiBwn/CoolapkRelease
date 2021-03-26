@@ -25,7 +25,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SmallRatingFeedViewHolder.kt */
 public final class SmallRatingFeedViewHolder extends GenericBindHolder<ItemProductSmallRatingFeedBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558880;
+    public static final int LAYOUT_ID = 2131558887;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public SmallRatingFeedViewHolder(View view, DataBindingComponent dataBindingComponent) {
@@ -98,9 +98,9 @@ public final class SmallRatingFeedViewHolder extends GenericBindHolder<ItemProdu
         TextView textView = ((ItemProductSmallRatingFeedBinding) getBinding()).likeNum;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.likeNum");
         textView.setText(i > 0 ? String.valueOf(i) : "");
-        ((ItemProductSmallRatingFeedBinding) getBinding()).likeNum.setTextColor(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099891));
+        ((ItemProductSmallRatingFeedBinding) getBinding()).likeNum.setTextColor(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099896));
         ((ItemProductSmallRatingFeedBinding) getBinding()).likeIcon.setImageResource(z ? 2131689495 : 2131689494);
-        ((ItemProductSmallRatingFeedBinding) getBinding()).likeIcon.setColorFilter(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099891));
+        ((ItemProductSmallRatingFeedBinding) getBinding()).likeIcon.setColorFilter(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099896));
     }
 
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
@@ -112,13 +112,13 @@ public final class SmallRatingFeedViewHolder extends GenericBindHolder<ItemProdu
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
             switch (view.getId()) {
-                case 2131362291:
+                case 2131362296:
                     ActionManager.startFeedCommentActivity(UiUtils.getActivity(getContext()), model.getId(), model.getUserName());
                     return;
-                case 2131362768:
+                case 2131362779:
                     ActionManager.startFeedDetailActivity(UiUtils.getActivity(getContext()), model, null, 0);
                     return;
-                case 2131362851:
+                case 2131362862:
                     FeedEventRequester feedEventRequester = FeedEventRequester.INSTANCE;
                     String id = model.getId();
                     if (id == null) {
@@ -127,7 +127,7 @@ public final class SmallRatingFeedViewHolder extends GenericBindHolder<ItemProdu
                     UserAction userAction = model.getUserAction();
                     FeedEventRequester.requestLike$default(feedEventRequester, id, userAction == null || userAction.getLike() != 1, 0, null, null, 24, null);
                     return;
-                case 2131363877:
+                case 2131363900:
                     ActionManager.startUserSpaceActivity(view, model.getUid(), model.getUserAvatar());
                     return;
                 default:

@@ -30,7 +30,7 @@ public class ItemAppInsideImageCardBindingImpl extends ItemAppInsideImageCardBin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362905, 6);
+        sparseIntArray.put(2131362917, 6);
     }
 
     public ItemAppInsideImageCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -72,7 +72,7 @@ public class ItemAppInsideImageCardBindingImpl extends ItemAppInsideImageCardBin
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((EntityItemModel) obj);
@@ -85,7 +85,7 @@ public class ItemAppInsideImageCardBindingImpl extends ItemAppInsideImageCardBin
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -154,7 +154,7 @@ public class ItemAppInsideImageCardBindingImpl extends ItemAppInsideImageCardBin
             this.actionContainer.setVisibility(i2);
             ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, serviceApp, false);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.subtitleView, str3);
             this.subtitleView.setVisibility(i3);
             TextViewBindingAdapter.setText(this.titleView, str2);

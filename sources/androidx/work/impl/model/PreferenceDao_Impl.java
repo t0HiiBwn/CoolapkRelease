@@ -59,15 +59,15 @@ public final class PreferenceDao_Impl implements PreferenceDao {
             acquire.bindString(1, str);
         }
         this.__db.assertNotSuspendingTransaction();
-        Long l2 = null;
+        Long l = null;
         Cursor query = DBUtil.query(this.__db, acquire, false, null);
         try {
             if (query.moveToFirst()) {
                 if (!query.isNull(0)) {
-                    l2 = Long.valueOf(query.getLong(0));
+                    l = Long.valueOf(query.getLong(0));
                 }
             }
-            return l2;
+            return l;
         } finally {
             query.close();
             acquire.release();
@@ -87,15 +87,15 @@ public final class PreferenceDao_Impl implements PreferenceDao {
 
             @Override // java.util.concurrent.Callable
             public Long call() throws Exception {
-                Long l2 = null;
+                Long l = null;
                 Cursor query = DBUtil.query(PreferenceDao_Impl.this.__db, acquire, false, null);
                 try {
                     if (query.moveToFirst()) {
                         if (!query.isNull(0)) {
-                            l2 = Long.valueOf(query.getLong(0));
+                            l = Long.valueOf(query.getLong(0));
                         }
                     }
-                    return l2;
+                    return l;
                 } finally {
                     query.close();
                 }

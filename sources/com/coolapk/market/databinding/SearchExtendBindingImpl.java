@@ -25,13 +25,13 @@ public class SearchExtendBindingImpl extends SearchExtendBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(7);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"search_back_header"}, new int[]{2}, new int[]{2131559122});
+        includedLayouts.setIncludes(1, new String[]{"search_back_header"}, new int[]{2}, new int[]{2131559129});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362327, 3);
-        sparseIntArray.put(2131363307, 4);
-        sparseIntArray.put(2131363315, 5);
-        sparseIntArray.put(2131363314, 6);
+        sparseIntArray.put(2131362333, 3);
+        sparseIntArray.put(2131363322, 4);
+        sparseIntArray.put(2131363331, 5);
+        sparseIntArray.put(2131363330, 6);
     }
 
     public SearchExtendBindingImpl(DataBindingComponent dataBindingComponent, View view) {

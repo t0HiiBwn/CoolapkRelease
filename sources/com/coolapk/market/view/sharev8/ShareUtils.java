@@ -284,7 +284,7 @@ public final class ShareUtils {
             sb.append("..");
             str = sb.toString();
         }
-        return str2 + (char) 65306 + str + ' ' + str3 + "  " + context.getString(2131886685);
+        return str2 + (char) 65306 + str + ' ' + str3 + "  " + context.getString(2131886747);
     }
 
     private final String insertHostIfNeed(String str) {

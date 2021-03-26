@@ -65,7 +65,7 @@ public class ItemAccountTipsBindingImpl extends ItemAccountTipsBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((UserProfile) obj);
         } else if (50 != i) {
             return false;
@@ -81,7 +81,7 @@ public class ItemAccountTipsBindingImpl extends ItemAccountTipsBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

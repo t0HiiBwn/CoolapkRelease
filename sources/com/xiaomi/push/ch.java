@@ -1,9 +1,7 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-
 public interface ch {
-    void a(Context context, String str, String str2);
+    String a();
 
-    void b(Context context, String str, String str2);
+    void a(hi hiVar, gi giVar, gv gvVar);
 }

@@ -58,7 +58,7 @@ public class ItemAppNodeTagBindingImpl extends ItemAppNodeTagBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (204 != i) {
+        if (205 != i) {
             return false;
         }
         setName((String) obj);
@@ -71,7 +71,7 @@ public class ItemAppNodeTagBindingImpl extends ItemAppNodeTagBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(204);
+        notifyPropertyChanged(205);
         super.requestRebind();
     }
 

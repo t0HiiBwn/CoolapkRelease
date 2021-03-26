@@ -5,6 +5,7 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Objects;
 
 public final class PhoneUtils {
     private PhoneUtils() {
@@ -283,14 +284,17 @@ public final class PhoneUtils {
     }
 
     public static void dial(String str) {
+        Objects.requireNonNull(str, "Argument 'phoneNumber' of type String (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         Utils.getApp().startActivity(UtilsBridge.getDialIntent(str));
     }
 
     public static void call(String str) {
+        Objects.requireNonNull(str, "Argument 'phoneNumber' of type String (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         Utils.getApp().startActivity(UtilsBridge.getCallIntent(str));
     }
 
     public static void sendSms(String str, String str2) {
+        Objects.requireNonNull(str, "Argument 'phoneNumber' of type String (#0 out of 2, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         Utils.getApp().startActivity(UtilsBridge.getSendSmsIntent(str, str2));
     }
 

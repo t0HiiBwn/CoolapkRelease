@@ -33,12 +33,12 @@ public class ItemAppViewInteractiveBindingImpl extends ItemAppViewInteractiveBin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363187, 16);
-        sparseIntArray.put(2131363186, 17);
-        sparseIntArray.put(2131363185, 18);
-        sparseIntArray.put(2131363184, 19);
-        sparseIntArray.put(2131363183, 20);
-        sparseIntArray.put(2131363213, 21);
+        sparseIntArray.put(2131363201, 16);
+        sparseIntArray.put(2131363200, 17);
+        sparseIntArray.put(2131363199, 18);
+        sparseIntArray.put(2131363198, 19);
+        sparseIntArray.put(2131363197, 20);
+        sparseIntArray.put(2131363227, 21);
     }
 
     public ItemAppViewInteractiveBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -100,7 +100,7 @@ public class ItemAppViewInteractiveBindingImpl extends ItemAppViewInteractiveBin
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppViewViewModel) obj);
@@ -114,7 +114,7 @@ public class ItemAppViewInteractiveBindingImpl extends ItemAppViewInteractiveBin
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -132,57 +132,57 @@ public class ItemAppViewInteractiveBindingImpl extends ItemAppViewInteractiveBin
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 233) {
+        } else if (i == 234) {
             synchronized (this) {
                 this.mDirtyFlags |= 2;
             }
             return true;
-        } else if (i == 234) {
+        } else if (i == 235) {
             synchronized (this) {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i == 309) {
+        } else if (i == 310) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
             return true;
-        } else if (i == 320) {
+        } else if (i == 321) {
             synchronized (this) {
                 this.mDirtyFlags |= 16;
             }
             return true;
-        } else if (i == 319) {
+        } else if (i == 320) {
             synchronized (this) {
                 this.mDirtyFlags |= 32;
             }
             return true;
-        } else if (i == 318) {
+        } else if (i == 319) {
             synchronized (this) {
                 this.mDirtyFlags |= 64;
             }
             return true;
-        } else if (i == 317) {
+        } else if (i == 318) {
             synchronized (this) {
                 this.mDirtyFlags |= 128;
             }
             return true;
-        } else if (i == 316) {
+        } else if (i == 317) {
             synchronized (this) {
                 this.mDirtyFlags |= 256;
             }
             return true;
-        } else if (i == 202) {
+        } else if (i == 203) {
             synchronized (this) {
                 this.mDirtyFlags |= 512;
             }
             return true;
-        } else if (i == 242) {
+        } else if (i == 243) {
             synchronized (this) {
                 this.mDirtyFlags |= 1024;
             }
             return true;
-        } else if (i != 315) {
+        } else if (i != 316) {
             return false;
         } else {
             synchronized (this) {
@@ -308,7 +308,7 @@ public class ItemAppViewInteractiveBindingImpl extends ItemAppViewInteractiveBin
                                     int myScore = appViewViewModel != null ? appViewViewModel.getMyScore() : 0;
                                     boolean z = myScore != 0;
                                     boolean z2 = myScore == 0;
-                                    str8 = this.mboundView9.getResources().getString(2131887169, Integer.valueOf(myScore));
+                                    str8 = this.mboundView9.getResources().getString(2131887231, Integer.valueOf(myScore));
                                     if (i8 != 0) {
                                         j |= z ? 65536 : 32768;
                                     }
@@ -365,12 +365,12 @@ public class ItemAppViewInteractiveBindingImpl extends ItemAppViewInteractiveBin
                                         this.ratingOfTheirsView.setVisibility(i2);
                                     }
                                     if ((4096 & j) != 0) {
-                                        InteractivePeopleViewBindingAdapters.setTitle(this.discoveryOfTheirsView, this.discoveryOfTheirsView.getResources().getString(2131886739));
-                                        TextViewBindingAdapter.setText(this.mboundView10, this.mboundView10.getResources().getString(2131886654) + " ");
+                                        InteractivePeopleViewBindingAdapters.setTitle(this.discoveryOfTheirsView, this.discoveryOfTheirsView.getResources().getString(2131886801));
+                                        TextViewBindingAdapter.setText(this.mboundView10, this.mboundView10.getResources().getString(2131886716) + " ");
                                         ThemeBindingAdapters.setTextColor(this.mboundView10, "colorAccent");
-                                        TextViewBindingAdapter.setText(this.mboundView11, this.mboundView11.getResources().getString(2131886655) + " ");
+                                        TextViewBindingAdapter.setText(this.mboundView11, this.mboundView11.getResources().getString(2131886717) + " ");
                                         ThemeBindingAdapters.setTextColor(this.mboundView11, "colorAccent");
-                                        InteractivePeopleViewBindingAdapters.setTitle(this.ratingOfTheirsView, this.ratingOfTheirsView.getResources().getString(2131886944));
+                                        InteractivePeopleViewBindingAdapters.setTitle(this.ratingOfTheirsView, this.ratingOfTheirsView.getResources().getString(2131887006));
                                     }
                                     if ((j & 4609) != 0) {
                                         this.mboundView10.setVisibility(i);

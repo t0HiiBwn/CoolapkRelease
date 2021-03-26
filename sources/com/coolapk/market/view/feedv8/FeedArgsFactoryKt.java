@@ -49,7 +49,7 @@ public final class FeedArgsFactoryKt {
     public static final FeedUIConfig.Builder applyFeed(FeedUIConfig.Builder builder, Context context) {
         Intrinsics.checkNotNullParameter(builder, "$this$applyFeed");
         Intrinsics.checkNotNullParameter(context, "context");
-        FeedUIConfig.Builder canAddVideo = builder.title(context.getString(2131886317)).submitText(context.getString(2131886370)).editTextHint(context.getString(2131886885)).canAddVideo(true);
+        FeedUIConfig.Builder canAddVideo = builder.title(context.getString(2131886347)).submitText(context.getString(2131886430)).editTextHint(context.getString(2131886947)).canAddVideo(true);
         Intrinsics.checkNotNullExpressionValue(canAddVideo, "this.title(context.getSt…       .canAddVideo(true)");
         return canAddVideo;
     }
@@ -64,7 +64,7 @@ public final class FeedArgsFactoryKt {
     public static final FeedUIConfig.Builder applyCoolPic(FeedUIConfig.Builder builder, Context context) {
         Intrinsics.checkNotNullParameter(builder, "$this$applyCoolPic");
         Intrinsics.checkNotNullParameter(context, "context");
-        FeedUIConfig.Builder editTextHint = builder.title("发布酷图").submitText(context.getString(2131886370)).isSubmitToViewVisible(true).submitToText("选择分类").isAddExtraItemVisible(false).editTextHint("以上传壁纸为主，发布广告、色情、手机截图和无关低质量图片将会被删除并对账号做禁言处理。");
+        FeedUIConfig.Builder editTextHint = builder.title("发布酷图").submitText(context.getString(2131886430)).isSubmitToViewVisible(true).submitToText("选择分类").isAddExtraItemVisible(false).editTextHint("以上传壁纸为主，发布广告、色情、手机截图和无关低质量图片将会被删除并对账号做禁言处理。");
         Intrinsics.checkNotNullExpressionValue(editTextHint, "this.title(\"发布酷图\")\n     …和无关低质量图片将会被删除并对账号做禁言处理。\")");
         return editTextHint;
     }
@@ -73,7 +73,7 @@ public final class FeedArgsFactoryKt {
         Intrinsics.checkNotNullParameter(builder, "$this$applyAnswerFeed");
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(feed, "feed");
-        FeedUIConfig.Builder canAddVideo = builder.title("写回答").submitText(context.getString(2131886370)).editTextHint("写回答...").questionTitle(feed.getMessageTitle()).isSubmitToViewVisible(true).isLocationViewVisible(false).submitToText("").isShowInArticleMode(true).isPreviewable(true).isSubmitToViewVisible(false).canAddMusic(false).canAddVideo(false);
+        FeedUIConfig.Builder canAddVideo = builder.title("写回答").submitText(context.getString(2131886430)).editTextHint("写回答...").questionTitle(feed.getMessageTitle()).isSubmitToViewVisible(true).isLocationViewVisible(false).submitToText("").isShowInArticleMode(true).isPreviewable(true).isSubmitToViewVisible(false).canAddMusic(false).canAddVideo(false);
         Intrinsics.checkNotNullExpressionValue(canAddVideo, "this.title(\"写回答\")\n      …      .canAddVideo(false)");
         return canAddVideo;
     }
@@ -91,7 +91,7 @@ public final class FeedArgsFactoryKt {
         Intrinsics.checkNotNullParameter(builder, "$this$applyTopic");
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(topic, "topic");
-        FeedUIConfig.Builder builder2 = builder.title("参与话题").submitText(context.getString(2131886370)).editTextHint(topic.getTagType() == 1 ? "点评一下" : "说两句").topicTitle(topic.getTitle());
+        FeedUIConfig.Builder builder2 = builder.title("参与话题").submitText(context.getString(2131886430)).editTextHint(topic.getTagType() == 1 ? "点评一下" : "说两句").topicTitle(topic.getTitle());
         String logo = topic.getLogo();
         if (logo == null) {
             logo = "";
@@ -105,7 +105,7 @@ public final class FeedArgsFactoryKt {
     public static final FeedUIConfig.Builder applySecondHand(FeedUIConfig.Builder builder, Context context) {
         Intrinsics.checkNotNullParameter(builder, "$this$applySecondHand");
         Intrinsics.checkNotNullParameter(context, "context");
-        FeedUIConfig.Builder isAnonymousAnswerBarVisible = builder.title("发布二手信息").submitText(context.getString(2131886370)).isEditTitleViewVisible(true).isSecondHandViewVisible(true).editTitleHint("宝贝品牌型号").relativeTitle("选择商品").submitToText("商品价格").relativeLogo("null").editTextHint("写写宝贝的转手原因，入手渠道等具体信息吧").commentBoardTip1("添加真实详细的商品照片").commentBoardTip2("首图会作为动态封面").isAddExtraItemVisible(false).isShareAppItemVisible(false).openKeyboardWhenInit(false).isAnonymousAnswerBarVisible(false);
+        FeedUIConfig.Builder isAnonymousAnswerBarVisible = builder.title("发布二手信息").submitText(context.getString(2131886430)).isEditTitleViewVisible(true).isSecondHandViewVisible(true).editTitleHint("宝贝品牌型号").relativeTitle("选择商品").submitToText("商品价格").relativeLogo("null").editTextHint("写写宝贝的转手原因，入手渠道等具体信息吧").commentBoardTip1("添加真实详细的商品照片").commentBoardTip2("首图会作为动态封面").isAddExtraItemVisible(false).isShareAppItemVisible(false).openKeyboardWhenInit(false).isAnonymousAnswerBarVisible(false);
         Intrinsics.checkNotNullExpressionValue(isAnonymousAnswerBarVisible, "this.title(\"发布二手信息\")\n   …usAnswerBarVisible(false)");
         return isAnonymousAnswerBarVisible;
     }
@@ -113,7 +113,7 @@ public final class FeedArgsFactoryKt {
     public static final FeedUIConfig.Builder applyVote(FeedUIConfig.Builder builder, Context context) {
         Intrinsics.checkNotNullParameter(builder, "$this$applyVote");
         Intrinsics.checkNotNullParameter(context, "context");
-        FeedUIConfig.Builder isAnonymousAnswerBarVisible = builder.title("发起投票").submitText(context.getString(2131886370)).editTextHint("投票说明").openKeyboardWhenInit(false).isAddExtraItemVisible(false).editTitleHint("投票标题").isPickPhotoItemVisible(false).isEditTitleViewVisible(true).isPickPhotoContainerVisible(false).isLocationViewVisible(false).isAnonymousAnswerBarVisible(false);
+        FeedUIConfig.Builder isAnonymousAnswerBarVisible = builder.title("发起投票").submitText(context.getString(2131886430)).editTextHint("投票说明").openKeyboardWhenInit(false).isAddExtraItemVisible(false).editTitleHint("投票标题").isPickPhotoItemVisible(false).isEditTitleViewVisible(true).isPickPhotoContainerVisible(false).isLocationViewVisible(false).isAnonymousAnswerBarVisible(false);
         Intrinsics.checkNotNullExpressionValue(isAnonymousAnswerBarVisible, "this.title(\"发起投票\")\n     …usAnswerBarVisible(false)");
         return isAnonymousAnswerBarVisible;
     }
@@ -121,7 +121,7 @@ public final class FeedArgsFactoryKt {
     public static final FeedUIConfig.Builder applyVoteComment(FeedUIConfig.Builder builder, Context context, String str) {
         Intrinsics.checkNotNullParameter(builder, "$this$applyVoteComment");
         Intrinsics.checkNotNullParameter(context, "context");
-        FeedUIConfig.Builder isAnonymousAnswerBarVisible = builder.title("发观点").submitText(context.getString(2131886370)).editTextHint("说说你投票的理由吧").relativeTitle(str).isLocationViewVisible(false).isAnonymousAnswerBarVisible(false);
+        FeedUIConfig.Builder isAnonymousAnswerBarVisible = builder.title("发观点").submitText(context.getString(2131886430)).editTextHint("说说你投票的理由吧").relativeTitle(str).isLocationViewVisible(false).isAnonymousAnswerBarVisible(false);
         Intrinsics.checkNotNullExpressionValue(isAnonymousAnswerBarVisible, "this.title(\"发观点\")\n      …usAnswerBarVisible(false)");
         return isAnonymousAnswerBarVisible;
     }
@@ -167,7 +167,7 @@ public final class FeedArgsFactoryKt {
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(str, "appName");
         Intrinsics.checkNotNullParameter(str2, "logoUrl");
-        FeedUIConfig.Builder submitText = builder.extraViewTitle(str).extraViewLogoUrl(str2).isExtraViewVisible(true).title(context.getString(2131886317)).submitText(context.getString(2131886370));
+        FeedUIConfig.Builder submitText = builder.extraViewTitle(str).extraViewLogoUrl(str2).isExtraViewVisible(true).title(context.getString(2131886347)).submitText(context.getString(2131886430));
         Intrinsics.checkNotNullExpressionValue(submitText, "this.extraViewTitle(appN…(R.string.menu_add_feed))");
         return submitText;
     }
@@ -191,7 +191,7 @@ public final class FeedArgsFactoryKt {
         Intrinsics.checkNotNullParameter(str, "title");
         Intrinsics.checkNotNullParameter(str2, "content");
         Intrinsics.checkNotNullParameter(str3, "logoUrl");
-        FeedUIConfig.Builder canAddVideo = builder.extraViewTitle(str).extraViewContent(str2).extraViewLogoUrl(str3).isExtraViewVisible(true).title(context.getString(2131886317)).editTextHint("分享你此刻的想法...").submitText(context.getString(2131886370)).canAddVideo(true);
+        FeedUIConfig.Builder canAddVideo = builder.extraViewTitle(str).extraViewContent(str2).extraViewLogoUrl(str3).isExtraViewVisible(true).title(context.getString(2131886347)).editTextHint("分享你此刻的想法...").submitText(context.getString(2131886430)).canAddVideo(true);
         Intrinsics.checkNotNullExpressionValue(canAddVideo, "this.extraViewTitle(titl…       .canAddVideo(true)");
         return canAddVideo;
     }

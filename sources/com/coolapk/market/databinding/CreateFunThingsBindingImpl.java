@@ -29,14 +29,14 @@ public class CreateFunThingsBindingImpl extends CreateFunThingsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363593, 7);
-        sparseIntArray.put(2131362316, 8);
-        sparseIntArray.put(2131362899, 9);
-        sparseIntArray.put(2131363230, 10);
-        sparseIntArray.put(2131362472, 11);
-        sparseIntArray.put(2131362471, 12);
-        sparseIntArray.put(2131362510, 13);
-        sparseIntArray.put(2131362509, 14);
+        sparseIntArray.put(2131363615, 7);
+        sparseIntArray.put(2131362322, 8);
+        sparseIntArray.put(2131362910, 9);
+        sparseIntArray.put(2131363244, 10);
+        sparseIntArray.put(2131362480, 11);
+        sparseIntArray.put(2131362479, 12);
+        sparseIntArray.put(2131362518, 13);
+        sparseIntArray.put(2131362517, 14);
     }
 
     public CreateFunThingsBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -81,7 +81,7 @@ public class CreateFunThingsBindingImpl extends CreateFunThingsBinding {
             setActionTitle((String) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (283 != i) {
+        } else if (284 != i) {
             return false;
         } else {
             setToolbarTitle((String) obj);
@@ -115,7 +115,7 @@ public class CreateFunThingsBindingImpl extends CreateFunThingsBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(283);
+        notifyPropertyChanged(284);
         super.requestRebind();
     }
 

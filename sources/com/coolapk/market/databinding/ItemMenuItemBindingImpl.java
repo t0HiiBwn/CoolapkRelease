@@ -29,7 +29,7 @@ public class ItemMenuItemBindingImpl extends ItemMenuItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362464, 5);
+        sparseIntArray.put(2131362472, 5);
     }
 
     public ItemMenuItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -68,9 +68,9 @@ public class ItemMenuItemBindingImpl extends ItemMenuItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Entity) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -86,7 +86,7 @@ public class ItemMenuItemBindingImpl extends ItemMenuItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -171,7 +171,7 @@ public class ItemMenuItemBindingImpl extends ItemMenuItemBinding {
         if ((9 & j) != 0) {
             this.logoView.setVisibility(i2);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str5, AppCompatResources.getDrawable(this.logoView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str5, AppCompatResources.getDrawable(this.logoView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.moreTextView, str3);
             this.moreTextView.setVisibility(i);
             TextViewBindingAdapter.setText(this.titleView, str2);

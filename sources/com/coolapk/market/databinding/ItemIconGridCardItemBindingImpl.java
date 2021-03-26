@@ -54,9 +54,9 @@ public class ItemIconGridCardItemBindingImpl extends ItemIconGridCardItemBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((IconGridCardItemViewHolder) obj);
-        } else if (224 != i) {
+        } else if (225 != i) {
             return false;
         } else {
             setPlaceHolder((Integer) obj);
@@ -71,7 +71,7 @@ public class ItemIconGridCardItemBindingImpl extends ItemIconGridCardItemBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -81,7 +81,7 @@ public class ItemIconGridCardItemBindingImpl extends ItemIconGridCardItemBinding
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(224);
+        notifyPropertyChanged(225);
         super.requestRebind();
     }
 

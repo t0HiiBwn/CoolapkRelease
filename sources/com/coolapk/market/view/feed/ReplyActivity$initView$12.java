@@ -43,7 +43,7 @@ final class ReplyActivity$initView$12 extends Lambda implements Function1<View, 
             public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
-                if (view.getId() != 2131362257) {
+                if (view.getId() != 2131362262) {
                     List<ImageUrl> imageUriList = ReplyActivity.access$getFeedDraft$p(this.this$0.this$0).getImageUriList();
                     Intrinsics.checkNotNullExpressionValue(imageUriList, "feedDraft.imageUriList");
                     ArrayList arrayList = new ArrayList();

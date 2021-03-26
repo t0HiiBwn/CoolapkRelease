@@ -114,7 +114,7 @@ public class ShareListFragment extends BottomDialogFragment {
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        ShareListViewBinding shareListViewBinding = (ShareListViewBinding) DataBindingUtil.inflate(layoutInflater, 2131559141, viewGroup, false, this.component);
+        ShareListViewBinding shareListViewBinding = (ShareListViewBinding) DataBindingUtil.inflate(layoutInflater, 2131559148, viewGroup, false, this.component);
         this.mBinding = shareListViewBinding;
         shareListViewBinding.getRoot().getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             /* class com.coolapk.market.view.sharev8.ShareListFragment.AnonymousClass1 */
@@ -206,7 +206,7 @@ public class ShareListFragment extends BottomDialogFragment {
     }
 
     private class ItemModelViewHolder extends GenericBindHolder<ItemShareAppBinding, ItemModel> {
-        public static final int LAYOUT_ID = 2131558927;
+        public static final int LAYOUT_ID = 2131558934;
 
         public ItemModelViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);
@@ -249,26 +249,26 @@ public class ShareListFragment extends BottomDialogFragment {
                 }
             });
             if (TextUtils.equals(itemModel.getTitle(), "更多")) {
-                GlideApp.with(ShareListFragment.this).load((Integer) 2131231437).into(((ItemShareAppBinding) getBinding()).iconView);
+                GlideApp.with(ShareListFragment.this).load((Integer) 2131231448).into(((ItemShareAppBinding) getBinding()).iconView);
             } else if (TextUtils.equals(itemModel.getTitle(), "复制链接")) {
-                GlideApp.with(ShareListFragment.this).load((Integer) 2131231399).into(((ItemShareAppBinding) getBinding()).iconView);
+                GlideApp.with(ShareListFragment.this).load((Integer) 2131231410).into(((ItemShareAppBinding) getBinding()).iconView);
             } else if (TextUtils.equals("酷安看看号", itemModel.getTitle())) {
-                GlideApp.with(ShareListFragment.this).load((Integer) 2131231379).into(((ItemShareAppBinding) getBinding()).iconView);
+                GlideApp.with(ShareListFragment.this).load((Integer) 2131231390).into(((ItemShareAppBinding) getBinding()).iconView);
             } else if (TextUtils.equals("酷安", itemModel.getTitle())) {
-                GlideApp.with(ShareListFragment.this).load((Integer) 2131231231).into(((ItemShareAppBinding) getBinding()).iconView);
+                GlideApp.with(ShareListFragment.this).load((Integer) 2131231242).into(((ItemShareAppBinding) getBinding()).iconView);
             } else if (TextUtils.equals("com.zhihu.android.app.ui.activity.share.ShareToFeedActivity", itemModel.getActivityName())) {
-                GlideApp.with(ShareListFragment.this).load((Integer) 2131231684).into(((ItemShareAppBinding) getBinding()).iconView);
+                GlideApp.with(ShareListFragment.this).load((Integer) 2131231695).into(((ItemShareAppBinding) getBinding()).iconView);
             } else if (TextUtils.equals("com.tencent.mm.ui.tools.ShareImgUI", itemModel.getActivityName())) {
-                GlideApp.with(ShareListFragment.this).load((Integer) 2131231647).into(((ItemShareAppBinding) getBinding()).iconView);
+                GlideApp.with(ShareListFragment.this).load((Integer) 2131231658).into(((ItemShareAppBinding) getBinding()).iconView);
             } else if (TextUtils.equals("com.tencent.mobileqq.activity.JumpActivity", itemModel.getActivityName())) {
                 if (itemModel.getPackageName().contains("tim")) {
-                    GlideApp.with(ShareListFragment.this).load((Integer) 2131231611).into(((ItemShareAppBinding) getBinding()).iconView);
+                    GlideApp.with(ShareListFragment.this).load((Integer) 2131231622).into(((ItemShareAppBinding) getBinding()).iconView);
                 } else {
-                    GlideApp.with(ShareListFragment.this).load((Integer) 2131231499).into(((ItemShareAppBinding) getBinding()).iconView);
+                    GlideApp.with(ShareListFragment.this).load((Integer) 2131231510).into(((ItemShareAppBinding) getBinding()).iconView);
                 }
             } else if (TextUtils.equals("com.sina.weibo.composerinde.ComposerDispatchActivity", itemModel.getActivityName())) {
-                GlideApp.with(ShareListFragment.this).load((Integer) 2131231650).into(((ItemShareAppBinding) getBinding()).iconView);
-                ((ItemShareAppBinding) getBinding()).iconView.setBackgroundResource(2131231071);
+                GlideApp.with(ShareListFragment.this).load((Integer) 2131231661).into(((ItemShareAppBinding) getBinding()).iconView);
+                ((ItemShareAppBinding) getBinding()).iconView.setBackgroundResource(2131231081);
                 ((ItemShareAppBinding) getBinding()).iconView.setBackgroundTintList(ColorStateList.valueOf(AppHolder.getAppTheme().getContentBackgroundDividerColor()));
             }
         }
@@ -277,7 +277,7 @@ public class ShareListFragment extends BottomDialogFragment {
     private class DataAdapter extends RecyclerView.Adapter<BindingViewHolder> {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558927;
+            return 2131558934;
         }
 
         public DataAdapter() {
@@ -286,7 +286,7 @@ public class ShareListFragment extends BottomDialogFragment {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-            if (i == 2131558927) {
+            if (i == 2131558934) {
                 ShareListFragment shareListFragment = ShareListFragment.this;
                 return new ItemModelViewHolder(inflate, shareListFragment.component, null);
             }

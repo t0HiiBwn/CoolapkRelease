@@ -582,9 +582,7 @@ public final class p {
         private String i;
         private String j;
         private String k;
-
-        /* renamed from: l  reason: collision with root package name */
-        private String f1443l;
+        private String l;
         private String m;
         private String[] n;
         private int o;
@@ -605,7 +603,7 @@ public final class p {
             this.i = str3;
             this.j = str4;
             this.k = str5;
-            this.f1443l = str6;
+            this.l = str6;
         }
 
         public final void a(int i2, String str, byte[] bArr) {
@@ -624,7 +622,7 @@ public final class p {
                     p.this.a(this.c, this.m, this.n, this.b);
                     return;
                 case 3:
-                    Cursor a2 = p.this.a(this.e, this.c, this.f, this.g, this.h, this.i, this.j, this.k, this.f1443l, this.b);
+                    Cursor a2 = p.this.a(this.e, this.c, this.f, this.g, this.h, this.i, this.j, this.k, this.l, this.b);
                     if (a2 != null) {
                         a2.close();
                         return;

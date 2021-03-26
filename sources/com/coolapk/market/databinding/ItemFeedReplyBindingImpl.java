@@ -31,14 +31,14 @@ public class ItemFeedReplyBindingImpl extends ItemFeedReplyBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 9);
-        sparseIntArray.put(2131362577, 10);
-        sparseIntArray.put(2131362490, 11);
-        sparseIntArray.put(2131363242, 12);
-        sparseIntArray.put(2131363241, 13);
-        sparseIntArray.put(2131362842, 14);
-        sparseIntArray.put(2131362287, 15);
-        sparseIntArray.put(2131362857, 16);
+        sparseIntArray.put(2131363604, 9);
+        sparseIntArray.put(2131362585, 10);
+        sparseIntArray.put(2131362498, 11);
+        sparseIntArray.put(2131363256, 12);
+        sparseIntArray.put(2131363255, 13);
+        sparseIntArray.put(2131362853, 14);
+        sparseIntArray.put(2131362292, 15);
+        sparseIntArray.put(2131362868, 16);
     }
 
     public ItemFeedReplyBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -81,7 +81,7 @@ public class ItemFeedReplyBindingImpl extends ItemFeedReplyBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FeedReply) obj);
         } else if (50 != i) {
             return false;
@@ -97,7 +97,7 @@ public class ItemFeedReplyBindingImpl extends ItemFeedReplyBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -214,7 +214,7 @@ public class ItemFeedReplyBindingImpl extends ItemFeedReplyBinding {
             TextViewBindingAdapters.setTextViewLinkable(this.infoView, str2, null, str8, false, null, str8);
             TextViewBindingAdapter.setText(this.likeNum, str5);
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, str8, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, str8, null, null, bool2, bool2, bool2, null, bool2);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str3, bool2);
         }
         if ((j & 4) != 0) {

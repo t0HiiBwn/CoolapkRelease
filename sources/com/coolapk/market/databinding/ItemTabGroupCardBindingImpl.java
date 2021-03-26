@@ -32,10 +32,10 @@ public class ItemTabGroupCardBindingImpl extends ItemTabGroupCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362970, 5);
-        sparseIntArray.put(2131363483, 6);
-        sparseIntArray.put(2131363484, 7);
-        sparseIntArray.put(2131362634, 8);
+        sparseIntArray.put(2131362982, 5);
+        sparseIntArray.put(2131363501, 6);
+        sparseIntArray.put(2131363502, 7);
+        sparseIntArray.put(2131362642, 8);
     }
 
     public ItemTabGroupCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {

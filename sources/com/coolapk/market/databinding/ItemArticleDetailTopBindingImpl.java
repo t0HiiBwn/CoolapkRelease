@@ -32,15 +32,15 @@ public class ItemArticleDetailTopBindingImpl extends ItemArticleDetailTopBinding
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(12);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"item_feed_target_view"}, new int[]{5}, new int[]{2131558732});
+        includedLayouts.setIncludes(0, new String[]{"item_feed_target_view"}, new int[]{5}, new int[]{2131558739});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362340, 6);
-        sparseIntArray.put(2131362649, 7);
-        sparseIntArray.put(2131363282, 8);
-        sparseIntArray.put(2131363211, 9);
-        sparseIntArray.put(2131363194, 10);
-        sparseIntArray.put(2131363281, 11);
+        sparseIntArray.put(2131362346, 6);
+        sparseIntArray.put(2131362657, 7);
+        sparseIntArray.put(2131363296, 8);
+        sparseIntArray.put(2131363225, 9);
+        sparseIntArray.put(2131363208, 10);
+        sparseIntArray.put(2131363295, 11);
     }
 
     public ItemArticleDetailTopBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -90,7 +90,7 @@ public class ItemArticleDetailTopBindingImpl extends ItemArticleDetailTopBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -106,7 +106,7 @@ public class ItemArticleDetailTopBindingImpl extends ItemArticleDetailTopBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

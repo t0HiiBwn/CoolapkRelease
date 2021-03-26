@@ -14,7 +14,7 @@ public class d {
 
         /* renamed from: com.umeng.analytics.pro.d$a$a  reason: collision with other inner class name */
         /* compiled from: UMDBConfig */
-        public static class C0141a {
+        public static class C0168a {
             public static final String a = "__i";
             public static final String b = "__a";
             public static final String c = "__t";
@@ -48,7 +48,7 @@ public class d {
 
         /* renamed from: com.umeng.analytics.pro.d$b$b  reason: collision with other inner class name */
         /* compiled from: UMDBConfig */
-        public static class C0142b {
+        public static class C0169b {
             public static final String a = "TEXT";
             public static final String b = "TEXT";
             public static final String c = "TEXT";
@@ -85,7 +85,7 @@ public class d {
 
     /* renamed from: com.umeng.analytics.pro.d$d  reason: collision with other inner class name */
     /* compiled from: UMDBConfig */
-    public static class C0143d {
+    public static class C0170d {
         public static final String a = "__sd";
 
         /* renamed from: com.umeng.analytics.pro.d$d$a */
@@ -102,9 +102,7 @@ public class d {
             public static final String i = "__sp";
             public static final String j = "__pp";
             public static final String k = "__av";
-
-            /* renamed from: l  reason: collision with root package name */
-            public static final String f1468l = "__vc";
+            public static final String l = "__vc";
         }
 
         /* renamed from: com.umeng.analytics.pro.d$d$b */
@@ -121,9 +119,7 @@ public class d {
             public static final String i = "TEXT";
             public static final String j = "TEXT";
             public static final String k = "TEXT";
-
-            /* renamed from: l  reason: collision with root package name */
-            public static final String f1469l = "TEXT";
+            public static final String l = "TEXT";
         }
     }
 }

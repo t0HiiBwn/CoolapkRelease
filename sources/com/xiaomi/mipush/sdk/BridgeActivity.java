@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-import com.xiaomi.channel.commonutils.logger.b;
+import com.xiaomi.a.a.a.c;
 
 public class BridgeActivity extends Activity {
     @Override // android.app.Activity
@@ -29,7 +29,7 @@ public class BridgeActivity extends Activity {
                 PushMessageHandler.a(getApplicationContext(), intent);
             }
         } catch (Exception e) {
-            b.a(e);
+            c.a(e);
         } catch (Throwable th) {
             finish();
             throw th;

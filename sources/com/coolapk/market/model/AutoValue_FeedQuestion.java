@@ -23,8 +23,8 @@ final class AutoValue_FeedQuestion extends C$AutoValue_FeedQuestion {
         return 0;
     }
 
-    AutoValue_FeedQuestion(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, UserInfo userInfo, String str13, String str14, String str15, int i2, String str16, int i3, String str17, int i4, int i5, String str18) {
-        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, str11, l2, l3, str12, userInfo, str13, str14, str15, i2, str16, i3, str17, i4, i5, str18);
+    AutoValue_FeedQuestion(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, UserInfo userInfo, String str13, String str14, String str15, int i2, String str16, int i3, String str17, int i4, int i5, String str18) {
+        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, str11, l, l2, str12, userInfo, str13, str14, str15, i2, str16, i3, str17, i4, i5, str18);
     }
 
     @Override // android.os.Parcelable

@@ -41,13 +41,13 @@ public final class a implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityPaused(Activity activity) {
-        Long l2 = this.b.get(activity);
-        if (l2 == null) {
-            l2 = Long.valueOf(this.a);
+        Long l = this.b.get(activity);
+        if (l == null) {
+            l = Long.valueOf(this.a);
         }
         final long currentTimeMillis = System.currentTimeMillis();
         final String localClassName = activity.getLocalClassName();
-        final long longValue = currentTimeMillis - l2.longValue();
+        final long longValue = currentTimeMillis - l.longValue();
         b.a().a(new Runnable() {
             /* class com.tencent.beacon.pagepath.a.AnonymousClass1 */
 

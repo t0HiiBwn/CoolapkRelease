@@ -35,9 +35,7 @@ public class d {
     private final HashSet<a> i;
     private final b.AbstractC0055b j;
     private volatile c k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private volatile c f1333l;
+    private volatile c l;
     private volatile String m;
     private volatile boolean n;
 
@@ -96,7 +94,7 @@ public class d {
     }
 
     c b() {
-        return this.f1333l;
+        return this.l;
     }
 
     public static d c() {

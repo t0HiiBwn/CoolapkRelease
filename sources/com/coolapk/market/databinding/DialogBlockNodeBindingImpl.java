@@ -28,9 +28,9 @@ public class DialogBlockNodeBindingImpl extends DialogBlockNodeBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 4);
-        sparseIntArray.put(2131363955, 5);
-        sparseIntArray.put(2131362576, 6);
+        sparseIntArray.put(2131363551, 4);
+        sparseIntArray.put(2131363981, 5);
+        sparseIntArray.put(2131362584, 6);
     }
 
     public DialogBlockNodeBindingImpl(DataBindingComponent dataBindingComponent, View view) {

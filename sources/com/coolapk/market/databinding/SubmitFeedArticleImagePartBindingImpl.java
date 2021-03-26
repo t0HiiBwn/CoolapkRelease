@@ -31,9 +31,9 @@ public class SubmitFeedArticleImagePartBindingImpl extends SubmitFeedArticleImag
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362793, 3);
-        sparseIntArray.put(2131362257, 4);
-        sparseIntArray.put(2131362376, 5);
+        sparseIntArray.put(2131362804, 3);
+        sparseIntArray.put(2131362262, 4);
+        sparseIntArray.put(2131362382, 5);
     }
 
     public SubmitFeedArticleImagePartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

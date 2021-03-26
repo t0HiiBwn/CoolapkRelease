@@ -310,33 +310,33 @@ public class Response implements bi<Response, e>, Serializable, Cloneable {
         public void b(ch chVar, Response response) throws bo {
             chVar.j();
             while (true) {
-                cc l2 = chVar.l();
-                if (l2.b == 0) {
+                cc l = chVar.l();
+                if (l.b == 0) {
                     break;
                 }
-                short s = l2.c;
+                short s = l.c;
                 if (s != 1) {
                     if (s != 2) {
                         if (s != 3) {
-                            ck.a(chVar, l2.b);
-                        } else if (l2.b == 12) {
+                            ck.a(chVar, l.b);
+                        } else if (l.b == 12) {
                             response.imprint = new d();
                             response.imprint.read(chVar);
                             response.setImprintIsSet(true);
                         } else {
-                            ck.a(chVar, l2.b);
+                            ck.a(chVar, l.b);
                         }
-                    } else if (l2.b == 11) {
+                    } else if (l.b == 11) {
                         response.msg = chVar.z();
                         response.setMsgIsSet(true);
                     } else {
-                        ck.a(chVar, l2.b);
+                        ck.a(chVar, l.b);
                     }
-                } else if (l2.b == 8) {
+                } else if (l.b == 8) {
                     response.resp_code = chVar.w();
                     response.setResp_codeIsSet(true);
                 } else {
-                    ck.a(chVar, l2.b);
+                    ck.a(chVar, l.b);
                 }
                 chVar.m();
             }

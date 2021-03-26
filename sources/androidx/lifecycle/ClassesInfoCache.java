@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class ClassesInfoCache {
+final class ClassesInfoCache {
     private static final int CALL_TYPE_NO_ARG = 0;
     private static final int CALL_TYPE_PROVIDER = 1;
     private static final int CALL_TYPE_PROVIDER_WITH_EVENT = 2;
@@ -144,7 +144,7 @@ class ClassesInfoCache {
         }
     }
 
-    static class MethodReference {
+    static final class MethodReference {
         final int mCallType;
         final Method mMethod;
 
@@ -175,7 +175,7 @@ class ClassesInfoCache {
             if (this == obj) {
                 return true;
             }
-            if (obj == null || getClass() != obj.getClass()) {
+            if (!(obj instanceof MethodReference)) {
                 return false;
             }
             MethodReference methodReference = (MethodReference) obj;

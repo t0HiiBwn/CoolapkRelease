@@ -14,6 +14,6 @@ final class MobileCodeVerifyDialog$requestMobileCode$2 implements Action0 {
 
     @Override // rx.functions.Action0
     public final void call() {
-        this.this$0.setLoadingState(false);
+        MobileCodeVerifyDialog.access$setLoadingState(this.this$0, false);
     }
 }

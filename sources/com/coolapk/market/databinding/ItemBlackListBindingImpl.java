@@ -24,8 +24,8 @@ public class ItemBlackListBindingImpl extends ItemBlackListBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362200, 3);
-        sparseIntArray.put(2131363478, 4);
+        sparseIntArray.put(2131362205, 3);
+        sparseIntArray.put(2131363496, 4);
     }
 
     public ItemBlackListBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -50,9 +50,7 @@ public class h implements c {
     private List<e> i = new CopyOnWriteArrayList();
     private String j;
     private int k = 1;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1312l = 30;
+    private int l = 30;
     private int m = 1;
     private int n = 0;
     private JSONObject o = null;
@@ -85,7 +83,7 @@ public class h implements c {
             this.E = a.a("tt_sdk_settings", "duration", 10000L);
             this.F = a.a("tt_sdk_settings", "max", 50);
             this.k = a.a("tt_sdk_settings", "download_config_dl_network", 1);
-            this.f1312l = a.a("tt_sdk_settings", "download_config_dl_size", 30);
+            this.l = a.a("tt_sdk_settings", "download_config_dl_size", 30);
             this.m = a.a("tt_sdk_settings", "download_config_storage_internal", 1);
             this.G = a.a("tt_sdk_settings", "pos_cache_time", 30);
             this.H = a.a("tt_sdk_settings", "vbtt", 5);
@@ -169,7 +167,7 @@ public class h implements c {
         this.E = J2.b("duration", 10000L);
         this.F = J2.b("max", 50);
         this.k = J2.b("download_config_dl_network", 1);
-        this.f1312l = J2.b("download_config_dl_size", 30);
+        this.l = J2.b("download_config_dl_size", 30);
         this.m = J2.b("download_config_storage_internal", 1);
         this.G = J2.b("pos_cache_time", 30);
         this.I = J2.b("fetch_template", 3600);
@@ -399,7 +397,7 @@ public class h implements c {
         JSONObject optJSONObject6 = jSONObject.optJSONObject("download_config");
         if (optJSONObject6 != null) {
             this.k = optJSONObject6.optInt("dl_network", 1);
-            this.f1312l = optJSONObject6.optInt("dl_size", 30);
+            this.l = optJSONObject6.optInt("dl_size", 30);
             this.m = optJSONObject6.optInt("if_storage_internal", 1);
             this.n = optJSONObject6.optInt("enable_download_opt", 0);
         }
@@ -495,7 +493,7 @@ public class h implements c {
             a.a("tt_sdk_settings", "duration", Long.valueOf(this.E));
             a.a("tt_sdk_settings", "max", Integer.valueOf(this.F));
             a.a("tt_sdk_settings", "download_config_dl_network", Integer.valueOf(this.k));
-            a.a("tt_sdk_settings", "download_config_dl_size", Integer.valueOf(this.f1312l));
+            a.a("tt_sdk_settings", "download_config_dl_size", Integer.valueOf(this.l));
             a.a("tt_sdk_settings", "download_config_storage_internal", Integer.valueOf(this.m));
             a.a("tt_sdk_settings", "pos_cache_time", Integer.valueOf(this.G));
             a.a("tt_sdk_settings", "vbtt", Integer.valueOf(this.H));
@@ -549,7 +547,7 @@ public class h implements c {
         J2.a("duration", this.E);
         J2.a("max", this.F);
         J2.a("download_config_dl_network", this.k);
-        J2.a("download_config_dl_size", this.f1312l);
+        J2.a("download_config_dl_size", this.l);
         J2.a("download_config_storage_internal", this.m);
         J2.a("pos_cache_time", this.G);
         J2.a("fetch_template", this.I);
@@ -616,7 +614,7 @@ public class h implements c {
     }
 
     public int f() {
-        return this.f1312l * 1024 * 1024;
+        return this.l * 1024 * 1024;
     }
 
     public String g() {
@@ -744,7 +742,7 @@ public class h implements c {
     }
 
     public int g(String str) {
-        return p.h().r(String.valueOf(str)).f1311l;
+        return p.h().r(String.valueOf(str)).l;
     }
 
     public JSONArray h(String str) {

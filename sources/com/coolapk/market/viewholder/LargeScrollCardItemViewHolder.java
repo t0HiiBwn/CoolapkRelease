@@ -37,7 +37,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: LargeScrollCardItemViewHolder.kt */
 public class LargeScrollCardItemViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558796;
+    public static final int LAYOUT_ID = 2131558803;
     private Drawable actionBg;
     public String actionText;
     private boolean isFollow;
@@ -271,9 +271,9 @@ public class LargeScrollCardItemViewHolder extends BindingViewHolder {
             this.isFollow = false;
             this.actionText = "立即购买";
             this.titleLine = 2;
-            this.actionBg = ShapeUtils.createActionCornerBg(getContext(), ResourceUtils.getColorInt(getContext(), 2131100035));
+            this.actionBg = ShapeUtils.createActionCornerBg(getContext(), ResourceUtils.getColorInt(getContext(), 2131100040));
             this.transformer = new CircleRadiusTransform(NumberExtendsKt.getDpf((Number) 8), false, 2, null);
-            this.subTitleColor = ResourceUtils.getColorInt(getContext(), 2131100035);
+            this.subTitleColor = ResourceUtils.getColorInt(getContext(), 2131100040);
             this.verifyStatusIcon = str4;
         } else if (obj instanceof Entity) {
             Entity entity = (Entity) obj;
@@ -301,9 +301,9 @@ public class LargeScrollCardItemViewHolder extends BindingViewHolder {
             gradientDrawable.setColor(AppHolder.getAppTheme().getContentBackgroundColor());
             Unit unit = Unit.INSTANCE;
             linearLayout.setBackground(gradientDrawable);
-            itemLargeScrollCardItemBinding.itemView.setTag(2131362753, obj);
-            itemLargeScrollCardItemBinding.actionView.setTag(2131362753, obj);
-            itemLargeScrollCardItemBinding.subTitleView.setTag(2131362753, obj);
+            itemLargeScrollCardItemBinding.itemView.setTag(2131362764, obj);
+            itemLargeScrollCardItemBinding.actionView.setTag(2131362764, obj);
+            itemLargeScrollCardItemBinding.subTitleView.setTag(2131362764, obj);
             TextView textView = itemLargeScrollCardItemBinding.actionView;
             Intrinsics.checkNotNullExpressionValue(textView, "binding.actionView");
             textView.setVisibility(!z ? 0 : 8);
@@ -339,9 +339,9 @@ public class LargeScrollCardItemViewHolder extends BindingViewHolder {
         gradientDrawable.setColor(AppHolder.getAppTheme().getContentBackgroundColor());
         Unit unit = Unit.INSTANCE;
         linearLayout.setBackground(gradientDrawable);
-        itemLargeScrollCardItemBinding.itemView.setTag(2131362753, obj);
-        itemLargeScrollCardItemBinding.actionView.setTag(2131362753, obj);
-        itemLargeScrollCardItemBinding.subTitleView.setTag(2131362753, obj);
+        itemLargeScrollCardItemBinding.itemView.setTag(2131362764, obj);
+        itemLargeScrollCardItemBinding.actionView.setTag(2131362764, obj);
+        itemLargeScrollCardItemBinding.subTitleView.setTag(2131362764, obj);
         TextView textView = itemLargeScrollCardItemBinding.actionView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.actionView");
         textView.setVisibility(!z ? 0 : 8);
@@ -367,10 +367,10 @@ public class LargeScrollCardItemViewHolder extends BindingViewHolder {
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        Object tag = view.getTag(2131362753);
+        Object tag = view.getTag(2131362764);
         int id = view.getId();
-        if (id != 2131361981) {
-            if (id != 2131362768) {
+        if (id != 2131361982) {
+            if (id != 2131362779) {
                 super.onClick(view);
             } else if (tag instanceof Entity) {
                 Context context = getContext();

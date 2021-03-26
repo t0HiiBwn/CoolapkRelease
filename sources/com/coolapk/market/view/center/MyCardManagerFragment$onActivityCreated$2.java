@@ -36,7 +36,7 @@ final class MyCardManagerFragment$onActivityCreated$2 extends Lambda implements 
             @Override // com.coolapk.market.view.center.TouchCallBack
             public void downTouch(View view, RecyclerView.ViewHolder viewHolder) {
                 Intrinsics.checkNotNullParameter(view, "view");
-                if (viewHolder != null && view.getId() == 2131362426) {
+                if (viewHolder != null && view.getId() == 2131362433) {
                     this.this$0.this$0.startDrag(viewHolder.getAdapterPosition());
                 }
             }
@@ -47,7 +47,7 @@ final class MyCardManagerFragment$onActivityCreated$2 extends Lambda implements 
                 if (viewHolder != null) {
                     int adapterPosition = viewHolder.getAdapterPosition();
                     boolean z = false;
-                    if (view.getId() == 2131362003) {
+                    if (view.getId() == 2131362004) {
                         int adapterPosition2 = viewHolder.getAdapterPosition() - this.this$0.this$0.findTargetPosition();
                         int i = 0;
                         while (i < adapterPosition2) {
@@ -56,7 +56,7 @@ final class MyCardManagerFragment$onActivityCreated$2 extends Lambda implements 
                             i++;
                             adapterPosition = i2;
                         }
-                    } else if (view.getId() == 2131362838) {
+                    } else if (view.getId() == 2131362849) {
                         int adapterPosition3 = this.this$0.this$0.findTargetPosition() - viewHolder.getAdapterPosition();
                         int i3 = 0;
                         while (i3 < adapterPosition3) {

@@ -82,10 +82,10 @@ public class AlbumPickFollowAppFragment extends StateEventListFragment<Result<Li
     @Override // com.coolapk.market.view.base.asynclist.AsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        setEmptyData(getString(2131886764), 0);
+        setEmptyData(getString(2131886826), 0);
         setAdapter(new DataAdapter(this));
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558856, 2131231052).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558863, 2131231062).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         if (getUserVisibleHint()) {
@@ -156,7 +156,7 @@ public class AlbumPickFollowAppFragment extends StateEventListFragment<Result<Li
         @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
         public void onClick(View view) {
             super.onClick(view);
-            if (view.getId() == 2131362768) {
+            if (view.getId() == 2131362779) {
                 CheckBox checkBox2 = this.binding.appCheckView;
                 this.checkBox = checkBox2;
                 checkBox2.setChecked(!checkBox2.isChecked());
@@ -179,7 +179,7 @@ public class AlbumPickFollowAppFragment extends StateEventListFragment<Result<Li
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558856;
+            return 2131558863;
         }
 
         public DataAdapter(Fragment fragment) {

@@ -23,8 +23,8 @@ public class ItemProductSeriesBindingImpl extends ItemProductSeriesBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 1);
-        sparseIntArray.put(2131362857, 2);
+        sparseIntArray.put(2131362779, 1);
+        sparseIntArray.put(2131362868, 2);
     }
 
     public ItemProductSeriesBindingImpl(DataBindingComponent dataBindingComponent, View view) {

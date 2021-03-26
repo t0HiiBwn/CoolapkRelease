@@ -26,9 +26,7 @@ class x implements aa {
     private float i;
     private float j;
     private boolean k = true;
-
-    /* renamed from: l  reason: collision with root package name */
-    private float f1244l = 0.0f;
+    private float l = 0.0f;
     private float m = 0.5f;
     private float n = 0.5f;
     private String o;
@@ -235,12 +233,12 @@ class x implements aa {
         if (f2 < 0.0f) {
             Log.w("GroundOverlayDelegateImp", "Transparency must be in the range [0..1]");
         }
-        this.f1244l = f2;
+        this.l = f2;
     }
 
     @Override // com.amap.api.interfaces.IGroundOverlay
     public float getTransparency() throws RemoteException {
-        return this.f1244l;
+        return this.l;
     }
 
     @Override // com.amap.api.interfaces.IGroundOverlay
@@ -279,7 +277,7 @@ class x implements aa {
                     this.c.d().a(a4, point3);
                     Paint paint = new Paint();
                     RectF rectF = new RectF((float) point.x, (float) point2.y, (float) point2.x, (float) point.y);
-                    paint.setAlpha((int) (255.0f - (this.f1244l * 255.0f)));
+                    paint.setAlpha((int) (255.0f - (this.l * 255.0f)));
                     paint.setFilterBitmap(true);
                     canvas.save();
                     canvas.rotate(this.i, (float) point3.x, (float) point3.y);

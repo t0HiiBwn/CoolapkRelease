@@ -28,11 +28,11 @@ public class ItemLiveLineViewPartBindingImpl extends ItemLiveLineViewPartBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363133, 1);
-        sparseIntArray.put(2131362257, 2);
-        sparseIntArray.put(2131363289, 3);
-        sparseIntArray.put(2131363582, 4);
-        sparseIntArray.put(2131362576, 5);
+        sparseIntArray.put(2131363147, 1);
+        sparseIntArray.put(2131362262, 2);
+        sparseIntArray.put(2131363304, 3);
+        sparseIntArray.put(2131363604, 4);
+        sparseIntArray.put(2131362584, 5);
     }
 
     public ItemLiveLineViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

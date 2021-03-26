@@ -1,55 +1,35 @@
 package com.xiaomi.push.service;
 
-import android.content.Context;
-import android.net.Uri;
-import android.os.Build;
-import android.provider.Settings;
-import com.xiaomi.push.ab;
+import com.xiaomi.push.c;
+import com.xiaomi.push.en;
+import com.xiaomi.push.service.XMPushService;
 
-public class az {
-    private static az a;
+class az extends XMPushService.i {
+    final /* synthetic */ int a;
+    final /* synthetic */ byte[] b;
+    final /* synthetic */ String c;
+    final /* synthetic */ XMPushService d;
 
-    /* renamed from: a  reason: collision with other field name */
-    private int f978a = 0;
-
-    /* renamed from: a  reason: collision with other field name */
-    private Context f979a;
-
-    private az(Context context) {
-        this.f979a = context.getApplicationContext();
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    az(XMPushService xMPushService, int i, int i2, byte[] bArr, String str) {
+        super(i);
+        this.d = xMPushService;
+        this.a = i2;
+        this.b = bArr;
+        this.c = str;
     }
 
-    public static az a(Context context) {
-        if (a == null) {
-            a = new az(context);
-        }
-        return a;
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public void a() {
+        bj.c(this.d);
+        q.a().a("5");
+        c.a(this.a);
+        this.d.d.c(en.a());
+        this.d.a(this.b, this.c);
     }
 
-    public int a() {
-        int i = this.f978a;
-        if (i != 0) {
-            return i;
-        }
-        if (Build.VERSION.SDK_INT >= 17) {
-            try {
-                this.f978a = Settings.Global.getInt(this.f979a.getContentResolver(), "device_provisioned", 0);
-            } catch (Exception unused) {
-            }
-            return this.f978a;
-        }
-        int i2 = Settings.Secure.getInt(this.f979a.getContentResolver(), "device_provisioned", 0);
-        this.f978a = i2;
-        return i2;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public Uri m634a() {
-        return Build.VERSION.SDK_INT >= 17 ? Settings.Global.getUriFor("device_provisioned") : Settings.Secure.getUriFor("device_provisioned");
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public boolean m635a() {
-        return ab.f183a.contains("xmsf") || ab.f183a.contains("xiaomi") || ab.f183a.contains("miui");
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public String b() {
+        return "clear account cache.";
     }
 }

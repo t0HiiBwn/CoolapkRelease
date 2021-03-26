@@ -17,12 +17,12 @@ public class j {
     }
 
     public static String b(byte[] bArr) {
-        byte[] a2 = m27a(bArr);
+        byte[] a2 = m17a(bArr);
         return a2 != null ? a(a2) : "0000000000000000";
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public static byte[] m27a(byte[] bArr) {
+    public static byte[] m17a(byte[] bArr) {
         if (bArr == null) {
             return null;
         }

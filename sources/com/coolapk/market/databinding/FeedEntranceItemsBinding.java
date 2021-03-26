@@ -40,7 +40,7 @@ public abstract class FeedEntranceItemsBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedEntranceItemsBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (FeedEntranceItemsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558557, viewGroup, z, obj);
+        return (FeedEntranceItemsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558560, viewGroup, z, obj);
     }
 
     public static FeedEntranceItemsBinding inflate(LayoutInflater layoutInflater) {
@@ -49,7 +49,7 @@ public abstract class FeedEntranceItemsBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedEntranceItemsBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (FeedEntranceItemsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558557, null, false, obj);
+        return (FeedEntranceItemsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558560, null, false, obj);
     }
 
     public static FeedEntranceItemsBinding bind(View view) {
@@ -58,6 +58,6 @@ public abstract class FeedEntranceItemsBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedEntranceItemsBinding bind(View view, Object obj) {
-        return (FeedEntranceItemsBinding) bind(obj, view, 2131558557);
+        return (FeedEntranceItemsBinding) bind(obj, view, 2131558560);
     }
 }

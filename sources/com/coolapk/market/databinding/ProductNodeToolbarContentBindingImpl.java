@@ -29,11 +29,11 @@ public class ProductNodeToolbarContentBindingImpl extends ProductNodeToolbarCont
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363595, 3);
-        sparseIntArray.put(2131363460, 4);
-        sparseIntArray.put(2131363282, 5);
-        sparseIntArray.put(2131363194, 6);
-        sparseIntArray.put(2131363281, 7);
+        sparseIntArray.put(2131363617, 3);
+        sparseIntArray.put(2131363478, 4);
+        sparseIntArray.put(2131363296, 5);
+        sparseIntArray.put(2131363208, 6);
+        sparseIntArray.put(2131363295, 7);
     }
 
     public ProductNodeToolbarContentBindingImpl(DataBindingComponent dataBindingComponent, View view) {

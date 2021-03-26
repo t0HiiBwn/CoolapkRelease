@@ -16,7 +16,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: TitleCardViewHolder.kt */
 public final class TitleCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558955;
+    public static final int LAYOUT_ID = 2131558962;
     private final ItemTitleCardBinding binding;
     private final TitleViewPart viewPart;
 

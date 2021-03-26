@@ -38,10 +38,10 @@ public class ItemTripleCoolPicBindingImpl extends ItemTripleCoolPicBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362785, 22);
-        sparseIntArray.put(2131362994, 23);
-        sparseIntArray.put(2131362995, 24);
-        sparseIntArray.put(2131362996, 25);
+        sparseIntArray.put(2131362796, 22);
+        sparseIntArray.put(2131363006, 23);
+        sparseIntArray.put(2131363007, 24);
+        sparseIntArray.put(2131363008, 25);
     }
 
     public ItemTripleCoolPicBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -113,9 +113,9 @@ public class ItemTripleCoolPicBindingImpl extends ItemTripleCoolPicBinding {
             setFeed1((Feed) obj);
         } else if (106 == i) {
             setFeed2((Feed) obj);
-        } else if (193 == i) {
+        } else if (194 == i) {
             setLongClick((View.OnLongClickListener) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (107 == i) {
             setFeed3((Feed) obj);
@@ -153,7 +153,7 @@ public class ItemTripleCoolPicBindingImpl extends ItemTripleCoolPicBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(193);
+        notifyPropertyChanged(194);
         super.requestRebind();
     }
 
@@ -163,7 +163,7 @@ public class ItemTripleCoolPicBindingImpl extends ItemTripleCoolPicBinding {
         synchronized (this) {
             this.mDirtyFlags |= 8;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -443,7 +443,7 @@ public class ItemTripleCoolPicBindingImpl extends ItemTripleCoolPicBinding {
         if ((j & 65) != 0) {
             str18 = str15;
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView1, str, null, 2131231691, 0, bool, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView1, str, null, 2131231702, 0, bool, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
             str17 = str16;
             this.itemView1.setVisibility(i2);
             TextViewBindingAdapter.setText(this.mboundView4, str4);
@@ -456,7 +456,7 @@ public class ItemTripleCoolPicBindingImpl extends ItemTripleCoolPicBinding {
         }
         if ((j & 66) != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView2, str8, null, 2131231691, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, true, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView2, str8, null, 2131231702, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, true, bool2, null, bool2);
             this.itemView2.setVisibility(i4);
             TextViewBindingAdapter.setText(this.mboundView11, str9);
             TextViewBindingAdapter.setText(this.mboundView13, str11);
@@ -465,7 +465,7 @@ public class ItemTripleCoolPicBindingImpl extends ItemTripleCoolPicBinding {
         }
         if ((j & 80) != 0) {
             Boolean bool3 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView3, str12, null, 2131231691, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, true, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView3, str12, null, 2131231702, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, true, bool3, null, bool3);
             this.itemView3.setVisibility(i6);
             TextViewBindingAdapter.setText(this.mboundView18, str17);
             TextViewBindingAdapter.setText(this.mboundView20, str18);

@@ -13,8 +13,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_FeedReply  reason: invalid class name */
 abstract class C$AutoValue_FeedReply extends C$$AutoValue_FeedReply {
-    C$AutoValue_FeedReply(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, String str10, String str11, String str12, String str13, String str14, UserInfo userInfo, int i, int i2, String str15, String str16, String str17, String str18, int i3, int i4, String str19, String str20, String str21, String str22, String str23, List<FeedReply> list, int i5, int i6, String str24, String str25, String str26, UserInfo userInfo2, int i7, String str27, int i8, int i9, int i10, int i11, String str28, String str29, String str30, String str31, String str32, String str33, String str34, FeedReply.ReplyUserAction replyUserAction, long j, String str35, String str36, long j2, String str37, String str38, String str39, FeedReply.ReplyFeed replyFeed, DyhArticle dyhArticle, SimpleInfo simpleInfo) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, l2, l3, str9, str10, str11, str12, str13, str14, userInfo, i, i2, str15, str16, str17, str18, i3, i4, str19, str20, str21, str22, str23, list, i5, i6, str24, str25, str26, userInfo2, i7, str27, i8, i9, i10, i11, str28, str29, str30, str31, str32, str33, str34, replyUserAction, j, str35, str36, j2, str37, str38, str39, replyFeed, dyhArticle, simpleInfo);
+    C$AutoValue_FeedReply(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, String str10, String str11, String str12, String str13, String str14, UserInfo userInfo, int i, int i2, String str15, String str16, String str17, String str18, int i3, int i4, String str19, String str20, String str21, String str22, String str23, List<FeedReply> list, int i5, int i6, String str24, String str25, String str26, UserInfo userInfo2, int i7, String str27, int i8, int i9, int i10, int i11, String str28, String str29, String str30, String str31, String str32, String str33, String str34, FeedReply.ReplyUserAction replyUserAction, long j, String str35, String str36, long j2, String str37, String str38, String str39, FeedReply.ReplyFeed replyFeed, DyhArticle dyhArticle, SimpleInfo simpleInfo) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, l, l2, str9, str10, str11, str12, str13, str14, userInfo, i, i2, str15, str16, str17, str18, i3, i4, str19, str20, str21, str22, str23, list, i5, i6, str24, str25, str26, userInfo2, i7, str27, i8, i9, i10, i11, str28, str29, str30, str31, str32, str33, str34, replyUserAction, j, str35, str36, j2, str37, str38, str39, replyFeed, dyhArticle, simpleInfo);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_FeedReply$GsonTypeAdapter */
@@ -254,13 +254,13 @@ abstract class C$AutoValue_FeedReply extends C$$AutoValue_FeedReply {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -668,8 +668,8 @@ abstract class C$AutoValue_FeedReply extends C$$AutoValue_FeedReply {
             String str6 = this.defaultLogo;
             String str7 = this.defaultSubTitle;
             String str8 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str9 = this.defaultDeprecatedUserAvatar;
             String str10 = this.defaultDisplayUserName;
             String str11 = this.defaultId;
@@ -729,8 +729,8 @@ abstract class C$AutoValue_FeedReply extends C$$AutoValue_FeedReply {
             String str44 = str6;
             String str45 = str7;
             String str46 = str8;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str47 = str9;
             String str48 = str10;
             String str49 = str11;
@@ -1186,7 +1186,7 @@ abstract class C$AutoValue_FeedReply extends C$$AutoValue_FeedReply {
                             str48 = this.displayUserNameAdapter.read(jsonReader);
                             continue;
                         case 7:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\b':
                             str62 = this.fetchTypeAdapter.read(jsonReader);
@@ -1342,7 +1342,7 @@ abstract class C$AutoValue_FeedReply extends C$$AutoValue_FeedReply {
                             str70 = this.extraTitleAdapter.read(jsonReader);
                             continue;
                         case ';':
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case '<':
                             i15 = this.isFeedAuthorAdapter.read(jsonReader).intValue();
@@ -1357,7 +1357,7 @@ abstract class C$AutoValue_FeedReply extends C$$AutoValue_FeedReply {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_FeedReply(str50, str74, str41, num2, str42, str43, str44, str45, str46, l4, l5, str47, str48, str49, str51, str52, str53, userInfo3, i12, i13, str54, str55, str56, str57, i14, i15, str58, str59, str60, str61, str62, list2, i16, i17, str63, str64, str65, userInfo4, i18, str66, i19, i20, i21, i22, str67, str68, str69, str70, str71, str72, str73, replyUserAction2, j3, str75, str76, j4, str77, str40, str78, replyFeed2, dyhArticle2, simpleInfo);
+            return new AutoValue_FeedReply(str50, str74, str41, num2, str42, str43, str44, str45, str46, l3, l4, str47, str48, str49, str51, str52, str53, userInfo3, i12, i13, str54, str55, str56, str57, i14, i15, str58, str59, str60, str61, str62, list2, i16, i17, str63, str64, str65, userInfo4, i18, str66, i19, i20, i21, i22, str67, str68, str69, str70, str71, str72, str73, replyUserAction2, j3, str75, str76, j4, str77, str40, str78, replyFeed2, dyhArticle2, simpleInfo);
         }
     }
 }

@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_UserProfile  reason: invalid class name */
 abstract class C$AutoValue_UserProfile extends C$$AutoValue_UserProfile {
-    C$AutoValue_UserProfile(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, UserInfo userInfo, String str13, String str14, String str15, int i, String str16, String str17, int i2, String str18, int i3, int i4, float f, String str19, String str20, int i5, int i6, int i7, int i8, int i9, int i10, int i11, int i12, int i13, int i14, int i15, int i16, String str21, String str22, String str23, String str24, int i17, int i18, int i19, int i20, int i21, int i22, int i23, int i24, String str25, String str26, int i25, int i26, long j, long j2, int i27, List<Entity> list, String str27, String str28, int i28, Tips tips, int i29, String str29, String str30, String str31, List<String> list2) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l2, l3, str12, userInfo, str13, str14, str15, i, str16, str17, i2, str18, i3, i4, f, str19, str20, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, str21, str22, str23, str24, i17, i18, i19, i20, i21, i22, i23, i24, str25, str26, i25, i26, j, j2, i27, list, str27, str28, i28, tips, i29, str29, str30, str31, list2);
+    C$AutoValue_UserProfile(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, UserInfo userInfo, String str13, String str14, String str15, int i, String str16, String str17, int i2, String str18, int i3, int i4, float f, String str19, String str20, int i5, int i6, int i7, int i8, int i9, int i10, int i11, int i12, int i13, int i14, int i15, int i16, String str21, String str22, String str23, String str24, int i17, int i18, int i19, int i20, int i21, int i22, int i23, int i24, String str25, String str26, int i25, int i26, long j, long j2, int i27, List<Entity> list, String str27, String str28, int i28, Tips tips, int i29, String str29, String str30, String str31, List<String> list2) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l, l2, str12, userInfo, str13, str14, str15, i, str16, str17, i2, str18, i3, i4, f, str19, str20, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, str21, str22, str23, str24, i17, i18, i19, i20, i21, i22, i23, i24, str25, str26, i25, i26, j, j2, i27, list, str27, str28, i28, tips, i29, str29, str30, str31, list2);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_UserProfile$GsonTypeAdapter */
@@ -292,13 +292,13 @@ abstract class C$AutoValue_UserProfile extends C$$AutoValue_UserProfile {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -750,8 +750,8 @@ abstract class C$AutoValue_UserProfile extends C$$AutoValue_UserProfile {
             String str9 = this.defaultSubTitle;
             String str10 = this.defaultId;
             String str11 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str12 = this.defaultDeprecatedUserAvatar;
             UserInfo userInfo = this.defaultUserInfo;
             String str13 = this.defaultDeprecatedUserName;
@@ -819,8 +819,8 @@ abstract class C$AutoValue_UserProfile extends C$$AutoValue_UserProfile {
             String str38 = str9;
             String str39 = str10;
             String str40 = str11;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str41 = str;
             String str42 = str12;
             UserInfo userInfo2 = userInfo;
@@ -1353,7 +1353,7 @@ abstract class C$AutoValue_UserProfile extends C$$AutoValue_UserProfile {
                             str44 = this.displayUserNameAdapter.read(jsonReader);
                             continue;
                         case 15:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 16:
                             i53 = this.isInLimitListAdapter.read(jsonReader).intValue();
@@ -1515,7 +1515,7 @@ abstract class C$AutoValue_UserProfile extends C$$AutoValue_UserProfile {
                             i37 = this.albumNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 'E':
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -1524,7 +1524,7 @@ abstract class C$AutoValue_UserProfile extends C$$AutoValue_UserProfile {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_UserProfile(str41, str57, str32, num2, str33, str34, str35, str36, str37, str38, str39, str40, l4, l5, str42, userInfo2, str43, str44, str45, i30, str46, str47, i31, str48, i32, i33, f2, str49, str50, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, str51, str52, str53, str54, i46, i47, i48, i49, i50, i51, i52, i53, str55, str56, i54, i55, j3, j4, i56, list3, str58, str59, i57, tips2, i58, str60, str61, str62, list2);
+            return new AutoValue_UserProfile(str41, str57, str32, num2, str33, str34, str35, str36, str37, str38, str39, str40, l3, l4, str42, userInfo2, str43, str44, str45, i30, str46, str47, i31, str48, i32, i33, f2, str49, str50, i34, i35, i36, i37, i38, i39, i40, i41, i42, i43, i44, i45, str51, str52, str53, str54, i46, i47, i48, i49, i50, i51, i52, i53, str55, str56, i54, i55, j3, j4, i56, list3, str58, str59, i57, tips2, i58, str60, str61, str62, list2);
         }
     }
 }

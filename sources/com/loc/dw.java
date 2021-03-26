@@ -39,9 +39,7 @@ public final class dw {
     String i = null;
     boolean j = false;
     StringBuilder k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private Context f1368l;
+    private Context l;
     private String m = null;
     private ArrayList<dv> n = new ArrayList<>();
     private int o = -113;
@@ -149,7 +147,7 @@ public final class dw {
 
     public dw(Context context) {
         Object a2;
-        this.f1368l = context;
+        this.l = context;
         if (this.d == null) {
             this.d = (TelephonyManager) ep.a(context, "phone");
         }
@@ -167,9 +165,9 @@ public final class dw {
             try {
                 int i2 = r;
                 if (i2 != 1) {
-                    a2 = ep.a(i2 != 2 ? this.f1368l : this.f1368l, "phone2");
+                    a2 = ep.a(i2 != 2 ? this.l : this.l, "phone2");
                 } else {
-                    a2 = ep.a(this.f1368l, "phone_msim");
+                    a2 = ep.a(this.l, "phone_msim");
                 }
                 this.q = a2;
             } catch (Throwable unused) {
@@ -518,7 +516,7 @@ public final class dw {
         int size;
         SecurityException e2;
         if (!this.j && this.d != null) {
-            if (Build.VERSION.SDK_INT >= 29 && this.f1368l.getApplicationInfo().targetSdkVersion >= 29) {
+            if (Build.VERSION.SDK_INT >= 29 && this.l.getApplicationInfo().targetSdkVersion >= 29) {
                 if (this.t == null) {
                     this.t = new a();
                 }
@@ -600,7 +598,7 @@ public final class dw {
                             try {
                                 dv a2 = a(cellInfo);
                                 if (a2 != null) {
-                                    a2.f1367l = (short) ((int) Math.min(65535L, duVar.a(a2)));
+                                    a2.l = (short) ((int) Math.min(65535L, duVar.a(a2)));
                                     arrayList.add(a2);
                                 }
                             } catch (Throwable unused2) {
@@ -816,7 +814,7 @@ public final class dw {
                     cxVar.n = cellIdentity.getLongitude();
                     cxVar.j = cellIdentity.getSystemId();
                     cxVar.k = cellIdentity.getNetworkId();
-                    cxVar.f1357l = cellIdentity.getBasestationId();
+                    cxVar.l = cellIdentity.getBasestationId();
                     cxVar.d = cellInfoCdma.getCellSignalStrength().getAsuLevel();
                     cxVar.c = cellInfoCdma.getCellSignalStrength().getCdmaDbm();
                     czVar = cxVar;
@@ -843,7 +841,7 @@ public final class dw {
                         cz czVar2 = new cz(cellInfo.isRegistered());
                         czVar2.a = String.valueOf(cellIdentity3.getMcc());
                         czVar2.b = String.valueOf(cellIdentity3.getMnc());
-                        czVar2.f1359l = cellIdentity3.getPci();
+                        czVar2.l = cellIdentity3.getPci();
                         czVar2.d = cellInfoLte.getCellSignalStrength().getAsuLevel();
                         czVar2.k = cellIdentity3.getCi();
                         czVar2.j = cellIdentity3.getTac();
@@ -862,7 +860,7 @@ public final class dw {
                         daVar2.b = String.valueOf(cellIdentity4.getMnc());
                         daVar2.j = cellIdentity4.getLac();
                         daVar2.k = cellIdentity4.getCid();
-                        daVar2.f1361l = cellIdentity4.getPsc();
+                        daVar2.l = cellIdentity4.getPsc();
                         daVar2.d = cellInfoWcdma.getCellSignalStrength().getAsuLevel();
                         daVar2.c = cellInfoWcdma.getCellSignalStrength().getDbm();
                         daVar = daVar2;
@@ -887,7 +885,7 @@ public final class dw {
     /* JADX WARNING: Removed duplicated region for block: B:17:0x0039  */
     public final synchronized void a(boolean z, boolean z2) {
         try {
-            boolean a2 = ep.a(this.f1368l);
+            boolean a2 = ep.a(this.l);
             this.j = a2;
             boolean z3 = true;
             if (!a2) {
@@ -1056,7 +1054,7 @@ public final class dw {
         } catch (Throwable unused) {
         }
         try {
-            int a2 = ep.a(ep.c(this.f1368l));
+            int a2 = ep.a(ep.c(this.l));
             return a2 == 0 || a2 == 4 || a2 == 2 || a2 == 5 || a2 == 3;
         } catch (Throwable unused2) {
             return false;

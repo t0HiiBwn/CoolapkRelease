@@ -28,12 +28,12 @@ public class ItemHeadCardBindingImpl extends ItemHeadCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363607, 4);
-        sparseIntArray.put(2131362340, 5);
-        sparseIntArray.put(2131363568, 6);
-        sparseIntArray.put(2131363582, 7);
-        sparseIntArray.put(2131363558, 8);
-        sparseIntArray.put(2131362417, 9);
+        sparseIntArray.put(2131363629, 4);
+        sparseIntArray.put(2131362346, 5);
+        sparseIntArray.put(2131363590, 6);
+        sparseIntArray.put(2131363604, 7);
+        sparseIntArray.put(2131363579, 8);
+        sparseIntArray.put(2131362423, 9);
     }
 
     public ItemHeadCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -71,9 +71,9 @@ public class ItemHeadCardBindingImpl extends ItemHeadCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Entity) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -89,7 +89,7 @@ public class ItemHeadCardBindingImpl extends ItemHeadCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

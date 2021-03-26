@@ -23,8 +23,8 @@ public class ItemApkScrollWithBackgroundBindingImpl extends ItemApkScrollWithBac
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362908, 2);
-        sparseIntArray.put(2131362865, 3);
+        sparseIntArray.put(2131362920, 2);
+        sparseIntArray.put(2131362876, 3);
     }
 
     public ItemApkScrollWithBackgroundBindingImpl(DataBindingComponent dataBindingComponent, View view) {

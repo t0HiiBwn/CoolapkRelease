@@ -27,12 +27,12 @@ public class ItemSearchFeedFilterBindingImpl extends ItemSearchFeedFilterBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362542, 1);
-        sparseIntArray.put(2131362543, 2);
-        sparseIntArray.put(2131363385, 3);
-        sparseIntArray.put(2131363381, 4);
-        sparseIntArray.put(2131363383, 5);
-        sparseIntArray.put(2131363384, 6);
+        sparseIntArray.put(2131362550, 1);
+        sparseIntArray.put(2131362551, 2);
+        sparseIntArray.put(2131363402, 3);
+        sparseIntArray.put(2131363398, 4);
+        sparseIntArray.put(2131363400, 5);
+        sparseIntArray.put(2131363401, 6);
     }
 
     public ItemSearchFeedFilterBindingImpl(DataBindingComponent dataBindingComponent, View view) {

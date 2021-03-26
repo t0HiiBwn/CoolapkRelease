@@ -31,8 +31,8 @@ public final class a implements NativeExceptionHandler {
         int i;
         String str12;
         int indexOf;
-        boolean l2 = c.a().l();
-        if (l2) {
+        boolean l = c.a().l();
+        if (l) {
             x.e("This Crash Caused By ANR , PLS To Fix ANR , This Trace May Be Not Useful!", new Object[0]);
         }
         CrashDetailBean crashDetailBean = new CrashDetailBean();
@@ -43,7 +43,7 @@ public final class a implements NativeExceptionHandler {
         crashDetailBean.m = this.c.g();
         crashDetailBean.n = str3;
         String str13 = "";
-        crashDetailBean.o = l2 ? " This Crash Caused By ANR , PLS To Fix ANR , This Trace May Be Not Useful![Bugly]" : str13;
+        crashDetailBean.o = l ? " This Crash Caused By ANR , PLS To Fix ANR , This Trace May Be Not Useful![Bugly]" : str13;
         crashDetailBean.p = str4;
         if (str5 != null) {
             str13 = str5;
@@ -130,7 +130,7 @@ public final class a implements NativeExceptionHandler {
         handleNativeException2(i, i2, j, j2, str, str2, str3, str4, i3, str5, i4, i5, i6, str6, str7, null);
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:90:0x0299  */
+    /* JADX WARNING: Removed duplicated region for block: B:90:0x029a  */
     /* JADX WARNING: Removed duplicated region for block: B:98:? A[RETURN, SYNTHETIC] */
     @Override // com.tencent.bugly.crashreport.crash.jni.NativeExceptionHandler
     public final void handleNativeException2(int i, int i2, long j, long j2, String str, String str2, String str3, String str4, int i3, String str5, int i4, int i5, int i6, String str6, String str7, String[] strArr) {

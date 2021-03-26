@@ -34,7 +34,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: DyhArticleVH.kt */
 public final class DyhArticleVH extends GenericBindHolder<ItemDyhArticleV8Binding, DyhArticle> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558678;
+    public static final int LAYOUT_ID = 2131558684;
     private ArticleCoverViewPart mCoverViewPart;
     private DyhArticle mDyhArticle;
     private DyhArticleContentViewPart mDyhArticleContentViewPart;
@@ -399,7 +399,7 @@ public final class DyhArticleVH extends GenericBindHolder<ItemDyhArticleV8Bindin
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131363260) {
+        if (view.getId() == 2131363274) {
             DyhArticle dyhArticle = this.mDyhArticle;
             if (dyhArticle == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("mDyhArticle");

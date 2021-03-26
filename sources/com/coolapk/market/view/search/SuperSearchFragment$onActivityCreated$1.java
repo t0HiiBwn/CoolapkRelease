@@ -21,6 +21,6 @@ final class SuperSearchFragment$onActivityCreated$1 extends Lambda implements Fu
 
     public final RecyclerView.ViewHolder invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "it");
-        return new ItemGoodsListViewHolder(view, this.this$0.getBindingComponent(), null);
+        return new ItemGoodsListViewHolder(view, SuperSearchFragment.access$getBindingComponent$p(this.this$0), null);
     }
 }

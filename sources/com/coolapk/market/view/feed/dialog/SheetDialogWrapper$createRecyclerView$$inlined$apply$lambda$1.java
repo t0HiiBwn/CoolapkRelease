@@ -27,7 +27,7 @@ public final class SheetDialogWrapper$createRecyclerView$$inlined$apply$lambda$1
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public SheetDialogWrapper.SimpleViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
-        View inflate = LayoutInflater.from(this.$this_apply.getContext()).inflate(2131558573, viewGroup, false);
+        View inflate = LayoutInflater.from(this.$this_apply.getContext()).inflate(2131558577, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "LayoutInflater.from(cont…LAYOUT_ID, parent, false)");
         return new SheetDialogWrapper.SimpleViewHolder(inflate);
     }

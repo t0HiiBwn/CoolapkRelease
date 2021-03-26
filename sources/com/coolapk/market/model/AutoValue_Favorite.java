@@ -24,8 +24,8 @@ final class AutoValue_Favorite extends C$AutoValue_Favorite {
         return 0;
     }
 
-    AutoValue_Favorite(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l2, Long l3, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, int i, List<String> list) {
-        super(str, str2, str3, str4, num, str5, str6, str7, l2, l3, str8, userInfo, str9, str10, str11, str12, str13, str14, str15, str16, str17, str18, str19, str20, str21, str22, str23, str24, str25, i, list);
+    AutoValue_Favorite(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l, Long l2, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, int i, List<String> list) {
+        super(str, str2, str3, str4, num, str5, str6, str7, l, l2, str8, userInfo, str9, str10, str11, str12, str13, str14, str15, str16, str17, str18, str19, str20, str21, str22, str23, str24, str25, i, list);
     }
 
     @Override // android.os.Parcelable

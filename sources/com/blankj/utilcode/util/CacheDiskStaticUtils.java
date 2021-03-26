@@ -411,6 +411,10 @@ public final class CacheDiskStaticUtils {
 
     private static CacheDiskUtils getDefaultCacheDiskUtils() {
         CacheDiskUtils cacheDiskUtils = sDefaultCacheDiskUtils;
-        return cacheDiskUtils != null ? cacheDiskUtils : CacheDiskUtils.getInstance();
+        if (cacheDiskUtils == null) {
+            cacheDiskUtils = CacheDiskUtils.getInstance();
+        }
+        Objects.requireNonNull(cacheDiskUtils, "Detected an attempt to return null from a method com.blankj.utilcode.util.CacheDiskStaticUtils.getDefaultCacheDiskUtils() marked by @androidx.annotation.NonNull");
+        return cacheDiskUtils;
     }
 }

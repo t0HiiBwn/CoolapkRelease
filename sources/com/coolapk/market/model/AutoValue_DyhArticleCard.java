@@ -19,8 +19,8 @@ final class AutoValue_DyhArticleCard extends C$AutoValue_DyhArticleCard {
         }
     };
 
-    AutoValue_DyhArticleCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l2, String str7, String str8, String str9, List<DyhArticle> list, String str10, String str11, String str12, Long l3) {
-        super(str, str2, num, str3, str4, str5, str6, l2, str7, str8, str9, list, str10, str11, str12, l3);
+    AutoValue_DyhArticleCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l, String str7, String str8, String str9, List<DyhArticle> list, String str10, String str11, String str12, Long l2) {
+        super(str, str2, num, str3, str4, str5, str6, l, str7, str8, str9, list, str10, str11, str12, l2);
     }
 
     @Override // android.os.Parcelable

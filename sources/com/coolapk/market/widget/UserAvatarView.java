@@ -68,57 +68,57 @@ public final class UserAvatarView extends AppCompatImageView {
                 switch (str.hashCode()) {
                     case -825965949:
                         if (str.equals("v_blue")) {
-                            return 2131231628;
+                            return 2131231639;
                         }
                         break;
                     case -825436485:
                         if (str.equals("v_test")) {
-                            return 2131231637;
+                            return 2131231648;
                         }
                         break;
                     case 111918408:
                         if (str.equals("v_red")) {
-                            return 2131231633;
+                            return 2131231644;
                         }
                         break;
                     case 169640442:
                         if (str.equals("v_green")) {
-                            return 2131231632;
+                            return 2131231643;
                         }
                         break;
                     case 1099934276:
                         if (str.equals("dev_blue")) {
-                            return 2131231629;
+                            return 2131231640;
                         }
                         break;
                     case 1126632414:
                         if (str.equals("dev_yellow")) {
-                            return 2131231631;
+                            return 2131231642;
                         }
                         break;
                     case 1316189476:
                         if (str.equals("star_red")) {
-                            return 2131231635;
+                            return 2131231646;
                         }
                         break;
                     case 1467420765:
                         if (str.equals("v_yellow")) {
-                            return 2131231638;
+                            return 2131231649;
                         }
                         break;
                     case 1559517543:
                         if (str.equals("dev_red")) {
-                            return 2131231630;
+                            return 2131231641;
                         }
                         break;
                     case 2044984065:
                         if (str.equals("star_yellow")) {
-                            return 2131231636;
+                            return 2131231647;
                         }
                         break;
                     case 2146698791:
                         if (str.equals("star_blue")) {
-                            return 2131231634;
+                            return 2131231645;
                         }
                         break;
                 }
@@ -167,7 +167,7 @@ public final class UserAvatarView extends AppCompatImageView {
     private final void setDebugSign() {
         this.verifyIcon = "v_test";
         this.autoRound = true;
-        this.vSignDrawable = getContext().getDrawable(2131231637);
+        this.vSignDrawable = getContext().getDrawable(2131231648);
         invalidate();
     }
 

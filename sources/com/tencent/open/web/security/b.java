@@ -14,7 +14,7 @@ import java.util.List;
 /* compiled from: ProGuard */
 public class b extends a {
     @Override // com.tencent.open.a
-    public void a(String str, String str2, List<String> list, a.C0134a aVar) {
+    public void a(String str, String str2, List<String> list, a.C0152a aVar) {
         f.a("openSDK_LOG.SecureJsBridge", "-->getResult, objectName: " + str + " | methodName: " + str2);
         int size = list.size();
         for (int i = 0; i < size; i++) {

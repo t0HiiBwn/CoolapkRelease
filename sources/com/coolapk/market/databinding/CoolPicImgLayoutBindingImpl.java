@@ -24,10 +24,10 @@ public class CoolPicImgLayoutBindingImpl extends CoolPicImgLayoutBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 1);
-        sparseIntArray.put(2131362608, 2);
-        sparseIntArray.put(2131362596, 3);
-        sparseIntArray.put(2131363146, 4);
+        sparseIntArray.put(2131362718, 1);
+        sparseIntArray.put(2131362616, 2);
+        sparseIntArray.put(2131362604, 3);
+        sparseIntArray.put(2131363160, 4);
     }
 
     public CoolPicImgLayoutBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -64,7 +64,7 @@ public class CoolPicImgLayoutBindingImpl extends CoolPicImgLayoutBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (291 != i) {
+        if (292 != i) {
             return false;
         }
         setUrl((String) obj);

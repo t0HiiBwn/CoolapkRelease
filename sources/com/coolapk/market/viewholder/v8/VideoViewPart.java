@@ -47,7 +47,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: VideoViewPart.kt */
 public final class VideoViewPart extends BindingViewPart<ItemVideoViewPartBinding, VideoModel> implements VideoPlayerBridge, Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558986;
+    public static final int LAYOUT_ID = 2131558993;
     private RelationAssist assist;
     private final DataBindingComponent component;
     private boolean coverFunctionOnly;
@@ -106,7 +106,7 @@ public final class VideoViewPart extends BindingViewPart<ItemVideoViewPartBindin
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemVideoViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558986, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558993, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemVideoViewPartBinding) inflate;
     }
@@ -189,8 +189,8 @@ public final class VideoViewPart extends BindingViewPart<ItemVideoViewPartBindin
         Intrinsics.checkNotNullParameter(view, "v");
         super.onClick(view);
         int id = view.getId();
-        if (id != 2131363129) {
-            if (id == 2131363914) {
+        if (id != 2131363143) {
+            if (id == 2131363939) {
                 startVideoFullScreen();
             }
         } else if (this.coverFunctionOnly) {

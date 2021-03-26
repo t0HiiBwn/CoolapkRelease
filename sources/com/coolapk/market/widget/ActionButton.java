@@ -148,7 +148,7 @@ public final class ActionButton extends AppCompatTextView {
             setOutlineProvider(new ActionButton$initUI$1());
         }
         if (isInEditMode()) {
-            setThemeColor(ActionButtonKt.access$toColor(2131099784, context));
+            setThemeColor(ActionButtonKt.access$toColor(2131099786, context));
         } else {
             setThemeColor(AppHolder.getAppTheme().getColorAccent());
         }

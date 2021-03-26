@@ -623,7 +623,7 @@ public class JavaBeanDeserializer implements ObjectDeserializer {
                                 objArr = objArr2;
                             }
                             if (this.beanInfo.creatorConstructor != null) {
-                                ?? r4 = this.beanInfo.f1188kotlin;
+                                ?? r4 = this.beanInfo.f192kotlin;
                                 if (r4 != 0) {
                                     r4 = 0;
                                     while (true) {
@@ -2372,7 +2372,7 @@ public class JavaBeanDeserializer implements ObjectDeserializer {
                 }
             }
             if (this.beanInfo.creatorConstructor != null) {
-                if (this.beanInfo.f1188kotlin) {
+                if (this.beanInfo.f192kotlin) {
                     int i2 = 0;
                     while (true) {
                         if (i2 >= length) {

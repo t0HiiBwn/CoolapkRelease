@@ -71,7 +71,7 @@ public class VoteCommentListFragment extends EntityListFragment {
         RecyclerView recyclerView2 = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView2, "recyclerView");
         recyclerView2.setLayoutManager(new StaggeredGridLayoutManager(2, 1));
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558738).constructor(new VoteCommentListFragment$onActivityCreated$2(this)).suitedMethod(VoteCommentListFragment$onActivityCreated$3.INSTANCE).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558745).constructor(new VoteCommentListFragment$onActivityCreated$2(this)).suitedMethod(VoteCommentListFragment$onActivityCreated$3.INSTANCE).build(), -1);
     }
 
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListContract.View

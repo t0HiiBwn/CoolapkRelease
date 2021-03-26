@@ -29,8 +29,10 @@ import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import androidx.core.content.ContextCompat;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -53,6 +55,7 @@ public final class ImageUtils {
     }
 
     public static byte[] bitmap2Bytes(Bitmap bitmap, Bitmap.CompressFormat compressFormat, int i) {
+        Objects.requireNonNull(compressFormat, "Argument 'format' of type CompressFormat (#1 out of 3, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         if (bitmap == null) {
             return null;
         }
@@ -70,6 +73,9 @@ public final class ImageUtils {
 
     public static Bitmap drawable2Bitmap(Drawable drawable) {
         Bitmap bitmap;
+        if (drawable == null) {
+            return null;
+        }
         if (drawable instanceof BitmapDrawable) {
             BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
             if (bitmapDrawable.getBitmap() != null) {
@@ -218,7 +224,16 @@ public final class ImageUtils {
     }
 
     public static Bitmap getBitmap(int i) {
-        return BitmapFactory.decodeResource(Utils.getApp().getResources(), i);
+        Drawable drawable = ContextCompat.getDrawable(Utils.getApp(), i);
+        if (drawable == null) {
+            return null;
+        }
+        Canvas canvas = new Canvas();
+        Bitmap createBitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+        canvas.setBitmap(createBitmap);
+        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+        drawable.draw(canvas);
+        return createBitmap;
     }
 
     public static Bitmap getBitmap(int i, int i2, int i3) {
@@ -1017,36 +1032,55 @@ public final class ImageUtils {
     }
 
     public static File save2Album(Bitmap bitmap, Bitmap.CompressFormat compressFormat) {
-        return save2Album(bitmap, compressFormat, 100, false);
+        return save2Album(bitmap, "", compressFormat, 100, false);
     }
 
     public static File save2Album(Bitmap bitmap, Bitmap.CompressFormat compressFormat, boolean z) {
-        return save2Album(bitmap, compressFormat, 100, z);
+        return save2Album(bitmap, "", compressFormat, 100, z);
     }
 
     public static File save2Album(Bitmap bitmap, Bitmap.CompressFormat compressFormat, int i) {
-        return save2Album(bitmap, compressFormat, i, false);
+        return save2Album(bitmap, "", compressFormat, i, false);
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:39:0x0122 A[SYNTHETIC, Splitter:B:39:0x0122] */
-    /* JADX WARNING: Removed duplicated region for block: B:47:0x012f A[SYNTHETIC, Splitter:B:47:0x012f] */
     public static File save2Album(Bitmap bitmap, Bitmap.CompressFormat compressFormat, int i, boolean z) {
+        return save2Album(bitmap, "", compressFormat, i, z);
+    }
+
+    public static File save2Album(Bitmap bitmap, String str, Bitmap.CompressFormat compressFormat) {
+        return save2Album(bitmap, str, compressFormat, 100, false);
+    }
+
+    public static File save2Album(Bitmap bitmap, String str, Bitmap.CompressFormat compressFormat, boolean z) {
+        return save2Album(bitmap, str, compressFormat, 100, z);
+    }
+
+    public static File save2Album(Bitmap bitmap, String str, Bitmap.CompressFormat compressFormat, int i) {
+        return save2Album(bitmap, str, compressFormat, i, false);
+    }
+
+    /* JADX WARNING: Removed duplicated region for block: B:42:0x0120 A[SYNTHETIC, Splitter:B:42:0x0120] */
+    /* JADX WARNING: Removed duplicated region for block: B:50:0x012d A[SYNTHETIC, Splitter:B:50:0x012d] */
+    public static File save2Album(Bitmap bitmap, String str, Bitmap.CompressFormat compressFormat, int i, boolean z) {
         Uri uri;
         Throwable th;
         Exception e;
         OutputStream outputStream;
-        String str = System.currentTimeMillis() + "_" + i + "." + (Bitmap.CompressFormat.JPEG.equals(compressFormat) ? "JPG" : compressFormat.name());
+        if (TextUtils.isEmpty(str)) {
+            str = Utils.getApp().getPackageName();
+        }
+        String str2 = System.currentTimeMillis() + "_" + i + "." + (Bitmap.CompressFormat.JPEG.equals(compressFormat) ? "JPG" : compressFormat.name());
         OutputStream outputStream2 = null;
         if (Build.VERSION.SDK_INT >= 29) {
             ContentValues contentValues = new ContentValues();
-            contentValues.put("_display_name", str);
+            contentValues.put("_display_name", str2);
             contentValues.put("mime_type", "image/*");
             if (Environment.getExternalStorageState().equals("mounted")) {
                 uri = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
             } else {
                 uri = MediaStore.Images.Media.INTERNAL_CONTENT_URI;
             }
-            contentValues.put("relative_path", Environment.DIRECTORY_DCIM + "/" + Utils.getApp().getPackageName());
+            contentValues.put("relative_path", Environment.DIRECTORY_DCIM + "/" + str);
             contentValues.put("is_pending", (Integer) 1);
             Uri insert = Utils.getApp().getContentResolver().insert(uri, contentValues);
             if (insert == null) {
@@ -1085,12 +1119,17 @@ public final class ImageUtils {
                         th = th2;
                         outputStream2 = outputStream;
                         if (outputStream2 != null) {
+                            try {
+                                outputStream2.close();
+                            } catch (IOException e5) {
+                                e5.printStackTrace();
+                            }
                         }
                         throw th;
                     }
                 }
-            } catch (Exception e5) {
-                e = e5;
+            } catch (Exception e6) {
+                e = e6;
                 outputStream = null;
                 Utils.getApp().getContentResolver().delete(insert, null, null);
                 e.printStackTrace();
@@ -1100,11 +1139,6 @@ public final class ImageUtils {
             } catch (Throwable th3) {
                 th = th3;
                 if (outputStream2 != null) {
-                    try {
-                        outputStream2.close();
-                    } catch (IOException e6) {
-                        e6.printStackTrace();
-                    }
                 }
                 throw th;
             }
@@ -1112,7 +1146,7 @@ public final class ImageUtils {
             Log.e("ImageUtils", "save to album need storage permission");
             return null;
         } else {
-            File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM), Utils.getApp().getPackageName() + "/" + str);
+            File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM), str + "/" + str2);
             if (!save(bitmap, file, compressFormat, i, z)) {
                 return null;
             }

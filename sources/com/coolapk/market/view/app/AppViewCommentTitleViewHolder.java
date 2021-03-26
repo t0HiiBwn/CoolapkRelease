@@ -7,7 +7,7 @@ import com.coolapk.market.databinding.ItemAppViewCommentTitleBinding;
 import com.coolapk.market.viewholder.BindingViewHolder;
 
 public class AppViewCommentTitleViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558602;
+    public static final int LAYOUT_ID = 2131558606;
     private final AppViewViewModel viewModel;
 
     public AppViewCommentTitleViewHolder(View view, AppViewViewModel appViewViewModel, DataBindingComponent dataBindingComponent) {
@@ -28,7 +28,7 @@ public class AppViewCommentTitleViewHolder extends BindingViewHolder {
     public void onClick(View view) {
         super.onClick(view);
         AppViewListFragment appViewListFragment = (AppViewListFragment) ((FragmentBindingComponent) getComponent()).getContainer();
-        if (view.getId() == 2131362555) {
+        if (view.getId() == 2131362563) {
             appViewListFragment.showFilterPopMenu(view);
         }
     }

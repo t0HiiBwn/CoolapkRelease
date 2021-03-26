@@ -20,7 +20,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: BannedUserViewHolder.kt */
 public final class BannedUserViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558967;
+    public static final int LAYOUT_ID = 2131558974;
     private final ItemUserBinding binding = ((ItemUserBinding) getBinding());
     private final ItemActionHandler handler;
     private LiveUser liveUser;
@@ -88,7 +88,7 @@ public final class BannedUserViewHolder extends BindingViewHolder {
             Intrinsics.throwUninitializedPropertyAccessException("liveUser");
         }
         view.setTag(liveUser2);
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             this.handler.onItemClick(this, view);
             return;
         }

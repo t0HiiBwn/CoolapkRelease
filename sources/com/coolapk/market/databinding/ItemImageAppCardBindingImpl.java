@@ -25,10 +25,10 @@ public class ItemImageAppCardBindingImpl extends ItemImageAppCardBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(5);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"item_app_inside_image_card"}, new int[]{3}, new int[]{2131558592});
+        includedLayouts.setIncludes(1, new String[]{"item_app_inside_image_card"}, new int[]{3}, new int[]{2131558596});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363917, 4);
+        sparseIntArray.put(2131363942, 4);
     }
 
     public ItemImageAppCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -74,7 +74,7 @@ public class ItemImageAppCardBindingImpl extends ItemImageAppCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((EntityItemModel) obj);
         } else if (44 != i) {
             return false;
@@ -90,7 +90,7 @@ public class ItemImageAppCardBindingImpl extends ItemImageAppCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -150,7 +150,7 @@ public class ItemImageAppCardBindingImpl extends ItemImageAppCardBinding {
         if ((j & 10) != 0) {
             this.imageView.setVisibility(i);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231696), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231707), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
             this.includeApp.setModel(entityItemModel);
         }
         executeBindingsOn(this.includeApp);

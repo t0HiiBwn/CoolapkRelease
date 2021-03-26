@@ -30,15 +30,15 @@ public class ItemLiveMessageBindingImpl extends ItemLiveMessageBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362095, 2);
-        sparseIntArray.put(2131362931, 3);
-        sparseIntArray.put(2131362647, 4);
-        sparseIntArray.put(2131363558, 5);
-        sparseIntArray.put(2131363179, 6);
-        sparseIntArray.put(2131362933, 7);
-        sparseIntArray.put(2131363016, 8);
-        sparseIntArray.put(2131363392, 9);
-        sparseIntArray.put(2131363389, 10);
+        sparseIntArray.put(2131362098, 2);
+        sparseIntArray.put(2131362943, 3);
+        sparseIntArray.put(2131362655, 4);
+        sparseIntArray.put(2131363579, 5);
+        sparseIntArray.put(2131363193, 6);
+        sparseIntArray.put(2131362945, 7);
+        sparseIntArray.put(2131363030, 8);
+        sparseIntArray.put(2131363409, 9);
+        sparseIntArray.put(2131363406, 10);
     }
 
     public ItemLiveMessageBindingImpl(DataBindingComponent dataBindingComponent, View view) {

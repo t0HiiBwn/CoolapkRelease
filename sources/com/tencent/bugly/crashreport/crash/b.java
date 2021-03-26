@@ -307,7 +307,7 @@ public final class b {
     }
 
     public final void a(CrashDetailBean crashDetailBean, long j, boolean z) {
-        if (c.f1437l) {
+        if (c.l) {
             x.a("try to upload right now", new Object[0]);
             ArrayList arrayList = new ArrayList();
             arrayList.add(crashDetailBean);
@@ -390,10 +390,10 @@ public final class b {
         if (list != null && list.size() > 0) {
             x.c("up finish update state %b", Boolean.valueOf(z));
             for (CrashDetailBean crashDetailBean : list) {
-                x.c("pre uid:%s uc:%d re:%b me:%b", crashDetailBean.c, Integer.valueOf(crashDetailBean.f1435l), Boolean.valueOf(crashDetailBean.d), Boolean.valueOf(crashDetailBean.j));
-                crashDetailBean.f1435l++;
+                x.c("pre uid:%s uc:%d re:%b me:%b", crashDetailBean.c, Integer.valueOf(crashDetailBean.l), Boolean.valueOf(crashDetailBean.d), Boolean.valueOf(crashDetailBean.j));
+                crashDetailBean.l++;
                 crashDetailBean.d = z;
-                x.c("set uid:%s uc:%d re:%b me:%b", crashDetailBean.c, Integer.valueOf(crashDetailBean.f1435l), Boolean.valueOf(crashDetailBean.d), Boolean.valueOf(crashDetailBean.j));
+                x.c("set uid:%s uc:%d re:%b me:%b", crashDetailBean.c, Integer.valueOf(crashDetailBean.l), Boolean.valueOf(crashDetailBean.d), Boolean.valueOf(crashDetailBean.j));
             }
             for (CrashDetailBean crashDetailBean2 : list) {
                 c.a().a(crashDetailBean2);
@@ -405,11 +405,11 @@ public final class b {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:50:0x00ce A[Catch:{ all -> 0x01f0 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:64:0x0175 A[Catch:{ all -> 0x01f0 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:65:0x0183 A[Catch:{ all -> 0x01f0 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:70:0x019e A[Catch:{ all -> 0x01f0 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:76:0x01cd A[Catch:{ all -> 0x01f0 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:50:0x00cf A[Catch:{ all -> 0x01f1 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:64:0x0176 A[Catch:{ all -> 0x01f1 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:65:0x0184 A[Catch:{ all -> 0x01f1 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:70:0x019f A[Catch:{ all -> 0x01f1 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:76:0x01ce A[Catch:{ all -> 0x01f1 }] */
     /* JADX WARNING: Removed duplicated region for block: B:88:? A[RETURN, SYNTHETIC] */
     public final void d(CrashDetailBean crashDetailBean) {
         int i;
@@ -586,7 +586,7 @@ public final class b {
                 i = 0;
             }
             contentValues.put("_me", Integer.valueOf(i));
-            contentValues.put("_uc", Integer.valueOf(crashDetailBean.f1435l));
+            contentValues.put("_uc", Integer.valueOf(crashDetailBean.l));
             contentValues.put("_dt", z.a(crashDetailBean));
             return contentValues;
         } catch (Throwable th) {
@@ -631,8 +631,8 @@ public final class b {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:46:0x00f8 A[Catch:{ all -> 0x0101 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:48:0x00fd A[DONT_GENERATE] */
+    /* JADX WARNING: Removed duplicated region for block: B:46:0x00f9 A[Catch:{ all -> 0x0102 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:48:0x00fe A[DONT_GENERATE] */
     private List<CrashDetailBean> b(List<a> list) {
         Throwable th;
         Cursor cursor;
@@ -738,8 +738,8 @@ public final class b {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:40:0x00cc A[Catch:{ all -> 0x00d5 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:42:0x00d1 A[DONT_GENERATE] */
+    /* JADX WARNING: Removed duplicated region for block: B:40:0x00cd A[Catch:{ all -> 0x00d6 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:42:0x00d2 A[DONT_GENERATE] */
     private List<a> b() {
         Throwable th;
         ArrayList arrayList = new ArrayList();
@@ -860,31 +860,31 @@ public final class b {
         }
     }
 
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x0163: APUT  
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x0164: APUT  
       (r3v150 java.lang.Object[])
       (1 ??[boolean, int, float, short, byte, char])
-      (wrap: java.lang.Integer : 0x015f: INVOKE  (r7v18 java.lang.Integer) = (r7v17 int) type: STATIC call: java.lang.Integer.valueOf(int):java.lang.Integer)
+      (wrap: java.lang.Integer : 0x0160: INVOKE  (r7v18 java.lang.Integer) = (r7v17 int) type: STATIC call: java.lang.Integer.valueOf(int):java.lang.Integer)
      */
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x0749: APUT  
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x074d: APUT  
       (r12v40 java.lang.Object[])
       (7 ??[int, float, short, byte, char])
-      (wrap: java.lang.Boolean : 0x0745: INVOKE  (r0v10 java.lang.Boolean) = (r1v1 boolean) type: STATIC call: java.lang.Boolean.valueOf(boolean):java.lang.Boolean)
+      (wrap: java.lang.Boolean : 0x0749: INVOKE  (r0v10 java.lang.Boolean) = (r1v1 boolean) type: STATIC call: java.lang.Boolean.valueOf(boolean):java.lang.Boolean)
      */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0374: IGET  (r8v0 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.C long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0389: IGET  (r8v2 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.D long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x039e: IGET  (r8v4 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.E long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0422: IGET  (r8v16 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.G long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0437: IGET  (r8v18 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.F long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0461: IGET  (r8v22 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.H long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: java.lang.Boolean : 0x04a4: INVOKE  (r8v28 java.lang.Boolean) = (r14v0 com.tencent.bugly.crashreport.common.info.a) type: VIRTUAL call: com.tencent.bugly.crashreport.common.info.a.r():java.lang.Boolean)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: boolean : 0x0535: IGET  (r6v29 boolean) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.k boolean)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x055f: IGET  (r8v32 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.M long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x058a: IGET  (r8v33 long) = (r14v0 com.tencent.bugly.crashreport.common.info.a) com.tencent.bugly.crashreport.common.info.a.r long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x059f: IGET  (r8v34 long) = (r14v0 com.tencent.bugly.crashreport.common.info.a) com.tencent.bugly.crashreport.common.info.a.s long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x05cb: IGET  (r8v35 long) = (r14v0 com.tencent.bugly.crashreport.common.info.a) com.tencent.bugly.crashreport.common.info.a.t long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x061f: IGET  (r8v36 long) = (r14v0 com.tencent.bugly.crashreport.common.info.a) com.tencent.bugly.crashreport.common.info.a.u long)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: int : 0x0638: IGET  (r6v23 int) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.Q int)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: int : 0x0651: IGET  (r6v21 int) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.R int)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0378: IGET  (r8v0 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.C long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x038d: IGET  (r8v2 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.D long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x03a2: IGET  (r8v4 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.E long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0426: IGET  (r8v16 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.G long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x043b: IGET  (r8v18 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.F long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0465: IGET  (r8v22 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.H long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: java.lang.Boolean : 0x04a8: INVOKE  (r8v28 java.lang.Boolean) = (r14v0 com.tencent.bugly.crashreport.common.info.a) type: VIRTUAL call: com.tencent.bugly.crashreport.common.info.a.r():java.lang.Boolean)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: boolean : 0x0539: IGET  (r6v29 boolean) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.k boolean)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0563: IGET  (r8v32 long) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.M long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x058e: IGET  (r8v33 long) = (r14v0 com.tencent.bugly.crashreport.common.info.a) com.tencent.bugly.crashreport.common.info.a.r long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x05a3: IGET  (r8v34 long) = (r14v0 com.tencent.bugly.crashreport.common.info.a) com.tencent.bugly.crashreport.common.info.a.s long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x05cf: IGET  (r8v35 long) = (r14v0 com.tencent.bugly.crashreport.common.info.a) com.tencent.bugly.crashreport.common.info.a.t long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: long : 0x0623: IGET  (r8v36 long) = (r14v0 com.tencent.bugly.crashreport.common.info.a) com.tencent.bugly.crashreport.common.info.a.u long)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: int : 0x063c: IGET  (r6v23 int) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.Q int)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: int : 0x0655: IGET  (r6v21 int) = (r13v0 com.tencent.bugly.crashreport.crash.CrashDetailBean) com.tencent.bugly.crashreport.crash.CrashDetailBean.R int)] */
     private static ak a(Context context, CrashDetailBean crashDetailBean, com.tencent.bugly.crashreport.common.info.a aVar) {
         aj a2;
         aj a3;
@@ -932,7 +932,7 @@ public final class b {
         akVar.h = crashDetailBean.z;
         akVar.i = crashDetailBean.c;
         akVar.j = null;
-        akVar.f1439l = crashDetailBean.m;
+        akVar.l = crashDetailBean.m;
         akVar.m = crashDetailBean.e;
         akVar.f = crashDetailBean.B;
         akVar.n = null;
@@ -1203,9 +1203,9 @@ public final class b {
         return akVar;
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:33:0x0090 A[Catch:{ all -> 0x00b2 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:35:0x0095 A[SYNTHETIC, Splitter:B:35:0x0095] */
-    /* JADX WARNING: Removed duplicated region for block: B:43:0x00a9  */
+    /* JADX WARNING: Removed duplicated region for block: B:33:0x0092 A[Catch:{ all -> 0x00b4 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:35:0x0097 A[SYNTHETIC, Splitter:B:35:0x0097] */
+    /* JADX WARNING: Removed duplicated region for block: B:43:0x00ab  */
     private static aj a(String str, Context context, String str2) {
         FileInputStream fileInputStream;
         Throwable th;

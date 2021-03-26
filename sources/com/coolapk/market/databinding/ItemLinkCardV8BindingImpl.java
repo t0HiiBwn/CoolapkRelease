@@ -21,9 +21,9 @@ public class ItemLinkCardV8BindingImpl extends ItemLinkCardV8Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363289, 1);
-        sparseIntArray.put(2131362815, 2);
-        sparseIntArray.put(2131362816, 3);
+        sparseIntArray.put(2131363304, 1);
+        sparseIntArray.put(2131362826, 2);
+        sparseIntArray.put(2131362827, 3);
     }
 
     public ItemLinkCardV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -58,7 +58,7 @@ public class ItemLinkCardV8BindingImpl extends ItemLinkCardV8Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (278 != i) {
+        if (279 != i) {
             return false;
         }
         setTitle((String) obj);

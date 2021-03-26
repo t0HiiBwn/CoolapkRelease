@@ -27,9 +27,9 @@ public class ItemTopGroupCardItemBindingImpl extends ItemTopGroupCardItemBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362568, 5);
-        sparseIntArray.put(2131362566, 6);
-        sparseIntArray.put(2131362567, 7);
+        sparseIntArray.put(2131362576, 5);
+        sparseIntArray.put(2131362574, 6);
+        sparseIntArray.put(2131362575, 7);
     }
 
     public ItemTopGroupCardItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -68,7 +68,7 @@ public class ItemTopGroupCardItemBindingImpl extends ItemTopGroupCardItemBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (242 != i) {
+        if (243 != i) {
             return false;
         }
         setServiceApp((ServiceApp) obj);
@@ -81,7 +81,7 @@ public class ItemTopGroupCardItemBindingImpl extends ItemTopGroupCardItemBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(242);
+        notifyPropertyChanged(243);
         super.requestRebind();
     }
 
@@ -109,7 +109,7 @@ public class ItemTopGroupCardItemBindingImpl extends ItemTopGroupCardItemBinding
                 str2 = null;
                 str4 = null;
             }
-            str3 = this.infoView.getResources().getString(2131886639, str5);
+            str3 = this.infoView.getResources().getString(2131886701, str5);
             str = str4;
         } else {
             str3 = null;
@@ -122,7 +122,7 @@ public class ItemTopGroupCardItemBindingImpl extends ItemTopGroupCardItemBinding
         if (i != 0) {
             ActionButtonBindingAdapters.setActionText(this.actionButton, serviceApp, true);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.infoView, str3);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }

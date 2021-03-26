@@ -19,7 +19,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: DyhArticleSimpleHeaderViewPart.kt */
 public final class DyhArticleSimpleHeaderViewPart extends BindingViewPart<ItemDyhSimpleHeaderBinding, DyhArticle> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558682;
+    public static final int LAYOUT_ID = 2131558688;
     private final DataBindingComponent dataBindingComponent;
     private DyhArticle mDyhArticle;
     private final DyhViewModel mDyhViewModel;
@@ -63,7 +63,7 @@ public final class DyhArticleSimpleHeaderViewPart extends BindingViewPart<ItemDy
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemDyhSimpleHeaderBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558682, viewGroup, false, this.dataBindingComponent);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558688, viewGroup, false, this.dataBindingComponent);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…se, dataBindingComponent)");
         return (ItemDyhSimpleHeaderBinding) inflate;
     }

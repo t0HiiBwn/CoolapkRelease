@@ -21,7 +21,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ArticleEditFeedTextHolder.kt */
 public final class ArticleEditFeedTextHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131559152;
+    public static final int LAYOUT_ID = 2131559160;
     private boolean isBindToContent;
     private final ArticleViewModel viewModel;
 

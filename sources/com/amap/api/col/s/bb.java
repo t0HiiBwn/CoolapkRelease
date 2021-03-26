@@ -33,9 +33,7 @@ public final class bb implements INearbySearch {
     private boolean i = false;
     private Timer j = new Timer();
     private UploadInfoCallback k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private TimerTask f1200l;
+    private TimerTask l;
 
     public bb(Context context) {
         this.c = context.getApplicationContext();
@@ -130,12 +128,12 @@ public final class bb implements INearbySearch {
         }
         try {
             this.k = uploadInfoCallback;
-            if (this.i && (timerTask = this.f1200l) != null) {
+            if (this.i && (timerTask = this.l) != null) {
                 timerTask.cancel();
             }
             this.i = true;
             a aVar = new a(this, (byte) 0);
-            this.f1200l = aVar;
+            this.l = aVar;
             this.j.schedule(aVar, 0, (long) i2);
         } catch (Throwable th) {
             i.a(th, "NearbySearch", "startUploadNearbyInfoAuto");
@@ -145,7 +143,7 @@ public final class bb implements INearbySearch {
     @Override // com.amap.api.services.interfaces.INearbySearch
     public final synchronized void stopUploadNearbyInfoAuto() {
         try {
-            TimerTask timerTask = this.f1200l;
+            TimerTask timerTask = this.l;
             if (timerTask != null) {
                 timerTask.cancel();
             }
@@ -153,7 +151,7 @@ public final class bb implements INearbySearch {
             i.a(th, "NearbySearch", "stopUploadNearbyInfoAuto");
         }
         this.i = false;
-        this.f1200l = null;
+        this.l = null;
     }
 
     private static boolean a(String str) {

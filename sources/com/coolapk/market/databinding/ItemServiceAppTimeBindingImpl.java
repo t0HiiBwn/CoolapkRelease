@@ -54,7 +54,7 @@ public class ItemServiceAppTimeBindingImpl extends ItemServiceAppTimeBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (276 != i) {
+        if (277 != i) {
             return false;
         }
         setTime((String) obj);
@@ -67,7 +67,7 @@ public class ItemServiceAppTimeBindingImpl extends ItemServiceAppTimeBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(276);
+        notifyPropertyChanged(277);
         super.requestRebind();
     }
 

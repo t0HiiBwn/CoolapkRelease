@@ -93,7 +93,7 @@ public class RelatedAlbumCard implements Card<Album> {
 
     @Override // com.coolapk.market.model.Card, com.coolapk.market.model.Entity
     public String getTitle() {
-        return this.context.getString(2131886955);
+        return this.context.getString(2131887017);
     }
 
     @Override // com.coolapk.market.model.Card

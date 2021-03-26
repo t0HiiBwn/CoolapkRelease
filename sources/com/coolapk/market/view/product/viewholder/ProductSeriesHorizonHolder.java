@@ -25,7 +25,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ProductSeriesHorizonHolder.kt */
 public final class ProductSeriesHorizonHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558875;
+    public static final int LAYOUT_ID = 2131558882;
     private final ItemProductSeriesHorizontalBinding binding;
     private ProductLocalData data;
 
@@ -137,7 +137,7 @@ public final class ProductSeriesHorizonHolder extends BindingViewHolder {
         super.onClick(view);
         boolean z = false;
         switch (view.getId()) {
-            case 2131361878:
+            case 2131361879:
                 ItemProductSeriesHorizontalBinding itemProductSeriesHorizontalBinding = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemProductSeriesHorizontalBinding, "binding");
                 Product model1 = itemProductSeriesHorizontalBinding.getModel1();
@@ -167,7 +167,7 @@ public final class ProductSeriesHorizonHolder extends BindingViewHolder {
                     return;
                 }
                 return;
-            case 2131361879:
+            case 2131361880:
                 ItemProductSeriesHorizontalBinding itemProductSeriesHorizontalBinding2 = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemProductSeriesHorizontalBinding2, "binding");
                 Product model2 = itemProductSeriesHorizontalBinding2.getModel2();
@@ -197,7 +197,7 @@ public final class ProductSeriesHorizonHolder extends BindingViewHolder {
                     return;
                 }
                 return;
-            case 2131361880:
+            case 2131361881:
                 ItemProductSeriesHorizontalBinding itemProductSeriesHorizontalBinding3 = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemProductSeriesHorizontalBinding3, "binding");
                 Product model3 = itemProductSeriesHorizontalBinding3.getModel3();
@@ -227,7 +227,7 @@ public final class ProductSeriesHorizonHolder extends BindingViewHolder {
                     return;
                 }
                 return;
-            case 2131361981:
+            case 2131361982:
                 ProductLocalData productLocalData = this.data;
                 if (productLocalData == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("data");
@@ -240,7 +240,7 @@ public final class ProductSeriesHorizonHolder extends BindingViewHolder {
                     return;
                 }
                 return;
-            case 2131362769:
+            case 2131362780:
                 ItemProductSeriesHorizontalBinding itemProductSeriesHorizontalBinding4 = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemProductSeriesHorizontalBinding4, "binding");
                 Product model12 = itemProductSeriesHorizontalBinding4.getModel1();
@@ -250,7 +250,7 @@ public final class ProductSeriesHorizonHolder extends BindingViewHolder {
                     return;
                 }
                 return;
-            case 2131362773:
+            case 2131362784:
                 ItemProductSeriesHorizontalBinding itemProductSeriesHorizontalBinding5 = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemProductSeriesHorizontalBinding5, "binding");
                 Product model22 = itemProductSeriesHorizontalBinding5.getModel2();
@@ -260,7 +260,7 @@ public final class ProductSeriesHorizonHolder extends BindingViewHolder {
                     return;
                 }
                 return;
-            case 2131362774:
+            case 2131362785:
                 ItemProductSeriesHorizontalBinding itemProductSeriesHorizontalBinding6 = this.binding;
                 Intrinsics.checkNotNullExpressionValue(itemProductSeriesHorizontalBinding6, "binding");
                 Product model32 = itemProductSeriesHorizontalBinding6.getModel3();

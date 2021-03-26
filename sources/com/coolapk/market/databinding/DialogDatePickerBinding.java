@@ -21,7 +21,7 @@ public abstract class DialogDatePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogDatePickerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogDatePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558522, viewGroup, z, obj);
+        return (DialogDatePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558524, viewGroup, z, obj);
     }
 
     public static DialogDatePickerBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class DialogDatePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogDatePickerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogDatePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558522, null, false, obj);
+        return (DialogDatePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558524, null, false, obj);
     }
 
     public static DialogDatePickerBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class DialogDatePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogDatePickerBinding bind(View view, Object obj) {
-        return (DialogDatePickerBinding) bind(obj, view, 2131558522);
+        return (DialogDatePickerBinding) bind(obj, view, 2131558524);
     }
 }

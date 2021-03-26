@@ -27,9 +27,9 @@ public class PostMorePanelBindingImpl extends PostMorePanelBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362962, 1);
-        sparseIntArray.put(2131362964, 2);
-        sparseIntArray.put(2131362963, 3);
+        sparseIntArray.put(2131362974, 1);
+        sparseIntArray.put(2131362976, 2);
+        sparseIntArray.put(2131362975, 3);
     }
 
     public PostMorePanelBindingImpl(DataBindingComponent dataBindingComponent, View view) {

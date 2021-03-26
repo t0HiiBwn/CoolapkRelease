@@ -24,8 +24,8 @@ public class DialogSecondHandEditBindingImpl extends DialogSecondHandEditBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 4);
-        sparseIntArray.put(2131362441, 5);
+        sparseIntArray.put(2131363604, 4);
+        sparseIntArray.put(2131362448, 5);
     }
 
     public DialogSecondHandEditBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -65,7 +65,7 @@ public class DialogSecondHandEditBindingImpl extends DialogSecondHandEditBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (186 != i) {
+        if (187 != i) {
             return false;
         }
         setLoading(((Boolean) obj).booleanValue());
@@ -78,7 +78,7 @@ public class DialogSecondHandEditBindingImpl extends DialogSecondHandEditBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(186);
+        notifyPropertyChanged(187);
         super.requestRebind();
     }
 

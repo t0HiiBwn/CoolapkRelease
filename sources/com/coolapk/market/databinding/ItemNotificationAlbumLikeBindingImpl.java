@@ -32,11 +32,11 @@ public class ItemNotificationAlbumLikeBindingImpl extends ItemNotificationAlbumL
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362200, 7);
-        sparseIntArray.put(2131362375, 8);
-        sparseIntArray.put(2131363435, 9);
-        sparseIntArray.put(2131363891, 10);
-        sparseIntArray.put(2131363219, 11);
+        sparseIntArray.put(2131362205, 7);
+        sparseIntArray.put(2131362381, 8);
+        sparseIntArray.put(2131363453, 9);
+        sparseIntArray.put(2131363914, 10);
+        sparseIntArray.put(2131363233, 11);
     }
 
     public ItemNotificationAlbumLikeBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -79,9 +79,9 @@ public class ItemNotificationAlbumLikeBindingImpl extends ItemNotificationAlbumL
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Album) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -97,7 +97,7 @@ public class ItemNotificationAlbumLikeBindingImpl extends ItemNotificationAlbumL
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -107,7 +107,7 @@ public class ItemNotificationAlbumLikeBindingImpl extends ItemNotificationAlbumL
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -184,7 +184,7 @@ public class ItemNotificationAlbumLikeBindingImpl extends ItemNotificationAlbumL
         int i2 = ((j & 12) > 0 ? 1 : ((j & 12) == 0 ? 0 : -1));
         if ((9 & j) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
             TextViewBindingAdapters.setTime(this.mboundView3, Long.valueOf(j2));
             TextViewBindingAdapter.setText(this.textView, str2);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str4, bool);
@@ -202,7 +202,7 @@ public class ItemNotificationAlbumLikeBindingImpl extends ItemNotificationAlbumL
         }
         if (i != 0) {
             Boolean bool3 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str5, null, 2131231152, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str5, null, 2131231162, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
         }
     }
 }

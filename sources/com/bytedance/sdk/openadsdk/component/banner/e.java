@@ -35,9 +35,7 @@ public class e implements TTBannerAd, al.a {
     private b i;
     private final b j;
     private a k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1293l = "banner_ad";
+    private String l = "banner_ad";
     private AdSlot m;
 
     public e(Context context, a aVar, AdSlot adSlot) {
@@ -99,7 +97,7 @@ public class e implements TTBannerAd, al.a {
     @Override // com.bytedance.sdk.openadsdk.TTBannerAd
     public void setSlideIntervalTime(int i2) {
         if (i2 > 0) {
-            this.f1293l = "slide_banner_ad";
+            this.l = "slide_banner_ad";
             a(this.a.b(), this.b);
             this.a.a();
             this.a.a(1000);
@@ -129,7 +127,7 @@ public class e implements TTBannerAd, al.a {
 
     private void b(TTAdDislike.DislikeInteractionCallback dislikeInteractionCallback) {
         if (this.i == null) {
-            this.i = new b(this.c, this.f, this.f1293l);
+            this.i = new b(this.c, this.f, this.l);
         }
         this.i.setDislikeInteractionCallback(dislikeInteractionCallback);
     }
@@ -185,7 +183,7 @@ public class e implements TTBannerAd, al.a {
 
     private a a(l lVar) {
         if (lVar.T() == 4) {
-            return com.bytedance.sdk.openadsdk.downloadnew.a.a(this.c, lVar, this.f1293l);
+            return com.bytedance.sdk.openadsdk.downloadnew.a.a(this.c, lVar, this.l);
         }
         return null;
     }
@@ -194,7 +192,7 @@ public class e implements TTBannerAd, al.a {
         cVar.a(aVar.a());
         final l b2 = aVar.b();
         this.f = b2;
-        this.i = new com.bytedance.sdk.openadsdk.dislike.b(this.c, b2, this.f1293l);
+        this.i = new com.bytedance.sdk.openadsdk.dislike.b(this.c, b2, this.l);
         cVar.a(b2);
         a a2 = a(b2);
         this.k = a2;
@@ -257,13 +255,13 @@ public class e implements TTBannerAd, al.a {
                 e.this.b();
                 u.b("TTBannerAd", "BANNER SHOW");
                 u.e("AdEvent", "pangolin ad show " + aj.a(b2, view));
-                d.a(e.this.c, b2, e.this.f1293l, (Map<String, Object>) null);
+                d.a(e.this.c, b2, e.this.l, (Map<String, Object>) null);
                 if (e.this.g != null) {
                     e.this.g.onAdShow(view, b2.T());
                 }
             }
         });
-        com.bytedance.sdk.openadsdk.core.a.a aVar3 = new com.bytedance.sdk.openadsdk.core.a.a(this.c, b2, this.f1293l, 2);
+        com.bytedance.sdk.openadsdk.core.a.a aVar3 = new com.bytedance.sdk.openadsdk.core.a.a(this.c, b2, this.l, 2);
         aVar3.a(cVar);
         aVar3.b(this.a.d());
         aVar3.a(this.k);

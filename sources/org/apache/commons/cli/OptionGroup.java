@@ -25,6 +25,18 @@ public class OptionGroup implements Serializable {
         return this.optionMap.values();
     }
 
+    public String getSelected() {
+        return this.selected;
+    }
+
+    public boolean isRequired() {
+        return this.required;
+    }
+
+    public void setRequired(boolean z) {
+        this.required = z;
+    }
+
     public void setSelected(Option option) throws AlreadySelectedException {
         String str = this.selected;
         if (str == null || str.equals(option.getOpt())) {
@@ -32,18 +44,6 @@ public class OptionGroup implements Serializable {
             return;
         }
         throw new AlreadySelectedException(this, option);
-    }
-
-    public String getSelected() {
-        return this.selected;
-    }
-
-    public void setRequired(boolean z) {
-        this.required = z;
-    }
-
-    public boolean isRequired() {
-        return this.required;
     }
 
     @Override // java.lang.Object

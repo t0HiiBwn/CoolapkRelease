@@ -9,12 +9,12 @@ import kotlin.time.DurationKt;
 /* compiled from: DurationConversions.kt */
 public final class DurationConversionsJDK8Kt {
     private static final double toKotlinDuration(Duration duration) {
-        return kotlin.time.Duration.m1969plusLRDsOJo(DurationKt.getSeconds(duration.getSeconds()), DurationKt.getNanoseconds(duration.getNano()));
+        return kotlin.time.Duration.m1367plusLRDsOJo(DurationKt.getSeconds(duration.getSeconds()), DurationKt.getNanoseconds(duration.getNano()));
     }
 
     /* renamed from: toJavaDuration-LRDsOJo  reason: not valid java name */
-    private static final Duration m2000toJavaDurationLRDsOJo(double d) {
-        Duration ofSeconds = Duration.ofSeconds((long) kotlin.time.Duration.m1959getInSecondsimpl(d), (long) kotlin.time.Duration.m1961getNanosecondsComponentimpl(d));
+    private static final Duration m1398toJavaDurationLRDsOJo(double d) {
+        Duration ofSeconds = Duration.ofSeconds((long) kotlin.time.Duration.m1357getInSecondsimpl(d), (long) kotlin.time.Duration.m1359getNanosecondsComponentimpl(d));
         Intrinsics.checkNotNullExpressionValue(ofSeconds, "toComponents { seconds, …, nanoseconds.toLong()) }");
         return ofSeconds;
     }

@@ -45,7 +45,7 @@ public abstract class ItemWeuiBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemWeuiBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemWeuiBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558992, viewGroup, z, obj);
+        return (ItemWeuiBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558999, viewGroup, z, obj);
     }
 
     public static ItemWeuiBinding inflate(LayoutInflater layoutInflater) {
@@ -54,7 +54,7 @@ public abstract class ItemWeuiBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemWeuiBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemWeuiBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558992, null, false, obj);
+        return (ItemWeuiBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558999, null, false, obj);
     }
 
     public static ItemWeuiBinding bind(View view) {
@@ -63,6 +63,6 @@ public abstract class ItemWeuiBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemWeuiBinding bind(View view, Object obj) {
-        return (ItemWeuiBinding) bind(obj, view, 2131558992);
+        return (ItemWeuiBinding) bind(obj, view, 2131558999);
     }
 }

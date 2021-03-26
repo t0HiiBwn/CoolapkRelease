@@ -36,7 +36,7 @@ public final class CallServerInterceptor implements Interceptor {
         RequestBody body = request$okhttp.body();
         long currentTimeMillis = System.currentTimeMillis();
         exchange$okhttp.writeRequestHeaders(request$okhttp);
-        Long l2 = null;
+        Long l = null;
         Response.Builder builder = null;
         if (!HttpMethod.permitsRequestBody(request$okhttp.method()) || body == null) {
             exchange$okhttp.noRequestBody();
@@ -104,9 +104,9 @@ public final class CallServerInterceptor implements Interceptor {
                 sb.append(" had non-zero Content-Length: ");
                 ResponseBody body3 = response.body();
                 if (body3 != null) {
-                    l2 = Long.valueOf(body3.contentLength());
+                    l = Long.valueOf(body3.contentLength());
                 }
-                sb.append(l2);
+                sb.append(l);
                 throw new ProtocolException(sb.toString());
             }
         }

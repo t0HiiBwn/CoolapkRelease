@@ -38,10 +38,10 @@ public class RelatedAlbumsFragment extends AsyncListFragment<Result<List<Entity>
         this.component = new FragmentBindingComponent(this);
         setRefreshEnable(false);
         setLoadMoreEnable(false);
-        setEmptyData(getString(2131886766), 0);
+        setEmptyData(getString(2131886828), 0);
         setLayoutManager(new LinearLayoutManager(getActivity()));
         setAdapter(new DataAdapter());
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558578, 2131231052).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558582, 2131231062).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         initData();
@@ -92,7 +92,7 @@ public class RelatedAlbumsFragment extends AsyncListFragment<Result<List<Entity>
     private class DataAdapter extends RecyclerView.Adapter<BindingViewHolder> {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558578;
+            return 2131558582;
         }
 
         private DataAdapter() {

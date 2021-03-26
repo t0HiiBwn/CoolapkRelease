@@ -88,8 +88,8 @@ public final class VoteCommentDetailListFragment extends VoteCommentListFragment
             RecyclerView recyclerView = getRecyclerView();
             Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
             recyclerView.setLayoutManager(staggeredGridLayoutManagerCopy);
-            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558988).constructor(new VoteCommentDetailListFragment$onActivityCreated$2(this)).suitedMethod(VoteCommentDetailListFragment$onActivityCreated$3.INSTANCE).build(), 0, 2, null);
-            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558987).constructor(new VoteCommentDetailListFragment$onActivityCreated$4(this)).suitedMethod(VoteCommentDetailListFragment$onActivityCreated$5.INSTANCE).build(), 0, 2, null);
+            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558995).constructor(new VoteCommentDetailListFragment$onActivityCreated$2(this)).suitedMethod(VoteCommentDetailListFragment$onActivityCreated$3.INSTANCE).build(), 0, 2, null);
+            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558994).constructor(new VoteCommentDetailListFragment$onActivityCreated$4(this)).suitedMethod(VoteCommentDetailListFragment$onActivityCreated$5.INSTANCE).build(), 0, 2, null);
         }
     }
 
@@ -152,7 +152,7 @@ public final class VoteCommentDetailListFragment extends VoteCommentListFragment
     /* compiled from: VoteCommentDetailListFragment.kt */
     public static final class VoteCommentTitleViewHolder extends GenericBindHolder<ItemVoteDetailSplitedTitleBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558988;
+        public static final int LAYOUT_ID = 2131558995;
         private final VoteCommentConfig config;
 
         public final VoteCommentConfig getConfig() {
@@ -199,7 +199,7 @@ public final class VoteCommentDetailListFragment extends VoteCommentListFragment
     /* compiled from: VoteCommentDetailListFragment.kt */
     public static final class VoteCommentEmptyViewHolder extends GenericBindHolder<ItemVoteCommentEmptyBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558987;
+        public static final int LAYOUT_ID = 2131558994;
         private final VoteCommentConfig config;
 
         public final VoteCommentConfig getConfig() {
@@ -242,7 +242,7 @@ public final class VoteCommentDetailListFragment extends VoteCommentListFragment
             Unit unit = Unit.INSTANCE;
             root.setBackground(gradientDrawable);
             int adjustAlpha = ColorUtils.adjustAlpha(intValue.intValue(), 0.2f);
-            Drawable drawable = ResourceUtils.getDrawable(getContext(), 2131231131);
+            Drawable drawable = ResourceUtils.getDrawable(getContext(), 2131231141);
             drawable.setTint(adjustAlpha);
             drawable.setBounds(0, 0, NumberExtendsKt.getDp((Number) 24), NumberExtendsKt.getDp((Number) 24));
             TextView textView = itemVoteCommentEmptyBinding.textView;

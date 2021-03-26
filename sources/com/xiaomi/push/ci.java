@@ -1,9 +1,25 @@
 package com.xiaomi.push;
 
-import android.content.Context;
+public class ci {
+    private static volatile ci b;
+    private ch a;
 
-public interface ci {
-    void a(Context context);
+    public static ci a() {
+        if (b == null) {
+            synchronized (ci.class) {
+                if (b == null) {
+                    b = new ci();
+                }
+            }
+        }
+        return b;
+    }
 
-    void b(Context context);
+    public void a(ch chVar) {
+        this.a = chVar;
+    }
+
+    public ch b() {
+        return this.a;
+    }
 }

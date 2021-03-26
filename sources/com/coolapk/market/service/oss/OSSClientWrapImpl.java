@@ -36,17 +36,26 @@ public final class OSSClientWrapImpl implements IOSSClientWrap {
         return dataConfig.getApiHost();
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:13:0x004d, code lost:
-        if (r0.equals("feed_cover") != false) goto L_0x006e;
+    /* JADX WARNING: Code restructure failed: missing block: B:13:0x0059, code lost:
+        if (r0.equals("back_list") != false) goto L_0x00a0;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:18:0x0063, code lost:
-        if (r0.equals("feed") != false) goto L_0x006e;
+    /* JADX WARNING: Code restructure failed: missing block: B:15:0x0062, code lost:
+        if (r0.equals("apk_logo") != false) goto L_0x00a0;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:20:0x006c, code lost:
-        if (r0.equals("picture") != false) goto L_0x006e;
+    /* JADX WARNING: Code restructure failed: missing block: B:20:0x0076, code lost:
+        if (r0.equals("feed_cover") != false) goto L_0x00a0;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:21:0x006e, code lost:
-        r2.element = "image";
+    /* JADX WARNING: Code restructure failed: missing block: B:25:0x008c, code lost:
+        if (r0.equals("album") != false) goto L_0x00a0;
+     */
+    /* JADX WARNING: Code restructure failed: missing block: B:27:0x0095, code lost:
+        if (r0.equals("feed") != false) goto L_0x00a0;
+     */
+    /* JADX WARNING: Code restructure failed: missing block: B:29:0x009e, code lost:
+        if (r0.equals("picture") != false) goto L_0x00a0;
+     */
+    /* JADX WARNING: Code restructure failed: missing block: B:30:0x00a0, code lost:
+        r3.element = "image";
      */
     @Override // com.coolapk.market.network.IOSSClientWrap
     public Observable<Pair<String, String>> uploadImage(List<ImageUploadOption> list) {
@@ -59,6 +68,7 @@ public final class OSSClientWrapImpl implements IOSSClientWrap {
         String uploadDir = ((ImageUploadOption) CollectionsKt.first((List<? extends Object>) list)).getUploadDir();
         Bundle bundle = ((ImageUploadOption) CollectionsKt.first((List<? extends Object>) list)).getBundle();
         boolean z = bundle != null ? bundle.getBoolean("extra_anonymous") : false;
+        String uid = ((ImageUploadOption) CollectionsKt.first((List<? extends Object>) list)).getUid();
         Ref.ObjectRef objectRef = new Ref.ObjectRef();
         objectRef.element = "";
         if (uploadDir != null) {
@@ -67,15 +77,29 @@ public final class OSSClientWrapImpl implements IOSSClientWrap {
                     break;
                 case 3138974:
                     break;
+                case 92896879:
+                    break;
                 case 94852023:
                     if (uploadDir.equals("cover")) {
                         objectRef.element = "avatar";
-                        Observable<Pair<String, String>> flatMap = Observable.just(list).map(OSSClientWrapImpl$uploadImage$1.INSTANCE).flatMap(OSSClientWrapImpl$uploadImage$2.INSTANCE).map(OSSClientWrapImpl$uploadImage$3.INSTANCE).doOnNext(new OSSClientWrapImpl$uploadImage$4(z, objectRef)).flatMap(OSSClientWrapImpl$uploadImage$5.INSTANCE);
+                        Observable<Pair<String, String>> flatMap = Observable.just(list).map(OSSClientWrapImpl$uploadImage$1.INSTANCE).flatMap(OSSClientWrapImpl$uploadImage$2.INSTANCE).map(OSSClientWrapImpl$uploadImage$3.INSTANCE).doOnNext(new OSSClientWrapImpl$uploadImage$4(z, objectRef, uid)).flatMap(OSSClientWrapImpl$uploadImage$5.INSTANCE);
                         Intrinsics.checkNotNullExpressionValue(flatMap, "Observable.just(urls)\n  …      }\n                }");
                         return flatMap;
                     }
                     break;
                 case 567045590:
+                    break;
+                case 954925063:
+                    if (uploadDir.equals("message")) {
+                        objectRef.element = "message";
+                        Observable<Pair<String, String>> flatMap = Observable.just(list).map(OSSClientWrapImpl$uploadImage$1.INSTANCE).flatMap(OSSClientWrapImpl$uploadImage$2.INSTANCE).map(OSSClientWrapImpl$uploadImage$3.INSTANCE).doOnNext(new OSSClientWrapImpl$uploadImage$4(z, objectRef, uid)).flatMap(OSSClientWrapImpl$uploadImage$5.INSTANCE);
+                        Intrinsics.checkNotNullExpressionValue(flatMap, "Observable.just(urls)\n  …      }\n                }");
+                        return flatMap;
+                    }
+                    break;
+                case 1024456174:
+                    break;
+                case 1334926582:
                     break;
             }
         }

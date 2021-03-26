@@ -35,7 +35,7 @@ public abstract class CustomThemeBinding extends ViewDataBinding {
 
     @Deprecated
     public static CustomThemeBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (CustomThemeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558494, viewGroup, z, obj);
+        return (CustomThemeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558496, viewGroup, z, obj);
     }
 
     public static CustomThemeBinding inflate(LayoutInflater layoutInflater) {
@@ -44,7 +44,7 @@ public abstract class CustomThemeBinding extends ViewDataBinding {
 
     @Deprecated
     public static CustomThemeBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (CustomThemeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558494, null, false, obj);
+        return (CustomThemeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558496, null, false, obj);
     }
 
     public static CustomThemeBinding bind(View view) {
@@ -53,6 +53,6 @@ public abstract class CustomThemeBinding extends ViewDataBinding {
 
     @Deprecated
     public static CustomThemeBinding bind(View view, Object obj) {
-        return (CustomThemeBinding) bind(obj, view, 2131558494);
+        return (CustomThemeBinding) bind(obj, view, 2131558496);
     }
 }

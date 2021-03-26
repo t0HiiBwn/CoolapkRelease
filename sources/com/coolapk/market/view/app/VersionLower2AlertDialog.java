@@ -33,7 +33,7 @@ public class VersionLower2AlertDialog extends BaseDialogFragment {
         int i = getArguments().getInt("urlType");
         final int i2 = getArguments().getInt("flag");
         final String downloadUrlMd5 = appForum.getDownloadUrlMd5(i);
-        return new AlertDialog.Builder(getActivity()).setMessage(getString(2131886705, appForum.appName())).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
+        return new AlertDialog.Builder(getActivity()).setMessage(getString(2131886767, appForum.appName())).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
             /* class com.coolapk.market.view.app.VersionLower2AlertDialog.AnonymousClass2 */
 
             @Override // android.content.DialogInterface.OnClickListener

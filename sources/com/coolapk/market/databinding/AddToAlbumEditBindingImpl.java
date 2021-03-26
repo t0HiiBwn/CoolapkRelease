@@ -59,7 +59,7 @@ public class AddToAlbumEditBindingImpl extends AddToAlbumEditBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (186 != i) {
+        if (187 != i) {
             return false;
         }
         setLoading(((Boolean) obj).booleanValue());
@@ -72,7 +72,7 @@ public class AddToAlbumEditBindingImpl extends AddToAlbumEditBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(186);
+        notifyPropertyChanged(187);
         super.requestRebind();
     }
 

@@ -45,7 +45,7 @@ public final class BaseFeedContentHolder$prepareMultiFeed$2 implements Func1<Boo
         Bitmap iconBitmap = BitmapUtil.getIconBitmap(application, str);
         File file = new File(BitmapUtil.generateFileOutputPath(application, str));
         BitmapUtil.saveBitmapToFile(file, iconBitmap, true);
-        Observable<R> map = DataManager.getInstance().uploadLogoImage(file).compose(RxUtils.applyIOSchedulers()).map(RxUtils.checkResultToData()).map(new BaseFeedContentHolder$prepareMultiFeed$2$uploadLogo$1(this));
+        Observable<R> map = DataManager.getInstance().uploadLogoImage(file).compose(RxUtils.applyIOSchedulers()).map(new BaseFeedContentHolder$prepareMultiFeed$2$uploadLogo$1(this));
         Intrinsics.checkNotNullExpressionValue(map, "DataManager.getInstance(…                        }");
         return map;
     }

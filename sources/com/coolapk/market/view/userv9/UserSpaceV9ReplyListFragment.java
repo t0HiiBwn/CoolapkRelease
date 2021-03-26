@@ -54,8 +54,8 @@ public final class UserSpaceV9ReplyListFragment extends EntityListFragment {
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(TopBottomDividerRule.Companion.getEMPTY());
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558982).constructor(new UserSpaceV9ReplyListFragment$onActivityCreated$1(this)).suitedEntityType("USER_SPACE_COUNT").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558898).constructor(new UserSpaceV9ReplyListFragment$onActivityCreated$2(this)).suitedMethod(UserSpaceV9ReplyListFragment$onActivityCreated$3.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558989).constructor(new UserSpaceV9ReplyListFragment$onActivityCreated$1(this)).suitedEntityType("USER_SPACE_COUNT").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558905).constructor(new UserSpaceV9ReplyListFragment$onActivityCreated$2(this)).suitedMethod(UserSpaceV9ReplyListFragment$onActivityCreated$3.INSTANCE).build(), 0, 2, null);
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         recyclerView.setClipToPadding(false);

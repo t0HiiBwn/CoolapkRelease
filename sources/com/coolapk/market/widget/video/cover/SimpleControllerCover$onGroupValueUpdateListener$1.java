@@ -27,7 +27,7 @@ public final class SimpleControllerCover$onGroupValueUpdateListener$1 implements
         Intrinsics.checkNotNullParameter(str, "key");
         Intrinsics.checkNotNullParameter(obj, "value");
         if (str.hashCode() == 1076260898 && str.equals("need_mute")) {
-            SimpleControllerCover.access$getBinding$p(this.this$0).volumeIconView.setImageDrawable(ResourceUtils.getDrawable(this.$context, ((Boolean) obj).booleanValue() ? 2131231642 : 2131231643));
+            SimpleControllerCover.access$getBinding$p(this.this$0).volumeIconView.setImageDrawable(ResourceUtils.getDrawable(this.$context, ((Boolean) obj).booleanValue() ? 2131231653 : 2131231654));
         }
     }
 }

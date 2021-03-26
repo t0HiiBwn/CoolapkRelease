@@ -25,12 +25,12 @@ public final class f {
             b.c("[page] please call 'onPageIn' first!", new Object[0]);
             return;
         }
-        Long l2 = map.get(str);
-        if (l2 == null) {
+        Long l = map.get(str);
+        if (l == null) {
             b.c("[page] please call 'onPageIn' first!", new Object[0]);
             return;
         }
-        final long longValue = currentTimeMillis - l2.longValue();
+        final long longValue = currentTimeMillis - l.longValue();
         com.tencent.beacon.core.a.b.a().a(new Runnable() {
             /* class com.tencent.beacon.core.event.f.AnonymousClass1 */
 

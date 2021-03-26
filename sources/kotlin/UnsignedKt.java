@@ -23,44 +23,44 @@ public final class UnsignedKt {
     }
 
     /* renamed from: uintDivide-J1ME1BU  reason: not valid java name */
-    public static final int m1002uintDivideJ1ME1BU(int i, int i2) {
-        return UInt.m773constructorimpl((int) ((((long) i) & 4294967295L) / (((long) i2) & 4294967295L)));
+    public static final int m400uintDivideJ1ME1BU(int i, int i2) {
+        return UInt.m171constructorimpl((int) ((((long) i) & 4294967295L) / (((long) i2) & 4294967295L)));
     }
 
     /* renamed from: uintRemainder-J1ME1BU  reason: not valid java name */
-    public static final int m1003uintRemainderJ1ME1BU(int i, int i2) {
-        return UInt.m773constructorimpl((int) ((((long) i) & 4294967295L) % (((long) i2) & 4294967295L)));
+    public static final int m401uintRemainderJ1ME1BU(int i, int i2) {
+        return UInt.m171constructorimpl((int) ((((long) i) & 4294967295L) % (((long) i2) & 4294967295L)));
     }
 
     /* renamed from: ulongDivide-eb3DHEI  reason: not valid java name */
-    public static final long m1004ulongDivideeb3DHEI(long j, long j2) {
+    public static final long m402ulongDivideeb3DHEI(long j, long j2) {
         if (j2 < 0) {
-            return ulongCompare(j, j2) < 0 ? ULong.m843constructorimpl(0) : ULong.m843constructorimpl(1);
+            return ulongCompare(j, j2) < 0 ? ULong.m241constructorimpl(0) : ULong.m241constructorimpl(1);
         }
         if (j >= 0) {
-            return ULong.m843constructorimpl(j / j2);
+            return ULong.m241constructorimpl(j / j2);
         }
         int i = 1;
         long j3 = ((j >>> 1) / j2) << 1;
-        if (ulongCompare(ULong.m843constructorimpl(j - (j3 * j2)), ULong.m843constructorimpl(j2)) < 0) {
+        if (ulongCompare(ULong.m241constructorimpl(j - (j3 * j2)), ULong.m241constructorimpl(j2)) < 0) {
             i = 0;
         }
-        return ULong.m843constructorimpl(j3 + ((long) i));
+        return ULong.m241constructorimpl(j3 + ((long) i));
     }
 
     /* renamed from: ulongRemainder-eb3DHEI  reason: not valid java name */
-    public static final long m1005ulongRemaindereb3DHEI(long j, long j2) {
+    public static final long m403ulongRemaindereb3DHEI(long j, long j2) {
         if (j2 < 0) {
-            return ulongCompare(j, j2) < 0 ? j : ULong.m843constructorimpl(j - j2);
+            return ulongCompare(j, j2) < 0 ? j : ULong.m241constructorimpl(j - j2);
         }
         if (j >= 0) {
-            return ULong.m843constructorimpl(j % j2);
+            return ULong.m241constructorimpl(j % j2);
         }
         long j3 = j - ((((j >>> 1) / j2) << 1) * j2);
-        if (ulongCompare(ULong.m843constructorimpl(j3), ULong.m843constructorimpl(j2)) < 0) {
+        if (ulongCompare(ULong.m241constructorimpl(j3), ULong.m241constructorimpl(j2)) < 0) {
             j2 = 0;
         }
-        return ULong.m843constructorimpl(j3 - j2);
+        return ULong.m241constructorimpl(j3 - j2);
     }
 
     public static final int doubleToUInt(double d) {
@@ -72,9 +72,9 @@ public final class UnsignedKt {
         }
         double d2 = (double) Integer.MAX_VALUE;
         if (d <= d2) {
-            return UInt.m773constructorimpl((int) d);
+            return UInt.m171constructorimpl((int) d);
         }
-        return UInt.m773constructorimpl(UInt.m773constructorimpl((int) (d - d2)) + UInt.m773constructorimpl(Integer.MAX_VALUE));
+        return UInt.m171constructorimpl(UInt.m171constructorimpl((int) (d - d2)) + UInt.m171constructorimpl(Integer.MAX_VALUE));
     }
 
     public static final long doubleToULong(double d) {
@@ -85,9 +85,9 @@ public final class UnsignedKt {
             return -1;
         }
         if (d < ((double) Long.MAX_VALUE)) {
-            return ULong.m843constructorimpl((long) d);
+            return ULong.m241constructorimpl((long) d);
         }
-        return ULong.m843constructorimpl(ULong.m843constructorimpl((long) (d - 9.223372036854776E18d)) - Long.MIN_VALUE);
+        return ULong.m241constructorimpl(ULong.m241constructorimpl((long) (d - 9.223372036854776E18d)) - Long.MIN_VALUE);
     }
 
     public static final String ulongToString(long j) {
@@ -96,9 +96,9 @@ public final class UnsignedKt {
 
     public static final String ulongToString(long j, int i) {
         if (j >= 0) {
-            String l2 = Long.toString(j, CharsKt.checkRadix(i));
-            Intrinsics.checkNotNullExpressionValue(l2, "java.lang.Long.toString(this, checkRadix(radix))");
-            return l2;
+            String l = Long.toString(j, CharsKt.checkRadix(i));
+            Intrinsics.checkNotNullExpressionValue(l, "java.lang.Long.toString(this, checkRadix(radix))");
+            return l;
         }
         long j2 = (long) i;
         long j3 = ((j >>> 1) / j2) << 1;
@@ -108,12 +108,12 @@ public final class UnsignedKt {
             j3++;
         }
         StringBuilder sb = new StringBuilder();
-        String l3 = Long.toString(j3, CharsKt.checkRadix(i));
+        String l2 = Long.toString(j3, CharsKt.checkRadix(i));
+        Intrinsics.checkNotNullExpressionValue(l2, "java.lang.Long.toString(this, checkRadix(radix))");
+        sb.append(l2);
+        String l3 = Long.toString(j4, CharsKt.checkRadix(i));
         Intrinsics.checkNotNullExpressionValue(l3, "java.lang.Long.toString(this, checkRadix(radix))");
         sb.append(l3);
-        String l4 = Long.toString(j4, CharsKt.checkRadix(i));
-        Intrinsics.checkNotNullExpressionValue(l4, "java.lang.Long.toString(this, checkRadix(radix))");
-        sb.append(l4);
         return sb.toString();
     }
 }

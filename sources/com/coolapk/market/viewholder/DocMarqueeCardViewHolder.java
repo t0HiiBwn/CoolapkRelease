@@ -28,7 +28,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 public class DocMarqueeCardViewHolder extends BindingViewHolder implements IAnimationBehavior {
-    public static final int LAYOUT_ID = 2131558674;
+    public static final int LAYOUT_ID = 2131558680;
     private final ItemDocMarqueeCardBinding binding;
     private final DataBindingComponent component;
     private int displayedChild;
@@ -93,7 +93,7 @@ public class DocMarqueeCardViewHolder extends BindingViewHolder implements IAnim
                 P p = viewHolder.data;
                 final Context context = DocMarqueeCardViewHolder.this.getContext();
                 ItemDocListCardItemBinding itemDocListCardItemBinding = (ItemDocListCardItemBinding) DataBindingUtil.findBinding(v);
-                if (v.getId() != 2131362605) {
+                if (v.getId() != 2131362613) {
                     if (p instanceof Gift) {
                         P p2 = p;
                         ActionManager.startAppViewActivity(UiUtils.getActivity(context), itemDocListCardItemBinding.iconView, p2.getApkName(), p2.getApkLogo(), p2.getApkTitle(), p2.getExtraAnalysisData(), null, null);
@@ -110,7 +110,7 @@ public class DocMarqueeCardViewHolder extends BindingViewHolder implements IAnim
                         return;
                     }
                     SimpleDialog newInstance = SimpleDialog.newInstance();
-                    newInstance.setMessage(context.getString(2131886822));
+                    newInstance.setMessage(context.getString(2131886884));
                     newInstance.setPositiveButton(2131886128, new DialogInterface.OnClickListener() {
                         /* class com.coolapk.market.viewholder.DocMarqueeCardViewHolder.AnonymousClass2.AnonymousClass1 */
 
@@ -142,7 +142,7 @@ public class DocMarqueeCardViewHolder extends BindingViewHolder implements IAnim
         }
 
         public View generateMarqueeItemView(Entity entity) {
-            View inflate = this.inflater.inflate(2131558673, (ViewGroup) null, false);
+            View inflate = this.inflater.inflate(2131558679, (ViewGroup) null, false);
             ItemDocListCardItemBinding itemDocListCardItemBinding = (ItemDocListCardItemBinding) DataBindingUtil.bind(inflate, this.component);
             if (entity instanceof Gift) {
                 itemDocListCardItemBinding.setIsGift(true);

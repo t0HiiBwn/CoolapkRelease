@@ -30,7 +30,7 @@ abstract class C$$AutoValue_ProductMedia extends ProductMedia {
     private final String urlMd5;
     private final String userName;
 
-    C$$AutoValue_ProductMedia(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, int i2) {
+    C$$AutoValue_ProductMedia(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, int i2) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -45,8 +45,8 @@ abstract class C$$AutoValue_ProductMedia extends ProductMedia {
         this.logo = str9;
         this.subTitle = str10;
         this.extraData = str11;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str12, "Null id");
         this.id = str12;
         this.productId = str13;
@@ -219,8 +219,8 @@ abstract class C$$AutoValue_ProductMedia extends ProductMedia {
         String str7;
         String str8;
         String str9;
+        Long l;
         Long l2;
-        Long l3;
         String str10;
         String str11;
         String str12;
@@ -237,7 +237,7 @@ abstract class C$$AutoValue_ProductMedia extends ProductMedia {
         ProductMedia productMedia = (ProductMedia) obj;
         String str17 = this.entityTypeName;
         if (str17 != null ? str17.equals(productMedia.getEntityTypeName()) : productMedia.getEntityTypeName() == null) {
-            if (this.entityType.equals(productMedia.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(productMedia.getEntityTemplate()) : productMedia.getEntityTemplate() == null) && this.entityTypeId == productMedia.getEntityTypeId() && ((str2 = this.entityId) != null ? str2.equals(productMedia.getEntityId()) : productMedia.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(productMedia.getEntityFixed()) : productMedia.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(productMedia.getTitle()) : productMedia.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(productMedia.getUrl()) : productMedia.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(productMedia.getDescription()) : productMedia.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(productMedia.getPic()) : productMedia.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(productMedia.getLogo()) : productMedia.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(productMedia.getSubTitle()) : productMedia.getSubTitle() == null) && ((str9 = this.extraData) != null ? str9.equals(productMedia.getExtraData()) : productMedia.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(productMedia.getDateline()) : productMedia.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(productMedia.getLastUpdate()) : productMedia.getLastUpdate() == null) && this.id.equals(productMedia.getId()) && ((str10 = this.productId) != null ? str10.equals(productMedia.getProductId()) : productMedia.getProductId() == null) && ((str11 = this.feedId) != null ? str11.equals(productMedia.getFeedId()) : productMedia.getFeedId() == null) && ((str12 = this.UID) != null ? str12.equals(productMedia.getUID()) : productMedia.getUID() == null) && ((str13 = this.userName) != null ? str13.equals(productMedia.getUserName()) : productMedia.getUserName() == null) && ((str14 = this.type) != null ? str14.equals(productMedia.getType()) : productMedia.getType() == null) && ((str15 = this.mediaInfo) != null ? str15.equals(productMedia.getMediaInfo()) : productMedia.getMediaInfo() == null) && ((str16 = this.urlMd5) != null ? str16.equals(productMedia.getUrlMd5()) : productMedia.getUrlMd5() == null) && this.isRecommend == productMedia.getIsRecommend()) {
+            if (this.entityType.equals(productMedia.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(productMedia.getEntityTemplate()) : productMedia.getEntityTemplate() == null) && this.entityTypeId == productMedia.getEntityTypeId() && ((str2 = this.entityId) != null ? str2.equals(productMedia.getEntityId()) : productMedia.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(productMedia.getEntityFixed()) : productMedia.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(productMedia.getTitle()) : productMedia.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(productMedia.getUrl()) : productMedia.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(productMedia.getDescription()) : productMedia.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(productMedia.getPic()) : productMedia.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(productMedia.getLogo()) : productMedia.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(productMedia.getSubTitle()) : productMedia.getSubTitle() == null) && ((str9 = this.extraData) != null ? str9.equals(productMedia.getExtraData()) : productMedia.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(productMedia.getDateline()) : productMedia.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(productMedia.getLastUpdate()) : productMedia.getLastUpdate() == null) && this.id.equals(productMedia.getId()) && ((str10 = this.productId) != null ? str10.equals(productMedia.getProductId()) : productMedia.getProductId() == null) && ((str11 = this.feedId) != null ? str11.equals(productMedia.getFeedId()) : productMedia.getFeedId() == null) && ((str12 = this.UID) != null ? str12.equals(productMedia.getUID()) : productMedia.getUID() == null) && ((str13 = this.userName) != null ? str13.equals(productMedia.getUserName()) : productMedia.getUserName() == null) && ((str14 = this.type) != null ? str14.equals(productMedia.getType()) : productMedia.getType() == null) && ((str15 = this.mediaInfo) != null ? str15.equals(productMedia.getMediaInfo()) : productMedia.getMediaInfo() == null) && ((str16 = this.urlMd5) != null ? str16.equals(productMedia.getUrlMd5()) : productMedia.getUrlMd5() == null) && this.isRecommend == productMedia.getIsRecommend()) {
                 return true;
             }
         }
@@ -269,10 +269,10 @@ abstract class C$$AutoValue_ProductMedia extends ProductMedia {
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.extraData;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode13 = (((hashCode12 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003) ^ this.id.hashCode()) * 1000003;
+        Long l = this.dateline;
+        int hashCode12 = (hashCode11 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode13 = (((hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003) ^ this.id.hashCode()) * 1000003;
         String str11 = this.productId;
         int hashCode14 = (hashCode13 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
         String str12 = this.feedId;

@@ -61,7 +61,7 @@ public abstract class ItemNotificationNaviBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNotificationNaviBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemNotificationNaviBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558846, viewGroup, z, obj);
+        return (ItemNotificationNaviBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558853, viewGroup, z, obj);
     }
 
     public static ItemNotificationNaviBinding inflate(LayoutInflater layoutInflater) {
@@ -70,7 +70,7 @@ public abstract class ItemNotificationNaviBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNotificationNaviBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemNotificationNaviBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558846, null, false, obj);
+        return (ItemNotificationNaviBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558853, null, false, obj);
     }
 
     public static ItemNotificationNaviBinding bind(View view) {
@@ -79,6 +79,6 @@ public abstract class ItemNotificationNaviBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNotificationNaviBinding bind(View view, Object obj) {
-        return (ItemNotificationNaviBinding) bind(obj, view, 2131558846);
+        return (ItemNotificationNaviBinding) bind(obj, view, 2131558853);
     }
 }

@@ -32,7 +32,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ColorfulScrollCardViewHolder.kt */
 final class ColorfulScrollCardChildViewHolder extends GenericBindHolder<ItemColorfulScrollCardChildBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558658;
+    public static final int LAYOUT_ID = 2131558664;
     private final Function0<EntityCard> callback;
 
     public final Function0<EntityCard> getCallback() {
@@ -138,7 +138,7 @@ final class ColorfulScrollCardChildViewHolder extends GenericBindHolder<ItemColo
         Entity model = itemColorfulScrollCardChildBinding.getModel();
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
-            if (view.getId() != 2131362768) {
+            if (view.getId() != 2131362779) {
                 super.onClick(view);
                 return;
             }

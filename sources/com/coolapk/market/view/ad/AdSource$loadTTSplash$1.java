@@ -21,7 +21,7 @@ public final class AdSource$loadTTSplash$1 implements TTAdNative.SplashAdListene
     public void onError(int i, String str) {
         Intrinsics.checkNotNullParameter(str, "message");
         LogUtils.e("广告加载出错: " + i + ' ' + str, new Object[0]);
-        this.this$0.isLoaded = true;
+        AdSource.access$setLoaded$p(this.this$0, true);
         OnAdLoadListener onAdLoadListener = this.$listener;
         onAdLoadListener.onLoadError(new Exception(i + ": " + str));
     }
@@ -29,19 +29,19 @@ public final class AdSource$loadTTSplash$1 implements TTAdNative.SplashAdListene
     @Override // com.bytedance.sdk.openadsdk.TTAdNative.SplashAdListener
     public void onTimeout() {
         LogUtils.w("广告加载超时", new Object[0]);
-        this.this$0.isLoaded = true;
-        OnAdEventListener onAdEventListener = this.this$0.eventListener;
-        if (onAdEventListener != null) {
-            onAdEventListener.shouldGoMainActivity("Ad load timeout");
+        AdSource.access$setLoaded$p(this.this$0, true);
+        OnAdEventListener access$getEventListener$p = AdSource.access$getEventListener$p(this.this$0);
+        if (access$getEventListener$p != null) {
+            access$getEventListener$p.shouldGoMainActivity("Ad load timeout");
         }
     }
 
     @Override // com.bytedance.sdk.openadsdk.TTAdNative.SplashAdListener
     public void onSplashAdLoad(TTSplashAd tTSplashAd) {
         LogUtils.i("广告加载成功", new Object[0]);
-        this.this$0.isLoaded = true;
+        AdSource.access$setLoaded$p(this.this$0, true);
         if (tTSplashAd != null) {
-            this.this$0.data = tTSplashAd;
+            AdSource.access$setData$p(this.this$0, tTSplashAd);
             tTSplashAd.setNotAllowSdkCountdown();
             tTSplashAd.setSplashInteractionListener(new AdSource$loadTTSplash$1$onSplashAdLoad$1(this, tTSplashAd));
             this.$listener.onLoadSuccess(tTSplashAd);

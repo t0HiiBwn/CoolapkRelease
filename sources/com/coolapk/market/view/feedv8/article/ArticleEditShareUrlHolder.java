@@ -19,7 +19,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ArticleEditShareUrlHolder.kt */
 public final class ArticleEditShareUrlHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558613;
+    public static final int LAYOUT_ID = 2131558617;
     private final ItemArticleEditShareUrlContainerBinding binding = ((ItemArticleEditShareUrlContainerBinding) getBinding());
     private final ArticleViewModel viewModel;
     private final Lazy viewPart$delegate;

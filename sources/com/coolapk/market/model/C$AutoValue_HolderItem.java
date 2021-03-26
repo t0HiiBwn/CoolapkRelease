@@ -25,7 +25,7 @@ abstract class C$AutoValue_HolderItem extends HolderItem {
     private final String url;
     private final String value;
 
-    C$AutoValue_HolderItem(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, String str14, Integer num2) {
+    C$AutoValue_HolderItem(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, String str14, Integer num2) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -40,8 +40,8 @@ abstract class C$AutoValue_HolderItem extends HolderItem {
         this.subTitle = str10;
         this.id = str11;
         this.extraData = str12;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.string = str13;
         this.value = str14;
         Objects.requireNonNull(num2, "Null intValue");
@@ -171,8 +171,8 @@ abstract class C$AutoValue_HolderItem extends HolderItem {
         String str8;
         String str9;
         String str10;
+        Long l;
         Long l2;
-        Long l3;
         String str11;
         String str12;
         if (obj == this) {
@@ -184,7 +184,7 @@ abstract class C$AutoValue_HolderItem extends HolderItem {
         HolderItem holderItem = (HolderItem) obj;
         String str13 = this.entityTypeName;
         if (str13 != null ? str13.equals(holderItem.getEntityTypeName()) : holderItem.getEntityTypeName() == null) {
-            if (this.entityType.equals(holderItem.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(holderItem.getEntityTemplate()) : holderItem.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(holderItem.getEntityId()) : holderItem.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(holderItem.getEntityFixed()) : holderItem.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(holderItem.getTitle()) : holderItem.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(holderItem.getUrl()) : holderItem.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(holderItem.getDescription()) : holderItem.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(holderItem.getPic()) : holderItem.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(holderItem.getLogo()) : holderItem.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(holderItem.getSubTitle()) : holderItem.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(holderItem.getId()) : holderItem.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(holderItem.getExtraData()) : holderItem.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(holderItem.getDateline()) : holderItem.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(holderItem.getLastUpdate()) : holderItem.getLastUpdate() == null) && ((str11 = this.string) != null ? str11.equals(holderItem.getString()) : holderItem.getString() == null) && ((str12 = this.value) != null ? str12.equals(holderItem.getValue()) : holderItem.getValue() == null) && this.intValue.equals(holderItem.getIntValue())) {
+            if (this.entityType.equals(holderItem.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(holderItem.getEntityTemplate()) : holderItem.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(holderItem.getEntityId()) : holderItem.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(holderItem.getEntityFixed()) : holderItem.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(holderItem.getTitle()) : holderItem.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(holderItem.getUrl()) : holderItem.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(holderItem.getDescription()) : holderItem.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(holderItem.getPic()) : holderItem.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(holderItem.getLogo()) : holderItem.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(holderItem.getSubTitle()) : holderItem.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(holderItem.getId()) : holderItem.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(holderItem.getExtraData()) : holderItem.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(holderItem.getDateline()) : holderItem.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(holderItem.getLastUpdate()) : holderItem.getLastUpdate() == null) && ((str11 = this.string) != null ? str11.equals(holderItem.getString()) : holderItem.getString() == null) && ((str12 = this.value) != null ? str12.equals(holderItem.getValue()) : holderItem.getValue() == null) && this.intValue.equals(holderItem.getIntValue())) {
                 return true;
             }
         }
@@ -218,10 +218,10 @@ abstract class C$AutoValue_HolderItem extends HolderItem {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str12 = this.string;
         int hashCode15 = (hashCode14 ^ (str12 == null ? 0 : str12.hashCode())) * 1000003;
         String str13 = this.value;
@@ -355,14 +355,14 @@ abstract class C$AutoValue_HolderItem extends HolderItem {
         }
 
         @Override // com.coolapk.market.model.HolderItem.Builder
-        public HolderItem.Builder dateline(Long l2) {
-            this.dateline = l2;
+        public HolderItem.Builder dateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.HolderItem.Builder
-        public HolderItem.Builder lastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public HolderItem.Builder lastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

@@ -25,9 +25,9 @@ final class SponsorSelfDrawNewsViewHolder$selfDrawForGDT$1 extends Lambda implem
 
     @Override // kotlin.jvm.functions.Function0
     public final void invoke() {
-        RelativeLayout relativeLayout = this.this$0.binding.itemView;
+        RelativeLayout relativeLayout = SponsorSelfDrawNewsViewHolder.access$getBinding$p(this.this$0).itemView;
         Intrinsics.checkNotNullExpressionValue(relativeLayout, "binding.itemView");
-        this.$ad.bindAdToView(this.this$0.getContext(), this.this$0.binding.nativeAdContainer, new FrameLayout.LayoutParams(0, 0), CollectionsKt.mutableListOf(relativeLayout));
+        this.$ad.bindAdToView(this.this$0.getContext(), SponsorSelfDrawNewsViewHolder.access$getBinding$p(this.this$0).nativeAdContainer, new FrameLayout.LayoutParams(0, 0), CollectionsKt.mutableListOf(relativeLayout));
         this.$ad.setNativeAdEventListener(EntityAdHelperKt.getSIMPLE_NATIVE_AD_LISTENER());
     }
 }

@@ -199,14 +199,14 @@ public final class ProductDataListFragment extends EntityListFragment {
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         RecyclerView recyclerView2 = recyclerView;
         recyclerView2.setPadding(recyclerView2.getPaddingLeft(), recyclerView2.getPaddingTop(), recyclerView2.getPaddingRight(), NumberExtendsKt.getDp((Number) 64));
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558880).suitedMethod(ProductDataListFragment$onActivityCreated$1.INSTANCE).constructor(new ProductDataListFragment$onActivityCreated$2(this)).build(), -1);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558879).suitedMethod(ProductDataListFragment$onActivityCreated$3.INSTANCE).constructor(new ProductDataListFragment$onActivityCreated$4(this)).build(), -1);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558866).suitedEntityType("productIntroduction").constructor(new ProductDataListFragment$onActivityCreated$5(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558872).suitedEntityType("productConfigList").constructor(new ProductDataListFragment$onActivityCreated$6(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558869).suitedEntityType("multiRatingScoreMap").constructor(new ProductDataListFragment$onActivityCreated$7(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558934).suitedEntityType("singleRatingCard").constructor(new ProductDataListFragment$onActivityCreated$8(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558956).constructor(new ProductDataListFragment$onActivityCreated$9(this)).suitedMethod(ProductDataListFragment$onActivityCreated$10.INSTANCE).resetItemViewType(NodeTopContentViewHolder.Companion.getVIEW_TYPE()).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558889).suitedEntityType("ratingCard").constructor(new ProductDataListFragment$onActivityCreated$11(this)).build(), 0, 2, null);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558887).suitedMethod(ProductDataListFragment$onActivityCreated$1.INSTANCE).constructor(new ProductDataListFragment$onActivityCreated$2(this)).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558886).suitedMethod(ProductDataListFragment$onActivityCreated$3.INSTANCE).constructor(new ProductDataListFragment$onActivityCreated$4(this)).build(), -1);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558873).suitedEntityType("productIntroduction").constructor(new ProductDataListFragment$onActivityCreated$5(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558879).suitedEntityType("productConfigList").constructor(new ProductDataListFragment$onActivityCreated$6(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558876).suitedEntityType("multiRatingScoreMap").constructor(new ProductDataListFragment$onActivityCreated$7(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558941).suitedEntityType("singleRatingCard").constructor(new ProductDataListFragment$onActivityCreated$8(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558963).constructor(new ProductDataListFragment$onActivityCreated$9(this)).suitedMethod(ProductDataListFragment$onActivityCreated$10.INSTANCE).resetItemViewType(NodeTopContentViewHolder.Companion.getVIEW_TYPE()).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558896).suitedEntityType("ratingCard").constructor(new ProductDataListFragment$onActivityCreated$11(this)).build(), 0, 2, null);
     }
 
     /* access modifiers changed from: protected */
@@ -221,7 +221,7 @@ public final class ProductDataListFragment extends EntityListFragment {
             int hashCode = pageName.hashCode();
             if (hashCode != -938102371) {
                 if (hashCode == 3138974 && pageName.equals("feed") && EntityListFragment.findFirstEntityIndex$default(this, "feed", null, false, false, 14, null) < 0) {
-                    String string = getString(2131886865);
+                    String string = getString(2131886927);
                     Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_left_a_comment)");
                     addHintView(string, new ProductDataListFragment$onRequestResponse$2(this));
                     updateContentUI();

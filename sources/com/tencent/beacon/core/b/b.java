@@ -25,9 +25,7 @@ public final class b {
     private byte i = -1;
     private String j = "";
     private String k = "";
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1423l = "";
+    private String l = "";
     private String m = "";
     private String n = "";
     private long o = 0;
@@ -53,7 +51,7 @@ public final class b {
                 bVar2.j = a.c(context);
                 d.k = a.e(context);
                 b bVar3 = d;
-                bVar3.f1423l = "beacon";
+                bVar3.l = "beacon";
                 bVar3.m = "3.1.2";
                 bVar3.n = "unknown";
                 bVar3.p = b(context);
@@ -107,7 +105,7 @@ public final class b {
     }
 
     public final synchronized String b() {
-        return this.f1423l;
+        return this.l;
     }
 
     public final synchronized String c() {

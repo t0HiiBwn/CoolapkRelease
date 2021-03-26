@@ -39,7 +39,7 @@ public class NativeExpressVideoView extends NativeExpressView implements g, c.b,
 
     protected void e() {
         this.n = new FrameLayout(this.g);
-        int d2 = aj.d(this.f1315l.aj());
+        int d2 = aj.d(this.l.aj());
         this.d = d2;
         a(d2);
         n();
@@ -51,7 +51,7 @@ public class NativeExpressVideoView extends NativeExpressView implements g, c.b,
     private void n() {
         try {
             this.w = new a();
-            ExpressVideoView expressVideoView = new ExpressVideoView(this.g, this.f1315l, this.j);
+            ExpressVideoView expressVideoView = new ExpressVideoView(this.g, this.l, this.j);
             this.v = expressVideoView;
             expressVideoView.setShouldCheckNetChange(false);
             this.v.setControllerStatusCallBack(new NativeVideoTsView.a() {

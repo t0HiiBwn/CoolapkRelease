@@ -69,7 +69,7 @@ import rx.Subscriber;
 /* compiled from: AppViewBaseInfoViewHolder.kt */
 public final class AppViewBaseInfoViewHolder extends StateViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558599;
+    public static final int LAYOUT_ID = 2131558603;
     private final ItemAppViewBaseInfoBinding binding;
     private final CouponAdapter couponAdapter;
     private boolean isCoverLoaded;
@@ -87,10 +87,6 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
             Intrinsics.throwUninitializedPropertyAccessException("serviceApp");
         }
         return serviceApp2;
-    }
-
-    public static final /* synthetic */ AppViewViewModel access$getViewModel$p(AppViewBaseInfoViewHolder appViewBaseInfoViewHolder) {
-        return appViewBaseInfoViewHolder.viewModel;
     }
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -121,7 +117,7 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
         Intrinsics.checkNotNullExpressionValue(recyclerView3, "binding.thumbnailView");
         recyclerView3.setItemAnimator(null);
         ThemeUtils.setRatingBarColor(itemAppViewBaseInfoBinding.ratingBarAverage, Color.parseColor("#ffb712"));
-        itemAppViewBaseInfoBinding.thumbnailView.addItemDecoration(ItemDecorations.horizontal(getContext()).first(2131231063).type(2131558597, 2131231063).last(2131231063).create());
+        itemAppViewBaseInfoBinding.thumbnailView.addItemDecoration(ItemDecorations.horizontal(getContext()).first(2131231073).type(2131558601, 2131231073).last(2131231073).create());
         ColorDrawable colorDrawable = new ColorDrawable(AppHolder.getAppTheme().getColorAccent());
         colorDrawable.setAlpha(26);
         Drawable createSelectableItemBackgroundWith = ShapeUtils.createSelectableItemBackgroundWith(getContext(), colorDrawable);
@@ -293,13 +289,13 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
         FragmentActivity fragmentActivity = (FragmentActivity) context;
         int i = 0;
         switch (view.getId()) {
-            case 2131361886:
+            case 2131361887:
                 doAction(fragmentActivity, view);
                 return;
-            case 2131361909:
+            case 2131361910:
                 RxLogin.getInstance(getContext()).requestLogin().subscribe((Subscriber<? super Boolean>) new AppViewBaseInfoViewHolder$onClick$2(this));
                 return;
-            case 2131361940:
+            case 2131361941:
                 Context context2 = getContext();
                 ServiceApp serviceApp2 = this.serviceApp;
                 if (serviceApp2 == null) {
@@ -307,7 +303,7 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
                 }
                 ActionManager.startExternalMarketByName(context2, null, null, serviceApp2.getPackageName());
                 return;
-            case 2131361948:
+            case 2131361949:
                 RatingDialog newInstance = RatingDialog.newInstance();
                 newInstance.setViewModel(this.viewModel);
                 newInstance.setPresenter(this.presenter);
@@ -315,7 +311,7 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
                 Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "activity.requireAppCompa…().supportFragmentManager");
                 newInstance.show(supportFragmentManager, (String) null);
                 return;
-            case 2131362050:
+            case 2131362051:
                 ServiceApp serviceApp3 = this.serviceApp;
                 if (serviceApp3 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("serviceApp");
@@ -336,7 +332,7 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
                     return;
                 }
                 return;
-            case 2131362052:
+            case 2131362053:
                 Context context3 = getContext();
                 ServiceApp serviceApp4 = this.serviceApp;
                 if (serviceApp4 == null) {
@@ -349,8 +345,8 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
                 }
                 ActionManager.startGiftListActivity(context3, apkId, serviceApp5.getAppName());
                 return;
-            case 2131362384:
-            case 2131362970:
+            case 2131362390:
+            case 2131362982:
                 Context context4 = getContext();
                 ServiceApp serviceApp6 = this.serviceApp;
                 if (serviceApp6 == null) {
@@ -358,14 +354,14 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
                 }
                 ActionManager.startAppDetailActivity(context4, serviceApp6);
                 return;
-            case 2131362547:
-            case 2131362548:
+            case 2131362555:
+            case 2131362556:
                 ServiceApp serviceApp7 = this.serviceApp;
                 if (serviceApp7 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("serviceApp");
                 }
                 if (!CollectionUtils.isEmpty(serviceApp7.getGiftRows())) {
-                    if (view.getId() != 2131362547) {
+                    if (view.getId() != 2131362555) {
                         i = 1;
                     }
                     ServiceApp serviceApp8 = this.serviceApp;
@@ -384,7 +380,7 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
                         }
                         if (!PackageUtils.isInstalled(context5, serviceApp9.getPackageName())) {
                             SimpleDialog newInstance2 = SimpleDialog.newInstance();
-                            newInstance2.setMessage(getContext().getString(2131886822));
+                            newInstance2.setMessage(getContext().getString(2131886884));
                             newInstance2.setPositiveButton(2131886128, new AppViewBaseInfoViewHolder$onClick$1(this));
                             newInstance2.setNegativeButton(2131886115);
                             FragmentManager supportFragmentManager2 = ContextExtendsKt.requireAppCompatActivity(fragmentActivity).getSupportFragmentManager();
@@ -404,14 +400,14 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
                     return;
                 }
                 return;
-            case 2131362618:
-            case 2131362619:
+            case 2131362626:
+            case 2131362627:
                 ServiceApp serviceApp11 = this.serviceApp;
                 if (serviceApp11 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("serviceApp");
                 }
                 if (!CollectionUtils.isEmpty(serviceApp11.getGiftRows())) {
-                    if (view.getId() != 2131362618) {
+                    if (view.getId() != 2131362626) {
                         i = 1;
                     }
                     ServiceApp serviceApp12 = this.serviceApp;
@@ -432,10 +428,10 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
                     return;
                 }
                 return;
-            case 2131362889:
+            case 2131362900:
                 ActionManager.startPhotoViewActivity(((ItemAppViewBaseInfoBinding) getBinding()).logoView, this.viewModel.getLogo(), null);
                 return;
-            case 2131363982:
+            case 2131364008:
                 ActionManager.startAppViewActivity(getContext(), "de.robv.android.xposed.installer");
                 return;
             default:
@@ -579,7 +575,7 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
     /* compiled from: AppViewBaseInfoViewHolder.kt */
     private static final class PhotoViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558597;
+        public static final int LAYOUT_ID = 2131558601;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public PhotoViewHolder(View view, DataBindingComponent dataBindingComponent, OnImageLoadListener onImageLoadListener, ItemActionHandler itemActionHandler) {
@@ -642,7 +638,7 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
     private final class PhotoAdapter extends RecyclerView.Adapter<PhotoViewHolder> {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558597;
+            return 2131558601;
         }
 
         public PhotoAdapter() {
@@ -662,26 +658,26 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
 
         public void onBindViewHolder(PhotoViewHolder photoViewHolder, int i) {
             Intrinsics.checkNotNullParameter(photoViewHolder, "holder");
-            AppViewViewModel.ImageSize thumbnailSize = AppViewBaseInfoViewHolder.access$getViewModel$p(AppViewBaseInfoViewHolder.this).getThumbnailSize(i);
+            AppViewViewModel.ImageSize thumbnailSize = AppViewBaseInfoViewHolder.this.viewModel.getThumbnailSize(i);
             Intrinsics.checkNotNullExpressionValue(thumbnailSize, "viewModel.getThumbnailSize(position)");
             photoViewHolder.bindTo(thumbnailSize);
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemCount() {
-            return AppViewBaseInfoViewHolder.access$getViewModel$p(AppViewBaseInfoViewHolder.this).getThumbnailCount();
+            return AppViewBaseInfoViewHolder.this.viewModel.getThumbnailCount();
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public long getItemId(int i) {
-            return AppViewBaseInfoViewHolder.access$getViewModel$p(AppViewBaseInfoViewHolder.this).getThumbnailSize(i).id;
+            return AppViewBaseInfoViewHolder.this.viewModel.getThumbnailSize(i).id;
         }
     }
 
     /* compiled from: AppViewBaseInfoViewHolder.kt */
     private static final class CouponViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558600;
+        public static final int LAYOUT_ID = 2131558604;
         private final ItemAppViewBaseInfoCouponItemBinding binding;
         private CouponInfo couponInfo;
         private ServiceApp serviceApp;
@@ -838,7 +834,7 @@ public final class AppViewBaseInfoViewHolder extends StateViewHolder {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public CouponViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558600, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558604, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "LayoutInflater.from(pare…LAYOUT_ID, parent, false)");
             ServiceApp serviceApp2 = this.serviceApp;
             if (serviceApp2 == null) {

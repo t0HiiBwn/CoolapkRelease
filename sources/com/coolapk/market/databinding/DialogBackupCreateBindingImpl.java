@@ -28,8 +28,8 @@ public class DialogBackupCreateBindingImpl extends DialogBackupCreateBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362400, 3);
-        sparseIntArray.put(2131363570, 4);
+        sparseIntArray.put(2131362406, 3);
+        sparseIntArray.put(2131363592, 4);
     }
 
     public DialogBackupCreateBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -50,7 +50,7 @@ public abstract class ItemAccountTipsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAccountTipsBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAccountTipsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558572, viewGroup, z, obj);
+        return (ItemAccountTipsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558576, viewGroup, z, obj);
     }
 
     public static ItemAccountTipsBinding inflate(LayoutInflater layoutInflater) {
@@ -59,7 +59,7 @@ public abstract class ItemAccountTipsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAccountTipsBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAccountTipsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558572, null, false, obj);
+        return (ItemAccountTipsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558576, null, false, obj);
     }
 
     public static ItemAccountTipsBinding bind(View view) {
@@ -68,6 +68,6 @@ public abstract class ItemAccountTipsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAccountTipsBinding bind(View view, Object obj) {
-        return (ItemAccountTipsBinding) bind(obj, view, 2131558572);
+        return (ItemAccountTipsBinding) bind(obj, view, 2131558576);
     }
 }

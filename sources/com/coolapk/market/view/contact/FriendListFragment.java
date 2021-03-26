@@ -108,10 +108,10 @@ public class FriendListFragment extends SimpleAsyncListFragment<Result<List<Enti
         String entityType = ((Entity) getDataList().get(i)).getEntityType();
         entityType.hashCode();
         if (entityType.equals("holder_title")) {
-            return 2131558954;
+            return 2131558961;
         }
         if (entityType.equals("contacts")) {
-            return 2131558660;
+            return 2131558666;
         }
         throw new RuntimeException("unknown viewType");
     }
@@ -119,10 +119,10 @@ public class FriendListFragment extends SimpleAsyncListFragment<Result<List<Enti
     @Override // com.coolapk.market.view.base.asynclist.SimpleAsyncListFragment
     public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-        if (i == 2131558660) {
+        if (i == 2131558666) {
             return new FriendViewHolder(inflate, getComponent(), null);
         }
-        if (i != 2131558954) {
+        if (i != 2131558961) {
             return null;
         }
         return new TitleViewHolder(inflate, null);
@@ -184,7 +184,7 @@ public class FriendListFragment extends SimpleAsyncListFragment<Result<List<Enti
             super.onClick(view);
             if (getAdapterPosition() >= 0) {
                 Contacts contacts = (Contacts) FriendListFragment.this.getDataList().get(getAdapterPosition());
-                if (view.getId() == 2131362933) {
+                if (view.getId() == 2131362945) {
                     ActionManager.startChattingActivity(FriendListFragment.this.getActivity(), contacts.getFollowUid(), contacts.getFollowUserName());
                 }
             }

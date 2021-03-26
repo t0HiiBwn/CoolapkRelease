@@ -28,7 +28,7 @@ public abstract class DialogBackupCreateBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogBackupCreateBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogBackupCreateBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558518, viewGroup, z, obj);
+        return (DialogBackupCreateBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558520, viewGroup, z, obj);
     }
 
     public static DialogBackupCreateBinding inflate(LayoutInflater layoutInflater) {
@@ -37,7 +37,7 @@ public abstract class DialogBackupCreateBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogBackupCreateBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogBackupCreateBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558518, null, false, obj);
+        return (DialogBackupCreateBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558520, null, false, obj);
     }
 
     public static DialogBackupCreateBinding bind(View view) {
@@ -46,6 +46,6 @@ public abstract class DialogBackupCreateBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogBackupCreateBinding bind(View view, Object obj) {
-        return (DialogBackupCreateBinding) bind(obj, view, 2131558518);
+        return (DialogBackupCreateBinding) bind(obj, view, 2131558520);
     }
 }

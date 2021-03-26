@@ -26,9 +26,9 @@ public class VideoErrorBindingImpl extends VideoErrorBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362734, 1);
-        sparseIntArray.put(2131361981, 2);
-        sparseIntArray.put(2131361982, 3);
+        sparseIntArray.put(2131362745, 1);
+        sparseIntArray.put(2131361982, 2);
+        sparseIntArray.put(2131361983, 3);
     }
 
     public VideoErrorBindingImpl(DataBindingComponent dataBindingComponent, View view) {

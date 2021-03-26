@@ -27,9 +27,9 @@ public class SubmitFeedAddVideoItemDialogBindingImpl extends SubmitFeedAddVideoI
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 2);
-        sparseIntArray.put(2131362441, 3);
-        sparseIntArray.put(2131362196, 4);
+        sparseIntArray.put(2131363551, 2);
+        sparseIntArray.put(2131362448, 3);
+        sparseIntArray.put(2131362200, 4);
     }
 
     public SubmitFeedAddVideoItemDialogBindingImpl(DataBindingComponent dataBindingComponent, View view) {

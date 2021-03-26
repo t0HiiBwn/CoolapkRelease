@@ -42,7 +42,7 @@ public class CustomTabsUtils {
     }
 
     private static Bitmap createBackBitmap(Context context) {
-        Drawable drawable = ResourceUtils.getDrawable(context, 2131231156);
+        Drawable drawable = ResourceUtils.getDrawable(context, 2131231166);
         if (isLightColor(AppHolder.getAppTheme().getColorPrimary())) {
             drawable.setColorFilter(-12303292, PorterDuff.Mode.SRC_IN);
         } else {

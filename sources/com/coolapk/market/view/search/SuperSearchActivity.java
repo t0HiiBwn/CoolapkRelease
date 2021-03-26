@@ -130,14 +130,14 @@ public final class SuperSearchActivity extends FakeStatusBarActivity implements 
     protected void onCreate(Bundle bundle) {
         int i;
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559124);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559131);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…, R.layout.search_extend)");
         this.binding = (SearchExtendBinding) contentView;
         String stringExtra = getIntent().getStringExtra("KEYWORD");
         this.keyword = stringExtra;
         String stringExtra2 = getIntent().getStringExtra("SEARCH_HINT");
         if (stringExtra2 == null) {
-            stringExtra2 = getString(2131886965);
+            stringExtra2 = getString(2131887027);
         }
         this.defaultSearchHint = stringExtra2;
         String stringExtra3 = getIntent().getStringExtra("SEARCH_TYPE");
@@ -494,7 +494,7 @@ public final class SuperSearchActivity extends FakeStatusBarActivity implements 
             SuperSearchFragment newInstance$default = SuperSearchFragment.Companion.newInstance$default(SuperSearchFragment.Companion, str, str8, null, null, 12, null);
             newInstance$default.setUseFilter(true);
             newInstance$default.setSuperSearchViewModel(getViewModel());
-            getSupportFragmentManager().beginTransaction().replace(2131363307, newInstance).replace(2131363314, newInstance$default).commit();
+            getSupportFragmentManager().beginTransaction().replace(2131363322, newInstance).replace(2131363330, newInstance$default).commit();
             return;
         }
         if (getFeedPageType() == null) {
@@ -588,7 +588,7 @@ public final class SuperSearchActivity extends FakeStatusBarActivity implements 
         SearchMainListFragment.Companion companion = SearchMainListFragment.Companion;
         String returnType = getReturnType();
         Intrinsics.checkNotNullExpressionValue(returnType, "returnType");
-        beginTransaction.replace(2131363307, companion.newInstance(returnType)).replace(2131363314, superSearchFragment).commit();
+        beginTransaction.replace(2131363322, companion.newInstance(returnType)).replace(2131363330, superSearchFragment).commit();
     }
 
     public final void setupFilter() {
@@ -609,7 +609,7 @@ public final class SuperSearchActivity extends FakeStatusBarActivity implements 
             AutoCompleteTextView autoCompleteTextView = searchExtendBinding.searchHeader.searchText;
             Intrinsics.checkNotNullExpressionValue(autoCompleteTextView, "binding.searchHeader.searchText");
             CharSequence hint = autoCompleteTextView.getHint();
-            if (hint != null && !TextUtils.equals(hint, getString(2131886965))) {
+            if (hint != null && !TextUtils.equals(hint, getString(2131887027))) {
                 str = hint.toString();
             } else {
                 return;
@@ -654,12 +654,12 @@ public final class SuperSearchActivity extends FakeStatusBarActivity implements 
     }
 
     private final Fragment findContentFragment() {
-        return getSupportFragmentManager().findFragmentById(2131363307);
+        return getSupportFragmentManager().findFragmentById(2131363322);
     }
 
     /* access modifiers changed from: private */
     public final PopLayoutBehavior findPopupFragment() {
-        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131363314);
+        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131363330);
         if (!(findFragmentById instanceof PopLayoutBehavior)) {
             findFragmentById = null;
         }

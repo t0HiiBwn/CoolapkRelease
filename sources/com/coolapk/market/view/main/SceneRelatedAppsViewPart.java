@@ -42,7 +42,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SceneRelatedAppsHelper.kt */
 public final class SceneRelatedAppsViewPart extends BindingViewPart<ItemSceneRelatedBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558903;
+    public static final int LAYOUT_ID = 2131558910;
     private final AppsAdapter adapter;
     private EntityCard card;
     private final DataBindingComponent component;
@@ -83,14 +83,14 @@ public final class SceneRelatedAppsViewPart extends BindingViewPart<ItemSceneRel
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemSceneRelatedBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558903, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558910, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemSceneRelatedBinding) inflate;
     }
 
     @Override // com.coolapk.market.viewholder.iview.ViewPart
     protected void onViewCreated() {
-        BaseMultiTypeAdapter.register$default(this.adapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558935).suitedClass(ServiceApp.class).constructor(new SceneRelatedAppsViewPart$onViewCreated$1(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(this.adapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558942).suitedClass(ServiceApp.class).constructor(new SceneRelatedAppsViewPart$onViewCreated$1(this)).build(), 0, 2, null);
         RecyclerView recyclerView = ((ItemSceneRelatedBinding) getBinding()).recyclerView;
         Intrinsics.checkNotNullExpressionValue(recyclerView, "binding.recyclerView");
         recyclerView.setAdapter(this.adapter);
@@ -101,11 +101,11 @@ public final class SceneRelatedAppsViewPart extends BindingViewPart<ItemSceneRel
         Intrinsics.checkNotNullExpressionValue(recyclerView3, "binding.recyclerView");
         recyclerView3.setItemAnimator(null);
         if (this.isDark) {
-            ((ItemSceneRelatedBinding) getBinding()).itemView.setBackgroundResource(2131100008);
-            ((ItemSceneRelatedBinding) getBinding()).titleView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131100147));
+            ((ItemSceneRelatedBinding) getBinding()).itemView.setBackgroundResource(2131100013);
+            ((ItemSceneRelatedBinding) getBinding()).titleView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131100160));
             ImageView imageView = ((ItemSceneRelatedBinding) getBinding()).closeView;
             Intrinsics.checkNotNullExpressionValue(imageView, "binding.closeView");
-            imageView.setImageTintList(ColorStateList.valueOf(ResourceUtils.getColorInt(getContext(), 2131100149)));
+            imageView.setImageTintList(ColorStateList.valueOf(ResourceUtils.getColorInt(getContext(), 2131100162)));
         }
     }
 
@@ -151,7 +151,7 @@ public final class SceneRelatedAppsViewPart extends BindingViewPart<ItemSceneRel
         ViewParent parent;
         ViewParent parent2;
         Intrinsics.checkNotNullParameter(view, "v");
-        if (view.getId() == 2131362257) {
+        if (view.getId() == 2131362262) {
             LinearLayout linearLayout = ((ItemSceneRelatedBinding) getBinding()).itemView;
             Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.itemView");
             ViewParent parent3 = linearLayout.getParent();
@@ -206,7 +206,7 @@ public final class SceneRelatedAppsViewPart extends BindingViewPart<ItemSceneRel
             setParentCard(SceneRelatedAppsViewPart.access$getCard$p(this.this$0));
             super.bindTo(obj);
             if (this.isDark) {
-                getBinding().titleView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131100147));
+                getBinding().titleView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131100160));
                 ActionButton.setButtonStyle$default(getBinding().actionContainer, 2, false, 2, null);
             }
         }
@@ -224,7 +224,7 @@ public final class SceneRelatedAppsViewPart extends BindingViewPart<ItemSceneRel
             Intrinsics.checkNotNullParameter(view, "view");
             super.onClick(view);
             int id = view.getId();
-            if (id == 2131361886) {
+            if (id == 2131361887) {
                 Context context = view.getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "view.context");
                 if (UiUtils.getActivityNullable(context) instanceof DynamicNodePageActivity) {
@@ -232,7 +232,7 @@ public final class SceneRelatedAppsViewPart extends BindingViewPart<ItemSceneRel
                 } else {
                     StatisticHelper.Companion.getInstance().recordSceneRelatedClickAction("列表_推荐下载_点击下载");
                 }
-            } else if (id != 2131362768) {
+            } else if (id != 2131362779) {
                 super.onClick(view);
             } else {
                 Context context2 = view.getContext();

@@ -82,22 +82,22 @@ final class EntityListFragment$onRegisterCards$56 extends Lambda implements Func
                 Intrinsics.checkNotNullParameter(viewGroup, "parent");
                 View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
                 switch (i) {
-                    case 2131558678:
+                    case 2131558684:
                         Intrinsics.checkNotNullExpressionValue(inflate, "view");
                         DataBindingComponent component = titleRecycleViewCardViewHolder.getComponent();
                         Intrinsics.checkNotNullExpressionValue(component, "holder.component");
                         return new DyhArticleVH(inflate, component, titleRecycleViewCardViewHolder.getItemActionHandler());
-                    case 2131558708:
+                    case 2131558715:
                         Intrinsics.checkNotNullExpressionValue(inflate, "view");
                         DataBindingComponent component2 = titleRecycleViewCardViewHolder.getComponent();
                         Intrinsics.checkNotNullExpressionValue(component2, "holder.component");
                         return new FeedViewHolderV8(inflate, component2, titleRecycleViewCardViewHolder.getItemActionHandler());
-                    case 2131558710:
+                    case 2131558717:
                         Intrinsics.checkNotNullExpressionValue(inflate, "view");
                         DataBindingComponent component3 = titleRecycleViewCardViewHolder.getComponent();
                         Intrinsics.checkNotNullExpressionValue(component3, "holder.component");
                         return new FeedNewsViewHolder(inflate, component3, titleRecycleViewCardViewHolder.getItemActionHandler());
-                    case 2131558755:
+                    case 2131558762:
                         Intrinsics.checkNotNullExpressionValue(inflate, "view");
                         DataBindingComponent component4 = titleRecycleViewCardViewHolder.getComponent();
                         Intrinsics.checkNotNullExpressionValue(component4, "holder.component");
@@ -114,9 +114,9 @@ final class EntityListFragment$onRegisterCards$56 extends Lambda implements Func
             public int getItemViewType(Object obj) {
                 Intrinsics.checkNotNullParameter(obj, "obj");
                 if (obj instanceof DyhArticle) {
-                    return 2131558678;
+                    return 2131558684;
                 }
-                return obj instanceof Feed ? EntityExtendsKt.isArticleNews((Feed) obj) ? 2131558710 : 2131558708 : obj instanceof Goods ? 2131558755 : 2131558929;
+                return obj instanceof Feed ? EntityExtendsKt.isArticleNews((Feed) obj) ? 2131558717 : 2131558715 : obj instanceof Goods ? 2131558762 : 2131558936;
             }
         });
     }

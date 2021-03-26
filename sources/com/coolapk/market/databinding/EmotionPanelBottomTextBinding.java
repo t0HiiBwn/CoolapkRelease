@@ -21,7 +21,7 @@ public abstract class EmotionPanelBottomTextBinding extends ViewDataBinding {
 
     @Deprecated
     public static EmotionPanelBottomTextBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (EmotionPanelBottomTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558547, viewGroup, z, obj);
+        return (EmotionPanelBottomTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558549, viewGroup, z, obj);
     }
 
     public static EmotionPanelBottomTextBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class EmotionPanelBottomTextBinding extends ViewDataBinding {
 
     @Deprecated
     public static EmotionPanelBottomTextBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (EmotionPanelBottomTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558547, null, false, obj);
+        return (EmotionPanelBottomTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558549, null, false, obj);
     }
 
     public static EmotionPanelBottomTextBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class EmotionPanelBottomTextBinding extends ViewDataBinding {
 
     @Deprecated
     public static EmotionPanelBottomTextBinding bind(View view, Object obj) {
-        return (EmotionPanelBottomTextBinding) bind(obj, view, 2131558547);
+        return (EmotionPanelBottomTextBinding) bind(obj, view, 2131558549);
     }
 }

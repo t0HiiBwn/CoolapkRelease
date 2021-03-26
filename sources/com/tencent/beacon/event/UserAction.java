@@ -27,9 +27,7 @@ public class UserAction {
     private static Boolean i;
     private static Boolean j;
     private static String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static String f1428l;
+    private static String l;
     private static String m;
     private static String n;
     private static String o;
@@ -125,10 +123,10 @@ public class UserAction {
                 setAppkey(str2);
                 k = null;
             }
-            String str3 = f1428l;
+            String str3 = l;
             if (str3 != null) {
                 setAppVersion(str3);
-                f1428l = null;
+                l = null;
             }
             String str4 = m;
             if (str4 != null) {
@@ -319,7 +317,7 @@ public class UserAction {
         if (userActionProxy != null) {
             userActionProxy.setAppVersion(str);
         } else {
-            f1428l = str;
+            l = str;
         }
     }
 
@@ -406,7 +404,7 @@ public class UserAction {
         if (userActionProxy != null) {
             userActionProxy.setAPPVersion(str);
         } else {
-            f1428l = str;
+            l = str;
         }
     }
 

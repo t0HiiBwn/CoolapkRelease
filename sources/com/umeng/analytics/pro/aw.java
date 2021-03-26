@@ -24,7 +24,7 @@ public class aw implements aq {
         @Override // android.content.ServiceConnection
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             try {
-                a a2 = a.AbstractBinderC0139a.a(iBinder);
+                a a2 = a.AbstractBinderC0166a.a(iBinder);
                 aw.this.d = a2.a();
                 Log.d("DeviceIdService", "onServiceConnected");
             } catch (RemoteException | NullPointerException e) {

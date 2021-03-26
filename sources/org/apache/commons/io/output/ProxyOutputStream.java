@@ -5,14 +5,36 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 public class ProxyOutputStream extends FilterOutputStream {
+    public ProxyOutputStream(OutputStream outputStream) {
+        super(outputStream);
+    }
+
     protected void afterWrite(int i) throws IOException {
     }
 
     protected void beforeWrite(int i) throws IOException {
     }
 
-    public ProxyOutputStream(OutputStream outputStream) {
-        super(outputStream);
+    @Override // java.io.FilterOutputStream, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
+        try {
+            this.out.close();
+        } catch (IOException e) {
+            handleIOException(e);
+        }
+    }
+
+    @Override // java.io.FilterOutputStream, java.io.OutputStream, java.io.Flushable
+    public void flush() throws IOException {
+        try {
+            this.out.flush();
+        } catch (IOException e) {
+            handleIOException(e);
+        }
+    }
+
+    protected void handleIOException(IOException iOException) throws IOException {
+        throw iOException;
     }
 
     @Override // java.io.FilterOutputStream, java.io.OutputStream
@@ -53,27 +75,5 @@ public class ProxyOutputStream extends FilterOutputStream {
         } catch (IOException e) {
             handleIOException(e);
         }
-    }
-
-    @Override // java.io.FilterOutputStream, java.io.OutputStream, java.io.Flushable
-    public void flush() throws IOException {
-        try {
-            this.out.flush();
-        } catch (IOException e) {
-            handleIOException(e);
-        }
-    }
-
-    @Override // java.io.FilterOutputStream, java.io.OutputStream, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
-        try {
-            this.out.close();
-        } catch (IOException e) {
-            handleIOException(e);
-        }
-    }
-
-    protected void handleIOException(IOException iOException) throws IOException {
-        throw iOException;
     }
 }

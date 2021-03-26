@@ -38,7 +38,7 @@ public abstract class AddToAlbumEditBinding extends ViewDataBinding {
 
     @Deprecated
     public static AddToAlbumEditBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AddToAlbumEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558437, viewGroup, z, obj);
+        return (AddToAlbumEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558438, viewGroup, z, obj);
     }
 
     public static AddToAlbumEditBinding inflate(LayoutInflater layoutInflater) {
@@ -47,7 +47,7 @@ public abstract class AddToAlbumEditBinding extends ViewDataBinding {
 
     @Deprecated
     public static AddToAlbumEditBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AddToAlbumEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558437, null, false, obj);
+        return (AddToAlbumEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558438, null, false, obj);
     }
 
     public static AddToAlbumEditBinding bind(View view) {
@@ -56,6 +56,6 @@ public abstract class AddToAlbumEditBinding extends ViewDataBinding {
 
     @Deprecated
     public static AddToAlbumEditBinding bind(View view, Object obj) {
-        return (AddToAlbumEditBinding) bind(obj, view, 2131558437);
+        return (AddToAlbumEditBinding) bind(obj, view, 2131558438);
     }
 }

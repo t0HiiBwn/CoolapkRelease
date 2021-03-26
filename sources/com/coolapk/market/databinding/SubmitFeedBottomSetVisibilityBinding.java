@@ -41,7 +41,7 @@ public abstract class SubmitFeedBottomSetVisibilityBinding extends ViewDataBindi
 
     @Deprecated
     public static SubmitFeedBottomSetVisibilityBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitFeedBottomSetVisibilityBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559156, viewGroup, z, obj);
+        return (SubmitFeedBottomSetVisibilityBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559164, viewGroup, z, obj);
     }
 
     public static SubmitFeedBottomSetVisibilityBinding inflate(LayoutInflater layoutInflater) {
@@ -50,7 +50,7 @@ public abstract class SubmitFeedBottomSetVisibilityBinding extends ViewDataBindi
 
     @Deprecated
     public static SubmitFeedBottomSetVisibilityBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitFeedBottomSetVisibilityBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559156, null, false, obj);
+        return (SubmitFeedBottomSetVisibilityBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559164, null, false, obj);
     }
 
     public static SubmitFeedBottomSetVisibilityBinding bind(View view) {
@@ -59,6 +59,6 @@ public abstract class SubmitFeedBottomSetVisibilityBinding extends ViewDataBindi
 
     @Deprecated
     public static SubmitFeedBottomSetVisibilityBinding bind(View view, Object obj) {
-        return (SubmitFeedBottomSetVisibilityBinding) bind(obj, view, 2131559156);
+        return (SubmitFeedBottomSetVisibilityBinding) bind(obj, view, 2131559164);
     }
 }

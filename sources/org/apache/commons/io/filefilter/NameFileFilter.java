@@ -23,6 +23,19 @@ public class NameFileFilter extends AbstractFileFilter implements Serializable {
         throw new IllegalArgumentException("The wildcard must not be null");
     }
 
+    public NameFileFilter(List<String> list) {
+        this(list, (IOCase) null);
+    }
+
+    public NameFileFilter(List<String> list, IOCase iOCase) {
+        if (list != null) {
+            this.names = (String[]) list.toArray(new String[list.size()]);
+            this.caseSensitivity = iOCase == null ? IOCase.SENSITIVE : iOCase;
+            return;
+        }
+        throw new IllegalArgumentException("The list of names must not be null");
+    }
+
     public NameFileFilter(String[] strArr) {
         this(strArr, (IOCase) null);
     }
@@ -36,19 +49,6 @@ public class NameFileFilter extends AbstractFileFilter implements Serializable {
             return;
         }
         throw new IllegalArgumentException("The array of names must not be null");
-    }
-
-    public NameFileFilter(List<String> list) {
-        this(list, (IOCase) null);
-    }
-
-    public NameFileFilter(List<String> list, IOCase iOCase) {
-        if (list != null) {
-            this.names = (String[]) list.toArray(new String[list.size()]);
-            this.caseSensitivity = iOCase == null ? IOCase.SENSITIVE : iOCase;
-            return;
-        }
-        throw new IllegalArgumentException("The list of names must not be null");
     }
 
     @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter

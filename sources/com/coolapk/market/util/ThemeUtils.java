@@ -137,7 +137,7 @@ public class ThemeUtils {
                         bitmap = ((BitmapDrawable) drawable).getBitmap();
                     }
                 }
-                activity.setTaskDescription(new ActivityManager.TaskDescription(activity.getString(2131886221), bitmap, i));
+                activity.setTaskDescription(new ActivityManager.TaskDescription(activity.getString(2131886251), bitmap, i));
             }
         } catch (Exception e) {
             e.printStackTrace();

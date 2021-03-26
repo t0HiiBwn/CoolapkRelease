@@ -43,7 +43,7 @@ import kotlin.text.StringsKt;
 /* compiled from: TitleViewPart.kt */
 public final class TitleViewPart extends BindingViewPart<ItemTitleViewBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558958;
+    public static final int LAYOUT_ID = 2131558965;
     public Entity card;
     private BindingViewHolder viewHolder;
 
@@ -84,7 +84,7 @@ public final class TitleViewPart extends BindingViewPart<ItemTitleViewBinding, E
             ViewUtil.clickListener(frameLayout2, titleViewPart2);
             FrameLayout frameLayout3 = itemTitleViewBinding.bottomView;
             Intrinsics.checkNotNullExpressionValue(frameLayout3, "bottomView");
-            frameLayout3.setId(2131362970);
+            frameLayout3.setId(2131362982);
             return titleViewPart;
         }
     }
@@ -106,7 +106,7 @@ public final class TitleViewPart extends BindingViewPart<ItemTitleViewBinding, E
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemTitleViewBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558958, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558965, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemTitleViewBinding) inflate;
     }
@@ -543,7 +543,7 @@ public final class TitleViewPart extends BindingViewPart<ItemTitleViewBinding, E
         boolean z = true;
         int i = 0;
         if (description == null || description.length() == 0) {
-            str = getContext().getString(2131887148);
+            str = getContext().getString(2131887210);
         } else {
             Entity entity2 = this.card;
             if (entity2 == null) {
@@ -677,7 +677,7 @@ public final class TitleViewPart extends BindingViewPart<ItemTitleViewBinding, E
         BindingViewHolder bindingViewHolder;
         Intrinsics.checkNotNullParameter(view, "v");
         super.onClick(view);
-        if (view.getId() == 2131362970) {
+        if (view.getId() == 2131362982) {
             Context context = getView().getContext();
             Intrinsics.checkNotNullExpressionValue(context, "view.context");
             Entity entity2 = this.card;

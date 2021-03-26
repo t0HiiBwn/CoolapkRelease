@@ -11,8 +11,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_DeviceParams  reason: invalid class name */
 abstract class C$AutoValue_DeviceParams extends C$$AutoValue_DeviceParams {
-    C$AutoValue_DeviceParams(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, String str12, List<String> list, int i) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l2, l3, str11, str12, list, i);
+    C$AutoValue_DeviceParams(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, String str12, List<String> list, int i) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l, l2, str11, str12, list, i);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_DeviceParams$GsonTypeAdapter */
@@ -127,13 +127,13 @@ abstract class C$AutoValue_DeviceParams extends C$$AutoValue_DeviceParams {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -218,8 +218,8 @@ abstract class C$AutoValue_DeviceParams extends C$$AutoValue_DeviceParams {
             String str8 = this.defaultSubTitle;
             String str9 = this.defaultId;
             String str10 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str11 = this.defaultTitle;
             String str12 = this.defaultKey;
             List<String> list = this.defaultOption;
@@ -234,8 +234,8 @@ abstract class C$AutoValue_DeviceParams extends C$$AutoValue_DeviceParams {
             String str19 = str8;
             String str20 = str9;
             String str21 = str10;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str22 = str11;
             String str23 = str;
             String str24 = str12;
@@ -365,7 +365,7 @@ abstract class C$AutoValue_DeviceParams extends C$$AutoValue_DeviceParams {
                             str13 = this.entityTemplateAdapter.read(jsonReader);
                             continue;
                         case 4:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 5:
                             list2 = this.optionAdapter.read(jsonReader);
@@ -401,7 +401,7 @@ abstract class C$AutoValue_DeviceParams extends C$$AutoValue_DeviceParams {
                             i = this.checkBoxAdapter.read(jsonReader).intValue();
                             continue;
                         case 16:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -410,7 +410,7 @@ abstract class C$AutoValue_DeviceParams extends C$$AutoValue_DeviceParams {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_DeviceParams(str23, str13, str14, num2, str15, str16, str17, str18, str19, str20, str21, l4, l5, str22, str24, list2, i);
+            return new AutoValue_DeviceParams(str23, str13, str14, num2, str15, str16, str17, str18, str19, str20, str21, l3, l4, str22, str24, list2, i);
         }
     }
 }

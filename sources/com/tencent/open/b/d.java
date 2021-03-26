@@ -33,9 +33,9 @@ public class d {
         g.a().a(j.a(str, str4, str5, str3, str2, str6, str7, "", "", str8, str9, str10), str2, false);
     }
 
-    public void a(int i, String str, String str2, String str3, String str4, Long l2, int i2, int i3, String str5) {
-        long elapsedRealtime = SystemClock.elapsedRealtime() - l2.longValue();
-        if (l2.longValue() == 0 || elapsedRealtime < 0) {
+    public void a(int i, String str, String str2, String str3, String str4, Long l, int i2, int i3, String str5) {
+        long elapsedRealtime = SystemClock.elapsedRealtime() - l.longValue();
+        if (l.longValue() == 0 || elapsedRealtime < 0) {
             elapsedRealtime = 0;
         }
         StringBuffer stringBuffer = new StringBuffer("https://huatuocode.huatuo.qq.com");

@@ -30,14 +30,14 @@ public class f {
             b(bVar, j(bVar));
             if (!b2) {
                 final long currentTimeMillis = System.currentTimeMillis();
-                a.a().a(new a.AbstractC0092a() {
+                a.a().a(new a.AbstractC0102a() {
                     /* class com.ss.android.downloadlib.b.f.AnonymousClass1 */
 
-                    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+                    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
                     public void c() {
                     }
 
-                    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+                    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
                     public void b() {
                         a.a().b(this);
                         d.a().a(new Runnable() {

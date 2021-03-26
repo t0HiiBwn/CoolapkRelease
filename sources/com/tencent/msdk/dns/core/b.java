@@ -17,14 +17,14 @@ public final class b {
         CountDownLatch countDownLatch = cVar.b;
         if (countDownLatch == null) {
             int i = 0;
-            for (RunnableC0130b bVar : cVar.a) {
+            for (RunnableC0148b bVar : cVar.a) {
                 if (!bVar.b) {
                     i++;
                 }
             }
             countDownLatch = new CountDownLatch(i);
         }
-        for (RunnableC0130b bVar2 : cVar.a) {
+        for (RunnableC0148b bVar2 : cVar.a) {
             DnsExecutors.b.execute(new a(bVar2, countDownLatch));
         }
         cVar.a.clear();
@@ -33,7 +33,7 @@ public final class b {
 
     /* compiled from: CountDownManager */
     public static class c {
-        private List<RunnableC0130b> a = Collections.emptyList();
+        private List<RunnableC0148b> a = Collections.emptyList();
         private CountDownLatch b = null;
 
         public c a(Runnable runnable) {
@@ -45,7 +45,7 @@ public final class b {
                 if (Collections.emptyList() == this.a) {
                     this.a = new ArrayList();
                 }
-                this.a.add(new RunnableC0130b(runnable, z));
+                this.a.add(new RunnableC0148b(runnable, z));
             } else {
                 throw new IllegalArgumentException("task".concat(" can not be null"));
             }
@@ -61,11 +61,11 @@ public final class b {
 
     /* renamed from: com.tencent.msdk.dns.core.b$b  reason: collision with other inner class name */
     /* compiled from: CountDownManager */
-    private static class RunnableC0130b implements Runnable {
+    private static class RunnableC0148b implements Runnable {
         private final Runnable a;
         private final boolean b;
 
-        public RunnableC0130b(Runnable runnable, boolean z) {
+        public RunnableC0148b(Runnable runnable, boolean z) {
             this.a = runnable;
             this.b = z;
         }
@@ -78,10 +78,10 @@ public final class b {
 
     /* compiled from: CountDownManager */
     private static class a implements Runnable {
-        private final RunnableC0130b a;
+        private final RunnableC0148b a;
         private final CountDownLatch b;
 
-        a(RunnableC0130b bVar, CountDownLatch countDownLatch) {
+        a(RunnableC0148b bVar, CountDownLatch countDownLatch) {
             this.a = bVar;
             this.b = countDownLatch;
         }

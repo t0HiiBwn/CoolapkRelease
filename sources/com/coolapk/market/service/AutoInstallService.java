@@ -94,13 +94,13 @@ public class AutoInstallService extends AccessibilityService {
                     if (isAppInstallEvent(charSequence2, trim)) {
                         onAppInstall();
                         return;
-                    } else if (hasNodeInfoByText(2131886560)) {
+                    } else if (hasNodeInfoByText(2131886622)) {
                         onAppInstalled();
                         return;
-                    } else if (hasNodeInfoByText(2131886563)) {
+                    } else if (hasNodeInfoByText(2131886625)) {
                         onAppUninstalled();
                         return;
-                    } else if (hasNodeInfoByText(2131886561)) {
+                    } else if (hasNodeInfoByText(2131886623)) {
                         onAppUninstall();
                         return;
                     } else {
@@ -134,25 +134,25 @@ public class AutoInstallService extends AccessibilityService {
     }
 
     private boolean isAppReplaceEvent(String str, String str2) {
-        return str2.contains(getString(2131886301)) || hasNodeInfoByText(2131886301);
+        return str2.contains(getString(2131886331)) || hasNodeInfoByText(2131886331);
     }
 
     private void onAppReplaceEvent() {
-        findAndClickNode(2131886262);
+        findAndClickNode(2131886292);
     }
 
     private boolean isAppInstallEvent(String str, String str2) {
-        return str.equalsIgnoreCase("com.android.packageinstaller.PackageInstallerActivity") || str2.contains(getString(2131886259)) || hasIdenticalNodeInfoByText(2131886259);
+        return str.equalsIgnoreCase("com.android.packageinstaller.PackageInstallerActivity") || str2.contains(getString(2131886289)) || hasIdenticalNodeInfoByText(2131886289);
     }
 
     private void onAppInstall() {
         if (INVOKE_GLOBAL || getValidNodeInfo(mInstallPackageList) != null) {
-            findAndClickNode(2131886259, 2131886262, 2131886255, 2131886261);
+            findAndClickNode(2131886289, 2131886292, 2131886285, 2131886291);
         }
     }
 
     private boolean isAppInstalledEvent(String str, String str2) {
-        return str2.equalsIgnoreCase(getString(2131886263)) || str2.equalsIgnoreCase(getString(2131886264)) || str2.contains(getString(2131886558)) || str2.contains(getString(2131886559)) || str2.contains(getString(2131886560)) || hasNodeInfoByText(2131886558) || hasNodeInfoByText(2131886559) || hasNodeInfoByText(2131886560);
+        return str2.equalsIgnoreCase(getString(2131886293)) || str2.equalsIgnoreCase(getString(2131886294)) || str2.contains(getString(2131886620)) || str2.contains(getString(2131886621)) || str2.contains(getString(2131886622)) || hasNodeInfoByText(2131886620) || hasNodeInfoByText(2131886621) || hasNodeInfoByText(2131886622);
     }
 
     private void onAppInstalled() {
@@ -165,9 +165,9 @@ public class AutoInstallService extends AccessibilityService {
         } else {
             accessibilityNodeInfo = null;
         }
-        boolean findAndClickNode = findAndClickNode(2131886262, 2131886258, 2131886256, 2131886260);
+        boolean findAndClickNode = findAndClickNode(2131886292, 2131886288, 2131886286, 2131886290);
         if (!findAndClickNode) {
-            findAndClickNode = findAndPerformBack(2131886264, 2131886263);
+            findAndClickNode = findAndPerformBack(2131886294, 2131886293);
         }
         if (findAndClickNode && mInstallPackageList != null && accessibilityNodeInfo != null && accessibilityNodeInfo.getText() != null) {
             mInstallPackageList.remove(accessibilityNodeInfo.getText().toString());
@@ -175,17 +175,17 @@ public class AutoInstallService extends AccessibilityService {
     }
 
     private boolean isAppUninstallEvent(String str, String str2) {
-        return str.equalsIgnoreCase("com.android.packageinstaller.UninstallerActivity") || str2.contains(getString(2131886561)) || str.equalsIgnoreCase("android.app.AlertDialog") || hasNodeInfoByText(2131886561);
+        return str.equalsIgnoreCase("com.android.packageinstaller.UninstallerActivity") || str2.contains(getString(2131886623)) || str.equalsIgnoreCase("android.app.AlertDialog") || hasNodeInfoByText(2131886623);
     }
 
     private void onAppUninstall() {
         if (INVOKE_GLOBAL || getValidNodeInfo(mUninstallPackageList) != null) {
-            findAndClickNode(2131886265, 2131886262);
+            findAndClickNode(2131886295, 2131886292);
         }
     }
 
     private boolean isAppUninstalledEvent() {
-        return hasNodeInfoByText(2131886563, 2131886564, 2131886565);
+        return hasNodeInfoByText(2131886625, 2131886626, 2131886627);
     }
 
     private void onAppUninstalled() {
@@ -198,7 +198,7 @@ public class AutoInstallService extends AccessibilityService {
         } else {
             accessibilityNodeInfo = null;
         }
-        if (findAndClickNode(2131886260, 2131886262) && mUninstallPackageList != null && accessibilityNodeInfo != null && accessibilityNodeInfo.getText() != null) {
+        if (findAndClickNode(2131886290, 2131886292) && mUninstallPackageList != null && accessibilityNodeInfo != null && accessibilityNodeInfo.getText() != null) {
             mUninstallPackageList.remove(accessibilityNodeInfo.getText().toString());
         }
     }
@@ -211,7 +211,7 @@ public class AutoInstallService extends AccessibilityService {
     }
 
     private void processAlertDialogEvent(AccessibilityEvent accessibilityEvent) {
-        AccessibilityNodeInfo nodeInfoByText = getNodeInfoByText(accessibilityEvent, "android.widget.Button", 2131886262);
+        AccessibilityNodeInfo nodeInfoByText = getNodeInfoByText(accessibilityEvent, "android.widget.Button", 2131886292);
         if (nodeInfoByText != null) {
             performClick(nodeInfoByText);
         }

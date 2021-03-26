@@ -14,7 +14,7 @@ public abstract class d implements b {
     public String s;
 
     /* renamed from: a */
-    public JSONObject mo13a() {
+    public JSONObject mo3a() {
         JSONObject jSONObject = (JSONObject) a.a().a(e.class, new Object[0]);
         try {
             jSONObject.put("page", this.o);

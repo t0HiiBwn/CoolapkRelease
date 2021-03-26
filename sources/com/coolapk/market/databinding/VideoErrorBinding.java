@@ -25,7 +25,7 @@ public abstract class VideoErrorBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoErrorBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (VideoErrorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559290, viewGroup, z, obj);
+        return (VideoErrorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559300, viewGroup, z, obj);
     }
 
     public static VideoErrorBinding inflate(LayoutInflater layoutInflater) {
@@ -34,7 +34,7 @@ public abstract class VideoErrorBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoErrorBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (VideoErrorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559290, null, false, obj);
+        return (VideoErrorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559300, null, false, obj);
     }
 
     public static VideoErrorBinding bind(View view) {
@@ -43,6 +43,6 @@ public abstract class VideoErrorBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoErrorBinding bind(View view, Object obj) {
-        return (VideoErrorBinding) bind(obj, view, 2131559290);
+        return (VideoErrorBinding) bind(obj, view, 2131559300);
     }
 }

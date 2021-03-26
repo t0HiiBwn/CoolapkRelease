@@ -31,7 +31,7 @@ import kotlin.text.Regex;
 /* compiled from: SecondHandFeedSourceViewPart.kt */
 public final class SecondHandFeedSourceViewPart extends BindingViewPart<ItemFeedSourcePartBinding, Feed> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558730;
+    public static final int LAYOUT_ID = 2131558737;
     private final DataBindingComponent component;
     private final Lazy ninePicViewPart$delegate;
     private final Lazy secondHandHeaderPart$delegate;
@@ -72,7 +72,7 @@ public final class SecondHandFeedSourceViewPart extends BindingViewPart<ItemFeed
         String message = feed.getMessage();
         Intrinsics.checkNotNullExpressionValue(message, "source.message");
         LinkTextUtils.convert(new Regex("[\\n\\r]").replace(message, " "), AppHolder.getAppTheme().getColorAccent(), null);
-        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886656));
+        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886718));
         spannableStringBuilder.setSpan(new ForegroundColorSpan(AppHolder.getAppTheme().getColorAccent()), 0, spannableStringBuilder.length(), 33);
         SpannableStringBuilder spannableStringBuilder2 = new SpannableStringBuilder(convert);
         CoolEllipsizeTextView coolEllipsizeTextView = itemFeedSourcePartBinding.textView;
@@ -97,7 +97,7 @@ public final class SecondHandFeedSourceViewPart extends BindingViewPart<ItemFeed
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedSourcePartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558730, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558737, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemFeedSourcePartBinding) inflate;
     }

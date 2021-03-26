@@ -38,7 +38,7 @@ public abstract class FeedWarningBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedWarningBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (FeedWarningBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558563, viewGroup, z, obj);
+        return (FeedWarningBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558566, viewGroup, z, obj);
     }
 
     public static FeedWarningBinding inflate(LayoutInflater layoutInflater) {
@@ -47,7 +47,7 @@ public abstract class FeedWarningBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedWarningBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (FeedWarningBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558563, null, false, obj);
+        return (FeedWarningBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558566, null, false, obj);
     }
 
     public static FeedWarningBinding bind(View view) {
@@ -56,6 +56,6 @@ public abstract class FeedWarningBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedWarningBinding bind(View view, Object obj) {
-        return (FeedWarningBinding) bind(obj, view, 2131558563);
+        return (FeedWarningBinding) bind(obj, view, 2131558566);
     }
 }

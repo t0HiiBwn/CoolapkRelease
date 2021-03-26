@@ -6,15 +6,15 @@ import kotlin.jvm.functions.Function1;
 /* compiled from: UShortArray.kt */
 public final class UShortArrayKt {
     /* renamed from: ushortArrayOf-rL5Bavg  reason: not valid java name */
-    private static final short[] m1001ushortArrayOfrL5Bavg(short... sArr) {
+    private static final short[] m399ushortArrayOfrL5Bavg(short... sArr) {
         return sArr;
     }
 
     private static final short[] UShortArray(int i, Function1<? super Integer, UShort> function1) {
         short[] sArr = new short[i];
         for (int i2 = 0; i2 < i; i2++) {
-            sArr[i2] = function1.invoke(Integer.valueOf(i2)).m982unboximpl();
+            sArr[i2] = function1.invoke(Integer.valueOf(i2)).m380unboximpl();
         }
-        return UShortArray.m985constructorimpl(sArr);
+        return UShortArray.m383constructorimpl(sArr);
     }
 }

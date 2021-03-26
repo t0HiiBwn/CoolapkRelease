@@ -19,12 +19,12 @@ public class a {
 
     /* renamed from: com.ss.android.downloadlib.e.a$a  reason: collision with other inner class name */
     /* compiled from: AdEventHandler */
-    private static class C0086a {
+    private static class C0096a {
         private static a a = new a();
     }
 
     public static a a() {
-        return C0086a.a;
+        return C0096a.a;
     }
 
     private a() {

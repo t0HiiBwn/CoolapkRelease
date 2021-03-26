@@ -23,8 +23,8 @@ final class SubmitFeedV8Activity$makeKeyboardAndMenuInteractive$s2$1<T> implemen
         if (this.this$0.lastActiveMenu == SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuEmotion) {
             Intrinsics.checkNotNullExpressionValue(bool, "fakeKeyboardShow");
             if (bool.booleanValue()) {
-                SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuEmotion.setImageResource(2131231386);
-                int colorInt = ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099891);
+                SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuEmotion.setImageResource(2131231397);
+                int colorInt = ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099896);
                 if (this.this$0.lastActiveMenu == SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuAddMore) {
                     Intrinsics.checkNotNullExpressionValue(bool, "fakeKeyboardShow");
                     if (bool.booleanValue()) {
@@ -57,8 +57,8 @@ final class SubmitFeedV8Activity$makeKeyboardAndMenuInteractive$s2$1<T> implemen
                 imageView3.setImageTintList(ColorStateList.valueOf(colorInt));
             }
         }
-        SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuEmotion.setImageResource(2131231277);
-        int colorInt = ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099891);
+        SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuEmotion.setImageResource(2131231288);
+        int colorInt = ResourceUtils.getColorInt(this.this$0.getActivity(), 2131099896);
         if (this.this$0.lastActiveMenu == SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuAddMore) {
         }
         ImageView imageView4 = SubmitFeedV8Activity.access$getBinding$p(this.this$0).menuAddMore;

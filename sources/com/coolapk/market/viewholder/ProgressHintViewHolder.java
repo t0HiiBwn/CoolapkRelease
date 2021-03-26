@@ -20,7 +20,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ProgressBarViewHolder.kt */
 public final class ProgressHintViewHolder extends GenericBindHolder<ItemProgressHintBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558883;
+    public static final int LAYOUT_ID = 2131558890;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public ProgressHintViewHolder(View view, FragmentBindingComponent fragmentBindingComponent, ItemActionHandler itemActionHandler) {

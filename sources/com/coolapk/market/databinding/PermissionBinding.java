@@ -21,7 +21,7 @@ public abstract class PermissionBinding extends ViewDataBinding {
 
     @Deprecated
     public static PermissionBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (PermissionBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559078, viewGroup, z, obj);
+        return (PermissionBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559085, viewGroup, z, obj);
     }
 
     public static PermissionBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class PermissionBinding extends ViewDataBinding {
 
     @Deprecated
     public static PermissionBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (PermissionBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559078, null, false, obj);
+        return (PermissionBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559085, null, false, obj);
     }
 
     public static PermissionBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class PermissionBinding extends ViewDataBinding {
 
     @Deprecated
     public static PermissionBinding bind(View view, Object obj) {
-        return (PermissionBinding) bind(obj, view, 2131559078);
+        return (PermissionBinding) bind(obj, view, 2131559085);
     }
 }

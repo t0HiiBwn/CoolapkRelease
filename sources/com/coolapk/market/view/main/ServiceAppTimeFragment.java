@@ -32,7 +32,7 @@ public abstract class ServiceAppTimeFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558925).suitedEntityType("holder_title").constructor(ServiceAppTimeFragment$onActivityCreated$1.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558932).suitedEntityType("holder_title").constructor(ServiceAppTimeFragment$onActivityCreated$1.INSTANCE).build(), 0, 2, null);
     }
 
     /* access modifiers changed from: protected */
@@ -96,7 +96,7 @@ public abstract class ServiceAppTimeFragment extends EntityListFragment {
         @Override // com.coolapk.market.widget.SectionedAdapter
         public RecyclerView.ViewHolder onCreateSectionViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(this.this$0.getActivity()).inflate(2131558925, viewGroup, false);
+            View inflate = LayoutInflater.from(this.this$0.getActivity()).inflate(2131558932, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "view");
             return new TimeViewHolder(inflate);
         }
@@ -112,7 +112,7 @@ public abstract class ServiceAppTimeFragment extends EntityListFragment {
     /* compiled from: ServiceAppTimeFragment.kt */
     private static final class TimeViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558925;
+        public static final int LAYOUT_ID = 2131558932;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public TimeViewHolder(View view) {

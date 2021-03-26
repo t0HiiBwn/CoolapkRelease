@@ -25,7 +25,7 @@ public class ItemDyhSourceTitleBindingImpl extends ItemDyhSourceTitleBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362088, 1);
+        sparseIntArray.put(2131362091, 1);
     }
 
     public ItemDyhSourceTitleBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -23,7 +23,7 @@ public class ItemSearchRecommendBindingImpl extends ItemSearchRecommendBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362672, 2);
+        sparseIntArray.put(2131362683, 2);
     }
 
     public ItemSearchRecommendBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -61,7 +61,7 @@ public class ItemSearchRecommendBindingImpl extends ItemSearchRecommendBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (273 != i) {
+        if (274 != i) {
             return false;
         }
         setText((String) obj);
@@ -74,7 +74,7 @@ public class ItemSearchRecommendBindingImpl extends ItemSearchRecommendBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(273);
+        notifyPropertyChanged(274);
         super.requestRebind();
     }
 

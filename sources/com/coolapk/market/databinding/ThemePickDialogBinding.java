@@ -33,7 +33,7 @@ public abstract class ThemePickDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static ThemePickDialogBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ThemePickDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559195, viewGroup, z, obj);
+        return (ThemePickDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559203, viewGroup, z, obj);
     }
 
     public static ThemePickDialogBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class ThemePickDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static ThemePickDialogBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ThemePickDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559195, null, false, obj);
+        return (ThemePickDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559203, null, false, obj);
     }
 
     public static ThemePickDialogBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class ThemePickDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static ThemePickDialogBinding bind(View view, Object obj) {
-        return (ThemePickDialogBinding) bind(obj, view, 2131559195);
+        return (ThemePickDialogBinding) bind(obj, view, 2131559203);
     }
 }

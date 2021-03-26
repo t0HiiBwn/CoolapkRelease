@@ -18,9 +18,7 @@ public final class am extends k {
     public String i = "";
     public String j = "";
     public Map<String, String> k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    public String f1440l = "";
+    public String l = "";
     public long m = 0;
     public String n = "";
     public String o = "";
@@ -59,7 +57,7 @@ public final class am extends k {
         if (map != null) {
             jVar.a((Map) map, 10);
         }
-        String str4 = this.f1440l;
+        String str4 = this.l;
         if (str4 != null) {
             jVar.a(str4, 11);
         }
@@ -129,7 +127,7 @@ public final class am extends k {
         this.i = iVar.b(8, false);
         this.j = iVar.b(9, false);
         this.k = (Map) iVar.a((i) z, 10, false);
-        this.f1440l = iVar.b(11, false);
+        this.l = iVar.b(11, false);
         this.m = iVar.a(this.m, 12, false);
         this.n = iVar.b(13, false);
         this.o = iVar.b(14, false);

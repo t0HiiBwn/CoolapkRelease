@@ -51,7 +51,7 @@ final class GoodGoodsEditListFragment$onRegisterCards$4 extends Lambda implement
             @Override // com.coolapk.market.view.center.TouchCallBack
             public void downTouch(View view, RecyclerView.ViewHolder viewHolder) {
                 Intrinsics.checkNotNullParameter(view, "view");
-                if (viewHolder != null && view.getId() == 2131362426) {
+                if (viewHolder != null && view.getId() == 2131362433) {
                     this.this$0.this$0.startDrag(viewHolder.getAdapterPosition());
                 }
             }

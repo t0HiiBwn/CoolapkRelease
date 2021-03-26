@@ -21,7 +21,7 @@ public abstract class FabBinding extends ViewDataBinding {
 
     @Deprecated
     public static FabBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (FabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558549, viewGroup, z, obj);
+        return (FabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558551, viewGroup, z, obj);
     }
 
     public static FabBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class FabBinding extends ViewDataBinding {
 
     @Deprecated
     public static FabBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (FabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558549, null, false, obj);
+        return (FabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558551, null, false, obj);
     }
 
     public static FabBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class FabBinding extends ViewDataBinding {
 
     @Deprecated
     public static FabBinding bind(View view, Object obj) {
-        return (FabBinding) bind(obj, view, 2131558549);
+        return (FabBinding) bind(obj, view, 2131558551);
     }
 }

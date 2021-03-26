@@ -192,7 +192,7 @@ public class b implements com.ss.android.downloadad.a.b {
     }
 
     public static a a(boolean z) {
-        a.C0080a d = new a.C0080a().a(0).a(true).c(false).d(false);
+        a.C0090a d = new a.C0090a().a(0).a(true).c(false).d(false);
         if (z) {
             d.b(2);
         } else {

@@ -16,7 +16,7 @@ final class PostButtonSettingFragment$onActivityCreated$5 implements View.OnClic
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        PostButtonSettingFragment.access$getBinding$p(this.this$0).radioGroup.check(2131363165);
+        PostButtonSettingFragment.access$getBinding$p(this.this$0).radioGroup.check(2131363179);
         ActionManager.startPhotoPickerActivity(this.this$0, 1, (List<String>) null);
     }
 }

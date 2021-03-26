@@ -49,10 +49,10 @@ public class DeveloperAppsFragment extends AsyncListFragment<Result<List<Service
         this.component = new FragmentBindingComponent(this);
         setRefreshEnable(false);
         setLoadMoreEnable(false);
-        setEmptyData(getString(2131886766), 0);
+        setEmptyData(getString(2131886828), 0);
         setLayoutManager(new LinearLayoutManager(getActivity()));
         setAdapter(new DataAdapter());
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558924, 2131231052).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558931, 2131231062).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         initData();
@@ -103,7 +103,7 @@ public class DeveloperAppsFragment extends AsyncListFragment<Result<List<Service
     private class DataAdapter extends RecyclerView.Adapter<BindingViewHolder> {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558924;
+            return 2131558931;
         }
 
         private DataAdapter() {
@@ -120,8 +120,8 @@ public class DeveloperAppsFragment extends AsyncListFragment<Result<List<Service
                     if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition())) {
                         Entity entity = (Entity) DeveloperAppsFragment.this.getDataList().get(viewHolder.getAdapterPosition());
                         int id = view.getId();
-                        if (id != 2131361886) {
-                            if (id == 2131362768 && EntityUtils.isApkType(entity.getEntityType())) {
+                        if (id != 2131361887) {
+                            if (id == 2131362779 && EntityUtils.isApkType(entity.getEntityType())) {
                                 ServiceApp serviceApp = (ServiceApp) entity;
                                 ActionManager.startAppViewActivity(DeveloperAppsFragment.this.getActivity(), ((ServiceAppBinding) ((BindingViewHolder) viewHolder).getBinding()).iconView, serviceApp.getPackageName(), serviceApp.getLogo(), serviceApp.getAppName(), serviceApp.getExtraAnalysisData(), serviceApp.getRequestContext(), serviceApp.getExtraFromApi());
                             }

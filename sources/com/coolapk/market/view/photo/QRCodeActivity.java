@@ -82,7 +82,7 @@ public final class QRCodeActivity extends BaseActivity implements ScanCallback {
     /* access modifiers changed from: private */
     public final void init() {
         try {
-            ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559112);
+            ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559119);
             Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…w(this, R.layout.qr_code)");
             this.binding = (QrCodeBinding) contentView;
             Symbol.looperScan = true;

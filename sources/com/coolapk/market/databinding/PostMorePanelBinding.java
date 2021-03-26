@@ -27,7 +27,7 @@ public abstract class PostMorePanelBinding extends ViewDataBinding {
 
     @Deprecated
     public static PostMorePanelBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (PostMorePanelBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559090, viewGroup, z, obj);
+        return (PostMorePanelBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559097, viewGroup, z, obj);
     }
 
     public static PostMorePanelBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class PostMorePanelBinding extends ViewDataBinding {
 
     @Deprecated
     public static PostMorePanelBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (PostMorePanelBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559090, null, false, obj);
+        return (PostMorePanelBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559097, null, false, obj);
     }
 
     public static PostMorePanelBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class PostMorePanelBinding extends ViewDataBinding {
 
     @Deprecated
     public static PostMorePanelBinding bind(View view, Object obj) {
-        return (PostMorePanelBinding) bind(obj, view, 2131559090);
+        return (PostMorePanelBinding) bind(obj, view, 2131559097);
     }
 }

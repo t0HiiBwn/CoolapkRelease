@@ -29,9 +29,9 @@ final class VoteExtraView$onItemClick$3 extends Lambda implements Function1<Stri
     public final void invoke(String str) {
         Intrinsics.checkNotNullParameter(str, "it");
         VoteExtraView voteExtraView = this.this$0;
-        FeedMultiPart build = voteExtraView.getMultiPart().newBuilder().votePage(str).build();
+        FeedMultiPart build = VoteExtraView.access$getMultiPart$p(voteExtraView).newBuilder().votePage(str).build();
         Intrinsics.checkNotNullExpressionValue(build, "multiPart.newBuilder()\n …                 .build()");
-        voteExtraView.setMultiPart(build);
+        VoteExtraView.access$setMultiPart$p(voteExtraView, build);
         this.this$0.requestUpdateDataList();
     }
 }

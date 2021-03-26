@@ -186,14 +186,14 @@ public class MultiItemDialogFragment extends BaseDialogFragment {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
             int i2 = 0;
             if (view != null) {
-                Object tag = view.getTag(2131363492);
+                Object tag = view.getTag(2131363510);
                 Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.databinding.DialogItemTextViewBinding");
                 dialogItemTextViewBinding = (DialogItemTextViewBinding) tag;
             } else {
                 dialogItemTextViewBinding = DialogItemTextViewBinding.inflate(LayoutInflater.from(viewGroup.getContext()), viewGroup, false);
                 Intrinsics.checkNotNullExpressionValue(dialogItemTextViewBinding, "DialogItemTextViewBindin….context), parent, false)");
                 view = dialogItemTextViewBinding.getRoot();
-                view.setTag(2131363492, dialogItemTextViewBinding);
+                view.setTag(2131363510, dialogItemTextViewBinding);
             }
             ActionItem actionItem = (ActionItem) getItem(i);
             TextView textView = dialogItemTextViewBinding.textView;

@@ -16,7 +16,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: LoginUserNodeRatingSelectorViewHolder.kt */
 public final class LoginUserNodeRatingSelectorViewHolder extends GenericBindHolder<ItemLoginUserNodeRatingSelectorBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558816;
+    public static final int LAYOUT_ID = 2131558823;
     private final NodeRatingPresenter presenter;
 
     public final NodeRatingPresenter getPresenter() {
@@ -85,7 +85,7 @@ public final class LoginUserNodeRatingSelectorViewHolder extends GenericBindHold
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
-        if (view.getId() == 2131363058) {
+        if (view.getId() == 2131363072) {
             ImageView imageView = ((ItemLoginUserNodeRatingSelectorBinding) getBinding()).orderImage;
             Intrinsics.checkNotNullExpressionValue(imageView, "binding.orderImage");
             showPopMenu(imageView);

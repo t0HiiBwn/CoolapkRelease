@@ -40,7 +40,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: LiveMessageViewHolder.kt */
 public final class LiveMessageViewHolder extends BindingViewHolder implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558808;
+    public static final int LAYOUT_ID = 2131558815;
     private final ItemLiveMessageBinding binding;
     private final Callback callback;
     private final CommandHelper commandHelper;
@@ -377,7 +377,7 @@ public final class LiveMessageViewHolder extends BindingViewHolder implements Re
         User userInfo = liveMessage17.getUserInfo();
         Intrinsics.checkNotNull(userInfo);
         Intrinsics.checkNotNullExpressionValue(userInfo, "liveMessage.userInfo!!");
-        fragmentImageLoader.displayImage(fragment, userInfo.getUserAvatar(), this.binding.avatarView, 2131231152);
+        fragmentImageLoader.displayImage(fragment, userInfo.getUserAvatar(), this.binding.avatarView, 2131231162);
         LiveMessageViewHolder$nineImageHotPlug$1 liveMessageViewHolder$nineImageHotPlug$1 = this.nineImageHotPlug;
         LiveMessage liveMessage18 = this.liveMessage;
         if (liveMessage18 == null) {
@@ -397,7 +397,7 @@ public final class LiveMessageViewHolder extends BindingViewHolder implements Re
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
         int id = view.getId();
-        if (id == 2131362095) {
+        if (id == 2131362098) {
             LiveMessage liveMessage2 = this.liveMessage;
             if (liveMessage2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("liveMessage");
@@ -411,13 +411,13 @@ public final class LiveMessageViewHolder extends BindingViewHolder implements Re
             Intrinsics.checkNotNull(userInfo);
             Intrinsics.checkNotNullExpressionValue(userInfo, "liveMessage.userInfo!!");
             ActionManager.startUserSpaceActivity(view, userName, userInfo.getUserAvatar());
-        } else if (id == 2131362707) {
+        } else if (id == 2131362718) {
             LiveMessage liveMessage4 = this.liveMessage;
             if (liveMessage4 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("liveMessage");
             }
             ActionManager.startPhotoViewActivity(view, liveMessage4.getPic(), null);
-        } else if (id != 2131363000) {
+        } else if (id != 2131363014) {
             super.onClick(view);
         } else {
             Context context = getContext();

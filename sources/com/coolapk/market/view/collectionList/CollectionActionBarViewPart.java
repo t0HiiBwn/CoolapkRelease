@@ -72,7 +72,7 @@ public final class CollectionActionBarViewPart extends BindingViewPart<ItemColle
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemCollectionFootBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558654, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558660, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…n_foot, viewGroup, false)");
         return (ItemCollectionFootBinding) inflate;
     }

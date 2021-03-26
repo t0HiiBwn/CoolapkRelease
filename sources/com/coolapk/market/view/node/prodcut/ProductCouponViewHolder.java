@@ -39,7 +39,7 @@ import kotlin.text.StringsKt;
 /* compiled from: ProductCouponViewHolder.kt */
 public final class ProductCouponViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558864;
+    public static final int LAYOUT_ID = 2131558871;
     private final DataAdapter adapter;
     private final ItemProductCouponBinding binding;
     private ProductCoupon productCoupon;
@@ -65,7 +65,7 @@ public final class ProductCouponViewHolder extends BindingViewHolder {
         itemProductCouponBinding.itemLeftView.setOnClickListener(productCouponViewHolder);
         itemProductCouponBinding.itemRightView.setOnClickListener(productCouponViewHolder);
         DataAdapter dataAdapter = new DataAdapter();
-        BaseMultiTypeAdapter.register$default(dataAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558865).suitedMethod(ProductCouponViewHolder$1$1.INSTANCE).constructor(ProductCouponViewHolder$1$2.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(dataAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558872).suitedMethod(ProductCouponViewHolder$1$1.INSTANCE).constructor(ProductCouponViewHolder$1$2.INSTANCE).build(), 0, 2, null);
         Unit unit = Unit.INSTANCE;
         this.adapter = dataAdapter;
         RecyclerView recyclerView = itemProductCouponBinding.deviceListView;
@@ -182,7 +182,7 @@ public final class ProductCouponViewHolder extends BindingViewHolder {
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362756) {
+        if (view.getId() != 2131362767) {
             super.onClick(view);
             return;
         }

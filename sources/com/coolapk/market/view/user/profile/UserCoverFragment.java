@@ -67,9 +67,9 @@ public final class UserCoverFragment extends ShortAsyncListFragment<HolderItem> 
     @Override // com.coolapk.market.view.base.asynclist.ShortAsyncListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558970).suitedEntityType("holder_type_title").constructor(new UserCoverFragment$onActivityCreated$1(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558969).suitedEntityType("holder_type_image").constructor(new UserCoverFragment$onActivityCreated$2(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558968).suitedEntityType("holder_type_add").constructor(new UserCoverFragment$onActivityCreated$3(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558977).suitedEntityType("holder_type_title").constructor(new UserCoverFragment$onActivityCreated$1(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558976).suitedEntityType("holder_type_image").constructor(new UserCoverFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558975).suitedEntityType("holder_type_add").constructor(new UserCoverFragment$onActivityCreated$3(this)).build(), 0, 2, null);
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);
@@ -156,7 +156,7 @@ public final class UserCoverFragment extends ShortAsyncListFragment<HolderItem> 
     /* compiled from: UserCoverFragment.kt */
     private static final class CoverImageViewHolder extends GenericBindHolder<ItemUserCoverImageBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558969;
+        public static final int LAYOUT_ID = 2131558976;
         private final GradientDrawable bg;
         private HolderItem data;
         private final UserCoverPresenter presenter;
@@ -238,7 +238,7 @@ public final class UserCoverFragment extends ShortAsyncListFragment<HolderItem> 
             HolderItem holderItem2 = this.data;
             if (holderItem2 != null) {
             }
-            AppHolder.getContextImageLoader().displayImage(getContext(), holderItem.getUrl(), (ImageView) ((ItemUserCoverImageBinding) getBinding()).imageView, ImageLoaderOptions.newBuilder().placeHolderRes(2131231696).useAnimate(true).build(), (OnImageLoadListener) null, (OnBitmapTransformListener) null);
+            AppHolder.getContextImageLoader().displayImage(getContext(), holderItem.getUrl(), (ImageView) ((ItemUserCoverImageBinding) getBinding()).imageView, ImageLoaderOptions.newBuilder().placeHolderRes(2131231707).useAnimate(true).build(), (OnImageLoadListener) null, (OnBitmapTransformListener) null);
             ((ItemUserCoverImageBinding) getBinding()).imageView.setOnClickListener(new UserCoverFragment$CoverImageViewHolder$bindToContent$3(holderItem));
             ((ItemUserCoverImageBinding) getBinding()).foregroundView.post(new UserCoverFragment$CoverImageViewHolder$bindToContent$4(this));
             this.data = holderItem;
@@ -260,7 +260,7 @@ public final class UserCoverFragment extends ShortAsyncListFragment<HolderItem> 
     /* compiled from: UserCoverFragment.kt */
     private static final class CoverAddViewHolder extends GenericBindHolder<ItemUserCoverAddBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558968;
+        public static final int LAYOUT_ID = 2131558975;
         private final UserCoverPresenter presenter;
 
         public final UserCoverPresenter getPresenter() {
@@ -298,7 +298,7 @@ public final class UserCoverFragment extends ShortAsyncListFragment<HolderItem> 
     /* compiled from: UserCoverFragment.kt */
     private static final class TitleViewHolder extends GenericBindHolder<ItemUserCoverTitleBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558970;
+        public static final int LAYOUT_ID = 2131558977;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public TitleViewHolder(View view, FragmentBindingComponent fragmentBindingComponent) {

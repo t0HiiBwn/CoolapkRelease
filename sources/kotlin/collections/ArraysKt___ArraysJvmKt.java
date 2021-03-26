@@ -1240,8 +1240,8 @@ class ArraysKt___ArraysJvmKt extends ArraysKt__ArraysKt {
         Intrinsics.checkNotNullParameter(collection, "elements");
         int length = jArr.length;
         long[] copyOf = Arrays.copyOf(jArr, collection.size() + length);
-        for (Long l2 : collection) {
-            copyOf[length] = l2.longValue();
+        for (Long l : collection) {
+            copyOf[length] = l.longValue();
             length++;
         }
         Intrinsics.checkNotNullExpressionValue(copyOf, "result");

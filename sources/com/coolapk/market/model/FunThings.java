@@ -17,9 +17,9 @@ public abstract class FunThings implements Entity, IUser {
 
         public abstract Builder coverPic(String str);
 
-        public abstract Builder createdate(Long l2);
+        public abstract Builder createdate(Long l);
 
-        public abstract Builder dateline(Long l2);
+        public abstract Builder dateline(Long l);
 
         public abstract Builder description(String str);
 
@@ -45,7 +45,7 @@ public abstract class FunThings implements Entity, IUser {
 
         public abstract Builder itemNum(int i);
 
-        public abstract Builder lastUpdate(Long l2);
+        public abstract Builder lastUpdate(Long l);
 
         public abstract Builder likeNum(int i);
 
@@ -54,6 +54,8 @@ public abstract class FunThings implements Entity, IUser {
         public abstract Builder message(String str);
 
         public abstract Builder pic(String str);
+
+        public abstract Builder recommend(int i);
 
         public abstract Builder replyNum(int i);
 
@@ -114,6 +116,9 @@ public abstract class FunThings implements Entity, IUser {
     @SerializedName("message")
     public abstract String getMessage();
 
+    @SerializedName("recommend")
+    public abstract int getRecommend();
+
     @SerializedName("reply_num")
     public abstract int getReplyNum();
 
@@ -152,6 +157,10 @@ public abstract class FunThings implements Entity, IUser {
 
     public boolean getIsOpened() {
         return getIsOpen() == 1;
+    }
+
+    public boolean isRecommend() {
+        return getRecommend() == 1;
     }
 
     public static TypeAdapter<FunThings> typeAdapter(Gson gson) {

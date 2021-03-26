@@ -18,7 +18,7 @@ public final class UserNodeRatingListFragment extends BaseRatingListFragment {
     @Override // com.coolapk.market.view.node.rating.BaseRatingListFragment, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558978).suitedMethod(UserNodeRatingListFragment$onActivityCreated$1.INSTANCE).constructor(new UserNodeRatingListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558985).suitedMethod(UserNodeRatingListFragment$onActivityCreated$1.INSTANCE).constructor(new UserNodeRatingListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
     }
 
     @Subscribe

@@ -63,9 +63,7 @@ class bc {
     private LatLng i;
     private double j;
     private Context k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private bl f1223l;
+    private bl l;
     private int m = 1;
     private boolean n = false;
     private final String o = "location_map_gps_locked.png";
@@ -81,7 +79,7 @@ class bc {
         Context applicationContext = context.getApplicationContext();
         this.k = applicationContext;
         this.e = yVar;
-        this.f1223l = new bl(applicationContext, yVar);
+        this.l = new bl(applicationContext, yVar);
         a(1, true);
     }
 
@@ -90,7 +88,7 @@ class bc {
             this.h = myLocationStyle;
             a(myLocationStyle.isMyLocationShowing());
             if (!this.h.isMyLocationShowing()) {
-                bl blVar = this.f1223l;
+                bl blVar = this.l;
                 if (blVar != null) {
                     blVar.a(false);
                 }
@@ -99,7 +97,7 @@ class bc {
             }
             Marker marker = this.f;
             if (marker != null || this.g != null) {
-                bl blVar2 = this.f1223l;
+                bl blVar2 = this.l;
                 if (blVar2 != null) {
                     blVar2.a(marker);
                 }
@@ -131,13 +129,13 @@ class bc {
             this.s = false;
             this.t = true;
         }
-        if (this.f1223l != null) {
+        if (this.l != null) {
             b();
         }
     }
 
     private void b() {
-        this.f1223l.b();
+        this.l.b();
     }
 
     public void a(Location location) {
@@ -222,9 +220,9 @@ class bc {
 
     public void a() throws RemoteException {
         e();
-        if (this.f1223l != null) {
+        if (this.l != null) {
             b();
-            this.f1223l = null;
+            this.l = null;
         }
     }
 
@@ -244,7 +242,7 @@ class bc {
             marker.remove();
             this.f.destroy();
             this.f = null;
-            bl blVar = this.f1223l;
+            bl blVar = this.l;
             if (blVar != null) {
                 blVar.a((Marker) null);
             }
@@ -311,7 +309,7 @@ class bc {
                 }
             }
             c();
-            bl blVar = this.f1223l;
+            bl blVar = this.l;
             if (blVar != null) {
                 blVar.a(this.f);
             }

@@ -21,7 +21,7 @@ public abstract class ScrollableTablayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static ScrollableTablayoutBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ScrollableTablayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559119, viewGroup, z, obj);
+        return (ScrollableTablayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559126, viewGroup, z, obj);
     }
 
     public static ScrollableTablayoutBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class ScrollableTablayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static ScrollableTablayoutBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ScrollableTablayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559119, null, false, obj);
+        return (ScrollableTablayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559126, null, false, obj);
     }
 
     public static ScrollableTablayoutBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class ScrollableTablayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static ScrollableTablayoutBinding bind(View view, Object obj) {
-        return (ScrollableTablayoutBinding) bind(obj, view, 2131559119);
+        return (ScrollableTablayoutBinding) bind(obj, view, 2131559126);
     }
 }

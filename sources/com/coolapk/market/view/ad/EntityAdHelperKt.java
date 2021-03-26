@@ -22,7 +22,7 @@ public final class EntityAdHelperKt {
 
     public static final void removeLastDelayAutoPlayListener(MediaView mediaView) {
         Intrinsics.checkNotNullParameter(mediaView, "$this$removeLastDelayAutoPlayListener");
-        Object tag = mediaView.getTag(2131363492);
+        Object tag = mediaView.getTag(2131363510);
         if (!(tag instanceof View.OnAttachStateChangeListener)) {
             tag = null;
         }
@@ -45,7 +45,7 @@ public final class EntityAdHelperKt {
         }
         if (z) {
             EntityAdHelperKt$makeADVideoDelayAutoPlay$lastAttachStateListener$1 entityAdHelperKt$makeADVideoDelayAutoPlay$lastAttachStateListener$1 = new EntityAdHelperKt$makeADVideoDelayAutoPlay$lastAttachStateListener$1(nativeUnifiedADData, mediaView);
-            mediaView.setTag(2131363492, entityAdHelperKt$makeADVideoDelayAutoPlay$lastAttachStateListener$1);
+            mediaView.setTag(2131363510, entityAdHelperKt$makeADVideoDelayAutoPlay$lastAttachStateListener$1);
             mediaView.addOnAttachStateChangeListener(entityAdHelperKt$makeADVideoDelayAutoPlay$lastAttachStateListener$1);
         }
     }

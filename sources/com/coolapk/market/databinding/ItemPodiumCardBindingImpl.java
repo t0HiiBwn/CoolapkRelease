@@ -20,7 +20,7 @@ public class ItemPodiumCardBindingImpl extends ItemPodiumCardBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(5);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"item_podium_card_item", "item_podium_card_item", "item_podium_card_item"}, new int[]{2, 3, 4}, new int[]{2131558860, 2131558860, 2131558860});
+        includedLayouts.setIncludes(1, new String[]{"item_podium_card_item", "item_podium_card_item", "item_podium_card_item"}, new int[]{2, 3, 4}, new int[]{2131558867, 2131558867, 2131558867});
     }
 
     public ItemPodiumCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -69,13 +69,13 @@ public class ItemPodiumCardBindingImpl extends ItemPodiumCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (280 == i) {
+        if (281 == i) {
             setTitles((List) obj);
         } else if (33 == i) {
             setApps((List) obj);
-        } else if (235 == i) {
+        } else if (236 == i) {
             setScores((List) obj);
-        } else if (192 != i) {
+        } else if (193 != i) {
             return false;
         } else {
             setLogos((List) obj);
@@ -89,7 +89,7 @@ public class ItemPodiumCardBindingImpl extends ItemPodiumCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 8;
         }
-        notifyPropertyChanged(280);
+        notifyPropertyChanged(281);
         super.requestRebind();
     }
 
@@ -109,7 +109,7 @@ public class ItemPodiumCardBindingImpl extends ItemPodiumCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 32;
         }
-        notifyPropertyChanged(235);
+        notifyPropertyChanged(236);
         super.requestRebind();
     }
 
@@ -119,7 +119,7 @@ public class ItemPodiumCardBindingImpl extends ItemPodiumCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 64;
         }
-        notifyPropertyChanged(192);
+        notifyPropertyChanged(193);
         super.requestRebind();
     }
 

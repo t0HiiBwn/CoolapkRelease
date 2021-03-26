@@ -22,7 +22,7 @@ public class ItemGoodGoodsAddBindingImpl extends ItemGoodGoodsAddBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362200, 2);
+        sparseIntArray.put(2131362205, 2);
     }
 
     public ItemGoodGoodsAddBindingImpl(DataBindingComponent dataBindingComponent, View view) {

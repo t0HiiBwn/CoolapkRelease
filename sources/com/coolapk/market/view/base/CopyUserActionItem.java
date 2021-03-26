@@ -15,7 +15,7 @@ public final class CopyUserActionItem extends CopyActionItem {
         Intrinsics.checkNotNullParameter(str, "userName");
         Activity currentActivity = AppHolder.getCurrentActivity();
         if (currentActivity != null) {
-            str2 = currentActivity.getString(2131886714, new Object[]{'@' + str + ' '});
+            str2 = currentActivity.getString(2131886776, new Object[]{'@' + str + ' '});
         } else {
             str2 = null;
         }

@@ -25,9 +25,7 @@ public class IdentifierIdClient {
     private static final int i = 0;
     private static final int j = 1;
     private static final int k = 2;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final int f1515l = 4;
+    private static final int l = 4;
     private static final int m = 11;
     private static final int n = 2000;
     private static Context o;

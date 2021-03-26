@@ -47,7 +47,7 @@ public abstract class ItemColorfulFatScrollCardChildBinding extends ViewDataBind
 
     @Deprecated
     public static ItemColorfulFatScrollCardChildBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemColorfulFatScrollCardChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558657, viewGroup, z, obj);
+        return (ItemColorfulFatScrollCardChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558663, viewGroup, z, obj);
     }
 
     public static ItemColorfulFatScrollCardChildBinding inflate(LayoutInflater layoutInflater) {
@@ -56,7 +56,7 @@ public abstract class ItemColorfulFatScrollCardChildBinding extends ViewDataBind
 
     @Deprecated
     public static ItemColorfulFatScrollCardChildBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemColorfulFatScrollCardChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558657, null, false, obj);
+        return (ItemColorfulFatScrollCardChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558663, null, false, obj);
     }
 
     public static ItemColorfulFatScrollCardChildBinding bind(View view) {
@@ -65,6 +65,6 @@ public abstract class ItemColorfulFatScrollCardChildBinding extends ViewDataBind
 
     @Deprecated
     public static ItemColorfulFatScrollCardChildBinding bind(View view, Object obj) {
-        return (ItemColorfulFatScrollCardChildBinding) bind(obj, view, 2131558657);
+        return (ItemColorfulFatScrollCardChildBinding) bind(obj, view, 2131558663);
     }
 }

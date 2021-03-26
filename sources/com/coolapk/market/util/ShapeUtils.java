@@ -211,7 +211,7 @@ public class ShapeUtils {
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setShape(1);
         gradientDrawable.setColor(AppHolder.getAppTheme().getColorAccent());
-        LayerDrawable layerDrawable = (LayerDrawable) ResourceUtils.getDrawable(context, 2131231265);
+        LayerDrawable layerDrawable = (LayerDrawable) ResourceUtils.getDrawable(context, 2131231276);
         layerDrawable.setDrawableByLayerId(16908288, gradientDrawable);
         return layerDrawable;
     }

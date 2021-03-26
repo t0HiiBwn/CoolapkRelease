@@ -166,7 +166,7 @@ public final class CreateCollectionActivity extends FakeStatusBarActivity implem
     }
 
     private final void setupInitView() {
-        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558489, new ContextBindingComponent(this));
+        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558490, new ContextBindingComponent(this));
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…xtBindingComponent(this))");
         CreateCollectListBinding createCollectListBinding = (CreateCollectListBinding) contentView;
         this.binding = createCollectListBinding;
@@ -520,17 +520,17 @@ public final class CreateCollectionActivity extends FakeStatusBarActivity implem
     public void onClick(View view) {
         Intrinsics.checkNotNull(view);
         switch (view.getId()) {
-            case 2131362001:
-            case 2131362793:
+            case 2131362002:
+            case 2131362804:
                 ActionManager.startPhotoPickerActivity(getActivity(), 1, (List<String>) null, 433);
                 return;
-            case 2131362257:
+            case 2131362262:
                 getActivity().finish();
                 return;
-            case 2131363101:
+            case 2131363115:
                 setupImage("");
                 return;
-            case 2131363457:
+            case 2131363475:
                 post();
                 return;
             default:

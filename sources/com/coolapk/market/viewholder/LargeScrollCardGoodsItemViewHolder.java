@@ -33,7 +33,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: LargeScrollCardGoodsItemViewHolder.kt */
 public class LargeScrollCardGoodsItemViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558795;
+    public static final int LAYOUT_ID = 2131558802;
     private Drawable actionBg;
     public String actionText;
     private boolean isFollow;
@@ -172,8 +172,8 @@ public class LargeScrollCardGoodsItemViewHolder extends BindingViewHolder {
             Intrinsics.checkNotNullExpressionValue(buyShowText, "data.buyShowText");
             this.actionText = buyShowText;
             this.titleLine = 2;
-            this.actionBg = ShapeUtils.createActionCornerBg(getContext(), ResourceUtils.getColorInt(getContext(), 2131100035));
-            this.subTitleColor = ResourceUtils.getColorInt(getContext(), 2131100035);
+            this.actionBg = ShapeUtils.createActionCornerBg(getContext(), ResourceUtils.getColorInt(getContext(), 2131100040));
+            this.subTitleColor = ResourceUtils.getColorInt(getContext(), 2131100040);
             z = true;
         } else if (obj instanceof Entity) {
             Entity entity = (Entity) obj;
@@ -193,9 +193,9 @@ public class LargeScrollCardGoodsItemViewHolder extends BindingViewHolder {
             throw new RuntimeException("unable to bind the not-entity-type ");
         }
         ItemLargeScrollCardGoodsItemBinding itemLargeScrollCardGoodsItemBinding = (ItemLargeScrollCardGoodsItemBinding) getBinding();
-        itemLargeScrollCardGoodsItemBinding.itemView.setTag(2131362753, obj);
-        itemLargeScrollCardGoodsItemBinding.actionView.setTag(2131362753, obj);
-        itemLargeScrollCardGoodsItemBinding.subTitleView.setTag(2131362753, obj);
+        itemLargeScrollCardGoodsItemBinding.itemView.setTag(2131362764, obj);
+        itemLargeScrollCardGoodsItemBinding.actionView.setTag(2131362764, obj);
+        itemLargeScrollCardGoodsItemBinding.subTitleView.setTag(2131362764, obj);
         TextView textView = itemLargeScrollCardGoodsItemBinding.actionView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.actionView");
         textView.setVisibility(z ? 0 : 8);
@@ -222,10 +222,10 @@ public class LargeScrollCardGoodsItemViewHolder extends BindingViewHolder {
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        Object tag = view.getTag(2131362753);
+        Object tag = view.getTag(2131362764);
         int id = view.getId();
-        if (id != 2131361981) {
-            if (id != 2131362768) {
+        if (id != 2131361982) {
+            if (id != 2131362779) {
                 super.onClick(view);
                 return;
             }
@@ -233,9 +233,10 @@ public class LargeScrollCardGoodsItemViewHolder extends BindingViewHolder {
             if (tag instanceof Goods) {
                 Goods goods = (Goods) tag;
                 if (goods.isDirect()) {
+                    ActionManagerCompat actionManagerCompat = ActionManagerCompat.INSTANCE;
                     Context context = getContext();
                     Intrinsics.checkNotNullExpressionValue(context, "context");
-                    ActionManagerCompat.startActivityByUrl(context, goods.getGoodsBuyUrl(), goods.getTitle(), goods.getSubTitle());
+                    actionManagerCompat.startWithGoodsBuyUrl(context, goods);
                 } else {
                     Context context2 = getContext();
                     Intrinsics.checkNotNullExpressionValue(context2, "context");
@@ -301,10 +302,10 @@ public class LargeScrollCardGoodsItemViewHolder extends BindingViewHolder {
             Intrinsics.checkNotNullExpressionValue(uid, "data.uid");
             entityListPresenter2.followUser(uid);
         } else if (tag instanceof Goods) {
+            ActionManagerCompat actionManagerCompat2 = ActionManagerCompat.INSTANCE;
             Context context4 = getContext();
             Intrinsics.checkNotNullExpressionValue(context4, "context");
-            Goods goods2 = (Goods) tag;
-            ActionManagerCompat.startActivityByUrl(context4, goods2.getGoodsBuyUrl(), goods2.getTitle(), goods2.getSubTitle());
+            actionManagerCompat2.startWithGoodsBuyUrl(context4, (Goods) tag);
         }
     }
 }

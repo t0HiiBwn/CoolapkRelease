@@ -27,7 +27,7 @@ public abstract class DialogAlbumitemPxBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumitemPxBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogAlbumitemPxBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558516, viewGroup, z, obj);
+        return (DialogAlbumitemPxBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558518, viewGroup, z, obj);
     }
 
     public static DialogAlbumitemPxBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class DialogAlbumitemPxBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumitemPxBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogAlbumitemPxBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558516, null, false, obj);
+        return (DialogAlbumitemPxBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558518, null, false, obj);
     }
 
     public static DialogAlbumitemPxBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class DialogAlbumitemPxBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumitemPxBinding bind(View view, Object obj) {
-        return (DialogAlbumitemPxBinding) bind(obj, view, 2131558516);
+        return (DialogAlbumitemPxBinding) bind(obj, view, 2131558518);
     }
 }

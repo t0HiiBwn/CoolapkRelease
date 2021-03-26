@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_FeedGoods  reason: invalid class name */
 abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
-    C$AutoValue_FeedGoods(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, String str11, String str12, String str13, long j, String str14, String str15, String str16, String str17, String str18, String str19, long j2, int i2, long j3, String str20, long j4, String str21, List<FeedGoodsCategory> list, String str22, String str23, String str24, List<ConfigPage> list2) {
-        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, l2, l3, str10, str11, str12, str13, j, str14, str15, str16, str17, str18, str19, j2, i2, j3, str20, j4, str21, list, str22, str23, str24, list2);
+    C$AutoValue_FeedGoods(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, String str11, String str12, String str13, long j, String str14, String str15, String str16, String str17, String str18, String str19, long j2, int i2, long j3, String str20, long j4, String str21, List<FeedGoodsCategory> list, String str22, String str23, String str24, List<ConfigPage> list2, int i3) {
+        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, l, l2, str10, str11, str12, str13, j, str14, str15, str16, str17, str18, str19, j2, i2, j3, str20, j4, str21, list, str22, str23, str24, list2, i3);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_FeedGoods$GsonTypeAdapter */
@@ -45,6 +45,7 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
         private int defaultEntityTypeId = 0;
         private String defaultEntityTypeName = null;
         private String defaultExtraData = null;
+        private int defaultFromApi = 0;
         private String defaultId = null;
         private String defaultKeyWords = null;
         private Long defaultLastUpdate = null;
@@ -70,6 +71,7 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
         private final TypeAdapter<Integer> entityTypeIdAdapter;
         private final TypeAdapter<String> entityTypeNameAdapter;
         private final TypeAdapter<String> extraDataAdapter;
+        private final TypeAdapter<Integer> fromApiAdapter;
         private final TypeAdapter<String> idAdapter;
         private final TypeAdapter<String> keyWordsAdapter;
         private final TypeAdapter<Long> lastUpdateAdapter;
@@ -125,6 +127,7 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
             this.backendCategoryNameAdapter = gson.getAdapter(String.class);
             this.priceAdapter = gson.getAdapter(String.class);
             this.tabApiListAdapter = gson.getAdapter(TypeToken.getParameterized(List.class, ConfigPage.class));
+            this.fromApiAdapter = gson.getAdapter(Integer.class);
         }
 
         public GsonTypeAdapter setDefaultEntityTypeName(String str) {
@@ -182,13 +185,13 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -302,6 +305,11 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
             return this;
         }
 
+        public GsonTypeAdapter setDefaultFromApi(int i) {
+            this.defaultFromApi = i;
+            return this;
+        }
+
         public void write(JsonWriter jsonWriter, FeedGoods feedGoods) throws IOException {
             if (feedGoods == null) {
                 jsonWriter.nullValue();
@@ -378,6 +386,8 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
             this.priceAdapter.write(jsonWriter, feedGoods.getPrice());
             jsonWriter.name("tabList");
             this.tabApiListAdapter.write(jsonWriter, feedGoods.getTabApiList());
+            jsonWriter.name("fromApi");
+            this.fromApiAdapter.write(jsonWriter, Integer.valueOf(feedGoods.getFromApi()));
             jsonWriter.endObject();
         }
 
@@ -399,8 +409,8 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
             String str7 = this.defaultLogo;
             String str8 = this.defaultSubTitle;
             String str9 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str10 = this.defaultId;
             String str11 = this.defaultMallName;
             String str12 = this.defaultSkuId;
@@ -423,8 +433,9 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
             String str23 = this.defaultBackendCategoryName;
             String str24 = this.defaultPrice;
             List<ConfigPage> list2 = this.defaultTabApiList;
+            int i3 = this.defaultFromApi;
             List<FeedGoodsCategory> list3 = list;
-            int i3 = i;
+            int i4 = i;
             String str25 = str3;
             Integer num2 = num;
             String str26 = str4;
@@ -433,8 +444,8 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
             String str29 = str7;
             String str30 = str8;
             String str31 = str9;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str32 = str10;
             String str33 = str;
             String str34 = str11;
@@ -449,7 +460,7 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
             String str42 = str15;
             String str43 = str19;
             long j6 = j2;
-            int i4 = i2;
+            int i5 = i2;
             long j7 = j3;
             String str44 = str20;
             long j8 = j4;
@@ -457,6 +468,7 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
             String str46 = str22;
             String str47 = str23;
             String str48 = str24;
+            List<ConfigPage> list4 = list2;
             while (jsonReader.hasNext()) {
                 String nextName = jsonReader.nextName();
                 if (jsonReader.peek() == JsonToken.NULL) {
@@ -531,147 +543,153 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
                                 break;
                             }
                             break;
+                        case -594357744:
+                            if (nextName.equals("fromApi")) {
+                                c = 11;
+                                break;
+                            }
+                            break;
                         case -573446013:
                             if (nextName.equals("update_time")) {
-                                c = 11;
+                                c = '\f';
                                 break;
                             }
                             break;
                         case -493574096:
                             if (nextName.equals("create_time")) {
-                                c = '\f';
+                                c = '\r';
                                 break;
                             }
                             break;
                         case -458115562:
                             if (nextName.equals("buy_count")) {
-                                c = '\r';
+                                c = 14;
                                 break;
                             }
                             break;
                         case -295591974:
                             if (nextName.equals("update_uid")) {
-                                c = 14;
+                                c = 15;
                                 break;
                             }
                             break;
                         case -253792294:
                             if (nextName.equals("extraData")) {
-                                c = 15;
+                                c = 16;
                                 break;
                             }
                             break;
                         case -204859874:
                             if (nextName.equals("bgColor")) {
-                                c = 16;
+                                c = 17;
                                 break;
                             }
                             break;
                         case 3355:
                             if (nextName.equals("id")) {
-                                c = 17;
+                                c = 18;
                                 break;
                             }
                             break;
                         case 110986:
                             if (nextName.equals("pic")) {
-                                c = 18;
+                                c = 19;
                                 break;
                             }
                             break;
                         case 116079:
                             if (nextName.equals("url")) {
-                                c = 19;
+                                c = 20;
                                 break;
                             }
                             break;
                         case 3327403:
                             if (nextName.equals("logo")) {
-                                c = 20;
+                                c = 21;
                                 break;
                             }
                             break;
                         case 75942002:
                             if (nextName.equals("mall_sku")) {
-                                c = 21;
+                                c = 22;
                                 break;
                             }
                             break;
                         case 94852023:
                             if (nextName.equals("cover")) {
-                                c = 22;
+                                c = 23;
                                 break;
                             }
                             break;
                         case 106934601:
                             if (nextName.equals("price")) {
-                                c = 23;
+                                c = 24;
                                 break;
                             }
                             break;
                         case 110371416:
                             if (nextName.equals("title")) {
-                                c = 24;
+                                c = 25;
                                 break;
                             }
                             break;
                         case 338683180:
                             if (nextName.equals("category_name")) {
-                                c = 25;
+                                c = 26;
                                 break;
                             }
                             break;
                         case 426181623:
                             if (nextName.equals("categoryRows")) {
-                                c = 26;
+                                c = 27;
                                 break;
                             }
                             break;
                         case 523149226:
                             if (nextName.equals("keywords")) {
-                                c = 27;
+                                c = 28;
                                 break;
                             }
                             break;
                         case 765987703:
                             if (nextName.equals("wish_count")) {
-                                c = 28;
+                                c = 29;
                                 break;
                             }
                             break;
                         case 767740856:
                             if (nextName.equals("entityTypeId")) {
-                                c = 29;
+                                c = 30;
                                 break;
                             }
                             break;
                         case 1197918978:
                             if (nextName.equals("sell_url")) {
-                                c = 30;
+                                c = 31;
                                 break;
                             }
                             break;
                         case 1258293585:
                             if (nextName.equals("entityFixed")) {
-                                c = 31;
+                                c = ' ';
                                 break;
                             }
                             break;
                         case 1369552525:
                             if (nextName.equals("create_uid")) {
-                                c = ' ';
+                                c = '!';
                                 break;
                             }
                             break;
                         case 1537780732:
                             if (nextName.equals("category_id")) {
-                                c = '!';
+                                c = '\"';
                                 break;
                             }
                             break;
                         case 1793464482:
                             if (nextName.equals("dateline")) {
-                                c = '\"';
+                                c = '#';
                                 break;
                             }
                             break;
@@ -693,13 +711,13 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
                             str36 = this.entityTemplateAdapter.read(jsonReader);
                             continue;
                         case 5:
-                            list2 = this.tabApiListAdapter.read(jsonReader);
+                            list4 = this.tabApiListAdapter.read(jsonReader);
                             continue;
                         case 6:
                             j6 = this.sellTimeAdapter.read(jsonReader).longValue();
                             continue;
                         case 7:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\b':
                             str33 = this.entityTypeNameAdapter.read(jsonReader);
@@ -708,79 +726,82 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
                             str35 = this.skuIdAdapter.read(jsonReader);
                             continue;
                         case '\n':
-                            i4 = this.blockStatusAdapter.read(jsonReader).intValue();
+                            i5 = this.blockStatusAdapter.read(jsonReader).intValue();
                             continue;
                         case 11:
-                            j8 = this.updateTimeAdapter.read(jsonReader).longValue();
+                            i3 = this.fromApiAdapter.read(jsonReader).intValue();
                             continue;
                         case '\f':
-                            j7 = this.createTimeAdapter.read(jsonReader).longValue();
+                            j8 = this.updateTimeAdapter.read(jsonReader).longValue();
                             continue;
                         case '\r':
-                            str40 = this.buyCountAdapter.read(jsonReader);
+                            j7 = this.createTimeAdapter.read(jsonReader).longValue();
                             continue;
                         case 14:
-                            str45 = this.updateUidAdapter.read(jsonReader);
+                            str40 = this.buyCountAdapter.read(jsonReader);
                             continue;
                         case 15:
-                            str31 = this.extraDataAdapter.read(jsonReader);
+                            str45 = this.updateUidAdapter.read(jsonReader);
                             continue;
                         case 16:
-                            str46 = this.bgColorAdapter.read(jsonReader);
+                            str31 = this.extraDataAdapter.read(jsonReader);
                             continue;
                         case 17:
-                            str32 = this.idAdapter.read(jsonReader);
+                            str46 = this.bgColorAdapter.read(jsonReader);
                             continue;
                         case 18:
-                            str28 = this.picAdapter.read(jsonReader);
+                            str32 = this.idAdapter.read(jsonReader);
                             continue;
                         case 19:
-                            str26 = this.urlAdapter.read(jsonReader);
+                            str28 = this.picAdapter.read(jsonReader);
                             continue;
                         case 20:
-                            str29 = this.logoAdapter.read(jsonReader);
+                            str26 = this.urlAdapter.read(jsonReader);
                             continue;
                         case 21:
-                            str37 = this.mallSkuAdapter.read(jsonReader);
+                            str29 = this.logoAdapter.read(jsonReader);
                             continue;
                         case 22:
-                            str42 = this.coverAdapter.read(jsonReader);
+                            str37 = this.mallSkuAdapter.read(jsonReader);
                             continue;
                         case 23:
-                            str48 = this.priceAdapter.read(jsonReader);
+                            str42 = this.coverAdapter.read(jsonReader);
                             continue;
                         case 24:
-                            str38 = this.titleAdapter.read(jsonReader);
+                            str48 = this.priceAdapter.read(jsonReader);
                             continue;
                         case 25:
-                            str47 = this.backendCategoryNameAdapter.read(jsonReader);
+                            str38 = this.titleAdapter.read(jsonReader);
                             continue;
                         case 26:
-                            list3 = this.categoryRowsAdapter.read(jsonReader);
+                            str47 = this.backendCategoryNameAdapter.read(jsonReader);
                             continue;
                         case 27:
-                            str41 = this.keyWordsAdapter.read(jsonReader);
+                            list3 = this.categoryRowsAdapter.read(jsonReader);
                             continue;
                         case 28:
-                            str39 = this.wishCountAdapter.read(jsonReader);
+                            str41 = this.keyWordsAdapter.read(jsonReader);
                             continue;
                         case 29:
-                            i3 = this.entityTypeIdAdapter.read(jsonReader).intValue();
+                            str39 = this.wishCountAdapter.read(jsonReader);
                             continue;
                         case 30:
-                            str43 = this.sellUrlAdapter.read(jsonReader);
+                            i4 = this.entityTypeIdAdapter.read(jsonReader).intValue();
                             continue;
                         case 31:
-                            num2 = this.entityFixedAdapter.read(jsonReader);
+                            str43 = this.sellUrlAdapter.read(jsonReader);
                             continue;
                         case ' ':
-                            str44 = this.createUidAdapter.read(jsonReader);
+                            num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case '!':
-                            j5 = this.categoryIdAdapter.read(jsonReader).longValue();
+                            str44 = this.createUidAdapter.read(jsonReader);
                             continue;
                         case '\"':
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            j5 = this.categoryIdAdapter.read(jsonReader).longValue();
+                            continue;
+                        case '#':
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -789,7 +810,7 @@ abstract class C$AutoValue_FeedGoods extends C$$AutoValue_FeedGoods {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_FeedGoods(str33, str36, i3, str25, num2, str26, str27, str28, str29, str30, str31, l4, l5, str32, str34, str35, str37, j5, str38, str42, str39, str40, str41, str43, j6, i4, j7, str44, j8, str45, list3, str46, str47, str48, list2);
+            return new AutoValue_FeedGoods(str33, str36, i4, str25, num2, str26, str27, str28, str29, str30, str31, l3, l4, str32, str34, str35, str37, j5, str38, str42, str39, str40, str41, str43, j6, i5, j7, str44, j8, str45, list3, str46, str47, str48, list4, i3);
         }
     }
 }

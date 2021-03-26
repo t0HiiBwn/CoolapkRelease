@@ -67,7 +67,7 @@ public final class LiveIntroduceFragment extends BaseFragment {
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559011, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559018, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…roduce, container, false)");
         LiveIntroduceBinding liveIntroduceBinding = (LiveIntroduceBinding) inflate;
         this.binding = liveIntroduceBinding;
@@ -191,7 +191,7 @@ public final class LiveIntroduceFragment extends BaseFragment {
         public final void setData(String str, String str2) {
             Intrinsics.checkNotNullParameter(str, "avatarUrl");
             Intrinsics.checkNotNullParameter(str2, "name");
-            AppHolder.getContextImageLoader().displayImage(getContext(), str, this.avatarView, 2131231152);
+            AppHolder.getContextImageLoader().displayImage(getContext(), str, this.avatarView, 2131231162);
             this.nameView.setText(str2);
         }
     }

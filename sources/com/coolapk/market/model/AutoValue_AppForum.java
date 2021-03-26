@@ -19,8 +19,8 @@ final class AutoValue_AppForum extends C$AutoValue_AppForum {
         }
     };
 
-    AutoValue_AppForum(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, String str12, int i, String str13, String str14, String str15, int i2, int i3, String str16, String str17, String str18, String str19, String str20, String str21, int i4, UserAction userAction, int i5, String str22, String str23, List<String> list, List<String> list2) {
-        super(str, str2, num, str3, str4, str5, str6, str7, str8, str9, str10, l2, l3, str11, str12, i, str13, str14, str15, i2, i3, str16, str17, str18, str19, str20, str21, i4, userAction, i5, str22, str23, list, list2);
+    AutoValue_AppForum(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, String str12, int i, String str13, String str14, String str15, int i2, int i3, String str16, String str17, String str18, String str19, String str20, String str21, int i4, UserAction userAction, int i5, String str22, String str23, List<String> list, List<String> list2) {
+        super(str, str2, num, str3, str4, str5, str6, str7, str8, str9, str10, l, l2, str11, str12, i, str13, str14, str15, i2, i3, str16, str17, str18, str19, str20, str21, i4, userAction, i5, str22, str23, list, list2);
     }
 
     @Override // android.os.Parcelable

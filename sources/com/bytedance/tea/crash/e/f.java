@@ -40,9 +40,7 @@ public class f implements Handler.Callback {
     private final List<Printer> h = new LinkedList();
     private final List<Printer> i = new LinkedList();
     private boolean k = false;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1345l;
+    private boolean l;
 
     private f() {
         b();
@@ -116,9 +114,9 @@ public class f implements Handler.Callback {
     }
 
     void a(String str) {
-        if (!this.f1345l) {
+        if (!this.l) {
             g.a(32);
-            this.f1345l = true;
+            this.l = true;
         }
         this.e = SystemClock.uptimeMillis();
         try {

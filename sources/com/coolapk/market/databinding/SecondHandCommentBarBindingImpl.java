@@ -26,8 +26,8 @@ public class SecondHandCommentBarBindingImpl extends SecondHandCommentBarBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363260, 15);
-        sparseIntArray.put(2131362882, 16);
+        sparseIntArray.put(2131363274, 15);
+        sparseIntArray.put(2131362893, 16);
     }
 
     public SecondHandCommentBarBindingImpl(DataBindingComponent dataBindingComponent, View view) {

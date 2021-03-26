@@ -35,7 +35,7 @@ public abstract class LayoutTabConfigBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutTabConfigBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (LayoutTabConfigBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559003, viewGroup, z, obj);
+        return (LayoutTabConfigBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559010, viewGroup, z, obj);
     }
 
     public static LayoutTabConfigBinding inflate(LayoutInflater layoutInflater) {
@@ -44,7 +44,7 @@ public abstract class LayoutTabConfigBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutTabConfigBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (LayoutTabConfigBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559003, null, false, obj);
+        return (LayoutTabConfigBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559010, null, false, obj);
     }
 
     public static LayoutTabConfigBinding bind(View view) {
@@ -53,6 +53,6 @@ public abstract class LayoutTabConfigBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutTabConfigBinding bind(View view, Object obj) {
-        return (LayoutTabConfigBinding) bind(obj, view, 2131559003);
+        return (LayoutTabConfigBinding) bind(obj, view, 2131559010);
     }
 }

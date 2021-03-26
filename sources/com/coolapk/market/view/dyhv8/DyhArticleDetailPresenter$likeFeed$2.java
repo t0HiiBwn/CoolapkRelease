@@ -24,13 +24,13 @@ public final class DyhArticleDetailPresenter$likeFeed$2 extends EmptySubscriber<
     public void onError(Throwable th) {
         Intrinsics.checkNotNullParameter(th, "e");
         super.onError(th);
-        DyhArticleDetailPresenter.access$setPostingLike$p(this.this$0, false);
+        this.this$0.isPostingLike = false;
         this.this$0.getView().onLikeResult(this.$isLiking, null, th);
     }
 
     public void onNext(int i) {
         super.onNext((DyhArticleDetailPresenter$likeFeed$2) Integer.valueOf(i));
-        DyhArticleDetailPresenter.access$setPostingLike$p(this.this$0, false);
+        this.this$0.isPostingLike = false;
         this.this$0.getView().onLikeResult(!this.$isLiking, Integer.valueOf(i), null);
     }
 }

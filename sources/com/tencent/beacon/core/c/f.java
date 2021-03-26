@@ -236,7 +236,7 @@ public abstract class f {
             throw new Exception(str5);
         }
 
-        /* JADX WARNING: Removed duplicated region for block: B:26:0x0098  */
+        /* JADX WARNING: Removed duplicated region for block: B:26:0x0099  */
         private static b a(String str, byte[] bArr, String str2, int i) throws Exception {
             Throwable th;
             ByteArrayEntity byteArrayEntity;
@@ -429,44 +429,44 @@ public abstract class f {
         /* JADX WARN: Multi-variable type inference failed */
         /* JADX WARN: Type inference failed for: r7v0 */
         /* JADX WARN: Type inference failed for: r7v3 */
-        /* JADX WARNING: Code restructure failed: missing block: B:57:0x01b6, code lost:
+        /* JADX WARNING: Code restructure failed: missing block: B:57:0x01b7, code lost:
             r7 = r15;
          */
-        /* JADX WARNING: Code restructure failed: missing block: B:59:0x01bb, code lost:
+        /* JADX WARNING: Code restructure failed: missing block: B:59:0x01bc, code lost:
             r0 = th;
          */
-        /* JADX WARNING: Code restructure failed: missing block: B:60:0x01bc, code lost:
+        /* JADX WARNING: Code restructure failed: missing block: B:60:0x01bd, code lost:
             r1 = 0;
             r6 = null;
          */
-        /* JADX WARNING: Code restructure failed: missing block: B:61:0x01c0, code lost:
+        /* JADX WARNING: Code restructure failed: missing block: B:61:0x01c1, code lost:
             r0 = e;
          */
-        /* JADX WARNING: Code restructure failed: missing block: B:62:0x01c1, code lost:
+        /* JADX WARNING: Code restructure failed: missing block: B:62:0x01c2, code lost:
             r6 = null;
          */
-        /* JADX WARNING: Code restructure failed: missing block: B:71:0x01ea, code lost:
+        /* JADX WARNING: Code restructure failed: missing block: B:71:0x01eb, code lost:
             r6 = null;
          */
-        /* JADX WARNING: Code restructure failed: missing block: B:75:0x0209, code lost:
-            if (r6 == null) goto L_0x020e;
+        /* JADX WARNING: Code restructure failed: missing block: B:75:0x020a, code lost:
+            if (r6 == null) goto L_0x020f;
          */
         /* JADX WARNING: Code restructure failed: missing block: B:77:?, code lost:
             r6.close();
          */
-        /* JADX WARNING: Code restructure failed: missing block: B:84:0x0232, code lost:
-            if (r6 != null) goto L_0x020b;
+        /* JADX WARNING: Code restructure failed: missing block: B:84:0x0233, code lost:
+            if (r6 != null) goto L_0x020c;
          */
         /* JADX WARNING: Failed to process nested try/catch */
-        /* JADX WARNING: Removed duplicated region for block: B:105:0x024c A[SYNTHETIC] */
-        /* JADX WARNING: Removed duplicated region for block: B:59:0x01bb A[ExcHandler: all (th java.lang.Throwable), Splitter:B:17:0x00b3] */
-        /* JADX WARNING: Removed duplicated region for block: B:61:0x01c0 A[ExcHandler: Exception (e java.lang.Exception), Splitter:B:17:0x00b3] */
-        /* JADX WARNING: Removed duplicated region for block: B:67:0x01e4 A[SYNTHETIC, Splitter:B:67:0x01e4] */
+        /* JADX WARNING: Removed duplicated region for block: B:105:0x024d A[SYNTHETIC] */
+        /* JADX WARNING: Removed duplicated region for block: B:59:0x01bc A[ExcHandler: all (th java.lang.Throwable), Splitter:B:17:0x00b3] */
+        /* JADX WARNING: Removed duplicated region for block: B:61:0x01c1 A[ExcHandler: Exception (e java.lang.Exception), Splitter:B:17:0x00b3] */
+        /* JADX WARNING: Removed duplicated region for block: B:67:0x01e5 A[SYNTHETIC, Splitter:B:67:0x01e5] */
         /* JADX WARNING: Removed duplicated region for block: B:72:? A[ExcHandler: ConnectException (unused java.net.ConnectException), SYNTHETIC, Splitter:B:17:0x00b3] */
-        /* JADX WARNING: Removed duplicated region for block: B:86:0x0237  */
-        /* JADX WARNING: Removed duplicated region for block: B:87:0x0239  */
-        /* JADX WARNING: Removed duplicated region for block: B:91:0x024d A[LOOP:0: B:4:0x0037->B:91:0x024d, LOOP_END] */
-        /* JADX WARNING: Removed duplicated region for block: B:96:0x025d A[SYNTHETIC, Splitter:B:96:0x025d] */
+        /* JADX WARNING: Removed duplicated region for block: B:86:0x0238  */
+        /* JADX WARNING: Removed duplicated region for block: B:87:0x023a  */
+        /* JADX WARNING: Removed duplicated region for block: B:91:0x024e A[LOOP:0: B:4:0x0037->B:91:0x024e, LOOP_END] */
+        /* JADX WARNING: Removed duplicated region for block: B:96:0x025e A[SYNTHETIC, Splitter:B:96:0x025e] */
         @Override // com.tencent.beacon.core.c.f
         public final byte[] a(String str, int i, byte[] bArr, a aVar, e eVar) throws Exception {
             long j;
@@ -475,6 +475,10 @@ public abstract class f {
             byte[] bArr2;
             int i3;
             Exception e;
+            OutputStream outputStream;
+            byte[] b;
+            int length;
+            Object[] objArr;
             int i4 = 0;
             if (str == null || i <= 0) {
                 com.tencent.beacon.core.d.b.d("[net] Request domain or port illegal!!!", new Object[0]);
@@ -504,19 +508,19 @@ public abstract class f {
                     eVar.a(str + ":" + i, j, c.c(this.a), i9);
                     long time = new Date().getTime();
                     InetAddress byName = InetAddress.getByName(str);
-                    Object[] objArr = new Object[i7];
-                    objArr[i4] = byName.getHostAddress();
-                    objArr[i6] = Integer.valueOf(i);
-                    com.tencent.beacon.core.d.b.b("[net] ip:port [%s:%d]", objArr);
+                    Object[] objArr2 = new Object[i7];
+                    objArr2[i4] = byName.getHostAddress();
+                    objArr2[i6] = Integer.valueOf(i);
+                    com.tencent.beacon.core.d.b.b("[net] ip:port [%s:%d]", objArr2);
                     try {
                         socket = new Socket(byName.getHostAddress(), i);
                         try {
                             socket.setSoTimeout(30000);
-                            Object[] objArr2 = new Object[i5];
-                            objArr2[i4] = socket.getLocalAddress().getHostName();
-                            objArr2[i6] = Integer.valueOf(socket.getLocalPort());
-                            objArr2[i7] = Integer.valueOf(bArr.length);
-                            com.tencent.beacon.core.d.b.b("[net] %s:%d send data[%d] to server. ", objArr2);
+                            Object[] objArr3 = new Object[i5];
+                            objArr3[i4] = socket.getLocalAddress().getHostName();
+                            objArr3[i6] = Integer.valueOf(socket.getLocalPort());
+                            objArr3[i7] = Integer.valueOf(bArr.length);
+                            com.tencent.beacon.core.d.b.b("[net] %s:%d send data[%d] to server. ", objArr3);
                             HashMap hashMap = new HashMap();
                             String d = aVar.d();
                             if (d != null && !"".equals(d)) {
@@ -536,73 +540,73 @@ public abstract class f {
                             SocketRequestPackage socketRequestPackage = new SocketRequestPackage(hashMap, bArr);
                             com.tencent.beacon.core.wup.b bVar = new com.tencent.beacon.core.wup.b();
                             socketRequestPackage.writeTo(bVar);
-                            OutputStream outputStream = socket.getOutputStream();
-                            byte[] b = bVar.b();
-                            int length = b.length;
-                            Object[] objArr3 = new Object[i7];
-                            objArr3[0] = Integer.valueOf(bArr.length);
+                            outputStream = socket.getOutputStream();
+                            b = bVar.b();
+                            length = b.length;
+                            objArr = new Object[i7];
+                            objArr[0] = Integer.valueOf(bArr.length);
+                        } catch (SocketTimeoutException unused) {
+                            i2 = i9;
+                            eVar.a();
+                            str2 = str2 + i2 + ":timeout ";
+                            com.tencent.beacon.core.d.b.b("[net] close client socket.", new Object[0]);
+                        } catch (ConnectException unused2) {
+                            StringBuilder sb = new StringBuilder();
+                            sb.append(str2);
+                            i2 = i9;
+                            sb.append(i2);
+                            sb.append(":connectExp ");
+                            str2 = sb.toString();
+                            com.tencent.beacon.core.d.b.b("[net] close client socket.", new Object[0]);
+                        } catch (Exception e2) {
+                            e = e2;
                             try {
-                                objArr3[1] = Integer.valueOf(length);
-                                com.tencent.beacon.core.d.b.b("[net] send header + data[%d] = %d", objArr3);
-                                int i10 = length + 4;
-                                ByteBuffer allocate = ByteBuffer.allocate(i10);
-                                allocate.order(ByteOrder.BIG_ENDIAN);
-                                allocate.putShort((short) i10);
-                                allocate.put(b);
-                                allocate.put((byte) 13);
-                                allocate.put((byte) 10);
-                                if (length >= 65532) {
-                                    com.tencent.beacon.core.d.b.d("[Error] send bytes exceed 64kB will failure!", new Object[0]);
-                                }
-                                outputStream.write(allocate.array());
-                                outputStream.flush();
-                                bArr2 = a(socket);
+                                str2 = str2 + ":" + e.getMessage();
                                 com.tencent.beacon.core.d.b.b("[net] close client socket.", new Object[0]);
-                                try {
-                                    socket.close();
-                                } catch (IOException unused) {
+                                if (socket != null) {
                                 }
                                 i2 = i9;
-                            } catch (SocketTimeoutException unused2) {
-                                i2 = i9;
-                                eVar.a();
-                                str2 = str2 + i2 + ":timeout ";
-                                com.tencent.beacon.core.d.b.b("[net] close client socket.", new Object[0]);
-                            } catch (ConnectException unused3) {
-                                StringBuilder sb = new StringBuilder();
-                                sb.append(str2);
-                                i2 = i9;
-                                sb.append(i2);
-                                sb.append(":connectExp ");
-                                str2 = sb.toString();
-                                com.tencent.beacon.core.d.b.b("[net] close client socket.", new Object[0]);
-                            } catch (Exception e2) {
-                                e = e2;
-                                try {
-                                    str2 = str2 + ":" + e.getMessage();
-                                    com.tencent.beacon.core.d.b.b("[net] close client socket.", new Object[0]);
-                                    if (socket != null) {
-                                    }
-                                    i2 = i9;
-                                    bArr2 = null;
-                                    if (bArr2 != null) {
-                                    }
-                                    eVar.a((long) i3, new Date().getTime() - time);
-                                    if (bArr2 == null) {
-                                    }
-                                } catch (Throwable th) {
-                                    Throwable th2 = th;
-                                    int i11 = 0;
-                                    com.tencent.beacon.core.d.b.b("[net] close client socket.", new Object[i11]);
-                                    if (socket != null) {
-                                        try {
-                                            socket.close();
-                                        } catch (IOException unused4) {
-                                        }
-                                    }
-                                    throw th2;
+                                bArr2 = null;
+                                if (bArr2 != null) {
                                 }
+                                eVar.a((long) i3, new Date().getTime() - time);
+                                if (bArr2 == null) {
+                                }
+                            } catch (Throwable th) {
+                                Throwable th2 = th;
+                                int i10 = 0;
+                                com.tencent.beacon.core.d.b.b("[net] close client socket.", new Object[i10]);
+                                if (socket != null) {
+                                    try {
+                                        socket.close();
+                                    } catch (IOException unused3) {
+                                    }
+                                }
+                                throw th2;
                             }
+                        }
+                        try {
+                            objArr[1] = Integer.valueOf(length);
+                            com.tencent.beacon.core.d.b.b("[net] send header + data[%d] = %d", objArr);
+                            int i11 = length + 4;
+                            ByteBuffer allocate = ByteBuffer.allocate(i11);
+                            allocate.order(ByteOrder.BIG_ENDIAN);
+                            allocate.putShort((short) i11);
+                            allocate.put(b);
+                            allocate.put((byte) 13);
+                            allocate.put((byte) 10);
+                            if (length >= 65532) {
+                                com.tencent.beacon.core.d.b.d("[Error] send bytes exceed 64kB will failure!", new Object[0]);
+                            }
+                            outputStream.write(allocate.array());
+                            outputStream.flush();
+                            bArr2 = a(socket);
+                            com.tencent.beacon.core.d.b.b("[net] close client socket.", new Object[0]);
+                            try {
+                                socket.close();
+                            } catch (IOException unused4) {
+                            }
+                            i2 = i9;
                         } catch (SocketTimeoutException unused5) {
                             i2 = i9;
                             eVar.a();

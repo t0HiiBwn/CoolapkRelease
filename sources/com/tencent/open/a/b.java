@@ -7,7 +7,7 @@ import java.util.Calendar;
 
 /* compiled from: ProGuard */
 public class b {
-    private static SimpleDateFormat a = d.C0135d.a("yy.MM.dd.HH");
+    private static SimpleDateFormat a = d.C0153d.a("yy.MM.dd.HH");
     private String b = "Tracer.File";
     private int c = Integer.MAX_VALUE;
     private int d = Integer.MAX_VALUE;

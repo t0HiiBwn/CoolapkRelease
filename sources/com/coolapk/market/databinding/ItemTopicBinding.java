@@ -52,7 +52,7 @@ public abstract class ItemTopicBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTopicBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemTopicBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558961, viewGroup, z, obj);
+        return (ItemTopicBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558968, viewGroup, z, obj);
     }
 
     public static ItemTopicBinding inflate(LayoutInflater layoutInflater) {
@@ -61,7 +61,7 @@ public abstract class ItemTopicBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTopicBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemTopicBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558961, null, false, obj);
+        return (ItemTopicBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558968, null, false, obj);
     }
 
     public static ItemTopicBinding bind(View view) {
@@ -70,6 +70,6 @@ public abstract class ItemTopicBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemTopicBinding bind(View view, Object obj) {
-        return (ItemTopicBinding) bind(obj, view, 2131558961);
+        return (ItemTopicBinding) bind(obj, view, 2131558968);
     }
 }

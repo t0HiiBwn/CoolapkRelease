@@ -35,8 +35,8 @@ public final class LoginUserNodeRatingListFragment extends BaseRatingListFragmen
     @Override // com.coolapk.market.view.node.rating.BaseRatingListFragment, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558816).suitedMethod(LoginUserNodeRatingListFragment$onActivityCreated$1.INSTANCE).constructor(new LoginUserNodeRatingListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558978).suitedMethod(LoginUserNodeRatingListFragment$onActivityCreated$3.INSTANCE).constructor(new LoginUserNodeRatingListFragment$onActivityCreated$4(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558823).suitedMethod(LoginUserNodeRatingListFragment$onActivityCreated$1.INSTANCE).constructor(new LoginUserNodeRatingListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558985).suitedMethod(LoginUserNodeRatingListFragment$onActivityCreated$3.INSTANCE).constructor(new LoginUserNodeRatingListFragment$onActivityCreated$4(this)).build(), 0, 2, null);
     }
 
     @Subscribe

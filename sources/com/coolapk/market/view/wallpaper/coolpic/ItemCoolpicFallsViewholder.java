@@ -23,7 +23,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemCoolpicFallsViewholder.kt */
 public final class ItemCoolpicFallsViewholder extends GenericBindHolder<ItemCoolpicFallBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558664;
+    public static final int LAYOUT_ID = 2131558670;
     private final String urlParams;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -115,12 +115,12 @@ public final class ItemCoolpicFallsViewholder extends GenericBindHolder<ItemCool
     public void onClick(View view) {
         super.onClick(view);
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf != null && valueOf.intValue() == 2131362768) {
+        if (valueOf != null && valueOf.intValue() == 2131362779) {
             Context context = getContext();
             ItemCoolpicFallBinding itemCoolpicFallBinding = (ItemCoolpicFallBinding) getBinding();
             Intrinsics.checkNotNullExpressionValue(itemCoolpicFallBinding, "binding");
             ActionManager.startCoolPicActivity(context, itemCoolpicFallBinding.getFeed(), "list", "old", this.urlParams, 0, getAdapterPosition());
-        } else if (valueOf != null && valueOf.intValue() == 2131363888) {
+        } else if (valueOf != null && valueOf.intValue() == 2131363911) {
             Context context2 = getContext();
             ItemCoolpicFallBinding itemCoolpicFallBinding2 = (ItemCoolpicFallBinding) getBinding();
             Intrinsics.checkNotNullExpressionValue(itemCoolpicFallBinding2, "binding");

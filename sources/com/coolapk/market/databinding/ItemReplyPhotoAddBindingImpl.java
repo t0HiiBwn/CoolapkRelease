@@ -27,7 +27,7 @@ public class ItemReplyPhotoAddBindingImpl extends ItemReplyPhotoAddBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362672, 1);
+        sparseIntArray.put(2131362683, 1);
     }
 
     public ItemReplyPhotoAddBindingImpl(DataBindingComponent dataBindingComponent, View view) {

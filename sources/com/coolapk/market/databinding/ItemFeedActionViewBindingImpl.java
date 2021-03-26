@@ -26,7 +26,7 @@ public class ItemFeedActionViewBindingImpl extends ItemFeedActionViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131361981, 1);
+        sparseIntArray.put(2131361982, 1);
     }
 
     public ItemFeedActionViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

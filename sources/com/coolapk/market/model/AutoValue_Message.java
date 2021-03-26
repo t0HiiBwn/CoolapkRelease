@@ -23,8 +23,8 @@ final class AutoValue_Message extends C$AutoValue_Message {
         return 0;
     }
 
-    AutoValue_Message(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, UserInfo userInfo, String str12, String str13, String str14, String str15, String str16, String str17, String str18, int i, int i2, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, NotifyCount notifyCount, int i3, int i4, Integer num2, String str27, UserInfo userInfo2) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l2, l3, str11, userInfo, str12, str13, str14, str15, str16, str17, str18, i, i2, str19, str20, str21, str22, str23, str24, str25, str26, notifyCount, i3, i4, num2, str27, userInfo2);
+    AutoValue_Message(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, UserInfo userInfo, String str12, String str13, String str14, String str15, String str16, String str17, String str18, int i, int i2, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, NotifyCount notifyCount, int i3, int i4, Integer num2, String str27, UserInfo userInfo2) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l, l2, str11, userInfo, str12, str13, str14, str15, str16, str17, str18, i, i2, str19, str20, str21, str22, str23, str24, str25, str26, notifyCount, i3, i4, num2, str27, userInfo2);
     }
 
     @Override // android.os.Parcelable

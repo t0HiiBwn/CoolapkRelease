@@ -29,20 +29,20 @@ public class ServiceAppBindingImpl extends ServiceAppBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 7);
-        sparseIntArray.put(2131362652, 8);
-        sparseIntArray.put(2131363182, 9);
-        sparseIntArray.put(2131363180, 10);
-        sparseIntArray.put(2131363181, 11);
-        sparseIntArray.put(2131362065, 12);
-        sparseIntArray.put(2131362061, 13);
-        sparseIntArray.put(2131362905, 14);
-        sparseIntArray.put(2131361886, 15);
-        sparseIntArray.put(2131362335, 16);
-        sparseIntArray.put(2131362546, 17);
-        sparseIntArray.put(2131362054, 18);
-        sparseIntArray.put(2131362746, 19);
-        sparseIntArray.put(2131362747, 20);
+        sparseIntArray.put(2131362779, 7);
+        sparseIntArray.put(2131362660, 8);
+        sparseIntArray.put(2131363196, 9);
+        sparseIntArray.put(2131363194, 10);
+        sparseIntArray.put(2131363195, 11);
+        sparseIntArray.put(2131362067, 12);
+        sparseIntArray.put(2131362063, 13);
+        sparseIntArray.put(2131362917, 14);
+        sparseIntArray.put(2131361887, 15);
+        sparseIntArray.put(2131362341, 16);
+        sparseIntArray.put(2131362554, 17);
+        sparseIntArray.put(2131362056, 18);
+        sparseIntArray.put(2131362757, 19);
+        sparseIntArray.put(2131362758, 20);
     }
 
     public ServiceAppBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -162,7 +162,7 @@ public class ServiceAppBindingImpl extends ServiceAppBinding {
             TextViewBindingAdapter.setText(this.extraTextView, str3);
             this.extraTextView.setVisibility(i2);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231363, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231374, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
             this.setTopView.setVisibility(i);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }

@@ -22,7 +22,7 @@ final class SubmitSecondHandExtraViewPart$showSecondHandDialog$1<T> implements A
     }
 
     public final void call(String str) {
-        if (this.$id == 2131363446) {
+        if (this.$id == 2131363464) {
             DataManager.getInstance().checkUrl(str).compose(RxUtils.apiCommonToData()).subscribe(new Action1<String>(this) {
                 /* class com.coolapk.market.view.feedv8.SubmitSecondHandExtraViewPart$showSecondHandDialog$1.AnonymousClass1 */
                 final /* synthetic */ SubmitSecondHandExtraViewPart$showSecondHandDialog$1 this$0;

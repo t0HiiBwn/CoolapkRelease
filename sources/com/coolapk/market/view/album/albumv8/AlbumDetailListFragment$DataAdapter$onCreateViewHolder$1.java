@@ -36,11 +36,11 @@ public final class AlbumDetailListFragment$DataAdapter$onCreateViewHolder$1 exte
         Intrinsics.checkNotNullParameter(viewHolder, "holder");
         Intrinsics.checkNotNullParameter(view, "view");
         if (viewHolder.getAdapterPosition() != -1) {
-            Object obj = AlbumDetailListFragment.access$getDataList$p(AlbumDetailListFragment.this).get(viewHolder.getAdapterPosition());
+            Object obj = AlbumDetailListFragment.this.dataList.get(viewHolder.getAdapterPosition());
             Objects.requireNonNull(obj, "null cannot be cast to non-null type com.coolapk.market.model.AlbumItem");
             AlbumItem albumItem = (AlbumItem) obj;
             int id = view.getId();
-            if (id == 2131361886) {
+            if (id == 2131361887) {
                 String str = null;
                 if (TextUtils.equals(albumItem.getApkId(), "0")) {
                     ActionManager.startExternalMarketByName(AlbumDetailListFragment.this.getActivity(), null, null, albumItem.getPackageName());
@@ -60,7 +60,7 @@ public final class AlbumDetailListFragment$DataAdapter$onCreateViewHolder$1 exte
                 }
                 strArr[2] = str;
                 StateUtils.handleClick(AlbumDetailListFragment.this.getActivity(), targetUrl.downloadKeys(strArr).build(), view);
-            } else if (id == 2131362019) {
+            } else if (id == 2131362020) {
                 if (TextUtils.equals(albumItem.getApkId(), "0")) {
                     ActionManager.startExternalMarketByName(AlbumDetailListFragment.this.getActivity(), albumItem.getUrl(), albumItem.getSourceName(), albumItem.getPackageName());
                     return;
@@ -78,7 +78,7 @@ public final class AlbumDetailListFragment$DataAdapter$onCreateViewHolder$1 exte
     public boolean onItemLongClick(RecyclerView.ViewHolder viewHolder, View view) {
         Intrinsics.checkNotNullParameter(viewHolder, "holder");
         Intrinsics.checkNotNullParameter(view, "view");
-        Object obj = AlbumDetailListFragment.access$getDataList$p(AlbumDetailListFragment.this).get(viewHolder.getAdapterPosition());
+        Object obj = AlbumDetailListFragment.this.dataList.get(viewHolder.getAdapterPosition());
         Objects.requireNonNull(obj, "null cannot be cast to non-null type com.coolapk.market.model.AlbumItem");
         AlbumItem albumItem = (AlbumItem) obj;
         if (viewHolder.getAdapterPosition() == -1) {

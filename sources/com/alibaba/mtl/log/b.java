@@ -24,10 +24,10 @@ public class b {
     private String G = null;
 
     /* renamed from: a  reason: collision with other field name */
-    private Application f54a = null;
+    private Application f53a = null;
 
     /* renamed from: a  reason: collision with other field name */
-    private IUTRequestAuthentication f55a = null;
+    private IUTRequestAuthentication f54a = null;
     private Context mContext = null;
     private boolean t = false;
     private boolean u = false;
@@ -122,15 +122,15 @@ public class b {
     }
 
     public void setAppApplicationInstance(Application application) {
-        this.f54a = application;
+        this.f53a = application;
         n();
     }
 
     private void n() {
         if (!this.t && Build.VERSION.SDK_INT >= 14) {
             try {
-                if (a().m22a() != null) {
-                    UTMCAppStatusRegHelper.registeActivityLifecycleCallbacks(a().m22a());
+                if (a().m12a() != null) {
+                    UTMCAppStatusRegHelper.registeActivityLifecycleCallbacks(a().m12a());
                     this.t = true;
                     return;
                 }
@@ -144,7 +144,7 @@ public class b {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public Application m22a() {
-        return this.f54a;
+    public Application m12a() {
+        return this.f53a;
     }
 }

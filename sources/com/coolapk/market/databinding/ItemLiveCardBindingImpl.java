@@ -24,9 +24,9 @@ public class ItemLiveCardBindingImpl extends ItemLiveCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131363433, 3);
-        sparseIntArray.put(2131363034, 4);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131363451, 3);
+        sparseIntArray.put(2131363048, 4);
     }
 
     public ItemLiveCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -64,7 +64,7 @@ public class ItemLiveCardBindingImpl extends ItemLiveCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (184 != i) {
+        if (185 != i) {
             return false;
         }
         setLive((Live) obj);
@@ -77,7 +77,7 @@ public class ItemLiveCardBindingImpl extends ItemLiveCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(184);
+        notifyPropertyChanged(185);
         super.requestRebind();
     }
 

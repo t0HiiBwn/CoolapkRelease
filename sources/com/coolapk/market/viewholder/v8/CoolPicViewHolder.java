@@ -38,7 +38,7 @@ import kotlin.text.StringsKt;
 /* compiled from: CoolPicViewHolder.kt */
 public final class CoolPicViewHolder extends GenericBindHolder<ItemFeedCoolPicLayoutBinding, Feed> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558694;
+    public static final int LAYOUT_ID = 2131558701;
     private final Lazy coolPicViewPart$delegate;
     private Feed feed;
     private final Lazy headerViewPart$delegate;
@@ -147,7 +147,7 @@ public final class CoolPicViewHolder extends GenericBindHolder<ItemFeedCoolPicLa
         TextView textView = itemFeedCoolPicLayoutBinding.textView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.textView");
         String message = feed2.getMessage();
-        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886656));
+        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886718));
         spannableStringBuilder.setSpan(new ForegroundColorSpan(AppHolder.getAppTheme().getColorAccent()), 0, spannableStringBuilder.length(), 33);
         Unit unit = Unit.INSTANCE;
         ViewExtendsKt.setBriefMessage(textView, 90, message, spannableStringBuilder);
@@ -168,7 +168,7 @@ public final class CoolPicViewHolder extends GenericBindHolder<ItemFeedCoolPicLa
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

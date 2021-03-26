@@ -68,8 +68,8 @@ public class r {
         return this.g;
     }
 
-    public r a(Long l2) {
-        this.g = l2;
+    public r a(Long l) {
+        this.g = l;
         return this;
     }
 }

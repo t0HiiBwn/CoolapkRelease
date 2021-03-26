@@ -8,40 +8,36 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.InlineMarker;
 import kotlinx.coroutines.internal.Symbol;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000.\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\f\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u001a\u0010\u0010\u0013\u001a\u00020\u00142\b\b\u0002\u0010\u0015\u001a\u00020\u0016\u001a5\u0010\u0017\u001a\u0002H\u0018\"\u0004\b\u0000\u0010\u0018*\u00020\u00142\n\b\u0002\u0010\u0019\u001a\u0004\u0018\u00010\u001a2\f\u0010\u001b\u001a\b\u0012\u0004\u0012\u0002H\u00180\u001cHHø\u0001\u0000¢\u0006\u0002\u0010\u001d\"\u0016\u0010\u0000\u001a\u00020\u00018\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\u0002\u0010\u0003\"\u0016\u0010\u0004\u001a\u00020\u00018\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\u0005\u0010\u0003\"\u0016\u0010\u0006\u001a\u00020\u00078\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\b\u0010\u0003\"\u0016\u0010\t\u001a\u00020\u00078\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\n\u0010\u0003\"\u0016\u0010\u000b\u001a\u00020\u00078\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\f\u0010\u0003\"\u0016\u0010\r\u001a\u00020\u00078\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\u000e\u0010\u0003\"\u0016\u0010\u000f\u001a\u00020\u00078\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\u0010\u0010\u0003\"\u0016\u0010\u0011\u001a\u00020\u00078\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\u0012\u0010\u0003\u0002\u0004\n\u0002\b\u0019¨\u0006\u001e"}, d2 = {"EMPTY_LOCKED", "Lkotlinx/coroutines/sync/Empty;", "EMPTY_LOCKED$annotations", "()V", "EMPTY_UNLOCKED", "EMPTY_UNLOCKED$annotations", "ENQUEUE_FAIL", "Lkotlinx/coroutines/internal/Symbol;", "ENQUEUE_FAIL$annotations", "LOCKED", "LOCKED$annotations", "LOCK_FAIL", "LOCK_FAIL$annotations", "SELECT_SUCCESS", "SELECT_SUCCESS$annotations", "UNLOCKED", "UNLOCKED$annotations", "UNLOCK_FAIL", "UNLOCK_FAIL$annotations", "Mutex", "Lkotlinx/coroutines/sync/Mutex;", "locked", "", "withLock", "T", "owner", "", "action", "Lkotlin/Function0;", "(Lkotlinx/coroutines/sync/Mutex;Ljava/lang/Object;Lkotlin/jvm/functions/Function0;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "kotlinx-coroutines-core"}, k = 2, mv = {1, 1, 16})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000.\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u001a\u0010\u0010\u0011\u001a\u00020\u00122\b\b\u0002\u0010\u0013\u001a\u00020\u0014\u001aB\u0010\u0015\u001a\u0002H\u0016\"\u0004\b\u0000\u0010\u0016*\u00020\u00122\n\b\u0002\u0010\u0017\u001a\u0004\u0018\u00010\u00182\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u0002H\u00160\u001aHHø\u0001\u0000\u0002\n\n\b\b\u0001\u0012\u0002\u0010\u0002 \u0001¢\u0006\u0002\u0010\u001b\"\u0016\u0010\u0000\u001a\u00020\u00018\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\u0002\u0010\u0003\"\u0016\u0010\u0004\u001a\u00020\u00018\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\u0005\u0010\u0003\"\u0016\u0010\u0006\u001a\u00020\u00078\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\b\u0010\u0003\"\u0016\u0010\t\u001a\u00020\u00078\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\n\u0010\u0003\"\u0016\u0010\u000b\u001a\u00020\u00078\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\f\u0010\u0003\"\u0016\u0010\r\u001a\u00020\u00078\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\u000e\u0010\u0003\"\u0016\u0010\u000f\u001a\u00020\u00078\u0002X\u0004¢\u0006\b\n\u0000\u0012\u0004\b\u0010\u0010\u0003\u0002\u0004\n\u0002\b\u0019¨\u0006\u001c"}, d2 = {"EMPTY_LOCKED", "Lkotlinx/coroutines/sync/Empty;", "getEMPTY_LOCKED$annotations", "()V", "EMPTY_UNLOCKED", "getEMPTY_UNLOCKED$annotations", "LOCKED", "Lkotlinx/coroutines/internal/Symbol;", "getLOCKED$annotations", "LOCK_FAIL", "getLOCK_FAIL$annotations", "SELECT_SUCCESS", "getSELECT_SUCCESS$annotations", "UNLOCKED", "getUNLOCKED$annotations", "UNLOCK_FAIL", "getUNLOCK_FAIL$annotations", "Mutex", "Lkotlinx/coroutines/sync/Mutex;", "locked", "", "withLock", "T", "owner", "", "action", "Lkotlin/Function0;", "(Lkotlinx/coroutines/sync/Mutex;Ljava/lang/Object;Lkotlin/jvm/functions/Function0;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "kotlinx-coroutines-core"}, k = 2, mv = {1, 4, 0})
 /* compiled from: Mutex.kt */
 public final class MutexKt {
     private static final Empty EMPTY_LOCKED;
     private static final Empty EMPTY_UNLOCKED;
-    private static final Symbol ENQUEUE_FAIL = new Symbol("ENQUEUE_FAIL");
     private static final Symbol LOCKED;
     private static final Symbol LOCK_FAIL = new Symbol("LOCK_FAIL");
     private static final Symbol SELECT_SUCCESS = new Symbol("SELECT_SUCCESS");
     private static final Symbol UNLOCKED;
     private static final Symbol UNLOCK_FAIL = new Symbol("UNLOCK_FAIL");
 
-    private static /* synthetic */ void EMPTY_LOCKED$annotations() {
+    private static /* synthetic */ void getEMPTY_LOCKED$annotations() {
     }
 
-    private static /* synthetic */ void EMPTY_UNLOCKED$annotations() {
+    private static /* synthetic */ void getEMPTY_UNLOCKED$annotations() {
     }
 
-    private static /* synthetic */ void ENQUEUE_FAIL$annotations() {
+    private static /* synthetic */ void getLOCKED$annotations() {
     }
 
-    private static /* synthetic */ void LOCKED$annotations() {
+    private static /* synthetic */ void getLOCK_FAIL$annotations() {
     }
 
-    private static /* synthetic */ void LOCK_FAIL$annotations() {
+    private static /* synthetic */ void getSELECT_SUCCESS$annotations() {
     }
 
-    private static /* synthetic */ void SELECT_SUCCESS$annotations() {
+    private static /* synthetic */ void getUNLOCKED$annotations() {
     }
 
-    private static /* synthetic */ void UNLOCKED$annotations() {
-    }
-
-    private static /* synthetic */ void UNLOCK_FAIL$annotations() {
+    private static /* synthetic */ void getUNLOCK_FAIL$annotations() {
     }
 
     public static /* synthetic */ Mutex Mutex$default(boolean z, int i, Object obj) {
@@ -119,15 +115,6 @@ public final class MutexKt {
         }
     }
 
-    static {
-        Symbol symbol = new Symbol("LOCKED");
-        LOCKED = symbol;
-        Symbol symbol2 = new Symbol("UNLOCKED");
-        UNLOCKED = symbol2;
-        EMPTY_LOCKED = new Empty(symbol);
-        EMPTY_UNLOCKED = new Empty(symbol2);
-    }
-
     public static /* synthetic */ Object withLock$default(Mutex mutex, Object obj, Function0 function0, Continuation continuation, int i, Object obj2) {
         int i2 = 1;
         if ((i & 1) != 0) {
@@ -144,5 +131,14 @@ public final class MutexKt {
             mutex.unlock(obj);
             InlineMarker.finallyEnd(i2);
         }
+    }
+
+    static {
+        Symbol symbol = new Symbol("LOCKED");
+        LOCKED = symbol;
+        Symbol symbol2 = new Symbol("UNLOCKED");
+        UNLOCKED = symbol2;
+        EMPTY_LOCKED = new Empty(symbol);
+        EMPTY_UNLOCKED = new Empty(symbol2);
     }
 }

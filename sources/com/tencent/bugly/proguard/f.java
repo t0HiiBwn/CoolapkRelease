@@ -7,9 +7,7 @@ import java.util.Map;
 /* compiled from: BUGLY */
 public final class f extends k {
     private static byte[] k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static Map<String, String> f1442l = null;
+    private static Map<String, String> l = null;
     private static /* synthetic */ boolean m = true;
     public short a = 0;
     public int b = 0;
@@ -68,18 +66,18 @@ public final class f extends k {
             }
             this.e = iVar.c(7, true);
             this.h = iVar.a(this.h, 8, true);
-            if (f1442l == null) {
+            if (l == null) {
                 HashMap hashMap = new HashMap();
-                f1442l = hashMap;
+                l = hashMap;
                 hashMap.put("", "");
             }
-            this.i = (Map) iVar.a((i) f1442l, 9, true);
-            if (f1442l == null) {
+            this.i = (Map) iVar.a((i) l, 9, true);
+            if (l == null) {
                 HashMap hashMap2 = new HashMap();
-                f1442l = hashMap2;
+                l = hashMap2;
                 hashMap2.put("", "");
             }
-            this.j = (Map) iVar.a((i) f1442l, 10, true);
+            this.j = (Map) iVar.a((i) l, 10, true);
         } catch (Exception e2) {
             e2.printStackTrace();
             PrintStream printStream = System.out;

@@ -283,14 +283,14 @@ public final class p {
     }
 
     private static BusStationItem k(JSONObject jSONObject) throws JSONException {
-        BusStationItem l2 = l(jSONObject);
-        l2.setAdCode(a(jSONObject, "adcode"));
-        l2.setCityCode(a(jSONObject, "citycode"));
+        BusStationItem l = l(jSONObject);
+        l.setAdCode(a(jSONObject, "adcode"));
+        l.setCityCode(a(jSONObject, "citycode"));
         JSONArray optJSONArray = jSONObject.optJSONArray("buslines");
         ArrayList arrayList = new ArrayList();
         if (optJSONArray == null) {
-            l2.setBusLineItems(arrayList);
-            return l2;
+            l.setBusLineItems(arrayList);
+            return l;
         }
         for (int i = 0; i < optJSONArray.length(); i++) {
             JSONObject optJSONObject = optJSONArray.optJSONObject(i);
@@ -298,8 +298,8 @@ public final class p {
                 arrayList.add(m(optJSONObject));
             }
         }
-        l2.setBusLineItems(arrayList);
-        return l2;
+        l.setBusLineItems(arrayList);
+        return l;
     }
 
     private static BusStationItem l(JSONObject jSONObject) throws JSONException {

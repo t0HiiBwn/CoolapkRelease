@@ -21,7 +21,7 @@ public final class MeUserMenuViewHolder$bindToContent$1 extends RecyclerView.Ada
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public MeUserMenuChildViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
-        View inflate = LayoutInflater.from(this.this$0.getContext()).inflate(2131558640, viewGroup, false);
+        View inflate = LayoutInflater.from(this.this$0.getContext()).inflate(2131558646, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "view");
         DataBindingComponent component = this.this$0.getComponent();
         Intrinsics.checkNotNullExpressionValue(component, "component");

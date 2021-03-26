@@ -40,14 +40,14 @@ public class h {
                 h.this.c();
             }
         };
-        com.ss.android.socialbase.downloader.a.a.a().a(new a.AbstractC0092a() {
+        com.ss.android.socialbase.downloader.a.a.a().a(new a.AbstractC0102a() {
             /* class com.ss.android.socialbase.appdownloader.h.AnonymousClass2 */
 
-            @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+            @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
             public void c() {
             }
 
-            @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+            @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
             public void b() {
                 if (!h.this.a.isEmpty()) {
                     long a2 = com.ss.android.socialbase.downloader.g.a.c().a("install_on_resume_install_interval", 120000L);

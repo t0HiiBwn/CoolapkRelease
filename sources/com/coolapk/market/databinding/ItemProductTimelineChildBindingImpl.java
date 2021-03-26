@@ -27,10 +27,10 @@ public class ItemProductTimelineChildBindingImpl extends ItemProductTimelineChil
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362367, 4);
-        sparseIntArray.put(2131363984, 5);
-        sparseIntArray.put(2131362417, 6);
-        sparseIntArray.put(2131362734, 7);
+        sparseIntArray.put(2131362373, 4);
+        sparseIntArray.put(2131364010, 5);
+        sparseIntArray.put(2131362423, 6);
+        sparseIntArray.put(2131362745, 7);
     }
 
     public ItemProductTimelineChildBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -70,7 +70,7 @@ public class ItemProductTimelineChildBindingImpl extends ItemProductTimelineChil
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Entity) obj);
         } else if (50 != i) {
             return false;
@@ -86,7 +86,7 @@ public class ItemProductTimelineChildBindingImpl extends ItemProductTimelineChil
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -150,7 +150,7 @@ public class ItemProductTimelineChildBindingImpl extends ItemProductTimelineChil
         }
         if (i3 != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str4, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str4, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }
         if ((j & 4) != 0) {

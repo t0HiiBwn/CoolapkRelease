@@ -30,9 +30,9 @@ public class ActivityWallpaperBindingImpl extends ActivityWallpaperBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363588, 5);
-        sparseIntArray.put(2131363345, 6);
-        sparseIntArray.put(2131362326, 7);
+        sparseIntArray.put(2131363610, 5);
+        sparseIntArray.put(2131363361, 6);
+        sparseIntArray.put(2131362332, 7);
     }
 
     public ActivityWallpaperBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -73,7 +73,7 @@ public class ActivityWallpaperBindingImpl extends ActivityWallpaperBinding {
     public boolean setVariable(int i, Object obj) {
         if (104 == i) {
             setFeed((Feed) obj);
-        } else if (185 != i) {
+        } else if (186 != i) {
             return false;
         } else {
             setLoadListener((OnImageLoadListener) obj);
@@ -97,7 +97,7 @@ public class ActivityWallpaperBindingImpl extends ActivityWallpaperBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(185);
+        notifyPropertyChanged(186);
         super.requestRebind();
     }
 

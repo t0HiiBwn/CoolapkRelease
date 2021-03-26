@@ -26,31 +26,6 @@ public class ByteOrderMark implements Serializable {
         }
     }
 
-    public String getCharsetName() {
-        return this.charsetName;
-    }
-
-    public int length() {
-        return this.bytes.length;
-    }
-
-    public int get(int i) {
-        return this.bytes[i];
-    }
-
-    public byte[] getBytes() {
-        byte[] bArr = new byte[this.bytes.length];
-        int i = 0;
-        while (true) {
-            int[] iArr = this.bytes;
-            if (i >= iArr.length) {
-                return bArr;
-            }
-            bArr[i] = (byte) iArr[i];
-            i++;
-        }
-    }
-
     @Override // java.lang.Object
     public boolean equals(Object obj) {
         if (!(obj instanceof ByteOrderMark)) {
@@ -73,6 +48,27 @@ public class ByteOrderMark implements Serializable {
         }
     }
 
+    public int get(int i) {
+        return this.bytes[i];
+    }
+
+    public byte[] getBytes() {
+        byte[] bArr = new byte[this.bytes.length];
+        int i = 0;
+        while (true) {
+            int[] iArr = this.bytes;
+            if (i >= iArr.length) {
+                return bArr;
+            }
+            bArr[i] = (byte) iArr[i];
+            i++;
+        }
+    }
+
+    public String getCharsetName() {
+        return this.charsetName;
+    }
+
     @Override // java.lang.Object
     public int hashCode() {
         int hashCode = getClass().hashCode();
@@ -80,6 +76,10 @@ public class ByteOrderMark implements Serializable {
             hashCode += i;
         }
         return hashCode;
+    }
+
+    public int length() {
+        return this.bytes.length;
     }
 
     @Override // java.lang.Object

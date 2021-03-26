@@ -19,8 +19,8 @@ final class AlbumItemDialog$HomePageActionItem$takeAction$1<T, R> implements Fun
     public final Observable<? extends Result<String>> call(Boolean bool) {
         Intrinsics.checkNotNullExpressionValue(bool, "aBoolean");
         if (bool.booleanValue()) {
-            return this.this$0.this$0.mPresenter.addToHeadlineV8(this.this$0.getAlbum());
+            return AlbumItemDialog.access$getMPresenter$p(this.this$0.this$0).addToHeadlineV8(this.this$0.getAlbum());
         }
-        return this.this$0.this$0.mPresenter.removeFromHeadlineV8(this.this$0.getAlbum());
+        return AlbumItemDialog.access$getMPresenter$p(this.this$0.this$0).removeFromHeadlineV8(this.this$0.getAlbum());
     }
 }

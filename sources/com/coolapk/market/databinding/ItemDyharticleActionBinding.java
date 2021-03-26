@@ -66,7 +66,7 @@ public abstract class ItemDyharticleActionBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDyharticleActionBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemDyharticleActionBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558685, viewGroup, z, obj);
+        return (ItemDyharticleActionBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558691, viewGroup, z, obj);
     }
 
     public static ItemDyharticleActionBinding inflate(LayoutInflater layoutInflater) {
@@ -75,7 +75,7 @@ public abstract class ItemDyharticleActionBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDyharticleActionBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemDyharticleActionBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558685, null, false, obj);
+        return (ItemDyharticleActionBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558691, null, false, obj);
     }
 
     public static ItemDyharticleActionBinding bind(View view) {
@@ -84,6 +84,6 @@ public abstract class ItemDyharticleActionBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDyharticleActionBinding bind(View view, Object obj) {
-        return (ItemDyharticleActionBinding) bind(obj, view, 2131558685);
+        return (ItemDyharticleActionBinding) bind(obj, view, 2131558691);
     }
 }

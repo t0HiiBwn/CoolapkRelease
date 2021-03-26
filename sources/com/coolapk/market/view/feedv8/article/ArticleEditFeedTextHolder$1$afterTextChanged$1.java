@@ -22,7 +22,7 @@ final class ArticleEditFeedTextHolder$1$afterTextChanged$1 extends Lambda implem
 
     public final ArticleModel invoke(ArticleModel articleModel) {
         Intrinsics.checkNotNullParameter(articleModel, "it");
-        ArticleEditText articleEditText = r4.etTitle;
+        ArticleEditText articleEditText = submitFeedArticleTextPartBinding.etTitle;
         Intrinsics.checkNotNullExpressionValue(articleEditText, "binding.etTitle");
         return ((ArticleText) articleModel).copy(String.valueOf(articleEditText.getText()));
     }

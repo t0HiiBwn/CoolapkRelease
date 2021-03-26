@@ -22,9 +22,7 @@ public final class ec {
     private long i = 120000;
     private Context j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1372l = false;
+    private boolean l = false;
 
     private ec(Context context) {
         this.j = context;
@@ -91,7 +89,7 @@ public final class ec {
 
     private synchronized void b(boolean z, final int i2) {
         if (!z) {
-            if (!ei.o() && this.f1372l) {
+            if (!ei.o() && this.l) {
                 return;
             }
         }
@@ -106,7 +104,7 @@ public final class ec {
             }
         }
         this.c = System.currentTimeMillis();
-        this.f1372l = true;
+        this.l = true;
         StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
         StringBuffer stringBuffer = new StringBuffer();
         for (StackTraceElement stackTraceElement : stackTrace) {

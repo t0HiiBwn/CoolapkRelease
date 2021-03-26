@@ -6,8 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import com.xiaomi.push.em;
-import com.xiaomi.push.en;
+import com.xiaomi.push.du;
+import com.xiaomi.push.dv;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -36,7 +36,7 @@ public class a implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivityResumed(Activity activity) {
-        en a2;
+        dv a2;
         String packageName;
         String a3;
         int i;
@@ -47,14 +47,14 @@ public class a implements Application.ActivityLifecycleCallbacks {
             if (!TextUtils.isEmpty(stringExtra) && intExtra > 0 && !this.a.contains(stringExtra)) {
                 this.a.add(stringExtra);
                 if (intExtra == 3000) {
-                    a2 = en.a(activity.getApplicationContext());
+                    a2 = dv.a(activity.getApplicationContext());
                     packageName = activity.getPackageName();
-                    a3 = em.m292a(intExtra);
+                    a3 = du.a(intExtra);
                     i = 3008;
                 } else if (intExtra == 1000) {
-                    a2 = en.a(activity.getApplicationContext());
+                    a2 = dv.a(activity.getApplicationContext());
                     packageName = activity.getPackageName();
-                    a3 = em.m292a(intExtra);
+                    a3 = du.a(intExtra);
                     i = 1008;
                 } else {
                     return;

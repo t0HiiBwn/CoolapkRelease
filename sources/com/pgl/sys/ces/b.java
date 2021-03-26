@@ -28,15 +28,13 @@ public class b extends Thread implements ISdkLite {
     private String i = "";
     private String j = "";
     private boolean k = false;
-
-    /* renamed from: l  reason: collision with root package name */
-    private ISdkInfo f1386l = null;
+    private ISdkInfo l = null;
 
     private b(Context context, String str, ISdkInfo iSdkInfo) {
         setName("CZL-00");
         this.b = context;
         this.g = str;
-        this.f1386l = iSdkInfo;
+        this.l = iSdkInfo;
     }
 
     public static b a() {
@@ -109,7 +107,7 @@ public class b extends Thread implements ISdkLite {
     }
 
     public static ISdkInfo e() {
-        return a().f1386l;
+        return a().l;
     }
 
     public static int f() {

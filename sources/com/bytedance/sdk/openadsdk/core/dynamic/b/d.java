@@ -17,9 +17,7 @@ public class d {
     private float i;
     private float j;
     private int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1307l;
+    private int l;
     private String m;
     private String n;
     private String o;
@@ -112,7 +110,7 @@ public class d {
     }
 
     public void b(int i2) {
-        this.f1307l = i2;
+        this.l = i2;
     }
 
     public void a(String str) {

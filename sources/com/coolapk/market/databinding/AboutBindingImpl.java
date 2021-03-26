@@ -23,7 +23,7 @@ public class AboutBindingImpl extends AboutBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362734, 8);
+        sparseIntArray.put(2131362745, 8);
     }
 
     public AboutBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -28,8 +28,8 @@ public class AlbumUserInfoBindingImpl extends AlbumUserInfoBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362021, 4);
-        sparseIntArray.put(2131363884, 5);
+        sparseIntArray.put(2131362022, 4);
+        sparseIntArray.put(2131363907, 5);
     }
 
     public AlbumUserInfoBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -71,7 +71,7 @@ public class AlbumUserInfoBindingImpl extends AlbumUserInfoBinding {
     public boolean setVariable(int i, Object obj) {
         if (8 == i) {
             setAlbum((Album) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);
@@ -95,7 +95,7 @@ public class AlbumUserInfoBindingImpl extends AlbumUserInfoBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -125,8 +125,8 @@ public class AlbumUserInfoBindingImpl extends AlbumUserInfoBinding {
             str = null;
         }
         if ((4 & j) != 0) {
-            Long l2 = null;
-            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "normal", l2, l2);
+            Long l = null;
+            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "normal", l, l);
         }
         if (i != 0) {
             Boolean bool = null;

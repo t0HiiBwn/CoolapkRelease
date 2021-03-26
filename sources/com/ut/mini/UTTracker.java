@@ -85,7 +85,7 @@ public class UTTracker {
             UTMIVariables.getInstance().isAliyunOSPlatform();
             f(g2);
             d(g2);
-            m39g(g2);
+            m29g(g2);
             h(g2);
             a.a(g2.remove(LogField.PAGE.toString()), g2.remove(LogField.EVENTID.toString()), g2.remove(LogField.ARG1.toString()), g2.remove(LogField.ARG2.toString()), g2.remove(LogField.ARG3.toString()), g2);
         }
@@ -170,7 +170,7 @@ public class UTTracker {
     }
 
     /* renamed from: g  reason: collision with other method in class */
-    private static void m39g(Map<String, String> map) {
+    private static void m29g(Map<String, String> map) {
         map.put(LogField.SDKTYPE.toString(), "mini");
     }
 

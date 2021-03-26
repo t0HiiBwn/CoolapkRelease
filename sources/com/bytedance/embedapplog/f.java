@@ -17,9 +17,7 @@ public class f implements Application.ActivityLifecycleCallbacks {
     private static int h = -1;
     private static Object i;
     private static Object j;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final HashSet<Integer> f1262l = new HashSet<>(8);
+    private static final HashSet<Integer> l = new HashSet<>(8);
     private final IPicker k;
 
     public static void b(Object obj) {
@@ -62,7 +60,7 @@ public class f implements Application.ActivityLifecycleCallbacks {
     public void onActivityResumed(Activity activity) {
         ay a2 = a(activity.getClass().getName(), "", System.currentTimeMillis(), e);
         b = a2;
-        a2.k = !f1262l.remove(Integer.valueOf(activity.hashCode())) ? 1 : 0;
+        a2.k = !l.remove(Integer.valueOf(activity.hashCode())) ? 1 : 0;
         if (!activity.isChild()) {
             try {
                 h = activity.getWindow().getDecorView().hashCode();
@@ -152,11 +150,11 @@ public class f implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivityDestroyed(Activity activity) {
-        f1262l.remove(Integer.valueOf(activity.hashCode()));
+        l.remove(Integer.valueOf(activity.hashCode()));
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivityCreated(Activity activity, Bundle bundle) {
-        f1262l.add(Integer.valueOf(activity.hashCode()));
+        l.add(Integer.valueOf(activity.hashCode()));
     }
 }

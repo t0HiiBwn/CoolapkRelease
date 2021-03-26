@@ -1,62 +1,51 @@
 package com.xiaomi.push;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.io.IOException;
 
-class cs extends cm {
-    cm a;
+public abstract class cs {
+    public abstract int a();
 
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ cq f286a;
-    final /* synthetic */ cm b;
+    public abstract cs a(ab abVar);
 
-    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    cs(cq cqVar, String str, cm cmVar) {
-        super(str);
-        this.f286a = cqVar;
-        this.b = cmVar;
-        this.a = cmVar;
-        this.f272b = this.f272b;
-        if (cmVar != null) {
-            this.f = cmVar.f;
+    public cs a(byte[] bArr) {
+        return b(bArr, 0, bArr.length);
+    }
+
+    public abstract void a(bc bcVar);
+
+    public void a(byte[] bArr, int i, int i2) {
+        try {
+            bc a = bc.a(bArr, i, i2);
+            a(a);
+            a.c();
+        } catch (IOException unused) {
+            throw new RuntimeException("Serializing to a byte array threw an IOException (should never happen).");
         }
     }
 
-    @Override // com.xiaomi.push.cm
-    public synchronized ArrayList<String> a(boolean z) {
-        ArrayList<String> arrayList;
-        arrayList = new ArrayList<>();
-        cm cmVar = this.a;
-        if (cmVar != null) {
-            arrayList.addAll(cmVar.a(true));
-        }
-        synchronized (cq.b) {
-            cm cmVar2 = cq.b.get(this.f272b);
-            if (cmVar2 != null) {
-                Iterator<String> it2 = cmVar2.a(true).iterator();
-                while (it2.hasNext()) {
-                    String next = it2.next();
-                    if (arrayList.indexOf(next) == -1) {
-                        arrayList.add(next);
-                    }
-                }
-                arrayList.remove(this.f272b);
-                arrayList.add(this.f272b);
-            }
-        }
-        return arrayList;
+    protected boolean a(ab abVar, int i) {
+        return abVar.b(i);
     }
 
-    @Override // com.xiaomi.push.cm
-    public synchronized void a(String str, cl clVar) {
-        cm cmVar = this.a;
-        if (cmVar != null) {
-            cmVar.a(str, clVar);
+    public abstract int b();
+
+    public cs b(byte[] bArr, int i, int i2) {
+        try {
+            ab a = ab.a(bArr, i, i2);
+            a(a);
+            a.a(0);
+            return this;
+        } catch (br e) {
+            throw e;
+        } catch (IOException unused) {
+            throw new RuntimeException("Reading from a byte array threw an IOException (should never happen).");
         }
     }
 
-    @Override // com.xiaomi.push.cm
-    public boolean b() {
-        return false;
+    public byte[] c() {
+        int b = b();
+        byte[] bArr = new byte[b];
+        a(bArr, 0, b);
+        return bArr;
     }
 }

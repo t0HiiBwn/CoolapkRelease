@@ -86,7 +86,7 @@ public abstract class AlbumDetailV8V2Binding extends ViewDataBinding {
 
     @Deprecated
     public static AlbumDetailV8V2Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AlbumDetailV8V2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558444, viewGroup, z, obj);
+        return (AlbumDetailV8V2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558445, viewGroup, z, obj);
     }
 
     public static AlbumDetailV8V2Binding inflate(LayoutInflater layoutInflater) {
@@ -95,7 +95,7 @@ public abstract class AlbumDetailV8V2Binding extends ViewDataBinding {
 
     @Deprecated
     public static AlbumDetailV8V2Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AlbumDetailV8V2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558444, null, false, obj);
+        return (AlbumDetailV8V2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558445, null, false, obj);
     }
 
     public static AlbumDetailV8V2Binding bind(View view) {
@@ -104,6 +104,6 @@ public abstract class AlbumDetailV8V2Binding extends ViewDataBinding {
 
     @Deprecated
     public static AlbumDetailV8V2Binding bind(View view, Object obj) {
-        return (AlbumDetailV8V2Binding) bind(obj, view, 2131558444);
+        return (AlbumDetailV8V2Binding) bind(obj, view, 2131558445);
     }
 }

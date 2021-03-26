@@ -135,10 +135,10 @@ public final class ErrorCover extends ThemeableCover implements IReceiverGroup.O
         Intrinsics.checkNotNullParameter(view, "v");
         super.onClick(view);
         switch (view.getId()) {
-            case 2131361981:
+            case 2131361982:
                 handleAction1();
                 return;
-            case 2131361982:
+            case 2131361983:
                 handleAction2();
                 return;
             default:
@@ -367,7 +367,7 @@ public final class ErrorCover extends ThemeableCover implements IReceiverGroup.O
         if (getGroupValue().getBoolean("can_redirect_source", true)) {
             String str6 = string;
             if (!(str6 == null || str6.length() == 0)) {
-                String string2 = getContext().getString(2131887153);
+                String string2 = getContext().getString(2131887215);
                 Intrinsics.checkNotNullExpressionValue(string2, "context.getString(R.string.str_view_source_url)");
                 str4 = string2;
             }
@@ -425,7 +425,7 @@ public final class ErrorCover extends ThemeableCover implements IReceiverGroup.O
     @Override // com.kk.taurus.playerbase.receiver.BaseCover
     public View onCreateCoverView(Context context) {
         Intrinsics.checkNotNullParameter(context, "context");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559290, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559300, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…video_error, null, false)");
         VideoErrorBinding videoErrorBinding = (VideoErrorBinding) inflate;
         this.binding = videoErrorBinding;

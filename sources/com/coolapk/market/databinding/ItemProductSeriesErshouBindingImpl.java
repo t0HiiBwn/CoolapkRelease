@@ -62,9 +62,9 @@ public class ItemProductSeriesErshouBindingImpl extends ItemProductSeriesErshouB
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (198 == i) {
+        if (199 == i) {
             setModel1((Product) obj);
-        } else if (199 == i) {
+        } else if (200 == i) {
             setModel2((Product) obj);
         } else if (50 != i) {
             return false;
@@ -80,7 +80,7 @@ public class ItemProductSeriesErshouBindingImpl extends ItemProductSeriesErshouB
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(198);
+        notifyPropertyChanged(199);
         super.requestRebind();
     }
 
@@ -90,7 +90,7 @@ public class ItemProductSeriesErshouBindingImpl extends ItemProductSeriesErshouB
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(199);
+        notifyPropertyChanged(200);
         super.requestRebind();
     }
 

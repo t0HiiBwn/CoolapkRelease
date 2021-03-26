@@ -33,7 +33,7 @@ public abstract class ItemNoLoginTitelBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNoLoginTitelBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemNoLoginTitelBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558836, viewGroup, z, obj);
+        return (ItemNoLoginTitelBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558843, viewGroup, z, obj);
     }
 
     public static ItemNoLoginTitelBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class ItemNoLoginTitelBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNoLoginTitelBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemNoLoginTitelBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558836, null, false, obj);
+        return (ItemNoLoginTitelBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558843, null, false, obj);
     }
 
     public static ItemNoLoginTitelBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class ItemNoLoginTitelBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNoLoginTitelBinding bind(View view, Object obj) {
-        return (ItemNoLoginTitelBinding) bind(obj, view, 2131558836);
+        return (ItemNoLoginTitelBinding) bind(obj, view, 2131558843);
     }
 }

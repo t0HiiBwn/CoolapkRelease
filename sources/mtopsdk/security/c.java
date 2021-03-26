@@ -20,29 +20,29 @@ public final class c extends a {
     private SecurityGuardManager b = null;
     private IUnifiedSecurityComponent c;
 
-    /* JADX WARNING: Code restructure failed: missing block: B:23:0x00ab, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:23:0x00ac, code lost:
         r5 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:24:0x00ac, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:24:0x00ad, code lost:
         mtopsdk.common.util.TBSdkLog.e("mtopsdk.OpenSignImpl", c() + " [initMiddleTier]init middleTier failed with unknown exception, appKeyIndex=" + r11.appKeyIndex + ",authCode=" + r11.authCode, r5);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:25:0x00d2, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:25:0x00d3, code lost:
         r5 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:26:0x00d3, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:26:0x00d4, code lost:
         mtopsdk.common.util.TBSdkLog.e("mtopsdk.OpenSignImpl", c() + " [initMiddleTier]init middleTier failed with errorCode " + r5.getErrorCode() + ",appKeyIndex=" + r11.appKeyIndex + ",authCode=" + r11.authCode, r5);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:30:0x0129, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:30:0x012a, code lost:
         r11 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:31:0x012a, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:31:0x012b, code lost:
         mtopsdk.common.util.TBSdkLog.e("mtopsdk.OpenSignImpl", r2 + " [init]init securityguard error.", r11);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:32:0x013e, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:32:0x013f, code lost:
         return;
      */
     /* JADX WARNING: Failed to process nested try/catch */
-    /* JADX WARNING: Removed duplicated region for block: B:30:0x0129 A[ExcHandler: all (r11v2 'th' java.lang.Throwable A[CUSTOM_DECLARE]), Splitter:B:1:0x000b] */
+    /* JADX WARNING: Removed duplicated region for block: B:30:0x012a A[ExcHandler: all (r11v2 'th' java.lang.Throwable A[CUSTOM_DECLARE]), Splitter:B:1:0x000b] */
     @Override // mtopsdk.security.a, mtopsdk.security.ISign
     public final void init(MtopConfig mtopConfig) {
         super.init(mtopConfig);

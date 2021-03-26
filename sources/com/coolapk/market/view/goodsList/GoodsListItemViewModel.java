@@ -25,7 +25,7 @@ public final class GoodsListItemViewModel extends BaseObservable {
     public final void setGoodsListItem(GoodsListItem goodsListItem2) {
         this.goodsListItem = goodsListItem2;
         notifyPropertyChanged(139);
-        notifyPropertyChanged(175);
+        notifyPropertyChanged(176);
         notifyPropertyChanged(140);
         notifyPropertyChanged(133);
     }
@@ -48,7 +48,7 @@ public final class GoodsListItemViewModel extends BaseObservable {
 
     public final void setItemNote(String str) {
         this.itemNote = str;
-        notifyPropertyChanged(175);
+        notifyPropertyChanged(176);
         notifyPropertyChanged(140);
     }
 

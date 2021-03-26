@@ -36,7 +36,7 @@ public abstract class SubmitVoteExtraChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitVoteExtraChildBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitVoteExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559174, viewGroup, z, obj);
+        return (SubmitVoteExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559182, viewGroup, z, obj);
     }
 
     public static SubmitVoteExtraChildBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class SubmitVoteExtraChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitVoteExtraChildBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitVoteExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559174, null, false, obj);
+        return (SubmitVoteExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559182, null, false, obj);
     }
 
     public static SubmitVoteExtraChildBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class SubmitVoteExtraChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitVoteExtraChildBinding bind(View view, Object obj) {
-        return (SubmitVoteExtraChildBinding) bind(obj, view, 2131559174);
+        return (SubmitVoteExtraChildBinding) bind(obj, view, 2131559182);
     }
 }

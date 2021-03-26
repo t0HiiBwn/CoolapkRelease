@@ -113,13 +113,13 @@ public final class Toast {
                     show$default(topActivityOrApplication, mayBeCause.getMessage(), 0, false, 12, null);
                 }
             } else if (mayBeCause instanceof SocketTimeoutException) {
-                show(topActivityOrApplication, 2131887204);
+                show(topActivityOrApplication, 2131887266);
             } else if ((mayBeCause instanceof ConnectException) || (mayBeCause instanceof UnknownHostException)) {
-                show(topActivityOrApplication, 2131887195);
+                show(topActivityOrApplication, 2131887257);
             } else if (mayBeCause instanceof SocketException) {
-                show(topActivityOrApplication, 2131887196);
+                show(topActivityOrApplication, 2131887258);
             } else if (mayBeCause instanceof EmitNullException) {
-                show$default(topActivityOrApplication, topActivityOrApplication.getString(2131886690), 0, false, 12, null);
+                show$default(topActivityOrApplication, topActivityOrApplication.getString(2131886752), 0, false, 12, null);
             } else if (mayBeCause instanceof CoolApkRuntimeException) {
                 show$default(topActivityOrApplication, mayBeCause.getMessage(), 0, false, 12, null);
             } else {
@@ -130,7 +130,7 @@ public final class Toast {
                 if (StringsKt.contains$default((CharSequence) message, (CharSequence) "End of input at line 1 column 1 ", false, 2, (Object) null)) {
                     show$default(topActivityOrApplication, "网络连接错误，请检查网络环境", 0, false, 12, null);
                 } else {
-                    show$default(topActivityOrApplication, topActivityOrApplication.getString(2131887206) + " " + mayBeCause.getMessage(), 0, false, 12, null);
+                    show$default(topActivityOrApplication, topActivityOrApplication.getString(2131887268) + " " + mayBeCause.getMessage(), 0, false, 12, null);
                 }
             }
             toast.uploadErrorIfNeed(mayBeCause);
@@ -156,15 +156,15 @@ public final class Toast {
         Intrinsics.checkNotNullParameter(str, "defaultTitle");
         if (installState.hasError()) {
             int errorCode = installState.getErrorCode();
-            int i = 2131887207;
+            int i = 2131887269;
             if (errorCode == -5) {
-                i = 2131887198;
+                i = 2131887260;
             } else if (errorCode == -4) {
-                i = 2131887202;
+                i = 2131887264;
             } else if (errorCode == -3) {
-                i = 2131887200;
+                i = 2131887262;
             } else if (errorCode == -2) {
-                i = 2131887197;
+                i = 2131887259;
             }
             String str2 = null;
             if (installState.getExtra() != null) {
@@ -184,7 +184,7 @@ public final class Toast {
         Intrinsics.checkNotNullParameter(uninstallState, "state");
         if (uninstallState.hasError()) {
             uninstallState.getErrorCode();
-            show$default(context, context.getString(2131887205, uninstallState.getTitle()), 0, false, 12, null);
+            show$default(context, context.getString(2131887267, uninstallState.getTitle()), 0, false, 12, null);
         }
     }
 

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="res_2131951693_base_textappearance_appcompat_widget_actionbar_menu" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Menu">
+    <style name="res_2131951694_base_textappearance_appcompat_widget_actionbar_menu" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Menu">
     </style>
-    <style name="res_2131951703_base_textappearance_appcompat_widget_button_inverse" parent="@android:style/TextAppearance.Material.Widget.Button.Inverse">
+    <style name="res_2131951704_base_textappearance_appcompat_widget_button_inverse" parent="@android:style/TextAppearance.Material.Widget.Button.Inverse">
     </style>
-    <style name="res_2131951717_base_theme_appcompat" parent="@style/res_2131951785_base_v23_theme_appcompat">
+    <style name="res_2131951718_base_theme_appcompat" parent="@style/res_2131951786_base_v23_theme_appcompat">
     </style>
-    <style name="res_2131951724_base_theme_appcompat_light" parent="@style/res_2131951786_base_v23_theme_appcompat_light">
+    <style name="res_2131951725_base_theme_appcompat_light" parent="@style/res_2131951787_base_v23_theme_appcompat_light">
     </style>
-    <style name="res_2131951785_base_v23_theme_appcompat" parent="@style/res_2131951783_base_v22_theme_appcompat">
+    <style name="res_2131951786_base_v23_theme_appcompat" parent="@style/res_2131951784_base_v22_theme_appcompat">
         <item name="actionBarItemBackground">?android:attr/actionBarItemBackground</item>
         <item name="actionMenuTextAppearance">?android:attr/actionMenuTextAppearance</item>
         <item name="actionMenuTextColor">?android:attr/actionMenuTextColor</item>
@@ -17,7 +17,7 @@
         <item name="ratingBarStyleIndicator">?android:attr/ratingBarStyleIndicator</item>
         <item name="ratingBarStyleSmall">?android:attr/ratingBarStyleSmall</item>
     </style>
-    <style name="res_2131951786_base_v23_theme_appcompat_light" parent="@style/res_2131951784_base_v22_theme_appcompat_light">
+    <style name="res_2131951787_base_v23_theme_appcompat_light" parent="@style/res_2131951785_base_v22_theme_appcompat_light">
         <item name="actionBarItemBackground">?android:attr/actionBarItemBackground</item>
         <item name="actionMenuTextAppearance">?android:attr/actionMenuTextAppearance</item>
         <item name="actionMenuTextColor">?android:attr/actionMenuTextColor</item>
@@ -26,34 +26,34 @@
         <item name="ratingBarStyleIndicator">?android:attr/ratingBarStyleIndicator</item>
         <item name="ratingBarStyleSmall">?android:attr/ratingBarStyleSmall</item>
     </style>
-    <style name="res_2131951807_base_widget_appcompat_actionbutton_overflow" parent="@android:style/Widget.Material.ActionButton.Overflow">
+    <style name="res_2131951808_base_widget_appcompat_actionbutton_overflow" parent="@android:style/Widget.Material.ActionButton.Overflow">
     </style>
-    <style name="res_2131951813_base_widget_appcompat_button_borderless_colored" parent="@android:style/Widget.Material.Button.Borderless.Colored">
+    <style name="res_2131951814_base_widget_appcompat_button_borderless_colored" parent="@android:style/Widget.Material.Button.Borderless.Colored">
     </style>
-    <style name="res_2131951815_base_widget_appcompat_button_colored" parent="@android:style/Widget.Material.Button.Colored">
+    <style name="res_2131951816_base_widget_appcompat_button_colored" parent="@android:style/Widget.Material.Button.Colored">
     </style>
-    <style name="res_2131951825_base_widget_appcompat_edittext" parent="@android:style/Widget.Material.EditText">
+    <style name="res_2131951826_base_widget_appcompat_edittext" parent="@android:style/Widget.Material.EditText">
         <item name="android:breakStrategy">@null</item>
         <item name="android:hyphenationFrequency">@null</item>
     </style>
-    <style name="res_2131951846_base_widget_appcompat_ratingbar_indicator" parent="@android:style/Widget.Material.RatingBar.Indicator">
+    <style name="res_2131951847_base_widget_appcompat_ratingbar_indicator" parent="@android:style/Widget.Material.RatingBar.Indicator">
     </style>
-    <style name="res_2131951847_base_widget_appcompat_ratingbar_small" parent="@android:style/Widget.Material.RatingBar.Small">
+    <style name="res_2131951848_base_widget_appcompat_ratingbar_small" parent="@android:style/Widget.Material.RatingBar.Small">
     </style>
-    <style name="res_2131951853_base_widget_appcompat_spinner_underlined" parent="@android:style/Widget.Material.Spinner.Underlined">
+    <style name="res_2131951854_base_widget_appcompat_spinner_underlined" parent="@android:style/Widget.Material.Spinner.Underlined">
     </style>
-    <style name="res_2131951854_base_widget_appcompat_textview" parent="@android:style/Widget.Material.TextView">
+    <style name="res_2131951855_base_widget_appcompat_textview" parent="@android:style/Widget.Material.TextView">
         <item name="android:breakStrategy">high_quality</item>
         <item name="android:hyphenationFrequency">@null</item>
     </style>
-    <style name="CardView" parent="@style/res_2131951659_base_cardview">
+    <style name="CardView" parent="@style/res_2131951660_base_cardview">
         <item name="cardBackgroundColor">?android:attr/colorBackgroundFloating</item>
     </style>
-    <style name="res_2131952383_widget_materialcomponents_popupmenu_contextmenu" parent="@style/res_2131951863_base_widget_materialcomponents_popupmenu_contextmenu">
+    <style name="res_2131952384_widget_materialcomponents_popupmenu_contextmenu" parent="@style/res_2131951864_base_widget_materialcomponents_popupmenu_contextmenu">
         <item name="android:popupBackground">?attr/popupMenuBackground</item>
         <item name="android:popupElevation">8dp</item>
     </style>
-    <style name="res_2131952384_widget_materialcomponents_popupmenu_listpopupwindow" parent="@style/res_2131951864_base_widget_materialcomponents_popupmenu_listpopupwindow">
+    <style name="res_2131952385_widget_materialcomponents_popupmenu_listpopupwindow" parent="@style/res_2131951865_base_widget_materialcomponents_popupmenu_listpopupwindow">
         <item name="android:popupBackground">?attr/popupMenuBackground</item>
         <item name="android:popupElevation">8dp</item>
     </style>

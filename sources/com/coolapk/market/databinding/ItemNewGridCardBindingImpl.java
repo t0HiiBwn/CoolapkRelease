@@ -25,11 +25,11 @@ public class ItemNewGridCardBindingImpl extends ItemNewGridCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362970, 2);
-        sparseIntArray.put(2131362464, 3);
-        sparseIntArray.put(2131362257, 4);
-        sparseIntArray.put(2131362634, 5);
-        sparseIntArray.put(2131361934, 6);
+        sparseIntArray.put(2131362982, 2);
+        sparseIntArray.put(2131362472, 3);
+        sparseIntArray.put(2131362262, 4);
+        sparseIntArray.put(2131362642, 5);
+        sparseIntArray.put(2131361935, 6);
     }
 
     public ItemNewGridCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -69,7 +69,7 @@ public class ItemNewGridCardBindingImpl extends ItemNewGridCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (278 != i) {
+        if (279 != i) {
             return false;
         }
         setTitle((String) obj);
@@ -82,7 +82,7 @@ public class ItemNewGridCardBindingImpl extends ItemNewGridCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(278);
+        notifyPropertyChanged(279);
         super.requestRebind();
     }
 

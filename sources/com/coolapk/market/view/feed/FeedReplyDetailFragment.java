@@ -117,7 +117,7 @@ public class FeedReplyDetailFragment extends EntityListFragment {
         recyclerView.setClipToPadding(false);
         getRecyclerView().setPadding(0, 0, 0, NumberExtendsKt.getDp((Number) 48));
         setRefreshEnable(false);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558716).suitedEntityType("feed_reply").constructor(new FeedReplyDetailFragment$onActivityCreated$1(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558723).suitedEntityType("feed_reply").constructor(new FeedReplyDetailFragment$onActivityCreated$1(this)).build(), 0, 2, null);
     }
 
     protected void onFeedReplyLoaded(FeedReply feedReply2) {
@@ -126,7 +126,7 @@ public class FeedReplyDetailFragment extends EntityListFragment {
         requireArguments().putParcelable("extra_feed", feedReply2);
         FragmentActivity activity = getActivity();
         if (activity != null) {
-            activity.setTitle(StringUtils.titleWithNum(getString(2131886791), feedReply2.getReplyNum()));
+            activity.setTitle(StringUtils.titleWithNum(getString(2131886853), feedReply2.getReplyNum()));
         }
         if (isAdded()) {
             List<Parcelable> dataList = getDataList();
@@ -249,7 +249,7 @@ public class FeedReplyDetailFragment extends EntityListFragment {
     /* compiled from: FeedReplyDetailFragment.kt */
     public static class FeedReplyDetailViewHolder extends FeedReplyViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558716;
+        public static final int LAYOUT_ID = 2131558723;
         private final String rid;
 
         public final String getRid() {

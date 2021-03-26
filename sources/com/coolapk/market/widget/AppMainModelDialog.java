@@ -49,7 +49,7 @@ public final class AppMainModelDialog extends BaseDialogFragment {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        AppMainModelSelectBinding appMainModelSelectBinding = (AppMainModelSelectBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558462, null, false);
+        AppMainModelSelectBinding appMainModelSelectBinding = (AppMainModelSelectBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558463, null, false);
         RadioButton radioButton = appMainModelSelectBinding.radioSocial;
         Intrinsics.checkNotNullExpressionValue(radioButton, "binding.radioSocial");
         radioButton.setButtonDrawable(createIcon());
@@ -66,10 +66,10 @@ public final class AppMainModelDialog extends BaseDialogFragment {
             int hashCode = preferencesString.hashCode();
             if (hashCode != -2027976644) {
                 if (hashCode == -1843721363 && preferencesString.equals("SOCIAL")) {
-                    appMainModelSelectBinding.radioGroup.check(2131363177);
+                    appMainModelSelectBinding.radioGroup.check(2131363191);
                 }
             } else if (preferencesString.equals("MARKET")) {
-                appMainModelSelectBinding.radioGroup.check(2131363172);
+                appMainModelSelectBinding.radioGroup.check(2131363186);
             }
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -84,9 +84,9 @@ public final class AppMainModelDialog extends BaseDialogFragment {
     }
 
     private final StateListDrawable createIcon() {
-        Drawable drawable = ResourceUtils.getDrawable(getActivity(), 2131231508);
+        Drawable drawable = ResourceUtils.getDrawable(getActivity(), 2131231519);
         DrawableCompat.setTint(drawable, AppHolder.getAppTheme().getColorAccent());
-        Drawable drawable2 = ResourceUtils.getDrawable(getActivity(), 2131231506);
+        Drawable drawable2 = ResourceUtils.getDrawable(getActivity(), 2131231517);
         DrawableCompat.setTint(drawable2, AppHolder.getAppTheme().getColorAccent());
         StateListDrawable stateListDrawable = new StateListDrawable();
         stateListDrawable.addState(new int[]{16842912}, drawable);

@@ -1,195 +1,127 @@
 package com.xiaomi.push;
 
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+public enum gn {
+    UploadSwitch(1),
+    UploadFrequency(2),
+    ScreenSizeCollectionSwitch(3),
+    MacCollectionSwitch(4),
+    IMSICollectionSwitch(5),
+    AndroidVnCollectionSwitch(6),
+    AndroidVcCollectionSwitch(7),
+    AndroidIdCollectionSwitch(8),
+    DeviceInfoCollectionFrequency(9),
+    AppInstallListCollectionSwitch(10),
+    AppInstallListCollectionFrequency(11),
+    AppActiveListCollectionSwitch(12),
+    AppActiveListCollectionFrequency(13),
+    BluetoothCollectionSwitch(14),
+    BluetoothCollectionFrequency(15),
+    LocationCollectionSwitch(16),
+    LocationCollectionFrequency(17),
+    AccountCollectionSwitch(18),
+    AccountCollectionFrequency(19),
+    WifiCollectionSwitch(20),
+    WifiCollectionFrequency(21),
+    CellularCollectionSwitch(22),
+    CellularCollectionFrequency(23),
+    TopAppCollectionSwitch(24),
+    TopAppCollectionFrequency(25),
+    DataCollectionSwitch(26),
+    OcVersionCheckFrequency(27),
+    SyncInfoFrequency(28),
+    UploadNotificationInfoFrequency(29),
+    UploadNotificationInfoMaxNum(30),
+    CollectionNotificationInfoBaseSwitch(31),
+    CollectionNotificationInfoAppSwitch(32),
+    CollectionNotificationInfoRemovedSwitch(33),
+    ForegroundServiceSwitch(34),
+    SyncMIIDFrequency(35),
+    Upload4GSwitch(36),
+    Upload4GFrequency(37),
+    Upload3GSwitch(38),
+    Upload3GFrequency(39),
+    ShieldTypeConfig(40),
+    UploadWIFIGeoLocFrequency(41),
+    UploadNOWIFIGeoLocFrequency(42),
+    BroadcastActionCollectionSwitch(43),
+    BroadcastActionCollectionFrequency(44),
+    UploadGeoLocSwitch(45),
+    ServiceBootMode(46),
+    AppPermissionCollectionSwitch(47),
+    AppPermissionCollectionFrequency(48),
+    WifiDevicesMacCollectionSwitch(49),
+    WifiDevicesMacCollectionFrequency(50),
+    WifiDevicesMacWifiUnchangedCollectionFrequency(51),
+    AggregationSdkMonitorSwitch(52),
+    AggregationSdkMonitorFrequency(53),
+    AggregationSdkMonitorDepth(54),
+    UploadGeoAppLocSwitch(55),
+    ThirdPushControlSwitch(56),
+    ThirdPushComponentKeyWords(57),
+    ThirdPushWhiteList(58),
+    XmsfScanWhitelist(59),
+    IccidCollectionSwitch(60),
+    LimitThridPushStrategyMode(61),
+    GlobalPushChannelException(62),
+    TinyDataUploadSwitch(63),
+    TinyDataUploadFrequency(64),
+    GlobalRegionIOSwitch(65),
+    GlobalRegionIOWait(66),
+    AggregatePushSwitch(67),
+    ActivityTSSwitch(68),
+    OperatorSwitch(69),
+    DeviceIdSwitch(70),
+    DeviceBaseInfoCollectionFrequency(71),
+    UsageStatsCollectionFrequency(72),
+    UsageStatsCollectionWhiteList(73),
+    ForceHandleCrashSwitch(74),
+    Crash4GUploadSwitch(75),
+    Crash4GUploadFrequency(76),
+    CrashWIFIUploadFrequency(77),
+    EventUploadSwitch(78),
+    PerfUploadSwitch(79),
+    EventUploadFrequency(80),
+    PerfUploadFrequency(81),
+    BatteryCollectionSwitch(82),
+    BatteryCollectionFrequency(83),
+    AwakeInfoUploadWaySwitch(84),
+    AwakeAppPingSwitch(85),
+    AwakeAppPingFrequency(86),
+    StorageCollectionSwitch(87),
+    StorageCollectionFrequency(88),
+    PopupDialogWhiteList(94),
+    PopupDialogContent(95),
+    PopupDialogSwitch(96),
+    FallDownTimeRange(97),
+    AppIsInstalledCollectionSwitch(98),
+    AppIsInstalledCollectionFrequency(99),
+    AppIsInstalledList(100),
+    TopNotificationUpdateFrequency(101),
+    TopNotificationUpdatePeriod(102),
+    TopNotificationUpdateSwitch(103),
+    EventUploadNewSwitch(104),
+    ScreenOnOrChargingTinyDataUploadSwitch(105),
+    NotificationAutoGroupSwitch(106),
+    LatestNotificationNotIntoGroupSwitch(107),
+    DCJobMutualSwitch(108),
+    StatDataUploadFrequency(120),
+    StatDataUploadNum(121),
+    StatDataProcessFrequency(122),
+    StatDataSwitch(123),
+    StatDataUploadWay(124),
+    StatDataDeleteFrequency(125),
+    CollectionDataPluginVersion(1001),
+    CollectionPluginDownloadUrl(1002),
+    CollectionPluginMd5(1003),
+    CollectionPluginForceStop(1004);
+    
+    private final int bj;
 
-public class gn {
-    private static volatile int a = -1;
-
-    /* renamed from: a  reason: collision with other field name */
-    private static long f507a = System.currentTimeMillis();
-
-    /* renamed from: a  reason: collision with other field name */
-    private static al f508a = new al(true);
-
-    /* renamed from: a  reason: collision with other field name */
-    private static com.xiaomi.push.providers.a f509a = null;
-
-    /* renamed from: a  reason: collision with other field name */
-    private static final Object f510a = new Object();
-
-    /* renamed from: a  reason: collision with other field name */
-    private static String f511a = "";
-
-    /* renamed from: a  reason: collision with other field name */
-    private static List<a> f512a = Collections.synchronizedList(new ArrayList());
-
-    static class a {
-        public int a = -1;
-
-        /* renamed from: a  reason: collision with other field name */
-        public long f513a = 0;
-
-        /* renamed from: a  reason: collision with other field name */
-        public String f514a = "";
-        public int b = -1;
-
-        /* renamed from: b  reason: collision with other field name */
-        public long f515b = 0;
-
-        /* renamed from: b  reason: collision with other field name */
-        public String f516b = "";
-
-        public a(String str, long j, int i, int i2, String str2, long j2) {
-            this.f514a = str;
-            this.f513a = j;
-            this.a = i;
-            this.b = i2;
-            this.f516b = str2;
-            this.f515b = j2;
-        }
-
-        public boolean a(a aVar) {
-            return TextUtils.equals(aVar.f514a, this.f514a) && TextUtils.equals(aVar.f516b, this.f516b) && aVar.a == this.a && aVar.b == this.b && Math.abs(aVar.f513a - this.f513a) <= 5000;
-        }
+    private gn(int i) {
+        this.bj = i;
     }
 
-    public static int a(Context context) {
-        if (a == -1) {
-            a = b(context);
-        }
-        return a;
-    }
-
-    public static int a(String str) {
-        try {
-            return str.getBytes("UTF-8").length;
-        } catch (UnsupportedEncodingException unused) {
-            return str.getBytes().length;
-        }
-    }
-
-    private static long a(int i, long j, boolean z, long j2, boolean z2) {
-        if (z && z2) {
-            long j3 = f507a;
-            f507a = j2;
-            if (j2 - j3 > 30000 && j > 1024) {
-                return j * 2;
-            }
-        }
-        return (j * ((long) (i == 0 ? 13 : 11))) / 10;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    private static com.xiaomi.push.providers.a m371a(Context context) {
-        com.xiaomi.push.providers.a aVar = f509a;
-        if (aVar != null) {
-            return aVar;
-        }
-        com.xiaomi.push.providers.a aVar2 = new com.xiaomi.push.providers.a(context);
-        f509a = aVar2;
-        return aVar2;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    private static synchronized String m372a(Context context) {
-        synchronized (gn.class) {
-            if (TextUtils.isEmpty(f511a)) {
-                return "";
-            }
-            return f511a;
-        }
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public static void m373a(Context context) {
-        a = b(context);
-    }
-
-    private static void a(Context context, String str, long j, boolean z, long j2) {
-        int a2;
-        boolean isEmpty;
-        if (context != null && !TextUtils.isEmpty(str) && "com.xiaomi.xmsf".equals(context.getPackageName()) && !"com.xiaomi.xmsf".equals(str) && -1 != (a2 = a(context))) {
-            synchronized (f510a) {
-                isEmpty = f512a.isEmpty();
-                a(new a(str, j2, a2, z ? 1 : 0, a2 == 0 ? m372a(context) : "", j));
-            }
-            if (isEmpty) {
-                f508a.a(new go(context), 5000);
-            }
-        }
-    }
-
-    public static void a(Context context, String str, long j, boolean z, boolean z2, long j2) {
-        a(context, str, a(a(context), j, z, j2, z2), z, j2);
-    }
-
-    private static void a(a aVar) {
-        for (a aVar2 : f512a) {
-            if (aVar2.a(aVar)) {
-                aVar2.f515b += aVar.f515b;
-                return;
-            }
-        }
-        f512a.add(aVar);
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public static synchronized void m374a(String str) {
-        synchronized (gn.class) {
-            if (!l.d() && !TextUtils.isEmpty(str)) {
-                f511a = str;
-            }
-        }
-    }
-
-    private static int b(Context context) {
-        NetworkInfo activeNetworkInfo;
-        try {
-            ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService("connectivity");
-            if (connectivityManager == null || (activeNetworkInfo = connectivityManager.getActiveNetworkInfo()) == null) {
-                return -1;
-            }
-            return activeNetworkInfo.getType();
-        } catch (Exception unused) {
-            return -1;
-        }
-    }
-
-    /* access modifiers changed from: private */
-    public static void b(Context context, List<a> list) {
-        try {
-            synchronized (com.xiaomi.push.providers.a.f893a) {
-                SQLiteDatabase writableDatabase = m371a(context).getWritableDatabase();
-                writableDatabase.beginTransaction();
-                try {
-                    for (a aVar : list) {
-                        ContentValues contentValues = new ContentValues();
-                        contentValues.put("package_name", aVar.f514a);
-                        contentValues.put("message_ts", Long.valueOf(aVar.f513a));
-                        contentValues.put("network_type", Integer.valueOf(aVar.a));
-                        contentValues.put("bytes", Long.valueOf(aVar.f515b));
-                        contentValues.put("rcv", Integer.valueOf(aVar.b));
-                        contentValues.put("imsi", aVar.f516b);
-                        writableDatabase.insert("traffic", null, contentValues);
-                    }
-                    writableDatabase.setTransactionSuccessful();
-                } finally {
-                    writableDatabase.endTransaction();
-                }
-            }
-        } catch (SQLiteException e) {
-            b.a(e);
-        }
+    public int a() {
+        return this.bj;
     }
 }

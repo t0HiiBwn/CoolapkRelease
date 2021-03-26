@@ -35,7 +35,7 @@ final class ProductCouponListFragment$onActivityCreated$2 extends Lambda impleme
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
                 super.onItemClick(viewHolder, view);
-                if (view.getId() == 2131362755) {
+                if (view.getId() == 2131362766) {
                     ProductCouponViewHolder productCouponViewHolder = (ProductCouponViewHolder) viewHolder;
                     boolean z = !this.this$0.this$0.shouldShowDevice.get(productCouponViewHolder.getAdapterPosition());
                     productCouponViewHolder.showDevices(z, true);

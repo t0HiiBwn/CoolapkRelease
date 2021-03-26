@@ -45,7 +45,7 @@ abstract class C$$AutoValue_Message extends Message {
     private final String url;
     private final UserInfo userInfo;
 
-    C$$AutoValue_Message(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, UserInfo userInfo2, String str12, String str13, String str14, String str15, String str16, String str17, String str18, int i, int i2, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, NotifyCount notifyCount2, int i3, int i4, Integer num2, String str27, UserInfo userInfo3) {
+    C$$AutoValue_Message(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, UserInfo userInfo2, String str12, String str13, String str14, String str15, String str16, String str17, String str18, int i, int i2, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, NotifyCount notifyCount2, int i3, int i4, Integer num2, String str27, UserInfo userInfo3) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -57,8 +57,8 @@ abstract class C$$AutoValue_Message extends Message {
         this.logo = str8;
         this.subTitle = str9;
         this.extraData = str10;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str11;
         this.userInfo = userInfo2;
         this.deprecatedUserName = str12;
@@ -355,10 +355,10 @@ abstract class C$$AutoValue_Message extends Message {
                                             if (str15 != null ? str15.equals(message2.getSubTitle()) : message2.getSubTitle() == null) {
                                                 String str16 = this.extraData;
                                                 if (str16 != null ? str16.equals(message2.getExtraData()) : message2.getExtraData() == null) {
-                                                    Long l2 = this.dateline;
-                                                    if (l2 != null ? l2.equals(message2.getDateline()) : message2.getDateline() == null) {
-                                                        Long l3 = this.lastUpdate;
-                                                        if (l3 != null ? l3.equals(message2.getLastUpdate()) : message2.getLastUpdate() == null) {
+                                                    Long l = this.dateline;
+                                                    if (l != null ? l.equals(message2.getDateline()) : message2.getDateline() == null) {
+                                                        Long l2 = this.lastUpdate;
+                                                        if (l2 != null ? l2.equals(message2.getLastUpdate()) : message2.getLastUpdate() == null) {
                                                             String str17 = this.deprecatedUserAvatar;
                                                             if (str17 != null ? str17.equals(message2.getDeprecatedUserAvatar()) : message2.getDeprecatedUserAvatar() == null) {
                                                                 UserInfo userInfo2 = this.userInfo;
@@ -422,10 +422,10 @@ abstract class C$$AutoValue_Message extends Message {
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.extraData;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode13 = (hashCode12 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode12 = (hashCode11 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str11 = this.deprecatedUserAvatar;
         int hashCode14 = (hashCode13 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
         UserInfo userInfo2 = this.userInfo;
@@ -610,14 +610,14 @@ abstract class C$$AutoValue_Message extends Message {
         }
 
         @Override // com.coolapk.market.model.Message.Builder
-        public Message.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public Message.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.Message.Builder
-        public Message.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public Message.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

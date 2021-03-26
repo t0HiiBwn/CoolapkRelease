@@ -31,7 +31,7 @@ public final class UserPickFragment$onCreateViewHolder$1 extends ItemActionHandl
         Intrinsics.checkNotNullParameter(viewHolder, "holder");
         Intrinsics.checkNotNullParameter(view, "view");
         super.onItemClick(viewHolder, view);
-        if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition()) && view.getId() == 2131362200) {
+        if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition()) && view.getId() == 2131362205) {
             FragmentActivity activity = this.this$0.getActivity();
             if (activity instanceof OnUserPickListener) {
                 Object obj = this.this$0.getDataList().get(viewHolder.getAdapterPosition());

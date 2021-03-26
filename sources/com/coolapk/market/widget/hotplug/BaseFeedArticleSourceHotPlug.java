@@ -31,7 +31,7 @@ public class BaseFeedArticleSourceHotPlug extends ViewPartHotPlug<FeedArticleSou
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public BaseFeedArticleSourceHotPlug(View view, DataBindingComponent dataBindingComponent, ViewPartPool viewPartPool, boolean z) {
-        super(2131558709, viewPartPool, z);
+        super(2131558716, viewPartPool, z);
         Intrinsics.checkNotNullParameter(view, "viewToReplace");
         Intrinsics.checkNotNullParameter(dataBindingComponent, "component");
         Intrinsics.checkNotNullParameter(viewPartPool, "viewPartPool");

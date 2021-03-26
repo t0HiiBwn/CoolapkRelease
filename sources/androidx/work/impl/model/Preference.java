@@ -25,12 +25,12 @@ public class Preference {
         if (!this.mKey.equals(preference.mKey)) {
             return false;
         }
-        Long l2 = this.mValue;
-        Long l3 = preference.mValue;
-        if (l2 != null) {
-            return l2.equals(l3);
+        Long l = this.mValue;
+        Long l2 = preference.mValue;
+        if (l != null) {
+            return l.equals(l2);
         }
-        if (l3 == null) {
+        if (l2 == null) {
             return true;
         }
         return false;
@@ -38,7 +38,7 @@ public class Preference {
 
     public int hashCode() {
         int hashCode = this.mKey.hashCode() * 31;
-        Long l2 = this.mValue;
-        return hashCode + (l2 != null ? l2.hashCode() : 0);
+        Long l = this.mValue;
+        return hashCode + (l != null ? l.hashCode() : 0);
     }
 }

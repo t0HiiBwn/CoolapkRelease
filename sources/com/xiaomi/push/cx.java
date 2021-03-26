@@ -1,58 +1,68 @@
 package com.xiaomi.push;
 
-/* synthetic */ class cx {
-    static final /* synthetic */ int[] a;
+import android.content.Context;
+import android.text.TextUtils;
 
-    static {
-        int[] iArr = new int[hc.values().length];
-        a = iArr;
-        try {
-            iArr[hc.Registration.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
+public class cx extends cw {
+    private boolean a;
+    private boolean b;
+    private boolean e;
+    private boolean f;
+
+    public cx(Context context, int i, boolean z, boolean z2, boolean z3, boolean z4) {
+        super(context, i);
+        this.a = z;
+        this.b = z2;
+        if (it.g()) {
+            this.b = false;
+        }
+        this.e = z3;
+        this.f = z4;
+    }
+
+    private String a(Context context) {
+        return !this.f ? "off" : "";
+    }
+
+    private String f() {
+        if (!this.a) {
+            return "off";
         }
         try {
-            a[hc.UnRegistration.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
+            String g = g();
+            if (TextUtils.isEmpty(g)) {
+                return "";
+            }
+            return ah.a(g) + "," + ah.b(g);
+        } catch (Throwable unused) {
+            return "";
         }
-        try {
-            a[hc.Subscription.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            a[hc.UnSubscription.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            a[hc.SendMessage.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            a[hc.AckMessage.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            a[hc.SetConfig.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            a[hc.ReportFeedback.ordinal()] = 8;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            a[hc.MultiConnectionBroadcast.ordinal()] = 9;
-        } catch (NoSuchFieldError unused9) {
-        }
-        try {
-            a[hc.MultiConnectionResult.ordinal()] = 10;
-        } catch (NoSuchFieldError unused10) {
-        }
-        try {
-            a[hc.Notification.ordinal()] = 11;
-        } catch (NoSuchFieldError unused11) {
-        }
-        try {
-            a[hc.Command.ordinal()] = 12;
-        } catch (NoSuchFieldError unused12) {
-        }
+    }
+
+    private String g() {
+        return "";
+    }
+
+    private String h() {
+        return !this.b ? "off" : "";
+    }
+
+    private String i() {
+        return !this.e ? "off" : "";
+    }
+
+    @Override // com.xiaomi.push.j.a
+    public int a() {
+        return 13;
+    }
+
+    @Override // com.xiaomi.push.cw
+    public String b() {
+        return f() + "|" + h() + "|" + i() + "|" + a(this.d);
+    }
+
+    @Override // com.xiaomi.push.cw
+    public gk c() {
+        return gk.DeviceBaseInfo;
     }
 }

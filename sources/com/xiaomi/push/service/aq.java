@@ -1,23 +1,17 @@
 package com.xiaomi.push.service;
 
-import android.text.TextUtils;
-import com.xiaomi.push.bi;
+import com.xiaomi.push.fa;
+import com.xiaomi.push.fe;
 
-public class aq {
-    private static long a = 0;
+class aq implements fa {
+    final /* synthetic */ XMPushService a;
 
-    /* renamed from: a  reason: collision with other field name */
-    private static String f957a = "";
+    aq(XMPushService xMPushService) {
+        this.a = xMPushService;
+    }
 
-    public static String a() {
-        if (TextUtils.isEmpty(f957a)) {
-            f957a = bi.a(4);
-        }
-        StringBuilder sb = new StringBuilder();
-        sb.append(f957a);
-        long j = a;
-        a = 1 + j;
-        sb.append(j);
-        return sb.toString();
+    @Override // com.xiaomi.push.fa
+    public boolean a(fe feVar) {
+        return true;
     }
 }

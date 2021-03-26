@@ -28,7 +28,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: TopicViewHolder.kt */
 public class TopicViewHolder extends GenericBindHolder<ItemTopicViewBinding, Topic> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558962;
+    public static final int LAYOUT_ID = 2131558969;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public TopicViewHolder(View view, DataBindingComponent dataBindingComponent) {
@@ -38,8 +38,8 @@ public class TopicViewHolder extends GenericBindHolder<ItemTopicViewBinding, Top
         ItemTopicViewBinding itemTopicViewBinding = (ItemTopicViewBinding) getBinding();
         Intrinsics.checkNotNullExpressionValue(itemTopicViewBinding, "binding");
         itemTopicViewBinding.setClick(this);
-        Drawable mutate = ResourceUtils.getDrawable(getContext(), 2131231300).mutate();
-        mutate.setTint(ResourceUtils.getColorInt(getContext(), 2131100011));
+        Drawable mutate = ResourceUtils.getDrawable(getContext(), 2131231311).mutate();
+        mutate.setTint(ResourceUtils.getColorInt(getContext(), 2131100016));
         mutate.setBounds(0, 0, NumberExtendsKt.getDp((Number) 12), NumberExtendsKt.getDp((Number) 12));
         Intrinsics.checkNotNullExpressionValue(mutate, "ResourceUtils.getDrawabl… 12.dp)\n                }");
         LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{mutate});
@@ -75,7 +75,7 @@ public class TopicViewHolder extends GenericBindHolder<ItemTopicViewBinding, Top
         ((ItemTopicViewBinding) getBinding()).executePendingBindings();
         String logo = topic.getLogo();
         if (logo == null || logo.length() == 0) {
-            GlideApp.with(getContext()).load((Integer) 2131231617).into(((ItemTopicViewBinding) getBinding()).logoView);
+            GlideApp.with(getContext()).load((Integer) 2131231628).into(((ItemTopicViewBinding) getBinding()).logoView);
         }
         ((ItemTopicViewBinding) getBinding()).rootView.setOnLongClickListener(new TopicViewHolder$bindToContent$1(this, topic));
         StatisticHelper instance = StatisticHelper.Companion.getInstance();
@@ -95,7 +95,7 @@ public class TopicViewHolder extends GenericBindHolder<ItemTopicViewBinding, Top
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
             super.onClick(view);
-            if (view.getId() == 2131363260) {
+            if (view.getId() == 2131363274) {
                 StatisticHelper instance = StatisticHelper.Companion.getInstance();
                 String title = model.getTitle();
                 if (title == null) {

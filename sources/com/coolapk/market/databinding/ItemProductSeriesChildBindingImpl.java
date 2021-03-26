@@ -23,9 +23,9 @@ public class ItemProductSeriesChildBindingImpl extends ItemProductSeriesChildBin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 1);
-        sparseIntArray.put(2131363460, 2);
-        sparseIntArray.put(2131362087, 3);
+        sparseIntArray.put(2131363604, 1);
+        sparseIntArray.put(2131363478, 2);
+        sparseIntArray.put(2131362090, 3);
     }
 
     public ItemProductSeriesChildBindingImpl(DataBindingComponent dataBindingComponent, View view) {

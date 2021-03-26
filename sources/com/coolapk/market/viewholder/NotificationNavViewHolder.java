@@ -21,7 +21,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: NotificationNavViewHolder.kt */
 public final class NotificationNavViewHolder extends GenericBindHolder<ItemNotificationNaviBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558846;
+    public static final int LAYOUT_ID = 2131558853;
 
     public NotificationNavViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
         super(view, dataBindingComponent, itemActionHandler);
@@ -92,21 +92,21 @@ public final class NotificationNavViewHolder extends GenericBindHolder<ItemNotif
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
         int id = view.getId();
-        if (id != 2131362769) {
+        if (id != 2131362780) {
             switch (id) {
-                case 2131362773:
+                case 2131362784:
                     ActionManager.startNotificationActivity(getContext(), 2);
                     return;
-                case 2131362774:
+                case 2131362785:
                     ActionManager.startNotificationActivity(getContext(), 3);
                     return;
-                case 2131362775:
+                case 2131362786:
                     ActionManager.startNotificationActivity(getContext(), 5);
                     return;
-                case 2131362776:
+                case 2131362787:
                     ActionManager.startNotificationActivity(getContext(), 6);
                     return;
-                case 2131362777:
+                case 2131362788:
                     ActionManager.startNotificationActivity(getContext(), 4);
                     return;
                 default:

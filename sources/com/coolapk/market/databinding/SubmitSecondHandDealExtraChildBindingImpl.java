@@ -23,11 +23,11 @@ public class SubmitSecondHandDealExtraChildBindingImpl extends SubmitSecondHandD
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 4);
-        sparseIntArray.put(2131363582, 5);
-        sparseIntArray.put(2131363475, 6);
-        sparseIntArray.put(2131362376, 7);
-        sparseIntArray.put(2131362087, 8);
+        sparseIntArray.put(2131362718, 4);
+        sparseIntArray.put(2131363604, 5);
+        sparseIntArray.put(2131363493, 6);
+        sparseIntArray.put(2131362382, 7);
+        sparseIntArray.put(2131362090, 8);
     }
 
     public SubmitSecondHandDealExtraChildBindingImpl(DataBindingComponent dataBindingComponent, View view) {

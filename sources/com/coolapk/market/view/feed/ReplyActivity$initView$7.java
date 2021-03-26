@@ -21,9 +21,9 @@ public final class ReplyActivity$initView$7 extends EmptySubscriber<Boolean> {
     public void onNext(boolean z) {
         super.onNext((ReplyActivity$initView$7) Boolean.valueOf(z));
         if (z) {
-            ReplyActivity.access$getBinding$p(this.this$0).menuEmotion.setImageResource(2131231386);
+            ReplyActivity.access$getBinding$p(this.this$0).menuEmotion.setImageResource(2131231397);
         } else {
-            ReplyActivity.access$getBinding$p(this.this$0).menuEmotion.setImageResource(2131231277);
+            ReplyActivity.access$getBinding$p(this.this$0).menuEmotion.setImageResource(2131231288);
         }
     }
 }

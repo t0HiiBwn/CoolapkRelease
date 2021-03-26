@@ -80,7 +80,7 @@ public final class UserBlockListFragment extends DataListFragment {
                 setEmptyData("由于你的黑名单设置，该用户动态对你不可见", 0);
             }
         }
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558898).constructor(new UserBlockListFragment$onActivityCreated$1(this)).suitedMethod(UserBlockListFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558905).constructor(new UserBlockListFragment$onActivityCreated$1(this)).suitedMethod(UserBlockListFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
     }
 
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListFragment

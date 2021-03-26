@@ -44,7 +44,7 @@ public abstract class ItemRelatedDataBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRelatedDataBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemRelatedDataBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558895, viewGroup, z, obj);
+        return (ItemRelatedDataBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558902, viewGroup, z, obj);
     }
 
     public static ItemRelatedDataBinding inflate(LayoutInflater layoutInflater) {
@@ -53,7 +53,7 @@ public abstract class ItemRelatedDataBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRelatedDataBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemRelatedDataBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558895, null, false, obj);
+        return (ItemRelatedDataBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558902, null, false, obj);
     }
 
     public static ItemRelatedDataBinding bind(View view) {
@@ -62,6 +62,6 @@ public abstract class ItemRelatedDataBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRelatedDataBinding bind(View view, Object obj) {
-        return (ItemRelatedDataBinding) bind(obj, view, 2131558895);
+        return (ItemRelatedDataBinding) bind(obj, view, 2131558902);
     }
 }

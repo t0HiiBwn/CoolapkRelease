@@ -30,13 +30,13 @@ public class ItemVideoViewPartBindingImpl extends ItemVideoViewPartBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363913, 4);
-        sparseIntArray.put(2131363129, 5);
-        sparseIntArray.put(2131363234, 6);
-        sparseIntArray.put(2131362873, 7);
-        sparseIntArray.put(2131362872, 8);
-        sparseIntArray.put(2131363080, 9);
-        sparseIntArray.put(2131362417, 10);
+        sparseIntArray.put(2131363938, 4);
+        sparseIntArray.put(2131363143, 5);
+        sparseIntArray.put(2131363248, 6);
+        sparseIntArray.put(2131362884, 7);
+        sparseIntArray.put(2131362883, 8);
+        sparseIntArray.put(2131363094, 9);
+        sparseIntArray.put(2131362423, 10);
     }
 
     public ItemVideoViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

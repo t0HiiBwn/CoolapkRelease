@@ -14,7 +14,7 @@ public abstract class DeviceParams implements Entity {
 
         public abstract Builder checkBox(int i);
 
-        public abstract Builder dateline(Long l2);
+        public abstract Builder dateline(Long l);
 
         public abstract Builder description(String str);
 
@@ -32,7 +32,7 @@ public abstract class DeviceParams implements Entity {
 
         public abstract Builder key(String str);
 
-        public abstract Builder lastUpdate(Long l2);
+        public abstract Builder lastUpdate(Long l);
 
         public abstract Builder logo(String str);
 

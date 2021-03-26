@@ -25,11 +25,11 @@ public class BaseChattingBindingImpl extends BaseChattingBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362067, 6);
-        sparseIntArray.put(2131362316, 7);
-        sparseIntArray.put(2131363592, 8);
-        sparseIntArray.put(2131361922, 9);
-        sparseIntArray.put(2131362450, 10);
+        sparseIntArray.put(2131362069, 6);
+        sparseIntArray.put(2131362322, 7);
+        sparseIntArray.put(2131363614, 8);
+        sparseIntArray.put(2131361923, 9);
+        sparseIntArray.put(2131362457, 10);
     }
 
     public BaseChattingBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -71,7 +71,7 @@ public class BaseChattingBindingImpl extends BaseChattingBinding {
     public boolean setVariable(int i, Object obj) {
         if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((BaseChatActivity.ViewMode) obj);
@@ -96,7 +96,7 @@ public class BaseChattingBindingImpl extends BaseChattingBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -114,7 +114,7 @@ public class BaseChattingBindingImpl extends BaseChattingBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i != 225) {
+        } else if (i != 226) {
             return false;
         } else {
             synchronized (this) {

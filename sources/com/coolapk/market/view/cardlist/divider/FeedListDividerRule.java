@@ -66,6 +66,9 @@ public final class FeedListDividerRule implements DividerRule {
         if (Intrinsics.areEqual(uniqueType2, "ENTITY_TYPE_SHARE_ACTION")) {
             return DividerData.Companion.getEMPTY();
         }
+        if (Intrinsics.areEqual(uniqueType2, "ENTITY_TYPE_BIND_GOODS")) {
+            return DividerData.Companion.getEMPTY();
+        }
         if (Intrinsics.areEqual(uniqueType2, "REPLY_HOT_ACTION")) {
             return DividerData.Companion.getEMPTY();
         }

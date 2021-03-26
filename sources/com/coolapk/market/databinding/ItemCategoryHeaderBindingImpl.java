@@ -27,8 +27,8 @@ public class ItemCategoryHeaderBindingImpl extends ItemCategoryHeaderBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 1);
-        sparseIntArray.put(2131362707, 2);
+        sparseIntArray.put(2131363551, 1);
+        sparseIntArray.put(2131362718, 2);
     }
 
     public ItemCategoryHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {

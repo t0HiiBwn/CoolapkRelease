@@ -22,7 +22,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: VoteMultiViewPart.kt */
 public abstract class VoteMultiViewPart extends BindingViewPart<ItemFeedVoteMultiBinding, VoteOption> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558741;
+    public static final int LAYOUT_ID = 2131558748;
     private final DataBindingComponent component;
     private Feed feed;
 
@@ -50,7 +50,7 @@ public abstract class VoteMultiViewPart extends BindingViewPart<ItemFeedVoteMult
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedVoteMultiBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558741, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558748, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemFeedVoteMultiBinding) inflate;
     }
@@ -86,7 +86,7 @@ public abstract class VoteMultiViewPart extends BindingViewPart<ItemFeedVoteMult
     @Override // com.coolapk.market.viewholder.iview.ViewPart, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
-        if (this.feed != null && view.getId() != 2131363585) {
+        if (this.feed != null && view.getId() != 2131363607) {
             super.onClick(view);
         }
     }

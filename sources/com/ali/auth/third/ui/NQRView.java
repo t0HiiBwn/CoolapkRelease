@@ -51,9 +51,7 @@ public class NQRView extends FrameLayout {
     private LoginCallback i;
     private RelativeLayout j;
     private LinearLayout k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1186l;
+    private boolean l;
     private NQrCodeLoginCallback m;
     Handler mHandler;
 
@@ -64,7 +62,7 @@ public class NQRView extends FrameLayout {
     public NQRView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         this.mHandler = new Handler();
-        this.f1186l = true;
+        this.l = true;
         this.m = new NQrCodeLoginCallback() {
             /* class com.ali.auth.third.ui.NQRView.AnonymousClass1 */
 
@@ -116,7 +114,7 @@ public class NQRView extends FrameLayout {
     /* access modifiers changed from: private */
     public void a() {
         if (this.mHandler != null) {
-            this.f1186l = true;
+            this.l = true;
         }
     }
 
@@ -178,13 +176,13 @@ public class NQRView extends FrameLayout {
 
                     @Override // java.lang.Runnable
                     public void run() {
-                        if (!NQRView.this.f1186l) {
+                        if (!NQRView.this.l) {
                             NQRView.this.a(str, jSONObject, nQrCodeLoginCallback);
                             NQRView.this.mHandler.postDelayed(this, 2000);
                         }
                     }
                 }, 3000);
-                NQRView.this.f1186l = false;
+                NQRView.this.l = false;
             }
         }).execute(new Object[]{Integer.valueOf(i2), Integer.valueOf(i3), null});
     }

@@ -37,7 +37,7 @@ public abstract class DialogEditBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogEditBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558523, viewGroup, z, obj);
+        return (DialogEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558525, viewGroup, z, obj);
     }
 
     public static DialogEditBinding inflate(LayoutInflater layoutInflater) {
@@ -46,7 +46,7 @@ public abstract class DialogEditBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogEditBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558523, null, false, obj);
+        return (DialogEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558525, null, false, obj);
     }
 
     public static DialogEditBinding bind(View view) {
@@ -55,6 +55,6 @@ public abstract class DialogEditBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogEditBinding bind(View view, Object obj) {
-        return (DialogEditBinding) bind(obj, view, 2131558523);
+        return (DialogEditBinding) bind(obj, view, 2131558525);
     }
 }

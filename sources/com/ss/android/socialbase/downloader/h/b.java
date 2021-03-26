@@ -24,12 +24,10 @@ public class b implements Runnable {
     private com.ss.android.socialbase.downloader.downloader.i i;
     private volatile boolean j;
     private volatile boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1415l;
+    private boolean l;
 
     public b(com.ss.android.socialbase.downloader.model.b bVar, DownloadTask downloadTask, f fVar) {
-        this.f1415l = false;
+        this.l = false;
         this.c = bVar;
         this.e = downloadTask;
         if (downloadTask != null) {
@@ -288,10 +286,10 @@ public class b implements Runnable {
                 }
                 String c2 = c();
                 boolean z3 = this.h != null;
-                this.f1415l = z3;
+                this.l = z3;
                 bVar.b(z3);
                 try {
-                    if (!this.f1415l) {
+                    if (!this.l) {
                         List<c> a2 = e.a(this.f.getExtraHeaders(), this.f.geteTag(), n, p);
                         a2.add(new c("Chunk-Index", String.valueOf(bVar.s())));
                         e.a(a2, this.f);
@@ -322,7 +320,7 @@ public class b implements Runnable {
                 }
                 i iVar2 = this.h;
                 if (iVar2 != null) {
-                    if (!this.f1415l) {
+                    if (!this.l) {
                         try {
                             int b3 = iVar2.b();
                             if (!e.d(b3)) {

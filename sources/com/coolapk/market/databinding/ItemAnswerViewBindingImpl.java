@@ -34,12 +34,12 @@ public class ItemAnswerViewBindingImpl extends ItemAnswerViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 6);
-        sparseIntArray.put(2131363568, 7);
-        sparseIntArray.put(2131363582, 8);
-        sparseIntArray.put(2131363533, 9);
-        sparseIntArray.put(2131363016, 10);
-        sparseIntArray.put(2131363229, 11);
+        sparseIntArray.put(2131362657, 6);
+        sparseIntArray.put(2131363590, 7);
+        sparseIntArray.put(2131363604, 8);
+        sparseIntArray.put(2131363551, 9);
+        sparseIntArray.put(2131363030, 10);
+        sparseIntArray.put(2131363243, 11);
     }
 
     public ItemAnswerViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -83,9 +83,9 @@ public class ItemAnswerViewBindingImpl extends ItemAnswerViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -101,7 +101,7 @@ public class ItemAnswerViewBindingImpl extends ItemAnswerViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

@@ -19,23 +19,21 @@ public class a {
     private String c = "http://oth.str.mdt.qq.com:8080/analytics/upload";
     private int d = 360;
     private int e = 100;
-    private SparseArray<C0123a> f = null;
+    private SparseArray<C0141a> f = null;
     private Map<String, String> g = null;
     private byte h = 3;
     private byte i = 2;
     private String j = "";
     private String k = "";
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1427l = "";
+    private String l = "";
     private boolean m = true;
 
     private a() {
-        SparseArray<C0123a> sparseArray = new SparseArray<>(3);
+        SparseArray<C0141a> sparseArray = new SparseArray<>(3);
         this.f = sparseArray;
-        sparseArray.put(1, new C0123a(1));
-        this.f.put(2, new C0123a(2));
-        this.f.put(3, new C0123a(3));
+        sparseArray.put(1, new C0141a(1));
+        this.f.put(2, new C0141a(2));
+        this.f.put(3, new C0141a(3));
     }
 
     public static a a() {
@@ -79,7 +77,7 @@ public class a {
         this.g = map;
     }
 
-    public final synchronized SparseArray<C0123a> e() {
+    public final synchronized SparseArray<C0141a> e() {
         if (this.f == null) {
             return null;
         }
@@ -87,8 +85,8 @@ public class a {
         return f.a(this.f);
     }
 
-    public final synchronized C0123a b(int i2) {
-        SparseArray<C0123a> sparseArray = this.f;
+    public final synchronized C0141a b(int i2) {
+        SparseArray<C0141a> sparseArray = this.f;
         if (sparseArray == null) {
             return null;
         }
@@ -155,7 +153,7 @@ public class a {
         String a2 = b.a(str);
         this.c = a2;
         com.tencent.beacon.core.d.b.b("[strategy] set strategy url to %s by api.", a2);
-        C0123a aVar = this.f.get(1);
+        C0141a aVar = this.f.get(1);
         if (aVar != null) {
             aVar.c = b.a(str2);
             com.tencent.beacon.core.d.b.b("[strategy] set user event url to %s by api.", aVar.c);
@@ -172,16 +170,16 @@ public class a {
     }
 
     private synchronized void c(String str) {
-        this.f1427l = str;
+        this.l = str;
     }
 
     public final synchronized String p() {
-        return this.f1427l;
+        return this.l;
     }
 
     public final synchronized void a(final Context context, final String str, final String str2) {
         com.tencent.beacon.core.d.b.b("[net] -> update local sid|time[%s|%s].", str, str2);
-        this.f1427l = str;
+        this.l = str;
         com.tencent.beacon.core.a.b.a().a(new Runnable() {
             /* class com.tencent.beacon.core.strategy.a.AnonymousClass1 */
 
@@ -227,7 +225,7 @@ public class a {
 
     /* renamed from: com.tencent.beacon.core.strategy.a$a  reason: collision with other inner class name */
     /* compiled from: StrategyBean */
-    public static class C0123a {
+    public static class C0141a {
         private final int a;
         private boolean b = false;
         private String c = "http://oth.eve.mdt.qq.com:8080/analytics/upload";
@@ -235,7 +233,7 @@ public class a {
         private Set<String> e = null;
         private Set<String> f = null;
 
-        public C0123a(int i) {
+        public C0141a(int i) {
             this.a = i;
         }
 
@@ -300,7 +298,7 @@ public class a {
 
     public final String b(String str) {
         Map<String, String> c2;
-        C0123a aVar = this.f.get(1);
+        C0141a aVar = this.f.get(1);
         if (aVar == null || (c2 = aVar.c()) == null) {
             return null;
         }
@@ -310,7 +308,7 @@ public class a {
     public final int k() {
         Map<String, String> c2;
         String str;
-        C0123a aVar = this.f.get(1);
+        C0141a aVar = this.f.get(1);
         if (aVar == null || (c2 = aVar.c()) == null || (str = c2.get("socketPort")) == null) {
             return 8081;
         }

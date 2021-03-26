@@ -114,7 +114,7 @@ public final class AlbumReplyListFragmentV8 extends FeedReplyListFragmentV8 {
     public boolean onRequestResponse(boolean z, List<? extends Entity> list) {
         boolean onRequestResponse = super.onRequestResponse(z, list);
         if (!onRequestResponse && EntityListFragment.findFirstEntityIndex$default(this, "feed_reply", null, false, false, 14, null) < 0) {
-            String string = getString(2131886865);
+            String string = getString(2131886927);
             Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_left_a_comment)");
             addHintView(string, new AlbumReplyListFragmentV8$onRequestResponse$1(this));
         }

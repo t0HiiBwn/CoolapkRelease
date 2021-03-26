@@ -72,10 +72,10 @@ public final class e implements Thread.UncaughtExceptionHandler {
       (0 ??[int, short, byte, char])
       (wrap: java.lang.Integer : 0x007b: INVOKE  (r10v3 java.lang.Integer) = (r10v2 int) type: STATIC call: java.lang.Integer.valueOf(int):java.lang.Integer)
      */
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x00d7: APUT  
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x00d8: APUT  
       (r9v12 java.lang.Object[])
       (1 ??[boolean, int, float, short, byte, char])
-      (wrap: java.lang.Boolean : 0x00d3: INVOKE  (r13v5 java.lang.Boolean) = (r13v4 boolean) type: STATIC call: java.lang.Boolean.valueOf(boolean):java.lang.Boolean)
+      (wrap: java.lang.Boolean : 0x00d4: INVOKE  (r13v5 java.lang.Boolean) = (r13v4 boolean) type: STATIC call: java.lang.Boolean.valueOf(boolean):java.lang.Boolean)
      */
     private CrashDetailBean b(Thread thread, Throwable th, boolean z, String str, byte[] bArr) {
         String str2;
@@ -84,9 +84,9 @@ public final class e implements Thread.UncaughtExceptionHandler {
             x.d("We can do nothing with a null throwable.", new Object[0]);
             return null;
         }
-        boolean l2 = c.a().l();
-        String str4 = (!l2 || !z) ? "" : " This Crash Caused By ANR , PLS To Fix ANR , This Trace May Be Not Useful![Bugly]";
-        if (l2 && z) {
+        boolean l = c.a().l();
+        String str4 = (!l || !z) ? "" : " This Crash Caused By ANR , PLS To Fix ANR , This Trace May Be Not Useful![Bugly]";
+        if (l && z) {
             x.e("This Crash Caused By ANR , PLS To Fix ANR , This Trace May Be Not Useful!", new Object[0]);
         }
         CrashDetailBean crashDetailBean = new CrashDetailBean();

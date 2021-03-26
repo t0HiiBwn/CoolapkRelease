@@ -66,7 +66,7 @@ public final class PostButtonSettingFragment extends BaseFragment {
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559089, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559096, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…etting, container, false)");
         PostButtonSettingBinding postButtonSettingBinding = (PostButtonSettingBinding) inflate;
         this.binding = postButtonSettingBinding;
@@ -81,7 +81,7 @@ public final class PostButtonSettingFragment extends BaseFragment {
     private final Drawable createPostButtonBg() {
         FragmentActivity requireActivity = requireActivity();
         Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-        return PostButtonView2Kt.createSvgIconCompat(requireActivity, 2131231494, AppHolder.getAppTheme().getColorAccent());
+        return PostButtonView2Kt.createSvgIconCompat(requireActivity, 2131231505, AppHolder.getAppTheme().getColorAccent());
     }
 
     private final void applyIconColor(ImageView imageView) {
@@ -138,28 +138,28 @@ public final class PostButtonSettingFragment extends BaseFragment {
         }
         ImageView imageView5 = postButtonSettingBinding5.plusBackgroundView;
         Intrinsics.checkNotNullExpressionValue(imageView5, "binding.plusBackgroundView");
-        setIcon(imageView5, 2131231489);
+        setIcon(imageView5, 2131231500);
         PostButtonSettingBinding postButtonSettingBinding6 = this.binding;
         if (postButtonSettingBinding6 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
         ImageView imageView6 = postButtonSettingBinding6.airplaneBackgroundView;
         Intrinsics.checkNotNullExpressionValue(imageView6, "binding.airplaneBackgroundView");
-        setIcon(imageView6, 2131231484);
+        setIcon(imageView6, 2131231495);
         PostButtonSettingBinding postButtonSettingBinding7 = this.binding;
         if (postButtonSettingBinding7 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
         ImageView imageView7 = postButtonSettingBinding7.coolapkBackgroundView;
         Intrinsics.checkNotNullExpressionValue(imageView7, "binding.coolapkBackgroundView");
-        setIcon(imageView7, 2131231410);
+        setIcon(imageView7, 2131231421);
         PostButtonSettingBinding postButtonSettingBinding8 = this.binding;
         if (postButtonSettingBinding8 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
         ImageView imageView8 = postButtonSettingBinding8.customButtonImagePlaceholder;
         Intrinsics.checkNotNullExpressionValue(imageView8, "binding.customButtonImagePlaceholder");
-        setIcon(imageView8, 2131231478);
+        setIcon(imageView8, 2131231489);
         PostButtonSettingBinding postButtonSettingBinding9 = this.binding;
         if (postButtonSettingBinding9 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -271,7 +271,7 @@ public final class PostButtonSettingFragment extends BaseFragment {
                         if (postButtonSettingBinding26 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("binding");
                         }
-                        postButtonSettingBinding26.radioGroup.check(2131363174);
+                        postButtonSettingBinding26.radioGroup.check(2131363188);
                         break;
                     }
                     break;
@@ -281,7 +281,7 @@ public final class PostButtonSettingFragment extends BaseFragment {
                         if (postButtonSettingBinding27 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("binding");
                         }
-                        postButtonSettingBinding27.radioGroup.check(2131363162);
+                        postButtonSettingBinding27.radioGroup.check(2131363176);
                         break;
                     }
                     break;
@@ -291,7 +291,7 @@ public final class PostButtonSettingFragment extends BaseFragment {
                         if (postButtonSettingBinding28 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("binding");
                         }
-                        postButtonSettingBinding28.radioGroup.check(2131363164);
+                        postButtonSettingBinding28.radioGroup.check(2131363178);
                         break;
                     }
                     break;
@@ -301,7 +301,7 @@ public final class PostButtonSettingFragment extends BaseFragment {
                         if (postButtonSettingBinding29 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("binding");
                         }
-                        postButtonSettingBinding29.radioGroup.check(2131363165);
+                        postButtonSettingBinding29.radioGroup.check(2131363179);
                         break;
                     }
                     break;
@@ -393,7 +393,7 @@ public final class PostButtonSettingFragment extends BaseFragment {
                         if (postButtonSettingBinding42 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("binding");
                         }
-                        postButtonSettingBinding42.radioGroupLongClick.check(2131363176);
+                        postButtonSettingBinding42.radioGroupLongClick.check(2131363190);
                         return;
                     }
                     return;
@@ -403,7 +403,7 @@ public final class PostButtonSettingFragment extends BaseFragment {
                         if (postButtonSettingBinding43 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("binding");
                         }
-                        postButtonSettingBinding43.radioGroupLongClick.check(2131363173);
+                        postButtonSettingBinding43.radioGroupLongClick.check(2131363187);
                         return;
                     }
                     return;
@@ -413,7 +413,7 @@ public final class PostButtonSettingFragment extends BaseFragment {
                         if (postButtonSettingBinding44 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("binding");
                         }
-                        postButtonSettingBinding44.radioGroupLongClick.check(2131363166);
+                        postButtonSettingBinding44.radioGroupLongClick.check(2131363180);
                         return;
                     }
                     return;
@@ -423,7 +423,7 @@ public final class PostButtonSettingFragment extends BaseFragment {
                         if (postButtonSettingBinding45 == null) {
                             Intrinsics.throwUninitializedPropertyAccessException("binding");
                         }
-                        postButtonSettingBinding45.radioGroupLongClick.check(2131363163);
+                        postButtonSettingBinding45.radioGroupLongClick.check(2131363177);
                         return;
                     }
                     return;
@@ -438,9 +438,9 @@ public final class PostButtonSettingFragment extends BaseFragment {
     }
 
     private final StateListDrawable createIcon() {
-        Drawable drawable = ResourceUtils.getDrawable(getActivity(), 2131231508);
+        Drawable drawable = ResourceUtils.getDrawable(getActivity(), 2131231519);
         DrawableCompat.setTint(drawable, AppHolder.getAppTheme().getColorAccent());
-        Drawable drawable2 = ResourceUtils.getDrawable(getActivity(), 2131231506);
+        Drawable drawable2 = ResourceUtils.getDrawable(getActivity(), 2131231517);
         DrawableCompat.setTint(drawable2, AppHolder.getAppTheme().getColorAccent());
         StateListDrawable stateListDrawable = new StateListDrawable();
         stateListDrawable.addState(new int[]{16842912}, drawable);
@@ -608,7 +608,7 @@ public final class PostButtonSettingFragment extends BaseFragment {
             if (i == 3925 && intent != null) {
                 ArrayList<String> stringArrayListExtra = intent.getStringArrayListExtra("PICKED_PHOTO_PATHS");
                 if (stringArrayListExtra == null || stringArrayListExtra.isEmpty()) {
-                    Toast.show$default(getActivity(), getString(2131886934), 0, false, 12, null);
+                    Toast.show$default(getActivity(), getString(2131886996), 0, false, 12, null);
                     return;
                 }
                 LogUtils.d("选择图片：" + CoolFileUtils.wrap(stringArrayListExtra.get(0)), new Object[0]);

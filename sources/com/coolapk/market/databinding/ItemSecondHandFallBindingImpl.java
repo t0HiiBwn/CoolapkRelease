@@ -34,12 +34,12 @@ public class ItemSecondHandFallBindingImpl extends ItemSecondHandFallBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362594, 8);
-        sparseIntArray.put(2131363342, 9);
-        sparseIntArray.put(2131363141, 10);
-        sparseIntArray.put(2131362473, 11);
-        sparseIntArray.put(2131363364, 12);
-        sparseIntArray.put(2131362733, 13);
+        sparseIntArray.put(2131362602, 8);
+        sparseIntArray.put(2131363358, 9);
+        sparseIntArray.put(2131363155, 10);
+        sparseIntArray.put(2131362481, 11);
+        sparseIntArray.put(2131363380, 12);
+        sparseIntArray.put(2131362744, 13);
     }
 
     public ItemSecondHandFallBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -81,7 +81,7 @@ public class ItemSecondHandFallBindingImpl extends ItemSecondHandFallBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -97,7 +97,7 @@ public class ItemSecondHandFallBindingImpl extends ItemSecondHandFallBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -172,7 +172,7 @@ public class ItemSecondHandFallBindingImpl extends ItemSecondHandFallBinding {
             OnImageLoadListener onImageLoadListener = null;
             OnBitmapTransformListener onBitmapTransformListener = null;
             View.OnClickListener onClickListener2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str, drawable, 2131231152, 0, bool, bool, bool, bool, bool, str8, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str, drawable, 2131231162, 0, bool, bool, bool, bool, bool, str8, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
             ImageViewBindingAdapters.setVipSignView(this.avatarView, str3, bool);
             ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.picView, str2, drawable, 0, 0, bool, bool, bool, true, bool, str8, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
             this.titleView.setVisibility(i);

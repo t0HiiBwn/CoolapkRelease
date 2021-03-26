@@ -579,6 +579,7 @@ public final class ThreadUtils {
                             if (!Task.this.isDone() && Task.this.mTimeoutListener != null) {
                                 Task.this.timeout();
                                 Task.this.mTimeoutListener.onTimeout();
+                                Task.this.onDone();
                             }
                         }
                     }, this.mTimeoutMillis);
@@ -669,7 +670,6 @@ public final class ThreadUtils {
             if (this.runner != null) {
                 this.runner.interrupt();
             }
-            onDone();
         }
 
         public boolean isCanceled() {
@@ -730,6 +730,18 @@ public final class ThreadUtils {
                     this.mLatch.await();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                }
+            }
+            return this.mValue;
+        }
+
+        public T getValue(long j, TimeUnit timeUnit, T t) {
+            if (!this.mFlag.get()) {
+                try {
+                    this.mLatch.await(j, timeUnit);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                    return t;
                 }
             }
             return this.mValue;

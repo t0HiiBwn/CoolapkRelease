@@ -58,7 +58,7 @@ public class ItemTextTitleScrollChildBindingImpl extends ItemTextTitleScrollChil
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((Entity) obj);
@@ -71,7 +71,7 @@ public class ItemTextTitleScrollChildBindingImpl extends ItemTextTitleScrollChil
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -127,7 +127,7 @@ public class ItemTextTitleScrollChildBindingImpl extends ItemTextTitleScrollChil
         if ((j & 3) != 0) {
             this.imageView.setVisibility(i2);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, null, 2131231696, 0, bool, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, null, 2131231707, 0, bool, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
             TextViewBindingAdapter.setText(this.newTagView, str2);
             this.newTagView.setVisibility(i);
             TextViewBindingAdapter.setText(this.titleView, str3);

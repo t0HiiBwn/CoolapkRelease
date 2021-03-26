@@ -106,7 +106,7 @@ public class StateUtils {
                 if (z) {
                     return StringUtils.formatPercent((float) downloadState.getCurrentLength(), (float) downloadState.getTotalLength());
                 }
-                return context.getString(2131886752);
+                return context.getString(2131886814);
             } else if (state2 != 5) {
                 if (!downloadState.isSuccess() || TextUtils.isEmpty(downloadState.getFilePath())) {
                     return context.getString(2131886120);
@@ -130,17 +130,17 @@ public class StateUtils {
             InstallState installState = (InstallState) state;
             switch (installState.getState()) {
                 case 1:
-                    return context.getString(2131886862);
+                    return context.getString(2131886924);
                 case 2:
-                    return context.getString(2131886862);
+                    return context.getString(2131886924);
                 case 3:
-                    return context.getString(2131886859);
+                    return context.getString(2131886921);
                 case 4:
-                    return context.getString(2131886860);
+                    return context.getString(2131886922);
                 case 5:
-                    return context.getString(2131886861);
+                    return context.getString(2131886923);
                 case 6:
-                    return context.getString(2131886858);
+                    return context.getString(2131886920);
                 case 7:
                     if (installState.hasError()) {
                         int errorCode = installState.getErrorCode();
@@ -164,7 +164,7 @@ public class StateUtils {
         } else {
             int state3 = ((UninstallState) state).getState();
             if (state3 == 1 || state3 == 2) {
-                return context.getString(2131887049);
+                return context.getString(2131887111);
             }
             return null;
         }
@@ -270,7 +270,7 @@ public class StateUtils {
                                     }
                                     ActionManager.startView(activity, fromFile, mimeType);
                                 } catch (ActivityNotFoundException unused) {
-                                    Toast.show(activity, 2131887189);
+                                    Toast.show(activity, 2131887251);
                                 }
                             }
                         }
@@ -528,7 +528,7 @@ public class StateUtils {
         InstallState installState;
         if (downloadState != null) {
             if (downloadState.isSuccess() && !TextUtils.isEmpty(downloadState.getFilePath()) && (installState = DataManager.getInstance().getInstallState(downloadState.getFilePathMd5())) != null && installState.getStartTime() > downloadState.getStartTime()) {
-                return ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099912);
+                return ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099917);
             }
             int state = downloadState.getState();
             if (state == 1 || state == 2 || state == 3) {
@@ -538,7 +538,7 @@ public class StateUtils {
                 return AppHolder.getAppTheme().getTextColorPrimary();
             }
         }
-        return ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099912);
+        return ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099917);
     }
 
     public static void updateActionProgress(DownloadState downloadState, Drawable drawable) {
@@ -568,7 +568,7 @@ public class StateUtils {
 
         @Override // androidx.fragment.app.DialogFragment
         public Dialog onCreateDialog(Bundle bundle) {
-            return new AlertDialog.Builder(getActivity()).setMessage(2131886724).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
+            return new AlertDialog.Builder(getActivity()).setMessage(2131886786).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.util.StateUtils.DownloadAgainConfirmDialog.AnonymousClass2 */
 
                 @Override // android.content.DialogInterface.OnClickListener

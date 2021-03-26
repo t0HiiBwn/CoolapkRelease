@@ -30,7 +30,7 @@ import kotlin.text.StringsKt;
 final class ItemProductTimelineChildViewHolder extends GenericBindHolder<ItemProductTimelineChildBinding, Entity> {
     public static final Companion Companion = new Companion(null);
     private static final Regex DATE_REGEX = new Regex("(\\d{1,2})月(\\d{1,2})日");
-    public static final int LAYOUT_ID = 2131558881;
+    public static final int LAYOUT_ID = 2131558888;
     private static final Regex YEAR_REGEX = new Regex("(\\d{4})年");
     private EntityCard parentCard;
 
@@ -161,7 +161,7 @@ final class ItemProductTimelineChildViewHolder extends GenericBindHolder<ItemPro
         Entity model = itemProductTimelineChildBinding.getModel();
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
-            if (view.getId() != 2131362768) {
+            if (view.getId() != 2131362779) {
                 super.onClick(view);
                 return;
             }

@@ -18,7 +18,7 @@ public abstract class BaseRewardAd {
     public static final int EVENT_TYPE_ON_VIDEO_COMPLETE = 7;
     private LoadAdParams a = null;
 
-    public BaseRewardAd(Context context, String str, String str2) {
+    public BaseRewardAd(Context context, String str, String str2, String str3) {
     }
 
     public int getAdapterPriority() {
@@ -51,7 +51,7 @@ public abstract class BaseRewardAd {
         this.a = loadAdParams;
     }
 
-    public abstract void setVolumOn(boolean z);
+    public abstract void setVolumeOn(boolean z);
 
     public abstract void showAD();
 

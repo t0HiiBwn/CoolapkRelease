@@ -29,7 +29,7 @@ public abstract class FeedActionBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedActionBarBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (FeedActionBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558550, viewGroup, z, obj);
+        return (FeedActionBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558552, viewGroup, z, obj);
     }
 
     public static FeedActionBarBinding inflate(LayoutInflater layoutInflater) {
@@ -38,7 +38,7 @@ public abstract class FeedActionBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedActionBarBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (FeedActionBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558550, null, false, obj);
+        return (FeedActionBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558552, null, false, obj);
     }
 
     public static FeedActionBarBinding bind(View view) {
@@ -47,6 +47,6 @@ public abstract class FeedActionBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedActionBarBinding bind(View view, Object obj) {
-        return (FeedActionBarBinding) bind(obj, view, 2131558550);
+        return (FeedActionBarBinding) bind(obj, view, 2131558552);
     }
 }

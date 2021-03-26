@@ -25,7 +25,7 @@ public class ItemNoMoreDataViewBindingImpl extends ItemNoMoreDataViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 1);
+        sparseIntArray.put(2131363551, 1);
     }
 
     public ItemNoMoreDataViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

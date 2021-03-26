@@ -99,7 +99,7 @@ public abstract class ItemReplyListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReplyListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558898, viewGroup, z, obj);
+        return (ItemReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558905, viewGroup, z, obj);
     }
 
     public static ItemReplyListBinding inflate(LayoutInflater layoutInflater) {
@@ -108,7 +108,7 @@ public abstract class ItemReplyListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReplyListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558898, null, false, obj);
+        return (ItemReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558905, null, false, obj);
     }
 
     public static ItemReplyListBinding bind(View view) {
@@ -117,6 +117,6 @@ public abstract class ItemReplyListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReplyListBinding bind(View view, Object obj) {
-        return (ItemReplyListBinding) bind(obj, view, 2131558898);
+        return (ItemReplyListBinding) bind(obj, view, 2131558905);
     }
 }

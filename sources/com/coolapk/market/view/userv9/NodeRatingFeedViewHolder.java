@@ -33,7 +33,7 @@ import rx.Subscriber;
 /* compiled from: NodeRatingFeedViewHolder.kt */
 public final class NodeRatingFeedViewHolder extends GenericBindHolder<NodeRatingFeedLikeViewBinding, NodeRating> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131559057;
+    public static final int LAYOUT_ID = 2131559064;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public NodeRatingFeedViewHolder(View view, DataBindingComponent dataBindingComponent) {
@@ -110,7 +110,7 @@ public final class NodeRatingFeedViewHolder extends GenericBindHolder<NodeRating
         NodeTargetInfo targetInfo;
         String url;
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() == 2131362200) {
+        if (view.getId() == 2131362205) {
             NodeRatingFeedLikeViewBinding nodeRatingFeedLikeViewBinding = (NodeRatingFeedLikeViewBinding) getBinding();
             Intrinsics.checkNotNullExpressionValue(nodeRatingFeedLikeViewBinding, "binding");
             NodeRating model = nodeRatingFeedLikeViewBinding.getModel();

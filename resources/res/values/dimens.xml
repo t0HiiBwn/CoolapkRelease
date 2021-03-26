@@ -450,4 +450,9 @@
     <dimen name="ucrop_size_wrapper_rotate_button">50dp</dimen>
     <dimen name="ucrop_text_size_widget_text">13sp</dimen>
     <dimen name="ucrop_width_horizontal_wheel_progress_line">2dp</dimen>
+    <dimen name="upsdk_margin_l">16dp</dimen>
+    <dimen name="upsdk_margin_m">8dp</dimen>
+    <dimen name="upsdk_margin_xs">2dp</dimen>
+    <dimen name="upsdk_master_body_2">13sp</dimen>
+    <dimen name="upsdk_master_subtitle">15sp</dimen>
 </resources>

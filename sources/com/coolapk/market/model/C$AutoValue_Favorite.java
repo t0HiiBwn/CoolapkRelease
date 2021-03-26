@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Favorite  reason: invalid class name */
 abstract class C$AutoValue_Favorite extends C$$AutoValue_Favorite {
-    C$AutoValue_Favorite(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l2, Long l3, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, int i, List<String> list) {
-        super(str, str2, str3, str4, num, str5, str6, str7, l2, l3, str8, userInfo, str9, str10, str11, str12, str13, str14, str15, str16, str17, str18, str19, str20, str21, str22, str23, str24, str25, i, list);
+    C$AutoValue_Favorite(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l, Long l2, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, int i, List<String> list) {
+        super(str, str2, str3, str4, num, str5, str6, str7, l, l2, str8, userInfo, str9, str10, str11, str12, str13, str14, str15, str16, str17, str18, str19, str20, str21, str22, str23, str24, str25, i, list);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Favorite$GsonTypeAdapter */
@@ -155,13 +155,13 @@ abstract class C$AutoValue_Favorite extends C$$AutoValue_Favorite {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -356,8 +356,8 @@ abstract class C$AutoValue_Favorite extends C$$AutoValue_Favorite {
             String str5 = this.defaultLogo;
             String str6 = this.defaultSubTitle;
             String str7 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str8 = this.defaultDeprecatedUserAvatar;
             UserInfo userInfo = this.defaultUserInfo;
             String str9 = this.defaultDeprecatedUserName;
@@ -386,8 +386,8 @@ abstract class C$AutoValue_Favorite extends C$$AutoValue_Favorite {
             String str29 = str5;
             String str30 = str6;
             String str31 = str7;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str32 = str8;
             UserInfo userInfo2 = userInfo;
             String str33 = str9;
@@ -627,7 +627,7 @@ abstract class C$AutoValue_Favorite extends C$$AutoValue_Favorite {
                             str34 = this.displayUserNameAdapter.read(jsonReader);
                             continue;
                         case 7:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\b':
                             i2 = this.isEditAdapter.read(jsonReader).intValue();
@@ -696,7 +696,7 @@ abstract class C$AutoValue_Favorite extends C$$AutoValue_Favorite {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 30:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -705,7 +705,7 @@ abstract class C$AutoValue_Favorite extends C$$AutoValue_Favorite {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Favorite(str35, str26, str27, str28, num2, str29, str30, str31, l4, l5, str32, userInfo2, str33, str34, str36, str37, str38, str39, str40, str41, str42, str43, str44, str45, str46, str47, str48, str49, str50, i2, list);
+            return new AutoValue_Favorite(str35, str26, str27, str28, num2, str29, str30, str31, l3, l4, str32, userInfo2, str33, str34, str36, str37, str38, str39, str40, str41, str42, str43, str44, str45, str46, str47, str48, str49, str50, i2, list);
         }
     }
 }

@@ -25,8 +25,7 @@ public final class Http2Connection$$special$$inlined$schedule$1 extends Task {
             if (this.this$0.intervalPongsReceived < this.this$0.intervalPingsSent) {
                 z = true;
             } else {
-                Http2Connection http2Connection = this.this$0;
-                http2Connection.intervalPingsSent = http2Connection.intervalPingsSent + 1;
+                this.this$0.intervalPingsSent++;
                 z = false;
             }
         }

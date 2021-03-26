@@ -1,38 +1,27 @@
 package com.xiaomi.push;
 
-import android.text.TextUtils;
+import com.xiaomi.push.service.XMPushService;
 
-public enum ew {
-    COMMAND_REGISTER("register"),
-    COMMAND_UNREGISTER("unregister"),
-    COMMAND_SET_ALIAS("set-alias"),
-    COMMAND_UNSET_ALIAS("unset-alias"),
-    COMMAND_SET_ACCOUNT("set-account"),
-    COMMAND_UNSET_ACCOUNT("unset-account"),
-    COMMAND_SUBSCRIBE_TOPIC("subscribe-topic"),
-    COMMAND_UNSUBSCRIBE_TOPIC("unsubscibe-topic"),
-    COMMAND_SET_ACCEPT_TIME("accept-time"),
-    COMMAND_CHK_VDEVID("check-vdeviceid");
-    
+class ew extends XMPushService.i {
+    final /* synthetic */ int a;
+    final /* synthetic */ Exception b;
+    final /* synthetic */ et c;
 
-    /* renamed from: a  reason: collision with other field name */
-    public final String f419a;
-
-    private ew(String str) {
-        this.f419a = str;
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    ew(et etVar, int i, int i2, Exception exc) {
+        super(i);
+        this.c = etVar;
+        this.a = i2;
+        this.b = exc;
     }
 
-    public static int a(String str) {
-        int i = -1;
-        if (TextUtils.isEmpty(str)) {
-            return -1;
-        }
-        ew[] values = values();
-        for (ew ewVar : values) {
-            if (ewVar.f419a.equals(str)) {
-                i = em.a(ewVar);
-            }
-        }
-        return i;
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public void a() {
+        this.c.r.a(this.a, this.b);
+    }
+
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public String b() {
+        return "shutdown the connection. " + this.a + ", " + this.b;
     }
 }

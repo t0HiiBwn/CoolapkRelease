@@ -33,7 +33,7 @@ abstract class C$$AutoValue_FeedQuestion extends FeedQuestion {
     private final String url;
     private final UserInfo userInfo;
 
-    C$$AutoValue_FeedQuestion(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, UserInfo userInfo2, String str13, String str14, String str15, int i2, String str16, int i3, String str17, int i4, int i5, String str18) {
+    C$$AutoValue_FeedQuestion(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, UserInfo userInfo2, String str13, String str14, String str15, int i2, String str16, int i3, String str17, int i4, int i5, String str18) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -48,8 +48,8 @@ abstract class C$$AutoValue_FeedQuestion extends FeedQuestion {
         this.logo = str9;
         this.subTitle = str10;
         this.extraData = str11;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str12;
         this.userInfo = userInfo2;
         this.deprecatedUserName = str13;
@@ -239,8 +239,8 @@ abstract class C$$AutoValue_FeedQuestion extends FeedQuestion {
         String str7;
         String str8;
         String str9;
+        Long l;
         Long l2;
-        Long l3;
         String str10;
         UserInfo userInfo2;
         String str11;
@@ -256,7 +256,7 @@ abstract class C$$AutoValue_FeedQuestion extends FeedQuestion {
         FeedQuestion feedQuestion = (FeedQuestion) obj;
         String str15 = this.entityTypeName;
         if (str15 != null ? str15.equals(feedQuestion.getEntityTypeName()) : feedQuestion.getEntityTypeName() == null) {
-            if (this.entityType.equals(feedQuestion.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(feedQuestion.getEntityTemplate()) : feedQuestion.getEntityTemplate() == null) && this.entityTypeId == feedQuestion.getEntityTypeId() && ((str2 = this.entityId) != null ? str2.equals(feedQuestion.getEntityId()) : feedQuestion.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(feedQuestion.getEntityFixed()) : feedQuestion.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(feedQuestion.getTitle()) : feedQuestion.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(feedQuestion.getUrl()) : feedQuestion.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(feedQuestion.getDescription()) : feedQuestion.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(feedQuestion.getPic()) : feedQuestion.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(feedQuestion.getLogo()) : feedQuestion.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(feedQuestion.getSubTitle()) : feedQuestion.getSubTitle() == null) && ((str9 = this.extraData) != null ? str9.equals(feedQuestion.getExtraData()) : feedQuestion.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(feedQuestion.getDateline()) : feedQuestion.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(feedQuestion.getLastUpdate()) : feedQuestion.getLastUpdate() == null) && ((str10 = this.deprecatedUserAvatar) != null ? str10.equals(feedQuestion.getDeprecatedUserAvatar()) : feedQuestion.getDeprecatedUserAvatar() == null) && ((userInfo2 = this.userInfo) != null ? userInfo2.equals(feedQuestion.getUserInfo()) : feedQuestion.getUserInfo() == null) && ((str11 = this.deprecatedUserName) != null ? str11.equals(feedQuestion.getDeprecatedUserName()) : feedQuestion.getDeprecatedUserName() == null) && ((str12 = this.displayUserName) != null ? str12.equals(feedQuestion.getDisplayUserName()) : feedQuestion.getDisplayUserName() == null) && ((str13 = this.message) != null ? str13.equals(feedQuestion.getMessage()) : feedQuestion.getMessage() == null) && this.blockStatus == feedQuestion.getBlockStatus() && this.id.equals(feedQuestion.getId()) && this.messageStatus == feedQuestion.getMessageStatus() && ((str14 = this.messageTitle) != null ? str14.equals(feedQuestion.getMessageTitle()) : feedQuestion.getMessageTitle() == null) && this.questionAnswerNum == feedQuestion.getQuestionAnswerNum() && this.questionFollowNum == feedQuestion.getQuestionFollowNum()) {
+            if (this.entityType.equals(feedQuestion.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(feedQuestion.getEntityTemplate()) : feedQuestion.getEntityTemplate() == null) && this.entityTypeId == feedQuestion.getEntityTypeId() && ((str2 = this.entityId) != null ? str2.equals(feedQuestion.getEntityId()) : feedQuestion.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(feedQuestion.getEntityFixed()) : feedQuestion.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(feedQuestion.getTitle()) : feedQuestion.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(feedQuestion.getUrl()) : feedQuestion.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(feedQuestion.getDescription()) : feedQuestion.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(feedQuestion.getPic()) : feedQuestion.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(feedQuestion.getLogo()) : feedQuestion.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(feedQuestion.getSubTitle()) : feedQuestion.getSubTitle() == null) && ((str9 = this.extraData) != null ? str9.equals(feedQuestion.getExtraData()) : feedQuestion.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(feedQuestion.getDateline()) : feedQuestion.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(feedQuestion.getLastUpdate()) : feedQuestion.getLastUpdate() == null) && ((str10 = this.deprecatedUserAvatar) != null ? str10.equals(feedQuestion.getDeprecatedUserAvatar()) : feedQuestion.getDeprecatedUserAvatar() == null) && ((userInfo2 = this.userInfo) != null ? userInfo2.equals(feedQuestion.getUserInfo()) : feedQuestion.getUserInfo() == null) && ((str11 = this.deprecatedUserName) != null ? str11.equals(feedQuestion.getDeprecatedUserName()) : feedQuestion.getDeprecatedUserName() == null) && ((str12 = this.displayUserName) != null ? str12.equals(feedQuestion.getDisplayUserName()) : feedQuestion.getDisplayUserName() == null) && ((str13 = this.message) != null ? str13.equals(feedQuestion.getMessage()) : feedQuestion.getMessage() == null) && this.blockStatus == feedQuestion.getBlockStatus() && this.id.equals(feedQuestion.getId()) && this.messageStatus == feedQuestion.getMessageStatus() && ((str14 = this.messageTitle) != null ? str14.equals(feedQuestion.getMessageTitle()) : feedQuestion.getMessageTitle() == null) && this.questionAnswerNum == feedQuestion.getQuestionAnswerNum() && this.questionFollowNum == feedQuestion.getQuestionFollowNum()) {
                 String str16 = this.uid;
                 if (str16 == null) {
                     if (feedQuestion.getUid() == null) {
@@ -295,10 +295,10 @@ abstract class C$$AutoValue_FeedQuestion extends FeedQuestion {
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.extraData;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode13 = (hashCode12 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode12 = (hashCode11 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str11 = this.deprecatedUserAvatar;
         int hashCode14 = (hashCode13 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
         UserInfo userInfo2 = this.userInfo;

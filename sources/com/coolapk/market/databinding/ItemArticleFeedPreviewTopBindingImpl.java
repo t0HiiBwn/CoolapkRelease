@@ -32,7 +32,7 @@ public class ItemArticleFeedPreviewTopBindingImpl extends ItemArticleFeedPreview
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362340, 9);
+        sparseIntArray.put(2131362346, 9);
     }
 
     public ItemArticleFeedPreviewTopBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -75,9 +75,9 @@ public class ItemArticleFeedPreviewTopBindingImpl extends ItemArticleFeedPreview
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -93,7 +93,7 @@ public class ItemArticleFeedPreviewTopBindingImpl extends ItemArticleFeedPreview
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -103,7 +103,7 @@ public class ItemArticleFeedPreviewTopBindingImpl extends ItemArticleFeedPreview
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -244,7 +244,7 @@ public class ItemArticleFeedPreviewTopBindingImpl extends ItemArticleFeedPreview
         }
         if ((j & 11) != 0) {
             Boolean bool4 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, null, 2131231152, 0, bool4, bool4, bool4, bool4, bool4, null, null, onBitmapTransformListener, bool4, bool4, bool4, null, bool4);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, null, 2131231162, 0, bool4, bool4, bool4, bool4, bool4, null, null, onBitmapTransformListener, bool4, bool4, bool4, null, bool4);
         }
     }
 }

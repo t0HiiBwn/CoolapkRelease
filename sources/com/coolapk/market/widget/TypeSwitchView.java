@@ -69,35 +69,35 @@ public final class TypeSwitchView extends LinearLayout implements View.OnClickLi
         switch (str.hashCode()) {
             case 640464:
                 if (str.equals("个人")) {
-                    i = 2131363330;
+                    i = 2131363346;
                     break;
                 }
                 i = 0;
                 break;
             case 672372:
                 if (str.equals("出售")) {
-                    i = 2131361964;
+                    i = 2131361965;
                     break;
                 }
                 i = 0;
                 break;
             case 700208:
                 if (str.equals("商家")) {
-                    i = 2131363328;
+                    i = 2131363344;
                     break;
                 }
                 i = 0;
                 break;
             case 815128:
                 if (str.equals("换机")) {
-                    i = 2131361963;
+                    i = 2131361964;
                     break;
                 }
                 i = 0;
                 break;
             case 839351:
                 if (str.equals("收购")) {
-                    i = 2131361962;
+                    i = 2131361963;
                     break;
                 }
                 i = 0;
@@ -126,11 +126,11 @@ public final class TypeSwitchView extends LinearLayout implements View.OnClickLi
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf != null && valueOf.intValue() == 2131363330) {
+        if (valueOf != null && valueOf.intValue() == 2131363346) {
             Context context = getContext();
             Intrinsics.checkNotNullExpressionValue(context, "context");
             getSwitchView(context, "个人").setSelected(true);
-        } else if (valueOf != null && valueOf.intValue() == 2131363328) {
+        } else if (valueOf != null && valueOf.intValue() == 2131363344) {
             Context context2 = getContext();
             Intrinsics.checkNotNullExpressionValue(context2, "context");
             getSwitchView(context2, "商家").setSelected(true);

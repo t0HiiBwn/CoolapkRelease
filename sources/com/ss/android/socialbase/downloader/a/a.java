@@ -14,7 +14,7 @@ import java.util.List;
 public class a {
     private Application a;
     private c b;
-    private final List<AbstractC0092a> c;
+    private final List<AbstractC0102a> c;
     private int d;
     private WeakReference<Activity> e;
     private volatile int f;
@@ -22,7 +22,7 @@ public class a {
 
     /* renamed from: com.ss.android.socialbase.downloader.a.a$a  reason: collision with other inner class name */
     /* compiled from: AppStatusManager */
-    public interface AbstractC0092a {
+    public interface AbstractC0102a {
         void b();
 
         void c();
@@ -135,7 +135,7 @@ public class a {
         return false;
     }
 
-    public void a(AbstractC0092a aVar) {
+    public void a(AbstractC0102a aVar) {
         if (aVar != null) {
             synchronized (this.c) {
                 if (!this.c.contains(aVar)) {
@@ -145,7 +145,7 @@ public class a {
         }
     }
 
-    public void b(AbstractC0092a aVar) {
+    public void b(AbstractC0102a aVar) {
         synchronized (this.c) {
             this.c.remove(aVar);
         }
@@ -165,7 +165,7 @@ public class a {
         Object[] c2 = c();
         if (c2 != null) {
             for (Object obj : c2) {
-                ((AbstractC0092a) obj).b();
+                ((AbstractC0102a) obj).b();
             }
         }
     }
@@ -176,7 +176,7 @@ public class a {
         Object[] c2 = c();
         if (c2 != null) {
             for (Object obj : c2) {
-                ((AbstractC0092a) obj).c();
+                ((AbstractC0102a) obj).c();
             }
         }
     }

@@ -108,11 +108,11 @@ public class MainCategoryFragment extends SimpleAsyncListFragment<Result<List<En
     public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
         switch (i) {
-            case 2131558819:
+            case 2131558826:
                 return new AppCategoryViewHolder(inflate, getComponent());
-            case 2131558820:
+            case 2131558827:
                 return new LinkCardsHolder(inflate, null);
-            case 2131558821:
+            case 2131558828:
                 return new CategoryTypeViewHolder(inflate, null);
             default:
                 throw new RuntimeException("onCreateViewHolder");
@@ -147,11 +147,11 @@ public class MainCategoryFragment extends SimpleAsyncListFragment<Result<List<En
         }
         switch (c) {
             case 0:
-                return 2131558821;
+                return 2131558828;
             case 1:
-                return 2131558819;
+                return 2131558826;
             case 2:
-                return 2131558820;
+                return 2131558827;
             default:
                 throw new RuntimeException("unknown view type " + entity);
         }
@@ -163,7 +163,7 @@ public class MainCategoryFragment extends SimpleAsyncListFragment<Result<List<En
     }
 
     public class LinkCardsHolder extends GenericBindHolder<ItemMainCategoryLinkBinding, LinkCard> {
-        public static final int LAYOUT_ID = 2131558820;
+        public static final int LAYOUT_ID = 2131558827;
 
         public LinkCardsHolder(View view, ItemActionHandler itemActionHandler) {
             super(view, itemActionHandler);
@@ -187,17 +187,17 @@ public class MainCategoryFragment extends SimpleAsyncListFragment<Result<List<En
         public void onClick(View view) {
             super.onClick(view);
             int id = view.getId();
-            if (id != 2131362769) {
+            if (id != 2131362780) {
                 switch (id) {
-                    case 2131362773:
+                    case 2131362784:
                         Link linkCard = ((ItemMainCategoryLinkBinding) getBinding()).itemView2.getLinkCard();
                         ActionManager.startActivityByLink(MainCategoryFragment.this.getActivity(), linkCard.getTitle(), linkCard.getUrl(), null, linkCard.getSubTitle());
                         return;
-                    case 2131362774:
+                    case 2131362785:
                         Link linkCard2 = ((ItemMainCategoryLinkBinding) getBinding()).itemView3.getLinkCard();
                         ActionManager.startActivityByLink(MainCategoryFragment.this.getActivity(), linkCard2.getTitle(), linkCard2.getUrl(), null, linkCard2.getSubTitle());
                         return;
-                    case 2131362775:
+                    case 2131362786:
                         Link linkCard3 = ((ItemMainCategoryLinkBinding) getBinding()).itemView4.getLinkCard();
                         ActionManager.startActivityByLink(MainCategoryFragment.this.getActivity(), linkCard3.getTitle(), linkCard3.getUrl(), null, linkCard3.getSubTitle());
                         return;
@@ -212,7 +212,7 @@ public class MainCategoryFragment extends SimpleAsyncListFragment<Result<List<En
     }
 
     public class CategoryTypeViewHolder extends GenericBindHolder<ItemMainCatogoryTypeBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558821;
+        public static final int LAYOUT_ID = 2131558828;
 
         public CategoryTypeViewHolder(View view, ItemActionHandler itemActionHandler) {
             super(view, itemActionHandler);

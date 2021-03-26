@@ -36,9 +36,7 @@ public final class f implements c {
     private static final List<com.bytedance.sdk.a.a.f> j;
     private static final List<com.bytedance.sdk.a.a.f> k;
     final g a;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final v f1270l;
+    private final v l;
     private final t.a m;
     private final g n;
     private i o;
@@ -65,7 +63,7 @@ public final class f implements c {
     }
 
     public f(v vVar, t.a aVar, g gVar, g gVar2) {
-        this.f1270l = vVar;
+        this.l = vVar;
         this.m = aVar;
         this.a = gVar;
         this.n = gVar2;

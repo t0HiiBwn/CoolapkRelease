@@ -15,9 +15,9 @@ final class VoteExtraView$ItemViewHolder$initView$3 implements View.OnClickListe
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        VoteExtraView.VoteViewData voteViewData = this.this$0.data;
-        if (voteViewData != null) {
-            this.this$0.this$0.onUserRemoveOption(voteViewData.getOptionIndex());
+        VoteExtraView.VoteViewData access$getData$p = VoteExtraView.ItemViewHolder.access$getData$p(this.this$0);
+        if (access$getData$p != null) {
+            VoteExtraView.access$onUserRemoveOption(this.this$0.this$0, access$getData$p.getOptionIndex());
         }
     }
 }

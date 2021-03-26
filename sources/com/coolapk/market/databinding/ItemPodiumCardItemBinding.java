@@ -77,7 +77,7 @@ public abstract class ItemPodiumCardItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPodiumCardItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemPodiumCardItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558860, viewGroup, z, obj);
+        return (ItemPodiumCardItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558867, viewGroup, z, obj);
     }
 
     public static ItemPodiumCardItemBinding inflate(LayoutInflater layoutInflater) {
@@ -86,7 +86,7 @@ public abstract class ItemPodiumCardItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPodiumCardItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemPodiumCardItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558860, null, false, obj);
+        return (ItemPodiumCardItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558867, null, false, obj);
     }
 
     public static ItemPodiumCardItemBinding bind(View view) {
@@ -95,6 +95,6 @@ public abstract class ItemPodiumCardItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPodiumCardItemBinding bind(View view, Object obj) {
-        return (ItemPodiumCardItemBinding) bind(obj, view, 2131558860);
+        return (ItemPodiumCardItemBinding) bind(obj, view, 2131558867);
     }
 }

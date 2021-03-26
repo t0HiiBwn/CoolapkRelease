@@ -147,7 +147,7 @@ public final class AlbumDetailActivity extends FakeStatusBarActivity implements 
             z = true;
         }
         this.showCommentFirst = z;
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558445, new ContextBindingComponent(getActivity()));
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558446, new ContextBindingComponent(getActivity()));
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…ndingComponent(activity))");
         AlbumDetailtViewBinding albumDetailtViewBinding = (AlbumDetailtViewBinding) contentView;
         this.binding = albumDetailtViewBinding;
@@ -320,7 +320,7 @@ public final class AlbumDetailActivity extends FakeStatusBarActivity implements 
             z = false;
         }
         getMenuInflater().inflate(2131623936, menu);
-        MenuItem findItem = menu.findItem(2131361902);
+        MenuItem findItem = menu.findItem(2131361903);
         Intrinsics.checkNotNullExpressionValue(findItem, "menu.findItem(R.id.action_edit_album)");
         findItem.setVisible(z);
         return true;
@@ -344,10 +344,10 @@ public final class AlbumDetailActivity extends FakeStatusBarActivity implements 
         Intrinsics.checkNotNull(album);
         Intrinsics.checkNotNullExpressionValue(album, "viewModel.album!!");
         int itemId = menuItem.getItemId();
-        if (itemId == 2131361902) {
+        if (itemId == 2131361903) {
             ActionManager.startAlbumEditActivity(getActivity(), album);
             return true;
-        } else if (itemId != 2131361932) {
+        } else if (itemId != 2131361933) {
             return super.onOptionsItemSelected(menuItem);
         } else {
             BaseActivity activity = getActivity();
@@ -699,7 +699,7 @@ public final class AlbumDetailActivity extends FakeStatusBarActivity implements 
         }
         Toolbar toolbar = albumDetailtViewBinding2.toolbar;
         ViewExtendsKt.adjustTintColorByAlpha$default(toolbar, 1.0f, false, 2, null);
-        toolbar.setTitle(getString(2131886667));
+        toolbar.setTitle(getString(2131886729));
         this.isInit = true;
     }
 

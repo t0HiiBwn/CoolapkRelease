@@ -16,9 +16,7 @@ public final class aa implements Closeable {
     final aa i;
     final aa j;
     final long k;
-
-    /* renamed from: l  reason: collision with root package name */
-    final long f1273l;
+    final long l;
     private volatile d m;
 
     aa(a aVar) {
@@ -33,7 +31,7 @@ public final class aa implements Closeable {
         this.i = aVar.i;
         this.j = aVar.j;
         this.k = aVar.k;
-        this.f1273l = aVar.f1274l;
+        this.l = aVar.l;
     }
 
     public y a() {
@@ -101,7 +99,7 @@ public final class aa implements Closeable {
     }
 
     public long m() {
-        return this.f1273l;
+        return this.l;
     }
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
@@ -132,9 +130,7 @@ public final class aa implements Closeable {
         aa i;
         aa j;
         long k;
-
-        /* renamed from: l  reason: collision with root package name */
-        long f1274l;
+        long l;
 
         public a() {
             this.c = -1;
@@ -154,7 +150,7 @@ public final class aa implements Closeable {
             this.i = aaVar.i;
             this.j = aaVar.j;
             this.k = aaVar.k;
-            this.f1274l = aaVar.f1273l;
+            this.l = aaVar.l;
         }
 
         public a a(y yVar) {
@@ -245,7 +241,7 @@ public final class aa implements Closeable {
         }
 
         public a b(long j2) {
-            this.f1274l = j2;
+            this.l = j2;
             return this;
         }
 

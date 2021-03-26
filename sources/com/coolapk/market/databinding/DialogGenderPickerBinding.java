@@ -21,7 +21,7 @@ public abstract class DialogGenderPickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogGenderPickerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogGenderPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558525, viewGroup, z, obj);
+        return (DialogGenderPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558527, viewGroup, z, obj);
     }
 
     public static DialogGenderPickerBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class DialogGenderPickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogGenderPickerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogGenderPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558525, null, false, obj);
+        return (DialogGenderPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558527, null, false, obj);
     }
 
     public static DialogGenderPickerBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class DialogGenderPickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogGenderPickerBinding bind(View view, Object obj) {
-        return (DialogGenderPickerBinding) bind(obj, view, 2131558525);
+        return (DialogGenderPickerBinding) bind(obj, view, 2131558527);
     }
 }

@@ -11,7 +11,6 @@ import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import androidx.viewpager.widget.ViewPager;
 import com.coolapk.market.widget.DrawSystemBarFrameLayout;
-import com.coolapk.market.widget.view.CollapsingToolbarFixLayout;
 import com.coolapk.market.widget.view.TabLayout;
 import com.google.android.material.appbar.AppBarLayout;
 
@@ -33,16 +32,16 @@ public class LiveActivityBindingImpl extends LiveActivityBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362067, 1);
-        sparseIntArray.put(2131362264, 2);
-        sparseIntArray.put(2131363130, 3);
-        sparseIntArray.put(2131363588, 4);
-        sparseIntArray.put(2131363481, 5);
-        sparseIntArray.put(2131363934, 6);
-        sparseIntArray.put(2131363137, 7);
-        sparseIntArray.put(2131363135, 8);
-        sparseIntArray.put(2131363136, 9);
-        sparseIntArray.put(2131363912, 10);
+        sparseIntArray.put(2131362069, 1);
+        sparseIntArray.put(2131362269, 2);
+        sparseIntArray.put(2131363144, 3);
+        sparseIntArray.put(2131363610, 4);
+        sparseIntArray.put(2131363499, 5);
+        sparseIntArray.put(2131363959, 6);
+        sparseIntArray.put(2131363151, 7);
+        sparseIntArray.put(2131363149, 8);
+        sparseIntArray.put(2131363150, 9);
+        sparseIntArray.put(2131363937, 10);
     }
 
     public LiveActivityBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -50,7 +49,7 @@ public class LiveActivityBindingImpl extends LiveActivityBinding {
     }
 
     private LiveActivityBindingImpl(DataBindingComponent dataBindingComponent, View view, Object[] objArr) {
-        super(dataBindingComponent, view, 0, (AppBarLayout) objArr[1], (CollapsingToolbarFixLayout) objArr[2], (DrawSystemBarFrameLayout) objArr[0], (FrameLayout) objArr[3], (ImageView) objArr[8], (TextView) objArr[9], (FrameLayout) objArr[7], (TabLayout) objArr[5], (Toolbar) objArr[4], (LinearLayout) objArr[10], (ViewPager) objArr[6]);
+        super(dataBindingComponent, view, 0, (AppBarLayout) objArr[1], (FrameLayout) objArr[2], (DrawSystemBarFrameLayout) objArr[0], (FrameLayout) objArr[3], (ImageView) objArr[8], (TextView) objArr[9], (FrameLayout) objArr[7], (TabLayout) objArr[5], (Toolbar) objArr[4], (LinearLayout) objArr[10], (ViewPager) objArr[6]);
         this.mDirtyFlags = -1;
         this.contentView.setTag(null);
         setRootTag(view);

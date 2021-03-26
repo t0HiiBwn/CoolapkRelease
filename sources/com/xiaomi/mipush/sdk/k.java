@@ -1,6 +1,6 @@
 package com.xiaomi.mipush.sdk;
 
-import com.xiaomi.push.hh;
+import com.xiaomi.push.gn;
 import java.util.HashMap;
 
 public class k {
@@ -23,31 +23,31 @@ public class k {
         a(d.ASSEMBLE_PUSH_FTOS, new a("com.xiaomi.assemble.control.FTOSPushManager", "newInstance"));
     }
 
-    public static ap a(d dVar) {
+    public static av a(d dVar) {
         int i = l.a[dVar.ordinal()];
         if (i == 1) {
-            return ap.UPLOAD_HUAWEI_TOKEN;
+            return av.UPLOAD_HUAWEI_TOKEN;
         }
         if (i == 2) {
-            return ap.UPLOAD_FCM_TOKEN;
+            return av.UPLOAD_FCM_TOKEN;
         }
         if (i == 3) {
-            return ap.UPLOAD_COS_TOKEN;
+            return av.UPLOAD_COS_TOKEN;
         }
         if (i != 4) {
             return null;
         }
-        return ap.UPLOAD_FTOS_TOKEN;
+        return av.UPLOAD_FTOS_TOKEN;
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public static a m96a(d dVar) {
+    public static a m75a(d dVar) {
         return a.get(dVar);
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public static hh m97a(d dVar) {
-        return hh.AggregatePushSwitch;
+    public static gn m76a(d dVar) {
+        return gn.AggregatePushSwitch;
     }
 
     private static void a(d dVar, a aVar) {

@@ -25,7 +25,7 @@ public class ItemUserGiftBindingImpl extends ItemUserGiftBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362612, 5);
+        sparseIntArray.put(2131362620, 5);
     }
 
     public ItemUserGiftBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -106,7 +106,7 @@ public class ItemUserGiftBindingImpl extends ItemUserGiftBinding {
         if (i != 0) {
             TextViewBindingAdapter.setText(this.giftContent, str3);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.giftLogoView, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.giftLogoView, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.titleGameView, str2);
         }
         if ((j & 2) != 0) {

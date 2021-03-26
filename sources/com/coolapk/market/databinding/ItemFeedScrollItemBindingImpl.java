@@ -29,9 +29,9 @@ public class ItemFeedScrollItemBindingImpl extends ItemFeedScrollItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362643, 3);
-        sparseIntArray.put(2131363533, 4);
-        sparseIntArray.put(2131362492, 5);
+        sparseIntArray.put(2131362651, 3);
+        sparseIntArray.put(2131363551, 4);
+        sparseIntArray.put(2131362500, 5);
     }
 
     public ItemFeedScrollItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -70,9 +70,9 @@ public class ItemFeedScrollItemBindingImpl extends ItemFeedScrollItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -88,7 +88,7 @@ public class ItemFeedScrollItemBindingImpl extends ItemFeedScrollItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

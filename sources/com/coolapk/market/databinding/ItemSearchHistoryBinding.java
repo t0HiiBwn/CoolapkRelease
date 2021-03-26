@@ -24,7 +24,7 @@ public abstract class ItemSearchHistoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchHistoryBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSearchHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558912, viewGroup, z, obj);
+        return (ItemSearchHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558919, viewGroup, z, obj);
     }
 
     public static ItemSearchHistoryBinding inflate(LayoutInflater layoutInflater) {
@@ -33,7 +33,7 @@ public abstract class ItemSearchHistoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchHistoryBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSearchHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558912, null, false, obj);
+        return (ItemSearchHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558919, null, false, obj);
     }
 
     public static ItemSearchHistoryBinding bind(View view) {
@@ -42,6 +42,6 @@ public abstract class ItemSearchHistoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchHistoryBinding bind(View view, Object obj) {
-        return (ItemSearchHistoryBinding) bind(obj, view, 2131558912);
+        return (ItemSearchHistoryBinding) bind(obj, view, 2131558919);
     }
 }

@@ -8,28 +8,28 @@
         <item name="android:navigationBarColor">#00000000</item>
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
     </style>
-    <style name="res_2131951717_base_theme_appcompat" parent="@style/res_2131951790_base_v28_theme_appcompat">
+    <style name="res_2131951718_base_theme_appcompat" parent="@style/res_2131951791_base_v28_theme_appcompat">
     </style>
-    <style name="res_2131951724_base_theme_appcompat_light" parent="@style/res_2131951791_base_v28_theme_appcompat_light">
+    <style name="res_2131951725_base_theme_appcompat_light" parent="@style/res_2131951792_base_v28_theme_appcompat_light">
     </style>
-    <style name="res_2131951773_base_v14_themeoverlay_materialcomponents_materialalertdialog" parent="@style/res_2131952181_themeoverlay_appcompat_dialog_alert">
+    <style name="res_2131951774_base_v14_themeoverlay_materialcomponents_materialalertdialog" parent="@style/res_2131952182_themeoverlay_appcompat_dialog_alert">
         <item name="android:backgroundDimAmount">0.32</item>
-        <item name="android:checkedTextViewStyle">@style/res_2131952349_widget_materialcomponents_checkedtextview</item>
+        <item name="android:checkedTextViewStyle">@style/res_2131952350_widget_materialcomponents_checkedtextview</item>
         <item name="android:dialogCornerRadius">@null</item>
-        <item name="alertDialogStyle">@style/res_2131951893_materialalertdialog_materialcomponents</item>
-        <item name="buttonBarButtonStyle">@style/res_2131952341_widget_materialcomponents_button_textbutton_dialog</item>
-        <item name="buttonBarNegativeButtonStyle">@style/res_2131952341_widget_materialcomponents_button_textbutton_dialog</item>
-        <item name="buttonBarNeutralButtonStyle">@style/res_2131952342_widget_materialcomponents_button_textbutton_dialog_flush</item>
-        <item name="buttonBarPositiveButtonStyle">@style/res_2131952341_widget_materialcomponents_button_textbutton_dialog</item>
-        <item name="materialAlertDialogBodyTextStyle">@style/res_2131951894_materialalertdialog_materialcomponents_body_text</item>
+        <item name="alertDialogStyle">@style/res_2131951894_materialalertdialog_materialcomponents</item>
+        <item name="buttonBarButtonStyle">@style/res_2131952342_widget_materialcomponents_button_textbutton_dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/res_2131952342_widget_materialcomponents_button_textbutton_dialog</item>
+        <item name="buttonBarNeutralButtonStyle">@style/res_2131952343_widget_materialcomponents_button_textbutton_dialog_flush</item>
+        <item name="buttonBarPositiveButtonStyle">@style/res_2131952342_widget_materialcomponents_button_textbutton_dialog</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/res_2131951895_materialalertdialog_materialcomponents_body_text</item>
     </style>
-    <style name="res_2131951790_base_v28_theme_appcompat" parent="@style/res_2131951787_base_v26_theme_appcompat">
+    <style name="res_2131951791_base_v28_theme_appcompat" parent="@style/res_2131951788_base_v26_theme_appcompat">
         <item name="dialogCornerRadius">?android:attr/dialogCornerRadius</item>
     </style>
-    <style name="res_2131951791_base_v28_theme_appcompat_light" parent="@style/res_2131951788_base_v26_theme_appcompat_light">
+    <style name="res_2131951792_base_v28_theme_appcompat_light" parent="@style/res_2131951789_base_v26_theme_appcompat_light">
         <item name="dialogCornerRadius">?android:attr/dialogCornerRadius</item>
     </style>
-    <style name="res_2131951871_baseapptheme_splash" parent="@style/BaseAppTheme">
+    <style name="res_2131951872_baseapptheme_splash" parent="@style/BaseAppTheme">
         <item name="android:windowBackground">@drawable/launch_window_background_v9</item>
         <item name="android:windowAnimationStyle">@null</item>
         <item name="android:windowFullscreen">true</item>

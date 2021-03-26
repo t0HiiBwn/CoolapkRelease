@@ -22,7 +22,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedRatingHeaderViewPart.kt */
 public final class FeedRatingHeaderViewPart extends BindingViewPart<ItemFeedRatingHeaderBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558714;
+    public static final int LAYOUT_ID = 2131558721;
     private final DataBindingComponent dataBindingComponent;
     private Feed feed;
 
@@ -50,7 +50,7 @@ public final class FeedRatingHeaderViewPart extends BindingViewPart<ItemFeedRati
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedRatingHeaderBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558714, viewGroup, false, this.dataBindingComponent);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558721, viewGroup, false, this.dataBindingComponent);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…se, dataBindingComponent)");
         return (ItemFeedRatingHeaderBinding) inflate;
     }
@@ -65,7 +65,7 @@ public final class FeedRatingHeaderViewPart extends BindingViewPart<ItemFeedRati
         ratingBar.setRating(ProductGlobalData.INSTANCE.ratingScoreToStartScore(feed2.getRatingScore()));
         TextView textView = ((ItemFeedRatingHeaderBinding) getBinding()).scoreView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.scoreView");
-        textView.setText(getContext().getString(2131886989, EntityExtendsKt.getDisplayRatingScore(feed2)));
+        textView.setText(getContext().getString(2131887051, EntityExtendsKt.getDisplayRatingScore(feed2)));
         ((ItemFeedRatingHeaderBinding) getBinding()).setClick(this);
         ((ItemFeedRatingHeaderBinding) getBinding()).setModel(feed2);
         ((ItemFeedRatingHeaderBinding) getBinding()).executePendingBindings();
@@ -75,9 +75,9 @@ public final class FeedRatingHeaderViewPart extends BindingViewPart<ItemFeedRati
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         int id = view.getId();
-        if (id == 2131362970) {
+        if (id == 2131362982) {
             showItemDialog();
-        } else if (id != 2131363877) {
+        } else if (id != 2131363900) {
             super.onClick(view);
         } else {
             Feed feed2 = this.feed;

@@ -40,7 +40,7 @@ public abstract class UserKeyInputBinding extends ViewDataBinding {
 
     @Deprecated
     public static UserKeyInputBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (UserKeyInputBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559282, viewGroup, z, obj);
+        return (UserKeyInputBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559292, viewGroup, z, obj);
     }
 
     public static UserKeyInputBinding inflate(LayoutInflater layoutInflater) {
@@ -49,7 +49,7 @@ public abstract class UserKeyInputBinding extends ViewDataBinding {
 
     @Deprecated
     public static UserKeyInputBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (UserKeyInputBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559282, null, false, obj);
+        return (UserKeyInputBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559292, null, false, obj);
     }
 
     public static UserKeyInputBinding bind(View view) {
@@ -58,6 +58,6 @@ public abstract class UserKeyInputBinding extends ViewDataBinding {
 
     @Deprecated
     public static UserKeyInputBinding bind(View view, Object obj) {
-        return (UserKeyInputBinding) bind(obj, view, 2131559282);
+        return (UserKeyInputBinding) bind(obj, view, 2131559292);
     }
 }

@@ -35,7 +35,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: UserHeaderInfoViewPart.kt */
 public final class UserHeaderInfoViewPart extends BindingViewPart<ItemUserInfoHeaderViewBinding, UserProfile> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558974;
+    public static final int LAYOUT_ID = 2131558981;
     private final UserSpaceV9Presenter presenter;
     private final UserSpaceV9ViewModel viewModel;
 
@@ -61,7 +61,7 @@ public final class UserHeaderInfoViewPart extends BindingViewPart<ItemUserInfoHe
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemUserInfoHeaderViewBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558974, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558981, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemUserInfoHeaderViewBinding) inflate;
     }
@@ -137,7 +137,7 @@ public final class UserHeaderInfoViewPart extends BindingViewPart<ItemUserInfoHe
         int i = 0;
         boolean z2 = signature == null || signature.length() == 0;
         String signature2 = userProfile.getSignature();
-        String signature3 = !(signature2 == null || signature2.length() == 0) ? userProfile.getSignature() : getContext().getString(2131886692);
+        String signature3 = !(signature2 == null || signature2.length() == 0) ? userProfile.getSignature() : getContext().getString(2131886754);
         TextView textView = ((ItemUserInfoHeaderViewBinding) getBinding()).signatureView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.signatureView");
         textView.setText(signature3);
@@ -190,7 +190,7 @@ public final class UserHeaderInfoViewPart extends BindingViewPart<ItemUserInfoHe
             arrayList.add(createTagView(1308622847, -1, str, userHeaderInfoViewPart$setFlowLayoutView$userDataListener$1));
         }
         if (userProfile.getLoginTime() > 0) {
-            String string = getContext().getString(2131887100, DateUtils.getTimeDescription(getContext(), Long.valueOf(userProfile.getLoginTime())));
+            String string = getContext().getString(2131887162, DateUtils.getTimeDescription(getContext(), Long.valueOf(userProfile.getLoginTime())));
             Intrinsics.checkNotNullExpressionValue(string, "context.getString(R.stri…context, data.loginTime))");
             arrayList.add(createTagView$default(this, 1308622847, -1, string, null, 8, null));
         }
@@ -232,9 +232,9 @@ public final class UserHeaderInfoViewPart extends BindingViewPart<ItemUserInfoHe
         } else {
             i = 1308622847;
             if (userProfile.getGender() != 0) {
-                i2 = 2131231327;
+                i2 = 2131231338;
             } else {
-                i2 = userProfile.getGender() == 1 ? 2131231329 : 0;
+                i2 = userProfile.getGender() == 1 ? 2131231340 : 0;
             }
             if (i2 != 0) {
                 spannableStringBuilder = null;
@@ -304,14 +304,14 @@ public final class UserHeaderInfoViewPart extends BindingViewPart<ItemUserInfoHe
         UserProfile userProfile = this.viewModel.getUserProfile();
         if (userProfile != null) {
             int id = view.getId();
-            if (id == 2131362439) {
+            if (id == 2131362446) {
                 ActionManager.startUserProfileActivity(getContext(), "编辑资料");
-            } else if (id == 2131362513) {
-                String string = getContext().getString(2131887087, userProfile.getUserName());
+            } else if (id == 2131362521) {
+                String string = getContext().getString(2131887149, userProfile.getUserName());
                 Intrinsics.checkNotNullExpressionValue(string, "context.getString(R.stri…fans_list, data.userName)");
                 ActionManager.startFansListActivity(getContext(), userProfile.getUid(), string);
-            } else if (id == 2131362583) {
-                String string2 = getContext().getString(2131887091, userProfile.getUserName());
+            } else if (id == 2131362591) {
+                String string2 = getContext().getString(2131887153, userProfile.getUserName());
                 Intrinsics.checkNotNullExpressionValue(string2, "context.getString(R.stri…llow_list, data.userName)");
                 ActionManager.startFriendListActivity(getContext(), userProfile.getUid(), string2);
             }

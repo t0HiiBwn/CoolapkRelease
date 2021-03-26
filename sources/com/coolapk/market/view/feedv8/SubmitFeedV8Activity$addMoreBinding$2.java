@@ -21,7 +21,7 @@ final class SubmitFeedV8Activity$addMoreBinding$2 extends Lambda implements Func
 
     @Override // kotlin.jvm.functions.Function0
     public final SubmitFeedBottomAddMoreV8Binding invoke() {
-        SubmitFeedBottomAddMoreV8Binding submitFeedBottomAddMoreV8Binding = (SubmitFeedBottomAddMoreV8Binding) DataBindingUtil.inflate(LayoutInflater.from(this.this$0.getActivity()), 2131559155, SubmitFeedV8Activity.access$getBinding$p(this.this$0).fakeKeyboardExtraContainer, false);
+        SubmitFeedBottomAddMoreV8Binding submitFeedBottomAddMoreV8Binding = (SubmitFeedBottomAddMoreV8Binding) DataBindingUtil.inflate(LayoutInflater.from(this.this$0.getActivity()), 2131559163, SubmitFeedV8Activity.access$getBinding$p(this.this$0).fakeKeyboardExtraContainer, false);
         Intrinsics.checkNotNullExpressionValue(submitFeedBottomAddMoreV8Binding, "moreBinding");
         submitFeedBottomAddMoreV8Binding.setUiConfig(this.this$0.getUiConfig());
         submitFeedBottomAddMoreV8Binding.setClick(this.this$0);

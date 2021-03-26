@@ -66,12 +66,14 @@ import com.coolapk.market.widget.Toast;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import kotlin.Metadata;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.Ref;
 import kotlin.text.StringsKt;
 import rx.Subscriber;
 
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000Å\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010$\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\u0007\n\u0002\b\u0007*\u0001\u0014\u0018\u0000 X2\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005:\u0002XYB\u0005¢\u0006\u0002\u0010\u0006J\b\u0010\u001a\u001a\u00020\u001bH\u0002J\u0010\u0010\u001c\u001a\u00020\u001b2\b\u0010\u001d\u001a\u0004\u0018\u00010\u001eJ\u000e\u0010\u001f\u001a\u00020\u001b2\u0006\u0010\u001d\u001a\u00020\u001eJ\u0006\u0010 \u001a\u00020\u001bJ\n\u0010!\u001a\u0004\u0018\u00010\"H\u0002J\b\u0010#\u001a\u00020\u001bH\u0002J\"\u0010$\u001a\u00020\u001b2\u0006\u0010%\u001a\u00020&2\u0006\u0010'\u001a\u00020&2\b\u0010(\u001a\u0004\u0018\u00010)H\u0014J\"\u0010*\u001a\u00020\u001b2\u000e\u0010+\u001a\n\u0012\u0004\u0012\u00020\"\u0018\u00010,2\b\u0010-\u001a\u0004\u0018\u00010.H\u0016J\u0010\u0010/\u001a\u00020\u001b2\u0006\u0010\u001d\u001a\u00020\u001eH\u0016J\u0010\u00100\u001a\u00020\u001b2\u0006\u00101\u001a\u00020\u001eH\u0016J(\u00102\u001a\u00020\u001b2\u0014\u0010+\u001a\u0010\u0012\n\u0012\b\u0012\u0004\u0012\u00020403\u0018\u00010,2\b\u0010-\u001a\u0004\u0018\u00010.H\u0016J\u0012\u00105\u001a\u00020\u001b2\b\u00106\u001a\u0004\u0018\u000107H\u0014J\u001a\u00108\u001a\u0004\u0018\u00010\b2\u0006\u0010\u001d\u001a\u00020\u001e2\u0006\u00109\u001a\u00020:H\u0016J\u0010\u0010;\u001a\u00020\u00102\u0006\u0010<\u001a\u00020=H\u0016J\b\u0010>\u001a\u00020\u001bH\u0014J2\u0010?\u001a\u00020\u001b2\u0006\u0010@\u001a\u00020\u00102\u0006\u0010A\u001a\u00020\u00102\u000e\u0010+\u001a\n\u0012\u0004\u0012\u00020&\u0018\u00010,2\b\u0010-\u001a\u0004\u0018\u00010.H\u0016J>\u0010B\u001a\u00020\u001b2\u0006\u0010@\u001a\u00020\u00102\u0006\u0010A\u001a\u00020\u00102\u001a\u0010C\u001a\u0016\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\b0D\u0018\u00010,2\b\u0010-\u001a\u0004\u0018\u00010.H\u0016J1\u0010E\u001a\u00020\u001b2\u0006\u0010@\u001a\u00020\u00102\u0006\u0010A\u001a\u00020\u00102\b\u0010+\u001a\u0004\u0018\u00010&2\b\u0010-\u001a\u0004\u0018\u00010.H\u0016¢\u0006\u0002\u0010FJ\u0018\u0010G\u001a\u00020\u001b2\u0006\u0010\u001d\u001a\u00020\u001e2\u0006\u00109\u001a\u00020:H\u0016J\u0010\u0010H\u001a\u00020\u00102\u0006\u0010I\u001a\u00020JH\u0016J\u0010\u0010K\u001a\u00020\u001b2\u0006\u0010\u001d\u001a\u00020\u001eH\u0016J>\u0010L\u001a\u00020\u001b2\u0006\u0010A\u001a\u00020&2\u0006\u0010@\u001a\u00020&2\u001a\u0010C\u001a\u0016\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\b0D\u0018\u00010,2\b\u0010-\u001a\u0004\u0018\u00010.H\u0016J\u0010\u0010M\u001a\u00020\u001b2\u0006\u0010N\u001a\u000207H\u0014J\b\u0010O\u001a\u00020\u001bH\u0014J6\u0010P\u001a\u00020\u001b2\u0006\u0010@\u001a\u00020&2\u001a\u0010C\u001a\u0016\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\b0D\u0018\u00010,2\b\u0010-\u001a\u0004\u0018\u00010.H\u0016J\u0010\u0010Q\u001a\u00020\u001b2\u0006\u0010R\u001a\u00020SH\u0016J\u0012\u0010T\u001a\u00020\u001b2\b\u0010U\u001a\u0004\u0018\u00010\bH\u0016J\b\u0010V\u001a\u00020\u001bH\u0002J\b\u0010W\u001a\u00020\u001bH\u0002R\u000e\u0010\u0007\u001a\u00020\bX.¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX.¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX.¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX.¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0013\u001a\u00020\u0014X\u000e¢\u0006\u0004\n\u0002\u0010\u0015R\u0012\u0010\u0016\u001a\u00060\u0017R\u00020\u0000X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0019X.¢\u0006\u0002\n\u0000¨\u0006Z"}, d2 = {"Lcom/coolapk/market/view/app/AppViewV8Activity;", "Lcom/coolapk/market/view/feedv8/FakeStatusBarActivity;", "Lcom/coolapk/market/view/app/AppViewContract$View;", "Landroid/view/View$OnClickListener;", "Lcom/coolapk/market/widget/AppExtensionBar$Callback;", "Lcom/coolapk/market/view/base/AlphableToolbar;", "()V", "appPackageName", "", "appViewFragment", "Lcom/coolapk/market/view/app/AppViewListFragment;", "binding", "Lcom/coolapk/market/databinding/AppViewV8Binding;", "component", "Lcom/coolapk/market/binding/ContextBindingComponent;", "downloadOrOpenAction", "", "presenter", "Lcom/coolapk/market/view/app/AppViewContract$Presenter;", "stateEventChangedAdapter", "com/coolapk/market/view/app/AppViewV8Activity$stateEventChangedAdapter$1", "Lcom/coolapk/market/view/app/AppViewV8Activity$stateEventChangedAdapter$1;", "thumbnailListener", "Lcom/coolapk/market/view/app/AppViewV8Activity$OnThumbnailListener;", "viewModel", "Lcom/coolapk/market/view/app/AppViewViewModel;", "addAppViewFragment", "", "doActionFunction", "view", "Landroid/view/View;", "doFollowFunction", "doLoadingBgAnim", "getServiceApp", "Lcom/coolapk/market/model/ServiceApp;", "loadThumbnail", "onActivityResult", "requestCode", "", "resultCode", "data", "Landroid/content/Intent;", "onAppLoaded", "result", "Lcom/coolapk/market/network/Result;", "error", "", "onClick", "onCommentClick", "v", "onCommentLoaded", "", "Lcom/coolapk/market/model/Feed;", "onCreate", "savedInstanceState", "Landroid/os/Bundle;", "onCreateMenuTitle", "menuCard", "Lcom/coolapk/market/model/MenuCard;", "onCreateOptionsMenu", "menu", "Landroid/view/Menu;", "onDestroy", "onFavoriteAppComplete", "oldValue", "newValue", "onFollowAppComplete", "mapResult", "", "onFollowUserComplete", "(ZZLjava/lang/Integer;Ljava/lang/Throwable;)V", "onMenuClick", "onOptionsItemSelected", "item", "Landroid/view/MenuItem;", "onPostClick", "onRatingComplete", "onSaveInstanceState", "outState", "onSetStatusBarColor", "onUnratingComplete", "setToolbarAlpha", "alpha", "", "setToolbarTitle", "title", "shareAppMessage", "updateUI", "Companion", "OnThumbnailListener", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: AppViewV8Activity.kt */
 public final class AppViewV8Activity extends FakeStatusBarActivity implements AppViewContract.View, View.OnClickListener, AppExtensionBar.Callback, AlphableToolbar {
     public static final Companion Companion = new Companion(null);
@@ -115,6 +117,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
         return appViewViewModel;
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0006\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\n"}, d2 = {"Lcom/coolapk/market/view/app/AppViewV8Activity$Companion;", "", "()V", "KEY_APP_NAME", "", "KEY_DOWNLOAD_OR_OPEN_ACTION", "KEY_EXTRA_ANALYSIS_DATA", "KEY_FROM_API", "KEY_LOGO", "KEY_PACKAGE_NAME", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AppViewV8Activity.kt */
     public static final class Companion {
         private Companion() {
@@ -196,7 +199,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                 finish();
                 return;
             } else if (TextUtils.isEmpty(stringExtra)) {
-                Toast.show(this, 2131887188);
+                Toast.show(this, 2131887250);
                 finish();
                 return;
             }
@@ -212,7 +215,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
         if (contextBindingComponent == null) {
             Intrinsics.throwUninitializedPropertyAccessException("component");
         }
-        ViewDataBinding contentView = DataBindingUtil.setContentView(appViewV8Activity, 2131558469, contextBindingComponent);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(appViewV8Activity, 2131558470, contextBindingComponent);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…t.app_view_v8, component)");
         AppViewV8Binding appViewV8Binding = (AppViewV8Binding) contentView;
         this.binding = appViewV8Binding;
@@ -270,7 +273,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
         }
         appViewViewModel4.setAppName(stringExtra5);
         Ref.ObjectRef objectRef = new Ref.ObjectRef();
-        objectRef.element = (T) getSupportFragmentManager().findFragmentById(2131362083);
+        objectRef.element = (T) getSupportFragmentManager().findFragmentById(2131362085);
         if (objectRef.element == null) {
             AppViewListFragment.Companion companion = AppViewListFragment.Companion;
             String str4 = this.appPackageName;
@@ -380,13 +383,13 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
     }
 
     private final void addAppViewFragment() {
-        if (getSupportFragmentManager().findFragmentById(2131362083) == null) {
+        if (getSupportFragmentManager().findFragmentById(2131362085) == null) {
             FragmentTransaction beginTransaction = getSupportFragmentManager().beginTransaction();
             AppViewListFragment appViewListFragment = this.appViewFragment;
             if (appViewListFragment == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("appViewFragment");
             }
-            beginTransaction.add(2131362083, appViewListFragment).commitAllowingStateLoss();
+            beginTransaction.add(2131362085, appViewListFragment).commitAllowingStateLoss();
             if (getServiceApp() != null) {
                 ServiceApp serviceApp = getServiceApp();
                 Intrinsics.checkNotNull(serviceApp);
@@ -409,7 +412,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
     public boolean onCreateOptionsMenu(Menu menu) {
         Intrinsics.checkNotNullParameter(menu, "menu");
         getMenuInflater().inflate(2131623940, menu);
-        MenuItem findItem = menu.findItem(2131361960);
+        MenuItem findItem = menu.findItem(2131361961);
         Intrinsics.checkNotNullExpressionValue(findItem, "menu.findItem(R.id.action_search)");
         boolean z = false;
         findItem.setVisible(getServiceApp() != null);
@@ -419,37 +422,37 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
             Intrinsics.throwUninitializedPropertyAccessException("appPackageName");
         }
         MobileApp mobileAppExistFast = instance.getMobileAppExistFast(str);
-        MenuItem findItem2 = menu.findItem(2131361938);
+        MenuItem findItem2 = menu.findItem(2131361939);
         Intrinsics.checkNotNullExpressionValue(findItem2, "menu.findItem(R.id.action_open)");
         findItem2.setVisible(mobileAppExistFast != null);
-        MenuItem findItem3 = menu.findItem(2131361980);
+        MenuItem findItem3 = menu.findItem(2131361981);
         Intrinsics.checkNotNullExpressionValue(findItem3, "menu.findItem(R.id.action_uninstall)");
         findItem3.setVisible(mobileAppExistFast != null);
-        MenuItem findItem4 = menu.findItem(2131361858);
+        MenuItem findItem4 = menu.findItem(2131361859);
         Intrinsics.checkNotNullExpressionValue(findItem4, "menu.findItem(R.id.action_apk_manage)");
         DataManager instance2 = DataManager.getInstance();
         Intrinsics.checkNotNullExpressionValue(instance2, "DataManager.getInstance()");
         LoginSession loginSession = instance2.getLoginSession();
         Intrinsics.checkNotNullExpressionValue(loginSession, "DataManager.getInstance().loginSession");
         findItem4.setVisible(loginSession.isAdmin());
-        MenuItem findItem5 = menu.findItem(2131361904);
+        MenuItem findItem5 = menu.findItem(2131361905);
         AppViewViewModel appViewViewModel = this.viewModel;
         if (appViewViewModel == null) {
             Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         }
         findItem5.setTitle(appViewViewModel.isFavor() ? 2131886113 : 2131886131);
-        MenuItem findItem6 = menu.findItem(2131361932);
+        MenuItem findItem6 = menu.findItem(2131361933);
         Intrinsics.checkNotNullExpressionValue(findItem6, "menu.findItem(R.id.action_more_item)");
         findItem6.setVisible(getServiceApp() != null);
-        MenuItem findItem7 = menu.findItem(2131361854);
+        MenuItem findItem7 = menu.findItem(2131361855);
         Intrinsics.checkNotNullExpressionValue(findItem7, "menu.findItem(R.id.action_add_album)");
         ServiceApp serviceApp = getServiceApp();
         findItem7.setVisible(serviceApp != null && serviceApp.getIsDownloadApp() == 1);
-        MenuItem findItem8 = menu.findItem(2131361912);
+        MenuItem findItem8 = menu.findItem(2131361913);
         Intrinsics.checkNotNullExpressionValue(findItem8, "menu.findItem(R.id.action_history)");
         ServiceApp serviceApp2 = getServiceApp();
         findItem8.setVisible(serviceApp2 != null && serviceApp2.getIsDownloadApp() == 1);
-        MenuItem findItem9 = menu.findItem(2131361900);
+        MenuItem findItem9 = menu.findItem(2131361901);
         Intrinsics.checkNotNullExpressionValue(findItem9, "menu.findItem(R.id.action_download_again)");
         ServiceApp serviceApp3 = getServiceApp();
         if (serviceApp3 != null && serviceApp3.getIsDownloadApp() == 1) {
@@ -464,13 +467,13 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
         Intrinsics.checkNotNullParameter(menuItem, "item");
         switch (menuItem.getItemId()) {
             case 16908332:
-            case 2131362659:
+            case 2131362670:
                 supportFinishAfterTransition();
                 return true;
-            case 2131361854:
+            case 2131361855:
                 ActionManager.doOnLogin(getActivity(), new AppViewV8Activity$onOptionsItemSelected$2(this));
                 break;
-            case 2131361858:
+            case 2131361859:
                 BaseActivity activity = getActivity();
                 AppViewViewModel appViewViewModel = this.viewModel;
                 if (appViewViewModel == null) {
@@ -483,10 +486,10 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                 Intrinsics.checkNotNullExpressionValue(apkId, "viewModel.serviceApp!!.apkId");
                 ActionManager.startWebViewActivity(activity, UriUtils.getAppManageUrl(apkId));
                 return true;
-            case 2131361861:
+            case 2131361862:
                 doActionFunction(null);
                 return true;
-            case 2131361888:
+            case 2131361889:
                 if (getServiceApp() != null) {
                     AppCopyDialog newInstance = AppCopyDialog.Companion.newInstance(getServiceApp());
                     FragmentManager supportFragmentManager = getSupportFragmentManager();
@@ -494,7 +497,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                     newInstance.show(supportFragmentManager, (String) null);
                 }
                 return true;
-            case 2131361900:
+            case 2131361901:
                 if (getServiceApp() != null) {
                     ServiceApp serviceApp2 = getServiceApp();
                     Intrinsics.checkNotNull(serviceApp2);
@@ -517,10 +520,10 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                     }
                 }
                 return true;
-            case 2131361904:
+            case 2131361905:
                 RxLogin.getInstance(getActivity()).requestLogin().subscribe((Subscriber<? super Boolean>) new AppViewV8Activity$onOptionsItemSelected$1(this));
                 break;
-            case 2131361912:
+            case 2131361913:
                 ServiceApp serviceApp4 = getServiceApp();
                 Intrinsics.checkNotNull(serviceApp4);
                 String appName = serviceApp4.getAppName();
@@ -531,7 +534,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                 Intrinsics.checkNotNull(serviceApp6);
                 ActionManager.startHistoryVersionActivity(this, appName, apkId2, serviceApp6.getLogo());
                 break;
-            case 2131361938:
+            case 2131361939:
                 BaseActivity activity2 = getActivity();
                 String str = this.appPackageName;
                 if (str == null) {
@@ -539,7 +542,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                 }
                 ActionManager.openApp(activity2, str);
                 return true;
-            case 2131361940:
+            case 2131361941:
                 AppViewViewModel appViewViewModel2 = this.viewModel;
                 if (appViewViewModel2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("viewModel");
@@ -555,7 +558,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                     ActionManager.startExternalMarketByName(getActivity(), null, null, serviceApp7.getPackageName());
                 }
                 return true;
-            case 2131361957:
+            case 2131361958:
                 BaseActivity activity3 = getActivity();
                 AppViewViewModel appViewViewModel4 = this.viewModel;
                 if (appViewViewModel4 == null) {
@@ -569,7 +572,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                 Intrinsics.checkNotNullExpressionValue(packageName, "viewModel.serviceApp!!.packageName!!");
                 ActionManager.startWebViewActivity(activity3, UriUtils.getAppReportUrl(packageName));
                 return true;
-            case 2131361960:
+            case 2131361961:
                 AppViewV8Activity appViewV8Activity = this;
                 AppViewViewModel appViewViewModel5 = this.viewModel;
                 if (appViewViewModel5 == null) {
@@ -580,10 +583,10 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                 Intrinsics.checkNotNullExpressionValue(serviceApp9, "viewModel.serviceApp!!");
                 ActionManager.startSceneSearchActivity(appViewV8Activity, "apk", serviceApp9.getApkId());
                 return true;
-            case 2131361968:
+            case 2131361969:
                 shareAppMessage();
                 return true;
-            case 2131361980:
+            case 2131361981:
                 String str2 = this.appPackageName;
                 if (str2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("appPackageName");
@@ -593,7 +596,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                 if (TextUtils.equals(str2, activity4.getPackageName())) {
                     BaseActivity activity5 = getActivity();
                     Intrinsics.checkNotNullExpressionValue(activity5, "activity");
-                    Toast.show(activity5, 2131887216);
+                    Toast.show(activity5, 2131887278);
                 } else if (getServiceApp() != null) {
                     ServiceApp serviceApp10 = getServiceApp();
                     Intrinsics.checkNotNull(serviceApp10);
@@ -674,6 +677,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
         }
     }
 
+    /* access modifiers changed from: private */
     public final ServiceApp getServiceApp() {
         return this.presenter.getServiceApp();
     }
@@ -803,7 +807,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                 List<String> thumbList = serviceApp2.getThumbList();
                 Intrinsics.checkNotNull(thumbList);
                 for (String str : thumbList) {
-                    AppHolder.getContextImageLoader().displayImage((Context) this, str, (ImageView) null, ImageLoaderOptions.newBuilder().placeHolderRes(2131231691).loadSource(true).build(), (OnImageLoadListener) this.thumbnailListener, (OnBitmapTransformListener) null);
+                    AppHolder.getContextImageLoader().displayImage((Context) this, str, (ImageView) null, ImageLoaderOptions.newBuilder().placeHolderRes(2131231702).loadSource(true).build(), (OnImageLoadListener) this.thumbnailListener, (OnBitmapTransformListener) null);
                 }
             }
         }
@@ -851,7 +855,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
             appViewViewModel3.setVoteNums(parseInt, new int[]{Integer.parseInt(str2), Integer.parseInt(str3), Integer.parseInt(str4), Integer.parseInt(str5), Integer.parseInt(str6)});
             BaseActivity activity = getActivity();
             Intrinsics.checkNotNullExpressionValue(activity, "activity");
-            Toast.show(activity, 2131886946);
+            Toast.show(activity, 2131887008);
         }
     }
 
@@ -890,7 +894,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
             appViewViewModel3.setVoteNums(parseInt, new int[]{Integer.parseInt(str2), Integer.parseInt(str3), Integer.parseInt(str4), Integer.parseInt(str5), Integer.parseInt(str6)});
             BaseActivity activity = getActivity();
             Intrinsics.checkNotNullExpressionValue(activity, "activity");
-            Toast.show(activity, 2131887052);
+            Toast.show(activity, 2131887114);
         }
     }
 
@@ -913,12 +917,12 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
         if (z2) {
             BaseActivity activity = getActivity();
             Intrinsics.checkNotNullExpressionValue(activity, "activity");
-            Toast.show(activity, 2131886815);
+            Toast.show(activity, 2131886877);
             return;
         }
         BaseActivity activity2 = getActivity();
         Intrinsics.checkNotNullExpressionValue(activity2, "activity");
-        Toast.show(activity2, 2131887047);
+        Toast.show(activity2, 2131887109);
     }
 
     @Override // com.coolapk.market.view.app.AppViewContract.View
@@ -959,12 +963,12 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
         if (z2) {
             BaseActivity activity = getActivity();
             Intrinsics.checkNotNullExpressionValue(activity, "activity");
-            Toast.show(activity, 2131886815);
+            Toast.show(activity, 2131886877);
             return;
         }
         BaseActivity activity2 = getActivity();
         Intrinsics.checkNotNullExpressionValue(activity2, "activity");
-        Toast.show(activity2, 2131887047);
+        Toast.show(activity2, 2131887109);
     }
 
     private final void updateUI() {
@@ -978,7 +982,7 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
             if (getServiceApp() != null && this.downloadOrOpenAction) {
                 this.downloadOrOpenAction = false;
                 AppViewV8Activity appViewV8Activity = this;
-                Toast.show(appViewV8Activity, 2131887194);
+                Toast.show(appViewV8Activity, 2131887256);
                 DataManager instance = DataManager.getInstance();
                 String str = this.appPackageName;
                 if (str == null) {
@@ -1011,18 +1015,18 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
         Intrinsics.checkNotNullParameter(view, "view");
         if (getServiceApp() != null) {
             switch (view.getId()) {
-                case 2131361886:
-                case 2131361981:
-                case 2131361983:
+                case 2131361887:
+                case 2131361982:
+                case 2131361984:
                     doActionFunction(view);
                     return;
-                case 2131362087:
+                case 2131362090:
                     ActionManager.startAppDetailActivity(this, getServiceApp());
                     return;
-                case 2131362284:
+                case 2131362289:
                     ActionManager.startAppCommentActivity(this, getServiceApp(), null);
                     return;
-                case 2131362291:
+                case 2131362296:
                     AppViewV8Binding appViewV8Binding = this.binding;
                     if (appViewV8Binding == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -1034,10 +1038,10 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
                     }
                     appViewListFragment.scrollToComment();
                     return;
-                case 2131362582:
+                case 2131362590:
                     doFollowFunction(view);
                     return;
-                case 2131362657:
+                case 2131362665:
                     ServiceApp serviceApp = getServiceApp();
                     Intrinsics.checkNotNull(serviceApp);
                     String appName = serviceApp.getAppName();
@@ -1243,10 +1247,11 @@ public final class AppViewV8Activity extends FakeStatusBarActivity implements Ap
         return getString(appViewViewModel.isFollowDeveloper() ? 2131886114 : 2131886134);
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0003\n\u0000\b\u0004\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J6\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\b\u0010\u0007\u001a\u0004\u0018\u00010\b2\b\u0010\t\u001a\u0004\u0018\u00010\n2\u0006\u0010\u000b\u001a\u00020\f2\b\u0010\r\u001a\u0004\u0018\u00010\u000eH\u0016¨\u0006\u000f"}, d2 = {"Lcom/coolapk/market/view/app/AppViewV8Activity$OnThumbnailListener;", "Lcom/coolapk/market/app/OnImageLoadListener;", "(Lcom/coolapk/market/view/app/AppViewV8Activity;)V", "onLoadComplete", "", "uri", "", "drawable", "Landroid/graphics/drawable/Drawable;", "view", "Landroid/view/View;", "isFromMemory", "", "error", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AppViewV8Activity.kt */
     private final class OnThumbnailListener implements OnImageLoadListener {
+        /* JADX WARN: Incorrect args count in method signature: ()V */
         public OnThumbnailListener() {
-            AppViewV8Activity.this = r1;
         }
 
         @Override // com.coolapk.market.app.OnImageLoadListener

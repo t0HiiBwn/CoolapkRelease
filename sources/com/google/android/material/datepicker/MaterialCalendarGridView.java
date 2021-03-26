@@ -171,8 +171,8 @@ final class MaterialCalendarGridView extends GridView {
         }
     }
 
-    private static boolean skipMonth(Long l2, Long l3, Long l4, Long l5) {
-        return l2 == null || l3 == null || l4 == null || l5 == null || l4.longValue() > l3.longValue() || l5.longValue() < l2.longValue();
+    private static boolean skipMonth(Long l, Long l2, Long l3, Long l4) {
+        return l == null || l2 == null || l3 == null || l4 == null || l3.longValue() > l2.longValue() || l4.longValue() < l.longValue();
     }
 
     private static int horizontalMidPoint(View view) {

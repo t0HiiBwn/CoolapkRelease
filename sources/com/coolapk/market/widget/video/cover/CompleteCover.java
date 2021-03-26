@@ -35,10 +35,10 @@ public final class CompleteCover extends ThemeableCover {
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         int id = view.getId();
-        if (id == 2131363240) {
+        if (id == 2131363254) {
             requestReplay(null);
             setPlayCompleteState(false);
-        } else if (id == 2131363358) {
+        } else if (id == 2131363374) {
             notifyReceiverEvent(-107, null);
         }
     }
@@ -116,7 +116,7 @@ public final class CompleteCover extends ThemeableCover {
     @Override // com.kk.taurus.playerbase.receiver.BaseCover
     public View onCreateCoverView(Context context) {
         Intrinsics.checkNotNullParameter(context, "context");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559288, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559298, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…eo_complete, null, false)");
         VideoCompleteBinding videoCompleteBinding = (VideoCompleteBinding) inflate;
         this.binding = videoCompleteBinding;

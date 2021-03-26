@@ -14,7 +14,7 @@ import kotlin.coroutines.Continuation;
 import kotlin.coroutines.intrinsics.IntrinsicsKt;
 import kotlin.coroutines.jvm.internal.DebugProbesKt;
 import kotlin.jvm.internal.Intrinsics;
-import kotlinx.coroutines.BuildersKt;
+import kotlinx.coroutines.BuildersKt__Builders_commonKt;
 import kotlinx.coroutines.CancellableContinuationImpl;
 import kotlinx.coroutines.CompletableJob;
 import kotlinx.coroutines.CoroutineDispatcher;
@@ -78,7 +78,7 @@ public abstract class CoroutineWorker extends ListenableWorker {
 
     @Override // androidx.work.ListenableWorker
     public final ListenableFuture<ListenableWorker.Result> startWork() {
-        BuildersKt.launch$default(CoroutineScopeKt.CoroutineScope(getCoroutineContext().plus(this.job)), null, null, new CoroutineWorker$startWork$1(this, null), 3, null);
+        Job unused = BuildersKt__Builders_commonKt.launch$default(CoroutineScopeKt.CoroutineScope(getCoroutineContext().plus(this.job)), null, null, new CoroutineWorker$startWork$1(this, null), 3, null);
         return this.future;
     }
 

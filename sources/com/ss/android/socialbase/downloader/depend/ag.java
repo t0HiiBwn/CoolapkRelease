@@ -32,7 +32,7 @@ public interface ag extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.ss.android.socialbase.downloader.depend.INotificationClickAidlCallback");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof ag)) {
-                return new C0097a(iBinder);
+                return new C0107a(iBinder);
             }
             return (ag) queryLocalInterface;
         }
@@ -77,11 +77,11 @@ public interface ag extends IInterface {
 
         /* renamed from: com.ss.android.socialbase.downloader.depend.ag$a$a  reason: collision with other inner class name */
         /* compiled from: INotificationClickAidlCallback */
-        private static class C0097a implements ag {
+        private static class C0107a implements ag {
             public static ag a;
             private IBinder b;
 
-            C0097a(IBinder iBinder) {
+            C0107a(IBinder iBinder) {
                 this.b = iBinder;
             }
 
@@ -179,7 +179,7 @@ public interface ag extends IInterface {
         }
 
         public static ag a() {
-            return C0097a.a;
+            return C0107a.a;
         }
     }
 }

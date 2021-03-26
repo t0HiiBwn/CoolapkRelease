@@ -75,21 +75,21 @@ public final class ShortcutsUtils {
         ArrayList<ShortcutInfo> arrayList = new ArrayList<>();
         Intent data = new Intent(context, MainActivity.class).setAction("android.intent.action.VIEW").setData(Uri.parse("coolmarket://com.coolapk.market/search"));
         Intrinsics.checkNotNullExpressionValue(data, "Intent(context, MainActi….coolapk.market/search\"))");
-        arrayList.add(createShortcut(context, "SEARCH", 2131886390, 2131231529, data));
+        arrayList.add(createShortcut(context, "SEARCH", 2131886450, 2131231540, data));
         Intent data2 = new Intent(context, MainActivity.class).setAction("android.intent.action.VIEW").setData(Uri.parse("coolmarket://com.coolapk.market/new_feed"));
         Intrinsics.checkNotNullExpressionValue(data2, "Intent(context, MainActi…oolapk.market/new_feed\"))");
-        arrayList.add(createShortcut(context, "NEW_FEED", 2131886370, 2131231527, data2));
+        arrayList.add(createShortcut(context, "NEW_FEED", 2131886430, 2131231538, data2));
         Intent data3 = new Intent(context, MainActivity.class).setAction("android.intent.action.VIEW").setData(Uri.parse("coolmarket://com.coolapk.market/page?url=V8_CHANNEL_COOLPIC&title=酷图"));
         Intrinsics.checkNotNullExpressionValue(data3, "Intent(context, MainActi…ANNEL_COOLPIC&title=酷图\"))");
-        arrayList.add(createShortcut(context, "COOL_PIC", 2131886687, 2131231387, data3));
+        arrayList.add(createShortcut(context, "COOL_PIC", 2131886749, 2131231398, data3));
         if (!AppHolder.getAppMetadata().isCommunityMode()) {
             Intent data4 = new Intent(context, MainActivity.class).setAction("android.intent.action.VIEW").setData(Uri.parse("coolmarket://com.coolapk.market/app_manager"));
             Intrinsics.checkNotNullExpressionValue(data4, "Intent(context, MainActi…apk.market/app_manager\"))");
-            arrayList.add(createShortcut(context, "APP_MANAGER", 2131887227, 2131231526, data4));
+            arrayList.add(createShortcut(context, "APP_MANAGER", 2131887289, 2131231537, data4));
         }
         Intent data5 = new Intent(context, MainActivity.class).setAction("android.intent.action.VIEW").setData(Uri.parse("coolmarket://com.coolapk.market/qr_scan"));
         Intrinsics.checkNotNullExpressionValue(data5, "Intent(context, MainActi…coolapk.market/qr_scan\"))");
-        arrayList.add(createShortcut(context, "COOL_SCAN", 2131887293, 2131231524, data5));
+        arrayList.add(createShortcut(context, "COOL_SCAN", 2131887355, 2131231535, data5));
         return arrayList;
     }
 

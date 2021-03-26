@@ -21,6 +21,6 @@ final class UArraysKt___UArraysKt$withIndex$4 extends Lambda implements Function
     /* Return type fixed from 'java.util.Iterator<kotlin.UShort>' to match base method */
     @Override // kotlin.jvm.functions.Function0
     public final Iterator<? extends UShort> invoke() {
-        return UShortArray.m994iteratorimpl(this.$this_withIndex);
+        return UShortArray.m392iteratorimpl(this.$this_withIndex);
     }
 }

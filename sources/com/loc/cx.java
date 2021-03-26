@@ -4,9 +4,7 @@ package com.loc;
 public final class cx extends cw {
     public int j = 0;
     public int k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    public int f1357l = 0;
+    public int l = 0;
     public int m;
     public int n;
 
@@ -21,7 +19,7 @@ public final class cx extends cw {
         cxVar.a(this);
         this.j = cxVar.j;
         this.k = cxVar.k;
-        this.f1357l = cxVar.f1357l;
+        this.l = cxVar.l;
         this.m = cxVar.m;
         this.n = cxVar.n;
         return cxVar;
@@ -29,6 +27,6 @@ public final class cx extends cw {
 
     @Override // com.loc.cw
     public final String toString() {
-        return "AmapCellCdma{sid=" + this.j + ", nid=" + this.k + ", bid=" + this.f1357l + ", latitude=" + this.m + ", longitude=" + this.n + '}' + super.toString();
+        return "AmapCellCdma{sid=" + this.j + ", nid=" + this.k + ", bid=" + this.l + ", latitude=" + this.m + ", longitude=" + this.n + '}' + super.toString();
     }
 }

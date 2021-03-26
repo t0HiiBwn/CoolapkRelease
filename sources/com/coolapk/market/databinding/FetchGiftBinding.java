@@ -41,7 +41,7 @@ public abstract class FetchGiftBinding extends ViewDataBinding {
 
     @Deprecated
     public static FetchGiftBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (FetchGiftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558564, viewGroup, z, obj);
+        return (FetchGiftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558567, viewGroup, z, obj);
     }
 
     public static FetchGiftBinding inflate(LayoutInflater layoutInflater) {
@@ -50,7 +50,7 @@ public abstract class FetchGiftBinding extends ViewDataBinding {
 
     @Deprecated
     public static FetchGiftBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (FetchGiftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558564, null, false, obj);
+        return (FetchGiftBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558567, null, false, obj);
     }
 
     public static FetchGiftBinding bind(View view) {
@@ -59,6 +59,6 @@ public abstract class FetchGiftBinding extends ViewDataBinding {
 
     @Deprecated
     public static FetchGiftBinding bind(View view, Object obj) {
-        return (FetchGiftBinding) bind(obj, view, 2131558564);
+        return (FetchGiftBinding) bind(obj, view, 2131558567);
     }
 }

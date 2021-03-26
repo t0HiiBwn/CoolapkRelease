@@ -17,7 +17,7 @@ import com.coolapk.market.util.DisplayUtils;
 import com.coolapk.market.util.ViewUtil;
 
 public class GridAlbumCardViewHolder extends GenericBindHolder<ItemGridAlbumCardBinding, Card> {
-    public static final int LAYOUT_ID = 2131558764;
+    public static final int LAYOUT_ID = 2131558771;
     private final DataAdapter adapter;
     private AlbumCard albumCard;
     private final ItemGridAlbumCardBinding binding;
@@ -71,7 +71,7 @@ public class GridAlbumCardViewHolder extends GenericBindHolder<ItemGridAlbumCard
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            View inflate = LayoutInflater.from(GridAlbumCardViewHolder.this.getContext()).inflate(2131558449, viewGroup, false);
+            View inflate = LayoutInflater.from(GridAlbumCardViewHolder.this.getContext()).inflate(2131558450, viewGroup, false);
             GridAlbumCardViewHolder gridAlbumCardViewHolder = GridAlbumCardViewHolder.this;
             return new DataViewHolder(gridAlbumCardViewHolder, inflate, gridAlbumCardViewHolder.component, GridAlbumCardViewHolder.this.itemActionHandler);
         }
@@ -101,7 +101,7 @@ public class GridAlbumCardViewHolder extends GenericBindHolder<ItemGridAlbumCard
     }
 
     public static class DataViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558449;
+        public static final int LAYOUT_ID = 2131558450;
         private final GridAlbumCardViewHolder gridCardViewHolder;
         public ObservableInt height = new ObservableInt();
         public ObservableInt width = new ObservableInt();

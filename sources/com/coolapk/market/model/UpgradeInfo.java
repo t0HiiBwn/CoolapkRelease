@@ -37,7 +37,7 @@ public abstract class UpgradeInfo implements Parcelable {
 
         public abstract Builder patchKey(String str);
 
-        public abstract Builder patchLength(Long l2);
+        public abstract Builder patchLength(Long l);
 
         public abstract Builder patchMd5(String str);
 

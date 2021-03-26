@@ -154,7 +154,7 @@ public class NotificationActionReceiver extends BroadcastReceiver {
                                     }
                                     ActionManager.startView(context, fromFile, mimeType);
                                 } catch (ActivityNotFoundException unused) {
-                                    Toast.show(context, 2131887189);
+                                    Toast.show(context, 2131887251);
                                 }
                             }
                             DownloadNotificationHelper.getInstance().cancelResult(context, downloadStateWithUrl.getKey());

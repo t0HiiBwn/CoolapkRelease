@@ -16,6 +16,6 @@ final class EntityLiveHelper$placeholder$2 extends Lambda implements Function0<S
 
     @Override // kotlin.jvm.functions.Function0
     public final String invoke() {
-        return AppHolder.getApplication().getString(2131886436);
+        return AppHolder.getApplication().getString(2131886496);
     }
 }

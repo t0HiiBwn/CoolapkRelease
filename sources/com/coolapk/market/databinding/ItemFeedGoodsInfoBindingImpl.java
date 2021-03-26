@@ -69,9 +69,9 @@ public class ItemFeedGoodsInfoBindingImpl extends ItemFeedGoodsInfoBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((GoodsSimpleInfo) obj);
-        } else if (271 == i) {
+        } else if (272 == i) {
             setSubTitle((String) obj);
         } else if (50 != i) {
             return false;
@@ -87,7 +87,7 @@ public class ItemFeedGoodsInfoBindingImpl extends ItemFeedGoodsInfoBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -97,7 +97,7 @@ public class ItemFeedGoodsInfoBindingImpl extends ItemFeedGoodsInfoBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(271);
+        notifyPropertyChanged(272);
         super.requestRebind();
     }
 
@@ -165,7 +165,7 @@ public class ItemFeedGoodsInfoBindingImpl extends ItemFeedGoodsInfoBinding {
         }
         if ((j & 9) != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str, null, 2131231408, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str, null, 2131231419, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
             TextViewBindingAdapter.setText(this.mboundView3, str3);
             this.mboundView3.setVisibility(i);
             TextViewBindingAdapter.setText(this.titleView, str2);

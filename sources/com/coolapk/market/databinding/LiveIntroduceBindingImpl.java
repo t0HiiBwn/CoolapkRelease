@@ -26,9 +26,9 @@ public class LiveIntroduceBindingImpl extends LiveIntroduceBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362300, 4);
-        sparseIntArray.put(2131363582, 5);
-        sparseIntArray.put(2131363138, 6);
+        sparseIntArray.put(2131362305, 4);
+        sparseIntArray.put(2131363604, 5);
+        sparseIntArray.put(2131363152, 6);
     }
 
     public LiveIntroduceBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -68,7 +68,7 @@ public class LiveIntroduceBindingImpl extends LiveIntroduceBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((LiveViewModel) obj);
@@ -81,7 +81,7 @@ public class LiveIntroduceBindingImpl extends LiveIntroduceBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 

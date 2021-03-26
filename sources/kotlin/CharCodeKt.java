@@ -13,7 +13,7 @@ public final class CharCodeKt {
 
     private static final char Char(int i) {
         if (i >= getCode(0) && i <= getCode(65535)) {
-            return (char) (UShort.m941constructorimpl((short) i) & 65535);
+            return (char) (UShort.m339constructorimpl((short) i) & 65535);
         }
         throw new IllegalArgumentException("Invalid Char code: " + i);
     }

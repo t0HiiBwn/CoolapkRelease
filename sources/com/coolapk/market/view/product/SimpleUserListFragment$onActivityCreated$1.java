@@ -40,11 +40,11 @@ final class SimpleUserListFragment$onActivityCreated$1 extends Lambda implements
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
                 super.onItemClick(viewHolder, view);
-                if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition()) && view.getId() == 2131362200) {
+                if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition()) && view.getId() == 2131362205) {
                     Object obj = this.this$0.this$0.getDataList().get(viewHolder.getAdapterPosition());
                     Objects.requireNonNull(obj, "null cannot be cast to non-null type com.coolapk.market.model.User");
                     User user = (User) obj;
-                    ActionManager.startUserSpaceActivity(viewHolder.itemView.findViewById(2131362672), user.getUid(), user.getUserAvatar());
+                    ActionManager.startUserSpaceActivity(viewHolder.itemView.findViewById(2131362683), user.getUid(), user.getUserAvatar());
                 }
             }
         });

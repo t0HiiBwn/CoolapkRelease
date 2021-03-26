@@ -50,7 +50,7 @@ public abstract class ItemSimpleEntityHolderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSimpleEntityHolderBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSimpleEntityHolderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558929, viewGroup, z, obj);
+        return (ItemSimpleEntityHolderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558936, viewGroup, z, obj);
     }
 
     public static ItemSimpleEntityHolderBinding inflate(LayoutInflater layoutInflater) {
@@ -59,7 +59,7 @@ public abstract class ItemSimpleEntityHolderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSimpleEntityHolderBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSimpleEntityHolderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558929, null, false, obj);
+        return (ItemSimpleEntityHolderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558936, null, false, obj);
     }
 
     public static ItemSimpleEntityHolderBinding bind(View view) {
@@ -68,6 +68,6 @@ public abstract class ItemSimpleEntityHolderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSimpleEntityHolderBinding bind(View view, Object obj) {
-        return (ItemSimpleEntityHolderBinding) bind(obj, view, 2131558929);
+        return (ItemSimpleEntityHolderBinding) bind(obj, view, 2131558936);
     }
 }

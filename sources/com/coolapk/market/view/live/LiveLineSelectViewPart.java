@@ -44,7 +44,7 @@ public final class LiveLineSelectViewPart extends ViewPart {
     @Override // com.coolapk.market.viewholder.iview.ViewPart
     protected View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558807, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558814, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…w_part, viewGroup, false)");
         ItemLiveLineViewPartBinding itemLiveLineViewPartBinding = (ItemLiveLineViewPartBinding) inflate;
         this.binding = itemLiveLineViewPartBinding;

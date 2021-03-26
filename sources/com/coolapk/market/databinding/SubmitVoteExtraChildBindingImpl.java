@@ -27,12 +27,12 @@ public class SubmitVoteExtraChildBindingImpl extends SubmitVoteExtraChildBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 1);
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131362441, 3);
-        sparseIntArray.put(2131362489, 4);
-        sparseIntArray.put(2131362376, 5);
-        sparseIntArray.put(2131362087, 6);
+        sparseIntArray.put(2131362718, 1);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131362448, 3);
+        sparseIntArray.put(2131362497, 4);
+        sparseIntArray.put(2131362382, 5);
+        sparseIntArray.put(2131362090, 6);
     }
 
     public SubmitVoteExtraChildBindingImpl(DataBindingComponent dataBindingComponent, View view) {

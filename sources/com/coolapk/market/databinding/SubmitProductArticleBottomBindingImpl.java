@@ -25,7 +25,7 @@ public class SubmitProductArticleBottomBindingImpl extends SubmitProductArticleB
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 1);
+        sparseIntArray.put(2131362779, 1);
     }
 
     public SubmitProductArticleBottomBindingImpl(DataBindingComponent dataBindingComponent, View view) {

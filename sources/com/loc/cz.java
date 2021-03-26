@@ -4,9 +4,7 @@ package com.loc;
 public final class cz extends cw {
     public int j = 0;
     public int k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    public int f1359l = Integer.MAX_VALUE;
+    public int l = Integer.MAX_VALUE;
     public int m = Integer.MAX_VALUE;
     public int n = Integer.MAX_VALUE;
 
@@ -21,7 +19,7 @@ public final class cz extends cw {
         czVar.a(this);
         czVar.j = this.j;
         czVar.k = this.k;
-        czVar.f1359l = this.f1359l;
+        czVar.l = this.l;
         czVar.m = this.m;
         czVar.n = this.n;
         return czVar;
@@ -29,6 +27,6 @@ public final class cz extends cw {
 
     @Override // com.loc.cw
     public final String toString() {
-        return "AmapCellLte{lac=" + this.j + ", cid=" + this.k + ", pci=" + this.f1359l + ", earfcn=" + this.m + ", timingAdvance=" + this.n + '}' + super.toString();
+        return "AmapCellLte{lac=" + this.j + ", cid=" + this.k + ", pci=" + this.l + ", earfcn=" + this.m + ", timingAdvance=" + this.n + '}' + super.toString();
     }
 }

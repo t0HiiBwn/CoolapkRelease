@@ -26,9 +26,9 @@ public class MainCategoryLayoutBindingImpl extends MainCategoryLayoutBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362859, 1);
-        sparseIntArray.put(2131362060, 2);
-        sparseIntArray.put(2131362601, 3);
+        sparseIntArray.put(2131362870, 1);
+        sparseIntArray.put(2131362062, 2);
+        sparseIntArray.put(2131362609, 3);
     }
 
     public MainCategoryLayoutBindingImpl(DataBindingComponent dataBindingComponent, View view) {

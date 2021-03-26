@@ -8,17 +8,17 @@ public class AutoCloseInputStream extends ProxyInputStream {
         super(inputStream);
     }
 
-    @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.Closeable, java.lang.AutoCloseable, java.io.InputStream
-    public void close() throws IOException {
-        this.in.close();
-        this.in = new ClosedInputStream();
-    }
-
     @Override // org.apache.commons.io.input.ProxyInputStream
     protected void afterRead(int i) throws IOException {
         if (i == -1) {
             close();
         }
+    }
+
+    @Override // org.apache.commons.io.input.ProxyInputStream, java.io.FilterInputStream, java.io.Closeable, java.lang.AutoCloseable, java.io.InputStream
+    public void close() throws IOException {
+        this.in.close();
+        this.in = new ClosedInputStream();
     }
 
     @Override // java.lang.Object

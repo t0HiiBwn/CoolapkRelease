@@ -1,14 +1,18 @@
 package com.qq.e.ads.nativ.express2;
 
+import android.app.Activity;
 import android.view.View;
 import com.qq.e.comm.adevent.ADEvent;
 import com.qq.e.comm.adevent.ADEventListener;
 import com.qq.e.comm.adevent.ADListener;
+import com.qq.e.comm.compliance.DownloadConfirmCallBack;
+import com.qq.e.comm.compliance.DownloadConfirmListener;
 
-public class NativeExpressADDataAdapter implements NativeExpressADData2 {
+public class NativeExpressADDataAdapter implements NativeExpressADData2, DownloadConfirmListener {
     private NativeExpressADData2 a;
     private MediaEventListener b;
     private AdEventListener c;
+    private DownloadConfirmListener d;
 
     public NativeExpressADDataAdapter(NativeExpressADData2 nativeExpressADData2) {
         this.a = nativeExpressADData2;
@@ -90,6 +94,15 @@ public class NativeExpressADDataAdapter implements NativeExpressADData2 {
         return this.a.getAdView();
     }
 
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public String getApkInfoUrl() {
+        NativeExpressADData2 nativeExpressADData2 = this.a;
+        if (nativeExpressADData2 != null) {
+            return nativeExpressADData2.getApkInfoUrl();
+        }
+        return null;
+    }
+
     @Override // com.qq.e.ads.nativ.express2.NativeExpressADData2
     public String getECPMLevel() {
         return this.a.getECPMLevel();
@@ -105,6 +118,14 @@ public class NativeExpressADDataAdapter implements NativeExpressADData2 {
         return this.a.isVideoAd();
     }
 
+    @Override // com.qq.e.comm.compliance.DownloadConfirmListener
+    public void onDownloadConfirm(Activity activity, int i, String str, DownloadConfirmCallBack downloadConfirmCallBack) {
+        DownloadConfirmListener downloadConfirmListener = this.d;
+        if (downloadConfirmListener != null) {
+            downloadConfirmListener.onDownloadConfirm(activity, i, str, downloadConfirmCallBack);
+        }
+    }
+
     @Override // com.qq.e.ads.nativ.express2.NativeExpressADData2
     public void render() {
         this.a.render();
@@ -113,6 +134,15 @@ public class NativeExpressADDataAdapter implements NativeExpressADData2 {
     @Override // com.qq.e.ads.nativ.express2.NativeExpressADData2
     public void setAdEventListener(AdEventListener adEventListener) {
         this.c = adEventListener;
+    }
+
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public void setDownloadConfirmListener(DownloadConfirmListener downloadConfirmListener) {
+        this.d = downloadConfirmListener;
+        NativeExpressADData2 nativeExpressADData2 = this.a;
+        if (nativeExpressADData2 != null) {
+            nativeExpressADData2.setDownloadConfirmListener(this);
+        }
     }
 
     @Override // com.qq.e.ads.nativ.express2.NativeExpressADData2

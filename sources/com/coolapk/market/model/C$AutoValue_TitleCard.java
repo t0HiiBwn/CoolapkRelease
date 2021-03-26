@@ -10,8 +10,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_TitleCard  reason: invalid class name */
 abstract class C$AutoValue_TitleCard extends C$$AutoValue_TitleCard {
-    C$AutoValue_TitleCard(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l2, Long l3, String str8, String str9, String str10, List list, String str11, String str12) {
-        super(str, str2, str3, num, str4, str5, str6, str7, l2, l3, str8, str9, str10, list, str11, str12);
+    C$AutoValue_TitleCard(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l, Long l2, String str8, String str9, String str10, List list, String str11, String str12) {
+        super(str, str2, str3, num, str4, str5, str6, str7, l, l2, str8, str9, str10, list, str11, str12);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_TitleCard$GsonTypeAdapter */
@@ -108,13 +108,13 @@ abstract class C$AutoValue_TitleCard extends C$$AutoValue_TitleCard {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -204,8 +204,8 @@ abstract class C$AutoValue_TitleCard extends C$$AutoValue_TitleCard {
             String str5 = this.defaultLogo;
             String str6 = this.defaultId;
             String str7 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str8 = this.defaultTitle;
             String str9 = this.defaultUrl;
             String str10 = this.defaultDescription;
@@ -219,8 +219,8 @@ abstract class C$AutoValue_TitleCard extends C$$AutoValue_TitleCard {
             String str16 = str5;
             String str17 = str6;
             String str18 = str7;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str19 = str8;
             String str20 = str9;
             String str21 = str10;
@@ -352,7 +352,7 @@ abstract class C$AutoValue_TitleCard extends C$$AutoValue_TitleCard {
                             str12 = this.entityTypeAdapter.read(jsonReader);
                             continue;
                         case 6:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 7:
                             str22 = this.entityTypeNameAdapter.read(jsonReader);
@@ -379,7 +379,7 @@ abstract class C$AutoValue_TitleCard extends C$$AutoValue_TitleCard {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 15:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -388,7 +388,7 @@ abstract class C$AutoValue_TitleCard extends C$$AutoValue_TitleCard {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_TitleCard(str22, str13, str14, num2, str15, str16, str17, str18, l4, l5, str19, str20, str21, list2, str23, str12);
+            return new AutoValue_TitleCard(str22, str13, str14, num2, str15, str16, str17, str18, l3, l4, str19, str20, str21, list2, str23, str12);
         }
     }
 }

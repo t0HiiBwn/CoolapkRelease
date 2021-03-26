@@ -1,6 +1,7 @@
 package kotlinx.coroutines.internal;
 
 import java.util.List;
+import kotlin.KotlinNothingValueException;
 import kotlinx.coroutines.MainCoroutineDispatcher;
 
 /* compiled from: MainDispatchers.kt */
@@ -8,7 +9,7 @@ public final class MainDispatchersKt {
     private static final String FAST_SERVICE_LOADER_PROPERTY_NAME = "kotlinx.coroutines.fast.service.loader";
     private static final boolean SUPPORT_MISSING = true;
 
-    private static /* synthetic */ void SUPPORT_MISSING$annotations() {
+    private static /* synthetic */ void getSUPPORT_MISSING$annotations() {
     }
 
     public static final MainCoroutineDispatcher tryCreateDispatcher(MainDispatcherFactory mainDispatcherFactory, List<? extends MainDispatcherFactory> list) {
@@ -41,7 +42,7 @@ public final class MainDispatchersKt {
             throw th;
         }
         throwMissingMainDispatcherException();
-        throw null;
+        throw new KotlinNothingValueException();
     }
 
     public static final Void throwMissingMainDispatcherException() {

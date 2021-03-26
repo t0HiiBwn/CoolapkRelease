@@ -72,34 +72,34 @@ class DateStrings {
         return getYearMonthDay(j);
     }
 
-    static Pair<String, String> getDateRangeString(Long l2, Long l3) {
-        return getDateRangeString(l2, l3, null);
+    static Pair<String, String> getDateRangeString(Long l, Long l2) {
+        return getDateRangeString(l, l2, null);
     }
 
-    static Pair<String, String> getDateRangeString(Long l2, Long l3, SimpleDateFormat simpleDateFormat) {
-        if (l2 == null && l3 == null) {
+    static Pair<String, String> getDateRangeString(Long l, Long l2, SimpleDateFormat simpleDateFormat) {
+        if (l == null && l2 == null) {
             return Pair.create(null, null);
         }
-        if (l2 == null) {
-            return Pair.create(null, getDateString(l3.longValue(), simpleDateFormat));
+        if (l == null) {
+            return Pair.create(null, getDateString(l2.longValue(), simpleDateFormat));
         }
-        if (l3 == null) {
-            return Pair.create(getDateString(l2.longValue(), simpleDateFormat), null);
+        if (l2 == null) {
+            return Pair.create(getDateString(l.longValue(), simpleDateFormat), null);
         }
         Calendar todayCalendar = UtcDates.getTodayCalendar();
         Calendar utcCalendar = UtcDates.getUtcCalendar();
-        utcCalendar.setTimeInMillis(l2.longValue());
+        utcCalendar.setTimeInMillis(l.longValue());
         Calendar utcCalendar2 = UtcDates.getUtcCalendar();
-        utcCalendar2.setTimeInMillis(l3.longValue());
+        utcCalendar2.setTimeInMillis(l2.longValue());
         if (simpleDateFormat != null) {
-            return Pair.create(simpleDateFormat.format(new Date(l2.longValue())), simpleDateFormat.format(new Date(l3.longValue())));
+            return Pair.create(simpleDateFormat.format(new Date(l.longValue())), simpleDateFormat.format(new Date(l2.longValue())));
         } else if (utcCalendar.get(1) != utcCalendar2.get(1)) {
-            return Pair.create(getYearMonthDay(l2.longValue(), Locale.getDefault()), getYearMonthDay(l3.longValue(), Locale.getDefault()));
+            return Pair.create(getYearMonthDay(l.longValue(), Locale.getDefault()), getYearMonthDay(l2.longValue(), Locale.getDefault()));
         } else {
             if (utcCalendar.get(1) == todayCalendar.get(1)) {
-                return Pair.create(getMonthDay(l2.longValue(), Locale.getDefault()), getMonthDay(l3.longValue(), Locale.getDefault()));
+                return Pair.create(getMonthDay(l.longValue(), Locale.getDefault()), getMonthDay(l2.longValue(), Locale.getDefault()));
             }
-            return Pair.create(getMonthDay(l2.longValue(), Locale.getDefault()), getYearMonthDay(l3.longValue(), Locale.getDefault()));
+            return Pair.create(getMonthDay(l.longValue(), Locale.getDefault()), getYearMonthDay(l2.longValue(), Locale.getDefault()));
         }
     }
 }

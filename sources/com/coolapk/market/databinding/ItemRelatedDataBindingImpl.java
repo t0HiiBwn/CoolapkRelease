@@ -54,7 +54,7 @@ public class ItemRelatedDataBindingImpl extends ItemRelatedDataBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (204 == i) {
+        if (205 == i) {
             setName((String) obj);
         } else if (39 != i) {
             return false;
@@ -70,7 +70,7 @@ public class ItemRelatedDataBindingImpl extends ItemRelatedDataBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(204);
+        notifyPropertyChanged(205);
         super.requestRebind();
     }
 
@@ -96,7 +96,7 @@ public class ItemRelatedDataBindingImpl extends ItemRelatedDataBinding {
         int i = ((5 & j) > 0 ? 1 : ((5 & j) == 0 ? 0 : -1));
         if ((j & 6) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str2, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str2, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
         }
         if (i != 0) {
             TextViewBindingAdapter.setText(this.titleView, str);

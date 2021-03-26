@@ -38,9 +38,7 @@ public class f {
     private final g.c i;
     private volatile c j;
     private volatile c k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final Runnable f1334l;
+    private final Runnable l;
     private final AtomicBoolean m;
 
     /* access modifiers changed from: private */
@@ -105,7 +103,7 @@ public class f {
                 }
             }
         };
-        this.f1334l = new Runnable() {
+        this.l = new Runnable() {
             /* class com.bytedance.sdk.openadsdk.i.f.AnonymousClass2 */
 
             @Override // java.lang.Runnable
@@ -229,7 +227,7 @@ public class f {
 
     public void d() {
         if (this.m.compareAndSet(false, true)) {
-            Thread thread = new Thread(this.f1334l);
+            Thread thread = new Thread(this.l);
             thread.setName("tt_pangle_thread_proxy_server");
             thread.start();
         }

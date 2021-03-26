@@ -37,7 +37,7 @@ public final class OptionPopupMenu$PackageMD5DialogFragment$onCreateLoader$3 ext
      */
     @Override // androidx.loader.content.AsyncTaskLoader
     public String loadInBackground() {
-        String string = this.this$0.getString(2131886633);
+        String string = this.this$0.getString(2131886695);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_can_not_find_file)");
         String str = this.this$0.filePath;
         if (str == null || !new File(this.this$0.filePath).exists()) {

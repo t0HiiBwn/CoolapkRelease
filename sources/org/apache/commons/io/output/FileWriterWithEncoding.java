@@ -7,35 +7,10 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.nio.charset.Charset;
 import java.nio.charset.CharsetEncoder;
-import java.util.Objects;
 import org.apache.commons.io.FileUtils;
 
 public class FileWriterWithEncoding extends Writer {
     private final Writer out;
-
-    public FileWriterWithEncoding(String str, String str2) throws IOException {
-        this(new File(str), str2, false);
-    }
-
-    public FileWriterWithEncoding(String str, String str2, boolean z) throws IOException {
-        this(new File(str), str2, z);
-    }
-
-    public FileWriterWithEncoding(String str, Charset charset) throws IOException {
-        this(new File(str), charset, false);
-    }
-
-    public FileWriterWithEncoding(String str, Charset charset, boolean z) throws IOException {
-        this(new File(str), charset, z);
-    }
-
-    public FileWriterWithEncoding(String str, CharsetEncoder charsetEncoder) throws IOException {
-        this(new File(str), charsetEncoder, false);
-    }
-
-    public FileWriterWithEncoding(String str, CharsetEncoder charsetEncoder, boolean z) throws IOException {
-        this(new File(str), charsetEncoder, z);
-    }
 
     public FileWriterWithEncoding(File file, String str) throws IOException {
         this(file, str, false);
@@ -61,32 +36,59 @@ public class FileWriterWithEncoding extends Writer {
         this.out = initWriter(file, charsetEncoder, z);
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:18:0x003e A[SYNTHETIC, Splitter:B:18:0x003e] */
-    /* JADX WARNING: Removed duplicated region for block: B:23:0x0048  */
+    public FileWriterWithEncoding(String str, String str2) throws IOException {
+        this(new File(str), str2, false);
+    }
+
+    public FileWriterWithEncoding(String str, String str2, boolean z) throws IOException {
+        this(new File(str), str2, z);
+    }
+
+    public FileWriterWithEncoding(String str, Charset charset) throws IOException {
+        this(new File(str), charset, false);
+    }
+
+    public FileWriterWithEncoding(String str, Charset charset, boolean z) throws IOException {
+        this(new File(str), charset, z);
+    }
+
+    public FileWriterWithEncoding(String str, CharsetEncoder charsetEncoder) throws IOException {
+        this(new File(str), charsetEncoder, false);
+    }
+
+    public FileWriterWithEncoding(String str, CharsetEncoder charsetEncoder, boolean z) throws IOException {
+        this(new File(str), charsetEncoder, z);
+    }
+
+    /* JADX WARNING: Removed duplicated region for block: B:20:0x0038 A[SYNTHETIC, Splitter:B:20:0x0038] */
+    /* JADX WARNING: Removed duplicated region for block: B:25:0x0042  */
     private static Writer initWriter(File file, Object obj, boolean z) throws IOException {
         Exception e;
-        Objects.requireNonNull(file, "File is missing");
-        Objects.requireNonNull(obj, "Encoding is missing");
-        FileOutputStream fileOutputStream = null;
-        boolean exists = file.exists();
-        try {
-            FileOutputStream fileOutputStream2 = new FileOutputStream(file, z);
+        if (file == null) {
+            throw new NullPointerException("File is missing");
+        } else if (obj != null) {
+            FileOutputStream fileOutputStream = null;
+            boolean exists = file.exists();
             try {
-                if (obj instanceof Charset) {
-                    return new OutputStreamWriter(fileOutputStream2, (Charset) obj);
+                FileOutputStream fileOutputStream2 = new FileOutputStream(file, z);
+                try {
+                    return obj instanceof Charset ? new OutputStreamWriter(fileOutputStream2, (Charset) obj) : obj instanceof CharsetEncoder ? new OutputStreamWriter(fileOutputStream2, (CharsetEncoder) obj) : new OutputStreamWriter(fileOutputStream2, (String) obj);
+                } catch (IOException | RuntimeException e2) {
+                    e = e2;
+                    fileOutputStream = fileOutputStream2;
+                    if (fileOutputStream != null) {
+                    }
+                    if (!exists) {
+                    }
+                    throw e;
                 }
-                if (obj instanceof CharsetEncoder) {
-                    return new OutputStreamWriter(fileOutputStream2, (CharsetEncoder) obj);
-                }
-                return new OutputStreamWriter(fileOutputStream2, (String) obj);
-            } catch (IOException | RuntimeException e2) {
-                e = e2;
-                fileOutputStream = fileOutputStream2;
+            } catch (IOException | RuntimeException e3) {
+                e = e3;
                 if (fileOutputStream != null) {
                     try {
                         fileOutputStream.close();
-                    } catch (IOException e3) {
-                        e.addSuppressed(e3);
+                    } catch (IOException e4) {
+                        e.addSuppressed(e4);
                     }
                 }
                 if (!exists) {
@@ -94,29 +96,24 @@ public class FileWriterWithEncoding extends Writer {
                 }
                 throw e;
             }
-        } catch (IOException | RuntimeException e4) {
-            e = e4;
-            if (fileOutputStream != null) {
-            }
-            if (!exists) {
-            }
-            throw e;
+        } else {
+            throw new NullPointerException("Encoding is missing");
         }
+    }
+
+    @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
+        this.out.close();
+    }
+
+    @Override // java.io.Writer, java.io.Flushable
+    public void flush() throws IOException {
+        this.out.flush();
     }
 
     @Override // java.io.Writer
     public void write(int i) throws IOException {
         this.out.write(i);
-    }
-
-    @Override // java.io.Writer
-    public void write(char[] cArr) throws IOException {
-        this.out.write(cArr);
-    }
-
-    @Override // java.io.Writer
-    public void write(char[] cArr, int i, int i2) throws IOException {
-        this.out.write(cArr, i, i2);
     }
 
     @Override // java.io.Writer
@@ -129,13 +126,13 @@ public class FileWriterWithEncoding extends Writer {
         this.out.write(str, i, i2);
     }
 
-    @Override // java.io.Writer, java.io.Flushable
-    public void flush() throws IOException {
-        this.out.flush();
+    @Override // java.io.Writer
+    public void write(char[] cArr) throws IOException {
+        this.out.write(cArr);
     }
 
-    @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
-        this.out.close();
+    @Override // java.io.Writer
+    public void write(char[] cArr, int i, int i2) throws IOException {
+        this.out.write(cArr, i, i2);
     }
 }

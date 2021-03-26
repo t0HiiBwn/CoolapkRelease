@@ -78,9 +78,7 @@ public class b {
     private static volatile IDownloadHttpService i;
     private static volatile h j;
     private static volatile IDownloadHttpService k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static volatile h f1408l;
+    private static volatile h l;
     private static volatile k m;
     private static volatile ExecutorService n;
     private static volatile ExecutorService o;
@@ -560,14 +558,14 @@ public class b {
     }
 
     public static h i() {
-        if (f1408l == null) {
+        if (l == null) {
             synchronized (b.class) {
-                if (f1408l == null) {
-                    f1408l = new com.ss.android.socialbase.downloader.impls.f();
+                if (l == null) {
+                    l = new com.ss.android.socialbase.downloader.impls.f();
                 }
             }
         }
-        return f1408l;
+        return l;
     }
 
     public static synchronized void a(k kVar) {

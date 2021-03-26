@@ -125,7 +125,7 @@ public final class SearchAppHeader extends BaseAppHeader implements SharedPrefer
         Unit unit = Unit.INSTANCE;
         this.avatarView = imageView;
         ImageView imageView2 = new ImageView(getContext());
-        imageView2.setImageResource(2131231534);
+        imageView2.setImageResource(2131231545);
         imageView2.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         Unit unit2 = Unit.INSTANCE;
         this.searchIconView = imageView2;
@@ -135,14 +135,14 @@ public final class SearchAppHeader extends BaseAppHeader implements SharedPrefer
         if (inflate == null) {
             Intrinsics.throwUninitializedPropertyAccessException("appManagerView");
         }
-        View findViewById = inflate.findViewById(2131362919);
+        View findViewById = inflate.findViewById(2131362931);
         Intrinsics.checkNotNullExpressionValue(findViewById, "appManagerView.findViewById(R.id.menu_badge)");
         this.appManagerBadgeView = (TextView) findViewById;
         View view = this.appManagerView;
         if (view == null) {
             Intrinsics.throwUninitializedPropertyAccessException("appManagerView");
         }
-        View findViewById2 = view.findViewById(2131362920);
+        View findViewById2 = view.findViewById(2131362932);
         Intrinsics.checkNotNullExpressionValue(findViewById2, "appManagerView.findViewById(R.id.menu_badge_icon)");
         this.appManagerIconView = (ImageView) findViewById2;
         View view2 = this.appManagerView;
@@ -156,14 +156,14 @@ public final class SearchAppHeader extends BaseAppHeader implements SharedPrefer
         if (inflate2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("notificationView");
         }
-        View findViewById3 = inflate2.findViewById(2131362919);
+        View findViewById3 = inflate2.findViewById(2131362931);
         Intrinsics.checkNotNullExpressionValue(findViewById3, "notificationView.findViewById(R.id.menu_badge)");
         this.notificationBadgeView = (TextView) findViewById3;
         View view3 = this.notificationView;
         if (view3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("notificationView");
         }
-        View findViewById4 = view3.findViewById(2131362920);
+        View findViewById4 = view3.findViewById(2131362932);
         Intrinsics.checkNotNullExpressionValue(findViewById4, "notificationView.findVie…yId(R.id.menu_badge_icon)");
         this.notificationIconView = (ImageView) findViewById4;
         View view4 = this.notificationView;
@@ -212,11 +212,11 @@ public final class SearchAppHeader extends BaseAppHeader implements SharedPrefer
         linearLayout.setLayoutParams(layoutParams);
         linearLayout.setGravity(17);
         ImageView imageView3 = new ImageView(linearLayout.getContext());
-        imageView3.setId(2131363134);
+        imageView3.setId(2131363148);
         LinearLayout.LayoutParams layoutParams2 = new LinearLayout.LayoutParams(NumberExtendsKt.getDp((Number) 9), NumberExtendsKt.getDp((Number) 9));
         Unit unit5 = Unit.INSTANCE;
         imageView3.setLayoutParams(layoutParams2);
-        imageView3.setImageResource(2131231492);
+        imageView3.setImageResource(2131231503);
         imageView3.setImageTintList(ColorStateList.valueOf(colorAccent));
         imageView3.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
         Unit unit6 = Unit.INSTANCE;
@@ -237,7 +237,7 @@ public final class SearchAppHeader extends BaseAppHeader implements SharedPrefer
         frameLayout2.addView(view6);
         AppCompatImageView appCompatImageView = new AppCompatImageView(frameLayout2.getContext());
         appCompatImageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-        appCompatImageView.setImageResource(2131231534);
+        appCompatImageView.setImageResource(2131231545);
         FrameLayout.LayoutParams layoutParams4 = new FrameLayout.LayoutParams(-2, -2);
         layoutParams4.gravity = 17;
         Unit unit11 = Unit.INSTANCE;
@@ -264,7 +264,7 @@ public final class SearchAppHeader extends BaseAppHeader implements SharedPrefer
         frameLayout3.addView(view7);
         AppCompatImageView appCompatImageView3 = new AppCompatImageView(frameLayout3.getContext());
         appCompatImageView3.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-        appCompatImageView3.setImageResource(2131231553);
+        appCompatImageView3.setImageResource(2131231564);
         appCompatImageView3.setContentDescription("设置");
         Unit unit16 = Unit.INSTANCE;
         AppCompatImageView appCompatImageView4 = appCompatImageView3;
@@ -507,7 +507,7 @@ public final class SearchAppHeader extends BaseAppHeader implements SharedPrefer
     /* JADX WARN: Type inference failed for: r1v6, types: [com.coolapk.market.imageloader.GlideRequest] */
     /* JADX WARNING: Unknown variable types count: 1 */
     private final void updateUserAvatar() {
-        int i = AppHolder.getAppTheme().isDarkTheme() ? 2131231153 : 2131231152;
+        int i = AppHolder.getAppTheme().isDarkTheme() ? 2131231163 : 2131231162;
         DataManager instance = DataManager.getInstance();
         Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
         LoginSession loginSession = instance.getLoginSession();
@@ -604,7 +604,7 @@ public final class SearchAppHeader extends BaseAppHeader implements SharedPrefer
             if (textView3 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("notificationBadgeView");
             }
-            DragAndDropHelper.withTarget(textView3).setDragListener(new SearchAppHeader$updateNotificationView$1(appNotification)).setPaintColor(getResources().getColor(2131100035)).apply();
+            DragAndDropHelper.withTarget(textView3).setDragListener(new SearchAppHeader$updateNotificationView$1(appNotification)).setPaintColor(getResources().getColor(2131100040)).apply();
         } else {
             TextView textView4 = this.notificationBadgeView;
             if (textView4 == null) {
@@ -622,13 +622,13 @@ public final class SearchAppHeader extends BaseAppHeader implements SharedPrefer
             if (imageView == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("notificationIconView");
             }
-            imageView.setImageResource(2131231448);
+            imageView.setImageResource(2131231459);
         } else {
             ImageView imageView2 = this.notificationIconView;
             if (imageView2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("notificationIconView");
             }
-            imageView2.setImageResource(2131231450);
+            imageView2.setImageResource(2131231461);
         }
         ImageView imageView3 = this.notificationIconView;
         if (imageView3 == null) {
@@ -680,7 +680,7 @@ public final class SearchAppHeader extends BaseAppHeader implements SharedPrefer
                 frameLayout2.setElevation((float) NumberExtendsKt.getDp((Number) 10));
                 frameLayout2.setBackground(createMenuBackground());
                 ImageView imageView = new ImageView(frameLayout2.getContext());
-                imageView.setImageResource(2131231422);
+                imageView.setImageResource(2131231433);
                 imageView.setImageTintList(ColorStateList.valueOf(ResourceUtils.resolveData(imageView.getContext(), 2130969533)));
                 Unit unit3 = Unit.INSTANCE;
                 FrameLayout.LayoutParams layoutParams2 = new FrameLayout.LayoutParams(NumberExtendsKt.getDp((Number) 24), NumberExtendsKt.getDp((Number) 24));

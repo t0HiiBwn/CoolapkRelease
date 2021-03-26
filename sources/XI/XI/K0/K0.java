@@ -12,7 +12,7 @@ public class K0 implements kM {
     public XI.XI.XI.XI K0;
 
     /* renamed from: XI  reason: collision with root package name */
-    public Context f1173XI;
+    public Context f179XI;
     public xo kM;
     public ServiceConnection xo = new XI();
 
@@ -24,7 +24,7 @@ public class K0 implements kM {
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             XI.XI.XI.XI xi;
             K0 k0 = K0.this;
-            int i = XI.AbstractBinderC0004XI.f1176XI;
+            int i = XI.AbstractBinderC0004XI.f182XI;
             if (iBinder == null) {
                 xi = null;
             } else {
@@ -42,7 +42,7 @@ public class K0 implements kM {
     }
 
     public K0(Context context) {
-        this.f1173XI = context;
+        this.f179XI = context;
     }
 
     public boolean XI() {

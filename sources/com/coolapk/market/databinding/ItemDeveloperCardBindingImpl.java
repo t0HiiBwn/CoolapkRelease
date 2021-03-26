@@ -22,8 +22,8 @@ public class ItemDeveloperCardBindingImpl extends ItemDeveloperCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363343, 5);
-        sparseIntArray.put(2131362092, 6);
+        sparseIntArray.put(2131363359, 5);
+        sparseIntArray.put(2131362095, 6);
     }
 
     public ItemDeveloperCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -66,7 +66,7 @@ public class ItemDeveloperCardBindingImpl extends ItemDeveloperCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppViewViewModel) obj);
@@ -80,7 +80,7 @@ public class ItemDeveloperCardBindingImpl extends ItemDeveloperCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 

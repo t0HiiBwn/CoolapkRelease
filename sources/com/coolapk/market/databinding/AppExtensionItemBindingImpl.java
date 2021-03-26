@@ -27,10 +27,10 @@ public class AppExtensionItemBindingImpl extends AppExtensionItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362929, 1);
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131363865, 3);
-        sparseIntArray.put(2131363437, 4);
+        sparseIntArray.put(2131362941, 1);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131363887, 3);
+        sparseIntArray.put(2131363455, 4);
     }
 
     public AppExtensionItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {

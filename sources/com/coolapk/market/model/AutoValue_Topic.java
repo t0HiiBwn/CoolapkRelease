@@ -24,8 +24,8 @@ final class AutoValue_Topic extends C$AutoValue_Topic {
         return 0;
     }
 
-    AutoValue_Topic(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l2, Long l3, String str8, String str9, String str10, int i, int i2, int i3, int i4, String str11, UserAction userAction, String str12, int i5, String str13, List<RelatedData> list, int i6, long j, long j2, String str14, List<NewHeadLine> list2, int i7, String str15, String str16, int i8, int i9, int i10, int i11, int i12, int i13, String str17, String str18, String str19, String str20, String str21, String str22, List<String> list3, List<String> list4, List<ConfigPage> list5, String str23, int i14, String str24, String str25) {
-        super(str, str2, str3, str4, num, str5, str6, str7, l2, l3, str8, str9, str10, i, i2, i3, i4, str11, userAction, str12, i5, str13, list, i6, j, j2, str14, list2, i7, str15, str16, i8, i9, i10, i11, i12, i13, str17, str18, str19, str20, str21, str22, list3, list4, list5, str23, i14, str24, str25);
+    AutoValue_Topic(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, Long l, Long l2, String str8, String str9, String str10, int i, int i2, int i3, int i4, String str11, UserAction userAction, String str12, int i5, String str13, List<RelatedData> list, int i6, long j, long j2, String str14, List<NewHeadLine> list2, int i7, String str15, String str16, int i8, int i9, int i10, int i11, int i12, int i13, String str17, String str18, String str19, String str20, String str21, String str22, List<String> list3, List<String> list4, List<ConfigPage> list5, String str23, int i14, String str24, String str25) {
+        super(str, str2, str3, str4, num, str5, str6, str7, l, l2, str8, str9, str10, i, i2, i3, i4, str11, userAction, str12, i5, str13, list, i6, j, j2, str14, list2, i7, str15, str16, i8, i9, i10, i11, i12, i13, str17, str18, str19, str20, str21, str22, list3, list4, list5, str23, i14, str24, str25);
     }
 
     @Override // android.os.Parcelable

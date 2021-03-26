@@ -23,8 +23,8 @@ public class ItemGoodsListEditHeaderBindingImpl extends ItemGoodsListEditHeaderB
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362899, 7);
-        sparseIntArray.put(2131363230, 8);
+        sparseIntArray.put(2131362910, 7);
+        sparseIntArray.put(2131363244, 8);
     }
 
     public ItemGoodsListEditHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -65,7 +65,7 @@ public class ItemGoodsListEditHeaderBindingImpl extends ItemGoodsListEditHeaderB
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((GoodsListDetailViewModel) obj);
         } else if (50 != i) {
             return false;
@@ -82,7 +82,7 @@ public class ItemGoodsListEditHeaderBindingImpl extends ItemGoodsListEditHeaderB
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

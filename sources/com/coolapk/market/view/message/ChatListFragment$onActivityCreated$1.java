@@ -12,8 +12,8 @@ final class ChatListFragment$onActivityCreated$1<T> implements Action1<Long> {
         this.this$0 = chatListFragment;
     }
 
-    public final void call(Long l2) {
-        ChatListFragment.access$setPassiveRefresh$p(this.this$0, true);
+    public final void call(Long l) {
+        this.this$0.passiveRefresh = true;
         this.this$0.reloadData();
     }
 }

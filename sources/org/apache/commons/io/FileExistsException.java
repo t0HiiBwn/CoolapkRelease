@@ -9,11 +9,11 @@ public class FileExistsException extends IOException {
     public FileExistsException() {
     }
 
-    public FileExistsException(String str) {
-        super(str);
-    }
-
     public FileExistsException(File file) {
         super("File " + file + " exists");
+    }
+
+    public FileExistsException(String str) {
+        super(str);
     }
 }

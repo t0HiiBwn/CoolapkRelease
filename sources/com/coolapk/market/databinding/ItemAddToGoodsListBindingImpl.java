@@ -27,7 +27,7 @@ public class ItemAddToGoodsListBindingImpl extends ItemAddToGoodsListBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362229, 3);
+        sparseIntArray.put(2131362234, 3);
     }
 
     public ItemAddToGoodsListBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -64,7 +64,7 @@ public class ItemAddToGoodsListBindingImpl extends ItemAddToGoodsListBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FunThings) obj);
         } else if (50 != i) {
             return false;
@@ -80,7 +80,7 @@ public class ItemAddToGoodsListBindingImpl extends ItemAddToGoodsListBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -119,7 +119,7 @@ public class ItemAddToGoodsListBindingImpl extends ItemAddToGoodsListBinding {
         }
         if (i != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }
         if ((j & 4) != 0) {

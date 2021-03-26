@@ -26,7 +26,7 @@ public abstract class ItemMainCategoryLinkBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMainCategoryLinkBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemMainCategoryLinkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558820, viewGroup, z, obj);
+        return (ItemMainCategoryLinkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558827, viewGroup, z, obj);
     }
 
     public static ItemMainCategoryLinkBinding inflate(LayoutInflater layoutInflater) {
@@ -35,7 +35,7 @@ public abstract class ItemMainCategoryLinkBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMainCategoryLinkBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemMainCategoryLinkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558820, null, false, obj);
+        return (ItemMainCategoryLinkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558827, null, false, obj);
     }
 
     public static ItemMainCategoryLinkBinding bind(View view) {
@@ -44,6 +44,6 @@ public abstract class ItemMainCategoryLinkBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMainCategoryLinkBinding bind(View view, Object obj) {
-        return (ItemMainCategoryLinkBinding) bind(obj, view, 2131558820);
+        return (ItemMainCategoryLinkBinding) bind(obj, view, 2131558827);
     }
 }

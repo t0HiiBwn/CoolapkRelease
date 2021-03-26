@@ -124,7 +124,7 @@ public final class FastReturnView extends FrameLayout implements SharedPreferenc
         setVisibility(4);
         ImageView imageView = new ImageView(getContext());
         imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-        Drawable drawable = ResourceUtils.getDrawable(imageView.getContext(), 2131231519);
+        Drawable drawable = ResourceUtils.getDrawable(imageView.getContext(), 2131231530);
         int dp2px2 = ConvertUtils.dp2px(10.0f);
         Objects.requireNonNull(drawable, "null cannot be cast to non-null type android.graphics.drawable.BitmapDrawable");
         BitmapDrawable bitmapDrawable = new BitmapDrawable(imageView.getResources(), Bitmap.createScaledBitmap(((BitmapDrawable) drawable).getBitmap(), dp2px2, dp2px2, true));

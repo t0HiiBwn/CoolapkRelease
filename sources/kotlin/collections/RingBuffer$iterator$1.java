@@ -22,8 +22,8 @@ public final class RingBuffer$iterator$1 extends AbstractIterator<T> {
             done();
             return;
         }
-        setNext(this.this$0.buffer[this.index]);
-        this.index = (this.index + 1) % this.this$0.capacity;
+        setNext(RingBuffer.access$getBuffer$p(this.this$0)[this.index]);
+        this.index = (this.index + 1) % RingBuffer.access$getCapacity$p(this.this$0);
         this.count--;
     }
 }

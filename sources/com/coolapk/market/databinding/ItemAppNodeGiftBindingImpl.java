@@ -119,10 +119,10 @@ public class ItemAppNodeGiftBindingImpl extends ItemAppNodeGiftBinding {
             }
             if (z) {
                 resources = this.mboundView3.getResources();
-                i = 2131886593;
+                i = 2131886655;
             } else {
                 resources = this.mboundView3.getResources();
-                i = 2131886821;
+                i = 2131886883;
             }
             str = resources.getString(i);
         } else {

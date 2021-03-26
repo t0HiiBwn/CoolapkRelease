@@ -27,11 +27,11 @@ public class SplashV9BindingImpl extends SplashV9Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363374, 1);
-        sparseIntArray.put(2131361991, 2);
-        sparseIntArray.put(2131362131, 3);
-        sparseIntArray.put(2131362889, 4);
-        sparseIntArray.put(2131363369, 5);
+        sparseIntArray.put(2131363391, 1);
+        sparseIntArray.put(2131361992, 2);
+        sparseIntArray.put(2131362134, 3);
+        sparseIntArray.put(2131362900, 4);
+        sparseIntArray.put(2131363386, 5);
     }
 
     public SplashV9BindingImpl(DataBindingComponent dataBindingComponent, View view) {

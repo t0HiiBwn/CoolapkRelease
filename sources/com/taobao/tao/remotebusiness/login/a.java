@@ -19,7 +19,7 @@ import mtopsdk.xstate.XState;
 /* compiled from: DefaultLoginImpl */
 public final class a implements IRemoteLogin {
     static Context a;
-    private static ThreadLocal<C0119a> b = new ThreadLocal<>();
+    private static ThreadLocal<C0129a> b = new ThreadLocal<>();
     private static volatile AtomicBoolean o = new AtomicBoolean(false);
     private static volatile a p = null;
     private Class<?> c;
@@ -31,9 +31,7 @@ public final class a implements IRemoteLogin {
     private Method i;
     private Method j;
     private Method k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private Method f1422l;
+    private Method l;
     private LoginContext m = new LoginContext();
     private BroadcastReceiver n = null;
 
@@ -86,7 +84,7 @@ public final class a implements IRemoteLogin {
         this.h = cls.getDeclaredMethod("isLogining", new Class[0]);
         Class<?> cls2 = Class.forName("com.taobao.login4android.broadcast.LoginBroadcastHelper");
         this.d = cls2;
-        this.f1422l = cls2.getMethod("registerLoginReceiver", Context.class, BroadcastReceiver.class);
+        this.l = cls2.getMethod("registerLoginReceiver", Context.class, BroadcastReceiver.class);
         b();
         TBSdkLog.e("mtopsdk.DefaultLoginImpl", "register login event receiver");
     }
@@ -103,16 +101,16 @@ public final class a implements IRemoteLogin {
             if (this.n == null) {
                 b bVar = new b(this);
                 this.n = bVar;
-                a(this.f1422l, a, bVar);
+                a(this.l, a, bVar);
             }
         }
     }
 
     public final void a(Object obj) {
         if (obj instanceof MtopResponse) {
-            b.set(new C0119a((MtopResponse) obj, (String) a(this.k, new Object[0])));
+            b.set(new C0129a((MtopResponse) obj, (String) a(this.k, new Object[0])));
         } else if (obj instanceof MtopRequest) {
-            b.set(new C0119a((MtopRequest) obj));
+            b.set(new C0129a((MtopRequest) obj));
         }
     }
 
@@ -136,7 +134,7 @@ public final class a implements IRemoteLogin {
             TBSdkLog.e("mtopsdk.DefaultLoginImpl", "[login]call login,showLoginUI:" + z + " , listener:" + onloginlistener);
         }
         Bundle bundle2 = null;
-        C0119a aVar = b.get();
+        C0129a aVar = b.get();
         if (aVar != null) {
             try {
                 bundle = new Bundle();
@@ -209,7 +207,7 @@ public final class a implements IRemoteLogin {
 
     /* renamed from: com.taobao.tao.remotebusiness.login.a$a  reason: collision with other inner class name */
     /* compiled from: DefaultLoginImpl */
-    static class C0119a {
+    static class C0129a {
         public String a;
         public String b;
         public String c;
@@ -218,7 +216,7 @@ public final class a implements IRemoteLogin {
         public String f = MtopUtils.getCurrentProcessName(a.a);
         public boolean g = XState.isAppBackground();
 
-        public C0119a(MtopResponse mtopResponse, String str) {
+        public C0129a(MtopResponse mtopResponse, String str) {
             this.a = str;
             this.b = mtopResponse.getApi();
             this.c = mtopResponse.getV();
@@ -226,7 +224,7 @@ public final class a implements IRemoteLogin {
             this.e = b.a(mtopResponse.getHeaderFields(), "S");
         }
 
-        public C0119a(MtopRequest mtopRequest) {
+        public C0129a(MtopRequest mtopRequest) {
             this.b = mtopRequest.getApiName();
             this.c = mtopRequest.getVersion();
         }

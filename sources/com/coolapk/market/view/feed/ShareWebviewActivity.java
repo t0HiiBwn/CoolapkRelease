@@ -46,7 +46,7 @@ public class ShareWebviewActivity extends BaseActivity {
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.binding = (ShareWebviewBinding) DataBindingUtil.setContentView(getActivity(), 2131559142);
+        this.binding = (ShareWebviewBinding) DataBindingUtil.setContentView(getActivity(), 2131559149);
         setupSlideView();
         setupToolbar();
         setupFragment();
@@ -87,7 +87,7 @@ public class ShareWebviewActivity extends BaseActivity {
     }
 
     private void setupToolbar() {
-        Drawable drawable = ResourceUtils.getDrawable(getActivity(), 2131231200);
+        Drawable drawable = ResourceUtils.getDrawable(getActivity(), 2131231211);
         drawable.mutate().setColorFilter(AppHolder.getAppTheme().getTextColorSecondary(), PorterDuff.Mode.SRC_IN);
         this.binding.toolbar.setTitleTextColor(AppHolder.getAppTheme().getTextColorSecondary());
         this.binding.toolbar.setNavigationIcon(drawable);
@@ -104,12 +104,12 @@ public class ShareWebviewActivity extends BaseActivity {
 
     private void setupFragment() {
         FragmentManager supportFragmentManager = getSupportFragmentManager();
-        if (((ShareWebViewFragment) supportFragmentManager.findFragmentById(2131363592)) == null) {
+        if (((ShareWebViewFragment) supportFragmentManager.findFragmentById(2131363614)) == null) {
             String stringExtra = getIntent().getStringExtra("extra_url");
             ArrayList<String> stringArrayListExtra = getIntent().getStringArrayListExtra("PICKED_PHOTO_PATHS");
             ShareWebViewFragment newInstance = ShareWebViewFragment.newInstance(stringExtra);
             newInstance.pathList.addAll(stringArrayListExtra);
-            supportFragmentManager.beginTransaction().add(2131363592, newInstance).commit();
+            supportFragmentManager.beginTransaction().add(2131363614, newInstance).commit();
         }
     }
 
@@ -121,7 +121,7 @@ public class ShareWebviewActivity extends BaseActivity {
 
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.activity.ComponentActivity, android.app.Activity
     public void onBackPressed() {
-        ShareWebViewFragment shareWebViewFragment = (ShareWebViewFragment) getSupportFragmentManager().findFragmentById(2131363592);
+        ShareWebViewFragment shareWebViewFragment = (ShareWebViewFragment) getSupportFragmentManager().findFragmentById(2131363614);
         if (shareWebViewFragment != null) {
             shareWebViewFragment.addResultBeforeFinished();
         }
@@ -207,7 +207,7 @@ public class ShareWebviewActivity extends BaseActivity {
                 }
                 final ProgressDialog progressDialog = new ProgressDialog(getActivity());
                 progressDialog.setProgressStyle(0);
-                progressDialog.setMessage(getString(2131886758));
+                progressDialog.setMessage(getString(2131886820));
                 progressDialog.setCancelable(false);
                 progressDialog.setCanceledOnTouchOutside(false);
                 progressDialog.show();

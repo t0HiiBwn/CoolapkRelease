@@ -26,8 +26,8 @@ public class DialogTimePickerBindingImpl extends DialogTimePickerBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363421, 1);
-        sparseIntArray.put(2131362461, 2);
+        sparseIntArray.put(2131363439, 1);
+        sparseIntArray.put(2131362469, 2);
     }
 
     public DialogTimePickerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -112,7 +112,7 @@ public final class AppNodeViewPart extends BaseAppNodeViewPart<AppNodeHeaderBind
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public AppNodeHeaderBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558464, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558465, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (AppNodeHeaderBinding) inflate;
     }
@@ -127,7 +127,7 @@ public final class AppNodeViewPart extends BaseAppNodeViewPart<AppNodeHeaderBind
         RoundedImageView roundedImageView = ((AppNodeHeaderBinding) getBinding()).logoView;
         Intrinsics.checkNotNullExpressionValue(roundedImageView, "binding.logoView");
         ViewExtendsKt.darkForegroundIfNeed(roundedImageView);
-        BaseMultiTypeAdapter.register$default(this.thumbnailAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558596).suitedClass(String.class).constructor(new AppNodeViewPart$onViewCreated$1(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(this.thumbnailAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558600).suitedClass(String.class).constructor(new AppNodeViewPart$onViewCreated$1(this)).build(), 0, 2, null);
         RecyclerView recyclerView = ((AppNodeHeaderBinding) getBinding()).thumbnailList;
         Intrinsics.checkNotNullExpressionValue(recyclerView, "binding.thumbnailList");
         recyclerView.setAdapter(this.thumbnailAdapter);
@@ -138,7 +138,7 @@ public final class AppNodeViewPart extends BaseAppNodeViewPart<AppNodeHeaderBind
         RecyclerView recyclerView3 = ((AppNodeHeaderBinding) getBinding()).thumbnailList;
         Intrinsics.checkNotNullExpressionValue(recyclerView3, "binding.thumbnailList");
         build.addTo(recyclerView3);
-        BaseMultiTypeAdapter.register$default(this.categoryAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558595).suitedClass(String.class).constructor(new AppNodeViewPart$onViewCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(this.categoryAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558599).suitedClass(String.class).constructor(new AppNodeViewPart$onViewCreated$2(this)).build(), 0, 2, null);
         RecyclerView recyclerView4 = ((AppNodeHeaderBinding) getBinding()).categoryList;
         Intrinsics.checkNotNullExpressionValue(recyclerView4, "binding.categoryList");
         recyclerView4.setAdapter(this.categoryAdapter);
@@ -149,21 +149,21 @@ public final class AppNodeViewPart extends BaseAppNodeViewPart<AppNodeHeaderBind
         RecyclerView recyclerView6 = ((AppNodeHeaderBinding) getBinding()).categoryList;
         Intrinsics.checkNotNullExpressionValue(recyclerView6, "binding.categoryList");
         build2.addTo(recyclerView6);
-        BaseMultiTypeAdapter.register$default(this.relateAppAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558935).suitedClass(ServiceApp.class).constructor(new AppNodeViewPart$onViewCreated$3(this)).doAfterBind(AppNodeViewPart$onViewCreated$4.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(this.relateAppAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558942).suitedClass(ServiceApp.class).constructor(new AppNodeViewPart$onViewCreated$3(this)).doAfterBind(AppNodeViewPart$onViewCreated$4.INSTANCE).build(), 0, 2, null);
         RecyclerView recyclerView7 = ((AppNodeHeaderBinding) getBinding()).relateAppList;
         Intrinsics.checkNotNullExpressionValue(recyclerView7, "binding.relateAppList");
         recyclerView7.setAdapter(this.relateAppAdapter);
         RecyclerView recyclerView8 = ((AppNodeHeaderBinding) getBinding()).relateAppList;
         Intrinsics.checkNotNullExpressionValue(recyclerView8, "binding.relateAppList");
         recyclerView8.setLayoutManager(new LinearLayoutManager(this.activity, 0, false));
-        BaseMultiTypeAdapter.register$default(this.giftAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558594).suitedClass(Gift.class).constructor(new AppNodeViewPart$onViewCreated$5(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(this.giftAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558598).suitedClass(Gift.class).constructor(new AppNodeViewPart$onViewCreated$5(this)).build(), 0, 2, null);
         RecyclerView recyclerView9 = ((AppNodeHeaderBinding) getBinding()).giftList;
         Intrinsics.checkNotNullExpressionValue(recyclerView9, "binding.giftList");
         recyclerView9.setAdapter(this.giftAdapter);
         RecyclerView recyclerView10 = ((AppNodeHeaderBinding) getBinding()).giftList;
         Intrinsics.checkNotNullExpressionValue(recyclerView10, "binding.giftList");
         recyclerView10.setLayoutManager(new LinearLayoutManager(this.activity));
-        BaseMultiTypeAdapter.register$default(this.couponAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558593).suitedClass(CouponInfo.class).constructor(new AppNodeViewPart$onViewCreated$6(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(this.couponAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558597).suitedClass(CouponInfo.class).constructor(new AppNodeViewPart$onViewCreated$6(this)).build(), 0, 2, null);
         RecyclerView recyclerView11 = ((AppNodeHeaderBinding) getBinding()).couponList;
         Intrinsics.checkNotNullExpressionValue(recyclerView11, "binding.couponList");
         recyclerView11.setAdapter(this.couponAdapter);
@@ -361,7 +361,7 @@ public final class AppNodeViewPart extends BaseAppNodeViewPart<AppNodeHeaderBind
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
         switch (view.getId()) {
-            case 2131361876:
+            case 2131361877:
                 ActionButton actionButton = ((AppNodeHeaderBinding) getBinding()).actionButton;
                 Intrinsics.checkNotNullExpressionValue(actionButton, "binding.actionButton");
                 CharSequence text = actionButton.getText();
@@ -377,16 +377,16 @@ public final class AppNodeViewPart extends BaseAppNodeViewPart<AppNodeHeaderBind
                 }
                 this.viewModel.startDownload(view);
                 return;
-            case 2131361879:
+            case 2131361880:
                 Toast.show$default(getContext(), "应用暂未上架，还不能下载哦~", 0, false, 12, null);
                 return;
-            case 2131362217:
+            case 2131362222:
                 this.viewModel.getShowAllChangeLog().set(!this.viewModel.getShowAllChangeLog().get());
                 return;
-            case 2131362331:
+            case 2131362337:
                 this.viewModel.getShowAllCoupon().set(true);
                 return;
-            case 2131362387:
+            case 2131362393:
                 ServiceApp serviceApp2 = this.viewModel.getServiceApp().get();
                 if (serviceApp2 != null) {
                     Intrinsics.checkNotNullExpressionValue(serviceApp2, "it");
@@ -401,7 +401,7 @@ public final class AppNodeViewPart extends BaseAppNodeViewPart<AppNodeHeaderBind
                     return;
                 }
                 return;
-            case 2131362578:
+            case 2131362586:
                 ServiceApp serviceApp3 = this.viewModel.getServiceApp().get();
                 Intrinsics.checkNotNull(serviceApp3);
                 Intrinsics.checkNotNullExpressionValue(serviceApp3, "viewModel.serviceApp.get()!!");
@@ -410,14 +410,14 @@ public final class AppNodeViewPart extends BaseAppNodeViewPart<AppNodeHeaderBind
                 this.presenter.followApp(serviceApp3.getApkId(), z, z2);
                 this.viewModel.isFollow().set(z2);
                 return;
-            case 2131362584:
+            case 2131362592:
                 Context context = getContext();
                 ServiceApp serviceApp4 = this.viewModel.getServiceApp().get();
                 Intrinsics.checkNotNull(serviceApp4);
                 Intrinsics.checkNotNullExpressionValue(serviceApp4, "viewModel.serviceApp.get()!!");
                 ActionManager.startAppFollowerListActivity(context, serviceApp4.getApkId());
                 return;
-            case 2131362610:
+            case 2131362618:
                 ServiceApp serviceApp5 = this.viewModel.getServiceApp().get();
                 if (serviceApp5 != null) {
                     Context context2 = getContext();
@@ -426,16 +426,16 @@ public final class AppNodeViewPart extends BaseAppNodeViewPart<AppNodeHeaderBind
                     return;
                 }
                 return;
-            case 2131362746:
+            case 2131362757:
                 this.viewModel.getShowAllIntroduce().set(!this.viewModel.getShowAllIntroduce().get());
                 return;
-            case 2131362889:
+            case 2131362900:
                 ServiceApp serviceApp6 = this.viewModel.getServiceApp().get();
                 Intrinsics.checkNotNull(serviceApp6);
                 Intrinsics.checkNotNullExpressionValue(serviceApp6, "viewModel.serviceApp.get()!!");
                 ActionManager.startPhotoViewActivity(((AppNodeHeaderBinding) getBinding()).logoView, serviceApp6.getLogo(), null);
                 return;
-            case 2131363214:
+            case 2131363228:
                 ServiceApp serviceApp7 = this.viewModel.getServiceApp().get();
                 if (serviceApp7 != null) {
                     Context context3 = getContext();
@@ -447,7 +447,7 @@ public final class AppNodeViewPart extends BaseAppNodeViewPart<AppNodeHeaderBind
                     return;
                 }
                 return;
-            case 2131363228:
+            case 2131363242:
                 ServiceApp serviceApp8 = this.viewModel.getServiceApp().get();
                 if (serviceApp8 != null) {
                     Context context4 = getContext();
@@ -456,10 +456,10 @@ public final class AppNodeViewPart extends BaseAppNodeViewPart<AppNodeHeaderBind
                     return;
                 }
                 return;
-            case 2131363277:
+            case 2131363291:
                 AppNodePresenter.ratingAppV10$default(this.presenter, this.viewModel, this.activity, 0, true, 4, null);
                 return;
-            case 2131363278:
+            case 2131363292:
                 Toast.show$default(getContext(), "应用暂未上架，还不能写点评哦~", 0, false, 12, null);
                 return;
             default:

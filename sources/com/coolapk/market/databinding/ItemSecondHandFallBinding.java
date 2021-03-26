@@ -71,7 +71,7 @@ public abstract class ItemSecondHandFallBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSecondHandFallBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSecondHandFallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558919, viewGroup, z, obj);
+        return (ItemSecondHandFallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558926, viewGroup, z, obj);
     }
 
     public static ItemSecondHandFallBinding inflate(LayoutInflater layoutInflater) {
@@ -80,7 +80,7 @@ public abstract class ItemSecondHandFallBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSecondHandFallBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSecondHandFallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558919, null, false, obj);
+        return (ItemSecondHandFallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558926, null, false, obj);
     }
 
     public static ItemSecondHandFallBinding bind(View view) {
@@ -89,6 +89,6 @@ public abstract class ItemSecondHandFallBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSecondHandFallBinding bind(View view, Object obj) {
-        return (ItemSecondHandFallBinding) bind(obj, view, 2131558919);
+        return (ItemSecondHandFallBinding) bind(obj, view, 2131558926);
     }
 }

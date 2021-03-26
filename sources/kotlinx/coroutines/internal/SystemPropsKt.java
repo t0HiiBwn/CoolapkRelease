@@ -2,7 +2,7 @@ package kotlinx.coroutines.internal;
 
 import kotlin.Metadata;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"kotlinx/coroutines/internal/SystemPropsKt__SystemPropsKt", "kotlinx/coroutines/internal/SystemPropsKt__SystemProps_commonKt"}, k = 4, mv = {1, 1, 16})
+@Metadata(bv = {1, 0, 3}, d1 = {"kotlinx/coroutines/internal/SystemPropsKt__SystemPropsKt", "kotlinx/coroutines/internal/SystemPropsKt__SystemProps_commonKt"}, k = 4, mv = {1, 4, 0})
 public final class SystemPropsKt {
     public static final int getAVAILABLE_PROCESSORS() {
         return SystemPropsKt__SystemPropsKt.getAVAILABLE_PROCESSORS();

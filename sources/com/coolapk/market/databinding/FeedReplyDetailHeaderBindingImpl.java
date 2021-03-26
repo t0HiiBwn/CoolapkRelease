@@ -28,10 +28,10 @@ public class FeedReplyDetailHeaderBindingImpl extends FeedReplyDetailHeaderBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362858, 1);
-        sparseIntArray.put(2131362594, 2);
-        sparseIntArray.put(2131363588, 3);
-        sparseIntArray.put(2131361981, 4);
+        sparseIntArray.put(2131362869, 1);
+        sparseIntArray.put(2131362602, 2);
+        sparseIntArray.put(2131363610, 3);
+        sparseIntArray.put(2131361982, 4);
     }
 
     public FeedReplyDetailHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {

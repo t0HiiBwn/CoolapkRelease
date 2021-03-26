@@ -21,7 +21,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: CenterMoreEntranceViewHolder.kt */
 final class CenterMoreEntranceChildViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558640;
+    public static final int LAYOUT_ID = 2131558646;
     private final ItemCenterMoreEntranceChildBinding binding = ((ItemCenterMoreEntranceChildBinding) getBinding());
     private boolean isInDragState;
     private final CenterMorePresenter presenter;
@@ -56,6 +56,13 @@ final class CenterMoreEntranceChildViewHolder extends BindingViewHolder {
     public void bindTo(Object obj) {
         Objects.requireNonNull(obj, "null cannot be cast to non-null type com.coolapk.market.view.center.UserMenu");
         UserMenu userMenu = (UserMenu) obj;
+        TextView textView = this.binding.bubbleTextView;
+        Intrinsics.checkNotNullExpressionValue(textView, "binding.bubbleTextView");
+        if (userMenu.getBubbleTintColor() != 0) {
+            textView.setBackgroundTintList(ColorStateList.valueOf(userMenu.getBubbleTintColor()));
+        } else {
+            textView.setBackgroundTintList(ColorStateList.valueOf(AppHolder.getAppTheme().getColorAccent()));
+        }
         this.binding.textView.setText(userMenu.getTitleRes());
         this.binding.imageView.setImageResource(userMenu.getIconRes());
         ImageView imageView = this.binding.imageView;

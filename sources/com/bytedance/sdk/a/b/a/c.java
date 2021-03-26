@@ -46,9 +46,7 @@ public final class c {
     private static final f i = f.b("efbbbf");
     private static final f j = f.b("feff");
     private static final f k = f.b("fffe");
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final f f1268l = f.b("0000ffff");
+    private static final f l = f.b("0000ffff");
     private static final f m = f.b("ffff0000");
     private static final Charset n = Charset.forName("UTF-16BE");
     private static final Charset o = Charset.forName("UTF-16LE");
@@ -360,7 +358,7 @@ public final class c {
             eVar.h((long) fVar3.g());
             return o;
         }
-        f fVar4 = f1268l;
+        f fVar4 = l;
         if (eVar.a(0, fVar4)) {
             eVar.h((long) fVar4.g());
             return p;

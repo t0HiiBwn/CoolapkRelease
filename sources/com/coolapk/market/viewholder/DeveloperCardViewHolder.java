@@ -16,7 +16,7 @@ import com.coolapk.market.view.app.AppViewViewModel;
 import rx.Subscriber;
 
 public class DeveloperCardViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558668;
+    public static final int LAYOUT_ID = 2131558674;
     private final AppViewContract.Presenter presenter;
     private final AppViewViewModel viewModel;
 
@@ -45,14 +45,14 @@ public class DeveloperCardViewHolder extends BindingViewHolder {
     public void onClick(View view) {
         super.onClick(view);
         switch (view.getId()) {
-            case 2131362092:
+            case 2131362095:
                 ServiceApp serviceApp = this.viewModel.getServiceApp();
                 ActionManager.startAppCommentActivity((Activity) getContext(), serviceApp, "@" + this.viewModel.getServiceApp().getDeveloperProfile().getUserName() + " ");
                 return;
-            case 2131362387:
+            case 2131362393:
                 ActionManager.startUserSpaceActivity(((ItemDeveloperCardBinding) getBinding()).avatarView, this.viewModel.getServiceApp().getDeveloperProfile().getUid(), this.viewModel.getServiceApp().getDeveloperProfile().getUserAvatar());
                 return;
-            case 2131362582:
+            case 2131362590:
                 RxLogin.getInstance(getContext()).requestLogin().subscribe((Subscriber<? super Boolean>) new EmptySubscriber<Boolean>() {
                     /* class com.coolapk.market.viewholder.DeveloperCardViewHolder.AnonymousClass1 */
 
@@ -66,7 +66,7 @@ public class DeveloperCardViewHolder extends BindingViewHolder {
                     }
                 });
                 return;
-            case 2131363343:
+            case 2131363359:
                 ActionManager.startChattingActivity(getContext(), this.viewModel.getServiceApp().getDeveloperProfile().getUid(), this.viewModel.getServiceApp().getDeveloperProfile().getUserName());
                 return;
             default:

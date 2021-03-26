@@ -24,8 +24,8 @@ public class ItemQuestionTitleViewBindingImpl extends ItemQuestionTitleViewBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362200, 2);
-        sparseIntArray.put(2131363000, 3);
+        sparseIntArray.put(2131362205, 2);
+        sparseIntArray.put(2131363014, 3);
     }
 
     public ItemQuestionTitleViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -61,9 +61,9 @@ public class ItemQuestionTitleViewBindingImpl extends ItemQuestionTitleViewBindi
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FeedQuestion) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -79,7 +79,7 @@ public class ItemQuestionTitleViewBindingImpl extends ItemQuestionTitleViewBindi
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

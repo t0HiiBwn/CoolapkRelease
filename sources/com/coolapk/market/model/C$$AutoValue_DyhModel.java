@@ -42,7 +42,7 @@ abstract class C$$AutoValue_DyhModel extends DyhModel {
     private final UserAction userAction;
     private final UserInfo userInfo;
 
-    C$$AutoValue_DyhModel(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l2, Long l3, String str7, UserInfo userInfo2, String str8, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, EditorInfo editorInfo2, String str17, String str18, int i, int i2, int i3, int i4, List<String> list, int i5, int i6, String str19, List<DyhArticle> list2, UserAction userAction2, Unread unread2) {
+    C$$AutoValue_DyhModel(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l, Long l2, String str7, UserInfo userInfo2, String str8, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, EditorInfo editorInfo2, String str17, String str18, int i, int i2, int i3, int i4, List<String> list, int i5, int i6, String str19, List<DyhArticle> list2, UserAction userAction2, Unread unread2) {
         this.entityTemplate = str;
         this.entityId = str2;
         this.entityFixed = num;
@@ -50,8 +50,8 @@ abstract class C$$AutoValue_DyhModel extends DyhModel {
         this.pic = str4;
         this.subTitle = str5;
         this.extraData = str6;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str7;
         this.userInfo = userInfo2;
         this.deprecatedUserName = str8;
@@ -305,10 +305,10 @@ abstract class C$$AutoValue_DyhModel extends DyhModel {
                             if (str6 != null ? str6.equals(dyhModel.getSubTitle()) : dyhModel.getSubTitle() == null) {
                                 String str7 = this.extraData;
                                 if (str7 != null ? str7.equals(dyhModel.getExtraData()) : dyhModel.getExtraData() == null) {
-                                    Long l2 = this.dateline;
-                                    if (l2 != null ? l2.equals(dyhModel.getDateline()) : dyhModel.getDateline() == null) {
-                                        Long l3 = this.lastUpdate;
-                                        if (l3 != null ? l3.equals(dyhModel.getLastUpdate()) : dyhModel.getLastUpdate() == null) {
+                                    Long l = this.dateline;
+                                    if (l != null ? l.equals(dyhModel.getDateline()) : dyhModel.getDateline() == null) {
+                                        Long l2 = this.lastUpdate;
+                                        if (l2 != null ? l2.equals(dyhModel.getLastUpdate()) : dyhModel.getLastUpdate() == null) {
                                             String str8 = this.deprecatedUserAvatar;
                                             if (str8 != null ? str8.equals(dyhModel.getDeprecatedUserAvatar()) : dyhModel.getDeprecatedUserAvatar() == null) {
                                                 UserInfo userInfo2 = this.userInfo;
@@ -390,10 +390,10 @@ abstract class C$$AutoValue_DyhModel extends DyhModel {
         int hashCode6 = (hashCode5 ^ (str5 == null ? 0 : str5.hashCode())) * 1000003;
         String str6 = this.extraData;
         int hashCode7 = (hashCode6 ^ (str6 == null ? 0 : str6.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode8 = (hashCode7 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode9 = (hashCode8 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode8 = (hashCode7 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode9 = (hashCode8 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str7 = this.deprecatedUserAvatar;
         int hashCode10 = (hashCode9 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
         UserInfo userInfo2 = this.userInfo;
@@ -556,14 +556,14 @@ abstract class C$$AutoValue_DyhModel extends DyhModel {
         }
 
         @Override // com.coolapk.market.model.DyhModel.Builder
-        public DyhModel.Builder dateline(Long l2) {
-            this.dateline = l2;
+        public DyhModel.Builder dateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.DyhModel.Builder
-        public DyhModel.Builder lastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public DyhModel.Builder lastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

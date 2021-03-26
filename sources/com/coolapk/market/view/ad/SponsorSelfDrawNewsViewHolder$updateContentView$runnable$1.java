@@ -25,9 +25,9 @@ final class SponsorSelfDrawNewsViewHolder$updateContentView$runnable$1 extends L
     @Override // kotlin.jvm.functions.Function0
     public final void invoke() {
         View view = this.$video;
-        if (view != null && view.getParent() == null && this.this$0.lastAd == this.$ad) {
-            this.this$0.binding.ttMediaView.removeAllViews();
-            this.this$0.binding.ttMediaView.addView(this.$video, -1, -1);
+        if (view != null && view.getParent() == null && SponsorSelfDrawNewsViewHolder.access$getLastAd$p(this.this$0) == this.$ad) {
+            SponsorSelfDrawNewsViewHolder.access$getBinding$p(this.this$0).ttMediaView.removeAllViews();
+            SponsorSelfDrawNewsViewHolder.access$getBinding$p(this.this$0).ttMediaView.addView(this.$video, -1, -1);
         }
     }
 }

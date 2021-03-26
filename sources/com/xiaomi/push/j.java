@@ -1,123 +1,129 @@
 package com.xiaomi.push;
 
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
-import android.content.ServiceConnection;
-import android.os.IBinder;
-import android.os.IInterface;
-import android.os.Looper;
-import android.os.Parcel;
-import java.io.IOException;
-import java.util.concurrent.LinkedBlockingQueue;
+import android.content.SharedPreferences;
+import android.util.SparseArray;
+import com.xiaomi.a.a.a.c;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-final class j {
+public class j {
+    private static volatile j a;
+    private ScheduledThreadPoolExecutor b = new ScheduledThreadPoolExecutor(1);
+    private SparseArray<ScheduledFuture> c = new SparseArray<>();
+    private Object d = new Object();
+    private SharedPreferences e;
 
-    static final class a {
-        private final String a;
+    public static abstract class a implements Runnable {
+        public abstract int a();
+    }
 
-        /* renamed from: a  reason: collision with other field name */
-        private final boolean f880a;
+    private static class b implements Runnable {
+        a a;
 
-        a(String str, boolean z) {
-            this.a = str;
-            this.f880a = z;
+        public b(a aVar) {
+            this.a = aVar;
         }
 
-        public String a() {
-            return this.a;
+        void a() {
+        }
+
+        void b() {
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            a();
+            this.a.run();
+            b();
         }
     }
 
-    private static final class b implements ServiceConnection {
-        private final LinkedBlockingQueue<IBinder> a;
-
-        /* renamed from: a  reason: collision with other field name */
-        boolean f881a;
-
-        private b() {
-            this.f881a = false;
-            this.a = new LinkedBlockingQueue<>(1);
-        }
-
-        public IBinder a() {
-            if (!this.f881a) {
-                this.f881a = true;
-                return this.a.poll(30000, TimeUnit.MILLISECONDS);
-            }
-            throw new IllegalStateException();
-        }
-
-        @Override // android.content.ServiceConnection
-        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-            try {
-                this.a.put(iBinder);
-            } catch (InterruptedException unused) {
-            }
-        }
-
-        @Override // android.content.ServiceConnection
-        public void onServiceDisconnected(ComponentName componentName) {
-        }
+    private j(Context context) {
+        this.e = context.getSharedPreferences("mipush_extra", 0);
     }
 
-    private static final class c implements IInterface {
-        private IBinder a;
-
-        public c(IBinder iBinder) {
-            this.a = iBinder;
-        }
-
-        public String a() {
-            Parcel obtain = Parcel.obtain();
-            Parcel obtain2 = Parcel.obtain();
-            try {
-                obtain.writeInterfaceToken("com.google.android.gms.ads.identifier.internal.IAdvertisingIdService");
-                this.a.transact(1, obtain, obtain2, 0);
-                obtain2.readException();
-                return obtain2.readString();
-            } finally {
-                obtain2.recycle();
-                obtain.recycle();
-            }
-        }
-
-        @Override // android.os.IInterface
-        public IBinder asBinder() {
-            return this.a;
-        }
-    }
-
-    public static a a(Context context) {
-        if (Looper.myLooper() != Looper.getMainLooper()) {
-            try {
-                context.getPackageManager().getPackageInfo("com.android.vending", 0);
-                b bVar = new b();
-                Intent intent = new Intent("com.google.android.gms.ads.identifier.service.START");
-                intent.setPackage("com.google.android.gms");
-                if (context.bindService(intent, bVar, 1)) {
-                    try {
-                        IBinder a2 = bVar.a();
-                        if (a2 != null) {
-                            a aVar = new a(new c(a2).a(), false);
-                            context.unbindService(bVar);
-                            return aVar;
-                        }
-                        context.unbindService(bVar);
-                    } catch (Exception e) {
-                        throw e;
-                    } catch (Throwable th) {
-                        context.unbindService(bVar);
-                        throw th;
-                    }
+    public static j a(Context context) {
+        if (a == null) {
+            synchronized (j.class) {
+                if (a == null) {
+                    a = new j(context);
                 }
-                throw new IOException("Google Play connection failed");
-            } catch (Exception e2) {
-                throw e2;
             }
-        } else {
-            throw new IllegalStateException("Cannot be called from the main thread");
         }
+        return a;
+    }
+
+    private static String b(int i) {
+        return "last_job_time" + i;
+    }
+
+    private ScheduledFuture b(a aVar) {
+        ScheduledFuture scheduledFuture;
+        synchronized (this.d) {
+            scheduledFuture = this.c.get(aVar.a());
+        }
+        return scheduledFuture;
+    }
+
+    public void a(Runnable runnable) {
+        a(runnable, 0);
+    }
+
+    public void a(Runnable runnable, int i) {
+        this.b.schedule(runnable, (long) i, TimeUnit.SECONDS);
+    }
+
+    public boolean a(int i) {
+        synchronized (this.d) {
+            ScheduledFuture scheduledFuture = this.c.get(i);
+            if (scheduledFuture == null) {
+                return false;
+            }
+            this.c.remove(i);
+            return scheduledFuture.cancel(false);
+        }
+    }
+
+    public boolean a(a aVar) {
+        return b(aVar, 0);
+    }
+
+    public boolean a(a aVar, int i) {
+        return a(aVar, i, 0);
+    }
+
+    public boolean a(a aVar, int i, int i2) {
+        if (aVar == null || b(aVar) != null) {
+            return false;
+        }
+        String b2 = b(aVar.a());
+        k kVar = new k(this, aVar, b2);
+        long abs = Math.abs(System.currentTimeMillis() - this.e.getLong(b2, 0)) / 1000;
+        if (abs < ((long) (i - i2))) {
+            i2 = (int) (((long) i) - abs);
+        }
+        try {
+            ScheduledFuture<?> scheduleAtFixedRate = this.b.scheduleAtFixedRate(kVar, (long) i2, (long) i, TimeUnit.SECONDS);
+            synchronized (this.d) {
+                this.c.put(aVar.a(), scheduleAtFixedRate);
+            }
+            return true;
+        } catch (Exception e2) {
+            c.a(e2);
+            return true;
+        }
+    }
+
+    public boolean b(a aVar, int i) {
+        if (aVar == null || b(aVar) != null) {
+            return false;
+        }
+        ScheduledFuture<?> schedule = this.b.schedule(new l(this, aVar), (long) i, TimeUnit.SECONDS);
+        synchronized (this.d) {
+            this.c.put(aVar.a(), schedule);
+        }
+        return true;
     }
 }

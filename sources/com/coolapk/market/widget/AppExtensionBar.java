@@ -53,8 +53,8 @@ public class AppExtensionBar extends LinearLayout {
         if (!(serviceApp2 == null || serviceApp2.getMenuCards() == null)) {
             List<MenuCard> menuCards = this.serviceApp.getMenuCards();
             LayoutInflater from = LayoutInflater.from(getContext());
-            View inflate = from.inflate(2131558460, (ViewGroup) this, false);
-            ((ImageView) inflate.findViewById(2131362672)).setImageTintList(ColorStateList.valueOf(AppHolder.getAppTheme().getColorAccent()));
+            View inflate = from.inflate(2131558461, (ViewGroup) this, false);
+            ((ImageView) inflate.findViewById(2131362683)).setImageTintList(ColorStateList.valueOf(AppHolder.getAppTheme().getColorAccent()));
             addView(inflate, new LinearLayout.LayoutParams(-2, -2));
             inflate.setOnClickListener(new View.OnClickListener() {
                 /* class com.coolapk.market.widget.AppExtensionBar.AnonymousClass1 */
@@ -67,12 +67,12 @@ public class AppExtensionBar extends LinearLayout {
                 }
             });
             for (final MenuCard menuCard : menuCards) {
-                final View inflate2 = from.inflate(2131558459, (ViewGroup) this, false);
-                ((TextView) inflate2.findViewById(2131363582)).setText(getMenuTitle(inflate2, menuCard));
+                final View inflate2 = from.inflate(2131558460, (ViewGroup) this, false);
+                ((TextView) inflate2.findViewById(2131363604)).setText(getMenuTitle(inflate2, menuCard));
                 addView(inflate2, new LinearLayout.LayoutParams(0, -2, 1.0f));
                 int i = 8;
-                inflate2.findViewById(2131362929).setVisibility(menuCard.hasChildItem() ? 0 : 8);
-                TextView textView = (TextView) inflate2.findViewById(2131363437);
+                inflate2.findViewById(2131362941).setVisibility(menuCard.hasChildItem() ? 0 : 8);
+                TextView textView = (TextView) inflate2.findViewById(2131363455);
                 if (menuCard.hasSubTitle()) {
                     i = 0;
                 }
@@ -112,7 +112,7 @@ public class AppExtensionBar extends LinearLayout {
                 });
             }
             setShowDividers(2);
-            setDividerDrawable(ResourceUtils.getDrawable(getContext(), 2131231059));
+            setDividerDrawable(ResourceUtils.getDrawable(getContext(), 2131231069));
             setDividerPadding(DisplayUtils.dp2px(getContext(), 12.0f));
         }
     }
@@ -125,10 +125,10 @@ public class AppExtensionBar extends LinearLayout {
         if (!(serviceApp2 == null || serviceApp2.getMenuCards() == null)) {
             List<MenuCard> menuCards = this.serviceApp.getMenuCards();
             LayoutInflater from = LayoutInflater.from(getContext());
-            View root = DataBindingUtil.inflate(from, 2131558458, this, false).getRoot();
+            View root = DataBindingUtil.inflate(from, 2131558459, this, false).getRoot();
             addView(root, new LinearLayout.LayoutParams(-1, -2));
-            ((TextView) root.findViewById(2131362286)).setText(this.serviceApp.getCommentCount());
-            root.findViewById(2131362284).setOnClickListener(new View.OnClickListener() {
+            ((TextView) root.findViewById(2131362291)).setText(this.serviceApp.getCommentCount());
+            root.findViewById(2131362289).setOnClickListener(new View.OnClickListener() {
                 /* class com.coolapk.market.widget.AppExtensionBar.AnonymousClass3 */
 
                 @Override // android.view.View.OnClickListener
@@ -140,7 +140,7 @@ public class AppExtensionBar extends LinearLayout {
                     }
                 }
             });
-            root.findViewById(2131362291).setOnClickListener(new View.OnClickListener() {
+            root.findViewById(2131362296).setOnClickListener(new View.OnClickListener() {
                 /* class com.coolapk.market.widget.AppExtensionBar.AnonymousClass4 */
 
                 @Override // android.view.View.OnClickListener
@@ -150,22 +150,22 @@ public class AppExtensionBar extends LinearLayout {
                     }
                 }
             });
-            ViewGroup viewGroup = (ViewGroup) root.findViewById(2131362482);
-            TextView textView = (TextView) root.findViewById(2131362290);
+            ViewGroup viewGroup = (ViewGroup) root.findViewById(2131362490);
+            TextView textView = (TextView) root.findViewById(2131362295);
             if (this.serviceApp.getCommentStatus() != -1) {
                 textView.setText(2131886161);
             } else {
                 textView.setText("此应用禁止评论");
             }
             for (final MenuCard menuCard : menuCards) {
-                final View inflate = from.inflate(2131558459, (ViewGroup) this, false);
-                ((TextView) inflate.findViewById(2131363582)).setText(getMenuTitle(inflate, menuCard));
+                final View inflate = from.inflate(2131558460, (ViewGroup) this, false);
+                ((TextView) inflate.findViewById(2131363604)).setText(getMenuTitle(inflate, menuCard));
                 viewGroup.addView(inflate, new LinearLayout.LayoutParams(-2, -1));
-                ImageView imageView = (ImageView) inflate.findViewById(2131362929);
+                ImageView imageView = (ImageView) inflate.findViewById(2131362941);
                 int i = 8;
                 imageView.setVisibility(menuCard.hasChildItem() ? 0 : 8);
-                imageView.setImageResource(TextUtils.equals(menuCard.getTitle(), "开发者") ? 2131231149 : 2131231423);
-                TextView textView2 = (TextView) inflate.findViewById(2131363437);
+                imageView.setImageResource(TextUtils.equals(menuCard.getTitle(), "开发者") ? 2131231159 : 2131231434);
+                TextView textView2 = (TextView) inflate.findViewById(2131363455);
                 if (menuCard.hasSubTitle()) {
                     i = 0;
                 }

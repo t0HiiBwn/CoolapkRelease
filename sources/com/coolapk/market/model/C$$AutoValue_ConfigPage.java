@@ -28,7 +28,7 @@ abstract class C$$AutoValue_ConfigPage extends ConfigPage {
     private final String url;
     private final int visibility;
 
-    C$$AutoValue_ConfigPage(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, int i, int i2, int i3, List<SimpleEntity> list) {
+    C$$AutoValue_ConfigPage(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, int i, int i2, int i3, List<SimpleEntity> list) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -43,8 +43,8 @@ abstract class C$$AutoValue_ConfigPage extends ConfigPage {
         this.subTitle = str10;
         this.id = str11;
         this.extraData = str12;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str13, "Null pageName");
         this.pageName = str13;
         this.visibility = i;
@@ -191,8 +191,8 @@ abstract class C$$AutoValue_ConfigPage extends ConfigPage {
         String str8;
         String str9;
         String str10;
+        Long l;
         Long l2;
-        Long l3;
         if (obj == this) {
             return true;
         }
@@ -202,7 +202,7 @@ abstract class C$$AutoValue_ConfigPage extends ConfigPage {
         ConfigPage configPage = (ConfigPage) obj;
         String str11 = this.entityTypeName;
         if (str11 != null ? str11.equals(configPage.getEntityTypeName()) : configPage.getEntityTypeName() == null) {
-            if (this.entityType.equals(configPage.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(configPage.getEntityTemplate()) : configPage.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(configPage.getEntityId()) : configPage.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(configPage.getEntityFixed()) : configPage.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(configPage.getTitle()) : configPage.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(configPage.getUrl()) : configPage.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(configPage.getDescription()) : configPage.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(configPage.getPic()) : configPage.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(configPage.getLogo()) : configPage.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(configPage.getSubTitle()) : configPage.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(configPage.getId()) : configPage.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(configPage.getExtraData()) : configPage.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(configPage.getDateline()) : configPage.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(configPage.getLastUpdate()) : configPage.getLastUpdate() == null) && this.pageName.equals(configPage.getPageName()) && this.visibility == configPage.getVisibility() && this.order == configPage.getOrder() && this.pageFixed == configPage.getPageFixed() && this.rawEntities.equals(configPage.getRawEntities())) {
+            if (this.entityType.equals(configPage.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(configPage.getEntityTemplate()) : configPage.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(configPage.getEntityId()) : configPage.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(configPage.getEntityFixed()) : configPage.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(configPage.getTitle()) : configPage.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(configPage.getUrl()) : configPage.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(configPage.getDescription()) : configPage.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(configPage.getPic()) : configPage.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(configPage.getLogo()) : configPage.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(configPage.getSubTitle()) : configPage.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(configPage.getId()) : configPage.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(configPage.getExtraData()) : configPage.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(configPage.getDateline()) : configPage.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(configPage.getLastUpdate()) : configPage.getLastUpdate() == null) && this.pageName.equals(configPage.getPageName()) && this.visibility == configPage.getVisibility() && this.order == configPage.getOrder() && this.pageFixed == configPage.getPageFixed() && this.rawEntities.equals(configPage.getRawEntities())) {
                 return true;
             }
         }
@@ -236,11 +236,11 @@ abstract class C$$AutoValue_ConfigPage extends ConfigPage {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        if (l3 != null) {
-            i = l3.hashCode();
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        if (l2 != null) {
+            i = l2.hashCode();
         }
         return ((((((((((hashCode13 ^ i) * 1000003) ^ this.pageName.hashCode()) * 1000003) ^ this.visibility) * 1000003) ^ this.order) * 1000003) ^ this.pageFixed) * 1000003) ^ this.rawEntities.hashCode();
     }
@@ -374,14 +374,14 @@ abstract class C$$AutoValue_ConfigPage extends ConfigPage {
         }
 
         @Override // com.coolapk.market.model.ConfigPage.Builder
-        public ConfigPage.Builder dateline(Long l2) {
-            this.dateline = l2;
+        public ConfigPage.Builder dateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.ConfigPage.Builder
-        public ConfigPage.Builder lastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public ConfigPage.Builder lastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

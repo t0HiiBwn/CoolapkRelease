@@ -28,7 +28,7 @@ public class ItemUserHistoryBindingImpl extends ItemUserHistoryBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362376, 6);
+        sparseIntArray.put(2131362382, 6);
     }
 
     public ItemUserHistoryBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -70,11 +70,11 @@ public class ItemUserHistoryBindingImpl extends ItemUserHistoryBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (294 == i) {
+        if (295 == i) {
             setUserHistory((UserHistory) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (307 == i) {
+        } else if (308 == i) {
             setViewHolder((UserHistoryViewHolder) obj);
         } else if (50 != i) {
             return false;
@@ -90,7 +90,7 @@ public class ItemUserHistoryBindingImpl extends ItemUserHistoryBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(294);
+        notifyPropertyChanged(295);
         super.requestRebind();
     }
 
@@ -138,7 +138,7 @@ public class ItemUserHistoryBindingImpl extends ItemUserHistoryBinding {
         String str;
         String str2;
         String str3;
-        Long l2;
+        Long l;
         String str4;
         String str5;
         synchronized (this) {
@@ -154,9 +154,9 @@ public class ItemUserHistoryBindingImpl extends ItemUserHistoryBinding {
                 str3 = userHistory.getTypeName();
                 str5 = userHistory.getLogo();
                 str4 = userHistory.getTitle();
-                l2 = userHistory.getDateline();
+                l = userHistory.getDateline();
             } else {
-                l2 = null;
+                l = null;
                 str3 = null;
                 str5 = null;
                 str4 = null;
@@ -171,7 +171,7 @@ public class ItemUserHistoryBindingImpl extends ItemUserHistoryBinding {
             str = str5;
             str2 = str4;
         } else {
-            l2 = null;
+            l = null;
             str3 = null;
             str2 = null;
             str = null;
@@ -183,8 +183,8 @@ public class ItemUserHistoryBindingImpl extends ItemUserHistoryBinding {
         }
         if ((j & 18) != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str, AppCompatResources.getDrawable(this.logoView.getContext(), 2131231363), 0, 0, bool2, bool2, bool2, true, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
-            TextViewBindingAdapters.setTime(this.mboundView5, l2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str, AppCompatResources.getDrawable(this.logoView.getContext(), 2131231374), 0, 0, bool2, bool2, bool2, true, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+            TextViewBindingAdapters.setTime(this.mboundView5, l);
             TextViewBindingAdapter.setText(this.titleView, str2);
             TextViewBindingAdapter.setText(this.typeView, str3);
             this.typeView.setVisibility(i);

@@ -16,7 +16,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: BottomSpaceViewHolder.kt */
 public final class BottomSpaceViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558617;
+    public static final int LAYOUT_ID = 2131558621;
     public static final int VIEW_TYPE = 20897633;
     private final ArticleFragmentPresenter presenter;
     private final Lazy relativeInfoViewPart$delegate = LazyKt.lazy(new BottomSpaceViewHolder$relativeInfoViewPart$2(this));

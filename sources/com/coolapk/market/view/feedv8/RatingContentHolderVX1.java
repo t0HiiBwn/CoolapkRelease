@@ -44,6 +44,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Objects;
+import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
 import kotlin.collections.MapsKt;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -53,6 +54,7 @@ import kotlin.text.StringsKt;
 import rx.Observable;
 import rx.Subscriber;
 
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000|\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u0000 D2\u00020\u00012\u00020\u0002:\u0001DB\r\u0012\u0006\u0010\u0003\u001a\u00020\u0004¢\u0006\u0002\u0010\u0005J\r\u0010\u0018\u001a\u00020\u0016H\u0010¢\u0006\u0002\b\u0019J\b\u0010\u001a\u001a\u00020\u001bH\u0002J\r\u0010\u001c\u001a\u00020\u001dH\u0010¢\u0006\u0002\b\u001eJ\b\u0010\u001f\u001a\u00020\u001bH\u0002J\b\u0010 \u001a\u00020\u001bH\u0002J\b\u0010!\u001a\u00020\u001bH\u0002J\r\u0010\"\u001a\u00020\u001bH\u0010¢\u0006\u0002\b#J \u0010$\u001a\u00020\u001b2\u0006\u0010%\u001a\u00020&2\u0006\u0010'\u001a\u00020&2\u0006\u0010(\u001a\u00020)H\u0016J\u0010\u0010*\u001a\u00020\u001b2\u0006\u0010+\u001a\u00020\u0012H\u0016J\u0015\u0010,\u001a\u00020\u00122\u0006\u0010-\u001a\u00020.H\u0010¢\u0006\u0002\b/J\b\u00100\u001a\u00020\u001bH\u0016J\u0010\u00101\u001a\u00020\u001b2\u0006\u00102\u001a\u000203H\u0016J\u0010\u00104\u001a\u00020\u001b2\u0006\u0010(\u001a\u00020)H\u0016J\u0010\u00105\u001a\u00020\u001b2\u0006\u0010(\u001a\u00020)H\u0016J\u0016\u00106\u001a\u00020\u001b2\f\u00107\u001a\b\u0012\u0004\u0012\u00020908H\u0016J\u0010\u0010:\u001a\u00020\u001b2\u0006\u0010(\u001a\u00020)H\u0016J\b\u0010;\u001a\u00020\u001bH\u0016J\b\u0010<\u001a\u00020\u001bH\u0016J\u0013\u0010=\u001a\b\u0012\u0004\u0012\u00020\u001d0>H\u0010¢\u0006\u0002\b?J\b\u0010@\u001a\u00020\u001bH\u0002J\b\u0010A\u001a\u00020\u001bH\u0002J\u0010\u0010B\u001a\u00020\u001b2\u0006\u0010C\u001a\u00020&H\u0002R\u000e\u0010\u0006\u001a\u00020\u0007X.¢\u0006\u0002\n\u0000R\u001a\u0010\b\u001a\u00020\tX.¢\u0006\u000e\n\u0000\u001a\u0004\b\n\u0010\u000b\"\u0004\b\f\u0010\rR\u000e\u0010\u000e\u001a\u00020\u0007X.¢\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\u0011\u001a\u00020\u00128VX\u0004¢\u0006\u0006\u001a\u0004\b\u0013\u0010\u0014R\u000e\u0010\u0015\u001a\u00020\u0016X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0007X.¢\u0006\u0002\n\u0000¨\u0006E"}, d2 = {"Lcom/coolapk/market/view/feedv8/RatingContentHolderVX1;", "Lcom/coolapk/market/view/feedv8/BaseFeedContentHolder;", "Landroid/view/View$OnClickListener;", "activity", "Landroid/app/Activity;", "(Landroid/app/Activity;)V", "advantageAdapter", "Lcom/coolapk/market/view/feedv8/PickPhotoAdapterV8;", "binding", "Lcom/coolapk/market/databinding/SubmitRatingNoramlContentBinding;", "getBinding$presentation_coolapkAppRelease", "()Lcom/coolapk/market/databinding/SubmitRatingNoramlContentBinding;", "setBinding$presentation_coolapkAppRelease", "(Lcom/coolapk/market/databinding/SubmitRatingNoramlContentBinding;)V", "disAdvantageAdapter", "focusEditText", "Landroid/widget/EditText;", "focusEditorView", "Landroid/view/View;", "getFocusEditorView", "()Landroid/view/View;", "isContentTextCollapsed", "", "summaryAdapter", "checkSubmittable", "checkSubmittable$presentation_coolapkAppRelease", "fillRelativeViewIfNeed", "", "generateDraftCopy", "Lcom/coolapk/market/model/FeedMultiPart;", "generateDraftCopy$presentation_coolapkAppRelease", "initEditTexts", "initPhotoViewsAndAdapters", "insertOwnerLabel", "notifyUIChange", "notifyUIChange$presentation_coolapkAppRelease", "onActivityResult", "requestCode", "", "resultCode", "data", "Landroid/content/Intent;", "onClick", "v", "onCreateContentView", "inflater", "Landroid/view/LayoutInflater;", "onCreateContentView$presentation_coolapkAppRelease", "onDeleteButtonClick", "onEmotionClick", "emotions", "Lcom/coolapk/market/widget/emotion/BaseEmotion;", "onPickAppIntent", "onPickAtIntent", "onPickImageListChange", "pathList", "", "", "onPickTopicIntent", "onRequestPickImage", "onSubmitButtonClick", "prepareMultiFeed", "Lrx/Observable;", "prepareMultiFeed$presentation_coolapkAppRelease", "updateBuyStateVisibility", "updateCollapsedState", "updateRatingScore", "score", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: RatingContentHolderVX1.kt */
 public final class RatingContentHolderVX1 extends BaseFeedContentHolder implements View.OnClickListener {
     public static final Companion Companion = new Companion(null);
@@ -96,6 +98,7 @@ public final class RatingContentHolderVX1 extends BaseFeedContentHolder implemen
         return pickPhotoAdapterV8;
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0007"}, d2 = {"Lcom/coolapk/market/view/feedv8/RatingContentHolderVX1$Companion;", "", "()V", "PICK_PHOTO_FOR_ADVANTAGE", "", "PICK_PHOTO_FOR_DISADVANTAGE", "PICK_PHOTO_FOR_SUMMARY", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: RatingContentHolderVX1.kt */
     public static final class Companion {
         private Companion() {
@@ -141,7 +144,7 @@ public final class RatingContentHolderVX1 extends BaseFeedContentHolder implemen
         SubmitRatingNoramlContentBinding submitRatingNoramlContentBinding;
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
         boolean z2 = false;
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559168, null, false, new ContextBindingComponent(getActivity()));
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559176, null, false, new ContextBindingComponent(getActivity()));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ndingComponent(activity))");
         SubmitRatingNoramlContentBinding submitRatingNoramlContentBinding2 = (SubmitRatingNoramlContentBinding) inflate;
         this.binding = submitRatingNoramlContentBinding2;
@@ -310,7 +313,7 @@ public final class RatingContentHolderVX1 extends BaseFeedContentHolder implemen
         if (z) {
             str = "";
         } else {
-            str = getActivity().getString(2131886943);
+            str = getActivity().getString(2131887005);
             Intrinsics.checkNotNullExpressionValue(str, "activity.getString(R.string.str_rating_hint)");
         }
         if (getUiConfig().isFeedTargetPhoneOrTablet()) {
@@ -496,6 +499,7 @@ public final class RatingContentHolderVX1 extends BaseFeedContentHolder implemen
         recyclerView3.setOverScrollMode(2);
     }
 
+    /* access modifiers changed from: private */
     public final void insertOwnerLabel() {
         SubmitRatingNoramlContentBinding submitRatingNoramlContentBinding = this.binding;
         if (submitRatingNoramlContentBinding == null) {
@@ -504,7 +508,7 @@ public final class RatingContentHolderVX1 extends BaseFeedContentHolder implemen
         View childAt = submitRatingNoramlContentBinding.relativeView.getChildAt(0);
         Objects.requireNonNull(childAt, "null cannot be cast to non-null type android.widget.LinearLayout");
         LinearLayout linearLayout = (LinearLayout) childAt;
-        TagProductOwnerBinding tagProductOwnerBinding = (TagProductOwnerBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559177, linearLayout, false);
+        TagProductOwnerBinding tagProductOwnerBinding = (TagProductOwnerBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559185, linearLayout, false);
         TextView textView = tagProductOwnerBinding.ownerTextView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.ownerTextView");
         textView.setText("机主");
@@ -607,6 +611,7 @@ public final class RatingContentHolderVX1 extends BaseFeedContentHolder implemen
         companion.fillRelativeInfoViewIntoLayout(linearLayout, getUiConfig(), new LinearLayout.LayoutParams(-1, NumberExtendsKt.getDp(Double.valueOf(0.5d))));
     }
 
+    /* access modifiers changed from: private */
     public final void updateRatingScore(int i) {
         int constrain = KotlinExtendKt.constrain(i, 5, 0);
         RatingContentHelper ratingContentHelper = RatingContentHelper.INSTANCE;
@@ -925,7 +930,7 @@ public final class RatingContentHolderVX1 extends BaseFeedContentHolder implemen
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         switch (view.getId()) {
-            case 2131362004:
+            case 2131362005:
                 Activity activity = getActivity();
                 PickPhotoAdapterV8 pickPhotoAdapterV8 = this.advantageAdapter;
                 if (pickPhotoAdapterV8 == null) {
@@ -944,7 +949,7 @@ public final class RatingContentHolderVX1 extends BaseFeedContentHolder implemen
                 ActionManager.startPhotoPickerActivity(activity, 9, arrayList, 2355);
                 UiUtils.closeKeyboard(getFocusEditorView());
                 return;
-            case 2131362256:
+            case 2131362261:
                 SubmitRatingNoramlContentBinding submitRatingNoramlContentBinding = this.binding;
                 if (submitRatingNoramlContentBinding == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -972,7 +977,7 @@ public final class RatingContentHolderVX1 extends BaseFeedContentHolder implemen
                     return;
                 }
                 return;
-            case 2131362405:
+            case 2131362411:
                 Activity activity2 = getActivity();
                 PickPhotoAdapterV8 pickPhotoAdapterV82 = this.disAdvantageAdapter;
                 if (pickPhotoAdapterV82 == null) {
@@ -991,11 +996,11 @@ public final class RatingContentHolderVX1 extends BaseFeedContentHolder implemen
                 ActionManager.startPhotoPickerActivity(activity2, 9, arrayList2, 2354);
                 UiUtils.closeKeyboard(getFocusEditorView());
                 return;
-            case 2131362478:
+            case 2131362486:
                 this.isContentTextCollapsed = !this.isContentTextCollapsed;
                 updateCollapsedState();
                 return;
-            case 2131363464:
+            case 2131363482:
                 Activity activity3 = getActivity();
                 PickPhotoAdapterV8 pickPhotoAdapterV83 = this.summaryAdapter;
                 if (pickPhotoAdapterV83 == null) {

@@ -19,6 +19,6 @@ final class ClearCacheHelper$clearDiskCacheTask$3 implements Action0 {
     public final void call() {
         Application application = AppHolder.getApplication();
         Intrinsics.checkNotNullExpressionValue(application, "AppHolder.getApplication()");
-        Toast.show(application, 2131886492);
+        Toast.show(application, 2131886552);
     }
 }

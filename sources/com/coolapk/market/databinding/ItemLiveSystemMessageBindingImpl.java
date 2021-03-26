@@ -28,7 +28,7 @@ public class ItemLiveSystemMessageBindingImpl extends ItemLiveSystemMessageBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362933, 2);
+        sparseIntArray.put(2131362945, 2);
     }
 
     public ItemLiveSystemMessageBindingImpl(DataBindingComponent dataBindingComponent, View view) {

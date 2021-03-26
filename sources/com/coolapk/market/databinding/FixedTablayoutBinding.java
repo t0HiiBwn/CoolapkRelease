@@ -21,7 +21,7 @@ public abstract class FixedTablayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static FixedTablayoutBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (FixedTablayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558565, viewGroup, z, obj);
+        return (FixedTablayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558568, viewGroup, z, obj);
     }
 
     public static FixedTablayoutBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class FixedTablayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static FixedTablayoutBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (FixedTablayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558565, null, false, obj);
+        return (FixedTablayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558568, null, false, obj);
     }
 
     public static FixedTablayoutBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class FixedTablayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static FixedTablayoutBinding bind(View view, Object obj) {
-        return (FixedTablayoutBinding) bind(obj, view, 2131558565);
+        return (FixedTablayoutBinding) bind(obj, view, 2131558568);
     }
 }

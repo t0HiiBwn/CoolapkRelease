@@ -32,12 +32,12 @@ public class AlbumDetailV8V2BindingImpl extends AlbumDetailV8V2Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362264, 10);
-        sparseIntArray.put(2131363881, 11);
-        sparseIntArray.put(2131363526, 12);
-        sparseIntArray.put(2131363588, 13);
-        sparseIntArray.put(2131362908, 14);
-        sparseIntArray.put(2131362907, 15);
+        sparseIntArray.put(2131362269, 10);
+        sparseIntArray.put(2131363904, 11);
+        sparseIntArray.put(2131363544, 12);
+        sparseIntArray.put(2131363610, 13);
+        sparseIntArray.put(2131362920, 14);
+        sparseIntArray.put(2131362919, 15);
     }
 
     public AlbumDetailV8V2BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -83,11 +83,11 @@ public class AlbumDetailV8V2BindingImpl extends AlbumDetailV8V2Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((AlbumDetailViewModel) obj);
@@ -112,7 +112,7 @@ public class AlbumDetailV8V2BindingImpl extends AlbumDetailV8V2Binding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -130,7 +130,7 @@ public class AlbumDetailV8V2BindingImpl extends AlbumDetailV8V2Binding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 247) {
+        } else if (i == 248) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
@@ -150,12 +150,12 @@ public class AlbumDetailV8V2BindingImpl extends AlbumDetailV8V2Binding {
                 this.mDirtyFlags |= 64;
             }
             return true;
-        } else if (i == 246) {
+        } else if (i == 247) {
             synchronized (this) {
                 this.mDirtyFlags |= 128;
             }
             return true;
-        } else if (i != 170) {
+        } else if (i != 171) {
             return false;
         } else {
             synchronized (this) {

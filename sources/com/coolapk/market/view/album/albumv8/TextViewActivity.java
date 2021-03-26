@@ -33,7 +33,7 @@ public class TextViewActivity extends BaseActivity implements TranslucentActivit
         this.sourceName = getIntent().getStringExtra("name");
         ContextBindingComponent contextBindingComponent = new ContextBindingComponent(getActivity());
         this.mComponent = contextBindingComponent;
-        TextViewBinding textViewBinding = (TextViewBinding) DataBindingUtil.setContentView(this, 2131559188, contextBindingComponent);
+        TextViewBinding textViewBinding = (TextViewBinding) DataBindingUtil.setContentView(this, 2131559196, contextBindingComponent);
         this.mBinding = textViewBinding;
         textViewBinding.textView.setText(this.showText);
         if (this.textSize != 0) {

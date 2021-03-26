@@ -22,9 +22,7 @@ public final class v implements Runnable {
     private final u i;
     private final int j;
     private final t k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final t f1444l;
+    private final t l;
     private String m;
     private final String n;
     private final Map<String, String> o;
@@ -55,7 +53,7 @@ public final class v implements Runnable {
         this.m = str;
         this.n = str2;
         this.k = tVar;
-        this.f1444l = null;
+        this.l = null;
         this.d = i3;
         if (i4 > 0) {
             this.a = i4;
@@ -67,11 +65,11 @@ public final class v implements Runnable {
         this.o = map;
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:13:0x0020  */
-    /* JADX WARNING: Removed duplicated region for block: B:14:0x002a  */
-    /* JADX WARNING: Removed duplicated region for block: B:17:0x0048  */
-    /* JADX WARNING: Removed duplicated region for block: B:20:0x0061  */
-    /* JADX WARNING: Removed duplicated region for block: B:23:0x0068  */
+    /* JADX WARNING: Removed duplicated region for block: B:13:0x0021  */
+    /* JADX WARNING: Removed duplicated region for block: B:14:0x002b  */
+    /* JADX WARNING: Removed duplicated region for block: B:17:0x0049  */
+    /* JADX WARNING: Removed duplicated region for block: B:20:0x0062  */
+    /* JADX WARNING: Removed duplicated region for block: B:23:0x0069  */
     /* JADX WARNING: Removed duplicated region for block: B:25:? A[RETURN, SYNTHETIC] */
     private void a(an anVar, boolean z, int i2, String str) {
         String str2;
@@ -95,7 +93,7 @@ public final class v implements Runnable {
                         if (tVar != null) {
                             tVar.a(z);
                         }
-                        tVar2 = this.f1444l;
+                        tVar2 = this.l;
                         if (tVar2 != null) {
                             tVar2.a(z);
                             return;
@@ -112,7 +110,7 @@ public final class v implements Runnable {
             tVar = this.k;
             if (tVar != null) {
             }
-            tVar2 = this.f1444l;
+            tVar2 = this.l;
             if (tVar2 != null) {
             }
         }
@@ -124,7 +122,7 @@ public final class v implements Runnable {
         tVar = this.k;
         if (tVar != null) {
         }
-        tVar2 = this.f1444l;
+        tVar2 = this.l;
         if (tVar2 != null) {
         }
     }
@@ -162,13 +160,13 @@ public final class v implements Runnable {
         }
     }
 
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x02db: APUT  
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x02dc: APUT  
       (r5v16 java.lang.Object[])
       (1 ??[boolean, int, float, short, byte, char])
-      (wrap: java.lang.Integer : 0x02d7: INVOKE  (r4v10 java.lang.Integer) = (r4v9 int) type: STATIC call: java.lang.Integer.valueOf(int):java.lang.Integer)
+      (wrap: java.lang.Integer : 0x02d8: INVOKE  (r4v10 java.lang.Integer) = (r4v9 int) type: STATIC call: java.lang.Integer.valueOf(int):java.lang.Integer)
      */
-    /* JADX WARNING: Removed duplicated region for block: B:63:0x01ba  */
-    /* JADX WARNING: Removed duplicated region for block: B:70:0x0220 A[SYNTHETIC, Splitter:B:70:0x0220] */
+    /* JADX WARNING: Removed duplicated region for block: B:63:0x01bb  */
+    /* JADX WARNING: Removed duplicated region for block: B:70:0x0221 A[SYNTHETIC, Splitter:B:70:0x0221] */
     @Override // java.lang.Runnable
     public final void run() {
         com.tencent.bugly.crashreport.common.strategy.a aVar;
@@ -218,7 +216,7 @@ public final class v implements Runnable {
                             } else {
                                 this.i.a(this.j, System.currentTimeMillis());
                                 t tVar = this.k;
-                                t tVar2 = this.f1444l;
+                                t tVar2 = this.l;
                                 String str3 = this.m;
                                 int i3 = -1;
                                 int i4 = 0;

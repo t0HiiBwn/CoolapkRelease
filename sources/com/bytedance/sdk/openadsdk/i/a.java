@@ -27,9 +27,7 @@ abstract class a implements k {
     protected volatile i i;
     protected volatile l j;
     protected volatile boolean k = false;
-
-    /* renamed from: l  reason: collision with root package name */
-    public final long f1332l = m.incrementAndGet();
+    public final long l = m.incrementAndGet();
     private final AtomicInteger n = new AtomicInteger(0);
     private int o = -1;
 

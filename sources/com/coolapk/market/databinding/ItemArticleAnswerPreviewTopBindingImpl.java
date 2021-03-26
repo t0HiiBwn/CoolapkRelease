@@ -30,9 +30,9 @@ public class ItemArticleAnswerPreviewTopBindingImpl extends ItemArticleAnswerPre
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 9);
-        sparseIntArray.put(2131362330, 10);
-        sparseIntArray.put(2131362417, 11);
+        sparseIntArray.put(2131363604, 9);
+        sparseIntArray.put(2131362336, 10);
+        sparseIntArray.put(2131362423, 11);
     }
 
     public ItemArticleAnswerPreviewTopBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -75,9 +75,9 @@ public class ItemArticleAnswerPreviewTopBindingImpl extends ItemArticleAnswerPre
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -93,7 +93,7 @@ public class ItemArticleAnswerPreviewTopBindingImpl extends ItemArticleAnswerPre
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -103,7 +103,7 @@ public class ItemArticleAnswerPreviewTopBindingImpl extends ItemArticleAnswerPre
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -233,7 +233,7 @@ public class ItemArticleAnswerPreviewTopBindingImpl extends ItemArticleAnswerPre
         }
         if ((j & 11) != 0) {
             Boolean bool3 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
         }
     }
 }

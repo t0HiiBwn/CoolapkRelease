@@ -58,14 +58,14 @@ public final class VoteDetailPKViewPart extends VotePKViewPart {
         Intrinsics.checkNotNullExpressionValue(voteOption, "optionLeft");
         Integer stringToColor = ColorUtils.stringToColor(voteOption.getColor());
         if (stringToColor == null) {
-            stringToColor = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099790));
+            stringToColor = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099792));
         }
         Intrinsics.checkNotNullExpressionValue(stringToColor, "ColorUtils.stringToColor…R.color.compare_view_red)");
         int intValue = stringToColor.intValue();
         Intrinsics.checkNotNullExpressionValue(voteOption2, "optionRight");
         Integer stringToColor2 = ColorUtils.stringToColor(voteOption2.getColor());
         if (stringToColor2 == null) {
-            stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099789));
+            stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099791));
         }
         Intrinsics.checkNotNullExpressionValue(stringToColor2, "ColorUtils.stringToColor….color.compare_view_blue)");
         int intValue2 = stringToColor2.intValue();

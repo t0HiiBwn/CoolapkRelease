@@ -39,8 +39,8 @@ public class ItemGoodsFallBindingImpl extends ItemGoodsFallBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362691, 13);
-        sparseIntArray.put(2131363194, 14);
+        sparseIntArray.put(2131362702, 13);
+        sparseIntArray.put(2131363208, 14);
     }
 
     public ItemGoodsFallBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -95,9 +95,9 @@ public class ItemGoodsFallBindingImpl extends ItemGoodsFallBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (157 == i) {
+        } else if (158 == i) {
             setImageUrl((String) obj);
         } else if (50 != i) {
             return false;
@@ -113,7 +113,7 @@ public class ItemGoodsFallBindingImpl extends ItemGoodsFallBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -123,7 +123,7 @@ public class ItemGoodsFallBindingImpl extends ItemGoodsFallBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(157);
+        notifyPropertyChanged(158);
         super.requestRebind();
     }
 
@@ -237,7 +237,7 @@ public class ItemGoodsFallBindingImpl extends ItemGoodsFallBinding {
             str9 = str4;
             i2 = i;
             onClickListener = onClickListener2;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str18, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231691), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str18, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231702), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
         } else {
             str11 = str5;
             str9 = str4;
@@ -261,7 +261,7 @@ public class ItemGoodsFallBindingImpl extends ItemGoodsFallBinding {
             TextViewBindingAdapters.setTextViewLinkable(this.messageView, str2, null, str21, bool3, null, str21);
             TextViewBindingAdapter.setText(this.timeView, str11);
             TextViewBindingAdapter.setText(this.titleView, str6);
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool3, bool3, bool3, bool3, bool3, str21, null, null, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool3, bool3, bool3, bool3, bool3, str21, null, null, bool3, bool3, bool3, null, bool3);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str9, bool3);
         }
     }

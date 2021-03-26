@@ -60,7 +60,7 @@ public abstract class ItemAdsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAdsBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAdsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558577, viewGroup, z, obj);
+        return (ItemAdsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558581, viewGroup, z, obj);
     }
 
     public static ItemAdsBinding inflate(LayoutInflater layoutInflater) {
@@ -69,7 +69,7 @@ public abstract class ItemAdsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAdsBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAdsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558577, null, false, obj);
+        return (ItemAdsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558581, null, false, obj);
     }
 
     public static ItemAdsBinding bind(View view) {
@@ -78,6 +78,6 @@ public abstract class ItemAdsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAdsBinding bind(View view, Object obj) {
-        return (ItemAdsBinding) bind(obj, view, 2131558577);
+        return (ItemAdsBinding) bind(obj, view, 2131558581);
     }
 }

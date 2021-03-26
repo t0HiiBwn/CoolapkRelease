@@ -28,9 +28,9 @@ public class ItemProductMultiRatingMapBindingImpl extends ItemProductMultiRating
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 5);
-        sparseIntArray.put(2131363197, 6);
-        sparseIntArray.put(2131363144, 7);
+        sparseIntArray.put(2131362779, 5);
+        sparseIntArray.put(2131363211, 6);
+        sparseIntArray.put(2131363158, 7);
     }
 
     public ItemProductMultiRatingMapBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -71,7 +71,7 @@ public class ItemProductMultiRatingMapBindingImpl extends ItemProductMultiRating
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Product) obj);
         } else if (50 != i) {
             return false;
@@ -87,7 +87,7 @@ public class ItemProductMultiRatingMapBindingImpl extends ItemProductMultiRating
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

@@ -31,12 +31,12 @@ public class ActivityWallpaperBetaBindingImpl extends ActivityWallpaperBetaBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362067, 6);
-        sparseIntArray.put(2131363593, 7);
-        sparseIntArray.put(2131362652, 8);
-        sparseIntArray.put(2131363345, 9);
-        sparseIntArray.put(2131363588, 10);
-        sparseIntArray.put(2131362326, 11);
+        sparseIntArray.put(2131362069, 6);
+        sparseIntArray.put(2131363615, 7);
+        sparseIntArray.put(2131362660, 8);
+        sparseIntArray.put(2131363361, 9);
+        sparseIntArray.put(2131363610, 10);
+        sparseIntArray.put(2131362332, 11);
     }
 
     public ActivityWallpaperBetaBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -144,7 +144,7 @@ public class ActivityWallpaperBetaBindingImpl extends ActivityWallpaperBetaBindi
         }
         if ((3 & j) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.coverView, str, null, 2131231691, 0, false, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.coverView, str, null, 2131231702, 0, false, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
             this.recommendSplashView.setVisibility(i);
             this.recommendView.setVisibility(i2);
             TextViewBindingAdapter.setText(this.textView6, str2);

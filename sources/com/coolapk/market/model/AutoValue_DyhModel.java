@@ -24,8 +24,8 @@ final class AutoValue_DyhModel extends C$AutoValue_DyhModel {
         return 0;
     }
 
-    AutoValue_DyhModel(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l2, Long l3, String str7, UserInfo userInfo, String str8, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, EditorInfo editorInfo, String str17, String str18, int i, int i2, int i3, int i4, List<String> list, int i5, int i6, String str19, List<DyhArticle> list2, UserAction userAction, Unread unread) {
-        super(str, str2, num, str3, str4, str5, str6, l2, l3, str7, userInfo, str8, str9, str10, str11, str12, str13, str14, str15, str16, editorInfo, str17, str18, i, i2, i3, i4, list, i5, i6, str19, list2, userAction, unread);
+    AutoValue_DyhModel(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l, Long l2, String str7, UserInfo userInfo, String str8, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, EditorInfo editorInfo, String str17, String str18, int i, int i2, int i3, int i4, List<String> list, int i5, int i6, String str19, List<DyhArticle> list2, UserAction userAction, Unread unread) {
+        super(str, str2, num, str3, str4, str5, str6, l, l2, str7, userInfo, str8, str9, str10, str11, str12, str13, str14, str15, str16, editorInfo, str17, str18, i, i2, i3, i4, list, i5, i6, str19, list2, userAction, unread);
     }
 
     @Override // android.os.Parcelable

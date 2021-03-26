@@ -46,7 +46,7 @@ public abstract class ItemChannelTabBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemChannelTabBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemChannelTabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558646, viewGroup, z, obj);
+        return (ItemChannelTabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558652, viewGroup, z, obj);
     }
 
     public static ItemChannelTabBinding inflate(LayoutInflater layoutInflater) {
@@ -55,7 +55,7 @@ public abstract class ItemChannelTabBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemChannelTabBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemChannelTabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558646, null, false, obj);
+        return (ItemChannelTabBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558652, null, false, obj);
     }
 
     public static ItemChannelTabBinding bind(View view) {
@@ -64,6 +64,6 @@ public abstract class ItemChannelTabBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemChannelTabBinding bind(View view, Object obj) {
-        return (ItemChannelTabBinding) bind(obj, view, 2131558646);
+        return (ItemChannelTabBinding) bind(obj, view, 2131558652);
     }
 }

@@ -139,7 +139,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
         ThemeUtils.setSystemBarDrawFlags(replyActivity);
         super.onCreate(bundle);
         ReplyActivity replyActivity2 = this;
-        ViewDataBinding contentView = DataBindingUtil.setContentView(replyActivity, 2131559116, new ContextBindingComponent(replyActivity2));
+        ViewDataBinding contentView = DataBindingUtil.setContentView(replyActivity, 2131559123, new ContextBindingComponent(replyActivity2));
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…xtBindingComponent(this))");
         this.binding = (ReplyBinding) contentView;
         Parcelable parcelableExtra = getIntent().getParcelableExtra("EXTRA_DRAFT");
@@ -348,12 +348,12 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
         if (replyActivity$initView$10 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("photoAdapter");
         }
-        BaseMultiTypeAdapter.register$default(replyActivity$initView$10, SimpleViewHolderFactor.Companion.withLayoutId(2131558900).suitedMethod(ReplyActivity$initView$11.INSTANCE).constructor(new ReplyActivity$initView$12(this, contextBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(replyActivity$initView$10, SimpleViewHolderFactor.Companion.withLayoutId(2131558907).suitedMethod(ReplyActivity$initView$11.INSTANCE).constructor(new ReplyActivity$initView$12(this, contextBindingComponent)).build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter = this.photoAdapter;
         if (baseMultiTypeAdapter == null) {
             Intrinsics.throwUninitializedPropertyAccessException("photoAdapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558901).suitedMethod(ReplyActivity$initView$13.INSTANCE).constructor(new ReplyActivity$initView$14(this, contextBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558908).suitedMethod(ReplyActivity$initView$13.INSTANCE).constructor(new ReplyActivity$initView$14(this, contextBindingComponent)).build(), 0, 2, null);
         ReplyBinding replyBinding22 = this.binding;
         if (replyBinding22 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -387,11 +387,11 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
         Intrinsics.checkNotNullParameter(view, "v");
         ViewGroup viewGroup = null;
         switch (view.getId()) {
-            case 2131362196:
-            case 2131362908:
+            case 2131362200:
+            case 2131362920:
                 onBackPressed();
                 return;
-            case 2131362225:
+            case 2131362230:
                 ReplyBinding replyBinding = this.binding;
                 if (replyBinding == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -406,7 +406,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
                 Intrinsics.checkNotNullExpressionValue(checkBox2, "binding.checkBox");
                 checkBox.setChecked(!checkBox2.isChecked());
                 return;
-            case 2131362256:
+            case 2131362261:
                 ReplyBinding replyBinding3 = this.binding;
                 if (replyBinding3 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -434,7 +434,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
                     return;
                 }
                 return;
-            case 2131362441:
+            case 2131362448:
                 ReplyBinding replyBinding5 = this.binding;
                 if (replyBinding5 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -450,7 +450,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
                     return;
                 }
                 return;
-            case 2131362672:
+            case 2131362683:
                 FeedDraft feedDraft2 = this.feedDraft;
                 if (feedDraft2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("feedDraft");
@@ -459,13 +459,13 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
                 Intrinsics.checkNotNullExpressionValue(imageUrl, "imageUrl");
                 ActionManager.startPhotoViewActivity(view, imageUrl.getSourceUrl(), imageUrl.getCompressedUrl());
                 return;
-            case 2131362917:
+            case 2131362929:
                 pickPhoto();
                 return;
-            case 2131362918:
-                ActionManager.startPickUserActivity(this, 8655, 5, getString(2131886950));
+            case 2131362930:
+                ActionManager.startPickUserActivity(this, 8655, 5, getString(2131887012));
                 return;
-            case 2131362921:
+            case 2131362933:
                 ReplyBinding replyBinding7 = this.binding;
                 if (replyBinding7 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -505,7 +505,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
                 }
                 UiUtils.openKeyboard(replyBinding12.editText);
                 return;
-            case 2131362923:
+            case 2131362935:
                 ReplyBinding replyBinding13 = this.binding;
                 if (replyBinding13 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -555,13 +555,13 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
                 }
                 replyBinding20.keyBoardInteractLayout.requestLayout();
                 return;
-            case 2131362927:
+            case 2131362939:
                 ActionManager.startPickAppActivity(this, 1561);
                 return;
-            case 2131362928:
+            case 2131362940:
                 ActionManager.startPickTopicActivity(this, 6666);
                 return;
-            case 2131363134:
+            case 2131363148:
                 if (PrivacyAlertDialog.Companion.shouldShowByIntent()) {
                     PrivacyAlertDialog newInstance = PrivacyAlertDialog.Companion.newInstance();
                     FragmentManager supportFragmentManager = getSupportFragmentManager();
@@ -748,7 +748,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
                     if (replyBinding2 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("binding");
                     }
-                    replyBinding2.postButton.setTextColor(ResourceUtils.getColorInt(getActivity(), 2131099893));
+                    replyBinding2.postButton.setTextColor(ResourceUtils.getColorInt(getActivity(), 2131099898));
                 }
                 ReplyBinding replyBinding5 = this.binding;
                 if (replyBinding5 == null) {
@@ -779,7 +779,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
         replyBinding2 = this.binding;
         if (replyBinding2 == null) {
         }
-        replyBinding2.postButton.setTextColor(ResourceUtils.getColorInt(getActivity(), 2131099893));
+        replyBinding2.postButton.setTextColor(ResourceUtils.getColorInt(getActivity(), 2131099898));
     }
 
     /* access modifiers changed from: private */
@@ -864,20 +864,20 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
         Observable.from(list).flatMap(new ReplyActivity$onPhotoPick$1(this)).compose(RxUtils.applyIOSchedulers()).toList().subscribe((Subscriber) new ReplyActivity$onPhotoPick$2(this, list));
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:109:0x022a, code lost:
-        if (r7.equals("dyh_article_reply") != false) goto L_0x022c;
+    /* JADX WARNING: Code restructure failed: missing block: B:109:0x022f, code lost:
+        if (r7.equals("dyh_article_reply") != false) goto L_0x0231;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:110:0x022c, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:110:0x0231, code lost:
         r2 = com.coolapk.market.manager.DataManager.getInstance();
         r3 = r13.feedDraft;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:111:0x0232, code lost:
-        if (r3 != null) goto L_0x0237;
+    /* JADX WARNING: Code restructure failed: missing block: B:111:0x0237, code lost:
+        if (r3 != null) goto L_0x023c;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:112:0x0234, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:112:0x0239, code lost:
         kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException("feedDraft");
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:113:0x0237, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:113:0x023c, code lost:
         r0 = r2.postDyhArticleReply(r3.getExtraId(), r0, r6, r0);
         kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r0, "DataManager.getInstance(…, url, isCheckBoxChecked)");
         doPost(r0, r1, new com.coolapk.market.view.feed.ReplyActivity$submitReply$4(r13));
@@ -905,7 +905,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
         kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException("feedDraft");
      */
     /* JADX WARNING: Code restructure failed: missing block: B:73:0x015a, code lost:
-        if (r7.getExtraData() == null) goto L_0x017a;
+        if (r7.getExtraData() == null) goto L_0x017f;
      */
     /* JADX WARNING: Code restructure failed: missing block: B:74:0x015c, code lost:
         r7 = r13.feedDraft;
@@ -918,62 +918,63 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
      */
     /* JADX WARNING: Code restructure failed: missing block: B:77:0x0165, code lost:
         r6 = new org.json.JSONObject(r7.getExtraData());
+        r6.optString("relation_group_id");
         r7 = r6.optString("source_id");
         r6 = r6.optBoolean("is_presenter");
         r11 = r7;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:78:0x017a, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:78:0x017f, code lost:
         r11 = r6;
         r6 = false;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:79:0x017c, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:79:0x0181, code lost:
         r7 = r13.feedDraft;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:80:0x017e, code lost:
-        if (r7 != null) goto L_0x0183;
+    /* JADX WARNING: Code restructure failed: missing block: B:80:0x0183, code lost:
+        if (r7 != null) goto L_0x0188;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:81:0x0180, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:81:0x0185, code lost:
         kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException("feedDraft");
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:83:0x018b, code lost:
-        if (kotlin.jvm.internal.Intrinsics.areEqual(r7.getType(), "live_message") != false) goto L_0x0191;
+    /* JADX WARNING: Code restructure failed: missing block: B:83:0x0190, code lost:
+        if (kotlin.jvm.internal.Intrinsics.areEqual(r7.getType(), "live_message") != false) goto L_0x0196;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:84:0x018d, code lost:
-        if (r0 == false) goto L_0x0190;
+    /* JADX WARNING: Code restructure failed: missing block: B:84:0x0192, code lost:
+        if (r0 == false) goto L_0x0195;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:85:0x0190, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:85:0x0195, code lost:
         r3 = 0;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:86:0x0191, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:86:0x0196, code lost:
         r0 = com.coolapk.market.manager.DataManager.getInstance();
         r4 = r13.feedDraft;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:87:0x0197, code lost:
-        if (r4 != null) goto L_0x019c;
+    /* JADX WARNING: Code restructure failed: missing block: B:87:0x019c, code lost:
+        if (r4 != null) goto L_0x01a1;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:88:0x0199, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:88:0x019e, code lost:
         kotlin.jvm.internal.Intrinsics.throwUninitializedPropertyAccessException("feedDraft");
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:89:0x019c, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:89:0x01a1, code lost:
         r7 = r4.getExtraId();
         r9 = r2;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:90:0x01a3, code lost:
-        if (r6 == false) goto L_0x01a8;
+    /* JADX WARNING: Code restructure failed: missing block: B:90:0x01a8, code lost:
+        if (r6 == false) goto L_0x01ad;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:91:0x01a5, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:91:0x01aa, code lost:
         r2 = "live_pic";
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:92:0x01a8, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:92:0x01ad, code lost:
         r2 = "live";
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:93:0x01aa, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:93:0x01af, code lost:
         r0 = r0.postLiveMessage(r7, r0, r9, r11, r3, r2);
         kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r0, "DataManager.getInstance(…adOption.UPLOAD_DIR_LIVE)");
         doPost(r0, r1, new com.coolapk.market.view.feed.ReplyActivity$submitReply$5(r13, r3));
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:95:0x01cb, code lost:
-        if (r7.equals("article_reply") != false) goto L_0x022c;
+    /* JADX WARNING: Code restructure failed: missing block: B:95:0x01d0, code lost:
+        if (r7.equals("article_reply") != false) goto L_0x0231;
      */
     private final void submitReply() {
         if (!this.isPosting) {
@@ -995,7 +996,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
                     if (replyBinding2 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("binding");
                     }
-                    Toast.show(replyBinding2.getRoot(), 2131886785);
+                    Toast.show(replyBinding2.getRoot(), 2131886847);
                     return;
                 }
                 obj = "[图片]";
@@ -1542,7 +1543,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
                 if (r3.equals("dyh_article_reply") != false) goto L_0x01fc;
              */
             /* JADX WARNING: Code restructure failed: missing block: B:70:0x01fc, code lost:
-                r3 = r21.getString(2131887297);
+                r3 = r21.getString(2131887359);
                 kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r3, "context.getString(R.string.title_reply)");
                 r2 = r22.getExtraData();
              */
@@ -1565,12 +1566,12 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
                 r4 = "";
              */
             /* JADX WARNING: Code restructure failed: missing block: B:78:0x021f, code lost:
-                r2 = r21.getString(2131886801, r22.getExtraData());
+                r2 = r21.getString(2131886863, r22.getExtraData());
                 kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r2, "context.getString(R.stri…int, feedDraft.extraData)");
                 r4 = r2;
              */
             /* JADX WARNING: Code restructure failed: missing block: B:79:0x0235, code lost:
-                r9 = r21.getString(2131886957);
+                r9 = r21.getString(2131887019);
                 kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r9, "context.getString(R.string.str_reply_and_forward)");
                 r0 = r22.getImageUriList();
                 kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r0, "feedDraft.imageUriList");
@@ -1733,7 +1734,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
     /* compiled from: ReplyActivity.kt */
     private static class ItemPhotoViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558900;
+        public static final int LAYOUT_ID = 2131558907;
         private final ItemReplyPhotoBinding binding;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -1779,7 +1780,7 @@ public final class ReplyActivity extends BaseActivity implements View.OnClickLis
     /* compiled from: ReplyActivity.kt */
     private static final class ItemAddPhotoViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558901;
+        public static final int LAYOUT_ID = 2131558908;
         private final ItemReplyPhotoAddBinding binding;
 
         @Override // com.coolapk.market.viewholder.BindingViewHolder

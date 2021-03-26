@@ -16,7 +16,7 @@ public class ItemDiscoveryImageViewV8BindingImpl extends ItemDiscoveryImageViewV
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362857, 1);
+        sparseIntArray.put(2131362868, 1);
     }
 
     public ItemDiscoveryImageViewV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -51,7 +51,7 @@ public class ItemDiscoveryImageViewV8BindingImpl extends ItemDiscoveryImageViewV
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppViewViewModel) obj);

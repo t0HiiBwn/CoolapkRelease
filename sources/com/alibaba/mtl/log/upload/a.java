@@ -58,7 +58,7 @@ public abstract class a implements Runnable {
         String str;
         String str2;
         i.a("UploadTask", "Upload");
-        if (!com.alibaba.mtl.log.a.f53s) {
+        if (!com.alibaba.mtl.log.a.f52s) {
             i.a("UploadTask", "Upload is disabled");
         } else if (l.isConnected() && !H && !G) {
             G = true;
@@ -344,6 +344,6 @@ public abstract class a implements Runnable {
     }
 
     private List<String> a(com.alibaba.mtl.log.model.a aVar) {
-        return com.alibaba.mtl.log.a.a.m20a(aVar.T);
+        return com.alibaba.mtl.log.a.a.m10a(aVar.T);
     }
 }

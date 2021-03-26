@@ -1,233 +1,163 @@
 package com.xiaomi.push;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.text.TextUtils;
-import com.xiaomi.push.ai;
-import com.xiaomi.push.service.an;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.nio.channels.FileLock;
-import java.util.ArrayList;
+import com.xiaomi.b.a.b;
+import com.xiaomi.b.a.c;
+import com.xiaomi.push.service.ak;
+import com.xiaomi.push.service.al;
+import com.xiaomi.push.service.l;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class du extends ai.a {
-    private Context a;
+public class du {
+    private static a a;
+    private static Map<String, gs> b;
 
-    /* renamed from: a  reason: collision with other field name */
-    private SharedPreferences f322a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private an f323a;
-
-    public du(Context context) {
-        this.a = context;
-        this.f322a = context.getSharedPreferences("mipush_extra", 0);
-        this.f323a = an.a(context);
+    public interface a {
+        void uploader(Context context, gm gmVar);
     }
 
-    private List<hk> a(File file) {
-        FileInputStream fileInputStream;
-        RandomAccessFile randomAccessFile;
-        Throwable th;
-        FileLock lock;
-        dg a2 = dh.a().m199a();
-        String a3 = a2 == null ? "" : a2.a();
-        FileLock fileLock = null;
-        if (TextUtils.isEmpty(a3)) {
+    public static int a(Enum r1) {
+        if (r1 != null) {
+            if (r1 instanceof gi) {
+                return r1.ordinal() + 1001;
+            }
+            if (r1 instanceof gs) {
+                return r1.ordinal() + 2001;
+            }
+            if (r1 instanceof ea) {
+                return r1.ordinal() + 3001;
+            }
+        }
+        return -1;
+    }
+
+    public static b a(Context context, String str, String str2, int i, long j, String str3) {
+        b a2 = a(str);
+        a2.a = str2;
+        a2.b = i;
+        a2.c = j;
+        a2.d = str3;
+        return a2;
+    }
+
+    public static b a(String str) {
+        b bVar = new b();
+        bVar.e = 1000;
+        bVar.g = 1001;
+        bVar.f = str;
+        return bVar;
+    }
+
+    public static c a() {
+        c cVar = new c();
+        cVar.e = 1000;
+        cVar.g = 1000;
+        cVar.f = "P100000";
+        return cVar;
+    }
+
+    public static c a(Context context, int i, long j, long j2) {
+        c a2 = a();
+        a2.a = i;
+        a2.b = j;
+        a2.c = j2;
+        return a2;
+    }
+
+    public static gm a(Context context, String str) {
+        if (TextUtils.isEmpty(str)) {
             return null;
         }
-        ArrayList arrayList = new ArrayList();
-        byte[] bArr = new byte[4];
-        synchronized (dm.a) {
+        gm gmVar = new gm();
+        gmVar.d("category_client_report_data");
+        gmVar.a("push_sdk_channel");
+        gmVar.a(1);
+        gmVar.b(str);
+        gmVar.c(true);
+        gmVar.b(System.currentTimeMillis());
+        gmVar.g(context.getPackageName());
+        gmVar.e("com.xiaomi.xmsf");
+        gmVar.f(ak.a());
+        gmVar.c("quality_support");
+        return gmVar;
+    }
+
+    public static String a(int i) {
+        return i == 1000 ? "E100000" : i == 3000 ? "E100002" : i == 2000 ? "E100001" : i == 6000 ? "E100003" : "";
+    }
+
+    public static void a(Context context, com.xiaomi.b.a.a aVar) {
+        com.xiaomi.b.b.a.a(context, aVar, new dr(context), new ds(context));
+    }
+
+    private static void a(Context context, gm gmVar) {
+        if (a(context.getApplicationContext())) {
+            al.a(context.getApplicationContext(), gmVar);
+            return;
+        }
+        a aVar = a;
+        if (aVar != null) {
+            aVar.uploader(context, gmVar);
+        }
+    }
+
+    public static void a(Context context, List<String> list) {
+        if (list != null) {
             try {
-                File file2 = new File(this.a.getExternalFilesDir(null), "push_cdata.lock");
-                y.m681a(file2);
-                randomAccessFile = new RandomAccessFile(file2, "rw");
-                try {
-                    lock = randomAccessFile.getChannel().lock();
-                } catch (Exception unused) {
-                    fileInputStream = null;
-                    try {
-                        fileLock.release();
-                    } catch (IOException unused2) {
+                for (String str : list) {
+                    gm a2 = a(context, str);
+                    if (!ak.a(a2, false)) {
+                        a(context, a2);
                     }
-                    y.a(fileInputStream);
-                    y.a(randomAccessFile);
-                    return arrayList;
-                } catch (Throwable th2) {
-                    th = th2;
-                    fileInputStream = null;
-                    try {
-                        fileLock.release();
-                    } catch (IOException unused3) {
-                    }
-                    y.a(fileInputStream);
-                    y.a(randomAccessFile);
-                    throw th;
                 }
-                try {
-                    fileInputStream = new FileInputStream(file);
-                    while (true) {
-                        try {
-                            if (fileInputStream.read(bArr) != 4) {
-                                break;
-                            }
-                            int a4 = ac.a(bArr);
-                            byte[] bArr2 = new byte[a4];
-                            if (fileInputStream.read(bArr2) != a4) {
-                                break;
-                            }
-                            byte[] a5 = dl.a(a3, bArr2);
-                            if (!(a5 == null || a5.length == 0)) {
-                                hk hkVar = new hk();
-                                im.a(hkVar, a5);
-                                arrayList.add(hkVar);
-                                a(hkVar);
-                            }
-                        } catch (Exception unused4) {
-                            fileLock = lock;
-                            if (fileLock != null && fileLock.isValid()) {
-                                fileLock.release();
-                            }
-                            y.a(fileInputStream);
-                            y.a(randomAccessFile);
-                            return arrayList;
-                        } catch (Throwable th3) {
-                            th = th3;
-                            fileLock = lock;
-                            if (fileLock != null && fileLock.isValid()) {
-                                fileLock.release();
-                            }
-                            y.a(fileInputStream);
-                            y.a(randomAccessFile);
-                            throw th;
-                        }
-                    }
-                    if (lock != null) {
-                        if (lock.isValid()) {
-                            try {
-                                lock.release();
-                            } catch (IOException unused5) {
-                            }
-                        }
-                    }
-                    y.a(fileInputStream);
-                } catch (Exception unused6) {
-                    fileInputStream = null;
-                    fileLock = lock;
-                    fileLock.release();
-                    y.a(fileInputStream);
-                    y.a(randomAccessFile);
-                    return arrayList;
-                } catch (Throwable th4) {
-                    th = th4;
-                    fileInputStream = null;
-                    fileLock = lock;
-                    fileLock.release();
-                    y.a(fileInputStream);
-                    y.a(randomAccessFile);
-                    throw th;
-                }
-            } catch (Exception unused7) {
-                randomAccessFile = null;
-                fileInputStream = null;
-                fileLock.release();
-                y.a(fileInputStream);
-                y.a(randomAccessFile);
-                return arrayList;
-            } catch (Throwable th5) {
-                th = th5;
-                randomAccessFile = null;
-                fileInputStream = null;
-                fileLock.release();
-                y.a(fileInputStream);
-                y.a(randomAccessFile);
-                throw th;
+            } catch (Throwable th) {
+                com.xiaomi.a.a.a.c.d(th.getMessage());
             }
-            y.a(randomAccessFile);
-        }
-        return arrayList;
-    }
-
-    @Override // com.xiaomi.push.ai.a
-    /* renamed from: a */
-    private void mo141a() {
-        SharedPreferences.Editor edit = this.f322a.edit();
-        edit.putLong("last_upload_data_timestamp", System.currentTimeMillis() / 1000);
-        edit.commit();
-    }
-
-    private void a(hk hkVar) {
-        if (hkVar.f567a == he.AppInstallList && !hkVar.f568a.startsWith("same_")) {
-            SharedPreferences.Editor edit = this.f322a.edit();
-            edit.putLong("dc_job_result_time_4", hkVar.f566a);
-            edit.putString("dc_job_result_4", bi.a(hkVar.f568a));
-            edit.commit();
         }
     }
 
-    @Override // com.xiaomi.push.ai.a
-    /* renamed from: a  reason: collision with other method in class */
-    private boolean mo209a() {
-        if (bc.d(this.a)) {
-            return false;
-        }
-        if ((bc.f(this.a) || bc.e(this.a)) && !c()) {
-            return true;
-        }
-        return (bc.g(this.a) && !b()) || bc.h(this.a);
+    public static void a(a aVar) {
+        a = aVar;
     }
 
-    private boolean b() {
-        if (!this.f323a.a(hh.Upload3GSwitch.a(), true)) {
-            return false;
+    public static boolean a(Context context) {
+        return context != null && !TextUtils.isEmpty(context.getPackageName()) && "com.xiaomi.xmsf".equals(context.getPackageName());
+    }
+
+    public static int b(int i) {
+        if (i > 0) {
+            return i + 1000;
         }
-        return Math.abs((System.currentTimeMillis() / 1000) - this.f322a.getLong("last_upload_data_timestamp", -1)) > ((long) Math.max(86400, this.f323a.a(hh.Upload3GFrequency.a(), 432000)));
+        return -1;
     }
 
-    private boolean c() {
-        if (!this.f323a.a(hh.Upload4GSwitch.a(), true)) {
-            return false;
-        }
-        return Math.abs((System.currentTimeMillis() / 1000) - this.f322a.getLong("last_upload_data_timestamp", -1)) > ((long) Math.max(86400, this.f323a.a(hh.Upload4GFrequency.a(), 259200)));
-    }
-
-    @Override // com.xiaomi.push.ai.a
-    /* renamed from: a  reason: collision with other method in class */
-    public String mo210a() {
-        return "1";
-    }
-
-    @Override // java.lang.Runnable
-    public void run() {
-        File file = new File(this.a.getExternalFilesDir(null), "push_cdata.data");
-        if (!bc.c(this.a)) {
-            if (file.length() > 1863680) {
-                file.delete();
-            }
-        } else if (!mo209a() && file.exists()) {
-            List<hk> a2 = a(file);
-            if (!ad.a(a2)) {
-                int size = a2.size();
-                if (size > 4000) {
-                    a2 = a2.subList(size - 4000, size);
+    public static gs b(String str) {
+        if (b == null) {
+            synchronized (gs.class) {
+                if (b == null) {
+                    b = new HashMap();
+                    gs[] values = gs.values();
+                    for (gs gsVar : values) {
+                        b.put(gsVar.S.toLowerCase(), gsVar);
+                    }
                 }
-                hv hvVar = new hv();
-                hvVar.a(a2);
-                byte[] a3 = y.a(im.a(hvVar));
-                ib ibVar = new ib("-1", false);
-                ibVar.c(hm.DataCollection.f576a);
-                ibVar.a(a3);
-                dg a4 = dh.a().m199a();
-                if (a4 != null) {
-                    a4.a(ibVar, hc.Notification, null);
-                }
-                mo141a();
             }
-            file.delete();
         }
+        gs gsVar2 = b.get(str.toLowerCase());
+        return gsVar2 != null ? gsVar2 : gs.Invalid;
+    }
+
+    public static void b(Context context) {
+        com.xiaomi.b.b.a.a(context, c(context));
+    }
+
+    public static com.xiaomi.b.a.a c(Context context) {
+        boolean a2 = l.a(context).a(gn.PerfUploadSwitch.a(), false);
+        boolean a3 = l.a(context).a(gn.EventUploadNewSwitch.a(), false);
+        int a4 = l.a(context).a(gn.PerfUploadFrequency.a(), 86400);
+        return com.xiaomi.b.a.a.a().b(a3).b((long) l.a(context).a(gn.EventUploadFrequency.a(), 86400)).c(a2).c((long) a4).a(context);
     }
 }

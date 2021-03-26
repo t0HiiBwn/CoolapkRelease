@@ -69,7 +69,7 @@ public abstract class TopicNodePageBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicNodePageBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (TopicNodePageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559204, viewGroup, z, obj);
+        return (TopicNodePageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559212, viewGroup, z, obj);
     }
 
     public static TopicNodePageBinding inflate(LayoutInflater layoutInflater) {
@@ -78,7 +78,7 @@ public abstract class TopicNodePageBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicNodePageBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (TopicNodePageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559204, null, false, obj);
+        return (TopicNodePageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559212, null, false, obj);
     }
 
     public static TopicNodePageBinding bind(View view) {
@@ -87,6 +87,6 @@ public abstract class TopicNodePageBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicNodePageBinding bind(View view, Object obj) {
-        return (TopicNodePageBinding) bind(obj, view, 2131559204);
+        return (TopicNodePageBinding) bind(obj, view, 2131559212);
     }
 }

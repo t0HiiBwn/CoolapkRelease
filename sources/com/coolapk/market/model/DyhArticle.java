@@ -32,9 +32,9 @@ public abstract class DyhArticle implements Entity, IUser {
 
         public abstract Builder content(String str);
 
-        public abstract Builder creatDate(Long l2);
+        public abstract Builder creatDate(Long l);
 
-        public abstract Builder dateline(Long l2);
+        public abstract Builder dateline(Long l);
 
         public abstract Builder description(String str);
 
@@ -78,7 +78,7 @@ public abstract class DyhArticle implements Entity, IUser {
 
         public abstract Builder keywords(String str);
 
-        public abstract Builder lastUpdate(Long l2);
+        public abstract Builder lastUpdate(Long l);
 
         public abstract Builder likeNum(int i);
 

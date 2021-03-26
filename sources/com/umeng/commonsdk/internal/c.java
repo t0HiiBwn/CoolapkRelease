@@ -45,9 +45,7 @@ public class c implements UMLogDataProtocol {
     private static Method i = null;
     private static Method j = null;
     private static final String k = "com.umeng.umzid.Spy";
-
-    /* renamed from: l  reason: collision with root package name */
-    private static boolean f1484l;
+    private static boolean l;
     private Context d;
 
     @Override // com.umeng.commonsdk.framework.UMLogDataProtocol
@@ -225,9 +223,9 @@ public class c implements UMLogDataProtocol {
     }
 
     private void e() {
-        if (!f1484l) {
+        if (!l) {
             if (FieldManager.allow("header_device_oaid") && Build.VERSION.SDK_INT > 28) {
-                f1484l = true;
+                l = true;
                 a(this.d, new OnGetOaidListener() {
                     /* class com.umeng.commonsdk.internal.c.AnonymousClass4 */
 
@@ -252,13 +250,13 @@ public class c implements UMLogDataProtocol {
                 });
             }
         } else if (!FieldManager.allow("header_device_oaid")) {
-            f1484l = false;
+            l = false;
         }
     }
 
     private void f() {
         if (FieldManager.allow("header_device_oaid") && Build.VERSION.SDK_INT > 28) {
-            f1484l = true;
+            l = true;
             UMConfigureImpl.registerInterruptFlag();
             UMConfigureImpl.init(this.d);
             e++;
@@ -278,8 +276,8 @@ public class c implements UMLogDataProtocol {
         }
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:34:0x00e2, code lost:
-        if (r13.isDirectory() != false) goto L_0x00e6;
+    /* JADX WARNING: Code restructure failed: missing block: B:34:0x00e3, code lost:
+        if (r13.isDirectory() != false) goto L_0x00e7;
      */
     @Override // com.umeng.commonsdk.framework.UMLogDataProtocol
     public void workEvent(Object obj, int i2) {

@@ -37,9 +37,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
     private Integer i;
     private l j;
     private boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1282l;
+    private boolean l;
     private boolean m;
     private boolean n;
     private d o;
@@ -99,7 +97,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
         this.f = "VADNetAgent/0";
         this.h = new Object();
         this.k = true;
-        this.f1282l = false;
+        this.l = false;
         this.m = false;
         this.n = false;
         this.p = null;
@@ -306,7 +304,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
 
     public void cancel() {
         synchronized (this.h) {
-            this.f1282l = true;
+            this.l = true;
             this.a = null;
         }
     }
@@ -314,7 +312,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
     public boolean isCanceled() {
         boolean z;
         synchronized (this.h) {
-            z = this.f1282l;
+            z = this.l;
         }
         return z;
     }

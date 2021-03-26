@@ -272,7 +272,7 @@ public final class FeedVoteDetailFragment extends EntityListFragment implements 
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         menuInflater.inflate(2131623950, menu);
-        MenuItem findItem = menu.findItem(2131361968);
+        MenuItem findItem = menu.findItem(2131361969);
         if (findItem != null) {
             findItem.setVisible(true);
         }
@@ -282,7 +282,7 @@ public final class FeedVoteDetailFragment extends EntityListFragment implements 
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
         int itemId = menuItem.getItemId();
-        if (itemId == 2131361931) {
+        if (itemId == 2131361932) {
             FeedVoteViewModel feedVoteViewModel = this.voteViewModel;
             if (feedVoteViewModel == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("voteViewModel");
@@ -291,7 +291,7 @@ public final class FeedVoteDetailFragment extends EntityListFragment implements 
             FragmentActivity requireActivity = requireActivity();
             Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
             EntityExtendsKt.showItemDialog(feed, requireActivity);
-        } else if (itemId == 2131361968) {
+        } else if (itemId == 2131361969) {
             FragmentActivity activity = getActivity();
             FeedVoteViewModel feedVoteViewModel2 = this.voteViewModel;
             if (feedVoteViewModel2 == null) {
@@ -617,7 +617,7 @@ public final class FeedVoteDetailFragment extends EntityListFragment implements 
                         Intrinsics.throwUninitializedPropertyAccessException("capsuleView");
                     }
                     capsuleView3.setText("写观点");
-                    capsuleView3.setImageResource(2131231669);
+                    capsuleView3.setImageResource(2131231680);
                     capsuleView3.setOnClickListener(new FeedVoteDetailFragment$updateCapsuleUI$$inlined$apply$lambda$2(this, vote));
                     CapsuleStatusHandler capsuleStatusHandler = this.capsuleViewHandler;
                     if (capsuleStatusHandler == null) {
@@ -632,7 +632,7 @@ public final class FeedVoteDetailFragment extends EntityListFragment implements 
                     Intrinsics.throwUninitializedPropertyAccessException("capsuleView");
                 }
                 capsuleView4.setText("去投票");
-                capsuleView4.setImageResource(2131231669);
+                capsuleView4.setImageResource(2131231680);
                 capsuleView4.setOnClickListener(new FeedVoteDetailFragment$updateCapsuleUI$$inlined$apply$lambda$1(this));
                 CapsuleStatusHandler capsuleStatusHandler2 = this.capsuleViewHandler;
                 if (capsuleStatusHandler2 == null) {
@@ -659,7 +659,7 @@ public final class FeedVoteDetailFragment extends EntityListFragment implements 
             Intrinsics.throwUninitializedPropertyAccessException("capsuleView");
         }
         capsuleView6.setText("参与话题讨论");
-        capsuleView6.setImageResource(2131231669);
+        capsuleView6.setImageResource(2131231680);
         capsuleView6.setOnClickListener(new FeedVoteDetailFragment$updateCapsuleUI$$inlined$apply$lambda$3(this, vote));
         CapsuleStatusHandler capsuleStatusHandler3 = this.capsuleViewHandler;
         if (capsuleStatusHandler3 == null) {

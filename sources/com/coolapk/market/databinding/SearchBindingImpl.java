@@ -29,12 +29,12 @@ public class SearchBindingImpl extends SearchBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363302, 2);
-        sparseIntArray.put(2131363004, 3);
-        sparseIntArray.put(2131363157, 4);
-        sparseIntArray.put(2131362244, 5);
-        sparseIntArray.put(2131363304, 6);
-        sparseIntArray.put(2131362816, 7);
+        sparseIntArray.put(2131363317, 2);
+        sparseIntArray.put(2131363018, 3);
+        sparseIntArray.put(2131363171, 4);
+        sparseIntArray.put(2131362249, 5);
+        sparseIntArray.put(2131363319, 6);
+        sparseIntArray.put(2131362827, 7);
     }
 
     public SearchBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CardTripleViewHolder extends CardViewHolder {
-    public static final int LAYOUT_ID = 2131558634;
+    public static final int LAYOUT_ID = 2131558640;
     private List<ChildItemViewModel> viewModelList;
 
     public static class ChildItemViewModel extends BaseObservable {
@@ -53,7 +53,7 @@ public class CardTripleViewHolder extends CardViewHolder {
 
     @Override // com.coolapk.market.viewholder.CardViewHolder
     protected View onFindChildView(View view, int i) {
-        return view.findViewById(i != 0 ? i != 1 ? i != 2 ? -1 : 2131362774 : 2131362773 : 2131362769);
+        return view.findViewById(i != 0 ? i != 1 ? i != 2 ? -1 : 2131362785 : 2131362784 : 2131362780);
     }
 
     @Override // com.coolapk.market.viewholder.CardViewHolder
@@ -73,7 +73,7 @@ public class CardTripleViewHolder extends CardViewHolder {
             ServiceApp serviceApp = (ServiceApp) entity;
             childItemViewModel.title.set(serviceApp.getAppName());
             childItemViewModel.logo.set(serviceApp.getLogo());
-            childItemViewModel.info.set(getContext().getString(2131886640, serviceApp.getScore()));
+            childItemViewModel.info.set(getContext().getString(2131886702, serviceApp.getScore()));
             childItemViewModel.actionText.set(StateUtils.getActionText(getContext(), true, serviceApp.getPackageName(), serviceApp.getPackageName(), serviceApp.getDownloadUrlMd5(0)));
             ViewUtil.directClickListener(itemCardTripleItemBinding.actionButton, this);
             itemCardTripleItemBinding.actionButton.setTag(Integer.valueOf(i));
@@ -86,7 +86,7 @@ public class CardTripleViewHolder extends CardViewHolder {
             Album album = (Album) entity;
             childItemViewModel.title.set(album.getTitle());
             childItemViewModel.logo.set(album.getLogo());
-            childItemViewModel.info.set(getContext().getString(2131886638, Integer.valueOf(album.getTotalApkNum())));
+            childItemViewModel.info.set(getContext().getString(2131886700, Integer.valueOf(album.getTotalApkNum())));
             childItemViewModel.actionText.set(null);
             ViewUtil.directClickListener(itemCardTripleItemBinding.actionButton, null);
             itemCardTripleItemBinding.actionButton.setTag(null);

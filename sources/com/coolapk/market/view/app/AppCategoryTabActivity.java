@@ -44,7 +44,7 @@ public final class AppCategoryTabActivity extends TabActivity {
     protected void onCreate(Bundle bundle) {
         String str;
         super.onCreate(bundle);
-        getToolbar().setTitle(2131887231);
+        getToolbar().setTitle(2131887293);
         String stringExtra = getIntent().getStringExtra("EXTRA_APK_TYPE");
         if (stringExtra != null) {
             int i = 0;
@@ -73,9 +73,9 @@ public final class AppCategoryTabActivity extends TabActivity {
 
     @Override // com.coolapk.market.view.base.TabActivity
     protected String[] onCreateTabs() {
-        String string = getString(2131886603);
+        String string = getString(2131886665);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_app_category_title_app)");
-        String string2 = getString(2131886604);
+        String string2 = getString(2131886666);
         Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_app_category_title_game)");
         return new String[]{string, string2};
     }
@@ -128,7 +128,7 @@ public final class AppCategoryTabActivity extends TabActivity {
             if (getUserVisibleHint()) {
                 initData();
             }
-            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558819).suitedEntityType("category").constructor(new AppCategoryTabActivity$CategoryList$onActivityCreated$1(this)).build(), 0, 2, null);
+            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558826).suitedEntityType("category").constructor(new AppCategoryTabActivity$CategoryList$onActivityCreated$1(this)).build(), 0, 2, null);
         }
 
         @Override // com.coolapk.market.view.base.asynclist.NewAsyncListContract.View

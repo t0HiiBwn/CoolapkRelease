@@ -22,7 +22,7 @@ abstract class C$$AutoValue_ForwardFeed extends ForwardFeed {
     private final String url;
     private final UserInfo userInfo;
 
-    C$$AutoValue_ForwardFeed(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, UserInfo userInfo2, String str11, String str12) {
+    C$$AutoValue_ForwardFeed(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, UserInfo userInfo2, String str11, String str12) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -34,8 +34,8 @@ abstract class C$$AutoValue_ForwardFeed extends ForwardFeed {
         this.logo = str8;
         this.subTitle = str9;
         this.extraData = str10;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.userInfo = userInfo2;
         Objects.requireNonNull(str11, "Null message");
         this.message = str11;
@@ -172,10 +172,10 @@ abstract class C$$AutoValue_ForwardFeed extends ForwardFeed {
                                             if (str9 != null ? str9.equals(forwardFeed.getSubTitle()) : forwardFeed.getSubTitle() == null) {
                                                 String str10 = this.extraData;
                                                 if (str10 != null ? str10.equals(forwardFeed.getExtraData()) : forwardFeed.getExtraData() == null) {
-                                                    Long l2 = this.dateline;
-                                                    if (l2 != null ? l2.equals(forwardFeed.getDateline()) : forwardFeed.getDateline() == null) {
-                                                        Long l3 = this.lastUpdate;
-                                                        if (l3 != null ? l3.equals(forwardFeed.getLastUpdate()) : forwardFeed.getLastUpdate() == null) {
+                                                    Long l = this.dateline;
+                                                    if (l != null ? l.equals(forwardFeed.getDateline()) : forwardFeed.getDateline() == null) {
+                                                        Long l2 = this.lastUpdate;
+                                                        if (l2 != null ? l2.equals(forwardFeed.getLastUpdate()) : forwardFeed.getLastUpdate() == null) {
                                                             UserInfo userInfo2 = this.userInfo;
                                                             if (userInfo2 != null ? userInfo2.equals(forwardFeed.getUserInfo()) : forwardFeed.getUserInfo() == null) {
                                                                 if (this.message.equals(forwardFeed.getMessage()) && this.id.equals(forwardFeed.getId())) {
@@ -223,10 +223,10 @@ abstract class C$$AutoValue_ForwardFeed extends ForwardFeed {
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.extraData;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode13 = (hashCode12 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode12 = (hashCode11 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         UserInfo userInfo2 = this.userInfo;
         if (userInfo2 != null) {
             i = userInfo2.hashCode();

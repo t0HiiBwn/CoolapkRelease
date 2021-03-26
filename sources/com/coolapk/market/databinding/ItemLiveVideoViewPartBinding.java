@@ -15,10 +15,11 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.coolapk.market.widget.view.MaxWidthFrameLayout;
+import com.coolapk.market.widget.view.TimeTextView;
 
 public abstract class ItemLiveVideoViewPartBinding extends ViewDataBinding {
     public final LinearLayout bottomContainer;
-    public final TextView currentTimeView;
+    public final TimeTextView currentTimeView;
     public final FrameLayout danmakuFrame;
     public final ImageView danmakuOpenView;
     public final ImageView danmakuPencilView;
@@ -48,7 +49,7 @@ public abstract class ItemLiveVideoViewPartBinding extends ViewDataBinding {
     public final TextView subscribeView;
     public final TextView titleView;
     public final LinearLayout topContainer;
-    public final TextView totalTimeView;
+    public final TimeTextView totalTimeView;
     public final LinearLayout upperCoverBottomView;
     public final RelativeLayout upperCoverSubscribeView;
     public final FrameLayout upperCoverView;
@@ -56,10 +57,10 @@ public abstract class ItemLiveVideoViewPartBinding extends ViewDataBinding {
 
     public abstract void setClick(View.OnClickListener onClickListener);
 
-    protected ItemLiveVideoViewPartBinding(Object obj, View view, int i, LinearLayout linearLayout, TextView textView, FrameLayout frameLayout, ImageView imageView, ImageView imageView2, EditText editText, LinearLayout linearLayout2, ProgressBar progressBar, ImageView imageView3, ImageView imageView4, ImageView imageView5, TextView textView2, MaxWidthFrameLayout maxWidthFrameLayout, TextView textView3, TextView textView4, TextView textView5, TextView textView6, LinearLayout linearLayout3, ImageView imageView6, ImageView imageView7, TextView textView7, ImageView imageView8, ImageView imageView9, SeekBar seekBar2, FrameLayout frameLayout2, ImageView imageView10, TextView textView8, TextView textView9, LinearLayout linearLayout4, TextView textView10, LinearLayout linearLayout5, RelativeLayout relativeLayout, FrameLayout frameLayout3, FrameLayout frameLayout4) {
+    protected ItemLiveVideoViewPartBinding(Object obj, View view, int i, LinearLayout linearLayout, TimeTextView timeTextView, FrameLayout frameLayout, ImageView imageView, ImageView imageView2, EditText editText, LinearLayout linearLayout2, ProgressBar progressBar, ImageView imageView3, ImageView imageView4, ImageView imageView5, TextView textView, MaxWidthFrameLayout maxWidthFrameLayout, TextView textView2, TextView textView3, TextView textView4, TextView textView5, LinearLayout linearLayout3, ImageView imageView6, ImageView imageView7, TextView textView6, ImageView imageView8, ImageView imageView9, SeekBar seekBar2, FrameLayout frameLayout2, ImageView imageView10, TextView textView7, TextView textView8, LinearLayout linearLayout4, TimeTextView timeTextView2, LinearLayout linearLayout5, RelativeLayout relativeLayout, FrameLayout frameLayout3, FrameLayout frameLayout4) {
         super(obj, view, i);
         this.bottomContainer = linearLayout;
-        this.currentTimeView = textView;
+        this.currentTimeView = timeTextView;
         this.danmakuFrame = frameLayout;
         this.danmakuOpenView = imageView;
         this.danmakuPencilView = imageView2;
@@ -69,25 +70,25 @@ public abstract class ItemLiveVideoViewPartBinding extends ViewDataBinding {
         this.danmakuSendView = imageView3;
         this.fullScreenView = imageView4;
         this.imageCover = imageView5;
-        this.infoView = textView2;
+        this.infoView = textView;
         this.itemView = maxWidthFrameLayout;
-        this.lineTextView = textView3;
-        this.liveTimeView = textView4;
-        this.liveTypeView = textView5;
-        this.liveTypeView2 = textView6;
+        this.lineTextView = textView2;
+        this.liveTimeView = textView3;
+        this.liveTypeView = textView4;
+        this.liveTypeView2 = textView5;
         this.liveViewContainer = linearLayout3;
         this.moreView = imageView6;
         this.navigationView = imageView7;
-        this.peopleNumView = textView7;
+        this.peopleNumView = textView6;
         this.playView = imageView8;
         this.refreshView = imageView9;
         this.seekBar = seekBar2;
         this.selectLineView = frameLayout2;
         this.shareView = imageView10;
-        this.subscribeView = textView8;
-        this.titleView = textView9;
+        this.subscribeView = textView7;
+        this.titleView = textView8;
         this.topContainer = linearLayout4;
-        this.totalTimeView = textView10;
+        this.totalTimeView = timeTextView2;
         this.upperCoverBottomView = linearLayout5;
         this.upperCoverSubscribeView = relativeLayout;
         this.upperCoverView = frameLayout3;
@@ -104,7 +105,7 @@ public abstract class ItemLiveVideoViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveVideoViewPartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemLiveVideoViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558810, viewGroup, z, obj);
+        return (ItemLiveVideoViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558817, viewGroup, z, obj);
     }
 
     public static ItemLiveVideoViewPartBinding inflate(LayoutInflater layoutInflater) {
@@ -113,7 +114,7 @@ public abstract class ItemLiveVideoViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveVideoViewPartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemLiveVideoViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558810, null, false, obj);
+        return (ItemLiveVideoViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558817, null, false, obj);
     }
 
     public static ItemLiveVideoViewPartBinding bind(View view) {
@@ -122,6 +123,6 @@ public abstract class ItemLiveVideoViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveVideoViewPartBinding bind(View view, Object obj) {
-        return (ItemLiveVideoViewPartBinding) bind(obj, view, 2131558810);
+        return (ItemLiveVideoViewPartBinding) bind(obj, view, 2131558817);
     }
 }

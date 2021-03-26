@@ -38,7 +38,7 @@ import kotlin.text.StringsKt;
 /* compiled from: AlbumExpandCardViewHolder.kt */
 public final class AlbumExpandCardViewHolder extends GenericBindHolder<ItemAlbumExpandCardBinding, Album> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558582;
+    public static final int LAYOUT_ID = 2131558586;
     private final List<?> dataList;
     private boolean isCoverLoaded;
     private String signUrl;
@@ -126,7 +126,7 @@ public final class AlbumExpandCardViewHolder extends GenericBindHolder<ItemAlbum
         Intrinsics.checkNotNull(view);
         int id = view.getId();
         String str = null;
-        if (id == 2131362095) {
+        if (id == 2131362098) {
             Context context = getContext();
             ItemAlbumExpandCardBinding itemAlbumExpandCardBinding = (ItemAlbumExpandCardBinding) getBinding();
             Intrinsics.checkNotNullExpressionValue(itemAlbumExpandCardBinding, "binding");
@@ -135,7 +135,7 @@ public final class AlbumExpandCardViewHolder extends GenericBindHolder<ItemAlbum
                 str = album.getUid();
             }
             ActionManager.startUserSpaceActivity(context, str);
-        } else if (id == 2131362200 || id == 2131362323) {
+        } else if (id == 2131362205 || id == 2131362329) {
             Context context2 = getContext();
             Intrinsics.checkNotNullExpressionValue(context2, "context");
             ActionManagerCompat.startActivityByUrl$default(context2, this.viewModel.getUrl(), null, null, 12, null);

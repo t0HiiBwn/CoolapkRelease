@@ -15,9 +15,7 @@ public class b implements com.ss.android.a.a.b.b {
     private int i;
     private boolean j;
     private boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1396l;
+    private String l;
     private transient Object m;
     private JSONObject n;
     private JSONObject o;
@@ -37,15 +35,15 @@ public class b implements com.ss.android.a.a.b.b {
         this.m = aVar.i;
         this.i = aVar.j;
         this.j = aVar.k;
-        this.k = aVar.f1397l;
-        this.f1396l = aVar.m;
+        this.k = aVar.l;
+        this.l = aVar.m;
         this.n = aVar.n;
         this.o = aVar.o;
     }
 
     @Override // com.ss.android.a.a.b.b
     public String a() {
-        return this.f1396l;
+        return this.l;
     }
 
     @Override // com.ss.android.a.a.b.b
@@ -125,7 +123,7 @@ public class b implements com.ss.android.a.a.b.b {
 
     @Override // com.ss.android.a.a.b.b
     public void a(String str) {
-        this.f1396l = str;
+        this.l = str;
     }
 
     /* compiled from: AdDownloadEventConfig */
@@ -141,9 +139,7 @@ public class b implements com.ss.android.a.a.b.b {
         private Object i;
         private int j;
         private boolean k = true;
-
-        /* renamed from: l  reason: collision with root package name */
-        private boolean f1397l = false;
+        private boolean l = false;
         private String m;
         private JSONObject n;
         private JSONObject o;
@@ -204,7 +200,7 @@ public class b implements com.ss.android.a.a.b.b {
         }
 
         public a c(boolean z) {
-            this.f1397l = z;
+            this.l = z;
             return this;
         }
 

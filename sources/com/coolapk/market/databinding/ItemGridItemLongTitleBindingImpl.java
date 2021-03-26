@@ -27,7 +27,7 @@ public class ItemGridItemLongTitleBindingImpl extends ItemGridItemLongTitleBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363435, 4);
+        sparseIntArray.put(2131363453, 4);
     }
 
     public ItemGridItemLongTitleBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -65,11 +65,11 @@ public class ItemGridItemLongTitleBindingImpl extends ItemGridItemLongTitleBindi
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((Entity) obj);
@@ -83,7 +83,7 @@ public class ItemGridItemLongTitleBindingImpl extends ItemGridItemLongTitleBindi
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -103,7 +103,7 @@ public class ItemGridItemLongTitleBindingImpl extends ItemGridItemLongTitleBindi
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -207,7 +207,7 @@ public class ItemGridItemLongTitleBindingImpl extends ItemGridItemLongTitleBindi
             str6 = str3;
             i2 = i;
             onClickListener = onClickListener2;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str5, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str5, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, true, bool, bool, null, bool);
         } else {
             onClickListener = onClickListener2;
             str6 = str3;

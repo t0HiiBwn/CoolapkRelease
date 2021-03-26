@@ -17,6 +17,6 @@ final class UserNodeRatingViewHolder$confirmDeleteRating$3 implements DialogInte
 
     @Override // android.content.DialogInterface.OnClickListener
     public final void onClick(DialogInterface dialogInterface, int i) {
-        this.this$0.deleteNodeRating(this.$data, 1);
+        UserNodeRatingViewHolder.access$deleteNodeRating(this.this$0, this.$data, 1);
     }
 }

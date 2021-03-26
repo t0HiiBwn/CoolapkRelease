@@ -23,10 +23,10 @@ public class ItemAlbumAppEditBindingImpl extends ItemAlbumAppEditBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362316, 7);
-        sparseIntArray.put(2131362072, 8);
-        sparseIntArray.put(2131363024, 9);
-        sparseIntArray.put(2131363055, 10);
+        sparseIntArray.put(2131362322, 7);
+        sparseIntArray.put(2131362074, 8);
+        sparseIntArray.put(2131363038, 9);
+        sparseIntArray.put(2131363069, 10);
     }
 
     public ItemAlbumAppEditBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -69,7 +69,7 @@ public class ItemAlbumAppEditBindingImpl extends ItemAlbumAppEditBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((AlbumItemViewModel) obj);
         } else if (27 != i) {
             return false;
@@ -86,7 +86,7 @@ public class ItemAlbumAppEditBindingImpl extends ItemAlbumAppEditBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -109,12 +109,12 @@ public class ItemAlbumAppEditBindingImpl extends ItemAlbumAppEditBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 191) {
+        } else if (i == 192) {
             synchronized (this) {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i == 278) {
+        } else if (i == 279) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
@@ -124,7 +124,7 @@ public class ItemAlbumAppEditBindingImpl extends ItemAlbumAppEditBinding {
                 this.mDirtyFlags |= 16;
             }
             return true;
-        } else if (i != 207) {
+        } else if (i != 208) {
             return false;
         } else {
             synchronized (this) {
@@ -187,7 +187,7 @@ public class ItemAlbumAppEditBindingImpl extends ItemAlbumAppEditBinding {
                 }
                 if ((69 & j) != 0) {
                     Boolean bool = null;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
                 }
                 if ((j & 81) == 0) {
                     TextViewBindingAdapter.setText(this.versionView, str4);

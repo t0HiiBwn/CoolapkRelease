@@ -41,7 +41,7 @@ public abstract class b {
         public a() {
             this.b = null;
             this.c = null;
-            this.b = Executors.newScheduledThreadPool(3, new ThreadFactoryC0120b());
+            this.b = Executors.newScheduledThreadPool(3, new ThreadFactoryC0138b());
             this.c = new SparseArray<>();
         }
 
@@ -118,7 +118,7 @@ public abstract class b {
 
     /* renamed from: com.tencent.beacon.core.a.b$b  reason: collision with other inner class name */
     /* compiled from: AsyncTaskHandlerAbs */
-    public class ThreadFactoryC0120b implements ThreadFactory {
+    public class ThreadFactoryC0138b implements ThreadFactory {
         private final AtomicInteger a = new AtomicInteger(1);
 
         @Override // java.util.concurrent.ThreadFactory

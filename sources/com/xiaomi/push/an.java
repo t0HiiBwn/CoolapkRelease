@@ -1,20 +1,15 @@
 package com.xiaomi.push;
 
-import com.xiaomi.push.al;
+import android.text.TextUtils;
+import java.io.File;
+import java.io.FilenameFilter;
 
-class an implements Runnable {
-    final /* synthetic */ al.b a;
-
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ al f197a;
-
-    an(al alVar, al.b bVar) {
-        this.f197a = alVar;
-        this.a = bVar;
+final class an implements FilenameFilter {
+    an() {
     }
 
-    @Override // java.lang.Runnable
-    public void run() {
-        this.f197a.a(this.a);
+    @Override // java.io.FilenameFilter
+    public boolean accept(File file, String str) {
+        return !TextUtils.isEmpty(str) && !str.toLowerCase().endsWith(".lock");
     }
 }

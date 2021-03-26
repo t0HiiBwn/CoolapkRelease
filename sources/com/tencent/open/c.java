@@ -29,11 +29,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /* compiled from: ProGuard */
-public class c extends b implements a.AbstractC0136a {
+public class c extends b implements a.AbstractC0154a {
     static Toast c;
     private String d;
     private IUiListener e;
-    private C0137c f;
+    private C0155c f;
     private Handler g;
     private a h;
     private b i;
@@ -44,7 +44,7 @@ public class c extends b implements a.AbstractC0136a {
         super(context, 16973840);
         this.j = new WeakReference<>(context);
         this.d = str2;
-        this.f = new C0137c(context, str, str2, qQToken.getAppId(), iUiListener);
+        this.f = new C0155c(context, str, str2, qQToken.getAppId(), iUiListener);
         this.g = new d(this.f, context.getMainLooper());
         this.e = iUiListener;
         this.k = Math.round(context.getResources().getDisplayMetrics().density * 185.0f);
@@ -219,9 +219,9 @@ public class c extends b implements a.AbstractC0136a {
 
     /* compiled from: ProGuard */
     private class d extends Handler {
-        private C0137c b;
+        private C0155c b;
 
-        public d(C0137c cVar, Looper looper) {
+        public d(C0155c cVar, Looper looper) {
             super(looper);
             this.b = cVar;
         }
@@ -246,14 +246,14 @@ public class c extends b implements a.AbstractC0136a {
 
     /* renamed from: com.tencent.open.c$c  reason: collision with other inner class name */
     /* compiled from: ProGuard */
-    private static class C0137c implements IUiListener {
+    private static class C0155c implements IUiListener {
         String a;
         String b;
         private WeakReference<Context> c;
         private String d;
         private IUiListener e;
 
-        public C0137c(Context context, String str, String str2, String str3, IUiListener iUiListener) {
+        public C0155c(Context context, String str, String str2, String str3, IUiListener iUiListener) {
             this.c = new WeakReference<>(context);
             this.d = str;
             this.a = str2;
@@ -309,7 +309,7 @@ public class c extends b implements a.AbstractC0136a {
         }
     }
 
-    @Override // com.tencent.open.c.a.AbstractC0136a
+    @Override // com.tencent.open.c.a.AbstractC0154a
     public void a(int i2) {
         WeakReference<Context> weakReference = this.j;
         if (!(weakReference == null || weakReference.get() == null)) {
@@ -322,7 +322,7 @@ public class c extends b implements a.AbstractC0136a {
         f.e("openSDK_LOG.PKDialog", "onKeyboardShown keyboard show");
     }
 
-    @Override // com.tencent.open.c.a.AbstractC0136a
+    @Override // com.tencent.open.c.a.AbstractC0154a
     public void a() {
         this.i.getLayoutParams().height = this.k;
         f.e("openSDK_LOG.PKDialog", "onKeyboardHidden keyboard hide");

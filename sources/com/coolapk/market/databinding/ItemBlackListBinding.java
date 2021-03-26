@@ -39,7 +39,7 @@ public abstract class ItemBlackListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBlackListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemBlackListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558624, viewGroup, z, obj);
+        return (ItemBlackListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558629, viewGroup, z, obj);
     }
 
     public static ItemBlackListBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class ItemBlackListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBlackListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemBlackListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558624, null, false, obj);
+        return (ItemBlackListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558629, null, false, obj);
     }
 
     public static ItemBlackListBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class ItemBlackListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBlackListBinding bind(View view, Object obj) {
-        return (ItemBlackListBinding) bind(obj, view, 2131558624);
+        return (ItemBlackListBinding) bind(obj, view, 2131558629);
     }
 }

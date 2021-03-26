@@ -104,7 +104,7 @@ public final class DiscoveryFragmentV11 extends BaseFragment implements Scrollab
         if (viewPager2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("viewPager");
         }
-        viewPager2.setId(2131363934);
+        viewPager2.setId(2131363959);
         ViewPager viewPager3 = this.viewPager;
         if (viewPager3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("viewPager");

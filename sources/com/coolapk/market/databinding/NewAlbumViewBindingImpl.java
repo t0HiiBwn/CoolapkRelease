@@ -33,18 +33,18 @@ public class NewAlbumViewBindingImpl extends NewAlbumViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362067, 3);
-        sparseIntArray.put(2131363593, 4);
-        sparseIntArray.put(2131362645, 5);
-        sparseIntArray.put(2131362652, 6);
-        sparseIntArray.put(2131361981, 7);
-        sparseIntArray.put(2131362025, 8);
-        sparseIntArray.put(2131363588, 9);
-        sparseIntArray.put(2131363888, 10);
-        sparseIntArray.put(2131363889, 11);
-        sparseIntArray.put(2131363891, 12);
-        sparseIntArray.put(2131362021, 13);
-        sparseIntArray.put(2131362024, 14);
+        sparseIntArray.put(2131362069, 3);
+        sparseIntArray.put(2131363615, 4);
+        sparseIntArray.put(2131362653, 5);
+        sparseIntArray.put(2131362660, 6);
+        sparseIntArray.put(2131361982, 7);
+        sparseIntArray.put(2131362026, 8);
+        sparseIntArray.put(2131363610, 9);
+        sparseIntArray.put(2131363911, 10);
+        sparseIntArray.put(2131363912, 11);
+        sparseIntArray.put(2131363914, 12);
+        sparseIntArray.put(2131362022, 13);
+        sparseIntArray.put(2131362025, 14);
     }
 
     public NewAlbumViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

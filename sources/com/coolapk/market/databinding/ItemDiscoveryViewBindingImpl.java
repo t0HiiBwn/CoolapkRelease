@@ -35,10 +35,10 @@ public class ItemDiscoveryViewBindingImpl extends ItemDiscoveryViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 10);
-        sparseIntArray.put(2131363016, 11);
-        sparseIntArray.put(2131363533, 12);
-        sparseIntArray.put(2131363229, 13);
+        sparseIntArray.put(2131362657, 10);
+        sparseIntArray.put(2131363030, 11);
+        sparseIntArray.put(2131363551, 12);
+        sparseIntArray.put(2131363243, 13);
     }
 
     public ItemDiscoveryViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -84,7 +84,7 @@ public class ItemDiscoveryViewBindingImpl extends ItemDiscoveryViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -100,7 +100,7 @@ public class ItemDiscoveryViewBindingImpl extends ItemDiscoveryViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -157,7 +157,7 @@ public class ItemDiscoveryViewBindingImpl extends ItemDiscoveryViewBinding {
                 j |= z ? 1024 : 512;
             }
             boolean isEmpty = TextUtils.isEmpty(str9);
-            str4 = z ? this.actionButton.getResources().getString(2131886778) : this.actionButton.getResources().getString(2131886779);
+            str4 = z ? this.actionButton.getResources().getString(2131886840) : this.actionButton.getResources().getString(2131886841);
             boolean isEmpty2 = TextUtils.isEmpty(str7);
             boolean isDiscoveryType = FeedUtils.isDiscoveryType(str6);
             if ((j & 5) != 0) {
@@ -203,7 +203,7 @@ public class ItemDiscoveryViewBindingImpl extends ItemDiscoveryViewBinding {
             this.fromWhereView.setVisibility(i2);
             Boolean bool = null;
             String str11 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str2, null, 2131231363, 0, bool, bool, bool, bool, bool, str11, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str2, null, 2131231374, 0, bool, bool, bool, bool, bool, str11, null, null, true, bool, bool, null, bool);
             this.mboundView8.setVisibility(i);
             TextViewBindingAdapters.setTextViewLinkable(this.mboundView8, str3, null, str11, bool, null, str11);
             TextViewBindingAdapter.setText(this.titleView, str5);

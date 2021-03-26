@@ -89,8 +89,8 @@ public class x {
             if (a3 != null && !"".equals(a3)) {
                 return a3;
             }
-            Signature[] l2 = l(context);
-            if (!(l2 == null || (a2 = new ac().a(l2[0].toByteArray())) == null || "".equals(a2))) {
+            Signature[] l = l(context);
+            if (!(l == null || (a2 = new ac().a(l[0].toByteArray())) == null || "".equals(a2))) {
                 g.a().a(context, "md5sign", a2);
                 return a2;
             }
@@ -106,8 +106,8 @@ public class x {
             if (a2 != null && !"".equals(a2)) {
                 return a2;
             }
-            Signature[] l2 = l(context);
-            if (!(l2 == null || (c2 = new ac().c(l2[0].toByteArray())) == null || "".equals(c2))) {
+            Signature[] l = l(context);
+            if (!(l == null || (c2 = new ac().c(l[0].toByteArray())) == null || "".equals(c2))) {
                 g.a().a(context, "shasign", c2);
                 return c2;
             }

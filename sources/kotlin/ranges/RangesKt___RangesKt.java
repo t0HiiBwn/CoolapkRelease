@@ -148,9 +148,9 @@ class RangesKt___RangesKt extends RangesKt__RangesKt {
         return num != null && intRange.contains(num.intValue());
     }
 
-    private static final boolean contains(LongRange longRange, Long l2) {
+    private static final boolean contains(LongRange longRange, Long l) {
         Intrinsics.checkNotNullParameter(longRange, "$this$contains");
-        return l2 != null && longRange.contains(l2.longValue());
+        return l != null && longRange.contains(l.longValue());
     }
 
     private static final boolean contains(CharRange charRange, Character ch) {

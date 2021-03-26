@@ -39,7 +39,7 @@ public class PermissionFragment extends BaseFragment {
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        PermissionBinding permissionBinding = (PermissionBinding) DataBindingUtil.inflate(layoutInflater, 2131559078, viewGroup, false);
+        PermissionBinding permissionBinding = (PermissionBinding) DataBindingUtil.inflate(layoutInflater, 2131559085, viewGroup, false);
         this.binding = permissionBinding;
         return permissionBinding.getRoot();
     }
@@ -49,7 +49,7 @@ public class PermissionFragment extends BaseFragment {
         super.onActivityCreated(bundle);
         this.binding.recyclerView.setAdapter(new DataAdapter());
         this.binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        this.binding.recyclerView.addItemDecoration(ItemDecorations.vertical(getActivity()).type(0, 2131231052).last(2131231052).create());
+        this.binding.recyclerView.addItemDecoration(ItemDecorations.vertical(getActivity()).type(0, 2131231062).last(2131231062).create());
         this.binding.recyclerView.getItemAnimator().setChangeDuration(0);
         this.binding.recyclerView.setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         this.subscription = DataManager.getInstance().getPermissionList(getArguments().getStringArrayList("PERMISSION_LIST"), getActivity().getPackageManager()).compose(RxUtils.applyIOSchedulers()).subscribe((Subscriber<? super R>) new Subscriber<List<PermissionItem>>() {
@@ -86,7 +86,7 @@ public class PermissionFragment extends BaseFragment {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new DataViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558848, viewGroup, false));
+            return new DataViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558855, viewGroup, false));
         }
 
         public void onBindViewHolder(BindingViewHolder bindingViewHolder, int i) {

@@ -53,18 +53,18 @@ public final class ReplyCopySheetGroupFactory implements SheetCallback {
         if (!this.dataList.isEmpty()) {
             return wrapAsSheetGroup();
         }
-        insertItem(new CopyTextAction(null, false, new ReplyCopySheetGroupFactory$create$1(this), 3, null), "复制全部内容", 2131231232);
+        insertItem(new CopyTextAction(null, false, new ReplyCopySheetGroupFactory$create$1(this), 3, null), "复制全部内容", 2131231243);
         CopyTextAction copyTextAction = new CopyTextAction(null, true, new ReplyCopySheetGroupFactory$create$2(this), 1, null);
-        String string = this.activity.getString(2131886713);
+        String string = this.activity.getString(2131886775);
         Intrinsics.checkNotNullExpressionValue(string, "activity.getString(R.string.str_dialog_copy_free)");
-        insertItem(copyTextAction, string, 2131231325);
+        insertItem(copyTextAction, string, 2131231336);
         String pic = this.data.getPic();
         boolean z2 = !(pic == null || StringsKt.isBlank(pic));
         Intrinsics.checkNotNullExpressionValue(loginSession, "session");
         if (loginSession.isAdmin() && z2) {
-            insertItem(new CopyTextAction(null, false, new ReplyCopySheetGroupFactory$create$3(this), 3, null), "复制图片链接", 2131231234);
+            insertItem(new CopyTextAction(null, false, new ReplyCopySheetGroupFactory$create$3(this), 3, null), "复制图片链接", 2131231245);
         }
-        insertItem(new CopyTextAction('@' + this.data.getUserName() + ' ', false, null, 6, null), "复制用户名", 2131231236);
+        insertItem(new CopyTextAction('@' + this.data.getUserName() + ' ', false, null, 6, null), "复制用户名", 2131231247);
         if (loginSession.isAdmin()) {
             String spamReason = this.data.getSpamReason();
             if (!(spamReason == null || spamReason.length() == 0)) {
@@ -75,7 +75,7 @@ public final class ReplyCopySheetGroupFactory implements SheetCallback {
                 if (spamReason2 == null) {
                     spamReason2 = "";
                 }
-                insertItem(new CopyTextAction(spamReason2, false, null, 6, null), "复制违规内容", 2131231235);
+                insertItem(new CopyTextAction(spamReason2, false, null, 6, null), "复制违规内容", 2131231246);
             }
         }
         return wrapAsSheetGroup();
@@ -99,7 +99,7 @@ public final class ReplyCopySheetGroupFactory implements SheetCallback {
             StringUtils.copyText(this.activity, str);
             Application application = AppHolder.getApplication();
             Intrinsics.checkNotNullExpressionValue(application, "AppHolder.getApplication()");
-            Toast.show(application, 2131887190);
+            Toast.show(application, 2131887252);
         }
         return SheetResult.Companion.getClose();
     }

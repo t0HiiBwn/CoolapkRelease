@@ -20,7 +20,7 @@ public abstract class User implements Entity, IUser {
 
         public abstract Builder setBio(String str);
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         public abstract Builder setDescription(String str);
 
@@ -44,7 +44,7 @@ public abstract class User implements Entity, IUser {
 
         public abstract Builder setIsFollow(int i);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLikeNum(int i);
 

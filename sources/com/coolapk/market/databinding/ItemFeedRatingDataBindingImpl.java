@@ -26,10 +26,10 @@ public class ItemFeedRatingDataBindingImpl extends ItemFeedRatingDataBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363460, 3);
-        sparseIntArray.put(2131363282, 4);
-        sparseIntArray.put(2131363281, 5);
-        sparseIntArray.put(2131363194, 6);
+        sparseIntArray.put(2131363478, 3);
+        sparseIntArray.put(2131363296, 4);
+        sparseIntArray.put(2131363295, 5);
+        sparseIntArray.put(2131363208, 6);
     }
 
     public ItemFeedRatingDataBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -66,7 +66,7 @@ public class ItemFeedRatingDataBindingImpl extends ItemFeedRatingDataBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FeedTarget) obj);
         } else if (50 != i) {
             return false;
@@ -82,7 +82,7 @@ public class ItemFeedRatingDataBindingImpl extends ItemFeedRatingDataBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -154,7 +154,7 @@ public class ItemFeedRatingDataBindingImpl extends ItemFeedRatingDataBinding {
         }
         if (i3 != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str4, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str4, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }
     }

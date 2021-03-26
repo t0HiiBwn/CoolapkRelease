@@ -106,7 +106,7 @@ public class FeedGoodsListDetailFragment extends FeedDetailFragmentV8 {
     @Override // com.coolapk.market.view.feed.reply.FeedDetailFragmentV8, com.coolapk.market.view.feed.reply.FeedReplyListFragmentV8, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558754).constructor(new FeedGoodsListDetailFragment$onActivityCreated$1(this)).suitedEntityType("ENTITY_TYPE_DETAIL_TOP").resetItemViewType(2131558696).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558761).constructor(new FeedGoodsListDetailFragment$onActivityCreated$1(this)).suitedEntityType("ENTITY_TYPE_DETAIL_TOP").resetItemViewType(2131558703).build(), 0, 2, null);
     }
 
     private final void setupAlphaToolbar() {
@@ -133,7 +133,7 @@ public class FeedGoodsListDetailFragment extends FeedDetailFragmentV8 {
         Intrinsics.checkNotNullParameter(menu, "menu");
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
-        MenuItem add = menu.add(0, 2131361901, 0, "编辑");
+        MenuItem add = menu.add(0, 2131361902, 0, "编辑");
         DataManager instance = DataManager.getInstance();
         Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
         LoginSession loginSession = instance.getLoginSession();
@@ -145,7 +145,7 @@ public class FeedGoodsListDetailFragment extends FeedDetailFragmentV8 {
     @Override // com.coolapk.market.view.feed.reply.FeedDetailFragmentV8, androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361901) {
+        if (menuItem.getItemId() != 2131361902) {
             return super.onOptionsItemSelected(menuItem);
         }
         ActionManager.startFunThingsListEditActivity(getActivity(), getFeed$presentation_coolapkAppRelease());

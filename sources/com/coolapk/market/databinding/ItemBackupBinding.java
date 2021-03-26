@@ -61,7 +61,7 @@ public abstract class ItemBackupBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBackupBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemBackupBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558619, viewGroup, z, obj);
+        return (ItemBackupBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558623, viewGroup, z, obj);
     }
 
     public static ItemBackupBinding inflate(LayoutInflater layoutInflater) {
@@ -70,7 +70,7 @@ public abstract class ItemBackupBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBackupBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemBackupBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558619, null, false, obj);
+        return (ItemBackupBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558623, null, false, obj);
     }
 
     public static ItemBackupBinding bind(View view) {
@@ -79,6 +79,6 @@ public abstract class ItemBackupBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBackupBinding bind(View view, Object obj) {
-        return (ItemBackupBinding) bind(obj, view, 2131558619);
+        return (ItemBackupBinding) bind(obj, view, 2131558623);
     }
 }

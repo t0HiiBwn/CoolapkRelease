@@ -111,7 +111,7 @@ public abstract class ItemContactBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemContactBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemContactBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558660, viewGroup, z, obj);
+        return (ItemContactBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558666, viewGroup, z, obj);
     }
 
     public static ItemContactBinding inflate(LayoutInflater layoutInflater) {
@@ -120,7 +120,7 @@ public abstract class ItemContactBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemContactBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemContactBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558660, null, false, obj);
+        return (ItemContactBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558666, null, false, obj);
     }
 
     public static ItemContactBinding bind(View view) {
@@ -129,6 +129,6 @@ public abstract class ItemContactBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemContactBinding bind(View view, Object obj) {
-        return (ItemContactBinding) bind(obj, view, 2131558660);
+        return (ItemContactBinding) bind(obj, view, 2131558666);
     }
 }

@@ -25,10 +25,10 @@ public class ItemDeveloperAppBindingImpl extends ItemDeveloperAppBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362652, 4);
-        sparseIntArray.put(2131362061, 5);
-        sparseIntArray.put(2131363014, 6);
-        sparseIntArray.put(2131362905, 7);
+        sparseIntArray.put(2131362660, 4);
+        sparseIntArray.put(2131362063, 5);
+        sparseIntArray.put(2131363028, 6);
+        sparseIntArray.put(2131362917, 7);
     }
 
     public ItemDeveloperAppBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -124,7 +124,7 @@ public class ItemDeveloperAppBindingImpl extends ItemDeveloperAppBinding {
             TextViewBindingAdapter.setText(this.extraTextView, str3);
             this.extraTextView.setVisibility(i);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231363, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231374, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }
         if ((j & 2) != 0) {

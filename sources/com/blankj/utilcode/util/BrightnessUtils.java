@@ -51,6 +51,7 @@ public final class BrightnessUtils {
     }
 
     public static int getWindowBrightness(Window window) {
+        Objects.requireNonNull(window, "Argument 'window' of type Window (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         float f = window.getAttributes().screenBrightness;
         return f < 0.0f ? getBrightness() : (int) (f * 255.0f);
     }

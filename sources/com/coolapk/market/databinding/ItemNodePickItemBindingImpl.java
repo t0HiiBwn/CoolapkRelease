@@ -25,10 +25,10 @@ public class ItemNodePickItemBindingImpl extends ItemNodePickItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 2);
-        sparseIntArray.put(2131363505, 3);
-        sparseIntArray.put(2131363582, 4);
-        sparseIntArray.put(2131362376, 5);
+        sparseIntArray.put(2131362779, 2);
+        sparseIntArray.put(2131363523, 3);
+        sparseIntArray.put(2131363604, 4);
+        sparseIntArray.put(2131362382, 5);
     }
 
     public ItemNodePickItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -64,7 +64,7 @@ public class ItemNodePickItemBindingImpl extends ItemNodePickItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((Entity) obj);
@@ -77,7 +77,7 @@ public class ItemNodePickItemBindingImpl extends ItemNodePickItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

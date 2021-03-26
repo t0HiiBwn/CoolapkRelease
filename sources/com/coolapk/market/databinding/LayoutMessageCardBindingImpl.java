@@ -69,11 +69,11 @@ public class LayoutMessageCardBindingImpl extends LayoutMessageCardBinding {
             setContent((String) obj);
         } else if (39 == i) {
             setAvatar((String) obj);
-        } else if (272 == i) {
+        } else if (273 == i) {
             setSubtitle((String) obj);
-        } else if (220 == i) {
+        } else if (221 == i) {
             setPic((String) obj);
-        } else if (278 == i) {
+        } else if (279 == i) {
             setTitle((String) obj);
         } else if (50 != i) {
             return false;
@@ -109,7 +109,7 @@ public class LayoutMessageCardBindingImpl extends LayoutMessageCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(272);
+        notifyPropertyChanged(273);
         super.requestRebind();
     }
 
@@ -119,7 +119,7 @@ public class LayoutMessageCardBindingImpl extends LayoutMessageCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 8;
         }
-        notifyPropertyChanged(220);
+        notifyPropertyChanged(221);
         super.requestRebind();
     }
 
@@ -129,7 +129,7 @@ public class LayoutMessageCardBindingImpl extends LayoutMessageCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 16;
         }
-        notifyPropertyChanged(278);
+        notifyPropertyChanged(279);
         super.requestRebind();
     }
 

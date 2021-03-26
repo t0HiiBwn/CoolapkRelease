@@ -74,7 +74,7 @@ public class EmotionUtils {
             switch (c) {
                 case 0:
                     Application application = AppHolder.getApplication();
-                    LayerDrawable layerDrawable2 = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(application, 2131231465)});
+                    LayerDrawable layerDrawable2 = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(application, 2131231476)});
                     layerDrawable2.setLayerInset(0, DisplayUtils.dp2px(application, 2.0f), DisplayUtils.dp2px(application, 1.0f), DisplayUtils.dp2px(application, 2.0f), DisplayUtils.dp2px(application, 0.0f));
                     layerDrawable2.setTint(AppHolder.getAppTheme().getColorAccent());
                     return layerDrawable2;
@@ -85,7 +85,7 @@ public class EmotionUtils {
                     }
                     if (layerDrawable == null) {
                         Application application2 = AppHolder.getApplication();
-                        layerDrawable = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(application2, 2131231285)});
+                        layerDrawable = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(application2, 2131231296)});
                         layerDrawable.setLayerInset(0, DisplayUtils.dp2px(application2, 2.0f), 0, DisplayUtils.dp2px(application2, 2.0f), 0);
                         this.drawableMap.put(str, new WeakReference<>(layerDrawable));
                     }
@@ -98,7 +98,7 @@ public class EmotionUtils {
                     }
                     if (layerDrawable == null) {
                         Application application3 = AppHolder.getApplication();
-                        layerDrawable = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(application3, 2131231171)});
+                        layerDrawable = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(application3, 2131231182)});
                         layerDrawable.setLayerInset(0, DisplayUtils.dp2px(application3, 0.0f), DisplayUtils.dp2px(application3, 0.0f), DisplayUtils.dp2px(application3, 0.0f), DisplayUtils.dp2px(application3, 0.0f));
                         this.drawableMap.put(str, new WeakReference<>(layerDrawable));
                     }

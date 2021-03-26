@@ -53,40 +53,40 @@ public final class FeedAdminQuickSheetGroupFactory extends FeedAdminBaseSheetGro
         }
         if (isVoteCommentFeed()) {
             if (isRecommendVote()) {
-                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.RecommendVote, "下精选观点", 2131231673, -1233878, null, false, 48, null);
+                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.RecommendVote, "下精选观点", 2131231684, -1233878, null, false, 48, null);
             } else {
-                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.RecommendVote, "精选观点", 2131231542, -15233209, null, false, 48, null);
+                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.RecommendVote, "精选观点", 2131231553, -15233209, null, false, 48, null);
             }
         }
         if (!isEditorChoice()) {
             String str = isHeadlined() ? "已上过" : "";
             if (isHeadline()) {
-                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Headline, "下头条", 2131231672, -1233878, str, false, 32, null);
+                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Headline, "下头条", 2131231683, -1233878, str, false, 32, null);
             } else {
-                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Headline, "上头条", 2131231541, -15233209, str, false, 32, null);
+                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Headline, "上头条", 2131231552, -15233209, str, false, 32, null);
             }
         }
         SheetDataKt.makeLastItemDivider(this.dataList);
         if (isMachineBlocked()) {
-            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.MachineBlock, "通过审核", 2131231600, -15233209, null, false, 48, null);
+            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.MachineBlock, "通过审核", 2131231611, -15233209, null, false, 48, null);
         } else if (isFolded()) {
-            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Fold, "取消折叠", 2131231624, -15233209, null, false, 48, null);
+            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Fold, "取消折叠", 2131231635, -15233209, null, false, 48, null);
         } else {
-            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Fold, "折叠", 2131231302, -1233878, null, false, 48, null);
+            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Fold, "折叠", 2131231313, -1233878, null, false, 48, null);
         }
-        insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.SoftFold, "去精", 2131231505, -1233878, null, false, 48, null);
+        insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.SoftFold, "去精", 2131231516, -1233878, null, false, 48, null);
         if (isHomeVisible()) {
-            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.HomeVisible, "全站可见", 2131231351, -15233209, null, false, 48, null);
+            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.HomeVisible, "全站可见", 2131231362, -15233209, null, false, 48, null);
         } else {
-            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.HomeVisible, "仅主页可见", 2131231351, -1233878, null, false, 48, null);
+            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.HomeVisible, "仅主页可见", 2131231362, -1233878, null, false, 48, null);
         }
         SheetDataKt.makeLastItemDivider(this.dataList);
         if (isRecommend()) {
-            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Recommend, "下推荐", 2131231673, -1233878, null, false, 48, null);
+            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Recommend, "下推荐", 2131231684, -1233878, null, false, 48, null);
         } else {
-            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Recommend, "上推荐", 2131231542, -15233209, null, false, 48, null);
+            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Recommend, "上推荐", 2131231553, -15233209, null, false, 48, null);
         }
-        insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.ViewFeedStatus, "查看状态", 2131231590, -15233209, null, false, 48, null);
+        insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.ViewFeedStatus, "查看状态", 2131231601, -15233209, null, false, 48, null);
         return wrapAsSheetGroup();
     }
 

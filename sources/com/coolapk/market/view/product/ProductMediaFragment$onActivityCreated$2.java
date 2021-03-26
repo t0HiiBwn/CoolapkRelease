@@ -37,7 +37,7 @@ final class ProductMediaFragment$onActivityCreated$2 extends Lambda implements F
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
                 super.onItemClick(viewHolder, view);
-                if (view.getId() == 2131362707 && viewHolder.getAdapterPosition() >= 0) {
+                if (view.getId() == 2131362718 && viewHolder.getAdapterPosition() >= 0) {
                     ProductMediaFragment productMediaFragment = this.this$0.this$0;
                     Object obj = this.this$0.this$0.getDataList().get(viewHolder.getAdapterPosition());
                     Intrinsics.checkNotNullExpressionValue(obj, "dataList[holder.adapterPosition]");

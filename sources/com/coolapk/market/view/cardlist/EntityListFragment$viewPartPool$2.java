@@ -17,9 +17,9 @@ final class EntityListFragment$viewPartPool$2 extends Lambda implements Function
     @Override // kotlin.jvm.functions.Function0
     public final ViewPartPool invoke() {
         ViewPartPool viewPartPool = new ViewPartPool();
-        viewPartPool.setMaxRecycledViews(2131558707, 15);
-        viewPartPool.setMaxRecycledViews(2131558661, 15);
-        viewPartPool.setMaxRecycledViews(2131558896, 9);
+        viewPartPool.setMaxRecycledViews(2131558714, 15);
+        viewPartPool.setMaxRecycledViews(2131558667, 15);
+        viewPartPool.setMaxRecycledViews(2131558903, 9);
         return viewPartPool;
     }
 }

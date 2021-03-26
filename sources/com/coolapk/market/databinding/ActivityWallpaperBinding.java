@@ -60,7 +60,7 @@ public abstract class ActivityWallpaperBinding extends ViewDataBinding {
 
     @Deprecated
     public static ActivityWallpaperBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ActivityWallpaperBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558434, viewGroup, z, obj);
+        return (ActivityWallpaperBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558435, viewGroup, z, obj);
     }
 
     public static ActivityWallpaperBinding inflate(LayoutInflater layoutInflater) {
@@ -69,7 +69,7 @@ public abstract class ActivityWallpaperBinding extends ViewDataBinding {
 
     @Deprecated
     public static ActivityWallpaperBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ActivityWallpaperBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558434, null, false, obj);
+        return (ActivityWallpaperBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558435, null, false, obj);
     }
 
     public static ActivityWallpaperBinding bind(View view) {
@@ -78,6 +78,6 @@ public abstract class ActivityWallpaperBinding extends ViewDataBinding {
 
     @Deprecated
     public static ActivityWallpaperBinding bind(View view, Object obj) {
-        return (ActivityWallpaperBinding) bind(obj, view, 2131558434);
+        return (ActivityWallpaperBinding) bind(obj, view, 2131558435);
     }
 }

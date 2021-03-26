@@ -1,193 +1,83 @@
 package com.xiaomi.push;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import android.content.Context;
+import android.content.Intent;
+import android.text.TextUtils;
+import com.xiaomi.b.a.b;
+import com.xiaomi.b.a.c;
+import com.xiaomi.b.a.d;
+import com.xiaomi.b.b.a;
 
-public final class dv {
+public class dv {
+    private static volatile dv a;
+    private Context b;
 
-    public static final class a extends e {
-        private int a = 0;
+    private dv(Context context) {
+        this.b = context;
+    }
 
-        /* renamed from: a  reason: collision with other field name */
-        private List<String> f324a = Collections.emptyList();
-
-        /* renamed from: a  reason: collision with other field name */
-        private boolean f325a;
-        private int b = 0;
-
-        /* renamed from: b  reason: collision with other field name */
-        private boolean f326b;
-        private int c = -1;
-
-        /* renamed from: c  reason: collision with other field name */
-        private boolean f327c = false;
-        private boolean d;
-        private boolean e;
-        private boolean f = false;
-
-        public static a a(byte[] bArr) {
-            return (a) new a().a(bArr);
-        }
-
-        public static a b(b bVar) {
-            return new a().a(bVar);
-        }
-
-        @Override // com.xiaomi.push.e
-        /* renamed from: a */
-        public int mo211a() {
-            if (this.c < 0) {
-                mo212b();
-            }
-            return this.c;
-        }
-
-        public a a(int i) {
-            this.f325a = true;
-            this.a = i;
-            return this;
-        }
-
-        @Override // com.xiaomi.push.e
-        public a a(b bVar) {
-            while (true) {
-                int a2 = bVar.m114a();
-                if (a2 == 0) {
-                    return this;
-                }
-                if (a2 == 8) {
-                    a(bVar.c());
-                } else if (a2 == 16) {
-                    a(bVar.m120a());
-                } else if (a2 == 24) {
-                    b(bVar.m123b());
-                } else if (a2 == 32) {
-                    b(bVar.m120a());
-                } else if (a2 == 42) {
-                    a(bVar.m117a());
-                } else if (!a(bVar, a2)) {
-                    return this;
+    public static dv a(Context context) {
+        if (a == null) {
+            synchronized (dv.class) {
+                if (a == null) {
+                    a = new dv(context);
                 }
             }
         }
+        return a;
+    }
 
-        public a a(String str) {
-            Objects.requireNonNull(str);
-            if (this.f324a.isEmpty()) {
-                this.f324a = new ArrayList();
-            }
-            this.f324a.add(str);
-            return this;
+    private void a(d dVar) {
+        if (dVar instanceof c) {
+            a.a(this.b, (c) dVar);
+        } else if (dVar instanceof b) {
+            a.a(this.b, (b) dVar);
         }
+    }
 
-        public a a(boolean z) {
-            this.f326b = true;
-            this.f327c = z;
-            return this;
+    public void a(String str, int i, long j, long j2) {
+        if (i >= 0 && j2 >= 0 && j > 0) {
+            c a2 = du.a(this.b, i, j, j2);
+            a2.a(str);
+            a2.b("3_7_5");
+            a(a2);
         }
+    }
 
-        @Override // com.xiaomi.push.e
-        /* renamed from: a  reason: collision with other method in class */
-        public List<String> mo211a() {
-            return this.f324a;
+    public void a(String str, Intent intent, int i, String str2) {
+        if (intent != null) {
+            a(str, du.a(intent.getIntExtra("eventMessageType", -1)), intent.getStringExtra("messageId"), i, System.currentTimeMillis(), str2);
         }
+    }
 
-        @Override // com.xiaomi.push.e
-        public void a(c cVar) {
-            if (mo211a()) {
-                cVar.m165b(1, c());
-            }
-            if (m213c()) {
-                cVar.m157a(2, mo212b());
-            }
-            if (m214d()) {
-                cVar.m152a(3, d());
-            }
-            if (f()) {
-                cVar.m157a(4, m215e());
-            }
-            for (String str : mo211a()) {
-                cVar.m156a(5, str);
-            }
+    public void a(String str, Intent intent, String str2) {
+        if (intent != null) {
+            a(str, du.a(intent.getIntExtra("eventMessageType", -1)), intent.getStringExtra("messageId"), 5001, System.currentTimeMillis(), str2);
         }
+    }
 
-        @Override // com.xiaomi.push.e
-        /* renamed from: a */
-        public boolean mo211a() {
-            return this.f325a;
+    public void a(String str, String str2, String str3, int i, long j, String str4) {
+        if (!TextUtils.isEmpty(str2) && !TextUtils.isEmpty(str3)) {
+            b a2 = du.a(this.b, str2, str3, i, j, str4);
+            a2.a(str);
+            a2.b("3_7_5");
+            a(a2);
         }
+    }
 
-        @Override // com.xiaomi.push.e
-        /* renamed from: b */
-        public int mo212b() {
-            int i = 0;
-            int b2 = mo211a() ? c.b(1, c()) + 0 : 0;
-            if (m213c()) {
-                b2 += c.a(2, mo212b());
-            }
-            if (m214d()) {
-                b2 += c.a(3, d());
-            }
-            if (f()) {
-                b2 += c.a(4, m215e());
-            }
-            for (String str : mo211a()) {
-                i += c.a(str);
-            }
-            int size = b2 + i + (mo211a().size() * 1);
-            this.c = size;
-            return size;
-        }
+    public void a(String str, String str2, String str3, int i, String str4) {
+        a(str, str2, str3, i, System.currentTimeMillis(), str4);
+    }
 
-        public a b(int i) {
-            this.d = true;
-            this.b = i;
-            return this;
-        }
+    public void a(String str, String str2, String str3, String str4) {
+        a(str, str2, str3, 5002, System.currentTimeMillis(), str4);
+    }
 
-        public a b(boolean z) {
-            this.e = true;
-            this.f = z;
-            return this;
-        }
+    public void b(String str, String str2, String str3, String str4) {
+        a(str, str2, str3, 5001, System.currentTimeMillis(), str4);
+    }
 
-        @Override // com.xiaomi.push.e
-        /* renamed from: b  reason: collision with other method in class */
-        public boolean mo212b() {
-            return this.f327c;
-        }
-
-        public int c() {
-            return this.a;
-        }
-
-        /* renamed from: c  reason: collision with other method in class */
-        public boolean m213c() {
-            return this.f326b;
-        }
-
-        public int d() {
-            return this.b;
-        }
-
-        /* renamed from: d  reason: collision with other method in class */
-        public boolean m214d() {
-            return this.d;
-        }
-
-        public int e() {
-            return this.f324a.size();
-        }
-
-        /* renamed from: e  reason: collision with other method in class */
-        public boolean m215e() {
-            return this.f;
-        }
-
-        public boolean f() {
-            return this.e;
-        }
+    public void c(String str, String str2, String str3, String str4) {
+        a(str, str2, str3, 4002, System.currentTimeMillis(), str4);
     }
 }

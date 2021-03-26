@@ -151,7 +151,7 @@ public final class PhotoViewActivity extends BaseActivity implements Translucent
             Intrinsics.checkNotNullExpressionValue(activity2, "activity");
             notchUtil2.extendStatusCutout(window3, activity2);
         }
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559079);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559086);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…iew(this, R.layout.photo)");
         this.binding = (PhotoBinding) contentView;
         this.feedType = getIntent().getStringExtra("feed_type");
@@ -305,7 +305,7 @@ public final class PhotoViewActivity extends BaseActivity implements Translucent
         @Override // androidx.fragment.app.Fragment
         public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
             Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-            ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558852, viewGroup, false);
+            ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558859, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…o_view, container, false)");
             ItemPhotoViewBinding itemPhotoViewBinding = (ItemPhotoViewBinding) inflate;
             this.photoBinding = itemPhotoViewBinding;

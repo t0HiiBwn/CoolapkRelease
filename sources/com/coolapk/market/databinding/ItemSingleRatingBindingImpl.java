@@ -25,8 +25,8 @@ public class ItemSingleRatingBindingImpl extends ItemSingleRatingBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363280, 3);
-        sparseIntArray.put(2131363194, 4);
+        sparseIntArray.put(2131363294, 3);
+        sparseIntArray.put(2131363208, 4);
     }
 
     public ItemSingleRatingBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -65,7 +65,7 @@ public class ItemSingleRatingBindingImpl extends ItemSingleRatingBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (189 == i) {
+        if (190 == i) {
             setLogo((String) obj);
         } else if (43 != i) {
             return false;
@@ -81,7 +81,7 @@ public class ItemSingleRatingBindingImpl extends ItemSingleRatingBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(189);
+        notifyPropertyChanged(190);
         super.requestRebind();
     }
 

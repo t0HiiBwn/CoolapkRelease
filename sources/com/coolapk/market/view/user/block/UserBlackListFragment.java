@@ -18,7 +18,7 @@ public final class UserBlackListFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558967).suitedMethod(UserBlackListFragment$onActivityCreated$1.INSTANCE).constructor(new UserBlackListFragment$onActivityCreated$2(this)).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558974).suitedMethod(UserBlackListFragment$onActivityCreated$1.INSTANCE).constructor(new UserBlackListFragment$onActivityCreated$2(this)).build(), -1);
     }
 
     public final void removeUser(User user) {

@@ -12,9 +12,7 @@ public class bh extends bo {
     public static final int h = 7;
     private static final cm j = new cm("TApplicationException");
     private static final cc k = new cc("message", (byte) 11, 1);
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final cc f1462l = new cc("type", (byte) 8, 2);
+    private static final cc l = new cc("type", (byte) 8, 2);
     private static final long m = 1;
     protected int i = 0;
 
@@ -73,7 +71,7 @@ public class bh extends bo {
             chVar.a(getMessage());
             chVar.c();
         }
-        chVar.a(f1462l);
+        chVar.a(l);
         chVar.a(this.i);
         chVar.c();
         chVar.d();

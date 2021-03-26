@@ -127,8 +127,8 @@ public final class QuestionDetailFragment extends EntityListFragment implements 
             marginParams.topMargin = actionBarSize;
         }
         getRecyclerView().setPadding(0, 0, 0, DisplayUtils.dp2px(getActivity(), 48.0f));
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558587).constructor(new QuestionDetailFragment$onActivityCreated$1(this)).suitedMethod(QuestionDetailFragment$onActivityCreated$2.INSTANCE).build(), -1);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558885).constructor(new QuestionDetailFragment$onActivityCreated$3(this)).suitedMethod(QuestionDetailFragment$onActivityCreated$4.INSTANCE).build(), 0, 2, null);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558591).constructor(new QuestionDetailFragment$onActivityCreated$1(this)).suitedMethod(QuestionDetailFragment$onActivityCreated$2.INSTANCE).build(), -1);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558892).constructor(new QuestionDetailFragment$onActivityCreated$3(this)).suitedMethod(QuestionDetailFragment$onActivityCreated$4.INSTANCE).build(), 0, 2, null);
         addBottomView();
         FragmentActivity activity = getActivity();
         if (activity instanceof AlphableToolbar) {
@@ -297,7 +297,7 @@ public final class QuestionDetailFragment extends EntityListFragment implements 
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         menuInflater.inflate(2131623950, menu);
-        MenuItem findItem = menu.findItem(2131361968);
+        MenuItem findItem = menu.findItem(2131361969);
         if (findItem != null) {
             findItem.setVisible(true);
             findItem.setIcon(2131689492);
@@ -307,7 +307,7 @@ public final class QuestionDetailFragment extends EntityListFragment implements 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() == 2131361931) {
+        if (menuItem.getItemId() == 2131361932) {
             QuestionPresenter questionPresenter = this.presenter;
             if (questionPresenter == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("presenter");
@@ -317,7 +317,7 @@ public final class QuestionDetailFragment extends EntityListFragment implements 
             Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
             EntityExtendsKt.showItemDialog(feed, requireActivity);
             return true;
-        } else if (menuItem.getItemId() != 2131361968) {
+        } else if (menuItem.getItemId() != 2131361969) {
             return super.onOptionsItemSelected(menuItem);
         } else {
             FragmentActivity activity = getActivity();
@@ -335,11 +335,11 @@ public final class QuestionDetailFragment extends EntityListFragment implements 
         Intrinsics.checkNotNullParameter(view, "view");
         BasePopMenu basePopMenu = new BasePopMenu(getActivity(), view);
         Menu menu = basePopMenu.getMenu();
-        menu.add(0, 2131886548, 1, 2131886548);
-        menu.add(0, 2131886549, 1, 2131886549);
-        menu.add(0, 2131886547, 1, 2131886547);
+        menu.add(0, 2131886610, 1, 2131886610);
+        menu.add(0, 2131886611, 1, 2131886611);
+        menu.add(0, 2131886609, 1, 2131886609);
         if (UserPermissionChecker.INSTANCE.isLoginAdmin()) {
-            basePopMenu.getMenu().add(0, 2131887132, 1, getString(2131887132));
+            basePopMenu.getMenu().add(0, 2131887194, 1, getString(2131887194));
         }
         basePopMenu.setOnMenuItemClickListener(new QuestionDetailFragment$showOrderPopMenu$2(this));
         basePopMenu.show();
@@ -477,7 +477,7 @@ public final class QuestionDetailFragment extends EntityListFragment implements 
             Boolean checkLogin = ActionManager.checkLogin(currentActivity);
             Intrinsics.checkNotNullExpressionValue(checkLogin, "ActionManager.checkLogin(it)");
             if (checkLogin.booleanValue()) {
-                ActionManager.startPickUserActivity(this, 8655, 10, getString(2131886951));
+                ActionManager.startPickUserActivity(this, 8655, 10, getString(2131887013));
             }
         }
     }

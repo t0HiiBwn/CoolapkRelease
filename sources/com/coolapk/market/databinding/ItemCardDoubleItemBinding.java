@@ -43,7 +43,7 @@ public abstract class ItemCardDoubleItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCardDoubleItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemCardDoubleItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558631, viewGroup, z, obj);
+        return (ItemCardDoubleItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558637, viewGroup, z, obj);
     }
 
     public static ItemCardDoubleItemBinding inflate(LayoutInflater layoutInflater) {
@@ -52,7 +52,7 @@ public abstract class ItemCardDoubleItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCardDoubleItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemCardDoubleItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558631, null, false, obj);
+        return (ItemCardDoubleItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558637, null, false, obj);
     }
 
     public static ItemCardDoubleItemBinding bind(View view) {
@@ -61,6 +61,6 @@ public abstract class ItemCardDoubleItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCardDoubleItemBinding bind(View view, Object obj) {
-        return (ItemCardDoubleItemBinding) bind(obj, view, 2131558631);
+        return (ItemCardDoubleItemBinding) bind(obj, view, 2131558637);
     }
 }

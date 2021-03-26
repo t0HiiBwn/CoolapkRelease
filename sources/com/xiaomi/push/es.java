@@ -1,149 +1,110 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import android.content.pm.PackageInfo;
-import android.content.pm.ServiceInfo;
-import android.os.Build;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.service.XMJobService;
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Vector;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserFactory;
 
 public final class es {
-    private static int a = 0;
+    private static int a = 5000;
+    private static int b = 330000;
+    private static int c = 600000;
+    private static int d = 330000;
+    private static Vector<String> e = new Vector<>();
 
-    /* renamed from: a  reason: collision with other field name */
-    private static a f412a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private static final String f413a = XMJobService.class.getCanonicalName();
-
-    interface a {
-        /* renamed from: a */
-        void mo311a();
-
-        void a(boolean z);
-
-        /* renamed from: a  reason: collision with other method in class */
-        boolean m310a();
-    }
-
-    public static synchronized void a() {
-        synchronized (es.class) {
-            if (f412a != null) {
-                b.c("stop alarm.");
-                f412a.mo311a();
-            }
-        }
-    }
-
-    /* JADX WARNING: Code restructure failed: missing block: B:19:0x005c, code lost:
-        if (r7.equals(com.xiaomi.push.t.a(r9, r6.name).getSuperclass().getCanonicalName()) != false) goto L_0x0048;
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:30:0x007d, code lost:
-        r2 = r5;
-     */
-    /* JADX WARNING: Removed duplicated region for block: B:34:0x009a  */
-    public static void a(Context context) {
-        et etVar;
-        Exception e;
-        Context applicationContext = context.getApplicationContext();
-        if ("com.xiaomi.xmsf".equals(applicationContext.getPackageName())) {
-            etVar = new et(applicationContext);
-        } else {
-            int i = 0;
-            try {
-                PackageInfo packageInfo = applicationContext.getPackageManager().getPackageInfo(applicationContext.getPackageName(), 4);
-                if (packageInfo.services != null) {
-                    ServiceInfo[] serviceInfoArr = packageInfo.services;
-                    int length = serviceInfoArr.length;
-                    int i2 = 0;
-                    while (true) {
-                        if (i >= length) {
-                            break;
-                        }
+    static {
+        try {
+            for (ClassLoader classLoader : d()) {
+                Enumeration<URL> resources = classLoader.getResources("META-INF/smack-config.xml");
+                while (resources.hasMoreElements()) {
+                    InputStream inputStream = null;
+                    try {
+                        inputStream = resources.nextElement().openStream();
+                        XmlPullParser newPullParser = XmlPullParserFactory.newInstance().newPullParser();
+                        newPullParser.setFeature("http://xmlpull.org/v1/doc/features.html#process-namespaces", true);
+                        newPullParser.setInput(inputStream, "UTF-8");
+                        int eventType = newPullParser.getEventType();
+                        do {
+                            if (eventType == 2) {
+                                if (newPullParser.getName().equals("className")) {
+                                    a(newPullParser);
+                                } else if (newPullParser.getName().equals("packetReplyTimeout")) {
+                                    a = a(newPullParser, a);
+                                } else if (newPullParser.getName().equals("keepAliveInterval")) {
+                                    b = a(newPullParser, b);
+                                } else if (newPullParser.getName().equals("mechName")) {
+                                    e.add(newPullParser.nextText());
+                                }
+                            }
+                            eventType = newPullParser.next();
+                        } while (eventType != 1);
+                    } catch (Exception e2) {
+                        e2.printStackTrace();
+                    } catch (Throwable th) {
                         try {
-                            ServiceInfo serviceInfo = serviceInfoArr[i];
-                            if ("android.permission.BIND_JOB_SERVICE".equals(serviceInfo.permission)) {
-                                String str = f413a;
-                                if (!str.equals(serviceInfo.name)) {
-                                }
-                                i2 = 1;
-                                if (i2 == 1) {
-                                    break;
-                                }
-                            }
-                            if (f413a.equals(serviceInfo.name) && "android.permission.BIND_JOB_SERVICE".equals(serviceInfo.permission)) {
-                                i = 1;
-                                break;
-                            }
-                            i++;
-                        } catch (Exception e2) {
-                            e = e2;
-                            i = i2;
-                            b.m41a("check service err : " + e.getMessage());
-                            if (i == 0) {
-                            }
-                            int i3 = Build.VERSION.SDK_INT;
-                            etVar = new et(applicationContext);
-                            f412a = etVar;
+                            inputStream.close();
+                        } catch (Exception unused) {
                         }
+                        throw th;
+                    }
+                    try {
+                        inputStream.close();
+                    } catch (Exception unused2) {
                     }
                 }
-            } catch (Exception e3) {
-                e = e3;
-                b.m41a("check service err : " + e.getMessage());
-                if (i == 0) {
-                }
-                int i3 = Build.VERSION.SDK_INT;
-                etVar = new et(applicationContext);
-                f412a = etVar;
             }
-            if (i == 0 || !t.m678a(applicationContext)) {
-                int i3 = Build.VERSION.SDK_INT;
-                etVar = new et(applicationContext);
-            } else {
-                throw new RuntimeException("Should export service: " + f413a + " with permission android.permission.BIND_JOB_SERVICE in AndroidManifest.xml file");
-            }
-        }
-        f412a = etVar;
-    }
-
-    public static synchronized void a(Context context, int i) {
-        synchronized (es.class) {
-            int i2 = a;
-            if (!"com.xiaomi.xmsf".equals(context.getPackageName())) {
-                if (i == 2) {
-                    a = 2;
-                } else {
-                    a = 0;
-                }
-            }
-            int i3 = a;
-            if (i2 != i3 && i3 == 2) {
-                a();
-                f412a = new ev(context);
-            }
+        } catch (Exception e3) {
+            e3.printStackTrace();
         }
     }
 
-    public static synchronized void a(boolean z) {
-        synchronized (es.class) {
-            if (f412a == null) {
-                b.m41a("timer is not initialized");
-                return;
-            }
-            b.c("register alarm. (" + z + ")");
-            f412a.a(z);
+    private es() {
+    }
+
+    private static int a(XmlPullParser xmlPullParser, int i) {
+        try {
+            return Integer.parseInt(xmlPullParser.nextText());
+        } catch (NumberFormatException e2) {
+            e2.printStackTrace();
+            return i;
         }
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public static synchronized boolean m309a() {
-        synchronized (es.class) {
-            a aVar = f412a;
-            if (aVar == null) {
-                return false;
-            }
-            return aVar.m310a();
+    public static String a() {
+        return "3.1.0";
+    }
+
+    private static void a(XmlPullParser xmlPullParser) {
+        String nextText = xmlPullParser.nextText();
+        try {
+            Class.forName(nextText);
+        } catch (ClassNotFoundException unused) {
+            PrintStream printStream = System.err;
+            printStream.println("Error! A startup class specified in smack-config.xml could not be loaded: " + nextText);
         }
+    }
+
+    public static int b() {
+        return b;
+    }
+
+    public static int c() {
+        return c;
+    }
+
+    private static ClassLoader[] d() {
+        ClassLoader[] classLoaderArr = {es.class.getClassLoader(), Thread.currentThread().getContextClassLoader()};
+        ArrayList arrayList = new ArrayList();
+        for (int i = 0; i < 2; i++) {
+            ClassLoader classLoader = classLoaderArr[i];
+            if (classLoader != null) {
+                arrayList.add(classLoader);
+            }
+        }
+        return (ClassLoader[]) arrayList.toArray(new ClassLoader[arrayList.size()]);
     }
 }

@@ -5,7 +5,7 @@ import com.coolapk.market.databinding.ItemTitleSectionBinding;
 import com.coolapk.market.widget.SectionedAdapter;
 
 public class TitleSectionViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558957;
+    public static final int LAYOUT_ID = 2131558964;
 
     public TitleSectionViewHolder(View view) {
         super(view);

@@ -13,7 +13,6 @@ import androidx.databinding.ObservableArrayList;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.coolapk.market.AppHolder;
-import com.coolapk.market.extend.NumberExtendsKt;
 import com.coolapk.market.extend.ViewExtents2Kt;
 import com.coolapk.market.manager.DataManager;
 import com.coolapk.market.model.Entity;
@@ -238,14 +237,14 @@ public final class SelectParamsFragment extends NewAsyncListFragment<List<? exte
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            menu.add(0, 2131361901, 0, "跳过").setShowAsAction(2);
+            menu.add(0, 2131361902, 0, "跳过").setShowAsAction(2);
         }
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361901) {
+        if (menuItem.getItemId() != 2131361902) {
             return super.onOptionsItemSelected(menuItem);
         }
         requireActivity().setResult(-1, new Intent().putExtra("json", ""));
@@ -267,7 +266,9 @@ public final class SelectParamsFragment extends NewAsyncListFragment<List<? exte
         RecyclerView recyclerView2 = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView2, "recyclerView");
         recyclerView2.setClipToPadding(false);
-        getRecyclerView().setPadding(0, 0, 0, NumberExtendsKt.getDp((Number) 60));
+        RecyclerView recyclerView3 = getRecyclerView();
+        Intrinsics.checkNotNullExpressionValue(recyclerView3, "recyclerView");
+        ViewExtents2Kt.tryListenWindowsInset(recyclerView3, new SelectParamsFragment$onActivityCreated$1(this));
         setLayoutManager(new LinearLayoutManager(getActivity()));
         this.adapter = new MultiTypeAdapter(this.dataList);
         ArrayList parcelableArrayList = requireArguments().getParcelableArrayList("KEY_ERSHOU_PARAMS");
@@ -278,7 +279,7 @@ public final class SelectParamsFragment extends NewAsyncListFragment<List<? exte
         if (multiTypeAdapter == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(multiTypeAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558669).suitedMethod(SelectParamsFragment$onActivityCreated$1.INSTANCE).constructor(new SelectParamsFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(multiTypeAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558675).suitedMethod(SelectParamsFragment$onActivityCreated$2.INSTANCE).constructor(new SelectParamsFragment$onActivityCreated$3(this)).build(), 0, 2, null);
         setHasOptionsMenu(true);
         MultiTypeAdapter multiTypeAdapter2 = this.adapter;
         if (multiTypeAdapter2 == null) {

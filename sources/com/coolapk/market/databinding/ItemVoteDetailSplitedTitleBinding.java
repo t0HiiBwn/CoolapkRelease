@@ -36,7 +36,7 @@ public abstract class ItemVoteDetailSplitedTitleBinding extends ViewDataBinding 
 
     @Deprecated
     public static ItemVoteDetailSplitedTitleBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemVoteDetailSplitedTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558988, viewGroup, z, obj);
+        return (ItemVoteDetailSplitedTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558995, viewGroup, z, obj);
     }
 
     public static ItemVoteDetailSplitedTitleBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class ItemVoteDetailSplitedTitleBinding extends ViewDataBinding 
 
     @Deprecated
     public static ItemVoteDetailSplitedTitleBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemVoteDetailSplitedTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558988, null, false, obj);
+        return (ItemVoteDetailSplitedTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558995, null, false, obj);
     }
 
     public static ItemVoteDetailSplitedTitleBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class ItemVoteDetailSplitedTitleBinding extends ViewDataBinding 
 
     @Deprecated
     public static ItemVoteDetailSplitedTitleBinding bind(View view, Object obj) {
-        return (ItemVoteDetailSplitedTitleBinding) bind(obj, view, 2131558988);
+        return (ItemVoteDetailSplitedTitleBinding) bind(obj, view, 2131558995);
     }
 }

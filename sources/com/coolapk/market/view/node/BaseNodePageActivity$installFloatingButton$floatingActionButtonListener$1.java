@@ -172,9 +172,9 @@ public final class BaseNodePageActivity$installFloatingButton$floatingActionButt
         if (this.isRefresh != z) {
             this.isRefresh = z;
             if (z) {
-                this.this$0.getBinding$presentation_coolapkAppRelease().floatingButton.setImageResource(2131231509);
+                this.this$0.getBinding$presentation_coolapkAppRelease().floatingButton.setImageResource(2131231520);
             } else {
-                this.this$0.getBinding$presentation_coolapkAppRelease().floatingButton.setImageResource(2131231432);
+                this.this$0.getBinding$presentation_coolapkAppRelease().floatingButton.setImageResource(2131231443);
             }
         }
     }

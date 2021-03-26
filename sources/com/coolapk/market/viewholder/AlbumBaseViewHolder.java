@@ -11,7 +11,7 @@ import com.coolapk.market.util.ViewUtil;
 import com.coolapk.market.view.album.AlbumDetailViewModel;
 
 public class AlbumBaseViewHolder extends GenericBindHolder<AlbumBaseInfoBinding, HolderItem> {
-    public static final int LAYOUT_ID = 2131558441;
+    public static final int LAYOUT_ID = 2131558442;
     private AlbumBaseInfoBinding binding = ((AlbumBaseInfoBinding) getBinding());
     private AlbumDetailViewModel viewModel;
 
@@ -27,7 +27,7 @@ public class AlbumBaseViewHolder extends GenericBindHolder<AlbumBaseInfoBinding,
         this.binding.setViewModel(this.viewModel);
         this.binding.introduceShadowView.setMaxWords(this.viewModel.getAlbumMaxWords());
         if (holderItem.getIntValue().intValue() == 1) {
-            GlideApp.with(getContext()).load((Integer) 2131231119).into(this.binding.recommendView);
+            GlideApp.with(getContext()).load((Integer) 2131231129).into(this.binding.recommendView);
             this.binding.recommendView.setVisibility(0);
         }
         this.binding.executePendingBindings();

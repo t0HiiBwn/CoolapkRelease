@@ -16,7 +16,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SearchRecommendViewHolder.kt */
 public final class SearchRecommendViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558914;
+    public static final int LAYOUT_ID = 2131558921;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public SearchRecommendViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -45,7 +45,7 @@ public final class SearchRecommendViewHolder extends BindingViewHolder {
         Intrinsics.checkNotNullExpressionValue(itemSearchRecommendBinding, "binding");
         itemSearchRecommendBinding.setText(entity.getTitle());
         itemSearchRecommendBinding.executePendingBindings();
-        int i = 2131231534;
+        int i = 2131231545;
         if (EntityExtendsKt.picOrLogo(entity).length() > 0) {
             Context context = getContext();
             Intrinsics.checkNotNullExpressionValue(context, "context");
@@ -56,7 +56,7 @@ public final class SearchRecommendViewHolder extends BindingViewHolder {
             i = resources.getIdentifier(picOrLogo, "drawable", context2.getPackageName());
         }
         itemSearchRecommendBinding.iconView.setImageResource(i);
-        this.itemView.setTag(2131362753, entity);
+        this.itemView.setTag(2131362764, entity);
         this.itemView.setOnClickListener(this);
     }
 }

@@ -13,7 +13,7 @@ import com.coolapk.market.viewholder.ItemActionHandler;
 import com.coolapk.market.viewholder.StateViewHolder;
 
 public class VersionAppViewHolder extends StateViewHolder {
-    public static final int LAYOUT_ID = 2131558983;
+    public static final int LAYOUT_ID = 2131558990;
     private String apkId;
     private ItemVersionAppBinding binding;
     private VersionApp versionApp;
@@ -30,12 +30,12 @@ public class VersionAppViewHolder extends StateViewHolder {
         this.binding = itemVersionAppBinding;
         itemVersionAppBinding.setViewModel(this);
         ViewUtil.directClickListener(this.binding.actionContainer, this);
-        notifyPropertyChanged(302);
+        notifyPropertyChanged(303);
         notifyPropertyChanged(1);
         notifyPropertyChanged(2);
         notifyPropertyChanged(3);
         notifyPropertyChanged(62);
-        notifyPropertyChanged(285);
+        notifyPropertyChanged(286);
     }
 
     @Bindable

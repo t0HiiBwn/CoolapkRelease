@@ -24,7 +24,7 @@ final class DyhArticleVH$bindToContent$1 implements View.OnLongClickListener {
     public final boolean onLongClick(View view) {
         DyhArticle dyhArticle;
         Intrinsics.checkNotNullExpressionValue(view, "v");
-        if (view.getId() != 2131363260) {
+        if (view.getId() != 2131363274) {
             return false;
         }
         Activity activity = UiUtils.getActivity(this.this$0.getContext());

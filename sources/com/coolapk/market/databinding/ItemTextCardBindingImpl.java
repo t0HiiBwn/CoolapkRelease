@@ -25,7 +25,7 @@ public class ItemTextCardBindingImpl extends ItemTextCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362200, 4);
+        sparseIntArray.put(2131362205, 4);
     }
 
     public ItemTextCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -63,7 +63,7 @@ public class ItemTextCardBindingImpl extends ItemTextCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Entity) obj);
         } else if (50 != i) {
             return false;
@@ -79,7 +79,7 @@ public class ItemTextCardBindingImpl extends ItemTextCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

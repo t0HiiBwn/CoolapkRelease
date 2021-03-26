@@ -22,8 +22,8 @@ public class ItemCardManagerBindingImpl extends ItemCardManagerBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 3);
-        sparseIntArray.put(2131362426, 4);
+        sparseIntArray.put(2131363604, 3);
+        sparseIntArray.put(2131362433, 4);
     }
 
     public ItemCardManagerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -135,7 +135,7 @@ public final class SuperSearchResultActivity extends FakeStatusBarActivity imple
         setContentBarAlwaysTranslucent(true);
         super.onCreate(bundle);
         this.viewModel = new SuperSearchViewModel();
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559129);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559136);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…, R.layout.search_result)");
         this.binding = (SearchResultBinding) contentView;
         String stringExtra = getIntent().getStringExtra("searchType");
@@ -484,15 +484,15 @@ public final class SuperSearchResultActivity extends FakeStatusBarActivity imple
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         switch (view.getId()) {
-            case 2131363004:
+            case 2131363018:
                 onBackPressed();
                 return;
-            case 2131363157:
+            case 2131363171:
                 StatisticHelper.Companion.getInstance().recordEvent("V9搜索界面", "二维码");
                 ActionManager.startQrcodeActivity(getActivity());
                 return;
-            case 2131363303:
-            case 2131363304:
+            case 2131363318:
+            case 2131363319:
                 SuperSearchResultActivity superSearchResultActivity = this;
                 String str = this.keyword;
                 if (str == null) {

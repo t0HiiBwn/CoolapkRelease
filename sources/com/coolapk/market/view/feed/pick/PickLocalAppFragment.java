@@ -26,7 +26,7 @@ import rx.Subscriber;
 public class PickLocalAppFragment extends LocalDataFragment<MobileApp> {
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment
     public int getItemViewType(int i) {
-        return 2131558855;
+        return 2131558862;
     }
 
     public static PickLocalAppFragment newInstance() {
@@ -39,8 +39,8 @@ public class PickLocalAppFragment extends LocalDataFragment<MobileApp> {
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getActivity().setTitle(getString(2131887286));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558855, 2131231052).create());
+        getActivity().setTitle(getString(2131887348));
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558862, 2131231062).create());
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         initData();
     }
@@ -84,7 +84,7 @@ public class PickLocalAppFragment extends LocalDataFragment<MobileApp> {
     }
 
     public static class PickAppViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558855;
+        public static final int LAYOUT_ID = 2131558862;
 
         public PickAppViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);

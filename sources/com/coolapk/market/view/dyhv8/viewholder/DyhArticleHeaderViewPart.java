@@ -36,7 +36,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: DyhArticleHeaderViewPart.kt */
 public final class DyhArticleHeaderViewPart extends BindingViewPart<ItemDyhArticleHeaderBinding, Entity> implements DyhContract.View {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558677;
+    public static final int LAYOUT_ID = 2131558683;
     private final DataBindingComponent dataBindingComponent;
     private final DyhViewModel mDyhViewModel;
     private Entity mEntity;
@@ -99,7 +99,7 @@ public final class DyhArticleHeaderViewPart extends BindingViewPart<ItemDyhArtic
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemDyhArticleHeaderBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558677, viewGroup, false, this.dataBindingComponent);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558683, viewGroup, false, this.dataBindingComponent);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…se, dataBindingComponent)");
         return (ItemDyhArticleHeaderBinding) inflate;
     }
@@ -143,16 +143,16 @@ public final class DyhArticleHeaderViewPart extends BindingViewPart<ItemDyhArtic
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
         switch (view.getId()) {
-            case 2131362633:
-            case 2131362889:
-            case 2131363260:
-            case 2131363391:
+            case 2131362641:
+            case 2131362900:
+            case 2131363274:
+            case 2131363408:
                 Context context = getContext();
                 DyhModel dyhModel = this.mDyhViewModel.getDyhModel();
                 Intrinsics.checkNotNullExpressionValue(dyhModel, "mDyhViewModel.dyhModel");
                 ActionManager.startDyhDetailActivity(context, dyhModel.getId());
                 return;
-            case 2131362641:
+            case 2131362649:
                 DataManager instance = DataManager.getInstance();
                 Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
                 LoginSession loginSession = instance.getLoginSession();

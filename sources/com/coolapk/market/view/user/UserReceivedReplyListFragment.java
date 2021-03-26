@@ -79,7 +79,7 @@ public class UserReceivedReplyListFragment extends NewAsyncListFragment<List<Ent
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        setEmptyData(getString(2131886764), 0);
+        setEmptyData(getString(2131886826), 0);
         setAdapter(new DataAdapter());
         getRecyclerView().setLayoutManager(new LinearLayoutManager(getActivity()));
         getRecyclerView().getItemAnimator().setChangeDuration(0);
@@ -198,7 +198,7 @@ public class UserReceivedReplyListFragment extends NewAsyncListFragment<List<Ent
     private class DataAdapter extends RecyclerView.Adapter<BindingViewHolder> {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558898;
+            return 2131558905;
         }
 
         private DataAdapter() {
@@ -220,7 +220,7 @@ public class UserReceivedReplyListFragment extends NewAsyncListFragment<List<Ent
     }
 
     public class ReceivedFeedReplyViewHolder extends GenericBindHolder<ItemReceiverdReplyBinding, FeedReply> {
-        public static final int LAYOUT_ID = 2131558890;
+        public static final int LAYOUT_ID = 2131558897;
         private FeedReply mFeedReply;
 
         public ReceivedFeedReplyViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -252,7 +252,7 @@ public class UserReceivedReplyListFragment extends NewAsyncListFragment<List<Ent
                     if ((!loginSession.isAdmin() && !loginSession.getUid().equals(feedReply.getUid())) || UserReceivedReplyListFragment.this.getClass() != UserReceivedReplyListFragment.class) {
                         return false;
                     }
-                    ConfirmDeleteDialog newInstance = ConfirmDeleteDialog.newInstance(UserReceivedReplyListFragment.this.getString(2131886722), UserReceivedReplyListFragment.this.getString(2131886719, feedReply.getUserName(), feedReply.getMessage()));
+                    ConfirmDeleteDialog newInstance = ConfirmDeleteDialog.newInstance(UserReceivedReplyListFragment.this.getString(2131886784), UserReceivedReplyListFragment.this.getString(2131886781, feedReply.getUserName(), feedReply.getMessage()));
                     newInstance.setDeleteTarget(feedReply);
                     newInstance.show(UserReceivedReplyListFragment.this.getChildFragmentManager(), (String) null);
                     return true;
@@ -303,10 +303,10 @@ public class UserReceivedReplyListFragment extends NewAsyncListFragment<List<Ent
             super.onClick(view);
             FeedReply model = ((ItemReceiverdReplyBinding) getBinding()).getModel();
             int id = view.getId();
-            if (id != 2131362200) {
-                if (id == 2131362316) {
+            if (id != 2131362205) {
+                if (id == 2131362322) {
                     ActionManager.startActivityByUrl(getContext(), model.getUrl());
-                } else if (id == 2131363877) {
+                } else if (id == 2131363900) {
                     ActionManager.startUserSpaceActivity(view, model.getUid(), model.getUserAvatar());
                 }
             } else if (model.hasParentReply()) {

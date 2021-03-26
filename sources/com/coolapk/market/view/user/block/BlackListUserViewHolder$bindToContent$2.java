@@ -28,8 +28,8 @@ final class BlackListUserViewHolder$bindToContent$2 implements View.OnClickListe
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        if (!(this.this$0.isRequesting)) {
-            this.this$0.isRequesting = true;
+        if (!BlackListUserViewHolder.access$isRequesting$p(this.this$0)) {
+            BlackListUserViewHolder.access$setRequesting$p(this.this$0, true);
             DataManager instance = DataManager.getInstance();
             User user = this.$user;
             instance.removeFromBlackList(user != null ? user.getUid() : null).compose(RxUtils.apiCommonToData()).subscribe(new Action1<String>(this) {
@@ -68,7 +68,7 @@ final class BlackListUserViewHolder$bindToContent$2 implements View.OnClickListe
                 }
 
                 public final void call(Throwable th) {
-                    this.this$0.this$0.isRequesting = false;
+                    BlackListUserViewHolder.access$setRequesting$p(this.this$0.this$0, false);
                     Toast.error(this.this$0.this$0.getContext(), th);
                 }
             });

@@ -24,7 +24,7 @@ public abstract class ItemNoMoreDataViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNoMoreDataViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemNoMoreDataViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558837, viewGroup, z, obj);
+        return (ItemNoMoreDataViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558844, viewGroup, z, obj);
     }
 
     public static ItemNoMoreDataViewBinding inflate(LayoutInflater layoutInflater) {
@@ -33,7 +33,7 @@ public abstract class ItemNoMoreDataViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNoMoreDataViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemNoMoreDataViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558837, null, false, obj);
+        return (ItemNoMoreDataViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558844, null, false, obj);
     }
 
     public static ItemNoMoreDataViewBinding bind(View view) {
@@ -42,6 +42,6 @@ public abstract class ItemNoMoreDataViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNoMoreDataViewBinding bind(View view, Object obj) {
-        return (ItemNoMoreDataViewBinding) bind(obj, view, 2131558837);
+        return (ItemNoMoreDataViewBinding) bind(obj, view, 2131558844);
     }
 }

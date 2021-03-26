@@ -29,7 +29,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -93,6 +92,7 @@ public class AppSetting implements SharedPreferences.OnSharedPreferenceChangeLis
             put("user_space_show_recent_like", true);
             put("record_hit_history", true);
             put("record_recent_history", true);
+            put("tpns_keep_alive", true);
         }
     });
     private final AppMetadata appMetadata;
@@ -100,6 +100,7 @@ public class AppSetting implements SharedPreferences.OnSharedPreferenceChangeLis
     private EntityCard configCard;
     private JSONObject configJson;
     private String downloadDir;
+    private EntityCard imageCard;
     private boolean isAlwaysLoadAppIconEnabled = true;
     private boolean isAutoDisableImageLoad = false;
     private boolean isAutoLoadVideoWhenWifi = true;
@@ -107,7 +108,6 @@ public class AppSetting implements SharedPreferences.OnSharedPreferenceChangeLis
     private Boolean isShowUpgradeCard;
     private Boolean isWifiAvailable;
     private long lastCheckCountTime;
-    private EntityCard mImageCard;
     private List<String> searchHint;
 
     public AppSetting(Context context, AppMetadata appMetadata2) {
@@ -118,7 +118,7 @@ public class AppSetting implements SharedPreferences.OnSharedPreferenceChangeLis
         this.isAutoDisableImageLoad = getBooleanPref("auto_disable_image_load");
         this.isAlwaysLoadAppIconEnabled = getBooleanPref("always_load_app_icon");
         this.isAutoLoadVideoWhenWifi = getBooleanPref("auto_load_video_when_wifi");
-        this.mImageCard = getImageCard();
+        this.imageCard = getImageCard();
     }
 
     public static Map<String, Boolean> getDefaultMap() {
@@ -492,9 +492,9 @@ public class AppSetting implements SharedPreferences.OnSharedPreferenceChangeLis
             preferencesEditor.putBoolean("IS_SPLASH_IMAGE_SHOW_BEFORE", true);
             preferencesEditor.remove("SPLASH_IMAGE_INFO");
         } else {
-            EntityCard imageCard = getImageCard();
-            this.mImageCard = entityCard;
-            if (imageCard == null || !Objects.equals(imageCard.getPic(), entityCard.getPic())) {
+            EntityCard imageCard2 = getImageCard();
+            this.imageCard = entityCard;
+            if (imageCard2 == null || !TextUtils.equals(imageCard2.getPic(), entityCard.getPic())) {
                 preferencesEditor.putBoolean("IS_SPLASH_IMAGE_SHOW_BEFORE", false);
             }
             preferencesEditor.putString("SPLASH_IMAGE_INFO", EntityExtendsKt.toJson(entityCard));
@@ -503,15 +503,15 @@ public class AppSetting implements SharedPreferences.OnSharedPreferenceChangeLis
     }
 
     public EntityCard getImageCard() {
-        if (this.mImageCard == null) {
+        if (this.imageCard == null) {
             String preferencesString = DataManager.getInstance().getPreferencesString("SPLASH_IMAGE_INFO", null);
             if (!TextUtils.isEmpty(preferencesString)) {
-                EntityCard entityCard = (EntityCard) EntityExtendsKt.fromJson(preferencesString, EntityCard.class);
-                this.mImageCard = entityCard;
+                EntityCard entityCard = (EntityCard) EntityExtendsKt.jsonToEntity(preferencesString);
+                this.imageCard = entityCard;
                 return entityCard;
             }
         }
-        return this.mImageCard;
+        return this.imageCard;
     }
 
     public void markImageLoaded() {
@@ -525,11 +525,11 @@ public class AppSetting implements SharedPreferences.OnSharedPreferenceChangeLis
     }
 
     public File getSplashImageFile(Context context) {
-        EntityCard imageCard = getImageCard();
-        if (imageCard == null) {
+        EntityCard imageCard2 = getImageCard();
+        if (imageCard2 == null) {
             return null;
         }
-        String pic = imageCard.getPic();
+        String pic = imageCard2.getPic();
         if (TextUtils.isEmpty(pic)) {
             pic = "EMPTY";
         }

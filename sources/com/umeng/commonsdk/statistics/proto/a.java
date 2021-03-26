@@ -39,9 +39,7 @@ public class a implements bi<a, e>, Serializable, Cloneable {
     private static final cc i = new cc("old_id", (byte) 11, 2);
     private static final cc j = new cc("new_id", (byte) 11, 3);
     private static final cc k = new cc("ts", (byte) 10, 4);
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final Map<Class<? extends cp>, cq> f1492l;
+    private static final Map<Class<? extends cp>, cq> l;
     private static final int m = 0;
     public String a;
     public String b;
@@ -52,7 +50,7 @@ public class a implements bi<a, e>, Serializable, Cloneable {
 
     static {
         HashMap hashMap = new HashMap();
-        f1492l = hashMap;
+        l = hashMap;
         hashMap.put(cr.class, new b());
         hashMap.put(cs.class, new d());
         EnumMap enumMap = new EnumMap(e.class);
@@ -269,12 +267,12 @@ public class a implements bi<a, e>, Serializable, Cloneable {
 
     @Override // com.umeng.analytics.pro.bi
     public void read(ch chVar) throws bo {
-        f1492l.get(chVar.D()).b().b(chVar, this);
+        l.get(chVar.D()).b().b(chVar, this);
     }
 
     @Override // com.umeng.analytics.pro.bi
     public void write(ch chVar) throws bo {
-        f1492l.get(chVar.D()).b().a(chVar, this);
+        l.get(chVar.D()).b().a(chVar, this);
     }
 
     @Override // java.lang.Object
@@ -343,54 +341,54 @@ public class a implements bi<a, e>, Serializable, Cloneable {
         }
 
         /* renamed from: a */
-        public C0151a b() {
-            return new C0151a();
+        public C0178a b() {
+            return new C0178a();
         }
     }
 
     /* renamed from: com.umeng.commonsdk.statistics.proto.a$a  reason: collision with other inner class name */
     /* compiled from: IdJournal */
-    private static class C0151a extends cr<a> {
-        private C0151a() {
+    private static class C0178a extends cr<a> {
+        private C0178a() {
         }
 
         /* renamed from: a */
         public void b(ch chVar, a aVar) throws bo {
             chVar.j();
             while (true) {
-                cc l2 = chVar.l();
-                if (l2.b == 0) {
+                cc l = chVar.l();
+                if (l.b == 0) {
                     break;
                 }
-                short s = l2.c;
+                short s = l.c;
                 if (s != 1) {
                     if (s != 2) {
                         if (s != 3) {
                             if (s != 4) {
-                                ck.a(chVar, l2.b);
-                            } else if (l2.b == 10) {
+                                ck.a(chVar, l.b);
+                            } else if (l.b == 10) {
                                 aVar.d = chVar.x();
                                 aVar.d(true);
                             } else {
-                                ck.a(chVar, l2.b);
+                                ck.a(chVar, l.b);
                             }
-                        } else if (l2.b == 11) {
+                        } else if (l.b == 11) {
                             aVar.c = chVar.z();
                             aVar.c(true);
                         } else {
-                            ck.a(chVar, l2.b);
+                            ck.a(chVar, l.b);
                         }
-                    } else if (l2.b == 11) {
+                    } else if (l.b == 11) {
                         aVar.b = chVar.z();
                         aVar.b(true);
                     } else {
-                        ck.a(chVar, l2.b);
+                        ck.a(chVar, l.b);
                     }
-                } else if (l2.b == 11) {
+                } else if (l.b == 11) {
                     aVar.a = chVar.z();
                     aVar.a(true);
                 } else {
-                    ck.a(chVar, l2.b);
+                    ck.a(chVar, l.b);
                 }
                 chVar.m();
             }

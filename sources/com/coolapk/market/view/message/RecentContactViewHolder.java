@@ -42,7 +42,7 @@ public final class RecentContactViewHolder extends ContactViewHolder {
     public void onClick(View view) {
         super.onClick(view);
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf != null && valueOf.intValue() == 2131362200) {
+        if (valueOf != null && valueOf.intValue() == 2131362205) {
             MessageCardDialogFragment.Companion companion = MessageCardDialogFragment.Companion;
             Entity entity2 = this.entity;
             Contacts contacts = this.contact;

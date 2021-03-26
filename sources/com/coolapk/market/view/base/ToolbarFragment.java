@@ -22,7 +22,7 @@ public abstract class ToolbarFragment extends BaseFragment {
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        ToolbarLayoutBinding toolbarLayoutBinding = (ToolbarLayoutBinding) DataBindingUtil.inflate(layoutInflater, 2131559199, viewGroup, false);
+        ToolbarLayoutBinding toolbarLayoutBinding = (ToolbarLayoutBinding) DataBindingUtil.inflate(layoutInflater, 2131559207, viewGroup, false);
         this.binding = toolbarLayoutBinding;
         return toolbarLayoutBinding.getRoot();
     }
@@ -32,13 +32,13 @@ public abstract class ToolbarFragment extends BaseFragment {
         super.onActivityCreated(bundle);
         this.binding.toolbar.setTitle(getToolbarTitle());
         FragmentManager childFragmentManager = getChildFragmentManager();
-        Fragment findFragmentById = childFragmentManager.findFragmentById(2131363592);
+        Fragment findFragmentById = childFragmentManager.findFragmentById(2131363614);
         this.contentFragment = findFragmentById;
         if (findFragmentById == null) {
             this.contentFragment = onCreateFragment();
             FragmentTransaction beginTransaction = childFragmentManager.beginTransaction();
             Fragment fragment = this.contentFragment;
-            beginTransaction.add(2131363592, fragment, fragment.getClass().getSimpleName()).commit();
+            beginTransaction.add(2131363614, fragment, fragment.getClass().getSimpleName()).commit();
         }
     }
 

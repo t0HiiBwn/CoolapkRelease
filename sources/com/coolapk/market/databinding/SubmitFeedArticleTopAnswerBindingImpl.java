@@ -23,10 +23,10 @@ public class SubmitFeedArticleTopAnswerBindingImpl extends SubmitFeedArticleTopA
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(4);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"feed_warning"}, new int[]{2}, new int[]{2131558563});
+        includedLayouts.setIncludes(1, new String[]{"feed_warning"}, new int[]{2}, new int[]{2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362472, 3);
+        sparseIntArray.put(2131362480, 3);
     }
 
     public SubmitFeedArticleTopAnswerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

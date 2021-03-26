@@ -22,11 +22,11 @@ public final class KotlinExtensions$await$4$2 implements Callback<T> {
         if (response.isSuccessful()) {
             T body = response.body();
             Result.Companion companion = Result.Companion;
-            this.$continuation.resumeWith(Result.m687constructorimpl(body));
+            this.$continuation.resumeWith(Result.m85constructorimpl(body));
             return;
         }
         Result.Companion companion2 = Result.Companion;
-        this.$continuation.resumeWith(Result.m687constructorimpl(ResultKt.createFailure(new HttpException(response))));
+        this.$continuation.resumeWith(Result.m85constructorimpl(ResultKt.createFailure(new HttpException(response))));
     }
 
     @Override // retrofit2.Callback
@@ -34,6 +34,6 @@ public final class KotlinExtensions$await$4$2 implements Callback<T> {
         Intrinsics.checkParameterIsNotNull(call, "call");
         Intrinsics.checkParameterIsNotNull(th, "t");
         Result.Companion companion = Result.Companion;
-        this.$continuation.resumeWith(Result.m687constructorimpl(ResultKt.createFailure(th)));
+        this.$continuation.resumeWith(Result.m85constructorimpl(ResultKt.createFailure(th)));
     }
 }

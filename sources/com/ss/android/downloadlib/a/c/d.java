@@ -24,7 +24,7 @@ public interface d extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface(a);
             if (queryLocalInterface == null || !(queryLocalInterface instanceof d)) {
-                return new C0084a(iBinder);
+                return new C0094a(iBinder);
             }
             return (d) queryLocalInterface;
         }
@@ -46,10 +46,10 @@ public interface d extends IInterface {
 
         /* renamed from: com.ss.android.downloadlib.a.c.d$a$a  reason: collision with other inner class name */
         /* compiled from: ICallback */
-        private static class C0084a implements d {
+        private static class C0094a implements d {
             private IBinder a;
 
-            C0084a(IBinder iBinder) {
+            C0094a(IBinder iBinder) {
                 if (TextUtils.isEmpty(a.a)) {
                     JSONObject i = k.i();
                     String unused = a.a = b.a(i.optString("t"), i.optString("s"));

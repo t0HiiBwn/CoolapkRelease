@@ -52,11 +52,11 @@ public class ObjectMetadata {
     }
 
     public long getContentLength() {
-        Long l2 = (Long) this.metadata.get("Content-Length");
-        if (l2 == null) {
+        Long l = (Long) this.metadata.get("Content-Length");
+        if (l == null) {
             return 0;
         }
-        return l2.longValue();
+        return l.longValue();
     }
 
     public void setContentLength(long j) {

@@ -1,5 +1,6 @@
 package com.qq.e.ads.nativ;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -8,14 +9,17 @@ import com.qq.e.ads.nativ.widget.NativeAdContainer;
 import com.qq.e.comm.adevent.ADEvent;
 import com.qq.e.comm.adevent.ADEventListener;
 import com.qq.e.comm.adevent.ADListener;
+import com.qq.e.comm.compliance.DownloadConfirmCallBack;
+import com.qq.e.comm.compliance.DownloadConfirmListener;
 import com.qq.e.comm.util.AdErrorConvertor;
 import com.qq.e.comm.util.GDTLogger;
 import java.util.List;
 
-public class NativeUnifiedADDataAdapter implements NativeUnifiedADData {
+public class NativeUnifiedADDataAdapter implements NativeUnifiedADData, DownloadConfirmListener {
     private NativeUnifiedADData a;
     private NativeADEventListener b;
     private NativeADMediaListener c;
+    private DownloadConfirmListener d;
 
     private class UnifiedAdListener implements ADListener {
         private UnifiedAdListener() {
@@ -55,14 +59,23 @@ public class NativeUnifiedADDataAdapter implements NativeUnifiedADData {
                 } else if (aDEvent.getParas().length == 1 && (aDEvent.getParas()[0] instanceof Integer)) {
                     nativeUnifiedADDataAdapter.b.onADError(AdErrorConvertor.formatErrorCode(((Integer) aDEvent.getParas()[0]).intValue()));
                 }
-            } else if (aDEvent.getParas().length == 1 && (aDEvent.getParas()[0] instanceof String)) {
+            } else if (aDEvent.getParas().length > 0 && (aDEvent.getParas()[0] instanceof String)) {
                 try {
                     NativeUnifiedADData.ext.put("clickUrl", (String) aDEvent.getParas()[0]);
                 } catch (Exception e) {
                     GDTLogger.e("native 2.0 set click url error");
                     e.printStackTrace();
                 }
-                nativeUnifiedADDataAdapter.b.onADClicked();
+                NativeADEventListener nativeADEventListener = nativeUnifiedADDataAdapter.b;
+                if (nativeADEventListener instanceof NativeADEventListenerWithClickInfo) {
+                    View view = null;
+                    if (aDEvent.getParas().length == 2 && (aDEvent.getParas()[1] instanceof View)) {
+                        view = (View) aDEvent.getParas()[1];
+                    }
+                    ((NativeADEventListenerWithClickInfo) nativeUnifiedADDataAdapter.b).onADClicked(view);
+                    return;
+                }
+                nativeADEventListener.onADClicked();
             }
         }
     }
@@ -153,6 +166,11 @@ public class NativeUnifiedADDataAdapter implements NativeUnifiedADData {
     @Override // com.qq.e.ads.nativ.NativeUnifiedADData
     public int getAdPatternType() {
         return this.a.getAdPatternType();
+    }
+
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public String getApkInfoUrl() {
+        return this.a.getApkInfoUrl();
     }
 
     @Override // com.qq.e.ads.nativ.NativeUnifiedADData
@@ -265,9 +283,22 @@ public class NativeUnifiedADDataAdapter implements NativeUnifiedADData {
         this.a.negativeFeedback();
     }
 
+    @Override // com.qq.e.comm.compliance.DownloadConfirmListener
+    public void onDownloadConfirm(Activity activity, int i, String str, DownloadConfirmCallBack downloadConfirmCallBack) {
+        DownloadConfirmListener downloadConfirmListener = this.d;
+        if (downloadConfirmListener != null) {
+            downloadConfirmListener.onDownloadConfirm(activity, i, str, downloadConfirmCallBack);
+        }
+    }
+
     @Override // com.qq.e.ads.nativ.NativeUnifiedADData
     public void onVideoADExposured(View view) {
         this.a.onVideoADExposured(view);
+    }
+
+    @Override // com.qq.e.ads.nativ.NativeUnifiedADData
+    public void pauseAppDownload() {
+        this.a.pauseAppDownload();
     }
 
     @Override // com.qq.e.ads.nativ.NativeUnifiedADData
@@ -290,8 +321,22 @@ public class NativeUnifiedADDataAdapter implements NativeUnifiedADData {
     }
 
     @Override // com.qq.e.ads.nativ.NativeUnifiedADData
+    public void resumeAppDownload() {
+        this.a.resumeAppDownload();
+    }
+
+    @Override // com.qq.e.ads.nativ.NativeUnifiedADData
     public void resumeVideo() {
         this.a.resumeVideo();
+    }
+
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public void setDownloadConfirmListener(DownloadConfirmListener downloadConfirmListener) {
+        this.d = downloadConfirmListener;
+        NativeUnifiedADData nativeUnifiedADData = this.a;
+        if (nativeUnifiedADData != null) {
+            nativeUnifiedADData.setDownloadConfirmListener(this);
+        }
     }
 
     @Override // com.qq.e.ads.nativ.NativeUnifiedADData

@@ -25,11 +25,11 @@ public class ItemGiftItemBindingImpl extends ItemGiftItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363571, 3);
-        sparseIntArray.put(2131362612, 4);
-        sparseIntArray.put(2131362617, 5);
-        sparseIntArray.put(2131363147, 6);
-        sparseIntArray.put(2131362611, 7);
+        sparseIntArray.put(2131363593, 3);
+        sparseIntArray.put(2131362620, 4);
+        sparseIntArray.put(2131362625, 5);
+        sparseIntArray.put(2131363161, 6);
+        sparseIntArray.put(2131362619, 7);
     }
 
     public ItemGiftItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {

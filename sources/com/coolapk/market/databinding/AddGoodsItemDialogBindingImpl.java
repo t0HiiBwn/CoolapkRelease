@@ -28,9 +28,9 @@ public class AddGoodsItemDialogBindingImpl extends AddGoodsItemDialogBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362629, 7);
-        sparseIntArray.put(2131362441, 8);
-        sparseIntArray.put(2131362196, 9);
+        sparseIntArray.put(2131362637, 7);
+        sparseIntArray.put(2131362448, 8);
+        sparseIntArray.put(2131362200, 9);
     }
 
     public AddGoodsItemDialogBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -73,13 +73,13 @@ public class AddGoodsItemDialogBindingImpl extends AddGoodsItemDialogBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (189 == i) {
+        if (190 == i) {
             setLogo((String) obj);
         } else if (74 == i) {
             setDialogTitle((String) obj);
-        } else if (271 == i) {
+        } else if (272 == i) {
             setSubTitle((String) obj);
-        } else if (278 != i) {
+        } else if (279 != i) {
             return false;
         } else {
             setTitle((String) obj);
@@ -93,7 +93,7 @@ public class AddGoodsItemDialogBindingImpl extends AddGoodsItemDialogBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(189);
+        notifyPropertyChanged(190);
         super.requestRebind();
     }
 
@@ -113,7 +113,7 @@ public class AddGoodsItemDialogBindingImpl extends AddGoodsItemDialogBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(271);
+        notifyPropertyChanged(272);
         super.requestRebind();
     }
 
@@ -123,7 +123,7 @@ public class AddGoodsItemDialogBindingImpl extends AddGoodsItemDialogBinding {
         synchronized (this) {
             this.mDirtyFlags |= 8;
         }
-        notifyPropertyChanged(278);
+        notifyPropertyChanged(279);
         super.requestRebind();
     }
 

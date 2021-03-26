@@ -16,7 +16,7 @@ import kotlin.jvm.internal.StringCompanionObject;
 /* compiled from: QuestionTitleViewHolder.kt */
 public final class QuestionTitleViewHolder extends GenericBindHolder<ItemQuestionTitleViewBinding, FeedQuestion> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558886;
+    public static final int LAYOUT_ID = 2131558893;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public QuestionTitleViewHolder(View view, DataBindingComponent dataBindingComponent) {

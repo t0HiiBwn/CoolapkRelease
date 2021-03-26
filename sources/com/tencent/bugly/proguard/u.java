@@ -160,9 +160,9 @@ public final class u {
     public final synchronized long a(int i2) {
         long j2 = 0;
         if (i2 >= 0) {
-            Long l2 = this.d.get(Integer.valueOf(i2));
-            if (l2 != null) {
-                return l2.longValue();
+            Long l = this.d.get(Integer.valueOf(i2));
+            if (l != null) {
+                return l.longValue();
             }
             List<r> a2 = this.b.a(i2);
             if (a2 != null && a2.size() > 0) {

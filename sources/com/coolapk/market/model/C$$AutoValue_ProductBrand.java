@@ -24,7 +24,7 @@ abstract class C$$AutoValue_ProductBrand extends ProductBrand {
     private final String type;
     private final String url;
 
-    C$$AutoValue_ProductBrand(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, int i2, int i3, int i4, String str12) {
+    C$$AutoValue_ProductBrand(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, int i2, int i3, int i4, String str12) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityTypeId = i;
@@ -38,8 +38,8 @@ abstract class C$$AutoValue_ProductBrand extends ProductBrand {
         this.subTitle = str9;
         this.id = str10;
         this.extraData = str11;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.seriesNum = i2;
         this.productNum = i3;
         this.isRecommend = i4;
@@ -176,8 +176,8 @@ abstract class C$$AutoValue_ProductBrand extends ProductBrand {
         String str7;
         String str8;
         String str9;
+        Long l;
         Long l2;
-        Long l3;
         if (obj == this) {
             return true;
         }
@@ -189,7 +189,7 @@ abstract class C$$AutoValue_ProductBrand extends ProductBrand {
         if (str10 != null ? str10.equals(productBrand.getEntityTypeName()) : productBrand.getEntityTypeName() == null) {
             String str11 = this.entityTemplate;
             if (str11 != null ? str11.equals(productBrand.getEntityTemplate()) : productBrand.getEntityTemplate() == null) {
-                if (this.entityTypeId == productBrand.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(productBrand.getEntityId()) : productBrand.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(productBrand.getEntityFixed()) : productBrand.getEntityFixed() == null) && ((str2 = this.title) != null ? str2.equals(productBrand.getTitle()) : productBrand.getTitle() == null) && ((str3 = this.url) != null ? str3.equals(productBrand.getUrl()) : productBrand.getUrl() == null) && ((str4 = this.description) != null ? str4.equals(productBrand.getDescription()) : productBrand.getDescription() == null) && ((str5 = this.pic) != null ? str5.equals(productBrand.getPic()) : productBrand.getPic() == null) && ((str6 = this.logo) != null ? str6.equals(productBrand.getLogo()) : productBrand.getLogo() == null) && ((str7 = this.subTitle) != null ? str7.equals(productBrand.getSubTitle()) : productBrand.getSubTitle() == null) && ((str8 = this.id) != null ? str8.equals(productBrand.getId()) : productBrand.getId() == null) && ((str9 = this.extraData) != null ? str9.equals(productBrand.getExtraData()) : productBrand.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(productBrand.getDateline()) : productBrand.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(productBrand.getLastUpdate()) : productBrand.getLastUpdate() == null) && this.seriesNum == productBrand.getSeriesNum() && this.productNum == productBrand.getProductNum() && this.isRecommend == productBrand.getIsRecommend()) {
+                if (this.entityTypeId == productBrand.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(productBrand.getEntityId()) : productBrand.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(productBrand.getEntityFixed()) : productBrand.getEntityFixed() == null) && ((str2 = this.title) != null ? str2.equals(productBrand.getTitle()) : productBrand.getTitle() == null) && ((str3 = this.url) != null ? str3.equals(productBrand.getUrl()) : productBrand.getUrl() == null) && ((str4 = this.description) != null ? str4.equals(productBrand.getDescription()) : productBrand.getDescription() == null) && ((str5 = this.pic) != null ? str5.equals(productBrand.getPic()) : productBrand.getPic() == null) && ((str6 = this.logo) != null ? str6.equals(productBrand.getLogo()) : productBrand.getLogo() == null) && ((str7 = this.subTitle) != null ? str7.equals(productBrand.getSubTitle()) : productBrand.getSubTitle() == null) && ((str8 = this.id) != null ? str8.equals(productBrand.getId()) : productBrand.getId() == null) && ((str9 = this.extraData) != null ? str9.equals(productBrand.getExtraData()) : productBrand.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(productBrand.getDateline()) : productBrand.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(productBrand.getLastUpdate()) : productBrand.getLastUpdate() == null) && this.seriesNum == productBrand.getSeriesNum() && this.productNum == productBrand.getProductNum() && this.isRecommend == productBrand.getIsRecommend()) {
                     String str12 = this.type;
                     if (str12 == null) {
                         if (productBrand.getType() == null) {
@@ -231,10 +231,10 @@ abstract class C$$AutoValue_ProductBrand extends ProductBrand {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (((((((hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003) ^ this.seriesNum) * 1000003) ^ this.productNum) * 1000003) ^ this.isRecommend) * 1000003;
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (((((((hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003) ^ this.seriesNum) * 1000003) ^ this.productNum) * 1000003) ^ this.isRecommend) * 1000003;
         String str12 = this.type;
         if (str12 != null) {
             i = str12.hashCode();

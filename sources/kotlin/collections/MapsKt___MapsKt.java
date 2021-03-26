@@ -237,7 +237,7 @@ class MapsKt___MapsKt extends MapsKt__MapsKt {
     }
 
     /* renamed from: maxOf  reason: collision with other method in class */
-    private static final <K, V> float m1094maxOf(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Float> function1) {
+    private static final <K, V> float m492maxOf(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Float> function1) {
         Iterator<T> it2 = map.entrySet().iterator();
         if (it2.hasNext()) {
             float floatValue = function1.invoke(it2.next()).floatValue();
@@ -253,7 +253,7 @@ class MapsKt___MapsKt extends MapsKt__MapsKt {
     /* JADX WARN: Type inference failed for: r1v3, types: [java.lang.Comparable, java.lang.Object] */
     /* JADX WARNING: Unknown variable types count: 1 */
     /* renamed from: maxOf  reason: collision with other method in class */
-    private static final <K, V, R extends Comparable<? super R>> R m1095maxOf(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, ? extends R> function1) {
+    private static final <K, V, R extends Comparable<? super R>> R m493maxOf(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, ? extends R> function1) {
         Iterator<T> it2 = map.entrySet().iterator();
         if (it2.hasNext()) {
             R r = (R) ((Comparable) function1.invoke(it2.next()));
@@ -269,7 +269,7 @@ class MapsKt___MapsKt extends MapsKt__MapsKt {
     }
 
     /* renamed from: maxOfOrNull  reason: collision with other method in class */
-    private static final <K, V> Double m1096maxOfOrNull(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Double> function1) {
+    private static final <K, V> Double m494maxOfOrNull(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Double> function1) {
         Iterator<T> it2 = map.entrySet().iterator();
         if (!it2.hasNext()) {
             return null;
@@ -282,7 +282,7 @@ class MapsKt___MapsKt extends MapsKt__MapsKt {
     }
 
     /* renamed from: maxOfOrNull  reason: collision with other method in class */
-    private static final <K, V> Float m1097maxOfOrNull(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Float> function1) {
+    private static final <K, V> Float m495maxOfOrNull(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Float> function1) {
         Iterator<T> it2 = map.entrySet().iterator();
         if (!it2.hasNext()) {
             return null;
@@ -420,7 +420,7 @@ class MapsKt___MapsKt extends MapsKt__MapsKt {
     }
 
     /* renamed from: minOf  reason: collision with other method in class */
-    private static final <K, V> float m1098minOf(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Float> function1) {
+    private static final <K, V> float m496minOf(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Float> function1) {
         Iterator<T> it2 = map.entrySet().iterator();
         if (it2.hasNext()) {
             float floatValue = function1.invoke(it2.next()).floatValue();
@@ -436,7 +436,7 @@ class MapsKt___MapsKt extends MapsKt__MapsKt {
     /* JADX WARN: Type inference failed for: r1v3, types: [java.lang.Comparable, java.lang.Object] */
     /* JADX WARNING: Unknown variable types count: 1 */
     /* renamed from: minOf  reason: collision with other method in class */
-    private static final <K, V, R extends Comparable<? super R>> R m1099minOf(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, ? extends R> function1) {
+    private static final <K, V, R extends Comparable<? super R>> R m497minOf(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, ? extends R> function1) {
         Iterator<T> it2 = map.entrySet().iterator();
         if (it2.hasNext()) {
             R r = (R) ((Comparable) function1.invoke(it2.next()));
@@ -452,7 +452,7 @@ class MapsKt___MapsKt extends MapsKt__MapsKt {
     }
 
     /* renamed from: minOfOrNull  reason: collision with other method in class */
-    private static final <K, V> Double m1100minOfOrNull(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Double> function1) {
+    private static final <K, V> Double m498minOfOrNull(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Double> function1) {
         Iterator<T> it2 = map.entrySet().iterator();
         if (!it2.hasNext()) {
             return null;
@@ -465,7 +465,7 @@ class MapsKt___MapsKt extends MapsKt__MapsKt {
     }
 
     /* renamed from: minOfOrNull  reason: collision with other method in class */
-    private static final <K, V> Float m1101minOfOrNull(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Float> function1) {
+    private static final <K, V> Float m499minOfOrNull(Map<? extends K, ? extends V> map, Function1<? super Map.Entry<? extends K, ? extends V>, Float> function1) {
         Iterator<T> it2 = map.entrySet().iterator();
         if (!it2.hasNext()) {
             return null;

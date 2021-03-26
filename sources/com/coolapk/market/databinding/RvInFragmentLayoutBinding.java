@@ -27,7 +27,7 @@ public abstract class RvInFragmentLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static RvInFragmentLayoutBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (RvInFragmentLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559118, viewGroup, z, obj);
+        return (RvInFragmentLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559125, viewGroup, z, obj);
     }
 
     public static RvInFragmentLayoutBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class RvInFragmentLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static RvInFragmentLayoutBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (RvInFragmentLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559118, null, false, obj);
+        return (RvInFragmentLayoutBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559125, null, false, obj);
     }
 
     public static RvInFragmentLayoutBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class RvInFragmentLayoutBinding extends ViewDataBinding {
 
     @Deprecated
     public static RvInFragmentLayoutBinding bind(View view, Object obj) {
-        return (RvInFragmentLayoutBinding) bind(obj, view, 2131559118);
+        return (RvInFragmentLayoutBinding) bind(obj, view, 2131559125);
     }
 }

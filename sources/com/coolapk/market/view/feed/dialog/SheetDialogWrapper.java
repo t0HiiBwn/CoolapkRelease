@@ -260,7 +260,7 @@ public final class SheetDialogWrapper<T> {
     /* compiled from: SheetDialogWrapper.kt */
     private static final class SimpleViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558573;
+        public static final int LAYOUT_ID = 2131558577;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public SimpleViewHolder(View view) {

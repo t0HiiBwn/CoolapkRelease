@@ -38,7 +38,7 @@ public final class VoteColorPickerFragment extends BaseDialogFragment {
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559163, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559171, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…_pick_color, null, false)");
         SubmitPickColorBinding submitPickColorBinding = (SubmitPickColorBinding) inflate;
         this.binding = submitPickColorBinding;

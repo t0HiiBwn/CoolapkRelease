@@ -17,11 +17,11 @@ public abstract class a {
     protected String d;
     protected int e;
     protected String f;
-    protected AbstractC0121a g;
+    protected AbstractC0139a g;
 
     /* renamed from: com.tencent.beacon.core.c.a$a  reason: collision with other inner class name */
     /* compiled from: AbstractUploadDatas */
-    public interface AbstractC0121a {
+    public interface AbstractC0139a {
         void a(boolean z);
     }
 
@@ -36,7 +36,7 @@ public abstract class a {
         this.f = str;
     }
 
-    public a(Context context, String str, AbstractC0121a aVar) {
+    public a(Context context, String str, AbstractC0139a aVar) {
         this.c = context;
         this.a = 102;
         this.b = 0;

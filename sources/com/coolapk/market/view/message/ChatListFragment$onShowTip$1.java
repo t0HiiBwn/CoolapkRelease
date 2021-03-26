@@ -75,7 +75,7 @@ final class ChatListFragment$onShowTip$1 implements View.OnClickListener {
                         }
                         Application application = AppHolder.getApplication();
                         Intrinsics.checkNotNullExpressionValue(application, "AppHolder.getApplication()");
-                        Toast.show(application, 2131886677);
+                        Toast.show(application, 2131886739);
                     }
                 });
             }

@@ -17,8 +17,8 @@ public final class a {
     private static byte[] e = Base64.decode("4M3PpUC4Vu1uMp+Y0Mxd+vfc6v4ggJAINfgTlH74pis=", 0);
 
     /* renamed from: com.qq.e.comm.net.rr.a$a  reason: collision with other inner class name */
-    static class C0077a extends Exception {
-        public C0077a(String str, Throwable th) {
+    static class C0087a extends Exception {
+        public C0087a(String str, Throwable th) {
             super(str, th);
         }
     }
@@ -29,7 +29,7 @@ public final class a {
         }
     }
 
-    private static synchronized Cipher a() throws C0077a {
+    private static synchronized Cipher a() throws C0087a {
         synchronized (a.class) {
             Cipher cipher = b;
             if (cipher != null) {
@@ -41,7 +41,7 @@ public final class a {
                 b = instance;
                 return instance;
             } catch (Exception e2) {
-                throw new C0077a("Fail To Init Cipher", e2);
+                throw new C0087a("Fail To Init Cipher", e2);
             }
         }
     }
@@ -61,7 +61,7 @@ public final class a {
         }
     }
 
-    private static synchronized Cipher b() throws C0077a {
+    private static synchronized Cipher b() throws C0087a {
         synchronized (a.class) {
             Cipher cipher = c;
             if (cipher != null) {
@@ -73,7 +73,7 @@ public final class a {
                 c = instance;
                 return instance;
             } catch (Exception e2) {
-                throw new C0077a("Fail To Init Cipher", e2);
+                throw new C0087a("Fail To Init Cipher", e2);
             }
         }
     }
@@ -95,19 +95,19 @@ public final class a {
         }
     }
 
-    private static byte[] c(byte[] bArr) throws C0077a {
+    private static byte[] c(byte[] bArr) throws C0087a {
         try {
             return a().doFinal(bArr);
         } catch (Exception e2) {
-            throw new C0077a("Exception While encrypt byte array", e2);
+            throw new C0087a("Exception While encrypt byte array", e2);
         }
     }
 
-    private static byte[] d(byte[] bArr) throws C0077a {
+    private static byte[] d(byte[] bArr) throws C0087a {
         try {
             return b().doFinal(bArr);
         } catch (Exception e2) {
-            throw new C0077a("Exception While dencrypt byte array", e2);
+            throw new C0087a("Exception While dencrypt byte array", e2);
         }
     }
 }

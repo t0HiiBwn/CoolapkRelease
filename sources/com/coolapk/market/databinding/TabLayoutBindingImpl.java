@@ -30,10 +30,10 @@ public class TabLayoutBindingImpl extends TabLayoutBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362900, 2);
-        sparseIntArray.put(2131363588, 3);
-        sparseIntArray.put(2131363490, 4);
-        sparseIntArray.put(2131363934, 5);
+        sparseIntArray.put(2131362911, 2);
+        sparseIntArray.put(2131363610, 3);
+        sparseIntArray.put(2131363508, 4);
+        sparseIntArray.put(2131363959, 5);
     }
 
     public TabLayoutBindingImpl(DataBindingComponent dataBindingComponent, View view) {

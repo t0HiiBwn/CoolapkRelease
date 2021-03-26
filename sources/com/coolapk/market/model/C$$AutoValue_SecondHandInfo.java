@@ -28,7 +28,7 @@ abstract class C$$AutoValue_SecondHandInfo extends SecondHandInfo {
     private final String title;
     private final String url;
 
-    C$$AutoValue_SecondHandInfo(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, int i, String str13, String str14, int i2, Long l2, Long l3, String str15, int i3, int i4, int i5, String str16) {
+    C$$AutoValue_SecondHandInfo(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, int i, String str13, String str14, int i2, Long l, Long l2, String str15, int i3, int i4, int i5, String str16) {
         this.feedId = str;
         this.title = str2;
         this.logo = str3;
@@ -45,8 +45,8 @@ abstract class C$$AutoValue_SecondHandInfo extends SecondHandInfo {
         this.url = str13;
         this.source = str14;
         this.secondHandStatus = i2;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.storeTypeText = str15;
         this.secondHandDealType = i3;
         this.secondHandFaceDeal = i4;
@@ -201,8 +201,8 @@ abstract class C$$AutoValue_SecondHandInfo extends SecondHandInfo {
     public boolean equals(Object obj) {
         String str;
         String str2;
+        Long l;
         Long l2;
-        Long l3;
         String str3;
         if (obj == this) {
             return true;
@@ -235,7 +235,7 @@ abstract class C$$AutoValue_SecondHandInfo extends SecondHandInfo {
                                                 if (str14 != null ? str14.equals(secondHandInfo.getProvince()) : secondHandInfo.getProvince() == null) {
                                                     String str15 = this.cityCode;
                                                     if (str15 != null ? str15.equals(secondHandInfo.getCityCode()) : secondHandInfo.getCityCode() == null) {
-                                                        if (this.storeType == secondHandInfo.getStoreType() && ((str = this.url) != null ? str.equals(secondHandInfo.getUrl()) : secondHandInfo.getUrl() == null) && ((str2 = this.source) != null ? str2.equals(secondHandInfo.getSource()) : secondHandInfo.getSource() == null) && this.secondHandStatus == secondHandInfo.getSecondHandStatus() && ((l2 = this.dateline) != null ? l2.equals(secondHandInfo.getDateline()) : secondHandInfo.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(secondHandInfo.getLastUpdate()) : secondHandInfo.getLastUpdate() == null) && ((str3 = this.storeTypeText) != null ? str3.equals(secondHandInfo.getStoreTypeText()) : secondHandInfo.getStoreTypeText() == null) && this.secondHandDealType == secondHandInfo.getSecondHandDealType() && this.secondHandFaceDeal == secondHandInfo.getSecondHandFaceDeal() && this.exchangePriceType == secondHandInfo.getExchangePriceType()) {
+                                                        if (this.storeType == secondHandInfo.getStoreType() && ((str = this.url) != null ? str.equals(secondHandInfo.getUrl()) : secondHandInfo.getUrl() == null) && ((str2 = this.source) != null ? str2.equals(secondHandInfo.getSource()) : secondHandInfo.getSource() == null) && this.secondHandStatus == secondHandInfo.getSecondHandStatus() && ((l = this.dateline) != null ? l.equals(secondHandInfo.getDateline()) : secondHandInfo.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(secondHandInfo.getLastUpdate()) : secondHandInfo.getLastUpdate() == null) && ((str3 = this.storeTypeText) != null ? str3.equals(secondHandInfo.getStoreTypeText()) : secondHandInfo.getStoreTypeText() == null) && this.secondHandDealType == secondHandInfo.getSecondHandDealType() && this.secondHandFaceDeal == secondHandInfo.getSecondHandFaceDeal() && this.exchangePriceType == secondHandInfo.getExchangePriceType()) {
                                                             String str16 = this.linkNotice;
                                                             if (str16 == null) {
                                                                 if (secondHandInfo.getLinkNotice() == null) {
@@ -291,10 +291,10 @@ abstract class C$$AutoValue_SecondHandInfo extends SecondHandInfo {
         int hashCode13 = (hashCode12 ^ (str13 == null ? 0 : str13.hashCode())) * 1000003;
         String str14 = this.source;
         int hashCode14 = (((hashCode13 ^ (str14 == null ? 0 : str14.hashCode())) * 1000003) ^ this.secondHandStatus) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode15 = (hashCode14 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode16 = (hashCode15 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode15 = (hashCode14 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode16 = (hashCode15 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str15 = this.storeTypeText;
         int hashCode17 = (((((((hashCode16 ^ (str15 == null ? 0 : str15.hashCode())) * 1000003) ^ this.secondHandDealType) * 1000003) ^ this.secondHandFaceDeal) * 1000003) ^ this.exchangePriceType) * 1000003;
         String str16 = this.linkNotice;

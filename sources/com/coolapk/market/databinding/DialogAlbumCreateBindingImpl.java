@@ -29,11 +29,11 @@ public class DialogAlbumCreateBindingImpl extends DialogAlbumCreateBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362400, 3);
-        sparseIntArray.put(2131363573, 4);
-        sparseIntArray.put(2131363570, 5);
-        sparseIntArray.put(2131362739, 6);
-        sparseIntArray.put(2131362738, 7);
+        sparseIntArray.put(2131362406, 3);
+        sparseIntArray.put(2131363595, 4);
+        sparseIntArray.put(2131363592, 5);
+        sparseIntArray.put(2131362750, 6);
+        sparseIntArray.put(2131362749, 7);
     }
 
     public DialogAlbumCreateBindingImpl(DataBindingComponent dataBindingComponent, View view) {

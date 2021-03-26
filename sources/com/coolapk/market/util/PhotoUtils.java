@@ -110,9 +110,9 @@ public class PhotoUtils {
                 CoolFileUtils.notifyNewMediaFile(AppHolder.getApplication(), genSavePath);
                 if (!z) {
                     if (!genSavePath.exists() || genSavePath.length() <= 0) {
-                        Toast.show(AppHolder.getApplication(), 2131886929);
+                        Toast.show(AppHolder.getApplication(), 2131886991);
                     } else {
-                        Toast.show(AppHolder.getApplication(), 2131886931);
+                        Toast.show(AppHolder.getApplication(), 2131886993);
                     }
                 }
                 return genSavePath;
@@ -126,7 +126,7 @@ public class PhotoUtils {
 
     static /* synthetic */ void lambda$saveImageObservable$1(boolean z) {
         if (!z) {
-            Toast.show(AppHolder.getApplication(), 2131886932);
+            Toast.show(AppHolder.getApplication(), 2131886994);
         }
     }
 
@@ -223,7 +223,7 @@ public class PhotoUtils {
 
     static /* synthetic */ void lambda$saveImages$5(boolean z) {
         if (!z) {
-            Toast.show(AppHolder.getApplication(), 2131886932);
+            Toast.show(AppHolder.getApplication(), 2131886994);
         }
     }
 

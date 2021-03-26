@@ -111,7 +111,7 @@ public class ct {
                 a(byteArrayOutputStream, aVar.i);
                 a(byteArrayOutputStream, aVar.j);
                 a(byteArrayOutputStream, aVar.k);
-                a(byteArrayOutputStream, aVar.f1229l);
+                a(byteArrayOutputStream, aVar.l);
                 a(byteArrayOutputStream, aVar.m);
                 a(byteArrayOutputStream, aVar.n);
                 a(byteArrayOutputStream, aVar.o);
@@ -194,7 +194,7 @@ public class ct {
         aVar.i = cq.d(context);
         aVar.j = String.valueOf(Build.VERSION.SDK_INT);
         aVar.k = cu.x(context);
-        aVar.f1229l = cu.u(context);
+        aVar.l = cu.u(context);
         aVar.m = cu.r(context) + "";
         aVar.n = cu.q(context) + "";
         aVar.o = cu.z(context);
@@ -253,9 +253,7 @@ public class ct {
         String i;
         String j;
         String k;
-
-        /* renamed from: l  reason: collision with root package name */
-        String f1229l;
+        String l;
         String m;
         String n;
         String o;

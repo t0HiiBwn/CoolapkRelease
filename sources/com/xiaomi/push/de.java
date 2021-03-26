@@ -1,49 +1,62 @@
 package com.xiaomi.push;
 
-import android.util.Log;
-import android.util.Pair;
-import java.util.Date;
-import java.util.List;
+import android.net.Uri;
+import android.text.TextUtils;
+import android.util.Base64;
+import com.xiaomi.a.a.a.c;
+import java.util.HashMap;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-class de implements Runnable {
-    final /* synthetic */ dd a;
-
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ String f313a;
-
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ Throwable f314a;
-
-    de(dd ddVar, String str, Throwable th) {
-        this.a = ddVar;
-        this.f313a = str;
-        this.f314a = th;
+public class de {
+    public static Uri a(String str, String str2) {
+        return Uri.parse("content://" + str).buildUpon().appendPath(str2).build();
     }
 
-    @Override // java.lang.Runnable
-    public void run() {
-        dd.a().add(new Pair(String.format("%1$s %2$s %3$s ", dd.a().format(new Date()), dd.a(this.a), this.f313a), this.f314a));
-        if (dd.a().size() > 20000) {
-            int size = (dd.a().size() - 20000) + 50;
-            for (int i = 0; i < size; i++) {
+    public static String a(String str) {
+        return Base64.encodeToString(ah.c(str), 2);
+    }
+
+    public static String a(HashMap<String, String> hashMap) {
+        if (hashMap == null) {
+            return "";
+        }
+        JSONObject jSONObject = new JSONObject();
+        try {
+            for (String str : hashMap.keySet()) {
+                jSONObject.put(str, hashMap.get(str));
+            }
+        } catch (JSONException e) {
+            c.a(e);
+        }
+        return jSONObject.toString();
+    }
+
+    public static String b(String str) {
+        return ah.a(Base64.decode(str, 2));
+    }
+
+    public static String b(HashMap<String, String> hashMap) {
+        HashMap hashMap2 = new HashMap();
+        if (hashMap != null) {
+            hashMap2.put("event_type", hashMap.get("event_type") + "");
+            hashMap2.put("description", hashMap.get("description") + "");
+            String str = hashMap.get("awake_info");
+            if (!TextUtils.isEmpty(str)) {
                 try {
-                    if (dd.a().size() > 0) {
-                        dd.a().remove(0);
-                    }
-                } catch (IndexOutOfBoundsException unused) {
+                    JSONObject jSONObject = new JSONObject(str);
+                    hashMap2.put("__planId__", String.valueOf(jSONObject.opt("__planId__")));
+                    hashMap2.put("flow_id", String.valueOf(jSONObject.opt("flow_id")));
+                    hashMap2.put("jobkey", String.valueOf(jSONObject.opt("jobkey")));
+                    hashMap2.put("msg_id", String.valueOf(jSONObject.opt("msg_id")));
+                    hashMap2.put("A", String.valueOf(jSONObject.opt("awake_app")));
+                    hashMap2.put("B", String.valueOf(jSONObject.opt("awakened_app")));
+                    hashMap2.put("module", String.valueOf(jSONObject.opt("awake_type")));
+                } catch (JSONException e) {
+                    c.a(e);
                 }
             }
-            List a2 = dd.a();
-            a2.add(new Pair(String.format("%1$s %2$s %3$s ", dd.a().format(new Date()), dd.a(this.a), "flush " + size + " lines logs."), null));
         }
-        try {
-            if (!aa.d()) {
-                Log.w(dd.a(this.a), "SDCard is unavailable.");
-            } else {
-                dd.a(this.a);
-            }
-        } catch (Exception e) {
-            Log.e(dd.a(this.a), "", e);
-        }
+        return a(hashMap2);
     }
 }

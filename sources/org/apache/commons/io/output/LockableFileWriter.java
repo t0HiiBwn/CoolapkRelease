@@ -14,37 +14,20 @@ public class LockableFileWriter extends Writer {
     private final File lockFile;
     private final Writer out;
 
-    public LockableFileWriter(String str) throws IOException {
-        this(str, false, (String) null);
-    }
-
-    public LockableFileWriter(String str, boolean z) throws IOException {
-        this(str, z, (String) null);
-    }
-
-    public LockableFileWriter(String str, boolean z, String str2) throws IOException {
-        this(new File(str), z, str2);
-    }
-
     public LockableFileWriter(File file) throws IOException {
         this(file, false, (String) null);
     }
 
-    public LockableFileWriter(File file, boolean z) throws IOException {
-        this(file, z, (String) null);
+    public LockableFileWriter(File file, String str) throws IOException {
+        this(file, str, false, (String) null);
     }
 
-    @Deprecated
-    public LockableFileWriter(File file, boolean z, String str) throws IOException {
-        this(file, Charset.defaultCharset(), z, str);
+    public LockableFileWriter(File file, String str, boolean z, String str2) throws IOException {
+        this(file, Charsets.toCharset(str), z, str2);
     }
 
     public LockableFileWriter(File file, Charset charset) throws IOException {
         this(file, charset, false, (String) null);
-    }
-
-    public LockableFileWriter(File file, String str) throws IOException {
-        this(file, str, false, (String) null);
     }
 
     public LockableFileWriter(File file, Charset charset, boolean z, String str) throws IOException {
@@ -64,16 +47,25 @@ public class LockableFileWriter extends Writer {
         throw new IOException("File specified is a directory");
     }
 
-    public LockableFileWriter(File file, String str, boolean z, String str2) throws IOException {
-        this(file, Charsets.toCharset(str), z, str2);
+    public LockableFileWriter(File file, boolean z) throws IOException {
+        this(file, z, (String) null);
     }
 
-    private void testLockDir(File file) throws IOException {
-        if (!file.exists()) {
-            throw new IOException("Could not find lockDir: " + file.getAbsolutePath());
-        } else if (!file.canWrite()) {
-            throw new IOException("Could not write to lockDir: " + file.getAbsolutePath());
-        }
+    @Deprecated
+    public LockableFileWriter(File file, boolean z, String str) throws IOException {
+        this(file, Charset.defaultCharset(), z, str);
+    }
+
+    public LockableFileWriter(String str) throws IOException {
+        this(str, false, (String) null);
+    }
+
+    public LockableFileWriter(String str, boolean z) throws IOException {
+        this(str, z, (String) null);
+    }
+
+    public LockableFileWriter(String str, boolean z, String str2) throws IOException {
+        this(new File(str), z, str2);
     }
 
     private void createLock() throws IOException {
@@ -99,6 +91,14 @@ public class LockableFileWriter extends Writer {
         }
     }
 
+    private void testLockDir(File file) throws IOException {
+        if (!file.exists()) {
+            throw new IOException("Could not find lockDir: " + file.getAbsolutePath());
+        } else if (!file.canWrite()) {
+            throw new IOException("Could not write to lockDir: " + file.getAbsolutePath());
+        }
+    }
+
     @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
     public void close() throws IOException {
         try {
@@ -108,19 +108,14 @@ public class LockableFileWriter extends Writer {
         }
     }
 
+    @Override // java.io.Writer, java.io.Flushable
+    public void flush() throws IOException {
+        this.out.flush();
+    }
+
     @Override // java.io.Writer
     public void write(int i) throws IOException {
         this.out.write(i);
-    }
-
-    @Override // java.io.Writer
-    public void write(char[] cArr) throws IOException {
-        this.out.write(cArr);
-    }
-
-    @Override // java.io.Writer
-    public void write(char[] cArr, int i, int i2) throws IOException {
-        this.out.write(cArr, i, i2);
     }
 
     @Override // java.io.Writer
@@ -133,8 +128,13 @@ public class LockableFileWriter extends Writer {
         this.out.write(str, i, i2);
     }
 
-    @Override // java.io.Writer, java.io.Flushable
-    public void flush() throws IOException {
-        this.out.flush();
+    @Override // java.io.Writer
+    public void write(char[] cArr) throws IOException {
+        this.out.write(cArr);
+    }
+
+    @Override // java.io.Writer
+    public void write(char[] cArr, int i, int i2) throws IOException {
+        this.out.write(cArr, i, i2);
     }
 }

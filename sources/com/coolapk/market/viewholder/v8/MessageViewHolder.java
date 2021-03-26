@@ -34,7 +34,7 @@ import rx.Observable;
 /* compiled from: MessageViewHolder.kt */
 public final class MessageViewHolder extends GenericBindHolder<ItemMessageBinding, Message> implements CompoundButton.OnCheckedChangeListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558824;
+    public static final int LAYOUT_ID = 2131558831;
     private final LinkedHashMap<String, Message> delList;
     private boolean editState;
     private Message mMessage;
@@ -191,7 +191,7 @@ public final class MessageViewHolder extends GenericBindHolder<ItemMessageBindin
                 ActionManager.startChattingActivity(context, messageUid, message2.getMessageUserName());
                 Observable.timer(1000, TimeUnit.MILLISECONDS).compose(RxUtils.applyIOSchedulers()).subscribe(new MessageViewHolder$onClick$1(this));
             }
-            if (view.getId() == 2131363877) {
+            if (view.getId() == 2131363900) {
                 Message message3 = this.mMessage;
                 if (message3 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("mMessage");

@@ -27,7 +27,7 @@ public abstract class ItemForwardEntityShareAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemForwardEntityShareAppBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemForwardEntityShareAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558749, viewGroup, z, obj);
+        return (ItemForwardEntityShareAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558756, viewGroup, z, obj);
     }
 
     public static ItemForwardEntityShareAppBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class ItemForwardEntityShareAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemForwardEntityShareAppBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemForwardEntityShareAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558749, null, false, obj);
+        return (ItemForwardEntityShareAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558756, null, false, obj);
     }
 
     public static ItemForwardEntityShareAppBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class ItemForwardEntityShareAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemForwardEntityShareAppBinding bind(View view, Object obj) {
-        return (ItemForwardEntityShareAppBinding) bind(obj, view, 2131558749);
+        return (ItemForwardEntityShareAppBinding) bind(obj, view, 2131558756);
     }
 }

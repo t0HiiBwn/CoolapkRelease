@@ -22,11 +22,11 @@ final class TopicNodeDataListFragment$onActivityCreated$1 extends Lambda impleme
 
     public final RecyclerView.ViewHolder invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "it");
-        FragmentBindingComponent bindingComponent = this.this$0.getBindingComponent();
+        FragmentBindingComponent fragmentBindingComponent = this.this$0.getBindingComponent();
         String id = this.this$0.getViewModel$presentation_coolapkAppRelease().getModel().getId();
         if (id == null) {
             id = "";
         }
-        return new NodeTopContentViewHolder(view, bindingComponent, "topic", id);
+        return new NodeTopContentViewHolder(view, fragmentBindingComponent, "topic", id);
     }
 }

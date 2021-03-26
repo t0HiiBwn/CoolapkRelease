@@ -488,7 +488,7 @@ final class aq implements View.OnKeyListener {
         private by a(w wVar, int i) {
             int i2 = i < 500 ? 500 : i;
             try {
-                return new by(i2, 10, aq.this.c.h.f1218l, wVar, i2, this);
+                return new by(i2, 10, aq.this.c.h.l, wVar, i2, this);
             } catch (Throwable th) {
                 cm.a(th, "MapController", "makeTransTool");
                 return null;
@@ -604,7 +604,7 @@ final class aq implements View.OnKeyListener {
                 if (this.c.d) {
                     Point point = new Point(i, i2);
                     w a2 = aq.this.c.c.g().d().a(i, i2);
-                    aq.this.c.h.f1218l = aq.this.c.h.a(a2);
+                    aq.this.c.h.l = aq.this.c.h.a(a2);
                     aq.this.c.h.a(point);
                 }
                 this.c.a(f, true, (float) i, (float) i2);

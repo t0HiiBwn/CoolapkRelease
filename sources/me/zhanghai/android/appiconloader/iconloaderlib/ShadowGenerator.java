@@ -8,6 +8,8 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
+import me.zhanghai.android.appiconloader.iconloaderlib.BitmapRenderer;
+import me.zhanghai.android.appiconloader.iconloaderlib.ShadowGenerator;
 
 public class ShadowGenerator {
     private static final int AMBIENT_SHADOW_ALPHA = 30;
@@ -81,9 +83,14 @@ public class ShadowGenerator {
             float f5 = (float) max;
             this.bounds.offsetTo(f5 - f3, f5 - (f4 / 2.0f));
             int i3 = max * 2;
-            Bitmap createBitmap = Bitmap.createBitmap(i3, i3, Bitmap.Config.ARGB_8888);
-            drawShadow(new Canvas(createBitmap));
-            return createBitmap;
+            return BitmapRenderer.CC.createHardwareBitmap(i3, i3, new BitmapRenderer() {
+                /* class me.zhanghai.android.appiconloader.iconloaderlib.$$Lambda$9Nue4i284oPYueC1uPhi6eLNVzE */
+
+                @Override // me.zhanghai.android.appiconloader.iconloaderlib.BitmapRenderer
+                public final void draw(Canvas canvas) {
+                    ShadowGenerator.Builder.this.drawShadow(canvas);
+                }
+            });
         }
 
         public void drawShadow(Canvas canvas) {

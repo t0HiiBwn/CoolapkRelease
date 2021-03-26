@@ -22,9 +22,9 @@ public class ItemTipEmptyBindingImpl extends ItemTipEmptyBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 2);
-        sparseIntArray.put(2131363582, 3);
-        sparseIntArray.put(2131363562, 4);
+        sparseIntArray.put(2131362779, 2);
+        sparseIntArray.put(2131363604, 3);
+        sparseIntArray.put(2131363584, 4);
     }
 
     public ItemTipEmptyBindingImpl(DataBindingComponent dataBindingComponent, View view) {

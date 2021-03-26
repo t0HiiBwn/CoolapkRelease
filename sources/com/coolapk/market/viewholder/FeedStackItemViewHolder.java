@@ -33,7 +33,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedStackCardViewHolder.kt */
 final class FeedStackItemViewHolder extends GenericBindHolder<ItemFeedStackItemBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558731;
+    public static final int LAYOUT_ID = 2131558738;
     private final Function0<EntityCard> callback;
     private final Lazy headerViewPart$delegate;
 
@@ -123,7 +123,7 @@ final class FeedStackItemViewHolder extends GenericBindHolder<ItemFeedStackItemB
         Feed model = itemFeedStackItemBinding.getModel();
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
-            if (view.getId() != 2131362200) {
+            if (view.getId() != 2131362205) {
                 super.onClick(view);
                 return;
             }

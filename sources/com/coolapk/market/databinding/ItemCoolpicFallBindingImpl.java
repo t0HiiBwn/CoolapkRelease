@@ -36,7 +36,7 @@ public class ItemCoolpicFallBindingImpl extends ItemCoolpicFallBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362993, 7);
+        sparseIntArray.put(2131363005, 7);
     }
 
     public ItemCoolpicFallBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -166,10 +166,10 @@ public class ItemCoolpicFallBindingImpl extends ItemCoolpicFallBinding {
             OnImageLoadListener onImageLoadListener = null;
             OnBitmapTransformListener onBitmapTransformListener = null;
             View.OnClickListener onClickListener2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str2, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231691), 0, 0, bool, bool, bool, true, bool, str9, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str2, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231702), 0, 0, bool, bool, bool, true, bool, str9, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
             TextViewBindingAdapter.setText(this.timeView, str5);
             TextViewBindingAdapters.setTextViewLinkable(this.titleView, str3, null, str9, bool, null, str9);
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool, bool, bool, bool, bool, str9, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool, bool, bool, bool, bool, str9, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener2, bool);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str4, bool);
         }
         if (i2 != 0) {

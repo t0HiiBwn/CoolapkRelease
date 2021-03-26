@@ -11,7 +11,7 @@ public abstract class DocListCard implements Card<Entity> {
     public static abstract class Builder {
         public abstract DocListCard build();
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         public abstract Builder setDescription(String str);
 
@@ -29,7 +29,7 @@ public abstract class DocListCard implements Card<Entity> {
 
         public abstract Builder setId(String str);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLogo(String str);
 

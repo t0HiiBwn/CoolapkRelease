@@ -55,7 +55,7 @@ public class NewAlbumPickFragment extends LocalDataFragment<MobileApp> {
 
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment
     public int getItemViewType(int i) {
-        return 2131558828;
+        return 2131558835;
     }
 
     public static NewAlbumPickFragment newInstance(Album album) {
@@ -70,8 +70,8 @@ public class NewAlbumPickFragment extends LocalDataFragment<MobileApp> {
     public void onActivityCreated(Bundle bundle) {
         ArrayList parcelableArrayList;
         super.onActivityCreated(bundle);
-        getActivity().setTitle(getString(2131887286));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558828, 2131231052).last(2131231052).create());
+        getActivity().setTitle(getString(2131887348));
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558835, 2131231062).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         this.mAlbum = (Album) getArguments().getParcelable("album");
@@ -95,19 +95,19 @@ public class NewAlbumPickFragment extends LocalDataFragment<MobileApp> {
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            menu.add(0, 2131361965, 100, "全选").setShowAsAction(2);
+            menu.add(0, 2131361966, 100, "全选").setShowAsAction(2);
         }
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() != 2131361965) {
+        if (menuItem.getItemId() != 2131361966) {
             return super.onOptionsItemSelected(menuItem);
         }
         onSelectAll(this.menuState);
         boolean z = !this.menuState;
         this.menuState = z;
-        menuItem.setTitle(z ? 2131886586 : 2131886584);
+        menuItem.setTitle(z ? 2131886648 : 2131886646);
         return true;
     }
 
@@ -235,7 +235,7 @@ public class NewAlbumPickFragment extends LocalDataFragment<MobileApp> {
         public Dialog onCreateDialog(Bundle bundle) {
             this.mMobileApp = (MobileApp) getArguments().getParcelable("app");
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            DialogAlbumMobileappNoteBinding dialogAlbumMobileappNoteBinding = (DialogAlbumMobileappNoteBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558514, null, false);
+            DialogAlbumMobileappNoteBinding dialogAlbumMobileappNoteBinding = (DialogAlbumMobileappNoteBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558516, null, false);
             this.binding = dialogAlbumMobileappNoteBinding;
             dialogAlbumMobileappNoteBinding.setApp(this.mMobileApp);
             AlbumItem albumItem2 = this.appMap.get(this.mMobileApp.getPackageName());
@@ -253,9 +253,9 @@ public class NewAlbumPickFragment extends LocalDataFragment<MobileApp> {
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
             int id = view.getId();
-            if (id == 2131362192) {
+            if (id == 2131362195) {
                 dismiss();
-            } else if (id == 2131363036) {
+            } else if (id == 2131363050) {
                 String obj = this.binding.apkNoteEditView.getText().toString();
                 this.mNote = obj;
                 this.viewModel.setPickAppNote(obj);
@@ -270,7 +270,7 @@ public class NewAlbumPickFragment extends LocalDataFragment<MobileApp> {
     }
 
     public class AlbumMobileAPPViewHolder extends StateViewHolder implements CompoundButton.OnCheckedChangeListener {
-        public static final int LAYOUT_ID = 2131558828;
+        public static final int LAYOUT_ID = 2131558835;
         private AlbumItem albumItem;
         private MobileApp app;
         private String appNote;

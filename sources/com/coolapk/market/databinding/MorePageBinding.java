@@ -21,7 +21,7 @@ public abstract class MorePageBinding extends ViewDataBinding {
 
     @Deprecated
     public static MorePageBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (MorePageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559021, viewGroup, z, obj);
+        return (MorePageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559028, viewGroup, z, obj);
     }
 
     public static MorePageBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class MorePageBinding extends ViewDataBinding {
 
     @Deprecated
     public static MorePageBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (MorePageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559021, null, false, obj);
+        return (MorePageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559028, null, false, obj);
     }
 
     public static MorePageBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class MorePageBinding extends ViewDataBinding {
 
     @Deprecated
     public static MorePageBinding bind(View view, Object obj) {
-        return (MorePageBinding) bind(obj, view, 2131559021);
+        return (MorePageBinding) bind(obj, view, 2131559028);
     }
 }

@@ -23,7 +23,7 @@ abstract class C$$AutoValue_NodeTargetInfo extends NodeTargetInfo {
     private final String url;
     private final String voteCount;
 
-    C$$AutoValue_NodeTargetInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, String str13, String str14, String str15) {
+    C$$AutoValue_NodeTargetInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, String str13, String str14, String str15) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -36,8 +36,8 @@ abstract class C$$AutoValue_NodeTargetInfo extends NodeTargetInfo {
         this.subTitle = str9;
         this.id = str10;
         this.extraData = str11;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.score = str12;
         this.voteCount = str13;
         this.ratingTotalNum = str14;
@@ -190,10 +190,10 @@ abstract class C$$AutoValue_NodeTargetInfo extends NodeTargetInfo {
                                                 if (str10 != null ? str10.equals(nodeTargetInfo.getId()) : nodeTargetInfo.getId() == null) {
                                                     String str11 = this.extraData;
                                                     if (str11 != null ? str11.equals(nodeTargetInfo.getExtraData()) : nodeTargetInfo.getExtraData() == null) {
-                                                        Long l2 = this.dateline;
-                                                        if (l2 != null ? l2.equals(nodeTargetInfo.getDateline()) : nodeTargetInfo.getDateline() == null) {
-                                                            Long l3 = this.lastUpdate;
-                                                            if (l3 != null ? l3.equals(nodeTargetInfo.getLastUpdate()) : nodeTargetInfo.getLastUpdate() == null) {
+                                                        Long l = this.dateline;
+                                                        if (l != null ? l.equals(nodeTargetInfo.getDateline()) : nodeTargetInfo.getDateline() == null) {
+                                                            Long l2 = this.lastUpdate;
+                                                            if (l2 != null ? l2.equals(nodeTargetInfo.getLastUpdate()) : nodeTargetInfo.getLastUpdate() == null) {
                                                                 String str12 = this.score;
                                                                 if (str12 != null ? str12.equals(nodeTargetInfo.getScore()) : nodeTargetInfo.getScore() == null) {
                                                                     String str13 = this.voteCount;
@@ -255,10 +255,10 @@ abstract class C$$AutoValue_NodeTargetInfo extends NodeTargetInfo {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str12 = this.score;
         int hashCode15 = (hashCode14 ^ (str12 == null ? 0 : str12.hashCode())) * 1000003;
         String str13 = this.voteCount;

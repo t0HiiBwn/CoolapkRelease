@@ -23,7 +23,9 @@ import com.coolapk.market.widget.MinimumWidthDialog;
 import com.coolapk.market.widget.Toast;
 import java.util.ArrayList;
 import java.util.Objects;
+import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
+import kotlin.jvm.JvmStatic;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.Ref;
@@ -31,15 +33,18 @@ import org.greenrobot.eventbus.EventBus;
 import rx.Observable;
 import rx.Subscriber;
 
+@Metadata(bv = {1, 0, 3}, d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0010\u0018\u0000 \u00122\u00020\u0001:\u000f\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001dB\u0005¢\u0006\u0002\u0010\u0002J\u0010\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\tH\u0002J\u0010\u0010\n\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\tH\u0002J\u0012\u0010\u000b\u001a\u00020\f2\b\u0010\r\u001a\u0004\u0018\u00010\u000eH\u0016R\u0016\u0010\u0003\u001a\n \u0005*\u0004\u0018\u00010\u00040\u0004X\u0004¢\u0006\u0002\n\u0000¨\u0006\u001e"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog;", "Lcom/coolapk/market/view/base/MultiItemDialogFragment;", "()V", "mPresenter", "Lcom/coolapk/market/view/album/AlbumActionPresenter;", "kotlin.jvm.PlatformType", "buildAdminActionItem", "Lcom/coolapk/market/view/base/MultiActionItem;", "album", "Lcom/coolapk/market/model/Album;", "buildMultiActionItem", "onActivityCreated", "", "savedInstanceState", "Landroid/os/Bundle;", "BannedActionItem", "CollectionRemoveActionItem", "CollectionTop", "Companion", "DeleteActionItem", "EditorChoiceActionItem", "FoldedActionItem", "HeadlineActionItem", "HomePageActionItem", "InfoDialogFragment", "NoHomePageActionItem", "PrivateActionItem", "RecommendActionItem", "SoftFoldedActionItem", "StatusActionItem", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: AlbumItemDialog.kt */
 public final class AlbumItemDialog extends MultiItemDialogFragment {
     public static final Companion Companion = new Companion(null);
     private final AlbumActionPresenter mPresenter = AlbumActionPresenter.getInstance();
 
+    @JvmStatic
     public static final AlbumItemDialog newInstance(Album album, URLSpan[] uRLSpanArr) {
         return Companion.newInstance(album, uRLSpanArr);
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J#\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\f\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\bH\u0007¢\u0006\u0002\u0010\n¨\u0006\u000b"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$Companion;", "", "()V", "newInstance", "Lcom/coolapk/market/view/album/AlbumItemDialog;", "album", "Lcom/coolapk/market/model/Album;", "spans", "", "Landroid/text/style/URLSpan;", "(Lcom/coolapk/market/model/Album;[Landroid/text/style/URLSpan;)Lcom/coolapk/market/view/album/AlbumItemDialog;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public static final class Companion {
         private Companion() {
@@ -49,6 +54,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
             this();
         }
 
+        @JvmStatic
         public final AlbumItemDialog newInstance(Album album, URLSpan[] uRLSpanArr) {
             Intrinsics.checkNotNullParameter(album, "album");
             Intrinsics.checkNotNullParameter(uRLSpanArr, "spans");
@@ -71,6 +77,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         updateDataList(new AlbumItemDialog$onActivityCreated$1(this));
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\b\u0004\u0018\u00002\u00020\u0001B\u0017\u0012\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\b\u0010\u0007\u001a\u00020\bH\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\t"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$CollectionRemoveActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "title", "", "album", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;Ljava/lang/String;Lcom/coolapk/market/model/Album;)V", "takeAction", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class CollectionRemoveActionItem extends ActionItem {
         private final Album album;
@@ -95,6 +102,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\b\u0004\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\b\u0010\u000b\u001a\u00020\fH\u0016R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\n¨\u0006\r"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$CollectionTop;", "Lcom/coolapk/market/view/base/ActionItem;", "mAdd", "", "album", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;ZLcom/coolapk/market/model/Album;)V", "getAlbum", "()Lcom/coolapk/market/model/Album;", "getMAdd", "()Z", "takeAction", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class CollectionTop extends ActionItem {
         private final Album album;
@@ -124,6 +132,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    /* access modifiers changed from: private */
     public final MultiActionItem buildMultiActionItem(Album album) {
         Ref.ObjectRef objectRef = new Ref.ObjectRef();
         objectRef.element = (T) requireArguments().getParcelableArrayList("urlspan");
@@ -135,10 +144,12 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         return new MultiActionItem(string, new AlbumItemDialog$buildMultiActionItem$1(this, album, objectRef));
     }
 
+    /* access modifiers changed from: private */
     public final MultiActionItem buildAdminActionItem(Album album) {
         return new MultiActionItem("管理", new AlbumItemDialog$buildAdminActionItem$1(this, album));
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\b\u0002\b\u0004\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\u0010\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eH\u0002J\b\u0010\u000f\u001a\u00020\fH\u0016R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\n¨\u0006\u0010"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$HeadlineActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "mAdd", "", "album", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;ZLcom/coolapk/market/model/Album;)V", "getAlbum", "()Lcom/coolapk/market/model/Album;", "getMAdd", "()Z", "onErrorEvent", "", "throwable", "", "takeAction", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class HeadlineActionItem extends ActionItem {
         private final Album album;
@@ -154,10 +165,6 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
             this.album = album2;
         }
 
-        public static final /* synthetic */ void access$onErrorEvent(HeadlineActionItem headlineActionItem, Throwable th) {
-            headlineActionItem.onErrorEvent(th);
-        }
-
         public final Album getAlbum() {
             return this.album;
         }
@@ -171,7 +178,8 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
             Observable.just(Boolean.valueOf(this.mAdd)).flatMap(new AlbumItemDialog$HeadlineActionItem$takeAction$1(this)).map(RxUtils.checkResultToData()).compose(RxUtils.applyIOSchedulers()).subscribe((Subscriber) new AlbumItemDialog$HeadlineActionItem$takeAction$2(this));
         }
 
-        private final void onErrorEvent(Throwable th) {
+        /* access modifiers changed from: private */
+        public final void onErrorEvent(Throwable th) {
             if ((th instanceof RuntimeException) && (th.getCause() instanceof ClientException)) {
                 ClientException clientException = (ClientException) th.getCause();
                 Intrinsics.checkNotNull(clientException);
@@ -184,6 +192,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\b\u0002\b\u0004\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\u0010\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eH\u0002J\b\u0010\u000f\u001a\u00020\fH\u0016R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\n¨\u0006\u0010"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$HomePageActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "mAdd", "", "album", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;ZLcom/coolapk/market/model/Album;)V", "getAlbum", "()Lcom/coolapk/market/model/Album;", "getMAdd", "()Z", "onErrorEvent", "", "throwable", "", "takeAction", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class HomePageActionItem extends ActionItem {
         private final Album album;
@@ -212,6 +221,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
             Observable.just(Boolean.valueOf(this.mAdd)).flatMap(new AlbumItemDialog$HomePageActionItem$takeAction$1(this)).map(RxUtils.checkResultToData()).compose(RxUtils.applyIOSchedulers()).subscribe((Subscriber) new AlbumItemDialog$HomePageActionItem$takeAction$2(this));
         }
 
+        /* access modifiers changed from: private */
         public final void onErrorEvent(Throwable th) {
             if ((th instanceof RuntimeException) && (th.getCause() instanceof ClientException)) {
                 ClientException clientException = (ClientException) th.getCause();
@@ -225,6 +235,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0003\n\u0002\b\u0002\b\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0010\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nH\u0002J\b\u0010\u000b\u001a\u00020\bH\u0016R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006¨\u0006\f"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$NoHomePageActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "album", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;Lcom/coolapk/market/model/Album;)V", "getAlbum", "()Lcom/coolapk/market/model/Album;", "onErrorEvent", "", "throwable", "", "takeAction", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class NoHomePageActionItem extends ActionItem {
         private final Album album;
@@ -247,6 +258,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
             this.this$0.mPresenter.removeFromHeadlineV8(this.album).map(RxUtils.checkResultToData()).compose(RxUtils.applyIOSchedulers()).subscribe((Subscriber<? super R>) new AlbumItemDialog$NoHomePageActionItem$takeAction$1(this));
         }
 
+        /* access modifiers changed from: private */
         public final void onErrorEvent(Throwable th) {
             if ((th instanceof RuntimeException) && (th.getCause() instanceof ClientException)) {
                 ClientException clientException = (ClientException) th.getCause();
@@ -260,6 +272,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\b\u0004\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\b\u0010\b\u001a\u00020\tH\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0002\u0010\u0007¨\u0006\n"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$PrivateActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "isSet", "", "album", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;ZLcom/coolapk/market/model/Album;)V", "()Z", "takeAction", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class PrivateActionItem extends ActionItem {
         private final Album album;
@@ -297,6 +310,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\b\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\b\u0010\u0005\u001a\u00020\u0006H\u0016R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0007"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$StatusActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "album", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;Lcom/coolapk/market/model/Album;)V", "takeAction", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class StatusActionItem extends ActionItem {
         private final Album album;
@@ -319,6 +333,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\b\u0004\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\b\u0010\b\u001a\u00020\tH\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0002\u0010\u0007¨\u0006\n"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$FoldedActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "isSet", "", "album", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;ZLcom/coolapk/market/model/Album;)V", "()Z", "takeAction", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class FoldedActionItem extends ActionItem {
         private final Album album;
@@ -356,6 +371,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\b\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\b\u0010\n\u001a\u00020\u000bH\u0016R\u000e\u0010\u0002\u001a\u00020\u0003X\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0005\u001a\u00020\u0006X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0007\"\u0004\b\b\u0010\t¨\u0006\f"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$SoftFoldedActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "album", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;Lcom/coolapk/market/model/Album;)V", "isSet", "", "()Z", "setSet", "(Z)V", "takeAction", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class SoftFoldedActionItem extends ActionItem {
         private final Album album;
@@ -395,6 +411,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\b\u0004\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\b\u0010\b\u001a\u00020\tH\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0002\u0010\u0007¨\u0006\n"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$BannedActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "isSet", "", "album", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;ZLcom/coolapk/market/model/Album;)V", "()Z", "takeAction", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class BannedActionItem extends ActionItem {
         private final Album album;
@@ -432,6 +449,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\b\u0004\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\b\u0010\n\u001a\u00020\u000bH\u0016R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0002\u0010\u0007R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\t¨\u0006\f"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$EditorChoiceActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "isRecommended", "", "mFeed", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;ZLcom/coolapk/market/model/Album;)V", "()Z", "getMFeed", "()Lcom/coolapk/market/model/Album;", "takeAction", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class EditorChoiceActionItem extends ActionItem {
         private final boolean isRecommended;
@@ -461,6 +479,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\b\u0004\u0018\u00002\u00020\u0001B\u0017\u0012\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\b\u0010\u0007\u001a\u00020\bH\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\t"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$DeleteActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "title", "", "feed", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;Ljava/lang/String;Lcom/coolapk/market/model/Album;)V", "takeAction", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     private final class DeleteActionItem extends ActionItem {
         private final Album feed;
@@ -477,7 +496,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
 
         @Override // com.coolapk.market.view.base.ActionItem
         public void takeAction() {
-            String string = this.this$0.getString(2131886722);
+            String string = this.this$0.getString(2131886784);
             Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_dialog_delete_title)");
             ConfirmDeleteDialog newInstance = ConfirmDeleteDialog.newInstance(string, "删除 " + this.feed.getUserName() + " 的应用集： " + this.feed.getIntroduce());
             newInstance.setDeleteTarget(this.feed);
@@ -487,6 +506,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\b\u0004\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J\b\u0010\u000b\u001a\u00020\fH\u0016R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\n¨\u0006\r"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$RecommendActionItem;", "Lcom/coolapk/market/view/base/ActionItem;", "mAdd", "", "mFeed", "Lcom/coolapk/market/model/Album;", "(Lcom/coolapk/market/view/album/AlbumItemDialog;ZLcom/coolapk/market/model/Album;)V", "getMAdd", "()Z", "getMFeed", "()Lcom/coolapk/market/model/Album;", "takeAction", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public final class RecommendActionItem extends ActionItem {
         private final boolean mAdd;
@@ -516,6 +536,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \u00172\u00020\u0001:\u0001\u0017B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u0013\u001a\u00020\u00142\b\u0010\u0015\u001a\u0004\u0018\u00010\u0016H\u0016R\u000e\u0010\u0003\u001a\u00020\u0004X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\bX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\n\u001a\u0004\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\f\u001a\u0004\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0004X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0004X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0011\u001a\u0004\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0012\u001a\u0004\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000¨\u0006\u0018"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$InfoDialogFragment;", "Lcom/coolapk/market/widget/MinimumWidthDialog;", "()V", "blockStatus", "", "blockStatusText", "", "entity", "Lcom/coolapk/market/model/Album;", "isHeadline", "isHeadlineV8", "messageStatus", "messageStatusText", "modelInfo", "recommend", "status", "statusText", "uid", "url", "onCreateDialog", "Landroid/app/Dialog;", "savedInstanceState", "Landroid/os/Bundle;", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AlbumItemDialog.kt */
     public static final class InfoDialogFragment extends MinimumWidthDialog {
         public static final Companion Companion = new Companion(null);
@@ -557,6 +578,7 @@ public final class AlbumItemDialog extends MultiItemDialogFragment {
             return create;
         }
 
+        @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0010\u0010\u0003\u001a\u00020\u00042\b\u0010\u0005\u001a\u0004\u0018\u00010\u0006¨\u0006\u0007"}, d2 = {"Lcom/coolapk/market/view/album/AlbumItemDialog$InfoDialogFragment$Companion;", "", "()V", "newInstance", "Lcom/coolapk/market/view/album/AlbumItemDialog$InfoDialogFragment;", "entity", "Lcom/coolapk/market/model/Album;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
         /* compiled from: AlbumItemDialog.kt */
         public static final class Companion {
             private Companion() {

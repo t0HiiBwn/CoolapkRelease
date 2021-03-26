@@ -114,7 +114,7 @@ public final class VideoFullScreenActivity extends BaseActivity implements Video
     protected void onCreate(Bundle bundle) {
         ThemeUtils.setSystemBarDrawFlags(this);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131559292);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131559302);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…layout.video_full_screen)");
         this.binding = (VideoFullScreenBinding) contentView;
         setSlidrEnable(false);

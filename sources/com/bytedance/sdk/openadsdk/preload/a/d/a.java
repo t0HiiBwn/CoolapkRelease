@@ -22,16 +22,14 @@ public class a implements Closeable {
     private long i;
     private int j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int[] f1337l;
+    private int[] l;
     private int m;
     private String[] n;
     private int[] o;
 
     public a(Reader reader) {
         int[] iArr = new int[32];
-        this.f1337l = iArr;
+        this.l = iArr;
         this.m = 0;
         this.m = 0 + 1;
         iArr[0] = 6;
@@ -159,7 +157,7 @@ public class a implements Closeable {
 
     int r() throws IOException {
         int b2;
-        int[] iArr = this.f1337l;
+        int[] iArr = this.l;
         int i2 = this.m;
         int i3 = iArr[i2 - 1];
         if (i3 == 1) {
@@ -231,7 +229,7 @@ public class a implements Closeable {
             if (this.c) {
                 z();
             }
-            this.f1337l[this.m - 1] = 7;
+            this.l[this.m - 1] = 7;
         } else if (i3 == 7) {
             if (b(false) == -1) {
                 this.a = 17;
@@ -859,7 +857,7 @@ public class a implements Closeable {
     @Override // java.io.Closeable, java.lang.AutoCloseable
     public void close() throws IOException {
         this.a = 0;
-        this.f1337l[0] = 8;
+        this.l[0] = 8;
         this.m = 1;
         this.b.close();
     }
@@ -910,14 +908,14 @@ public class a implements Closeable {
 
     private void a(int i2) {
         int i3 = this.m;
-        int[] iArr = this.f1337l;
+        int[] iArr = this.l;
         if (i3 == iArr.length) {
             int i4 = i3 * 2;
-            this.f1337l = Arrays.copyOf(iArr, i4);
+            this.l = Arrays.copyOf(iArr, i4);
             this.o = Arrays.copyOf(this.o, i4);
             this.n = (String[]) Arrays.copyOf(this.n, i4);
         }
-        int[] iArr2 = this.f1337l;
+        int[] iArr2 = this.l;
         int i5 = this.m;
         this.m = i5 + 1;
         iArr2[i5] = i2;
@@ -1086,7 +1084,7 @@ public class a implements Closeable {
         sb.append('$');
         int i2 = this.m;
         for (int i3 = 0; i3 < i2; i3++) {
-            int i4 = this.f1337l[i3];
+            int i4 = this.l[i3];
             if (i4 == 1 || i4 == 2) {
                 sb.append('[');
                 sb.append(this.o[i3]);

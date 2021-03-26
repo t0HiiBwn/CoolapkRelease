@@ -4,6 +4,7 @@ public class DataConst {
 
     public interface Keys {
         public static final String SESSION_ADMIN_TYPE = "adminType";
+        public static final String SESSION_PUSH_ID = "pushId";
         public static final String SESSION_TOKEN = "token";
         public static final String SESSION_UID = "uid";
         public static final String SESSION_USERNAME = "username";

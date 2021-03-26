@@ -7,6 +7,9 @@ import com.qq.e.ads.LiteAbstractAD;
 import com.qq.e.ads.rewardvideo.ServerSideVerificationOptions;
 import com.qq.e.comm.adevent.ADEvent;
 import com.qq.e.comm.adevent.ADListener;
+import com.qq.e.comm.compliance.ApkDownloadComplianceInterface;
+import com.qq.e.comm.compliance.DownloadConfirmCallBack;
+import com.qq.e.comm.compliance.DownloadConfirmListener;
 import com.qq.e.comm.managers.GDTADManager;
 import com.qq.e.comm.pi.POFactory;
 import com.qq.e.comm.pi.RVADI2;
@@ -15,7 +18,7 @@ import com.qq.e.comm.util.GDTLogger;
 import com.qq.e.comm.util.VideoAdValidity;
 import java.util.HashMap;
 
-public class ExpressRewardVideoAD extends LiteAbstractAD<RVADI2> {
+public class ExpressRewardVideoAD extends LiteAbstractAD<RVADI2> implements ApkDownloadComplianceInterface, DownloadConfirmListener {
     public static final int EVENT_AD_LOAD = 100;
     public static final int EVENT_CLICK = 105;
     public static final int EVENT_CLOSE = 106;
@@ -30,6 +33,7 @@ public class ExpressRewardVideoAD extends LiteAbstractAD<RVADI2> {
     private boolean c = true;
     private ServerSideVerificationOptions d;
     private ExpressRewardVideoAdListener e;
+    private DownloadConfirmListener f;
 
     private static class AdListenerAdapter implements ADListener {
         private ExpressRewardVideoAdListener a;
@@ -151,6 +155,15 @@ public class ExpressRewardVideoAD extends LiteAbstractAD<RVADI2> {
         }
     }
 
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public String getApkInfoUrl() {
+        RVADI2 rvadi2 = this.a;
+        if (rvadi2 != null) {
+            return rvadi2.getApkInfoUrl();
+        }
+        return null;
+    }
+
     public String getECPMLevel() {
         RVADI2 rvadi2 = this.a;
         if (rvadi2 != null) {
@@ -193,6 +206,23 @@ public class ExpressRewardVideoAD extends LiteAbstractAD<RVADI2> {
             rvadi2.loadAD();
         } else {
             this.b = true;
+        }
+    }
+
+    @Override // com.qq.e.comm.compliance.DownloadConfirmListener
+    public void onDownloadConfirm(Activity activity, int i, String str, DownloadConfirmCallBack downloadConfirmCallBack) {
+        DownloadConfirmListener downloadConfirmListener = this.f;
+        if (downloadConfirmListener != null) {
+            downloadConfirmListener.onDownloadConfirm(activity, i, str, downloadConfirmCallBack);
+        }
+    }
+
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public void setDownloadConfirmListener(DownloadConfirmListener downloadConfirmListener) {
+        this.f = downloadConfirmListener;
+        RVADI2 rvadi2 = this.a;
+        if (rvadi2 != null) {
+            rvadi2.setDownloadConfirmListener(this);
         }
     }
 

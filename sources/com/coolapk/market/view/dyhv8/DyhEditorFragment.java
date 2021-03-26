@@ -70,9 +70,9 @@ public final class DyhEditorFragment extends EntityListFragment {
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         this.component = new FragmentBindingComponent(this);
-        setEmptyData(getString(2131886765), 0);
+        setEmptyData(getString(2131886827), 0);
         BaseMultiTypeAdapter adapter$presentation_coolapkAppRelease = getAdapter$presentation_coolapkAppRelease();
-        SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558680).suitedMethod(DyhEditorFragment$onActivityCreated$1.INSTANCE).constructor(new DyhEditorFragment$onActivityCreated$2(this));
+        SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558686).suitedMethod(DyhEditorFragment$onActivityCreated$1.INSTANCE).constructor(new DyhEditorFragment$onActivityCreated$2(this));
         Integer num = getItemViewTypeByEntityType().get("dyh");
         Intrinsics.checkNotNull(num);
         Intrinsics.checkNotNullExpressionValue(num, "itemViewTypeByEntityType…yUtils.ENTITY_TYPE_DYH]!!");
@@ -173,7 +173,7 @@ public final class DyhEditorFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment
     public boolean onRequestResponse(boolean z, List<? extends Entity> list) {
         if (z && CollectionUtils.isEmpty(list)) {
-            setEmptyData(getString(2131886765), 0);
+            setEmptyData(getString(2131886827), 0);
         }
         return super.onRequestResponse(z, list);
     }

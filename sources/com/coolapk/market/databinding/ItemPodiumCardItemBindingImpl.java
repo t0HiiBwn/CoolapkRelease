@@ -32,9 +32,9 @@ public class ItemPodiumCardItemBindingImpl extends ItemPodiumCardItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362100, 8);
-        sparseIntArray.put(2131363034, 9);
-        sparseIntArray.put(2131363283, 10);
+        sparseIntArray.put(2131362103, 8);
+        sparseIntArray.put(2131363048, 9);
+        sparseIntArray.put(2131363297, 10);
     }
 
     public ItemPodiumCardItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -78,13 +78,13 @@ public class ItemPodiumCardItemBindingImpl extends ItemPodiumCardItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (189 == i) {
+        if (190 == i) {
             setLogo((String) obj);
         } else if (27 == i) {
             setApp((ServiceApp) obj);
-        } else if (233 == i) {
+        } else if (234 == i) {
             setScore((String) obj);
-        } else if (278 != i) {
+        } else if (279 != i) {
             return false;
         } else {
             setTitle((String) obj);
@@ -98,7 +98,7 @@ public class ItemPodiumCardItemBindingImpl extends ItemPodiumCardItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(189);
+        notifyPropertyChanged(190);
         super.requestRebind();
     }
 
@@ -118,7 +118,7 @@ public class ItemPodiumCardItemBindingImpl extends ItemPodiumCardItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(233);
+        notifyPropertyChanged(234);
         super.requestRebind();
     }
 
@@ -128,7 +128,7 @@ public class ItemPodiumCardItemBindingImpl extends ItemPodiumCardItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 8;
         }
-        notifyPropertyChanged(278);
+        notifyPropertyChanged(279);
         super.requestRebind();
     }
 
@@ -191,7 +191,7 @@ public class ItemPodiumCardItemBindingImpl extends ItemPodiumCardItemBinding {
                     i5 = i3;
                     str2 = str5;
                     str = str4;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str3, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str3, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
                 } else {
                     str2 = str5;
                     i5 = i3;

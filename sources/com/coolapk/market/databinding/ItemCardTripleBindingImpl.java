@@ -21,10 +21,10 @@ public class ItemCardTripleBindingImpl extends ItemCardTripleBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(8);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(3, new String[]{"item_card_triple_item", "item_card_triple_item", "item_card_triple_item"}, new int[]{4, 5, 6}, new int[]{2131558635, 2131558635, 2131558635});
+        includedLayouts.setIncludes(3, new String[]{"item_card_triple_item", "item_card_triple_item", "item_card_triple_item"}, new int[]{4, 5, 6}, new int[]{2131558641, 2131558641, 2131558641});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362200, 7);
+        sparseIntArray.put(2131362205, 7);
     }
 
     public ItemCardTripleBindingImpl(DataBindingComponent dataBindingComponent, View view) {

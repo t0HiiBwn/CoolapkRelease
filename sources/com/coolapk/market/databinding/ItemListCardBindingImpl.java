@@ -21,7 +21,7 @@ public class ItemListCardBindingImpl extends ItemListCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362865, 1);
+        sparseIntArray.put(2131362876, 1);
     }
 
     public ItemListCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -58,7 +58,7 @@ public class ItemListCardBindingImpl extends ItemListCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (278 != i) {
+        if (279 != i) {
             return false;
         }
         setTitle((String) obj);

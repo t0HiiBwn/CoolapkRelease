@@ -1,40 +1,28 @@
 package com.xiaomi.push.service;
 
-import android.content.Context;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.ft;
-import com.xiaomi.push.hy;
+import com.xiaomi.a.a.a.c;
 import com.xiaomi.push.service.XMPushService;
+import com.xiaomi.push.service.q;
 
-final class s extends XMPushService.i {
-    final /* synthetic */ hy a;
-
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ XMPushService f1038a;
+class s extends XMPushService.i {
+    final /* synthetic */ q.b.c a;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    s(int i, XMPushService xMPushService, hy hyVar) {
+    s(q.b.c cVar, int i) {
         super(i);
-        this.f1038a = xMPushService;
-        this.a = hyVar;
+        this.a = cVar;
     }
 
     @Override // com.xiaomi.push.service.XMPushService.i
-    /* renamed from: a */
-    public String mo344a() {
-        return "send ack message for obsleted message.";
-    }
-
-    @Override // com.xiaomi.push.service.XMPushService.i
-    /* renamed from: a  reason: collision with other method in class */
-    public void mo669a() {
-        try {
-            hy a2 = p.a((Context) this.f1038a, this.a);
-            a2.m456a().a("message_obsleted", "1");
-            x.a(this.f1038a, a2);
-        } catch (ft e) {
-            b.a(e);
-            this.f1038a.a(10, e);
+    public void a() {
+        if (this.a.b == this.a.a.o) {
+            c.b("clean peer, chid = " + this.a.a.h);
+            this.a.a.o = null;
         }
+    }
+
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public String b() {
+        return "clear peer job";
     }
 }

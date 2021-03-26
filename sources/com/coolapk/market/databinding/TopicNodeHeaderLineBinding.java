@@ -29,7 +29,7 @@ public abstract class TopicNodeHeaderLineBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicNodeHeaderLineBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (TopicNodeHeaderLineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559203, viewGroup, z, obj);
+        return (TopicNodeHeaderLineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559211, viewGroup, z, obj);
     }
 
     public static TopicNodeHeaderLineBinding inflate(LayoutInflater layoutInflater) {
@@ -38,7 +38,7 @@ public abstract class TopicNodeHeaderLineBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicNodeHeaderLineBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (TopicNodeHeaderLineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559203, null, false, obj);
+        return (TopicNodeHeaderLineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559211, null, false, obj);
     }
 
     public static TopicNodeHeaderLineBinding bind(View view) {
@@ -47,6 +47,6 @@ public abstract class TopicNodeHeaderLineBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicNodeHeaderLineBinding bind(View view, Object obj) {
-        return (TopicNodeHeaderLineBinding) bind(obj, view, 2131559203);
+        return (TopicNodeHeaderLineBinding) bind(obj, view, 2131559211);
     }
 }

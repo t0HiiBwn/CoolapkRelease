@@ -2,11 +2,11 @@ package kotlinx.coroutines.internal;
 
 import java.util.ArrayDeque;
 import java.util.Iterator;
+import java.util.Objects;
 import kotlin.Pair;
 import kotlin.Result;
 import kotlin.ResultKt;
 import kotlin.TuplesKt;
-import kotlin.TypeCastException;
 import kotlin.coroutines.Continuation;
 import kotlin.coroutines.jvm.internal.CoroutineStackFrame;
 import kotlin.jvm.internal.InlineMarker;
@@ -39,23 +39,23 @@ public final class StackTraceRecoveryKt {
         String str4 = "kotlin.coroutines.jvm.internal.BaseContinuationImpl";
         try {
             Result.Companion companion = Result.Companion;
-            str = Result.m687constructorimpl(Class.forName(str4).getCanonicalName());
+            str = Result.m85constructorimpl(Class.forName(str4).getCanonicalName());
         } catch (Throwable th) {
             Result.Companion companion2 = Result.Companion;
-            str = Result.m687constructorimpl(ResultKt.createFailure(th));
+            str = Result.m85constructorimpl(ResultKt.createFailure(th));
         }
-        if (Result.m690exceptionOrNullimpl(str) == null) {
+        if (Result.m88exceptionOrNullimpl(str) == null) {
             str4 = str;
         }
         baseContinuationImplClassName = str4;
         try {
             Result.Companion companion3 = Result.Companion;
-            str2 = Result.m687constructorimpl(Class.forName(str3).getCanonicalName());
+            str2 = Result.m85constructorimpl(Class.forName(str3).getCanonicalName());
         } catch (Throwable th2) {
             Result.Companion companion4 = Result.Companion;
-            str2 = Result.m687constructorimpl(ResultKt.createFailure(th2));
+            str2 = Result.m85constructorimpl(ResultKt.createFailure(th2));
         }
-        if (Result.m690exceptionOrNullimpl(str2) == null) {
+        if (Result.m88exceptionOrNullimpl(str2) == null) {
             str3 = str2;
         }
         stackTraceRecoveryClassName = str3;
@@ -116,11 +116,9 @@ public final class StackTraceRecoveryKt {
         int i = 0;
         if (frameIndex == -1) {
             Object[] array = arrayDeque.toArray(new StackTraceElement[0]);
-            if (array != null) {
-                e2.setStackTrace((StackTraceElement[]) array);
-                return e2;
-            }
-            throw new TypeCastException("null cannot be cast to non-null type kotlin.Array<T>");
+            Objects.requireNonNull(array, "null cannot be cast to non-null type kotlin.Array<T>");
+            e2.setStackTrace((StackTraceElement[]) array);
+            return e2;
         }
         StackTraceElement[] stackTraceElementArr = new StackTraceElement[(arrayDeque.size() + frameIndex)];
         for (int i2 = 0; i2 < frameIndex; i2++) {

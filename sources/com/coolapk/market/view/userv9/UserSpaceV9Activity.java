@@ -142,7 +142,7 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
         UserSpaceV9Activity userSpaceV9Activity = this;
         ThemeUtils.setSystemBarDrawFlags(userSpaceV9Activity);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(userSpaceV9Activity, 2131559285, new ContextBindingComponent(this));
+        ViewDataBinding contentView = DataBindingUtil.setContentView(userSpaceV9Activity, 2131559295, new ContextBindingComponent(this));
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…user_space_v9, component)");
         UserSpaceV9Binding userSpaceV9Binding = (UserSpaceV9Binding) contentView;
         this.binding = userSpaceV9Binding;
@@ -212,7 +212,7 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
         if (userSpaceV9Binding3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
-        userSpaceV9Binding3.toolbar.setNavigationIcon(2131231156);
+        userSpaceV9Binding3.toolbar.setNavigationIcon(2131231166);
         UserSpaceV9Binding userSpaceV9Binding4 = this.binding;
         if (userSpaceV9Binding4 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -261,7 +261,7 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
         DataManager instance = DataManager.getInstance();
         Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
         LoginSession loginSession = instance.getLoginSession();
-        MenuItem findItem = menu.findItem(2131361857);
+        MenuItem findItem = menu.findItem(2131361858);
         if (findItem != null) {
             Intrinsics.checkNotNullExpressionValue(loginSession, "session");
             if (loginSession.isAdmin()) {
@@ -284,25 +284,25 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
         Menu menu = toolbar.getMenu();
         if (menu != null) {
             boolean z = !this.viewModel.isLoginUser();
-            MenuItem findItem = menu.findItem(2131361925);
+            MenuItem findItem = menu.findItem(2131361926);
             boolean z2 = false;
             if (findItem != null) {
                 findItem.setVisible(false);
             }
-            MenuItem findItem2 = menu.findItem(2131361874);
+            MenuItem findItem2 = menu.findItem(2131361875);
             if (findItem2 != null) {
                 findItem2.setVisible(z);
                 findItem2.setTitle(this.viewModel.isBlackList() ? "取消拉黑" : "加入黑名单");
             }
-            MenuItem findItem3 = menu.findItem(2131361957);
+            MenuItem findItem3 = menu.findItem(2131361958);
             if (findItem3 != null) {
                 findItem3.setVisible(z);
             }
-            MenuItem findItem4 = menu.findItem(2131361968);
+            MenuItem findItem4 = menu.findItem(2131361969);
             if (findItem4 != null) {
                 findItem4.setVisible(this.viewModel.getUserProfile() != null);
             }
-            MenuItem findItem5 = menu.findItem(2131361984);
+            MenuItem findItem5 = menu.findItem(2131361985);
             if (findItem5 != null) {
                 UserProfile userProfile = this.viewModel.getUserProfile();
                 if (userProfile != null) {
@@ -330,25 +330,25 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
         Intrinsics.checkNotNullParameter(menuItem, "item");
         UserProfile userProfile = this.viewModel.getUserProfile();
         switch (menuItem.getItemId()) {
-            case 2131361857:
+            case 2131361858:
                 String stringExtra = getIntent().getStringExtra("key_uid");
                 Intrinsics.checkNotNull(stringExtra);
                 Intrinsics.checkNotNullExpressionValue(stringExtra, "intent.getStringExtra(KEY_USER_ID)!!");
                 ActionManager.startWebViewActivity(getActivity(), UriUtils.getUserManageUrl(stringExtra));
                 return true;
-            case 2131361874:
+            case 2131361875:
                 if (userProfile == null) {
                     return false;
                 }
                 ActionManager.startBlackListSettingActivity(getActivity(), userProfile);
                 return true;
-            case 2131361925:
+            case 2131361926:
                 if (userProfile == null) {
                     return false;
                 }
                 ActionManager.startChattingActivity(getActivity(), userProfile.getUid(), userProfile.getUserName());
                 return true;
-            case 2131361957:
+            case 2131361958:
                 if (userProfile == null) {
                     return false;
                 }
@@ -356,19 +356,19 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
                 Intrinsics.checkNotNullExpressionValue(uid, "userProfile.uid");
                 ActionManager.startWebViewActivity(getActivity(), UriUtils.buildUserReportUrl(uid));
                 return true;
-            case 2131361960:
+            case 2131361961:
                 if (userProfile == null) {
                     return false;
                 }
                 ActionManager.startSceneSearchActivity(this, "user", userProfile.getUid() + "|" + userProfile.getGender());
                 return true;
-            case 2131361968:
+            case 2131361969:
                 if (userProfile == null) {
                     return false;
                 }
                 ActionManager.shareText(getActivity(), userProfile);
                 return true;
-            case 2131361984:
+            case 2131361985:
                 if (userProfile == null) {
                     return false;
                 }
@@ -400,11 +400,11 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
         UserProfile userProfile = this.viewModel.getUserProfile();
         if (userProfile != null) {
             switch (view.getId()) {
-                case 2131361981:
-                case 2131363590:
+                case 2131361982:
+                case 2131363612:
                     onActionButtonClick();
                     return;
-                case 2131362447:
+                case 2131362454:
                     DataManager instance = DataManager.getInstance();
                     Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
                     LoginSession loginSession = instance.getLoginSession();
@@ -416,10 +416,10 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
                         ActionManager.startUserProfileActivity(getActivity(), "编辑资料");
                         return;
                     }
-                case 2131362933:
+                case 2131362945:
                     ActionManager.startChattingActivity(getActivity(), userProfile.getUid(), userProfile.getUserName());
                     return;
-                case 2131363159:
+                case 2131363173:
                     if (this.viewModel.isLoginUser()) {
                         BaseActivity activity = getActivity();
                         Intrinsics.checkNotNullExpressionValue(activity, "activity");
@@ -428,8 +428,8 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
                     }
                     ActionManager.startChattingActivity(getActivity(), userProfile.getUid(), userProfile.getUserName());
                     return;
-                case 2131363599:
-                case 2131363877:
+                case 2131363621:
+                case 2131363900:
                     String userAvatar = this.viewModel.getUserAvatar();
                     if (!TextUtils.isEmpty(userAvatar)) {
                         ActionManager.startPhotoViewActivity(view, StringsKt.replace$default(StringsKt.replace$default(userAvatar, "_middle", "_big", false, 4, (Object) null), "_small", "_big", false, 4, (Object) null), userAvatar);
@@ -531,7 +531,7 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
             if (userSpaceV9Binding2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");
             }
-            userSpaceV9Binding2.qrcodeView.setImageResource(2131231502);
+            userSpaceV9Binding2.qrcodeView.setImageResource(2131231513);
             UserSpaceV9Binding userSpaceV9Binding3 = this.binding;
             if (userSpaceV9Binding3 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -544,7 +544,7 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
             if (userSpaceV9Binding4 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");
             }
-            userSpaceV9Binding4.qrcodeView.setImageResource(2131231276);
+            userSpaceV9Binding4.qrcodeView.setImageResource(2131231287);
             UserSpaceV9Binding userSpaceV9Binding5 = this.binding;
             if (userSpaceV9Binding5 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -755,8 +755,8 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
         textViewArr[1] = userSpaceV9Binding4.userToolbar.toolbarActionView;
         for (int i = 0; i < 2; i++) {
             TextView textView3 = textViewArr[i];
-            if (this.viewModel.getFollow()) {
-                textView3.setText(textView3.getContext().getString(this.viewModel.getMutualConcern() ? 2131886139 : 2131886114));
+            if (this.viewModel.isBlackList()) {
+                textView3.setText(textView3.getContext().getString(2131886112));
                 GradientDrawable gradientDrawable = new GradientDrawable();
                 gradientDrawable.setShape(0);
                 gradientDrawable.setStroke(NumberExtendsKt.getDp((Number) 1), -1);
@@ -765,8 +765,8 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
                 gradientDrawable.setCornerRadius(((float) textView3.getLayoutParams().height) / 2.0f);
                 Unit unit = Unit.INSTANCE;
                 textView3.setBackground(gradientDrawable);
-            } else if (this.viewModel.isBlackList()) {
-                textView3.setText(textView3.getContext().getString(2131886112));
+            } else if (this.viewModel.getFollow()) {
+                textView3.setText(textView3.getContext().getString(this.viewModel.getMutualConcern() ? 2131886139 : 2131886114));
                 GradientDrawable gradientDrawable2 = new GradientDrawable();
                 gradientDrawable2.setShape(0);
                 gradientDrawable2.setStroke(NumberExtendsKt.getDp((Number) 1), -1);
@@ -794,7 +794,7 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
             if (userSpaceV9Binding == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");
             }
-            userSpaceV9Binding.backgroundView.setImageResource(2131232034);
+            userSpaceV9Binding.backgroundView.setImageResource(2131232052);
             return;
         }
         GlideContextImageLoader contextImageLoader = AppHolder.getContextImageLoader();
@@ -907,7 +907,7 @@ public final class UserSpaceV9Activity extends BaseActivity implements UserSpace
                 Intrinsics.checkNotNull(userProfile);
                 userHeaderInfoViewPart.setFollowState(userProfile);
             }
-        } else if (i == 163) {
+        } else if (i == 164) {
             setActionViewState();
             invalidateOptionsMenu();
         }

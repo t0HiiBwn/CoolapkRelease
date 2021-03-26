@@ -57,7 +57,7 @@ public final class BadBadRatingBar extends AppCompatRatingBar {
 
     public final void setHeartShapeProgressBar(int i) {
         this.sampleSize = i;
-        Drawable drawable = ResourceUtils.getDrawable(getContext(), 2131231343);
+        Drawable drawable = ResourceUtils.getDrawable(getContext(), 2131231354);
         drawable.setBounds(0, 0, i, i);
         BitmapDrawable bitmapDrawable = new BitmapDrawable(getResources(), BitmapUtil.drawableToBitmap(drawable));
         LayerDrawable layerDrawable = new LayerDrawable(new BitmapDrawable[]{bitmapDrawable, bitmapDrawable, bitmapDrawable});
@@ -77,9 +77,9 @@ public final class BadBadRatingBar extends AppCompatRatingBar {
 
     private final Drawable createRatingBarProgressDrawable(Context context, int i, boolean z) {
         LayerDrawable layerDrawable;
-        BitmapDrawable bitmapDrawable = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(BitmapFactory.decodeResource(context.getResources(), 2131231567), i, i, true));
+        BitmapDrawable bitmapDrawable = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(BitmapFactory.decodeResource(context.getResources(), 2131231578), i, i, true));
         if (z) {
-            BitmapDrawable bitmapDrawable2 = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(BitmapFactory.decodeResource(context.getResources(), 2131231573), i, i, true));
+            BitmapDrawable bitmapDrawable2 = new BitmapDrawable(context.getResources(), Bitmap.createScaledBitmap(BitmapFactory.decodeResource(context.getResources(), 2131231584), i, i, true));
             layerDrawable = new LayerDrawable(new BitmapDrawable[]{bitmapDrawable2, bitmapDrawable2, bitmapDrawable});
         } else {
             layerDrawable = new LayerDrawable(new BitmapDrawable[]{bitmapDrawable, bitmapDrawable, bitmapDrawable});

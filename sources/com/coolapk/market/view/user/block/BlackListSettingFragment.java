@@ -166,7 +166,7 @@ public class BlackListSettingFragment extends LocalDataFragment<HolderItem> {
 
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment
     public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558624, viewGroup, false);
+        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558629, viewGroup, false);
         if (i == 123) {
             return new BlackListViewHolder(inflate, null) {
                 /* class com.coolapk.market.view.user.block.BlackListSettingFragment.AnonymousClass3 */
@@ -347,11 +347,11 @@ public class BlackListSettingFragment extends LocalDataFragment<HolderItem> {
 
     @Override // com.coolapk.market.app.InitBehavior
     public void initData() {
-        getDataList().add(HolderItem.newBuilder().entityType("black_list").string(getString(2131887062)).value("加入黑名单后，你不会再看到TA的任何动态，TA也不能再关注你或给你发评论、消息以及@通知，但TA可以看到你的动态。").build());
+        getDataList().add(HolderItem.newBuilder().entityType("black_list").string(getString(2131887124)).value("加入黑名单后，你不会再看到TA的任何动态，TA也不能再关注你或给你发评论、消息以及@通知，但TA可以看到你的动态。").build());
     }
 
     private abstract class BlackListViewHolder extends GenericBindHolder<ItemBlackListBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558624;
+        public static final int LAYOUT_ID = 2131558629;
 
         public BlackListViewHolder(View view, ItemActionHandler itemActionHandler) {
             super(view, itemActionHandler);

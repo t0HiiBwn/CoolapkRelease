@@ -80,7 +80,7 @@ public abstract class CreateFunThingsBinding extends ViewDataBinding {
 
     @Deprecated
     public static CreateFunThingsBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (CreateFunThingsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558490, viewGroup, z, obj);
+        return (CreateFunThingsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558491, viewGroup, z, obj);
     }
 
     public static CreateFunThingsBinding inflate(LayoutInflater layoutInflater) {
@@ -89,7 +89,7 @@ public abstract class CreateFunThingsBinding extends ViewDataBinding {
 
     @Deprecated
     public static CreateFunThingsBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (CreateFunThingsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558490, null, false, obj);
+        return (CreateFunThingsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558491, null, false, obj);
     }
 
     public static CreateFunThingsBinding bind(View view) {
@@ -98,6 +98,6 @@ public abstract class CreateFunThingsBinding extends ViewDataBinding {
 
     @Deprecated
     public static CreateFunThingsBinding bind(View view, Object obj) {
-        return (CreateFunThingsBinding) bind(obj, view, 2131558490);
+        return (CreateFunThingsBinding) bind(obj, view, 2131558491);
     }
 }

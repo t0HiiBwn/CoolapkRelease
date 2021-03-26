@@ -1023,13 +1023,13 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: max */
-    public static final Double m1910max(Sequence<Double> sequence) {
+    public static final Double m1308max(Sequence<Double> sequence) {
         Intrinsics.checkNotNullParameter(sequence, "$this$max");
         return SequencesKt.maxOrNull((Sequence<? extends Double>) sequence);
     }
 
     /* renamed from: max */
-    public static final Float m1911max(Sequence<Float> sequence) {
+    public static final Float m1309max(Sequence<Float> sequence) {
         Intrinsics.checkNotNullParameter(sequence, "$this$max");
         return SequencesKt.maxOrNull((Sequence<? extends Float>) sequence);
     }
@@ -1087,7 +1087,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: maxOf */
-    private static final <T> float m1912maxOf(Sequence<? extends T> sequence, Function1<? super T, Float> function1) {
+    private static final <T> float m1310maxOf(Sequence<? extends T> sequence, Function1<? super T, Float> function1) {
         Iterator<? extends T> it2 = sequence.iterator();
         if (it2.hasNext()) {
             float floatValue = function1.invoke((Object) it2.next()).floatValue();
@@ -1106,7 +1106,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     /* JADX WARN: Type inference failed for: r0v10, types: [java.lang.Comparable] */
     /* JADX WARNING: Unknown variable types count: 1 */
     /* renamed from: maxOf */
-    private static final <T, R extends Comparable<? super R>> R m1913maxOf(Sequence<? extends T> sequence, Function1<? super T, ? extends R> function1) {
+    private static final <T, R extends Comparable<? super R>> R m1311maxOf(Sequence<? extends T> sequence, Function1<? super T, ? extends R> function1) {
         Iterator<? extends T> it2 = sequence.iterator();
         if (it2.hasNext()) {
             R r = (R) ((Comparable) function1.invoke((Object) it2.next()));
@@ -1122,7 +1122,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: maxOfOrNull */
-    private static final <T> Double m1914maxOfOrNull(Sequence<? extends T> sequence, Function1<? super T, Double> function1) {
+    private static final <T> Double m1312maxOfOrNull(Sequence<? extends T> sequence, Function1<? super T, Double> function1) {
         Iterator<? extends T> it2 = sequence.iterator();
         if (!it2.hasNext()) {
             return null;
@@ -1135,7 +1135,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: maxOfOrNull */
-    private static final <T> Float m1915maxOfOrNull(Sequence<? extends T> sequence, Function1<? super T, Float> function1) {
+    private static final <T> Float m1313maxOfOrNull(Sequence<? extends T> sequence, Function1<? super T, Float> function1) {
         Iterator<? extends T> it2 = sequence.iterator();
         if (!it2.hasNext()) {
             return null;
@@ -1209,7 +1209,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: maxOrNull */
-    public static final Double m1916maxOrNull(Sequence<Double> sequence) {
+    public static final Double m1314maxOrNull(Sequence<Double> sequence) {
         Intrinsics.checkNotNullParameter(sequence, "$this$maxOrNull");
         Iterator<Double> it2 = sequence.iterator();
         if (!it2.hasNext()) {
@@ -1223,7 +1223,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: maxOrNull */
-    public static final Float m1917maxOrNull(Sequence<Float> sequence) {
+    public static final Float m1315maxOrNull(Sequence<Float> sequence) {
         Intrinsics.checkNotNullParameter(sequence, "$this$maxOrNull");
         Iterator<Float> it2 = sequence.iterator();
         if (!it2.hasNext()) {
@@ -1282,13 +1282,13 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: min */
-    public static final Double m1918min(Sequence<Double> sequence) {
+    public static final Double m1316min(Sequence<Double> sequence) {
         Intrinsics.checkNotNullParameter(sequence, "$this$min");
         return SequencesKt.minOrNull((Sequence<? extends Double>) sequence);
     }
 
     /* renamed from: min */
-    public static final Float m1919min(Sequence<Float> sequence) {
+    public static final Float m1317min(Sequence<Float> sequence) {
         Intrinsics.checkNotNullParameter(sequence, "$this$min");
         return SequencesKt.minOrNull((Sequence<? extends Float>) sequence);
     }
@@ -1346,7 +1346,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: minOf */
-    private static final <T> float m1920minOf(Sequence<? extends T> sequence, Function1<? super T, Float> function1) {
+    private static final <T> float m1318minOf(Sequence<? extends T> sequence, Function1<? super T, Float> function1) {
         Iterator<? extends T> it2 = sequence.iterator();
         if (it2.hasNext()) {
             float floatValue = function1.invoke((Object) it2.next()).floatValue();
@@ -1365,7 +1365,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     /* JADX WARN: Type inference failed for: r0v10, types: [java.lang.Comparable] */
     /* JADX WARNING: Unknown variable types count: 1 */
     /* renamed from: minOf */
-    private static final <T, R extends Comparable<? super R>> R m1921minOf(Sequence<? extends T> sequence, Function1<? super T, ? extends R> function1) {
+    private static final <T, R extends Comparable<? super R>> R m1319minOf(Sequence<? extends T> sequence, Function1<? super T, ? extends R> function1) {
         Iterator<? extends T> it2 = sequence.iterator();
         if (it2.hasNext()) {
             R r = (R) ((Comparable) function1.invoke((Object) it2.next()));
@@ -1381,7 +1381,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: minOfOrNull */
-    private static final <T> Double m1922minOfOrNull(Sequence<? extends T> sequence, Function1<? super T, Double> function1) {
+    private static final <T> Double m1320minOfOrNull(Sequence<? extends T> sequence, Function1<? super T, Double> function1) {
         Iterator<? extends T> it2 = sequence.iterator();
         if (!it2.hasNext()) {
             return null;
@@ -1394,7 +1394,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: minOfOrNull */
-    private static final <T> Float m1923minOfOrNull(Sequence<? extends T> sequence, Function1<? super T, Float> function1) {
+    private static final <T> Float m1321minOfOrNull(Sequence<? extends T> sequence, Function1<? super T, Float> function1) {
         Iterator<? extends T> it2 = sequence.iterator();
         if (!it2.hasNext()) {
             return null;
@@ -1468,7 +1468,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: minOrNull */
-    public static final Double m1924minOrNull(Sequence<Double> sequence) {
+    public static final Double m1322minOrNull(Sequence<Double> sequence) {
         Intrinsics.checkNotNullParameter(sequence, "$this$minOrNull");
         Iterator<Double> it2 = sequence.iterator();
         if (!it2.hasNext()) {
@@ -1482,7 +1482,7 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     /* renamed from: minOrNull */
-    public static final Float m1925minOrNull(Sequence<Float> sequence) {
+    public static final Float m1323minOrNull(Sequence<Float> sequence) {
         Intrinsics.checkNotNullParameter(sequence, "$this$minOrNull");
         Iterator<Float> it2 = sequence.iterator();
         if (!it2.hasNext()) {
@@ -1743,19 +1743,19 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     }
 
     private static final <T> int sumOfUInt(Sequence<? extends T> sequence, Function1<? super T, UInt> function1) {
-        int r0 = UInt.m773constructorimpl(0);
+        int r0 = UInt.m171constructorimpl(0);
         Iterator<? extends T> it2 = sequence.iterator();
         while (it2.hasNext()) {
-            r0 = UInt.m773constructorimpl(r0 + function1.invoke((Object) it2.next()).m816unboximpl());
+            r0 = UInt.m171constructorimpl(r0 + function1.invoke((Object) it2.next()).m214unboximpl());
         }
         return r0;
     }
 
     private static final <T> long sumOfULong(Sequence<? extends T> sequence, Function1<? super T, ULong> function1) {
-        long r0 = ULong.m843constructorimpl((long) 0);
+        long r0 = ULong.m241constructorimpl((long) 0);
         Iterator<? extends T> it2 = sequence.iterator();
         while (it2.hasNext()) {
-            r0 = ULong.m843constructorimpl(r0 + function1.invoke((Object) it2.next()).m886unboximpl());
+            r0 = ULong.m241constructorimpl(r0 + function1.invoke((Object) it2.next()).m284unboximpl());
         }
         return r0;
     }
@@ -2024,8 +2024,8 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
         Intrinsics.checkNotNullParameter(sequence, "$this$average");
         double d = 0.0d;
         int i = 0;
-        for (Long l2 : sequence) {
-            d += (double) l2.longValue();
+        for (Long l : sequence) {
+            d += (double) l.longValue();
             i++;
             if (i < 0) {
                 CollectionsKt.throwCountOverflow();
@@ -2101,8 +2101,8 @@ class SequencesKt___SequencesKt extends SequencesKt___SequencesJvmKt {
     public static final long sumOfLong(Sequence<Long> sequence) {
         Intrinsics.checkNotNullParameter(sequence, "$this$sum");
         long j = 0;
-        for (Long l2 : sequence) {
-            j += l2.longValue();
+        for (Long l : sequence) {
+            j += l.longValue();
         }
         return j;
     }

@@ -80,10 +80,10 @@ public class PickSearchAppFragment extends StateEventListFragment<Result<List<En
     @Override // com.coolapk.market.view.base.asynclist.AsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        setEmptyData(getString(2131886764), 0);
+        setEmptyData(getString(2131886826), 0);
         setAdapter(new DataAdapter(this));
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558924, 2131231052).type(2131558917, 2131231056).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558931, 2131231062).type(2131558924, 2131231066).last(2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         if (getUserVisibleHint()) {
@@ -129,10 +129,10 @@ public class PickSearchAppFragment extends StateEventListFragment<Result<List<En
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-            if (i == 2131558917) {
+            if (i == 2131558924) {
                 return new SearchViewHolder(inflate, null, null);
             }
-            if (i == 2131558924) {
+            if (i == 2131558931) {
                 return new ServiceAppViewHolder(inflate, this.component, new ItemActionHandler() {
                     /* class com.coolapk.market.view.feed.pick.PickSearchAppFragment.DataAdapter.AnonymousClass1 */
 
@@ -140,7 +140,7 @@ public class PickSearchAppFragment extends StateEventListFragment<Result<List<En
                     public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                         if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition())) {
                             Entity entity = (Entity) PickSearchAppFragment.this.getDataList().get(viewHolder.getAdapterPosition());
-                            if (view.getId() == 2131362768 && EntityUtils.isApkType(entity.getEntityType())) {
+                            if (view.getId() == 2131362779 && EntityUtils.isApkType(entity.getEntityType())) {
                                 PickSearchAppFragment.this.getActivity().setResult(-1, new Intent().putExtra("pick_app_result", ((ServiceApp) entity).getPackageName()));
                                 PickSearchAppFragment.this.getActivity().finish();
                             }
@@ -173,17 +173,17 @@ public class PickSearchAppFragment extends StateEventListFragment<Result<List<En
             String entityType = ((Entity) PickSearchAppFragment.this.getDataList().get(i)).getEntityType();
             entityType.hashCode();
             if (entityType.equals("holder type search")) {
-                return 2131558917;
+                return 2131558924;
             }
             if (entityType.equals("apk")) {
-                return 2131558924;
+                return 2131558931;
             }
             throw new RuntimeException("error");
         }
     }
 
     public class SearchViewHolder extends GenericBindHolder<ItemSearchViewBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558917;
+        public static final int LAYOUT_ID = 2131558924;
 
         public SearchViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);

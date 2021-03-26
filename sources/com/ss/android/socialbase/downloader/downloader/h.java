@@ -146,7 +146,7 @@ public interface h extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.ss.android.socialbase.downloader.downloader.IDownloadAidlService");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof h)) {
-                return new C0111a(iBinder);
+                return new C0121a(iBinder);
             }
             return (h) queryLocalInterface;
         }
@@ -165,7 +165,7 @@ public interface h extends IInterface {
                 switch (i) {
                     case 1:
                         parcel.enforceInterface("com.ss.android.socialbase.downloader.downloader.IDownloadAidlService");
-                        a(a.AbstractBinderC0112a.a(parcel.readStrongBinder()));
+                        a(a.AbstractBinderC0122a.a(parcel.readStrongBinder()));
                         parcel2.writeNoException();
                         return true;
                     case 2:
@@ -523,11 +523,11 @@ public interface h extends IInterface {
 
         /* renamed from: com.ss.android.socialbase.downloader.downloader.h$a$a  reason: collision with other inner class name */
         /* compiled from: IDownloadAidlService */
-        private static class C0111a implements h {
+        private static class C0121a implements h {
             public static h a;
             private IBinder b;
 
-            C0111a(IBinder iBinder) {
+            C0121a(IBinder iBinder) {
                 this.b = iBinder;
             }
 
@@ -1749,7 +1749,7 @@ public interface h extends IInterface {
         }
 
         public static h f() {
-            return C0111a.a;
+            return C0121a.a;
         }
     }
 }

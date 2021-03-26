@@ -14,7 +14,7 @@ public class a extends d {
     public int g = 0;
 
     /* renamed from: g  reason: collision with other field name */
-    public Map<String, String> f39g;
+    public Map<String, String> f38g;
     public Map<String, Integer> h;
 
     public synchronized void e() {
@@ -27,8 +27,8 @@ public class a extends d {
 
     public synchronized void a(String str, String str2) {
         if (!b.d(str)) {
-            if (this.f39g == null) {
-                this.f39g = new HashMap();
+            if (this.f38g == null) {
+                this.f38g = new HashMap();
             }
             if (this.h == null) {
                 this.h = new HashMap();
@@ -38,7 +38,7 @@ public class a extends d {
                 if (str2.length() <= 100) {
                     i = str2.length();
                 }
-                this.f39g.put(str, str2.substring(0, i));
+                this.f38g.put(str, str2.substring(0, i));
             }
             if (!this.h.containsKey(str)) {
                 this.h.put(str, 1);
@@ -51,9 +51,9 @@ public class a extends d {
 
     @Override // com.alibaba.mtl.appmonitor.a.d
     /* renamed from: a */
-    public synchronized JSONObject mo13a() {
+    public synchronized JSONObject mo3a() {
         JSONObject a;
-        a = super.mo13a();
+        a = super.mo3a();
         try {
             a.put("successCount", this.f);
             a.put("failCount", this.g);
@@ -64,8 +64,8 @@ public class a extends d {
                     String key = entry.getKey();
                     jSONObject.put("errorCode", key);
                     jSONObject.put("errorCount", entry.getValue());
-                    if (this.f39g.containsKey(key)) {
-                        jSONObject.put("errorMsg", this.f39g.get(key));
+                    if (this.f38g.containsKey(key)) {
+                        jSONObject.put("errorMsg", this.f38g.get(key));
                     }
                     jSONArray.put(jSONObject);
                 }
@@ -81,7 +81,7 @@ public class a extends d {
         super.clean();
         this.f = 0;
         this.g = 0;
-        Map<String, String> map = this.f39g;
+        Map<String, String> map = this.f38g;
         if (map != null) {
             map.clear();
         }

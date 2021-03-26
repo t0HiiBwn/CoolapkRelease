@@ -149,7 +149,7 @@ public final class LoadingCover extends ThemeableCover implements IReceiverGroup
     @Override // com.kk.taurus.playerbase.receiver.BaseCover
     public View onCreateCoverView(Context context) {
         Intrinsics.checkNotNullParameter(context, "context");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559294, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559304, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…deo_loading, null, false)");
         VideoLoadingBinding videoLoadingBinding = (VideoLoadingBinding) inflate;
         this.binding = videoLoadingBinding;

@@ -66,7 +66,7 @@ public class UpgradeFragment extends StateEventListFragment<List<MobileApp>, Mob
     @Override // com.coolapk.market.view.base.StateEventListFragment, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
-        setEmptyData(getString(2131886770), 0);
+        setEmptyData(getString(2131886832), 0);
         setRefreshEnable(false);
         setLoadMoreEnable(false);
         setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -97,8 +97,8 @@ public class UpgradeFragment extends StateEventListFragment<List<MobileApp>, Mob
         }
         super.onActivityCreated(bundle);
         boolean z = false;
-        getView().findViewById(2131362457).setClickable(false);
-        setEmptyData(getString(2131887058), 0);
+        getView().findViewById(2131362464).setClickable(false);
+        setEmptyData(getString(2131887120), 0);
         NotificationManagerCompat.from(getActivity()).cancel(3);
         setNotifyAdapter(false);
         setAdapter(new DataAdapter(this));
@@ -200,17 +200,17 @@ public class UpgradeFragment extends StateEventListFragment<List<MobileApp>, Mob
          */
         /* JADX WARNING: Illegal instructions before constructor call */
         public UpgradeSection(int i) {
-            super(0, 2131558847, r0);
+            super(0, 2131558854, r0);
             String[] strArr = new String[3];
-            strArr[0] = UpgradeFragment.this.getString(2131887059, Integer.valueOf(i));
-            strArr[1] = UpgradeFragment.this.getString(UpgradeFragment.this.isUpgrading ? 2131886637 : 2131887056);
-            strArr[2] = UpgradeFragment.this.getString(2131886854);
+            strArr[0] = UpgradeFragment.this.getString(2131887121, Integer.valueOf(i));
+            strArr[1] = UpgradeFragment.this.getString(UpgradeFragment.this.isUpgrading ? 2131886699 : 2131887118);
+            strArr[2] = UpgradeFragment.this.getString(2131886916);
         }
 
         public void onClick(RecyclerView.ViewHolder viewHolder, View view) {
             DownloadState findLatestDownloadState;
             switch (view.getId()) {
-                case 2131363051:
+                case 2131363065:
                     if (UpgradeFragment.this.isUpgrading) {
                         for (MobileApp mobileApp : DataManager.getInstance().getMobileAppUpgradeListFast(false)) {
                             if (!(mobileApp.getUpgradeInfo() == null || (findLatestDownloadState = StateUtils.findLatestDownloadState(mobileApp.getUpgradeInfo().getDownloadUrlMd5(0), mobileApp.getUpgradeInfo().getDownloadUrlMd5(1))) == null || !findLatestDownloadState.isRunning())) {
@@ -225,7 +225,7 @@ public class UpgradeFragment extends StateEventListFragment<List<MobileApp>, Mob
                         UpgradeFragment.this.upgradeAll();
                         return;
                     }
-                case 2131363052:
+                case 2131363066:
                     DataManager.getInstance().ignoreAllUpgrade();
                     UpgradeFragment.this.reloadData();
                     return;
@@ -255,7 +255,7 @@ public class UpgradeFragment extends StateEventListFragment<List<MobileApp>, Mob
 
         @Override // androidx.fragment.app.DialogFragment
         public Dialog onCreateDialog(Bundle bundle) {
-            return new AlertDialog.Builder(getActivity()).setMessage(2131886891).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
+            return new AlertDialog.Builder(getActivity()).setMessage(2131886953).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.view.appmanager.UpgradeFragment.WifiDownloadIntentDialog.AnonymousClass3 */
 
                 @Override // android.content.DialogInterface.OnClickListener
@@ -288,20 +288,20 @@ public class UpgradeFragment extends StateEventListFragment<List<MobileApp>, Mob
          */
         /* JADX WARNING: Illegal instructions before constructor call */
         public IgnoreSection(int i, int i2, boolean z) {
-            super(i, 2131558847, r0);
+            super(i, 2131558854, r0);
             String[] strArr = new String[3];
-            strArr[0] = UpgradeFragment.this.getString(2131886856, Integer.valueOf(i2));
-            strArr[1] = UpgradeFragment.this.getString(2131886636);
-            strArr[2] = UpgradeFragment.this.getString(z ? 2131886835 : 2131886985);
+            strArr[0] = UpgradeFragment.this.getString(2131886918, Integer.valueOf(i2));
+            strArr[1] = UpgradeFragment.this.getString(2131886698);
+            strArr[2] = UpgradeFragment.this.getString(z ? 2131886897 : 2131887047);
         }
 
         public void onClick(RecyclerView.ViewHolder viewHolder, View view) {
             switch (view.getId()) {
-                case 2131363051:
+                case 2131363065:
                     DataManager.getInstance().cancelAllIgnore();
                     UpgradeFragment.this.reloadData();
                     return;
-                case 2131363052:
+                case 2131363066:
                     UpgradeFragment.this.presenter.setContainIgnore(!UpgradeFragment.this.presenter.isContainIgnore());
                     UpgradeFragment.this.reloadData();
                     return;
@@ -347,7 +347,7 @@ public class UpgradeFragment extends StateEventListFragment<List<MobileApp>, Mob
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558965;
+            return 2131558972;
         }
 
         public DataAdapter(Fragment fragment) {
@@ -365,10 +365,10 @@ public class UpgradeFragment extends StateEventListFragment<List<MobileApp>, Mob
                     if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition())) {
                         MobileApp mobileApp = (MobileApp) UpgradeFragment.this.getDataList().get(UpgradeFragment.this.adapter.sectionedPositionToPosition(viewHolder.getAdapterPosition()));
                         int id = view.getId();
-                        if (id != 2131361886) {
-                            if (id == 2131362768) {
+                        if (id != 2131361887) {
+                            if (id == 2131362779) {
                                 ActionManager.startAppViewActivity(UpgradeFragment.this.getActivity(), mobileApp.getPackageName());
-                            } else if (id == 2131362970) {
+                            } else if (id == 2131362982) {
                                 String appName = mobileApp.getAppName();
                                 final String packageName = mobileApp.getPackageName();
                                 new OptionPopupMenu(UpgradeFragment.this.getActivity(), UpgradeFragment.this.getChildFragmentManager(), view, 2131623972, appName, packageName, mobileApp.getVersionName(), mobileApp.getVersionCode(), mobileApp.getApkPath(), new PopupMenu.OnMenuItemClickListener() {
@@ -377,10 +377,10 @@ public class UpgradeFragment extends StateEventListFragment<List<MobileApp>, Mob
                                     @Override // androidx.appcompat.widget.PopupMenu.OnMenuItemClickListener
                                     public boolean onMenuItemClick(MenuItem menuItem) {
                                         switch (menuItem.getItemId()) {
-                                            case 2131361914:
+                                            case 2131361915:
                                                 DataManager.getInstance().ignoreUpgrade(packageName, 1);
                                                 return true;
-                                            case 2131361915:
+                                            case 2131361916:
                                                 DataManager.getInstance().ignoreUpgrade(packageName, -1);
                                                 return true;
                                             default:

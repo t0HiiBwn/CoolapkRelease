@@ -87,7 +87,7 @@ public final class DataListFallConvert {
             FrameLayout frameLayout = (FrameLayout) view;
             if (frameLayout != null) {
                 RecyclerView recyclerView2 = this.fragment.getRecyclerView();
-                ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(frameLayout.getContext()), 2131559118, frameLayout, false, new FragmentBindingComponent(this.fragment));
+                ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(frameLayout.getContext()), 2131559125, frameLayout, false, new FragmentBindingComponent(this.fragment));
                 Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ndingComponent(fragment))");
                 RvInFragmentLayoutBinding rvInFragmentLayoutBinding = (RvInFragmentLayoutBinding) inflate;
                 this.binding = rvInFragmentLayoutBinding;

@@ -22,10 +22,10 @@ public class SearchDropdownItemBindingImpl extends SearchDropdownItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362416, 2);
-        sparseIntArray.put(2131362312, 3);
-        sparseIntArray.put(2131363008, 4);
-        sparseIntArray.put(2131362244, 5);
+        sparseIntArray.put(2131362422, 2);
+        sparseIntArray.put(2131362317, 3);
+        sparseIntArray.put(2131363022, 4);
+        sparseIntArray.put(2131362249, 5);
     }
 
     public SearchDropdownItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -61,7 +61,7 @@ public class SearchDropdownItemBindingImpl extends SearchDropdownItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (273 != i) {
+        if (274 != i) {
             return false;
         }
         setText((String) obj);
@@ -74,7 +74,7 @@ public class SearchDropdownItemBindingImpl extends SearchDropdownItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(273);
+        notifyPropertyChanged(274);
         super.requestRebind();
     }
 

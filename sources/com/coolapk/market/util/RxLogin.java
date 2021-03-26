@@ -55,7 +55,7 @@ public class RxLogin {
     }
 
     /* access modifiers changed from: private */
-    public void onLoginResult(Long l2) {
+    public void onLoginResult(Long l) {
         for (int i = 0; i < this.mSubscriberMap.size(); i++) {
             WeakReference<Subscriber<? super Boolean>> valueAt = this.mSubscriberMap.valueAt(i);
             if (valueAt != null) {
@@ -79,7 +79,7 @@ public class RxLogin {
             super.onCreate(bundle);
             ThemeUtils.setTranslucentStatusBar(this);
             ActionManager.startLoginActivity(this, "https://account.coolapk.com/auth/login?type=coolapk", 2311);
-            Toast.show(this, 2131886960);
+            Toast.show(this, 2131887022);
         }
 
         @Override // androidx.fragment.app.FragmentActivity, android.app.Activity

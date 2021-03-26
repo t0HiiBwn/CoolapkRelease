@@ -26,8 +26,8 @@ public class ItemFeedGoodsDetailImageBindingImpl extends ItemFeedGoodsDetailImag
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 1);
-        sparseIntArray.put(2131362609, 2);
+        sparseIntArray.put(2131362718, 1);
+        sparseIntArray.put(2131362617, 2);
     }
 
     public ItemFeedGoodsDetailImageBindingImpl(DataBindingComponent dataBindingComponent, View view) {

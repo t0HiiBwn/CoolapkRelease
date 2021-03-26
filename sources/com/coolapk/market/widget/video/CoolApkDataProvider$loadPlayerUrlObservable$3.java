@@ -45,9 +45,9 @@ final class CoolApkDataProvider$loadPlayerUrlObservable$3<T, R> implements Func1
         Intrinsics.checkNotNullExpressionValue(urlList, "videoUrls.urlList");
         if (CollectionsKt.firstOrNull((List<? extends Object>) urlList) != null) {
             if (videoUrls.getUrlList().size() == 1) {
-                dataSource.setUri(Uri.parse(CoolApkDataProvider.access$getProxyUrl(this.this$0, videoUrls.getUrlList().get(0).toString(), this.$video.getIsLive())));
+                dataSource.setUri(Uri.parse(this.this$0.getProxyUrl(videoUrls.getUrlList().get(0).toString(), this.$video.getIsLive())));
             } else {
-                dataSource.setUri(Uri.fromFile(CoolApkDataProvider.access$buildConcatFile(this.this$0, videoUrls, this.$video.getIsLive())));
+                dataSource.setUri(Uri.fromFile(this.this$0.buildConcatFile(videoUrls, this.$video.getIsLive())));
             }
             return dataSource;
         }

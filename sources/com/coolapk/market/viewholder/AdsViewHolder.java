@@ -18,7 +18,7 @@ import rx.Subscriber;
 import rx.functions.Action0;
 
 public class AdsViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558577;
+    public static final int LAYOUT_ID = 2131558581;
     private Ads ads;
     private boolean isRequesting;
 
@@ -45,8 +45,8 @@ public class AdsViewHolder extends BindingViewHolder {
     public void onClick(View view) {
         super.onClick(view);
         int id = view.getId();
-        if (id != 2131361981) {
-            if (id == 2131362768) {
+        if (id != 2131361982) {
+            if (id == 2131362779) {
                 ActionManager.startActivityByUrl(getContext(), this.ads.getUrl());
             }
         } else if ("user".equals(this.ads.getAdsType())) {

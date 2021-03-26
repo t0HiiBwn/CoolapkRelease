@@ -23,8 +23,8 @@ final class AutoValue_GoodsListItem extends C$AutoValue_GoodsListItem {
         return 0;
     }
 
-    AutoValue_GoodsListItem(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, int i2, Long l3) {
-        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, l2, str11, str12, str13, str14, str15, str16, str17, str18, str19, i2, l3);
+    AutoValue_GoodsListItem(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, int i2, Long l2) {
+        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, l, str11, str12, str13, str14, str15, str16, str17, str18, str19, i2, l2);
     }
 
     @Override // android.os.Parcelable

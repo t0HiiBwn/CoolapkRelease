@@ -28,9 +28,9 @@ public class ItemSceneRelatedBindingImpl extends ItemSceneRelatedBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 1);
-        sparseIntArray.put(2131362257, 2);
-        sparseIntArray.put(2131363221, 3);
+        sparseIntArray.put(2131363604, 1);
+        sparseIntArray.put(2131362262, 2);
+        sparseIntArray.put(2131363235, 3);
     }
 
     public ItemSceneRelatedBindingImpl(DataBindingComponent dataBindingComponent, View view) {

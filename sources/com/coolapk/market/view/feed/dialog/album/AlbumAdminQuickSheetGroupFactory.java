@@ -53,44 +53,44 @@ public final class AlbumAdminQuickSheetGroupFactory extends AlbumAdminBaseSheetG
         }
         if (!isEditorChoice()) {
             if (isHeadline()) {
-                insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Headline, "下头条", 2131231672, -1233878, "", false, 32, null);
+                insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Headline, "下头条", 2131231683, -1233878, "", false, 32, null);
             } else {
-                insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Headline, "上头条", 2131231541, -15233209, "", false, 32, null);
+                insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Headline, "上头条", 2131231552, -15233209, "", false, 32, null);
             }
         }
         if (isEditorChoice()) {
-            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.EditorChoice, "下编辑精选", 2131231505, -1233878, null, false, 48, null);
+            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.EditorChoice, "下编辑精选", 2131231516, -1233878, null, false, 48, null);
         } else {
-            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.EditorChoice, "上编辑精选", 2131231294, -15233209, null, false, 48, null);
+            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.EditorChoice, "上编辑精选", 2131231305, -15233209, null, false, 48, null);
         }
         SheetDataKt.makeLastItemDivider(this.dataList);
         if (isRecommendOrNormal()) {
-            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.NoHeadlineAnyMore, "禁止上头条", 2131231377, -1233878, null, false, 48, null);
+            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.NoHeadlineAnyMore, "禁止上头条", 2131231388, -1233878, null, false, 48, null);
         }
         if (isFolded()) {
-            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Fold, "取消折叠", 2131231624, -15233209, null, false, 48, null);
+            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Fold, "取消折叠", 2131231635, -15233209, null, false, 48, null);
         } else {
-            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Fold, "折叠", 2131231302, -1233878, null, false, 48, null);
+            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Fold, "折叠", 2131231313, -1233878, null, false, 48, null);
         }
-        insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.SoftFold, "去精", 2131231505, -1233878, null, false, 48, null);
+        insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.SoftFold, "去精", 2131231516, -1233878, null, false, 48, null);
         if (!isBanned()) {
-            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Ban, "手动屏蔽", 2131231554, -1233878, null, false, 48, null);
+            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Ban, "手动屏蔽", 2131231565, -1233878, null, false, 48, null);
         } else {
-            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Ban, "解除屏蔽", 2131231554, -15233209, null, false, 48, null);
+            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Ban, "解除屏蔽", 2131231565, -15233209, null, false, 48, null);
         }
         if (isSelfVisible()) {
-            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "全站可见", 2131231351, -15233209, null, false, 48, null);
+            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "全站可见", 2131231362, -15233209, null, false, 48, null);
         } else {
-            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "仅自己可见", 2131231351, -1233878, null, false, 48, null);
+            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "仅自己可见", 2131231362, -1233878, null, false, 48, null);
         }
         SheetDataKt.makeLastItemDivider(this.dataList);
         if (isRecommend()) {
-            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Recommend, "下推荐", 2131231673, -1233878, null, false, 48, null);
+            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Recommend, "下推荐", 2131231684, -1233878, null, false, 48, null);
         } else {
-            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Recommend, "上推荐", 2131231542, -15233209, null, false, 48, null);
+            insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Recommend, "上推荐", 2131231553, -15233209, null, false, 48, null);
         }
-        insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.ViewFeedStatus, "查看状态", 2131231590, -15233209, null, false, 48, null);
-        insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Author, "作者管理", 2131231671, -15233209, null, false, 48, null);
+        insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.ViewFeedStatus, "查看状态", 2131231601, -15233209, null, false, 48, null);
+        insertItem$default(this, AlbumAdminBaseSheetGroupFactory.AdminAction.Author, "作者管理", 2131231682, -15233209, null, false, 48, null);
         return wrapAsSheetGroup();
     }
 

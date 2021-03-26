@@ -54,7 +54,7 @@ public final class GoodsSearchListFragment extends GoodsCouponSearchListFragment
     @Override // com.coolapk.market.view.feed.pick.GoodsCouponSearchListFragment, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558755).suitedEntityType("pear_goods").constructor(new GoodsSearchListFragment$onActivityCreated$1(this)).doAfterBind(new GoodsSearchListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558762).suitedEntityType("pear_goods").constructor(new GoodsSearchListFragment$onActivityCreated$1(this)).doAfterBind(new GoodsSearchListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
     }
 
     public final void convertPearGoodsToFeedGoods(Goods goods) {

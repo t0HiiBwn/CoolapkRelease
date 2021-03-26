@@ -15,7 +15,7 @@ public class c {
     private static final Object d = new Object();
 
     /* renamed from: a  reason: collision with other field name */
-    private a f60a = new b(com.alibaba.mtl.log.a.getContext());
+    private a f59a = new b(com.alibaba.mtl.log.a.getContext());
     private Runnable b = new Runnable() {
         /* class com.alibaba.mtl.log.c.c.AnonymousClass1 */
 
@@ -24,9 +24,7 @@ public class c {
             c.this.F();
         }
     };
-
-    /* renamed from: l  reason: collision with root package name */
-    private List<com.alibaba.mtl.log.model.a> f1194l = new CopyOnWriteArrayList();
+    private List<com.alibaba.mtl.log.model.a> l = new CopyOnWriteArrayList();
 
     private c() {
         UploadEngine.getInstance().start();
@@ -47,8 +45,8 @@ public class c {
     public void a(com.alibaba.mtl.log.model.a aVar) {
         i.a("LogStoreMgr", "[add] :", aVar.X);
         com.alibaba.mtl.log.b.a.m(aVar.T);
-        this.f1194l.add(aVar);
-        if (this.f1194l.size() >= 100) {
+        this.l.add(aVar);
+        if (this.l.size() >= 100) {
             r.a().f(1);
             r.a().a(1, this.b, 0);
         } else if (!r.a().b(1)) {
@@ -66,11 +64,11 @@ public class c {
 
     public int a(List<com.alibaba.mtl.log.model.a> list) {
         i.a("LogStoreMgr", list);
-        return this.f60a.mo25a(list);
+        return this.f59a.mo15a(list);
     }
 
     public List<com.alibaba.mtl.log.model.a> a(String str, int i) {
-        List<com.alibaba.mtl.log.model.a> a2 = this.f60a.a(str, i);
+        List<com.alibaba.mtl.log.model.a> a2 = this.f59a.a(str, i);
         i.a("LogStoreMgr", "[get]", a2);
         return a2;
     }
@@ -79,14 +77,14 @@ public class c {
         i.a("LogStoreMgr", "[store]");
         ArrayList arrayList = null;
         try {
-            synchronized (this.f1194l) {
-                if (this.f1194l.size() > 0) {
-                    arrayList = new ArrayList(this.f1194l);
-                    this.f1194l.clear();
+            synchronized (this.l) {
+                if (this.l.size() > 0) {
+                    arrayList = new ArrayList(this.l);
+                    this.l.clear();
                 }
             }
             if (arrayList != null && arrayList.size() > 0) {
-                this.f60a.m24a((List<com.alibaba.mtl.log.model.a>) arrayList);
+                this.f59a.m14a((List<com.alibaba.mtl.log.model.a>) arrayList);
             }
         } catch (Throwable unused) {
         }
@@ -94,21 +92,21 @@ public class c {
 
     public void clear() {
         i.a("LogStoreMgr", "[clear]");
-        this.f60a.clear();
-        this.f1194l.clear();
+        this.f59a.clear();
+        this.l.clear();
     }
 
     /* access modifiers changed from: private */
     public void G() {
         Calendar instance = Calendar.getInstance();
         instance.add(5, -3);
-        this.f60a.c("time", String.valueOf(instance.getTimeInMillis()));
+        this.f59a.c("time", String.valueOf(instance.getTimeInMillis()));
     }
 
     /* access modifiers changed from: private */
     public void e(int i) {
         if (i > 9000) {
-            this.f60a.e((i - 9000) + 1000);
+            this.f59a.e((i - 9000) + 1000);
         }
     }
 
@@ -120,7 +118,7 @@ public class c {
         @Override // java.lang.Runnable
         public void run() {
             i.a("LogStoreMgr", "CleanLogTask");
-            int g = c.this.f60a.g();
+            int g = c.this.f59a.g();
             if (g > 9000) {
                 c.this.e(g);
             }
@@ -135,7 +133,7 @@ public class c {
         @Override // java.lang.Runnable
         public void run() {
             c.this.G();
-            int g = c.this.f60a.g();
+            int g = c.this.f59a.g();
             if (g > 9000) {
                 c.this.e(g);
             }

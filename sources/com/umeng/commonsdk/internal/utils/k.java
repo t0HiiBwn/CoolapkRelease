@@ -135,7 +135,7 @@ public class k {
         return i < 0 ? "noper" : "unknown";
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:21:0x0039 A[SYNTHETIC, Splitter:B:21:0x0039] */
+    /* JADX WARNING: Removed duplicated region for block: B:21:0x003a A[SYNTHETIC, Splitter:B:21:0x003a] */
     public static String c() {
         String str;
         BufferedReader bufferedReader;

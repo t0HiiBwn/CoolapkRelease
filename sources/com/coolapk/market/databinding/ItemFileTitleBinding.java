@@ -23,7 +23,7 @@ public abstract class ItemFileTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFileTitleBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFileTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558745, viewGroup, z, obj);
+        return (ItemFileTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558752, viewGroup, z, obj);
     }
 
     public static ItemFileTitleBinding inflate(LayoutInflater layoutInflater) {
@@ -32,7 +32,7 @@ public abstract class ItemFileTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFileTitleBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFileTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558745, null, false, obj);
+        return (ItemFileTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558752, null, false, obj);
     }
 
     public static ItemFileTitleBinding bind(View view) {
@@ -41,6 +41,6 @@ public abstract class ItemFileTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFileTitleBinding bind(View view, Object obj) {
-        return (ItemFileTitleBinding) bind(obj, view, 2131558745);
+        return (ItemFileTitleBinding) bind(obj, view, 2131558752);
     }
 }

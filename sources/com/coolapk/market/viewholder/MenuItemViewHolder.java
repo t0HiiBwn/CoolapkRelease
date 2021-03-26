@@ -19,7 +19,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: MenuItemViewHolder.kt */
 public final class MenuItemViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558823;
+    public static final int LAYOUT_ID = 2131558830;
     private final ItemMenuItemBinding binding;
     private Entity entity;
 
@@ -73,7 +73,7 @@ public final class MenuItemViewHolder extends BindingViewHolder {
         Entity entity2;
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
-        if (view.getId() == 2131363260 && (entity2 = this.entity) != null) {
+        if (view.getId() == 2131363274 && (entity2 = this.entity) != null) {
             Context context = getContext();
             Intrinsics.checkNotNullExpressionValue(context, "context");
             ActionManagerCompat.startActivityByUrl(context, entity2.getUrl(), entity2.getTitle(), entity2.getSubTitle());

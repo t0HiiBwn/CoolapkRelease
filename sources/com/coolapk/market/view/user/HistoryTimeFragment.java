@@ -46,16 +46,16 @@ public class HistoryTimeFragment extends UserHistoryListFragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            MenuItemCompat.setShowAsAction(menu.add(0, 2131361891, 0, getString(2131886650)), 2);
+            MenuItemCompat.setShowAsAction(menu.add(0, 2131361892, 0, getString(2131886712)), 2);
         }
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() != 2131361891) {
+        if (menuItem.getItemId() != 2131361892) {
             return true;
         }
-        ConfirmDialog newInstance = ConfirmDialog.newInstance(getString(2131886650), getString(2131886694));
+        ConfirmDialog newInstance = ConfirmDialog.newInstance(getString(2131886712), getString(2131886756));
         newInstance.setOnOkRunnable(new Runnable() {
             /* class com.coolapk.market.view.user.HistoryTimeFragment.AnonymousClass1 */
 
@@ -103,11 +103,11 @@ public class HistoryTimeFragment extends UserHistoryListFragment {
             if (EntityUtils.isHistoryType(entity.getEntityType())) {
                 String timeDescription = getTimeDescription((UserHistory) entity);
                 if (i == 0) {
-                    arrayList.add(new SectionedAdapter.Section(i, 2131558925, timeDescription));
+                    arrayList.add(new SectionedAdapter.Section(i, 2131558932, timeDescription));
                 } else {
                     Entity entity2 = getDataList().get(i - 1);
                     if (EntityUtils.isHistoryType(entity2.getEntityType()) && !TextUtils.equals(getTimeDescription((UserHistory) entity2), timeDescription)) {
-                        arrayList.add(new SectionedAdapter.Section(i, 2131558925, timeDescription));
+                        arrayList.add(new SectionedAdapter.Section(i, 2131558932, timeDescription));
                     }
                 }
             }
@@ -126,7 +126,7 @@ public class HistoryTimeFragment extends UserHistoryListFragment {
 
         @Override // com.coolapk.market.widget.SectionedAdapter
         public RecyclerView.ViewHolder onCreateSectionViewHolder(ViewGroup viewGroup, int i) {
-            return new TimeViewHolder(LayoutInflater.from(HistoryTimeFragment.this.getActivity()).inflate(2131558925, viewGroup, false));
+            return new TimeViewHolder(LayoutInflater.from(HistoryTimeFragment.this.getActivity()).inflate(2131558932, viewGroup, false));
         }
 
         @Override // com.coolapk.market.widget.SectionedAdapter
@@ -136,7 +136,7 @@ public class HistoryTimeFragment extends UserHistoryListFragment {
     }
 
     private static class TimeViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558925;
+        public static final int LAYOUT_ID = 2131558932;
 
         public TimeViewHolder(View view) {
             super(view);

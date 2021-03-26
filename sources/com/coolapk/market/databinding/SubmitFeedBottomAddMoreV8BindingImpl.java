@@ -57,7 +57,7 @@ public class SubmitFeedBottomAddMoreV8BindingImpl extends SubmitFeedBottomAddMor
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (288 == i) {
+        if (289 == i) {
             setUiConfig((FeedUIConfig) obj);
         } else if (50 != i) {
             return false;
@@ -73,7 +73,7 @@ public class SubmitFeedBottomAddMoreV8BindingImpl extends SubmitFeedBottomAddMor
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(288);
+        notifyPropertyChanged(289);
         super.requestRebind();
     }
 

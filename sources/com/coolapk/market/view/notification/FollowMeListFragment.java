@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.coolapk.market.AppHolder;
 import com.coolapk.market.event.NotificationReadEvent;
 import com.coolapk.market.event.UserBlockedEvent;
+import com.coolapk.market.manager.AppNotification;
 import com.coolapk.market.manager.DataManager;
+import com.coolapk.market.manager.PushMessage;
 import com.coolapk.market.model.Entity;
 import com.coolapk.market.model.Notification;
 import com.coolapk.market.network.Result;
@@ -47,10 +49,37 @@ public class FollowMeListFragment extends SimpleAsyncListFragment<Result<List<En
         setLayoutManager(new LinearLayoutManager(getActivity()));
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
+        AppHolder.getAppNotification().interceptInLifeCycle(this, new AppNotification.MessageIntercept() {
+            /* class com.coolapk.market.view.notification.$$Lambda$FollowMeListFragment$L1glTA8OlJnY59ybScZVqLfXCU */
+
+            @Override // com.coolapk.market.manager.AppNotification.MessageIntercept
+            public final boolean interceptNotification(PushMessage pushMessage) {
+                return FollowMeListFragment.this.lambda$onActivityCreated$1$FollowMeListFragment(pushMessage);
+            }
+        });
         if (getUserVisibleHint()) {
             initData();
         }
         EventBus.getDefault().register(this);
+    }
+
+    public /* synthetic */ boolean lambda$onActivityCreated$1$FollowMeListFragment(PushMessage pushMessage) {
+        if (!"contacts_follow".equals(pushMessage.getType()) || !isResumed()) {
+            return false;
+        }
+        AppHolder.getMainThreadHandler().post(new Runnable() {
+            /* class com.coolapk.market.view.notification.$$Lambda$FollowMeListFragment$SSOP3qQLJYZHU6yndNe0IPiBWZI */
+
+            @Override // java.lang.Runnable
+            public final void run() {
+                FollowMeListFragment.this.lambda$null$0$FollowMeListFragment();
+            }
+        });
+        return true;
+    }
+
+    public /* synthetic */ void lambda$null$0$FollowMeListFragment() {
+        scrollToTop(true);
     }
 
     @Override // com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
@@ -96,7 +125,7 @@ public class FollowMeListFragment extends SimpleAsyncListFragment<Result<List<En
         String entityType = ((Entity) getDataList().get(i)).getEntityType();
         entityType.hashCode();
         if (entityType.equals("notification")) {
-            return 2131558842;
+            return 2131558849;
         }
         throw new RuntimeException("unknown View Type");
     }
@@ -104,7 +133,7 @@ public class FollowMeListFragment extends SimpleAsyncListFragment<Result<List<En
     @Override // com.coolapk.market.view.base.asynclist.SimpleAsyncListFragment
     public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View inflate = LayoutInflater.from(getActivity()).inflate(i, viewGroup, false);
-        if (i == 2131558842) {
+        if (i == 2131558849) {
             return new NotificationViewHolder(inflate, getComponent(), null);
         }
         throw new RuntimeException("unknown View Type");

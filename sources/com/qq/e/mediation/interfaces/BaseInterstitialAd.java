@@ -9,7 +9,7 @@ import com.qq.e.ads.interstitial2.UnifiedInterstitialMediaListener;
 public abstract class BaseInterstitialAd {
     public static final int DEFAULT_PRIORITY = -1;
 
-    public BaseInterstitialAd(Activity activity, String str, String str2) {
+    public BaseInterstitialAd(Activity activity, String str, String str2, String str3) {
     }
 
     public abstract void close();
@@ -29,6 +29,8 @@ public abstract class BaseInterstitialAd {
     public abstract boolean isValid();
 
     public abstract void loadAd();
+
+    public abstract void loadFullScreenAD();
 
     public abstract void setAdListener(UnifiedInterstitialADListener unifiedInterstitialADListener);
 
@@ -51,4 +53,6 @@ public abstract class BaseInterstitialAd {
     public abstract void showAsPopupWindow();
 
     public abstract void showAsPopupWindow(Activity activity);
+
+    public abstract void showFullScreenAD(Activity activity);
 }

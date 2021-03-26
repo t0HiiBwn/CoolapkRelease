@@ -17,7 +17,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SencondHandGoodsInfoViewPart.kt */
 public final class SencondHandGoodsInfoViewPart extends BindingViewPart<ItemSecondHandDetailBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558918;
+    public static final int LAYOUT_ID = 2131558925;
     private final DataBindingComponent component;
     private Feed mFeed;
 
@@ -50,7 +50,7 @@ public final class SencondHandGoodsInfoViewPart extends BindingViewPart<ItemSeco
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemSecondHandDetailBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558918, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558925, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemSecondHandDetailBinding) inflate;
     }

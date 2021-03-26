@@ -34,7 +34,7 @@ public abstract class ItemVoteCommentEmptyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVoteCommentEmptyBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemVoteCommentEmptyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558987, viewGroup, z, obj);
+        return (ItemVoteCommentEmptyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558994, viewGroup, z, obj);
     }
 
     public static ItemVoteCommentEmptyBinding inflate(LayoutInflater layoutInflater) {
@@ -43,7 +43,7 @@ public abstract class ItemVoteCommentEmptyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVoteCommentEmptyBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemVoteCommentEmptyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558987, null, false, obj);
+        return (ItemVoteCommentEmptyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558994, null, false, obj);
     }
 
     public static ItemVoteCommentEmptyBinding bind(View view) {
@@ -52,6 +52,6 @@ public abstract class ItemVoteCommentEmptyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemVoteCommentEmptyBinding bind(View view, Object obj) {
-        return (ItemVoteCommentEmptyBinding) bind(obj, view, 2131558987);
+        return (ItemVoteCommentEmptyBinding) bind(obj, view, 2131558994);
     }
 }

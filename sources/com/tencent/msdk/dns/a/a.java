@@ -16,9 +16,7 @@ final class a {
     public final String i;
     public final String j;
     public final String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    public final String f1448l;
+    public final String l;
     public final String m;
     public final String n;
     public final String o;
@@ -41,7 +39,7 @@ final class a {
         this.i = str9;
         this.j = str10;
         this.k = str11;
-        this.f1448l = str12;
+        this.l = str12;
         this.m = str13;
         this.n = str14;
         this.o = str15;
@@ -55,7 +53,7 @@ final class a {
 
     /* renamed from: com.tencent.msdk.dns.a.a$a  reason: collision with other inner class name */
     /* compiled from: BatchStatistics */
-    public static class C0128a {
+    public static class C0146a {
         private final boolean a;
         private final StringBuilder b = new StringBuilder();
         private final StringBuilder c = new StringBuilder();
@@ -67,9 +65,7 @@ final class a {
         private final StringBuilder i = new StringBuilder();
         private final StringBuilder j = new StringBuilder();
         private final StringBuilder k = new StringBuilder();
-
-        /* renamed from: l  reason: collision with root package name */
-        private final StringBuilder f1449l = new StringBuilder();
+        private final StringBuilder l = new StringBuilder();
         private final StringBuilder m = new StringBuilder();
         private final StringBuilder n = new StringBuilder();
         private final StringBuilder o = new StringBuilder();
@@ -81,11 +77,11 @@ final class a {
         private final StringBuilder u = new StringBuilder();
         private final StringBuilder v = new StringBuilder();
 
-        public C0128a(boolean z) {
+        public C0146a(boolean z) {
             this.a = z;
         }
 
-        public C0128a a(StatisticsMerge statisticsMerge) {
+        public C0146a a(StatisticsMerge statisticsMerge) {
             if (statisticsMerge != null) {
                 StringBuilder sb = this.b;
                 sb.append(statisticsMerge.netType);
@@ -119,7 +115,7 @@ final class a {
                     StringBuilder sb10 = this.k;
                     sb10.append(com.tencent.msdk.dns.base.e.a.a(statistics.ips, ","));
                     sb10.append('_');
-                    StringBuilder sb11 = this.f1449l;
+                    StringBuilder sb11 = this.l;
                     sb11.append(statistics.ttl);
                     sb11.append('_');
                     StringBuilder sb12 = this.m;
@@ -141,7 +137,7 @@ final class a {
                     StringBuilder sb17 = this.k;
                     sb17.append(com.tencent.msdk.dns.base.e.a.a(statisticsMerge.restInetDnsStat.ips, ","));
                     sb17.append('_');
-                    StringBuilder sb18 = this.f1449l;
+                    StringBuilder sb18 = this.l;
                     sb18.append(statisticsMerge.restInetDnsStat.ttl);
                     sb18.append('_');
                     StringBuilder sb19 = this.m;
@@ -196,7 +192,7 @@ final class a {
                 sb6.setLength(sb6.length() - 1);
                 StringBuilder sb7 = this.k;
                 sb7.setLength(sb7.length() - 1);
-                StringBuilder sb8 = this.f1449l;
+                StringBuilder sb8 = this.l;
                 sb8.setLength(sb8.length() - 1);
                 StringBuilder sb9 = this.m;
                 sb9.setLength(sb9.length() - 1);
@@ -228,7 +224,7 @@ final class a {
                     sb21.setLength(sb21.length() - 1);
                 }
             }
-            return new a(this.b.toString(), this.c.toString(), this.d.toString(), this.e.toString(), this.f.toString(), this.g.toString(), this.h.toString(), this.i.toString(), this.j.toString(), this.k.toString(), this.f1449l.toString(), this.m.toString(), this.n.toString(), this.o.toString(), this.p.toString(), this.q.toString(), this.r.toString(), this.s.toString(), this.t.toString(), this.u.toString(), this.v.toString());
+            return new a(this.b.toString(), this.c.toString(), this.d.toString(), this.e.toString(), this.f.toString(), this.g.toString(), this.h.toString(), this.i.toString(), this.j.toString(), this.k.toString(), this.l.toString(), this.m.toString(), this.n.toString(), this.o.toString(), this.p.toString(), this.q.toString(), this.r.toString(), this.s.toString(), this.t.toString(), this.u.toString(), this.v.toString());
         }
     }
 }

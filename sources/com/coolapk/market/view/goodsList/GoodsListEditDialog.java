@@ -66,7 +66,7 @@ public final class GoodsListEditDialog extends BaseDialogFragment {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558526, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558528, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…s_list_edit, null, false)");
         DialogGoodsListEditBinding dialogGoodsListEditBinding = (DialogGoodsListEditBinding) inflate;
         this.titleView = dialogGoodsListEditBinding.titleEditText;

@@ -50,7 +50,7 @@ public abstract class ItemFeedShareActionViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedShareActionViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedShareActionViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558726, viewGroup, z, obj);
+        return (ItemFeedShareActionViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558733, viewGroup, z, obj);
     }
 
     public static ItemFeedShareActionViewBinding inflate(LayoutInflater layoutInflater) {
@@ -59,7 +59,7 @@ public abstract class ItemFeedShareActionViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedShareActionViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedShareActionViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558726, null, false, obj);
+        return (ItemFeedShareActionViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558733, null, false, obj);
     }
 
     public static ItemFeedShareActionViewBinding bind(View view) {
@@ -68,6 +68,6 @@ public abstract class ItemFeedShareActionViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedShareActionViewBinding bind(View view, Object obj) {
-        return (ItemFeedShareActionViewBinding) bind(obj, view, 2131558726);
+        return (ItemFeedShareActionViewBinding) bind(obj, view, 2131558733);
     }
 }

@@ -15,7 +15,7 @@ final class MeUserInfoViewHolder$bindToContent$1<T> implements Action1<Long> {
         this.this$0 = meUserInfoViewHolder;
     }
 
-    public final void call(Long l2) {
+    public final void call(Long l) {
         ((ItemCenterUserInfoBinding) this.this$0.getBinding()).curExperience.animate().setListener(new AnimatorListenerAdapter(this) {
             /* class com.coolapk.market.view.center.MeUserInfoViewHolder$bindToContent$1.AnonymousClass1 */
             final /* synthetic */ MeUserInfoViewHolder$bindToContent$1 this$0;

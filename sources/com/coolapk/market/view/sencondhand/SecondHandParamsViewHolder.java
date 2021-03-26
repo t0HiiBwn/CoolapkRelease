@@ -35,18 +35,16 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Objects;
-import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\f\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0005\u0018\u0000 %2\u00020\u0001:\u0003%&'Bg\u0012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003\u0012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00060\u0003\u00122\u0010\u0007\u001a.\u0012\u0004\u0012\u00020\u0006\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\t\u0018\u00010\bj\u0016\u0012\u0004\u0012\u00020\u0006\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\t\u0018\u0001`\n\u0012\u0006\u0010\u000b\u001a\u00020\f\u0012\b\u0010\r\u001a\u0004\u0018\u00010\u000e¢\u0006\u0002\u0010\u000fJ\u0012\u0010 \u001a\u00020!2\b\u0010\"\u001a\u0004\u0018\u00010#H\u0016J\u0010\u0010$\u001a\u00020!2\u0006\u0010\u000b\u001a\u00020\fH\u0016R\u0016\u0010\u0010\u001a\n \u0012*\u0004\u0018\u00010\u00110\u0011X\u0004¢\u0006\u0002\n\u0000R\u001c\u0010\u0013\u001a\u0004\u0018\u00010\u0014X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0016\"\u0004\b\u0017\u0010\u0018R\u0017\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00060\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0019\u0010\u001aR\u0014\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u00060\u0003X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u001c\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003X\u0004¢\u0006\u0002\n\u0000R=\u0010\u0007\u001a.\u0012\u0004\u0012\u00020\u0006\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\t\u0018\u00010\bj\u0016\u0012\u0004\u0012\u00020\u0006\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\t\u0018\u0001`\n¢\u0006\b\n\u0000\u001a\u0004\b\u001d\u0010\u001eR\u0014\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003X\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003X\u0004¢\u0006\u0002\n\u0000¨\u0006("}, d2 = {"Lcom/coolapk/market/view/sencondhand/SecondHandParamsViewHolder;", "Lcom/coolapk/market/viewholder/BindingViewHolder;", "paramText", "", "Lcom/coolapk/market/model/ProductParams;", "keys", "", "map", "Ljava/util/LinkedHashMap;", "", "Lkotlin/collections/LinkedHashMap;", "view", "Landroid/view/View;", "itemActionHandler", "Lcom/coolapk/market/viewholder/ItemActionHandler;", "(Ljava/util/List;Ljava/util/List;Ljava/util/LinkedHashMap;Landroid/view/View;Lcom/coolapk/market/viewholder/ItemActionHandler;)V", "binding", "Lcom/coolapk/market/databinding/ItemDeviceParamsBinding;", "kotlin.jvm.PlatformType", "checkHelper", "Lcom/coolapk/market/view/sencondhand/CheckHelper;", "getCheckHelper", "()Lcom/coolapk/market/view/sencondhand/CheckHelper;", "setCheckHelper", "(Lcom/coolapk/market/view/sencondhand/CheckHelper;)V", "getKeys", "()Ljava/util/List;", "list", "listParams", "getMap", "()Ljava/util/LinkedHashMap;", "options", "bindTo", "", "data", "", "onClick", "Companion", "DataAdapter", "DataViewHolder", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: SecondHandParamsViewHolder.kt */
 public final class SecondHandParamsViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558669;
+    public static final int LAYOUT_ID = 2131558675;
     private final ItemDeviceParamsBinding binding;
     private CheckHelper checkHelper;
     private final List<String> keys;
@@ -82,14 +80,6 @@ public final class SecondHandParamsViewHolder extends BindingViewHolder {
         build.addTo(recyclerView3);
     }
 
-    public static final /* synthetic */ List access$getOptions$p(SecondHandParamsViewHolder secondHandParamsViewHolder) {
-        return secondHandParamsViewHolder.options;
-    }
-
-    public static final /* synthetic */ List access$getParamText$p(SecondHandParamsViewHolder secondHandParamsViewHolder) {
-        return secondHandParamsViewHolder.paramText;
-    }
-
     public final List<String> getKeys() {
         return this.keys;
     }
@@ -98,7 +88,6 @@ public final class SecondHandParamsViewHolder extends BindingViewHolder {
         return this.map;
     }
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\b\u0010\u0005\u001a\u00020\u0006H\u0002J\b\u0010\u0007\u001a\u00020\bH\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\t"}, d2 = {"Lcom/coolapk/market/view/sencondhand/SecondHandParamsViewHolder$Companion;", "", "()V", "LAYOUT_ID", "", "createSelectedBackground", "Landroid/graphics/drawable/StateListDrawable;", "createSelectedTextColor", "Landroid/content/res/ColorStateList;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: SecondHandParamsViewHolder.kt */
     public static final class Companion {
         private Companion() {
@@ -108,12 +97,10 @@ public final class SecondHandParamsViewHolder extends BindingViewHolder {
             this();
         }
 
-        /* access modifiers changed from: private */
         public final ColorStateList createSelectedTextColor() {
             return new ColorStateList(new int[][]{new int[]{16842913}, new int[0]}, new int[]{AppHolder.getAppTheme().getColorAccent(), AppHolder.getAppTheme().getTextColorPrimary()});
         }
 
-        /* access modifiers changed from: private */
         public final StateListDrawable createSelectedBackground() {
             StateListDrawable stateListDrawable = new StateListDrawable();
             int[] selected = ViewStates.INSTANCE.selected();
@@ -222,20 +209,19 @@ public final class SecondHandParamsViewHolder extends BindingViewHolder {
         super.onClick(view);
     }
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0004\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0003J\b\u0010\u0007\u001a\u00020\bH\u0016J\u0018\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\u00022\u0006\u0010\f\u001a\u00020\bH\u0016J\u0018\u0010\r\u001a\u00020\u00022\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\bH\u0016R\u0014\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005X\u0004¢\u0006\u0002\n\u0000¨\u0006\u0011"}, d2 = {"Lcom/coolapk/market/view/sencondhand/SecondHandParamsViewHolder$DataAdapter;", "Landroidx/recyclerview/widget/RecyclerView$Adapter;", "Lcom/coolapk/market/view/sencondhand/SecondHandParamsViewHolder$DataViewHolder;", "(Lcom/coolapk/market/view/sencondhand/SecondHandParamsViewHolder;)V", "dataSet", "", "Lcom/coolapk/market/model/ProductParams;", "getItemCount", "", "onBindViewHolder", "", "holder", "position", "onCreateViewHolder", "parent", "Landroid/view/ViewGroup;", "viewType", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: SecondHandParamsViewHolder.kt */
     public final class DataAdapter extends RecyclerView.Adapter<DataViewHolder> {
         private final List<ProductParams> dataSet;
 
-        /* JADX WARN: Incorrect args count in method signature: ()V */
         public DataAdapter() {
-            this.dataSet = SecondHandParamsViewHolder.this.listParams;
+            SecondHandParamsViewHolder.this = r1;
+            this.dataSet = r1.listParams;
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public DataViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558762, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558769, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             return new DataViewHolder(inflate);
         }
@@ -246,7 +232,7 @@ public final class SecondHandParamsViewHolder extends BindingViewHolder {
             ProductParams productParams = this.dataSet.get(i);
             Integer num = null;
             if (!productParams.isSingleSelect()) {
-                for (ProductParams productParams2 : SecondHandParamsViewHolder.access$getParamText$p(SecondHandParamsViewHolder.this)) {
+                for (ProductParams productParams2 : SecondHandParamsViewHolder.this.paramText) {
                     if (Intrinsics.areEqual(productParams2.getTitle(), productParams.getTitle())) {
                         CheckHelper checkHelper = SecondHandParamsViewHolder.this.getCheckHelper();
                         SparseIntArray checkedArrays = checkHelper != null ? checkHelper.getCheckedArrays() : null;
@@ -262,7 +248,7 @@ public final class SecondHandParamsViewHolder extends BindingViewHolder {
                 Intrinsics.checkNotNull(num);
                 if (num.intValue() < 0) {
                     if (productParams.isOther()) {
-                        for (ProductParams productParams3 : SecondHandParamsViewHolder.access$getParamText$p(SecondHandParamsViewHolder.this)) {
+                        for (ProductParams productParams3 : SecondHandParamsViewHolder.this.paramText) {
                             if (Intrinsics.areEqual(productParams3.getKey(), productParams.getKey())) {
                                 CheckHelper checkHelper3 = SecondHandParamsViewHolder.this.getCheckHelper();
                                 if (checkHelper3 != null) {
@@ -274,7 +260,7 @@ public final class SecondHandParamsViewHolder extends BindingViewHolder {
                     } else {
                         CheckHelper checkHelper4 = SecondHandParamsViewHolder.this.getCheckHelper();
                         if (checkHelper4 != null) {
-                            if (!SecondHandParamsViewHolder.access$getParamText$p(SecondHandParamsViewHolder.this).contains(productParams)) {
+                            if (!SecondHandParamsViewHolder.this.paramText.contains(productParams)) {
                                 i = -1;
                             }
                             checkHelper4.setCheckedPostion(i);
@@ -284,7 +270,7 @@ public final class SecondHandParamsViewHolder extends BindingViewHolder {
             }
             CheckHelper checkHelper5 = SecondHandParamsViewHolder.this.getCheckHelper();
             if (checkHelper5 != null) {
-                checkHelper5.bindViewHolder(dataViewHolder, 2131363576);
+                checkHelper5.bindViewHolder(dataViewHolder, 2131363598);
             }
         }
 
@@ -294,11 +280,10 @@ public final class SecondHandParamsViewHolder extends BindingViewHolder {
         }
     }
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\\\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0007\n\u0002\u0010!\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\u0018\u0000 &2\u00020\u0001:\u0001&B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0012\u0010\u0013\u001a\u00020\u00142\b\u0010\u0015\u001a\u0004\u0018\u00010\u0016H\u0016J\u0010\u0010\u0017\u001a\u00020\u00142\u0006\u0010\u0018\u001a\u00020\u0003H\u0016J\u0006\u0010\u0019\u001a\u00020\u0012J\b\u0010\u001a\u001a\u00020\u0014H\u0002Jb\u0010\u001b\u001a\u00020\u00142\u0006\u0010\u001c\u001a\u00020\t2\f\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u00120\u001e22\u0010\u001f\u001a.\u0012\u0004\u0012\u00020\u0010\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00120!\u0018\u00010 j\u0016\u0012\u0004\u0012\u00020\u0010\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00120!\u0018\u0001`\"2\u0006\u0010#\u001a\u00020$2\b\b\u0002\u0010%\u001a\u00020\u0010R\u0016\u0010\u0005\u001a\n \u0007*\u0004\u0018\u00010\u00060\u0006X\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\b\u001a\u00020\tX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\n\u0010\u000b\"\u0004\b\f\u0010\rR\u001a\u0010\u000e\u001a\u000e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020\u00100\u000fX.¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X.¢\u0006\u0002\n\u0000¨\u0006'"}, d2 = {"Lcom/coolapk/market/view/sencondhand/SecondHandParamsViewHolder$DataViewHolder;", "Lcom/coolapk/market/viewholder/BindingViewHolder;", "itemView", "Landroid/view/View;", "(Landroid/view/View;)V", "binding", "Lcom/coolapk/market/databinding/ItemGoodsParamsBinding;", "kotlin.jvm.PlatformType", "inOther", "", "getInOther", "()Z", "setInOther", "(Z)V", "item", "Lkotlin/Pair;", "", "productParams", "Lcom/coolapk/market/model/ProductParams;", "bindTo", "", "data", "", "onClick", "view", "paramText", "showDoneButton", "stateChange", "checked", "options", "", "map", "Ljava/util/LinkedHashMap;", "", "Lkotlin/collections/LinkedHashMap;", "type", "", "otherOption", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: SecondHandParamsViewHolder.kt */
     public static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558762;
+        public static final int LAYOUT_ID = 2131558769;
         private final ItemGoodsParamsBinding binding;
         private boolean inOther;
         private Pair<String, String> item;
@@ -314,7 +299,6 @@ public final class SecondHandParamsViewHolder extends BindingViewHolder {
             itemGoodsParamsBinding.setClick(this);
         }
 
-        @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/view/sencondhand/SecondHandParamsViewHolder$DataViewHolder$Companion;", "", "()V", "LAYOUT_ID", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
         /* compiled from: SecondHandParamsViewHolder.kt */
         public static final class Companion {
             private Companion() {

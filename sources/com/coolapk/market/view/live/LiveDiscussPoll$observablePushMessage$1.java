@@ -1,6 +1,7 @@
 package com.coolapk.market.view.live;
 
 import com.coolapk.market.AppHolder;
+import com.coolapk.market.manager.AppNotification;
 import com.coolapk.market.manager.PushMessage;
 import kotlin.Metadata;
 import rx.Observable;
@@ -16,14 +17,14 @@ final class LiveDiscussPoll$observablePushMessage$1<T> implements Observable.OnS
     }
 
     public final void call(Subscriber<? super PushMessage> subscriber) {
-        final LiveDiscussPoll$observablePushMessage$1$messageIntercept$1 liveDiscussPoll$observablePushMessage$1$messageIntercept$1 = new LiveDiscussPoll$observablePushMessage$1$messageIntercept$1(subscriber);
-        AppHolder.getAppNotification().addIntercept(liveDiscussPoll$observablePushMessage$1$messageIntercept$1);
+        final AppNotification.MessageIntercept invoke = AppNotification.MessageIntercept.Companion.invoke(new LiveDiscussPoll$observablePushMessage$1$messageIntercept$1(subscriber));
+        AppHolder.getAppNotification().addIntercept(invoke);
         subscriber.add(new MainThreadSubscription() {
             /* class com.coolapk.market.view.live.LiveDiscussPoll$observablePushMessage$1.AnonymousClass1 */
 
             @Override // rx.android.MainThreadSubscription
             protected void onUnsubscribe() {
-                AppHolder.getAppNotification().removeIntercept(liveDiscussPoll$observablePushMessage$1$messageIntercept$1);
+                AppHolder.getAppNotification().removeIntercept(invoke);
             }
         });
     }

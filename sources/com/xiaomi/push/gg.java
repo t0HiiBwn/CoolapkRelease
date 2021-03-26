@@ -1,169 +1,92 @@
 package com.xiaomi.push;
 
-import java.io.InputStream;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.Enumeration;
+import android.content.Context;
+import android.text.TextUtils;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.service.ak;
+import com.xiaomi.push.service.al;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
 
 public class gg {
-    private static gg a;
+    private static volatile gg a;
+    private final Context b;
+    private Map<String, gh> c = new HashMap();
 
-    /* renamed from: a  reason: collision with other field name */
-    private Map<String, Object> f505a = new ConcurrentHashMap();
-    private Map<String, Object> b = new ConcurrentHashMap();
-
-    private gg() {
-        m366a();
+    private gg(Context context) {
+        this.b = context;
     }
 
-    public static synchronized gg a() {
-        gg ggVar;
-        synchronized (gg.class) {
-            if (a == null) {
-                a = new gg();
-            }
-            ggVar = a;
+    public static gg a(Context context) {
+        if (context == null) {
+            c.d("[TinyDataManager]:mContext is null, TinyDataManager.getInstance(Context) failed.");
+            return null;
         }
-        return ggVar;
-    }
-
-    private String a(String str, String str2) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("<");
-        sb.append(str);
-        sb.append("/>");
-        if (str != null) {
-            sb.append("<");
-            sb.append(str2);
-            sb.append("/>");
-        }
-        return sb.toString();
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    private ClassLoader[] m364a() {
-        ClassLoader[] classLoaderArr = {gg.class.getClassLoader(), Thread.currentThread().getContextClassLoader()};
-        ArrayList arrayList = new ArrayList();
-        for (int i = 0; i < 2; i++) {
-            ClassLoader classLoader = classLoaderArr[i];
-            if (classLoader != null) {
-                arrayList.add(classLoader);
-            }
-        }
-        return (ClassLoader[]) arrayList.toArray(new ClassLoader[arrayList.size()]);
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public Object m365a(String str, String str2) {
-        return this.f505a.get(a(str, str2));
-    }
-
-    /* JADX WARNING: Removed duplicated region for block: B:42:0x00f6 A[SYNTHETIC, Splitter:B:42:0x00f6] */
-    /* renamed from: a  reason: collision with other method in class */
-    protected void m366a() {
-        Map<String, Object> map;
-        Object obj;
-        Map<String, Object> map2;
-        Object obj2;
-        try {
-            for (ClassLoader classLoader : m364a()) {
-                Enumeration<URL> resources = classLoader.getResources("META-INF/smack.providers");
-                while (resources.hasMoreElements()) {
-                    InputStream inputStream = null;
-                    try {
-                        InputStream openStream = resources.nextElement().openStream();
-                        XmlPullParser newPullParser = XmlPullParserFactory.newInstance().newPullParser();
-                        newPullParser.setFeature("http://xmlpull.org/v1/doc/features.html#process-namespaces", true);
-                        newPullParser.setInput(openStream, "UTF-8");
-                        int eventType = newPullParser.getEventType();
-                        do {
-                            if (eventType == 2) {
-                                if (newPullParser.getName().equals("iqProvider")) {
-                                    newPullParser.next();
-                                    newPullParser.next();
-                                    String nextText = newPullParser.nextText();
-                                    newPullParser.next();
-                                    newPullParser.next();
-                                    String nextText2 = newPullParser.nextText();
-                                    newPullParser.next();
-                                    newPullParser.next();
-                                    String nextText3 = newPullParser.nextText();
-                                    String a2 = a(nextText, nextText2);
-                                    if (!this.b.containsKey(a2)) {
-                                        try {
-                                            Class<?> cls = Class.forName(nextText3);
-                                            if (ge.class.isAssignableFrom(cls)) {
-                                                map2 = this.b;
-                                                obj2 = cls.newInstance();
-                                            } else if (fx.class.isAssignableFrom(cls)) {
-                                                map2 = this.b;
-                                                obj2 = cls;
-                                            }
-                                            map2.put(a2, obj2 == 1 ? 1 : 0);
-                                        } catch (ClassNotFoundException e) {
-                                            e = e;
-                                            e.printStackTrace();
-                                            eventType = newPullParser.next();
-                                            if (eventType == 1) {
-                                            }
-                                        }
-                                    }
-                                } else if (newPullParser.getName().equals("extensionProvider")) {
-                                    newPullParser.next();
-                                    newPullParser.next();
-                                    String nextText4 = newPullParser.nextText();
-                                    newPullParser.next();
-                                    newPullParser.next();
-                                    String nextText5 = newPullParser.nextText();
-                                    newPullParser.next();
-                                    newPullParser.next();
-                                    String nextText6 = newPullParser.nextText();
-                                    String a3 = a(nextText4, nextText5);
-                                    if (!this.f505a.containsKey(a3)) {
-                                        try {
-                                            Class<?> cls2 = Class.forName(nextText6);
-                                            if (gf.class.isAssignableFrom(cls2)) {
-                                                map = this.f505a;
-                                                obj = cls2.newInstance();
-                                            } else if (ga.class.isAssignableFrom(cls2)) {
-                                                map = this.f505a;
-                                                obj = cls2;
-                                            }
-                                            map.put(a3, obj == 1 ? 1 : 0);
-                                        } catch (ClassNotFoundException e2) {
-                                            e = e2;
-                                            e.printStackTrace();
-                                            eventType = newPullParser.next();
-                                            if (eventType == 1) {
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            eventType = newPullParser.next();
-                        } while (eventType == 1);
-                    } finally {
-                        try {
-                            inputStream.close();
-                        } catch (Exception unused) {
-                        }
-                    }
+        if (a == null) {
+            synchronized (gg.class) {
+                if (a == null) {
+                    a = new gg(context);
                 }
             }
-        } catch (Exception e3) {
-            e3.printStackTrace();
+        }
+        return a;
+    }
+
+    private boolean a(String str, String str2, String str3, String str4, long j, String str5) {
+        gm gmVar = new gm();
+        gmVar.d(str3);
+        gmVar.c(str4);
+        gmVar.a(j);
+        gmVar.b(str5);
+        gmVar.c(true);
+        gmVar.a("push_sdk_channel");
+        gmVar.e(str2);
+        return a(gmVar, str);
+    }
+
+    gh a() {
+        gh ghVar = this.c.get("UPLOADER_PUSH_CHANNEL");
+        if (ghVar != null) {
+            return ghVar;
+        }
+        gh ghVar2 = this.c.get("UPLOADER_HTTP");
+        if (ghVar2 != null) {
+            return ghVar2;
+        }
+        return null;
+    }
+
+    public void a(gh ghVar, String str) {
+        if (ghVar == null) {
+            c.d("[TinyDataManager]: please do not add null mUploader to TinyDataManager.");
+        } else if (TextUtils.isEmpty(str)) {
+            c.d("[TinyDataManager]: can not add a provider from unkown resource.");
+        } else {
+            b().put(str, ghVar);
         }
     }
 
-    public void a(String str, String str2, Object obj) {
-        if ((obj instanceof gf) || (obj instanceof Class)) {
-            this.f505a.put(a(str, str2), obj);
-            return;
+    public boolean a(gm gmVar, String str) {
+        if (TextUtils.isEmpty(str)) {
+            c.a("pkgName is null or empty, upload ClientUploadDataItem failed.");
+            return false;
+        } else if (ak.a(gmVar, false)) {
+            return false;
+        } else {
+            if (TextUtils.isEmpty(gmVar.m())) {
+                gmVar.f(ak.a());
+            }
+            gmVar.g(str);
+            al.a(this.b, gmVar);
+            return true;
         }
-        throw new IllegalArgumentException("Provider must be a PacketExtensionProvider or a Class instance.");
+    }
+
+    public boolean a(String str, String str2, long j, String str3) {
+        return a(this.b.getPackageName(), this.b.getPackageName(), str, str2, j, str3);
+    }
+
+    Map<String, gh> b() {
+        return this.c;
     }
 }

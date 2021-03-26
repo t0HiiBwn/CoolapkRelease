@@ -59,9 +59,7 @@ public class d implements com.bytedance.sdk.openadsdk.downloadnew.core.a, al.a {
     protected boolean i = true;
     protected IListenerManager j;
     private int k = -1;
-
-    /* renamed from: l  reason: collision with root package name */
-    private com.ss.android.a.a.b.a f1329l;
+    private com.ss.android.a.a.b.a l;
     private com.ss.android.a.a.b.b m;
     private c n;
     private boolean o;
@@ -223,7 +221,7 @@ public class d implements com.bytedance.sdk.openadsdk.downloadnew.core.a, al.a {
         }
         this.u = new com.bytedance.sdk.openadsdk.downloadnew.core.c();
         this.n = com.bytedance.sdk.openadsdk.downloadnew.a.b.b.a(this.d, lVar, null).a();
-        this.f1329l = com.bytedance.sdk.openadsdk.downloadnew.a.b.b.a(lVar).a();
+        this.l = com.bytedance.sdk.openadsdk.downloadnew.a.b.b.a(lVar).a();
         this.m = com.bytedance.sdk.openadsdk.downloadnew.a.b.b.a(lVar, this.d).a();
         a();
     }
@@ -357,7 +355,7 @@ public class d implements com.bytedance.sdk.openadsdk.downloadnew.core.a, al.a {
                 }
             } else if (!t()) {
                 c("changeDownloadStatus, the current status is1: " + this.e);
-                g.d().a(this.b.b(), this.n.d(), 2, this.m, this.f1329l, null, new n() {
+                g.d().a(this.b.b(), this.n.d(), 2, this.m, this.l, null, new n() {
                     /* class com.bytedance.sdk.openadsdk.downloadnew.a.d.AnonymousClass3 */
 
                     @Override // com.ss.android.a.a.a.n
@@ -371,13 +369,13 @@ public class d implements com.bytedance.sdk.openadsdk.downloadnew.core.a, al.a {
 
                                     @Override // com.bytedance.sdk.openadsdk.downloadnew.a.d.b
                                     public void a() {
-                                        g.d().a(d.this.b.b(), d.this.n.d(), 2, d.this.m, d.this.f1329l);
+                                        g.d().a(d.this.b.b(), d.this.n.d(), 2, d.this.m, d.this.l);
                                     }
                                 });
                                 return;
                             }
                         }
-                        g.d().a(d.this.b.b(), d.this.n.d(), 2, d.this.m, d.this.f1329l);
+                        g.d().a(d.this.b.b(), d.this.n.d(), 2, d.this.m, d.this.l);
                     }
                 });
                 c("changeDownloadStatus, the current status is2: " + this.e);
@@ -387,11 +385,11 @@ public class d implements com.bytedance.sdk.openadsdk.downloadnew.core.a, al.a {
 
                     @Override // com.bytedance.sdk.openadsdk.downloadnew.a.d.b
                     public void a() {
-                        g.d().a(d.this.b.b(), d.this.n.d(), 2, d.this.m, d.this.f1329l);
+                        g.d().a(d.this.b.b(), d.this.n.d(), 2, d.this.m, d.this.l);
                     }
                 });
             } else {
-                g.d().a(this.b.b(), this.n.d(), 2, this.m, this.f1329l);
+                g.d().a(this.b.b(), this.n.d(), 2, this.m, this.l);
             }
         }
     }

@@ -42,12 +42,12 @@ public final class OnSubscribeFromIterable<T> implements Observable.OnSubscribe<
         private static final long serialVersionUID = -8730475647105475802L;
 
         /* renamed from: it  reason: collision with root package name */
-        private final Iterator<? extends T> f1516it;
+        private final Iterator<? extends T> f200it;
         private final Subscriber<? super T> o;
 
         IterableProducer(Subscriber<? super T> subscriber, Iterator<? extends T> it2) {
             this.o = subscriber;
-            this.f1516it = it2;
+            this.f200it = it2;
         }
 
         @Override // rx.Producer
@@ -63,7 +63,7 @@ public final class OnSubscribeFromIterable<T> implements Observable.OnSubscribe<
 
         void slowPath(long j) {
             Subscriber<? super T> subscriber = this.o;
-            Iterator<? extends T> it2 = this.f1516it;
+            Iterator<? extends T> it2 = this.f200it;
             do {
                 long j2 = 0;
                 while (true) {
@@ -105,7 +105,7 @@ public final class OnSubscribeFromIterable<T> implements Observable.OnSubscribe<
 
         void fastPath() {
             Subscriber<? super T> subscriber = this.o;
-            Iterator<? extends T> it2 = this.f1516it;
+            Iterator<? extends T> it2 = this.f200it;
             while (!subscriber.isUnsubscribed()) {
                 try {
                     subscriber.onNext((Object) it2.next());

@@ -26,9 +26,7 @@ public abstract class b {
     private int i = 10000;
     private int j = 1;
     private int k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1385l = false;
+    private boolean l = false;
     private HandlerThread m;
     private Handler n;
     private boolean o = false;
@@ -195,10 +193,10 @@ public abstract class b {
     }
 
     public synchronized void a(int i2, int i3, byte[] bArr) {
-        if (!this.f1385l) {
+        if (!this.l) {
             this.j = 2;
             b(i2, i3, bArr);
-            this.f1385l = true;
+            this.l = true;
             this.k = 0;
             HandlerThread handlerThread = new HandlerThread("request");
             this.m = handlerThread;
@@ -209,12 +207,12 @@ public abstract class b {
                 @Override // android.os.Handler.Callback
                 public boolean handleMessage(Message message) {
                     if (b.this.k >= b.this.j) {
-                        b.this.f1385l = false;
+                        b.this.l = false;
                         b.this.k = 0;
                         b.this.m.quit();
                         return false;
                     } else if (b.this.a()) {
-                        b.this.f1385l = false;
+                        b.this.l = false;
                         b.this.k = 0;
                         b.this.m.quit();
                         return true;

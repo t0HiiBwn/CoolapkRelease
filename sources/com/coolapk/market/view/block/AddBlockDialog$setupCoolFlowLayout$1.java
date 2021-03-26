@@ -20,7 +20,7 @@ final class AddBlockDialog$setupCoolFlowLayout$1 implements View.OnClickListener
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        AddBlockDialog.access$updateBlockNodes(AddBlockDialog.INSTANCE, this.$initCopy, this.$blockItemList);
+        AddBlockDialog.INSTANCE.updateBlockNodes(this.$initCopy, this.$blockItemList);
         this.$dialog.dismiss();
     }
 }

@@ -24,7 +24,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: MobileAppViewHolder.kt */
 public final class MobileAppViewHolder extends StateViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558829;
+    public static final int LAYOUT_ID = 2131558836;
     private MobileApp mobileApp;
     private final SelectionTracker<Long> tracker;
 
@@ -61,11 +61,11 @@ public final class MobileAppViewHolder extends StateViewHolder {
         if (uninstallState != null) {
             int state = uninstallState.getState();
             if (state == 1) {
-                String string = getContext().getString(2131887050);
+                String string = getContext().getString(2131887112);
                 Intrinsics.checkNotNullExpressionValue(string, "context.getString(R.string.str_uninstall_wait)");
                 return string;
             } else if (state == 2) {
-                String string2 = getContext().getString(2131887049);
+                String string2 = getContext().getString(2131887111);
                 Intrinsics.checkNotNullExpressionValue(string2, "context.getString(R.stri…r_uninstall_uninstalling)");
                 return string2;
             }

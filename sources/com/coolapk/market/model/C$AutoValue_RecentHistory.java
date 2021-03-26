@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_RecentHistory  reason: invalid class name */
 abstract class C$AutoValue_RecentHistory extends C$$AutoValue_RecentHistory {
-    C$AutoValue_RecentHistory(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, int i, int i2, String str12, String str13, String str14, int i3, int i4, int i5, int i6) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l2, l3, str11, i, i2, str12, str13, str14, i3, i4, i5, i6);
+    C$AutoValue_RecentHistory(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, int i, int i2, String str12, String str13, String str14, int i3, int i4, int i5, int i6) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l, l2, str11, i, i2, str12, str13, str14, i3, i4, i5, i6);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_RecentHistory$GsonTypeAdapter */
@@ -143,13 +143,13 @@ abstract class C$AutoValue_RecentHistory extends C$$AutoValue_RecentHistory {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -276,8 +276,8 @@ abstract class C$AutoValue_RecentHistory extends C$$AutoValue_RecentHistory {
             String str8 = this.defaultLogo;
             String str9 = this.defaultSubTitle;
             String str10 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str11 = this.defaultId;
             int i = this.defaultCount;
             int i2 = this.defaultIsTop;
@@ -298,8 +298,8 @@ abstract class C$AutoValue_RecentHistory extends C$$AutoValue_RecentHistory {
             String str21 = str8;
             String str22 = str9;
             String str23 = str10;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str24 = str11;
             String str25 = str;
             int i7 = i;
@@ -477,7 +477,7 @@ abstract class C$AutoValue_RecentHistory extends C$$AutoValue_RecentHistory {
                             str15 = this.entityTemplateAdapter.read(jsonReader);
                             continue;
                         case 6:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 7:
                             i8 = this.isTopAdapter.read(jsonReader).intValue();
@@ -522,7 +522,7 @@ abstract class C$AutoValue_RecentHistory extends C$$AutoValue_RecentHistory {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 21:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case 22:
                             i10 = this.commentNumAdapter.read(jsonReader).intValue();
@@ -534,7 +534,7 @@ abstract class C$AutoValue_RecentHistory extends C$$AutoValue_RecentHistory {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_RecentHistory(str25, str15, str16, num2, str17, str18, str19, str20, str21, str22, str23, l4, l5, str24, i7, i8, str26, str27, str28, i9, i10, i11, i6);
+            return new AutoValue_RecentHistory(str25, str15, str16, num2, str17, str18, str19, str20, str21, str22, str23, l3, l4, str24, i7, i8, str26, str27, str28, i9, i10, i11, i6);
         }
     }
 }

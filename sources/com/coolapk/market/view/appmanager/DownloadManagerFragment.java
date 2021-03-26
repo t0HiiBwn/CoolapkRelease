@@ -65,7 +65,7 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
     @Override // com.coolapk.market.view.base.StateEventListFragment, androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
-        setEmptyData(getString(2131886766), 0);
+        setEmptyData(getString(2131886828), 0);
         setNotifyAdapter(false);
         setRefreshEnable(false);
         setLoadMoreEnable(false);
@@ -108,7 +108,7 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
             if (j == 0) {
                 arrayList.add(new DownloadSection(createTime));
             } else if (((long) findTheDay) != j) {
-                arrayList.add(new SectionedAdapter.Section(i, 2131558957, getDownloadTimeDescription(createTime)));
+                arrayList.add(new SectionedAdapter.Section(i, 2131558964, getDownloadTimeDescription(createTime)));
             }
             j = (long) findTheDay;
         }
@@ -183,12 +183,12 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
     public String getDownloadTimeDescription(long j) {
         int findTheDay = findTheDay(j);
         if (findTheDay == 1) {
-            return getActivity().getString(2131886755);
+            return getActivity().getString(2131886817);
         }
         if (findTheDay != 2) {
-            return getActivity().getString(2131886754);
+            return getActivity().getString(2131886816);
         }
-        return getActivity().getString(2131886753);
+        return getActivity().getString(2131886815);
     }
 
     @Override // com.coolapk.market.view.base.asynclist.AsyncListFragment
@@ -209,16 +209,16 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
          */
         /* JADX WARNING: Illegal instructions before constructor call */
         public DownloadSection(long j) {
-            super(0, 2131558847, r0);
+            super(0, 2131558854, r0);
             String[] strArr = new String[3];
             strArr[0] = DownloadManagerFragment.this.getDownloadTimeDescription(j);
-            strArr[1] = DownloadManagerFragment.this.getString(DownloadManagerFragment.this.isDownloading ? 2131886634 : 2131886681);
-            strArr[2] = DownloadManagerFragment.this.getString(2131886693);
+            strArr[1] = DownloadManagerFragment.this.getString(DownloadManagerFragment.this.isDownloading ? 2131886696 : 2131886743);
+            strArr[2] = DownloadManagerFragment.this.getString(2131886755);
         }
 
         public void onClick(RecyclerView.ViewHolder viewHolder, View view) {
             switch (view.getId()) {
-                case 2131363051:
+                case 2131363065:
                     if (DownloadManagerFragment.this.isDownloading) {
                         Iterator it2 = DownloadManagerFragment.this.getDataList().iterator();
                         while (it2.hasNext()) {
@@ -237,7 +237,7 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
                         }
                     }
                     return;
-                case 2131363052:
+                case 2131363066:
                     DeleteDownloadLogConfirmDialog.newInstance().show(DownloadManagerFragment.this.getChildFragmentManager(), (String) null);
                     return;
                 default:
@@ -292,7 +292,7 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
 
         @Override // androidx.fragment.app.DialogFragment
         public Dialog onCreateDialog(Bundle bundle) {
-            return new AlertDialog.Builder(getActivity()).setMessage(2131886720).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
+            return new AlertDialog.Builder(getActivity()).setMessage(2131886782).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.view.appmanager.DownloadManagerFragment.DeleteDownloadLogConfirmDialog.AnonymousClass2 */
 
                 @Override // android.content.DialogInterface.OnClickListener
@@ -317,7 +317,7 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
         @Override // com.coolapk.market.widget.SectionedAdapter
         public RecyclerView.ViewHolder onCreateSectionViewHolder(ViewGroup viewGroup, int i) {
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-            if (i == 2131558847) {
+            if (i == 2131558854) {
                 return new OptionsTitleSectionViewHolder(inflate, new ItemActionHandler() {
                     /* class com.coolapk.market.view.appmanager.DownloadManagerFragment.MySectionedAdapter.AnonymousClass1 */
 
@@ -329,7 +329,7 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
                     }
                 });
             }
-            if (i == 2131558957) {
+            if (i == 2131558964) {
                 return new TitleSectionViewHolder(inflate);
             }
             throw new RuntimeException("Unknown view type: " + i);
@@ -346,7 +346,7 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558675;
+            return 2131558681;
         }
 
         public DataAdapter(Fragment fragment) {
@@ -364,9 +364,9 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
                     if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition())) {
                         final DownloadInfo downloadInfo = (DownloadInfo) DownloadManagerFragment.this.getDataList().get(DownloadManagerFragment.this.adapter.sectionedPositionToPosition(viewHolder.getAdapterPosition()));
                         int id = view.getId();
-                        if (id != 2131361886) {
-                            if (id != 2131362768) {
-                                if (id != 2131362970 || downloadInfo.getExtra() == null) {
+                        if (id != 2131361887) {
+                            if (id != 2131362779) {
+                                if (id != 2131362982 || downloadInfo.getExtra() == null) {
                                     return;
                                 }
                                 if (downloadInfo.getExtra().getString("PACKAGE_NAME") == null) {
@@ -407,7 +407,7 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
                                     @Override // androidx.appcompat.widget.PopupMenu.OnMenuItemClickListener
                                     public boolean onMenuItemClick(MenuItem menuItem) {
                                         int itemId = menuItem.getItemId();
-                                        if (itemId == 2131361891) {
+                                        if (itemId == 2131361892) {
                                             ConfirmDialog newInstance = ConfirmDialog.newInstance("", "确认要删除下载记录与本地文件么？", " 确认删除", "取消");
                                             newInstance.setOnOkRunnable(new Runnable() {
                                                 /* class com.coolapk.market.view.appmanager.DownloadManagerFragment.DataAdapter.AnonymousClass1.AnonymousClass2.AnonymousClass1 */
@@ -419,10 +419,10 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
                                             });
                                             newInstance.show(DownloadManagerFragment.this.getChildFragmentManager(), (String) null);
                                             return true;
-                                        } else if (itemId != 2131361981) {
+                                        } else if (itemId != 2131361982) {
                                             return false;
                                         } else {
-                                            ActionManager.startAppForumActivity(DownloadManagerFragment.this.getActivity(), view2.findViewById(2131362672), string2, string4, string, string5);
+                                            ActionManager.startAppForumActivity(DownloadManagerFragment.this.getActivity(), view2.findViewById(2131362683), string2, string4, string, string5);
                                             return true;
                                         }
                                     }
@@ -432,7 +432,7 @@ public class DownloadManagerFragment extends StateEventListFragment<List<Downloa
                                 if (!TextUtils.isEmpty(string6)) {
                                     View view3 = viewHolder.itemView;
                                     String string7 = downloadInfo.getExtra().getString("TITLE");
-                                    ActionManager.startAppForumActivity(DownloadManagerFragment.this.getActivity(), view3.findViewById(2131362672), string6, downloadInfo.getExtra().getString("LOGO"), string7, downloadInfo.getExtra().getString("EXTRA_ANALYSIS_DATA"));
+                                    ActionManager.startAppForumActivity(DownloadManagerFragment.this.getActivity(), view3.findViewById(2131362683), string6, downloadInfo.getExtra().getString("LOGO"), string7, downloadInfo.getExtra().getString("EXTRA_ANALYSIS_DATA"));
                                 }
                             }
                         } else if (downloadInfo.getExtra() != null) {

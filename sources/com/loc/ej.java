@@ -25,9 +25,7 @@ public final class ej {
     public static String i = null;
     static String j;
     static HashMap<String, String> k;
-
-    /* renamed from: l  reason: collision with root package name */
-    static boolean f1376l = false;
+    static boolean l = false;
     static boolean m = false;
     private static final String[] n = {"com.amap.api.location", "com.loc", "com.amap.api.fence"};
     private static t o = null;

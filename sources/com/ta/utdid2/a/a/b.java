@@ -9,7 +9,7 @@ public class b {
         public int a;
 
         /* renamed from: a  reason: collision with other field name */
-        public byte[] f72a;
+        public byte[] f71a;
 
         a() {
         }
@@ -24,28 +24,28 @@ public class b {
     }
 
     public static byte[] decode(byte[] bArr, int i, int i2, int i3) {
-        C0116b bVar = new C0116b(i3, new byte[((i2 * 3) / 4)]);
+        C0126b bVar = new C0126b(i3, new byte[((i2 * 3) / 4)]);
         if (!bVar.a(bArr, i, i2, true)) {
             throw new IllegalArgumentException("bad base-64");
-        } else if (bVar.a == bVar.f72a.length) {
-            return bVar.f72a;
+        } else if (bVar.a == bVar.f71a.length) {
+            return bVar.f71a;
         } else {
             byte[] bArr2 = new byte[bVar.a];
-            System.arraycopy(bVar.f72a, 0, bArr2, 0, bVar.a);
+            System.arraycopy(bVar.f71a, 0, bArr2, 0, bVar.a);
             return bArr2;
         }
     }
 
     /* renamed from: com.ta.utdid2.a.a.b$b  reason: collision with other inner class name */
-    static class C0116b extends a {
+    static class C0126b extends a {
         private static final int[] a = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, -1, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -2, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, -1, -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
         private static final int[] b = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -2, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, 63, -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
         private final int[] c;
         private int state;
         private int value;
 
-        public C0116b(int i, byte[] bArr) {
-            this.f72a = bArr;
+        public C0126b(int i, byte[] bArr) {
+            this.f71a = bArr;
             this.c = (i & 8) == 0 ? a : b;
             this.state = 0;
             this.value = 0;
@@ -58,7 +58,7 @@ public class b {
             }
             int i4 = i2 + i;
             int i5 = this.value;
-            byte[] bArr2 = this.f72a;
+            byte[] bArr2 = this.f71a;
             int[] iArr = this.c;
             int i6 = i5;
             int i7 = 0;
@@ -189,7 +189,7 @@ public class b {
         c cVar = new c(i3, null);
         int i4 = (i2 / 3) * 4;
         int i5 = 2;
-        if (!cVar.f74b) {
+        if (!cVar.f73b) {
             int i6 = i2 % 3;
             if (i6 == 1) {
                 i4 += 2;
@@ -199,17 +199,17 @@ public class b {
         } else if (i2 % 3 > 0) {
             i4 += 4;
         }
-        if (cVar.f75c && i2 > 0) {
+        if (cVar.f74c && i2 > 0) {
             int i7 = ((i2 - 1) / 57) + 1;
             if (!cVar.d) {
                 i5 = 1;
             }
             i4 += i7 * i5;
         }
-        cVar.f72a = new byte[i4];
+        cVar.f71a = new byte[i4];
         cVar.a(bArr, i, i2, true);
         if (a || cVar.a == i4) {
-            return cVar.f72a;
+            return cVar.f71a;
         }
         throw new AssertionError();
     }
@@ -220,30 +220,30 @@ public class b {
         private static final byte[] c = {65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 45, 95};
 
         /* renamed from: b  reason: collision with other field name */
-        int f73b;
+        int f72b;
 
         /* renamed from: b  reason: collision with other field name */
-        public final boolean f74b;
+        public final boolean f73b;
 
         /* renamed from: c  reason: collision with other field name */
-        public final boolean f75c;
+        public final boolean f74c;
         private int count;
         public final boolean d;
 
         /* renamed from: d  reason: collision with other field name */
-        private final byte[] f76d;
+        private final byte[] f75d;
         private final byte[] e;
 
         public c(int i, byte[] bArr) {
-            this.f72a = bArr;
+            this.f71a = bArr;
             boolean z = true;
-            this.f74b = (i & 1) == 0;
+            this.f73b = (i & 1) == 0;
             boolean z2 = (i & 2) == 0;
-            this.f75c = z2;
+            this.f74c = z2;
             this.d = (i & 4) == 0 ? false : z;
             this.e = (i & 8) == 0 ? b : c;
-            this.f76d = new byte[2];
-            this.f73b = 0;
+            this.f75d = new byte[2];
+            this.f72b = 0;
             this.count = z2 ? 19 : -1;
         }
 

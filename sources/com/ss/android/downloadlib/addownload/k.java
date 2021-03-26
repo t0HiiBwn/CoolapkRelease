@@ -35,9 +35,7 @@ public class k {
     private static i i;
     private static a j;
     private static b k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static com.ss.android.socialbase.appdownloader.c.h f1404l;
+    private static com.ss.android.socialbase.appdownloader.c.h l;
     private static d m;
     private static e n;
     private static o o;
@@ -148,8 +146,8 @@ public class k {
     }
 
     public static com.ss.android.socialbase.appdownloader.c.h g() {
-        if (f1404l == null) {
-            f1404l = new com.ss.android.socialbase.appdownloader.c.h() {
+        if (l == null) {
+            l = new com.ss.android.socialbase.appdownloader.c.h() {
                 /* class com.ss.android.downloadlib.addownload.k.AnonymousClass2 */
 
                 @Override // com.ss.android.socialbase.appdownloader.c.h
@@ -157,7 +155,7 @@ public class k {
                 }
             };
         }
-        return f1404l;
+        return l;
     }
 
     public static o h() {

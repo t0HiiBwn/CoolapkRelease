@@ -15,7 +15,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemCreateGoodsListViewHolder.kt */
 public final class ItemCreateGoodsListViewHolder extends GenericBindHolder<ItemCreateGoodsListBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558666;
+    public static final int LAYOUT_ID = 2131558672;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public ItemCreateGoodsListViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -35,7 +35,7 @@ public final class ItemCreateGoodsListViewHolder extends GenericBindHolder<ItemC
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131362768) {
+        if (view.getId() == 2131362779) {
             ActionManager.startCreateGoodsListActivity(getContext());
         }
     }

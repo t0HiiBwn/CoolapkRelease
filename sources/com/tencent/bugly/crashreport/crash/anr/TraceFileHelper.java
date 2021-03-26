@@ -124,9 +124,9 @@ public class TraceFileHelper {
         return null;
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:64:0x017f A[Catch:{ all -> 0x0175 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:67:0x01a7 A[SYNTHETIC, Splitter:B:67:0x01a7] */
-    /* JADX WARNING: Removed duplicated region for block: B:75:0x01b9 A[SYNTHETIC, Splitter:B:75:0x01b9] */
+    /* JADX WARNING: Removed duplicated region for block: B:64:0x0181 A[Catch:{ all -> 0x0177 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:67:0x01aa A[SYNTHETIC, Splitter:B:67:0x01aa] */
+    /* JADX WARNING: Removed duplicated region for block: B:75:0x01bc A[SYNTHETIC, Splitter:B:75:0x01bc] */
     /* JADX WARNING: Removed duplicated region for block: B:94:? A[RETURN, SYNTHETIC] */
     public static void readTraceFile(String str, b bVar) {
         Throwable th;
@@ -228,26 +228,18 @@ public class TraceFileHelper {
                         bufferedReader = bufferedReader2;
                         try {
                             if (!x.a(e)) {
-                                e.printStackTrace();
                             }
                             x.d("trace open fail:%s : %s", e.getClass().getName(), e.getMessage());
                             if (bufferedReader == null) {
-                                try {
-                                    bufferedReader.close();
-                                } catch (IOException e7) {
-                                    if (!x.a(e7)) {
-                                        e7.printStackTrace();
-                                    }
-                                }
                             }
                         } catch (Throwable th2) {
                             th = th2;
                             if (bufferedReader != null) {
                                 try {
                                     bufferedReader.close();
-                                } catch (IOException e8) {
-                                    if (!x.a(e8)) {
-                                        e8.printStackTrace();
+                                } catch (IOException e7) {
+                                    if (!x.a(e7)) {
+                                        e7.printStackTrace();
                                     }
                                 }
                             }
@@ -260,12 +252,20 @@ public class TraceFileHelper {
                         }
                         throw th;
                     }
-                } catch (Exception e9) {
-                    e = e9;
+                } catch (Exception e8) {
+                    e = e8;
                     if (!x.a(e)) {
+                        e.printStackTrace();
                     }
                     x.d("trace open fail:%s : %s", e.getClass().getName(), e.getMessage());
                     if (bufferedReader == null) {
+                        try {
+                            bufferedReader.close();
+                        } catch (IOException e9) {
+                            if (!x.a(e9)) {
+                                e9.printStackTrace();
+                            }
+                        }
                     }
                 }
             }

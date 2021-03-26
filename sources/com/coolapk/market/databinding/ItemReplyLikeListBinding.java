@@ -66,7 +66,7 @@ public abstract class ItemReplyLikeListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReplyLikeListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemReplyLikeListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558897, viewGroup, z, obj);
+        return (ItemReplyLikeListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558904, viewGroup, z, obj);
     }
 
     public static ItemReplyLikeListBinding inflate(LayoutInflater layoutInflater) {
@@ -75,7 +75,7 @@ public abstract class ItemReplyLikeListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReplyLikeListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemReplyLikeListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558897, null, false, obj);
+        return (ItemReplyLikeListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558904, null, false, obj);
     }
 
     public static ItemReplyLikeListBinding bind(View view) {
@@ -84,6 +84,6 @@ public abstract class ItemReplyLikeListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemReplyLikeListBinding bind(View view, Object obj) {
-        return (ItemReplyLikeListBinding) bind(obj, view, 2131558897);
+        return (ItemReplyLikeListBinding) bind(obj, view, 2131558904);
     }
 }

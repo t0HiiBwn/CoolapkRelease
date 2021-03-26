@@ -15,18 +15,16 @@ import java.util.Map;
 
 /* compiled from: CommonRecordUploadDatas */
 public final class b extends com.tencent.beacon.core.c.a {
-    private static AbstractC0122b m = new a((byte) 0);
+    private static AbstractC0140b m = new a((byte) 0);
     private Context h = null;
     private Long[] i = null;
     private List<Long> j = null;
     private byte[] k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1425l = false;
+    private boolean l = false;
 
     /* renamed from: com.tencent.beacon.core.event.b$b  reason: collision with other inner class name */
     /* compiled from: CommonRecordUploadDatas */
-    public interface AbstractC0122b {
+    public interface AbstractC0140b {
         byte[] a(List<RDBean> list, List<Long> list2);
     }
 
@@ -36,11 +34,11 @@ public final class b extends com.tencent.beacon.core.c.a {
     }
 
     private synchronized boolean g() {
-        return this.f1425l;
+        return this.l;
     }
 
     public final synchronized void a(boolean z) {
-        this.f1425l = z;
+        this.l = z;
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:65:0x011e A[LOOP:1: B:63:0x0119->B:65:0x011e, LOOP_END] */
@@ -96,7 +94,7 @@ public final class b extends com.tencent.beacon.core.c.a {
                             if (a4.size() > 0) {
                                 ArrayList arrayList = new ArrayList();
                                 this.j = arrayList;
-                                AbstractC0122b bVar = m;
+                                AbstractC0140b bVar = m;
                                 byte[] a5 = bVar != null ? bVar.a(a4, arrayList) : null;
                                 if (this.j.size() > 0) {
                                     Context context = this.h;
@@ -197,7 +195,7 @@ public final class b extends com.tencent.beacon.core.c.a {
     }
 
     /* compiled from: CommonRecordUploadDatas */
-    private static class a implements AbstractC0122b {
+    private static class a implements AbstractC0140b {
         private a() {
         }
 
@@ -205,7 +203,7 @@ public final class b extends com.tencent.beacon.core.c.a {
             this();
         }
 
-        @Override // com.tencent.beacon.core.event.b.AbstractC0122b
+        @Override // com.tencent.beacon.core.event.b.AbstractC0140b
         public final byte[] a(List<RDBean> list, List<Long> list2) {
             if (list != null && list.size() > 0) {
                 ArrayList<EventRecord> arrayList = new ArrayList<>();

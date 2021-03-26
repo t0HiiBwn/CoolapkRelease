@@ -10,6 +10,10 @@ public class BoundedInputStream extends InputStream {
     private long pos;
     private boolean propagateClose;
 
+    public BoundedInputStream(InputStream inputStream) {
+        this(inputStream, -1);
+    }
+
     public BoundedInputStream(InputStream inputStream, long j) {
         this.pos = 0;
         this.mark = -1;
@@ -18,8 +22,35 @@ public class BoundedInputStream extends InputStream {
         this.in = inputStream;
     }
 
-    public BoundedInputStream(InputStream inputStream) {
-        this(inputStream, -1);
+    @Override // java.io.InputStream
+    public int available() throws IOException {
+        long j = this.max;
+        if (j < 0 || this.pos < j) {
+            return this.in.available();
+        }
+        return 0;
+    }
+
+    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
+        if (this.propagateClose) {
+            this.in.close();
+        }
+    }
+
+    public boolean isPropagateClose() {
+        return this.propagateClose;
+    }
+
+    @Override // java.io.InputStream
+    public synchronized void mark(int i) {
+        this.in.mark(i);
+        this.mark = this.pos;
+    }
+
+    @Override // java.io.InputStream
+    public boolean markSupported() {
+        return this.in.markSupported();
     }
 
     @Override // java.io.InputStream
@@ -44,12 +75,23 @@ public class BoundedInputStream extends InputStream {
         if (j >= 0 && this.pos >= j) {
             return -1;
         }
-        int read = this.in.read(bArr, i, (int) (j >= 0 ? Math.min((long) i2, j - this.pos) : (long) i2));
+        long j2 = this.max;
+        int read = this.in.read(bArr, i, (int) (j2 >= 0 ? Math.min((long) i2, j2 - this.pos) : (long) i2));
         if (read == -1) {
             return -1;
         }
         this.pos += (long) read;
         return read;
+    }
+
+    @Override // java.io.InputStream
+    public synchronized void reset() throws IOException {
+        this.in.reset();
+        this.pos = this.mark;
+    }
+
+    public void setPropagateClose(boolean z) {
+        this.propagateClose = z;
     }
 
     @Override // java.io.InputStream
@@ -63,49 +105,8 @@ public class BoundedInputStream extends InputStream {
         return skip;
     }
 
-    @Override // java.io.InputStream
-    public int available() throws IOException {
-        long j = this.max;
-        if (j < 0 || this.pos < j) {
-            return this.in.available();
-        }
-        return 0;
-    }
-
     @Override // java.lang.Object
     public String toString() {
         return this.in.toString();
-    }
-
-    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
-        if (this.propagateClose) {
-            this.in.close();
-        }
-    }
-
-    @Override // java.io.InputStream
-    public synchronized void reset() throws IOException {
-        this.in.reset();
-        this.pos = this.mark;
-    }
-
-    @Override // java.io.InputStream
-    public synchronized void mark(int i) {
-        this.in.mark(i);
-        this.mark = this.pos;
-    }
-
-    @Override // java.io.InputStream
-    public boolean markSupported() {
-        return this.in.markSupported();
-    }
-
-    public boolean isPropagateClose() {
-        return this.propagateClose;
-    }
-
-    public void setPropagateClose(boolean z) {
-        this.propagateClose = z;
     }
 }

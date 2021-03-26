@@ -9,15 +9,13 @@ class a implements i {
     private boolean c = false;
     private f d;
     private int[] e;
-    private C0091a f = new C0091a();
+    private C0101a f = new C0101a();
     private boolean g;
     private int h;
     private int i;
     private int j;
     private int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int[] f1407l;
+    private int[] l;
     private int m;
     private int n;
     private int o;
@@ -78,11 +76,11 @@ class a implements i {
         if (this.h != 2) {
             return -1;
         }
-        return this.f1407l.length / 5;
+        return this.l.length / 5;
     }
 
     public String a(int i2) {
-        int i3 = this.f1407l[e(i2) + 1];
+        int i3 = this.l[e(i2) + 1];
         if (i3 == -1) {
             return "";
         }
@@ -90,16 +88,16 @@ class a implements i {
     }
 
     public int b(int i2) {
-        return this.f1407l[e(i2) + 3];
+        return this.l[e(i2) + 3];
     }
 
     public int c(int i2) {
-        return this.f1407l[e(i2) + 4];
+        return this.l[e(i2) + 4];
     }
 
     public String d(int i2) {
         int e2 = e(i2);
-        int[] iArr = this.f1407l;
+        int[] iArr = this.l;
         if (iArr[e2 + 3] == 3) {
             return this.d.a(iArr[e2 + 2]);
         }
@@ -110,7 +108,7 @@ class a implements i {
     private final int e(int i2) {
         if (this.h == 2) {
             int i3 = i2 * 5;
-            if (i3 < this.f1407l.length) {
+            if (i3 < this.l.length) {
                 return i3;
             }
             throw new IndexOutOfBoundsException("Invalid attribute index (" + i2 + ").");
@@ -123,7 +121,7 @@ class a implements i {
         this.i = -1;
         this.j = -1;
         this.k = -1;
-        this.f1407l = null;
+        this.l = null;
         this.m = -1;
         this.n = -1;
         this.o = -1;
@@ -187,9 +185,9 @@ class a implements i {
                             this.n = b5;
                             this.o = (b5 >>> 16) - 1;
                             this.n = (65535 & b5) - 1;
-                            this.f1407l = this.b.b((b4 & 65535) * 5);
+                            this.l = this.b.b((b4 & 65535) * 5);
                             while (true) {
-                                int[] iArr = this.f1407l;
+                                int[] iArr = this.l;
                                 if (i4 < iArr.length) {
                                     iArr[i4] = iArr[i4] >>> 24;
                                     i4 += 5;
@@ -227,7 +225,7 @@ class a implements i {
 
     /* renamed from: com.ss.android.socialbase.appdownloader.f.a.a$a  reason: collision with other inner class name */
     /* compiled from: AXmlResourceParser */
-    private static final class C0091a {
+    private static final class C0101a {
         private int[] a = new int[32];
         private int b;
         private int c;

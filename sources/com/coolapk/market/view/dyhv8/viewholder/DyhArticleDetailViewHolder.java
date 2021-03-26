@@ -48,7 +48,7 @@ import rx.Subscriber;
 /* compiled from: DyhArticleDetailViewHolder.kt */
 public final class DyhArticleDetailViewHolder extends GenericBindHolder<ItemDyhDetailV8Binding, DyhArticle> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558679;
+    public static final int LAYOUT_ID = 2131558685;
     private DyhArticle dyhArticle;
     private DyhViewModel dyhViewModel;
     private Boolean isRequesting = false;
@@ -244,10 +244,10 @@ public final class DyhArticleDetailViewHolder extends GenericBindHolder<ItemDyhD
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
         switch (view.getId()) {
-            case 2131361981:
+            case 2131361982:
                 onActionButtonClick();
                 return;
-            case 2131362200:
+            case 2131362205:
                 DyhArticle dyhArticle2 = this.dyhArticle;
                 Intrinsics.checkNotNull(dyhArticle2);
                 if (TextUtils.isEmpty(dyhArticle2.getRawUrl())) {
@@ -280,10 +280,10 @@ public final class DyhArticleDetailViewHolder extends GenericBindHolder<ItemDyhD
                 }
                 ActionManager.startWebViewForDyhActivity(getContext(), this.dyhArticle);
                 return;
-            case 2131362481:
+            case 2131362489:
                 ActionManager.startWebViewForDyhActivity(getContext(), this.dyhArticle);
                 return;
-            case 2131362889:
+            case 2131362900:
                 Context context2 = getContext();
                 DyhViewModel dyhViewModel2 = this.dyhViewModel;
                 Intrinsics.checkNotNull(dyhViewModel2);

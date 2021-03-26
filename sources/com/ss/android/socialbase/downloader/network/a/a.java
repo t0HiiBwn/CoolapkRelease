@@ -15,7 +15,7 @@ public class a {
 
     /* renamed from: com.ss.android.socialbase.downloader.network.a.a$a  reason: collision with other inner class name */
     /* compiled from: DownloadConnectionPool */
-    private static final class C0114a {
+    private static final class C0124a {
         private static final a a = new a();
     }
 
@@ -96,7 +96,7 @@ public class a {
     }
 
     public static a a() {
-        return C0114a.a;
+        return C0124a.a;
     }
 
     private a() {

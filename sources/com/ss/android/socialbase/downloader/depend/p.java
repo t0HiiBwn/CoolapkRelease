@@ -28,7 +28,7 @@ public interface p extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.ss.android.socialbase.downloader.depend.IDownloadDiskSpaceAidlHandler");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof p)) {
-                return new C0108a(iBinder);
+                return new C0118a(iBinder);
             }
             return (p) queryLocalInterface;
         }
@@ -51,11 +51,11 @@ public interface p extends IInterface {
 
         /* renamed from: com.ss.android.socialbase.downloader.depend.p$a$a  reason: collision with other inner class name */
         /* compiled from: IDownloadDiskSpaceAidlHandler */
-        private static class C0108a implements p {
+        private static class C0118a implements p {
             public static p a;
             private IBinder b;
 
-            C0108a(IBinder iBinder) {
+            C0118a(IBinder iBinder) {
                 this.b = iBinder;
             }
 
@@ -92,7 +92,7 @@ public interface p extends IInterface {
         }
 
         public static p a() {
-            return C0108a.a;
+            return C0118a.a;
         }
     }
 }

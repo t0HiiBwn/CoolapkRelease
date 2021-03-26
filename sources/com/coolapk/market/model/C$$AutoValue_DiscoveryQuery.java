@@ -27,7 +27,7 @@ abstract class C$$AutoValue_DiscoveryQuery extends DiscoveryQuery {
     private final String title;
     private final String url;
 
-    C$$AutoValue_DiscoveryQuery(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, String str10, String str11, String str12, String str13, List<String> list, String str14, String str15, String str16) {
+    C$$AutoValue_DiscoveryQuery(String str, String str2, Integer num, String str3, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, String str10, String str11, String str12, String str13, List<String> list, String str14, String str15, String str16) {
         this.entityTemplate = str;
         this.entityId = str2;
         this.entityFixed = num;
@@ -37,8 +37,8 @@ abstract class C$$AutoValue_DiscoveryQuery extends DiscoveryQuery {
         this.subTitle = str6;
         this.id = str7;
         this.extraData = str8;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.entityTypeName = str9;
         this.title = str10;
         this.logo = str11;
@@ -200,10 +200,10 @@ abstract class C$$AutoValue_DiscoveryQuery extends DiscoveryQuery {
                                     if (str7 != null ? str7.equals(discoveryQuery.getId()) : discoveryQuery.getId() == null) {
                                         String str8 = this.extraData;
                                         if (str8 != null ? str8.equals(discoveryQuery.getExtraData()) : discoveryQuery.getExtraData() == null) {
-                                            Long l2 = this.dateline;
-                                            if (l2 != null ? l2.equals(discoveryQuery.getDateline()) : discoveryQuery.getDateline() == null) {
-                                                Long l3 = this.lastUpdate;
-                                                if (l3 != null ? l3.equals(discoveryQuery.getLastUpdate()) : discoveryQuery.getLastUpdate() == null) {
+                                            Long l = this.dateline;
+                                            if (l != null ? l.equals(discoveryQuery.getDateline()) : discoveryQuery.getDateline() == null) {
+                                                Long l2 = this.lastUpdate;
+                                                if (l2 != null ? l2.equals(discoveryQuery.getLastUpdate()) : discoveryQuery.getLastUpdate() == null) {
                                                     String str9 = this.entityTypeName;
                                                     if (str9 != null ? str9.equals(discoveryQuery.getEntityTypeName()) : discoveryQuery.getEntityTypeName() == null) {
                                                         String str10 = this.title;
@@ -261,10 +261,10 @@ abstract class C$$AutoValue_DiscoveryQuery extends DiscoveryQuery {
         int hashCode8 = (hashCode7 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
         String str8 = this.extraData;
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode10 = (hashCode9 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode11 = (hashCode10 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode10 = (hashCode9 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode11 = (hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str9 = this.entityTypeName;
         int hashCode12 = (hashCode11 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.title;

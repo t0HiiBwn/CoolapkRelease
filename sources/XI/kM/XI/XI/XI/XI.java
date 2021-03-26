@@ -12,23 +12,23 @@ public final class XI implements ServiceConnection {
     public final LinkedBlockingQueue<IBinder> K0 = new LinkedBlockingQueue<>(1);
 
     /* renamed from: XI  reason: collision with root package name */
-    public boolean f1179XI = false;
+    public boolean f185XI = false;
 
     /* renamed from: XI.kM.XI.XI.XI.XI$XI  reason: collision with other inner class name */
     public class RunnableC0006XI implements Runnable {
 
         /* renamed from: XI  reason: collision with root package name */
-        public final /* synthetic */ IBinder f1180XI;
+        public final /* synthetic */ IBinder f186XI;
 
         public RunnableC0006XI(IBinder iBinder) {
-            this.f1180XI = iBinder;
+            this.f186XI = iBinder;
         }
 
         @Override // java.lang.Runnable
         public final void run() {
             try {
                 System.currentTimeMillis();
-                XI.this.K0.offer(this.f1180XI);
+                XI.this.K0.offer(this.f186XI);
             } catch (Throwable th) {
                 th.getClass().getSimpleName();
             }

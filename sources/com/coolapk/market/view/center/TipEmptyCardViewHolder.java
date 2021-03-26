@@ -17,7 +17,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: TipEmptyCardViewHolder.kt */
 public final class TipEmptyCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558953;
+    public static final int LAYOUT_ID = 2131558960;
     private final ItemTipEmptyBinding binding = ((ItemTipEmptyBinding) getBinding());
     private EntityCard model;
 
@@ -69,7 +69,7 @@ public final class TipEmptyCardViewHolder extends BindingViewHolder {
         super.onClick(view);
         String str = null;
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf != null && valueOf.intValue() == 2131363437) {
+        if (valueOf != null && valueOf.intValue() == 2131363455) {
             Context context = getContext();
             Intrinsics.checkNotNullExpressionValue(context, "context");
             EntityCard entityCard = this.model;

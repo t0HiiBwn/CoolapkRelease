@@ -29,7 +29,7 @@ public abstract class TopicPickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicPickerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (TopicPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559205, viewGroup, z, obj);
+        return (TopicPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559213, viewGroup, z, obj);
     }
 
     public static TopicPickerBinding inflate(LayoutInflater layoutInflater) {
@@ -38,7 +38,7 @@ public abstract class TopicPickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicPickerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (TopicPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559205, null, false, obj);
+        return (TopicPickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559213, null, false, obj);
     }
 
     public static TopicPickerBinding bind(View view) {
@@ -47,6 +47,6 @@ public abstract class TopicPickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicPickerBinding bind(View view, Object obj) {
-        return (TopicPickerBinding) bind(obj, view, 2131559205);
+        return (TopicPickerBinding) bind(obj, view, 2131559213);
     }
 }

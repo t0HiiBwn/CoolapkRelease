@@ -32,10 +32,10 @@ public class ItemFeedVoteCommentSmallBindingImpl extends ItemFeedVoteCommentSmal
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363956, 8);
-        sparseIntArray.put(2131363533, 9);
-        sparseIntArray.put(2131362842, 10);
-        sparseIntArray.put(2131362287, 11);
+        sparseIntArray.put(2131363982, 8);
+        sparseIntArray.put(2131363551, 9);
+        sparseIntArray.put(2131362853, 10);
+        sparseIntArray.put(2131362292, 11);
     }
 
     public ItemFeedVoteCommentSmallBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -81,7 +81,7 @@ public class ItemFeedVoteCommentSmallBindingImpl extends ItemFeedVoteCommentSmal
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -97,7 +97,7 @@ public class ItemFeedVoteCommentSmallBindingImpl extends ItemFeedVoteCommentSmal
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -118,7 +118,7 @@ public class ItemFeedVoteCommentSmallBindingImpl extends ItemFeedVoteCommentSmal
         String str2;
         String str3;
         boolean z;
-        Long l2;
+        Long l;
         int i;
         int i2;
         String str4;
@@ -138,13 +138,13 @@ public class ItemFeedVoteCommentSmallBindingImpl extends ItemFeedVoteCommentSmal
         if (i5 != 0) {
             if (feed != null) {
                 i = feed.getLikeNum();
-                l2 = feed.getDateline();
+                l = feed.getDateline();
                 str7 = feed.getUserName();
                 str6 = feed.getUserAvatar();
                 userInfo = feed.getUserInfo();
                 i3 = feed.getReplyNum();
             } else {
-                l2 = null;
+                l = null;
                 str7 = null;
                 str6 = null;
                 userInfo = null;
@@ -167,7 +167,7 @@ public class ItemFeedVoteCommentSmallBindingImpl extends ItemFeedVoteCommentSmal
             i4 = i3;
             i2 = i4;
         } else {
-            l2 = null;
+            l = null;
             str3 = null;
             str2 = null;
             str = null;
@@ -213,9 +213,9 @@ public class ItemFeedVoteCommentSmallBindingImpl extends ItemFeedVoteCommentSmal
             TextViewBindingAdapter.setText(this.commentNum, str4);
             TextViewBindingAdapter.setText(this.likeNum, str5);
             TextViewBindingAdapter.setText(this.mboundView2, str2);
-            TextViewBindingAdapters.setTime(this.mboundView7, l2);
+            TextViewBindingAdapters.setTime(this.mboundView7, l);
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str3, bool2);
         }
     }

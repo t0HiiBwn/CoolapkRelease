@@ -1,96 +1,24 @@
 package com.xiaomi.push;
 
-import java.nio.ByteBuffer;
+import android.content.SharedPreferences;
 
-public abstract class iy {
-    protected ji a;
+class iy implements Runnable {
+    final /* synthetic */ String a;
+    final /* synthetic */ String b;
+    final /* synthetic */ String c;
+    final /* synthetic */ ix d;
 
-    protected iy(ji jiVar) {
-        this.a = jiVar;
+    iy(ix ixVar, String str, String str2, String str3) {
+        this.d = ixVar;
+        this.a = str;
+        this.b = str2;
+        this.c = str3;
     }
 
-    /* renamed from: a */
-    public abstract byte mo532a();
-
-    public abstract double a();
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract int m545a();
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract long m546a();
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract iv m547a();
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract iw m548a();
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract ix m549a();
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract jc m550a();
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract jd m551a();
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract String m552a();
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract ByteBuffer m553a();
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract short m554a();
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract void m555a();
-
-    public abstract void a(byte b);
-
-    /* renamed from: a */
-    public abstract void mo543a(int i);
-
-    public abstract void a(long j);
-
-    public abstract void a(iv ivVar);
-
-    public abstract void a(iw iwVar);
-
-    public abstract void a(ix ixVar);
-
-    public abstract void a(jd jdVar);
-
-    public abstract void a(String str);
-
-    public abstract void a(ByteBuffer byteBuffer);
-
-    public abstract void a(short s);
-
-    public abstract void a(boolean z);
-
-    /* renamed from: a  reason: collision with other method in class */
-    public abstract boolean m556a();
-
-    public abstract void b();
-
-    public abstract void c();
-
-    public abstract void d();
-
-    public abstract void e();
-
-    public abstract void f();
-
-    public abstract void g();
-
-    public abstract void h();
-
-    public abstract void i();
-
-    public abstract void j();
-
-    public void k() {
+    @Override // java.lang.Runnable
+    public void run() {
+        SharedPreferences.Editor edit = ix.a(this.d).getSharedPreferences(this.a, 4).edit();
+        edit.putString(this.b, this.c);
+        edit.commit();
     }
 }

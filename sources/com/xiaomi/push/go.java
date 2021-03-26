@@ -1,24 +1,26 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import com.xiaomi.push.al;
-import java.util.ArrayList;
+public enum go {
+    MISC_CONFIG(1),
+    PLUGIN_CONFIG(2);
+    
+    private final int c;
 
-final class go extends al.b {
-    final /* synthetic */ Context a;
-
-    go(Context context) {
-        this.a = context;
+    private go(int i) {
+        this.c = i;
     }
 
-    @Override // com.xiaomi.push.al.b
-    /* renamed from: b */
-    public void mo197b() {
-        ArrayList arrayList;
-        synchronized (gn.a()) {
-            arrayList = new ArrayList(gn.a());
-            gn.a().clear();
+    public static go a(int i) {
+        if (i == 1) {
+            return MISC_CONFIG;
         }
-        gn.b(this.a, arrayList);
+        if (i != 2) {
+            return null;
+        }
+        return PLUGIN_CONFIG;
+    }
+
+    public int a() {
+        return this.c;
     }
 }

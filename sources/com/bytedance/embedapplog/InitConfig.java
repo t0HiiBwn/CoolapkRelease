@@ -13,9 +13,7 @@ public class InitConfig {
     private int i = 0;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1255l;
+    private String l;
     private String m;
     private int n;
     private int o;
@@ -131,12 +129,12 @@ public class InitConfig {
     }
 
     public InitConfig setVersion(String str) {
-        this.f1255l = str;
+        this.l = str;
         return this;
     }
 
     public String getVersion() {
-        return this.f1255l;
+        return this.l;
     }
 
     public InitConfig setTweakedChannel(String str) {

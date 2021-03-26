@@ -33,22 +33,22 @@ public final class UserFollowAppActivity extends TabActivity {
     @Override // com.coolapk.market.view.base.TabActivity, com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        getToolbar().setTitle(2131887102);
+        getToolbar().setTitle(2131887164);
     }
 
     @Override // com.coolapk.market.view.base.TabActivity
     protected String[] onCreateTabs() {
-        String string = getString(2131887223);
+        String string = getString(2131887285);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.title_app)");
-        String string2 = getString(2131886737);
+        String string2 = getString(2131886799);
         Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_discovery_app_forum)");
-        String string3 = getString(2131887270);
+        String string3 = getString(2131887332);
         Intrinsics.checkNotNullExpressionValue(string3, "getString(R.string.title_group_topic)");
-        String string4 = getString(2131887026);
+        String string4 = getString(2131887088);
         Intrinsics.checkNotNullExpressionValue(string4, "getString(R.string.str_title_question)");
-        String string5 = getString(2131887017);
+        String string5 = getString(2131887079);
         Intrinsics.checkNotNullExpressionValue(string5, "getString(R.string.str_title_collection)");
-        String string6 = getString(2131887025);
+        String string6 = getString(2131887087);
         Intrinsics.checkNotNullExpressionValue(string6, "getString(R.string.str_title_mobile_bar)");
         return new String[]{string, string2, string3, string4, string5, string6};
     }

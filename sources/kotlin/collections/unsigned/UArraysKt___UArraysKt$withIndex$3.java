@@ -21,6 +21,6 @@ final class UArraysKt___UArraysKt$withIndex$3 extends Lambda implements Function
     /* Return type fixed from 'java.util.Iterator<kotlin.UByte>' to match base method */
     @Override // kotlin.jvm.functions.Function0
     public final Iterator<? extends UByte> invoke() {
-        return UByteArray.m758iteratorimpl(this.$this_withIndex);
+        return UByteArray.m156iteratorimpl(this.$this_withIndex);
     }
 }

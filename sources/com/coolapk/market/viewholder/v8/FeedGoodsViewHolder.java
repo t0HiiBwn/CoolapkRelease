@@ -38,7 +38,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedGoodsViewHolder.kt */
 public final class FeedGoodsViewHolder extends GenericBindHolder<ItemFeedGoodsBinding, Feed> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558702;
+    public static final int LAYOUT_ID = 2131558709;
     private Feed feed;
     private final Lazy goodsInfoViewPart$delegate;
     private final Lazy headerViewPart$delegate;
@@ -167,7 +167,7 @@ public final class FeedGoodsViewHolder extends GenericBindHolder<ItemFeedGoodsBi
             TextView textView4 = itemFeedGoodsBinding.textView;
             Intrinsics.checkNotNullExpressionValue(textView4, "binding.textView");
             String message = feed2.getMessage();
-            SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886656));
+            SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886718));
             spannableStringBuilder.setSpan(new ForegroundColorSpan(AppHolder.getAppTheme().getColorAccent()), 0, spannableStringBuilder.length(), 33);
             Unit unit = Unit.INSTANCE;
             ViewExtendsKt.setBriefMessage(textView4, 90, message, spannableStringBuilder);
@@ -181,7 +181,7 @@ public final class FeedGoodsViewHolder extends GenericBindHolder<ItemFeedGoodsBi
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

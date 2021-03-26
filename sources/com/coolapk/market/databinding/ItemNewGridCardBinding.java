@@ -41,7 +41,7 @@ public abstract class ItemNewGridCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNewGridCardBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemNewGridCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558835, viewGroup, z, obj);
+        return (ItemNewGridCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558842, viewGroup, z, obj);
     }
 
     public static ItemNewGridCardBinding inflate(LayoutInflater layoutInflater) {
@@ -50,7 +50,7 @@ public abstract class ItemNewGridCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNewGridCardBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemNewGridCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558835, null, false, obj);
+        return (ItemNewGridCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558842, null, false, obj);
     }
 
     public static ItemNewGridCardBinding bind(View view) {
@@ -59,6 +59,6 @@ public abstract class ItemNewGridCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNewGridCardBinding bind(View view, Object obj) {
-        return (ItemNewGridCardBinding) bind(obj, view, 2131558835);
+        return (ItemNewGridCardBinding) bind(obj, view, 2131558842);
     }
 }

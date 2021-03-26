@@ -27,8 +27,8 @@ public class FetchGiftBindingImpl extends FetchGiftBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362998, 5);
-        sparseIntArray.put(2131362419, 6);
+        sparseIntArray.put(2131363010, 5);
+        sparseIntArray.put(2131362425, 6);
     }
 
     public FetchGiftBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -71,7 +71,7 @@ public class FetchGiftBindingImpl extends FetchGiftBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (176 != i) {
+        if (177 != i) {
             return false;
         }
         setKey((String) obj);
@@ -84,7 +84,7 @@ public class FetchGiftBindingImpl extends FetchGiftBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(176);
+        notifyPropertyChanged(177);
         super.requestRebind();
     }
 

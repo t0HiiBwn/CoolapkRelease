@@ -28,13 +28,13 @@ public class SubmitFeedNewGoodsBindingImpl extends SubmitFeedNewGoodsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131363437, 3);
-        sparseIntArray.put(2131362441, 4);
-        sparseIntArray.put(2131362470, 5);
-        sparseIntArray.put(2131362196, 6);
-        sparseIntArray.put(2131362882, 7);
-        sparseIntArray.put(2131362257, 8);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131363455, 3);
+        sparseIntArray.put(2131362448, 4);
+        sparseIntArray.put(2131362478, 5);
+        sparseIntArray.put(2131362200, 6);
+        sparseIntArray.put(2131362893, 7);
+        sparseIntArray.put(2131362262, 8);
     }
 
     public SubmitFeedNewGoodsBindingImpl(DataBindingComponent dataBindingComponent, View view) {

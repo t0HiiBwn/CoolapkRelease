@@ -19,14 +19,6 @@ public class AgeFileFilter extends AbstractFileFilter implements Serializable {
         this.cutoff = j;
     }
 
-    public AgeFileFilter(Date date) {
-        this(date, true);
-    }
-
-    public AgeFileFilter(Date date, boolean z) {
-        this(date.getTime(), z);
-    }
-
     public AgeFileFilter(File file) {
         this(file, true);
     }
@@ -35,13 +27,18 @@ public class AgeFileFilter extends AbstractFileFilter implements Serializable {
         this(file.lastModified(), z);
     }
 
+    public AgeFileFilter(Date date) {
+        this(date, true);
+    }
+
+    public AgeFileFilter(Date date, boolean z) {
+        this(date.getTime(), z);
+    }
+
     @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter
     public boolean accept(File file) {
         boolean isFileNewer = FileUtils.isFileNewer(file, this.cutoff);
-        if (this.acceptOlder) {
-            return !isFileNewer;
-        }
-        return isFileNewer;
+        return this.acceptOlder ? !isFileNewer : isFileNewer;
     }
 
     @Override // org.apache.commons.io.filefilter.AbstractFileFilter, java.lang.Object

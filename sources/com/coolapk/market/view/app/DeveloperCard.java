@@ -92,7 +92,7 @@ public class DeveloperCard implements Card<ServiceApp> {
 
     @Override // com.coolapk.market.model.Card, com.coolapk.market.model.Entity
     public String getTitle() {
-        return this.context.getString(2131886701);
+        return this.context.getString(2131886763);
     }
 
     @Override // com.coolapk.market.model.Card

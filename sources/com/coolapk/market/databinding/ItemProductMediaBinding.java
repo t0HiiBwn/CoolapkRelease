@@ -39,7 +39,7 @@ public abstract class ItemProductMediaBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductMediaBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemProductMediaBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558868, viewGroup, z, obj);
+        return (ItemProductMediaBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558875, viewGroup, z, obj);
     }
 
     public static ItemProductMediaBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class ItemProductMediaBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductMediaBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemProductMediaBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558868, null, false, obj);
+        return (ItemProductMediaBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558875, null, false, obj);
     }
 
     public static ItemProductMediaBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class ItemProductMediaBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProductMediaBinding bind(View view, Object obj) {
-        return (ItemProductMediaBinding) bind(obj, view, 2131558868);
+        return (ItemProductMediaBinding) bind(obj, view, 2131558875);
     }
 }

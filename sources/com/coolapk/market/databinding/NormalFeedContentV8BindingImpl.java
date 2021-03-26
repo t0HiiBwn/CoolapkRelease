@@ -41,17 +41,17 @@ public class NormalFeedContentV8BindingImpl extends NormalFeedContentV8Binding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(28);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"feed_warning"}, new int[]{19}, new int[]{2131558563});
+        includedLayouts.setIncludes(1, new String[]{"feed_warning"}, new int[]{19}, new int[]{2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363194, 20);
-        sparseIntArray.put(2131363212, 21);
-        sparseIntArray.put(2131362443, 22);
-        sparseIntArray.put(2131363917, 23);
-        sparseIntArray.put(2131363955, 24);
-        sparseIntArray.put(2131363221, 25);
-        sparseIntArray.put(2131362592, 26);
-        sparseIntArray.put(2131363397, 27);
+        sparseIntArray.put(2131363208, 20);
+        sparseIntArray.put(2131363226, 21);
+        sparseIntArray.put(2131362450, 22);
+        sparseIntArray.put(2131363942, 23);
+        sparseIntArray.put(2131363981, 24);
+        sparseIntArray.put(2131363235, 25);
+        sparseIntArray.put(2131362600, 26);
+        sparseIntArray.put(2131363414, 27);
     }
 
     public NormalFeedContentV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -125,7 +125,7 @@ public class NormalFeedContentV8BindingImpl extends NormalFeedContentV8Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (288 == i) {
+        if (289 == i) {
             setUiConfig((FeedUIConfig) obj);
         } else if (50 != i) {
             return false;
@@ -141,7 +141,7 @@ public class NormalFeedContentV8BindingImpl extends NormalFeedContentV8Binding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(288);
+        notifyPropertyChanged(289);
         super.requestRebind();
     }
 

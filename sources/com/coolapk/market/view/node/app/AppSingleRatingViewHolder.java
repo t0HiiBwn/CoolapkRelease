@@ -15,7 +15,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: AppSingleRatingViewHolder.kt */
 public final class AppSingleRatingViewHolder extends BaseSingleRatingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558934;
+    public static final int LAYOUT_ID = 2131558941;
     private final AppNodePresenter presenter;
     private final AppNodeViewModel viewModel;
 

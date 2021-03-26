@@ -17,7 +17,7 @@ final class WaterMarkDialog$onCreateDialog$3 implements View.OnClickListener {
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        this.$binding.radioGroup.check(2131363178);
+        this.$binding.radioGroup.check(2131363192);
         this.this$0.dismiss();
     }
 }

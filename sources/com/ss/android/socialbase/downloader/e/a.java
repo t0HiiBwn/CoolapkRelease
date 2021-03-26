@@ -21,9 +21,7 @@ public class a implements b {
     private com.ss.android.socialbase.downloader.f.a i;
     private com.ss.android.socialbase.downloader.f.a j;
     private com.ss.android.socialbase.downloader.f.a k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private volatile boolean f1411l;
+    private volatile boolean l;
     private volatile boolean m;
     private volatile Throwable n;
     private volatile Future o;
@@ -82,7 +80,7 @@ public class a implements b {
     @Override // com.ss.android.socialbase.downloader.e.b
     public void b() {
         synchronized (this.d) {
-            this.f1411l = true;
+            this.l = true;
             this.d.notify();
         }
         Future future = this.o;
@@ -105,12 +103,12 @@ public class a implements b {
         com.ss.android.socialbase.downloader.f.a aVar = this.h;
         if (aVar == null) {
             synchronized (this.d) {
-                if (!this.f1411l) {
+                if (!this.l) {
                     com.ss.android.socialbase.downloader.f.a aVar2 = this.f;
                     if (aVar2 != null || (i2 = this.p) >= this.c) {
                         while (aVar2 == null) {
                             this.d.wait();
-                            if (!this.f1411l) {
+                            if (!this.l) {
                                 aVar2 = this.f;
                             } else {
                                 throw new p("");
@@ -127,7 +125,7 @@ public class a implements b {
                 }
                 throw new p("");
             }
-        } else if (!this.f1411l) {
+        } else if (!this.l) {
             this.h = aVar.d;
             aVar.d = null;
             return aVar;

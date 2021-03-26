@@ -195,9 +195,7 @@ public class TTVideoWebPageActivity extends Activity implements d {
     private ImageView i;
     private ImageView j;
     private TextView k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private TextView f1289l;
+    private TextView l;
     private TextView m;
     private TextView n;
     private TextView o;
@@ -608,7 +606,7 @@ public class TTVideoWebPageActivity extends Activity implements d {
             });
         }
         TextView textView = (TextView) findViewById(ac.e(this, "tt_titlebar_dislike"));
-        this.f1289l = textView;
+        this.l = textView;
         if (textView != null) {
             textView.setOnClickListener(new View.OnClickListener() {
                 /* class com.bytedance.sdk.openadsdk.activity.base.TTVideoWebPageActivity.AnonymousClass3 */

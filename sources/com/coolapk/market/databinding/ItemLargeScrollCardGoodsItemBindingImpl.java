@@ -55,9 +55,9 @@ public class ItemLargeScrollCardGoodsItemBindingImpl extends ItemLargeScrollCard
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((LargeScrollCardGoodsItemViewHolder) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);
@@ -72,7 +72,7 @@ public class ItemLargeScrollCardGoodsItemBindingImpl extends ItemLargeScrollCard
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -82,7 +82,7 @@ public class ItemLargeScrollCardGoodsItemBindingImpl extends ItemLargeScrollCard
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -168,7 +168,7 @@ public class ItemLargeScrollCardGoodsItemBindingImpl extends ItemLargeScrollCard
         }
         if ((j & 7) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str, AppCompatResources.getDrawable(this.logoView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str, AppCompatResources.getDrawable(this.logoView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
         }
     }
 }

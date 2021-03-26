@@ -30,9 +30,9 @@ final class VoteExtraView$onItemClick$1 extends Lambda implements Function1<Dial
     public final void invoke(DialogUtil.DialogItemData dialogItemData) {
         Intrinsics.checkNotNullParameter(dialogItemData, "it");
         VoteExtraView voteExtraView = this.this$0;
-        FeedMultiPart build = voteExtraView.getMultiPart().newBuilder().voteAnonymousStatus(Integer.parseInt(dialogItemData.getType())).build();
+        FeedMultiPart build = VoteExtraView.access$getMultiPart$p(voteExtraView).newBuilder().voteAnonymousStatus(Integer.parseInt(dialogItemData.getType())).build();
         Intrinsics.checkNotNullExpressionValue(build, "multiPart.newBuilder()\n …                 .build()");
-        voteExtraView.setMultiPart(build);
+        VoteExtraView.access$setMultiPart$p(voteExtraView, build);
         this.this$0.requestUpdateDataList();
     }
 }

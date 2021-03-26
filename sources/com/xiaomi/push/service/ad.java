@@ -1,38 +1,98 @@
 package com.xiaomi.push.service;
 
-import android.app.Notification;
 import android.content.Context;
-import com.xiaomi.push.ai;
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.os.Build;
+import android.os.Looper;
+import android.os.Message;
+import android.os.Messenger;
+import android.os.RemoteException;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.it;
+import java.util.ArrayList;
+import java.util.List;
 
-final class ad extends ai.a {
-    final /* synthetic */ int a;
+public class ad {
+    private static ad a;
+    private static String e;
+    private Context b;
+    private Messenger c;
+    private boolean d = false;
+    private List<Message> f = new ArrayList();
+    private boolean g = false;
+    private Messenger h;
 
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ Notification f938a;
-
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ Context f939a;
-
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ String f940a;
-    final /* synthetic */ String b;
-
-    ad(int i, String str, Context context, String str2, Notification notification) {
-        this.a = i;
-        this.f940a = str;
-        this.f939a = context;
-        this.b = str2;
-        this.f938a = notification;
+    private ad(Context context) {
+        this.b = context.getApplicationContext();
+        this.c = new Messenger(new ae(this, Looper.getMainLooper()));
+        if (a()) {
+            c.c("use miui push service");
+            this.d = true;
+        }
     }
 
-    @Override // com.xiaomi.push.ai.a
-    /* renamed from: a */
-    public String mo141a() {
-        return ab.b(this.a, this.f940a);
+    public static ad a(Context context) {
+        if (a == null) {
+            a = new ad(context);
+        }
+        return a;
     }
 
-    @Override // java.lang.Runnable
-    public void run() {
-        ab.a(this.f939a, this.b, this.a, this.f940a, this.f938a);
+    private boolean a() {
+        if (com.xiaomi.push.c.f) {
+            return false;
+        }
+        try {
+            PackageInfo packageInfo = this.b.getPackageManager().getPackageInfo("com.xiaomi.xmsf", 4);
+            return packageInfo != null && packageInfo.versionCode >= 104;
+        } catch (Exception unused) {
+            return false;
+        }
+    }
+
+    private synchronized void b(Intent intent) {
+        if (this.g) {
+            Message c2 = c(intent);
+            if (this.f.size() >= 50) {
+                this.f.remove(0);
+            }
+            this.f.add(c2);
+            return;
+        }
+        if (this.h == null) {
+            this.b.bindService(intent, new af(this), 1);
+            this.g = true;
+            this.f.clear();
+            this.f.add(c(intent));
+        } else {
+            try {
+                this.h.send(c(intent));
+            } catch (RemoteException unused) {
+                this.h = null;
+                this.g = false;
+            }
+        }
+    }
+
+    private Message c(Intent intent) {
+        Message obtain = Message.obtain();
+        obtain.what = 17;
+        obtain.obj = intent;
+        return obtain;
+    }
+
+    public boolean a(Intent intent) {
+        try {
+            if (it.a() || Build.VERSION.SDK_INT < 26) {
+                this.b.startService(intent);
+                return true;
+            }
+            b(intent);
+            return true;
+        } catch (Exception e2) {
+            c.a(e2);
+            return false;
+        }
     }
 }

@@ -366,9 +366,9 @@ public class z {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:33:0x0073 A[Catch:{ all -> 0x008b }] */
-    /* JADX WARNING: Removed duplicated region for block: B:35:0x0078 A[SYNTHETIC, Splitter:B:35:0x0078] */
-    /* JADX WARNING: Removed duplicated region for block: B:40:0x0082 A[SYNTHETIC, Splitter:B:40:0x0082] */
+    /* JADX WARNING: Removed duplicated region for block: B:33:0x0074 A[Catch:{ all -> 0x008c }] */
+    /* JADX WARNING: Removed duplicated region for block: B:35:0x0079 A[SYNTHETIC, Splitter:B:35:0x0079] */
+    /* JADX WARNING: Removed duplicated region for block: B:40:0x0083 A[SYNTHETIC, Splitter:B:40:0x0083] */
     private static ArrayList<String> a(Context context, String[] strArr) {
         Throwable th;
         BufferedReader bufferedReader;
@@ -813,7 +813,7 @@ public class z {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:30:0x0067 A[SYNTHETIC, Splitter:B:30:0x0067] */
+    /* JADX WARNING: Removed duplicated region for block: B:30:0x0068 A[SYNTHETIC, Splitter:B:30:0x0068] */
     public static String a(File file, int i, boolean z) {
         Throwable th;
         BufferedReader bufferedReader;

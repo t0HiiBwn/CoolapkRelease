@@ -83,7 +83,7 @@ public final class ProductCouponActivity extends BaseActivity {
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559108);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559115);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte….product_coupon_activity)");
         this.binding = (ProductCouponActivityBinding) contentView;
         setupUi();
@@ -95,7 +95,7 @@ public final class ProductCouponActivity extends BaseActivity {
             List<ProductCoupon> couponList = product.getCouponList();
             Intrinsics.checkNotNull(couponList);
             Intrinsics.checkNotNullExpressionValue(couponList, "product.couponList!!");
-            beginTransaction.add(2131362306, companion.newInstance(couponList)).commit();
+            beginTransaction.add(2131362311, companion.newInstance(couponList)).commit();
         }
     }
 

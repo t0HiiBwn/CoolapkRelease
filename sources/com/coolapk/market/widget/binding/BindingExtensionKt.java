@@ -191,7 +191,7 @@ public final class BindingExtensionKt {
             Intrinsics.checkNotNullExpressionValue(imageView5, "binding.topImageView");
             int i2 = (int) 4294198070L;
             imageView5.setImageTintList(ColorStateList.valueOf(i2));
-            feedTopBinding.topImageView.setImageResource(2131231616);
+            feedTopBinding.topImageView.setImageResource(2131231627);
             TextView textView2 = feedTopBinding.topTextView;
             Intrinsics.checkNotNullExpressionValue(textView2, "binding.topTextView");
             textView2.setText("置顶");

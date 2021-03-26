@@ -18,6 +18,6 @@ final class PackageAddedAction$doPackageAddedAction$2 implements Runnable {
     @Override // java.lang.Runnable
     public final void run() {
         Context context = this.$context;
-        Toast.show$default(context, context.getString(2131887187, this.$title), 0, false, 12, null);
+        Toast.show$default(context, context.getString(2131887249, this.$title), 0, false, 12, null);
     }
 }

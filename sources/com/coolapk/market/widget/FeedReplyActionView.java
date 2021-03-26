@@ -28,9 +28,9 @@ import rx.Subscriber;
 import rx.functions.Func1;
 
 public class FeedReplyActionView extends LinearLayout implements View.OnClickListener {
-    public static final FeedItem LIKE = new FeedItem(2131886790, 2131689494, 2131362532);
+    public static final FeedItem LIKE = new FeedItem(2131886852, 2131689494, 2131362540);
     public static final int LIKED = 2131689495;
-    public static final FeedItem REPLY = new FeedItem(2131886791, 2131689479, 2131362533);
+    public static final FeedItem REPLY = new FeedItem(2131886853, 2131689479, 2131362541);
     private boolean likeState;
     private Func1<View, Boolean> mExtraListener;
     private FeedReply mFeedReply;
@@ -57,15 +57,15 @@ public class FeedReplyActionView extends LinearLayout implements View.OnClickLis
     }
 
     private View newItemView(LayoutInflater layoutInflater, FeedItem feedItem) {
-        View inflate = layoutInflater.inflate(2131558551, (ViewGroup) this, false);
+        View inflate = layoutInflater.inflate(2131558553, (ViewGroup) this, false);
         inflate.setId(feedItem.containerId.intValue());
         ViewUtil.clickListener(inflate, this);
         Holder holder = new Holder();
         holder.parent = inflate;
-        holder.textView = (TextView) inflate.findViewById(2131363533);
-        holder.imageView = (ImageView) inflate.findViewById(2131362707);
+        holder.textView = (TextView) inflate.findViewById(2131363551);
+        holder.imageView = (ImageView) inflate.findViewById(2131362718);
         holder.feedItem = feedItem;
-        inflate.setTag(2131362531, holder);
+        inflate.setTag(2131362539, holder);
         restoreView(holder);
         return inflate;
     }
@@ -102,7 +102,7 @@ public class FeedReplyActionView extends LinearLayout implements View.OnClickLis
     private Holder getHolder(int i) {
         View findViewById = findViewById(i);
         if (findViewById != null) {
-            return (Holder) findViewById.getTag(2131362531);
+            return (Holder) findViewById.getTag(2131362539);
         }
         return null;
     }
@@ -117,7 +117,7 @@ public class FeedReplyActionView extends LinearLayout implements View.OnClickLis
             Func1<View, Boolean> func1 = this.mExtraListener;
             if (func1 == null || !func1.call(view).booleanValue()) {
                 switch (view.getId()) {
-                    case 2131362532:
+                    case 2131362540:
                         ActionManager.checkLogin(getContext(), new Runnable() {
                             /* class com.coolapk.market.widget.FeedReplyActionView.AnonymousClass1 */
 
@@ -127,7 +127,7 @@ public class FeedReplyActionView extends LinearLayout implements View.OnClickLis
                             }
                         });
                         return;
-                    case 2131362533:
+                    case 2131362541:
                         ActionManager.startReplyActivity(UiUtils.getActivity(getContext()), this.mFeedReply);
                         return;
                     default:
@@ -142,7 +142,7 @@ public class FeedReplyActionView extends LinearLayout implements View.OnClickLis
         if (!this.postingLike) {
             this.postingLike = true;
             final FeedReply feedReply = this.mFeedReply;
-            Holder holder = (Holder) findViewById(LIKE.containerId.intValue()).getTag(2131362531);
+            Holder holder = (Holder) findViewById(LIKE.containerId.intValue()).getTag(2131362539);
             if (!this.likeState) {
                 this.mPresenter.likeFeedReply(feedReply).compose(RxUtils.applyIOSchedulers()).subscribe((Subscriber<? super R>) new Subscriber<Result<String>>() {
                     /* class com.coolapk.market.widget.FeedReplyActionView.AnonymousClass2 */
@@ -207,14 +207,14 @@ public class FeedReplyActionView extends LinearLayout implements View.OnClickLis
             holder.imageView.setColorFilter(AppHolder.getAppTheme().getColorAccent());
             return;
         }
-        holder.textView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099893));
+        holder.textView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099898));
         holder.imageView.setImageResource(2131689494);
-        holder.imageView.setColorFilter(ResourceUtils.getColorInt(getContext(), 2131099893));
+        holder.imageView.setColorFilter(ResourceUtils.getColorInt(getContext(), 2131099898));
     }
 
     public void onDeleteClick() {
         FeedReply feedReply = this.mFeedReply;
-        ConfirmDeleteDialog newInstance = ConfirmDeleteDialog.newInstance(getContext().getString(2131886722), getContext().getString(2131886719, this.mFeedReply.getUserName(), this.mFeedReply.getMessage()));
+        ConfirmDeleteDialog newInstance = ConfirmDeleteDialog.newInstance(getContext().getString(2131886784), getContext().getString(2131886781, this.mFeedReply.getUserName(), this.mFeedReply.getMessage()));
         newInstance.setDeleteTarget(feedReply);
         newInstance.show(ContextExtendsKt.requireAppCompatActivity(getContext()).getSupportFragmentManager(), (String) null);
     }

@@ -77,7 +77,7 @@ public class b {
         return a;
     }
 
-    public static a.C0080a a(l lVar) {
+    public static a.C0090a a(l lVar) {
         int i;
         int G = lVar == null ? 1 : lVar.G();
         if (lVar == null) {
@@ -88,7 +88,7 @@ public class b {
         if (lVar != null && !TextUtils.isEmpty(lVar.au())) {
             i = 2;
         }
-        return new a.C0080a().a(G).b(i).a(true).b(false).a(lVar);
+        return new a.C0090a().a(G).b(i).a(true).b(false).a(lVar);
     }
 
     public static b.a a(l lVar, String str) {

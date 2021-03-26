@@ -34,7 +34,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedFilterViewHolder.kt */
 public final class FeedFilterViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558911;
+    public static final int LAYOUT_ID = 2131558918;
     public static final String SORT_DATELINE = "dateline";
     public static final String SORT_HOT = "hot";
     public static final String SORT_REPLY = "reply";
@@ -184,13 +184,13 @@ public final class FeedFilterViewHolder extends BindingViewHolder {
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
         switch (view.getId()) {
-            case 2131363381:
+            case 2131363398:
                 this.viewModel.setFeedSort("dateline");
                 break;
-            case 2131363383:
+            case 2131363400:
                 this.viewModel.setFeedSort("hot");
                 break;
-            case 2131363384:
+            case 2131363401:
                 this.viewModel.setFeedSort("reply");
                 break;
         }
@@ -247,16 +247,16 @@ public final class FeedFilterViewHolder extends BindingViewHolder {
             DataViewHolder dataViewHolder;
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
             if (view != null) {
-                Object tag = view.getTag(2131363492);
+                Object tag = view.getTag(2131363510);
                 Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.viewholder.FeedFilterViewHolder.DataViewHolder");
                 dataViewHolder = (DataViewHolder) tag;
             } else {
-                View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558699, viewGroup, false);
+                View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558706, viewGroup, false);
                 ItemSearchFeedFilterBinding itemSearchFeedFilterBinding = this.this$0.filterBinding;
                 Intrinsics.checkNotNullExpressionValue(itemSearchFeedFilterBinding, "filterBinding");
                 Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
                 DataViewHolder dataViewHolder2 = new DataViewHolder(itemSearchFeedFilterBinding, inflate, this.this$0.getViewModel());
-                dataViewHolder2.itemView.setTag(2131363492, dataViewHolder2);
+                dataViewHolder2.itemView.setTag(2131363510, dataViewHolder2);
                 dataViewHolder = dataViewHolder2;
             }
             dataViewHolder.bindTo(getItem(i));
@@ -270,7 +270,7 @@ public final class FeedFilterViewHolder extends BindingViewHolder {
     /* compiled from: FeedFilterViewHolder.kt */
     public static final class DataViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558699;
+        public static final int LAYOUT_ID = 2131558706;
         private final ItemFeedFilterBinding binding;
         private Pair<String, String> item;
         private final ItemSearchFeedFilterBinding viewBinding;
@@ -342,7 +342,7 @@ public final class FeedFilterViewHolder extends BindingViewHolder {
         public void onClick(View view) {
             Intrinsics.checkNotNullParameter(view, "view");
             super.onClick(view);
-            if (view.getId() == 2131362768) {
+            if (view.getId() == 2131362779) {
                 SuperSearchViewModel superSearchViewModel = this.viewModel;
                 Pair<String, String> pair = this.item;
                 if (pair == null) {

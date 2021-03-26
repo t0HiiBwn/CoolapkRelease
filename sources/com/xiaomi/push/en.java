@@ -1,85 +1,70 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import android.content.Intent;
-import android.text.TextUtils;
-import com.xiaomi.clientreport.data.EventClientReport;
-import com.xiaomi.clientreport.data.PerfClientReport;
-import com.xiaomi.clientreport.data.a;
-import com.xiaomi.clientreport.manager.ClientReportClient;
+import java.util.Map;
 
-public class en {
-    private static volatile en a;
+public class en implements Cloneable {
+    public static String a = "wcc-ml-test10.bj";
+    public static final String b = f.b;
+    public static String c;
+    private String d;
+    private String e;
+    private int f;
+    private boolean g = em.a;
+    private boolean h = true;
+    private String i;
+    private eq j;
 
-    /* renamed from: a  reason: collision with other field name */
-    private Context f401a;
-
-    private en(Context context) {
-        this.f401a = context;
+    public en(Map<String, Integer> map, int i2, String str, eq eqVar) {
+        a(map, i2, str, eqVar);
     }
 
-    public static en a(Context context) {
-        if (a == null) {
-            synchronized (en.class) {
-                if (a == null) {
-                    a = new en(context);
-                }
-            }
+    public static final String a() {
+        String str = c;
+        return str != null ? str : c.a() ? "sandbox.xmpush.xiaomi.com" : c.b() ? b : "app.chat.xiaomi.net";
+    }
+
+    public static final void a(String str) {
+        c = str;
+    }
+
+    private void a(Map<String, Integer> map, int i2, String str, eq eqVar) {
+        this.f = i2;
+        this.d = str;
+        this.j = eqVar;
+    }
+
+    public void a(boolean z) {
+        this.g = z;
+    }
+
+    public String b() {
+        return this.i;
+    }
+
+    public void b(String str) {
+        this.i = str;
+    }
+
+    public void c(String str) {
+        this.e = str;
+    }
+
+    public byte[] c() {
+        return null;
+    }
+
+    public int d() {
+        return this.f;
+    }
+
+    public String e() {
+        if (this.e == null) {
+            this.e = a();
         }
-        return a;
+        return this.e;
     }
 
-    private void a(a aVar) {
-        if (aVar instanceof PerfClientReport) {
-            ClientReportClient.reportPerf(this.f401a, (PerfClientReport) aVar);
-        } else if (aVar instanceof EventClientReport) {
-            ClientReportClient.reportEvent(this.f401a, (EventClientReport) aVar);
-        }
-    }
-
-    public void a(String str, int i, long j, long j2) {
-        if (i >= 0 && j2 >= 0 && j > 0) {
-            PerfClientReport a2 = em.a(this.f401a, i, j, j2);
-            a2.setAppPackageName(str);
-            a2.setSdkVersion("3_7_9");
-            a(a2);
-        }
-    }
-
-    public void a(String str, Intent intent, int i, String str2) {
-        if (intent != null) {
-            a(str, em.m292a(intent.getIntExtra("eventMessageType", -1)), intent.getStringExtra("messageId"), i, System.currentTimeMillis(), str2);
-        }
-    }
-
-    public void a(String str, Intent intent, String str2) {
-        if (intent != null) {
-            a(str, em.m292a(intent.getIntExtra("eventMessageType", -1)), intent.getStringExtra("messageId"), 5001, System.currentTimeMillis(), str2);
-        }
-    }
-
-    public void a(String str, String str2, String str3, int i, long j, String str4) {
-        if (!TextUtils.isEmpty(str2) && !TextUtils.isEmpty(str3)) {
-            EventClientReport a2 = em.a(this.f401a, str2, str3, i, j, str4);
-            a2.setAppPackageName(str);
-            a2.setSdkVersion("3_7_9");
-            a(a2);
-        }
-    }
-
-    public void a(String str, String str2, String str3, int i, String str4) {
-        a(str, str2, str3, i, System.currentTimeMillis(), str4);
-    }
-
-    public void a(String str, String str2, String str3, String str4) {
-        a(str, str2, str3, 5002, System.currentTimeMillis(), str4);
-    }
-
-    public void b(String str, String str2, String str3, String str4) {
-        a(str, str2, str3, 5001, System.currentTimeMillis(), str4);
-    }
-
-    public void c(String str, String str2, String str3, String str4) {
-        a(str, str2, str3, 4002, System.currentTimeMillis(), str4);
+    public boolean f() {
+        return this.g;
     }
 }

@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Base64;
+import android.util.Log;
 import android.util.Pair;
 import com.coolapk.market.download.DownloadJob;
 import com.coolapk.market.download.Downloader;
@@ -50,6 +51,7 @@ import com.coolapk.market.model.FeedMultiPart;
 import com.coolapk.market.model.FeedReply;
 import com.coolapk.market.model.FileDetail;
 import com.coolapk.market.model.Gift;
+import com.coolapk.market.model.ImInfo;
 import com.coolapk.market.model.ImageUploadOption;
 import com.coolapk.market.model.InstallState;
 import com.coolapk.market.model.Library;
@@ -1052,14 +1054,12 @@ public class DataManager {
         }).onBackpressureBuffer(list.size() > 0 ? (long) list.size() : 1);
     }
 
-    public Observable<Result<String>> uploadLogoImage(File file) {
-        MultipartBody.Builder addFormDataPart = new MultipartBody.Builder().setType(MultipartBody.FORM).addFormDataPart("picFile", StringUtils.toMd5(file.getAbsolutePath()), RequestBody.create(CoolFileUtils.mediaType(file.getAbsolutePath()), file));
-        return this.coolMarketService.uploadImage("picFile", "apk_logo", CoolFileUtils.getFileMd5(file.getAbsolutePath()), addFormDataPart.build());
+    public Observable<Pair<String, String>> uploadLogoImage(File file) {
+        return getInstance().uploadImage(Collections.singletonList(ImageUploadOption.create(CoolFileUtils.wrap(file.getAbsolutePath()), "apk_logo", "FEED", null)));
     }
 
-    public Observable<Result<String>> uploadAlbumLogoImage(AlbumItem albumItem) {
-        MultipartBody.Builder addFormDataPart = new MultipartBody.Builder().setType(MultipartBody.FORM).addFormDataPart("picFile", StringUtils.toMd5(albumItem.getLogoUrl()), RequestBody.create(MediaType.parse("image/png"), new File(albumItem.getLogoUrl())));
-        return this.coolMarketService.uploadImage("picFile", "album", CoolFileUtils.getFileMd5(albumItem.getLogoUrl()), addFormDataPart.build());
+    public Observable<Pair<String, String>> uploadAlbumLogoImage(AlbumItem albumItem) {
+        return getInstance().uploadImage(Collections.singletonList(ImageUploadOption.create(CoolFileUtils.wrap(albumItem.getLogoUrl()), "album", "FEED", null)));
     }
 
     public Observable<Pair<String, File>> getBackupLogoFile(List<String> list, final Context context) {
@@ -1094,12 +1094,11 @@ public class DataManager {
             /* class com.coolapk.market.manager.DataManager.AnonymousClass8 */
 
             public Observable<Pair<String, String>> call(final Pair<String, File> pair) {
-                MultipartBody.Builder addFormDataPart = new MultipartBody.Builder().setType(MultipartBody.FORM).addFormDataPart("picFile", StringUtils.toMd5(((File) pair.second).getAbsolutePath()), RequestBody.create(CoolFileUtils.mediaType(((File) pair.second).getAbsolutePath()), (File) pair.second));
-                return DataManager.this.coolMarketService.uploadImage("picFile", "back_list", CoolFileUtils.getFileMd5(((File) pair.second).getAbsolutePath()), addFormDataPart.build()).delay(300, TimeUnit.MILLISECONDS).map(new Func1<Result<String>, Pair<String, String>>() {
+                return DataManager.getInstance().uploadImage(Collections.singletonList(ImageUploadOption.create(CoolFileUtils.wrap(((File) pair.second).getAbsolutePath()), "back_list", "FEED", null))).flatMap(new Func1<Pair<String, String>, Observable<Pair<String, String>>>() {
                     /* class com.coolapk.market.manager.DataManager.AnonymousClass8.AnonymousClass1 */
 
-                    public Pair<String, String> call(Result<String> result) {
-                        return Pair.create(pair.first, result.getData());
+                    public Observable<Pair<String, String>> call(Pair<String, String> pair) {
+                        return Observable.just(Pair.create(pair.first, pair.second));
                     }
                 });
             }
@@ -1124,13 +1123,12 @@ public class DataManager {
         });
     }
 
-    public Observable<ResponseBody> uploadMessageImage(String str, String str2) {
-        File file = new File(Uri.parse(str).getPath());
-        return this.coolMarketService.messageUploadImage(new MultipartBody.Builder().setType(MultipartBody.FORM).addFormDataPart("uid", str2).addFormDataPart("imgFile", StringUtils.toMd5(file.getAbsolutePath()), RequestBody.create(CoolFileUtils.mediaType(file.getAbsolutePath()), file)).build());
+    public Observable<Pair<String, String>> uploadMessageImage(String str, String str2) {
+        return uploadImage(Collections.singletonList(ImageUploadOption.create(CoolFileUtils.wrap(new File(Uri.parse(str).getPath()).getAbsolutePath()), "message", "FEED", null, str2)));
     }
 
-    public Observable<Result<JSONObject>> ossUploadPrepare(String str, String str2, int i, String str3) {
-        return this.coolMarketService.ossUploadPrepare(str, str2, i, str3);
+    public Observable<Result<JSONObject>> ossUploadPrepare(String str, String str2, int i, String str3, String str4) {
+        return this.coolMarketService.ossUploadPrepare(str, str2, i, str3, str4);
     }
 
     public Observable<String> uploadAllImage(List<ImageUploadOption> list) {
@@ -1351,6 +1349,7 @@ public class DataManager {
     }
 
     public Observable<Result<String>> addApkToAlbum(String str, String str2, String str3, String str4, String str5, int i, String str6) {
+        Log.d("hfl", str6);
         return this.coolMarketService.addApkToAlbum(str, str2, str3, str4, str5, i, str6);
     }
 
@@ -1460,6 +1459,10 @@ public class DataManager {
 
     public Observable<Result<List<Entity>>> sendMessage(String str, String str2, String str3, String str4) {
         return this.coolMarketService.sendMessage(str, str2, str3, str4, "");
+    }
+
+    public Observable<ResponseBody> sendMessageForPic(String str, String str2) {
+        return this.coolMarketService.sendMessage(str, "", str2);
     }
 
     public Observable<Result<List<Entity>>> sendMessage(String str, String str2, String str3, String str4, String str5) {
@@ -1742,6 +1745,10 @@ public class DataManager {
         return this.coolMarketService.getUserHtmlFeedList(str, i, str2, str3);
     }
 
+    public Observable<Result<List<String>>> getTipGoodsTagList() {
+        return this.coolMarketService.getTipGoodsTagList();
+    }
+
     public Observable<Result<List<Feed>>> searchQuestion(String str, int i, String str2, String str3) {
         return this.coolMarketService.searchQuestion(str, i, str2, str3);
     }
@@ -2016,6 +2023,14 @@ public class DataManager {
 
     public Observable<Result<FeedGoods>> addGoodsWithHtmlContent(String str, String str2, String str3) {
         return this.coolMarketService.addGoodsWithHtmlContent(str, str2, str3);
+    }
+
+    public Observable<Result<FeedGoods>> createGoods(int i, String str, String str2, String str3, String str4) {
+        return this.coolMarketService.createGoods(i, str, str2, str3, str4);
+    }
+
+    public Observable<Result<String>> getGoodsBuyUrl(String str, String str2) {
+        return this.coolMarketService.getGoodsBuyUrl(str, str2);
     }
 
     public Observable<Result<String>> changedFeedGoodsRecommendStatus(String str, int i) {
@@ -3081,6 +3096,10 @@ public class DataManager {
         return this.coolMarketService.getAvatarCoverList();
     }
 
+    public Observable<Result<ImInfo>> getImInfo(String str) {
+        return this.coolMarketService.getImInfo(str);
+    }
+
     public Observable<Result<String>> changeAvatarCover(String str) {
         return this.coolMarketService.changeAvatarCover(str);
     }
@@ -3409,6 +3428,10 @@ public class DataManager {
 
     public Observable<ResponseBody> myPageCardManage() {
         return this.coolMarketService.myPageCardManage("my_page_card_config");
+    }
+
+    public Observable<Result<String>> updateBindGoods(String str, String str2) {
+        return this.coolMarketService.updateBindGoods(str, str2);
     }
 
     public Observable<Result<List<Entity>>> getGoodsList(String str, String str2, int i, String str3, String str4) {

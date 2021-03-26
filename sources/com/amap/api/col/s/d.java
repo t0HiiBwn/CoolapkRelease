@@ -16,9 +16,7 @@ import org.json.JSONObject;
 public final class d<T> extends b<T, Object> {
     private int j = 0;
     private List<String> k = new ArrayList();
-
-    /* renamed from: l  reason: collision with root package name */
-    private List<SuggestionCity> f1209l = new ArrayList();
+    private List<SuggestionCity> l = new ArrayList();
 
     public d(Context context, T t) {
         super(context, t);
@@ -41,14 +39,14 @@ public final class d<T> extends b<T, Object> {
             JSONObject jSONObject = new JSONObject(str);
             JSONObject optJSONObject = jSONObject.optJSONObject("suggestion");
             if (optJSONObject != null) {
-                this.f1209l = p.a(optJSONObject);
+                this.l = p.a(optJSONObject);
                 this.k = p.b(optJSONObject);
             }
             this.j = jSONObject.optInt("count");
             if (this.b instanceof BusLineQuery) {
-                return BusLineResult.createPagedResult((BusLineQuery) this.b, this.j, this.f1209l, this.k, p.f(jSONObject));
+                return BusLineResult.createPagedResult((BusLineQuery) this.b, this.j, this.l, this.k, p.f(jSONObject));
             }
-            return BusStationResult.createPagedResult((BusStationQuery) this.b, this.j, this.f1209l, this.k, p.e(jSONObject));
+            return BusStationResult.createPagedResult((BusStationQuery) this.b, this.j, this.l, this.k, p.e(jSONObject));
         } catch (Exception e) {
             i.a(e, "BusSearchServerHandler", "paseJSON");
             return null;

@@ -181,7 +181,7 @@ public final class FeedArticleAnswerDetailFragment extends FeedArticleDetailFrag
     @Override // com.coolapk.market.view.feed.reply.FeedArticleDetailFragment, com.coolapk.market.view.feed.reply.FeedDetailFragmentV8, com.coolapk.market.view.feed.reply.FeedReplyListFragmentV8, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558610).suitedEntityType("ARTICLE_ANSWER_TOP").constructor(new FeedArticleAnswerDetailFragment$onActivityCreated$1(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558614).suitedEntityType("ARTICLE_ANSWER_TOP").constructor(new FeedArticleAnswerDetailFragment$onActivityCreated$1(this)).build(), 0, 2, null);
     }
 
     @Override // com.coolapk.market.view.feed.reply.FeedArticleDetailFragment

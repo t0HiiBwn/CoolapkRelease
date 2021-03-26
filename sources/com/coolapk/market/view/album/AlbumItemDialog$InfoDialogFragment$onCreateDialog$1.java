@@ -17,6 +17,6 @@ final class AlbumItemDialog$InfoDialogFragment$onCreateDialog$1 implements Dialo
 
     @Override // android.content.DialogInterface.OnClickListener
     public final void onClick(DialogInterface dialogInterface, int i) {
-        ActionManager.startTextViewActivity(this.this$0.getActivity(), StringUtils.getModelInfo(this.this$0.modelInfo), 12, "feed");
+        ActionManager.startTextViewActivity(this.this$0.getActivity(), StringUtils.getModelInfo(AlbumItemDialog.InfoDialogFragment.access$getModelInfo$p(this.this$0)), 12, "feed");
     }
 }

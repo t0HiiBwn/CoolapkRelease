@@ -129,15 +129,15 @@ public class QzonePublish extends BaseApi {
     }
 
     /* access modifiers changed from: private */
-    /* JADX WARNING: Removed duplicated region for block: B:28:0x00c9  */
-    /* JADX WARNING: Removed duplicated region for block: B:35:0x010e  */
-    /* JADX WARNING: Removed duplicated region for block: B:38:0x0175  */
-    /* JADX WARNING: Removed duplicated region for block: B:41:0x0198  */
-    /* JADX WARNING: Removed duplicated region for block: B:44:0x01b2  */
-    /* JADX WARNING: Removed duplicated region for block: B:47:0x01d5  */
-    /* JADX WARNING: Removed duplicated region for block: B:50:0x01f8  */
-    /* JADX WARNING: Removed duplicated region for block: B:53:0x0282  */
-    /* JADX WARNING: Removed duplicated region for block: B:54:0x02ce  */
+    /* JADX WARNING: Removed duplicated region for block: B:28:0x00cc  */
+    /* JADX WARNING: Removed duplicated region for block: B:35:0x0111  */
+    /* JADX WARNING: Removed duplicated region for block: B:38:0x0178  */
+    /* JADX WARNING: Removed duplicated region for block: B:41:0x019b  */
+    /* JADX WARNING: Removed duplicated region for block: B:44:0x01b5  */
+    /* JADX WARNING: Removed duplicated region for block: B:47:0x01d8  */
+    /* JADX WARNING: Removed duplicated region for block: B:50:0x01fb  */
+    /* JADX WARNING: Removed duplicated region for block: B:53:0x0285  */
+    /* JADX WARNING: Removed duplicated region for block: B:54:0x02d1  */
     public void b(Activity activity, Bundle bundle, IUiListener iUiListener) {
         String str;
         String str2;

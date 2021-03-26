@@ -33,7 +33,7 @@ import kotlin.jvm.internal.TypeIntrinsics;
 /* compiled from: GoodsListEditViewHolder.kt */
 public final class GoodsListEditViewHolder extends GenericBindHolder<ItemEditGoodsBinding, GoodsListItem> implements ItemTouchHelperViewHolder, CompoundButton.OnCheckedChangeListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558686;
+    public static final int LAYOUT_ID = 2131558692;
     private final TouchCallBack callBack;
     private final HashSet<GoodsListItem> delList;
     private GoodsListItem goodsListItem;
@@ -134,7 +134,7 @@ public final class GoodsListEditViewHolder extends GenericBindHolder<ItemEditGoo
     public void onClick(View view) {
         super.onClick(view);
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf != null && valueOf.intValue() == 2131363024) {
+        if (valueOf != null && valueOf.intValue() == 2131363038) {
             Activity activityNullable = UiUtils.getActivityNullable(getContext());
             AddGoodsDialogFragment.Companion companion = AddGoodsDialogFragment.Companion;
             GoodsListItem goodsListItem2 = this.goodsListItem;
@@ -167,7 +167,7 @@ public final class GoodsListEditViewHolder extends GenericBindHolder<ItemEditGoo
             FragmentManager supportFragmentManager = ContextExtendsKt.requireAppCompatActivity(activityNullable).getSupportFragmentManager();
             Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "activity.requireAppCompa…().supportFragmentManager");
             newInstance.show(supportFragmentManager, (String) null);
-        } else if (valueOf != null && valueOf.intValue() == 2131362200) {
+        } else if (valueOf != null && valueOf.intValue() == 2131362205) {
             pickGoodsItem();
         }
     }

@@ -12,9 +12,7 @@ public class cb extends ch {
     private static final byte i = 1;
     private static final byte j = 31;
     private static final byte k = -32;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final int f1465l = 5;
+    private static final int l = 5;
     byte[] a;
     byte[] b;
     byte[] c;
@@ -134,9 +132,7 @@ public class cb extends ch {
         public static final byte i = 9;
         public static final byte j = 10;
         public static final byte k = 11;
-
-        /* renamed from: l  reason: collision with root package name */
-        public static final byte f1466l = 12;
+        public static final byte l = 12;
 
         private b() {
         }

@@ -27,12 +27,12 @@ public class ItemDyhArticleV8BindingImpl extends ItemDyhArticleV8Binding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362643, 8);
-        sparseIntArray.put(2131362312, 9);
-        sparseIntArray.put(2131362306, 10);
-        sparseIntArray.put(2131363251, 11);
-        sparseIntArray.put(2131362338, 12);
-        sparseIntArray.put(2131362319, 13);
+        sparseIntArray.put(2131362651, 8);
+        sparseIntArray.put(2131362317, 9);
+        sparseIntArray.put(2131362311, 10);
+        sparseIntArray.put(2131363265, 11);
+        sparseIntArray.put(2131362344, 12);
+        sparseIntArray.put(2131362325, 13);
     }
 
     public ItemDyhArticleV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -78,21 +78,21 @@ public class ItemDyhArticleV8BindingImpl extends ItemDyhArticleV8Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((DyhArticle) obj);
         } else if (115 == i) {
             setFoldText((String) obj);
-        } else if (183 == i) {
+        } else if (184 == i) {
             setListType((String) obj);
         } else if (147 == i) {
             setHolder((DyhArticleVH) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (263 == i) {
+        } else if (264 == i) {
             setSingleImg((String) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((DyhViewModel) obj);
@@ -106,7 +106,7 @@ public class ItemDyhArticleV8BindingImpl extends ItemDyhArticleV8Binding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -152,7 +152,7 @@ public class ItemDyhArticleV8BindingImpl extends ItemDyhArticleV8Binding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -193,7 +193,7 @@ public class ItemDyhArticleV8BindingImpl extends ItemDyhArticleV8Binding {
                 this.mDirtyFlags |= 512;
             }
             return true;
-        } else if (i != 253) {
+        } else if (i != 254) {
             return false;
         } else {
             synchronized (this) {
@@ -208,7 +208,7 @@ public class ItemDyhArticleV8BindingImpl extends ItemDyhArticleV8Binding {
         long j;
         String str;
         boolean z;
-        Long l2;
+        Long l;
         String str2;
         int i;
         int i2;
@@ -229,10 +229,10 @@ public class ItemDyhArticleV8BindingImpl extends ItemDyhArticleV8Binding {
         if ((j & 3078) != 0) {
             if ((j & 2052) == 0 || dyhArticle == null) {
                 str2 = null;
-                l2 = null;
+                l = null;
             } else {
                 str2 = dyhArticle.getDyhShortName();
-                l2 = dyhArticle.getCreatDate();
+                l = dyhArticle.getCreatDate();
             }
             if (dyhArticle != null) {
                 str3 = dyhArticle.getShowFromInfo();
@@ -243,7 +243,7 @@ public class ItemDyhArticleV8BindingImpl extends ItemDyhArticleV8Binding {
             z = str3 != null;
         } else {
             str2 = null;
-            l2 = null;
+            l = null;
             str = null;
             z = false;
         }
@@ -304,7 +304,7 @@ public class ItemDyhArticleV8BindingImpl extends ItemDyhArticleV8Binding {
             ViewBindingAdapters.updateDyhArticle(this.mboundView7, dyhArticle);
             String str4 = null;
             TextViewBindingAdapters.setTextViewLinkable(this.newsFromWhereView, str, null, str4, null, null, str4);
-            TextViewBindingAdapters.setTime(this.sourceTimeView, l2);
+            TextViewBindingAdapters.setTime(this.sourceTimeView, l);
             TextViewBindingAdapter.setText(this.sourceTitleView, str2);
         }
         if ((3078 & j) != 0) {

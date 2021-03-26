@@ -13,7 +13,7 @@ import com.coolapk.market.util.UiUtils;
 import com.coolapk.market.widget.binding.BindingExtensionKt;
 
 public class AlbumViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558578;
+    public static final int LAYOUT_ID = 2131558582;
     private Album album;
 
     public AlbumViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -47,13 +47,13 @@ public class AlbumViewHolder extends BindingViewHolder {
 
     @Bindable
     public String getUserName() {
-        return String.format(getContext().getString(2131886581), this.album.getUserName(), Integer.valueOf(this.album.getTotalApkNum()));
+        return String.format(getContext().getString(2131886643), this.album.getUserName(), Integer.valueOf(this.album.getTotalApkNum()));
     }
 
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         super.onClick(view);
-        if (view.getId() == 2131362752) {
+        if (view.getId() == 2131362763) {
             ActionManagerCompat.startActivityByUrl(getContext(), this.album.getUrl(), this.album.getTitle(), this.album.getSubTitle());
         }
     }

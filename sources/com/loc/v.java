@@ -16,16 +16,14 @@ public final class v {
     public static final Integer i = 4;
     public static final Integer j = 5;
     private static String k = "ADgAIwBbAA8AagAIAHIAEwCFAD8AxABDAQcAIQEoADgBYAA8AZwAnwI7APADKwAHAzIADAM+AA9LWVc1a2NtOXBaQzV2Y3k1VFpYSjJhV05sVFdGdVlXZGxjZ1FaMlYwVTJWeWRtbGpaUUljR2h2Ym1VVWFYQm9iMjVsYzNWaWFXNW1id01ZMjl0TG1GdVpISnZhV1F1YVc1MFpYSnVZV3d1ZEdWc1pYQm9iMjU1TGtsVVpXeGxjR2h2Ym5ra1UzUjFZZ1FZMjl0TG1GdVpISnZhV1F1YVc1MFpYSnVZV3d1ZEdWc1pYQm9iMjU1TGtsUWFHOXVaVk4xWWtsdVptOGtVM1IxWWdHVkZKQlRsTkJRMVJKVDA1ZloyVjBSR1YyYVdObFNXUT1FWTI5dExtRnVaSEp2YVdRdWFXNTBaWEp1WVd3dWRHVnNaWEJvYjI1NUxrbFVaV3hsY0dodmJua0lZMjl0TG1GdVpISnZhV1F1YVc1MFpYSnVZV3d1ZEdWc1pYQm9iMjU1TGtsUWFHOXVaVk4xWWtsdVptOEVJbXRsZVNJNklpVnpJaXdpY0d4aGRHWnZjbTBpT2lKaGJtUnliMmxrSWl3aVpHbDFJam9pSlhNaUxDSndhMmNpT2lJbGN5SXNJbTF2WkdWc0lqb2lKWE1pTENKaGNIQnVZVzFsSWpvaUpYTWlMQ0poY0hCMlpYSnphVzl1SWpvaUpYTWlMQ0p6ZVhOMlpYSnphVzl1SWpvaUpYTWlMQUdJbXRsZVNJNklpVnpJaXdpY0d4aGRHWnZjbTBpT2lKaGJtUnliMmxrSWl3aVpHbDFJam9pSlhNaUxDSnRZV01pT2lJbGN5SXNJblJwWkNJNklpVnpJaXdpZFcxcFpIUWlPaUlsY3lJc0ltMWhiblZtWVdOMGRYSmxJam9pSlhNaUxDSmtaWFpwWTJVaU9pSWxjeUlzSW5OcGJTSTZJaVZ6SWl3aWNHdG5Jam9pSlhNaUxDSnRiMlJsYkNJNklpVnpJaXdpWVhCd2RtVnljMmx2YmlJNklpVnpJaXdpWVhCd2JtRnRaU0k2SWlWeklnPUlZV2xrUFFNZkhObGNtbGhiRDBRWVc1a2NtOXBaRjlwWkE=";
-
-    /* renamed from: l  reason: collision with root package name */
-    private static volatile ConcurrentHashMap<String, String> f1383l = new ConcurrentHashMap<>(8);
+    private static volatile ConcurrentHashMap<String, String> l = new ConcurrentHashMap<>(8);
 
     public static String a(String str) {
         String str2 = "";
         try {
-            synchronized (f1383l) {
-                if (f1383l != null && f1383l.containsKey(str)) {
-                    str2 = f1383l.get(str);
+            synchronized (l) {
+                if (l != null && l.containsKey(str)) {
+                    str2 = l.get(str);
                 }
             }
         } catch (Throwable unused) {
@@ -39,12 +37,12 @@ public final class v {
                 return;
             }
             if (!TextUtils.isEmpty(str2)) {
-                synchronized (f1383l) {
-                    if (f1383l == null) {
-                        f1383l = new ConcurrentHashMap<>(8);
+                synchronized (l) {
+                    if (l == null) {
+                        l = new ConcurrentHashMap<>(8);
                     }
-                    if (!f1383l.containsKey(str)) {
-                        f1383l.put(str, str2);
+                    if (!l.containsKey(str)) {
+                        l.put(str, str2);
                     }
                 }
             }

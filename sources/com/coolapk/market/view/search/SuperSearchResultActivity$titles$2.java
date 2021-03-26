@@ -21,21 +21,21 @@ final class SuperSearchResultActivity$titles$2 extends Lambda implements Functio
     public final String[] invoke() {
         String appMode = AppHolder.getAppMetadata().getAppMode();
         if (appMode != null && appMode.hashCode() == -1480249367 && appMode.equals("community")) {
-            String string = this.this$0.getString(2131886977);
+            String string = this.this$0.getString(2131887039);
             Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_search_page_title_user)");
-            String string2 = this.this$0.getString(2131886974);
+            String string2 = this.this$0.getString(2131887036);
             Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_search_page_title_feed)");
             return new String[]{"综合", "数码", string, string2, "话题", "好物", "二手", "问答", "好物单", "看看号"};
         }
-        String string3 = this.this$0.getString(2131886971);
+        String string3 = this.this$0.getString(2131887033);
         Intrinsics.checkNotNullExpressionValue(string3, "getString(R.string.str_search_page_title_app)");
-        String string4 = this.this$0.getString(2131886975);
+        String string4 = this.this$0.getString(2131887037);
         Intrinsics.checkNotNullExpressionValue(string4, "getString(R.string.str_search_page_title_game)");
-        String string5 = this.this$0.getString(2131886977);
+        String string5 = this.this$0.getString(2131887039);
         Intrinsics.checkNotNullExpressionValue(string5, "getString(R.string.str_search_page_title_user)");
-        String string6 = this.this$0.getString(2131886974);
+        String string6 = this.this$0.getString(2131887036);
         Intrinsics.checkNotNullExpressionValue(string6, "getString(R.string.str_search_page_title_feed)");
-        String string7 = this.this$0.getString(2131886970);
+        String string7 = this.this$0.getString(2131887032);
         Intrinsics.checkNotNullExpressionValue(string7, "getString(R.string.str_search_page_title_album)");
         return new String[]{"综合", "数码", string3, string4, string5, string6, "话题", "好物", "二手", "问答", "好物单", "看看号", string7};
     }

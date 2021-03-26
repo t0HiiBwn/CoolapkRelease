@@ -20,7 +20,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: DyhShareActionViewHolder.kt */
 public final class DyhShareActionViewHolder extends GenericBindHolder<ItemFeedShareActionViewBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558726;
+    public static final int LAYOUT_ID = 2131558733;
     private final DyhArticleDetailPresenter presenter;
 
     public final DyhArticleDetailPresenter getPresenter() {
@@ -61,7 +61,7 @@ public final class DyhShareActionViewHolder extends GenericBindHolder<ItemFeedSh
         super.onClick(view);
         DyhArticle dyhArticle = this.presenter.getDyhArticle();
         switch (view.getId()) {
-            case 2131362519:
+            case 2131362527:
                 Activity currentActivity = AppHolder.getCurrentActivity();
                 if (currentActivity != null) {
                     Boolean checkLogin = ActionManager.checkLogin(currentActivity);
@@ -73,20 +73,20 @@ public final class DyhShareActionViewHolder extends GenericBindHolder<ItemFeedSh
                     return;
                 }
                 return;
-            case 2131362970:
+            case 2131362982:
                 ActionManager.startForwardEntityActivity(getContext(), dyhArticle);
                 return;
-            case 2131363153:
+            case 2131363167:
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");
                 ShareUtils.shareToQQ(context, dyhArticle);
                 return;
-            case 2131363964:
+            case 2131363990:
                 Context context2 = getContext();
                 Intrinsics.checkNotNullExpressionValue(context2, "context");
                 ShareUtils.shareToWechatUrl(context2, dyhArticle, true);
                 return;
-            case 2131363965:
+            case 2131363991:
                 Context context3 = getContext();
                 Intrinsics.checkNotNullExpressionValue(context3, "context");
                 ShareUtils.shareToWechatUrl(context3, dyhArticle, false);

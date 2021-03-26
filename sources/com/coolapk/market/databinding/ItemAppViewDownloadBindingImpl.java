@@ -78,7 +78,7 @@ public class ItemAppViewDownloadBindingImpl extends ItemAppViewDownloadBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppViewViewModel) obj);
@@ -92,7 +92,7 @@ public class ItemAppViewDownloadBindingImpl extends ItemAppViewDownloadBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -115,12 +115,12 @@ public class ItemAppViewDownloadBindingImpl extends ItemAppViewDownloadBinding {
                 this.mDirtyFlags |= 2;
             }
             return true;
-        } else if (i == 264) {
+        } else if (i == 265) {
             synchronized (this) {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i == 242) {
+        } else if (i == 243) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
@@ -140,7 +140,7 @@ public class ItemAppViewDownloadBindingImpl extends ItemAppViewDownloadBinding {
                 this.mDirtyFlags |= 64;
             }
             return true;
-        } else if (i == 285) {
+        } else if (i == 286) {
             synchronized (this) {
                 this.mDirtyFlags |= 128;
             }
@@ -206,7 +206,7 @@ public class ItemAppViewDownloadBindingImpl extends ItemAppViewDownloadBinding {
                     }
                     j = j5 | j4;
                 }
-                drawable2 = AppCompatResources.getDrawable(this.mboundView5.getContext(), z ? 2131231256 : 2131231114);
+                drawable2 = AppCompatResources.getDrawable(this.mboundView5.getContext(), z ? 2131231267 : 2131231124);
                 if (z) {
                     resources = this.mboundView6.getResources();
                     i3 = 2131886114;

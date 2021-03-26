@@ -48,10 +48,10 @@ final class FeedDetailFragmentV8$setupSecondHandCommentBar$1 extends Lambda impl
         Intrinsics.checkNotNullParameter(view, "v");
         boolean z = false;
         switch (view.getId()) {
-            case 2131362291:
+            case 2131362296:
                 ActionManager.startFeedCommentActivity(this.this$0.getActivity(), this.this$0.getFeed$presentation_coolapkAppRelease().getId(), this.this$0.getFeed$presentation_coolapkAppRelease().getUserName());
                 return;
-            case 2131362624:
+            case 2131362632:
                 SecondHandInfo secondHandInfo = this.this$0.getFeed$presentation_coolapkAppRelease().getSecondHandInfo();
                 Intrinsics.checkNotNull(secondHandInfo);
                 Intrinsics.checkNotNullExpressionValue(secondHandInfo, "feed.secondHandInfo!!");
@@ -128,7 +128,7 @@ final class FeedDetailFragmentV8$setupSecondHandCommentBar$1 extends Lambda impl
                 Intrinsics.checkNotNullExpressionValue(childFragmentManager, "childFragmentManager");
                 newInstance.show(childFragmentManager, (String) null);
                 return;
-            case 2131362851:
+            case 2131362862:
                 Activity currentActivity = AppHolder.getCurrentActivity();
                 if (currentActivity != null) {
                     Boolean checkLogin = ActionManager.checkLogin(currentActivity);
@@ -145,10 +145,10 @@ final class FeedDetailFragmentV8$setupSecondHandCommentBar$1 extends Lambda impl
                     return;
                 }
                 return;
-            case 2131363358:
+            case 2131363374:
                 ActionManager.startForwardEntityActivity(this.this$0.getActivity(), this.this$0.getFeed$presentation_coolapkAppRelease());
                 return;
-            case 2131363418:
+            case 2131363436:
                 Activity currentActivity2 = AppHolder.getCurrentActivity();
                 if (currentActivity2 != null) {
                     Boolean checkLogin2 = ActionManager.checkLogin(currentActivity2);

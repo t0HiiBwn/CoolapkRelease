@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_MessageCard  reason: invalid class name */
 abstract class C$AutoValue_MessageCard extends C$$AutoValue_MessageCard {
-    C$AutoValue_MessageCard(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, String str10, String str11) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, l2, l3, str9, str10, str11);
+    C$AutoValue_MessageCard(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, String str10, String str11) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, l, l2, str9, str10, str11);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_MessageCard$GsonTypeAdapter */
@@ -106,13 +106,13 @@ abstract class C$AutoValue_MessageCard extends C$$AutoValue_MessageCard {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -184,8 +184,8 @@ abstract class C$AutoValue_MessageCard extends C$$AutoValue_MessageCard {
             String str6 = this.defaultSubTitle;
             String str7 = this.defaultId;
             String str8 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str9 = this.defaultTitle;
             String str10 = str;
             String str11 = str2;
@@ -196,8 +196,8 @@ abstract class C$AutoValue_MessageCard extends C$$AutoValue_MessageCard {
             String str15 = str6;
             String str16 = str7;
             String str17 = str8;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str18 = str9;
             String str19 = this.defaultUrl;
             String str20 = this.defaultDescription;
@@ -308,7 +308,7 @@ abstract class C$AutoValue_MessageCard extends C$$AutoValue_MessageCard {
                             str11 = this.entityTemplateAdapter.read(jsonReader);
                             continue;
                         case 4:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 5:
                             str10 = this.entityTypeNameAdapter.read(jsonReader);
@@ -335,7 +335,7 @@ abstract class C$AutoValue_MessageCard extends C$$AutoValue_MessageCard {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case '\r':
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -344,7 +344,7 @@ abstract class C$AutoValue_MessageCard extends C$$AutoValue_MessageCard {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_MessageCard(str10, str11, str12, num2, str13, str14, str15, str16, str17, l4, l5, str18, str19, str20);
+            return new AutoValue_MessageCard(str10, str11, str12, num2, str13, str14, str15, str16, str17, l3, l4, str18, str19, str20);
         }
     }
 }

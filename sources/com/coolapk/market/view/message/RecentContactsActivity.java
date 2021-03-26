@@ -76,7 +76,7 @@ public final class RecentContactsActivity extends FakeStatusBarActivity {
         Object obj = extras != null ? extras.get("entity") : null;
         Objects.requireNonNull(obj, "null cannot be cast to non-null type com.coolapk.market.model.Entity");
         this.entity = (Entity) obj;
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559283);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559293);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…this, R.layout.user_pick)");
         this.binding = (UserPickBinding) contentView;
         setupHeader();
@@ -89,13 +89,13 @@ public final class RecentContactsActivity extends FakeStatusBarActivity {
         Intrinsics.checkNotNullExpressionValue(floatingActionButton, "binding.fab.fab");
         floatingActionButton.setVisibility(8);
         FragmentManager supportFragmentManager = getSupportFragmentManager();
-        if (supportFragmentManager.findFragmentById(2131363307) == null) {
+        if (supportFragmentManager.findFragmentById(2131363322) == null) {
             RecentContactsFragment.Companion companion = RecentContactsFragment.Companion;
             Entity entity2 = this.entity;
             if (entity2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("entity");
             }
-            supportFragmentManager.beginTransaction().add(2131363307, companion.newInstance(entity2)).commit();
+            supportFragmentManager.beginTransaction().add(2131363322, companion.newInstance(entity2)).commit();
             supportFragmentManager.executePendingTransactions();
         }
         UserPickBinding userPickBinding2 = this.binding;
@@ -282,12 +282,12 @@ public final class RecentContactsActivity extends FakeStatusBarActivity {
     }
 
     private final Fragment findContentFragment() {
-        return getSupportFragmentManager().findFragmentById(2131363307);
+        return getSupportFragmentManager().findFragmentById(2131363322);
     }
 
     /* access modifiers changed from: private */
     public final PopLayoutBehavior findPopupFragment() {
-        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131363314);
+        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131363330);
         if (!(findFragmentById instanceof PopLayoutBehavior)) {
             findFragmentById = null;
         }
@@ -307,7 +307,7 @@ public final class RecentContactsActivity extends FakeStatusBarActivity {
         }
         UserPickFragment newInstance = UserPickFragment.Companion.newInstance(str);
         newInstance.setPresenter(new UserPresenter(newInstance));
-        supportFragmentManager.beginTransaction().replace(2131363314, newInstance).commit();
+        supportFragmentManager.beginTransaction().replace(2131363330, newInstance).commit();
     }
 
     @Metadata(bv = {1, 0, 3}, d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\b\u0004\u0018\u00002\u00020\u00012\u00020\u0002B\u0005¢\u0006\u0002\u0010\u0003J\b\u0010\u0004\u001a\u00020\u0005H\u0016J\n\u0010\u0006\u001a\u0004\u0018\u00010\u0007H\u0016J\u0012\u0010\b\u001a\u0004\u0018\u00010\t2\u0006\u0010\n\u001a\u00020\u0005H\u0016J\u0010\u0010\u000b\u001a\u00020\f2\u0006\u0010\n\u001a\u00020\u0005H\u0016J\"\u0010\r\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\n\u001a\u00020\u00052\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0010\u001a\u00020\u0011H\u0016¨\u0006\u0012"}, d2 = {"Lcom/coolapk/market/view/message/RecentContactsActivity$BridgeAdapter;", "Landroid/widget/BaseAdapter;", "Landroid/widget/Filterable;", "(Lcom/coolapk/market/view/message/RecentContactsActivity;)V", "getCount", "", "getFilter", "Landroid/widget/Filter;", "getItem", "", "position", "getItemId", "", "getView", "Landroid/view/View;", "convertView", "parent", "Landroid/view/ViewGroup;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})

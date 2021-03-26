@@ -6,8 +6,65 @@ import java.net.URL;
 import java.util.Date;
 
 public class TypeHandler {
-    public static Object createValue(String str, Object obj) throws ParseException {
-        return createValue(str, (Class) obj);
+    public static Class createClass(String str) throws ParseException {
+        try {
+            return Class.forName(str);
+        } catch (ClassNotFoundException unused) {
+            StringBuffer stringBuffer = new StringBuffer();
+            stringBuffer.append("Unable to find the class: ");
+            stringBuffer.append(str);
+            throw new ParseException(stringBuffer.toString());
+        }
+    }
+
+    public static Date createDate(String str) throws ParseException {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    public static File createFile(String str) throws ParseException {
+        return new File(str);
+    }
+
+    public static File[] createFiles(String str) throws ParseException {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    public static Number createNumber(String str) throws ParseException {
+        try {
+            return str.indexOf(46) != -1 ? Double.valueOf(str) : Long.valueOf(str);
+        } catch (NumberFormatException e) {
+            throw new ParseException(e.getMessage());
+        }
+    }
+
+    public static Object createObject(String str) throws ParseException {
+        try {
+            try {
+                return Class.forName(str).newInstance();
+            } catch (Exception e) {
+                StringBuffer stringBuffer = new StringBuffer();
+                stringBuffer.append(e.getClass().getName());
+                stringBuffer.append("; Unable to create an instance of: ");
+                stringBuffer.append(str);
+                throw new ParseException(stringBuffer.toString());
+            }
+        } catch (ClassNotFoundException unused) {
+            StringBuffer stringBuffer2 = new StringBuffer();
+            stringBuffer2.append("Unable to find the class: ");
+            stringBuffer2.append(str);
+            throw new ParseException(stringBuffer2.toString());
+        }
+    }
+
+    public static URL createURL(String str) throws ParseException {
+        try {
+            return new URL(str);
+        } catch (MalformedURLException unused) {
+            StringBuffer stringBuffer = new StringBuffer();
+            stringBuffer.append("Unable to parse the URL: ");
+            stringBuffer.append(str);
+            throw new ParseException(stringBuffer.toString());
+        }
     }
 
     public static Object createValue(String str, Class cls) throws ParseException {
@@ -41,67 +98,7 @@ public class TypeHandler {
         return null;
     }
 
-    public static Object createObject(String str) throws ParseException {
-        try {
-            try {
-                return Class.forName(str).newInstance();
-            } catch (Exception e) {
-                StringBuffer stringBuffer = new StringBuffer();
-                stringBuffer.append(e.getClass().getName());
-                stringBuffer.append("; Unable to create an instance of: ");
-                stringBuffer.append(str);
-                throw new ParseException(stringBuffer.toString());
-            }
-        } catch (ClassNotFoundException unused) {
-            StringBuffer stringBuffer2 = new StringBuffer();
-            stringBuffer2.append("Unable to find the class: ");
-            stringBuffer2.append(str);
-            throw new ParseException(stringBuffer2.toString());
-        }
-    }
-
-    public static Number createNumber(String str) throws ParseException {
-        try {
-            if (str.indexOf(46) != -1) {
-                return Double.valueOf(str);
-            }
-            return Long.valueOf(str);
-        } catch (NumberFormatException e) {
-            throw new ParseException(e.getMessage());
-        }
-    }
-
-    public static Class createClass(String str) throws ParseException {
-        try {
-            return Class.forName(str);
-        } catch (ClassNotFoundException unused) {
-            StringBuffer stringBuffer = new StringBuffer();
-            stringBuffer.append("Unable to find the class: ");
-            stringBuffer.append(str);
-            throw new ParseException(stringBuffer.toString());
-        }
-    }
-
-    public static Date createDate(String str) throws ParseException {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
-
-    public static URL createURL(String str) throws ParseException {
-        try {
-            return new URL(str);
-        } catch (MalformedURLException unused) {
-            StringBuffer stringBuffer = new StringBuffer();
-            stringBuffer.append("Unable to parse the URL: ");
-            stringBuffer.append(str);
-            throw new ParseException(stringBuffer.toString());
-        }
-    }
-
-    public static File createFile(String str) throws ParseException {
-        return new File(str);
-    }
-
-    public static File[] createFiles(String str) throws ParseException {
-        throw new UnsupportedOperationException("Not yet implemented");
+    public static Object createValue(String str, Object obj) throws ParseException {
+        return createValue(str, (Class) obj);
     }
 }

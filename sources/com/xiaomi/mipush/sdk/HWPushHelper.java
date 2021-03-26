@@ -3,7 +3,7 @@ package com.xiaomi.mipush.sdk;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
+import com.xiaomi.a.a.a.c;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -15,7 +15,7 @@ public class HWPushHelper {
     }
 
     public static boolean hasNetwork(Context context) {
-        return h.m94a(context);
+        return h.m73a(context);
     }
 
     public static boolean isHmsTokenSynced(Context context) {
@@ -24,7 +24,7 @@ public class HWPushHelper {
             return false;
         }
         String a3 = h.a(context, a2);
-        String a4 = ab.a(context).a(ap.UPLOAD_HUAWEI_TOKEN);
+        String a4 = ag.a(context).a(av.UPLOAD_HUAWEI_TOKEN);
         return !TextUtils.isEmpty(a3) && !TextUtils.isEmpty(a4) && "synced".equals(a4);
     }
 
@@ -56,7 +56,7 @@ public class HWPushHelper {
                     }
                 }
             } catch (Exception e) {
-                b.d(e.toString());
+                c.d(e.toString());
             }
         }
         PushMessageReceiver a2 = h.a(context);
@@ -78,7 +78,7 @@ public class HWPushHelper {
                 }
             }
         } catch (Exception e) {
-            b.d(e.toString());
+            c.d(e.toString());
         }
         PushMessageReceiver a2 = h.a(context);
         if (a2 != null) {

@@ -23,8 +23,8 @@ final class AutoValue_Video extends C$AutoValue_Video {
         return 0;
     }
 
-    AutoValue_Video(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, String str12, int i2, boolean z, String str13, String str14, String str15, boolean z2) {
-        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, l2, l3, str11, str12, i2, z, str13, str14, str15, z2);
+    AutoValue_Video(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, String str12, int i2, boolean z, String str13, String str14, String str15, boolean z2) {
+        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, l, l2, str11, str12, i2, z, str13, str14, str15, z2);
     }
 
     @Override // android.os.Parcelable

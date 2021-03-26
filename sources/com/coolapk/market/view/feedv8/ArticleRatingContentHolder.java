@@ -28,8 +28,8 @@ public final class ArticleRatingContentHolder extends ArticleFeedContentHolder2 
     public View onCreateContentView$presentation_coolapkAppRelease(LayoutInflater layoutInflater) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
         View onCreateContentView$presentation_coolapkAppRelease = super.onCreateContentView$presentation_coolapkAppRelease(layoutInflater);
-        getAdapter().register(SimpleViewHolderFactor.Companion.withLayoutId(2131559165).constructor(new ArticleRatingContentHolder$onCreateContentView$1(this)).suitedMethod(ArticleRatingContentHolder$onCreateContentView$2.INSTANCE).build(), 0);
-        getAdapter().register(SimpleViewHolderFactor.Companion.withLayoutId(2131559164).constructor(new ArticleRatingContentHolder$onCreateContentView$3(this)).suitedMethod(ArticleRatingContentHolder$onCreateContentView$4.INSTANCE).build(), 0);
+        getAdapter().register(SimpleViewHolderFactor.Companion.withLayoutId(2131559173).constructor(new ArticleRatingContentHolder$onCreateContentView$1(this)).suitedMethod(ArticleRatingContentHolder$onCreateContentView$2.INSTANCE).build(), 0);
+        getAdapter().register(SimpleViewHolderFactor.Companion.withLayoutId(2131559172).constructor(new ArticleRatingContentHolder$onCreateContentView$3(this)).suitedMethod(ArticleRatingContentHolder$onCreateContentView$4.INSTANCE).build(), 0);
         return onCreateContentView$presentation_coolapkAppRelease;
     }
 
@@ -80,7 +80,7 @@ public final class ArticleRatingContentHolder extends ArticleFeedContentHolder2 
     /* compiled from: ArticleRatingContentHolder.kt */
     private static final class ProductArticleBottomHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131559164;
+        public static final int LAYOUT_ID = 2131559172;
         private final ArticleFeedContentHolder2 content;
 
         public final ArticleFeedContentHolder2 getContent() {

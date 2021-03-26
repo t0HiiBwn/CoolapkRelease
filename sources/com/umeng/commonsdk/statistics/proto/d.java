@@ -45,15 +45,13 @@ public class d implements bi<d, e>, Serializable, Cloneable {
     public Map<String, e> a;
     public int b;
     public String c;
-
-    /* renamed from: l  reason: collision with root package name */
-    private byte f1494l;
+    private byte l;
 
     static {
         HashMap hashMap = new HashMap();
         j = hashMap;
         hashMap.put(cr.class, new b());
-        hashMap.put(cs.class, new C0154d());
+        hashMap.put(cs.class, new C0181d());
         EnumMap enumMap = new EnumMap(e.class);
         enumMap.put((EnumMap) e.PROPERTY, (e) new bu("property", (byte) 1, new bx((byte) 13, new bv((byte) 11), new bz((byte) 12, e.class))));
         enumMap.put((EnumMap) e.VERSION, (e) new bu("version", (byte) 1, new bv((byte) 8)));
@@ -123,7 +121,7 @@ public class d implements bi<d, e>, Serializable, Cloneable {
     }
 
     public d() {
-        this.f1494l = 0;
+        this.l = 0;
     }
 
     public d(Map<String, e> map, int i2, String str) {
@@ -135,8 +133,8 @@ public class d implements bi<d, e>, Serializable, Cloneable {
     }
 
     public d(d dVar) {
-        this.f1494l = 0;
-        this.f1494l = dVar.f1494l;
+        this.l = 0;
+        this.l = dVar.l;
         if (dVar.e()) {
             HashMap hashMap = new HashMap();
             for (Map.Entry<String, e> entry : dVar.a.entrySet()) {
@@ -212,15 +210,15 @@ public class d implements bi<d, e>, Serializable, Cloneable {
     }
 
     public void g() {
-        this.f1494l = bf.b(this.f1494l, 0);
+        this.l = bf.b(this.l, 0);
     }
 
     public boolean h() {
-        return bf.a(this.f1494l, 0);
+        return bf.a(this.l, 0);
     }
 
     public void b(boolean z) {
-        this.f1494l = bf.a(this.f1494l, 0, z);
+        this.l = bf.a(this.l, 0, z);
     }
 
     public String i() {
@@ -304,7 +302,7 @@ public class d implements bi<d, e>, Serializable, Cloneable {
 
     private void a(ObjectInputStream objectInputStream) throws IOException, ClassNotFoundException {
         try {
-            this.f1494l = 0;
+            this.l = 0;
             read(new cb(new ct(objectInputStream)));
         } catch (bo e2) {
             throw new IOException(e2.getMessage());
@@ -331,28 +329,28 @@ public class d implements bi<d, e>, Serializable, Cloneable {
         public void b(ch chVar, d dVar) throws bo {
             chVar.j();
             while (true) {
-                cc l2 = chVar.l();
-                if (l2.b == 0) {
+                cc l = chVar.l();
+                if (l.b == 0) {
                     break;
                 }
-                short s = l2.c;
+                short s = l.c;
                 if (s != 1) {
                     if (s != 2) {
                         if (s != 3) {
-                            ck.a(chVar, l2.b);
-                        } else if (l2.b == 11) {
+                            ck.a(chVar, l.b);
+                        } else if (l.b == 11) {
                             dVar.c = chVar.z();
                             dVar.c(true);
                         } else {
-                            ck.a(chVar, l2.b);
+                            ck.a(chVar, l.b);
                         }
-                    } else if (l2.b == 8) {
+                    } else if (l.b == 8) {
                         dVar.b = chVar.w();
                         dVar.b(true);
                     } else {
-                        ck.a(chVar, l2.b);
+                        ck.a(chVar, l.b);
                     }
-                } else if (l2.b == 13) {
+                } else if (l.b == 13) {
                     ce n = chVar.n();
                     dVar.a = new HashMap(n.c * 2);
                     for (int i = 0; i < n.c; i++) {
@@ -364,7 +362,7 @@ public class d implements bi<d, e>, Serializable, Cloneable {
                     chVar.o();
                     dVar.a(true);
                 } else {
-                    ck.a(chVar, l2.b);
+                    ck.a(chVar, l.b);
                 }
                 chVar.m();
             }
@@ -405,8 +403,8 @@ public class d implements bi<d, e>, Serializable, Cloneable {
 
     /* renamed from: com.umeng.commonsdk.statistics.proto.d$d  reason: collision with other inner class name */
     /* compiled from: Imprint */
-    private static class C0154d implements cq {
-        private C0154d() {
+    private static class C0181d implements cq {
+        private C0181d() {
         }
 
         /* renamed from: a */

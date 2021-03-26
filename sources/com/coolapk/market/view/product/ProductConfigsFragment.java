@@ -82,10 +82,10 @@ public final class ProductConfigsFragment extends ShortAsyncListFragment<HolderI
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         setHasOptionsMenu(true);
-        setEmptyData(getString(2131886765), 0);
+        setEmptyData(getString(2131886827), 0);
         FragmentBindingComponent fragmentBindingComponent = new FragmentBindingComponent(this);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558863).suitedEntityType("entity_type_config_title").constructor(new ProductConfigsFragment$onActivityCreated$1(fragmentBindingComponent)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558862).suitedEntityType("entity_type_config_item").constructor(new ProductConfigsFragment$onActivityCreated$2(fragmentBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558870).suitedEntityType("entity_type_config_title").constructor(new ProductConfigsFragment$onActivityCreated$1(fragmentBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558869).suitedEntityType("entity_type_config_item").constructor(new ProductConfigsFragment$onActivityCreated$2(fragmentBindingComponent)).build(), 0, 2, null);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         initData();
     }
@@ -94,7 +94,7 @@ public final class ProductConfigsFragment extends ShortAsyncListFragment<HolderI
     /* compiled from: ProductConfigsFragment.kt */
     private static final class ProductSeriesTitleHolder extends GenericBindHolder<ItemProductConfigTitleBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558863;
+        public static final int LAYOUT_ID = 2131558870;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public ProductSeriesTitleHolder(View view, DataBindingComponent dataBindingComponent) {
@@ -126,7 +126,7 @@ public final class ProductConfigsFragment extends ShortAsyncListFragment<HolderI
     /* compiled from: ProductConfigsFragment.kt */
     private static final class ProductConfigItemHolder extends GenericBindHolder<ItemProductConfigItemBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558862;
+        public static final int LAYOUT_ID = 2131558869;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public ProductConfigItemHolder(View view, DataBindingComponent dataBindingComponent) {

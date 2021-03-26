@@ -8,6 +8,10 @@ public class ChunkedOutputStream extends FilterOutputStream {
     private static final int DEFAULT_CHUNK_SIZE = 4096;
     private final int chunkSize;
 
+    public ChunkedOutputStream(OutputStream outputStream) {
+        this(outputStream, 4096);
+    }
+
     public ChunkedOutputStream(OutputStream outputStream, int i) {
         super(outputStream);
         if (i > 0) {
@@ -15,10 +19,6 @@ public class ChunkedOutputStream extends FilterOutputStream {
             return;
         }
         throw new IllegalArgumentException();
-    }
-
-    public ChunkedOutputStream(OutputStream outputStream) {
-        this(outputStream, 4096);
     }
 
     @Override // java.io.FilterOutputStream, java.io.OutputStream

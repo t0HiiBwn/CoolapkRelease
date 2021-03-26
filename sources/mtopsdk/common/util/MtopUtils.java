@@ -149,8 +149,8 @@ public final class MtopUtils {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:22:0x006a A[SYNTHETIC, Splitter:B:22:0x006a] */
-    /* JADX WARNING: Removed duplicated region for block: B:27:0x0070  */
+    /* JADX WARNING: Removed duplicated region for block: B:22:0x006b A[SYNTHETIC, Splitter:B:22:0x006b] */
+    /* JADX WARNING: Removed duplicated region for block: B:27:0x0071  */
     /* JADX WARNING: Removed duplicated region for block: B:35:? A[RETURN, SYNTHETIC] */
     public static boolean writeObject(Serializable serializable, File file, String str) {
         File file2;

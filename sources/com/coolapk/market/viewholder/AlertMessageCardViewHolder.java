@@ -12,7 +12,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: AlertMessageCardViewHolder.kt */
 public final class AlertMessageCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558586;
+    public static final int LAYOUT_ID = 2131558590;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public AlertMessageCardViewHolder(View view, ItemActionHandler itemActionHandler) {

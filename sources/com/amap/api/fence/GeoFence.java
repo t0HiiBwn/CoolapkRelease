@@ -59,9 +59,7 @@ public class GeoFence implements Parcelable {
     private float i;
     private long j;
     private int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private float f1212l;
+    private float l;
     private float m;
     private DPoint n;
     private int o;
@@ -77,7 +75,7 @@ public class GeoFence implements Parcelable {
         this.i = 0.0f;
         this.j = -1;
         this.k = 1;
-        this.f1212l = 0.0f;
+        this.l = 0.0f;
         this.m = 0.0f;
         this.n = null;
         this.o = 0;
@@ -95,7 +93,7 @@ public class GeoFence implements Parcelable {
         this.i = 0.0f;
         this.j = -1;
         this.k = 1;
-        this.f1212l = 0.0f;
+        this.l = 0.0f;
         this.m = 0.0f;
         this.n = null;
         this.o = 0;
@@ -112,7 +110,7 @@ public class GeoFence implements Parcelable {
         this.i = parcel.readFloat();
         this.j = parcel.readLong();
         this.k = parcel.readInt();
-        this.f1212l = parcel.readFloat();
+        this.l = parcel.readFloat();
         this.m = parcel.readFloat();
         this.n = (DPoint) parcel.readParcelable(DPoint.class.getClassLoader());
         this.o = parcel.readInt();
@@ -199,7 +197,7 @@ public class GeoFence implements Parcelable {
     }
 
     public float getMinDis2Center() {
-        return this.f1212l;
+        return this.l;
     }
 
     public PendingIntent getPendingIntent() {
@@ -280,7 +278,7 @@ public class GeoFence implements Parcelable {
     }
 
     public void setMinDis2Center(float f2) {
-        this.f1212l = f2;
+        this.l = f2;
     }
 
     public void setPendingIntent(PendingIntent pendingIntent) {
@@ -323,7 +321,7 @@ public class GeoFence implements Parcelable {
         parcel.writeFloat(this.i);
         parcel.writeLong(this.j);
         parcel.writeInt(this.k);
-        parcel.writeFloat(this.f1212l);
+        parcel.writeFloat(this.l);
         parcel.writeFloat(this.m);
         parcel.writeParcelable(this.n, i2);
         parcel.writeInt(this.o);

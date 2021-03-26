@@ -66,7 +66,7 @@ public final class AlbumUserSheetGroupFactory implements SheetCallback {
         Intrinsics.checkNotNullParameter(activity2, "activity");
         this.data = album;
         this.activity = activity2;
-        this.bgColor = ResourceUtils.getColorInt(activity2, 2131100049);
+        this.bgColor = ResourceUtils.getColorInt(activity2, 2131100054);
         this.userItemColor = ResourceUtils.resolveData(activity2, 2130969438);
     }
 
@@ -89,21 +89,21 @@ public final class AlbumUserSheetGroupFactory implements SheetCallback {
         String uid = this.data.getUid();
         Intrinsics.checkNotNullExpressionValue(loginSession, "session");
         boolean areEqual = Intrinsics.areEqual(uid, loginSession.getUid());
-        insertItem$default(this, AlbumAction.Copy, "复制", 2131231233, 0, null, 24, null);
+        insertItem$default(this, AlbumAction.Copy, "复制", 2131231244, 0, null, 24, null);
         UserAction userAction = this.data.getUserAction();
         if ((userAction != null ? userAction.getFavorite() : 0) <= 0) {
             z = false;
         }
         if (z) {
-            insertItem$default(this, AlbumAction.Favor, "已收藏", 2131231622, (int) 4294948626L, null, 16, null);
+            insertItem$default(this, AlbumAction.Favor, "已收藏", 2131231633, (int) 4294948626L, null, 16, null);
         } else {
-            insertItem$default(this, AlbumAction.Favor, "收藏", 2131231202, 0, null, 24, null);
+            insertItem$default(this, AlbumAction.Favor, "收藏", 2131231213, 0, null, 24, null);
         }
         if (areEqual || loginSession.isAdmin()) {
-            insertItem$default(this, AlbumAction.Delete, "删除", 2131231241, 0, null, 24, null);
+            insertItem$default(this, AlbumAction.Delete, "删除", 2131231252, 0, null, 24, null);
         }
         if (!areEqual) {
-            insertItem$default(this, AlbumAction.Report, "举报", 2131231646, 0, null, 24, null);
+            insertItem$default(this, AlbumAction.Report, "举报", 2131231657, 0, null, 24, null);
         }
         return wrapAsSheetGroup();
     }
@@ -128,7 +128,7 @@ public final class AlbumUserSheetGroupFactory implements SheetCallback {
             }
             ActionManager.startWebViewActivity(activity2, UriUtils.buildFeedReportUrl(id));
         } else if (i == 4) {
-            String string = this.activity.getString(2131886722);
+            String string = this.activity.getString(2131886784);
             Intrinsics.checkNotNullExpressionValue(string, "activity.getString(R.str….str_dialog_delete_title)");
             ConfirmDeleteDialog newInstance = ConfirmDeleteDialog.newInstance(string, "删除 " + this.data.getUserName() + " 的应用集： " + this.data.getIntroduce());
             newInstance.setDeleteTarget(this.data);

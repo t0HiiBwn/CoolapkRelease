@@ -22,8 +22,8 @@ public class ItemRefreshCardBindingImpl extends ItemRefreshCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131361897, 2);
-        sparseIntArray.put(2131361898, 3);
+        sparseIntArray.put(2131361898, 2);
+        sparseIntArray.put(2131361899, 3);
     }
 
     public ItemRefreshCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -59,7 +59,7 @@ public class ItemRefreshCardBindingImpl extends ItemRefreshCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (211 != i) {
+        if (212 != i) {
             return false;
         }
         setOnClick((View.OnClickListener) obj);
@@ -72,7 +72,7 @@ public class ItemRefreshCardBindingImpl extends ItemRefreshCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(211);
+        notifyPropertyChanged(212);
         super.requestRebind();
     }
 

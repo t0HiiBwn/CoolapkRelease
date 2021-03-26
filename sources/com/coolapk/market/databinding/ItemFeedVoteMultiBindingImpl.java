@@ -24,8 +24,8 @@ public class ItemFeedVoteMultiBindingImpl extends ItemFeedVoteMultiBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363397, 5);
-        sparseIntArray.put(2131362222, 6);
+        sparseIntArray.put(2131363414, 5);
+        sparseIntArray.put(2131362227, 6);
     }
 
     public ItemFeedVoteMultiBindingImpl(DataBindingComponent dataBindingComponent, View view) {

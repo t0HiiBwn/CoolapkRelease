@@ -62,7 +62,7 @@ public abstract class PictureDetailWrapBinding extends ViewDataBinding {
 
     @Deprecated
     public static PictureDetailWrapBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (PictureDetailWrapBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559087, viewGroup, z, obj);
+        return (PictureDetailWrapBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559094, viewGroup, z, obj);
     }
 
     public static PictureDetailWrapBinding inflate(LayoutInflater layoutInflater) {
@@ -71,7 +71,7 @@ public abstract class PictureDetailWrapBinding extends ViewDataBinding {
 
     @Deprecated
     public static PictureDetailWrapBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (PictureDetailWrapBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559087, null, false, obj);
+        return (PictureDetailWrapBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559094, null, false, obj);
     }
 
     public static PictureDetailWrapBinding bind(View view) {
@@ -80,6 +80,6 @@ public abstract class PictureDetailWrapBinding extends ViewDataBinding {
 
     @Deprecated
     public static PictureDetailWrapBinding bind(View view, Object obj) {
-        return (PictureDetailWrapBinding) bind(obj, view, 2131559087);
+        return (PictureDetailWrapBinding) bind(obj, view, 2131559094);
     }
 }

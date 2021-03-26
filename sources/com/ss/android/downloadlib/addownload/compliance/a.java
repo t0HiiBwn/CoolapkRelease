@@ -30,21 +30,19 @@ public class a extends Dialog {
     private Activity i;
     private final long j;
     private long k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final b f1402l;
+    private final b l;
 
     public a(Activity activity, long j2) {
         super(activity);
         this.i = activity;
         this.j = j2;
-        this.f1402l = (b) c.a().get(Long.valueOf(j2));
+        this.l = (b) c.a().get(Long.valueOf(j2));
     }
 
     @Override // android.app.Dialog
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        if (this.f1402l == null) {
+        if (this.l == null) {
             dismiss();
             return;
         }
@@ -56,7 +54,7 @@ public class a extends Dialog {
         }
         setCancelable(true);
         setCanceledOnTouchOutside(true);
-        this.k = this.f1402l.b;
+        this.k = this.l.b;
         a();
         e.b("lp_app_dialog_show", this.k);
         setOnCancelListener(new DialogInterface.OnCancelListener() {
@@ -78,11 +76,11 @@ public class a extends Dialog {
         this.f = (TextView) findViewById(R.id.tv_give_up);
         this.g = (ClipImageView) findViewById(R.id.iv_app_icon);
         this.h = (LinearLayout) findViewById(R.id.ll_download);
-        this.a.setText(k.a(this.f1402l.e, "--"));
+        this.a.setText(k.a(this.l.e, "--"));
         TextView textView = this.b;
-        textView.setText("版本号：" + k.a(this.f1402l.f, "--"));
+        textView.setText("版本号：" + k.a(this.l.f, "--"));
         TextView textView2 = this.c;
-        textView2.setText("开发者：" + k.a(this.f1402l.g, "应用信息正在完善中"));
+        textView2.setText("开发者：" + k.a(this.l.g, "应用信息正在完善中"));
         this.g.setRoundRadius(k.a(com.ss.android.downloadlib.addownload.k.a(), 8.0f));
         this.g.setBackgroundColor(Color.parseColor("#EBEBEB"));
         d.a().a(this.j, new d.a() {

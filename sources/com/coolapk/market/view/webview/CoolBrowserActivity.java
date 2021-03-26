@@ -55,7 +55,7 @@ public class CoolBrowserActivity extends BaseActivity implements View.OnClickLis
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        CoolBrowserBinding coolBrowserBinding = (CoolBrowserBinding) DataBindingUtil.setContentView(getActivity(), 2131558486);
+        CoolBrowserBinding coolBrowserBinding = (CoolBrowserBinding) DataBindingUtil.setContentView(getActivity(), 2131558487);
         this.mBinding = coolBrowserBinding;
         coolBrowserBinding.setClick(this);
         setupStatusBar();
@@ -65,7 +65,7 @@ public class CoolBrowserActivity extends BaseActivity implements View.OnClickLis
         CoolBrowserData.PageData createNewPage = coolBrowserData.createNewPage(coolBrowserData.getHomePage());
         CoolBrowserFragment orCreateFragment = createNewPage.getOrCreateFragment(supportFragmentManager);
         this.mBinding.linkTextView.setText(this.mBrowserData.getHomePage());
-        supportFragmentManager.beginTransaction().add(2131363592, orCreateFragment).commit();
+        supportFragmentManager.beginTransaction().add(2131363614, orCreateFragment).commit();
         this.mBrowserData.setCurrentPageData(createNewPage);
         getSupportFragmentManager().executePendingTransactions();
         this.mInitDrawable = this.mBinding.linkContentView.getBackground();
@@ -102,7 +102,7 @@ public class CoolBrowserActivity extends BaseActivity implements View.OnClickLis
         this.mAdapter = new PageAdapter();
         this.mBinding.pageListView.setAdapter(this.mAdapter);
         this.mBinding.pageListView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        this.mBinding.pageListView.addItemDecoration(ItemDecorations.horizontal(getActivity()).type(0, 2131231052).create());
+        this.mBinding.pageListView.addItemDecoration(ItemDecorations.horizontal(getActivity()).type(0, 2131231062).create());
         this.mBrowserData.setPageCountChangeListener(new CoolBrowserData.PageCountChangeListener() {
             /* class com.coolapk.market.view.webview.CoolBrowserActivity.AnonymousClass3 */
 
@@ -138,7 +138,7 @@ public class CoolBrowserActivity extends BaseActivity implements View.OnClickLis
         this.mBinding.actionClear.setVisibility(0);
         this.mBinding.actionQrcode.setVisibility(0);
         this.mBinding.editText.requestFocus();
-        this.mBinding.actionSearchEngine.setImageTintList(ColorStateList.valueOf(ResourceUtils.getColorInt(getActivity(), 2131099891)));
+        this.mBinding.actionSearchEngine.setImageTintList(ColorStateList.valueOf(ResourceUtils.getColorInt(getActivity(), 2131099896)));
         this.mBinding.linkContentView.setBackground(new ColorDrawable(AppHolder.getAppTheme().getContentBackgroundColor()));
         this.mBinding.appBar.setBackground(new ColorDrawable(AppHolder.getAppTheme().getContentBackgroundColor()));
         this.contentStatusView.setBackground(new ColorDrawable(AppHolder.getAppTheme().getContentBackgroundColor()));
@@ -228,24 +228,24 @@ public class CoolBrowserActivity extends BaseActivity implements View.OnClickLis
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         switch (view.getId()) {
-            case 2131361863:
+            case 2131361864:
                 CoolBrowserFragment currentFragment = getCurrentFragment();
                 if (currentFragment != null) {
                     currentFragment.getWebView().goBack();
                     return;
                 }
                 return;
-            case 2131361882:
+            case 2131361883:
                 this.mBinding.editText.getText().clear();
                 return;
-            case 2131361910:
+            case 2131361911:
                 CoolBrowserFragment currentFragment2 = getCurrentFragment();
                 if (currentFragment2 != null) {
                     currentFragment2.getWebView().goForward();
                     return;
                 }
                 return;
-            case 2131361941:
+            case 2131361942:
                 if (this.mIsBottomViewShow) {
                     hidePageList(true);
                     return;
@@ -253,10 +253,10 @@ public class CoolBrowserActivity extends BaseActivity implements View.OnClickLis
                     showPageList();
                     return;
                 }
-            case 2131361947:
+            case 2131361948:
                 ActionManager.startQrcodeActivity(getActivity());
                 return;
-            case 2131361956:
+            case 2131361957:
                 CoolBrowserFragment currentFragment3 = getCurrentFragment();
                 if (currentFragment3 != null && currentFragment3.getWebView() != null) {
                     currentFragment3.getWebView().reload();
@@ -282,23 +282,23 @@ public class CoolBrowserActivity extends BaseActivity implements View.OnClickLis
                     return;
                 }
                 return;
-            case 2131362136:
+            case 2131362139:
                 hidePageList(true);
                 return;
-            case 2131362171:
+            case 2131362174:
                 addPage();
                 return;
-            case 2131362172:
+            case 2131362175:
                 removeAllPage();
                 return;
-            case 2131362173:
+            case 2131362176:
                 CoolBrowserFragment currentFragment4 = getCurrentFragment();
                 if (currentFragment4 != null && currentFragment4.getWebView() != null) {
                     currentFragment4.getWebView().loadUrl(this.mBrowserData.getHomePage());
                     return;
                 }
                 return;
-            case 2131362862:
+            case 2131362873:
                 if (this.mIsBottomViewShow) {
                     hidePageList(false);
                 }
@@ -307,7 +307,7 @@ public class CoolBrowserActivity extends BaseActivity implements View.OnClickLis
                     return;
                 }
                 return;
-            case 2131362908:
+            case 2131362920:
                 if (this.mIsFocusMode) {
                     hideFocus();
                     return;
@@ -328,7 +328,7 @@ public class CoolBrowserActivity extends BaseActivity implements View.OnClickLis
         if (currentFragment != null) {
             beginTransaction.hide(currentFragment);
         }
-        beginTransaction.add(2131363592, orCreateFragment).commit();
+        beginTransaction.add(2131363614, orCreateFragment).commit();
         this.mBrowserData.setCurrentPageData(createNewPage);
     }
 
@@ -370,7 +370,7 @@ public class CoolBrowserActivity extends BaseActivity implements View.OnClickLis
         if (orCreateFragment.isAdded()) {
             beginTransaction.show(orCreateFragment);
         } else {
-            beginTransaction.add(2131363592, orCreateFragment);
+            beginTransaction.add(2131363614, orCreateFragment);
         }
         beginTransaction.commit();
         this.mBrowserData.setCurrentPageData(pageAt);
@@ -502,7 +502,7 @@ public class CoolBrowserActivity extends BaseActivity implements View.OnClickLis
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new PageViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558991, viewGroup, false));
+            return new PageViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558998, viewGroup, false));
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter

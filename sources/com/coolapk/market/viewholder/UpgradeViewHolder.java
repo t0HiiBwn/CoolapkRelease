@@ -26,7 +26,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: UpgradeViewHolder.kt */
 public final class UpgradeViewHolder extends StateViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558965;
+    public static final int LAYOUT_ID = 2131558972;
     private final HashMap<String, Boolean> expandStatus;
     private MobileApp mobileApp;
     private UpgradeInfo upgradeInfo;
@@ -119,7 +119,7 @@ public final class UpgradeViewHolder extends StateViewHolder {
             Intrinsics.throwUninitializedPropertyAccessException("upgradeInfo");
         }
         if (TextUtils.isEmpty(upgradeInfo2.getChangeLog())) {
-            return getContext().getString(2131886888);
+            return getContext().getString(2131886950);
         }
         UpgradeInfo upgradeInfo3 = this.upgradeInfo;
         if (upgradeInfo3 == null) {
@@ -186,7 +186,7 @@ public final class UpgradeViewHolder extends StateViewHolder {
             Intrinsics.checkNotNull(ignoreInfo);
             Intrinsics.checkNotNullExpressionValue(ignoreInfo, "mobileApp.ignoreInfo!!");
             if (ignoreInfo.getType() != 0) {
-                String string = getContext().getString(2131886635);
+                String string = getContext().getString(2131886697);
                 Intrinsics.checkNotNullExpressionValue(string, "context.getString(R.string.str_cancel_ignore)");
                 return string;
             }

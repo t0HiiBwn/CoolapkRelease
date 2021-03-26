@@ -24,7 +24,7 @@ public class ItemFeedNewsBottomBindingImpl extends ItemFeedNewsBottomBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362833, 2);
+        sparseIntArray.put(2131362844, 2);
     }
 
     public ItemFeedNewsBottomBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -62,7 +62,7 @@ public class ItemFeedNewsBottomBindingImpl extends ItemFeedNewsBottomBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((Feed) obj);
@@ -75,7 +75,7 @@ public class ItemFeedNewsBottomBindingImpl extends ItemFeedNewsBottomBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

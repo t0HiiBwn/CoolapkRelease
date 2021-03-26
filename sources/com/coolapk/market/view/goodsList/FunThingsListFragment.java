@@ -69,7 +69,7 @@ public final class FunThingsListFragment extends EntityListFragment {
                 ((AlphaToolbarActivity) requireActivity).setToolbarTitle("我的好物单");
             }
         }
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558666).suitedMethod(FunThingsListFragment$onActivityCreated$1.INSTANCE).constructor(new FunThingsListFragment$onActivityCreated$2(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558672).suitedMethod(FunThingsListFragment$onActivityCreated$1.INSTANCE).constructor(new FunThingsListFragment$onActivityCreated$2(this)).build(), 0);
     }
 
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.BaseFragment, androidx.fragment.app.Fragment
@@ -135,14 +135,14 @@ public final class FunThingsListFragment extends EntityListFragment {
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            menu.add(0, 2131362970, 0, "创建").setShowAsAction(1);
+            menu.add(0, 2131362982, 0, "创建").setShowAsAction(1);
         }
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131362970) {
+        if (menuItem.getItemId() != 2131362982) {
             return super.onOptionsItemSelected(menuItem);
         }
         ActionManager.startCreateGoodsListActivity(getActivity());

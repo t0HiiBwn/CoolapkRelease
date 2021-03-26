@@ -300,19 +300,13 @@ public final class SpanUtils {
 
     public SpanUtils setClickSpan(ClickableSpan clickableSpan) {
         Objects.requireNonNull(clickableSpan, "Argument 'clickSpan' of type ClickableSpan (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
-        TextView textView = this.mTextView;
-        if (textView != null && textView.getMovementMethod() == null) {
-            this.mTextView.setMovementMethod(LinkMovementMethod.getInstance());
-        }
+        setMovementMethodIfNeed();
         this.clickSpan = clickableSpan;
         return this;
     }
 
     public SpanUtils setClickSpan(final int i, final boolean z, final View.OnClickListener onClickListener) {
-        TextView textView = this.mTextView;
-        if (textView != null && textView.getMovementMethod() == null) {
-            this.mTextView.setMovementMethod(LinkMovementMethod.getInstance());
-        }
+        setMovementMethodIfNeed();
         this.clickSpan = new ClickableSpan() {
             /* class com.blankj.utilcode.util.SpanUtils.AnonymousClass1 */
 
@@ -337,12 +331,16 @@ public final class SpanUtils {
 
     public SpanUtils setUrl(String str) {
         Objects.requireNonNull(str, "Argument 'url' of type String (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
+        setMovementMethodIfNeed();
+        this.url = str;
+        return this;
+    }
+
+    private void setMovementMethodIfNeed() {
         TextView textView = this.mTextView;
         if (textView != null && textView.getMovementMethod() == null) {
             this.mTextView.setMovementMethod(LinkMovementMethod.getInstance());
         }
-        this.url = str;
-        return this;
     }
 
     public SpanUtils setBlur(float f, BlurMaskFilter.Blur blur) {

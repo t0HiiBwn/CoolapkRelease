@@ -60,7 +60,7 @@ public class ItemDyhSimpleHeaderBindingImpl extends ItemDyhSimpleHeaderBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((DyhViewModel) obj);
@@ -74,7 +74,7 @@ public class ItemDyhSimpleHeaderBindingImpl extends ItemDyhSimpleHeaderBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -125,7 +125,7 @@ public class ItemDyhSimpleHeaderBindingImpl extends ItemDyhSimpleHeaderBinding {
             this.mDirtyFlags = 0;
         }
         DyhViewModel dyhViewModel = this.mViewModel;
-        Long l2 = null;
+        Long l = null;
         int i4 = 0;
         if ((15 & j) != 0) {
             int i5 = ((j & 11) > 0 ? 1 : ((j & 11) == 0 ? 0 : -1));
@@ -133,7 +133,7 @@ public class ItemDyhSimpleHeaderBindingImpl extends ItemDyhSimpleHeaderBinding {
                 DyhArticle dyhArticle = dyhViewModel != null ? dyhViewModel.getDyhArticle() : null;
                 if (dyhArticle != null) {
                     z2 = dyhArticle.isTop();
-                    l2 = dyhArticle.getCreatDate();
+                    l = dyhArticle.getCreatDate();
                 } else {
                     z2 = false;
                 }
@@ -160,7 +160,7 @@ public class ItemDyhSimpleHeaderBindingImpl extends ItemDyhSimpleHeaderBinding {
                         if ((j & 11) != 0) {
                             this.mboundView1.setVisibility(i4);
                             this.mboundView2.setVisibility(i4);
-                            TextViewBindingAdapters.setTime(this.timeView, l2);
+                            TextViewBindingAdapters.setTime(this.timeView, l);
                         }
                         if ((j & 13) == 0) {
                             this.rootView.setVisibility(i);

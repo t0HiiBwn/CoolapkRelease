@@ -138,8 +138,8 @@ public class GlideProgressHelper {
         private boolean needsDispatch(String str, long j, long j2, float f) {
             if (!(f == 0.0f || j == 0 || j2 == j)) {
                 long j3 = (long) (((((float) j) * 100.0f) / ((float) j2)) / f);
-                Long l2 = this.mDispatchedProgress.get(str);
-                if (l2 != null && j3 == l2.longValue()) {
+                Long l = this.mDispatchedProgress.get(str);
+                if (l != null && j3 == l.longValue()) {
                     return false;
                 }
                 this.mDispatchedProgress.put(str, Long.valueOf(j3));

@@ -75,7 +75,7 @@ public class SearchHistoryListFragment extends NewAsyncListFragment<Cursor> {
         setAdapter(new DataAdapter());
         this.adapter = new HeaderAdapter(getRecyclerView().getAdapter());
         getRecyclerView().setAdapter(this.adapter);
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(0, 2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(0, 2131231062).create());
         getRecyclerView().setLayoutManager(new LinearLayoutManager(getActivity()));
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
@@ -184,10 +184,10 @@ public class SearchHistoryListFragment extends NewAsyncListFragment<Cursor> {
         @Override // com.coolapk.market.widget.SectionedAdapter
         public RecyclerView.ViewHolder onCreateSectionViewHolder(ViewGroup viewGroup, int i) {
             if (i == 1) {
-                return new HeaderViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558910, viewGroup, false), null);
+                return new HeaderViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558917, viewGroup, false), null);
             }
             if (i == 2) {
-                return new FooterViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558909, viewGroup, false), new ItemActionHandler() {
+                return new FooterViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558916, viewGroup, false), new ItemActionHandler() {
                     /* class com.coolapk.market.view.search.SearchHistoryListFragment.HeaderAdapter.AnonymousClass1 */
 
                     @Override // com.coolapk.market.viewholder.ItemActionHandler
@@ -210,7 +210,7 @@ public class SearchHistoryListFragment extends NewAsyncListFragment<Cursor> {
     }
 
     private static class HeaderViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558910;
+        public static final int LAYOUT_ID = 2131558917;
 
         public HeaderViewHolder(View view, ItemActionHandler itemActionHandler) {
             super(view, itemActionHandler);
@@ -247,7 +247,7 @@ public class SearchHistoryListFragment extends NewAsyncListFragment<Cursor> {
     }
 
     private static class FooterViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558909;
+        public static final int LAYOUT_ID = 2131558916;
 
         public FooterViewHolder(View view, ItemActionHandler itemActionHandler) {
             super(view, itemActionHandler);
@@ -266,7 +266,7 @@ public class SearchHistoryListFragment extends NewAsyncListFragment<Cursor> {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new DataViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558908, viewGroup, false), new ItemActionHandler() {
+            return new DataViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558915, viewGroup, false), new ItemActionHandler() {
                 /* class com.coolapk.market.view.search.SearchHistoryListFragment.DataAdapter.AnonymousClass1 */
 
                 @Override // com.coolapk.market.viewholder.ItemActionHandler
@@ -274,7 +274,7 @@ public class SearchHistoryListFragment extends NewAsyncListFragment<Cursor> {
                     if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition())) {
                         SearchHistoryListFragment.this.cursor.moveToPosition(SearchHistoryListFragment.this.adapter.sectionedPositionToPosition(viewHolder.getAdapterPosition()));
                         String string = SearchHistoryListFragment.this.cursor.getString(1);
-                        if (view.getId() != 2131362374) {
+                        if (view.getId() != 2131362380) {
                             ((SuperSearchActivity) SearchHistoryListFragment.this.getActivity()).inputKeyword(string);
                             return;
                         }
@@ -306,7 +306,7 @@ public class SearchHistoryListFragment extends NewAsyncListFragment<Cursor> {
     }
 
     private static class DataViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558908;
+        public static final int LAYOUT_ID = 2131558915;
 
         public DataViewHolder(View view, ItemActionHandler itemActionHandler) {
             super(view, itemActionHandler);

@@ -33,7 +33,7 @@ public class ItemNotificationFeedreplyLikeBindingImpl extends ItemNotificationFe
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 8);
+        sparseIntArray.put(2131363551, 8);
     }
 
     public ItemNotificationFeedreplyLikeBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -81,9 +81,9 @@ public class ItemNotificationFeedreplyLikeBindingImpl extends ItemNotificationFe
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FeedReply) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -99,7 +99,7 @@ public class ItemNotificationFeedreplyLikeBindingImpl extends ItemNotificationFe
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -109,7 +109,7 @@ public class ItemNotificationFeedreplyLikeBindingImpl extends ItemNotificationFe
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -227,14 +227,14 @@ public class ItemNotificationFeedreplyLikeBindingImpl extends ItemNotificationFe
             String str12 = null;
             TextViewBindingAdapters.setTextViewLinkable(this.infoView, str, null, "textColorSecondary", bool2, null, str12);
             TextViewBindingAdapters.setTime(this.mboundView3, Long.valueOf(j2));
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView5, str8, null, 2131231363, 0, bool2, bool2, bool2, bool2, bool2, str12, null, null, true, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView5, str8, null, 2131231374, 0, bool2, bool2, bool2, bool2, bool2, str12, null, null, true, bool2, bool2, null, bool2);
             TextViewBindingAdapter.setText(this.mboundView6, str6);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str5, bool2);
             TextViewBindingAdapter.setText(this.userNameView, str4);
         }
         if ((j & 11) != 0) {
             Boolean bool3 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, null, 2131231152, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, null, 2131231162, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
         }
     }
 }

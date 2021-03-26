@@ -15,7 +15,7 @@ final class MainV8ListFragment$onActivityCreated$3 implements SharedPreferences.
 
     @Override // android.content.SharedPreferences.OnSharedPreferenceChangeListener
     public final void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String str) {
-        if (Intrinsics.areEqual(str, "disable_show_upgrade_app_card") && MainV8ListFragment.access$disableShowUpgradeAppCard(this.this$0)) {
+        if (Intrinsics.areEqual(str, "disable_show_upgrade_app_card") && (this.this$0.disableShowUpgradeAppCard())) {
             this.this$0.removeUpgradeCard();
         }
     }

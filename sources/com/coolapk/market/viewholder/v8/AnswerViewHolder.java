@@ -34,7 +34,7 @@ import kotlin.text.Regex;
 /* compiled from: AnswerViewHolder.kt */
 public class AnswerViewHolder extends GenericBindHolder<ItemAnswerViewBinding, Feed> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558587;
+    public static final int LAYOUT_ID = 2131558591;
     private Feed feed;
     private final Lazy headerViewPart$delegate;
     private final AnswerViewHolder$nineImageHotPlug$1 nineImageHotPlug;
@@ -142,7 +142,7 @@ public class AnswerViewHolder extends GenericBindHolder<ItemAnswerViewBinding, F
         if (feed2 == null) {
             return;
         }
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

@@ -69,7 +69,7 @@ public final class TopicPickerActivity extends FakeStatusBarActivity implements 
     @Override // com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131559205);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131559213);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…y, R.layout.topic_picker)");
         this.binding = (TopicPickerBinding) contentView;
         setupUi();
@@ -200,8 +200,8 @@ public final class TopicPickerActivity extends FakeStatusBarActivity implements 
         }
         topicPickerBinding18.getRoot().postDelayed(new TopicPickerActivity$setupUi$5(this), 100);
         FragmentManager supportFragmentManager = getSupportFragmentManager();
-        if (supportFragmentManager.findFragmentById(2131362307) == null) {
-            supportFragmentManager.beginTransaction().add(2131362307, TopicPickFragment.Companion.newInstance(getIntent().getStringExtra("KEY_ACTION_TYPE"))).commit();
+        if (supportFragmentManager.findFragmentById(2131362312) == null) {
+            supportFragmentManager.beginTransaction().add(2131362312, TopicPickFragment.Companion.newInstance(getIntent().getStringExtra("KEY_ACTION_TYPE"))).commit();
             supportFragmentManager.executePendingTransactions();
         }
     }
@@ -221,7 +221,7 @@ public final class TopicPickerActivity extends FakeStatusBarActivity implements 
 
     /* access modifiers changed from: private */
     public final void inputKeyword(String str) {
-        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362307);
+        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362312);
         if (findFragmentById != null && (findFragmentById instanceof TopicPickFragment)) {
             TopicPickFragment topicPickFragment = (TopicPickFragment) findFragmentById;
             if (topicPickFragment.isVisible() && topicPickFragment.isAdded()) {

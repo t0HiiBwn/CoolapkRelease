@@ -81,7 +81,7 @@ public class UserProfileEditFragment extends BaseFragment {
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         FragmentBindingComponent fragmentBindingComponent = new FragmentBindingComponent(this);
         this.mComponent = fragmentBindingComponent;
-        EditUserViewBinding editUserViewBinding = (EditUserViewBinding) DataBindingUtil.inflate(layoutInflater, 2131558545, viewGroup, false, fragmentBindingComponent);
+        EditUserViewBinding editUserViewBinding = (EditUserViewBinding) DataBindingUtil.inflate(layoutInflater, 2131558547, viewGroup, false, fragmentBindingComponent);
         this.mBinding = editUserViewBinding;
         return editUserViewBinding.getRoot();
     }
@@ -118,14 +118,14 @@ public class UserProfileEditFragment extends BaseFragment {
         switch (c) {
             case 0:
                 this.model = new UserEmailViewModel();
-                setWidth((TextView) this.mBinding.codeInputContainer.getViewById(2131363581), (TextView) this.mBinding.mainInputContainer.getViewById(2131363581));
+                setWidth((TextView) this.mBinding.codeInputContainer.getViewById(2131363603), (TextView) this.mBinding.mainInputContainer.getViewById(2131363603));
                 break;
             case 1:
                 this.model = new UserPhoneViewModel();
-                ImageView imageView = (ImageView) this.mBinding.imgCodeContainer.getViewById(2131362459);
+                ImageView imageView = (ImageView) this.mBinding.imgCodeContainer.getViewById(2131362467);
                 this.codeImageView = imageView;
                 imageView.setVisibility(0);
-                final TextView textView = (TextView) this.mBinding.codeInputContainer.getViewById(2131361977);
+                final TextView textView = (TextView) this.mBinding.codeInputContainer.getViewById(2131361978);
                 textView.post(new Runnable() {
                     /* class com.coolapk.market.view.user.edit.UserProfileEditFragment.AnonymousClass1 */
 
@@ -135,7 +135,7 @@ public class UserProfileEditFragment extends BaseFragment {
                         UserProfileEditFragment.this.codeImageView.requestLayout();
                     }
                 });
-                setWidth((TextView) this.mBinding.codeInputContainer.getViewById(2131363581), (TextView) this.mBinding.mainInputContainer.getViewById(2131363581));
+                setWidth((TextView) this.mBinding.codeInputContainer.getViewById(2131363603), (TextView) this.mBinding.mainInputContainer.getViewById(2131363603));
                 captchaImage();
                 initInfo();
                 break;
@@ -145,7 +145,7 @@ public class UserProfileEditFragment extends BaseFragment {
                 break;
         }
         this.mBinding.setModel(this.model);
-        this.mBinding.editUserSave.setTextColor(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099912));
+        this.mBinding.editUserSave.setTextColor(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099917));
         ViewUtil.clickListener(this.mBinding.editUserSave, new View.OnClickListener() {
             /* class com.coolapk.market.view.user.edit.UserProfileEditFragment.AnonymousClass2 */
 
@@ -172,7 +172,7 @@ public class UserProfileEditFragment extends BaseFragment {
                         public void onClick(DialogInterface dialogInterface, int i) {
                             final ProgressDialog progressDialog = new ProgressDialog(UserProfileEditFragment.this.getActivity());
                             progressDialog.setProgressStyle(0);
-                            progressDialog.setMessage(UserProfileEditFragment.this.getString(2131886763));
+                            progressDialog.setMessage(UserProfileEditFragment.this.getString(2131886825));
                             progressDialog.setCanceledOnTouchOutside(false);
                             progressDialog.setCancelable(false);
                             progressDialog.show();
@@ -263,7 +263,7 @@ public class UserProfileEditFragment extends BaseFragment {
                                 UserProfileEditFragment.this.captchaImage();
                                 return;
                             }
-                            TextView textView = (TextView) UserProfileEditFragment.this.mBinding.codeInputContainer.getViewById(2131361977);
+                            TextView textView = (TextView) UserProfileEditFragment.this.mBinding.codeInputContainer.getViewById(2131361978);
                             textView.setText("验证码已发送");
                             textView.setTextColor(AppHolder.getAppTheme().getTextColorSecondary());
                             textView.setClickable(false);
@@ -332,8 +332,8 @@ public class UserProfileEditFragment extends BaseFragment {
                     Long valueOf = Long.valueOf(split[1]);
                     UserProfileEditFragment.this.canChanageUserName = intValue > 0;
                     if (!UserProfileEditFragment.this.canChanageUserName) {
-                        ((EditText) UserProfileEditFragment.this.mBinding.mainInputContainer.getViewById(2131362441)).setText(DataManager.getInstance().getLoginSession().getUserName());
-                        UserProfileEditFragment.this.mBinding.mainInputContainer.getViewById(2131362441).setFocusable(false);
+                        ((EditText) UserProfileEditFragment.this.mBinding.mainInputContainer.getViewById(2131362448)).setText(DataManager.getInstance().getLoginSession().getUserName());
+                        UserProfileEditFragment.this.mBinding.mainInputContainer.getViewById(2131362448).setFocusable(false);
                         UserProfileEditFragment.this.mBinding.editUserSave.setClickable(false);
                     }
                     TextView textView = UserProfileEditFragment.this.mBinding.tipView;
@@ -364,7 +364,7 @@ public class UserProfileEditFragment extends BaseFragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        GlideApp.with(getFragment()).load((Object) new GlideUrl(str, builder.build())).placeholder(2131231367).into(this.codeImageView);
+        GlideApp.with(getFragment()).load((Object) new GlideUrl(str, builder.build())).placeholder(2131231378).into(this.codeImageView);
     }
 
     /* access modifiers changed from: private */

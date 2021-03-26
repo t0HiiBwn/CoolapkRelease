@@ -25,7 +25,7 @@ public class ItemArticleEditShareUrlBindingImpl extends ItemArticleEditShareUrlB
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362484, 3);
+        sparseIntArray.put(2131362492, 3);
     }
 
     public ItemArticleEditShareUrlBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -62,7 +62,7 @@ public class ItemArticleEditShareUrlBindingImpl extends ItemArticleEditShareUrlB
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((ArticleShareUrl) obj);
         } else if (50 != i) {
             return false;
@@ -78,7 +78,7 @@ public class ItemArticleEditShareUrlBindingImpl extends ItemArticleEditShareUrlB
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -115,7 +115,7 @@ public class ItemArticleEditShareUrlBindingImpl extends ItemArticleEditShareUrlB
         int i2 = ((6 & j) > 0 ? 1 : ((6 & j) == 0 ? 0 : -1));
         if (i != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extendIcon, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extendIcon, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.extendTitle, str2);
         }
         if ((j & 4) != 0) {

@@ -14,7 +14,7 @@ public class b {
             return 0;
         }
         String format = String.format("%s%s%s%s%s", aVar.f(), aVar.getDeviceId(), Long.valueOf(aVar.a()), aVar.getImsi(), aVar.e());
-        if (g.m30a(format)) {
+        if (g.m20a(format)) {
             return 0;
         }
         Adler32 adler32 = new Adler32();
@@ -29,7 +29,7 @@ public class b {
         }
         synchronized (d) {
             String value = c.a(context).getValue();
-            if (g.m30a(value)) {
+            if (g.m20a(value)) {
                 return null;
             }
             if (value.endsWith("\n")) {

@@ -31,11 +31,9 @@ public class PM {
     private RandomAccessFile g;
     private FileLock h;
     private boolean i;
-    private a.AbstractC0076a j;
+    private a.AbstractC0086a j;
     private POFactory k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1387l;
+    private int l;
     private a.b m = new a.b() {
         /* class com.qq.e.comm.managers.plugin.PM.AnonymousClass1 */
 
@@ -53,7 +51,7 @@ public class PM {
     public interface a {
 
         /* renamed from: com.qq.e.comm.managers.plugin.PM$a$a  reason: collision with other inner class name */
-        public interface AbstractC0076a {
+        public interface AbstractC0086a {
             void onLoadFail();
 
             void onLoadSuccess();
@@ -66,7 +64,7 @@ public class PM {
         }
     }
 
-    public PM(Context context, a.AbstractC0076a aVar) {
+    public PM(Context context, a.AbstractC0086a aVar) {
         this.b = context.getApplicationContext();
         this.j = aVar;
         long currentTimeMillis = System.currentTimeMillis();
@@ -74,7 +72,7 @@ public class PM {
         if (b()) {
             a();
         }
-        this.f1387l = (int) (System.currentTimeMillis() - currentTimeMillis);
+        this.l = (int) (System.currentTimeMillis() - currentTimeMillis);
     }
 
     private void a() {
@@ -121,7 +119,7 @@ public class PM {
                     if (a.a(context, d.b(context), d.e(this.b))) {
                         this.c = Sig.ASSET_PLUGIN_SIG;
                         this.d = d.b(this.b);
-                        this.e = 1202;
+                        this.e = 1203;
                         z = true;
                     } else {
                         GDTLogger.e("Fail to prepair Defult plugin ");
@@ -152,8 +150,8 @@ public class PM {
         if (!aVar2.a()) {
             return false;
         }
-        if (aVar2.b() < 1202) {
-            GDTLogger.d("last updated plugin version =" + this.e + ";asset plugin version=1202");
+        if (aVar2.b() < 1203) {
+            GDTLogger.d("last updated plugin version =" + this.e + ";asset plugin version=1203");
             return false;
         }
         this.c = aVar2.c();
@@ -187,7 +185,7 @@ public class PM {
     }
 
     private void e() {
-        a.AbstractC0076a aVar = this.j;
+        a.AbstractC0086a aVar = this.j;
         if (aVar != null) {
             aVar.onLoadSuccess();
         }
@@ -195,7 +193,7 @@ public class PM {
 
     /* access modifiers changed from: private */
     public void f() {
-        a.AbstractC0076a aVar = this.j;
+        a.AbstractC0086a aVar = this.j;
         if (aVar != null) {
             aVar.onLoadFail();
         }
@@ -226,7 +224,7 @@ public class PM {
     }
 
     public int getInitCostTime() {
-        return this.f1387l;
+        return this.l;
     }
 
     public String getLocalSig() {

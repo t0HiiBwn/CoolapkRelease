@@ -109,7 +109,7 @@ public abstract class ArticleFeedBaseContentHolder extends BaseFeedContentHolder
     @Override // com.coolapk.market.view.feedv8.BaseFeedContentHolder
     public View onCreateContentView$presentation_coolapkAppRelease(LayoutInflater layoutInflater) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559150, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559158, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…cle_holder2, null, false)");
         SubmitFeedArticleHolder2Binding submitFeedArticleHolder2Binding = (SubmitFeedArticleHolder2Binding) inflate;
         this.binding = submitFeedArticleHolder2Binding;

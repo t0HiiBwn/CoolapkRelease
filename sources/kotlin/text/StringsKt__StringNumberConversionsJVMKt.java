@@ -29,9 +29,9 @@ class StringsKt__StringNumberConversionsJVMKt extends StringsKt__StringBuilderKt
     }
 
     private static final String toString(long j, int i) {
-        String l2 = Long.toString(j, CharsKt.checkRadix(i));
-        Intrinsics.checkNotNullExpressionValue(l2, "java.lang.Long.toString(this, checkRadix(radix))");
-        return l2;
+        String l = Long.toString(j, CharsKt.checkRadix(i));
+        Intrinsics.checkNotNullExpressionValue(l, "java.lang.Long.toString(this, checkRadix(radix))");
+        return l;
     }
 
     private static final boolean toBooleanNullable(String str) {

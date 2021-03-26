@@ -67,7 +67,7 @@ public abstract class BaseChattingBinding extends ViewDataBinding {
 
     @Deprecated
     public static BaseChattingBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (BaseChattingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558473, viewGroup, z, obj);
+        return (BaseChattingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558474, viewGroup, z, obj);
     }
 
     public static BaseChattingBinding inflate(LayoutInflater layoutInflater) {
@@ -76,7 +76,7 @@ public abstract class BaseChattingBinding extends ViewDataBinding {
 
     @Deprecated
     public static BaseChattingBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (BaseChattingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558473, null, false, obj);
+        return (BaseChattingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558474, null, false, obj);
     }
 
     public static BaseChattingBinding bind(View view) {
@@ -85,6 +85,6 @@ public abstract class BaseChattingBinding extends ViewDataBinding {
 
     @Deprecated
     public static BaseChattingBinding bind(View view, Object obj) {
-        return (BaseChattingBinding) bind(obj, view, 2131558473);
+        return (BaseChattingBinding) bind(obj, view, 2131558474);
     }
 }

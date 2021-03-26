@@ -27,13 +27,13 @@ public class ItemProductCouponBindingImpl extends ItemProductCouponBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362755, 7);
-        sparseIntArray.put(2131362388, 8);
-        sparseIntArray.put(2131362756, 9);
-        sparseIntArray.put(2131363257, 10);
-        sparseIntArray.put(2131361896, 11);
-        sparseIntArray.put(2131362389, 12);
-        sparseIntArray.put(2131362392, 13);
+        sparseIntArray.put(2131362766, 7);
+        sparseIntArray.put(2131362394, 8);
+        sparseIntArray.put(2131362767, 9);
+        sparseIntArray.put(2131363271, 10);
+        sparseIntArray.put(2131361897, 11);
+        sparseIntArray.put(2131362395, 12);
+        sparseIntArray.put(2131362398, 13);
     }
 
     public ItemProductCouponBindingImpl(DataBindingComponent dataBindingComponent, View view) {

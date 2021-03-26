@@ -25,8 +25,8 @@ public class TipLayoutBindingImpl extends TipLayoutBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363911, 1);
-        sparseIntArray.put(2131362662, 2);
+        sparseIntArray.put(2131363936, 1);
+        sparseIntArray.put(2131362673, 2);
     }
 
     public TipLayoutBindingImpl(DataBindingComponent dataBindingComponent, View view) {

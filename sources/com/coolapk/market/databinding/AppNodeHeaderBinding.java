@@ -175,7 +175,7 @@ public abstract class AppNodeHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppNodeHeaderBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AppNodeHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558464, viewGroup, z, obj);
+        return (AppNodeHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558465, viewGroup, z, obj);
     }
 
     public static AppNodeHeaderBinding inflate(LayoutInflater layoutInflater) {
@@ -184,7 +184,7 @@ public abstract class AppNodeHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppNodeHeaderBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AppNodeHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558464, null, false, obj);
+        return (AppNodeHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558465, null, false, obj);
     }
 
     public static AppNodeHeaderBinding bind(View view) {
@@ -193,6 +193,6 @@ public abstract class AppNodeHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppNodeHeaderBinding bind(View view, Object obj) {
-        return (AppNodeHeaderBinding) bind(obj, view, 2131558464);
+        return (AppNodeHeaderBinding) bind(obj, view, 2131558465);
     }
 }

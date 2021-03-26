@@ -22,7 +22,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: LiveCardViewHolder.kt */
 public final class LiveCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558804;
+    public static final int LAYOUT_ID = 2131558811;
     private final ItemLiveCardBinding binding;
     private Live live;
 

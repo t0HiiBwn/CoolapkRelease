@@ -46,34 +46,34 @@ public class ProductNodeHeaderBindingImpl extends ProductNodeHeaderBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362099, 27);
-        sparseIntArray.put(2131362101, 28);
-        sparseIntArray.put(2131362102, 29);
-        sparseIntArray.put(2131362098, 30);
-        sparseIntArray.put(2131362768, 31);
-        sparseIntArray.put(2131362339, 32);
-        sparseIntArray.put(2131362715, 33);
-        sparseIntArray.put(2131362908, 34);
-        sparseIntArray.put(2131362730, 35);
-        sparseIntArray.put(2131362643, 36);
-        sparseIntArray.put(2131362664, 37);
-        sparseIntArray.put(2131363623, 38);
-        sparseIntArray.put(2131362580, 39);
-        sparseIntArray.put(2131363200, 40);
-        sparseIntArray.put(2131363207, 41);
-        sparseIntArray.put(2131363210, 42);
-        sparseIntArray.put(2131363281, 43);
-        sparseIntArray.put(2131363194, 44);
-        sparseIntArray.put(2131362330, 45);
-        sparseIntArray.put(2131363489, 46);
-        sparseIntArray.put(2131363192, 47);
-        sparseIntArray.put(2131363191, 48);
-        sparseIntArray.put(2131363190, 49);
-        sparseIntArray.put(2131363189, 50);
-        sparseIntArray.put(2131363188, 51);
-        sparseIntArray.put(2131362376, 52);
-        sparseIntArray.put(2131362663, 53);
-        sparseIntArray.put(2131363507, 54);
+        sparseIntArray.put(2131362102, 27);
+        sparseIntArray.put(2131362104, 28);
+        sparseIntArray.put(2131362105, 29);
+        sparseIntArray.put(2131362101, 30);
+        sparseIntArray.put(2131362779, 31);
+        sparseIntArray.put(2131362345, 32);
+        sparseIntArray.put(2131362726, 33);
+        sparseIntArray.put(2131362920, 34);
+        sparseIntArray.put(2131362741, 35);
+        sparseIntArray.put(2131362651, 36);
+        sparseIntArray.put(2131362675, 37);
+        sparseIntArray.put(2131363645, 38);
+        sparseIntArray.put(2131362588, 39);
+        sparseIntArray.put(2131363214, 40);
+        sparseIntArray.put(2131363221, 41);
+        sparseIntArray.put(2131363224, 42);
+        sparseIntArray.put(2131363295, 43);
+        sparseIntArray.put(2131363208, 44);
+        sparseIntArray.put(2131362336, 45);
+        sparseIntArray.put(2131363507, 46);
+        sparseIntArray.put(2131363206, 47);
+        sparseIntArray.put(2131363205, 48);
+        sparseIntArray.put(2131363204, 49);
+        sparseIntArray.put(2131363203, 50);
+        sparseIntArray.put(2131363202, 51);
+        sparseIntArray.put(2131362382, 52);
+        sparseIntArray.put(2131362674, 53);
+        sparseIntArray.put(2131363525, 54);
     }
 
     public ProductNodeHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -152,9 +152,9 @@ public class ProductNodeHeaderBindingImpl extends ProductNodeHeaderBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Product) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -170,7 +170,7 @@ public class ProductNodeHeaderBindingImpl extends ProductNodeHeaderBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

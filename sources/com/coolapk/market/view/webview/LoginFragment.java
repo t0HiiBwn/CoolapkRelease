@@ -176,18 +176,18 @@ public final class LoginFragment extends WebViewFragment {
         if (this.mTencent == null) {
             this.mTencent = Tencent.createInstance("100336226", AppHolder.getApplication());
             this.mUiListener = new LoginUiListener();
-            Tencent tencent = this.mTencent;
-            Intrinsics.checkNotNull(tencent);
-            if (tencent.isSessionValid()) {
-                Tencent tencent2 = this.mTencent;
-                Intrinsics.checkNotNull(tencent2);
-                tencent2.logout(getActivity());
+            Tencent tencent2 = this.mTencent;
+            Intrinsics.checkNotNull(tencent2);
+            if (tencent2.isSessionValid()) {
+                Tencent tencent3 = this.mTencent;
+                Intrinsics.checkNotNull(tencent3);
+                tencent3.logout(getActivity());
             }
         }
         if (PackageUtils.isInstalled(getActivity(), "com.tencent.mobileqq") || PackageUtils.isInstalled(getActivity(), "com.tencent.tim")) {
-            Tencent tencent3 = this.mTencent;
-            Intrinsics.checkNotNull(tencent3);
-            tencent3.login(getActivity(), "get_user_info", this.mUiListener);
+            Tencent tencent4 = this.mTencent;
+            Intrinsics.checkNotNull(tencent4);
+            tencent4.login(getActivity(), "get_user_info", this.mUiListener);
             return true;
         }
         Toast.show$default(getActivity(), "未安装QQ", 0, false, 12, null);
@@ -260,7 +260,7 @@ public final class LoginFragment extends WebViewFragment {
             progressDialog.setProgressStyle(0);
             progressDialog.setCanceledOnTouchOutside(false);
             progressDialog.setCancelable(false);
-            progressDialog.setMessage(getString(2131886871));
+            progressDialog.setMessage(getString(2131886933));
             progressDialog.show();
             this.mIsPosting = true;
             DataManager.getInstance().getAccessToken(str).compose(RxUtils.applyIOSchedulers()).doOnUnsubscribe(new LoginFragment$postLoginRequest$1(this, progressDialog)).subscribe((Subscriber<? super R>) new LoginFragment$postLoginRequest$2(this, str2, str3));
@@ -296,7 +296,7 @@ public final class LoginFragment extends WebViewFragment {
         }
         FragmentActivity requireActivity = requireActivity();
         Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-        Toast.show(requireActivity, 2131886870);
+        Toast.show(requireActivity, 2131886932);
         WebView webView = getWebView();
         Intrinsics.checkNotNull(webView);
         webView.loadUrl("https://account.coolapk.com/auth/login?type=coolapk");

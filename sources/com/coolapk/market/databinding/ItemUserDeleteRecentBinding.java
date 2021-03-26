@@ -33,7 +33,7 @@ public abstract class ItemUserDeleteRecentBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserDeleteRecentBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemUserDeleteRecentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558971, viewGroup, z, obj);
+        return (ItemUserDeleteRecentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558978, viewGroup, z, obj);
     }
 
     public static ItemUserDeleteRecentBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class ItemUserDeleteRecentBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserDeleteRecentBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemUserDeleteRecentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558971, null, false, obj);
+        return (ItemUserDeleteRecentBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558978, null, false, obj);
     }
 
     public static ItemUserDeleteRecentBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class ItemUserDeleteRecentBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserDeleteRecentBinding bind(View view, Object obj) {
-        return (ItemUserDeleteRecentBinding) bind(obj, view, 2131558971);
+        return (ItemUserDeleteRecentBinding) bind(obj, view, 2131558978);
     }
 }

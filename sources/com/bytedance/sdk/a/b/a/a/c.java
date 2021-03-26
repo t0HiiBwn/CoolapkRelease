@@ -63,9 +63,7 @@ public final class c {
         private long i;
         private long j;
         private String k;
-
-        /* renamed from: l  reason: collision with root package name */
-        private int f1264l = -1;
+        private int l = -1;
 
         public a(long j2, y yVar, aa aaVar) {
             this.a = j2;
@@ -90,7 +88,7 @@ public final class c {
                     } else if ("ETag".equalsIgnoreCase(a3)) {
                         this.k = b2;
                     } else if ("Age".equalsIgnoreCase(a3)) {
-                        this.f1264l = e.b(b2, -1);
+                        this.l = e.b(b2, -1);
                     }
                 }
             }
@@ -188,8 +186,8 @@ public final class c {
             if (date != null) {
                 j2 = Math.max(0L, this.j - date.getTime());
             }
-            if (this.f1264l != -1) {
-                j2 = Math.max(j2, TimeUnit.SECONDS.toMillis((long) this.f1264l));
+            if (this.l != -1) {
+                j2 = Math.max(j2, TimeUnit.SECONDS.toMillis((long) this.l));
             }
             long j3 = this.j;
             return j2 + (j3 - this.i) + (this.a - j3);

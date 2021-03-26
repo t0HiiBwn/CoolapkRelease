@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_LiveUser  reason: invalid class name */
 abstract class C$AutoValue_LiveUser extends C$$AutoValue_LiveUser {
-    C$AutoValue_LiveUser(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, String str14, String str15, int i2, int i3, User user) {
-        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l2, l3, str13, str14, str15, i2, i3, user);
+    C$AutoValue_LiveUser(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, String str14, String str15, int i2, int i3, User user) {
+        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l, l2, str13, str14, str15, i2, i3, user);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_LiveUser$GsonTypeAdapter */
@@ -155,13 +155,13 @@ abstract class C$AutoValue_LiveUser extends C$$AutoValue_LiveUser {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -269,8 +269,8 @@ abstract class C$AutoValue_LiveUser extends C$$AutoValue_LiveUser {
             String str10 = this.defaultSubTitle;
             String str11 = this.defaultId;
             String str12 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str13 = this.defaultLiveId;
             String str14 = this.defaultUid;
             String str15 = this.defaultUserAvatar;
@@ -291,8 +291,8 @@ abstract class C$AutoValue_LiveUser extends C$$AutoValue_LiveUser {
             String str25 = str11;
             String str26 = str12;
             String str27 = str;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str28 = str13;
             String str29 = str14;
             String str30 = str15;
@@ -456,7 +456,7 @@ abstract class C$AutoValue_LiveUser extends C$$AutoValue_LiveUser {
                             str16 = this.entityTypeAdapter.read(jsonReader);
                             continue;
                         case 5:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 6:
                             str27 = this.entityTypeNameAdapter.read(jsonReader);
@@ -504,7 +504,7 @@ abstract class C$AutoValue_LiveUser extends C$$AutoValue_LiveUser {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 21:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -513,7 +513,7 @@ abstract class C$AutoValue_LiveUser extends C$$AutoValue_LiveUser {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_LiveUser(str27, str16, str17, i4, str18, num2, str19, str20, str21, str22, str23, str24, str25, str26, l4, l5, str28, str29, str30, i5, i6, user);
+            return new AutoValue_LiveUser(str27, str16, str17, i4, str18, num2, str19, str20, str21, str22, str23, str24, str25, str26, l3, l4, str28, str29, str30, i5, i6, user);
         }
     }
 }

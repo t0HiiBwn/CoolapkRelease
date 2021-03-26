@@ -27,7 +27,7 @@ public abstract class PicReplyListBinding extends ViewDataBinding {
 
     @Deprecated
     public static PicReplyListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (PicReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559081, viewGroup, z, obj);
+        return (PicReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559088, viewGroup, z, obj);
     }
 
     public static PicReplyListBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class PicReplyListBinding extends ViewDataBinding {
 
     @Deprecated
     public static PicReplyListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (PicReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559081, null, false, obj);
+        return (PicReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559088, null, false, obj);
     }
 
     public static PicReplyListBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class PicReplyListBinding extends ViewDataBinding {
 
     @Deprecated
     public static PicReplyListBinding bind(View view, Object obj) {
-        return (PicReplyListBinding) bind(obj, view, 2131559081);
+        return (PicReplyListBinding) bind(obj, view, 2131559088);
     }
 }

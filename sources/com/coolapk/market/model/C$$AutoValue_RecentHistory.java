@@ -30,7 +30,7 @@ abstract class C$$AutoValue_RecentHistory extends RecentHistory {
     private final String uid;
     private final String url;
 
-    C$$AutoValue_RecentHistory(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, int i, int i2, String str12, String str13, String str14, int i3, int i4, int i5, int i6) {
+    C$$AutoValue_RecentHistory(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, int i, int i2, String str12, String str13, String str14, int i3, int i4, int i5, int i6) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -42,8 +42,8 @@ abstract class C$$AutoValue_RecentHistory extends RecentHistory {
         this.logo = str8;
         this.subTitle = str9;
         this.extraData = str10;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str11, "Null id");
         this.id = str11;
         this.count = i;
@@ -231,10 +231,10 @@ abstract class C$$AutoValue_RecentHistory extends RecentHistory {
                                             if (str12 != null ? str12.equals(recentHistory.getSubTitle()) : recentHistory.getSubTitle() == null) {
                                                 String str13 = this.extraData;
                                                 if (str13 != null ? str13.equals(recentHistory.getExtraData()) : recentHistory.getExtraData() == null) {
-                                                    Long l2 = this.dateline;
-                                                    if (l2 != null ? l2.equals(recentHistory.getDateline()) : recentHistory.getDateline() == null) {
-                                                        Long l3 = this.lastUpdate;
-                                                        if (l3 != null ? l3.equals(recentHistory.getLastUpdate()) : recentHistory.getLastUpdate() == null) {
+                                                    Long l = this.dateline;
+                                                    if (l != null ? l.equals(recentHistory.getDateline()) : recentHistory.getDateline() == null) {
+                                                        Long l2 = this.lastUpdate;
+                                                        if (l2 != null ? l2.equals(recentHistory.getLastUpdate()) : recentHistory.getLastUpdate() == null) {
                                                             if (this.id.equals(recentHistory.getId()) && this.count == recentHistory.getCount() && this.isTop == recentHistory.getIsTop() && ((str = this.targetId) != null ? str.equals(recentHistory.getTargetId()) : recentHistory.getTargetId() == null) && ((str2 = this.targetType) != null ? str2.equals(recentHistory.getTargetType()) : recentHistory.getTargetType() == null) && ((str3 = this.uid) != null ? str3.equals(recentHistory.getUid()) : recentHistory.getUid() == null) && this.followNum == recentHistory.getFollowNum() && this.commentNum == recentHistory.getCommentNum() && this.fansNum == recentHistory.getFansNum() && this.answerNum == recentHistory.getAnswerNum()) {
                                                                 return true;
                                                             }
@@ -279,10 +279,10 @@ abstract class C$$AutoValue_RecentHistory extends RecentHistory {
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.extraData;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode13 = (((((((hashCode12 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003) ^ this.id.hashCode()) * 1000003) ^ this.count) * 1000003) ^ this.isTop) * 1000003;
+        Long l = this.dateline;
+        int hashCode12 = (hashCode11 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode13 = (((((((hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003) ^ this.id.hashCode()) * 1000003) ^ this.count) * 1000003) ^ this.isTop) * 1000003;
         String str11 = this.targetId;
         int hashCode14 = (hashCode13 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
         String str12 = this.targetType;
@@ -417,14 +417,14 @@ abstract class C$$AutoValue_RecentHistory extends RecentHistory {
         }
 
         @Override // com.coolapk.market.model.RecentHistory.Builder
-        public RecentHistory.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public RecentHistory.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.RecentHistory.Builder
-        public RecentHistory.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public RecentHistory.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

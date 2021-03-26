@@ -115,10 +115,10 @@ public class UMProcessDBHelper {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:62:0x0165  */
-    /* JADX WARNING: Removed duplicated region for block: B:64:0x016a  */
-    /* JADX WARNING: Removed duplicated region for block: B:71:0x017f  */
-    /* JADX WARNING: Removed duplicated region for block: B:73:0x0184 A[SYNTHETIC, Splitter:B:73:0x0184] */
+    /* JADX WARNING: Removed duplicated region for block: B:62:0x0166  */
+    /* JADX WARNING: Removed duplicated region for block: B:64:0x016b  */
+    /* JADX WARNING: Removed duplicated region for block: B:71:0x0180  */
+    /* JADX WARNING: Removed duplicated region for block: B:73:0x0185 A[SYNTHETIC, Splitter:B:73:0x0185] */
     public JSONObject readMainEvents(long j, List<Integer> list) {
         SQLiteDatabase sQLiteDatabase;
         Throwable th;
@@ -211,13 +211,8 @@ public class UMProcessDBHelper {
                     sQLiteDatabase = sQLiteDatabase2;
                     cursor2 = cursor;
                     if (cursor2 != null) {
-                        cursor2.close();
                     }
                     if (sQLiteDatabase != null) {
-                        try {
-                            sQLiteDatabase.endTransaction();
-                        } catch (Throwable unused3) {
-                        }
                     }
                     c.a(this.mContext).b("_main_");
                     throw th;
@@ -231,7 +226,7 @@ public class UMProcessDBHelper {
                 c.a(this.mContext).b("_main_");
                 throw th;
             }
-        } catch (Exception unused4) {
+        } catch (Exception unused3) {
             cursor = null;
             UMRTLog.e("MobclickRT", "--->>> 构建子进程事件数据异常，清除数据库数据。");
             sQLiteDatabase2.execSQL("delete from __et_p");
@@ -248,8 +243,13 @@ public class UMProcessDBHelper {
             th = th4;
             sQLiteDatabase = null;
             if (cursor2 != null) {
+                cursor2.close();
             }
             if (sQLiteDatabase != null) {
+                try {
+                    sQLiteDatabase.endTransaction();
+                } catch (Throwable unused4) {
+                }
             }
             c.a(this.mContext).b("_main_");
             throw th;

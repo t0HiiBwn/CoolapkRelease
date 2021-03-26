@@ -27,9 +27,9 @@ public class NetworkDiagnosisBindingImpl extends NetworkDiagnosisBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363513, 1);
-        sparseIntArray.put(2131363419, 2);
-        sparseIntArray.put(2131362328, 3);
+        sparseIntArray.put(2131363531, 1);
+        sparseIntArray.put(2131363437, 2);
+        sparseIntArray.put(2131362334, 3);
     }
 
     public NetworkDiagnosisBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -2397,8 +2397,8 @@ public class JSONPath implements JSONAware {
                 Long[] lArr2 = this.values;
                 int length2 = lArr2.length;
                 while (i < length2) {
-                    Long l2 = lArr2[i];
-                    if (l2 != null && l2.longValue() == longExtractValue) {
+                    Long l = lArr2[i];
+                    if (l != null && l.longValue() == longExtractValue) {
                         return !this.not;
                     }
                     i++;

@@ -148,7 +148,7 @@ public class MultiMarketDialog extends BottomDialogFragment {
                     arrayList2.remove(0);
                 }
             }
-            arrayList3.add(ItemModel.create(getActivity().getString(2131886875), ShapeUtils.createCircleShapeIcon(ResourceUtils.getDrawable(getActivity(), 2131231435))));
+            arrayList3.add(ItemModel.create(getActivity().getString(2131886937), ShapeUtils.createCircleShapeIcon(ResourceUtils.getDrawable(getActivity(), 2131231446))));
         }
         return arrayList3;
     }
@@ -219,7 +219,7 @@ public class MultiMarketDialog extends BottomDialogFragment {
                 GlideApp.with(itemMarketAppsBinding.iconView).clear(itemMarketAppsBinding.iconView);
                 itemMarketAppsBinding.iconView.setImageDrawable(itemModel.icon);
             } else {
-                AppHolder.getContextImageLoader().displayImage(getContext(), itemModel.logoUrl, itemMarketAppsBinding.iconView, 2131231363);
+                AppHolder.getContextImageLoader().displayImage(getContext(), itemModel.logoUrl, itemMarketAppsBinding.iconView, 2131231374);
             }
             itemMarketAppsBinding.titleView.setText(itemModel.title);
         }
@@ -234,7 +234,7 @@ public class MultiMarketDialog extends BottomDialogFragment {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public MarketViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new MarketViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558822, viewGroup, false), new ItemActionHandler() {
+            return new MarketViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131558829, viewGroup, false), new ItemActionHandler() {
                 /* class com.coolapk.market.widget.MultiMarketDialog.MarketAdapter.AnonymousClass1 */
 
                 @Override // com.coolapk.market.viewholder.ItemActionHandler

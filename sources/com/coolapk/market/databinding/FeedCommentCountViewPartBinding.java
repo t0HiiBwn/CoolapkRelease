@@ -48,7 +48,7 @@ public abstract class FeedCommentCountViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedCommentCountViewPartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (FeedCommentCountViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558556, viewGroup, z, obj);
+        return (FeedCommentCountViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558559, viewGroup, z, obj);
     }
 
     public static FeedCommentCountViewPartBinding inflate(LayoutInflater layoutInflater) {
@@ -57,7 +57,7 @@ public abstract class FeedCommentCountViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedCommentCountViewPartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (FeedCommentCountViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558556, null, false, obj);
+        return (FeedCommentCountViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558559, null, false, obj);
     }
 
     public static FeedCommentCountViewPartBinding bind(View view) {
@@ -66,6 +66,6 @@ public abstract class FeedCommentCountViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedCommentCountViewPartBinding bind(View view, Object obj) {
-        return (FeedCommentCountViewPartBinding) bind(obj, view, 2131558556);
+        return (FeedCommentCountViewPartBinding) bind(obj, view, 2131558559);
     }
 }

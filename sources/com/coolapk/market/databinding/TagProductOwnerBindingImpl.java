@@ -26,7 +26,7 @@ public class TagProductOwnerBindingImpl extends TagProductOwnerBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363063, 1);
+        sparseIntArray.put(2131363077, 1);
     }
 
     public TagProductOwnerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -40,7 +40,7 @@ public abstract class DialogSecondHandEditBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSecondHandEditBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogSecondHandEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558533, viewGroup, z, obj);
+        return (DialogSecondHandEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558535, viewGroup, z, obj);
     }
 
     public static DialogSecondHandEditBinding inflate(LayoutInflater layoutInflater) {
@@ -49,7 +49,7 @@ public abstract class DialogSecondHandEditBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSecondHandEditBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogSecondHandEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558533, null, false, obj);
+        return (DialogSecondHandEditBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558535, null, false, obj);
     }
 
     public static DialogSecondHandEditBinding bind(View view) {
@@ -58,6 +58,6 @@ public abstract class DialogSecondHandEditBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSecondHandEditBinding bind(View view, Object obj) {
-        return (DialogSecondHandEditBinding) bind(obj, view, 2131558533);
+        return (DialogSecondHandEditBinding) bind(obj, view, 2131558535);
     }
 }

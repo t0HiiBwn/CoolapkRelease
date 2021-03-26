@@ -31,7 +31,7 @@ public abstract class SubmitFeedAddVideoItemDialogBinding extends ViewDataBindin
 
     @Deprecated
     public static SubmitFeedAddVideoItemDialogBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitFeedAddVideoItemDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559148, viewGroup, z, obj);
+        return (SubmitFeedAddVideoItemDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559156, viewGroup, z, obj);
     }
 
     public static SubmitFeedAddVideoItemDialogBinding inflate(LayoutInflater layoutInflater) {
@@ -40,7 +40,7 @@ public abstract class SubmitFeedAddVideoItemDialogBinding extends ViewDataBindin
 
     @Deprecated
     public static SubmitFeedAddVideoItemDialogBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitFeedAddVideoItemDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559148, null, false, obj);
+        return (SubmitFeedAddVideoItemDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559156, null, false, obj);
     }
 
     public static SubmitFeedAddVideoItemDialogBinding bind(View view) {
@@ -49,6 +49,6 @@ public abstract class SubmitFeedAddVideoItemDialogBinding extends ViewDataBindin
 
     @Deprecated
     public static SubmitFeedAddVideoItemDialogBinding bind(View view, Object obj) {
-        return (SubmitFeedAddVideoItemDialogBinding) bind(obj, view, 2131559148);
+        return (SubmitFeedAddVideoItemDialogBinding) bind(obj, view, 2131559156);
     }
 }

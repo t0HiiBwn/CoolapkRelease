@@ -44,7 +44,7 @@ public final class ProductPostView extends FrameLayout implements View.OnClickLi
     public ProductPostView(Context context) {
         super(context);
         Intrinsics.checkNotNullParameter(context, "context");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131559111, this, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131559118, this, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…t_post_view, this, false)");
         ProductPostViewBinding productPostViewBinding = (ProductPostViewBinding) inflate;
         this.binding = productPostViewBinding;
@@ -81,7 +81,7 @@ public final class ProductPostView extends FrameLayout implements View.OnClickLi
     public ProductPostView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         Intrinsics.checkNotNullParameter(context, "context");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131559111, this, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131559118, this, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…t_post_view, this, false)");
         ProductPostViewBinding productPostViewBinding = (ProductPostViewBinding) inflate;
         this.binding = productPostViewBinding;
@@ -153,20 +153,20 @@ public final class ProductPostView extends FrameLayout implements View.OnClickLi
             Activity activityNullable = UiUtils.getActivityNullable(context);
             if (activityNullable != null) {
                 switch (view.getId()) {
-                    case 2131362769:
+                    case 2131362780:
                         ProductPresenter productPresenter = this.presenter;
                         if (productPresenter != null) {
                             productPresenter.commentProduct(activityNullable, model);
                         }
                         hideWithAnimator$default(this, false, 1, null);
                         return;
-                    case 2131362770:
-                    case 2131362771:
-                    case 2131362772:
-                    case 2131362776:
+                    case 2131362781:
+                    case 2131362782:
+                    case 2131362783:
+                    case 2131362787:
                     default:
                         return;
-                    case 2131362773:
+                    case 2131362784:
                         if (productViewModel.getRatingScore() > 0) {
                             Toast.show$default(getContext(), "不可重复点评", 0, false, 12, null);
                             return;
@@ -177,14 +177,14 @@ public final class ProductPostView extends FrameLayout implements View.OnClickLi
                         }
                         hideWithAnimator$default(this, false, 1, null);
                         return;
-                    case 2131362774:
+                    case 2131362785:
                         FeedUIConfig build = FeedArgsFactoryKt.applyProduct(FeedArgsFactory.uiConfigForQuestion(), activityNullable, model).title("").build();
                         FeedMultiPart build2 = FeedArgsFactoryKt.applyProduct(FeedArgsFactory.multiPartForQuestion(), model).message("").build();
                         StatisticHelper.Companion.getInstance().recordPhoneBarPostEvent("提问");
                         ActionManager.startQuestionTitleV8Activity(activityNullable, build, build2);
                         hideWithAnimator$default(this, false, 1, null);
                         return;
-                    case 2131362775:
+                    case 2131362786:
                         Activity activity = activityNullable;
                         FeedUIConfig build3 = FeedArgsFactoryKt.applyProduct(FeedArgsFactoryKt.applyHtml(FeedArgsFactory.uiConfigForFeed(activity)), activity, model).title("发图文").build();
                         FeedMultiPart build4 = FeedArgsFactoryKt.applyProduct(FeedArgsFactory.multiPartForFeed(), model).build();
@@ -192,12 +192,12 @@ public final class ProductPostView extends FrameLayout implements View.OnClickLi
                         ActionManager.startSubmitFeedV8Activity(activityNullable, build3, build4);
                         hideWithAnimator$default(this, false, 1, null);
                         return;
-                    case 2131362777:
+                    case 2131362788:
                         StatisticHelper.Companion.getInstance().recordPhoneBarPostEvent("视频");
                         ActionManager.startProductShareVideoActivity(activityNullable, model);
                         hideWithAnimator$default(this, false, 1, null);
                         return;
-                    case 2131362778:
+                    case 2131362789:
                         if (!model.isReleased()) {
                             Toast.show$default(getContext(), "产品暂未发布，无法发布二手", 0, false, 12, null);
                             return;

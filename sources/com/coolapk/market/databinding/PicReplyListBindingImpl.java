@@ -26,8 +26,8 @@ public class PicReplyListBindingImpl extends PicReplyListBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362146, 1);
-        sparseIntArray.put(2131362306, 2);
+        sparseIntArray.put(2131362149, 1);
+        sparseIntArray.put(2131362311, 2);
     }
 
     public PicReplyListBindingImpl(DataBindingComponent dataBindingComponent, View view) {

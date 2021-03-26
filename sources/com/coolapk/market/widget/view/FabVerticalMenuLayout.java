@@ -126,7 +126,7 @@ public final class FabVerticalMenuLayout extends FrameLayout {
         textView.setText(str);
         textView.setTextColor(-1);
         Drawable mutate = ResourceUtils.getDrawable(textView.getContext(), 2131230897).mutate();
-        mutate.setTint(ColorUtils.adjustAlpha(textView.getResources().getColor(2131099891), 0.8f));
+        mutate.setTint(ColorUtils.adjustAlpha(textView.getResources().getColor(2131099896), 0.8f));
         textView.setPadding(DisplayUtils.dp2px(textView.getContext(), 4.0f), DisplayUtils.dp2px(textView.getContext(), 2.0f), DisplayUtils.dp2px(textView.getContext(), 4.0f), DisplayUtils.dp2px(textView.getContext(), 2.0f));
         Unit unit = Unit.INSTANCE;
         textView.setBackground(mutate);

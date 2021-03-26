@@ -54,7 +54,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedVoteHeaderViewPart.kt */
 public final class FeedVoteHeaderViewPart extends BindingViewPart<ItemFeedVoteHeaderBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558740;
+    public static final int LAYOUT_ID = 2131558747;
     private final FragmentBindingComponent bindingComponent;
     private int currentDescriptionLength = 75;
     private boolean didUserCheckAnonymous;
@@ -115,7 +115,7 @@ public final class FeedVoteHeaderViewPart extends BindingViewPart<ItemFeedVoteHe
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedVoteHeaderBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558740, viewGroup, false, this.bindingComponent);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558747, viewGroup, false, this.bindingComponent);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(… false, bindingComponent)");
         return (ItemFeedVoteHeaderBinding) inflate;
     }
@@ -177,7 +177,7 @@ public final class FeedVoteHeaderViewPart extends BindingViewPart<ItemFeedVoteHe
             Intrinsics.checkNotNullExpressionValue(textView, "binding.descriptionView");
             int i = this.currentDescriptionLength;
             String message2 = feed2.getMessage();
-            SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886656));
+            SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886718));
             spannableStringBuilder.setSpan(new ForegroundColorSpan(AppHolder.getAppTheme().getColorAccent()), 0, spannableStringBuilder.length(), 33);
             Unit unit = Unit.INSTANCE;
             ViewExtendsKt.setBriefMessage(textView, i, message2, spannableStringBuilder);
@@ -192,10 +192,10 @@ public final class FeedVoteHeaderViewPart extends BindingViewPart<ItemFeedVoteHe
         if (feed2 != null && (vote = feed2.getVote()) != null) {
             Intrinsics.checkNotNullExpressionValue(vote, "feed.vote ?: return");
             switch (view.getId()) {
-                case 2131361981:
+                case 2131361982:
                     handleActionClick(vote);
                     return;
-                case 2131362057:
+                case 2131362059:
                     boolean z = false;
                     boolean z2 = EntityExtendsKt.isFinished(vote) || this.viewModel.getUserVotedAndNotModifying();
                     boolean z3 = !EntityExtendsKt.isAllowAnonymous(vote);
@@ -212,7 +212,7 @@ public final class FeedVoteHeaderViewPart extends BindingViewPart<ItemFeedVoteHe
                         return;
                     }
                     return;
-                case 2131362378:
+                case 2131362384:
                     int i = Integer.MAX_VALUE;
                     if (this.currentDescriptionLength == Integer.MAX_VALUE) {
                         i = 75;
@@ -220,14 +220,14 @@ public final class FeedVoteHeaderViewPart extends BindingViewPart<ItemFeedVoteHe
                     this.currentDescriptionLength = i;
                     setDescriptionText();
                     return;
-                case 2131363558:
+                case 2131363579:
                     ActionManagerCompat actionManagerCompat = ActionManagerCompat.INSTANCE;
                     Context context = getContext();
                     String id = vote.getId();
                     Intrinsics.checkNotNullExpressionValue(id, "vote.id");
                     actionManagerCompat.startVoteUserListActivity(context, id, "");
                     return;
-                case 2131363877:
+                case 2131363900:
                     ActionManager.startUserSpaceActivity(getView(), feed2.getUid(), feed2.getUserAvatar());
                     return;
                 default:
@@ -362,7 +362,7 @@ public final class FeedVoteHeaderViewPart extends BindingViewPart<ItemFeedVoteHe
         int textColorTertiary = AppHolder.getAppTheme().getTextColorTertiary();
         int textColorSecondary = AppHolder.getAppTheme().getTextColorSecondary();
         int colorAccent = AppHolder.getAppTheme().getColorAccent();
-        Drawable drawable = ResourceUtils.getDrawable(getContext(), 2131231522);
+        Drawable drawable = ResourceUtils.getDrawable(getContext(), 2131231533);
         if (z) {
             if (this.didUserCheckAnonymous) {
                 ImageView imageView = ((ItemFeedVoteHeaderBinding) getBinding()).anonymousCheckView;
@@ -390,7 +390,7 @@ public final class FeedVoteHeaderViewPart extends BindingViewPart<ItemFeedVoteHe
         Vote vote = feed2.getVote();
         Intrinsics.checkNotNull(vote);
         Intrinsics.checkNotNullExpressionValue(vote, "data.vote!!");
-        int adjustAlpha = ColorUtils.adjustAlpha(ResourceUtils.getColorInt(getContext(), 2131099893), 0.2f);
+        int adjustAlpha = ColorUtils.adjustAlpha(ResourceUtils.getColorInt(getContext(), 2131099898), 0.2f);
         int colorAccent = AppHolder.getAppTheme().getColorAccent();
         int textColorSecondary = AppHolder.getAppTheme().getTextColorSecondary();
         if (vote.getType() == 0) {

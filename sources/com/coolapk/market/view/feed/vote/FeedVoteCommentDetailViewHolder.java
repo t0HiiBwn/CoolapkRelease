@@ -25,7 +25,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedVoteCommentDetailViewHolder.kt */
 public final class FeedVoteCommentDetailViewHolder extends GenericBindHolder<ItemFeedVoteCommentDetailBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558737;
+    public static final int LAYOUT_ID = 2131558744;
     private final int flags;
     private final Lazy headerViewPart$delegate;
     private final FeedVoteCommentDetailViewHolder$nineImageHotPlug$1 nineImageHotPlug;

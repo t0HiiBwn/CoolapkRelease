@@ -60,7 +60,7 @@ public class ItemFeedForwardViewBindingImpl extends ItemFeedForwardViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((ForwardFeed) obj);
         } else if (50 != i) {
             return false;
@@ -76,7 +76,7 @@ public class ItemFeedForwardViewBindingImpl extends ItemFeedForwardViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -121,7 +121,7 @@ public class ItemFeedForwardViewBindingImpl extends ItemFeedForwardViewBinding {
         if (i != 0) {
             Boolean bool2 = null;
             String str4 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, str4, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, str4, null, null, bool2, bool2, bool2, null, bool2);
             TextViewBindingAdapters.setDatelineByEntity(this.replyReplyInfoText, forwardFeed);
             TextViewBindingAdapters.setTextViewLinkable(this.textView, str2, null, str4, bool2, null, str4);
             TextViewBindingAdapter.setText(this.titleView, str3);

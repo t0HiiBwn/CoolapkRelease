@@ -30,7 +30,7 @@ public abstract class NewAsyncListFragment<T> extends RefreshRecyclerFragment im
     @Override // com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        setEmptyData(getString(2131886765), 0);
+        setEmptyData(getString(2131886827), 0);
         if (!this.presenter.isDataLoaded()) {
             setLoading(true);
         }

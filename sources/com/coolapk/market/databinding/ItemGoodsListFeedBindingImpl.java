@@ -32,8 +32,8 @@ public class ItemGoodsListFeedBindingImpl extends ItemGoodsListFeedBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 7);
-        sparseIntArray.put(2131362630, 8);
+        sparseIntArray.put(2131362657, 7);
+        sparseIntArray.put(2131362638, 8);
     }
 
     public ItemGoodsListFeedBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -78,13 +78,13 @@ public class ItemGoodsListFeedBindingImpl extends ItemGoodsListFeedBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (301 == i) {
+        } else if (302 == i) {
             setVerifyStatusIcon((String) obj);
-        } else if (250 == i) {
+        } else if (251 == i) {
             setShowFromView(((Boolean) obj).booleanValue());
-        } else if (300 == i) {
+        } else if (301 == i) {
             setVerifyLabel((String) obj);
         } else if (121 == i) {
             setFollowNum((String) obj);
@@ -102,7 +102,7 @@ public class ItemGoodsListFeedBindingImpl extends ItemGoodsListFeedBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -170,7 +170,7 @@ public class ItemGoodsListFeedBindingImpl extends ItemGoodsListFeedBinding {
         }
         if (i != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.coverView, str, AppCompatResources.getDrawable(this.coverView.getContext(), 2131231696), 0, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.coverView, str, AppCompatResources.getDrawable(this.coverView.getContext(), 2131231707), 0, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
             ViewBindingAdapters.updateFeed(this.feedActionView, feed);
             TextViewBindingAdapter.setText(this.mboundView4, str2);
         }

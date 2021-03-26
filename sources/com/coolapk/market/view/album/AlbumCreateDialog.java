@@ -85,7 +85,7 @@ public class AlbumCreateDialog extends BaseDialogFragment {
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        DialogAlbumCreateBinding dialogAlbumCreateBinding = (DialogAlbumCreateBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558513, null, false);
+        DialogAlbumCreateBinding dialogAlbumCreateBinding = (DialogAlbumCreateBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558515, null, false);
         this.titleView = dialogAlbumCreateBinding.titleEditText;
         TextView textView = dialogAlbumCreateBinding.dialogTitleView;
         this.intro = dialogAlbumCreateBinding.introEditText;
@@ -99,7 +99,7 @@ public class AlbumCreateDialog extends BaseDialogFragment {
             this.isEdit = true;
             this.albumTitle = this.mAlbumDetailViewModel.getAlbumTitle();
             this.albumIntro = this.mAlbumDetailViewModel.getAlbumIntro();
-            textView.setText(getString(2131886574));
+            textView.setText(getString(2131886636));
             this.titleView.setText(this.albumTitle);
             this.intro.setText(this.albumIntro);
             if (!TextUtils.isEmpty(this.albumTitle) && !TextUtils.isEmpty(this.albumIntro)) {
@@ -140,9 +140,9 @@ public class AlbumCreateDialog extends BaseDialogFragment {
         progressDialog.setProgressStyle(0);
         progressDialog.setCancelable(true);
         if (!this.isEdit) {
-            progressDialog.setMessage(getString(2131886715));
+            progressDialog.setMessage(getString(2131886777));
         } else {
-            progressDialog.setMessage(getString(2131886579));
+            progressDialog.setMessage(getString(2131886641));
         }
         progressDialog.show();
         progressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
@@ -156,7 +156,7 @@ public class AlbumCreateDialog extends BaseDialogFragment {
         this.albumTitle = this.titleView.getText().toString();
         this.albumIntro = this.intro.getText().toString();
         if (TextUtils.isEmpty(this.albumTitle) || TextUtils.isEmpty(this.albumIntro)) {
-            Toast.show(getActivity(), getString(2131886576));
+            Toast.show(getActivity(), getString(2131886638));
             progressDialog.dismiss();
         } else if (!this.isEdit) {
             this.createSubscription = DataManager.getInstance().createAlbum(this.albumTitle, this.albumIntro).map(RxUtils.checkResult()).flatMap(new Func1() {

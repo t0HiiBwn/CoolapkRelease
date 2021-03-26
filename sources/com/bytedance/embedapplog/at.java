@@ -10,9 +10,7 @@ public class at extends aq {
     private String i;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private long f1257l;
+    private long l;
     private long m;
 
     @Override // com.bytedance.embedapplog.aq
@@ -24,7 +22,7 @@ public class at extends aq {
         this.h = str;
         this.i = str2;
         this.j = str3;
-        this.f1257l = j2;
+        this.l = j2;
         this.m = j3;
         this.k = str4;
     }
@@ -45,7 +43,7 @@ public class at extends aq {
         this.d = cursor.getString(3);
         this.h = cursor.getString(4);
         this.i = cursor.getString(5);
-        this.f1257l = (long) cursor.getInt(6);
+        this.l = (long) cursor.getInt(6);
         this.m = (long) cursor.getInt(7);
         this.k = cursor.getString(8);
         this.j = cursor.getString(9);
@@ -62,7 +60,7 @@ public class at extends aq {
         contentValues.put("user_unique_id", this.d);
         contentValues.put("category", this.h);
         contentValues.put("tag", this.i);
-        contentValues.put("value", Long.valueOf(this.f1257l));
+        contentValues.put("value", Long.valueOf(this.l));
         contentValues.put("ext_value", Long.valueOf(this.m));
         contentValues.put("params", this.k);
         contentValues.put("label", this.j);
@@ -78,7 +76,7 @@ public class at extends aq {
         jSONObject.put("user_unique_id", this.d);
         jSONObject.put("category", this.h);
         jSONObject.put("tag", this.i);
-        jSONObject.put("value", this.f1257l);
+        jSONObject.put("value", this.l);
         jSONObject.put("ext_value", this.m);
         jSONObject.put("params", this.k);
         jSONObject.put("label", this.j);
@@ -100,7 +98,7 @@ public class at extends aq {
         }
         jSONObject.put("category", this.h);
         jSONObject.put("tag", this.i);
-        jSONObject.put("value", this.f1257l);
+        jSONObject.put("value", this.l);
         jSONObject.put("ext_value", this.m);
         jSONObject.put("label", this.j);
         jSONObject.put("datetime", this.g);
@@ -121,7 +119,7 @@ public class at extends aq {
         this.d = jSONObject.optString("user_unique_id", null);
         this.h = jSONObject.optString("category", null);
         this.i = jSONObject.optString("tag", null);
-        this.f1257l = jSONObject.optLong("value", 0);
+        this.l = jSONObject.optLong("value", 0);
         this.m = jSONObject.optLong("ext_value", 0);
         this.k = jSONObject.optString("params", null);
         this.j = jSONObject.optString("label", null);

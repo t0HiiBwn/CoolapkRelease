@@ -23,9 +23,7 @@ public class bc {
     private static boolean i = a("androidx.fragment.app.FragmentActivity");
     private static boolean j = a("androidx.appcompat.app.AlertDialog");
     private static boolean k = a("androidx.appcompat.view.menu.ListMenuItemView");
-
-    /* renamed from: l  reason: collision with root package name */
-    private static boolean f1260l = a("androidx.recyclerview.widget.RecyclerView");
+    private static boolean l = a("androidx.recyclerview.widget.RecyclerView");
     private static boolean m = a("androidx.viewpager.widget.ViewPager");
     private static boolean n = a("androidx.swiperefreshlayout.widget.SwipeRefreshLayout");
     private static boolean o = a("androidx.fragment.app.Fragment");
@@ -58,7 +56,7 @@ public class bc {
     }
 
     static void a(Class<?> cls, String str) {
-        if (!f1260l && !e && !a && str != null && str.contains("RecyclerView")) {
+        if (!l && !e && !a && str != null && str.contains("RecyclerView")) {
             try {
                 if (a(cls) != null && c != null) {
                     b = cls;
@@ -99,7 +97,7 @@ public class bc {
     }
 
     static boolean c(Object obj) {
-        return f1260l && (obj instanceof RecyclerView);
+        return l && (obj instanceof RecyclerView);
     }
 
     static boolean d(Object obj) {

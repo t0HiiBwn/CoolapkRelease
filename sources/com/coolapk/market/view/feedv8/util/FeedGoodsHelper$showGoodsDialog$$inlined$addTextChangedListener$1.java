@@ -56,7 +56,7 @@ public final class FeedGoodsHelper$showGoodsDialog$$inlined$addTextChangedListen
             gradientDrawable.setCornerRadius(NumberExtendsKt.getDpf((Number) 8));
             Stroke stroke = new Stroke();
             if (z) {
-                stroke.setColor(ResourceUtils.getColorInt(this.$activity$inlined, 2131099825));
+                stroke.setColor(ResourceUtils.getColorInt(this.$activity$inlined, 2131099827));
             } else if (AppHolder.getAppTheme().isDarkTheme()) {
                 stroke.setColor(872415231);
             } else {

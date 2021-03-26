@@ -62,8 +62,8 @@ public final class DraftListFragment extends LocalMultiTypeFragment<RoughDraft> 
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         setHasOptionsMenu(true);
-        setEmptyData(getString(2131886765), 0);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558722).suitedClass(RoughDraft.class).constructor(new DraftListFragment$onActivityCreated$1(new FragmentBindingComponent(this))).build(), 0, 2, null);
+        setEmptyData(getString(2131886827), 0);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558729).suitedClass(RoughDraft.class).constructor(new DraftListFragment$onActivityCreated$1(new FragmentBindingComponent(this))).build(), 0, 2, null);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getMainBackgroundColor());
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
@@ -111,7 +111,7 @@ public final class DraftListFragment extends LocalMultiTypeFragment<RoughDraft> 
         Intrinsics.checkNotNullParameter(menu, "menu");
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
-        if (isAdded() && (add = menu.add(0, 2131361891, 0, getString(2131886651))) != null) {
+        if (isAdded() && (add = menu.add(0, 2131361892, 0, getString(2131886713))) != null) {
             add.setShowAsAction(2);
         }
     }
@@ -119,12 +119,12 @@ public final class DraftListFragment extends LocalMultiTypeFragment<RoughDraft> 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361891) {
+        if (menuItem.getItemId() != 2131361892) {
             return true;
         }
-        String string = getString(2131886651);
+        String string = getString(2131886713);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_clear_rough_draft)");
-        String string2 = getString(2131886652);
+        String string2 = getString(2131886714);
         Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_c…_rough_draft_description)");
         ConfirmDialog newInstance = ConfirmDialog.newInstance(string, string2);
         newInstance.setOnOkRunnable(new DraftListFragment$onOptionsItemSelected$1(this));
@@ -144,7 +144,7 @@ public final class DraftListFragment extends LocalMultiTypeFragment<RoughDraft> 
     /* compiled from: DraftListFragment.kt */
     private static final class FeedRoughDraftViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558722;
+        public static final int LAYOUT_ID = 2131558729;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public FeedRoughDraftViewHolder(View view, FragmentBindingComponent fragmentBindingComponent) {
@@ -538,7 +538,7 @@ public final class DraftListFragment extends LocalMultiTypeFragment<RoughDraft> 
                     }
                     Snackbar make = Snackbar.make(view, "删除一篇草稿", 0);
                     Intrinsics.checkNotNullExpressionValue(make, "Snackbar.make(view, \"删除一…稿\", Snackbar.LENGTH_LONG)");
-                    make.setAction(2131887009, new DraftListFragment$FeedRoughDraftViewHolder$showDeleteSnackBar$2(draftListFragment2, adapterPosition, roughDraft));
+                    make.setAction(2131887071, new DraftListFragment$FeedRoughDraftViewHolder$showDeleteSnackBar$2(draftListFragment2, adapterPosition, roughDraft));
                     make.addCallback(new DraftListFragment$FeedRoughDraftViewHolder$showDeleteSnackBar$3(roughDraft, draftListFragment2));
                     make.show();
                     draftListFragment2.setShowingSnackBar(make);

@@ -30,7 +30,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ProductMultiRatingMapViewHolder.kt */
 public final class ProductMultiRatingMapViewHolder extends GenericBindHolder<ItemProductMultiRatingMapBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558869;
+    public static final int LAYOUT_ID = 2131558876;
     private final ProductPresenter presenter;
     private final ProductViewModel viewModel;
 
@@ -81,7 +81,7 @@ public final class ProductMultiRatingMapViewHolder extends GenericBindHolder<Ite
         TextView textView2 = ((ItemProductMultiRatingMapBinding) getBinding()).ratingCountView;
         Intrinsics.checkNotNullExpressionValue(textView2, "binding.ratingCountView");
         int i = 0;
-        textView2.setText(getContext().getString(2131886796, Integer.valueOf(model.getRatingTotalNum())));
+        textView2.setText(getContext().getString(2131886858, Integer.valueOf(model.getRatingTotalNum())));
         ((ItemProductMultiRatingMapBinding) getBinding()).linearView.setBackgroundColor(ColorUtils.setAlphaComponent(AppHolder.getAppTheme().getColorAccent(), 26));
         ProductGlobalData productGlobalData = ProductGlobalData.INSTANCE;
         String type = model.getType();
@@ -115,7 +115,7 @@ public final class ProductMultiRatingMapViewHolder extends GenericBindHolder<Ite
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131361981) {
+        if (view.getId() != 2131361982) {
             super.onClick(view);
             return;
         }

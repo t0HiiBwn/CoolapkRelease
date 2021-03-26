@@ -118,12 +118,12 @@ public final class ChannelManagerFragment extends NewAsyncListFragment<List<? ex
         if (multiTypeAdapter2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(multiTypeAdapter2, SimpleViewHolderFactor.Companion.withLayoutId(2131558647).suitedClass(ChannelTitle.class).constructor(new ChannelManagerFragment$onActivityCreated$1(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(multiTypeAdapter2, SimpleViewHolderFactor.Companion.withLayoutId(2131558653).suitedClass(ChannelTitle.class).constructor(new ChannelManagerFragment$onActivityCreated$1(this)).build(), 0, 2, null);
         MultiTypeAdapter multiTypeAdapter3 = this.adapter;
         if (multiTypeAdapter3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(multiTypeAdapter3, SimpleViewHolderFactor.Companion.withLayoutId(2131558646).suitedClass(Channel.class).constructor(new ChannelManagerFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(multiTypeAdapter3, SimpleViewHolderFactor.Companion.withLayoutId(2131558652).suitedClass(Channel.class).constructor(new ChannelManagerFragment$onActivityCreated$2(this)).build(), 0, 2, null);
         MultiTypeAdapter multiTypeAdapter4 = this.adapter;
         if (multiTypeAdapter4 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
@@ -152,7 +152,7 @@ public final class ChannelManagerFragment extends NewAsyncListFragment<List<? ex
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() == 2131361958) {
+        if (menuItem.getItemId() == 2131361959) {
             this.reset = true;
             reloadData();
         }

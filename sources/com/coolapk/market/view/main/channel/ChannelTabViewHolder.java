@@ -25,7 +25,7 @@ import org.greenrobot.eventbus.EventBus;
 /* compiled from: ChannelTabViewHolder.kt */
 public final class ChannelTabViewHolder extends BindingViewHolder implements ItemTouchHelperViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558646;
+    public static final int LAYOUT_ID = 2131558652;
     private final ItemChannelTabBinding binding = ((ItemChannelTabBinding) getBinding());
     public Channel channel;
     private final Lazy channelManager$delegate = LazyKt.lazy(new ChannelTabViewHolder$channelManager$2(this));
@@ -121,7 +121,7 @@ public final class ChannelTabViewHolder extends BindingViewHolder implements Ite
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362768) {
+        if (view.getId() != 2131362779) {
             super.onClick(view);
             return;
         }
@@ -162,7 +162,7 @@ public final class ChannelTabViewHolder extends BindingViewHolder implements Ite
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnLongClickListener
     public boolean onLongClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362768) {
+        if (view.getId() != 2131362779) {
             return super.onLongClick(view);
         }
         Channel channel2 = this.channel;

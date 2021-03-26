@@ -14,7 +14,7 @@ import com.coolapk.market.util.EntityUtils;
 import com.coolapk.market.util.LinkTextUtils;
 
 public class UserReplyLikeViewHolder extends GenericBindHolder<ItemReplyLikeListBinding, FeedReply> {
-    public static final int LAYOUT_ID = 2131558897;
+    public static final int LAYOUT_ID = 2131558904;
     private Context context;
 
     public UserReplyLikeViewHolder(Context context2, View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -25,7 +25,7 @@ public class UserReplyLikeViewHolder extends GenericBindHolder<ItemReplyLikeList
     public void bindToContent(FeedReply feedReply) {
         ItemReplyLikeListBinding itemReplyLikeListBinding = (ItemReplyLikeListBinding) getBinding();
         int i = 0;
-        itemReplyLikeListBinding.textView.setText(this.context.getString(2131886898, EntityUtils.isFeedreply(feedReply.getEntityType()) ? "回复" : "动态"));
+        itemReplyLikeListBinding.textView.setText(this.context.getString(2131886960, EntityUtils.isFeedreply(feedReply.getEntityType()) ? "回复" : "动态"));
         itemReplyLikeListBinding.setClick(this);
         itemReplyLikeListBinding.setModel(feedReply);
         itemReplyLikeListBinding.setTransformer(new CircleTransform());
@@ -43,9 +43,9 @@ public class UserReplyLikeViewHolder extends GenericBindHolder<ItemReplyLikeList
         super.onClick(view);
         FeedReply model = ((ItemReplyLikeListBinding) getBinding()).getModel();
         int id = view.getId();
-        if (id == 2131362316) {
+        if (id == 2131362322) {
             ActionManager.startActivityByUrl(getContext(), model.getUrl());
-        } else if (id == 2131363877) {
+        } else if (id == 2131363900) {
             ActionManager.startUserSpaceActivity(view, model.getLikeUid(), model.getLikeAvatar());
         }
     }

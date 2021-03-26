@@ -162,12 +162,12 @@ public final class MyCardManagerFragment extends NewAsyncListFragment<List<? ext
         if (multiTypeAdapter == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        multiTypeAdapter.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558632).suitedMethod(MyCardManagerFragment$onActivityCreated$1.INSTANCE).constructor(new MyCardManagerFragment$onActivityCreated$2(this)).build(), 0);
+        multiTypeAdapter.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558638).suitedMethod(MyCardManagerFragment$onActivityCreated$1.INSTANCE).constructor(new MyCardManagerFragment$onActivityCreated$2(this)).build(), 0);
         MultiTypeAdapter multiTypeAdapter2 = this.adapter;
         if (multiTypeAdapter2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        multiTypeAdapter2.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558932).suitedMethod(MyCardManagerFragment$onActivityCreated$3.INSTANCE).constructor(MyCardManagerFragment$onActivityCreated$4.INSTANCE).build(), 0);
+        multiTypeAdapter2.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558939).suitedMethod(MyCardManagerFragment$onActivityCreated$3.INSTANCE).constructor(MyCardManagerFragment$onActivityCreated$4.INSTANCE).build(), 0);
         MultiTypeAdapter multiTypeAdapter3 = this.adapter;
         if (multiTypeAdapter3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
@@ -297,7 +297,7 @@ public final class MyCardManagerFragment extends NewAsyncListFragment<List<? ext
     /* compiled from: MyCardManagerFragment.kt */
     private static final class TitleViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558932;
+        public static final int LAYOUT_ID = 2131558939;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public TitleViewHolder(View view) {

@@ -37,16 +37,16 @@ public class AdvertisingIdClient {
     public static class XI implements Runnable {
 
         /* renamed from: XI  reason: collision with root package name */
-        public final /* synthetic */ Context f1350XI;
+        public final /* synthetic */ Context f198XI;
 
         public XI(Context context) {
-            this.f1350XI = context;
+            this.f198XI = context;
         }
 
         @Override // java.lang.Runnable
         public final void run() {
             try {
-                AdvertisingIdClient.requestAdvertisingIdInfo(this.f1350XI);
+                AdvertisingIdClient.requestAdvertisingIdInfo(this.f198XI);
             } catch (Throwable unused) {
             }
         }
@@ -90,8 +90,8 @@ public class AdvertisingIdClient {
             intent.setPackage("com.huawei.hwid");
             if (context.bindService(intent, xi, 1)) {
                 try {
-                    if (!xi.f1179XI) {
-                        xi.f1179XI = true;
+                    if (!xi.f185XI) {
+                        xi.f185XI = true;
                         IBinder take = xi.K0.take();
                         Parcel obtain = Parcel.obtain();
                         Parcel obtain2 = Parcel.obtain();
@@ -150,7 +150,7 @@ public class AdvertisingIdClient {
     }
 
     private static void updateAdvertisingIdInfo(Context context) {
-        K0.f1178XI.execute(new XI(context));
+        K0.f184XI.execute(new XI(context));
     }
 
     public static boolean verifyAdId(Context context, String str, boolean z) {

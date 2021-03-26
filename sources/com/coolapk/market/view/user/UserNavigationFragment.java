@@ -25,13 +25,13 @@ public class UserNavigationFragment extends LocalDataFragment<HolderItem> {
 
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment
     public int getItemViewType(int i) {
-        return 2131558977;
+        return 2131558984;
     }
 
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getActivity().setTitle(getString(2131886875));
+        getActivity().setTitle(getString(2131886937));
         getRecyclerView().addItemDecoration(new PaddingDividerItemDecoration(new PaddingDividerItemDecoration.SimpleCallBack(getActivity()) {
             /* class com.coolapk.market.view.user.UserNavigationFragment.AnonymousClass1 */
 
@@ -73,7 +73,7 @@ public class UserNavigationFragment extends LocalDataFragment<HolderItem> {
                 LoginSession loginSession = DataManager.getInstance().getLoginSession();
                 int adapterPosition = viewHolder.getAdapterPosition();
                 if (adapterPosition == 0) {
-                    ActionManager.startWebViewTitleActivity(UserNavigationFragment.this.getActivity(), "https://m.coolapk.com/mp/do?c=userDevice&m=myDevice", UserNavigationFragment.this.getString(2131886877));
+                    ActionManager.startWebViewTitleActivity(UserNavigationFragment.this.getActivity(), "https://m.coolapk.com/mp/do?c=userDevice&m=myDevice", UserNavigationFragment.this.getString(2131886939));
                 } else if (adapterPosition == 1) {
                     ActionManager.startUserApkCommentActivity(UserNavigationFragment.this.getActivity(), loginSession.getUid());
                 } else if (adapterPosition == 2) {
@@ -92,17 +92,17 @@ public class UserNavigationFragment extends LocalDataFragment<HolderItem> {
     @Override // com.coolapk.market.app.InitBehavior
     public void initData() {
         ArrayList arrayList = new ArrayList();
-        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231661).string(getString(2131886877)).build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231481).string(getString(2131887064)).build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231479).string(getString(2131887065)).build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231666).string(getString(2131887098)).build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231655).string(getString(2131887127)).build());
-        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231662).string(getString(2131886878)).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231672).string(getString(2131886939)).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231492).string(getString(2131887126)).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231490).string(getString(2131887127)).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231677).string(getString(2131887160)).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231666).string(getString(2131887189)).build());
+        arrayList.add(HolderItem.newBuilder().entityType("holder_item").intValue(2131231673).string(getString(2131886940)).build());
         getDataList().addAll(arrayList);
     }
 
     public static class UserNavigationViewHolder extends GenericBindHolder<ItemUserNavigationBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558977;
+        public static final int LAYOUT_ID = 2131558984;
 
         public UserNavigationViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);

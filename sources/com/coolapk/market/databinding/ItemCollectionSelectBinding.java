@@ -58,7 +58,7 @@ public abstract class ItemCollectionSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCollectionSelectBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemCollectionSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558656, viewGroup, z, obj);
+        return (ItemCollectionSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558662, viewGroup, z, obj);
     }
 
     public static ItemCollectionSelectBinding inflate(LayoutInflater layoutInflater) {
@@ -67,7 +67,7 @@ public abstract class ItemCollectionSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCollectionSelectBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemCollectionSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558656, null, false, obj);
+        return (ItemCollectionSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558662, null, false, obj);
     }
 
     public static ItemCollectionSelectBinding bind(View view) {
@@ -76,6 +76,6 @@ public abstract class ItemCollectionSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCollectionSelectBinding bind(View view, Object obj) {
-        return (ItemCollectionSelectBinding) bind(obj, view, 2131558656);
+        return (ItemCollectionSelectBinding) bind(obj, view, 2131558662);
     }
 }

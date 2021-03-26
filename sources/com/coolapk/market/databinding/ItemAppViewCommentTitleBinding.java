@@ -33,7 +33,7 @@ public abstract class ItemAppViewCommentTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppViewCommentTitleBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAppViewCommentTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558602, viewGroup, z, obj);
+        return (ItemAppViewCommentTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558606, viewGroup, z, obj);
     }
 
     public static ItemAppViewCommentTitleBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class ItemAppViewCommentTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppViewCommentTitleBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAppViewCommentTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558602, null, false, obj);
+        return (ItemAppViewCommentTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558606, null, false, obj);
     }
 
     public static ItemAppViewCommentTitleBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class ItemAppViewCommentTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppViewCommentTitleBinding bind(View view, Object obj) {
-        return (ItemAppViewCommentTitleBinding) bind(obj, view, 2131558602);
+        return (ItemAppViewCommentTitleBinding) bind(obj, view, 2131558606);
     }
 }

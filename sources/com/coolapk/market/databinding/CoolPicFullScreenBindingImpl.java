@@ -25,10 +25,10 @@ public class CoolPicFullScreenBindingImpl extends CoolPicFullScreenBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363472, 2);
-        sparseIntArray.put(2131362318, 3);
-        sparseIntArray.put(2131362880, 4);
-        sparseIntArray.put(2131362656, 5);
+        sparseIntArray.put(2131363490, 2);
+        sparseIntArray.put(2131362324, 3);
+        sparseIntArray.put(2131362891, 4);
+        sparseIntArray.put(2131362664, 5);
     }
 
     public CoolPicFullScreenBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -64,7 +64,7 @@ public class CoolPicFullScreenBindingImpl extends CoolPicFullScreenBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;

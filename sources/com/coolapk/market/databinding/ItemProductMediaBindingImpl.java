@@ -24,8 +24,8 @@ public class ItemProductMediaBindingImpl extends ItemProductMediaBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363915, 2);
-        sparseIntArray.put(2131362417, 3);
+        sparseIntArray.put(2131363940, 2);
+        sparseIntArray.put(2131362423, 3);
     }
 
     public ItemProductMediaBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -61,7 +61,7 @@ public class ItemProductMediaBindingImpl extends ItemProductMediaBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (159 != i) {
+        if (160 != i) {
             return false;
         }
         setImgUrl((String) obj);
@@ -74,7 +74,7 @@ public class ItemProductMediaBindingImpl extends ItemProductMediaBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(159);
+        notifyPropertyChanged(160);
         super.requestRebind();
     }
 
@@ -100,7 +100,7 @@ public class ItemProductMediaBindingImpl extends ItemProductMediaBinding {
         if ((3 & j) != 0) {
             this.imageView.setVisibility(i);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, null, 2131231691, 0, bool, bool, bool, true, bool, null, null, null, bool, true, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, null, 2131231702, 0, bool, bool, bool, true, bool, null, null, null, bool, true, bool, null, bool);
         }
         if ((j & 2) != 0) {
             ViewBindingAdapters.clipView(this.imageView, null, 2);

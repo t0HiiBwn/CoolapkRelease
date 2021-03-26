@@ -50,7 +50,7 @@ public abstract class ItemFeedFollowableHeaderViewBinding extends ViewDataBindin
 
     @Deprecated
     public static ItemFeedFollowableHeaderViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedFollowableHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558700, viewGroup, z, obj);
+        return (ItemFeedFollowableHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558707, viewGroup, z, obj);
     }
 
     public static ItemFeedFollowableHeaderViewBinding inflate(LayoutInflater layoutInflater) {
@@ -59,7 +59,7 @@ public abstract class ItemFeedFollowableHeaderViewBinding extends ViewDataBindin
 
     @Deprecated
     public static ItemFeedFollowableHeaderViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedFollowableHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558700, null, false, obj);
+        return (ItemFeedFollowableHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558707, null, false, obj);
     }
 
     public static ItemFeedFollowableHeaderViewBinding bind(View view) {
@@ -68,6 +68,6 @@ public abstract class ItemFeedFollowableHeaderViewBinding extends ViewDataBindin
 
     @Deprecated
     public static ItemFeedFollowableHeaderViewBinding bind(View view, Object obj) {
-        return (ItemFeedFollowableHeaderViewBinding) bind(obj, view, 2131558700);
+        return (ItemFeedFollowableHeaderViewBinding) bind(obj, view, 2131558707);
     }
 }

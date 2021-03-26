@@ -28,8 +28,8 @@ public class ItemGoodsListSimpleBindingImpl extends ItemGoodsListSimpleBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363435, 5);
-        sparseIntArray.put(2131363219, 6);
+        sparseIntArray.put(2131363453, 5);
+        sparseIntArray.put(2131363233, 6);
     }
 
     public ItemGoodsListSimpleBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -37,11 +37,11 @@ public class ItemGoodsListSimpleBindingImpl extends ItemGoodsListSimpleBinding {
     }
 
     private ItemGoodsListSimpleBindingImpl(DataBindingComponent dataBindingComponent, View view, Object[] objArr) {
-        super(dataBindingComponent, view, 0, (CoolapkCardView) objArr[0], (RoundedImageView) objArr[2], (LinearLayout) objArr[1], (TextView) objArr[6], (LinearLayout) objArr[5], (EllipsizeTextView) objArr[3], (TextView) objArr[4]);
+        super(dataBindingComponent, view, 0, (LinearLayout) objArr[1], (CoolapkCardView) objArr[0], (RoundedImageView) objArr[2], (TextView) objArr[6], (LinearLayout) objArr[5], (EllipsizeTextView) objArr[3], (TextView) objArr[4]);
         this.mDirtyFlags = -1;
+        this.cardView.setTag(null);
         this.coolapkCardView.setTag(null);
         this.iconView.setTag(null);
-        this.itemAlbumView.setTag(null);
         this.titleView.setTag(null);
         this.userNameView.setTag(null);
         setRootTag(view);
@@ -68,9 +68,9 @@ public class ItemGoodsListSimpleBindingImpl extends ItemGoodsListSimpleBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FunThings) obj);
-        } else if (295 == i) {
+        } else if (296 == i) {
             setUserInfo((String) obj);
         } else if (50 != i) {
             return false;
@@ -86,7 +86,7 @@ public class ItemGoodsListSimpleBindingImpl extends ItemGoodsListSimpleBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -96,7 +96,7 @@ public class ItemGoodsListSimpleBindingImpl extends ItemGoodsListSimpleBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(295);
+        notifyPropertyChanged(296);
         super.requestRebind();
     }
 
@@ -132,14 +132,13 @@ public class ItemGoodsListSimpleBindingImpl extends ItemGoodsListSimpleBinding {
             str = coverPic;
         }
         int i2 = ((10 & j) > 0 ? 1 : ((10 & j) == 0 ? 0 : -1));
-        int i3 = ((j & 12) > 0 ? 1 : ((j & 12) == 0 ? 0 : -1));
+        if ((j & 12) != 0) {
+            ViewBindingAdapters.clickListener(this.cardView, onClickListener, null);
+        }
         if (i != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.titleView, str2);
-        }
-        if (i3 != 0) {
-            ViewBindingAdapters.clickListener(this.itemAlbumView, onClickListener, null);
         }
         if (i2 != 0) {
             TextViewBindingAdapter.setText(this.userNameView, str3);

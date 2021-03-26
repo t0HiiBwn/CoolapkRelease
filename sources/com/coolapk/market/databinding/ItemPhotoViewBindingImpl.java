@@ -29,11 +29,11 @@ public class ItemPhotoViewBindingImpl extends ItemPhotoViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 1);
-        sparseIntArray.put(2131362608, 2);
-        sparseIntArray.put(2131363556, 3);
-        sparseIntArray.put(2131363146, 4);
-        sparseIntArray.put(2131362876, 5);
+        sparseIntArray.put(2131362718, 1);
+        sparseIntArray.put(2131362616, 2);
+        sparseIntArray.put(2131363577, 3);
+        sparseIntArray.put(2131363160, 4);
+        sparseIntArray.put(2131362887, 5);
     }
 
     public ItemPhotoViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

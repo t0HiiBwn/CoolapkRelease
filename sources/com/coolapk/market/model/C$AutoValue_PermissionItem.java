@@ -8,7 +8,7 @@ abstract class C$AutoValue_PermissionItem extends PermissionItem {
     private final CharSequence description;
 
     /* renamed from: group  reason: collision with root package name */
-    private final CharSequence f1347group;
+    private final CharSequence f194group;
     private final CharSequence label;
     private final int level;
     private final CharSequence sourceString;
@@ -18,7 +18,7 @@ abstract class C$AutoValue_PermissionItem extends PermissionItem {
         this.label = charSequence;
         this.sourceString = charSequence2;
         this.description = charSequence3;
-        this.f1347group = charSequence4;
+        this.f194group = charSequence4;
         this.level = i;
     }
 
@@ -39,7 +39,7 @@ abstract class C$AutoValue_PermissionItem extends PermissionItem {
 
     @Override // com.coolapk.market.model.PermissionItem
     public CharSequence group() {
-        return this.f1347group;
+        return this.f194group;
     }
 
     @Override // com.coolapk.market.model.PermissionItem
@@ -49,7 +49,7 @@ abstract class C$AutoValue_PermissionItem extends PermissionItem {
 
     @Override // java.lang.Object
     public String toString() {
-        return "PermissionItem{label=" + ((Object) this.label) + ", sourceString=" + ((Object) this.sourceString) + ", description=" + ((Object) this.description) + ", group=" + ((Object) this.f1347group) + ", level=" + this.level + "}";
+        return "PermissionItem{label=" + ((Object) this.label) + ", sourceString=" + ((Object) this.sourceString) + ", description=" + ((Object) this.description) + ", group=" + ((Object) this.f194group) + ", level=" + this.level + "}";
     }
 
     @Override // java.lang.Object
@@ -64,7 +64,7 @@ abstract class C$AutoValue_PermissionItem extends PermissionItem {
             return false;
         }
         PermissionItem permissionItem = (PermissionItem) obj;
-        if (!this.label.equals(permissionItem.label()) || ((charSequence = this.sourceString) != null ? !charSequence.equals(permissionItem.sourceString()) : permissionItem.sourceString() != null) || ((charSequence2 = this.description) != null ? !charSequence2.equals(permissionItem.description()) : permissionItem.description() != null) || ((charSequence3 = this.f1347group) != null ? !charSequence3.equals(permissionItem.group()) : permissionItem.group() != null) || this.level != permissionItem.level()) {
+        if (!this.label.equals(permissionItem.label()) || ((charSequence = this.sourceString) != null ? !charSequence.equals(permissionItem.sourceString()) : permissionItem.sourceString() != null) || ((charSequence2 = this.description) != null ? !charSequence2.equals(permissionItem.description()) : permissionItem.description() != null) || ((charSequence3 = this.f194group) != null ? !charSequence3.equals(permissionItem.group()) : permissionItem.group() != null) || this.level != permissionItem.level()) {
             return false;
         }
         return true;
@@ -78,7 +78,7 @@ abstract class C$AutoValue_PermissionItem extends PermissionItem {
         int hashCode2 = (hashCode ^ (charSequence == null ? 0 : charSequence.hashCode())) * 1000003;
         CharSequence charSequence2 = this.description;
         int hashCode3 = (hashCode2 ^ (charSequence2 == null ? 0 : charSequence2.hashCode())) * 1000003;
-        CharSequence charSequence3 = this.f1347group;
+        CharSequence charSequence3 = this.f194group;
         if (charSequence3 != null) {
             i = charSequence3.hashCode();
         }
@@ -90,7 +90,7 @@ abstract class C$AutoValue_PermissionItem extends PermissionItem {
         private CharSequence description;
 
         /* renamed from: group  reason: collision with root package name */
-        private CharSequence f1348group;
+        private CharSequence f195group;
         private CharSequence label;
         private Integer level;
         private CharSequence sourceString;
@@ -102,7 +102,7 @@ abstract class C$AutoValue_PermissionItem extends PermissionItem {
             this.label = permissionItem.label();
             this.sourceString = permissionItem.sourceString();
             this.description = permissionItem.description();
-            this.f1348group = permissionItem.group();
+            this.f195group = permissionItem.group();
             this.level = Integer.valueOf(permissionItem.level());
         }
 
@@ -126,7 +126,7 @@ abstract class C$AutoValue_PermissionItem extends PermissionItem {
 
         @Override // com.coolapk.market.model.PermissionItem.Builder
         public PermissionItem.Builder group(CharSequence charSequence) {
-            this.f1348group = charSequence;
+            this.f195group = charSequence;
             return this;
         }
 
@@ -146,7 +146,7 @@ abstract class C$AutoValue_PermissionItem extends PermissionItem {
                 str = str + " level";
             }
             if (str.isEmpty()) {
-                return new AutoValue_PermissionItem(this.label, this.sourceString, this.description, this.f1348group, this.level.intValue());
+                return new AutoValue_PermissionItem(this.label, this.sourceString, this.description, this.f195group, this.level.intValue());
             }
             throw new IllegalStateException("Missing required properties:" + str);
         }

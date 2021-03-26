@@ -36,7 +36,7 @@ public abstract class Live implements Entity {
 
         public abstract Builder setCloseDiscuss(int i);
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         public abstract Builder setDescription(String str);
 
@@ -72,7 +72,7 @@ public abstract class Live implements Entity {
 
         public abstract Builder setIsShowBannerTitle(int i);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLiveEndTime(long j);
 
@@ -91,6 +91,8 @@ public abstract class Live implements Entity {
         public abstract Builder setPresenterUserInfo(List<User> list);
 
         public abstract Builder setRankScore(int i);
+
+        public abstract Builder setRelationGroupId(String str);
 
         public abstract Builder setRelationPageName(String str);
 
@@ -179,6 +181,9 @@ public abstract class Live implements Entity {
 
     @SerializedName("rank_scrore")
     public abstract int getRankScore();
+
+    @SerializedName("relation_group_id")
+    public abstract String getRelationGroupId();
 
     @SerializedName("relation_page_name")
     public abstract String getRelationPageName();

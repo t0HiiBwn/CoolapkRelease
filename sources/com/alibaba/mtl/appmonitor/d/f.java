@@ -27,7 +27,7 @@ public class f extends g {
         h hVar;
         String str3 = this.TAG;
         i.a(str3, "samplingSeed:", Integer.valueOf(i), "isSuccess:", bool, "successSampling:", Integer.valueOf(this.o), "failSampling:" + this.p);
-        if (this.f50q != null && (hVar = (h) this.f50q.get(str)) != null && (hVar instanceof d)) {
+        if (this.f49q != null && (hVar = (h) this.f49q.get(str)) != null && (hVar instanceof d)) {
             return ((d) hVar).a(i, str2, bool, map);
         }
         if (bool.booleanValue()) {
@@ -46,7 +46,7 @@ public class f extends g {
     public void b(JSONObject jSONObject) {
         a(jSONObject);
         c(jSONObject);
-        this.f50q.clear();
+        this.f49q.clear();
         try {
             JSONArray jSONArray = jSONObject.getJSONArray("metrics");
             if (jSONArray != null) {
@@ -54,10 +54,10 @@ public class f extends g {
                     JSONObject jSONObject2 = jSONArray.getJSONObject(i);
                     String string = jSONObject2.getString("module");
                     if (b.c(string)) {
-                        h hVar = (h) this.f50q.get(string);
+                        h hVar = (h) this.f49q.get(string);
                         if (hVar == null) {
                             hVar = new d(string, this.o, this.p);
-                            this.f50q.put(string, hVar);
+                            this.f49q.put(string, hVar);
                         }
                         hVar.b(jSONObject2);
                     }

@@ -22,11 +22,11 @@ public class ItemFeedVoteCommentViewPartBindingImpl extends ItemFeedVoteCommentV
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131363437, 3);
-        sparseIntArray.put(2131363945, 4);
-        sparseIntArray.put(2131363234, 5);
-        sparseIntArray.put(2131363584, 6);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131363455, 3);
+        sparseIntArray.put(2131363971, 4);
+        sparseIntArray.put(2131363248, 5);
+        sparseIntArray.put(2131363606, 6);
     }
 
     public ItemFeedVoteCommentViewPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

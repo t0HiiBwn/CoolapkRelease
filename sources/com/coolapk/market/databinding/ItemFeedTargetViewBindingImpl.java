@@ -67,7 +67,7 @@ public class ItemFeedTargetViewBindingImpl extends ItemFeedTargetViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((Feed) obj);
@@ -80,7 +80,7 @@ public class ItemFeedTargetViewBindingImpl extends ItemFeedTargetViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -136,7 +136,7 @@ public class ItemFeedTargetViewBindingImpl extends ItemFeedTargetViewBinding {
         }
         if ((3 & j) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, true, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, true, null, bool);
             TextViewBindingAdapter.setText(this.mboundView2, str2);
             TextViewBindingAdapter.setText(this.mboundView3, str3);
             this.mboundView3.setVisibility(i2);

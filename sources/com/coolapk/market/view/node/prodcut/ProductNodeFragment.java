@@ -378,8 +378,8 @@ public final class ProductNodeFragment extends BaseFragment implements NodeFragm
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         Intrinsics.checkNotNullParameter(menu, "menu");
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
-        MenuItem add = menu.add(0, 2131361960, 0, getString(2131886390));
-        add.setIcon(2131231534);
+        MenuItem add = menu.add(0, 2131361961, 0, getString(2131886450));
+        add.setIcon(2131231545);
         add.setShowAsAction(2);
     }
 
@@ -404,7 +404,7 @@ public final class ProductNodeFragment extends BaseFragment implements NodeFragm
         String str2;
         Intrinsics.checkNotNullParameter(menuItem, "item");
         int itemId = menuItem.getItemId();
-        if (itemId == 2131361875) {
+        if (itemId == 2131361876) {
             ProductViewModel productViewModel = this.viewModel;
             if (productViewModel == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("viewModel");
@@ -435,14 +435,14 @@ public final class ProductNodeFragment extends BaseFragment implements NodeFragm
             }
             blockItemArr[0] = new BlockItem(valueOf, str, str3, str2, false, null, "node", 48, null);
             addBlockDialog.showBlockNodeDialog(fragmentActivity, CollectionsKt.mutableListOf(blockItemArr));
-        } else if (itemId == 2131361933) {
+        } else if (itemId == 2131361934) {
             ProductViewModel productViewModel2 = this.viewModel;
             if (productViewModel2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("viewModel");
             }
             ActionManager.startProductMediaTabActivity(getActivity(), productViewModel2.getModel().getId(), "待选产品图/视频", false, 0);
             return true;
-        } else if (itemId == 2131361960) {
+        } else if (itemId == 2131361961) {
             StatisticHelper.Companion.getInstance().recordPhoneBarAction("点搜索");
             FragmentActivity activity = getActivity();
             ProductViewModel productViewModel3 = this.viewModel;
@@ -566,9 +566,9 @@ public final class ProductNodeFragment extends BaseFragment implements NodeFragm
                 Intrinsics.checkNotNullExpressionValue(textView, "binding.toolbarActionView");
                 textView.setSelected(followState);
                 if (followState) {
-                    productNodeToolbarContentBinding.toolbarActionView.setText(2131887142);
+                    productNodeToolbarContentBinding.toolbarActionView.setText(2131887204);
                 } else {
-                    productNodeToolbarContentBinding.toolbarActionView.setText(2131887143);
+                    productNodeToolbarContentBinding.toolbarActionView.setText(2131887205);
                 }
             } else {
                 throw new IllegalArgumentException("Required value was null.".toString());
@@ -591,7 +591,7 @@ public final class ProductNodeFragment extends BaseFragment implements NodeFragm
                 Intrinsics.throwUninitializedPropertyAccessException("presenter");
             }
             if (productPresenter != null) {
-                ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559110, null, false);
+                ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559117, null, false);
                 Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…bar_content, null, false)");
                 ProductNodeToolbarContentBinding productNodeToolbarContentBinding = (ProductNodeToolbarContentBinding) inflate;
                 this.toolbarBinding = productNodeToolbarContentBinding;
@@ -619,7 +619,7 @@ public final class ProductNodeFragment extends BaseFragment implements NodeFragm
                 LinearLayout linearLayout = productNodeToolbarContentBinding.scoreViewContainer;
                 Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.scoreViewContainer");
                 linearLayout.setVisibility(0);
-                GlideApp.with(productNodeToolbarContentBinding.toolbarUserAvatarView).load(product.getLogo()).placeholder(2131231363).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(productNodeToolbarContentBinding.toolbarUserAvatarView);
+                GlideApp.with(productNodeToolbarContentBinding.toolbarUserAvatarView).load(product.getLogo()).placeholder(2131231374).diskCacheStrategy(DiskCacheStrategy.RESOURCE).into(productNodeToolbarContentBinding.toolbarUserAvatarView);
                 View root = productNodeToolbarContentBinding.getRoot();
                 Intrinsics.checkNotNullExpressionValue(root, "binding.root");
                 FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(-1, -1);

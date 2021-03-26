@@ -39,15 +39,15 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(29);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"feed_top", "feed_warning"}, new int[]{21, 22}, new int[]{2131558562, 2131558563});
+        includedLayouts.setIncludes(1, new String[]{"feed_top", "feed_warning"}, new int[]{21, 22}, new int[]{2131558565, 2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363605, 23);
-        sparseIntArray.put(2131362646, 24);
-        sparseIntArray.put(2131362321, 25);
-        sparseIntArray.put(2131362121, 26);
-        sparseIntArray.put(2131362671, 27);
-        sparseIntArray.put(2131362677, 28);
+        sparseIntArray.put(2131363627, 23);
+        sparseIntArray.put(2131362654, 24);
+        sparseIntArray.put(2131362327, 25);
+        sparseIntArray.put(2131362124, 26);
+        sparseIntArray.put(2131362682, 27);
+        sparseIntArray.put(2131362688, 28);
     }
 
     public ItemAlbumWithAvatarBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -123,25 +123,25 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((AlbumDetailViewModel) obj);
         } else if (150 == i) {
             setIcon0((String) obj);
         } else if (153 == i) {
             setIcon3((String) obj);
-        } else if (300 == i) {
+        } else if (301 == i) {
             setVerifyLabel((String) obj);
         } else if (152 == i) {
             setIcon2((String) obj);
-        } else if (301 == i) {
+        } else if (302 == i) {
             setVerifyStatusIcon((String) obj);
-        } else if (250 == i) {
+        } else if (251 == i) {
             setShowFromView(((Boolean) obj).booleanValue());
         } else if (154 == i) {
             setIcon5((String) obj);
         } else if (151 == i) {
             setIcon1((String) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -158,7 +158,7 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -188,7 +188,7 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
         synchronized (this) {
             this.mDirtyFlags |= 32;
         }
-        notifyPropertyChanged(300);
+        notifyPropertyChanged(301);
         super.requestRebind();
     }
 
@@ -208,7 +208,7 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
         synchronized (this) {
             this.mDirtyFlags |= 128;
         }
-        notifyPropertyChanged(301);
+        notifyPropertyChanged(302);
         super.requestRebind();
     }
 
@@ -218,7 +218,7 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
         synchronized (this) {
             this.mDirtyFlags |= 256;
         }
-        notifyPropertyChanged(250);
+        notifyPropertyChanged(251);
         super.requestRebind();
     }
 
@@ -248,7 +248,7 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2048;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -289,7 +289,7 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 293) {
+        } else if (i == 294) {
             synchronized (this) {
                 this.mDirtyFlags |= 8192;
             }
@@ -309,7 +309,7 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
                 this.mDirtyFlags |= 65536;
             }
             return true;
-        } else if (i == 296) {
+        } else if (i == 297) {
             synchronized (this) {
                 this.mDirtyFlags |= 131072;
             }
@@ -543,8 +543,8 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
                     OnImageLoadListener onImageLoadListener = null;
                     OnBitmapTransformListener onBitmapTransformListener3 = null;
                     View.OnClickListener onClickListener2 = null;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str2, drawable, 2131231152, 0, bool, bool, bool, bool, bool, str21, onImageLoadListener, onBitmapTransformListener3, bool, bool, bool, onClickListener2, bool);
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, drawable, 2131231152, 0, bool, bool, bool, bool, bool, str21, onImageLoadListener, onBitmapTransformListener3, bool, bool, bool, onClickListener2, bool);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.avatarView, str2, drawable, 2131231162, 0, bool, bool, bool, bool, bool, str21, onImageLoadListener, onBitmapTransformListener3, bool, bool, bool, onClickListener2, bool);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str2, drawable, 2131231162, 0, bool, bool, bool, bool, bool, str21, onImageLoadListener, onBitmapTransformListener3, bool, bool, bool, onClickListener2, bool);
                 }
                 if (i8 != 0) {
                     Boolean bool2 = null;
@@ -586,7 +586,7 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
                     str11 = str17;
                     str7 = str16;
                     str10 = str15;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView15, str14, null, 2131231363, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView15, str14, null, 2131231374, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
                 } else {
                     onBitmapTransformListener = onBitmapTransformListener2;
                     str12 = str20;
@@ -601,21 +601,21 @@ public class ItemAlbumWithAvatarBindingImpl extends ItemAlbumWithAvatarBinding {
                 }
                 if ((j & 527360) != 0) {
                     Boolean bool4 = null;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView16, str12, null, 2131231363, 0, bool4, bool4, bool4, bool4, bool4, null, null, onBitmapTransformListener, bool4, bool4, bool4, null, bool4);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView16, str12, null, 2131231374, 0, bool4, bool4, bool4, bool4, bool4, null, null, onBitmapTransformListener, bool4, bool4, bool4, null, bool4);
                 }
                 if ((j & 524352) != 0) {
                     this.mboundView17.setVisibility(i5);
                 }
                 if ((j & 526400) != 0) {
                     Boolean bool5 = null;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView17, str11, null, 2131231363, 0, bool5, bool5, bool5, bool5, bool5, null, null, onBitmapTransformListener, bool5, bool5, bool5, null, bool5);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView17, str11, null, 2131231374, 0, bool5, bool5, bool5, bool5, bool5, null, null, onBitmapTransformListener, bool5, bool5, bool5, null, bool5);
                 }
                 if ((j & 524304) != 0) {
                     this.mboundView18.setVisibility(i3);
                 }
                 if ((j & 526352) != 0) {
                     Boolean bool6 = null;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView18, str10, null, 2131231363, 0, bool6, bool6, bool6, bool6, bool6, null, null, onBitmapTransformListener, bool6, bool6, bool6, null, bool6);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView18, str10, null, 2131231374, 0, bool6, bool6, bool6, bool6, bool6, null, null, onBitmapTransformListener, bool6, bool6, bool6, null, bool6);
                 }
                 if ((j & 524320) != 0) {
                     TextViewBindingAdapter.setText(this.mboundView5, str7);

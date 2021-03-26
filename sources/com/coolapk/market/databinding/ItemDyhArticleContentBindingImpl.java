@@ -22,7 +22,7 @@ public class ItemDyhArticleContentBindingImpl extends ItemDyhArticleContentBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362312, 3);
+        sparseIntArray.put(2131362317, 3);
     }
 
     public ItemDyhArticleContentBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -59,15 +59,15 @@ public class ItemDyhArticleContentBindingImpl extends ItemDyhArticleContentBindi
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((DyhViewModel) obj);
-        } else if (183 == i) {
+        } else if (184 == i) {
             setListType((String) obj);
         } else if (115 == i) {
             setFoldText((String) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (263 != i) {
+        } else if (264 != i) {
             return false;
         } else {
             setSingleImg((String) obj);
@@ -82,7 +82,7 @@ public class ItemDyhArticleContentBindingImpl extends ItemDyhArticleContentBindi
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -130,7 +130,7 @@ public class ItemDyhArticleContentBindingImpl extends ItemDyhArticleContentBindi
                 this.mDirtyFlags |= 32;
             }
             return true;
-        } else if (i != 194) {
+        } else if (i != 195) {
             return false;
         } else {
             synchronized (this) {

@@ -61,7 +61,7 @@ abstract class C$$AutoValue_Album extends Album {
     private final UserAction userAction;
     private final UserInfo userInfo;
 
-    C$$AutoValue_Album(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, UserInfo userInfo2, String str10, String str11, String str12, String str13, String str14, String str15, String str16, UserInfo userInfo3, String str17, String str18, long j, String str19, String str20, int i, String str21, int i2, int i3, int i4, int i5, int i6, int i7, String str22, int i8, String str23, int i9, String str24, int i10, String str25, String str26, List<AlbumItem> list, String str27, Collection collection, CollectionItem collectionItem2, List<FeedReply> list2, UserAction userAction2, List<FeedReply> list3, int i11, FeedStatus feedStatus2, SimpleInfo simpleInfo, SimpleInfo simpleInfo2) {
+    C$$AutoValue_Album(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, UserInfo userInfo2, String str10, String str11, String str12, String str13, String str14, String str15, String str16, UserInfo userInfo3, String str17, String str18, long j, String str19, String str20, int i, String str21, int i2, int i3, int i4, int i5, int i6, int i7, String str22, int i8, String str23, int i9, String str24, int i10, String str25, String str26, List<AlbumItem> list, String str27, Collection collection, CollectionItem collectionItem2, List<FeedReply> list2, UserAction userAction2, List<FeedReply> list3, int i11, FeedStatus feedStatus2, SimpleInfo simpleInfo, SimpleInfo simpleInfo2) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -71,8 +71,8 @@ abstract class C$$AutoValue_Album extends Album {
         this.subTitle = str6;
         this.id = str7;
         this.extraData = str8;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str9;
         this.userInfo = userInfo2;
         Objects.requireNonNull(str10, "Null uid");
@@ -476,10 +476,10 @@ abstract class C$$AutoValue_Album extends Album {
                                     if (str24 != null ? str24.equals(album.getId()) : album.getId() == null) {
                                         String str25 = this.extraData;
                                         if (str25 != null ? str25.equals(album.getExtraData()) : album.getExtraData() == null) {
-                                            Long l2 = this.dateline;
-                                            if (l2 != null ? l2.equals(album.getDateline()) : album.getDateline() == null) {
-                                                Long l3 = this.lastUpdate;
-                                                if (l3 != null ? l3.equals(album.getLastUpdate()) : album.getLastUpdate() == null) {
+                                            Long l = this.dateline;
+                                            if (l != null ? l.equals(album.getDateline()) : album.getDateline() == null) {
+                                                Long l2 = this.lastUpdate;
+                                                if (l2 != null ? l2.equals(album.getLastUpdate()) : album.getLastUpdate() == null) {
                                                     String str26 = this.deprecatedUserAvatar;
                                                     if (str26 != null ? str26.equals(album.getDeprecatedUserAvatar()) : album.getDeprecatedUserAvatar() == null) {
                                                         UserInfo userInfo3 = this.userInfo;
@@ -531,10 +531,10 @@ abstract class C$$AutoValue_Album extends Album {
         int hashCode8 = (hashCode7 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
         String str8 = this.extraData;
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode10 = (hashCode9 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode11 = (hashCode10 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode10 = (hashCode9 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode11 = (hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str9 = this.deprecatedUserAvatar;
         int hashCode12 = (hashCode11 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         UserInfo userInfo2 = this.userInfo;
@@ -767,14 +767,14 @@ abstract class C$$AutoValue_Album extends Album {
         }
 
         @Override // com.coolapk.market.model.Album.Builder
-        public Album.Builder dateline(Long l2) {
-            this.dateline = l2;
+        public Album.Builder dateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.Album.Builder
-        public Album.Builder lastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public Album.Builder lastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

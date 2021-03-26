@@ -18,12 +18,12 @@ public final class UserFollowPresenter$followUser$2 extends EmptySubscriber<Inte
     public void onError(Throwable th) {
         super.onError(th);
         this.this$0.setPostingFollow(false);
-        UserFollowPresenter.access$getResultHandler$p(this.this$0).invoke(Boolean.valueOf(this.$isFollowing), th);
+        this.this$0.resultHandler.invoke(Boolean.valueOf(this.$isFollowing), th);
     }
 
     public void onNext(Integer num) {
         super.onNext((UserFollowPresenter$followUser$2) num);
         this.this$0.setPostingFollow(false);
-        UserFollowPresenter.access$getResultHandler$p(this.this$0).invoke(Boolean.valueOf(!this.$isFollowing), null);
+        this.this$0.resultHandler.invoke(Boolean.valueOf(!this.$isFollowing), null);
     }
 }

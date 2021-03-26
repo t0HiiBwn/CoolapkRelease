@@ -62,7 +62,7 @@ public abstract class ItemFeedVoteBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVoteBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedVoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558735, viewGroup, z, obj);
+        return (ItemFeedVoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558742, viewGroup, z, obj);
     }
 
     public static ItemFeedVoteBinding inflate(LayoutInflater layoutInflater) {
@@ -71,7 +71,7 @@ public abstract class ItemFeedVoteBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVoteBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedVoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558735, null, false, obj);
+        return (ItemFeedVoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558742, null, false, obj);
     }
 
     public static ItemFeedVoteBinding bind(View view) {
@@ -80,6 +80,6 @@ public abstract class ItemFeedVoteBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVoteBinding bind(View view, Object obj) {
-        return (ItemFeedVoteBinding) bind(obj, view, 2131558735);
+        return (ItemFeedVoteBinding) bind(obj, view, 2131558742);
     }
 }

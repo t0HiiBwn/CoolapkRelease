@@ -83,7 +83,7 @@ public final class PackageService extends TaskService {
         if (this.isFirstForeground && Build.VERSION.SDK_INT >= 26) {
             if (intent != null ? intent.getBooleanExtra("FOREGROUND", false) : false) {
                 this.isFirstForeground = false;
-                startForeground(7, new NotificationCompat.Builder(getApplicationContext(), String.valueOf(6)).setContentTitle("酷安后台服务").setSmallIcon(2131231756).setColor(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099784)).setContentText("").setAutoCancel(true).build());
+                startForeground(7, new NotificationCompat.Builder(getApplicationContext(), String.valueOf(6)).setContentTitle("酷安后台服务").setSmallIcon(2131231767).setColor(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099786)).setContentText("").setAutoCancel(true).build());
             }
         }
         return super.onStartCommand(intent, i, i2);
@@ -127,7 +127,7 @@ public final class PackageService extends TaskService {
                     string = parse.getLastPathSegment();
                 }
             }
-            Toast.show$default(this, getString(2131887209, new Object[]{string}), 0, false, 12, null);
+            Toast.show$default(this, getString(2131887271, new Object[]{string}), 0, false, 12, null);
             LogUtils.v("正在安装: %s", string);
         }
     }
@@ -138,7 +138,7 @@ public final class PackageService extends TaskService {
         UninstallState uninstallState = DataManager.getInstance().getUninstallState(uninstallEvent.key);
         if (uninstallState != null && uninstallState.getState() == 2) {
             String title = uninstallState.getTitle();
-            Toast.show$default(this, getString(2131887215, new Object[]{title}), 0, false, 12, null);
+            Toast.show$default(this, getString(2131887277, new Object[]{title}), 0, false, 12, null);
             LogUtils.v("正在卸载: %s", title);
         }
     }

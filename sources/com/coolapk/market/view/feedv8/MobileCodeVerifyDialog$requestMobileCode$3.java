@@ -22,7 +22,7 @@ public final class MobileCodeVerifyDialog$requestMobileCode$3 extends EmptySubsc
     public void onError(Throwable th) {
         Intrinsics.checkNotNullParameter(th, "e");
         super.onError(th);
-        this.this$0.isVerifying = false;
+        MobileCodeVerifyDialog.access$setVerifying$p(this.this$0, false);
         Throwable mayBeCause = ToastKt.getMayBeCause(th);
         if (mayBeCause instanceof ClientException) {
             MobileCodeVerifyDialog mobileCodeVerifyDialog = this.this$0;
@@ -30,18 +30,18 @@ public final class MobileCodeVerifyDialog$requestMobileCode$3 extends EmptySubsc
             if (message == null) {
                 message = "";
             }
-            mobileCodeVerifyDialog.setErrorText(message);
+            MobileCodeVerifyDialog.access$setErrorText(mobileCodeVerifyDialog, message);
         } else {
             Toast.error(this.this$0.getActivity(), th);
         }
-        this.this$0.setRequestMobileCodeEnable(true);
+        MobileCodeVerifyDialog.access$setRequestMobileCodeEnable(this.this$0, true);
     }
 
     public void onNext(Result<String> result) {
         Intrinsics.checkNotNullParameter(result, "t");
         super.onNext((MobileCodeVerifyDialog$requestMobileCode$3) result);
-        this.this$0.isVerifying = false;
-        this.this$0.hadSendSms = true;
+        MobileCodeVerifyDialog.access$setVerifying$p(this.this$0, false);
+        MobileCodeVerifyDialog.access$setHadSendSms$p(this.this$0, true);
         Toast.show$default(this.this$0.getActivity(), result.getData(), 0, false, 12, null);
     }
 }

@@ -18,9 +18,7 @@ public class TextOptions implements Parcelable {
     private int i = -16777216;
     private int j = 20;
     private int k = 3;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1247l = 6;
+    private int l = 6;
 
     @Override // android.os.Parcelable
     public int describeContents() {
@@ -59,7 +57,7 @@ public class TextOptions implements Parcelable {
 
     public TextOptions align(int i2, int i3) {
         this.k = i2;
-        this.f1247l = i3;
+        this.l = i3;
         return this;
     }
 
@@ -88,7 +86,7 @@ public class TextOptions implements Parcelable {
     }
 
     public int getAlignY() {
-        return this.f1247l;
+        return this.l;
     }
 
     public int getBackgroundColor() {
@@ -144,7 +142,7 @@ public class TextOptions implements Parcelable {
         parcel.writeInt(this.b.getStyle());
         parcel.writeFloat(this.f);
         parcel.writeInt(this.k);
-        parcel.writeInt(this.f1247l);
+        parcel.writeInt(this.l);
         parcel.writeInt(this.g);
         parcel.writeInt(this.i);
         parcel.writeInt(this.j);

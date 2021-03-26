@@ -38,7 +38,7 @@ public abstract class DialogAlbumMobileappNoteBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumMobileappNoteBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogAlbumMobileappNoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558514, viewGroup, z, obj);
+        return (DialogAlbumMobileappNoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558516, viewGroup, z, obj);
     }
 
     public static DialogAlbumMobileappNoteBinding inflate(LayoutInflater layoutInflater) {
@@ -47,7 +47,7 @@ public abstract class DialogAlbumMobileappNoteBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumMobileappNoteBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogAlbumMobileappNoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558514, null, false, obj);
+        return (DialogAlbumMobileappNoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558516, null, false, obj);
     }
 
     public static DialogAlbumMobileappNoteBinding bind(View view) {
@@ -56,6 +56,6 @@ public abstract class DialogAlbumMobileappNoteBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumMobileappNoteBinding bind(View view, Object obj) {
-        return (DialogAlbumMobileappNoteBinding) bind(obj, view, 2131558514);
+        return (DialogAlbumMobileappNoteBinding) bind(obj, view, 2131558516);
     }
 }

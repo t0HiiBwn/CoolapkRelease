@@ -25,14 +25,14 @@ public class SubmitFeedArticleTopPartBindingImpl extends SubmitFeedArticleTopPar
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(8);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"feed_warning"}, new int[]{2}, new int[]{2131558563});
+        includedLayouts.setIncludes(0, new String[]{"feed_warning"}, new int[]{2}, new int[]{2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363230, 3);
-        sparseIntArray.put(2131362257, 4);
-        sparseIntArray.put(2131363194, 5);
-        sparseIntArray.put(2131363212, 6);
-        sparseIntArray.put(2131362472, 7);
+        sparseIntArray.put(2131363244, 3);
+        sparseIntArray.put(2131362262, 4);
+        sparseIntArray.put(2131363208, 5);
+        sparseIntArray.put(2131363226, 6);
+        sparseIntArray.put(2131362480, 7);
     }
 
     public SubmitFeedArticleTopPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

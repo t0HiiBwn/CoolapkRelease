@@ -107,7 +107,7 @@ public class ShareFeedV8Activity extends FakeStatusBarActivity implements View.O
     protected void onCreate(Bundle bundle) {
         setToolbarColorEqualContentColor(true);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559138);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559145);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…, R.layout.share_feed_v8)");
         ShareFeedV8Binding shareFeedV8Binding = (ShareFeedV8Binding) contentView;
         this.binding = shareFeedV8Binding;
@@ -290,7 +290,7 @@ public class ShareFeedV8Activity extends FakeStatusBarActivity implements View.O
 
     private final void loadShareInfo(String str, String str2, String str3) {
         ProgressDialog progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage(getString(2131886866));
+        progressDialog.setMessage(getString(2131886928));
         progressDialog.setProgressStyle(0);
         progressDialog.setCanceledOnTouchOutside(true);
         progressDialog.setCancelable(false);
@@ -364,13 +364,13 @@ public class ShareFeedV8Activity extends FakeStatusBarActivity implements View.O
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         switch (view.getId()) {
-            case 2131361895:
+            case 2131361896:
                 ActionManager.startPickAppActivity(getActivity(), 1561);
                 return;
-            case 2131362257:
+            case 2131362262:
                 getActivity().finish();
                 return;
-            case 2131362921:
+            case 2131362933:
                 ShareFeedV8Binding shareFeedV8Binding = this.binding;
                 if (shareFeedV8Binding == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -410,7 +410,7 @@ public class ShareFeedV8Activity extends FakeStatusBarActivity implements View.O
                 }
                 UiUtils.openKeyboard(shareFeedV8Binding6.editText);
                 return;
-            case 2131363457:
+            case 2131363475:
                 ShareFeedV8Binding shareFeedV8Binding7 = this.binding;
                 if (shareFeedV8Binding7 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -421,7 +421,7 @@ public class ShareFeedV8Activity extends FakeStatusBarActivity implements View.O
                 if (TextUtils.isEmpty(obj)) {
                     BaseActivity activity = getActivity();
                     Intrinsics.checkNotNullExpressionValue(activity, "activity");
-                    Toast.show(activity, 2131886785);
+                    Toast.show(activity, 2131886847);
                     return;
                 }
                 loadShareInfo("", obj, "");

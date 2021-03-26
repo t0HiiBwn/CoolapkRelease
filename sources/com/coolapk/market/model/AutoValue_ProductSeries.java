@@ -24,8 +24,8 @@ final class AutoValue_ProductSeries extends C$AutoValue_ProductSeries {
         return 0;
     }
 
-    AutoValue_ProductSeries(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, int i2, int i3, int i4, List<Product> list) {
-        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l2, l3, i2, i3, i4, list);
+    AutoValue_ProductSeries(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, int i2, int i3, int i4, List<Product> list) {
+        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l, l2, i2, i3, i4, list);
     }
 
     @Override // android.os.Parcelable

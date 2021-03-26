@@ -33,9 +33,7 @@ public class t implements x.a {
     private static Context i = null;
     private static boolean j = false;
     private static long k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static boolean f1475l = true;
+    private static boolean l = true;
     private static long m;
 
     private t() {
@@ -121,8 +119,8 @@ public class t implements x.a {
                     edit.putInt("vers_code", i2);
                     edit.putString("vers_name", string);
                     edit.commit();
-                    if (f1475l) {
-                        f1475l = false;
+                    if (l) {
+                        l = false;
                     }
                     if (j) {
                         j = false;
@@ -134,8 +132,8 @@ public class t implements x.a {
                 }
                 if (j) {
                     j = false;
-                    if (f1475l) {
-                        f1475l = false;
+                    if (l) {
+                        l = false;
                     }
                     h = e(context);
                     MLog.d("创建新会话: " + h);
@@ -148,8 +146,8 @@ public class t implements x.a {
                 edit.commit();
                 MLog.d("延续上一个会话: " + h);
                 UMRTLog.i("MobclickRT", "Extend current session: " + h);
-                if (f1475l) {
-                    f1475l = false;
+                if (l) {
+                    l = false;
                     if (FieldManager.allow("header_foreground_count")) {
                         Context context2 = i;
                         UMWorkDispatch.sendEventEx(context2, 8213, CoreProtocol.getInstance(context2), null, 0);

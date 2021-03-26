@@ -27,9 +27,9 @@ public class WebViewBindingImpl extends WebViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363959, 1);
-        sparseIntArray.put(2131363960, 2);
-        sparseIntArray.put(2131363146, 3);
+        sparseIntArray.put(2131363985, 1);
+        sparseIntArray.put(2131363986, 2);
+        sparseIntArray.put(2131363160, 3);
     }
 
     public WebViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

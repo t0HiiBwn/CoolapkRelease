@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 public final class d {
     private static final Map<String, a> a = com.tencent.msdk.dns.base.a.a.a();
     private static final Map<l, b> b = new ConcurrentHashMap();
-    private static i.a c = new a.C0131a();
+    private static i.a c = new a.C0149a();
     private static h d = new com.tencent.msdk.dns.core.b.a();
     private static IStatisticsMerge.a e = new com.tencent.msdk.dns.core.stat.a();
     private static volatile g f = null;
@@ -466,21 +466,21 @@ public final class d {
     }
 
     private static <LookupExtra extends f.a> void a(a aVar, j<LookupExtra> jVar) {
-        int l2 = jVar.l();
+        int l = jVar.l();
         int g = jVar.g();
         boolean h = jVar.h();
         if (aVar.c != null || aVar.b != null) {
-            if (!(aVar.c == null || (g & 2) == 0 || (!h && (l2 & 2) == 0))) {
+            if (!(aVar.c == null || (g & 2) == 0 || (!h && (l & 2) == 0))) {
                 a(aVar.c, jVar);
             }
             if (aVar.b != null && (g & 1) != 0) {
-                if (h || (l2 & 1) != 0) {
+                if (h || (l & 1) != 0) {
                     a(aVar.b, jVar);
                 }
             }
         } else if (aVar.a == null) {
         } else {
-            if (h || (l2 & 3) != 0) {
+            if (h || (l & 3) != 0) {
                 a(aVar.a, jVar);
             }
         }

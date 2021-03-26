@@ -24,7 +24,7 @@ public class e {
     private static e a;
 
     /* renamed from: a  reason: collision with other field name */
-    private AtomicInteger f44a = new AtomicInteger(0);
+    private AtomicInteger f43a = new AtomicInteger(0);
     private AtomicInteger b = new AtomicInteger(0);
     private AtomicInteger c = new AtomicInteger(0);
     private Map<String, c> j = new ConcurrentHashMap();
@@ -65,7 +65,7 @@ public class e {
             aVar.e();
             c.a(a2, aVar);
         }
-        a(f.a(i), this.f44a);
+        a(f.a(i), this.f43a);
     }
 
     public void a(int i, String str, String str2, String str3, String str4, String str5, Map<String, String> map) {
@@ -79,7 +79,7 @@ public class e {
             aVar2.a(str4, str5);
             c.a(a2, aVar2);
         }
-        a(f.a(i), this.f44a);
+        a(f.a(i), this.f43a);
     }
 
     public void a(int i, String str, String str2, String str3, double d, Map<String, String> map) {
@@ -146,12 +146,12 @@ public class e {
 
     public void a(String str, String str2, boolean z, Map<String, String> map) {
         c cVar = this.j.get(str);
-        if (cVar != null && cVar.m14a(str2)) {
+        if (cVar != null && cVar.m4a(str2)) {
             this.j.remove(str);
             if (z) {
                 b(cVar.o, cVar.p);
             }
-            a(cVar.e, cVar.o, cVar.p, cVar.mo13a(), cVar.mo13a(), map);
+            a(cVar.e, cVar.o, cVar.p, cVar.mo3a(), cVar.mo3a(), map);
             a.a().a((a) cVar);
         }
     }
@@ -205,7 +205,7 @@ public class e {
         if (incrementAndGet >= fVar.b()) {
             i.a("EventRepo", fVar.toString(), " event size exceed trigger count.");
             atomicInteger.set(0);
-            m15a(fVar.a());
+            m5a(fVar.a());
         }
     }
 
@@ -238,7 +238,7 @@ public class e {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public void m15a(int i) {
+    public void m5a(int i) {
         final Map<UTDimensionValueSet, List<d>> a2 = a(i);
         r.a().b(new Runnable() {
             /* class com.alibaba.mtl.appmonitor.a.e.AnonymousClass1 */

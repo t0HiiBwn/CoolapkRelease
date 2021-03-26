@@ -39,7 +39,7 @@ public class NativeDrawVideoTsView extends NativeVideoTsView implements View.OnC
 
     public void a(Bitmap bitmap, int i) {
         i.d().a(bitmap);
-        this.f1320l = i;
+        this.l = i;
     }
 
     @Override // com.bytedance.sdk.openadsdk.core.video.nativevideo.NativeVideoTsView, android.view.View

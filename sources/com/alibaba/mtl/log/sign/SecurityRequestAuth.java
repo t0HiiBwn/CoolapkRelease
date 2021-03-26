@@ -13,18 +13,18 @@ public class SecurityRequestAuth implements IRequestAuth {
     private Class a = null;
 
     /* renamed from: a  reason: collision with other field name */
-    private Field f68a = null;
+    private Field f67a = null;
 
     /* renamed from: a  reason: collision with other field name */
-    private Method f69a = null;
+    private Method f68a = null;
     private Object b = null;
 
     /* renamed from: b  reason: collision with other field name */
-    private Field f70b = null;
+    private Field f69b = null;
     private Object c = null;
 
     /* renamed from: c  reason: collision with other field name */
-    private Field f71c = null;
+    private Field f70c = null;
     private String g = null;
     private int z = 1;
 
@@ -66,9 +66,9 @@ public class SecurityRequestAuth implements IRequestAuth {
                 try {
                     Class<?> cls3 = Class.forName("com.alibaba.wireless.security.open.SecurityGuardParamContext");
                     this.a = cls3;
-                    this.f68a = cls3.getDeclaredField("appKey");
-                    this.f70b = this.a.getDeclaredField("paramMap");
-                    this.f71c = this.a.getDeclaredField("requestType");
+                    this.f67a = cls3.getDeclaredField("appKey");
+                    this.f69b = this.a.getDeclaredField("paramMap");
+                    this.f70c = this.a.getDeclaredField("requestType");
                     try {
                         method = cls.getMethod("isOpen", new Class[0]);
                     } catch (Throwable th4) {
@@ -86,7 +86,7 @@ public class SecurityRequestAuth implements IRequestAuth {
                         z2 = cls2 == null;
                     }
                     this.z = z2 ? 1 : 12;
-                    this.f69a = Class.forName("com.alibaba.wireless.security.open.securesignature.ISecureSignatureComponent").getMethod("signRequest", this.a, String.class);
+                    this.f68a = Class.forName("com.alibaba.wireless.security.open.securesignature.ISecureSignatureComponent").getMethod("signRequest", this.a, String.class);
                 } catch (Throwable th6) {
                     i.a("SecurityRequestAuth", "initSecurityCheck", th6);
                 }
@@ -104,15 +104,15 @@ public class SecurityRequestAuth implements IRequestAuth {
         if (this.g == null) {
             i.a("SecurityRequestAuth", "There is no appkey,please check it!");
             return null;
-        } else if (str == null || this.b == null || (cls = this.a) == null || this.f68a == null || this.f70b == null || this.f71c == null || this.f69a == null || this.c == null) {
+        } else if (str == null || this.b == null || (cls = this.a) == null || this.f67a == null || this.f69b == null || this.f70c == null || this.f68a == null || this.c == null) {
             return null;
         } else {
             try {
                 Object newInstance = cls.newInstance();
-                this.f68a.set(newInstance, this.g);
-                ((Map) this.f70b.get(newInstance)).put("INPUT", str);
-                this.f71c.set(newInstance, Integer.valueOf(this.z));
-                return (String) this.f69a.invoke(this.c, newInstance, this.Z);
+                this.f67a.set(newInstance, this.g);
+                ((Map) this.f69b.get(newInstance)).put("INPUT", str);
+                this.f70c.set(newInstance, Integer.valueOf(this.z));
+                return (String) this.f68a.invoke(this.c, newInstance, this.Z);
             } catch (Exception e) {
                 e.printStackTrace();
                 return null;

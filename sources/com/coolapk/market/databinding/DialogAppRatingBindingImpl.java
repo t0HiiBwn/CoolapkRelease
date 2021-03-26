@@ -57,7 +57,7 @@ public class DialogAppRatingBindingImpl extends DialogAppRatingBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppNodeViewModel) obj);
@@ -71,7 +71,7 @@ public class DialogAppRatingBindingImpl extends DialogAppRatingBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -134,13 +134,13 @@ public class DialogAppRatingBindingImpl extends DialogAppRatingBinding {
             i = 0;
             z = false;
         }
-        String string = (16 & j) != 0 ? this.mboundView1.getResources().getString(2131886879, Integer.valueOf(i)) : null;
+        String string = (16 & j) != 0 ? this.mboundView1.getResources().getString(2131886941, Integer.valueOf(i)) : null;
         int i3 = ((j & 7) > 0 ? 1 : ((j & 7) == 0 ? 0 : -1));
         if (i3 != 0) {
             if (z) {
                 str = string;
             } else {
-                str = this.mboundView1.getResources().getString(2131886890);
+                str = this.mboundView1.getResources().getString(2131886952);
             }
         }
         if (i3 != 0) {

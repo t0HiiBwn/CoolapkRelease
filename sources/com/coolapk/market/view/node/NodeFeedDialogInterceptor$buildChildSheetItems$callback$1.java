@@ -23,7 +23,7 @@ public final class NodeFeedDialogInterceptor$buildChildSheetItems$callback$1 imp
     @Override // com.coolapk.market.view.feed.dialog.SheetCallback
     public SheetResult onSheetClick(SheetAction sheetAction) {
         Intrinsics.checkNotNullParameter(sheetAction, "sheetAction");
-        this.this$0.checkAndShowSetFeedTopHint(this.$isFeedTop, (Feed) this.$data);
+        NodeFeedDialogInterceptor.access$checkAndShowSetFeedTopHint(this.this$0, this.$isFeedTop, (Feed) this.$data);
         return SheetResult.Companion.getClose();
     }
 }

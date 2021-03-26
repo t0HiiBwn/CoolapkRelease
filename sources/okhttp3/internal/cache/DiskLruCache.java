@@ -129,13 +129,13 @@ public final class DiskLruCache implements Closeable, Flushable {
         this.closed = z;
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:30:0x00c0, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:30:0x00c1, code lost:
         r2 = move-exception;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:31:0x00c1, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:31:0x00c2, code lost:
         kotlin.io.CloseableKt.closeFinally(r1, r0);
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:32:0x00c4, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:32:0x00c5, code lost:
         throw r2;
      */
     private final void readJournal() {

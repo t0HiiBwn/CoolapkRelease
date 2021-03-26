@@ -13,9 +13,7 @@ public class ac {
     String i;
     Integer j;
     Integer k;
-
-    /* renamed from: l  reason: collision with root package name */
-    Long f1456l;
+    Long l;
     String m;
     String n;
 
@@ -68,10 +66,10 @@ public class ac {
     }
 
     public Long g() {
-        return this.f1456l;
+        return this.l;
     }
 
     public void a(Long l2) {
-        this.f1456l = l2;
+        this.l = l2;
     }
 }

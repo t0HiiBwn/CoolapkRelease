@@ -26,7 +26,7 @@ public class LiveFloatNewMessageBindingImpl extends LiveFloatNewMessageBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363013, 1);
+        sparseIntArray.put(2131363027, 1);
     }
 
     public LiveFloatNewMessageBindingImpl(DataBindingComponent dataBindingComponent, View view) {

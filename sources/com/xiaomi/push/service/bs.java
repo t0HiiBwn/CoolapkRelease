@@ -1,28 +1,38 @@
 package com.xiaomi.push.service;
 
+import android.content.Context;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.ey;
+import com.xiaomi.push.hf;
 import com.xiaomi.push.service.XMPushService;
 
-class bs extends XMPushService.i {
+final class bs extends XMPushService.i {
     final /* synthetic */ XMPushService a;
+    final /* synthetic */ hf b;
+    final /* synthetic */ String c;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    bs(XMPushService xMPushService, int i) {
+    bs(int i, XMPushService xMPushService, hf hfVar, String str) {
         super(i);
         this.a = xMPushService;
+        this.b = hfVar;
+        this.c = str;
     }
 
     @Override // com.xiaomi.push.service.XMPushService.i
-    /* renamed from: a */
-    public String mo344a() {
-        return "disconnect for service destroy.";
-    }
-
-    @Override // com.xiaomi.push.service.XMPushService.i
-    /* renamed from: a  reason: collision with other method in class */
-    public void mo646a() {
-        if (this.a.f902a != null) {
-            this.a.f902a.b(15, (Exception) null);
-            this.a.f902a = null;
+    public void a() {
+        try {
+            hf a2 = bn.a((Context) this.a, this.b);
+            a2.m().a("absent_target_package", this.c);
+            bu.a(this.a, a2);
+        } catch (ey e) {
+            c.a(e);
+            this.a.a(10, e);
         }
+    }
+
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public String b() {
+        return "send app absent ack message for message.";
     }
 }

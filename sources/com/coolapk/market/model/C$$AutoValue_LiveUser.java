@@ -28,7 +28,7 @@ abstract class C$$AutoValue_LiveUser extends LiveUser {
     private final String userAvatar;
     private final User userInfo;
 
-    C$$AutoValue_LiveUser(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, String str14, String str15, int i2, int i3, User user) {
+    C$$AutoValue_LiveUser(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, String str14, String str15, int i2, int i3, User user) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -44,8 +44,8 @@ abstract class C$$AutoValue_LiveUser extends LiveUser {
         this.subTitle = str10;
         this.id = str11;
         this.extraData = str12;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str13, "Null liveId");
         this.liveId = str13;
         Objects.requireNonNull(str14, "Null uid");
@@ -204,8 +204,8 @@ abstract class C$$AutoValue_LiveUser extends LiveUser {
         String str8;
         String str9;
         String str10;
+        Long l;
         Long l2;
-        Long l3;
         if (obj == this) {
             return true;
         }
@@ -215,7 +215,7 @@ abstract class C$$AutoValue_LiveUser extends LiveUser {
         LiveUser liveUser = (LiveUser) obj;
         String str11 = this.entityTypeName;
         if (str11 != null ? str11.equals(liveUser.getEntityTypeName()) : liveUser.getEntityTypeName() == null) {
-            if (this.entityType.equals(liveUser.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(liveUser.getEntityTemplate()) : liveUser.getEntityTemplate() == null) && this.entityTypeId == liveUser.getEntityTypeId() && ((str2 = this.entityId) != null ? str2.equals(liveUser.getEntityId()) : liveUser.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(liveUser.getEntityFixed()) : liveUser.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(liveUser.getTitle()) : liveUser.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(liveUser.getUrl()) : liveUser.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(liveUser.getDescription()) : liveUser.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(liveUser.getPic()) : liveUser.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(liveUser.getLogo()) : liveUser.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(liveUser.getSubTitle()) : liveUser.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(liveUser.getId()) : liveUser.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(liveUser.getExtraData()) : liveUser.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(liveUser.getDateline()) : liveUser.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(liveUser.getLastUpdate()) : liveUser.getLastUpdate() == null) && this.liveId.equals(liveUser.getLiveId()) && this.uid.equals(liveUser.getUid()) && this.userAvatar.equals(liveUser.getUserAvatar()) && this.disallowPost == liveUser.getDisallowPost() && this.disallowPostPic == liveUser.getDisallowPostPic() && this.userInfo.equals(liveUser.getUserInfo())) {
+            if (this.entityType.equals(liveUser.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(liveUser.getEntityTemplate()) : liveUser.getEntityTemplate() == null) && this.entityTypeId == liveUser.getEntityTypeId() && ((str2 = this.entityId) != null ? str2.equals(liveUser.getEntityId()) : liveUser.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(liveUser.getEntityFixed()) : liveUser.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(liveUser.getTitle()) : liveUser.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(liveUser.getUrl()) : liveUser.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(liveUser.getDescription()) : liveUser.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(liveUser.getPic()) : liveUser.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(liveUser.getLogo()) : liveUser.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(liveUser.getSubTitle()) : liveUser.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(liveUser.getId()) : liveUser.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(liveUser.getExtraData()) : liveUser.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(liveUser.getDateline()) : liveUser.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(liveUser.getLastUpdate()) : liveUser.getLastUpdate() == null) && this.liveId.equals(liveUser.getLiveId()) && this.uid.equals(liveUser.getUid()) && this.userAvatar.equals(liveUser.getUserAvatar()) && this.disallowPost == liveUser.getDisallowPost() && this.disallowPostPic == liveUser.getDisallowPostPic() && this.userInfo.equals(liveUser.getUserInfo())) {
                 return true;
             }
         }
@@ -249,11 +249,11 @@ abstract class C$$AutoValue_LiveUser extends LiveUser {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        if (l3 != null) {
-            i = l3.hashCode();
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        if (l2 != null) {
+            i = l2.hashCode();
         }
         return ((((((((((((hashCode13 ^ i) * 1000003) ^ this.liveId.hashCode()) * 1000003) ^ this.uid.hashCode()) * 1000003) ^ this.userAvatar.hashCode()) * 1000003) ^ this.disallowPost) * 1000003) ^ this.disallowPostPic) * 1000003) ^ this.userInfo.hashCode();
     }

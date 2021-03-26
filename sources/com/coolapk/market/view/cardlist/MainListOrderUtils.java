@@ -12,12 +12,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Set;
-import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000B\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010 \n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0010\u0010\u0011\u001a\u00020\u000b2\u0006\u0010\u0012\u001a\u00020\u0004H\u0002J&\u0010\u0013\u001a\n\u0012\u0004\u0012\u00020\r\u0018\u00010\u00142\u000e\u0010\u0015\u001a\n\u0012\u0004\u0012\u00020\r\u0018\u00010\u00142\u0006\u0010\u0016\u001a\u00020\u0017J\u001c\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\r0\u00142\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\r0\u0007H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XD¢\u0006\u0002\n\u0000R6\u0010\u0005\u001a*\u0012\u0004\u0012\u00020\u0004\u0012\n\u0012\b\u0012\u0004\u0012\u00020\b0\u00070\u0006j\u0014\u0012\u0004\u0012\u00020\u0004\u0012\n\u0012\b\u0012\u0004\u0012\u00020\b0\u0007`\tX\u0004¢\u0006\u0002\n\u0000R*\u0010\n\u001a\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u000b0\u0006j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u000b`\tX\u0004¢\u0006\u0002\n\u0000R*\u0010\f\u001a\u001e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\r0\u0006j\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\r`\tX\u0004¢\u0006\u0002\n\u0000R\u0018\u0010\u000e\u001a\u00020\u0004*\u00020\b8BX\u0004¢\u0006\u0006\u001a\u0004\b\u000f\u0010\u0010¨\u0006\u001a"}, d2 = {"Lcom/coolapk/market/view/cardlist/MainListOrderUtils;", "", "()V", "GROUP_TYPE_ARTICLE", "", "cacheFeedMap", "Ljava/util/HashMap;", "", "Lcom/coolapk/market/model/Feed;", "Lkotlin/collections/HashMap;", "groupCountTemp", "", "needInsertToFeeds", "Lcom/coolapk/market/model/Entity;", "groupType", "getGroupType", "(Lcom/coolapk/market/model/Feed;)Ljava/lang/String;", "getGroupTypeAllowMaxCount", "type", "modifyData", "", "loadData", "isRefresh", "", "modifyFeedList", "feedList", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: MainV8ListFragment.kt */
 public final class MainListOrderUtils {
     private final String GROUP_TYPE_ARTICLE = "图文";
@@ -159,7 +157,6 @@ public final class MainListOrderUtils {
         return Intrinsics.areEqual(str, this.GROUP_TYPE_ARTICLE) ? 3 : 1;
     }
 
-    /* access modifiers changed from: private */
     public final String getGroupType(Feed feed) {
         if (Intrinsics.areEqual(feed.getExtraType(), "apk")) {
             return "动态推应用";

@@ -18,9 +18,7 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
     private static final int A = 2;
     private static final int B = 3;
     public static final Map<e, bu> k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final long f1459l = 420342210744516016L;
+    private static final long l = 420342210744516016L;
     private static final cm m = new cm("UMEnvelope");
     private static final cc n = new cc("version", (byte) 11, 1);
     private static final cc o = new cc("address", (byte) 11, 2);
@@ -83,9 +81,7 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
         CODEX(10, "codex");
         
         private static final Map<String, e> k = new HashMap();
-
-        /* renamed from: l  reason: collision with root package name */
-        private final short f1460l;
+        private final short l;
         private final String m;
 
         static {
@@ -136,13 +132,13 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
         }
 
         private e(short s, String str) {
-            this.f1460l = s;
+            this.l = s;
             this.m = str;
         }
 
         @Override // com.umeng.analytics.pro.bp
         public short a() {
-            return this.f1460l;
+            return this.l;
         }
 
         @Override // com.umeng.analytics.pro.bp
@@ -599,8 +595,8 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
         public void b(ch chVar, bb bbVar) throws bo {
             chVar.j();
             while (true) {
-                cc l2 = chVar.l();
-                if (l2.b == 0) {
+                cc l = chVar.l();
+                if (l.b == 0) {
                     chVar.k();
                     if (!bbVar.m()) {
                         throw new ci("Required field 'serial_num' was not found in serialized data! Struct: " + toString());
@@ -613,10 +609,10 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
                         throw new ci("Required field 'length' was not found in serialized data! Struct: " + toString());
                     }
                 } else {
-                    switch (l2.c) {
+                    switch (l.c) {
                         case 1:
-                            if (l2.b != 11) {
-                                ck.a(chVar, l2.b);
+                            if (l.b != 11) {
+                                ck.a(chVar, l.b);
                                 break;
                             } else {
                                 bbVar.a = chVar.z();
@@ -624,8 +620,8 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
                                 break;
                             }
                         case 2:
-                            if (l2.b != 11) {
-                                ck.a(chVar, l2.b);
+                            if (l.b != 11) {
+                                ck.a(chVar, l.b);
                                 break;
                             } else {
                                 bbVar.b = chVar.z();
@@ -633,8 +629,8 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
                                 break;
                             }
                         case 3:
-                            if (l2.b != 11) {
-                                ck.a(chVar, l2.b);
+                            if (l.b != 11) {
+                                ck.a(chVar, l.b);
                                 break;
                             } else {
                                 bbVar.c = chVar.z();
@@ -642,8 +638,8 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
                                 break;
                             }
                         case 4:
-                            if (l2.b != 8) {
-                                ck.a(chVar, l2.b);
+                            if (l.b != 8) {
+                                ck.a(chVar, l.b);
                                 break;
                             } else {
                                 bbVar.d = chVar.w();
@@ -651,8 +647,8 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
                                 break;
                             }
                         case 5:
-                            if (l2.b != 8) {
-                                ck.a(chVar, l2.b);
+                            if (l.b != 8) {
+                                ck.a(chVar, l.b);
                                 break;
                             } else {
                                 bbVar.e = chVar.w();
@@ -660,8 +656,8 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
                                 break;
                             }
                         case 6:
-                            if (l2.b != 8) {
-                                ck.a(chVar, l2.b);
+                            if (l.b != 8) {
+                                ck.a(chVar, l.b);
                                 break;
                             } else {
                                 bbVar.f = chVar.w();
@@ -669,8 +665,8 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
                                 break;
                             }
                         case 7:
-                            if (l2.b != 11) {
-                                ck.a(chVar, l2.b);
+                            if (l.b != 11) {
+                                ck.a(chVar, l.b);
                                 break;
                             } else {
                                 bbVar.g = chVar.A();
@@ -678,8 +674,8 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
                                 break;
                             }
                         case 8:
-                            if (l2.b != 11) {
-                                ck.a(chVar, l2.b);
+                            if (l.b != 11) {
+                                ck.a(chVar, l.b);
                                 break;
                             } else {
                                 bbVar.h = chVar.z();
@@ -687,8 +683,8 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
                                 break;
                             }
                         case 9:
-                            if (l2.b != 11) {
-                                ck.a(chVar, l2.b);
+                            if (l.b != 11) {
+                                ck.a(chVar, l.b);
                                 break;
                             } else {
                                 bbVar.i = chVar.z();
@@ -696,8 +692,8 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
                                 break;
                             }
                         case 10:
-                            if (l2.b != 8) {
-                                ck.a(chVar, l2.b);
+                            if (l.b != 8) {
+                                ck.a(chVar, l.b);
                                 break;
                             } else {
                                 bbVar.j = chVar.w();
@@ -705,7 +701,7 @@ public class bb implements bi<bb, e>, Serializable, Cloneable {
                                 break;
                             }
                         default:
-                            ck.a(chVar, l2.b);
+                            ck.a(chVar, l.b);
                             break;
                     }
                     chVar.m();

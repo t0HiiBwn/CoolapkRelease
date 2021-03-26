@@ -22,9 +22,7 @@ public class e {
     private String i;
     private String j;
     private Map<String, String> k = new HashMap();
-
-    /* renamed from: l  reason: collision with root package name */
-    private JSONObject f1335l;
+    private JSONObject l;
     private JSONObject m;
     private String n;
     private boolean o;
@@ -196,7 +194,7 @@ public class e {
     }
 
     public JSONObject n() {
-        return this.f1335l;
+        return this.l;
     }
 
     public void o() {

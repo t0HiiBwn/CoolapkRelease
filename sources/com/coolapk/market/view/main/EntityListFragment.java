@@ -118,10 +118,10 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         ((PreventAutoScrollRecyclerView) getRecyclerView()).setPreventAutoScroll(true);
-        setEmptyData(getString(2131886764), 0);
+        setEmptyData(getString(2131886826), 0);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558924, 2131231051).type(2131558577, 2131231052).type(2131558800, 2131231051).type(2131558765, 2131231051).type(2131558674, 2131231051).type(2131558791, 2131231051).type(2131558764, 2131231051).type(2131558578, 2131231052).type(2131558825, 2131231051).type(2131558959, 2131231051).type(2131558942, 2131231051).type(2131558949, 2131231051).type(2131558787, 2131231051).type(2131558803, 2131231051).type(2131558955, 2131231052).type(2131558792, 2131231051).type(2131558591, 2131231052).create());
-        getRecyclerView().addItemDecoration(new SpecialDividerItemDecoration(getActivity(), new int[]{2131558924, 2131558578}, getIgnoreSpecialDividerItemViewType()));
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558931, 2131231061).type(2131558581, 2131231062).type(2131558807, 2131231061).type(2131558772, 2131231061).type(2131558680, 2131231061).type(2131558798, 2131231061).type(2131558771, 2131231061).type(2131558582, 2131231062).type(2131558832, 2131231061).type(2131558966, 2131231061).type(2131558949, 2131231061).type(2131558956, 2131231061).type(2131558794, 2131231061).type(2131558810, 2131231061).type(2131558962, 2131231062).type(2131558799, 2131231061).type(2131558595, 2131231062).create());
+        getRecyclerView().addItemDecoration(new SpecialDividerItemDecoration(getActivity(), new int[]{2131558931, 2131558582}, getIgnoreSpecialDividerItemViewType()));
         getRecyclerView().setItemAnimator(null);
         setAdapter(new DataAdapter(this));
         if (getUserVisibleHint()) {
@@ -320,39 +320,39 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
         }
         switch (c) {
             case 0:
-                return 2131558955;
+                return 2131558962;
             case 1:
-                return 2131558942;
-            case 2:
-                return 2131558791;
-            case 3:
-                return 2131558792;
-            case 4:
-                return 2131558674;
-            case 5:
-                return 2131558787;
-            case 6:
-                return 2131558825;
-            case 7:
-                return 2131558577;
-            case '\b':
-                return 2131558924;
-            case '\t':
-                return 2131558578;
-            case '\n':
-                return 2131558959;
-            case 11:
-                return 2131558765;
-            case '\f':
                 return 2131558949;
+            case 2:
+                return 2131558798;
+            case 3:
+                return 2131558799;
+            case 4:
+                return 2131558680;
+            case 5:
+                return 2131558794;
+            case 6:
+                return 2131558832;
+            case 7:
+                return 2131558581;
+            case '\b':
+                return 2131558931;
+            case '\t':
+                return 2131558582;
+            case '\n':
+                return 2131558966;
+            case 11:
+                return 2131558772;
+            case '\f':
+                return 2131558956;
             case '\r':
-                return 2131558591;
+                return 2131558595;
             case 14:
-                return 2131558800;
+                return 2131558807;
             case 15:
-                return 2131558803;
+                return 2131558810;
             default:
-                return 2131558617;
+                return 2131558621;
         }
     }
 
@@ -367,15 +367,15 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
             switch (i) {
-                case 2131558577:
+                case 2131558581:
                     return new AdsViewHolder(inflate, this.component, null);
-                case 2131558578:
+                case 2131558582:
                     return new AlbumViewHolder(inflate, this.component, new ItemActionHandler() {
                         /* class com.coolapk.market.view.main.EntityListFragment.DataAdapter.AnonymousClass5 */
 
                         @Override // com.coolapk.market.viewholder.ItemActionHandler
                         public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
-                            if (viewHolder.getAdapterPosition() != -1 && view.getId() == 2131362752) {
+                            if (viewHolder.getAdapterPosition() != -1 && view.getId() == 2131362763) {
                                 Entity entity = EntityListFragment.this.getDataList().get(viewHolder.getAdapterPosition());
                                 if (EntityUtils.isAlbumType(entity.getEntityType())) {
                                     ActionManager.startV8AlbumDetailActivity(EntityListFragment.this.getActivity(), entity);
@@ -383,13 +383,13 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                             }
                         }
                     });
-                case 2131558591:
+                case 2131558595:
                     return new AppForumViewHolder(inflate, this.component, null);
-                case 2131558617:
+                case 2131558621:
                     return new EmptyViewHolder(inflate);
-                case 2131558674:
+                case 2131558680:
                     return new DocMarqueeCardViewHolder(inflate, this.component);
-                case 2131558765:
+                case 2131558772:
                     return new GridCardViewHolder(inflate, this.component, EntityListFragment.this.getApkType(), new ItemActionHandler() {
                         /* class com.coolapk.market.view.main.EntityListFragment.DataAdapter.AnonymousClass4 */
 
@@ -399,18 +399,18 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                             if (viewHolder.getAdapterPosition() != -1) {
                                 int dataIndex = EntityListFragment.this.getDataIndex(viewHolder.getAdapterPosition());
                                 EntityCard entityCard = (EntityCard) EntityListFragment.this.getDataList().get(dataIndex);
-                                if (view.getId() == 2131362970) {
+                                if (view.getId() == 2131362982) {
                                     DataAdapter.this.onEntityCardClick(entityCard);
-                                } else if (view.getId() == 2131362257) {
+                                } else if (view.getId() == 2131362262) {
                                     DataManager.getInstance().getPreferencesEditor().putLong("HEADLINE_ADS_GRID_CLOSE_TIMESTAMP", System.currentTimeMillis()).putString("HEADLINE_ADS_CLOSE_URL", entityCard.getUrl()).apply();
-                                    Toast.show(EntityListFragment.this.getActivity(), 2131887213);
+                                    Toast.show(EntityListFragment.this.getActivity(), 2131887275);
                                     EntityListFragment.this.getDataList().remove(EntityListFragment.this.getDataIndex(viewHolder.getAdapterPosition()));
                                 } else {
                                     int intValue = ((Integer) view.getTag()).intValue();
                                     if (entityCard.getUrl().startsWith("/apk")) {
                                         ServiceApp serviceApp = (ServiceApp) entityCard.getEntities().get(intValue);
                                         int id = view.getId();
-                                        if (id == 2131361876) {
+                                        if (id == 2131361877) {
                                             MobileApp mobileAppExistFast = DataManager.getInstance().getMobileAppExistFast(serviceApp.getPackageName());
                                             UpgradeInfo upgradeInfo = mobileAppExistFast != null ? mobileAppExistFast.getUpgradeInfo() : null;
                                             ClickInfo.Builder targetUrl = ClickInfo.newBuilder(serviceApp).packageName(serviceApp.getPackageName()).targetUrl(serviceApp.getDownloadUrl(0));
@@ -420,33 +420,33 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                                             strArr[2] = upgradeInfo != null ? upgradeInfo.getDownloadUrlMd5(0) : null;
                                             strArr[3] = upgradeInfo != null ? upgradeInfo.getDownloadUrlMd5(1) : null;
                                             StateUtils.handleClick(EntityListFragment.this.getActivity(), targetUrl.downloadKeys(strArr).build(), null);
-                                        } else if (id == 2131362768) {
-                                            ActionManager.startAppViewActivity(EntityListFragment.this.getActivity(), view.findViewById(2131362672), serviceApp.getPackageName(), serviceApp.getLogo(), serviceApp.getAppName(), serviceApp.getExtraAnalysisData(), serviceApp.getRequestContext(), serviceApp.getExtraFromApi());
+                                        } else if (id == 2131362779) {
+                                            ActionManager.startAppViewActivity(EntityListFragment.this.getActivity(), view.findViewById(2131362683), serviceApp.getPackageName(), serviceApp.getLogo(), serviceApp.getAppName(), serviceApp.getExtraAnalysisData(), serviceApp.getRequestContext(), serviceApp.getExtraFromApi());
                                         }
                                     } else if (entityCard.getUrl().startsWith("/album")) {
-                                        ImageView imageView = (ImageView) view.findViewById(2131362672);
+                                        ImageView imageView = (ImageView) view.findViewById(2131362683);
                                         ActionManager.startV8AlbumDetailActivity(EntityListFragment.this.getActivity(), (Album) entityCard.getEntities().get(intValue));
                                     } else if (entityCard.getUrl().startsWith("/ads")) {
                                         Ads ads = (Ads) entityCard.getEntities().get(intValue);
                                         int id2 = view.getId();
-                                        if (id2 == 2131361976) {
+                                        if (id2 == 2131361977) {
                                             EntityListFragment.this.onGridCardActionViewClick(viewHolder, view, dataIndex, intValue);
-                                        } else if (id2 == 2131362768) {
+                                        } else if (id2 == 2131362779) {
                                             ActionManager.startActivityByUrl(EntityListFragment.this.getActivity(), ads.getUrl());
                                         }
                                     } else if (entityCard.getUrl().startsWith("/appForum")) {
                                         AppForum appForum = (AppForum) entityCard.getEntities().get(intValue);
-                                        ActionManager.startAppForumActivity(EntityListFragment.this.getActivity(), (ImageView) view.findViewById(2131362672), appForum.packageName(), appForum.logo(), appForum.title(), null);
+                                        ActionManager.startAppForumActivity(EntityListFragment.this.getActivity(), (ImageView) view.findViewById(2131362683), appForum.packageName(), appForum.logo(), appForum.title(), null);
                                     }
                                 }
                             }
                         }
                     });
-                case 2131558787:
+                case 2131558794:
                     return new ImageCardViewHolder(inflate, this.component, null);
-                case 2131558791:
+                case 2131558798:
                     return new ImageListCardViewHolder(inflate, this.component);
-                case 2131558792:
+                case 2131558799:
                     return new ImageScrollCardViewHolder(inflate, this.component, new ItemActionHandler() {
                         /* class com.coolapk.market.view.main.EntityListFragment.DataAdapter.AnonymousClass10 */
 
@@ -454,13 +454,13 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                         public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                             if (viewHolder.getAdapterPosition() != -1) {
                                 EntityCard entityCard = (EntityCard) EntityListFragment.this.getDataList().get(EntityListFragment.this.getDataIndex(viewHolder.getAdapterPosition()));
-                                if (view.getId() == 2131362970) {
+                                if (view.getId() == 2131362982) {
                                     ActionManager.startActivityByLink(EntityListFragment.this.getActivity(), entityCard.getTitle(), entityCard.getUrl(), EntityListFragment.this.getApkType(), entityCard.getSubTitle());
                                 }
                             }
                         }
                     });
-                case 2131558800:
+                case 2131558807:
                     return new LinkCardViewHolder(inflate, new ItemActionHandler() {
                         /* class com.coolapk.market.view.main.EntityListFragment.DataAdapter.AnonymousClass9 */
 
@@ -472,7 +472,7 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                             }
                         }
                     });
-                case 2131558803:
+                case 2131558810:
                     return new ListCardViewHolder(inflate, this.component, new ItemActionHandler() {
                         /* class com.coolapk.market.view.main.EntityListFragment.DataAdapter.AnonymousClass7 */
 
@@ -480,11 +480,11 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                         public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                             if (viewHolder.getAdapterPosition() != -1) {
                                 EntityCard entityCard = (EntityCard) EntityListFragment.this.getDataList().get(EntityListFragment.this.getDataIndex(viewHolder.getAdapterPosition()));
-                                if (view.getId() == 2131362257) {
+                                if (view.getId() == 2131362262) {
                                     DataManager.getInstance().getPreferencesEditor().putLong("HEADLINE_ADS_LIST_CLOSE_TIMESTAMP", System.currentTimeMillis()).putString("HEADLINE_ADS_CLOSE_URL", entityCard.getUrl()).apply();
-                                    Toast.show(EntityListFragment.this.getActivity(), 2131887213);
+                                    Toast.show(EntityListFragment.this.getActivity(), 2131887275);
                                     EntityListFragment.this.getDataList().remove(EntityListFragment.this.getDataIndex(viewHolder.getAdapterPosition()));
-                                } else if (view.getId() == 2131362970) {
+                                } else if (view.getId() == 2131362982) {
                                     DataAdapter.this.onEntityCardClick(entityCard);
                                 }
                             }
@@ -502,19 +502,19 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                             return EntityListFragment.this.entityType2ItemViewType(str);
                         }
                     });
-                case 2131558825:
+                case 2131558832:
                     return new MessageCardViewHolder(inflate, new ItemActionHandler() {
                         /* class com.coolapk.market.view.main.EntityListFragment.DataAdapter.AnonymousClass1 */
 
                         @Override // com.coolapk.market.viewholder.ItemActionHandler
                         public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
-                            if (viewHolder.getAdapterPosition() != -1 && view.getId() == 2131362257) {
+                            if (viewHolder.getAdapterPosition() != -1 && view.getId() == 2131362262) {
                                 DataManager.getInstance().getPreferencesEditor().putString("HEADLINE_MESSAGE_CLOSE_URL", ((MessageCard) EntityListFragment.this.getDataList().get(EntityListFragment.this.getDataIndex(viewHolder.getAdapterPosition()))).getUrl()).apply();
                                 EntityListFragment.this.getDataList().remove(EntityListFragment.this.getDataIndex(viewHolder.getAdapterPosition()));
                             }
                         }
                     });
-                case 2131558924:
+                case 2131558931:
                     return new ServiceAppViewHolder(inflate, this.component, new ItemActionHandler() {
                         /* class com.coolapk.market.view.main.EntityListFragment.DataAdapter.AnonymousClass6 */
 
@@ -525,8 +525,8 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                                 viewHolder.getAdapterPosition();
                                 Entity entity = EntityListFragment.this.getDataList().get(EntityListFragment.this.getDataIndex(viewHolder.getAdapterPosition()));
                                 int id = view.getId();
-                                if (id != 2131361886) {
-                                    if (id == 2131362768 && EntityUtils.isApkType(entity.getEntityType())) {
+                                if (id != 2131361887) {
+                                    if (id == 2131362779 && EntityUtils.isApkType(entity.getEntityType())) {
                                         ServiceApp serviceApp = (ServiceApp) entity;
                                         ActionManager.startAppViewActivity(EntityListFragment.this.getActivity(), ((ServiceAppBinding) ((BindingViewHolder) viewHolder).getBinding()).iconView, serviceApp.getPackageName(), serviceApp.getLogo(), serviceApp.getAppName(), serviceApp.getExtraAnalysisData(), serviceApp.getRequestContext(), serviceApp.getExtraFromApi());
                                     }
@@ -549,7 +549,7 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                             }
                         }
                     });
-                case 2131558942:
+                case 2131558949:
                     return new TabGroupCardViewHolder(inflate, this.component, EntityListFragment.this.tabGroupCardIndex, new ItemActionHandler() {
                         /* class com.coolapk.market.view.main.EntityListFragment.DataAdapter.AnonymousClass3 */
 
@@ -559,21 +559,21 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                             if (viewHolder.getAdapterPosition() != -1) {
                                 GridCard gridCard = ((TabGroupCard) EntityListFragment.this.getDataList().get(EntityListFragment.this.getDataIndex(viewHolder.getAdapterPosition()))).getEntities().get(EntityListFragment.this.tabGroupCardIndex.get());
                                 switch (view.getId()) {
-                                    case 2131362970:
+                                    case 2131362982:
                                         ActionManager.startActivityByLink(EntityListFragment.this.getActivity(), gridCard.getTitle(), gridCard.getUrl(), EntityListFragment.this.getApkType(), gridCard.getSubTitle());
                                         return;
-                                    case 2131363483:
+                                    case 2131363501:
                                         EntityListFragment.this.tabGroupCardIndex.set(0);
                                         DataAdapter.this.notifyItemChanged(viewHolder.getAdapterPosition());
                                         return;
-                                    case 2131363484:
+                                    case 2131363502:
                                         EntityListFragment.this.tabGroupCardIndex.set(1);
                                         DataAdapter.this.notifyItemChanged(viewHolder.getAdapterPosition());
                                         return;
                                     default:
                                         ServiceApp serviceApp = gridCard.getEntities().get(((Integer) view.getTag()).intValue());
                                         int id = view.getId();
-                                        if (id == 2131361876) {
+                                        if (id == 2131361877) {
                                             MobileApp mobileAppExistFast = DataManager.getInstance().getMobileAppExistFast(serviceApp.getPackageName());
                                             UpgradeInfo upgradeInfo = mobileAppExistFast != null ? mobileAppExistFast.getUpgradeInfo() : null;
                                             ClickInfo.Builder targetUrl = ClickInfo.newBuilder(serviceApp).packageName(serviceApp.getPackageName()).targetUrl(serviceApp.getDownloadUrl(0));
@@ -584,8 +584,8 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                                             strArr[3] = upgradeInfo != null ? upgradeInfo.getDownloadUrlMd5(1) : null;
                                             StateUtils.handleClick(EntityListFragment.this.getActivity(), targetUrl.downloadKeys(strArr).build(), null);
                                             return;
-                                        } else if (id == 2131362768) {
-                                            ActionManager.startAppViewActivity(EntityListFragment.this.getActivity(), view.findViewById(2131362672), serviceApp.getPackageName(), serviceApp.getLogo(), serviceApp.getAppName(), serviceApp.getExtraAnalysisData(), serviceApp.getRequestContext(), serviceApp.getExtraFromApi());
+                                        } else if (id == 2131362779) {
+                                            ActionManager.startAppViewActivity(EntityListFragment.this.getActivity(), view.findViewById(2131362683), serviceApp.getPackageName(), serviceApp.getLogo(), serviceApp.getAppName(), serviceApp.getExtraAnalysisData(), serviceApp.getRequestContext(), serviceApp.getExtraFromApi());
                                             ActionManager.startActivityByLink(EntityListFragment.this.getActivity(), gridCard.getTitle(), gridCard.getUrl(), EntityListFragment.this.getApkType(), gridCard.getSubTitle());
                                             return;
                                         } else {
@@ -595,11 +595,11 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                             }
                         }
                     });
-                case 2131558949:
+                case 2131558956:
                     return new TextImageCardViewHolder(inflate, this.component, null);
-                case 2131558955:
+                case 2131558962:
                     return new TitleCardViewHolder(inflate, this.component);
-                case 2131558959:
+                case 2131558966:
                     return new TopGroupCardViewHolder(inflate, this.component, new ItemActionHandler() {
                         /* class com.coolapk.market.view.main.EntityListFragment.DataAdapter.AnonymousClass2 */
 
@@ -609,7 +609,7 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                             if (viewHolder.getAdapterPosition() != -1) {
                                 Entity entity = EntityListFragment.this.getDataList().get(EntityListFragment.this.getDataIndex(viewHolder.getAdapterPosition()));
                                 int id = view.getId();
-                                if (id == 2131361876) {
+                                if (id == 2131361877) {
                                     ServiceApp serviceApp = ((TopGroupCard) entity).getEntities().get(2).getEntities().get(((Integer) view.getTag()).intValue());
                                     MobileApp mobileAppExistFast = DataManager.getInstance().getMobileAppExistFast(serviceApp.getPackageName());
                                     UpgradeInfo upgradeInfo = mobileAppExistFast != null ? mobileAppExistFast.getUpgradeInfo() : null;
@@ -620,19 +620,19 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                                     strArr[2] = upgradeInfo != null ? upgradeInfo.getDownloadUrlMd5(0) : null;
                                     strArr[3] = upgradeInfo != null ? upgradeInfo.getDownloadUrlMd5(1) : null;
                                     StateUtils.handleClick(EntityListFragment.this.getActivity(), targetUrl.downloadKeys(strArr).build(), null);
-                                } else if (id != 2131362768) {
+                                } else if (id != 2131362779) {
                                     switch (id) {
-                                        case 2131362781:
+                                        case 2131362792:
                                             ActionManager.startActivityByUrl(EntityListFragment.this.getActivity(), ((TopGroupCard) entity).getEntities().get(0).getSubUrl());
                                             return;
-                                        case 2131362782:
+                                        case 2131362793:
                                             ActionManager.startActivityByUrl(EntityListFragment.this.getActivity(), ((TopGroupCard) entity).getEntities().get(1).getSubUrl());
                                             return;
-                                        case 2131362783:
+                                        case 2131362794:
                                             TopCard topCard = ((TopGroupCard) entity).getEntities().get(0);
                                             ActionManager.startActivityByLink(EntityListFragment.this.getActivity(), topCard.getTitle(), topCard.getUrl(), EntityListFragment.this.getApkType(), topCard.getSubTitle());
                                             return;
-                                        case 2131362784:
+                                        case 2131362795:
                                             TopCard topCard2 = ((TopGroupCard) entity).getEntities().get(1);
                                             ActionManager.startActivityByLink(EntityListFragment.this.getActivity(), topCard2.getTitle(), topCard2.getUrl(), EntityListFragment.this.getApkType(), topCard2.getSubTitle());
                                             return;
@@ -641,7 +641,7 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<Entit
                                     }
                                 } else {
                                     ServiceApp serviceApp2 = ((TopGroupCard) entity).getEntities().get(2).getEntities().get(((Integer) view.getTag()).intValue());
-                                    ActionManager.startAppViewActivity(EntityListFragment.this.getActivity(), view.findViewById(2131362672), serviceApp2.getPackageName(), serviceApp2.getLogo(), serviceApp2.getAppName(), serviceApp2.getExtraAnalysisData(), serviceApp2.getRequestContext(), serviceApp2.getExtraFromApi());
+                                    ActionManager.startAppViewActivity(EntityListFragment.this.getActivity(), view.findViewById(2131362683), serviceApp2.getPackageName(), serviceApp2.getLogo(), serviceApp2.getAppName(), serviceApp2.getExtraAnalysisData(), serviceApp2.getRequestContext(), serviceApp2.getExtraFromApi());
                                 }
                             }
                         }

@@ -134,8 +134,8 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
                     }
                 }
             }
-            for (Long l2 : arraySet) {
-                removeFragment(l2.longValue());
+            for (Long l : arraySet) {
+                removeFragment(l.longValue());
             }
         }
     }
@@ -153,17 +153,17 @@ public abstract class FragmentStateAdapter extends RecyclerView.Adapter<Fragment
     }
 
     private Long itemForViewHolder(int i) {
-        Long l2 = null;
+        Long l = null;
         for (int i2 = 0; i2 < this.mItemIdToViewHolder.size(); i2++) {
             if (this.mItemIdToViewHolder.valueAt(i2).intValue() == i) {
-                if (l2 == null) {
-                    l2 = Long.valueOf(this.mItemIdToViewHolder.keyAt(i2));
+                if (l == null) {
+                    l = Long.valueOf(this.mItemIdToViewHolder.keyAt(i2));
                 } else {
                     throw new IllegalStateException("Design assumption violated: a ViewHolder can only be bound to one item at a time.");
                 }
             }
         }
-        return l2;
+        return l;
     }
 
     private void ensureFragment(int i) {

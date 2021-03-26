@@ -39,15 +39,15 @@ public final class NodeHelper$setupRecommendRows$1 extends ArrayAdapter<NewHeadL
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
         int i2 = 0;
         if (view != null) {
-            Object tag = view.getTag(2131363492);
+            Object tag = view.getTag(2131363510);
             Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.databinding.TopicNodeHeaderLineBinding");
             topicNodeHeaderLineBinding = (TopicNodeHeaderLineBinding) tag;
         } else {
-            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131559203, viewGroup, false);
+            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131559211, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ader_line, parent, false)");
             topicNodeHeaderLineBinding = (TopicNodeHeaderLineBinding) inflate;
         }
-        topicNodeHeaderLineBinding.itemView.setTag(2131363492, topicNodeHeaderLineBinding.getRoot());
+        topicNodeHeaderLineBinding.itemView.setTag(2131363510, topicNodeHeaderLineBinding.getRoot());
         Object item = getItem(i);
         Intrinsics.checkNotNull(item);
         Intrinsics.checkNotNullExpressionValue(item, "getItem(position)!!");

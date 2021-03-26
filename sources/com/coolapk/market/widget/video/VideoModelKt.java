@@ -217,14 +217,14 @@ public final class VideoModelKt {
             str = live.getUrl();
         }
         VideoModel viewModel = toViewModel(video);
-        Video video2 = video;
+        Live live2 = live;
         int intValue = num != null ? num.intValue() : 0;
         if (str != null) {
             str2 = str;
         } else {
             str2 = "";
         }
-        return VideoModel.copy$default(viewModel, null, null, str4, str2, 0, intValue, false, false, null, video2, null, 1491, null);
+        return VideoModel.copy$default(viewModel, null, null, str4, str2, 0, intValue, false, false, null, live2, null, 1491, null);
     }
 
     public static final VideoModel toVideoModel(Feed feed) {

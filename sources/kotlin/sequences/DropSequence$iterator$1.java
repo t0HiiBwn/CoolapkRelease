@@ -19,8 +19,8 @@ public final class DropSequence$iterator$1 implements Iterator<T>, KMappedMarker
     /* JADX WARN: Incorrect args count in method signature: ()V */
     DropSequence$iterator$1(DropSequence dropSequence) {
         this.this$0 = dropSequence;
-        this.iterator = DropSequence.access$getSequence$p(dropSequence).iterator();
-        this.left = DropSequence.access$getCount$p(dropSequence);
+        this.iterator = dropSequence.sequence.iterator();
+        this.left = dropSequence.count;
     }
 
     public final Iterator<T> getIterator() {

@@ -1,33 +1,41 @@
 package com.xiaomi.push;
 
-import com.xiaomi.channel.commonutils.logger.b;
-import java.util.Date;
+import java.io.IOException;
 
-class br implements fl {
-    final /* synthetic */ bq a;
-
-    br(bq bqVar) {
-        this.a = bqVar;
+public class br extends IOException {
+    public br(String str) {
+        super(str);
     }
 
-    @Override // com.xiaomi.push.fl
-    public void a(fi fiVar) {
-        b.c("[Slim] " + this.a.f236a.format(new Date()) + " Connection reconnected (" + this.a.f233a.hashCode() + ")");
+    static br a() {
+        return new br("While parsing a protocol message, the input ended unexpectedly in the middle of a field.  This could mean either than the input has been truncated or that an embedded message misreported its own length.");
     }
 
-    @Override // com.xiaomi.push.fl
-    public void a(fi fiVar, int i, Exception exc) {
-        b.c("[Slim] " + this.a.f236a.format(new Date()) + " Connection closed (" + this.a.f233a.hashCode() + ")");
+    static br b() {
+        return new br("CodedInputStream encountered an embedded string or message which claimed to have negative size.");
     }
 
-    @Override // com.xiaomi.push.fl
-    public void a(fi fiVar, Exception exc) {
-        b.c("[Slim] " + this.a.f236a.format(new Date()) + " Reconnection failed due to an exception (" + this.a.f233a.hashCode() + ")");
-        exc.printStackTrace();
+    static br c() {
+        return new br("CodedInputStream encountered a malformed varint.");
     }
 
-    @Override // com.xiaomi.push.fl
-    public void b(fi fiVar) {
-        b.c("[Slim] " + this.a.f236a.format(new Date()) + " Connection started (" + this.a.f233a.hashCode() + ")");
+    static br d() {
+        return new br("Protocol message contained an invalid tag (zero).");
+    }
+
+    static br e() {
+        return new br("Protocol message end-group tag did not match expected tag.");
+    }
+
+    static br f() {
+        return new br("Protocol message tag had invalid wire type.");
+    }
+
+    static br g() {
+        return new br("Protocol message had too many levels of nesting.  May be malicious.  Use CodedInputStream.setRecursionLimit() to increase the depth limit.");
+    }
+
+    static br h() {
+        return new br("Protocol message was too large.  May be malicious.  Use CodedInputStream.setSizeLimit() to increase the size limit.");
     }
 }

@@ -29,8 +29,8 @@ public class ItemTextImageCardBindingImpl extends ItemTextImageCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 4);
-        sparseIntArray.put(2131362858, 5);
+        sparseIntArray.put(2131362779, 4);
+        sparseIntArray.put(2131362869, 5);
     }
 
     public ItemTextImageCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -152,7 +152,7 @@ public class ItemTextImageCardBindingImpl extends ItemTextImageCardBinding {
             DataBindingComponent dataBindingComponent = this.mBindingComponent;
             AspectRatioImageView aspectRatioImageView = this.mboundView1;
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(dataBindingComponent, aspectRatioImageView, str5, AppCompatResources.getDrawable(aspectRatioImageView.getContext(), 2131231363), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, true, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(dataBindingComponent, aspectRatioImageView, str5, AppCompatResources.getDrawable(aspectRatioImageView.getContext(), 2131231374), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, true, bool, null, bool);
             TextViewBindingAdapter.setText(this.mboundView3, str3);
             this.mboundView3.setVisibility(i);
             TextViewBindingAdapter.setText(this.textView7, str2);

@@ -34,7 +34,7 @@ public abstract class SearchHistoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchHistoryBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SearchHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559125, viewGroup, z, obj);
+        return (SearchHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559132, viewGroup, z, obj);
     }
 
     public static SearchHistoryBinding inflate(LayoutInflater layoutInflater) {
@@ -43,7 +43,7 @@ public abstract class SearchHistoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchHistoryBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SearchHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559125, null, false, obj);
+        return (SearchHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559132, null, false, obj);
     }
 
     public static SearchHistoryBinding bind(View view) {
@@ -52,6 +52,6 @@ public abstract class SearchHistoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchHistoryBinding bind(View view, Object obj) {
-        return (SearchHistoryBinding) bind(obj, view, 2131559125);
+        return (SearchHistoryBinding) bind(obj, view, 2131559132);
     }
 }

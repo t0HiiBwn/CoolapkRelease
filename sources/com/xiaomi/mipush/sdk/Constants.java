@@ -1,6 +1,6 @@
 package com.xiaomi.mipush.sdk;
 
-import com.xiaomi.push.ab;
+import com.xiaomi.push.c;
 
 public class Constants {
     public static final String ACCEPT_TIME_SEPARATOR_SERVER = "-";
@@ -45,6 +45,6 @@ public class Constants {
     public static final String WAVE_SEPARATOR = "~";
 
     protected static int a() {
-        return ab.a();
+        return c.c();
     }
 }

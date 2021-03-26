@@ -58,8 +58,8 @@ public final class GoodsSearchMainListFragment extends EntityListFragment {
         setEmptyData(null, 0);
         setRefreshEnable(false);
         setLoadMoreEnable(false);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131559125).suitedMethod(GoodsSearchMainListFragment$onActivityCreated$1.INSTANCE).constructor(new GoodsSearchMainListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131559126).suitedMethod(GoodsSearchMainListFragment$onActivityCreated$3.INSTANCE).constructor(new GoodsSearchMainListFragment$onActivityCreated$4(this)).resetItemViewType(2131562579).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131559132).suitedMethod(GoodsSearchMainListFragment$onActivityCreated$1.INSTANCE).constructor(new GoodsSearchMainListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131559133).suitedMethod(GoodsSearchMainListFragment$onActivityCreated$3.INSTANCE).constructor(new GoodsSearchMainListFragment$onActivityCreated$4(this)).resetItemViewType(2131562586).build(), 0, 2, null);
         getVxDividerDecoration$presentation_coolapkAppRelease().addViewMarginRule(new GoodsSearchMainListFragment$onActivityCreated$5());
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new GoodsSearchMainListFragment$onActivityCreated$6());
         loadHistory();

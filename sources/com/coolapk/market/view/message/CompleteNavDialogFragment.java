@@ -59,7 +59,7 @@ public final class CompleteNavDialogFragment extends BaseDialogFragment implemen
         String string2 = requireArguments().getString("EXTRA_USER_NAME");
         Intrinsics.checkNotNull(string2);
         this.userName = string2;
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558521, null, false, new ContextBindingComponent(getActivity()));
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558523, null, false, new ContextBindingComponent(getActivity()));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ndingComponent(activity))");
         DialogCompleteNavBinding dialogCompleteNavBinding = (DialogCompleteNavBinding) inflate;
         this.binding = dialogCompleteNavBinding;
@@ -98,13 +98,13 @@ public final class CompleteNavDialogFragment extends BaseDialogFragment implemen
     public void onClick(View view) {
         Intrinsics.checkNotNull(view);
         int id = view.getId();
-        if (id == 2131362394) {
+        if (id == 2131362400) {
             dismiss();
             Activity topActivity = AppHolder.getActivityStackManager().getTopActivity();
             if (topActivity != null) {
                 topActivity.finish();
             }
-        } else if (id == 2131362399) {
+        } else if (id == 2131362405) {
             dismiss();
             Activity topActivity2 = AppHolder.getActivityStackManager().getTopActivity();
             if (topActivity2 != null) {

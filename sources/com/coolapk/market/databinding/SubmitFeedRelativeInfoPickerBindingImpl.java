@@ -24,7 +24,7 @@ public class SubmitFeedRelativeInfoPickerBindingImpl extends SubmitFeedRelativeI
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 6);
+        sparseIntArray.put(2131363604, 6);
     }
 
     public SubmitFeedRelativeInfoPickerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

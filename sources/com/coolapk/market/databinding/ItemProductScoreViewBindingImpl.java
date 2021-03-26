@@ -21,7 +21,7 @@ public class ItemProductScoreViewBindingImpl extends ItemProductScoreViewBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362857, 1);
+        sparseIntArray.put(2131362868, 1);
     }
 
     public ItemProductScoreViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

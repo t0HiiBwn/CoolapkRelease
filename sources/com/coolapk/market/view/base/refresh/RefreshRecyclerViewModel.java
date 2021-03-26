@@ -51,7 +51,7 @@ public class RefreshRecyclerViewModel extends BaseObservable {
     public void showContent(boolean z) {
         if (this.showList != z) {
             this.showList = z;
-            notifyPropertyChanged(229);
+            notifyPropertyChanged(230);
             notifyPropertyChanged(92);
         }
     }
@@ -59,9 +59,9 @@ public class RefreshRecyclerViewModel extends BaseObservable {
     public void setLoading(boolean z) {
         if (this.loading != z) {
             this.loading = z;
-            notifyPropertyChanged(229);
+            notifyPropertyChanged(230);
             notifyPropertyChanged(92);
-            notifyPropertyChanged(186);
+            notifyPropertyChanged(187);
         }
     }
 

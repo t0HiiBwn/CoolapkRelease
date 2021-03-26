@@ -24,11 +24,11 @@ final class SubmitExtraViewPart$onRequestVisibility$3 implements View.OnClickLis
         FeedUIConfig.Builder builder2 = FeedUIConfig.builder(SubmitExtraViewPart.access$getActivity$p(this.this$0).getUiConfig());
         Intrinsics.checkNotNullExpressionValue(view, "it");
         switch (view.getId()) {
-            case 2131363938:
+            case 2131363964:
                 builder.visibleStatus(1);
                 builder2.visibleState(1);
                 break;
-            case 2131363939:
+            case 2131363965:
                 builder.visibleStatus(-1);
                 builder2.visibleState(-1);
                 break;

@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Notification  reason: invalid class name */
 abstract class C$AutoValue_Notification extends C$$AutoValue_Notification {
-    C$AutoValue_Notification(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, String str12, String str13, String str14, String str15, String str16, String str17, int i, String str18, UserInfo userInfo, NotifyCount notifyCount, String str19) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l2, l3, str11, str12, str13, str14, str15, str16, str17, i, str18, userInfo, notifyCount, str19);
+    C$AutoValue_Notification(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, String str12, String str13, String str14, String str15, String str16, String str17, int i, String str18, UserInfo userInfo, NotifyCount notifyCount, String str19) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l, l2, str11, str12, str13, str14, str15, str16, str17, i, str18, userInfo, notifyCount, str19);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Notification$GsonTypeAdapter */
@@ -149,13 +149,13 @@ abstract class C$AutoValue_Notification extends C$$AutoValue_Notification {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -296,8 +296,8 @@ abstract class C$AutoValue_Notification extends C$$AutoValue_Notification {
             String str8 = this.defaultLogo;
             String str9 = this.defaultSubTitle;
             String str10 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str11 = this.defaultId;
             String str12 = this.defaultUid;
             String str13 = this.defaultFromUid;
@@ -320,8 +320,8 @@ abstract class C$AutoValue_Notification extends C$$AutoValue_Notification {
             String str26 = str8;
             String str27 = str9;
             String str28 = str10;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str29 = str11;
             String str30 = str;
             String str31 = str12;
@@ -516,7 +516,7 @@ abstract class C$AutoValue_Notification extends C$$AutoValue_Notification {
                             str19 = this.entityTypeAdapter.read(jsonReader);
                             continue;
                         case 7:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\b':
                             str30 = this.entityTypeNameAdapter.read(jsonReader);
@@ -567,7 +567,7 @@ abstract class C$AutoValue_Notification extends C$$AutoValue_Notification {
                             userInfo2 = this.fromUserInfoAdapter.read(jsonReader);
                             continue;
                         case 24:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -576,7 +576,7 @@ abstract class C$AutoValue_Notification extends C$$AutoValue_Notification {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Notification(str30, str20, str21, num2, str22, str23, str24, str25, str26, str27, str28, l4, l5, str29, str31, str32, str33, str34, str35, str36, i2, str37, userInfo2, notifyCount2, str19);
+            return new AutoValue_Notification(str30, str20, str21, num2, str22, str23, str24, str25, str26, str27, str28, l3, l4, str29, str31, str32, str33, str34, str35, str36, i2, str37, userInfo2, notifyCount2, str19);
         }
     }
 }

@@ -28,6 +28,6 @@ final class MobileCodeVerifyDialog$onActivityCreated$2 extends Lambda implements
 
     public final void invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "it");
-        this.this$0.requestVerify();
+        MobileCodeVerifyDialog.access$requestVerify(this.this$0);
     }
 }

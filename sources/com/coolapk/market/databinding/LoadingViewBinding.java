@@ -27,7 +27,7 @@ public abstract class LoadingViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static LoadingViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (LoadingViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559013, viewGroup, z, obj);
+        return (LoadingViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559020, viewGroup, z, obj);
     }
 
     public static LoadingViewBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class LoadingViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static LoadingViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (LoadingViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559013, null, false, obj);
+        return (LoadingViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559020, null, false, obj);
     }
 
     public static LoadingViewBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class LoadingViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static LoadingViewBinding bind(View view, Object obj) {
-        return (LoadingViewBinding) bind(obj, view, 2131559013);
+        return (LoadingViewBinding) bind(obj, view, 2131559020);
     }
 }

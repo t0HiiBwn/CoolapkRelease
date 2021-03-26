@@ -26,7 +26,7 @@ public class ItemFoldedViewBindingImpl extends ItemFoldedViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 1);
+        sparseIntArray.put(2131363551, 1);
     }
 
     public ItemFoldedViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

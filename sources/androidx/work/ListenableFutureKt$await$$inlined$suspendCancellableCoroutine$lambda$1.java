@@ -23,7 +23,7 @@ public final class ListenableFutureKt$await$$inlined$suspendCancellableCoroutine
         try {
             Object obj = this.$this_await$inlined.get();
             Result.Companion companion = Result.Companion;
-            this.$cancellableContinuation.resumeWith(Result.m687constructorimpl(obj));
+            this.$cancellableContinuation.resumeWith(Result.m85constructorimpl(obj));
         } catch (Throwable th) {
             Throwable cause = th.getCause();
             if (cause == null) {
@@ -34,7 +34,7 @@ public final class ListenableFutureKt$await$$inlined$suspendCancellableCoroutine
                 return;
             }
             Result.Companion companion2 = Result.Companion;
-            this.$cancellableContinuation.resumeWith(Result.m687constructorimpl(ResultKt.createFailure(cause)));
+            this.$cancellableContinuation.resumeWith(Result.m85constructorimpl(ResultKt.createFailure(cause)));
         }
     }
 }

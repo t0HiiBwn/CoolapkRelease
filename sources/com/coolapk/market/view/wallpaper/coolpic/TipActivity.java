@@ -48,7 +48,7 @@ public final class TipActivity extends BaseActivity implements TranslucentActivi
         ThemeUtils.setSystemBarDrawFlags(tipActivity);
         super.onCreate(bundle);
         this.direction = getIntent().getIntExtra("KEY_DATA", 0);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(tipActivity, 2131559198);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(tipActivity, 2131559206);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…his, R.layout.tip_layout)");
         TipLayoutBinding tipLayoutBinding = (TipLayoutBinding) contentView;
         this.binding = tipLayoutBinding;

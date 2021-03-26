@@ -21,7 +21,7 @@ public class ItemEmptyViewBindingImpl extends ItemEmptyViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362472, 1);
+        sparseIntArray.put(2131362480, 1);
     }
 
     public ItemEmptyViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

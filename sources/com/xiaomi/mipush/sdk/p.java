@@ -1,11 +1,11 @@
 package com.xiaomi.mipush.sdk;
 
 import android.content.Context;
-import com.xiaomi.push.ec;
-import com.xiaomi.push.hh;
-import com.xiaomi.push.service.an;
+import com.xiaomi.push.dj;
+import com.xiaomi.push.gn;
+import com.xiaomi.push.service.l;
 
-final class p extends an.a {
+final class p extends l.a {
     final /* synthetic */ Context a;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -14,8 +14,8 @@ final class p extends an.a {
         this.a = context;
     }
 
-    @Override // com.xiaomi.push.service.an.a
+    @Override // com.xiaomi.push.service.l.a
     protected void onCallback() {
-        ec.a(this.a).a(an.a(this.a).a(hh.AwakeInfoUploadWaySwitch.a(), 0));
+        dj.a(this.a).a(l.a(this.a).a(gn.AwakeInfoUploadWaySwitch.a(), 0));
     }
 }

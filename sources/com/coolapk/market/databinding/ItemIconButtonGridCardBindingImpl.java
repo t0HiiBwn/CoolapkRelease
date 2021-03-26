@@ -32,11 +32,11 @@ public class ItemIconButtonGridCardBindingImpl extends ItemIconButtonGridCardBin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 7);
-        sparseIntArray.put(2131362679, 8);
-        sparseIntArray.put(2131362678, 9);
-        sparseIntArray.put(2131362681, 10);
-        sparseIntArray.put(2131362680, 11);
+        sparseIntArray.put(2131362779, 7);
+        sparseIntArray.put(2131362690, 8);
+        sparseIntArray.put(2131362689, 9);
+        sparseIntArray.put(2131362692, 10);
+        sparseIntArray.put(2131362691, 11);
     }
 
     public ItemIconButtonGridCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -83,7 +83,7 @@ public class ItemIconButtonGridCardBindingImpl extends ItemIconButtonGridCardBin
     public boolean setVariable(int i, Object obj) {
         if (46 == i) {
             setCard2((Entity) obj);
-        } else if (185 == i) {
+        } else if (186 == i) {
             setLoadListener((OnImageLoadListener) obj);
         } else if (45 == i) {
             setCard1((Entity) obj);
@@ -111,7 +111,7 @@ public class ItemIconButtonGridCardBindingImpl extends ItemIconButtonGridCardBin
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(185);
+        notifyPropertyChanged(186);
         super.requestRebind();
     }
 
@@ -261,14 +261,14 @@ public class ItemIconButtonGridCardBindingImpl extends ItemIconButtonGridCardBin
                             Boolean bool2 = null;
                             i6 = i7;
                             onImageLoadListener = onImageLoadListener2;
-                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.img0, str7, null, 2131231696, 0, bool2, bool2, bool2, bool2, bool2, null, onImageLoadListener, null, bool2, bool2, true, null, bool2);
+                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.img0, str7, null, 2131231707, 0, bool2, bool2, bool2, bool2, bool2, null, onImageLoadListener, null, bool2, bool2, true, null, bool2);
                         } else {
                             onImageLoadListener = onImageLoadListener2;
                             i6 = i7;
                         }
                         if (i4 != 0) {
                             Boolean bool3 = null;
-                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.img1, str6, null, 2131231696, 0, bool3, bool3, bool3, bool3, bool3, null, onImageLoadListener, null, bool3, bool3, true, null, bool3);
+                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.img1, str6, null, 2131231707, 0, bool3, bool3, bool3, bool3, bool3, null, onImageLoadListener, null, bool3, bool3, true, null, bool3);
                         }
                         if ((j & 20) != 0) {
                             TextViewBindingAdapter.setText(this.mboundView3, str3);

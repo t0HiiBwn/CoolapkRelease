@@ -26,8 +26,8 @@ public class ItemCenterUserMenuChildBindingImpl extends ItemCenterUserMenuChildB
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 1);
-        sparseIntArray.put(2131363533, 2);
+        sparseIntArray.put(2131362718, 1);
+        sparseIntArray.put(2131363551, 2);
     }
 
     public ItemCenterUserMenuChildBindingImpl(DataBindingComponent dataBindingComponent, View view) {

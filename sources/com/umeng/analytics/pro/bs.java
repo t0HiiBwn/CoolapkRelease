@@ -195,10 +195,10 @@ public abstract class bs<T extends bs<?, ?>, F extends bp> implements bi<T, F> {
             bsVar.b = null;
             bsVar.a = null;
             chVar.j();
-            cc l2 = chVar.l();
-            bsVar.a = bsVar.a(chVar, l2);
+            cc l = chVar.l();
+            bsVar.a = bsVar.a(chVar, l);
             if (bsVar.a != null) {
-                bsVar.b = (F) bsVar.a(l2.c);
+                bsVar.b = (F) bsVar.a(l.c);
             }
             chVar.m();
             chVar.l();

@@ -65,13 +65,13 @@ public class ItemDocListCardItemBindingImpl extends ItemDocListCardItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (189 == i) {
+        if (190 == i) {
             setLogo((String) obj);
         } else if (97 == i) {
             setEntityTypeName((String) obj);
-        } else if (278 == i) {
+        } else if (279 == i) {
             setTitle((String) obj);
-        } else if (168 != i) {
+        } else if (169 != i) {
             return false;
         } else {
             setIsGift(((Boolean) obj).booleanValue());
@@ -85,7 +85,7 @@ public class ItemDocListCardItemBindingImpl extends ItemDocListCardItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(189);
+        notifyPropertyChanged(190);
         super.requestRebind();
     }
 
@@ -105,7 +105,7 @@ public class ItemDocListCardItemBindingImpl extends ItemDocListCardItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(278);
+        notifyPropertyChanged(279);
         super.requestRebind();
     }
 
@@ -115,7 +115,7 @@ public class ItemDocListCardItemBindingImpl extends ItemDocListCardItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 8;
         }
-        notifyPropertyChanged(168);
+        notifyPropertyChanged(169);
         super.requestRebind();
     }
 
@@ -197,7 +197,7 @@ public class ItemDocListCardItemBindingImpl extends ItemDocListCardItemBinding {
                             this.iconView.setVisibility(i);
                             Boolean bool = null;
                             str = str4;
-                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str2, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
+                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str2, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
                         } else {
                             str = str4;
                         }

@@ -32,15 +32,15 @@ public class AlbumDetailBindingImpl extends AlbumDetailBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362264, 12);
-        sparseIntArray.put(2131363881, 13);
-        sparseIntArray.put(2131362340, 14);
-        sparseIntArray.put(2131362652, 15);
-        sparseIntArray.put(2131362735, 16);
-        sparseIntArray.put(2131363217, 17);
-        sparseIntArray.put(2131363588, 18);
-        sparseIntArray.put(2131363480, 19);
-        sparseIntArray.put(2131362279, 20);
+        sparseIntArray.put(2131362269, 12);
+        sparseIntArray.put(2131363904, 13);
+        sparseIntArray.put(2131362346, 14);
+        sparseIntArray.put(2131362660, 15);
+        sparseIntArray.put(2131362746, 16);
+        sparseIntArray.put(2131363231, 17);
+        sparseIntArray.put(2131363610, 18);
+        sparseIntArray.put(2131363498, 19);
+        sparseIntArray.put(2131362284, 20);
     }
 
     public AlbumDetailBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -88,11 +88,11 @@ public class AlbumDetailBindingImpl extends AlbumDetailBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((AlbumDetailViewModel) obj);
@@ -106,7 +106,7 @@ public class AlbumDetailBindingImpl extends AlbumDetailBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -127,7 +127,7 @@ public class AlbumDetailBindingImpl extends AlbumDetailBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -160,12 +160,12 @@ public class AlbumDetailBindingImpl extends AlbumDetailBinding {
                 this.mDirtyFlags |= 32;
             }
             return true;
-        } else if (i == 246) {
+        } else if (i == 247) {
             synchronized (this) {
                 this.mDirtyFlags |= 64;
             }
             return true;
-        } else if (i != 170) {
+        } else if (i != 171) {
             return false;
         } else {
             synchronized (this) {
@@ -279,7 +279,7 @@ public class AlbumDetailBindingImpl extends AlbumDetailBinding {
                     i6 = i3;
                     i5 = i4;
                     onClickListener = onClickListener2;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.albumIconView, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, true, bool, onClickListener, bool);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.albumIconView, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, true, bool, onClickListener, bool);
                 } else {
                     str5 = str3;
                     onClickListener = onClickListener2;

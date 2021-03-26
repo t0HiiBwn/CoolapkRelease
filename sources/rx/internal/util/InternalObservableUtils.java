@@ -39,8 +39,8 @@ public enum InternalObservableUtils {
         PlusOneLongFunc2() {
         }
 
-        public Long call(Long l2, Object obj) {
-            return Long.valueOf(l2.longValue() + 1);
+        public Long call(Long l, Object obj) {
+            return Long.valueOf(l.longValue() + 1);
         }
     }
 

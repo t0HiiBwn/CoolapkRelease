@@ -16,7 +16,7 @@ public interface a extends IInterface {
 
     /* renamed from: com.umeng.analytics.pro.a$a  reason: collision with other inner class name */
     /* compiled from: IDeviceIdService */
-    public static abstract class AbstractBinderC0139a extends Binder implements a {
+    public static abstract class AbstractBinderC0166a extends Binder implements a {
         static final int a = 1;
         static final int b = 2;
         static final int c = 3;
@@ -27,7 +27,7 @@ public interface a extends IInterface {
             return this;
         }
 
-        public AbstractBinderC0139a() {
+        public AbstractBinderC0166a() {
             attachInterface(this, "com.samsung.android.deviceidservice.IDeviceIdService");
         }
 
@@ -37,7 +37,7 @@ public interface a extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.samsung.android.deviceidservice.IDeviceIdService");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof a)) {
-                return new C0140a(iBinder);
+                return new C0167a(iBinder);
             }
             return (a) queryLocalInterface;
         }
@@ -72,14 +72,14 @@ public interface a extends IInterface {
 
         /* renamed from: com.umeng.analytics.pro.a$a$a  reason: collision with other inner class name */
         /* compiled from: IDeviceIdService */
-        private static class C0140a implements a {
+        private static class C0167a implements a {
             private IBinder a;
 
             public String b() {
                 return "com.samsung.android.deviceidservice.IDeviceIdService";
             }
 
-            C0140a(IBinder iBinder) {
+            C0167a(IBinder iBinder) {
                 this.a = iBinder;
             }
 

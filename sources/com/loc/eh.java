@@ -40,9 +40,7 @@ public final class eh {
     public String i = null;
     protected String j = null;
     protected String k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    protected String f1374l = null;
+    protected String l = null;
     protected String m = null;
     protected String n = null;
     protected String o = null;
@@ -342,7 +340,7 @@ public final class eh {
         this.i = str12;
         this.j = str9;
         this.k = str9;
-        this.f1374l = str9;
+        this.l = str9;
         this.m = str9;
         this.n = str9;
         this.o = str10;
@@ -437,7 +435,7 @@ public final class eh {
         int parseInt;
         int length2;
         int length3;
-        String[] strArr = {this.a, this.c, this.d, this.e, this.f, this.g, this.h, this.i, this.f1374l, this.m, this.n, this.o, this.p, this.q, this.r, this.s, this.t, this.u, this.v, this.w, this.x, this.A, this.B, this.E, this.G, this.H, J, this.N};
+        String[] strArr = {this.a, this.c, this.d, this.e, this.f, this.g, this.h, this.i, this.l, this.m, this.n, this.o, this.p, this.q, this.r, this.s, this.t, this.u, this.v, this.w, this.x, this.A, this.B, this.E, this.G, this.H, J, this.N};
         for (int i22 = 0; i22 < 28; i22++) {
             if (TextUtils.isEmpty(strArr[i22])) {
                 strArr[i22] = "";
@@ -649,7 +647,7 @@ public final class eh {
                                     }
                                     bArr5[i6] = (byte) i19;
                                     int i33 = i6 + 1;
-                                    byte[] a13 = ep.a(dvVar.f1367l, bArr2);
+                                    byte[] a13 = ep.a(dvVar.l, bArr2);
                                     System.arraycopy(a13, 0, bArr5, i33, a13.length);
                                     i6 = i33 + a13.length;
                                     if (Double.valueOf("5.1").doubleValue() >= 5.0d) {
@@ -679,7 +677,7 @@ public final class eh {
                                 i19 = 99;
                                 bArr5[i6] = (byte) i19;
                                 int i33 = i6 + 1;
-                                byte[] a13 = ep.a(dvVar.f1367l, bArr2);
+                                byte[] a13 = ep.a(dvVar.l, bArr2);
                                 System.arraycopy(a13, 0, bArr5, i33, a13.length);
                                 i6 = i33 + a13.length;
                                 if (Double.valueOf("5.1").doubleValue() >= 5.0d) {

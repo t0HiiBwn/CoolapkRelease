@@ -16,7 +16,7 @@ import org.json.JSONObject;
 /* compiled from: ExceptionEventBuilder */
 public class b {
     /* renamed from: a  reason: collision with other method in class */
-    public static void m18a(Context context, Throwable th) {
+    public static void m8a(Context context, Throwable th) {
         if (th != null) {
             try {
                 h hVar = (h) a.a().a(h.class, new Object[0]);
@@ -26,7 +26,7 @@ public class b {
                 d dVar = (d) a.a().a(d.class, new Object[0]);
                 dVar.put(a(context, th));
                 hashMap.put("data", dVar);
-                hVar.m.put(f.ALARM.m16a(), new JSONObject(hashMap).toString());
+                hVar.m.put(f.ALARM.m6a(), new JSONObject(hashMap).toString());
                 hVar.v = "APPMONITOR";
                 hVar.w = "sdk-exception";
                 c.a(hVar);
@@ -38,8 +38,8 @@ public class b {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public static void m19a(Throwable th) {
-        m18a((Context) null, th);
+    public static void m9a(Throwable th) {
+        m8a((Context) null, th);
     }
 
     private static JSONObject a(Context context, Throwable th) throws IOException {

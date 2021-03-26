@@ -219,8 +219,8 @@ public final class b {
             Matcher matcher = a.matcher(str2);
             boolean z = true;
             int parseInteger = StringUtil.parseInteger(matcher.matches() ? matcher.group(1) : "0", 0);
-            if (parseInteger < 1202) {
-                GDTLogger.i("online plugin version is smaller than asset plugin version" + parseInteger + ",1202.download give up");
+            if (parseInteger < 1203) {
+                GDTLogger.i("online plugin version is smaller than asset plugin version" + parseInteger + ",1203.download give up");
                 z = false;
             }
             if (z) {

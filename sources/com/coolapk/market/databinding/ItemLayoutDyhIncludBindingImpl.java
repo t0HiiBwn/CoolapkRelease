@@ -21,11 +21,11 @@ public class ItemLayoutDyhIncludBindingImpl extends ItemLayoutDyhIncludBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362639, 1);
-        sparseIntArray.put(2131362640, 2);
-        sparseIntArray.put(2131362376, 3);
-        sparseIntArray.put(2131362865, 4);
-        sparseIntArray.put(2131361899, 5);
+        sparseIntArray.put(2131362647, 1);
+        sparseIntArray.put(2131362648, 2);
+        sparseIntArray.put(2131362382, 3);
+        sparseIntArray.put(2131362876, 4);
+        sparseIntArray.put(2131361900, 5);
     }
 
     public ItemLayoutDyhIncludBindingImpl(DataBindingComponent dataBindingComponent, View view) {

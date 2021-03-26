@@ -30,7 +30,7 @@ public abstract class LiveReplyListBinding extends ViewDataBinding {
 
     @Deprecated
     public static LiveReplyListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (LiveReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559012, viewGroup, z, obj);
+        return (LiveReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559019, viewGroup, z, obj);
     }
 
     public static LiveReplyListBinding inflate(LayoutInflater layoutInflater) {
@@ -39,7 +39,7 @@ public abstract class LiveReplyListBinding extends ViewDataBinding {
 
     @Deprecated
     public static LiveReplyListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (LiveReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559012, null, false, obj);
+        return (LiveReplyListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559019, null, false, obj);
     }
 
     public static LiveReplyListBinding bind(View view) {
@@ -48,6 +48,6 @@ public abstract class LiveReplyListBinding extends ViewDataBinding {
 
     @Deprecated
     public static LiveReplyListBinding bind(View view, Object obj) {
-        return (LiveReplyListBinding) bind(obj, view, 2131559012);
+        return (LiveReplyListBinding) bind(obj, view, 2131559019);
     }
 }

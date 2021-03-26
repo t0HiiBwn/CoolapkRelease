@@ -33,23 +33,24 @@ public interface ReceiveChannel<E> {
 
     Object receive(Continuation<? super E> continuation);
 
-    Object receiveOrClosed(Continuation<? super ValueOrClosed<? extends E>> continuation);
+    /* renamed from: receiveOrClosed-ZYPwvRU */
+    Object mo1404receiveOrClosedZYPwvRU(Continuation<? super ValueOrClosed<? extends E>> continuation);
 
     @Deprecated(level = DeprecationLevel.WARNING, message = "Deprecated in favor of receiveOrClosed and receiveOrNull extension", replaceWith = @ReplaceWith(expression = "receiveOrNull", imports = {"kotlinx.coroutines.channels.receiveOrNull"}))
     Object receiveOrNull(Continuation<? super E> continuation);
 
     /* compiled from: Channel.kt */
     public static final class DefaultImpls {
+        public static /* synthetic */ void getOnReceiveOrClosed$annotations() {
+        }
+
+        public static /* synthetic */ void getOnReceiveOrNull$annotations() {
+        }
+
         public static /* synthetic */ void isClosedForReceive$annotations() {
         }
 
         public static /* synthetic */ void isEmpty$annotations() {
-        }
-
-        public static /* synthetic */ void onReceiveOrClosed$annotations() {
-        }
-
-        public static /* synthetic */ void onReceiveOrNull$annotations() {
         }
 
         public static /* synthetic */ void cancel$default(ReceiveChannel receiveChannel, CancellationException cancellationException, int i, Object obj) {

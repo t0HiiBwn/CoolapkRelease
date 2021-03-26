@@ -71,7 +71,7 @@ public class ItemTripleAvatarViewPartBindingImpl extends ItemTripleAvatarViewPar
             setAvatar3((String) obj);
         } else if (41 == i) {
             setAvatar2((String) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);
@@ -115,7 +115,7 @@ public class ItemTripleAvatarViewPartBindingImpl extends ItemTripleAvatarViewPar
         synchronized (this) {
             this.mDirtyFlags |= 8;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -178,7 +178,7 @@ public class ItemTripleAvatarViewPartBindingImpl extends ItemTripleAvatarViewPar
                             i3 = i2;
                             onBitmapTransformListener = onBitmapTransformListener2;
                             str = str4;
-                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str2, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
+                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str2, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
                         } else {
                             i3 = i2;
                             i4 = i8;
@@ -196,14 +196,14 @@ public class ItemTripleAvatarViewPartBindingImpl extends ItemTripleAvatarViewPar
                         }
                         if ((j & 28) != 0) {
                             Boolean bool2 = null;
-                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView2, str, null, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, null, null, onBitmapTransformListener, bool2, bool2, bool2, null, bool2);
+                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView2, str, null, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, null, null, onBitmapTransformListener, bool2, bool2, bool2, null, bool2);
                         }
                         if ((j & 18) != 0) {
                             this.mboundView3.setVisibility(i3);
                         }
                         if ((j & 26) != 0) {
                             Boolean bool3 = null;
-                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView3, str3, null, 2131231152, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
+                            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView3, str3, null, 2131231162, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
                             return;
                         }
                         return;

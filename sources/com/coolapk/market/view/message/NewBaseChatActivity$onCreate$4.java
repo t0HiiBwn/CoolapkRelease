@@ -17,7 +17,7 @@ final class NewBaseChatActivity$onCreate$4 implements ViewUtil.OnDoubleClickList
 
     @Override // com.coolapk.market.util.ViewUtil.OnDoubleClickListener
     public final boolean onDoubleClick(View view) {
-        Fragment findFragmentById = this.this$0.getSupportFragmentManager().findFragmentById(2131363592);
+        Fragment findFragmentById = this.this$0.getSupportFragmentManager().findFragmentById(2131363614);
         if (!(findFragmentById instanceof ScrollableFragment) || !findFragmentById.isVisible()) {
             return false;
         }

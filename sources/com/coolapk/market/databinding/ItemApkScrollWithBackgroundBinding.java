@@ -39,7 +39,7 @@ public abstract class ItemApkScrollWithBackgroundBinding extends ViewDataBinding
 
     @Deprecated
     public static ItemApkScrollWithBackgroundBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemApkScrollWithBackgroundBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558588, viewGroup, z, obj);
+        return (ItemApkScrollWithBackgroundBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558592, viewGroup, z, obj);
     }
 
     public static ItemApkScrollWithBackgroundBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class ItemApkScrollWithBackgroundBinding extends ViewDataBinding
 
     @Deprecated
     public static ItemApkScrollWithBackgroundBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemApkScrollWithBackgroundBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558588, null, false, obj);
+        return (ItemApkScrollWithBackgroundBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558592, null, false, obj);
     }
 
     public static ItemApkScrollWithBackgroundBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class ItemApkScrollWithBackgroundBinding extends ViewDataBinding
 
     @Deprecated
     public static ItemApkScrollWithBackgroundBinding bind(View view, Object obj) {
-        return (ItemApkScrollWithBackgroundBinding) bind(obj, view, 2131558588);
+        return (ItemApkScrollWithBackgroundBinding) bind(obj, view, 2131558592);
     }
 }

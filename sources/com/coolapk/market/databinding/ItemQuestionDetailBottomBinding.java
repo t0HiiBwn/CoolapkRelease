@@ -67,7 +67,7 @@ public abstract class ItemQuestionDetailBottomBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemQuestionDetailBottomBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemQuestionDetailBottomBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558884, viewGroup, z, obj);
+        return (ItemQuestionDetailBottomBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558891, viewGroup, z, obj);
     }
 
     public static ItemQuestionDetailBottomBinding inflate(LayoutInflater layoutInflater) {
@@ -76,7 +76,7 @@ public abstract class ItemQuestionDetailBottomBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemQuestionDetailBottomBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemQuestionDetailBottomBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558884, null, false, obj);
+        return (ItemQuestionDetailBottomBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558891, null, false, obj);
     }
 
     public static ItemQuestionDetailBottomBinding bind(View view) {
@@ -85,6 +85,6 @@ public abstract class ItemQuestionDetailBottomBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemQuestionDetailBottomBinding bind(View view, Object obj) {
-        return (ItemQuestionDetailBottomBinding) bind(obj, view, 2131558884);
+        return (ItemQuestionDetailBottomBinding) bind(obj, view, 2131558891);
     }
 }

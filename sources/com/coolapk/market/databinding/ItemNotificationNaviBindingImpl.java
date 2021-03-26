@@ -84,7 +84,7 @@ public class ItemNotificationNaviBindingImpl extends ItemNotificationNaviBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (208 == i) {
+        if (209 == i) {
             setNotification((AppNotification) obj);
         } else if (50 != i) {
             return false;
@@ -100,7 +100,7 @@ public class ItemNotificationNaviBindingImpl extends ItemNotificationNaviBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(208);
+        notifyPropertyChanged(209);
         super.requestRebind();
     }
 

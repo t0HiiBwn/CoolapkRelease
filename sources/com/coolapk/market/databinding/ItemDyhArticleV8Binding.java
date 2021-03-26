@@ -115,7 +115,7 @@ public abstract class ItemDyhArticleV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDyhArticleV8Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemDyhArticleV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558678, viewGroup, z, obj);
+        return (ItemDyhArticleV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558684, viewGroup, z, obj);
     }
 
     public static ItemDyhArticleV8Binding inflate(LayoutInflater layoutInflater) {
@@ -124,7 +124,7 @@ public abstract class ItemDyhArticleV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDyhArticleV8Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemDyhArticleV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558678, null, false, obj);
+        return (ItemDyhArticleV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558684, null, false, obj);
     }
 
     public static ItemDyhArticleV8Binding bind(View view) {
@@ -133,6 +133,6 @@ public abstract class ItemDyhArticleV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDyhArticleV8Binding bind(View view, Object obj) {
-        return (ItemDyhArticleV8Binding) bind(obj, view, 2131558678);
+        return (ItemDyhArticleV8Binding) bind(obj, view, 2131558684);
     }
 }

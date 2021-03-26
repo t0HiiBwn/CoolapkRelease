@@ -23,8 +23,8 @@ final class AutoValue_UpgradeInfo extends C$AutoValue_UpgradeInfo {
         return 0;
     }
 
-    AutoValue_UpgradeInfo(String str, String str2, String str3, String str4, int i, String str5, long j, String str6, String str7, String str8, String str9, Long l2, String str10, String str11, String str12) {
-        super(str, str2, str3, str4, i, str5, j, str6, str7, str8, str9, l2, str10, str11, str12);
+    AutoValue_UpgradeInfo(String str, String str2, String str3, String str4, int i, String str5, long j, String str6, String str7, String str8, String str9, Long l, String str10, String str11, String str12) {
+        super(str, str2, str3, str4, i, str5, j, str6, str7, str8, str9, l, str10, str11, str12);
     }
 
     @Override // android.os.Parcelable

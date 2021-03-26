@@ -111,7 +111,7 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
     public void onViewCreated(View view, Bundle bundle) {
         Intrinsics.checkNotNullParameter(view, "view");
         super.onViewCreated(view, bundle);
-        setEmptyData(getString(2131886769), 0);
+        setEmptyData(getString(2131886831), 0);
         setRefreshEnable(false);
         setLoadMoreEnable(false);
         setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -174,7 +174,7 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
         if (presenter2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("presenter");
         }
-        arrayList.add(new SectionedAdapter.Section(0, 2131558830, presenter2));
+        arrayList.add(new SectionedAdapter.Section(0, 2131558837, presenter2));
         TitleAdapter titleAdapter2 = this.adapter;
         if (titleAdapter2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
@@ -215,7 +215,7 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
         switch (menuItem.getItemId()) {
-            case 2131361970:
+            case 2131361971:
                 MobileAppContract.Presenter presenter2 = this.presenter;
                 if (presenter2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("presenter");
@@ -227,7 +227,7 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
                 }
                 presenter3.reloadData();
                 return true;
-            case 2131361971:
+            case 2131361972:
                 MobileAppContract.Presenter presenter4 = this.presenter;
                 if (presenter4 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("presenter");
@@ -239,7 +239,7 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
                 }
                 presenter5.reloadData();
                 return true;
-            case 2131361972:
+            case 2131361973:
                 MobileAppContract.Presenter presenter6 = this.presenter;
                 if (presenter6 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("presenter");
@@ -251,7 +251,7 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
                 }
                 presenter7.reloadData();
                 return true;
-            case 2131361973:
+            case 2131361974:
                 MobileAppContract.Presenter presenter8 = this.presenter;
                 if (presenter8 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("presenter");
@@ -263,7 +263,7 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
                 }
                 presenter9.reloadData();
                 return true;
-            case 2131361974:
+            case 2131361975:
                 MobileAppContract.Presenter presenter10 = this.presenter;
                 if (presenter10 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("presenter");
@@ -347,8 +347,8 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
         @Override // com.coolapk.market.widget.SectionedAdapter
         public RecyclerView.ViewHolder onCreateSectionViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558830, viewGroup, false);
-            if (i == 2131558830) {
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558837, viewGroup, false);
+            if (i == 2131558837) {
                 Intrinsics.checkNotNullExpressionValue(inflate, "viewItem");
                 return new SwitchViewHolder(inflate);
             }
@@ -370,7 +370,7 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558829;
+            return 2131558836;
         }
 
         public DataAdapter(MobileAppFragment mobileAppFragment, Fragment fragment) {
@@ -412,7 +412,7 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
     /* compiled from: MobileAppFragment.kt */
     public static final class SwitchViewHolder extends BindingViewHolder implements CompoundButton.OnCheckedChangeListener {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558830;
+        public static final int LAYOUT_ID = 2131558837;
         private MobileAppPresenter presenter;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -532,8 +532,8 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
 
         /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object] */
         @Override // androidx.recyclerview.selection.ItemKeyProvider
-        public /* bridge */ /* synthetic */ int getPosition(Long l2) {
-            return getPosition(l2.longValue());
+        public /* bridge */ /* synthetic */ int getPosition(Long l) {
+            return getPosition(l.longValue());
         }
 
         @Override // androidx.recyclerview.selection.ItemKeyProvider
@@ -572,7 +572,7 @@ public final class MobileAppFragment extends StateEventListFragment<List<? exten
         public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
             Intrinsics.checkNotNullParameter(actionMode, "mode");
             Intrinsics.checkNotNullParameter(menuItem, "item");
-            if (menuItem.getItemId() != 2131361891) {
+            if (menuItem.getItemId() != 2131361892) {
                 return false;
             }
             int itemCount = MobileAppFragment.access$getAdapter$p(MobileAppFragment.this).getItemCount();

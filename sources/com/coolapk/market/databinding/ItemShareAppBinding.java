@@ -37,7 +37,7 @@ public abstract class ItemShareAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemShareAppBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemShareAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558927, viewGroup, z, obj);
+        return (ItemShareAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558934, viewGroup, z, obj);
     }
 
     public static ItemShareAppBinding inflate(LayoutInflater layoutInflater) {
@@ -46,7 +46,7 @@ public abstract class ItemShareAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemShareAppBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemShareAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558927, null, false, obj);
+        return (ItemShareAppBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558934, null, false, obj);
     }
 
     public static ItemShareAppBinding bind(View view) {
@@ -55,6 +55,6 @@ public abstract class ItemShareAppBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemShareAppBinding bind(View view, Object obj) {
-        return (ItemShareAppBinding) bind(obj, view, 2131558927);
+        return (ItemShareAppBinding) bind(obj, view, 2131558934);
     }
 }

@@ -68,7 +68,7 @@ public class UserAlbumListActivity extends AlphaToolbarActivity {
 
     @Override // android.app.Activity
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() != 2131361856) {
+        if (menuItem.getItemId() != 2131361857) {
             return false;
         }
         AlbumCreateDialog.newInstance().show(getSupportFragmentManager(), (String) null);

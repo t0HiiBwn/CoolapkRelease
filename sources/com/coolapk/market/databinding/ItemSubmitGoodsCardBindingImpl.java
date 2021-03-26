@@ -22,8 +22,8 @@ public class ItemSubmitGoodsCardBindingImpl extends ItemSubmitGoodsCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363397, 1);
-        sparseIntArray.put(2131362257, 2);
+        sparseIntArray.put(2131363414, 1);
+        sparseIntArray.put(2131362262, 2);
     }
 
     public ItemSubmitGoodsCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -58,7 +58,7 @@ public class ItemSubmitGoodsCardBindingImpl extends ItemSubmitGoodsCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((GoodsSimpleInfo) obj);

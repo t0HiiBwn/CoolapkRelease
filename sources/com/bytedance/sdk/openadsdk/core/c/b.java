@@ -45,9 +45,7 @@ public class b extends l {
     protected Dialog i;
     protected ImageView j;
     protected FrameLayout k;
-
-    /* renamed from: l  reason: collision with root package name */
-    a f1302l;
+    a l;
     private String o = "interaction";
 
     public b(Context context, com.bytedance.sdk.openadsdk.core.d.l lVar, AdSlot adSlot) {
@@ -202,8 +200,8 @@ public class b extends l {
             public boolean a(NativeExpressView nativeExpressView, int i) {
                 try {
                     b.this.a.l();
-                    b.this.f1302l = new a(nativeExpressView.getContext());
-                    b.this.f1302l.a(b.this.c, b.this.a, b.this.h);
+                    b.this.l = new a(nativeExpressView.getContext());
+                    b.this.l.a(b.this.c, b.this.a, b.this.h);
                     return true;
                 } catch (Exception unused) {
                     return false;
@@ -355,7 +353,7 @@ public class b extends l {
                 }
             });
         }
-        a aVar = this.f1302l;
+        a aVar = this.l;
         if (aVar != null) {
             aVar.a(this.i);
         }

@@ -5,6 +5,7 @@ import android.util.DisplayMetrics;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public final class AdaptScreenUtils {
     private static List<Field> sMetricsFields;
@@ -14,20 +15,28 @@ public final class AdaptScreenUtils {
     }
 
     public static Resources adaptWidth(Resources resources, int i) {
+        Objects.requireNonNull(resources, "Argument 'resources' of type Resources (#0 out of 2, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         applyDisplayMetrics(resources, (((float) resources.getDisplayMetrics().widthPixels) * 72.0f) / ((float) i));
+        Objects.requireNonNull(resources, "Detected an attempt to return null from a method com.blankj.utilcode.util.AdaptScreenUtils.adaptWidth() marked by @androidx.annotation.NonNull");
         return resources;
     }
 
     public static Resources adaptHeight(Resources resources, int i) {
-        return adaptHeight(resources, i, false);
+        Objects.requireNonNull(resources, "Argument 'resources' of type Resources (#0 out of 2, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
+        Resources adaptHeight = adaptHeight(resources, i, false);
+        Objects.requireNonNull(adaptHeight, "Detected an attempt to return null from a method com.blankj.utilcode.util.AdaptScreenUtils.adaptHeight() marked by @androidx.annotation.NonNull");
+        return adaptHeight;
     }
 
     public static Resources adaptHeight(Resources resources, int i, boolean z) {
+        Objects.requireNonNull(resources, "Argument 'resources' of type Resources (#0 out of 3, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         applyDisplayMetrics(resources, (((float) (resources.getDisplayMetrics().heightPixels + (z ? getNavBarHeight(resources) : 0))) * 72.0f) / ((float) i));
+        Objects.requireNonNull(resources, "Detected an attempt to return null from a method com.blankj.utilcode.util.AdaptScreenUtils.adaptHeight() marked by @androidx.annotation.NonNull");
         return resources;
     }
 
     private static int getNavBarHeight(Resources resources) {
+        Objects.requireNonNull(resources, "Argument 'resources' of type Resources (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         int identifier = resources.getIdentifier("navigation_bar_height", "dimen", "android");
         if (identifier != 0) {
             return resources.getDimensionPixelSize(identifier);
@@ -36,7 +45,9 @@ public final class AdaptScreenUtils {
     }
 
     public static Resources closeAdapt(Resources resources) {
+        Objects.requireNonNull(resources, "Argument 'resources' of type Resources (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         applyDisplayMetrics(resources, Resources.getSystem().getDisplayMetrics().density * 72.0f);
+        Objects.requireNonNull(resources, "Detected an attempt to return null from a method com.blankj.utilcode.util.AdaptScreenUtils.closeAdapt() marked by @androidx.annotation.NonNull");
         return resources;
     }
 
@@ -49,6 +60,7 @@ public final class AdaptScreenUtils {
     }
 
     private static void applyDisplayMetrics(Resources resources, float f) {
+        Objects.requireNonNull(resources, "Argument 'resources' of type Resources (#0 out of 2, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         resources.getDisplayMetrics().xdpi = f;
         Utils.getApp().getResources().getDisplayMetrics().xdpi = f;
         applyOtherDisplayMetrics(resources, f);

@@ -42,9 +42,9 @@ public abstract class ar extends q {
             byteArrayOutputStream.write(new byte[]{3});
             if (j()) {
                 Context context = this.a;
-                boolean l2 = l();
+                boolean l = l();
                 t tVar = this.b;
-                byte[] a2 = m.a(context, l2, tVar != null && "navi".equals(tVar.a()));
+                byte[] a2 = m.a(context, l, tVar != null && "navi".equals(tVar.a()));
                 byteArrayOutputStream.write(u.a(a2.length));
                 byteArrayOutputStream.write(a2);
             } else {

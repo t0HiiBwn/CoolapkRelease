@@ -45,10 +45,11 @@ public final class FeedDetailActivityV8$loadFeedInfo$1 extends EmptySubscriber<E
         Intrinsics.checkNotNullParameter(entity, "t");
         super.onNext((FeedDetailActivityV8$loadFeedInfo$1) entity);
         if (entity instanceof Feed) {
-            this.this$0.feed = (Feed) entity;
-            Feed feed = this.this$0.feed;
-            Intrinsics.checkNotNull(feed);
-            if (feed.isSecondHand()) {
+            Feed feed = (Feed) entity;
+            this.this$0.feed = feed;
+            Feed feed2 = this.this$0.feed;
+            Intrinsics.checkNotNull(feed2);
+            if (feed2.isSecondHand()) {
                 DataManager instance = DataManager.getInstance();
                 Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
                 LoginSession loginSession = instance.getLoginSession();
@@ -57,6 +58,9 @@ public final class FeedDetailActivityV8$loadFeedInfo$1 extends EmptySubscriber<E
                     DataManager.getInstance().onCheckAgree().compose(RxUtils.applyIOSchedulers()).subscribe(new FeedDetailActivityV8$loadFeedInfo$1$onNext$1(this), new FeedDetailActivityV8$loadFeedInfo$1$onNext$2(this));
                     return;
                 }
+            }
+            if (this.this$0.shouldShowEditBindGoodsAfterDataLoad) {
+                this.this$0.showEditBindGoodsView(feed);
             }
             this.this$0.requestCreateFragment();
             this.this$0.setLoadingFinished();

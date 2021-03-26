@@ -15,6 +15,8 @@ public abstract class LoginInfo {
 
         public abstract Builder notifyCount(NotifyCount notifyCount);
 
+        public abstract Builder pushId(String str);
+
         public abstract Builder refreshToken(String str);
 
         public abstract Builder token(String str);
@@ -29,6 +31,9 @@ public abstract class LoginInfo {
     public abstract int getAdminType();
 
     public abstract NotifyCount getNotifyCount();
+
+    @SerializedName("pushId")
+    public abstract String getPushId();
 
     @SerializedName("refreshToken")
     public abstract String getRefreshToken();

@@ -199,7 +199,7 @@ public final class MainFragment extends BaseFragment implements AHBottomNavigati
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559018, viewGroup, false, new FragmentBindingComponent(this));
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559025, viewGroup, false, new FragmentBindingComponent(this));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…tainer, false, component)");
         MainFragmentBinding mainFragmentBinding = (MainFragmentBinding) inflate;
         this.binding = mainFragmentBinding;
@@ -727,9 +727,9 @@ public final class MainFragment extends BaseFragment implements AHBottomNavigati
                 findFragmentByTag2.setInitialSavedState(savedState);
             }
             if (i == index(PageName.CENTER)) {
-                fragmentTransaction.add(2131362597, findFragmentByTag2, fragmentTag);
+                fragmentTransaction.add(2131362605, findFragmentByTag2, fragmentTag);
             } else {
-                fragmentTransaction.add(2131362901, findFragmentByTag2, fragmentTag);
+                fragmentTransaction.add(2131362912, findFragmentByTag2, fragmentTag);
             }
         } else if (findFragmentByTag2.isAdded()) {
             fragmentTransaction.show(findFragmentByTag2);
@@ -802,11 +802,11 @@ public final class MainFragment extends BaseFragment implements AHBottomNavigati
                 FragmentActivity requireActivity = requireActivity();
                 Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
                 drawable = navigationItem.getIconDrawable(requireActivity);
-                drawable2 = ResourceUtils.getDrawable(getActivity(), 2131231353);
+                drawable2 = ResourceUtils.getDrawable(getActivity(), 2131231364);
                 Intrinsics.checkNotNullExpressionValue(drawable2, "ResourceUtils.getDrawabl…_home_refresh_white_24dp)");
-                item.setTitle(2131887296);
+                item.setTitle(2131887358);
             } else {
-                drawable = ResourceUtils.getDrawable(getActivity(), 2131231353);
+                drawable = ResourceUtils.getDrawable(getActivity(), 2131231364);
                 Intrinsics.checkNotNullExpressionValue(drawable, "ResourceUtils.getDrawabl…_home_refresh_white_24dp)");
                 FragmentActivity requireActivity2 = requireActivity();
                 Intrinsics.checkNotNullExpressionValue(requireActivity2, "requireActivity()");

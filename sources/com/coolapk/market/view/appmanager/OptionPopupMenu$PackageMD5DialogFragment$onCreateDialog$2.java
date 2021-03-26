@@ -30,6 +30,6 @@ final class OptionPopupMenu$PackageMD5DialogFragment$onCreateDialog$2 implements
         StringUtils.copyText(this.this$0.getActivity(), this.$title + " " + this.$versionName + " (" + this.$versionCode + ") " + this.$packageName);
         FragmentActivity requireActivity = this.this$0.requireActivity();
         Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-        Toast.show(requireActivity, 2131887190);
+        Toast.show(requireActivity, 2131887252);
     }
 }

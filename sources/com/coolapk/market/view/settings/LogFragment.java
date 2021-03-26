@@ -41,9 +41,9 @@ public class LogFragment extends NewAsyncListFragment<Cursor> {
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        setEmptyData(getString(2131886764), 0);
+        setEmptyData(getString(2131886826), 0);
         setAdapter(new DataAdapter());
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(0, 2131231052).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(0, 2131231062).last(2131231062).create());
         getRecyclerView().setLayoutManager(new LinearLayoutManager(getActivity()));
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
@@ -58,13 +58,13 @@ public class LogFragment extends NewAsyncListFragment<Cursor> {
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            MenuItemCompat.setShowAsAction(menu.add(0, 2131361891, 0, "清除"), 2);
+            MenuItemCompat.setShowAsAction(menu.add(0, 2131361892, 0, "清除"), 2);
         }
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() != 2131361891) {
+        if (menuItem.getItemId() != 2131361892) {
             return super.onOptionsItemSelected(menuItem);
         }
         ConfirmDialog newInstance = ConfirmDialog.newInstance("清除log", "你确定要清除所有log吗？");
@@ -135,7 +135,7 @@ public class LogFragment extends NewAsyncListFragment<Cursor> {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            return new DataViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131559014, viewGroup, false), new ItemActionHandler() {
+            return new DataViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(2131559021, viewGroup, false), new ItemActionHandler() {
                 /* class com.coolapk.market.view.settings.LogFragment.DataAdapter.AnonymousClass1 */
 
                 @Override // com.coolapk.market.viewholder.ItemActionHandler

@@ -32,7 +32,7 @@ abstract class C$$AutoValue_Contacts extends Contacts {
     private final String url;
     private final UserInfo userInfo;
 
-    C$$AutoValue_Contacts(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, String str14, String str15, String str16, String str17, String str18, int i, String str19, UserInfo userInfo2, UserInfo userInfo3) {
+    C$$AutoValue_Contacts(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, String str14, String str15, String str16, String str17, String str18, int i, String str19, UserInfo userInfo2, UserInfo userInfo3) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -47,8 +47,8 @@ abstract class C$$AutoValue_Contacts extends Contacts {
         this.subTitle = str10;
         this.id = str11;
         this.extraData = str12;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str13;
         this.deprecatedUserName = str14;
         this.displayUserName = str15;
@@ -229,8 +229,8 @@ abstract class C$$AutoValue_Contacts extends Contacts {
         String str8;
         String str9;
         String str10;
+        Long l;
         Long l2;
-        Long l3;
         String str11;
         String str12;
         String str13;
@@ -247,7 +247,7 @@ abstract class C$$AutoValue_Contacts extends Contacts {
         Contacts contacts = (Contacts) obj;
         String str17 = this.entityTypeName;
         if (str17 != null ? str17.equals(contacts.getEntityTypeName()) : contacts.getEntityTypeName() == null) {
-            if (this.entityType.equals(contacts.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(contacts.getEntityTemplate()) : contacts.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(contacts.getEntityId()) : contacts.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(contacts.getEntityFixed()) : contacts.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(contacts.getTitle()) : contacts.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(contacts.getUrl()) : contacts.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(contacts.getDescription()) : contacts.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(contacts.getPic()) : contacts.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(contacts.getLogo()) : contacts.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(contacts.getSubTitle()) : contacts.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(contacts.getId()) : contacts.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(contacts.getExtraData()) : contacts.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(contacts.getDateline()) : contacts.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(contacts.getLastUpdate()) : contacts.getLastUpdate() == null) && ((str11 = this.deprecatedUserAvatar) != null ? str11.equals(contacts.getDeprecatedUserAvatar()) : contacts.getDeprecatedUserAvatar() == null) && ((str12 = this.deprecatedUserName) != null ? str12.equals(contacts.getDeprecatedUserName()) : contacts.getDeprecatedUserName() == null) && ((str13 = this.displayUserName) != null ? str13.equals(contacts.getDisplayUserName()) : contacts.getDisplayUserName() == null) && this.uid.equals(contacts.getUid()) && ((str14 = this.followUid) != null ? str14.equals(contacts.getFollowUid()) : contacts.getFollowUid() == null) && ((str15 = this.deprecatedFollowUserName) != null ? str15.equals(contacts.getDeprecatedFollowUserName()) : contacts.getDeprecatedFollowUserName() == null) && this.isFriend == contacts.getIsFriend() && ((str16 = this.deprecatedFollowerUserAvatar) != null ? str16.equals(contacts.getDeprecatedFollowerUserAvatar()) : contacts.getDeprecatedFollowerUserAvatar() == null) && ((userInfo2 = this.followerUserInfo) != null ? userInfo2.equals(contacts.getFollowerUserInfo()) : contacts.getFollowerUserInfo() == null)) {
+            if (this.entityType.equals(contacts.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(contacts.getEntityTemplate()) : contacts.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(contacts.getEntityId()) : contacts.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(contacts.getEntityFixed()) : contacts.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(contacts.getTitle()) : contacts.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(contacts.getUrl()) : contacts.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(contacts.getDescription()) : contacts.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(contacts.getPic()) : contacts.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(contacts.getLogo()) : contacts.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(contacts.getSubTitle()) : contacts.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(contacts.getId()) : contacts.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(contacts.getExtraData()) : contacts.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(contacts.getDateline()) : contacts.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(contacts.getLastUpdate()) : contacts.getLastUpdate() == null) && ((str11 = this.deprecatedUserAvatar) != null ? str11.equals(contacts.getDeprecatedUserAvatar()) : contacts.getDeprecatedUserAvatar() == null) && ((str12 = this.deprecatedUserName) != null ? str12.equals(contacts.getDeprecatedUserName()) : contacts.getDeprecatedUserName() == null) && ((str13 = this.displayUserName) != null ? str13.equals(contacts.getDisplayUserName()) : contacts.getDisplayUserName() == null) && this.uid.equals(contacts.getUid()) && ((str14 = this.followUid) != null ? str14.equals(contacts.getFollowUid()) : contacts.getFollowUid() == null) && ((str15 = this.deprecatedFollowUserName) != null ? str15.equals(contacts.getDeprecatedFollowUserName()) : contacts.getDeprecatedFollowUserName() == null) && this.isFriend == contacts.getIsFriend() && ((str16 = this.deprecatedFollowerUserAvatar) != null ? str16.equals(contacts.getDeprecatedFollowerUserAvatar()) : contacts.getDeprecatedFollowerUserAvatar() == null) && ((userInfo2 = this.followerUserInfo) != null ? userInfo2.equals(contacts.getFollowerUserInfo()) : contacts.getFollowerUserInfo() == null)) {
                 UserInfo userInfo3 = this.userInfo;
                 if (userInfo3 == null) {
                     if (contacts.getUserInfo() == null) {
@@ -288,10 +288,10 @@ abstract class C$$AutoValue_Contacts extends Contacts {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str12 = this.deprecatedUserAvatar;
         int hashCode15 = (hashCode14 ^ (str12 == null ? 0 : str12.hashCode())) * 1000003;
         String str13 = this.deprecatedUserName;
@@ -452,14 +452,14 @@ abstract class C$$AutoValue_Contacts extends Contacts {
         }
 
         @Override // com.coolapk.market.model.Contacts.Builder
-        public Contacts.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public Contacts.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.Contacts.Builder
-        public Contacts.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public Contacts.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

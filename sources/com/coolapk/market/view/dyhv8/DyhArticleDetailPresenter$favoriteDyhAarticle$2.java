@@ -24,13 +24,13 @@ public final class DyhArticleDetailPresenter$favoriteDyhAarticle$2 extends Empty
     public void onError(Throwable th) {
         Intrinsics.checkNotNullParameter(th, "e");
         super.onError(th);
-        DyhArticleDetailPresenter.access$setPostingFavorite$p(this.this$0, false);
+        this.this$0.isPostingFavorite = false;
         this.this$0.getView().onFavoriteResult(this.$isFavoriting, null, th);
     }
 
     public void onNext(int i) {
         super.onNext((DyhArticleDetailPresenter$favoriteDyhAarticle$2) Integer.valueOf(i));
-        DyhArticleDetailPresenter.access$setPostingFavorite$p(this.this$0, false);
+        this.this$0.isPostingFavorite = false;
         this.this$0.getView().onFavoriteResult(!this.$isFavoriting, Integer.valueOf(i), null);
     }
 }

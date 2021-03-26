@@ -2,123 +2,178 @@ package com.xiaomi.push;
 
 import android.content.Context;
 import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.j;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.nio.channels.FileLock;
 
-public class cw {
-    public static int a(Context context, int i) {
-        int a = gn.a(context);
-        if (-1 == a) {
-            return -1;
+public abstract class cw extends j.a {
+    protected int c;
+    protected Context d;
+
+    public cw(Context context, int i) {
+        this.c = i;
+        this.d = context;
+    }
+
+    public static void a(Context context, gq gqVar) {
+        ch b = ci.a().b();
+        String a = b == null ? "" : b.a();
+        if (!TextUtils.isEmpty(a) && !TextUtils.isEmpty(gqVar.c())) {
+            a(context, gqVar, a);
         }
-        return (i * (a == 0 ? 13 : 11)) / 10;
     }
 
-    public static int a(hc hcVar) {
-        return em.a(hcVar.a());
-    }
-
-    public static int a(in inVar, hc hcVar) {
-        int a;
-        switch (cx.a[hcVar.ordinal()]) {
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
-            case 9:
-            case 10:
-                return em.a(hcVar.a());
-            case 11:
-                a = em.a(hcVar.a());
-                if (inVar != null) {
+    private static void a(Context context, gq gqVar, String str) {
+        Throwable th;
+        BufferedOutputStream bufferedOutputStream;
+        RandomAccessFile randomAccessFile;
+        IOException e;
+        FileLock lock;
+        byte[] b = cm.b(str, ht.a(gqVar));
+        if (b != null && b.length != 0) {
+            synchronized (cn.a) {
+                FileLock fileLock = null;
+                try {
+                    File file = new File(context.getExternalFilesDir(null), "push_cdata.lock");
+                    jg.c(file);
+                    randomAccessFile = new RandomAccessFile(file, "rw");
                     try {
-                        if (inVar instanceof ht) {
-                            String str = ((ht) inVar).f661d;
-                            if (!TextUtils.isEmpty(str) && em.a(em.m291a(str)) != -1) {
-                                a = em.a(em.m291a(str));
-                                break;
+                        lock = randomAccessFile.getChannel().lock();
+                    } catch (IOException e2) {
+                        e = e2;
+                        bufferedOutputStream = null;
+                        try {
+                            e.printStackTrace();
+                            try {
+                                fileLock.release();
+                            } catch (IOException unused) {
                             }
-                        } else if (inVar instanceof ib) {
-                            String str2 = ((ib) inVar).f722d;
-                            if (!TextUtils.isEmpty(str2)) {
-                                if (em.a(em.m291a(str2)) != -1) {
-                                    a = em.a(em.m291a(str2));
-                                }
-                                if (hm.UploadTinyData.equals(em.m291a(str2))) {
-                                    return -1;
+                            jg.a(bufferedOutputStream);
+                            jg.a(randomAccessFile);
+                        } catch (Throwable th2) {
+                            th = th2;
+                            if (fileLock != null && fileLock.isValid()) {
+                                try {
+                                    fileLock.release();
+                                } catch (IOException unused2) {
                                 }
                             }
+                            jg.a(bufferedOutputStream);
+                            jg.a(randomAccessFile);
+                            throw th;
                         }
-                    } catch (Exception unused) {
-                        b.d("PERF_ERROR : parse Notification type error");
-                        return a;
+                    } catch (Throwable th3) {
+                        th = th3;
+                        bufferedOutputStream = null;
+                        fileLock.release();
+                        jg.a(bufferedOutputStream);
+                        jg.a(randomAccessFile);
+                        throw th;
                     }
-                }
-                break;
-            case 12:
-                a = em.a(hcVar.a());
-                if (inVar != null) {
                     try {
-                        if (inVar instanceof hx) {
-                            String b = ((hx) inVar).b();
-                            if (!TextUtils.isEmpty(b) && ew.a(b) != -1) {
-                                a = ew.a(b);
-                                break;
+                        bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(new File(context.getExternalFilesDir(null), "push_cdata.data"), true));
+                        try {
+                            bufferedOutputStream.write(d.a(b.length));
+                            bufferedOutputStream.write(b);
+                            bufferedOutputStream.flush();
+                            if (lock != null) {
+                                if (lock.isValid()) {
+                                    try {
+                                        lock.release();
+                                    } catch (IOException unused3) {
+                                    }
+                                }
                             }
-                        } else if (inVar instanceof hw) {
-                            String a2 = ((hw) inVar).a();
-                            if (!TextUtils.isEmpty(a2) && ew.a(a2) != -1) {
-                                return ew.a(a2);
+                            jg.a(bufferedOutputStream);
+                        } catch (IOException e3) {
+                            e = e3;
+                            fileLock = lock;
+                            e.printStackTrace();
+                            if (fileLock != null && fileLock.isValid()) {
+                                fileLock.release();
                             }
+                            jg.a(bufferedOutputStream);
+                            jg.a(randomAccessFile);
+                        } catch (Throwable th4) {
+                            th = th4;
+                            fileLock = lock;
+                            fileLock.release();
+                            jg.a(bufferedOutputStream);
+                            jg.a(randomAccessFile);
+                            throw th;
                         }
-                    } catch (Exception unused2) {
-                        b.d("PERF_ERROR : parse Command type error");
-                        break;
+                    } catch (IOException e4) {
+                        e = e4;
+                        bufferedOutputStream = null;
+                        fileLock = lock;
+                        e.printStackTrace();
+                        fileLock.release();
+                        jg.a(bufferedOutputStream);
+                        jg.a(randomAccessFile);
+                    } catch (Throwable th5) {
+                        th = th5;
+                        bufferedOutputStream = null;
+                        fileLock = lock;
+                        fileLock.release();
+                        jg.a(bufferedOutputStream);
+                        jg.a(randomAccessFile);
+                        throw th;
                     }
+                } catch (IOException e5) {
+                    e = e5;
+                    bufferedOutputStream = null;
+                    randomAccessFile = null;
+                    e.printStackTrace();
+                    fileLock.release();
+                    jg.a(bufferedOutputStream);
+                    jg.a(randomAccessFile);
+                } catch (Throwable th6) {
+                    th = th6;
+                    bufferedOutputStream = null;
+                    randomAccessFile = null;
+                    fileLock.release();
+                    jg.a(bufferedOutputStream);
+                    jg.a(randomAccessFile);
+                    throw th;
                 }
-                break;
-            default:
-                return -1;
-        }
-        return a;
-    }
-
-    public static void a(String str, Context context, int i, int i2) {
-        if (i > 0 && i2 > 0) {
-            int a = a(context, i2);
-            if (i != em.a(hm.UploadTinyData)) {
-                en.a(context.getApplicationContext()).a(str, i, 1, (long) a);
+                jg.a(randomAccessFile);
             }
         }
     }
 
-    public static void a(String str, Context context, hy hyVar, int i) {
-        hc a;
-        if (context != null && hyVar != null && (a = hyVar.a()) != null) {
-            int a2 = a(a);
-            if (i <= 0) {
-                byte[] a3 = im.a(hyVar);
-                i = a3 != null ? a3.length : 0;
-            }
-            a(str, context, a2, i);
+    public abstract String b();
+
+    public abstract gk c();
+
+    protected boolean d() {
+        return cm.a(this.d, String.valueOf(a()), (long) this.c);
+    }
+
+    protected boolean e() {
+        return true;
+    }
+
+    @Override // java.lang.Runnable
+    public void run() {
+        if (d()) {
+            c.a("DC run job mutual: " + a());
+            return;
         }
-    }
-
-    public static void a(String str, Context context, in inVar, hc hcVar, int i) {
-        a(str, context, a(inVar, hcVar), i);
-    }
-
-    public static void a(String str, Context context, byte[] bArr) {
-        if (context != null && bArr != null && bArr.length > 0) {
-            hy hyVar = new hy();
-            try {
-                im.a(hyVar, bArr);
-                a(str, context, hyVar, bArr.length);
-            } catch (is unused) {
-                b.m41a("fail to convert bytes to container");
+        ch b = ci.a().b();
+        String a = b == null ? "" : b.a();
+        if (!TextUtils.isEmpty(a) && e()) {
+            String b2 = b();
+            if (!TextUtils.isEmpty(b2)) {
+                gq gqVar = new gq();
+                gqVar.a(b2);
+                gqVar.a(System.currentTimeMillis());
+                gqVar.a(c());
+                a(this.d, gqVar, a);
             }
         }
     }

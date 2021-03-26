@@ -28,12 +28,12 @@ public class ItemProductViewBindingImpl extends ItemProductViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363460, 7);
-        sparseIntArray.put(2131363282, 8);
-        sparseIntArray.put(2131363281, 9);
-        sparseIntArray.put(2131363194, 10);
-        sparseIntArray.put(2131363231, 11);
-        sparseIntArray.put(2131363019, 12);
+        sparseIntArray.put(2131363478, 7);
+        sparseIntArray.put(2131363296, 8);
+        sparseIntArray.put(2131363295, 9);
+        sparseIntArray.put(2131363208, 10);
+        sparseIntArray.put(2131363245, 11);
+        sparseIntArray.put(2131363033, 12);
     }
 
     public ItemProductViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -74,7 +74,7 @@ public class ItemProductViewBindingImpl extends ItemProductViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Product) obj);
         } else if (50 != i) {
             return false;
@@ -90,7 +90,7 @@ public class ItemProductViewBindingImpl extends ItemProductViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -144,7 +144,7 @@ public class ItemProductViewBindingImpl extends ItemProductViewBinding {
         int i3 = ((6 & j) > 0 ? 1 : ((6 & j) == 0 ? 0 : -1));
         if ((5 & j) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231691, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231702, 0, bool, bool, bool, true, bool, null, null, null, bool, bool, bool, null, bool);
             this.maskView.setVisibility(i);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }

@@ -115,7 +115,7 @@ public class AppendObjectRequest extends OSSRequest {
         return this.initCRC64;
     }
 
-    public void setInitCRC64(Long l2) {
-        this.initCRC64 = l2;
+    public void setInitCRC64(Long l) {
+        this.initCRC64 = l;
     }
 }

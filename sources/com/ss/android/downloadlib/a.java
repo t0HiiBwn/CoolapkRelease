@@ -25,7 +25,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /* compiled from: AdDownloadCompletedEventHandlerImpl */
-public class a implements com.ss.android.downloadad.a.a, b.c, a.AbstractC0092a {
+public class a implements com.ss.android.downloadad.a.a, b.c, a.AbstractC0102a {
     private static String a = "a";
     private static volatile a d;
     private long b;
@@ -592,14 +592,14 @@ public class a implements com.ss.android.downloadad.a.a, b.c, a.AbstractC0092a {
         return str;
     }
 
-    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
     public void b() {
         com.ss.android.socialbase.downloader.c.a.b(a, "onAppForeground()");
         d();
         a(5);
     }
 
-    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0092a
+    @Override // com.ss.android.socialbase.downloader.a.a.AbstractC0102a
     public void c() {
         com.ss.android.socialbase.downloader.c.a.b(a, "onAppBackground()");
         a(6);
@@ -617,7 +617,7 @@ public class a implements com.ss.android.downloadad.a.a, b.c, a.AbstractC0092a {
     public void a(int i) {
         long currentTimeMillis = System.currentTimeMillis();
         if (currentTimeMillis - this.b >= 120000) {
-            d.a().a(new RunnableC0081a(i), this.b > 0 ? 2000 : 8000);
+            d.a().a(new RunnableC0091a(i), this.b > 0 ? 2000 : 8000);
             this.b = currentTimeMillis;
         }
     }
@@ -745,10 +745,10 @@ public class a implements com.ss.android.downloadad.a.a, b.c, a.AbstractC0092a {
 
     /* renamed from: com.ss.android.downloadlib.a$a  reason: collision with other inner class name */
     /* compiled from: AdDownloadCompletedEventHandlerImpl */
-    private class RunnableC0081a implements Runnable {
+    private class RunnableC0091a implements Runnable {
         private final int b;
 
-        public RunnableC0081a(int i) {
+        public RunnableC0091a(int i) {
             this.b = i;
         }
 

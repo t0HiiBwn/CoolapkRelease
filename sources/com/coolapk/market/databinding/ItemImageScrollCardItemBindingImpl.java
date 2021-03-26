@@ -64,7 +64,7 @@ public class ItemImageScrollCardItemBindingImpl extends ItemImageScrollCardItemB
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (156 != i) {
+        if (157 != i) {
             return false;
         }
         setImageCard((Entity) obj);
@@ -77,7 +77,7 @@ public class ItemImageScrollCardItemBindingImpl extends ItemImageScrollCardItemB
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(156);
+        notifyPropertyChanged(157);
         super.requestRebind();
     }
 
@@ -144,7 +144,7 @@ public class ItemImageScrollCardItemBindingImpl extends ItemImageScrollCardItemB
         }
         if (i5 != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str5, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str5, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
             TextViewBindingAdapter.setText(this.mboundView2, str2);
             TextViewBindingAdapter.setText(this.mboundView3, str);
             this.mboundView3.setVisibility(i);

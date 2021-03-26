@@ -3,6 +3,7 @@ package com.coolapk.market.view.feedv8;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
 import com.blankj.utilcode.util.ConvertUtils;
 import com.coolapk.market.binding.ContextBindingComponent;
 import com.coolapk.market.databinding.SubmitFeedArticleBottomBinding;
@@ -14,6 +15,7 @@ import com.coolapk.market.model.ImageUrl;
 import com.coolapk.market.model.ShareFeedInfo;
 import com.coolapk.market.view.feedv8.ArticleModel;
 import com.coolapk.market.view.feedv8.article.ArticleViewModel;
+import com.coolapk.market.view.feedv8.util.FeedGoodsAddHelper;
 import com.coolapk.market.view.feedv8.util.HandleFocusRecyclerView;
 import com.coolapk.market.viewholder.BindingViewHolder;
 import com.coolapk.market.widget.Toast;
@@ -24,6 +26,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Objects;
 import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
 import kotlin.collections.MapsKt;
@@ -33,11 +36,12 @@ import kotlin.ranges.RangesKt;
 import kotlin.sequences.SequencesKt;
 import rx.Observable;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0016\u0018\u0000 !2\u00020\u0001:\u0002 !B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\r\u0010\u0005\u001a\u00020\u0006H\u0010¢\u0006\u0002\b\u0007J\b\u0010\b\u001a\u00020\u0006H\u0002J\u000e\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u000b0\nH\u0014J\r\u0010\f\u001a\u00020\rH\u0010¢\u0006\u0002\b\u000eJ\u0015\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u0012H\u0010¢\u0006\u0002\b\u0013J\u0010\u0010\u0014\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u0017H\u0016J\u0010\u0010\u0018\u001a\u00020\u00152\u0006\u0010\u0019\u001a\u00020\u001aH\u0016J\b\u0010\u001b\u001a\u00020\u0015H\u0016J\b\u0010\u001c\u001a\u00020\u0015H\u0002J\u0013\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\r0\u001eH\u0010¢\u0006\u0002\b\u001f¨\u0006\""}, d2 = {"Lcom/coolapk/market/view/feedv8/ArticleFeedContentHolder2;", "Lcom/coolapk/market/view/feedv8/ArticleFeedBaseContentHolder;", "activity", "Landroid/app/Activity;", "(Landroid/app/Activity;)V", "checkSubmittable", "", "checkSubmittable$presentation_coolapkAppRelease", "checkTextCountLength", "createArticleModelListWhenParseFailed", "", "Lcom/coolapk/market/view/feedv8/ArticleModel;", "generateDraftCopy", "Lcom/coolapk/market/model/FeedMultiPart;", "generateDraftCopy$presentation_coolapkAppRelease", "onCreateContentView", "Landroid/view/View;", "inflater", "Landroid/view/LayoutInflater;", "onCreateContentView$presentation_coolapkAppRelease", "onExtraEntityLoaded", "", "entity", "Lcom/coolapk/market/model/Entity;", "onShareInfoLoaded", "info", "Lcom/coolapk/market/model/ShareFeedInfo;", "onSubmitButtonClick", "onTextContentChanged", "prepareMultiFeed", "Lrx/Observable;", "prepareMultiFeed$presentation_coolapkAppRelease", "ArticleBottomHolder", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0016\u0018\u0000 &2\u00020\u0001:\u0002%&B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\r\u0010\u000b\u001a\u00020\u0006H\u0010¢\u0006\u0002\b\fJ\b\u0010\r\u001a\u00020\u0006H\u0002J\u000e\u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\u00100\u000fH\u0014J\r\u0010\u0011\u001a\u00020\u0012H\u0010¢\u0006\u0002\b\u0013J\u0015\u0010\u0014\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u0017H\u0010¢\u0006\u0002\b\u0018J\u0010\u0010\u0019\u001a\u00020\u001a2\u0006\u0010\u001b\u001a\u00020\u001cH\u0016J\u0010\u0010\u001d\u001a\u00020\u001a2\u0006\u0010\u001e\u001a\u00020\u001fH\u0016J\b\u0010 \u001a\u00020\u001aH\u0016J\b\u0010!\u001a\u00020\u001aH\u0002J\u0013\u0010\"\u001a\b\u0012\u0004\u0012\u00020\u00120#H\u0010¢\u0006\u0002\b$R\u001a\u0010\u0005\u001a\u00020\u0006X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\n¨\u0006'"}, d2 = {"Lcom/coolapk/market/view/feedv8/ArticleFeedContentHolder2;", "Lcom/coolapk/market/view/feedv8/ArticleFeedBaseContentHolder;", "activity", "Landroid/app/Activity;", "(Landroid/app/Activity;)V", "disableSuggestAddGoods", "", "getDisableSuggestAddGoods$presentation_coolapkAppRelease", "()Z", "setDisableSuggestAddGoods$presentation_coolapkAppRelease", "(Z)V", "checkSubmittable", "checkSubmittable$presentation_coolapkAppRelease", "checkTextCountLength", "createArticleModelListWhenParseFailed", "", "Lcom/coolapk/market/view/feedv8/ArticleModel;", "generateDraftCopy", "Lcom/coolapk/market/model/FeedMultiPart;", "generateDraftCopy$presentation_coolapkAppRelease", "onCreateContentView", "Landroid/view/View;", "inflater", "Landroid/view/LayoutInflater;", "onCreateContentView$presentation_coolapkAppRelease", "onExtraEntityLoaded", "", "entity", "Lcom/coolapk/market/model/Entity;", "onShareInfoLoaded", "info", "Lcom/coolapk/market/model/ShareFeedInfo;", "onSubmitButtonClick", "onTextContentChanged", "prepareMultiFeed", "Lrx/Observable;", "prepareMultiFeed$presentation_coolapkAppRelease", "ArticleBottomHolder", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: ArticleFeedContentHolder2.kt */
 public class ArticleFeedContentHolder2 extends ArticleFeedBaseContentHolder {
     public static final Companion Companion = new Companion(null);
     public static final int MAX_INPUT_TEXT = 12000;
+    private boolean disableSuggestAddGoods;
 
     @Metadata(bv = {1, 0, 3}, k = 3, mv = {1, 4, 2})
     public final /* synthetic */ class WhenMappings {
@@ -70,21 +74,29 @@ public class ArticleFeedContentHolder2 extends ArticleFeedBaseContentHolder {
         }
     }
 
+    public final boolean getDisableSuggestAddGoods$presentation_coolapkAppRelease() {
+        return this.disableSuggestAddGoods;
+    }
+
+    public final void setDisableSuggestAddGoods$presentation_coolapkAppRelease(boolean z) {
+        this.disableSuggestAddGoods = z;
+    }
+
     @Override // com.coolapk.market.view.feedv8.ArticleFeedBaseContentHolder, com.coolapk.market.view.feedv8.BaseFeedContentHolder
     public View onCreateContentView$presentation_coolapkAppRelease(LayoutInflater layoutInflater) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
         View onCreateContentView$presentation_coolapkAppRelease = super.onCreateContentView$presentation_coolapkAppRelease(layoutInflater);
         ContextBindingComponent contextBindingComponent = new ContextBindingComponent(getActivity());
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131559151).constructor(new ArticleFeedContentHolder2$onCreateContentView$1(this)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$2.INSTANCE).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131559152).constructor(new ArticleFeedContentHolder2$onCreateContentView$3(this)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$4.INSTANCE).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558941).constructor(new ArticleFeedContentHolder2$onCreateContentView$5(this)).suitedMethod(new ArticleFeedContentHolder2$onCreateContentView$6(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131559149).constructor(new ArticleFeedContentHolder2$onCreateContentView$7(this)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$8.INSTANCE).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558613).constructor(new ArticleFeedContentHolder2$onCreateContentView$9(this, contextBindingComponent)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$10.INSTANCE).build(), 0, 2, null);
-        getAdapter().setMatchAllFactor(SimpleViewHolderFactor.Companion.withLayoutId(2131558929).constructor(new ArticleFeedContentHolder2$onCreateContentView$11(contextBindingComponent)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$12.INSTANCE).build());
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131559159).constructor(new ArticleFeedContentHolder2$onCreateContentView$1(this)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$2.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131559160).constructor(new ArticleFeedContentHolder2$onCreateContentView$3(this)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$4.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558948).constructor(new ArticleFeedContentHolder2$onCreateContentView$5(this)).suitedMethod(new ArticleFeedContentHolder2$onCreateContentView$6(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131559157).constructor(new ArticleFeedContentHolder2$onCreateContentView$7(this)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$8.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558617).constructor(new ArticleFeedContentHolder2$onCreateContentView$9(this, contextBindingComponent)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$10.INSTANCE).build(), 0, 2, null);
+        getAdapter().setMatchAllFactor(SimpleViewHolderFactor.Companion.withLayoutId(2131558936).constructor(new ArticleFeedContentHolder2$onCreateContentView$11(contextBindingComponent)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$12.INSTANCE).build());
         if (Intrinsics.areEqual(getMultiPart().type(), "answer")) {
-            BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131559153).constructor(new ArticleFeedContentHolder2$onCreateContentView$13(this)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$14.INSTANCE).build(), 0, 2, null);
+            BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131559161).constructor(new ArticleFeedContentHolder2$onCreateContentView$13(this)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$14.INSTANCE).build(), 0, 2, null);
         } else {
-            BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131559154).constructor(new ArticleFeedContentHolder2$onCreateContentView$15(this)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$16.INSTANCE).build(), 0, 2, null);
+            BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131559162).constructor(new ArticleFeedContentHolder2$onCreateContentView$15(this)).suitedMethod(ArticleFeedContentHolder2$onCreateContentView$16.INSTANCE).build(), 0, 2, null);
         }
         getArticleViewModel().getActions().observe(getLifecycleOwner(), new ArticleFeedContentHolder2$onCreateContentView$17(this));
         List<Entity> extraEntities = getUiConfig().extraEntities();
@@ -250,6 +262,29 @@ public class ArticleFeedContentHolder2 extends ArticleFeedBaseContentHolder {
     @Override // com.coolapk.market.view.feedv8.BaseFeedContentHolder
     public void onSubmitButtonClick() {
         super.onSubmitButtonClick();
+        if (getUiConfig().extraEntities().isEmpty() && !this.disableSuggestAddGoods) {
+            List<ArticleModel> value = getArticleViewModel().getDataList().getValue();
+            Intrinsics.checkNotNull(value);
+            Intrinsics.checkNotNullExpressionValue(value, "articleViewModel.dataList.value!!");
+            ArrayList arrayList = new ArrayList();
+            for (T t : value) {
+                if (t instanceof ArticleText) {
+                    arrayList.add(t);
+                }
+            }
+            ArrayList<ArticleText> arrayList2 = arrayList;
+            ArrayList arrayList3 = new ArrayList(CollectionsKt.collectionSizeOrDefault(arrayList2, 10));
+            for (ArticleText articleText : arrayList2) {
+                arrayList3.add(articleText.getText());
+            }
+            if (FeedGoodsAddHelper.INSTANCE.didInputTextContainGoodsTag(arrayList3)) {
+                FeedGoodsAddHelper feedGoodsAddHelper = FeedGoodsAddHelper.INSTANCE;
+                Activity activity = getActivity();
+                Objects.requireNonNull(activity, "null cannot be cast to non-null type androidx.appcompat.app.AppCompatActivity");
+                feedGoodsAddHelper.showSuggestAddGoodsDialog((AppCompatActivity) activity, new ArticleFeedContentHolder2$onSubmitButtonClick$1(this), new ArticleFeedContentHolder2$onSubmitButtonClick$2(this));
+                return;
+            }
+        }
         startSubmitFeed$presentation_coolapkAppRelease();
     }
 
@@ -349,7 +384,7 @@ public class ArticleFeedContentHolder2 extends ArticleFeedBaseContentHolder {
     /* compiled from: ArticleFeedContentHolder2.kt */
     private static final class ArticleBottomHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131559149;
+        public static final int LAYOUT_ID = 2131559157;
         private final ArticleFeedContentHolder2 content;
 
         public final ArticleFeedContentHolder2 getContent() {

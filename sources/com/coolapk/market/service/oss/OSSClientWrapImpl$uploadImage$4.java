@@ -14,18 +14,20 @@ import rx.functions.Action1;
 /* compiled from: OssHelper.kt */
 final class OSSClientWrapImpl$uploadImage$4<T> implements Action1<OSSUploadImageProcessor> {
     final /* synthetic */ boolean $anonymous;
+    final /* synthetic */ String $toUid;
     final /* synthetic */ Ref.ObjectRef $uploadBucket;
 
-    OSSClientWrapImpl$uploadImage$4(boolean z, Ref.ObjectRef objectRef) {
+    OSSClientWrapImpl$uploadImage$4(boolean z, Ref.ObjectRef objectRef, String str) {
         this.$anonymous = z;
         this.$uploadBucket = objectRef;
+        this.$toUid = str;
     }
 
     public final void call(OSSUploadImageProcessor oSSUploadImageProcessor) {
         JSONArray generateUploadJsonArray = oSSUploadImageProcessor.generateUploadJsonArray();
         if (generateUploadJsonArray.length() > 0) {
             boolean z = this.$anonymous;
-            R first = DataManager.getInstance().ossUploadPrepare(this.$uploadBucket.element, oSSUploadImageProcessor.getDir$presentation_coolapkAppRelease(), z ? 1 : 0, generateUploadJsonArray.toString()).map(RxUtils.checkResultToData()).toBlocking().first();
+            R first = DataManager.getInstance().ossUploadPrepare(this.$uploadBucket.element, oSSUploadImageProcessor.getDir$presentation_coolapkAppRelease(), z ? 1 : 0, generateUploadJsonArray.toString(), this.$toUid).map(RxUtils.checkResultToData()).toBlocking().first();
             JSONObject optJSONObject = first.optJSONObject("uploadPrepareInfo");
             JSONArray optJSONArray = first.optJSONArray("fileInfo");
             oSSUploadImageProcessor.setUploadPrepareInfo$presentation_coolapkAppRelease(optJSONObject);

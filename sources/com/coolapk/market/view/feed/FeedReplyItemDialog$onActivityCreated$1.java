@@ -46,19 +46,19 @@ final class FeedReplyItemDialog$onActivityCreated$1 extends Lambda implements Fu
     public final void invoke(List<ActionItem> list) {
         Intrinsics.checkNotNullParameter(list, "it");
         FeedReplyItemDialog feedReplyItemDialog = this.this$0;
-        String string = feedReplyItemDialog.getString(2131887152);
+        String string = feedReplyItemDialog.getString(2131887214);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_view_session)");
         MultiItemDialogFragmentKt.addItem(list, new FeedReplyItemDialog.DetailViewActionItem(feedReplyItemDialog, string, this.$feedReply));
         DataManager instance = DataManager.getInstance();
         Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
         LoginSession loginSession = instance.getLoginSession();
-        MultiItemDialogFragmentKt.addItem(list, FeedReplyItemDialog.access$buildMultiActionItem(this.this$0, this.$feedReply));
+        MultiItemDialogFragmentKt.addItem(list, this.this$0.buildMultiActionItem(this.$feedReply));
         Intrinsics.checkNotNullExpressionValue(loginSession, "session");
         if (loginSession.isAdmin()) {
-            MultiItemDialogFragmentKt.addItem(list, FeedReplyItemDialog.access$buildAdminActionItem(this.this$0, this.$feedReply));
+            MultiItemDialogFragmentKt.addItem(list, this.this$0.buildAdminActionItem(this.$feedReply));
         }
         if (!TextUtils.isEmpty(this.$feedReply.getPic())) {
-            String string2 = this.this$0.getString(2131886803);
+            String string2 = this.this$0.getString(2131886865);
             Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_feed_reply_view_photo)");
             MultiItemDialogFragmentKt.addItem(list, string2, new Function0<Unit>(this) {
                 /* class com.coolapk.market.view.feed.FeedReplyItemDialog$onActivityCreated$1.AnonymousClass1 */
@@ -77,11 +77,11 @@ final class FeedReplyItemDialog$onActivityCreated$1 extends Lambda implements Fu
             });
         }
         if (loginSession.isAdmin()) {
-            String string3 = this.this$0.getString(2131886730);
+            String string3 = this.this$0.getString(2131886792);
             Intrinsics.checkNotNullExpressionValue(string3, "getString(R.string.str_dialog_report)");
             MultiItemDialogFragmentKt.addItem(list, new MultiActionItem(string3, new FeedReplyItemDialog$onActivityCreated$1$item$1(this)));
         } else {
-            String string4 = this.this$0.getString(2131886730);
+            String string4 = this.this$0.getString(2131886792);
             Intrinsics.checkNotNullExpressionValue(string4, "getString(R.string.str_dialog_report)");
             MultiItemDialogFragmentKt.addItem(list, string4, new Function0<Unit>(this) {
                 /* class com.coolapk.market.view.feed.FeedReplyItemDialog$onActivityCreated$1.AnonymousClass2 */
@@ -106,7 +106,7 @@ final class FeedReplyItemDialog$onActivityCreated$1 extends Lambda implements Fu
             }
             if (Intrinsics.areEqual(this.$feedReply.getUid(), loginSession.getUid()) || loginSession.isAdmin()) {
                 FeedReplyItemDialog feedReplyItemDialog2 = this.this$0;
-                String string5 = feedReplyItemDialog2.getString(2131886716);
+                String string5 = feedReplyItemDialog2.getString(2131886778);
                 Intrinsics.checkNotNullExpressionValue(string5, "getString(R.string.str_dialog_delete)");
                 MultiItemDialogFragmentKt.addItem(list, new FeedReplyItemDialog.DeleteActionItem(feedReplyItemDialog2, string5, this.$feedReply));
             }

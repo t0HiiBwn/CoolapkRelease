@@ -146,11 +146,11 @@ final class FeedItemDialog$onActivityCreated$1 extends Lambda implements Functio
                         loginSession = this.$session;
                         Intrinsics.checkNotNullExpressionValue(loginSession, "session");
                         if (loginSession.isAdmin()) {
-                            String string = this.this$0.getString(2131886730);
+                            String string = this.this$0.getString(2131886792);
                             Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_dialog_report)");
                             MultiItemDialogFragmentKt.addItem(list, new MultiActionItem(string, new FeedItemDialog$onActivityCreated$1$item$1(this)));
                         } else if (!z10) {
-                            String string2 = this.this$0.getString(2131886730);
+                            String string2 = this.this$0.getString(2131886792);
                             Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_dialog_report)");
                             MultiItemDialogFragmentKt.addItem(list, string2, new Function0<Unit>(this) {
                                 /* class com.coolapk.market.view.feed.FeedItemDialog$onActivityCreated$1.AnonymousClass2 */
@@ -231,7 +231,7 @@ final class FeedItemDialog$onActivityCreated$1 extends Lambda implements Functio
                                 Intrinsics.checkNotNullExpressionValue(loginSession14, "session");
                             }
                             FeedItemDialog feedItemDialog = this.this$0;
-                            String string3 = feedItemDialog.getString(2131886716);
+                            String string3 = feedItemDialog.getString(2131886778);
                             Intrinsics.checkNotNullExpressionValue(string3, "getString(R.string.str_dialog_delete)");
                             MultiItemDialogFragmentKt.addItem(list, new FeedItemDialog.DeleteActionItem(feedItemDialog, string3, this.$feed));
                             LoginSession loginSession15 = this.$session;

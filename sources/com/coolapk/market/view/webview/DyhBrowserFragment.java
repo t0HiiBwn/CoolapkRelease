@@ -50,16 +50,16 @@ public class DyhBrowserFragment extends WebViewFragment implements CoolWebView.O
     private DyhArticleCommentBarViewPart commentBarViewPart;
     private DyhArticle dyhArticle;
     private DyhActionPresenter dyhArticlePresenter;
-    private final int favResrouce = 2131231559;
-    private final int favedResrouce = 2131231557;
+    private final int favResrouce = 2131231570;
+    private final int favedResrouce = 2131231568;
     private boolean isDown;
     private boolean isFaved;
     private boolean isLiked;
     private boolean isSignFaved;
     private boolean isSignLiked;
     private boolean isUp;
-    private final int likeResrouce = 2131231682;
-    private final int likedResrouce = 2131231246;
+    private final int likeResrouce = 2131231693;
+    private final int likedResrouce = 2131231257;
     private int oldY;
     private boolean posting;
     private int scrollDistance;
@@ -116,7 +116,7 @@ public class DyhBrowserFragment extends WebViewFragment implements CoolWebView.O
             Intrinsics.throwUninitializedPropertyAccessException("dyhArticle");
         }
         if (dyhArticle2 != null) {
-            MenuItem findItem = menu.findItem(2131361904);
+            MenuItem findItem = menu.findItem(2131361905);
             Intrinsics.checkNotNullExpressionValue(findItem, "menu.findItem(R.id.action_favior)");
             DyhArticle dyhArticle3 = this.dyhArticle;
             if (dyhArticle3 == null) {
@@ -124,7 +124,7 @@ public class DyhBrowserFragment extends WebViewFragment implements CoolWebView.O
             }
             Intrinsics.checkNotNull(dyhArticle3);
             findItem.setTitle(dyhArticle3.isFavorite() ? "已收藏" : "收藏");
-            MenuItem findItem2 = menu.findItem(2131361904);
+            MenuItem findItem2 = menu.findItem(2131361905);
             Intrinsics.checkNotNullExpressionValue(findItem2, "menu.findItem(R.id.action_favior)");
             findItem2.setVisible(true);
         }
@@ -142,18 +142,18 @@ public class DyhBrowserFragment extends WebViewFragment implements CoolWebView.O
         Intrinsics.checkNotNullExpressionValue(coolWebView, "binding.webView");
         String url = coolWebView.getUrl();
         switch (menuItem.getItemId()) {
-            case 2131361883:
+            case 2131361884:
                 coolWebView.clearCache(true);
-                Toast.show(getWebView(), 2131887156);
+                Toast.show(getWebView(), 2131887218);
                 return true;
-            case 2131361889:
+            case 2131361890:
                 if (url != null) {
                     StringUtils.copyText(getActivity(), coolWebView.getUrl());
-                    Toast.show(getWebView(), 2131887190);
+                    Toast.show(getWebView(), 2131887252);
                     return true;
                 }
                 break;
-            case 2131361904:
+            case 2131361905:
                 FragmentActivity activity = getActivity();
                 DyhArticle dyhArticle2 = this.dyhArticle;
                 if (dyhArticle2 == null) {
@@ -161,10 +161,10 @@ public class DyhBrowserFragment extends WebViewFragment implements CoolWebView.O
                 }
                 ActionManager.startCollectionSelectActivity(activity, dyhArticle2.getId(), "article");
                 return true;
-            case 2131361956:
+            case 2131361957:
                 coolWebView.reload();
                 return true;
-            case 2131361968:
+            case 2131361969:
                 if (coolWebView.getUrl() != null) {
                     String title = coolWebView.getTitle();
                     String title2 = coolWebView.getTitle();
@@ -185,7 +185,7 @@ public class DyhBrowserFragment extends WebViewFragment implements CoolWebView.O
                     StringCompanionObject stringCompanionObject = StringCompanionObject.INSTANCE;
                     Object[] objArr = new Object[3];
                     objArr[0] = reconvert;
-                    objArr[1] = getString(2131886685);
+                    objArr[1] = getString(2131886747);
                     DyhArticle dyhArticle3 = this.dyhArticle;
                     if (dyhArticle3 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("dyhArticle");
@@ -197,7 +197,7 @@ public class DyhBrowserFragment extends WebViewFragment implements CoolWebView.O
                     return true;
                 }
                 break;
-            case 2131361985:
+            case 2131361986:
                 if (coolWebView.getUrl() != null) {
                     ActionManager.startView(getActivity(), Uri.parse(coolWebView.getUrl()), null);
                     return true;

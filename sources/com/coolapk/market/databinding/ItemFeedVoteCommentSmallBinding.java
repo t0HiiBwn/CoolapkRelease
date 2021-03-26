@@ -62,7 +62,7 @@ public abstract class ItemFeedVoteCommentSmallBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVoteCommentSmallBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedVoteCommentSmallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558738, viewGroup, z, obj);
+        return (ItemFeedVoteCommentSmallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558745, viewGroup, z, obj);
     }
 
     public static ItemFeedVoteCommentSmallBinding inflate(LayoutInflater layoutInflater) {
@@ -71,7 +71,7 @@ public abstract class ItemFeedVoteCommentSmallBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVoteCommentSmallBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedVoteCommentSmallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558738, null, false, obj);
+        return (ItemFeedVoteCommentSmallBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558745, null, false, obj);
     }
 
     public static ItemFeedVoteCommentSmallBinding bind(View view) {
@@ -80,6 +80,6 @@ public abstract class ItemFeedVoteCommentSmallBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVoteCommentSmallBinding bind(View view, Object obj) {
-        return (ItemFeedVoteCommentSmallBinding) bind(obj, view, 2131558738);
+        return (ItemFeedVoteCommentSmallBinding) bind(obj, view, 2131558745);
     }
 }

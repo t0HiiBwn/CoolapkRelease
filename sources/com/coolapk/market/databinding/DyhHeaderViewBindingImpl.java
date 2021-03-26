@@ -27,8 +27,8 @@ public class DyhHeaderViewBindingImpl extends DyhHeaderViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362085, 11);
-        sparseIntArray.put(2131361981, 12);
+        sparseIntArray.put(2131362088, 11);
+        sparseIntArray.put(2131361982, 12);
     }
 
     public DyhHeaderViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -75,9 +75,9 @@ public class DyhHeaderViewBindingImpl extends DyhHeaderViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((DyhViewModel) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);
@@ -92,7 +92,7 @@ public class DyhHeaderViewBindingImpl extends DyhHeaderViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -102,7 +102,7 @@ public class DyhHeaderViewBindingImpl extends DyhHeaderViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -130,7 +130,7 @@ public class DyhHeaderViewBindingImpl extends DyhHeaderViewBinding {
                 this.mDirtyFlags |= 8;
             }
             return true;
-        } else if (i == 165) {
+        } else if (i == 166) {
             synchronized (this) {
                 this.mDirtyFlags |= 16;
             }
@@ -155,12 +155,12 @@ public class DyhHeaderViewBindingImpl extends DyhHeaderViewBinding {
                 this.mDirtyFlags |= 256;
             }
             return true;
-        } else if (i == 293) {
+        } else if (i == 294) {
             synchronized (this) {
                 this.mDirtyFlags |= 512;
             }
             return true;
-        } else if (i == 297) {
+        } else if (i == 298) {
             synchronized (this) {
                 this.mDirtyFlags |= 1024;
             }
@@ -432,7 +432,7 @@ public class DyhHeaderViewBindingImpl extends DyhHeaderViewBinding {
         }
         if ((j & 6145) != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str3, null, 2131231271, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, true, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str3, null, 2131231282, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, true, bool2, null, bool2);
         }
         if ((4101 & j) != 0) {
             TextViewBindingAdapter.setText(this.titleView, str);
@@ -442,7 +442,7 @@ public class DyhHeaderViewBindingImpl extends DyhHeaderViewBinding {
         }
         if (i16 != 0) {
             Boolean bool3 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str4, null, 2131231152, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str4, null, 2131231162, 0, bool3, bool3, bool3, bool3, bool3, null, null, onBitmapTransformListener, bool3, bool3, bool3, null, bool3);
         }
     }
 }

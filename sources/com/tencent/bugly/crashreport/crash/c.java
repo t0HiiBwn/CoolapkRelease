@@ -31,9 +31,7 @@ public final class c {
     public static boolean i = false;
     public static String j = null;
     public static int k = 5000;
-
-    /* renamed from: l  reason: collision with root package name */
-    public static boolean f1437l = true;
+    public static boolean l = true;
     public static boolean m;
     public static String n;
     public static String o;

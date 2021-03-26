@@ -1,28 +1,21 @@
 package com.xiaomi.mipush.sdk;
 
-import android.database.ContentObserver;
-import android.os.Handler;
-import com.xiaomi.push.bc;
-import com.xiaomi.push.service.az;
+import android.content.Context;
+import android.content.Intent;
 
-class am extends ContentObserver {
-    final /* synthetic */ ak a;
+final class am implements Runnable {
+    final /* synthetic */ Context a;
 
-    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    am(ak akVar, Handler handler) {
-        super(handler);
-        this.a = akVar;
+    /* renamed from: a  reason: collision with other field name */
+    final /* synthetic */ Intent f122a;
+
+    am(Context context, Intent intent) {
+        this.a = context;
+        this.f122a = intent;
     }
 
-    @Override // android.database.ContentObserver
-    public void onChange(boolean z) {
-        ak akVar = this.a;
-        akVar.f151a = Integer.valueOf(az.a(ak.a(akVar)).a());
-        if (ak.a(this.a).intValue() != 0) {
-            ak.a(this.a).getContentResolver().unregisterContentObserver(this);
-            if (bc.b(ak.a(this.a))) {
-                this.a.m72c();
-            }
-        }
+    @Override // java.lang.Runnable
+    public void run() {
+        PushMessageHandler.b(this.a, this.f122a);
     }
 }

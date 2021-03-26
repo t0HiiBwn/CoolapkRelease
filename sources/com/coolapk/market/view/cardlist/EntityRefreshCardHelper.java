@@ -29,7 +29,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: EntityRefreshCardHelper.kt */
 public final class EntityRefreshCardHelper extends EntityDataFilter {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558893;
+    public static final int LAYOUT_ID = 2131558900;
     private Map<Entity, Runnable> dismissActionMap = new LinkedHashMap();
     private final EntityListFragment fragment;
     private Runnable toastDismissAction;

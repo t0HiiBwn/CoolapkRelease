@@ -73,7 +73,7 @@ public final class LiveListItemViewHolder$Companion$createWithTitle$2 extends Ti
     public BindingViewHolder onCreateViewHolder(TitleRecycleViewCardViewHolder titleRecycleViewCardViewHolder, ViewGroup viewGroup, int i) {
         Intrinsics.checkNotNullParameter(titleRecycleViewCardViewHolder, "holder");
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
-        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558806, viewGroup, false);
+        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558813, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "view");
         return new LiveListItemViewHolder(inflate, this.$component, this.$presenter);
     }

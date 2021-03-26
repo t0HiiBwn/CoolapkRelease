@@ -21,7 +21,7 @@ public abstract class LocationInfo implements Entity {
 
         public abstract Builder setCountry(String str);
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         public abstract Builder setDescription(String str);
 
@@ -45,7 +45,7 @@ public abstract class LocationInfo implements Entity {
 
         public abstract Builder setIsHideLocation(boolean z);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLatitude(Double d);
 

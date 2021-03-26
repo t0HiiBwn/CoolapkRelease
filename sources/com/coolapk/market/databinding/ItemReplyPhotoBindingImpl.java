@@ -25,7 +25,7 @@ public class ItemReplyPhotoBindingImpl extends ItemReplyPhotoBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362257, 2);
+        sparseIntArray.put(2131362262, 2);
     }
 
     public ItemReplyPhotoBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -63,7 +63,7 @@ public class ItemReplyPhotoBindingImpl extends ItemReplyPhotoBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (291 != i) {
+        if (292 != i) {
             return false;
         }
         setUrl((String) obj);
@@ -76,7 +76,7 @@ public class ItemReplyPhotoBindingImpl extends ItemReplyPhotoBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(291);
+        notifyPropertyChanged(292);
         super.requestRebind();
     }
 
@@ -90,7 +90,7 @@ public class ItemReplyPhotoBindingImpl extends ItemReplyPhotoBinding {
         String str = this.mUrl;
         if ((3 & j) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231696), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, true, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231707), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, true, null, bool);
         }
         if ((j & 2) != 0) {
             ViewBindingAdapters.clipView(this.mboundView0, null, 4);

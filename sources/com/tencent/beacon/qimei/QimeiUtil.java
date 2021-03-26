@@ -79,13 +79,13 @@ public class QimeiUtil {
         c.a(context).a().a("GEN_QIMEI", (Object) h.a()).b();
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:25:0x0045, code lost:
-        if (r1 != null) goto L_0x0032;
+    /* JADX WARNING: Code restructure failed: missing block: B:25:0x0046, code lost:
+        if (r1 != null) goto L_0x0033;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:28:0x0049, code lost:
-        if (r1 != null) goto L_0x0032;
+    /* JADX WARNING: Code restructure failed: missing block: B:28:0x004a, code lost:
+        if (r1 != null) goto L_0x0033;
      */
-    /* JADX WARNING: Removed duplicated region for block: B:19:0x0040 A[SYNTHETIC, Splitter:B:19:0x0040] */
+    /* JADX WARNING: Removed duplicated region for block: B:19:0x0041 A[SYNTHETIC, Splitter:B:19:0x0041] */
     private static String loadQIMEIFromSDCard(Context context) {
         FileInputStream fileInputStream;
         Throwable th;
@@ -136,9 +136,9 @@ public class QimeiUtil {
         return null;
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:16:0x003c A[SYNTHETIC, Splitter:B:16:0x003c] */
-    /* JADX WARNING: Removed duplicated region for block: B:22:0x0043 A[SYNTHETIC, Splitter:B:22:0x0043] */
-    /* JADX WARNING: Removed duplicated region for block: B:27:0x004a A[SYNTHETIC, Splitter:B:27:0x004a] */
+    /* JADX WARNING: Removed duplicated region for block: B:16:0x003d A[SYNTHETIC, Splitter:B:16:0x003d] */
+    /* JADX WARNING: Removed duplicated region for block: B:22:0x0044 A[SYNTHETIC, Splitter:B:22:0x0044] */
+    /* JADX WARNING: Removed duplicated region for block: B:27:0x004b A[SYNTHETIC, Splitter:B:27:0x004b] */
     /* JADX WARNING: Removed duplicated region for block: B:36:? A[RETURN, SYNTHETIC] */
     /* JADX WARNING: Removed duplicated region for block: B:37:? A[RETURN, SYNTHETIC] */
     private static void saveQIMEIToSDCard(String str) {

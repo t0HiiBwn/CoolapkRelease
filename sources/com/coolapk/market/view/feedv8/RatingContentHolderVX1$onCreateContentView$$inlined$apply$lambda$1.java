@@ -14,6 +14,6 @@ final class RatingContentHolderVX1$onCreateContentView$$inlined$apply$lambda$1 i
 
     @Override // android.widget.RatingBar.OnRatingBarChangeListener
     public final void onRatingChanged(RatingBar ratingBar, float f, boolean z) {
-        RatingContentHolderVX1.access$updateRatingScore(this.this$0, (int) f);
+        this.this$0.updateRatingScore((int) f);
     }
 }

@@ -22,8 +22,8 @@ public class CenterV9SocialDialogBindingImpl extends CenterV9SocialDialogBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 5);
-        sparseIntArray.put(2131363562, 6);
+        sparseIntArray.put(2131363551, 5);
+        sparseIntArray.put(2131363584, 6);
     }
 
     public CenterV9SocialDialogBindingImpl(DataBindingComponent dataBindingComponent, View view) {

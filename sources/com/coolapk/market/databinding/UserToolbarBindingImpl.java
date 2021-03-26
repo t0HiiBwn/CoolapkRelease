@@ -56,11 +56,11 @@ public class UserToolbarBindingImpl extends UserToolbarBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (299 == i) {
+        if (300 == i) {
             setUserVerifyStatusIcon((String) obj);
-        } else if (297 == i) {
+        } else if (298 == i) {
             setUserName((String) obj);
-        } else if (293 == i) {
+        } else if (294 == i) {
             setUserAvatar((String) obj);
         } else if (50 != i) {
             return false;
@@ -76,7 +76,7 @@ public class UserToolbarBindingImpl extends UserToolbarBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(299);
+        notifyPropertyChanged(300);
         super.requestRebind();
     }
 
@@ -86,7 +86,7 @@ public class UserToolbarBindingImpl extends UserToolbarBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(297);
+        notifyPropertyChanged(298);
         super.requestRebind();
     }
 
@@ -96,7 +96,7 @@ public class UserToolbarBindingImpl extends UserToolbarBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(293);
+        notifyPropertyChanged(294);
         super.requestRebind();
     }
 

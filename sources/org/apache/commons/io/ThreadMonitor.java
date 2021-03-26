@@ -4,6 +4,19 @@ class ThreadMonitor implements Runnable {
     private final Thread thread;
     private final long timeout;
 
+    private ThreadMonitor(Thread thread2, long j) {
+        this.thread = thread2;
+        this.timeout = j;
+    }
+
+    private static void sleep(long j) throws InterruptedException {
+        long currentTimeMillis = System.currentTimeMillis() + j;
+        do {
+            Thread.sleep(j);
+            j = currentTimeMillis - System.currentTimeMillis();
+        } while (j > 0);
+    }
+
     public static Thread start(long j) {
         return start(Thread.currentThread(), j);
     }
@@ -24,11 +37,6 @@ class ThreadMonitor implements Runnable {
         }
     }
 
-    private ThreadMonitor(Thread thread2, long j) {
-        this.thread = thread2;
-        this.timeout = j;
-    }
-
     @Override // java.lang.Runnable
     public void run() {
         try {
@@ -36,13 +44,5 @@ class ThreadMonitor implements Runnable {
             this.thread.interrupt();
         } catch (InterruptedException unused) {
         }
-    }
-
-    private static void sleep(long j) throws InterruptedException {
-        long currentTimeMillis = System.currentTimeMillis() + j;
-        do {
-            Thread.sleep(j);
-            j = currentTimeMillis - System.currentTimeMillis();
-        } while (j > 0);
     }
 }

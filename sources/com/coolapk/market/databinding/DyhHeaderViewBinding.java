@@ -66,7 +66,7 @@ public abstract class DyhHeaderViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static DyhHeaderViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DyhHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558543, viewGroup, z, obj);
+        return (DyhHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558545, viewGroup, z, obj);
     }
 
     public static DyhHeaderViewBinding inflate(LayoutInflater layoutInflater) {
@@ -75,7 +75,7 @@ public abstract class DyhHeaderViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static DyhHeaderViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DyhHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558543, null, false, obj);
+        return (DyhHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558545, null, false, obj);
     }
 
     public static DyhHeaderViewBinding bind(View view) {
@@ -84,6 +84,6 @@ public abstract class DyhHeaderViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static DyhHeaderViewBinding bind(View view, Object obj) {
-        return (DyhHeaderViewBinding) bind(obj, view, 2131558543);
+        return (DyhHeaderViewBinding) bind(obj, view, 2131558545);
     }
 }

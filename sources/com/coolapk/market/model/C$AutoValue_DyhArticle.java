@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_DyhArticle  reason: invalid class name */
 abstract class C$AutoValue_DyhArticle extends C$$AutoValue_DyhArticle {
-    C$AutoValue_DyhArticle(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, Long l2, Long l3, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, int i2, String str18, String str19, String str20, int i3, String str21, String str22, String str23, String str24, int i4, String str25, List<String> list, String str26, String str27, int i5, int i6, int i7, int i8, int i9, int i10, int i11, DyhModel dyhModel, List<FeedReply> list2, int i12, String str28, String str29, String str30, int i13, String str31, String str32, int i14, UserAction userAction, int i15, Long l4, Collection collection, CollectionItem collectionItem) {
-        super(str, str2, str3, i, str4, num, str5, str6, str7, l2, l3, str8, userInfo, str9, str10, str11, str12, str13, str14, str15, str16, str17, i2, str18, str19, str20, i3, str21, str22, str23, str24, i4, str25, list, str26, str27, i5, i6, i7, i8, i9, i10, i11, dyhModel, list2, i12, str28, str29, str30, i13, str31, str32, i14, userAction, i15, l4, collection, collectionItem);
+    C$AutoValue_DyhArticle(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, Long l, Long l2, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, int i2, String str18, String str19, String str20, int i3, String str21, String str22, String str23, String str24, int i4, String str25, List<String> list, String str26, String str27, int i5, int i6, int i7, int i8, int i9, int i10, int i11, DyhModel dyhModel, List<FeedReply> list2, int i12, String str28, String str29, String str30, int i13, String str31, String str32, int i14, UserAction userAction, int i15, Long l3, Collection collection, CollectionItem collectionItem) {
+        super(str, str2, str3, i, str4, num, str5, str6, str7, l, l2, str8, userInfo, str9, str10, str11, str12, str13, str14, str15, str16, str17, i2, str18, str19, str20, i3, str21, str22, str23, str24, i4, str25, list, str26, str27, i5, i6, i7, i8, i9, i10, i11, dyhModel, list2, i12, str28, str29, str30, i13, str31, str32, i14, userAction, i15, l3, collection, collectionItem);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_DyhArticle$GsonTypeAdapter */
@@ -241,13 +241,13 @@ abstract class C$AutoValue_DyhArticle extends C$$AutoValue_DyhArticle {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -471,8 +471,8 @@ abstract class C$AutoValue_DyhArticle extends C$$AutoValue_DyhArticle {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultCreatDate(Long l2) {
-            this.defaultCreatDate = l2;
+        public GsonTypeAdapter setDefaultCreatDate(Long l) {
+            this.defaultCreatDate = l;
             return this;
         }
 
@@ -627,8 +627,8 @@ abstract class C$AutoValue_DyhArticle extends C$$AutoValue_DyhArticle {
             String str5 = this.defaultLogo;
             String str6 = this.defaultSubTitle;
             String str7 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str8 = this.defaultDeprecatedUserAvatar;
             UserInfo userInfo = this.defaultUserInfo;
             String str9 = this.defaultDeprecatedUserName;
@@ -673,7 +673,7 @@ abstract class C$AutoValue_DyhArticle extends C$$AutoValue_DyhArticle {
             int i14 = this.defaultIsHeadlineV8;
             UserAction userAction = this.defaultUserAction;
             int i15 = this.defaultStatus;
-            Long l4 = this.defaultCreatDate;
+            Long l3 = this.defaultCreatDate;
             Collection collection = this.defaultCollectionInfo;
             CollectionItem collectionItem = this.defaultCollectionItem;
             String str33 = str2;
@@ -684,8 +684,8 @@ abstract class C$AutoValue_DyhArticle extends C$$AutoValue_DyhArticle {
             String str36 = str5;
             String str37 = str6;
             String str38 = str7;
+            Long l4 = l;
             Long l5 = l2;
-            Long l6 = l3;
             String str39 = str8;
             UserInfo userInfo2 = userInfo;
             String str40 = str9;
@@ -731,7 +731,7 @@ abstract class C$AutoValue_DyhArticle extends C$$AutoValue_DyhArticle {
             int i29 = i14;
             UserAction userAction2 = userAction;
             int i30 = i15;
-            Long l7 = l4;
+            Long l6 = l3;
             Collection collection2 = collection;
             while (jsonReader.hasNext()) {
                 String nextName = jsonReader.nextName();
@@ -1119,7 +1119,7 @@ abstract class C$AutoValue_DyhArticle extends C$$AutoValue_DyhArticle {
                             str48 = this.authorAdapter.read(jsonReader);
                             continue;
                         case '\t':
-                            l6 = this.lastUpdateAdapter.read(jsonReader);
+                            l5 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\n':
                             str44 = this.dyhIdAdapter.read(jsonReader);
@@ -1254,13 +1254,13 @@ abstract class C$AutoValue_DyhArticle extends C$$AutoValue_DyhArticle {
                             str55 = this.videoUrlAdapter.read(jsonReader);
                             continue;
                         case '6':
-                            l7 = this.creatDateAdapter.read(jsonReader);
+                            l6 = this.creatDateAdapter.read(jsonReader);
                             continue;
                         case '7':
                             i20 = this.isHtmlArticleAdapter.read(jsonReader).intValue();
                             continue;
                         case '8':
-                            l5 = this.datelineAdapter.read(jsonReader);
+                            l4 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case '9':
                             str56 = this.redirectUrlAdapter.read(jsonReader);
@@ -1272,7 +1272,7 @@ abstract class C$AutoValue_DyhArticle extends C$$AutoValue_DyhArticle {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_DyhArticle(str41, str33, str34, i16, str35, num2, str36, str37, str38, l5, l6, str39, userInfo2, str40, str42, str43, str44, str45, str46, str47, str48, str49, i17, str50, str51, str52, i18, str53, str54, str55, str56, i19, str57, list3, str58, str59, i20, i21, i22, i23, i24, i25, i26, dyhModel2, list4, i27, str60, str61, str62, i28, str63, str64, i29, userAction2, i30, l7, collection2, collectionItem);
+            return new AutoValue_DyhArticle(str41, str33, str34, i16, str35, num2, str36, str37, str38, l4, l5, str39, userInfo2, str40, str42, str43, str44, str45, str46, str47, str48, str49, i17, str50, str51, str52, i18, str53, str54, str55, str56, i19, str57, list3, str58, str59, i20, i21, i22, i23, i24, i25, i26, dyhModel2, list4, i27, str60, str61, str62, i28, str63, str64, i29, userAction2, i30, l6, collection2, collectionItem);
         }
     }
 }

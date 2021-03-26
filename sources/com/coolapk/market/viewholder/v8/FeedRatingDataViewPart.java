@@ -23,7 +23,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedRatingDataViewPart.kt */
 public final class FeedRatingDataViewPart extends BindingViewPart<ItemFeedRatingDataBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558712;
+    public static final int LAYOUT_ID = 2131558719;
     private final DataBindingComponent component;
 
     public FeedRatingDataViewPart(DataBindingComponent dataBindingComponent) {
@@ -55,7 +55,7 @@ public final class FeedRatingDataViewPart extends BindingViewPart<ItemFeedRating
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedRatingDataBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558712, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558719, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemFeedRatingDataBinding) inflate;
     }
@@ -96,7 +96,7 @@ public final class FeedRatingDataViewPart extends BindingViewPart<ItemFeedRating
         FeedTarget model = ((ItemFeedRatingDataBinding) getBinding()).getModel();
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
-            if (view.getId() == 2131362200) {
+            if (view.getId() == 2131362205) {
                 ActionManagerCompat.startActivityByUrl(getContext(), model.getUrl(), model.getTitle(), model.getSubTitle());
             }
         }

@@ -21,9 +21,9 @@ public final class ShareFeedV8Activity$setupKeyBoardMenu$s3$1 extends EmptySubsc
     public void onNext(boolean z) {
         super.onNext((ShareFeedV8Activity$setupKeyBoardMenu$s3$1) Boolean.valueOf(z));
         if (z) {
-            this.this$0.getBinding$presentation_coolapkAppRelease().menuCloseKeyboard.setImageResource(2131231384);
+            this.this$0.getBinding$presentation_coolapkAppRelease().menuCloseKeyboard.setImageResource(2131231395);
         } else {
-            this.this$0.getBinding$presentation_coolapkAppRelease().menuCloseKeyboard.setImageResource(2131231385);
+            this.this$0.getBinding$presentation_coolapkAppRelease().menuCloseKeyboard.setImageResource(2131231396);
         }
     }
 }

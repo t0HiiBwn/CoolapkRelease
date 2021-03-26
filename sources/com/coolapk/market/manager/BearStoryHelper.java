@@ -6,12 +6,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import com.coolapk.market.util.PackageUtils;
+import com.coolapk.market.util.StringUtils;
+import com.coolapk.market.widget.Toast;
 import kotlin.Metadata;
 import kotlin.jvm.JvmStatic;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\b\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0016\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eJ \u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u00042\u0006\u0010\u0014\u001a\u00020\u000eH\u0007J\u0010\u0010\u0015\u001a\u00020\u00102\u0006\u0010\r\u001a\u00020\u000eH\u0007J\u0010\u0010\u0016\u001a\u00020\u00102\u0006\u0010\r\u001a\u00020\u000eH\u0007J\u0010\u0010\u0017\u001a\u00020\u00102\u0006\u0010\r\u001a\u00020\u000eH\u0007J\u000e\u0010\u0018\u001a\u00020\u00102\u0006\u0010\r\u001a\u00020\u000eJ\u0010\u0010\u0019\u001a\u00020\u00102\u0006\u0010\r\u001a\u00020\u000eH\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u001a"}, d2 = {"Lcom/coolapk/market/manager/BearStoryHelper;", "", "()V", "JD_HOST", "", "TB_HOST", "TB_PACKAGE", "TM_PACKAGE", "UL_HOST", "bearStoreUrlJump", "", "context", "Landroid/content/Context;", "uri", "Landroid/net/Uri;", "checkBearStoryAutoJump", "", "activity", "Landroid/app/Activity;", "originUrl", "notHttpUri", "isBearStoryUrl", "isInnerBrowserUrl", "isOuterBrowserUrl", "isPearProgram", "isTBJDSpecialUri", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\n\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0016\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eJ \u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u00042\u0006\u0010\u0014\u001a\u00020\u000eH\u0007J\u0016\u0010\u0015\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\u0016\u001a\u00020\u0004J\u0010\u0010\u0017\u001a\u00020\u00102\u0006\u0010\r\u001a\u00020\u000eH\u0007J\u0010\u0010\u0018\u001a\u00020\u00102\u0006\u0010\r\u001a\u00020\u000eH\u0007J\u0010\u0010\u0019\u001a\u00020\u00102\u0006\u0010\r\u001a\u00020\u000eH\u0007J\u000e\u0010\u001a\u001a\u00020\u00102\u0006\u0010\r\u001a\u00020\u000eJ\u0010\u0010\u001b\u001a\u00020\u00102\u0006\u0010\r\u001a\u00020\u000eH\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u001c"}, d2 = {"Lcom/coolapk/market/manager/BearStoryHelper;", "", "()V", "JD_HOST", "", "TB_HOST", "TB_PACKAGE", "TM_PACKAGE", "UL_HOST", "bearStoreUrlJump", "", "context", "Landroid/content/Context;", "uri", "Landroid/net/Uri;", "checkBearStoryAutoJump", "", "activity", "Landroid/app/Activity;", "originUrl", "notHttpUri", "copyTaobaoWordAndJump", "word", "isBearStoryUrl", "isInnerBrowserUrl", "isOuterBrowserUrl", "isPearProgram", "isTBJDSpecialUri", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: BearStoryHelper.kt */
 public final class BearStoryHelper {
     public static final BearStoryHelper INSTANCE = new BearStoryHelper();
@@ -112,6 +114,19 @@ public final class BearStoryHelper {
             }
         }
         ActionManager.startWebViewActivity(context, uri.toString());
+    }
+
+    public final void copyTaobaoWordAndJump(Context context, String str) {
+        Intrinsics.checkNotNullParameter(context, "context");
+        Intrinsics.checkNotNullParameter(str, "word");
+        StringUtils.copyText(context, str);
+        if (PackageUtils.isInstalled(context, "com.taobao.taobao")) {
+            ActionManager.openApp(context, "com.taobao.taobao");
+        } else if (PackageUtils.isInstalled(context, "com.tmall.wireless")) {
+            ActionManager.openApp(context, "com.tmall.wireless");
+        } else {
+            Toast.show$default(context, "请先安装 淘宝/天猫", 0, false, 12, null);
+        }
     }
 
     @JvmStatic

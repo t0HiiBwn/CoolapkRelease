@@ -23,7 +23,7 @@ final class AppViewBaseInfoViewHolder$onCoverImageLoadListener$1 implements OnIm
         Intrinsics.checkNotNullExpressionValue(imageView, "binding.coverView");
         imageView.setVisibility(0);
         if (th != null) {
-            this.this$0.binding.coverView.setBackgroundColor(ResourceUtils.getColorInt(this.this$0.getContext(), 2131099784));
+            this.this$0.binding.coverView.setBackgroundColor(ResourceUtils.getColorInt(this.this$0.getContext(), 2131099786));
         }
     }
 }

@@ -207,11 +207,11 @@ public final class GroupValue implements ValueInter {
 
     @Override // com.kk.taurus.playerbase.receiver.ValueInter
     public long getLong(String str, long j) {
-        Long l2 = (Long) get(str);
-        if (l2 == null) {
+        Long l = (Long) get(str);
+        if (l == null) {
             return j;
         }
-        return l2.longValue();
+        return l.longValue();
     }
 
     @Override // com.kk.taurus.playerbase.receiver.ValueInter

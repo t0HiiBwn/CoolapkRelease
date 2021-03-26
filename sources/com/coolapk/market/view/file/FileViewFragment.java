@@ -57,7 +57,7 @@ public class FileViewFragment extends RefreshRecyclerFragment implements FileCon
     @Override // androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
-        VerticalItemDecoration create = ItemDecorations.vertical(getActivity()).type(2131558744, 2131231052).type(2131558745, 2131231052).last(2131231052).create();
+        VerticalItemDecoration create = ItemDecorations.vertical(getActivity()).type(2131558751, 2131231062).type(2131558752, 2131231062).last(2131231062).create();
         getRecyclerView().setLayoutManager(new LinearLayoutManager(getActivity()));
         getRecyclerView().addItemDecoration(create);
         getRecyclerView().getItemAnimator().setChangeDuration(0);
@@ -71,7 +71,7 @@ public class FileViewFragment extends RefreshRecyclerFragment implements FileCon
     @Override // com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        setEmptyData(getString(2131886767), 0);
+        setEmptyData(getString(2131886829), 0);
         String string = getArguments().getString("directory");
         if (string == null || !new File(string).exists()) {
             string = AppHolder.getAppSetting().getDownloadDir();
@@ -91,9 +91,9 @@ public class FileViewFragment extends RefreshRecyclerFragment implements FileCon
     /* access modifiers changed from: private */
     public void checkValidDirectory(File file) {
         if (!file.exists() || !file.isDirectory()) {
-            Toast.show(getActivity(), 2131886542);
+            Toast.show(getActivity(), 2131886602);
         } else if (!file.canRead() || !file.canWrite()) {
-            Toast.show(getActivity(), 2131886545);
+            Toast.show(getActivity(), 2131886605);
         } else {
             Intent intent = new Intent();
             intent.putExtra("directory", this.extDir);
@@ -147,9 +147,9 @@ public class FileViewFragment extends RefreshRecyclerFragment implements FileCon
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
             switch (i) {
-                case 2131558744:
+                case 2131558751:
                     return new FileViewHolder(inflate);
-                case 2131558745:
+                case 2131558752:
                     return new TitleViewHolder(inflate, null);
                 default:
                     throw new RuntimeException("unknown view type");
@@ -158,7 +158,7 @@ public class FileViewFragment extends RefreshRecyclerFragment implements FileCon
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return FileViewFragment.this.getDataList().get(i) instanceof File ? 2131558744 : 2131558745;
+            return FileViewFragment.this.getDataList().get(i) instanceof File ? 2131558751 : 2131558752;
         }
 
         public void onBindViewHolder(BindingViewHolder bindingViewHolder, int i) {
@@ -172,7 +172,7 @@ public class FileViewFragment extends RefreshRecyclerFragment implements FileCon
     }
 
     private class FileViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558744;
+        public static final int LAYOUT_ID = 2131558751;
 
         public FileViewHolder(View view) {
             super(view);
@@ -198,7 +198,7 @@ public class FileViewFragment extends RefreshRecyclerFragment implements FileCon
     }
 
     private class TitleViewHolder extends GenericBindHolder<ItemFileTitleBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558745;
+        public static final int LAYOUT_ID = 2131558752;
 
         public TitleViewHolder(View view, ItemActionHandler itemActionHandler) {
             super(view, itemActionHandler);
@@ -226,7 +226,7 @@ public class FileViewFragment extends RefreshRecyclerFragment implements FileCon
                         FileViewFragment.this.reloadContent();
                         return;
                     }
-                    Toast.show(FileViewFragment.this.getActivity(), 2131886811);
+                    Toast.show(FileViewFragment.this.getActivity(), 2131886873);
                 }
             });
         }

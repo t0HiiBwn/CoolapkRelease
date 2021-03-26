@@ -104,7 +104,7 @@ public class WebViewFragment extends BaseFragment implements View.OnClickListene
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        this.mBinding = (WebViewBinding) DataBindingUtil.inflate(layoutInflater, 2131559302, viewGroup, false);
+        this.mBinding = (WebViewBinding) DataBindingUtil.inflate(layoutInflater, 2131559312, viewGroup, false);
         AppTheme appTheme = AppHolder.getAppTheme();
         this.mBinding.progressBar.getProgressDrawable().setColorFilter(appTheme.getColorPrimaryDark(), PorterDuff.Mode.SRC_IN);
         this.mBinding.swipeRefreshView.setColorSchemeColors(appTheme.getColorPrimary());
@@ -276,7 +276,7 @@ public class WebViewFragment extends BaseFragment implements View.OnClickListene
         } else if (BearStoryHelper.checkBearStoryAutoJump(getActivity(), getArguments().getString("external_url", webView.getOriginalUrl()), parse)) {
             return true;
         } else {
-            Snackbar.make(getWebView(), 2131887162, 0).setAction(2131887161, new View.OnClickListener() {
+            Snackbar.make(getWebView(), 2131887224, 0).setAction(2131887223, new View.OnClickListener() {
                 /* class com.coolapk.market.view.webview.WebViewFragment.AnonymousClass2 */
 
                 @Override // android.view.View.OnClickListener
@@ -360,32 +360,32 @@ public class WebViewFragment extends BaseFragment implements View.OnClickListene
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         CoolWebView coolWebView = this.mBinding.webView;
         switch (menuItem.getItemId()) {
-            case 2131361883:
+            case 2131361884:
                 coolWebView.clearCache(true);
-                Toast.show(getWebView(), 2131887156);
+                Toast.show(getWebView(), 2131887218);
                 break;
-            case 2131361889:
+            case 2131361890:
                 if (coolWebView.getUrl() != null) {
                     StringUtils.copyText(getActivity(), coolWebView.getUrl());
-                    Toast.show(getWebView(), 2131887190);
+                    Toast.show(getWebView(), 2131887252);
                     break;
                 }
                 break;
-            case 2131361956:
+            case 2131361957:
                 coolWebView.reload();
                 break;
-            case 2131361968:
+            case 2131361969:
                 if (coolWebView.getUrl() != null) {
                     String title = coolWebView.getTitle();
                     String reconvert = LinkTextUtils.reconvert(coolWebView.getTitle());
                     if (reconvert.length() > 240) {
                         reconvert = reconvert.substring(0, 240) + "…";
                     }
-                    ActionManager.shareText(getActivity(), title, String.format("%s  %s %s", reconvert, getString(2131886685), coolWebView.getUrl()));
+                    ActionManager.shareText(getActivity(), title, String.format("%s  %s %s", reconvert, getString(2131886747), coolWebView.getUrl()));
                     break;
                 }
                 break;
-            case 2131361985:
+            case 2131361986:
                 if (coolWebView.getUrl() != null) {
                     ActionManager.startView(getActivity(), Uri.parse(coolWebView.getUrl()), null);
                     break;
@@ -437,7 +437,7 @@ public class WebViewFragment extends BaseFragment implements View.OnClickListene
         if (TextUtils.isEmpty(name)) {
             name = str.substring(str.lastIndexOf("/") + 1);
         }
-        Snackbar.make(getWebView(), getString(2131887158, name), -2).setAction(2131886128, new View.OnClickListener() {
+        Snackbar.make(getWebView(), getString(2131887220, name), -2).setAction(2131886128, new View.OnClickListener() {
             /* class com.coolapk.market.view.webview.WebViewFragment.AnonymousClass3 */
 
             @Override // android.view.View.OnClickListener

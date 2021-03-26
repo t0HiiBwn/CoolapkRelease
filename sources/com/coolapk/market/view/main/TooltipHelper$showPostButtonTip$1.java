@@ -44,7 +44,7 @@ final class TooltipHelper$showPostButtonTip$1 implements Runnable {
             if (z) {
                 i = -36;
             }
-            final Tooltip create = Tooltip.Builder.anchor$default(new Tooltip.Builder(requireActivity), this.$view, NumberExtendsKt.getDp(Integer.valueOf(i2)), NumberExtendsKt.getDp(Integer.valueOf(i)), false, 8, null).text(this.$tipText).styleId(2131952224).maxWidth(DisplayUtils.getWidthPixels(requireActivity) / 2).arrow(true).floatingAnimation(Tooltip.Animation.Companion.getDEFAULT()).closePolicy(new ClosePolicy.Builder().consume(true).inside(true).outside(true).build()).showDuration(8000).overlay(true).create();
+            final Tooltip create = Tooltip.Builder.anchor$default(new Tooltip.Builder(requireActivity), this.$view, NumberExtendsKt.getDp(Integer.valueOf(i2)), NumberExtendsKt.getDp(Integer.valueOf(i)), false, 8, null).text(this.$tipText).styleId(2131952225).maxWidth(DisplayUtils.getWidthPixels(requireActivity) / 2).arrow(true).floatingAnimation(Tooltip.Animation.Companion.getDEFAULT()).closePolicy(new ClosePolicy.Builder().consume(true).inside(true).outside(true).build()).showDuration(8000).overlay(true).create();
             Tooltip.show$default(create.doOnFailure(AnonymousClass1.INSTANCE).doOnShown(new Function1<Tooltip, Unit>(this) {
                 /* class com.coolapk.market.view.main.TooltipHelper$showPostButtonTip$1.AnonymousClass2 */
                 final /* synthetic */ TooltipHelper$showPostButtonTip$1 this$0;

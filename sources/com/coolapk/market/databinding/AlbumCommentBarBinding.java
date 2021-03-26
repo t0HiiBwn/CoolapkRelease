@@ -63,7 +63,7 @@ public abstract class AlbumCommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static AlbumCommentBarBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AlbumCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558442, viewGroup, z, obj);
+        return (AlbumCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558443, viewGroup, z, obj);
     }
 
     public static AlbumCommentBarBinding inflate(LayoutInflater layoutInflater) {
@@ -72,7 +72,7 @@ public abstract class AlbumCommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static AlbumCommentBarBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AlbumCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558442, null, false, obj);
+        return (AlbumCommentBarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558443, null, false, obj);
     }
 
     public static AlbumCommentBarBinding bind(View view) {
@@ -81,6 +81,6 @@ public abstract class AlbumCommentBarBinding extends ViewDataBinding {
 
     @Deprecated
     public static AlbumCommentBarBinding bind(View view, Object obj) {
-        return (AlbumCommentBarBinding) bind(obj, view, 2131558442);
+        return (AlbumCommentBarBinding) bind(obj, view, 2131558443);
     }
 }

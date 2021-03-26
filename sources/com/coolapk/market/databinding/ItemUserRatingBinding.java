@@ -56,7 +56,7 @@ public abstract class ItemUserRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserRatingBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemUserRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558981, viewGroup, z, obj);
+        return (ItemUserRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558988, viewGroup, z, obj);
     }
 
     public static ItemUserRatingBinding inflate(LayoutInflater layoutInflater) {
@@ -65,7 +65,7 @@ public abstract class ItemUserRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserRatingBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemUserRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558981, null, false, obj);
+        return (ItemUserRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558988, null, false, obj);
     }
 
     public static ItemUserRatingBinding bind(View view) {
@@ -74,6 +74,6 @@ public abstract class ItemUserRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserRatingBinding bind(View view, Object obj) {
-        return (ItemUserRatingBinding) bind(obj, view, 2131558981);
+        return (ItemUserRatingBinding) bind(obj, view, 2131558988);
     }
 }

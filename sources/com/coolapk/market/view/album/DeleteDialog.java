@@ -30,8 +30,8 @@ public class DeleteDialog extends BaseDialogFragment {
     public Dialog onCreateDialog(Bundle bundle) {
         final AlbumItem albumItem = (AlbumItem) getArguments().getParcelable("ALBUMITEM");
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        AlertDialog.Builder title = builder.setTitle(getActivity().getString(2131886732));
-        title.setMessage(albumItem.getTitle() + "\n" + albumItem.getPackageName()).setPositiveButton(getActivity().getString(2131886708), new DialogInterface.OnClickListener() {
+        AlertDialog.Builder title = builder.setTitle(getActivity().getString(2131886794));
+        title.setMessage(albumItem.getTitle() + "\n" + albumItem.getPackageName()).setPositiveButton(getActivity().getString(2131886770), new DialogInterface.OnClickListener() {
             /* class com.coolapk.market.view.album.DeleteDialog.AnonymousClass1 */
 
             @Override // android.content.DialogInterface.OnClickListener
@@ -57,7 +57,7 @@ public class DeleteDialog extends BaseDialogFragment {
                     }
                 });
             }
-        }).setNegativeButton(getActivity().getString(2131886706), (DialogInterface.OnClickListener) null);
+        }).setNegativeButton(getActivity().getString(2131886768), (DialogInterface.OnClickListener) null);
         return builder.create();
     }
 }

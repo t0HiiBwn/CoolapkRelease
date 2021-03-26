@@ -18,9 +18,7 @@ class av {
     public int i = q.c;
     public float j = 10.0f;
     public double k = 0.0d;
-
-    /* renamed from: l  reason: collision with root package name */
-    public w f1218l = null;
+    public w l = null;
     public w m = null;
     public Point n = null;
     public a o = null;
@@ -40,7 +38,7 @@ class av {
         int i2 = (int) f2;
         this.k = (d2 / ((double) (1 << i2))) / ((double) ((f2 + 1.0f) - ((float) i2)));
         w a2 = a(new w(this.r, this.q, true));
-        this.f1218l = a2;
+        this.l = a2;
         this.m = a2.g();
         this.n = new Point(this.p.c() / 2, this.p.d() / 2);
         a aVar = new a();
@@ -145,7 +143,7 @@ class av {
         } else {
             d2 = i5 == 1 ? ((double) ((i3 + 1) * i4)) * d3 : 0.0d;
         }
-        return a(new w(d2, d4, false), this.f1218l, this.n, this.k);
+        return a(new w(d2, d4, false), this.l, this.n, this.k);
     }
 
     public ArrayList<bs> a(w wVar, int i2, int i3, int i4) {
@@ -261,16 +259,16 @@ class av {
     }
 
     public void a(PointF pointF, PointF pointF2, float f2) {
-        if (this.f1218l != null) {
+        if (this.l != null) {
             double[] b2 = b(pointF, pointF2);
-            this.f1218l.b(b2[1]);
-            this.f1218l.a(b2[0]);
+            this.l.b(b2[1]);
+            this.l.a(b2[0]);
         }
     }
 
     public w a(PointF pointF, PointF pointF2) {
         double[] b2 = b(pointF, pointF2);
-        w wVar = new w(this.f1218l.b(), this.f1218l.a());
+        w wVar = new w(this.l.b(), this.l.a());
         wVar.b(b2[1]);
         wVar.a(b2[0]);
         return wVar;
@@ -278,12 +276,12 @@ class av {
 
     private double[] b(PointF pointF, PointF pointF2) {
         double d2 = this.k;
-        w b2 = b(pointF, this.f1218l, this.n, d2, this.o);
-        w b3 = b(pointF2, this.f1218l, this.n, d2, this.o);
+        w b2 = b(pointF, this.l, this.n, d2, this.o);
+        w b3 = b(pointF2, this.l, this.n, d2, this.o);
         double e2 = b3.e() - b2.e();
         double f2 = b3.f() - b2.f();
-        double e3 = this.f1218l.e() + e2;
-        double f3 = this.f1218l.f() + f2;
+        double e3 = this.l.e() + e2;
+        double f3 = this.l.f() + f2;
         while (e3 < ((double) this.o.a)) {
             e3 += (double) (this.o.b - this.o.a);
         }

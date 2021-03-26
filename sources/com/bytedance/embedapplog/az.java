@@ -9,9 +9,7 @@ public class az extends aq {
     public int i;
     private String j;
     private int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1259l;
+    private String l;
     private int m;
     private long n;
 
@@ -22,7 +20,7 @@ public class az extends aq {
         this.k = 1;
         this.i = AppLog.getSuccRate();
         this.j = str;
-        this.f1259l = str2;
+        this.l = str2;
         this.m = i2;
         this.n = bn.a();
     }
@@ -41,7 +39,7 @@ public class az extends aq {
         this.j = cursor.getString(4);
         this.k = cursor.getInt(5);
         this.i = cursor.getInt(6);
-        this.f1259l = cursor.getString(7);
+        this.l = cursor.getString(7);
         this.m = cursor.getInt(8);
         this.n = cursor.getLong(9);
         return this;
@@ -56,7 +54,7 @@ public class az extends aq {
         contentValues.put("event_name", this.j);
         contentValues.put("is_monitor", Integer.valueOf(this.k));
         contentValues.put("bav_monitor_rate", Integer.valueOf(this.i));
-        contentValues.put("monitor_status", this.f1259l);
+        contentValues.put("monitor_status", this.l);
         contentValues.put("monitor_num", Integer.valueOf(this.m));
         contentValues.put("date", Long.valueOf(this.n));
     }
@@ -70,7 +68,7 @@ public class az extends aq {
         jSONObject.put("event_name", this.j);
         jSONObject.put("is_monitor", this.k);
         jSONObject.put("bav_monitor_rate", this.i);
-        jSONObject.put("monitor_status", this.f1259l);
+        jSONObject.put("monitor_status", this.l);
         jSONObject.put("monitor_num", this.m);
         jSONObject.put("date", this.n);
     }
@@ -81,7 +79,7 @@ public class az extends aq {
         jSONObject.put("event_name", this.j);
         jSONObject.put("is_monitor", this.k);
         jSONObject.put("bav_monitor_rate", this.i);
-        jSONObject.put("monitor_status", this.f1259l);
+        jSONObject.put("monitor_status", this.l);
         jSONObject.put("monitor_num", this.m);
         return jSONObject;
     }
@@ -95,7 +93,7 @@ public class az extends aq {
         this.j = jSONObject.optString("event_name", null);
         this.k = jSONObject.optInt("is_monitor", 0);
         this.i = jSONObject.optInt("bav_monitor_rate", 0);
-        this.f1259l = jSONObject.optString("monitor_status", null);
+        this.l = jSONObject.optString("monitor_status", null);
         this.m = jSONObject.optInt("monitor_num", 0);
         this.n = jSONObject.optLong("date", 0);
         return this;

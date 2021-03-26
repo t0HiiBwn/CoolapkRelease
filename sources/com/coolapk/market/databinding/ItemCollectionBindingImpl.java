@@ -28,7 +28,7 @@ public class ItemCollectionBindingImpl extends ItemCollectionBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362727, 7);
+        sparseIntArray.put(2131362738, 7);
     }
 
     public ItemCollectionBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -69,7 +69,7 @@ public class ItemCollectionBindingImpl extends ItemCollectionBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Collection) obj);
         } else if (50 != i) {
             return false;
@@ -85,7 +85,7 @@ public class ItemCollectionBindingImpl extends ItemCollectionBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -150,7 +150,7 @@ public class ItemCollectionBindingImpl extends ItemCollectionBinding {
             this.descriptionView.setVisibility(i);
             TextViewBindingAdapter.setText(this.infoView, str4);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str, null, 2131231696, 0, bool, bool, bool, false, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str, null, 2131231707, 0, bool, bool, bool, false, bool, null, null, null, bool, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.statusView, str2);
             TextViewBindingAdapter.setText(this.titleView, str5);
         }

@@ -56,11 +56,11 @@ final class SecondHandParamsViewHolder$bindTo$$inlined$apply$lambda$2 extends La
                 public final void call(String str) {
                     SecondHandParamsViewHolder.DataViewHolder dataViewHolder = dataViewHolder;
                     boolean z = z;
-                    List<ProductParams> access$getOptions$p = SecondHandParamsViewHolder.access$getOptions$p(this.this$0);
+                    List<ProductParams> list = this.this$0.options;
                     LinkedHashMap<String, List<ProductParams>> map = this.this$0.getMap();
                     int i = i;
                     Intrinsics.checkNotNullExpressionValue(str, "it");
-                    dataViewHolder.stateChange(z, access$getOptions$p, map, i, str);
+                    dataViewHolder.stateChange(z, list, map, i, str);
                     newInstance.dismiss();
                 }
             });
@@ -70,7 +70,7 @@ final class SecondHandParamsViewHolder$bindTo$$inlined$apply$lambda$2 extends La
                 public final void call(Boolean bool) {
                     SecondHandParamsViewHolder.DataViewHolder dataViewHolder = dataViewHolder;
                     Intrinsics.checkNotNullExpressionValue(bool, "it");
-                    dataViewHolder.stateChange(bool.booleanValue(), SecondHandParamsViewHolder.access$getOptions$p(this.this$0), this.this$0.getMap(), i, "其他");
+                    dataViewHolder.stateChange(bool.booleanValue(), this.this$0.options, this.this$0.getMap(), i, "其他");
                     singleCheckHelper.setCheckedPostion(-1);
                 }
             });
@@ -80,6 +80,6 @@ final class SecondHandParamsViewHolder$bindTo$$inlined$apply$lambda$2 extends La
             Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "context.requireAppCompat…().supportFragmentManager");
             newInstance.show(supportFragmentManager, (String) null);
         }
-        SecondHandParamsViewHolder.DataViewHolder.stateChange$default(dataViewHolder, z || (i == 0 ? SecondHandParamsViewHolder.access$getParamText$p(this.this$0).contains(dataViewHolder.paramText()) : false), SecondHandParamsViewHolder.access$getOptions$p(this.this$0), this.this$0.getMap(), i, null, 16, null);
+        SecondHandParamsViewHolder.DataViewHolder.stateChange$default(dataViewHolder, z || (i == 0 ? this.this$0.paramText.contains(dataViewHolder.paramText()) : false), this.this$0.options, this.this$0.getMap(), i, null, 16, null);
     }
 }

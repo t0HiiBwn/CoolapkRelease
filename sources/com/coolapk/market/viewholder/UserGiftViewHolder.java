@@ -9,7 +9,7 @@ import com.coolapk.market.util.DateUtils;
 import com.coolapk.market.util.ViewUtil;
 
 public class UserGiftViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558972;
+    public static final int LAYOUT_ID = 2131558979;
     private Gift gift;
 
     public UserGiftViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {

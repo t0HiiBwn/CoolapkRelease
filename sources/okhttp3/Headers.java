@@ -85,7 +85,7 @@ public final class Headers implements Iterable<Pair<? extends String, ? extends 
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "size", imports = {}))
     /* renamed from: -deprecated_size  reason: not valid java name */
-    public final int m2247deprecated_size() {
+    public final int m1496deprecated_size() {
         return size();
     }
 
@@ -442,7 +442,7 @@ public final class Headers implements Iterable<Pair<? extends String, ? extends 
 
         @Deprecated(level = DeprecationLevel.ERROR, message = "function name changed", replaceWith = @ReplaceWith(expression = "headersOf(*namesAndValues)", imports = {}))
         /* renamed from: -deprecated_of  reason: not valid java name */
-        public final Headers m2249deprecated_of(String... strArr) {
+        public final Headers m1498deprecated_of(String... strArr) {
             Intrinsics.checkNotNullParameter(strArr, "namesAndValues");
             return of((String[]) Arrays.copyOf(strArr, strArr.length));
         }
@@ -471,7 +471,7 @@ public final class Headers implements Iterable<Pair<? extends String, ? extends 
 
         @Deprecated(level = DeprecationLevel.ERROR, message = "function moved to extension", replaceWith = @ReplaceWith(expression = "headers.toHeaders()", imports = {}))
         /* renamed from: -deprecated_of  reason: not valid java name */
-        public final Headers m2248deprecated_of(Map<String, String> map) {
+        public final Headers m1497deprecated_of(Map<String, String> map) {
             Intrinsics.checkNotNullParameter(map, "headers");
             return of(map);
         }

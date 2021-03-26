@@ -23,10 +23,10 @@ public class TopicPickerBindingImpl extends TopicPickerBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(4);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"search_back_header"}, new int[]{2}, new int[]{2131559122});
+        includedLayouts.setIncludes(1, new String[]{"search_back_header"}, new int[]{2}, new int[]{2131559129});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362307, 3);
+        sparseIntArray.put(2131362312, 3);
     }
 
     public TopicPickerBindingImpl(DataBindingComponent dataBindingComponent, View view) {

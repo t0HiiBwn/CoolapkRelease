@@ -53,7 +53,7 @@ public class ItemSectionDemoTitleBindingImpl extends ItemSectionDemoTitleBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (306 != i) {
+        if (307 != i) {
             return false;
         }
         setVh((SectionDemoFragment.SectionViewHolder) obj);
@@ -67,7 +67,7 @@ public class ItemSectionDemoTitleBindingImpl extends ItemSectionDemoTitleBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(306);
+        notifyPropertyChanged(307);
         super.requestRebind();
     }
 

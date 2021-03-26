@@ -95,8 +95,8 @@ public final class NodeHelper {
         indicatorView2.setVisibility(i);
         indicatorView.setTotalIndicatorCount(list.size());
         indicatorView.setSelectedIndex(0);
-        indicatorView.setSelectedDrawableColor(ResourceUtils.getColorInt(context, 2131100147));
-        indicatorView.setUnSelectedDrawableColor(ResourceUtils.getColorInt(context, 2131100150));
+        indicatorView.setSelectedDrawableColor(ResourceUtils.getColorInt(context, 2131100160));
+        indicatorView.setUnSelectedDrawableColor(ResourceUtils.getColorInt(context, 2131100163));
         viewPager.addOnPageChangeListener(new NodeHelper$setupIndicatorAndViewPager$2(indicatorView));
     }
 
@@ -115,35 +115,35 @@ public final class NodeHelper {
         FabVerticalMenuLayout fabVerticalMenuLayout = new FabVerticalMenuLayout(context);
         FabVerticalMenuLayout fabVerticalMenuLayout2 = fabVerticalMenuLayout;
         fabVerticalMenuLayout2.setPadding(fabVerticalMenuLayout2.getPaddingLeft(), fabVerticalMenuLayout2.getPaddingTop(), fabVerticalMenuLayout2.getPaddingRight(), -((int) f));
-        FabVerticalMenuLayout.setFabInfo$default(fabVerticalMenuLayout, 2131231489, Integer.valueOf(AppHolder.getAppTheme().getColorAccent()), (View.OnClickListener) null, 4, (Object) null);
+        FabVerticalMenuLayout.setFabInfo$default(fabVerticalMenuLayout, 2131231500, Integer.valueOf(AppHolder.getAppTheme().getColorAccent()), (View.OnClickListener) null, 4, (Object) null);
         boolean areEqual = Intrinsics.areEqual(topic.getTitle(), "二手交易");
         if (areEqual) {
-            Integer valueOf = Integer.valueOf(resources.getColor(2131099875));
-            String string = resources.getString(2131886325);
+            Integer valueOf = Integer.valueOf(resources.getColor(2131099880));
+            String string = resources.getString(2131886355);
             Intrinsics.checkNotNullExpressionValue(string, "resources.getString(R.st…trance_simple_secondhand)");
-            fabVerticalMenuLayout.addSubFabInfo(2131231535, valueOf, string, new NodeHelper$showTopicFabView$1(activity));
+            fabVerticalMenuLayout.addSubFabInfo(2131231546, valueOf, string, new NodeHelper$showTopicFabView$1(activity));
         }
-        Integer valueOf2 = Integer.valueOf(resources.getColor(2131099876));
-        String string2 = resources.getString(2131886327);
-        String string3 = resources.getString(2131886321);
+        Integer valueOf2 = Integer.valueOf(resources.getColor(2131099881));
+        String string2 = resources.getString(2131886357);
+        String string3 = resources.getString(2131886351);
         if (!areEqual) {
             string2 = string3;
         }
         Intrinsics.checkNotNullExpressionValue(string2, "inSecondHand.valueTo(\n  …ed_entrance_simple_feed))");
-        fabVerticalMenuLayout.addSubFabInfo(2131231258, valueOf2, string2, new NodeHelper$showTopicFabView$2(activity, topic));
-        Integer valueOf3 = Integer.valueOf(resources.getColor(2131099878));
-        String string4 = resources.getString(2131886319);
+        fabVerticalMenuLayout.addSubFabInfo(2131231269, valueOf2, string2, new NodeHelper$showTopicFabView$2(activity, topic));
+        Integer valueOf3 = Integer.valueOf(resources.getColor(2131099883));
+        String string4 = resources.getString(2131886349);
         Intrinsics.checkNotNullExpressionValue(string4, "resources.getString(R.st…_entrance_simple_article)");
-        fabVerticalMenuLayout.addSubFabInfo(2131231174, valueOf3, string4, new NodeHelper$showTopicFabView$3(activity, topic));
-        Integer valueOf4 = Integer.valueOf(resources.getColor(2131099882));
-        String string5 = resources.getString(2131886323);
+        fabVerticalMenuLayout.addSubFabInfo(2131231185, valueOf3, string4, new NodeHelper$showTopicFabView$3(activity, topic));
+        Integer valueOf4 = Integer.valueOf(resources.getColor(2131099887));
+        String string5 = resources.getString(2131886353);
         Intrinsics.checkNotNullExpressionValue(string5, "resources.getString(R.st…entrance_simple_question)");
-        fabVerticalMenuLayout.addSubFabInfo(2131231613, valueOf4, string5, new NodeHelper$showTopicFabView$4(activity, topic));
+        fabVerticalMenuLayout.addSubFabInfo(2131231624, valueOf4, string5, new NodeHelper$showTopicFabView$4(activity, topic));
         if (topic.getTagType() == 1) {
-            Integer valueOf5 = Integer.valueOf(resources.getColor(2131099880));
-            String string6 = resources.getString(2131886320);
+            Integer valueOf5 = Integer.valueOf(resources.getColor(2131099885));
+            String string6 = resources.getString(2131886350);
             Intrinsics.checkNotNullExpressionValue(string6, "resources.getString(R.st…_entrance_simple_comment)");
-            fabVerticalMenuLayout.addSubFabInfo(2131231245, valueOf5, string6, new NodeHelper$showTopicFabView$5(activity, topic));
+            fabVerticalMenuLayout.addSubFabInfo(2131231256, valueOf5, string6, new NodeHelper$showTopicFabView$5(activity, topic));
         }
         fabVerticalMenuLayout.setFabLongClickListener(new NodeHelper$showTopicFabView$6(activity));
         contentView.addView(fabVerticalMenuLayout2, new FrameLayout.LayoutParams(-1, -1));
@@ -171,8 +171,8 @@ public final class NodeHelper {
             FabVerticalMenuLayout fabVerticalMenuLayout = new FabVerticalMenuLayout(context);
             FabVerticalMenuLayout fabVerticalMenuLayout2 = fabVerticalMenuLayout;
             fabVerticalMenuLayout2.setPadding(fabVerticalMenuLayout2.getPaddingLeft(), fabVerticalMenuLayout2.getPaddingTop(), fabVerticalMenuLayout2.getPaddingRight(), -((int) f));
-            FabVerticalMenuLayout.setFabInfo$default(fabVerticalMenuLayout, 2131231489, Integer.valueOf(AppHolder.getAppTheme().getColorAccent()), (View.OnClickListener) null, 4, (Object) null);
-            fabVerticalMenuLayout.addSubFabInfo(2131231258, Integer.valueOf(resources.getColor(2131099876)), "讨论", new NodeHelper$showAppFabView$2(nodeHelper$showAppFabView$1));
+            FabVerticalMenuLayout.setFabInfo$default(fabVerticalMenuLayout, 2131231500, Integer.valueOf(AppHolder.getAppTheme().getColorAccent()), (View.OnClickListener) null, 4, (Object) null);
+            fabVerticalMenuLayout.addSubFabInfo(2131231269, Integer.valueOf(resources.getColor(2131099881)), "讨论", new NodeHelper$showAppFabView$2(nodeHelper$showAppFabView$1));
             AppMetadataKt.runOnAppMode$default(this, null, NodeHelper$showAppFabView$3.INSTANCE, null, new NodeHelper$showAppFabView$4(fabVerticalMenuLayout, resources, appNodePresenter, appNodeViewModel, activity), 5, null);
             contentView.addView(fabVerticalMenuLayout2, new FrameLayout.LayoutParams(-1, -1));
             fabVerticalMenuLayout.post(new NodeHelper$showAppFabView$5(fabVerticalMenuLayout));

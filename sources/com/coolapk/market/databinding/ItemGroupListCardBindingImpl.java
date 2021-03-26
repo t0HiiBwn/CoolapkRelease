@@ -24,9 +24,9 @@ public class ItemGroupListCardBindingImpl extends ItemGroupListCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363611, 2);
-        sparseIntArray.put(2131363582, 3);
-        sparseIntArray.put(2131362865, 4);
+        sparseIntArray.put(2131363633, 2);
+        sparseIntArray.put(2131363604, 3);
+        sparseIntArray.put(2131362876, 4);
     }
 
     public ItemGroupListCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {

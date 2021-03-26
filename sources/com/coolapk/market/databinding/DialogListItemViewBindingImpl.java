@@ -27,9 +27,9 @@ public class DialogListItemViewBindingImpl extends DialogListItemViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 1);
-        sparseIntArray.put(2131362376, 2);
-        sparseIntArray.put(2131362229, 3);
+        sparseIntArray.put(2131363604, 1);
+        sparseIntArray.put(2131362382, 2);
+        sparseIntArray.put(2131362234, 3);
     }
 
     public DialogListItemViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

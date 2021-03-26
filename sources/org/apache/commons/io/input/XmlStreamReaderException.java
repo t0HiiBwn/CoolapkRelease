@@ -27,19 +27,19 @@ public class XmlStreamReaderException extends IOException {
         return this.bomEncoding;
     }
 
-    public String getXmlGuessEncoding() {
-        return this.xmlGuessEncoding;
-    }
-
-    public String getXmlEncoding() {
-        return this.xmlEncoding;
+    public String getContentTypeEncoding() {
+        return this.contentTypeEncoding;
     }
 
     public String getContentTypeMime() {
         return this.contentTypeMime;
     }
 
-    public String getContentTypeEncoding() {
-        return this.contentTypeEncoding;
+    public String getXmlEncoding() {
+        return this.xmlEncoding;
+    }
+
+    public String getXmlGuessEncoding() {
+        return this.xmlGuessEncoding;
     }
 }

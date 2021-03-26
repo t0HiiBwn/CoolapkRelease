@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.coolapk.market.design.CoolapkCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/coolapk_card_view" android:tag="layout/item_goods_list_simple_0" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardStyle="2">
-    <LinearLayout android:orientation="vertical" android:id="@+id/item_album_view" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/card_view" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content">
         <LinearLayout android:gravity="center_vertical" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
             <LinearLayout android:layout_gravity="top" android:id="@+id/stroke_view" android:padding="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
                 <com.makeramen.roundedimageview.RoundedImageView android:id="@+id/icon_view" android:tag="binding_2" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="centerCrop" app:riv_corner_radius="12dp"/>

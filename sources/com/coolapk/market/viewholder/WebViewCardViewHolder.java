@@ -40,7 +40,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: WebViewCardViewHolder.kt */
 public final class WebViewCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558990;
+    public static final int LAYOUT_ID = 2131558997;
     private final ItemWebViewBinding binding;
     private Entity card;
     private VideoWebViewFragment childFragment;
@@ -288,7 +288,7 @@ public final class WebViewCardViewHolder extends BindingViewHolder {
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
         int id = view.getId();
-        if (id == 2131362338) {
+        if (id == 2131362344) {
             VideoWebViewFragment videoWebViewFragment = this.childFragment;
             if (!(videoWebViewFragment == null || (webView = videoWebViewFragment.getWebView()) == null)) {
                 Entity entity = this.card;
@@ -304,7 +304,7 @@ public final class WebViewCardViewHolder extends BindingViewHolder {
             AspectRatioImageView aspectRatioImageView = this.binding.coverView;
             Intrinsics.checkNotNullExpressionValue(aspectRatioImageView, "binding.coverView");
             aspectRatioImageView.setVisibility(8);
-        } else if (id == 2131362598 || id == 2131362768) {
+        } else if (id == 2131362606 || id == 2131362779) {
             enterFullScreen();
         }
     }

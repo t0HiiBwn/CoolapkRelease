@@ -27,9 +27,7 @@ public class b {
     private static long i = 0;
     private static long j = 0;
     private static Application.ActivityLifecycleCallbacks k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static Class<?> f1432l = null;
+    private static Class<?> l = null;
     private static boolean m = true;
 
     static /* synthetic */ String a(String str, String str2) {
@@ -152,7 +150,7 @@ public class b {
                             @Override // android.app.Application.ActivityLifecycleCallbacks
                             public final void onActivityResumed(Activity activity) {
                                 String name = activity != null ? activity.getClass().getName() : "unknown";
-                                if (b.f1432l == null || b.f1432l.getName().equals(name)) {
+                                if (b.l == null || b.l.getName().equals(name)) {
                                     x.c(">>> %s onResumed <<<", name);
                                     a b = a.b();
                                     if (b != null) {
@@ -176,7 +174,7 @@ public class b {
                                                 long unused = b.j = currentTimeMillis;
                                                 x.a("add a timer to upload hot start user info", new Object[0]);
                                                 if (b.m) {
-                                                    w.a().a(new a.RunnableC0125a(null, true), b.d);
+                                                    w.a().a(new a.RunnableC0143a(null, true), b.d);
                                                 }
                                             }
                                         }
@@ -187,7 +185,7 @@ public class b {
                             @Override // android.app.Application.ActivityLifecycleCallbacks
                             public final void onActivityPaused(Activity activity) {
                                 String name = activity != null ? activity.getClass().getName() : "unknown";
-                                if (b.f1432l == null || b.f1432l.getName().equals(name)) {
+                                if (b.l == null || b.l.getName().equals(name)) {
                                     x.c(">>> %s onPaused <<<", name);
                                     com.tencent.bugly.crashreport.common.info.a b = com.tencent.bugly.crashreport.common.info.a.b();
                                     if (b != null) {
@@ -211,7 +209,7 @@ public class b {
                             @Override // android.app.Application.ActivityLifecycleCallbacks
                             public final void onActivityDestroyed(Activity activity) {
                                 String name = activity != null ? activity.getClass().getName() : "unknown";
-                                if (b.f1432l == null || b.f1432l.getName().equals(name)) {
+                                if (b.l == null || b.l.getName().equals(name)) {
                                     x.c(">>> %s onDestroyed <<<", name);
                                     com.tencent.bugly.crashreport.common.info.a b = com.tencent.bugly.crashreport.common.info.a.b();
                                     if (b != null) {
@@ -223,7 +221,7 @@ public class b {
                             @Override // android.app.Application.ActivityLifecycleCallbacks
                             public final void onActivityCreated(Activity activity, Bundle bundle) {
                                 String name = activity != null ? activity.getClass().getName() : "unknown";
-                                if (b.f1432l == null || b.f1432l.getName().equals(name)) {
+                                if (b.l == null || b.l.getName().equals(name)) {
                                     x.c(">>> %s onCreated <<<", name);
                                     com.tencent.bugly.crashreport.common.info.a b = com.tencent.bugly.crashreport.common.info.a.b();
                                     if (b != null) {
@@ -258,7 +256,7 @@ public class b {
             a = new a(context, z);
             b = true;
             if (buglyStrategy != null) {
-                f1432l = buglyStrategy.getUserInfoActivity();
+                l = buglyStrategy.getUserInfoActivity();
                 j2 = buglyStrategy.getAppReportDelay();
             } else {
                 j2 = 0;

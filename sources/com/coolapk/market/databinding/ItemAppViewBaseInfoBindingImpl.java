@@ -58,16 +58,16 @@ public class ItemAppViewBaseInfoBindingImpl extends ItemAppViewBaseInfoBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(50);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"item_app_view_base_info_gift"}, new int[]{42}, new int[]{2131558601});
+        includedLayouts.setIncludes(0, new String[]{"item_app_view_base_info_gift"}, new int[]{42}, new int[]{2131558605});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362085, 43);
-        sparseIntArray.put(2131362338, 44);
-        sparseIntArray.put(2131362652, 45);
-        sparseIntArray.put(2131362334, 46);
-        sparseIntArray.put(2131362050, 47);
-        sparseIntArray.put(2131363556, 48);
-        sparseIntArray.put(2131362743, 49);
+        sparseIntArray.put(2131362088, 43);
+        sparseIntArray.put(2131362344, 44);
+        sparseIntArray.put(2131362660, 45);
+        sparseIntArray.put(2131362340, 46);
+        sparseIntArray.put(2131362051, 47);
+        sparseIntArray.put(2131363577, 48);
+        sparseIntArray.put(2131362754, 49);
     }
 
     public ItemAppViewBaseInfoBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -192,7 +192,7 @@ public class ItemAppViewBaseInfoBindingImpl extends ItemAppViewBaseInfoBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppViewViewModel) obj);
@@ -206,7 +206,7 @@ public class ItemAppViewBaseInfoBindingImpl extends ItemAppViewBaseInfoBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -248,7 +248,7 @@ public class ItemAppViewBaseInfoBindingImpl extends ItemAppViewBaseInfoBinding {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i == 242) {
+        } else if (i == 243) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
@@ -268,17 +268,17 @@ public class ItemAppViewBaseInfoBindingImpl extends ItemAppViewBaseInfoBinding {
                 this.mDirtyFlags |= 64;
             }
             return true;
-        } else if (i == 178) {
+        } else if (i == 179) {
             synchronized (this) {
                 this.mDirtyFlags |= 128;
             }
             return true;
-        } else if (i == 234) {
+        } else if (i == 235) {
             synchronized (this) {
                 this.mDirtyFlags |= 256;
             }
             return true;
-        } else if (i == 233) {
+        } else if (i == 234) {
             synchronized (this) {
                 this.mDirtyFlags |= 512;
             }
@@ -288,22 +288,22 @@ public class ItemAppViewBaseInfoBindingImpl extends ItemAppViewBaseInfoBinding {
                 this.mDirtyFlags |= 1024;
             }
             return true;
-        } else if (i == 202) {
+        } else if (i == 203) {
             synchronized (this) {
                 this.mDirtyFlags |= 2048;
             }
             return true;
-        } else if (i == 203) {
+        } else if (i == 204) {
             synchronized (this) {
                 this.mDirtyFlags |= 4096;
             }
             return true;
-        } else if (i == 189) {
+        } else if (i == 190) {
             synchronized (this) {
                 this.mDirtyFlags |= 8192;
             }
             return true;
-        } else if (i == 205) {
+        } else if (i == 206) {
             synchronized (this) {
                 this.mDirtyFlags |= 16384;
             }
@@ -313,27 +313,27 @@ public class ItemAppViewBaseInfoBindingImpl extends ItemAppViewBaseInfoBinding {
                 this.mDirtyFlags |= 32768;
             }
             return true;
-        } else if (i == 290) {
+        } else if (i == 291) {
             synchronized (this) {
                 this.mDirtyFlags |= 65536;
             }
             return true;
-        } else if (i == 245) {
+        } else if (i == 246) {
             synchronized (this) {
                 this.mDirtyFlags |= 131072;
             }
             return true;
-        } else if (i == 262) {
+        } else if (i == 263) {
             synchronized (this) {
                 this.mDirtyFlags |= 262144;
             }
             return true;
-        } else if (i == 161) {
+        } else if (i == 162) {
             synchronized (this) {
                 this.mDirtyFlags |= 524288;
             }
             return true;
-        } else if (i != 162) {
+        } else if (i != 163) {
             return false;
         } else {
             synchronized (this) {
@@ -1037,7 +1037,7 @@ public class ItemAppViewBaseInfoBindingImpl extends ItemAppViewBaseInfoBinding {
         if ((j4 & 2103298) == 0) {
             str19 = null;
         } else if (!z) {
-            str19 = this.actionRank.getResources().getString(2131886948);
+            str19 = this.actionRank.getResources().getString(2131887010);
         }
         int i47 = ((j4 & 2097162) > 0 ? 1 : ((j4 & 2097162) == 0 ? 0 : -1));
         if (i47 != 0) {
@@ -1127,7 +1127,7 @@ public class ItemAppViewBaseInfoBindingImpl extends ItemAppViewBaseInfoBinding {
                     ThemeBindingAdapters.setTintColor(this.mboundView2, "textColorSecondary");
                     ThemeBindingAdapters.setTextColor(this.mboundView26, "colorAccent");
                     InteractivePeopleView interactivePeopleView = this.mboundView29;
-                    InteractivePeopleViewBindingAdapters.setTitle(interactivePeopleView, interactivePeopleView.getResources().getString(2131886674));
+                    InteractivePeopleViewBindingAdapters.setTitle(interactivePeopleView, interactivePeopleView.getResources().getString(2131886736));
                     ThemeBindingAdapters.setTextColor(this.moreView, "colorAccent");
                     ThemeBindingAdapters.setTextColor(this.titleView, "textColorPrimary");
                 }
@@ -1156,7 +1156,7 @@ public class ItemAppViewBaseInfoBindingImpl extends ItemAppViewBaseInfoBinding {
                 }
                 if ((j4 & 2105346) != 0) {
                     Boolean bool2 = null;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str14, null, 2131231363, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str14, null, 2131231374, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
                 }
                 if ((j4 & 2097218) != 0) {
                     TextViewBindingAdapter.setText(this.mboundView10, str7);

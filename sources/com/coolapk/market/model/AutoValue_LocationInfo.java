@@ -49,8 +49,8 @@ final class AutoValue_LocationInfo extends C$AutoValue_LocationInfo {
         return 0;
     }
 
-    AutoValue_LocationInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, String str13, Double d, Double d2, String str14, String str15, String str16, boolean z, boolean z2, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, String str27) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l2, l3, str12, str13, d, d2, str14, str15, str16, z, z2, str17, str18, str19, str20, str21, str22, str23, str24, str25, str26, str27);
+    AutoValue_LocationInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, String str13, Double d, Double d2, String str14, String str15, String str16, boolean z, boolean z2, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, String str27) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l, l2, str12, str13, d, d2, str14, str15, str16, z, z2, str17, str18, str19, str20, str21, str22, str23, str24, str25, str26, str27);
     }
 
     @Override // android.os.Parcelable

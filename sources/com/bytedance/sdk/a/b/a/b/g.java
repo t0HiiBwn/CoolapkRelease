@@ -28,9 +28,7 @@ public final class g {
     private final f i;
     private int j;
     private c k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1267l;
+    private boolean l;
     private boolean m;
     private boolean n;
     private c o;
@@ -95,7 +93,7 @@ public final class g {
                 } else {
                     cVar2 = null;
                 }
-                if (!this.f1267l) {
+                if (!this.l) {
                     cVar = null;
                 }
                 if (cVar2 == null) {
@@ -174,7 +172,7 @@ public final class g {
         cVar2.a(i2, i3, i4, z, this.b, this.c);
         g().b(cVar2.a());
         synchronized (this.g) {
-            this.f1267l = true;
+            this.l = true;
             com.bytedance.sdk.a.b.a.a.a.b(this.g, cVar2);
             if (cVar2.d()) {
                 socket = com.bytedance.sdk.a.b.a.a.a.a(this.g, this.a, this);
@@ -334,7 +332,7 @@ public final class g {
                 c cVar2 = this.k;
                 a2 = a(z, false, true);
                 if (this.k == null) {
-                    if (this.f1267l) {
+                    if (this.l) {
                         cVar = cVar2;
                     }
                 }
@@ -372,7 +370,7 @@ public final class g {
             throw new AssertionError();
         } else if (this.k == null) {
             this.k = cVar;
-            this.f1267l = z;
+            this.l = z;
             cVar.d.add(new a(this, this.h));
         } else {
             throw new IllegalStateException();

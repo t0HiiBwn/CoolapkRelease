@@ -138,7 +138,7 @@ public class TabLayout extends HorizontalScrollView {
         SlidingTabStrip slidingTabStrip = new SlidingTabStrip(context);
         this.mTabStrip = slidingTabStrip;
         super.addView(slidingTabStrip, 0, new FrameLayout.LayoutParams(-2, -1));
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.TabLayout, i, 2131952313);
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.TabLayout, i, 2131952314);
         slidingTabStrip.setSelectedIndicatorHeight(DisplayUtils.dp2px(context, 2.5f));
         slidingTabStrip.setSelectedIndicatorColor(obtainStyledAttributes.getColor(7, 0));
         int dimensionPixelSize = obtainStyledAttributes.getDimensionPixelSize(15, 0);
@@ -150,7 +150,7 @@ public class TabLayout extends HorizontalScrollView {
         this.mTabPaddingTop = obtainStyledAttributes.getDimensionPixelSize(19, this.mTabPaddingTop);
         this.mTabPaddingEnd = obtainStyledAttributes.getDimensionPixelSize(17, this.mTabPaddingEnd);
         this.mTabPaddingBottom = obtainStyledAttributes.getDimensionPixelSize(16, this.mTabPaddingBottom);
-        int resourceId = obtainStyledAttributes.getResourceId(22, 2131952076);
+        int resourceId = obtainStyledAttributes.getResourceId(22, 2131952077);
         this.mTabTextAppearance = resourceId;
         TypedArray obtainStyledAttributes2 = context.obtainStyledAttributes(resourceId, androidx.appcompat.R.styleable.TextAppearance);
         try {
@@ -1034,7 +1034,7 @@ public class TabLayout extends HorizontalScrollView {
             }
             LinearLayout linearLayout = new LinearLayout(context);
             this.mLinearLayout = linearLayout;
-            linearLayout.setId(2131362858);
+            linearLayout.setId(2131362869);
             this.mLinearLayout.setGravity(17);
             this.mLinearLayout.setOrientation(1);
             RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(-2, -2);
@@ -1280,12 +1280,12 @@ public class TabLayout extends HorizontalScrollView {
             boolean z = false;
             if (this.mCustomView == null) {
                 if (this.mIconView == null) {
-                    ImageView imageView2 = (ImageView) LayoutInflater.from(getContext()).inflate(2131558500, (ViewGroup) this.mLinearLayout, false);
+                    ImageView imageView2 = (ImageView) LayoutInflater.from(getContext()).inflate(2131558502, (ViewGroup) this.mLinearLayout, false);
                     this.mLinearLayout.addView(imageView2, 0);
                     this.mIconView = imageView2;
                 }
                 if (this.mTextView == null) {
-                    TextView textView3 = (TextView) LayoutInflater.from(getContext()).inflate(2131558501, (ViewGroup) this.mLinearLayout, false);
+                    TextView textView3 = (TextView) LayoutInflater.from(getContext()).inflate(2131558503, (ViewGroup) this.mLinearLayout, false);
                     this.mLinearLayout.addView(textView3);
                     this.mTextView = textView3;
                     this.mDefaultMaxLines = TextViewCompat.getMaxLines(textView3);

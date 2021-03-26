@@ -30,7 +30,7 @@ public abstract class FeedBlockItemsBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedBlockItemsBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (FeedBlockItemsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558554, viewGroup, z, obj);
+        return (FeedBlockItemsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558557, viewGroup, z, obj);
     }
 
     public static FeedBlockItemsBinding inflate(LayoutInflater layoutInflater) {
@@ -39,7 +39,7 @@ public abstract class FeedBlockItemsBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedBlockItemsBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (FeedBlockItemsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558554, null, false, obj);
+        return (FeedBlockItemsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558557, null, false, obj);
     }
 
     public static FeedBlockItemsBinding bind(View view) {
@@ -48,6 +48,6 @@ public abstract class FeedBlockItemsBinding extends ViewDataBinding {
 
     @Deprecated
     public static FeedBlockItemsBinding bind(View view, Object obj) {
-        return (FeedBlockItemsBinding) bind(obj, view, 2131558554);
+        return (FeedBlockItemsBinding) bind(obj, view, 2131558557);
     }
 }

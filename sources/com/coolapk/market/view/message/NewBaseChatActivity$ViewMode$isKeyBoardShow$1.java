@@ -19,9 +19,9 @@ final class NewBaseChatActivity$ViewMode$isKeyBoardShow$1 implements Runnable {
         EmotionPanel emotionPanel = NewBaseChatActivity.access$getMBinding$p(NewBaseChatActivity.this).emotionPanel;
         Intrinsics.checkNotNullExpressionValue(emotionPanel, "mBinding.emotionPanel");
         if (emotionPanel.isShown()) {
-            NewBaseChatActivity.access$getMBinding$p(NewBaseChatActivity.this).menuEmotion.setImageResource(2131231386);
+            NewBaseChatActivity.access$getMBinding$p(NewBaseChatActivity.this).menuEmotion.setImageResource(2131231397);
         } else {
-            NewBaseChatActivity.access$getMBinding$p(NewBaseChatActivity.this).menuEmotion.setImageResource(2131231278);
+            NewBaseChatActivity.access$getMBinding$p(NewBaseChatActivity.this).menuEmotion.setImageResource(2131231289);
         }
     }
 }

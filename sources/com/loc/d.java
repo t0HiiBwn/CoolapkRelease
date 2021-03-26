@@ -68,9 +68,7 @@ public final class d {
     Messenger i = null;
     Messenger j = null;
     Intent k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    int f1360l = 0;
+    int l = 0;
     b m = null;
     boolean n = false;
     AMapLocationClientOption.AMapLocationMode o = AMapLocationClientOption.AMapLocationMode.Hight_Accuracy;
@@ -937,14 +935,14 @@ public final class d {
     static /* synthetic */ void h(d dVar) {
         try {
             if (dVar.i != null) {
-                dVar.f1360l = 0;
+                dVar.l = 0;
                 Bundle bundle = new Bundle();
                 bundle.putBundle("optBundle", ej.a(dVar.a));
                 dVar.a(2, bundle);
                 return;
             }
-            int i2 = dVar.f1360l + 1;
-            dVar.f1360l = i2;
+            int i2 = dVar.l + 1;
+            dVar.l = i2;
             if (i2 < 10) {
                 dVar.a(1008, (Object) null, 50);
             }
@@ -1033,7 +1031,7 @@ public final class d {
             }
             a(1016);
             this.C = false;
-            this.f1360l = 0;
+            this.l = 0;
         } catch (Throwable th) {
             ej.a(th, "ALManager", "stopLocation");
         }

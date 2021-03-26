@@ -38,14 +38,14 @@ public class SubmitFeedGoodsBindingImpl extends SubmitFeedGoodsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362316, 11);
-        sparseIntArray.put(2131363194, 12);
-        sparseIntArray.put(2131363968, 13);
-        sparseIntArray.put(2131362186, 14);
-        sparseIntArray.put(2131363097, 15);
-        sparseIntArray.put(2131363955, 16);
-        sparseIntArray.put(2131363221, 17);
-        sparseIntArray.put(2131362417, 18);
+        sparseIntArray.put(2131362322, 11);
+        sparseIntArray.put(2131363208, 12);
+        sparseIntArray.put(2131363994, 13);
+        sparseIntArray.put(2131362189, 14);
+        sparseIntArray.put(2131363111, 15);
+        sparseIntArray.put(2131363981, 16);
+        sparseIntArray.put(2131363235, 17);
+        sparseIntArray.put(2131362423, 18);
     }
 
     public SubmitFeedGoodsBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -102,7 +102,7 @@ public class SubmitFeedGoodsBindingImpl extends SubmitFeedGoodsBinding {
     public boolean setVariable(int i, Object obj) {
         if (109 == i) {
             setFeedGoods((FeedGoods) obj);
-        } else if (288 == i) {
+        } else if (289 == i) {
             setUiConfig((FeedUIConfig) obj);
         } else if (50 != i) {
             return false;
@@ -128,7 +128,7 @@ public class SubmitFeedGoodsBindingImpl extends SubmitFeedGoodsBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(288);
+        notifyPropertyChanged(289);
         super.requestRebind();
     }
 
@@ -218,7 +218,7 @@ public class SubmitFeedGoodsBindingImpl extends SubmitFeedGoodsBinding {
             this.addGoodsView.setVisibility(i);
             this.mboundView1.setVisibility(i3);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView2, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, true, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView2, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, true, null, bool);
             TextViewBindingAdapter.setText(this.mboundView4, str2);
             this.mboundView4.setVisibility(i2);
             TextViewBindingAdapter.setText(this.titleView, str3);

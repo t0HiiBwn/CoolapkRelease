@@ -12,7 +12,7 @@ import com.coolapk.market.view.app.AppViewContract;
 import com.coolapk.market.viewholder.BindingViewHolder;
 
 public class AppViewInteractiveViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558606;
+    public static final int LAYOUT_ID = 2131558610;
     private final AppViewContract.Presenter presenter;
     private final AppViewViewModel viewModel;
 
@@ -44,11 +44,11 @@ public class AppViewInteractiveViewHolder extends BindingViewHolder {
         super.onClick(view);
         FragmentActivity fragmentActivity = (FragmentActivity) getContext();
         int id = view.getId();
-        if (id == 2131362410) {
+        if (id == 2131362416) {
             ActionManager.startDiscoveryOfTheirsActivity(getContext(), this.viewModel.getServiceApp().getApkId());
-        } else if (id == 2131363206) {
+        } else if (id == 2131363220) {
             ActionManager.startRatingOfTheirsActivity(getContext(), this.viewModel.getServiceApp().getApkId());
-        } else if (id == 2131363213) {
+        } else if (id == 2131363227) {
             RatingDialog newInstance = RatingDialog.newInstance();
             newInstance.setViewModel(this.viewModel);
             newInstance.setPresenter(this.presenter);

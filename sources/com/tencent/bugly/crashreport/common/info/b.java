@@ -670,10 +670,10 @@ public class b {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:33:0x009a  */
-    /* JADX WARNING: Removed duplicated region for block: B:38:0x00a6  */
-    /* JADX WARNING: Removed duplicated region for block: B:43:0x00b2  */
-    /* JADX WARNING: Removed duplicated region for block: B:48:0x00ba A[SYNTHETIC, Splitter:B:48:0x00ba] */
+    /* JADX WARNING: Removed duplicated region for block: B:33:0x009c  */
+    /* JADX WARNING: Removed duplicated region for block: B:38:0x00a8  */
+    /* JADX WARNING: Removed duplicated region for block: B:43:0x00b4  */
+    /* JADX WARNING: Removed duplicated region for block: B:48:0x00bc A[SYNTHETIC, Splitter:B:48:0x00bc] */
     private static int q() {
         Throwable th;
         BufferedReader bufferedReader;
@@ -719,6 +719,11 @@ public class b {
                         th = th2;
                         bufferedReader2 = bufferedReader;
                         if (bufferedReader2 != null) {
+                            try {
+                                bufferedReader2.close();
+                            } catch (IOException e7) {
+                                e7.printStackTrace();
+                            }
                         }
                         throw th;
                     }
@@ -736,26 +741,26 @@ public class b {
             }
             try {
                 bufferedReader.close();
-            } catch (IOException e7) {
-                e7.printStackTrace();
+            } catch (IOException e8) {
+                e8.printStackTrace();
             }
-        } catch (UnsupportedEncodingException e8) {
+        } catch (UnsupportedEncodingException e9) {
             bufferedReader = null;
-            e = e8;
+            e = e9;
             e.printStackTrace();
             if (bufferedReader != null) {
             }
             return i;
-        } catch (FileNotFoundException e9) {
+        } catch (FileNotFoundException e10) {
             bufferedReader = null;
-            e2 = e9;
+            e2 = e10;
             e2.printStackTrace();
             if (bufferedReader != null) {
             }
             return i;
-        } catch (IOException e10) {
+        } catch (IOException e11) {
             bufferedReader = null;
-            e3 = e10;
+            e3 = e11;
             e3.printStackTrace();
             if (bufferedReader != null) {
             }
@@ -763,11 +768,6 @@ public class b {
         } catch (Throwable th3) {
             th = th3;
             if (bufferedReader2 != null) {
-                try {
-                    bufferedReader2.close();
-                } catch (IOException e11) {
-                    e11.printStackTrace();
-                }
             }
             throw th;
         }

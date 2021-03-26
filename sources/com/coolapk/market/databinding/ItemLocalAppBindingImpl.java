@@ -26,8 +26,8 @@ public class ItemLocalAppBindingImpl extends ItemLocalAppBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362316, 7);
-        sparseIntArray.put(2131363906, 8);
+        sparseIntArray.put(2131362322, 7);
+        sparseIntArray.put(2131363929, 8);
     }
 
     public ItemLocalAppBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -70,9 +70,9 @@ public class ItemLocalAppBindingImpl extends ItemLocalAppBinding {
     public boolean setVariable(int i, Object obj) {
         if (27 == i) {
             setApp((MobileApp) obj);
-        } else if (307 == i) {
+        } else if (308 == i) {
             setViewHolder((AppViewHolder) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((AlbumPickAPKViewModel) obj);
@@ -97,7 +97,7 @@ public class ItemLocalAppBindingImpl extends ItemLocalAppBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(307);
+        notifyPropertyChanged(308);
         super.requestRebind();
     }
 
@@ -190,7 +190,7 @@ public class ItemLocalAppBindingImpl extends ItemLocalAppBinding {
             TextViewBindingAdapter.setText(this.apkSizeView, str2);
             this.apkSystemView.setVisibility(i);
             Boolean bool = null;
-            ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, str, null, null, 2131231363, bool, bool);
+            ImageViewBindingAdapters.setAppIconWithContext(this.mBindingComponent, this.iconView, str, null, null, 2131231374, bool, bool);
             TextViewBindingAdapter.setText(this.titleView, str3);
             TextViewBindingAdapter.setText(this.versionView, str4);
         }

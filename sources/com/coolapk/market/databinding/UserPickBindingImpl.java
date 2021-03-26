@@ -24,13 +24,13 @@ public class UserPickBindingImpl extends UserPickBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(7);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"fab"}, new int[]{3}, new int[]{2131558549});
-        includedLayouts.setIncludes(1, new String[]{"search_back_header"}, new int[]{2}, new int[]{2131559122});
+        includedLayouts.setIncludes(0, new String[]{"fab"}, new int[]{3}, new int[]{2131558551});
+        includedLayouts.setIncludes(1, new String[]{"search_back_header"}, new int[]{2}, new int[]{2131559129});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363307, 4);
-        sparseIntArray.put(2131363315, 5);
-        sparseIntArray.put(2131363314, 6);
+        sparseIntArray.put(2131363322, 4);
+        sparseIntArray.put(2131363331, 5);
+        sparseIntArray.put(2131363330, 6);
     }
 
     public UserPickBindingImpl(DataBindingComponent dataBindingComponent, View view) {

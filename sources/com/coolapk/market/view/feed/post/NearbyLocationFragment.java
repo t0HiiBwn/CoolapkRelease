@@ -103,7 +103,7 @@ public class NearbyLocationFragment extends BaseFragment implements AMapLocation
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        PoiListBinding poiListBinding = (PoiListBinding) DataBindingUtil.inflate(layoutInflater, 2131559088, viewGroup, false);
+        PoiListBinding poiListBinding = (PoiListBinding) DataBindingUtil.inflate(layoutInflater, 2131559095, viewGroup, false);
         this.binding = poiListBinding;
         poiListBinding.recyclerView.getItemAnimator().setChangeDuration(0);
         return this.binding.getRoot();
@@ -120,7 +120,7 @@ public class NearbyLocationFragment extends BaseFragment implements AMapLocation
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         this.binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        this.binding.recyclerView.addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558813, 2131231052).last(2131231052).create());
+        this.binding.recyclerView.addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558820, 2131231062).last(2131231062).create());
         this.binding.recyclerView.getItemAnimator().setChangeDuration(0);
         this.binding.recyclerView.setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         this.binding.recyclerView.setClipToPadding(false);
@@ -218,7 +218,7 @@ public class NearbyLocationFragment extends BaseFragment implements AMapLocation
             this.province = aMapLocation.getProvince();
             boolean z = true;
             if (!TextUtils.equals("ershou", this.bindType)) {
-                LocationInfo.Builder country2 = LocationInfo.newBuilder().setAddress(getString(2131886880)).setSnippet("").setLongAddress("").setLatitude(Double.valueOf(0.0d)).setLongitude(Double.valueOf(0.0d)).setBusinessArea("").setCityCode("").setProvince("").setCity("").setCountry("");
+                LocationInfo.Builder country2 = LocationInfo.newBuilder().setAddress(getString(2131886942)).setSnippet("").setLongAddress("").setLatitude(Double.valueOf(0.0d)).setLongitude(Double.valueOf(0.0d)).setBusinessArea("").setCityCode("").setProvince("").setCity("").setCountry("");
                 LocationInfo locationInfo2 = this.lastLocationInfo;
                 this.dataList.add(country2.setIsChecked(locationInfo2 == null || locationInfo2.getIsHideLocation()).setIsHideLocation(true).setEntityType("location").build());
             }
@@ -270,7 +270,7 @@ public class NearbyLocationFragment extends BaseFragment implements AMapLocation
     private class DataAdapter extends RecyclerView.Adapter<BindingViewHolder> {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558813;
+            return 2131558820;
         }
 
         private DataAdapter() {
@@ -279,7 +279,7 @@ public class NearbyLocationFragment extends BaseFragment implements AMapLocation
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-            if (i == 2131558813) {
+            if (i == 2131558820) {
                 return new LocationViewHolder(inflate, null, null);
             }
             throw new IllegalStateException("Unknown view type " + i);
@@ -296,7 +296,7 @@ public class NearbyLocationFragment extends BaseFragment implements AMapLocation
     }
 
     private class LocationViewHolder extends GenericBindHolder<ItemLocationBinding, LocationInfo> {
-        public static final int LAYOUT_ID = 2131558813;
+        public static final int LAYOUT_ID = 2131558820;
         private final ItemLocationBinding binding = ((ItemLocationBinding) getBinding());
 
         public LocationViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -306,7 +306,7 @@ public class NearbyLocationFragment extends BaseFragment implements AMapLocation
         public void bindToContent(LocationInfo locationInfo) {
             if (getAdapterPosition() == NearbyLocationFragment.this.myLocationIndex) {
                 TextView textView = this.binding.titleView;
-                textView.setText(locationInfo.getAddress() + "(" + NearbyLocationFragment.this.getString(2131886881) + ")");
+                textView.setText(locationInfo.getAddress() + "(" + NearbyLocationFragment.this.getString(2131886943) + ")");
             } else {
                 this.binding.titleView.setText(locationInfo.getAddress());
             }

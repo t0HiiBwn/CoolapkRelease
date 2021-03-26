@@ -31,9 +31,7 @@ public class TTCountdownView extends View {
     private boolean i;
     private float j;
     private float k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private float f1323l;
+    private float l;
     private String m;
     private boolean n;
     private Paint o;
@@ -86,7 +84,7 @@ public class TTCountdownView extends View {
         this.i = false;
         this.j = 5.0f;
         this.k = 5.0f;
-        this.f1323l = 0.8f;
+        this.l = 0.8f;
         this.m = "跳过";
         this.n = false;
         this.s = 1.0f;

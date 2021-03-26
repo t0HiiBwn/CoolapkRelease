@@ -24,7 +24,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ProductDescriptionHolder.kt */
 public final class ProductDescriptionHolder extends GenericBindHolder<ItemProductDescriptionBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558866;
+    public static final int LAYOUT_ID = 2131558873;
     private final TitleViewPart titleViewPart;
     private final ProductViewModel viewModel;
 

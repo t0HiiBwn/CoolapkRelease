@@ -28,8 +28,8 @@ public class ItemBackupHeaderBindingImpl extends ItemBackupHeaderBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362889, 6);
-        sparseIntArray.put(2131362330, 7);
+        sparseIntArray.put(2131362900, 6);
+        sparseIntArray.put(2131362336, 7);
     }
 
     public ItemBackupHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -71,15 +71,15 @@ public class ItemBackupHeaderBindingImpl extends ItemBackupHeaderBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((HolderItem) obj);
         } else if (58 == i) {
             setCount((String) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (276 != i) {
+        } else if (277 != i) {
             return false;
         } else {
             setTime((String) obj);
@@ -93,7 +93,7 @@ public class ItemBackupHeaderBindingImpl extends ItemBackupHeaderBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -128,7 +128,7 @@ public class ItemBackupHeaderBindingImpl extends ItemBackupHeaderBinding {
         synchronized (this) {
             this.mDirtyFlags |= 16;
         }
-        notifyPropertyChanged(276);
+        notifyPropertyChanged(277);
         super.requestRebind();
     }
 

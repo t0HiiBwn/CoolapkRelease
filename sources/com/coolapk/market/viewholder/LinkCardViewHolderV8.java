@@ -25,7 +25,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: LinkCardViewHolderV8.kt */
 public final class LinkCardViewHolderV8 extends GenericBindHolder<ItemLinkCardV8Binding, EntityCard> implements CoolapkTagsView.OnTagClickListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558802;
+    public static final int LAYOUT_ID = 2131558809;
     private EntityCard card;
     private final TitleViewPart viewPart;
 
@@ -110,7 +110,7 @@ public final class LinkCardViewHolderV8 extends GenericBindHolder<ItemLinkCardV8
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362970) {
+        if (view.getId() != 2131362982) {
             super.onClick(view);
             return;
         }

@@ -32,7 +32,7 @@ abstract class C$$AutoValue_LiveMessage extends LiveMessage {
     private final User userInfo;
     private final String userName;
 
-    C$$AutoValue_LiveMessage(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, String str14, String str15, String str16, String str17, int i, User user, LiveMessage liveMessage, String str18, int i2) {
+    C$$AutoValue_LiveMessage(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, String str14, String str15, String str16, String str17, int i, User user, LiveMessage liveMessage, String str18, int i2) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -47,8 +47,8 @@ abstract class C$$AutoValue_LiveMessage extends LiveMessage {
         this.subTitle = str10;
         this.id = str11;
         this.extraData = str12;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str13, "Null liveId");
         this.liveId = str13;
         Objects.requireNonNull(str14, "Null uid");
@@ -231,8 +231,8 @@ abstract class C$$AutoValue_LiveMessage extends LiveMessage {
         String str8;
         String str9;
         String str10;
+        Long l;
         Long l2;
-        Long l3;
         User user;
         LiveMessage liveMessage;
         if (obj == this) {
@@ -244,7 +244,7 @@ abstract class C$$AutoValue_LiveMessage extends LiveMessage {
         LiveMessage liveMessage2 = (LiveMessage) obj;
         String str11 = this.entityTypeName;
         if (str11 != null ? str11.equals(liveMessage2.getEntityTypeName()) : liveMessage2.getEntityTypeName() == null) {
-            if (this.entityType.equals(liveMessage2.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(liveMessage2.getEntityTemplate()) : liveMessage2.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(liveMessage2.getEntityId()) : liveMessage2.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(liveMessage2.getEntityFixed()) : liveMessage2.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(liveMessage2.getTitle()) : liveMessage2.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(liveMessage2.getUrl()) : liveMessage2.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(liveMessage2.getDescription()) : liveMessage2.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(liveMessage2.getPic()) : liveMessage2.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(liveMessage2.getLogo()) : liveMessage2.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(liveMessage2.getSubTitle()) : liveMessage2.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(liveMessage2.getId()) : liveMessage2.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(liveMessage2.getExtraData()) : liveMessage2.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(liveMessage2.getDateline()) : liveMessage2.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(liveMessage2.getLastUpdate()) : liveMessage2.getLastUpdate() == null) && this.liveId.equals(liveMessage2.getLiveId()) && this.uid.equals(liveMessage2.getUid()) && this.userName.equals(liveMessage2.getUserName()) && this.message.equals(liveMessage2.getMessage()) && this.messageSource.equals(liveMessage2.getMessageSource()) && this.isBroadcast == liveMessage2.getIsBroadcast() && ((user = this.userInfo) != null ? user.equals(liveMessage2.getUserInfo()) : liveMessage2.getUserInfo() == null) && ((liveMessage = this.sourceRow) != null ? liveMessage.equals(liveMessage2.getSourceRow()) : liveMessage2.getSourceRow() == null) && this.datelineFormat.equals(liveMessage2.getDatelineFormat()) && this.isRead == liveMessage2.getIsRead()) {
+            if (this.entityType.equals(liveMessage2.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(liveMessage2.getEntityTemplate()) : liveMessage2.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(liveMessage2.getEntityId()) : liveMessage2.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(liveMessage2.getEntityFixed()) : liveMessage2.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(liveMessage2.getTitle()) : liveMessage2.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(liveMessage2.getUrl()) : liveMessage2.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(liveMessage2.getDescription()) : liveMessage2.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(liveMessage2.getPic()) : liveMessage2.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(liveMessage2.getLogo()) : liveMessage2.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(liveMessage2.getSubTitle()) : liveMessage2.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(liveMessage2.getId()) : liveMessage2.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(liveMessage2.getExtraData()) : liveMessage2.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(liveMessage2.getDateline()) : liveMessage2.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(liveMessage2.getLastUpdate()) : liveMessage2.getLastUpdate() == null) && this.liveId.equals(liveMessage2.getLiveId()) && this.uid.equals(liveMessage2.getUid()) && this.userName.equals(liveMessage2.getUserName()) && this.message.equals(liveMessage2.getMessage()) && this.messageSource.equals(liveMessage2.getMessageSource()) && this.isBroadcast == liveMessage2.getIsBroadcast() && ((user = this.userInfo) != null ? user.equals(liveMessage2.getUserInfo()) : liveMessage2.getUserInfo() == null) && ((liveMessage = this.sourceRow) != null ? liveMessage.equals(liveMessage2.getSourceRow()) : liveMessage2.getSourceRow() == null) && this.datelineFormat.equals(liveMessage2.getDatelineFormat()) && this.isRead == liveMessage2.getIsRead()) {
                 return true;
             }
         }
@@ -278,10 +278,10 @@ abstract class C$$AutoValue_LiveMessage extends LiveMessage {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (((((((((((((hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003) ^ this.liveId.hashCode()) * 1000003) ^ this.uid.hashCode()) * 1000003) ^ this.userName.hashCode()) * 1000003) ^ this.message.hashCode()) * 1000003) ^ this.messageSource.hashCode()) * 1000003) ^ this.isBroadcast) * 1000003;
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (((((((((((((hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003) ^ this.liveId.hashCode()) * 1000003) ^ this.uid.hashCode()) * 1000003) ^ this.userName.hashCode()) * 1000003) ^ this.message.hashCode()) * 1000003) ^ this.messageSource.hashCode()) * 1000003) ^ this.isBroadcast) * 1000003;
         User user = this.userInfo;
         int hashCode15 = (hashCode14 ^ (user == null ? 0 : user.hashCode())) * 1000003;
         LiveMessage liveMessage = this.sourceRow;
@@ -430,14 +430,14 @@ abstract class C$$AutoValue_LiveMessage extends LiveMessage {
         }
 
         @Override // com.coolapk.market.model.LiveMessage.Builder
-        public LiveMessage.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public LiveMessage.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.LiveMessage.Builder
-        public LiveMessage.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public LiveMessage.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

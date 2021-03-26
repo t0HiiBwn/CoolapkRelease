@@ -269,7 +269,7 @@ public class d {
                 jSONObject.put("rev", a.i);
                 jSONObject.put("har", a.j);
                 jSONObject.put("rev", a.k);
-                jSONObject.put("ser", a.f1486l);
+                jSONObject.put("ser", a.l);
                 jSONObject.put("cur_cpu", com.umeng.commonsdk.internal.utils.d.d());
                 jSONObject.put("max_cpu", com.umeng.commonsdk.internal.utils.d.b());
                 jSONObject.put("min_cpu", com.umeng.commonsdk.internal.utils.d.c());
@@ -622,10 +622,10 @@ public class d {
 
     public static JSONArray j(Context context) {
         Context applicationContext;
-        List<a.C0148a> l2;
+        List<a.C0175a> l;
         JSONArray jSONArray = new JSONArray();
-        if (!(context == null || (l2 = a.l((applicationContext = context.getApplicationContext()))) == null || l2.isEmpty())) {
-            for (a.C0148a aVar : l2) {
+        if (!(context == null || (l = a.l((applicationContext = context.getApplicationContext()))) == null || l.isEmpty())) {
+            for (a.C0175a aVar : l) {
                 if (aVar != null) {
                     try {
                         JSONObject jSONObject = new JSONObject();

@@ -81,7 +81,7 @@ public final class MessageCardDialogFragment extends BaseDialogFragment implemen
     public Dialog onCreateDialog(Bundle bundle) {
         Contacts contacts = (Contacts) requireArguments().getParcelable("EXTRA_CONTACTS");
         Entity entity = (Entity) requireArguments().getParcelable("EXTRA_ENTITY");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558530, null, false, new ContextBindingComponent(getActivity()));
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558532, null, false, new ContextBindingComponent(getActivity()));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ndingComponent(activity))");
         this.binding = (DialogMessageCardBinding) inflate;
         if (entity != null) {
@@ -396,9 +396,9 @@ public final class MessageCardDialogFragment extends BaseDialogFragment implemen
     public void onClick(View view) {
         Intrinsics.checkNotNull(view);
         int id = view.getId();
-        if (id == 2131362396) {
+        if (id == 2131362402) {
             dismiss();
-        } else if (id == 2131362398) {
+        } else if (id == 2131362404) {
             DialogMessageCardBinding dialogMessageCardBinding = this.binding;
             if (dialogMessageCardBinding == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");

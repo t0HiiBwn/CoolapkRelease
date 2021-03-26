@@ -18,7 +18,7 @@ import com.coolapk.market.util.ViewUtil;
 import java.util.Locale;
 
 public class DownloadViewHolder extends StateViewHolder {
-    public static final int LAYOUT_ID = 2131558675;
+    public static final int LAYOUT_ID = 2131558681;
     private DownloadInfo downloadInfo;
     private Extra extra;
 

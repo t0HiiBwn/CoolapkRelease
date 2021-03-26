@@ -29,7 +29,7 @@ public final class CountdownView extends FrameLayout {
     public final void init() {
         setMinimumWidth(NumberExtendsKt.getDp((Number) 54));
         setMinimumHeight(NumberExtendsKt.getDp((Number) 26));
-        setBackgroundResource(2131231873);
+        setBackgroundResource(2131231885);
         TextView textView2 = new TextView(getContext());
         this.textView = textView2;
         if (textView2 == null) {

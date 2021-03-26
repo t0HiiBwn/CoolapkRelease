@@ -53,7 +53,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedGoodsDetailViewHolder.kt */
 public final class FeedGoodsDetailViewHolder extends GenericBindHolder<ItemFeedGoodsDetailBinding, HolderItem> implements PhotoActivityCallback {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558703;
+    public static final int LAYOUT_ID = 2131558710;
     private final int flags;
     private final Lazy goodsInfoViewPart$delegate;
     private final Lazy headerViewPart$delegate;
@@ -124,7 +124,7 @@ public final class FeedGoodsDetailViewHolder extends GenericBindHolder<ItemFeedG
             @Override // androidx.recyclerview.widget.RecyclerView.Adapter
             public ImageViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
                 Intrinsics.checkNotNullParameter(viewGroup, "parent");
-                ItemFeedGoodsDetailImageBinding itemFeedGoodsDetailImageBinding = (ItemFeedGoodsDetailImageBinding) DataBindingUtil.inflate(LayoutInflater.from(viewGroup.getContext()), 2131558704, viewGroup, false);
+                ItemFeedGoodsDetailImageBinding itemFeedGoodsDetailImageBinding = (ItemFeedGoodsDetailImageBinding) DataBindingUtil.inflate(LayoutInflater.from(viewGroup.getContext()), 2131558711, viewGroup, false);
                 FeedGoodsDetailViewHolder feedGoodsDetailViewHolder = this.this$0;
                 Intrinsics.checkNotNullExpressionValue(itemFeedGoodsDetailImageBinding, "binding");
                 View root = itemFeedGoodsDetailImageBinding.getRoot();
@@ -238,8 +238,8 @@ public final class FeedGoodsDetailViewHolder extends GenericBindHolder<ItemFeedG
         indicatorView.setVisibility(0);
         indicatorView.setTotalIndicatorCount(arrayList2.size());
         indicatorView.setSelectedIndex(0);
-        indicatorView.setSelectedDrawableColor(ResourceUtils.getColorInt(getContext(), 2131100147));
-        indicatorView.setUnSelectedDrawableColor(ResourceUtils.getColorInt(getContext(), 2131100150));
+        indicatorView.setSelectedDrawableColor(ResourceUtils.getColorInt(getContext(), 2131100160));
+        indicatorView.setUnSelectedDrawableColor(ResourceUtils.getColorInt(getContext(), 2131100163));
     }
 
     /* access modifiers changed from: private */
@@ -298,7 +298,7 @@ public final class FeedGoodsDetailViewHolder extends GenericBindHolder<ItemFeedG
             ItemFeedGoodsDetailImageBinding itemFeedGoodsDetailImageBinding = (ItemFeedGoodsDetailImageBinding) getBinding();
             Objects.requireNonNull(obj, "null cannot be cast to non-null type kotlin.String");
             String str = (String) obj;
-            AppHolder.getContextImageLoader().displayImage(getContext(), str, itemFeedGoodsDetailImageBinding.imageView, 2131231691);
+            AppHolder.getContextImageLoader().displayImage(getContext(), str, itemFeedGoodsDetailImageBinding.imageView, 2131231702);
             Intrinsics.checkNotNullExpressionValue(itemFeedGoodsDetailImageBinding, "binding");
             itemFeedGoodsDetailImageBinding.getRoot().setOnClickListener(new FeedGoodsDetailViewHolder$ImageViewHolder$bindTo$1(this, itemFeedGoodsDetailImageBinding));
             TextViewBindingAdapters.setGifIndicatorVisibility(itemFeedGoodsDetailImageBinding.gifIndicator, str, false);

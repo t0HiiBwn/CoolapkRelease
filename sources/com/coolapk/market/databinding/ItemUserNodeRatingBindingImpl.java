@@ -26,7 +26,7 @@ public class ItemUserNodeRatingBindingImpl extends ItemUserNodeRatingBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363194, 3);
+        sparseIntArray.put(2131363208, 3);
     }
 
     public ItemUserNodeRatingBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -63,7 +63,7 @@ public class ItemUserNodeRatingBindingImpl extends ItemUserNodeRatingBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((NodeRating) obj);
@@ -76,7 +76,7 @@ public class ItemUserNodeRatingBindingImpl extends ItemUserNodeRatingBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -101,7 +101,7 @@ public class ItemUserNodeRatingBindingImpl extends ItemUserNodeRatingBinding {
                 str = logo;
                 if (i == 0) {
                     Boolean bool = null;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
                     TextViewBindingAdapter.setText(this.userNameView, str2);
                     return;
                 }

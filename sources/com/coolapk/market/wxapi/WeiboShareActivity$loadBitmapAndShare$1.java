@@ -12,7 +12,7 @@ final class WeiboShareActivity$loadBitmapAndShare$1<T, R> implements Func1<Long,
     WeiboShareActivity$loadBitmapAndShare$1() {
     }
 
-    public final Bitmap call(Long l2) {
+    public final Bitmap call(Long l) {
         return null;
     }
 }

@@ -46,9 +46,9 @@ public class CountyListFragment extends NewAsyncListFragment<List<HolderItem>> {
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getActivity().setTitle(getString(2131886688));
+        getActivity().setTitle(getString(2131886750));
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558946, 2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558953, 2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setClipToPadding(false);
         getRecyclerView().setPadding(0, 0, 0, DisplayUtils.dp2px(getActivity(), 48.0f));
@@ -148,7 +148,7 @@ public class CountyListFragment extends NewAsyncListFragment<List<HolderItem>> {
     }
 
     public static class CountryViewHolder extends GenericBindHolder<ItemTextBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558946;
+        public static final int LAYOUT_ID = 2131558953;
 
         public CountryViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);
@@ -159,7 +159,7 @@ public class CountyListFragment extends NewAsyncListFragment<List<HolderItem>> {
             ((ItemTextBinding) getBinding()).itemText.setContent(holderItem.getString());
             WeUIItem weUIItem = ((ItemTextBinding) getBinding()).itemText;
             weUIItem.setTitle("+" + holderItem.getValue());
-            final TextView textView = (TextView) ((ItemTextBinding) getBinding()).itemText.getViewById(2131363581);
+            final TextView textView = (TextView) ((ItemTextBinding) getBinding()).itemText.getViewById(2131363603);
             textView.post(new Runnable() {
                 /* class com.coolapk.market.view.user.edit.CountyListFragment.CountryViewHolder.AnonymousClass1 */
 
@@ -179,7 +179,7 @@ public class CountyListFragment extends NewAsyncListFragment<List<HolderItem>> {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558946;
+            return 2131558953;
         }
 
         public DataAdapter() {

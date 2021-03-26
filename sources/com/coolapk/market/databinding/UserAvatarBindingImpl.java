@@ -85,7 +85,7 @@ public class UserAvatarBindingImpl extends UserAvatarBinding {
         String str = this.mAvatar;
         if ((3 & j) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, true, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, true, null, bool);
         }
         if ((j & 2) != 0) {
             ThemeBindingAdapters.setBackgroundColor(this.pickButton, "colorAccent");

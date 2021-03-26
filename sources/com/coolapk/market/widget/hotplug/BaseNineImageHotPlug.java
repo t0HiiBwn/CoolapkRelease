@@ -43,7 +43,7 @@ public class BaseNineImageHotPlug extends ViewPartHotPlug<NinePicViewPart, List<
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public BaseNineImageHotPlug(View view, DataBindingComponent dataBindingComponent, ViewPartPool viewPartPool, boolean z) {
-        super(2131558662, viewPartPool, z);
+        super(2131558668, viewPartPool, z);
         Intrinsics.checkNotNullParameter(view, "viewToReplace");
         Intrinsics.checkNotNullParameter(dataBindingComponent, "component");
         Intrinsics.checkNotNullParameter(viewPartPool, "viewPartPool");

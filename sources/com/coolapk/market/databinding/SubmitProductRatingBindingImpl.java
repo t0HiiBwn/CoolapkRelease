@@ -31,13 +31,13 @@ public class SubmitProductRatingBindingImpl extends SubmitProductRatingBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363230, 5);
-        sparseIntArray.put(2131363279, 6);
-        sparseIntArray.put(2131363194, 7);
-        sparseIntArray.put(2131363097, 8);
-        sparseIntArray.put(2131363955, 9);
-        sparseIntArray.put(2131363221, 10);
-        sparseIntArray.put(2131363397, 11);
+        sparseIntArray.put(2131363244, 5);
+        sparseIntArray.put(2131363293, 6);
+        sparseIntArray.put(2131363208, 7);
+        sparseIntArray.put(2131363111, 8);
+        sparseIntArray.put(2131363981, 9);
+        sparseIntArray.put(2131363235, 10);
+        sparseIntArray.put(2131363414, 11);
     }
 
     public SubmitProductRatingBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -78,7 +78,7 @@ public class SubmitProductRatingBindingImpl extends SubmitProductRatingBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (288 == i) {
+        if (289 == i) {
             setUiConfig((FeedUIConfig) obj);
         } else if (50 != i) {
             return false;
@@ -94,7 +94,7 @@ public class SubmitProductRatingBindingImpl extends SubmitProductRatingBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(288);
+        notifyPropertyChanged(289);
         super.requestRebind();
     }
 

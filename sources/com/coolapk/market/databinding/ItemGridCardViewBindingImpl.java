@@ -26,9 +26,9 @@ public class ItemGridCardViewBindingImpl extends ItemGridCardViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 1);
-        sparseIntArray.put(2131362634, 2);
-        sparseIntArray.put(2131362970, 3);
+        sparseIntArray.put(2131363604, 1);
+        sparseIntArray.put(2131362642, 2);
+        sparseIntArray.put(2131362982, 3);
     }
 
     public ItemGridCardViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

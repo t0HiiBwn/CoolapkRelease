@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_FileDetail  reason: invalid class name */
 abstract class C$AutoValue_FileDetail extends C$$AutoValue_FileDetail {
-    C$AutoValue_FileDetail(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, String str10, Long l3, int i, int i2, int i3, int i4, int i5) {
-        super(str, str2, str3, str4, str5, str6, str7, str8, str9, l2, str10, l3, i, i2, i3, i4, i5);
+    C$AutoValue_FileDetail(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, Long l, String str10, Long l2, int i, int i2, int i3, int i4, int i5) {
+        super(str, str2, str3, str4, str5, str6, str7, str8, str9, l, str10, l2, i, i2, i3, i4, i5);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_FileDetail$GsonTypeAdapter */
@@ -115,8 +115,8 @@ abstract class C$AutoValue_FileDetail extends C$$AutoValue_FileDetail {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
@@ -125,8 +125,8 @@ abstract class C$AutoValue_FileDetail extends C$$AutoValue_FileDetail {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdateTime(Long l2) {
-            this.defaultLastUpdateTime = l2;
+        public GsonTypeAdapter setDefaultLastUpdateTime(Long l) {
+            this.defaultLastUpdateTime = l;
             return this;
         }
 
@@ -214,9 +214,9 @@ abstract class C$AutoValue_FileDetail extends C$$AutoValue_FileDetail {
             String str7 = this.defaultFileSize;
             String str8 = this.defaultFileExt;
             String str9 = this.defaultFirstUid;
-            Long l2 = this.defaultDateline;
+            Long l = this.defaultDateline;
             String str10 = this.defaultLastUid;
-            Long l3 = this.defaultLastUpdateTime;
+            Long l2 = this.defaultLastUpdateTime;
             int i = this.defaultUploadCount;
             int i2 = this.defaultIsBlock;
             int i3 = this.defaultIsForbid;
@@ -230,9 +230,9 @@ abstract class C$AutoValue_FileDetail extends C$$AutoValue_FileDetail {
             String str16 = str7;
             String str17 = str8;
             String str18 = str9;
-            Long l4 = l2;
+            Long l3 = l;
             String str19 = str10;
-            Long l5 = l3;
+            Long l4 = l2;
             int i6 = i;
             int i7 = i2;
             String str20 = str;
@@ -396,10 +396,10 @@ abstract class C$AutoValue_FileDetail extends C$$AutoValue_FileDetail {
                             str14 = this.uploadTypeAdapter.read(jsonReader);
                             continue;
                         case 15:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case 16:
-                            l5 = this.lastUpdateTimeAdapter.read(jsonReader);
+                            l4 = this.lastUpdateTimeAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -408,7 +408,7 @@ abstract class C$AutoValue_FileDetail extends C$$AutoValue_FileDetail {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_FileDetail(str20, str11, str12, str13, str14, str15, str16, str17, str18, l4, str19, l5, i6, i7, i8, i9, i5);
+            return new AutoValue_FileDetail(str20, str11, str12, str13, str14, str15, str16, str17, str18, l3, str19, l4, i6, i7, i8, i9, i5);
         }
     }
 }

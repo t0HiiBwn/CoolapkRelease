@@ -25,7 +25,7 @@ public class ItemCenterMoreTitleBindingImpl extends ItemCenterMoreTitleBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 1);
+        sparseIntArray.put(2131363604, 1);
     }
 
     public ItemCenterMoreTitleBindingImpl(DataBindingComponent dataBindingComponent, View view) {

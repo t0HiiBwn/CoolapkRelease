@@ -10,6 +10,6 @@ import kotlinx.coroutines.flow.FlowCollector;
 public final class SafeCollectorKt {
     private static final Function3<FlowCollector<Object>, Object, Continuation<? super Unit>, Object> emitFun = ((Function3) TypeIntrinsics.beforeCheckcastToFunctionOfArity(new SafeCollectorKt$emitFun$1(), 3));
 
-    private static /* synthetic */ void emitFun$annotations() {
+    private static /* synthetic */ void getEmitFun$annotations() {
     }
 }

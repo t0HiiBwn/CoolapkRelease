@@ -30,8 +30,8 @@ public class ItemDyharticleActionBindingImpl extends ItemDyharticleActionBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362590, 8);
-        sparseIntArray.put(2131362287, 9);
+        sparseIntArray.put(2131362598, 8);
+        sparseIntArray.put(2131362292, 9);
     }
 
     public ItemDyharticleActionBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -75,9 +75,9 @@ public class ItemDyharticleActionBindingImpl extends ItemDyharticleActionBinding
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((DyhArticle) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -93,7 +93,7 @@ public class ItemDyharticleActionBindingImpl extends ItemDyharticleActionBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -155,10 +155,10 @@ public class ItemDyharticleActionBindingImpl extends ItemDyharticleActionBinding
             }
             if (z3) {
                 context = this.likeIcon.getContext();
-                i5 = 2131231246;
+                i5 = 2131231257;
             } else {
                 context = this.likeIcon.getContext();
-                i5 = 2131231682;
+                i5 = 2131231693;
             }
             drawable = AppCompatResources.getDrawable(context, i5);
             if ((j & 9) != 0) {
@@ -187,13 +187,13 @@ public class ItemDyharticleActionBindingImpl extends ItemDyharticleActionBinding
         int i9 = ((j & 9) > 0 ? 1 : ((j & 9) == 0 ? 0 : -1));
         if (i9 != 0) {
             if (!z) {
-                valueOf = this.forwardNum.getResources().getString(2131886789);
+                valueOf = this.forwardNum.getResources().getString(2131886851);
             }
             if (!z2) {
-                valueOf3 = this.likeNum.getResources().getString(2131886790);
+                valueOf3 = this.likeNum.getResources().getString(2131886852);
             }
             if (i2 == 0) {
-                valueOf2 = this.commentNum.getResources().getString(2131887297);
+                valueOf2 = this.commentNum.getResources().getString(2131887359);
             }
         } else {
             valueOf3 = null;

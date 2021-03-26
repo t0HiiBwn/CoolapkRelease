@@ -1,26 +1,22 @@
 package com.xiaomi.push;
 
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.ai;
-import java.lang.ref.WeakReference;
+import android.content.Context;
+import java.util.List;
 
-class bu extends ai.a {
-    final /* synthetic */ bs a;
+public abstract class bu {
+    private int a;
 
-    bu(bs bsVar) {
-        this.a = bsVar;
+    public bu(int i) {
+        this.a = i;
     }
 
-    @Override // com.xiaomi.push.ai.a
-    /* renamed from: a */
-    public String mo141a() {
-        return "10054";
+    public int a() {
+        return this.a;
     }
 
-    @Override // java.lang.Runnable
-    public void run() {
-        b.c("exec== DbSizeControlJob");
-        ce.a(bs.a(this.a)).a(new bx(bs.a(this.a), new WeakReference(bs.a(this.a))));
-        this.a.b("check_time");
+    public boolean a(Context context, String str, List<z> list) {
+        return true;
     }
+
+    public abstract String b(Context context, String str, List<z> list);
 }

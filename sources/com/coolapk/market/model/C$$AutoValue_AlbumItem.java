@@ -30,7 +30,7 @@ abstract class C$$AutoValue_AlbumItem extends AlbumItem {
     private final int versionCode;
     private final String versionName;
 
-    C$$AutoValue_AlbumItem(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, String str11, String str12, String str13, int i, String str14, String str15, String str16, int i2, String str17, String str18) {
+    C$$AutoValue_AlbumItem(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, String str11, String str12, String str13, int i, String str14, String str15, String str16, int i2, String str17, String str18) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -41,8 +41,8 @@ abstract class C$$AutoValue_AlbumItem extends AlbumItem {
         this.subTitle = str7;
         this.id = str8;
         this.extraData = str9;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.albumId = str10;
         this.title = str11;
         this.apkId = str12;
@@ -229,10 +229,10 @@ abstract class C$$AutoValue_AlbumItem extends AlbumItem {
                                         if (str12 != null ? str12.equals(albumItem.getId()) : albumItem.getId() == null) {
                                             String str13 = this.extraData;
                                             if (str13 != null ? str13.equals(albumItem.getExtraData()) : albumItem.getExtraData() == null) {
-                                                Long l2 = this.dateline;
-                                                if (l2 != null ? l2.equals(albumItem.getDateline()) : albumItem.getDateline() == null) {
-                                                    Long l3 = this.lastUpdate;
-                                                    if (l3 != null ? l3.equals(albumItem.getLastUpdate()) : albumItem.getLastUpdate() == null) {
+                                                Long l = this.dateline;
+                                                if (l != null ? l.equals(albumItem.getDateline()) : albumItem.getDateline() == null) {
+                                                    Long l2 = this.lastUpdate;
+                                                    if (l2 != null ? l2.equals(albumItem.getLastUpdate()) : albumItem.getLastUpdate() == null) {
                                                         String str14 = this.albumId;
                                                         if (str14 != null ? str14.equals(albumItem.getAlbumId()) : albumItem.getAlbumId() == null) {
                                                             String str15 = this.title;
@@ -290,10 +290,10 @@ abstract class C$$AutoValue_AlbumItem extends AlbumItem {
         int hashCode9 = (hashCode8 ^ (str8 == null ? 0 : str8.hashCode())) * 1000003;
         String str9 = this.extraData;
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode11 = (hashCode10 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode12 = (hashCode11 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode11 = (hashCode10 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str10 = this.albumId;
         int hashCode13 = (hashCode12 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.title;
@@ -432,14 +432,14 @@ abstract class C$$AutoValue_AlbumItem extends AlbumItem {
         }
 
         @Override // com.coolapk.market.model.AlbumItem.Builder
-        public AlbumItem.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public AlbumItem.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.AlbumItem.Builder
-        public AlbumItem.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public AlbumItem.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

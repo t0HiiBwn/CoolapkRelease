@@ -154,7 +154,7 @@ public class ItemIconLinkMiniGridCardItemBindingImpl extends ItemIconLinkMiniGri
         if ((j & 3) != 0) {
             this.iconView.setVisibility(i);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str4, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str4, AppCompatResources.getDrawable(this.iconView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
             this.mboundView2.setVisibility(i2);
             TextViewBindingAdapter.setText(this.titleView, str);
         }

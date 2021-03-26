@@ -37,7 +37,7 @@ public abstract class ItemMobileAppSwitchBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMobileAppSwitchBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemMobileAppSwitchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558830, viewGroup, z, obj);
+        return (ItemMobileAppSwitchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558837, viewGroup, z, obj);
     }
 
     public static ItemMobileAppSwitchBinding inflate(LayoutInflater layoutInflater) {
@@ -46,7 +46,7 @@ public abstract class ItemMobileAppSwitchBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMobileAppSwitchBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemMobileAppSwitchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558830, null, false, obj);
+        return (ItemMobileAppSwitchBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558837, null, false, obj);
     }
 
     public static ItemMobileAppSwitchBinding bind(View view) {
@@ -55,6 +55,6 @@ public abstract class ItemMobileAppSwitchBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMobileAppSwitchBinding bind(View view, Object obj) {
-        return (ItemMobileAppSwitchBinding) bind(obj, view, 2131558830);
+        return (ItemMobileAppSwitchBinding) bind(obj, view, 2131558837);
     }
 }

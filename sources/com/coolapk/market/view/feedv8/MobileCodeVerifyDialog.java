@@ -48,6 +48,34 @@ public final class MobileCodeVerifyDialog extends BaseDialogFragment {
         return submitVerifyMobileCodeDialogBinding;
     }
 
+    public static final /* synthetic */ void access$requestMobileCode(MobileCodeVerifyDialog mobileCodeVerifyDialog) {
+        mobileCodeVerifyDialog.requestMobileCode();
+    }
+
+    public static final /* synthetic */ void access$requestVerify(MobileCodeVerifyDialog mobileCodeVerifyDialog) {
+        mobileCodeVerifyDialog.requestVerify();
+    }
+
+    public static final /* synthetic */ void access$setErrorText(MobileCodeVerifyDialog mobileCodeVerifyDialog, String str) {
+        mobileCodeVerifyDialog.setErrorText(str);
+    }
+
+    public static final /* synthetic */ void access$setHadSendSms$p(MobileCodeVerifyDialog mobileCodeVerifyDialog, boolean z) {
+        mobileCodeVerifyDialog.hadSendSms = z;
+    }
+
+    public static final /* synthetic */ void access$setLoadingState(MobileCodeVerifyDialog mobileCodeVerifyDialog, boolean z) {
+        mobileCodeVerifyDialog.setLoadingState(z);
+    }
+
+    public static final /* synthetic */ void access$setRequestMobileCodeEnable(MobileCodeVerifyDialog mobileCodeVerifyDialog, boolean z) {
+        mobileCodeVerifyDialog.setRequestMobileCodeEnable(z);
+    }
+
+    public static final /* synthetic */ void access$setVerifying$p(MobileCodeVerifyDialog mobileCodeVerifyDialog, boolean z) {
+        mobileCodeVerifyDialog.isVerifying = z;
+    }
+
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J(\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00062\b\u0010\u0007\u001a\u0004\u0018\u00010\u00062\u000e\u0010\b\u001a\n\u0012\u0004\u0012\u00020\n\u0018\u00010\t¨\u0006\u000b"}, d2 = {"Lcom/coolapk/market/view/feedv8/MobileCodeVerifyDialog$Companion;", "", "()V", "newInstance", "Lcom/coolapk/market/view/feedv8/MobileCodeVerifyDialog;", "message", "", "messageExtra", "verifySucceedCallback", "Lkotlin/Function0;", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: MessageStatusHelper.kt */
     public static final class Companion {
@@ -73,7 +101,7 @@ public final class MobileCodeVerifyDialog extends BaseDialogFragment {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559171, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559179, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…code_dialog, null, false)");
         this.binding = (SubmitVerifyMobileCodeDialogBinding) inflate;
         AlertDialog.Builder title = new AlertDialog.Builder(requireActivity()).setTitle("手机验证码");
@@ -170,8 +198,7 @@ public final class MobileCodeVerifyDialog extends BaseDialogFragment {
         }
     }
 
-    /* access modifiers changed from: private */
-    public final void setRequestMobileCodeEnable(boolean z) {
+    private final void setRequestMobileCodeEnable(boolean z) {
         if (z) {
             CountDownTimer countDownTimer2 = this.countDownTimer;
             if (countDownTimer2 != null) {
@@ -186,7 +213,7 @@ public final class MobileCodeVerifyDialog extends BaseDialogFragment {
             }
             TextView textView = submitVerifyMobileCodeDialogBinding.actionView;
             Intrinsics.checkNotNullExpressionValue(textView, "binding.actionView");
-            textView.setText(getString(2131886961));
+            textView.setText(getString(2131887023));
             SubmitVerifyMobileCodeDialogBinding submitVerifyMobileCodeDialogBinding2 = this.binding;
             if (submitVerifyMobileCodeDialogBinding2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -206,8 +233,7 @@ public final class MobileCodeVerifyDialog extends BaseDialogFragment {
         }
     }
 
-    /* access modifiers changed from: private */
-    public final void requestMobileCode() {
+    private final void requestMobileCode() {
         if (!this.isVerifying) {
             setRequestMobileCodeEnable(false);
             this.isVerifying = true;
@@ -215,8 +241,7 @@ public final class MobileCodeVerifyDialog extends BaseDialogFragment {
         }
     }
 
-    /* access modifiers changed from: private */
-    public final void requestVerify() {
+    private final void requestVerify() {
         if (!this.isVerifying) {
             if (!this.hadSendSms) {
                 Toast.show$default(getActivity(), "请先获取验证码", 0, false, 12, null);
@@ -236,8 +261,7 @@ public final class MobileCodeVerifyDialog extends BaseDialogFragment {
         }
     }
 
-    /* access modifiers changed from: private */
-    public final void setErrorText(String str) {
+    private final void setErrorText(String str) {
         String str2 = str;
         if (str2.length() > 0) {
             SubmitVerifyMobileCodeDialogBinding submitVerifyMobileCodeDialogBinding = this.binding;
@@ -257,8 +281,7 @@ public final class MobileCodeVerifyDialog extends BaseDialogFragment {
         }
     }
 
-    /* access modifiers changed from: private */
-    public final void setLoadingState(boolean z) {
+    private final void setLoadingState(boolean z) {
         if (z) {
             SubmitVerifyMobileCodeDialogBinding submitVerifyMobileCodeDialogBinding = this.binding;
             if (submitVerifyMobileCodeDialogBinding == null) {

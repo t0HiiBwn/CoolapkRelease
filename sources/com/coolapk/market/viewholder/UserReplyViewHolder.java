@@ -32,9 +32,9 @@ import kotlin.jvm.internal.Intrinsics;
 @Metadata(bv = {1, 0, 3}, d1 = {"\u0000J\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0007\n\u0002\u0010\u0002\n\u0002\b\u0005\b\u0016\u0018\u0000 &2\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u00012\u00020\u0004:\u0001&B\u001f\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\u0007\u001a\u00020\b\u0012\b\u0010\t\u001a\u0004\u0018\u00010\n¢\u0006\u0002\u0010\u000bJ\u0010\u0010!\u001a\u00020\"2\u0006\u0010\f\u001a\u00020\u0003H\u0016J\u0010\u0010#\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u0006H\u0016J\b\u0010%\u001a\u00020\"H\u0016R\u000e\u0010\f\u001a\u00020\u0003X.¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u000e¢\u0006\u0002\n\u0000R\u0011\u0010\u000f\u001a\u00020\u000e8G¢\u0006\u0006\u001a\u0004\b\u000f\u0010\u0010R\u0011\u0010\u0011\u001a\u00020\u000e8G¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u0010R\u0011\u0010\u0012\u001a\u00020\u000e8G¢\u0006\u0006\u001a\u0004\b\u0012\u0010\u0010R\u001b\u0010\u0013\u001a\u00020\u00148BX\u0002¢\u0006\f\n\u0004\b\u0017\u0010\u0018\u001a\u0004\b\u0015\u0010\u0016R\u0013\u0010\u0019\u001a\u0004\u0018\u00010\u001a8G¢\u0006\u0006\u001a\u0004\b\u001b\u0010\u001cR\u0013\u0010\u001d\u001a\u0004\u0018\u00010\u001a8G¢\u0006\u0006\u001a\u0004\b\u001e\u0010\u001cR\u0013\u0010\u001f\u001a\u0004\u0018\u00010\u001a8G¢\u0006\u0006\u001a\u0004\b \u0010\u001c¨\u0006'"}, d2 = {"Lcom/coolapk/market/viewholder/UserReplyViewHolder;", "Lcom/coolapk/market/viewholder/GenericBindHolder;", "Lcom/coolapk/market/databinding/ItemReplyListBinding;", "Lcom/coolapk/market/model/FeedReply;", "Lcom/coolapk/market/viewholder/iview/Recyclable;", "itemView", "Landroid/view/View;", "component", "Landroidx/databinding/DataBindingComponent;", "onItemClick", "Lcom/coolapk/market/viewholder/ItemActionHandler;", "(Landroid/view/View;Landroidx/databinding/DataBindingComponent;Lcom/coolapk/market/viewholder/ItemActionHandler;)V", "feedReply", "inLikeList", "", "isShowContent", "()Z", "isShowSpamInfo", "isShowTime", "ninePicViewPart", "Lcom/coolapk/market/viewholder/v8/image/NinePicViewPart;", "getNinePicViewPart", "()Lcom/coolapk/market/viewholder/v8/image/NinePicViewPart;", "ninePicViewPart$delegate", "Lkotlin/Lazy;", "sourcePic", "", "getSourcePic", "()Ljava/lang/String;", "sourceTitle", "getSourceTitle", "sourceUrl", "getSourceUrl", "bindToContent", "", "onClick", "view", "onRecycled", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: UserReplyViewHolder.kt */
 public class UserReplyViewHolder extends GenericBindHolder<ItemReplyListBinding, FeedReply> implements Recyclable {
-    public static final int CARD_VIEW_TYPE = 2131559240;
+    public static final int CARD_VIEW_TYPE = 2131559247;
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558898;
+    public static final int LAYOUT_ID = 2131558905;
     private FeedReply feedReply;
     private boolean inLikeList;
     private final Lazy ninePicViewPart$delegate;
@@ -311,7 +311,7 @@ public class UserReplyViewHolder extends GenericBindHolder<ItemReplyListBinding,
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
         switch (view.getId()) {
-            case 2131362200:
+            case 2131362205:
                 FeedReply feedReply2 = this.feedReply;
                 if (feedReply2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("feedReply");
@@ -332,10 +332,10 @@ public class UserReplyViewHolder extends GenericBindHolder<ItemReplyListBinding,
                 }
                 ActionManager.startFeedReplyDetailActivity(context2, feedReply4);
                 return;
-            case 2131362316:
+            case 2131362322:
                 ActionManager.startActivityByUrl(getContext(), getSourceUrl());
                 return;
-            case 2131362707:
+            case 2131362718:
                 FeedReply feedReply5 = this.feedReply;
                 if (feedReply5 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("feedReply");
@@ -347,7 +347,7 @@ public class UserReplyViewHolder extends GenericBindHolder<ItemReplyListBinding,
                 }
                 ActionManager.startPhotoViewActivity(view, pic, feedReply6.getMiddleSizePic());
                 return;
-            case 2131363877:
+            case 2131363900:
                 FeedReply feedReply7 = this.feedReply;
                 if (feedReply7 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("feedReply");

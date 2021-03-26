@@ -17,6 +17,7 @@ import com.coolapk.market.model.FeedGoods;
 import com.coolapk.market.model.FeedReply;
 import com.coolapk.market.model.FileDetail;
 import com.coolapk.market.model.Gift;
+import com.coolapk.market.model.ImInfo;
 import com.coolapk.market.model.LikeResult;
 import com.coolapk.market.model.Live;
 import com.coolapk.market.model.LiveMessage;
@@ -313,6 +314,10 @@ public class CoolMarketService {
         @FormUrlEncoded
         @POST("goodsList/create")
         Observable<Result<String>> createFunThings(@Field("title") String str, @Field("message") String str2, @Field("cover") String str3);
+
+        @FormUrlEncoded
+        @POST("goods/addGoods")
+        Observable<Result<FeedGoods>> createGoods(@Field("parseStatus") int i, @Field("mallName") String str, @Field("title") String str2, @Field("sellUrl") String str3, @Field("cover") String str4);
 
         @FormUrlEncoded
         @POST("vote/createUserVote")
@@ -729,6 +734,10 @@ public class CoolMarketService {
         @GET("apk/giftList")
         Observable<Result<List<Gift>>> getGiftListByApkId(@Query("apkId") String str, @Query("page") int i, @Query("firstItem") String str2, @Query("lastItem") String str3);
 
+        @FormUrlEncoded
+        @POST("goods/getBuyUrl")
+        Observable<Result<String>> getGoodsBuyUrl(@Field("goods_url") String str, @Field("goods_buy_url") String str2);
+
         @GET("goods/detail")
         Observable<Result<FeedGoods>> getGoodsDetail(@Query("id") String str);
 
@@ -755,6 +764,9 @@ public class CoolMarketService {
 
         @GET("device/httpInfo")
         Observable<ResponseBody> getHttpInfo();
+
+        @GET("account/imInfo")
+        Observable<Result<ImInfo>> getImInfo(@Query("roomId") String str);
 
         @GET("device/ip")
         Observable<Result<String>> getIpAddress();
@@ -954,6 +966,9 @@ public class CoolMarketService {
 
         @GET("feed/targetInfo")
         Observable<Result<Entity>> getTargetInfo(@Query("targetType") String str, @Query("targetId") String str2);
+
+        @GET("feed/tipGoodsTagList")
+        Observable<Result<List<String>>> getTipGoodsTagList();
 
         @GET("topic/newTagDetail")
         Observable<Result<Entity>> getTopicCompatProduct(@Query("tag") String str);
@@ -1160,7 +1175,7 @@ public class CoolMarketService {
 
         @FormUrlEncoded
         @POST("upload/ossUploadPrepare")
-        Observable<Result<JSONObject>> ossUploadPrepare(@Field("uploadBucket") String str, @Field("uploadDir") String str2, @Field("is_anonymous") int i, @Field("uploadFileList") String str3);
+        Observable<Result<JSONObject>> ossUploadPrepare(@Field("uploadBucket") String str, @Field("uploadDir") String str2, @Field("is_anonymous") int i, @Field("uploadFileList") String str3, @Field("toUid") String str4);
 
         @GET("device/ping")
         Observable<Result<String>> pingRequest();
@@ -1305,6 +1320,10 @@ public class CoolMarketService {
 
         @POST("message/send")
         @Multipart
+        Observable<ResponseBody> sendMessage(@Query("uid") String str, @Part("message") String str2, @Part("message_pic") String str3);
+
+        @POST("message/send")
+        @Multipart
         Observable<Result<List<Entity>>> sendMessage(@Query("uid") String str, @Part("message") String str2, @Part("message_pic") String str3, @Part("message_extra") String str4, @Part("message_card") String str5);
 
         @FormUrlEncoded
@@ -1407,6 +1426,10 @@ public class CoolMarketService {
 
         @GET("feed/unsetMessageStatus")
         Observable<Result<String>> unsetMessageStatus(@Query("id") String str);
+
+        @FormUrlEncoded
+        @POST("feed/updateBindGoods")
+        Observable<Result<String>> updateBindGoods(@Field("feedId") String str, @Field("goodsIds") String str2);
 
         @POST("collection/update")
         Observable<Result<Collection>> updateCollection(@Body RequestBody requestBody);

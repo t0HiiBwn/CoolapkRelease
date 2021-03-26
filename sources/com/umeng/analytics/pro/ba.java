@@ -100,9 +100,7 @@ public class ba {
     public static final String i = "wrapper_type";
     public static final String j = "wrapper_version";
     public static final String k = "appkey";
-
-    /* renamed from: l  reason: collision with root package name */
-    public static final String f1458l = "channel";
+    public static final String l = "channel";
     public static final String m = "secret";
     public static final String n = "app_version";
     public static final String o = "package_name";

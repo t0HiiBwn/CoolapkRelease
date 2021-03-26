@@ -53,7 +53,7 @@ public final class RelativeInfoPickerViewPart extends BindingViewPart<SubmitFeed
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public SubmitFeedRelativeInfoPickerBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559161, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559169, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…picker, viewGroup, false)");
         return (SubmitFeedRelativeInfoPickerBinding) inflate;
     }
@@ -71,7 +71,7 @@ public final class RelativeInfoPickerViewPart extends BindingViewPart<SubmitFeed
         gradientDrawable.setColor((int) j);
         gradientDrawable.setShape(1);
         Unit unit = Unit.INSTANCE;
-        Drawable drawable = ResourceUtils.getDrawable(imageView2.getContext(), 2131231200);
+        Drawable drawable = ResourceUtils.getDrawable(imageView2.getContext(), 2131231211);
         drawable.setTint(AppHolder.getAppTheme().getContentBackgroundColor());
         Unit unit2 = Unit.INSTANCE;
         LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{gradientDrawable, drawable});
@@ -113,15 +113,15 @@ public final class RelativeInfoPickerViewPart extends BindingViewPart<SubmitFeed
         TextView textView = ((SubmitFeedRelativeInfoPickerBinding) getBinding()).titleView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.titleView");
         textView.setText(feedUIConfig.relativeTitle());
-        AppHolder.getContextImageLoader().displayImage(getContext(), feedUIConfig.relativeLogo(), ((SubmitFeedRelativeInfoPickerBinding) getBinding()).imageView, 2131231363);
+        AppHolder.getContextImageLoader().displayImage(getContext(), feedUIConfig.relativeLogo(), ((SubmitFeedRelativeInfoPickerBinding) getBinding()).imageView, 2131231374);
     }
 
     @Override // com.coolapk.market.viewholder.iview.ViewPart, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         int id = view.getId();
-        if (id != 2131362002) {
-            if (id == 2131362257) {
+        if (id != 2131362003) {
+            if (id == 2131362262) {
                 View root = ((SubmitFeedRelativeInfoPickerBinding) getBinding()).getRoot();
                 Objects.requireNonNull(root, "null cannot be cast to non-null type android.view.ViewGroup");
                 TransitionManager.beginDelayedTransition((ViewGroup) root);
@@ -131,7 +131,7 @@ public final class RelativeInfoPickerViewPart extends BindingViewPart<SubmitFeed
                     return;
                 }
                 return;
-            } else if (id != 2131363230) {
+            } else if (id != 2131363244) {
                 return;
             }
         }

@@ -20,7 +20,7 @@ public class c {
 
     /* renamed from: com.ss.android.socialbase.downloader.network.c$c  reason: collision with other inner class name */
     /* compiled from: DownloadDnsManager */
-    private static class C0115c {
+    private static class C0125c {
         private static final c a = new c();
     }
 
@@ -31,7 +31,7 @@ public class c {
     }
 
     public static c a() {
-        return C0115c.a;
+        return C0125c.a;
     }
 
     public void a(final String str, final a aVar, final long j) {

@@ -48,7 +48,7 @@ import org.json.JSONObject;
 /* compiled from: ItemGroupListCardViewHolder.kt */
 public final class ItemGroupListCardViewHolder extends StateViewHolder implements CoolapkCardView.CardStyleCallback {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558771;
+    public static final int LAYOUT_ID = 2131558778;
     private DataAdapter adapter;
     private final ItemGroupListCardBinding binding;
     private EntityCard card;
@@ -167,7 +167,7 @@ public final class ItemGroupListCardViewHolder extends StateViewHolder implement
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362464) {
+        if (view.getId() != 2131362472) {
             super.onClick(view);
             return;
         }

@@ -117,7 +117,7 @@ public final class VoteContentHolder extends BaseFeedContentHolder implements Vi
     @Override // com.coolapk.market.view.feedv8.BaseFeedContentHolder
     public View onCreateContentView$presentation_coolapkAppRelease(LayoutInflater layoutInflater) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559299, null, false, new ContextBindingComponent(getActivity()));
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559309, null, false, new ContextBindingComponent(getActivity()));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ndingComponent(activity))");
         VoteFeedContentBinding voteFeedContentBinding = (VoteFeedContentBinding) inflate;
         this.binding = voteFeedContentBinding;
@@ -180,7 +180,7 @@ public final class VoteContentHolder extends BaseFeedContentHolder implements Vi
             }
             LinearLayout linearLayout = voteFeedContentBinding.relativeView;
             Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.relativeView");
-            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559158, linearLayout, false);
+            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559166, linearLayout, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…a_logo, container, false)");
             SubmitFeedExtraLogoBinding submitFeedExtraLogoBinding = (SubmitFeedExtraLogoBinding) inflate;
             this.pickTopicBinding = submitFeedExtraLogoBinding;
@@ -222,7 +222,7 @@ public final class VoteContentHolder extends BaseFeedContentHolder implements Vi
         ImageView imageView = submitFeedExtraLogoBinding4.imageView;
         Intrinsics.checkNotNullExpressionValue(imageView, "pickTopicBinding.imageView");
         ViewExtendsKt.clipView(imageView, 0, (float) NumberExtendsKt.getDp((Number) 4));
-        ImageLoaderOptions build = ImageLoaderOptions.newBuilder().placeHolderRes(2131231617).build();
+        ImageLoaderOptions build = ImageLoaderOptions.newBuilder().placeHolderRes(2131231628).build();
         GlideContextImageLoader contextImageLoader = AppHolder.getContextImageLoader();
         Activity activity = getActivity();
         String relativeLogo = getUiConfig().relativeLogo();
@@ -602,10 +602,10 @@ public final class VoteContentHolder extends BaseFeedContentHolder implements Vi
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         int id = view.getId();
-        if (id == 2131362967) {
+        if (id == 2131362979) {
             showMoreSettings();
-        } else if (id != 2131362992) {
-            if (id == 2131363120) {
+        } else if (id != 2131363004) {
+            if (id == 2131363134) {
                 if (!getUiConfig().canUpdateVoteMode()) {
                     Toast.show$default(getActivity(), "投票模式不可修改", 0, false, 12, null);
                 } else if (getMultiPart().voteType() != 0) {

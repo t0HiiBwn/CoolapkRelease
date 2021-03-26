@@ -18,7 +18,7 @@ final class DyhArticleDetailViewHolder$bindToContent$1 implements View.OnLongCli
     @Override // android.view.View.OnLongClickListener
     public final boolean onLongClick(View view) {
         Intrinsics.checkNotNullExpressionValue(view, "v");
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             return false;
         }
         DataManager instance = DataManager.getInstance();

@@ -23,7 +23,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ShareInfoViewPart.kt */
 public final class ShareInfoViewPart extends BindingViewPart<ItemArticleEditShareUrlBinding, ArticleShareUrl> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558612;
+    public static final int LAYOUT_ID = 2131558616;
     private final DataBindingComponent component;
 
     public ShareInfoViewPart(DataBindingComponent dataBindingComponent) {
@@ -50,7 +50,7 @@ public final class ShareInfoViewPart extends BindingViewPart<ItemArticleEditShar
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemArticleEditShareUrlBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558612, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558616, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         return (ItemArticleEditShareUrlBinding) inflate;
     }
@@ -98,7 +98,7 @@ public final class ShareInfoViewPart extends BindingViewPart<ItemArticleEditShar
             ImageView imageView2 = itemArticleEditShareUrlBinding.extendIcon;
             Intrinsics.checkNotNullExpressionValue(imageView2, "binding.extendIcon");
             imageView2.setScaleType(ImageView.ScaleType.CENTER);
-            itemArticleEditShareUrlBinding.extendIcon.setImageResource(2131231397);
+            itemArticleEditShareUrlBinding.extendIcon.setImageResource(2131231408);
             itemArticleEditShareUrlBinding.extendIcon.setBackgroundColor(AppHolder.getAppTheme().getColorAccent());
         } else {
             ImageView imageView3 = itemArticleEditShareUrlBinding.extendIcon;
@@ -123,7 +123,7 @@ public final class ShareInfoViewPart extends BindingViewPart<ItemArticleEditShar
         ArticleShareUrl model = ((ItemArticleEditShareUrlBinding) getBinding()).getModel();
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
-            if (view.getId() == 2131362481) {
+            if (view.getId() == 2131362489) {
                 ActionManagerCompat.startActivityByUrl$default(getContext(), model.getUrl(), null, null, 12, null);
             }
         }

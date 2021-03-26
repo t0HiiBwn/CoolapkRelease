@@ -17,7 +17,7 @@ final class ImageModeDialog$onCreateDialog$1 implements View.OnClickListener {
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
-        this.$binding.radioGroup.check(2131363167);
+        this.$binding.radioGroup.check(2131363181);
         this.this$0.dismiss();
     }
 }

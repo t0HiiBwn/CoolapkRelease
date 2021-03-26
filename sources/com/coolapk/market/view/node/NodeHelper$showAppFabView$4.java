@@ -41,7 +41,7 @@ final class NodeHelper$showAppFabView$4 extends Lambda implements Function1<Node
 
     public final void invoke(NodeHelper nodeHelper) {
         Intrinsics.checkNotNullParameter(nodeHelper, "it");
-        this.$layout.addSubFabInfo(2131689490, Integer.valueOf(this.$resources.getColor(2131099878)), "点评", new View.OnClickListener(this) {
+        this.$layout.addSubFabInfo(2131689490, Integer.valueOf(this.$resources.getColor(2131099883)), "点评", new View.OnClickListener(this) {
             /* class com.coolapk.market.view.node.NodeHelper$showAppFabView$4.AnonymousClass1 */
             final /* synthetic */ NodeHelper$showAppFabView$4 this$0;
 

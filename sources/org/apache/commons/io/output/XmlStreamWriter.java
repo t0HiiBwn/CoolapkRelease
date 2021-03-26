@@ -21,16 +21,6 @@ public class XmlStreamWriter extends Writer {
     private Writer writer;
     private StringWriter xmlPrologWriter;
 
-    public XmlStreamWriter(OutputStream outputStream) {
-        this(outputStream, (String) null);
-    }
-
-    public XmlStreamWriter(OutputStream outputStream, String str) {
-        this.xmlPrologWriter = new StringWriter(4096);
-        this.out = outputStream;
-        this.defaultEncoding = str == null ? "UTF-8" : str;
-    }
-
     public XmlStreamWriter(File file) throws FileNotFoundException {
         this(file, (String) null);
     }
@@ -39,31 +29,14 @@ public class XmlStreamWriter extends Writer {
         this(new FileOutputStream(file), str);
     }
 
-    public String getEncoding() {
-        return this.encoding;
+    public XmlStreamWriter(OutputStream outputStream) {
+        this(outputStream, (String) null);
     }
 
-    public String getDefaultEncoding() {
-        return this.defaultEncoding;
-    }
-
-    @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
-        if (this.writer == null) {
-            this.encoding = this.defaultEncoding;
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(this.out, this.encoding);
-            this.writer = outputStreamWriter;
-            outputStreamWriter.write(this.xmlPrologWriter.toString());
-        }
-        this.writer.close();
-    }
-
-    @Override // java.io.Writer, java.io.Flushable
-    public void flush() throws IOException {
-        Writer writer2 = this.writer;
-        if (writer2 != null) {
-            writer2.flush();
-        }
+    public XmlStreamWriter(OutputStream outputStream, String str) {
+        this.xmlPrologWriter = new StringWriter(4096);
+        this.out = outputStream;
+        this.defaultEncoding = str == null ? "UTF-8" : str;
     }
 
     private void detectEncoding(char[] cArr, int i, int i2) throws IOException {
@@ -98,6 +71,33 @@ public class XmlStreamWriter extends Writer {
                 }
             }
         }
+    }
+
+    @Override // java.io.Writer, java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
+        if (this.writer == null) {
+            this.encoding = this.defaultEncoding;
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(this.out, this.encoding);
+            this.writer = outputStreamWriter;
+            outputStreamWriter.write(this.xmlPrologWriter.toString());
+        }
+        this.writer.close();
+    }
+
+    @Override // java.io.Writer, java.io.Flushable
+    public void flush() throws IOException {
+        Writer writer2 = this.writer;
+        if (writer2 != null) {
+            writer2.flush();
+        }
+    }
+
+    public String getDefaultEncoding() {
+        return this.defaultEncoding;
+    }
+
+    public String getEncoding() {
+        return this.encoding;
     }
 
     @Override // java.io.Writer

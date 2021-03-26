@@ -38,7 +38,7 @@ import rx.Subscriber;
 /* compiled from: GoodsListEditHeaderViewHolder.kt */
 public final class GoodsListEditHeaderViewHolder extends GenericBindHolder<ItemGoodsListEditHeaderBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558759;
+    public static final int LAYOUT_ID = 2131558766;
     private String coverUrl;
     private boolean isNeedUpload;
     private final GoodsListDetailViewModel viewModel;
@@ -130,7 +130,7 @@ public final class GoodsListEditHeaderViewHolder extends GenericBindHolder<ItemG
     public void onClick(View view) {
         super.onClick(view);
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf != null && valueOf.intValue() == 2131362793) {
+        if (valueOf != null && valueOf.intValue() == 2131362804) {
             DataBindingComponent component = getComponent();
             if (!(component instanceof FragmentBindingComponent)) {
                 component = null;
@@ -141,7 +141,7 @@ public final class GoodsListEditHeaderViewHolder extends GenericBindHolder<ItemG
                 fragment = null;
             }
             ActionManager.startPhotoPickerActivity((GoodGoodsEditListFragment) fragment, 1, (List<String>) null, 433);
-        } else if (valueOf != null && valueOf.intValue() == 2131362315) {
+        } else if (valueOf != null && valueOf.intValue() == 2131362321) {
             Activity activityNullable = UiUtils.getActivityNullable(getContext());
             GoodsListEditDialog newInstance = GoodsListEditDialog.Companion.newInstance(this.viewModel.getGoodsListId(), this.viewModel.getGoodsShowTitle(), this.viewModel.getGoodsShowMessage());
             newInstance.setViewModel(this.viewModel);

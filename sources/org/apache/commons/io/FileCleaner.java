@@ -7,6 +7,22 @@ public class FileCleaner {
     static final FileCleaningTracker theInstance = new FileCleaningTracker();
 
     @Deprecated
+    public static synchronized void exitWhenFinished() {
+        synchronized (FileCleaner.class) {
+            theInstance.exitWhenFinished();
+        }
+    }
+
+    public static FileCleaningTracker getInstance() {
+        return theInstance;
+    }
+
+    @Deprecated
+    public static int getTrackCount() {
+        return theInstance.getTrackCount();
+    }
+
+    @Deprecated
     public static void track(File file, Object obj) {
         theInstance.track(file, obj);
     }
@@ -24,21 +40,5 @@ public class FileCleaner {
     @Deprecated
     public static void track(String str, Object obj, FileDeleteStrategy fileDeleteStrategy) {
         theInstance.track(str, obj, fileDeleteStrategy);
-    }
-
-    @Deprecated
-    public static int getTrackCount() {
-        return theInstance.getTrackCount();
-    }
-
-    @Deprecated
-    public static synchronized void exitWhenFinished() {
-        synchronized (FileCleaner.class) {
-            theInstance.exitWhenFinished();
-        }
-    }
-
-    public static FileCleaningTracker getInstance() {
-        return theInstance;
     }
 }

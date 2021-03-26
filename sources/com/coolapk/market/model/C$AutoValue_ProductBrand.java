@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_ProductBrand  reason: invalid class name */
 abstract class C$AutoValue_ProductBrand extends C$$AutoValue_ProductBrand {
-    C$AutoValue_ProductBrand(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, int i2, int i3, int i4, String str12) {
-        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l2, l3, i2, i3, i4, str12);
+    C$AutoValue_ProductBrand(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, int i2, int i3, int i4, String str12) {
+        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l, l2, i2, i3, i4, str12);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_ProductBrand$GsonTypeAdapter */
@@ -141,13 +141,13 @@ abstract class C$AutoValue_ProductBrand extends C$$AutoValue_ProductBrand {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -238,8 +238,8 @@ abstract class C$AutoValue_ProductBrand extends C$$AutoValue_ProductBrand {
             String str9 = this.defaultSubTitle;
             String str10 = this.defaultId;
             String str11 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             int i2 = this.defaultSeriesNum;
             int i3 = this.defaultProductNum;
             int i4 = this.defaultIsRecommend;
@@ -256,9 +256,9 @@ abstract class C$AutoValue_ProductBrand extends C$$AutoValue_ProductBrand {
             String str20 = str9;
             String str21 = str10;
             String str22 = str11;
-            Long l4 = l2;
+            Long l3 = l;
             String str23 = str;
-            Long l5 = l3;
+            Long l4 = l2;
             int i6 = i2;
             int i7 = i3;
             int i8 = i4;
@@ -402,7 +402,7 @@ abstract class C$AutoValue_ProductBrand extends C$$AutoValue_ProductBrand {
                             i7 = this.productNumAdapter.read(jsonReader).intValue();
                             continue;
                         case 5:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 6:
                             str23 = this.entityTypeNameAdapter.read(jsonReader);
@@ -441,7 +441,7 @@ abstract class C$AutoValue_ProductBrand extends C$$AutoValue_ProductBrand {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 18:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -450,7 +450,7 @@ abstract class C$AutoValue_ProductBrand extends C$$AutoValue_ProductBrand {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_ProductBrand(str23, str13, i5, str14, num2, str15, str16, str17, str18, str19, str20, str21, str22, l4, l5, i6, i7, i8, str12);
+            return new AutoValue_ProductBrand(str23, str13, i5, str14, num2, str15, str16, str17, str18, str19, str20, str21, str22, l3, l4, i6, i7, i8, str12);
         }
     }
 }

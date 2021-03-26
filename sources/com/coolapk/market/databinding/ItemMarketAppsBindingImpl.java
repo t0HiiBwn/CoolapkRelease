@@ -23,8 +23,8 @@ public class ItemMarketAppsBindingImpl extends ItemMarketAppsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362672, 1);
-        sparseIntArray.put(2131363582, 2);
+        sparseIntArray.put(2131362683, 1);
+        sparseIntArray.put(2131363604, 2);
     }
 
     public ItemMarketAppsBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -59,7 +59,7 @@ public class ItemMarketAppsBindingImpl extends ItemMarketAppsBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((AppForum) obj);
         } else if (50 != i) {
             return false;

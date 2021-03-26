@@ -44,7 +44,7 @@ public class EditDialog extends BaseDialogFragment implements View.OnClickListen
     public Dialog onCreateDialog(Bundle bundle) {
         this.albumItem = (AlbumItem) getArguments().getParcelable("ALBUMITEM");
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        DialogAlbumitemNoteBinding dialogAlbumitemNoteBinding = (DialogAlbumitemNoteBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558515, null, false);
+        DialogAlbumitemNoteBinding dialogAlbumitemNoteBinding = (DialogAlbumitemNoteBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558517, null, false);
         this.binding = dialogAlbumitemNoteBinding;
         dialogAlbumitemNoteBinding.dialogTitleView.setText(this.albumItem.getTitle());
         this.binding.apkNoteEditView.setText(this.mAlbumItemViewModel.getNote());
@@ -59,9 +59,9 @@ public class EditDialog extends BaseDialogFragment implements View.OnClickListen
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         int id = view.getId();
-        if (id == 2131362192) {
+        if (id == 2131362195) {
             dismiss();
-        } else if (id == 2131363036) {
+        } else if (id == 2131363050) {
             this.mNote = this.binding.apkNoteEditView.getText().toString();
             final AlbumItem build = AlbumItem.newBuilder(this.albumItem).setNote(this.mNote).build();
             this.binding.progressBar.setVisibility(0);

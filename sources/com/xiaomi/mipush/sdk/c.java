@@ -1,39 +1,38 @@
 package com.xiaomi.mipush.sdk;
 
 import android.content.Context;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.dx;
-import com.xiaomi.push.ec;
-import com.xiaomi.push.eg;
-import com.xiaomi.push.hc;
-import com.xiaomi.push.hm;
-import com.xiaomi.push.hp;
-import com.xiaomi.push.ib;
-import com.xiaomi.push.service.aq;
+import com.xiaomi.push.de;
+import com.xiaomi.push.dj;
+import com.xiaomi.push.dn;
+import com.xiaomi.push.gi;
+import com.xiaomi.push.gs;
+import com.xiaomi.push.gv;
+import com.xiaomi.push.hi;
+import com.xiaomi.push.service.o;
 import java.util.HashMap;
 
-public class c implements eg {
-    @Override // com.xiaomi.push.eg
+public class c implements dn {
+    @Override // com.xiaomi.push.dn
     public void a(Context context, HashMap<String, String> hashMap) {
-        ib ibVar = new ib();
-        ibVar.b(ec.a(context).m290a());
-        ibVar.d(ec.a(context).b());
-        ibVar.c(hm.AwakeAppResponse.f576a);
-        ibVar.a(aq.a());
-        ibVar.f717a = hashMap;
-        ak.a(context).a((ak) ibVar, hc.Notification, true, (hp) null, true);
-        b.m41a("MoleInfo：　send data in app layer");
+        hi hiVar = new hi();
+        hiVar.b(dj.a(context).b());
+        hiVar.d(dj.a(context).c());
+        hiVar.c(gs.AwakeAppResponse.S);
+        hiVar.a(o.a());
+        hiVar.h = hashMap;
+        aq.a(context).a((aq) hiVar, gi.Notification, true, (gv) null, true);
+        com.xiaomi.a.a.a.c.a("MoleInfo：　send data in app layer");
     }
 
-    @Override // com.xiaomi.push.eg
+    @Override // com.xiaomi.push.dn
     public void b(Context context, HashMap<String, String> hashMap) {
-        MiTinyDataClient.upload("category_awake_app", "wake_up_app", 1, dx.a(hashMap));
-        b.m41a("MoleInfo：　send data in app layer");
+        MiTinyDataClient.upload("category_awake_app", "wake_up_app", 1, de.a(hashMap));
+        com.xiaomi.a.a.a.c.a("MoleInfo：　send data in app layer");
     }
 
-    @Override // com.xiaomi.push.eg
+    @Override // com.xiaomi.push.dn
     public void c(Context context, HashMap<String, String> hashMap) {
-        b.m41a("MoleInfo：　" + dx.b(hashMap));
+        com.xiaomi.a.a.a.c.a("MoleInfo：　" + de.b(hashMap));
         String str = hashMap.get("awake_info");
         if (String.valueOf(1007).equals(hashMap.get("event_type"))) {
             n.a(context, str);

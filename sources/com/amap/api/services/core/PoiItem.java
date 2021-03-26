@@ -38,9 +38,7 @@ public class PoiItem implements Parcelable {
     private final String i;
     private LatLonPoint j;
     private LatLonPoint k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1249l;
+    private String l;
     private String m;
     private String n;
     private String o;
@@ -173,11 +171,11 @@ public class PoiItem implements Parcelable {
     }
 
     public String getWebsite() {
-        return this.f1249l;
+        return this.l;
     }
 
     public void setWebsite(String str) {
-        this.f1249l = str;
+        this.l = str;
     }
 
     public String getPostcode() {
@@ -288,7 +286,7 @@ public class PoiItem implements Parcelable {
         this.d = parcel.readString();
         this.j = (LatLonPoint) parcel.readValue(LatLonPoint.class.getClassLoader());
         this.k = (LatLonPoint) parcel.readValue(LatLonPoint.class.getClassLoader());
-        this.f1249l = parcel.readString();
+        this.l = parcel.readString();
         this.m = parcel.readString();
         this.n = parcel.readString();
         boolean[] zArr = new boolean[1];
@@ -322,7 +320,7 @@ public class PoiItem implements Parcelable {
         parcel.writeString(this.d);
         parcel.writeValue(this.j);
         parcel.writeValue(this.k);
-        parcel.writeString(this.f1249l);
+        parcel.writeString(this.l);
         parcel.writeString(this.m);
         parcel.writeString(this.n);
         parcel.writeBooleanArray(new boolean[]{this.s});

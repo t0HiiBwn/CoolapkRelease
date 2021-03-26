@@ -43,9 +43,7 @@ final class LivePresenter$loadLive$1 extends Lambda implements Function1<LivePre
 
             public void onNext(Result<Live> result) {
                 Intrinsics.checkNotNullParameter(result, "result");
-                this.this$0.this$0.live = result.getData();
-                this.this$0.this$0.videoLineMap.clear();
-                this.this$0.this$0.getView().onLiveLoaded(result, null);
+                this.this$0.this$0.setNewResult(result);
             }
         });
         Intrinsics.checkNotNullExpressionValue(subscribe, "DataManager.getInstance(… }\n                    })");

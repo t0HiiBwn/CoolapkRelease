@@ -26,6 +26,6 @@ public final class SponsorSelfDrawNewsViewHolder$updateContentView$7 implements 
     @Override // com.bytedance.sdk.openadsdk.TTAdDislike.DislikeInteractionCallback
     public void onSelected(int i, String str) {
         Intrinsics.checkNotNullParameter(str, "value");
-        this.this$0.entityAdHelper.requestCloseAd(EntityExtendsKt.entityUniqueId(SponsorSelfDrawNewsViewHolder.access$getData$p(this.this$0)), this.this$0.getAdapterPosition());
+        SponsorSelfDrawNewsViewHolder.access$getEntityAdHelper$p(this.this$0).requestCloseAd(EntityExtendsKt.entityUniqueId(SponsorSelfDrawNewsViewHolder.access$getData$p(this.this$0)), this.this$0.getAdapterPosition());
     }
 }

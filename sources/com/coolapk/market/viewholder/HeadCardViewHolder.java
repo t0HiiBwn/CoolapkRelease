@@ -31,7 +31,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: HeadCardViewHolder.kt */
 public final class HeadCardViewHolder extends GenericBindHolder<ItemHeadCardBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558772;
+    public static final int LAYOUT_ID = 2131558779;
     private Entity entity;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -163,7 +163,7 @@ public final class HeadCardViewHolder extends GenericBindHolder<ItemHeadCardBind
                 Intrinsics.checkNotNullExpressionValue(scalingImageView2, "binding.topImageView");
                 scalingImageView2.setVisibility(0);
             }
-            AppHolder.getFragmentImageLoader().displayImage(fragment2, entity2.getPic(), (ImageView) ((ItemHeadCardBinding) getBinding()).topImageView, ImageLoaderOptions.newBuilder().placeHolderRes(2131231696).build(), (OnImageLoadListener) headCardViewHolder$populateImage$onImageLoadListener$1, (OnBitmapTransformListener) null);
+            AppHolder.getFragmentImageLoader().displayImage(fragment2, entity2.getPic(), (ImageView) ((ItemHeadCardBinding) getBinding()).topImageView, ImageLoaderOptions.newBuilder().placeHolderRes(2131231707).build(), (OnImageLoadListener) headCardViewHolder$populateImage$onImageLoadListener$1, (OnBitmapTransformListener) null);
         }
     }
 
@@ -191,11 +191,11 @@ public final class HeadCardViewHolder extends GenericBindHolder<ItemHeadCardBind
         }
         if (view != null) {
             Intrinsics.checkNotNullExpressionValue(view, "inFragment<Fragment>()?.view.elvis { return }");
-            if (!Intrinsics.areEqual(view.getTag(2131362638), (Object) true)) {
+            if (!Intrinsics.areEqual(view.getTag(2131362646), (Object) true)) {
                 View view2 = ((ItemHeadCardBinding) getBinding()).coverViewMask;
                 Intrinsics.checkNotNullExpressionValue(view2, "binding.coverViewMask");
                 view2.setVisibility(0);
-                view.setTag(2131362638, true);
+                view.setTag(2131362646, true);
                 View view3 = ((ItemHeadCardBinding) getBinding()).coverViewMask;
                 Intrinsics.checkNotNullExpressionValue(view3, "binding.coverViewMask");
                 ScalingImageView scalingImageView3 = ((ItemHeadCardBinding) getBinding()).topImageView;
@@ -209,7 +209,7 @@ public final class HeadCardViewHolder extends GenericBindHolder<ItemHeadCardBind
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
-        if (view.getId() == 2131362200) {
+        if (view.getId() == 2131362205) {
             Entity entity2 = this.entity;
             if (entity2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("entity");

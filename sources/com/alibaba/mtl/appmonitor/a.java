@@ -15,18 +15,16 @@ import com.alibaba.mtl.log.d.r;
 /* compiled from: BackgroundTrigger */
 class a implements Runnable {
     private static boolean j;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static boolean f1190l;
+    private static boolean l;
     private Application b;
     private boolean k = true;
 
     public static void init(Application application) {
         if (!j) {
             i.a("BackgroundTrigger", "init BackgroundTrigger");
-            f1190l = a(application.getApplicationContext());
+            l = a(application.getApplicationContext());
             a aVar = new a(application);
-            if (f1190l) {
+            if (l) {
                 r.a().a(4, aVar, 60000);
             } else if (Build.VERSION.SDK_INT >= 14) {
                 application.registerActivityLifecycleCallbacks(new C0012a(aVar));
@@ -68,7 +66,7 @@ class a implements Runnable {
                 com.alibaba.mtl.log.a.k();
             }
         }
-        if (f1190l) {
+        if (l) {
             r.a().a(4, this, 60000);
         }
     }
@@ -78,7 +76,7 @@ class a implements Runnable {
     class C0012a implements Application.ActivityLifecycleCallbacks {
 
         /* renamed from: a  reason: collision with other field name */
-        private Runnable f40a;
+        private Runnable f39a;
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityCreated(Activity activity, Bundle bundle) {
@@ -101,19 +99,19 @@ class a implements Runnable {
         }
 
         C0012a(Runnable runnable) {
-            this.f40a = runnable;
+            this.f39a = runnable;
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityStarted(Activity activity) {
             r.a().f(4);
-            r.a().a(4, this.f40a, 60000);
+            r.a().a(4, this.f39a, 60000);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityStopped(Activity activity) {
             r.a().f(4);
-            r.a().a(4, this.f40a, 60000);
+            r.a().a(4, this.f39a, 60000);
         }
     }
 

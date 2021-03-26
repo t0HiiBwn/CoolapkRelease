@@ -25,9 +25,9 @@ public class ItemCenterLoginBindingImpl extends ItemCenterLoginBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363603, 7);
-        sparseIntArray.put(2131362129, 8);
-        sparseIntArray.put(2131362886, 9);
+        sparseIntArray.put(2131363625, 7);
+        sparseIntArray.put(2131362132, 8);
+        sparseIntArray.put(2131362897, 9);
     }
 
     public ItemCenterLoginBindingImpl(DataBindingComponent dataBindingComponent, View view) {

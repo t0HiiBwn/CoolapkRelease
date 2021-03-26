@@ -23,8 +23,8 @@ final class AutoValue_DeviceInfo extends C$AutoValue_DeviceInfo {
         return 0;
     }
 
-    AutoValue_DeviceInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, String str13) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l2, l3, str12, str13);
+    AutoValue_DeviceInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, String str13) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l, l2, str12, str13);
     }
 
     @Override // android.os.Parcelable

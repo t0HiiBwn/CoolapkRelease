@@ -27,7 +27,7 @@ import rx.Observable;
 import rx.functions.Action1;
 
 public class DyhViewholder extends GenericBindHolder<ItemFollowDyhBinding, DyhModel> implements DyhContract.View {
-    public static final int LAYOUT_ID = 2131558747;
+    public static final int LAYOUT_ID = 2131558754;
     private final DyhViewModel dyhViewModel = new DyhViewModel();
     private boolean isRequesting;
     private DyhPresenter mPresenter;
@@ -71,12 +71,12 @@ public class DyhViewholder extends GenericBindHolder<ItemFollowDyhBinding, DyhMo
     public void onClick(View view) {
         super.onClick(view);
         int id = view.getId();
-        if (id != 2131361981) {
-            if (id == 2131363260) {
+        if (id != 2131361982) {
+            if (id == 2131363274) {
                 Observable.timer(2000, TimeUnit.MILLISECONDS).subscribe(new Action1<Long>() {
                     /* class com.coolapk.market.view.dyhv8.viewholder.DyhViewholder.AnonymousClass2 */
 
-                    public void call(Long l2) {
+                    public void call(Long l) {
                         DyhViewholder.this.dyhViewModel.cleanRedPoint();
                     }
                 });

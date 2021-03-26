@@ -43,7 +43,7 @@ public final class b {
             Map a2 = a.a(24);
             a2.put("channel", a.channel);
             a2.put("lookup_count", String.valueOf(lookupResultArr.length));
-            a.C0128a aVar = new a.C0128a(false);
+            a.C0146a aVar = new a.C0146a(false);
             for (LookupResult lookupResult : lookupResultArr) {
                 aVar.a((StatisticsMerge) lookupResult.stat);
             }
@@ -56,7 +56,7 @@ public final class b {
             a2.put("hdns_a_err_msgs", a3.i);
             a2.put("hdns_a_ipses", a3.j);
             a2.put("hdns_a_ttls", a3.k);
-            a2.put("hdns_a_client_ips", a3.f1448l);
+            a2.put("hdns_a_client_ips", a3.l);
             a2.put("hdns_a_time_mses", a3.m);
             a2.put("hdns_a_retrys", a3.n);
             a2.put("hdns_4a_err_codes", a3.o);
@@ -130,7 +130,7 @@ public final class b {
             Map a2 = com.tencent.msdk.dns.base.a.a.a(19);
             a2.put("channel", a.channel);
             a2.put("lookup_count", String.valueOf(collection.size()));
-            a.C0128a aVar = new a.C0128a(true);
+            a.C0146a aVar = new a.C0146a(true);
             for (LookupResult lookupResult : collection) {
                 aVar.a((StatisticsMerge) lookupResult.stat);
             }
@@ -145,7 +145,7 @@ public final class b {
             a2.put("hdns_err_msgs", a3.i);
             a2.put("hdns_ipses", a3.j);
             a2.put("hdns_ttls", a3.k);
-            a2.put("hdns_client_ips", a3.f1448l);
+            a2.put("hdns_client_ips", a3.l);
             a2.put("hdns_time_mses", a3.m);
             a2.put("hdns_retrys", a3.n);
             a(a2);

@@ -1,36 +1,33 @@
 package com.xiaomi.push;
 
 import android.content.Context;
-import android.text.TextUtils;
-import java.text.SimpleDateFormat;
+import android.content.IntentFilter;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.mpcd.receivers.BroadcastActionsReceiver;
 
 public class cj {
-    private static String a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private static SimpleDateFormat f266a;
-
-    static {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
-        f266a = simpleDateFormat;
-        a = simpleDateFormat.format(Long.valueOf(System.currentTimeMillis()));
+    private static co a() {
+        return new ck();
     }
 
-    public static hg a(Context context, String str) {
-        if (TextUtils.isEmpty(str)) {
-            return null;
+    public static void a(Context context) {
+        cp.a(context).a();
+        try {
+            context.registerReceiver(new BroadcastActionsReceiver(a()), b());
+        } catch (Throwable th) {
+            c.a(th);
         }
-        hg hgVar = new hg();
-        hgVar.d("category_push_stat");
-        hgVar.a("push_sdk_stat_channel");
-        hgVar.a(1);
-        hgVar.b(str);
-        hgVar.a(true);
-        hgVar.b(System.currentTimeMillis());
-        hgVar.g(bs.a(context).m149a());
-        hgVar.e("com.xiaomi.xmsf");
-        hgVar.f("");
-        hgVar.c("push_stat");
-        return hgVar;
+    }
+
+    private static IntentFilter b() {
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("android.intent.action.PACKAGE_ADDED");
+        intentFilter.addAction("android.intent.action.PACKAGE_CHANGED");
+        intentFilter.addAction("android.intent.action.PACKAGE_DATA_CLEARED");
+        intentFilter.addAction("android.intent.action.PACKAGE_REPLACED");
+        intentFilter.addAction("android.intent.action.PACKAGE_RESTARTED");
+        intentFilter.addAction("android.intent.action.PACKAGE_REMOVED");
+        intentFilter.addDataScheme("package");
+        return intentFilter;
     }
 }

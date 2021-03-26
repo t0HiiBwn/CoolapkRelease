@@ -64,7 +64,7 @@ final class SequenceBuilderIterator<T> extends SequenceScope<T> implements Itera
             this.nextStep = null;
             Unit unit = Unit.INSTANCE;
             Result.Companion companion = Result.Companion;
-            continuation.resumeWith(Result.m687constructorimpl(unit));
+            continuation.resumeWith(Result.m85constructorimpl(unit));
         }
     }
 

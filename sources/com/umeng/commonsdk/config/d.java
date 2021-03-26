@@ -15,10 +15,8 @@ public class d {
     public static String[] h = new String[a.values().length];
     public static String[] i = new String[b.values().length];
     public static String[] j = new String[c.values().length];
-    public static String[] k = new String[EnumC0146d.values().length];
-
-    /* renamed from: l  reason: collision with root package name */
-    private static Map<String, String[]> f1477l = new HashMap();
+    public static String[] k = new String[EnumC0173d.values().length];
+    private static Map<String, String[]> l = new HashMap();
 
     /* compiled from: FieldTable */
     public enum a {
@@ -120,7 +118,7 @@ public class d {
 
     /* renamed from: com.umeng.commonsdk.config.d$d  reason: collision with other inner class name */
     /* compiled from: FieldTable */
-    public enum EnumC0146d {
+    public enum EnumC0173d {
         share_device_id,
         share_imsi,
         share_iccid,
@@ -141,7 +139,7 @@ public class d {
             for (int i2 = 0; i2 < a.values().length; i2++) {
                 h[i2] = a.values()[i2].toString();
             }
-            Map<String, String[]> map = f1477l;
+            Map<String, String[]> map = l;
             if (map != null) {
                 map.put(a.class.getName(), h);
             }
@@ -151,7 +149,7 @@ public class d {
             for (int i3 = 0; i3 < b.values().length; i3++) {
                 i[i3] = b.values()[i3].toString();
             }
-            Map<String, String[]> map2 = f1477l;
+            Map<String, String[]> map2 = l;
             if (map2 != null) {
                 map2.put(b.class.getName(), i);
             }
@@ -161,19 +159,19 @@ public class d {
             for (int i4 = 0; i4 < c.values().length; i4++) {
                 j[i4] = c.values()[i4].toString();
             }
-            Map<String, String[]> map3 = f1477l;
+            Map<String, String[]> map3 = l;
             if (map3 != null) {
                 map3.put(c.class.getName(), j);
             }
         }
         String[] strArr4 = k;
         if (strArr4 != null && strArr4.length > 0) {
-            for (int i5 = 0; i5 < EnumC0146d.values().length; i5++) {
-                k[i5] = EnumC0146d.values()[i5].toString();
+            for (int i5 = 0; i5 < EnumC0173d.values().length; i5++) {
+                k[i5] = EnumC0173d.values()[i5].toString();
             }
-            Map<String, String[]> map4 = f1477l;
+            Map<String, String[]> map4 = l;
             if (map4 != null) {
-                map4.put(EnumC0146d.class.getName(), k);
+                map4.put(EnumC0173d.class.getName(), k);
             }
         }
     }
@@ -183,9 +181,9 @@ public class d {
     }
 
     public static String[] b(String str) {
-        if (str == null || str.length() <= 0 || !f1477l.containsKey(str)) {
+        if (str == null || str.length() <= 0 || !l.containsKey(str)) {
             return null;
         }
-        return f1477l.get(str);
+        return l.get(str);
     }
 }

@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_ProductSeries  reason: invalid class name */
 abstract class C$AutoValue_ProductSeries extends C$$AutoValue_ProductSeries {
-    C$AutoValue_ProductSeries(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, int i2, int i3, int i4, List<Product> list) {
-        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l2, l3, i2, i3, i4, list);
+    C$AutoValue_ProductSeries(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, int i2, int i3, int i4, List<Product> list) {
+        super(str, str2, i, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l, l2, i2, i3, i4, list);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_ProductSeries$GsonTypeAdapter */
@@ -144,13 +144,13 @@ abstract class C$AutoValue_ProductSeries extends C$$AutoValue_ProductSeries {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -241,8 +241,8 @@ abstract class C$AutoValue_ProductSeries extends C$$AutoValue_ProductSeries {
             String str9 = this.defaultSubTitle;
             String str10 = this.defaultId;
             String str11 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             int i2 = this.defaultBrandId;
             int i3 = this.defaultDisplayOrder;
             int i4 = this.defaultProductNum;
@@ -259,9 +259,9 @@ abstract class C$AutoValue_ProductSeries extends C$$AutoValue_ProductSeries {
             String str19 = str9;
             String str20 = str10;
             String str21 = str11;
-            Long l4 = l2;
+            Long l3 = l;
             String str22 = str;
-            Long l5 = l3;
+            Long l4 = l2;
             int i6 = i2;
             int i7 = i3;
             int i8 = i4;
@@ -411,7 +411,7 @@ abstract class C$AutoValue_ProductSeries extends C$$AutoValue_ProductSeries {
                             i7 = this.displayOrderAdapter.read(jsonReader).intValue();
                             continue;
                         case 7:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\b':
                             str22 = this.entityTypeNameAdapter.read(jsonReader);
@@ -444,7 +444,7 @@ abstract class C$AutoValue_ProductSeries extends C$$AutoValue_ProductSeries {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 18:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -453,7 +453,7 @@ abstract class C$AutoValue_ProductSeries extends C$$AutoValue_ProductSeries {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_ProductSeries(str22, str12, i5, str13, num2, str14, str15, str16, str17, str18, str19, str20, str21, l4, l5, i6, i7, i8, list);
+            return new AutoValue_ProductSeries(str22, str12, i5, str13, num2, str14, str15, str16, str17, str18, str19, str20, str21, l3, l4, i6, i7, i8, list);
         }
     }
 }

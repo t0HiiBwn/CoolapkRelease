@@ -47,7 +47,7 @@ public class DyhViewModel extends BaseObservable {
             this.isFollowDyh = z;
         }
         notifyPropertyChanged(85);
-        notifyPropertyChanged(167);
+        notifyPropertyChanged(168);
         notifyPropertyChanged(81);
     }
 
@@ -58,7 +58,7 @@ public class DyhViewModel extends BaseObservable {
 
     public void setIsShowActionView(boolean z) {
         this.isShowActionView = z;
-        notifyPropertyChanged(172);
+        notifyPropertyChanged(173);
     }
 
     @Bindable
@@ -83,7 +83,7 @@ public class DyhViewModel extends BaseObservable {
 
     public void setMaxWords(Integer num) {
         this.maxArticleWords = num;
-        notifyPropertyChanged(194);
+        notifyPropertyChanged(195);
     }
 
     @Bindable
@@ -140,7 +140,7 @@ public class DyhViewModel extends BaseObservable {
 
     public void setInForward(boolean z) {
         this.isInForward = z;
-        notifyPropertyChanged(169);
+        notifyPropertyChanged(170);
     }
 
     @Bindable
@@ -265,13 +265,13 @@ public class DyhViewModel extends BaseObservable {
 
     public void setShowRedPoint(boolean z) {
         this.isShowRedPoint = z;
-        notifyPropertyChanged(256);
+        notifyPropertyChanged(257);
     }
 
     @Bindable
     public String getDyhFollowNum() {
         this.dyhFollowNum = String.valueOf(this.dyhModel.getFollowNum());
-        return StringUtils.emptyIfNull(AppHolder.getCurrentActivity().getString(2131886759, new Object[]{this.dyhFollowNum}));
+        return StringUtils.emptyIfNull(AppHolder.getCurrentActivity().getString(2131886821, new Object[]{this.dyhFollowNum}));
     }
 
     public void setDyhFollowNum(String str) {
@@ -327,7 +327,7 @@ public class DyhViewModel extends BaseObservable {
     public void setFollowDyh(boolean z) {
         this.isFollowDyh = z;
         setDyhModel(DyhModel.newBuilder(getDyhModel()).userAction(UserAction.newBuilder(getDyhModel().getUserAction()).follow(z ? 1 : 0).build()).build());
-        notifyPropertyChanged(167);
+        notifyPropertyChanged(168);
     }
 
     @Bindable

@@ -40,7 +40,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SmallScrollCardItemViewHolder.kt */
 public class SmallScrollCardItemViewHolder extends StateViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558935;
+    public static final int LAYOUT_ID = 2131558942;
     private final ItemSmallScrollCardItemBinding binding = ((ItemSmallScrollCardItemBinding) getBinding());
     private boolean hiddenScore;
     private int imagePlaceHolderId;
@@ -198,7 +198,7 @@ public class SmallScrollCardItemViewHolder extends StateViewHolder {
                 }
                 this.titleLine = i;
             }
-            this.imagePlaceHolderId = 2131231152;
+            this.imagePlaceHolderId = 2131231162;
             this.score = null;
             UserAvatarView userAvatarView = this.binding.iconView;
             UserInfo userInfo = user.getUserInfo();
@@ -216,7 +216,7 @@ public class SmallScrollCardItemViewHolder extends StateViewHolder {
             }
             this.title = str;
             this.titleLine = 1;
-            this.imagePlaceHolderId = 2131231363;
+            this.imagePlaceHolderId = 2131231374;
             this.score = serviceApp2.getScore();
             this.subTitle = serviceApp2.getSubTitle();
             this.binding.iconView.bind(null, false);
@@ -234,7 +234,7 @@ public class SmallScrollCardItemViewHolder extends StateViewHolder {
             this.title = str;
             this.subTitle = product.getSubTitle();
             this.titleLine = 2;
-            this.imagePlaceHolderId = 2131231363;
+            this.imagePlaceHolderId = 2131231374;
             this.score = null;
             this.binding.iconView.bind(null, false);
             UserAvatarView userAvatarView4 = this.binding.iconView;
@@ -251,7 +251,7 @@ public class SmallScrollCardItemViewHolder extends StateViewHolder {
             this.title = str;
             this.subTitle = entity2.getSubTitle();
             this.titleLine = 1;
-            this.imagePlaceHolderId = 2131231363;
+            this.imagePlaceHolderId = 2131231374;
             this.score = null;
             this.binding.iconView.bind(null, false);
             UserAvatarView userAvatarView5 = this.binding.iconView;
@@ -284,8 +284,8 @@ public class SmallScrollCardItemViewHolder extends StateViewHolder {
         Context context = getContext();
         Intrinsics.checkNotNullExpressionValue(context, "context");
         textView2.setTypeface(ProductGlobalData.getNumberTypeface(context));
-        this.binding.itemView.setTag(2131362753, obj);
-        this.binding.actionContainer.setTag(2131362753, obj);
+        this.binding.itemView.setTag(2131362764, obj);
+        this.binding.actionContainer.setTag(2131362764, obj);
         SmallScrollCardItemViewHolder smallScrollCardItemViewHolder = this;
         ViewUtil.clickListener(this.binding.itemView, smallScrollCardItemViewHolder);
         ViewUtil.clickListener(this.binding.actionContainer, smallScrollCardItemViewHolder);
@@ -313,10 +313,10 @@ public class SmallScrollCardItemViewHolder extends StateViewHolder {
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        Object tag = view.getTag(2131362753);
+        Object tag = view.getTag(2131362764);
         int id = view.getId();
         int i = null;
-        if (id == 2131361886) {
+        if (id == 2131361887) {
             Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.model.ServiceApp");
             ServiceApp serviceApp2 = (ServiceApp) tag;
             UpgradeInfo upgradeInfo = null;
@@ -334,7 +334,7 @@ public class SmallScrollCardItemViewHolder extends StateViewHolder {
             }
             strArr[3] = i;
             StateUtils.handleClick(UiUtils.getActivity(getContext()), targetUrl.downloadKeys(strArr).build(), view);
-        } else if (id != 2131362768) {
+        } else if (id != 2131362779) {
             super.onClick(view);
         } else {
             if (tag instanceof User) {

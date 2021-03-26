@@ -34,9 +34,7 @@ public class a extends AlertDialog {
     private AbstractC0047a i;
     private String j = "补充中，可于应用官网查看";
     private String k = "暂无";
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1324l;
+    private String l;
     private String m = "http://sf6-ttcdn-tos.pstatp.com/obj/ad-tetris-site/personal-privacy-page.html";
     private String n;
     private HashMap<String, String> o;
@@ -105,7 +103,7 @@ public class a extends AlertDialog {
                 }
                 String g2 = b2.g();
                 if (!TextUtils.isEmpty(g2)) {
-                    this.f1324l = g2;
+                    this.l = g2;
                 }
                 HashMap<String, String> a2 = b2.a();
                 this.o = a2;
@@ -194,7 +192,7 @@ public class a extends AlertDialog {
     }
 
     public a a(String str) {
-        this.f1324l = str;
+        this.l = str;
         return this;
     }
 
@@ -214,7 +212,7 @@ public class a extends AlertDialog {
             this.d.setText(str);
         }
         if (this.f != null) {
-            this.f.setText(String.format(ac.a(this.a, "tt_open_app_name"), this.f1324l));
+            this.f.setText(String.format(ac.a(this.a, "tt_open_app_name"), this.l));
         }
     }
 

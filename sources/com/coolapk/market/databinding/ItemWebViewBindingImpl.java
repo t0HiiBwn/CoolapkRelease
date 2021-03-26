@@ -28,11 +28,11 @@ public class ItemWebViewBindingImpl extends ItemWebViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 2);
-        sparseIntArray.put(2131362658, 3);
-        sparseIntArray.put(2131363961, 4);
-        sparseIntArray.put(2131362598, 5);
-        sparseIntArray.put(2131362338, 6);
+        sparseIntArray.put(2131362779, 2);
+        sparseIntArray.put(2131362669, 3);
+        sparseIntArray.put(2131363987, 4);
+        sparseIntArray.put(2131362606, 5);
+        sparseIntArray.put(2131362344, 6);
     }
 
     public ItemWebViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

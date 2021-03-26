@@ -69,9 +69,9 @@ public class ItemNotificationBindingImpl extends ItemNotificationBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Notification) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -87,7 +87,7 @@ public class ItemNotificationBindingImpl extends ItemNotificationBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -175,7 +175,7 @@ public class ItemNotificationBindingImpl extends ItemNotificationBinding {
             TextViewBindingAdapters.setTextViewLinkable(this.infoView, str3, null, str2, bool2, null, str9);
             TextViewBindingAdapters.setDatelineByEntity(this.mboundView4, notification);
             TextViewBindingAdapter.setText(this.titleView, str5);
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, str9, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, str9, null, null, bool2, bool2, bool2, null, bool2);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str4, bool2);
         }
     }

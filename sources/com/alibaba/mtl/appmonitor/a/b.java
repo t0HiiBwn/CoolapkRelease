@@ -14,9 +14,9 @@ public class b extends d {
 
     @Override // com.alibaba.mtl.appmonitor.a.d
     /* renamed from: a */
-    public synchronized JSONObject mo13a() {
+    public synchronized JSONObject mo3a() {
         JSONObject a;
-        a = super.mo13a();
+        a = super.mo3a();
         try {
             a.put("count", this.count);
             a.put("value", this.value);

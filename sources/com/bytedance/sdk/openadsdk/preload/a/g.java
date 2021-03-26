@@ -26,9 +26,7 @@ public final class g {
     private int i = 2;
     private int j = 2;
     private boolean k = false;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1339l = false;
+    private boolean l = false;
     private boolean m = true;
     private boolean n = false;
     private boolean o = false;
@@ -57,7 +55,7 @@ public final class g {
         Collections.reverse(arrayList2);
         arrayList.addAll(arrayList2);
         a(this.h, this.i, this.j, arrayList);
-        return new f(this.a, this.c, this.d, this.g, this.k, this.o, this.m, this.n, this.p, this.f1339l, this.b, this.h, this.i, this.j, this.e, this.f, arrayList);
+        return new f(this.a, this.c, this.d, this.g, this.k, this.o, this.m, this.n, this.p, this.l, this.b, this.h, this.i, this.j, this.e, this.f, arrayList);
     }
 
     private void a(String str, int i2, int i3, List<w> list) {

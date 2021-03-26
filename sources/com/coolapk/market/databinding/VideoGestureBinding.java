@@ -39,7 +39,7 @@ public abstract class VideoGestureBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoGestureBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (VideoGestureBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559293, viewGroup, z, obj);
+        return (VideoGestureBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559303, viewGroup, z, obj);
     }
 
     public static VideoGestureBinding inflate(LayoutInflater layoutInflater) {
@@ -48,7 +48,7 @@ public abstract class VideoGestureBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoGestureBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (VideoGestureBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559293, null, false, obj);
+        return (VideoGestureBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559303, null, false, obj);
     }
 
     public static VideoGestureBinding bind(View view) {
@@ -57,6 +57,6 @@ public abstract class VideoGestureBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoGestureBinding bind(View view, Object obj) {
-        return (VideoGestureBinding) bind(obj, view, 2131559293);
+        return (VideoGestureBinding) bind(obj, view, 2131559303);
     }
 }

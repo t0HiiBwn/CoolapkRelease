@@ -54,12 +54,12 @@ final class ReadMoreScrollCallback extends TitleRecycleViewCardViewHolder.Callba
         Intrinsics.checkNotNullParameter(titleRecycleViewCardViewHolder, "holder");
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
         View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-        if (i == 2131558750) {
+        if (i == 2131558757) {
             Intrinsics.checkNotNullExpressionValue(inflate, "view");
             DataBindingComponent component = titleRecycleViewCardViewHolder.getComponent();
             Intrinsics.checkNotNullExpressionValue(component, "holder.component");
             return new FunThingsItemViewHolder(inflate, component, null);
-        } else if (i == 2131558922) {
+        } else if (i == 2131558929) {
             Intrinsics.checkNotNullExpressionValue(inflate, "view");
             DataBindingComponent component2 = titleRecycleViewCardViewHolder.getComponent();
             Intrinsics.checkNotNullExpressionValue(component2, "holder.component");
@@ -84,10 +84,10 @@ final class ReadMoreScrollCallback extends TitleRecycleViewCardViewHolder.Callba
             int hashCode = str.hashCode();
             if (hashCode != 985920449) {
                 if (hashCode == 1394352404 && str.equals("goodsList")) {
-                    return 2131558750;
+                    return 2131558757;
                 }
             } else if (str.equals("see_more")) {
-                return 2131558922;
+                return 2131558929;
             }
         }
         return 0;

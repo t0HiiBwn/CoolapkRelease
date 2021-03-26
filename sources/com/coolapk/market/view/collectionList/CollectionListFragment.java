@@ -56,8 +56,8 @@ public final class CollectionListFragment extends EntityListFragment {
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            MenuItem add = menu.add(0, 2131362970, 0, "添加更多");
-            add.setIcon(2131231489);
+            MenuItem add = menu.add(0, 2131362982, 0, "添加更多");
+            add.setIcon(2131231500);
             add.setShowAsAction(1);
         }
     }
@@ -65,7 +65,7 @@ public final class CollectionListFragment extends EntityListFragment {
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131362970) {
+        if (menuItem.getItemId() != 2131362982) {
             return super.onOptionsItemSelected(menuItem);
         }
         ActionManager.startCollectionListCreateActivity(getActivity());

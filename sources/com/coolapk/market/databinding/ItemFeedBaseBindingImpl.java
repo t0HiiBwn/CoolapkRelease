@@ -34,8 +34,8 @@ public class ItemFeedBaseBindingImpl extends ItemFeedBaseBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362530, 9);
-        sparseIntArray.put(2131362534, 10);
+        sparseIntArray.put(2131362538, 9);
+        sparseIntArray.put(2131362542, 10);
     }
 
     public ItemFeedBaseBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -86,11 +86,11 @@ public class ItemFeedBaseBindingImpl extends ItemFeedBaseBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (263 == i) {
+        } else if (264 == i) {
             setSingleImg((String) obj);
         } else if (50 != i) {
             return false;
@@ -106,7 +106,7 @@ public class ItemFeedBaseBindingImpl extends ItemFeedBaseBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

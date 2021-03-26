@@ -322,7 +322,6 @@ public final class AppConfig extends DataConfig {
         sb.append("-");
         sb.append(locale.getCountry());
         String sb2 = sb.toString();
-        String as = AuthUtils.getAS(this.appContext, this.deviceId);
         String str2 = this.androidId + "; ; ; " + this.macAddress + "; " + Build.MANUFACTURER + "; " + Build.BRAND + "; " + Build.MODEL + ";" + OaidManager.INSTANCE.getOaid();
         Charset charset = Charsets.UTF_8;
         Objects.requireNonNull(str2, "null cannot be cast to non-null type java.lang.String");
@@ -333,6 +332,8 @@ public final class AppConfig extends DataConfig {
         String sb3 = new StringBuilder(encodeToString).reverse().toString();
         Intrinsics.checkNotNullExpressionValue(sb3, "StringBuilder(device).reverse().toString()");
         String replace = new Regex("\\r\\n|\\r|\\n|=").replace(sb3, "");
+        Application application = this.appContext;
+        String as = AuthUtils.getAS(null);
         if (AppHolder.getAppTheme().isNightTheme()) {
             str = "1";
         } else {

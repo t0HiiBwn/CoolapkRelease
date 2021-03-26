@@ -26,7 +26,7 @@ public abstract class ArticleDetailTextPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ArticleDetailTextPartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ArticleDetailTextPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558471, viewGroup, z, obj);
+        return (ArticleDetailTextPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558472, viewGroup, z, obj);
     }
 
     public static ArticleDetailTextPartBinding inflate(LayoutInflater layoutInflater) {
@@ -35,7 +35,7 @@ public abstract class ArticleDetailTextPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ArticleDetailTextPartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ArticleDetailTextPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558471, null, false, obj);
+        return (ArticleDetailTextPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558472, null, false, obj);
     }
 
     public static ArticleDetailTextPartBinding bind(View view) {
@@ -44,6 +44,6 @@ public abstract class ArticleDetailTextPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ArticleDetailTextPartBinding bind(View view, Object obj) {
-        return (ArticleDetailTextPartBinding) bind(obj, view, 2131558471);
+        return (ArticleDetailTextPartBinding) bind(obj, view, 2131558472);
     }
 }

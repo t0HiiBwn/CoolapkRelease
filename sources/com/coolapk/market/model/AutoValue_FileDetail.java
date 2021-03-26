@@ -23,8 +23,8 @@ final class AutoValue_FileDetail extends C$AutoValue_FileDetail {
         return 0;
     }
 
-    AutoValue_FileDetail(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, String str10, Long l3, int i, int i2, int i3, int i4, int i5) {
-        super(str, str2, str3, str4, str5, str6, str7, str8, str9, l2, str10, l3, i, i2, i3, i4, i5);
+    AutoValue_FileDetail(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9, Long l, String str10, Long l2, int i, int i2, int i3, int i4, int i5) {
+        super(str, str2, str3, str4, str5, str6, str7, str8, str9, l, str10, l2, i, i2, i3, i4, i5);
     }
 
     @Override // android.os.Parcelable

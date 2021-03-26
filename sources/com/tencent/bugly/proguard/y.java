@@ -23,9 +23,7 @@ public final class y {
     private static String i;
     private static String j;
     private static Context k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static String f1445l;
+    private static String l;
     private static boolean m;
     private static boolean n;
     private static ExecutorService o;
@@ -52,7 +50,7 @@ public final class y {
                     i = a2.d;
                     a2.getClass();
                     j = "";
-                    f1445l = k.getFilesDir().getPath() + "/buglylog_" + i + "_" + j + ".txt";
+                    l = k.getFilesDir().getPath() + "/buglylog_" + i + "_" + j + ".txt";
                     p = Process.myPid();
                 } catch (Throwable unused) {
                 }
@@ -142,7 +140,7 @@ public final class y {
                             g = true;
                             a aVar = h;
                             if (aVar == null) {
-                                h = new a(f1445l);
+                                h = new a(l);
                             } else if (aVar.b == null || h.b.length() + ((long) f.length()) > h.e) {
                                 h.a();
                             }

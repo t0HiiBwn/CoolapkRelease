@@ -40,7 +40,7 @@ public abstract class SubmitFeedExtraChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedExtraChildBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitFeedExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559157, viewGroup, z, obj);
+        return (SubmitFeedExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559165, viewGroup, z, obj);
     }
 
     public static SubmitFeedExtraChildBinding inflate(LayoutInflater layoutInflater) {
@@ -49,7 +49,7 @@ public abstract class SubmitFeedExtraChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedExtraChildBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitFeedExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559157, null, false, obj);
+        return (SubmitFeedExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559165, null, false, obj);
     }
 
     public static SubmitFeedExtraChildBinding bind(View view) {
@@ -58,6 +58,6 @@ public abstract class SubmitFeedExtraChildBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedExtraChildBinding bind(View view, Object obj) {
-        return (SubmitFeedExtraChildBinding) bind(obj, view, 2131559157);
+        return (SubmitFeedExtraChildBinding) bind(obj, view, 2131559165);
     }
 }

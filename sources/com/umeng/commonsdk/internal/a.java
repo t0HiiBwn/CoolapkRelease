@@ -23,9 +23,7 @@ public class a {
     public static final int i = 32772;
     public static final int j = 32773;
     public static final int k = 32774;
-
-    /* renamed from: l  reason: collision with root package name */
-    public static final int f1483l = 32775;
+    public static final int l = 32775;
     public static final int m = 32776;
     public static final int n = 32777;
     public static final int o = 32778;

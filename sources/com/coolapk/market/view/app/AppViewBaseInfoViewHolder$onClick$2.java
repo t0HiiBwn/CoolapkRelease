@@ -26,10 +26,10 @@ public final class AppViewBaseInfoViewHolder$onClick$2 extends Subscriber<Boolea
     public void onNext(Boolean bool) {
         Intrinsics.checkNotNull(bool);
         if (bool.booleanValue()) {
-            boolean isFollow = AppViewBaseInfoViewHolder.access$getViewModel$p(this.this$0).isFollow();
-            boolean z = !AppViewBaseInfoViewHolder.access$getViewModel$p(this.this$0).isFollow();
+            boolean isFollow = this.this$0.viewModel.isFollow();
+            boolean z = !this.this$0.viewModel.isFollow();
             this.this$0.presenter.followApp(AppViewBaseInfoViewHolder.access$getServiceApp$p(this.this$0).getApkId(), isFollow, z);
-            AppViewBaseInfoViewHolder.access$getViewModel$p(this.this$0).setFollowApp(z);
+            this.this$0.viewModel.setFollowApp(z);
         }
     }
 }

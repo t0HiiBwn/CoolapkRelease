@@ -28,12 +28,12 @@ public class ItemCenterUserInfoBindingImpl extends ItemCenterUserInfoBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363877, 4);
-        sparseIntArray.put(2131363000, 5);
-        sparseIntArray.put(2131362839, 6);
-        sparseIntArray.put(2131362347, 7);
-        sparseIntArray.put(2131362051, 8);
-        sparseIntArray.put(2131363146, 9);
+        sparseIntArray.put(2131363900, 4);
+        sparseIntArray.put(2131363014, 5);
+        sparseIntArray.put(2131362850, 6);
+        sparseIntArray.put(2131362353, 7);
+        sparseIntArray.put(2131362052, 8);
+        sparseIntArray.put(2131363160, 9);
     }
 
     public ItemCenterUserInfoBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -73,7 +73,7 @@ public class ItemCenterUserInfoBindingImpl extends ItemCenterUserInfoBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((UserProfile) obj);
         } else if (50 != i) {
             return false;
@@ -89,7 +89,7 @@ public class ItemCenterUserInfoBindingImpl extends ItemCenterUserInfoBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

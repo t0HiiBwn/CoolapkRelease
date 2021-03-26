@@ -26,7 +26,7 @@ public final class RomUtils {
     private static final String[] ROM_ONEPLUS = {"oneplus"};
     private static final String[] ROM_OPPO = {"oppo"};
     private static final String[] ROM_SAMSUNG = {"samsung"};
-    private static final String[] ROM_SMARTISAN = {"smartisan"};
+    private static final String[] ROM_SMARTISAN = {"smartisan", "deltainno"};
     private static final String[] ROM_SONY = {"sony"};
     private static final String[] ROM_VIVO = {"vivo"};
     private static final String[] ROM_XIAOMI = {"xiaomi"};

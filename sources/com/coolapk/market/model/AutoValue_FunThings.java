@@ -9,7 +9,7 @@ final class AutoValue_FunThings extends C$AutoValue_FunThings {
 
         @Override // android.os.Parcelable.Creator
         public AutoValue_FunThings createFromParcel(Parcel parcel) {
-            return new AutoValue_FunThings(parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? Integer.valueOf(parcel.readInt()) : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? Long.valueOf(parcel.readLong()) : null, parcel.readInt() == 0 ? Long.valueOf(parcel.readLong()) : null, parcel.readInt() == 0 ? parcel.readString() : null, (UserInfo) parcel.readParcelable(UserInfo.class.getClassLoader()), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt(), parcel.readInt(), parcel.readInt(), parcel.readInt(), parcel.readInt(), parcel.readInt(), parcel.readInt(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt(), parcel.readInt() == 0 ? Long.valueOf(parcel.readLong()) : null, (UserAction) parcel.readParcelable(UserAction.class.getClassLoader()), parcel.readInt() == 0 ? parcel.readString() : null);
+            return new AutoValue_FunThings(parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? Integer.valueOf(parcel.readInt()) : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? Long.valueOf(parcel.readLong()) : null, parcel.readInt() == 0 ? Long.valueOf(parcel.readLong()) : null, parcel.readInt() == 0 ? parcel.readString() : null, (UserInfo) parcel.readParcelable(UserInfo.class.getClassLoader()), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt(), parcel.readInt(), parcel.readInt(), parcel.readInt(), parcel.readInt(), parcel.readInt(), parcel.readInt(), parcel.readInt() == 0 ? parcel.readString() : null, parcel.readInt(), parcel.readInt(), parcel.readInt() == 0 ? Long.valueOf(parcel.readLong()) : null, (UserAction) parcel.readParcelable(UserAction.class.getClassLoader()), parcel.readInt() == 0 ? parcel.readString() : null);
         }
 
         @Override // android.os.Parcelable.Creator
@@ -23,8 +23,8 @@ final class AutoValue_FunThings extends C$AutoValue_FunThings {
         return 0;
     }
 
-    AutoValue_FunThings(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, UserInfo userInfo, String str10, String str11, String str12, String str13, String str14, String str15, int i, String str16, int i2, int i3, int i4, int i5, int i6, int i7, int i8, String str17, int i9, Long l4, UserAction userAction, String str18) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, l2, l3, str9, userInfo, str10, str11, str12, str13, str14, str15, i, str16, i2, i3, i4, i5, i6, i7, i8, str17, i9, l4, userAction, str18);
+    AutoValue_FunThings(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, UserInfo userInfo, String str10, String str11, String str12, String str13, String str14, String str15, int i, String str16, int i2, int i3, int i4, int i5, int i6, int i7, int i8, String str17, int i9, int i10, Long l3, UserAction userAction, String str18) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, l, l2, str9, userInfo, str10, str11, str12, str13, str14, str15, i, str16, i2, i3, i4, i5, i6, i7, i8, str17, i9, i10, l3, userAction, str18);
     }
 
     @Override // android.os.Parcelable
@@ -159,6 +159,7 @@ final class AutoValue_FunThings extends C$AutoValue_FunThings {
             parcel.writeString(getCoverPic());
         }
         parcel.writeInt(getIsOpen());
+        parcel.writeInt(getRecommend());
         if (getCreatedate() == null) {
             parcel.writeInt(1);
         } else {

@@ -57,7 +57,7 @@ public class WeUIItem extends LinearLayout implements View.OnClickListener {
         String string4 = obtainAttributes.getString(0);
         String string5 = obtainAttributes.getString(2);
         obtainAttributes.recycle();
-        ItemWeuiBinding itemWeuiBinding = (ItemWeuiBinding) DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558992, this, true);
+        ItemWeuiBinding itemWeuiBinding = (ItemWeuiBinding) DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558999, this, true);
         this.binding = itemWeuiBinding;
         itemWeuiBinding.startImg.setImageResource(resourceId);
         this.binding.endImg.setImageResource(resourceId2);
@@ -147,20 +147,20 @@ public class WeUIItem extends LinearLayout implements View.OnClickListener {
             }
             switch (c) {
                 case 0:
-                    setActionText(getContext().getString(2131886979));
-                    setTitle(getContext().getString(2131886988));
-                    setHint(getContext().getString(2131886843));
+                    setActionText(getContext().getString(2131887041));
+                    setTitle(getContext().getString(2131887050));
+                    setHint(getContext().getString(2131886905));
                     TextView textView = this.binding.titleText;
                     textView.getLayoutParams().width = DisplayUtils.dp2px(getContext(), 81.0f);
                     textView.requestLayout();
                     return;
                 case 1:
-                    setTitle(getContext().getString(2131887019));
-                    setHint(getContext().getString(2131886838));
+                    setTitle(getContext().getString(2131887081));
+                    setHint(getContext().getString(2131886900));
                     return;
                 case 2:
                     setTitle("+86");
-                    setHint(getContext().getString(2131886841));
+                    setHint(getContext().getString(2131886903));
                     this.binding.editText.setInputType(2);
                     TextView textView2 = this.binding.titleText;
                     textView2.getLayoutParams().width = DisplayUtils.dp2px(getContext(), 81.0f);
@@ -169,18 +169,18 @@ public class WeUIItem extends LinearLayout implements View.OnClickListener {
                     textView2.setPadding(0, DisplayUtils.dp2px(getContext(), 12.0f), DisplayUtils.dp2px(getContext(), 4.0f), DisplayUtils.dp2px(getContext(), 12.0f));
                     return;
                 case 3:
-                    setTitle(getContext().getString(2131886857));
-                    setHint(getContext().getString(2131886840));
+                    setTitle(getContext().getString(2131886919));
+                    setHint(getContext().getString(2131886902));
                     TextView textView3 = this.binding.titleText;
                     textView3.getLayoutParams().width = DisplayUtils.dp2px(getContext(), 81.0f);
                     textView3.requestLayout();
                     return;
                 case 4:
-                    setTitle(getContext().getString(2131887028));
-                    setHint(getContext().getString(2131886844));
+                    setTitle(getContext().getString(2131887090));
+                    setHint(getContext().getString(2131886906));
                     return;
                 case 5:
-                    setTitle(getContext().getString(2131886688));
+                    setTitle(getContext().getString(2131886750));
                     TextView textView4 = this.binding.titleText;
                     ((LinearLayout.LayoutParams) textView4.getLayoutParams()).width = DisplayUtils.dp2px(getContext(), 81.0f);
                     textView4.requestLayout();
@@ -189,9 +189,9 @@ public class WeUIItem extends LinearLayout implements View.OnClickListener {
                     setActionText("中国 China");
                     return;
                 case 6:
-                    setTitle(getContext().getString(2131887020));
-                    setHint(getContext().getString(2131886839));
-                    setActionText(getContext().getString(2131886979));
+                    setTitle(getContext().getString(2131887082));
+                    setHint(getContext().getString(2131886901));
+                    setActionText(getContext().getString(2131887041));
                     return;
                 default:
                     return;
@@ -252,15 +252,15 @@ public class WeUIItem extends LinearLayout implements View.OnClickListener {
 
     public View getViewById(int i) {
         switch (i) {
-            case 2131361977:
+            case 2131361978:
                 return this.binding.actionTextView;
-            case 2131362441:
+            case 2131362448:
                 return this.binding.editText;
-            case 2131362459:
+            case 2131362467:
                 return this.binding.endImg;
-            case 2131363420:
+            case 2131363438:
                 return this.binding.startImg;
-            case 2131363581:
+            case 2131363603:
                 return this.binding.titleText;
             default:
                 return null;
@@ -271,12 +271,12 @@ public class WeUIItem extends LinearLayout implements View.OnClickListener {
     public void onClick(View view) {
         Action1<String> action1;
         int id = view.getId();
-        if (id == 2131361977) {
+        if (id == 2131361978) {
             Action1<String> action12 = this.listener;
             if (action12 != null) {
                 action12.call(getText());
             }
-        } else if (id == 2131362459 && (action1 = this.listener) != null) {
+        } else if (id == 2131362467 && (action1 = this.listener) != null) {
             action1.call(getText());
         }
     }

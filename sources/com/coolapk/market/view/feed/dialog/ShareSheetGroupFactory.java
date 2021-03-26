@@ -102,12 +102,12 @@ public final class ShareSheetGroupFactory implements SheetCallback {
             z = false;
         }
         if (z) {
-            insertItem(ShareAction.Feed, "动态", 2131231315);
-            insertItem(ShareAction.PM, "私信", 2131231496);
+            insertItem(ShareAction.Feed, "动态", 2131231326);
+            insertItem(ShareAction.PM, "私信", 2131231507);
         }
         Entity entity = this.data;
         if ((entity instanceof Feed) || (entity instanceof DyhArticle)) {
-            insertItem(ShareAction.KKH, "看看号", 2131231316);
+            insertItem(ShareAction.KKH, "看看号", 2131231327);
         }
         Iterator<T> it2 = this.shareApps.iterator();
         while (true) {
@@ -122,8 +122,8 @@ public final class ShareSheetGroupFactory implements SheetCallback {
             }
         }
         if (t2 != null) {
-            insertItem(ShareAction.WeChat, "微信", 2131231321);
-            insertItem(ShareAction.WeChatTimeline, "朋友圈", 2131231318);
+            insertItem(ShareAction.WeChat, "微信", 2131231332);
+            insertItem(ShareAction.WeChatTimeline, "朋友圈", 2131231329);
         }
         Iterator<T> it3 = this.shareApps.iterator();
         while (true) {
@@ -137,7 +137,7 @@ public final class ShareSheetGroupFactory implements SheetCallback {
             }
         }
         if (t3 != null) {
-            insertItem(ShareAction.WeiBo, "微博", 2131231322);
+            insertItem(ShareAction.WeiBo, "微博", 2131231333);
         }
         Iterator<T> it4 = this.shareApps.iterator();
         while (true) {
@@ -151,7 +151,7 @@ public final class ShareSheetGroupFactory implements SheetCallback {
             }
         }
         if (t4 != null) {
-            insertItem(ShareAction.QQ, "QQ", 2131231319);
+            insertItem(ShareAction.QQ, "QQ", 2131231330);
         }
         Iterator<T> it5 = this.shareApps.iterator();
         while (true) {
@@ -165,7 +165,7 @@ public final class ShareSheetGroupFactory implements SheetCallback {
             }
         }
         if (t5 != null) {
-            insertItem(ShareAction.Tim, "TIM", 2131231320);
+            insertItem(ShareAction.Tim, "TIM", 2131231331);
         }
         Iterator<T> it6 = this.shareApps.iterator();
         while (true) {
@@ -179,10 +179,10 @@ public final class ShareSheetGroupFactory implements SheetCallback {
             }
         }
         if (t != null) {
-            insertItem(ShareAction.Zhihu, "知乎", 2131231323);
+            insertItem(ShareAction.Zhihu, "知乎", 2131231334);
         }
-        insertItem(ShareAction.CopyLink, "复制链接", 2131231314);
-        insertItem(ShareAction.More, "更多", 2131231317);
+        insertItem(ShareAction.CopyLink, "复制链接", 2131231325);
+        insertItem(ShareAction.More, "更多", 2131231328);
         return wrapAsSheetGroup();
     }
 

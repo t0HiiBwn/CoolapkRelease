@@ -84,7 +84,7 @@ public final class ProductMediaTabActivity extends TabActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         Intrinsics.checkNotNullParameter(menu, "menu");
         getMenuInflater().inflate(2131623967, menu);
-        MenuItem findItem = menu.findItem(2131361932);
+        MenuItem findItem = menu.findItem(2131361933);
         boolean z = false;
         boolean booleanExtra = getIntent().getBooleanExtra("extra_recommend_flag", false);
         Intrinsics.checkNotNullExpressionValue(findItem, "item");
@@ -104,7 +104,7 @@ public final class ProductMediaTabActivity extends TabActivity {
     @Override // android.app.Activity
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361933) {
+        if (menuItem.getItemId() != 2131361934) {
             return super.onOptionsItemSelected(menuItem);
         }
         ActionManager.startProductMediaTabActivity(this, getIntent().getStringExtra("extra_product_id"), "待选产品图/视频", false, 0);

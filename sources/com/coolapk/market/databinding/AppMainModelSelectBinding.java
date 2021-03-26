@@ -31,7 +31,7 @@ public abstract class AppMainModelSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppMainModelSelectBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (AppMainModelSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558462, viewGroup, z, obj);
+        return (AppMainModelSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558463, viewGroup, z, obj);
     }
 
     public static AppMainModelSelectBinding inflate(LayoutInflater layoutInflater) {
@@ -40,7 +40,7 @@ public abstract class AppMainModelSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppMainModelSelectBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (AppMainModelSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558462, null, false, obj);
+        return (AppMainModelSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558463, null, false, obj);
     }
 
     public static AppMainModelSelectBinding bind(View view) {
@@ -49,6 +49,6 @@ public abstract class AppMainModelSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static AppMainModelSelectBinding bind(View view, Object obj) {
-        return (AppMainModelSelectBinding) bind(obj, view, 2131558462);
+        return (AppMainModelSelectBinding) bind(obj, view, 2131558463);
     }
 }

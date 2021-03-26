@@ -75,9 +75,9 @@ public class OperatorOnBackpressureBuffer<T> implements Observable.Operator<T, T
         private final ConcurrentLinkedQueue<Object> queue = new ConcurrentLinkedQueue<>();
         private final AtomicBoolean saturated = new AtomicBoolean(false);
 
-        public BufferSubscriber(Subscriber<? super T> subscriber, Long l2, Action0 action0, BackpressureOverflow.Strategy strategy) {
+        public BufferSubscriber(Subscriber<? super T> subscriber, Long l, Action0 action0, BackpressureOverflow.Strategy strategy) {
             this.child = subscriber;
-            this.capacity = l2 != null ? new AtomicLong(l2.longValue()) : null;
+            this.capacity = l != null ? new AtomicLong(l.longValue()) : null;
             this.onOverflow = action0;
             this.manager = new BackpressureDrainManager(this);
             this.overflowStrategy = strategy;

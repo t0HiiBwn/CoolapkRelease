@@ -53,7 +53,6 @@ public final class NewMessageListFragment extends EntityListFragment {
     private boolean isPassiveSelect;
     private boolean isRefreshByUser;
     private boolean isSelectAll;
-    private AppNotification.PMIntercept mPMIntercept;
     private ItemMessageSelectViewBinding messageSelectViewBinding;
     private boolean showDelView;
 
@@ -92,17 +91,17 @@ public final class NewMessageListFragment extends EntityListFragment {
                         str2 = message2.getUKey();
                     }
                 }
-                Observable<R> doOnNext = DataManager.getInstance().getMessageList(i, str, str2).map(RxUtils.checkResultToData()).doOnNext(new NewMessageListFragment$onCreateRequest$1(z));
-                Intrinsics.checkNotNullExpressionValue(doOnNext, "DataManager.getInstance(…      }\n                }");
-                return doOnNext;
+                Observable<R> map = DataManager.getInstance().getMessageList(i, str, str2).map(RxUtils.checkResultToData());
+                Intrinsics.checkNotNullExpressionValue(map, "DataManager.getInstance(…tils.checkResultToData())");
+                return map;
             }
         }
         str = null;
         if (!z) {
         }
-        Observable<R> doOnNext = DataManager.getInstance().getMessageList(i, str, str2).map(RxUtils.checkResultToData()).doOnNext(new NewMessageListFragment$onCreateRequest$1(z));
-        Intrinsics.checkNotNullExpressionValue(doOnNext, "DataManager.getInstance(…      }\n                }");
-        return doOnNext;
+        Observable<R> map = DataManager.getInstance().getMessageList(i, str, str2).map(RxUtils.checkResultToData());
+        Intrinsics.checkNotNullExpressionValue(map, "DataManager.getInstance(…tils.checkResultToData())");
+        return map;
     }
 
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
@@ -111,11 +110,8 @@ public final class NewMessageListFragment extends EntityListFragment {
         getVxDividerDecoration$presentation_coolapkAppRelease().setDefaultNoMargin();
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new NewMessageListFragment$onActivityCreated$1());
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558824).constructor(new NewMessageListFragment$onActivityCreated$2(this)).suitedMethod(NewMessageListFragment$onActivityCreated$3.INSTANCE).build(), -1);
-        AppNotification appNotification = AppHolder.getAppNotification();
-        AppNotification.PMIntercept pMIntercept = new AppNotification.PMIntercept(new NewMessageListFragment$onActivityCreated$4(this));
-        this.mPMIntercept = pMIntercept;
-        appNotification.addIntercept(pMIntercept);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558831).constructor(new NewMessageListFragment$onActivityCreated$2(this)).suitedMethod(NewMessageListFragment$onActivityCreated$3.INSTANCE).build(), -1);
+        AppHolder.getAppNotification().interceptInLifeCycle(this, AppNotification.MessageIntercept.Companion.privateMessage(new NewMessageListFragment$onActivityCreated$4(this)));
         setHasOptionsMenu(true);
         updateMessageNum();
         onShowDelView();
@@ -163,7 +159,7 @@ public final class NewMessageListFragment extends EntityListFragment {
         getRecyclerView().post(new NewMessageListFragment$updateEditState$1(this));
         FragmentActivity activity = getActivity();
         Objects.requireNonNull(activity, "null cannot be cast to non-null type com.coolapk.market.view.notification.NotificationActivity");
-        MenuItem findItem = ((NotificationActivity) activity).getToolbar().getMenu().findItem(2131361901);
+        MenuItem findItem = ((NotificationActivity) activity).getToolbar().getMenu().findItem(2131361902);
         Intrinsics.checkNotNullExpressionValue(findItem, "(activity as Notificatio…indItem(R.id.action_edit)");
         findItem.setTitle(this.editState ? "完成" : "批量删除");
     }
@@ -174,14 +170,14 @@ public final class NewMessageListFragment extends EntityListFragment {
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (isAdded()) {
-            menu.add(0, 2131361901, 0, "批量删除").setShowAsAction(2);
+            menu.add(0, 2131361902, 0, "批量删除").setShowAsAction(2);
         }
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() == 2131361901) {
+        if (menuItem.getItemId() == 2131361902) {
             FragmentActivity activity = getActivity();
             if (!(activity instanceof NotificationActivity)) {
                 activity = null;
@@ -211,7 +207,7 @@ public final class NewMessageListFragment extends EntityListFragment {
             setDelViewText(str);
             return;
         }
-        setDelViewBackgroundColor(ResourceUtils.getColorInt(getActivity(), 2131099882));
+        setDelViewBackgroundColor(ResourceUtils.getColorInt(getActivity(), 2131099887));
         boolean z = this.isSelectAll;
         StringBuilder sb = new StringBuilder();
         sb.append("删除会话(");
@@ -310,7 +306,7 @@ public final class NewMessageListFragment extends EntityListFragment {
             frameLayout = null;
         }
         if (frameLayout != null) {
-            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558827, null, true);
+            ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558834, null, true);
             Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…_select_view, null, true)");
             ItemMessageSelectViewBinding itemMessageSelectViewBinding = (ItemMessageSelectViewBinding) inflate;
             this.messageSelectViewBinding = itemMessageSelectViewBinding;
@@ -358,14 +354,6 @@ public final class NewMessageListFragment extends EntityListFragment {
             Lifecycle lifecycle = getLifecycle();
             Intrinsics.checkNotNullExpressionValue(lifecycle, "lifecycle");
             LifeCycleExtendsKt.oneTimeOnDestroy(lifecycle, new NewMessageListFragment$onShowDelView$5(this));
-        }
-    }
-
-    @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
-    public void onDestroy() {
-        super.onDestroy();
-        if (this.mPMIntercept != null) {
-            AppHolder.getAppNotification().removeIntercept(this.mPMIntercept);
         }
     }
 

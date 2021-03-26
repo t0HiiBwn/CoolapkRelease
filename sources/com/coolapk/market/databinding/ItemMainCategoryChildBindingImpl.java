@@ -56,7 +56,7 @@ public class ItemMainCategoryChildBindingImpl extends ItemMainCategoryChildBindi
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (182 != i) {
+        if (183 != i) {
             return false;
         }
         setLinkCard((Link) obj);
@@ -69,7 +69,7 @@ public class ItemMainCategoryChildBindingImpl extends ItemMainCategoryChildBindi
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(182);
+        notifyPropertyChanged(183);
         super.requestRebind();
     }
 

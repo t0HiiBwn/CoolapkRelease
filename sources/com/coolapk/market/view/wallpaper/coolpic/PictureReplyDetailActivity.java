@@ -81,7 +81,7 @@ public final class PictureReplyDetailActivity extends BaseActivity implements Fe
     protected void onCreate(Bundle bundle) {
         ThemeUtils.setSystemBarDrawFlags(this);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131559081);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131559088);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte… R.layout.pic_reply_list)");
         this.binding = (PicReplyListBinding) contentView;
         Parcelable parcelableExtra = getIntent().getParcelableExtra("feed");
@@ -243,7 +243,7 @@ public final class PictureReplyDetailActivity extends BaseActivity implements Fe
     private final void updataFeed(Feed feed2) {
         Activity activityUnder$default = ActivityStackManager.getActivityUnder$default(AppHolder.getActivityStackManager(), this, false, 2, null);
         if (activityUnder$default instanceof CoolPicDetailActivity) {
-            Fragment findFragmentById = ((CoolPicDetailActivity) activityUnder$default).getSupportFragmentManager().findFragmentById(2131362318);
+            Fragment findFragmentById = ((CoolPicDetailActivity) activityUnder$default).getSupportFragmentManager().findFragmentById(2131362324);
             if (findFragmentById instanceof CoolPicListFragment) {
                 ((CoolPicListFragment) findFragmentById).updateFeed(feed2);
             }
@@ -290,7 +290,7 @@ public final class PictureReplyDetailActivity extends BaseActivity implements Fe
     private final void setupFragment() {
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "supportFragmentManager");
-        PictureDetailReplyListFragment pictureDetailReplyListFragment = (PictureDetailReplyListFragment) supportFragmentManager.findFragmentById(2131362306);
+        PictureDetailReplyListFragment pictureDetailReplyListFragment = (PictureDetailReplyListFragment) supportFragmentManager.findFragmentById(2131362311);
         this.contentFragment = pictureDetailReplyListFragment;
         if (pictureDetailReplyListFragment == null) {
             PictureDetailReplyListFragment.Companion companion = PictureDetailReplyListFragment.Companion;
@@ -302,7 +302,7 @@ public final class PictureReplyDetailActivity extends BaseActivity implements Fe
             FragmentTransaction beginTransaction = supportFragmentManager.beginTransaction();
             PictureDetailReplyListFragment pictureDetailReplyListFragment2 = this.contentFragment;
             Intrinsics.checkNotNull(pictureDetailReplyListFragment2);
-            beginTransaction.add(2131362306, pictureDetailReplyListFragment2).commit();
+            beginTransaction.add(2131362311, pictureDetailReplyListFragment2).commit();
         }
     }
 

@@ -17,10 +17,10 @@ public class d {
     private File a;
 
     /* renamed from: a  reason: collision with other field name */
-    private final Object f87a = new Object();
+    private final Object f86a = new Object();
 
     /* renamed from: a  reason: collision with other field name */
-    private HashMap<File, a> f88a = new HashMap<>();
+    private HashMap<File, a> f87a = new HashMap<>();
 
     public d(String str) {
         if (str == null || str.length() <= 0) {
@@ -38,7 +38,7 @@ public class d {
 
     private File a() {
         File file;
-        synchronized (this.f87a) {
+        synchronized (this.f86a) {
             file = this.a;
         }
         return file;
@@ -62,7 +62,7 @@ public class d {
         Throwable th2;
         File b2 = b(str);
         synchronized (b) {
-            aVar = this.f88a.get(b2);
+            aVar = this.f87a.get(b2);
             if (aVar != null && !aVar.d()) {
                 return aVar;
             }
@@ -195,10 +195,10 @@ public class d {
             if (aVar != null) {
                 aVar.a(hashMap2);
             } else {
-                aVar = this.f88a.get(b2);
+                aVar = this.f87a.get(b2);
                 if (aVar == null) {
                     aVar = new a(b2, i, hashMap2);
-                    this.f88a.put(b2, aVar);
+                    this.f87a.put(b2, aVar);
                 }
             }
         }
@@ -215,22 +215,22 @@ public class d {
         private Map a;
 
         /* renamed from: a  reason: collision with other field name */
-        private WeakHashMap<b.AbstractC0117b, Object> f89a;
+        private WeakHashMap<b.AbstractC0127b, Object> f88a;
         private final File b;
 
         /* renamed from: c  reason: collision with other field name */
-        private final int f90c;
+        private final int f89c;
 
         /* renamed from: c  reason: collision with other field name */
-        private final File f91c;
+        private final File f90c;
         private boolean j = false;
 
         a(File file, int i, Map map) {
             this.b = file;
-            this.f91c = d.a(file);
-            this.f90c = i;
+            this.f90c = d.a(file);
+            this.f89c = i;
             this.a = map == null ? new HashMap() : map;
-            this.f89a = new WeakHashMap<>();
+            this.f88a = new WeakHashMap<>();
         }
 
         @Override // com.ta.utdid2.b.a.b
@@ -283,20 +283,20 @@ public class d {
         @Override // com.ta.utdid2.b.a.b
         public long getLong(String str, long j2) {
             synchronized (this) {
-                Long l2 = (Long) this.a.get(str);
-                if (l2 != null) {
-                    j2 = l2.longValue();
+                Long l = (Long) this.a.get(str);
+                if (l != null) {
+                    j2 = l.longValue();
                 }
             }
             return j2;
         }
 
         /* renamed from: com.ta.utdid2.b.a.d$a$a  reason: collision with other inner class name */
-        public final class C0118a implements b.a {
+        public final class C0128a implements b.a {
             private final Map<String, Object> b = new HashMap();
             private boolean k = false;
 
-            public C0118a() {
+            public C0128a() {
             }
 
             @Override // com.ta.utdid2.b.a.b.a
@@ -359,14 +359,14 @@ public class d {
             public boolean commit() {
                 boolean z;
                 ArrayList arrayList;
-                HashSet<b.AbstractC0117b> hashSet;
+                HashSet<b.AbstractC0127b> hashSet;
                 boolean e;
                 synchronized (d.b) {
-                    z = a.this.f89a.size() > 0;
+                    z = a.this.f88a.size() > 0;
                     arrayList = null;
                     if (z) {
                         arrayList = new ArrayList();
-                        hashSet = new HashSet(a.this.f89a.keySet());
+                        hashSet = new HashSet(a.this.f88a.keySet());
                     } else {
                         hashSet = null;
                     }
@@ -397,7 +397,7 @@ public class d {
                 if (z) {
                     for (int size = arrayList.size() - 1; size >= 0; size--) {
                         String str = (String) arrayList.get(size);
-                        for (b.AbstractC0117b bVar : hashSet) {
+                        for (b.AbstractC0127b bVar : hashSet) {
                             if (bVar != null) {
                                 bVar.a(a.this, str);
                             }
@@ -410,7 +410,7 @@ public class d {
 
         @Override // com.ta.utdid2.b.a.b
         public b.a a() {
-            return new C0118a();
+            return new C0128a();
         }
 
         private FileOutputStream a(File file) {
@@ -433,9 +433,9 @@ public class d {
         /* access modifiers changed from: private */
         public boolean e() {
             if (this.b.exists()) {
-                if (this.f91c.exists()) {
+                if (this.f90c.exists()) {
                     this.b.delete();
-                } else if (!this.b.renameTo(this.f91c)) {
+                } else if (!this.b.renameTo(this.f90c)) {
                     return false;
                 }
             }
@@ -446,7 +446,7 @@ public class d {
                 }
                 e.a(this.a, a2);
                 a2.close();
-                this.f91c.delete();
+                this.f90c.delete();
                 return true;
             } catch (Exception unused) {
                 if (this.b.exists()) {

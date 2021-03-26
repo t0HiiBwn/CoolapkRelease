@@ -26,7 +26,7 @@ public abstract class SubmitFeedArticleTextPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedArticleTextPartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitFeedArticleTextPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559152, viewGroup, z, obj);
+        return (SubmitFeedArticleTextPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559160, viewGroup, z, obj);
     }
 
     public static SubmitFeedArticleTextPartBinding inflate(LayoutInflater layoutInflater) {
@@ -35,7 +35,7 @@ public abstract class SubmitFeedArticleTextPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedArticleTextPartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitFeedArticleTextPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559152, null, false, obj);
+        return (SubmitFeedArticleTextPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559160, null, false, obj);
     }
 
     public static SubmitFeedArticleTextPartBinding bind(View view) {
@@ -44,6 +44,6 @@ public abstract class SubmitFeedArticleTextPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedArticleTextPartBinding bind(View view, Object obj) {
-        return (SubmitFeedArticleTextPartBinding) bind(obj, view, 2131559152);
+        return (SubmitFeedArticleTextPartBinding) bind(obj, view, 2131559160);
     }
 }

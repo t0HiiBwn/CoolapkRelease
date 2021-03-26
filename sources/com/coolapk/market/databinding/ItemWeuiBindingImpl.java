@@ -22,12 +22,12 @@ public class ItemWeuiBindingImpl extends ItemWeuiBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363420, 1);
-        sparseIntArray.put(2131363581, 2);
-        sparseIntArray.put(2131363533, 3);
-        sparseIntArray.put(2131362441, 4);
-        sparseIntArray.put(2131361977, 5);
-        sparseIntArray.put(2131362459, 6);
+        sparseIntArray.put(2131363438, 1);
+        sparseIntArray.put(2131363603, 2);
+        sparseIntArray.put(2131363551, 3);
+        sparseIntArray.put(2131362448, 4);
+        sparseIntArray.put(2131361978, 5);
+        sparseIntArray.put(2131362467, 6);
     }
 
     public ItemWeuiBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -62,7 +62,7 @@ public class ItemWeuiBindingImpl extends ItemWeuiBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (158 != i) {
+        if (159 != i) {
             return false;
         }
         setImg((String) obj);

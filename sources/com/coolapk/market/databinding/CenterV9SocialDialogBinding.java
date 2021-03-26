@@ -43,7 +43,7 @@ public abstract class CenterV9SocialDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static CenterV9SocialDialogBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (CenterV9SocialDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558479, viewGroup, z, obj);
+        return (CenterV9SocialDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558480, viewGroup, z, obj);
     }
 
     public static CenterV9SocialDialogBinding inflate(LayoutInflater layoutInflater) {
@@ -52,7 +52,7 @@ public abstract class CenterV9SocialDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static CenterV9SocialDialogBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (CenterV9SocialDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558479, null, false, obj);
+        return (CenterV9SocialDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558480, null, false, obj);
     }
 
     public static CenterV9SocialDialogBinding bind(View view) {
@@ -61,6 +61,6 @@ public abstract class CenterV9SocialDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static CenterV9SocialDialogBinding bind(View view, Object obj) {
-        return (CenterV9SocialDialogBinding) bind(obj, view, 2131558479);
+        return (CenterV9SocialDialogBinding) bind(obj, view, 2131558480);
     }
 }

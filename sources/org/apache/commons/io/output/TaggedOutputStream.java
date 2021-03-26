@@ -13,16 +13,16 @@ public class TaggedOutputStream extends ProxyOutputStream {
         super(outputStream);
     }
 
+    @Override // org.apache.commons.io.output.ProxyOutputStream
+    protected void handleIOException(IOException iOException) throws IOException {
+        throw new TaggedIOException(iOException, this.tag);
+    }
+
     public boolean isCauseOf(Exception exc) {
         return TaggedIOException.isTaggedWith(exc, this.tag);
     }
 
     public void throwIfCauseOf(Exception exc) throws IOException {
         TaggedIOException.throwCauseIfTaggedWith(exc, this.tag);
-    }
-
-    @Override // org.apache.commons.io.output.ProxyOutputStream
-    protected void handleIOException(IOException iOException) throws IOException {
-        throw new TaggedIOException(iOException, this.tag);
     }
 }

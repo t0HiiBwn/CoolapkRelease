@@ -14,9 +14,9 @@ final class PropertiesKt$byNullableLong$4 extends Lambda implements Function1<Lo
         super(1);
     }
 
-    public final JsonElement invoke(Long l2) {
+    public final JsonElement invoke(Long l) {
         JsonElement jsonElement;
-        if (l2 == null || (jsonElement = BuilderKt.toJson(l2)) == null) {
+        if (l == null || (jsonElement = BuilderKt.toJson(l)) == null) {
             jsonElement = ElementKt.getJsonNull();
         }
         return jsonElement;

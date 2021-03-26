@@ -32,7 +32,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: GoodsViewHolder.kt */
 public final class GoodsViewHolder extends GenericBindHolder<ItemGoodsBinding, Goods> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558755;
+    public static final int LAYOUT_ID = 2131558762;
     private Goods goods;
     private boolean ignoreBindTags;
     private final GoodsTagPlug tagView;
@@ -111,7 +111,7 @@ public final class GoodsViewHolder extends GenericBindHolder<ItemGoodsBinding, G
         itemGoodsBinding.setModel(goods2);
         TextView textView = ((ItemGoodsBinding) getBinding()).goShoppingView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.goShoppingView");
-        textView.setBackground(ShapeUtils.createActionCornerBg(getContext(), ResourceUtils.getColorInt(getContext(), 2131100035)));
+        textView.setBackground(ShapeUtils.createActionCornerBg(getContext(), ResourceUtils.getColorInt(getContext(), 2131100040)));
         ((ItemGoodsBinding) getBinding()).executePendingBindings();
         fixStrangeLayoutBug();
     }
@@ -139,24 +139,15 @@ public final class GoodsViewHolder extends GenericBindHolder<ItemGoodsBinding, G
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
             int id = view.getId();
             String str = null;
-            if (id == 2131362623) {
+            if (id == 2131362631) {
+                ActionManagerCompat actionManagerCompat = ActionManagerCompat.INSTANCE;
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");
                 Goods goods2 = this.goods;
                 if (goods2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("goods");
                 }
-                String goodsBuyUrl = goods2.getGoodsBuyUrl();
-                Goods goods3 = this.goods;
-                if (goods3 == null) {
-                    Intrinsics.throwUninitializedPropertyAccessException("goods");
-                }
-                String title = goods3.getTitle();
-                Goods goods4 = this.goods;
-                if (goods4 == null) {
-                    Intrinsics.throwUninitializedPropertyAccessException("goods");
-                }
-                ActionManagerCompat.startActivityByUrl(context, goodsBuyUrl, title, goods4.getSubTitle());
+                actionManagerCompat.startWithGoodsBuyUrl(context, goods2);
                 StatisticHelper instance = StatisticHelper.Companion.getInstance();
                 DataBindingComponent component = getComponent();
                 if (!(component instanceof FragmentBindingComponent)) {
@@ -172,49 +163,40 @@ public final class GoodsViewHolder extends GenericBindHolder<ItemGoodsBinding, G
                     str = baseFragment.getFixedRecordId();
                 }
                 StatisticHelper.recordEntityEvent$default(instance, str, model, getAdapterPosition(), ViewHolderExtendsKt.findParentEntity(this), null, 16, null);
-            } else if (id != 2131362768) {
+            } else if (id != 2131362779) {
                 super.onClick(view);
             } else {
-                Goods goods5 = this.goods;
-                if (goods5 == null) {
+                Goods goods3 = this.goods;
+                if (goods3 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("goods");
                 }
-                if (goods5.isDirect()) {
+                if (goods3.isDirect()) {
+                    ActionManagerCompat actionManagerCompat2 = ActionManagerCompat.INSTANCE;
                     Context context2 = getContext();
                     Intrinsics.checkNotNullExpressionValue(context2, "context");
+                    Goods goods4 = this.goods;
+                    if (goods4 == null) {
+                        Intrinsics.throwUninitializedPropertyAccessException("goods");
+                    }
+                    actionManagerCompat2.startWithGoodsBuyUrl(context2, goods4);
+                } else {
+                    Context context3 = getContext();
+                    Intrinsics.checkNotNullExpressionValue(context3, "context");
+                    Goods goods5 = this.goods;
+                    if (goods5 == null) {
+                        Intrinsics.throwUninitializedPropertyAccessException("goods");
+                    }
+                    String goodsUrl = goods5.getGoodsUrl();
                     Goods goods6 = this.goods;
                     if (goods6 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("goods");
                     }
-                    String goodsBuyUrl2 = goods6.getGoodsBuyUrl();
+                    String title = goods6.getTitle();
                     Goods goods7 = this.goods;
                     if (goods7 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("goods");
                     }
-                    String title2 = goods7.getTitle();
-                    Goods goods8 = this.goods;
-                    if (goods8 == null) {
-                        Intrinsics.throwUninitializedPropertyAccessException("goods");
-                    }
-                    ActionManagerCompat.startActivityByUrl(context2, goodsBuyUrl2, title2, goods8.getSubTitle());
-                } else {
-                    Context context3 = getContext();
-                    Intrinsics.checkNotNullExpressionValue(context3, "context");
-                    Goods goods9 = this.goods;
-                    if (goods9 == null) {
-                        Intrinsics.throwUninitializedPropertyAccessException("goods");
-                    }
-                    String goodsUrl = goods9.getGoodsUrl();
-                    Goods goods10 = this.goods;
-                    if (goods10 == null) {
-                        Intrinsics.throwUninitializedPropertyAccessException("goods");
-                    }
-                    String title3 = goods10.getTitle();
-                    Goods goods11 = this.goods;
-                    if (goods11 == null) {
-                        Intrinsics.throwUninitializedPropertyAccessException("goods");
-                    }
-                    ActionManagerCompat.startActivityByUrl(context3, goodsUrl, title3, goods11.getSubTitle());
+                    ActionManagerCompat.startActivityByUrl(context3, goodsUrl, title, goods7.getSubTitle());
                 }
                 StatisticHelper instance2 = StatisticHelper.Companion.getInstance();
                 DataBindingComponent component2 = getComponent();

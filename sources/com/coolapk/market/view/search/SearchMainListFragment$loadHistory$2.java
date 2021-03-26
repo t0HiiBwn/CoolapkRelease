@@ -14,6 +14,6 @@ final class SearchMainListFragment$loadHistory$2<T> implements Action1<Unit> {
     }
 
     public final void call(Unit unit) {
-        this.this$0.updateItemSearchHistory();
+        SearchMainListFragment.access$updateItemSearchHistory(this.this$0);
     }
 }

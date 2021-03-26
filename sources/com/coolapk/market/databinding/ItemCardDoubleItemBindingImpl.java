@@ -25,8 +25,8 @@ public class ItemCardDoubleItemBindingImpl extends ItemCardDoubleItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363435, 5);
-        sparseIntArray.put(2131363460, 6);
+        sparseIntArray.put(2131363453, 5);
+        sparseIntArray.put(2131363478, 6);
     }
 
     public ItemCardDoubleItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -67,7 +67,7 @@ public class ItemCardDoubleItemBindingImpl extends ItemCardDoubleItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((CardDoubleViewHolder.ChildItemViewModel) obj);
@@ -81,7 +81,7 @@ public class ItemCardDoubleItemBindingImpl extends ItemCardDoubleItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 32;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 

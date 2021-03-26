@@ -20,9 +20,7 @@ public final class GroundOverlayOptions implements Parcelable {
     private boolean i;
     private float j;
     private float k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private float f1245l;
+    private float l;
 
     @Override // android.os.Parcelable
     public int describeContents() {
@@ -33,7 +31,7 @@ public final class GroundOverlayOptions implements Parcelable {
         this.i = true;
         this.j = 0.0f;
         this.k = 0.5f;
-        this.f1245l = 0.5f;
+        this.l = 0.5f;
         this.a = i2;
         this.b = BitmapDescriptorFactory.fromBitmap(null);
         this.c = latLng;
@@ -45,14 +43,14 @@ public final class GroundOverlayOptions implements Parcelable {
         this.i = z;
         this.j = f6;
         this.k = f7;
-        this.f1245l = f8;
+        this.l = f8;
     }
 
     public GroundOverlayOptions() {
         this.i = true;
         this.j = 0.0f;
         this.k = 0.5f;
-        this.f1245l = 0.5f;
+        this.l = 0.5f;
         this.a = 1;
     }
 
@@ -63,7 +61,7 @@ public final class GroundOverlayOptions implements Parcelable {
 
     public GroundOverlayOptions anchor(float f2, float f3) {
         this.k = f2;
-        this.f1245l = f3;
+        this.l = f3;
         return this;
     }
 
@@ -189,7 +187,7 @@ public final class GroundOverlayOptions implements Parcelable {
     }
 
     public float getAnchorV() {
-        return this.f1245l;
+        return this.l;
     }
 
     public boolean isVisible() {
@@ -209,6 +207,6 @@ public final class GroundOverlayOptions implements Parcelable {
         parcel.writeByte(this.i ? (byte) 1 : 0);
         parcel.writeFloat(this.j);
         parcel.writeFloat(this.k);
-        parcel.writeFloat(this.f1245l);
+        parcel.writeFloat(this.l);
     }
 }

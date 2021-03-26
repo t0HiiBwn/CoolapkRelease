@@ -95,7 +95,7 @@ public class ActionButtonFrameLayout extends RevealFrameLayout {
             }
         });
         if (getChildAt(1) instanceof TextView) {
-            ((TextView) getChildAt(1)).setTextColor(ResourceUtils.getColorInt(getContext(), 2131099912));
+            ((TextView) getChildAt(1)).setTextColor(ResourceUtils.getColorInt(getContext(), 2131099917));
         }
     }
 

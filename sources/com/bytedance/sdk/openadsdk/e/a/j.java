@@ -20,9 +20,7 @@ public class j {
     m i;
     n j;
     String k = "host";
-
-    /* renamed from: l  reason: collision with root package name */
-    final Set<String> f1330l = new LinkedHashSet();
+    final Set<String> l = new LinkedHashSet();
     final Set<String> m = new LinkedHashSet();
     boolean n;
     boolean o;

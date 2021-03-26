@@ -16,11 +16,11 @@ public class UTDevice {
 
     private static String d(Context context) {
         a b = b.b(context);
-        return (b == null || g.m30a(b.f())) ? "ffffffffffffffffffffffff" : b.f();
+        return (b == null || g.m20a(b.f())) ? "ffffffffffffffffffffffff" : b.f();
     }
 
     private static String e(Context context) {
         String h = c.a(context).h();
-        return (h == null || g.m30a(h)) ? "ffffffffffffffffffffffff" : h;
+        return (h == null || g.m20a(h)) ? "ffffffffffffffffffffffff" : h;
     }
 }

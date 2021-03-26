@@ -30,7 +30,7 @@ public final class LargeScrollCardViewHolder extends TitleRecycleViewCardViewHol
                 titleRecycleViewCardViewHolder.getRecyclerView().setPadding(ViewMarginData.Companion.getDEFAULT_SIZE(), ConvertUtils.dp2px(8.0f), ViewMarginData.Companion.getDEFAULT_SIZE(), ConvertUtils.dp2px(12.0f));
                 titleRecycleViewCardViewHolder.getRecyclerView().setClipToPadding(false);
                 titleRecycleViewCardViewHolder.getRecyclerView().setClipChildren(false);
-                titleRecycleViewCardViewHolder.getRecyclerView().addItemDecoration(ItemDecorations.horizontal(titleRecycleViewCardViewHolder.getContext()).type(2131558796, 2131231064).type(2131558795, 2131231064).create());
+                titleRecycleViewCardViewHolder.getRecyclerView().addItemDecoration(ItemDecorations.horizontal(titleRecycleViewCardViewHolder.getContext()).type(2131558803, 2131231074).type(2131558802, 2131231074).create());
             }
 
             @Override // com.coolapk.market.viewholder.TitleRecycleViewCardViewHolder.Callback
@@ -38,7 +38,7 @@ public final class LargeScrollCardViewHolder extends TitleRecycleViewCardViewHol
                 Intrinsics.checkNotNullParameter(titleRecycleViewCardViewHolder, "holder");
                 Intrinsics.checkNotNullParameter(viewGroup, "parent");
                 View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-                if (i != 2131558795) {
+                if (i != 2131558802) {
                     Intrinsics.checkNotNullExpressionValue(inflate, "view");
                     DataBindingComponent component = titleRecycleViewCardViewHolder.getComponent();
                     Intrinsics.checkNotNullExpressionValue(component, "holder.component");
@@ -68,7 +68,7 @@ public final class LargeScrollCardViewHolder extends TitleRecycleViewCardViewHol
             @Override // com.coolapk.market.viewholder.TitleRecycleViewCardViewHolder.Callback
             public int getItemViewType(Object obj) {
                 Intrinsics.checkNotNullParameter(obj, "obj");
-                return obj instanceof Goods ? 2131558795 : 2131558796;
+                return obj instanceof Goods ? 2131558802 : 2131558803;
             }
         });
         Intrinsics.checkNotNullParameter(view, "itemView");

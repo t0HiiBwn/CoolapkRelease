@@ -62,7 +62,7 @@ public final class ProductTimelineViewHolder$Companion$createCallback$1 extends 
     public BindingViewHolder onCreateViewHolder(TitleRecycleViewCardViewHolder titleRecycleViewCardViewHolder, ViewGroup viewGroup, int i) {
         Intrinsics.checkNotNullParameter(titleRecycleViewCardViewHolder, "holder");
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
-        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558881, viewGroup, false);
+        View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558888, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "view");
         DataBindingComponent component = titleRecycleViewCardViewHolder.getComponent();
         Intrinsics.checkNotNullExpressionValue(component, "holder.component");

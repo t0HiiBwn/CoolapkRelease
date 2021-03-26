@@ -57,7 +57,7 @@ public class AlbumDetailViewModel extends BaseObservable {
 
     public void setShowContentView(boolean z) {
         this.showContentView = z;
-        notifyPropertyChanged(247);
+        notifyPropertyChanged(248);
     }
 
     @Bindable
@@ -84,7 +84,7 @@ public class AlbumDetailViewModel extends BaseObservable {
         setAlbumInfo(album2);
         notifyPropertyChanged(8);
         notifyPropertyChanged(22);
-        notifyPropertyChanged(293);
+        notifyPropertyChanged(294);
         notifyPropertyChanged(23);
         notifyPropertyChanged(21);
         notifyPropertyChanged(13);
@@ -93,13 +93,13 @@ public class AlbumDetailViewModel extends BaseObservable {
         notifyPropertyChanged(17);
         notifyPropertyChanged(11);
         notifyPropertyChanged(18);
-        notifyPropertyChanged(232);
-        notifyPropertyChanged(201);
+        notifyPropertyChanged(233);
+        notifyPropertyChanged(202);
         notifyPropertyChanged(149);
         notifyPropertyChanged(9);
-        notifyPropertyChanged(170);
+        notifyPropertyChanged(171);
         notifyPropertyChanged(20);
-        notifyPropertyChanged(246);
+        notifyPropertyChanged(247);
     }
 
     @Bindable
@@ -158,12 +158,12 @@ public class AlbumDetailViewModel extends BaseObservable {
 
     public void setMyAlbum(boolean z) {
         this.myAlbum = z;
-        notifyPropertyChanged(201);
+        notifyPropertyChanged(202);
     }
 
     public void setIsLoading(boolean z) {
         this.isLoading = z;
-        notifyPropertyChanged(170);
+        notifyPropertyChanged(171);
     }
 
     @Bindable
@@ -278,7 +278,7 @@ public class AlbumDetailViewModel extends BaseObservable {
 
     public void setAlbumReplyNum(int i) {
         this.albumReplyNum = i;
-        notifyPropertyChanged(232);
+        notifyPropertyChanged(233);
     }
 
     @Bindable
@@ -368,7 +368,7 @@ public class AlbumDetailViewModel extends BaseObservable {
 
     public void setAlbumLikeNum(int i) {
         if (i == 0) {
-            this.context.getString(2131886790);
+            this.context.getString(2131886852);
         } else {
             String.valueOf(i);
         }
@@ -383,7 +383,7 @@ public class AlbumDetailViewModel extends BaseObservable {
     public void setAlbumFavNum(int i) {
         String str;
         if (i == 0) {
-            str = this.context.getString(2131886786);
+            str = this.context.getString(2131886848);
         } else {
             str = String.valueOf(i);
         }
@@ -420,7 +420,7 @@ public class AlbumDetailViewModel extends BaseObservable {
     public void updateAlbum() {
         notifyPropertyChanged(8);
         notifyPropertyChanged(22);
-        notifyPropertyChanged(293);
+        notifyPropertyChanged(294);
         notifyPropertyChanged(23);
         notifyPropertyChanged(21);
         notifyPropertyChanged(13);
@@ -429,11 +429,11 @@ public class AlbumDetailViewModel extends BaseObservable {
         notifyPropertyChanged(17);
         notifyPropertyChanged(11);
         notifyPropertyChanged(18);
-        notifyPropertyChanged(232);
-        notifyPropertyChanged(201);
+        notifyPropertyChanged(233);
+        notifyPropertyChanged(202);
         notifyPropertyChanged(149);
         notifyPropertyChanged(9);
-        notifyPropertyChanged(170);
+        notifyPropertyChanged(171);
         notifyPropertyChanged(20);
     }
 }

@@ -21,7 +21,7 @@ public abstract class ItemFeedReplyTextBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedReplyTextBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedReplyTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558720, viewGroup, z, obj);
+        return (ItemFeedReplyTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558727, viewGroup, z, obj);
     }
 
     public static ItemFeedReplyTextBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class ItemFeedReplyTextBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedReplyTextBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedReplyTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558720, null, false, obj);
+        return (ItemFeedReplyTextBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558727, null, false, obj);
     }
 
     public static ItemFeedReplyTextBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class ItemFeedReplyTextBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedReplyTextBinding bind(View view, Object obj) {
-        return (ItemFeedReplyTextBinding) bind(obj, view, 2131558720);
+        return (ItemFeedReplyTextBinding) bind(obj, view, 2131558727);
     }
 }

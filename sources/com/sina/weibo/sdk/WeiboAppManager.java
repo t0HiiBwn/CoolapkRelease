@@ -77,8 +77,8 @@ public class WeiboAppManager {
         return wbAppInfo2;
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:39:0x0091 A[SYNTHETIC, Splitter:B:39:0x0091] */
-    /* JADX WARNING: Removed duplicated region for block: B:47:0x009e A[SYNTHETIC, Splitter:B:47:0x009e] */
+    /* JADX WARNING: Removed duplicated region for block: B:39:0x0092 A[SYNTHETIC, Splitter:B:39:0x0092] */
+    /* JADX WARNING: Removed duplicated region for block: B:47:0x009f A[SYNTHETIC, Splitter:B:47:0x009f] */
     private static WbAppInfo parseWbInfoByAsset(Context context, String str) {
         Throwable th;
         Exception e;
@@ -145,17 +145,12 @@ public class WeiboAppManager {
                     th = th2;
                     inputStream2 = inputStream;
                     if (inputStream2 != null) {
-                        try {
-                            inputStream2.close();
-                        } catch (IOException e6) {
-                            e6.printStackTrace();
-                        }
                     }
                     throw th;
                 }
             }
-        } catch (Exception e7) {
-            e = e7;
+        } catch (Exception e6) {
+            e = e6;
             inputStream = null;
             LogUtil.e(TAG, e.getMessage());
             if (inputStream != null) {
@@ -164,6 +159,11 @@ public class WeiboAppManager {
         } catch (Throwable th3) {
             th = th3;
             if (inputStream2 != null) {
+                try {
+                    inputStream2.close();
+                } catch (IOException e7) {
+                    e7.printStackTrace();
+                }
             }
             throw th;
         }

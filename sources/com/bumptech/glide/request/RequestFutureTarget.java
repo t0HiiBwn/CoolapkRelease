@@ -129,7 +129,7 @@ public class RequestFutureTarget<R> implements FutureTarget<R>, RequestListener<
     public synchronized void onResourceReady(R r, Transition<? super R> transition) {
     }
 
-    private synchronized R doGet(Long l2) throws ExecutionException, InterruptedException, TimeoutException {
+    private synchronized R doGet(Long l) throws ExecutionException, InterruptedException, TimeoutException {
         if (this.assertBackgroundThread && !isDone()) {
             Util.assertBackgroundThread();
         }
@@ -140,11 +140,11 @@ public class RequestFutureTarget<R> implements FutureTarget<R>, RequestListener<
         } else if (this.resultReceived) {
             return this.resource;
         } else {
-            if (l2 == null) {
+            if (l == null) {
                 this.waiter.waitForTimeout(this, 0);
-            } else if (l2.longValue() > 0) {
+            } else if (l.longValue() > 0) {
                 long currentTimeMillis = System.currentTimeMillis();
-                long longValue = l2.longValue() + currentTimeMillis;
+                long longValue = l.longValue() + currentTimeMillis;
                 while (!isDone() && currentTimeMillis < longValue) {
                     this.waiter.waitForTimeout(this, longValue - currentTimeMillis);
                     currentTimeMillis = System.currentTimeMillis();

@@ -30,7 +30,7 @@ public class ItemFeedFollowableHeaderViewBindingImpl extends ItemFeedFollowableH
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(10);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"feed_warning"}, new int[]{9}, new int[]{2131558563});
+        includedLayouts.setIncludes(0, new String[]{"feed_warning"}, new int[]{9}, new int[]{2131558566});
     }
 
     public ItemFeedFollowableHeaderViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -86,7 +86,7 @@ public class ItemFeedFollowableHeaderViewBindingImpl extends ItemFeedFollowableH
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -102,7 +102,7 @@ public class ItemFeedFollowableHeaderViewBindingImpl extends ItemFeedFollowableH
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -222,7 +222,6 @@ public class ItemFeedFollowableHeaderViewBindingImpl extends ItemFeedFollowableH
             ThemeBindingAdapters.setBackgroundColor(this.followView, "colorAccent");
             bool = null;
             ViewBindingAdapters.clipView(this.followView, null, 13);
-            ThemeBindingAdapters.setTextColor(this.modifyView, "colorAccent");
         } else {
             bool = null;
         }
@@ -242,7 +241,7 @@ public class ItemFeedFollowableHeaderViewBindingImpl extends ItemFeedFollowableH
             TextViewBindingAdapter.setText(this.nameView, str5);
             TextViewBindingAdapters.setDatelineByEntity(this.timeView, feed);
             Boolean bool3 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231152, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, null, 2131231162, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
             ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str4, bool3);
         }
         executeBindingsOn(this.alertView);

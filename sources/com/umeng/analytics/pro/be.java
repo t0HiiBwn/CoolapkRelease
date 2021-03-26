@@ -13,7 +13,5 @@ public class be {
     public static final String i = "_uuid";
     public static final String j = "_re1";
     public static final String k = "_re2";
-
-    /* renamed from: l  reason: collision with root package name */
-    public static final String f1461l = "umeng_zcfg_flag";
+    public static final String l = "umeng_zcfg_flag";
 }

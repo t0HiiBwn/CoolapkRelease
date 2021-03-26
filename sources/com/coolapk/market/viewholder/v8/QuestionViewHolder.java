@@ -35,7 +35,7 @@ import kotlin.jvm.internal.StringCompanionObject;
 /* compiled from: QuestionViewHolder.kt */
 public final class QuestionViewHolder extends GenericBindHolder<ItemQuestionViewBinding, Feed> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558887;
+    public static final int LAYOUT_ID = 2131558894;
     private Feed feed;
     private final Lazy headerViewPart$delegate;
     private final BaseFeedRelativeHotPlug relativeInfoHotPlug;
@@ -145,11 +145,11 @@ public final class QuestionViewHolder extends GenericBindHolder<ItemQuestionView
         Feed feed2 = this.feed;
         if (feed2 != null) {
             int id = view.getId();
-            if (id == 2131362200) {
+            if (id == 2131362205) {
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");
                 ActionManagerCompat.startActivityByUrl$default(context, FeedUriAction.Companion.buildUrl(feed2), null, null, 12, null);
-            } else if (id != 2131363877) {
+            } else if (id != 2131363900) {
                 super.onClick(view);
             } else {
                 ActionManager.startUserSpaceActivity(view, feed2.getUid(), feed2.getUserAvatar());

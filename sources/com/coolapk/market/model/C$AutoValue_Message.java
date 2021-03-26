@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Message  reason: invalid class name */
 abstract class C$AutoValue_Message extends C$$AutoValue_Message {
-    C$AutoValue_Message(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, UserInfo userInfo, String str12, String str13, String str14, String str15, String str16, String str17, String str18, int i, int i2, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, NotifyCount notifyCount, int i3, int i4, Integer num2, String str27, UserInfo userInfo2) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l2, l3, str11, userInfo, str12, str13, str14, str15, str16, str17, str18, i, i2, str19, str20, str21, str22, str23, str24, str25, str26, notifyCount, i3, i4, num2, str27, userInfo2);
+    C$AutoValue_Message(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, UserInfo userInfo, String str12, String str13, String str14, String str15, String str16, String str17, String str18, int i, int i2, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, NotifyCount notifyCount, int i3, int i4, Integer num2, String str27, UserInfo userInfo2) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, l, l2, str11, userInfo, str12, str13, str14, str15, str16, str17, str18, i, i2, str19, str20, str21, str22, str23, str24, str25, str26, notifyCount, i3, i4, num2, str27, userInfo2);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Message$GsonTypeAdapter */
@@ -188,13 +188,13 @@ abstract class C$AutoValue_Message extends C$$AutoValue_Message {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -426,8 +426,8 @@ abstract class C$AutoValue_Message extends C$$AutoValue_Message {
             String str8 = this.defaultLogo;
             String str9 = this.defaultSubTitle;
             String str10 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str11 = this.defaultDeprecatedUserAvatar;
             UserInfo userInfo = this.defaultUserInfo;
             String str12 = this.defaultDeprecatedUserName;
@@ -463,8 +463,8 @@ abstract class C$AutoValue_Message extends C$$AutoValue_Message {
             String str34 = str8;
             String str35 = str9;
             String str36 = str10;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str37 = str11;
             String str38 = str;
             UserInfo userInfo3 = userInfo;
@@ -759,7 +759,7 @@ abstract class C$AutoValue_Message extends C$$AutoValue_Message {
                             str40 = this.displayUserNameAdapter.read(jsonReader);
                             continue;
                         case '\n':
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 11:
                             str49 = this.messageCardAdapter.read(jsonReader);
@@ -840,7 +840,7 @@ abstract class C$AutoValue_Message extends C$$AutoValue_Message {
                             str45 = this.fromUserNameAdapter.read(jsonReader);
                             continue;
                         case '%':
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -849,7 +849,7 @@ abstract class C$AutoValue_Message extends C$$AutoValue_Message {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Message(str38, str28, str29, num3, str30, str31, str32, str33, str34, str35, str36, l4, l5, str37, userInfo3, str39, str40, str41, str42, str43, str44, str45, i5, i6, str46, str47, str48, str49, str50, str51, str52, str53, notifyCount2, i7, i8, num4, str54, userInfo2);
+            return new AutoValue_Message(str38, str28, str29, num3, str30, str31, str32, str33, str34, str35, str36, l3, l4, str37, userInfo3, str39, str40, str41, str42, str43, str44, str45, i5, i6, str46, str47, str48, str49, str50, str51, str52, str53, notifyCount2, i7, i8, num4, str54, userInfo2);
         }
     }
 }

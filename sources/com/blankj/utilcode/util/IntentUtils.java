@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 public final class IntentUtils {
     private IntentUtils() {
@@ -183,24 +184,27 @@ public final class IntentUtils {
     public static Intent getShutdownIntent() {
         Intent intent;
         if (Build.VERSION.SDK_INT >= 26) {
-            intent = new Intent("android.intent.action.ACTION_SHUTDOWN");
-        } else {
             intent = new Intent("com.android.internal.intent.action.REQUEST_SHUTDOWN");
+        } else {
+            intent = new Intent("android.intent.action.ACTION_REQUEST_SHUTDOWN");
         }
         intent.putExtra("android.intent.extra.KEY_CONFIRM", false);
         return intent.addFlags(268435456);
     }
 
     public static Intent getDialIntent(String str) {
-        return getIntent(new Intent("android.intent.action.DIAL", Uri.parse("tel:" + str)), true);
+        Objects.requireNonNull(str, "Argument 'phoneNumber' of type String (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
+        return getIntent(new Intent("android.intent.action.DIAL", Uri.parse("tel:" + Uri.encode(str))), true);
     }
 
     public static Intent getCallIntent(String str) {
-        return getIntent(new Intent("android.intent.action.CALL", Uri.parse("tel:" + str)), true);
+        Objects.requireNonNull(str, "Argument 'phoneNumber' of type String (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
+        return getIntent(new Intent("android.intent.action.CALL", Uri.parse("tel:" + Uri.encode(str))), true);
     }
 
     public static Intent getSendSmsIntent(String str, String str2) {
-        Intent intent = new Intent("android.intent.action.SENDTO", Uri.parse("smsto:" + str));
+        Objects.requireNonNull(str, "Argument 'phoneNumber' of type String (#0 out of 2, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
+        Intent intent = new Intent("android.intent.action.SENDTO", Uri.parse("smsto:" + Uri.encode(str)));
         intent.putExtra("sms_body", str2);
         return getIntent(intent, true);
     }

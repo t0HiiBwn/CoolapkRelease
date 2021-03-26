@@ -28,6 +28,7 @@ import com.blankj.utilcode.R;
 import com.blankj.utilcode.util.Utils;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;
 import java.util.Objects;
 
@@ -37,7 +38,7 @@ public final class ToastUtils {
     private static final String NOTHING = "toast nothing";
     private static final String NULL = "toast null";
     private static final String TAG_TOAST = "TAG_TOAST";
-    private static IToast iToast;
+    private static WeakReference<IToast> sWeakToast;
     private boolean isLong = false;
     private boolean isNotUseSystemToast = false;
     private int mBgColor = -16777217;
@@ -108,7 +109,9 @@ public final class ToastUtils {
     }
 
     public final ToastUtils setLeftIcon(int i) {
-        return setLeftIcon(ContextCompat.getDrawable(Utils.getApp(), i));
+        ToastUtils leftIcon = setLeftIcon(ContextCompat.getDrawable(Utils.getApp(), i));
+        Objects.requireNonNull(leftIcon, "Detected an attempt to return null from a method com.blankj.utilcode.util.ToastUtils.setLeftIcon() marked by @androidx.annotation.NonNull");
+        return leftIcon;
     }
 
     public final ToastUtils setLeftIcon(Drawable drawable) {
@@ -117,7 +120,9 @@ public final class ToastUtils {
     }
 
     public final ToastUtils setTopIcon(int i) {
-        return setTopIcon(ContextCompat.getDrawable(Utils.getApp(), i));
+        ToastUtils topIcon = setTopIcon(ContextCompat.getDrawable(Utils.getApp(), i));
+        Objects.requireNonNull(topIcon, "Detected an attempt to return null from a method com.blankj.utilcode.util.ToastUtils.setTopIcon() marked by @androidx.annotation.NonNull");
+        return topIcon;
     }
 
     public final ToastUtils setTopIcon(Drawable drawable) {
@@ -126,7 +131,9 @@ public final class ToastUtils {
     }
 
     public final ToastUtils setRightIcon(int i) {
-        return setRightIcon(ContextCompat.getDrawable(Utils.getApp(), i));
+        ToastUtils rightIcon = setRightIcon(ContextCompat.getDrawable(Utils.getApp(), i));
+        Objects.requireNonNull(rightIcon, "Detected an attempt to return null from a method com.blankj.utilcode.util.ToastUtils.setRightIcon() marked by @androidx.annotation.NonNull");
+        return rightIcon;
     }
 
     public final ToastUtils setRightIcon(Drawable drawable) {
@@ -135,7 +142,9 @@ public final class ToastUtils {
     }
 
     public final ToastUtils setBottomIcon(int i) {
-        return setBottomIcon(ContextCompat.getDrawable(Utils.getApp(), i));
+        ToastUtils bottomIcon = setBottomIcon(ContextCompat.getDrawable(Utils.getApp(), i));
+        Objects.requireNonNull(bottomIcon, "Detected an attempt to return null from a method com.blankj.utilcode.util.ToastUtils.setBottomIcon() marked by @androidx.annotation.NonNull");
+        return bottomIcon;
     }
 
     public final ToastUtils setBottomIcon(Drawable drawable) {
@@ -149,7 +158,9 @@ public final class ToastUtils {
     }
 
     public static ToastUtils getDefaultMaker() {
-        return DEFAULT_MAKER;
+        ToastUtils toastUtils = DEFAULT_MAKER;
+        Objects.requireNonNull(toastUtils, "Detected an attempt to return null from a method com.blankj.utilcode.util.ToastUtils.getDefaultMaker() marked by @androidx.annotation.NonNull");
+        return toastUtils;
     }
 
     public final void show(CharSequence charSequence) {
@@ -169,6 +180,7 @@ public final class ToastUtils {
     }
 
     public final void show(View view) {
+        Objects.requireNonNull(view, "Argument 'view' of type View (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         show(view, getDuration(), this);
     }
 
@@ -247,11 +259,20 @@ public final class ToastUtils {
     }
 
     public static void cancel() {
-        IToast iToast2 = iToast;
-        if (iToast2 != null) {
-            iToast2.cancel();
-            iToast = null;
-        }
+        UtilsBridge.runOnUiThread(new Runnable() {
+            /* class com.blankj.utilcode.util.ToastUtils.AnonymousClass1 */
+
+            @Override // java.lang.Runnable
+            public void run() {
+                if (ToastUtils.sWeakToast != null) {
+                    IToast iToast = (IToast) ToastUtils.sWeakToast.get();
+                    if (iToast != null) {
+                        iToast.cancel();
+                    }
+                    WeakReference unused = ToastUtils.sWeakToast = null;
+                }
+            }
+        });
     }
 
     private static void show(CharSequence charSequence, int i, ToastUtils toastUtils) {
@@ -259,12 +280,14 @@ public final class ToastUtils {
     }
 
     private static void show(View view, int i, ToastUtils toastUtils) {
+        Objects.requireNonNull(view, "Argument 'view' of type View (#0 out of 3, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         show(view, null, i, toastUtils);
     }
 
     private static void show(final View view, final CharSequence charSequence, final int i, ToastUtils toastUtils) {
+        Objects.requireNonNull(toastUtils, "Argument 'utils' of type ToastUtils (#3 out of 4, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         UtilsBridge.runOnUiThread(new Runnable(toastUtils) {
-            /* class com.blankj.utilcode.util.ToastUtils.AnonymousClass1 */
+            /* class com.blankj.utilcode.util.ToastUtils.AnonymousClass2 */
             final /* synthetic */ ToastUtils val$utils;
 
             {
@@ -274,13 +297,15 @@ public final class ToastUtils {
             @Override // java.lang.Runnable
             public void run() {
                 ToastUtils.cancel();
-                IToast unused = ToastUtils.iToast = ToastUtils.newToast(this.val$utils);
+                IToast newToast = ToastUtils.newToast(this.val$utils);
+                WeakReference unused = ToastUtils.sWeakToast = new WeakReference(newToast);
+                View view = view;
                 if (view != null) {
-                    ToastUtils.iToast.setToastView(view);
+                    newToast.setToastView(view);
                 } else {
-                    ToastUtils.iToast.setToastView(charSequence);
+                    newToast.setToastView(charSequence);
                 }
-                ToastUtils.iToast.show(i);
+                newToast.show(i);
             }
         });
     }
@@ -305,14 +330,13 @@ public final class ToastUtils {
         if (Build.VERSION.SDK_INT < 25) {
             return new WindowManagerToast(toastUtils, 2005);
         }
-        if (UtilsBridge.isGrantedDrawOverlays()) {
-            if (Build.VERSION.SDK_INT >= 26) {
-                new WindowManagerToast(toastUtils, 2038);
-            } else {
-                new WindowManagerToast(toastUtils, 2002);
-            }
+        if (!UtilsBridge.isGrantedDrawOverlays()) {
+            return new ActivityToast(toastUtils);
         }
-        return new ActivityToast(toastUtils);
+        if (Build.VERSION.SDK_INT >= 26) {
+            return new WindowManagerToast(toastUtils, 2038);
+        }
+        return new WindowManagerToast(toastUtils, 2002);
     }
 
     static final class SystemToast extends AbsToast {
@@ -365,14 +389,21 @@ public final class ToastUtils {
     }
 
     static final class WindowManagerToast extends AbsToast {
-        private Utils.ActivityLifecycleCallbacks mActivityLifecycleCallbacks;
         private WindowManager.LayoutParams mParams;
         private WindowManager mWM;
 
         WindowManagerToast(ToastUtils toastUtils, int i) {
             super(toastUtils);
+            this.mParams = new WindowManager.LayoutParams();
+            this.mWM = (WindowManager) Utils.getApp().getSystemService("window");
+            this.mParams.type = i;
+        }
+
+        WindowManagerToast(ToastUtils toastUtils, WindowManager windowManager, int i) {
+            super(toastUtils);
             WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
             this.mParams = layoutParams;
+            this.mWM = windowManager;
             layoutParams.type = i;
         }
 
@@ -397,13 +428,12 @@ public final class ToastUtils {
                 this.mParams.y = this.mToast.getYOffset();
                 this.mParams.horizontalMargin = this.mToast.getHorizontalMargin();
                 this.mParams.verticalMargin = this.mToast.getVerticalMargin();
-                WindowManager windowManager = (WindowManager) Utils.getApp().getSystemService("window");
-                this.mWM = windowManager;
-                if (windowManager != null) {
-                    try {
+                try {
+                    WindowManager windowManager = this.mWM;
+                    if (windowManager != null) {
                         windowManager.addView(this.mToastView, this.mParams);
-                    } catch (Exception unused) {
                     }
+                } catch (Exception unused) {
                 }
                 UtilsBridge.runOnUiThreadDelayed(new Runnable() {
                     /* class com.blankj.utilcode.util.ToastUtils.WindowManagerToast.AnonymousClass1 */
@@ -432,6 +462,7 @@ public final class ToastUtils {
 
     static final class ActivityToast extends AbsToast {
         private static int sShowingIndex;
+        private IToast iToast;
         private Utils.ActivityLifecycleCallbacks mActivityLifecycleCallbacks;
 
         ActivityToast(ToastUtils toastUtils) {
@@ -442,14 +473,18 @@ public final class ToastUtils {
         public void show(int i) {
             if (this.mToast != null) {
                 if (!UtilsBridge.isAppForeground()) {
-                    showSystemToast(i);
+                    this.iToast = showSystemToast(i);
                     return;
                 }
                 boolean z = false;
                 for (Activity activity : UtilsBridge.getActivityList()) {
                     if (UtilsBridge.isActivityAlive(activity)) {
-                        showWithActivity(activity, sShowingIndex, true);
-                        z = true;
+                        if (!z) {
+                            this.iToast = showWithActivityWindow(activity, i);
+                            z = true;
+                        } else {
+                            showWithActivityView(activity, sShowingIndex, true);
+                        }
                     }
                 }
                 if (z) {
@@ -465,7 +500,7 @@ public final class ToastUtils {
                     sShowingIndex++;
                     return;
                 }
-                showSystemToast(i);
+                this.iToast = showSystemToast(i);
             }
         }
 
@@ -490,23 +525,38 @@ public final class ToastUtils {
                     }
                 }
             }
+            IToast iToast2 = this.iToast;
+            if (iToast2 != null) {
+                iToast2.cancel();
+                this.iToast = null;
+            }
             super.cancel();
         }
 
-        private void showSystemToast(int i) {
+        private IToast showSystemToast(int i) {
             SystemToast systemToast = new SystemToast(this.mToastUtils);
             systemToast.mToast = this.mToast;
             systemToast.show(i);
+            return systemToast;
+        }
+
+        private IToast showWithActivityWindow(Activity activity, int i) {
+            WindowManagerToast windowManagerToast = new WindowManagerToast(this.mToastUtils, activity.getWindowManager(), 99);
+            windowManagerToast.mToastView = getToastViewSnapshot(-1);
+            windowManagerToast.mToast = this.mToast;
+            windowManagerToast.show(i);
+            return windowManagerToast;
         }
 
         /* access modifiers changed from: private */
-        public void showWithActivity(Activity activity, int i, boolean z) {
+        public void showWithActivityView(Activity activity, int i, boolean z) {
             Window window = activity.getWindow();
             if (window != null) {
                 ViewGroup viewGroup = (ViewGroup) window.getDecorView();
                 FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(-2, -2);
                 layoutParams.gravity = this.mToast.getGravity();
                 layoutParams.bottomMargin = this.mToast.getYOffset() + UtilsBridge.getNavBarHeight();
+                layoutParams.topMargin = this.mToast.getYOffset() + UtilsBridge.getStatusBarHeight();
                 layoutParams.leftMargin = this.mToast.getXOffset();
                 View toastViewSnapshot = getToastViewSnapshot(i);
                 if (z) {
@@ -515,14 +565,6 @@ public final class ToastUtils {
                 }
                 viewGroup.addView(toastViewSnapshot, layoutParams);
             }
-        }
-
-        private View getToastViewSnapshot(int i) {
-            Bitmap view2Bitmap = UtilsBridge.view2Bitmap(this.mToastView);
-            ImageView imageView = new ImageView(Utils.getApp());
-            imageView.setTag("TAG_TOAST" + i);
-            imageView.setImageBitmap(view2Bitmap);
-            return imageView;
         }
 
         private void registerLifecycleCallback() {
@@ -534,7 +576,7 @@ public final class ToastUtils {
                 public void onActivityCreated(Activity activity) {
                     Objects.requireNonNull(activity, "Argument 'activity' of type Activity (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
                     if (ActivityToast.this.isShowing()) {
-                        ActivityToast.this.showWithActivity(activity, i, false);
+                        ActivityToast.this.showWithActivityView(activity, i, false);
                     }
                 }
             };
@@ -576,6 +618,7 @@ public final class ToastUtils {
             View tryApplyUtilsToastView = this.mToastUtils.tryApplyUtilsToastView(charSequence);
             if (tryApplyUtilsToastView != null) {
                 setToastView(tryApplyUtilsToastView);
+                processRtlIfNeed();
                 return;
             }
             View view = this.mToast.getView();
@@ -592,9 +635,16 @@ public final class ToastUtils {
                 textView.setTextSize((float) this.mToastUtils.mTextSize);
             }
             setBg(textView);
+            processRtlIfNeed();
         }
 
-        protected void setBg(TextView textView) {
+        private void processRtlIfNeed() {
+            if (UtilsBridge.isLayoutRtl()) {
+                setToastView(getToastViewSnapshot(-1));
+            }
+        }
+
+        private void setBg(TextView textView) {
             if (this.mToastUtils.mBgResource != -1) {
                 this.mToastView.setBackgroundResource(this.mToastUtils.mBgResource);
                 textView.setBackgroundColor(0);
@@ -622,6 +672,14 @@ public final class ToastUtils {
             }
             this.mToast = null;
             this.mToastView = null;
+        }
+
+        View getToastViewSnapshot(int i) {
+            Bitmap view2Bitmap = UtilsBridge.view2Bitmap(this.mToastView);
+            ImageView imageView = new ImageView(Utils.getApp());
+            imageView.setTag("TAG_TOAST" + i);
+            imageView.setImageBitmap(view2Bitmap);
+            return imageView;
         }
     }
 

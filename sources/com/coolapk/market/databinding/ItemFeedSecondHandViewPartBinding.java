@@ -32,7 +32,7 @@ public abstract class ItemFeedSecondHandViewPartBinding extends ViewDataBinding 
 
     @Deprecated
     public static ItemFeedSecondHandViewPartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedSecondHandViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558725, viewGroup, z, obj);
+        return (ItemFeedSecondHandViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558732, viewGroup, z, obj);
     }
 
     public static ItemFeedSecondHandViewPartBinding inflate(LayoutInflater layoutInflater) {
@@ -41,7 +41,7 @@ public abstract class ItemFeedSecondHandViewPartBinding extends ViewDataBinding 
 
     @Deprecated
     public static ItemFeedSecondHandViewPartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedSecondHandViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558725, null, false, obj);
+        return (ItemFeedSecondHandViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558732, null, false, obj);
     }
 
     public static ItemFeedSecondHandViewPartBinding bind(View view) {
@@ -50,6 +50,6 @@ public abstract class ItemFeedSecondHandViewPartBinding extends ViewDataBinding 
 
     @Deprecated
     public static ItemFeedSecondHandViewPartBinding bind(View view, Object obj) {
-        return (ItemFeedSecondHandViewPartBinding) bind(obj, view, 2131558725);
+        return (ItemFeedSecondHandViewPartBinding) bind(obj, view, 2131558732);
     }
 }

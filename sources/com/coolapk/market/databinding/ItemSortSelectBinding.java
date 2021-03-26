@@ -38,7 +38,7 @@ public abstract class ItemSortSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSortSelectBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSortSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558936, viewGroup, z, obj);
+        return (ItemSortSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558943, viewGroup, z, obj);
     }
 
     public static ItemSortSelectBinding inflate(LayoutInflater layoutInflater) {
@@ -47,7 +47,7 @@ public abstract class ItemSortSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSortSelectBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSortSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558936, null, false, obj);
+        return (ItemSortSelectBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558943, null, false, obj);
     }
 
     public static ItemSortSelectBinding bind(View view) {
@@ -56,6 +56,6 @@ public abstract class ItemSortSelectBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSortSelectBinding bind(View view, Object obj) {
-        return (ItemSortSelectBinding) bind(obj, view, 2131558936);
+        return (ItemSortSelectBinding) bind(obj, view, 2131558943);
     }
 }

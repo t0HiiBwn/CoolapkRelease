@@ -42,11 +42,11 @@ final class AlbumItemDialog$buildMultiActionItem$1 extends Lambda implements Fun
 
     public final void invoke(List<ActionItem> list) {
         Intrinsics.checkNotNullParameter(list, "it");
-        String string = this.this$0.getString(2131886712);
+        String string = this.this$0.getString(2131886774);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_dialog_copy_content)");
-        String string2 = this.this$0.getString(2131886713);
+        String string2 = this.this$0.getString(2131886775);
         Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_dialog_copy_free)");
-        String string3 = this.this$0.getString(2131886363);
+        String string3 = this.this$0.getString(2131886423);
         Intrinsics.checkNotNullExpressionValue(string3, "getString(R.string.menu_action_copy_link)");
         list.add(new CopyActionItem(string3, "https://www.coolapk.com" + this.$album.getUrl() + " "));
         String allLinkAndText = StringUtils.getAllLinkAndText(this.$album.getIntroduce());
@@ -62,7 +62,7 @@ final class AlbumItemDialog$buildMultiActionItem$1 extends Lambda implements Fun
             String url = uRLSpan.getURL();
             Intrinsics.checkNotNullExpressionValue(url, "url");
             if (StringsKt.startsWith$default(url, "http", false, 2, (Object) null)) {
-                String string4 = this.this$0.getString(2131886714, url);
+                String string4 = this.this$0.getString(2131886776, url);
                 Intrinsics.checkNotNullExpressionValue(string4, "getString(R.string.str_dialog_copy_something, url)");
                 list.add(new CopyActionItem(string4, url));
             }

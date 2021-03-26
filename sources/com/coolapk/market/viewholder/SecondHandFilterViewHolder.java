@@ -18,7 +18,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SecondHandFilterViewHolder.kt */
 public final class SecondHandFilterViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558916;
+    public static final int LAYOUT_ID = 2131558923;
     private final ItemSearchShFilterBinding binding;
     private final ArrayList<TextView> filterTextViews;
     private final ArrayList<LinearLayout> filterViews;

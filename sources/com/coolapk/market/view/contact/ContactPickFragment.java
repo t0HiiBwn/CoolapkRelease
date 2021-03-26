@@ -99,7 +99,7 @@ public class ContactPickFragment extends SimpleAsyncListFragment<Result<List<Ent
         super.onActivityCreated(bundle);
         ((PreventAutoScrollRecyclerView) getRecyclerView()).setPreventAutoScroll(false);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558967, 2131231052).type(2131558660, 2131231052).type(2131558917, 2131231052).type(2131558954, 2131231052).type(2131558971, 2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558974, 2131231062).type(2131558666, 2131231062).type(2131558924, 2131231062).type(2131558961, 2131231062).type(2131558978, 2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setClipToPadding(false);
         getRecyclerView().post(new Runnable() {
@@ -217,15 +217,15 @@ public class ContactPickFragment extends SimpleAsyncListFragment<Result<List<Ent
         }
         switch (c) {
             case 0:
-                return 2131558954;
+                return 2131558961;
             case 1:
-                return 2131558660;
+                return 2131558666;
             case 2:
-                return 2131558967;
+                return 2131558974;
             case 3:
-                return 2131558971;
+                return 2131558978;
             case 4:
-                return 2131558917;
+                return 2131558924;
             default:
                 throw new RuntimeException("unknown viewType");
         }
@@ -235,15 +235,15 @@ public class ContactPickFragment extends SimpleAsyncListFragment<Result<List<Ent
     public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
         switch (i) {
-            case 2131558660:
+            case 2131558666:
                 return new ContactPickViewHolder(inflate, getComponent(), null);
-            case 2131558917:
+            case 2131558924:
                 return new SearchViewHolder(inflate, null, null);
-            case 2131558954:
+            case 2131558961:
                 return new TitleViewHolder(inflate, null);
-            case 2131558967:
+            case 2131558974:
                 return new UserPickViewHolder(inflate, getComponent(), null);
-            case 2131558971:
+            case 2131558978:
                 return new DeleteRecentViewHolder(inflate, null);
             default:
                 return null;
@@ -284,7 +284,7 @@ public class ContactPickFragment extends SimpleAsyncListFragment<Result<List<Ent
     }
 
     public class SearchViewHolder extends GenericBindHolder<ItemSearchViewBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558917;
+        public static final int LAYOUT_ID = 2131558924;
 
         public SearchViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
             super(view, dataBindingComponent, itemActionHandler);
@@ -326,7 +326,7 @@ public class ContactPickFragment extends SimpleAsyncListFragment<Result<List<Ent
     }
 
     public class DeleteRecentViewHolder extends GenericBindHolder<ItemUserDeleteRecentBinding, HolderItem> {
-        public static final int LAYOUT_ID = 2131558971;
+        public static final int LAYOUT_ID = 2131558978;
 
         public DeleteRecentViewHolder(View view, ItemActionHandler itemActionHandler) {
             super(view, null, itemActionHandler);
@@ -342,7 +342,7 @@ public class ContactPickFragment extends SimpleAsyncListFragment<Result<List<Ent
                     int i = 0;
                     while (i < ContactPickFragment.this.getDataList().size()) {
                         int itemViewType = ContactPickFragment.this.getItemViewType(i);
-                        if (itemViewType == 2131558971 || itemViewType == 2131558967) {
+                        if (itemViewType == 2131558978 || itemViewType == 2131558974) {
                             ContactPickFragment.this.getDataList().remove(i);
                             i--;
                         }

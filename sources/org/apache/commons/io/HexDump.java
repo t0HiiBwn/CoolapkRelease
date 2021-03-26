@@ -9,6 +9,20 @@ public class HexDump {
     private static final char[] _hexcodes = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
     private static final int[] _shifts = {28, 24, 20, 16, 12, 8, 4, 0};
 
+    private static StringBuilder dump(StringBuilder sb, byte b) {
+        for (int i = 0; i < 2; i++) {
+            sb.append(_hexcodes[(b >> _shifts[i + 6]) & 15]);
+        }
+        return sb;
+    }
+
+    private static StringBuilder dump(StringBuilder sb, long j) {
+        for (int i = 0; i < 8; i++) {
+            sb.append(_hexcodes[((int) (j >> _shifts[i])) & 15]);
+        }
+        return sb;
+    }
+
     public static void dump(byte[] bArr, long j, OutputStream outputStream, int i) throws IOException, ArrayIndexOutOfBoundsException, IllegalArgumentException {
         if (i < 0 || i >= bArr.length) {
             throw new ArrayIndexOutOfBoundsException("illegal index: " + i + " into array of length " + bArr.length);
@@ -47,19 +61,5 @@ public class HexDump {
         } else {
             throw new IllegalArgumentException("cannot write to nullstream");
         }
-    }
-
-    private static StringBuilder dump(StringBuilder sb, long j) {
-        for (int i = 0; i < 8; i++) {
-            sb.append(_hexcodes[((int) (j >> _shifts[i])) & 15]);
-        }
-        return sb;
-    }
-
-    private static StringBuilder dump(StringBuilder sb, byte b) {
-        for (int i = 0; i < 2; i++) {
-            sb.append(_hexcodes[(b >> _shifts[i + 6]) & 15]);
-        }
-        return sb;
     }
 }

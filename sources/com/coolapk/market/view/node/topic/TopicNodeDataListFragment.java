@@ -95,7 +95,7 @@ public final class TopicNodeDataListFragment extends EntityListFragment {
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new NodeHelper.NodeDividerRule());
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558956).constructor(new TopicNodeDataListFragment$onActivityCreated$1(this)).suitedMethod(TopicNodeDataListFragment$onActivityCreated$2.INSTANCE).resetItemViewType(NodeTopContentViewHolder.Companion.getVIEW_TYPE()).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558963).constructor(new TopicNodeDataListFragment$onActivityCreated$1(this)).suitedMethod(TopicNodeDataListFragment$onActivityCreated$2.INSTANCE).resetItemViewType(NodeTopContentViewHolder.Companion.getVIEW_TYPE()).build(), 0, 2, null);
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         RecyclerView recyclerView2 = recyclerView;

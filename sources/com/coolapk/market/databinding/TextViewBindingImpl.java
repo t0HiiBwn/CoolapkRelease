@@ -28,8 +28,8 @@ public class TextViewBindingImpl extends TextViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363289, 2);
-        sparseIntArray.put(2131363533, 3);
+        sparseIntArray.put(2131363304, 2);
+        sparseIntArray.put(2131363551, 3);
     }
 
     public TextViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

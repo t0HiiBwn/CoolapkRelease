@@ -24,7 +24,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SearchHotListCardViewHolder.kt */
 public final class SearchHotListCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131559128;
+    public static final int LAYOUT_ID = 2131559135;
     private DataAdapter adapter;
     private final SearchListCardBinding binding;
     private Card<Entity> card;
@@ -154,7 +154,7 @@ public final class SearchHotListCardViewHolder extends BindingViewHolder {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public SearchHotListViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131559127, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131559134, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             return new SearchHotListViewHolder(inflate, this.component, null, this.presenter);
         }

@@ -15,25 +15,25 @@ public final class JobSupportKt {
     private static final Symbol TOO_LATE_TO_CANCEL = new Symbol("TOO_LATE_TO_CANCEL");
     private static final int TRUE = 1;
 
-    private static /* synthetic */ void COMPLETING_ALREADY$annotations() {
+    private static /* synthetic */ void getCOMPLETING_ALREADY$annotations() {
     }
 
-    private static /* synthetic */ void COMPLETING_RETRY$annotations() {
+    private static /* synthetic */ void getCOMPLETING_RETRY$annotations() {
     }
 
-    public static /* synthetic */ void COMPLETING_WAITING_CHILDREN$annotations() {
+    public static /* synthetic */ void getCOMPLETING_WAITING_CHILDREN$annotations() {
     }
 
-    private static /* synthetic */ void EMPTY_ACTIVE$annotations() {
+    private static /* synthetic */ void getEMPTY_ACTIVE$annotations() {
     }
 
-    private static /* synthetic */ void EMPTY_NEW$annotations() {
+    private static /* synthetic */ void getEMPTY_NEW$annotations() {
     }
 
-    private static /* synthetic */ void SEALED$annotations() {
+    private static /* synthetic */ void getSEALED$annotations() {
     }
 
-    private static /* synthetic */ void TOO_LATE_TO_CANCEL$annotations() {
+    private static /* synthetic */ void getTOO_LATE_TO_CANCEL$annotations() {
     }
 
     public static final Object boxIncomplete(Object obj) {

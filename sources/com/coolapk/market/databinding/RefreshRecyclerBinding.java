@@ -49,7 +49,7 @@ public abstract class RefreshRecyclerBinding extends ViewDataBinding {
 
     @Deprecated
     public static RefreshRecyclerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (RefreshRecyclerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559114, viewGroup, z, obj);
+        return (RefreshRecyclerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559121, viewGroup, z, obj);
     }
 
     public static RefreshRecyclerBinding inflate(LayoutInflater layoutInflater) {
@@ -58,7 +58,7 @@ public abstract class RefreshRecyclerBinding extends ViewDataBinding {
 
     @Deprecated
     public static RefreshRecyclerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (RefreshRecyclerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559114, null, false, obj);
+        return (RefreshRecyclerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559121, null, false, obj);
     }
 
     public static RefreshRecyclerBinding bind(View view) {
@@ -67,6 +67,6 @@ public abstract class RefreshRecyclerBinding extends ViewDataBinding {
 
     @Deprecated
     public static RefreshRecyclerBinding bind(View view, Object obj) {
-        return (RefreshRecyclerBinding) bind(obj, view, 2131559114);
+        return (RefreshRecyclerBinding) bind(obj, view, 2131559121);
     }
 }

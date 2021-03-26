@@ -23,7 +23,7 @@ public class SubmitFeedExtraLogoBindingImpl extends SubmitFeedExtraLogoBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
+        sparseIntArray.put(2131363604, 2);
     }
 
     public SubmitFeedExtraLogoBindingImpl(DataBindingComponent dataBindingComponent, View view) {

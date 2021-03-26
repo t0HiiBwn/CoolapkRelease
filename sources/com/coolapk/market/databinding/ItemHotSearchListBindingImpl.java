@@ -26,8 +26,8 @@ public class ItemHotSearchListBindingImpl extends ItemHotSearchListBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 2);
-        sparseIntArray.put(2131362664, 3);
+        sparseIntArray.put(2131363604, 2);
+        sparseIntArray.put(2131362675, 3);
     }
 
     public ItemHotSearchListBindingImpl(DataBindingComponent dataBindingComponent, View view) {

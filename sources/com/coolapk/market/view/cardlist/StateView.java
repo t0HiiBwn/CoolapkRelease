@@ -126,6 +126,6 @@ public final class StateView extends LinearLayout {
         if (textView3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("textView");
         }
-        textView3.setText(getContext().getString(2131886962));
+        textView3.setText(getContext().getString(2131887024));
     }
 }

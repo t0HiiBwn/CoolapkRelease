@@ -22,6 +22,7 @@
     <color name="accent_purple">#9c27b0</color>
     <color name="accent_red">#db4437</color>
     <color name="accent_teal">#009688</color>
+    <color name="accent_time_limit">#3e5a73</color>
     <color name="accent_white">@color/green</color>
     <color name="activated_black">@color/activated_teal</color>
     <color name="activated_blue">#64b5f6</color>
@@ -39,6 +40,7 @@
     <color name="activated_purple">#ba68c8</color>
     <color name="activated_red">#69db4437</color>
     <color name="activated_teal">#4db6ac</color>
+    <color name="activated_time_limit">#3e5a73</color>
     <color name="activated_white">@color/activated_green</color>
     <color name="alibc_transparent">#00000000</color>
     <color name="aliuser_color_dark_gray">#959595</color>
@@ -324,6 +326,8 @@
     <color name="tag_background_color">#3d3d3d</color>
     <color name="tag_text_color">#b7b7b7</color>
     <color name="teal">#009688</color>
+    <color name="time_limit_blue">#3e5a73</color>
+    <color name="time_limit_dark">#3e5a73</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6ffffff</color>
     <color name="transparent">#0000</color>
@@ -406,6 +410,12 @@
     <color name="ucrop_color_widget_active">#ff6e40</color>
     <color name="ucrop_color_widget_background">#fff</color>
     <color name="ucrop_color_widget_text">#000</color>
+    <color name="upsdk_blue_text_007dff">#007dff</color>
+    <color name="upsdk_category_button_select_pressed">#0076f2</color>
+    <color name="upsdk_color_gray_1">#f2f2f2</color>
+    <color name="upsdk_color_gray_10">#191919</color>
+    <color name="upsdk_color_gray_7">#808080</color>
+    <color name="upsdk_white">#ffffffff</color>
     <color name="wallpaper_list_background">#dedfe0</color>
     <color name="white">#ffffff</color>
     <color name="white_primary_text">#dcffffff</color>

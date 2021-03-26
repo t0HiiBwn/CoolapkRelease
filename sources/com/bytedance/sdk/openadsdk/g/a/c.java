@@ -22,9 +22,7 @@ public class c<T extends c> implements a {
     private int i = 0;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1331l;
+    private String l;
     private String m;
 
     private T q() {
@@ -204,11 +202,11 @@ public class c<T extends c> implements a {
     }
 
     public String o() {
-        return this.f1331l;
+        return this.l;
     }
 
     public T i(String str) {
-        this.f1331l = str;
+        this.l = str;
         return q();
     }
 }

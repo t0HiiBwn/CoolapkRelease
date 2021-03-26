@@ -43,11 +43,15 @@ public final class ApiUtils {
     }
 
     public static void register(Class<? extends BaseApi> cls) {
-        getInstance().registerImpl(cls);
+        if (cls != null) {
+            getInstance().registerImpl(cls);
+        }
     }
 
     public static String toString_() {
-        return getInstance().toString();
+        String apiUtils = getInstance().toString();
+        Objects.requireNonNull(apiUtils, "Detected an attempt to return null from a method com.blankj.utilcode.util.ApiUtils.toString_() marked by @androidx.annotation.NonNull");
+        return apiUtils;
     }
 
     public String toString() {

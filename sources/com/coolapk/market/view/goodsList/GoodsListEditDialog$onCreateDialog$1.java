@@ -29,7 +29,7 @@ final class GoodsListEditDialog$onCreateDialog$1 implements View.OnClickListener
         final ProgressDialog progressDialog = new ProgressDialog(this.this$0.getActivity());
         progressDialog.setProgressStyle(0);
         progressDialog.setCancelable(true);
-        progressDialog.setMessage(this.this$0.getString(2131886579));
+        progressDialog.setMessage(this.this$0.getString(2131886641));
         progressDialog.show();
         GoodsListEditDialog goodsListEditDialog = this.this$0;
         EditText access$getTitleView$p = GoodsListEditDialog.access$getTitleView$p(goodsListEditDialog);
@@ -40,7 +40,7 @@ final class GoodsListEditDialog$onCreateDialog$1 implements View.OnClickListener
         Intrinsics.checkNotNull(access$getIntro$p);
         GoodsListEditDialog.access$setGoodsListDescription$p(goodsListEditDialog2, access$getIntro$p.getText().toString());
         if (TextUtils.isEmpty(GoodsListEditDialog.access$getGoodsListTitle$p(this.this$0)) || TextUtils.isEmpty(GoodsListEditDialog.access$getGoodsListDescription$p(this.this$0))) {
-            Toast.show$default(this.this$0.getActivity(), this.this$0.getString(2131886576), 0, false, 12, null);
+            Toast.show$default(this.this$0.getActivity(), this.this$0.getString(2131886638), 0, false, 12, null);
             progressDialog.dismiss();
             return;
         }

@@ -34,7 +34,7 @@ public abstract class ItemActionSheetDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemActionSheetDialogBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemActionSheetDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558573, viewGroup, z, obj);
+        return (ItemActionSheetDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558577, viewGroup, z, obj);
     }
 
     public static ItemActionSheetDialogBinding inflate(LayoutInflater layoutInflater) {
@@ -43,7 +43,7 @@ public abstract class ItemActionSheetDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemActionSheetDialogBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemActionSheetDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558573, null, false, obj);
+        return (ItemActionSheetDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558577, null, false, obj);
     }
 
     public static ItemActionSheetDialogBinding bind(View view) {
@@ -52,6 +52,6 @@ public abstract class ItemActionSheetDialogBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemActionSheetDialogBinding bind(View view, Object obj) {
-        return (ItemActionSheetDialogBinding) bind(obj, view, 2131558573);
+        return (ItemActionSheetDialogBinding) bind(obj, view, 2131558577);
     }
 }

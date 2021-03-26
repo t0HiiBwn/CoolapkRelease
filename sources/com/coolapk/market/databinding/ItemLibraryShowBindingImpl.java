@@ -54,7 +54,7 @@ public class ItemLibraryShowBindingImpl extends ItemLibraryShowBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((Library) obj);
@@ -67,7 +67,7 @@ public class ItemLibraryShowBindingImpl extends ItemLibraryShowBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

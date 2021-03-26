@@ -26,7 +26,7 @@ public class GDTADManager {
     private volatile APPStatus f;
     private volatile DeviceStatus g;
     private volatile String h;
-    private PM.a.AbstractC0076a i;
+    private PM.a.AbstractC0086a i;
 
     static final class a {
         private static GDTADManager a = new GDTADManager((byte) 0);
@@ -148,7 +148,7 @@ public class GDTADManager {
         return this.a.booleanValue();
     }
 
-    public void setPluginLoadListener(PM.a.AbstractC0076a aVar) {
+    public void setPluginLoadListener(PM.a.AbstractC0086a aVar) {
         this.i = aVar;
     }
 }

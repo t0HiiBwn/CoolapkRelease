@@ -30,7 +30,7 @@ import kotlin.text.Regex;
 /* compiled from: UserHistoryViewHolder.kt */
 public final class UserHistoryViewHolder extends GenericBindHolder<ItemUserHistoryBinding, UserHistory> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558973;
+    public static final int LAYOUT_ID = 2131558980;
     private UserHistory userHistory;
 
     public static final /* synthetic */ UserHistory access$getUserHistory$p(UserHistoryViewHolder userHistoryViewHolder) {

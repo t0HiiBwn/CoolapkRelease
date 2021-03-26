@@ -174,7 +174,7 @@ public class DeviceConfig {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:7:0x0013 A[Catch:{ all -> 0x0076 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:7:0x0013 A[Catch:{ all -> 0x0077 }] */
     private static String getMacByJavaAPI() {
         try {
             if (!FieldManager.allow("header_device_id_mac")) {

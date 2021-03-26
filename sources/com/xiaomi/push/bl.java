@@ -1,51 +1,48 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.clientreport.processor.IEventProcessor;
-import com.xiaomi.clientreport.processor.IPerfProcessor;
-import com.xiaomi.clientreport.processor.c;
+import org.json.JSONObject;
 
-public class bl implements Runnable {
-    private Context a;
+public class bl {
+    private int a;
+    private long b;
+    private long c;
+    private String d;
+    private long e;
 
-    /* renamed from: a  reason: collision with other field name */
-    private c f230a;
-
-    public void a(Context context) {
-        this.a = context;
+    public bl() {
+        this(0, 0, 0, null);
     }
 
-    public void a(c cVar) {
-        this.f230a = cVar;
-    }
-
-    @Override // java.lang.Runnable
-    public void run() {
-        bp a2;
-        String str;
-        long currentTimeMillis;
-        try {
-            c cVar = this.f230a;
-            if (cVar != null) {
-                cVar.a();
-            }
-            b.c("begin read and send perf / event");
-            c cVar2 = this.f230a;
-            if (cVar2 instanceof IEventProcessor) {
-                a2 = bp.a(this.a);
-                str = "event_last_upload_time";
-                currentTimeMillis = System.currentTimeMillis();
-            } else if (cVar2 instanceof IPerfProcessor) {
-                a2 = bp.a(this.a);
-                str = "perf_last_upload_time";
-                currentTimeMillis = System.currentTimeMillis();
-            } else {
-                return;
-            }
-            a2.m146a("sp_client_report_status", str, currentTimeMillis);
-        } catch (Exception e) {
-            b.a(e);
+    public bl(int i, long j, long j2, Exception exc) {
+        this.a = i;
+        this.b = j;
+        this.e = j2;
+        this.c = System.currentTimeMillis();
+        if (exc != null) {
+            this.d = exc.getClass().getSimpleName();
         }
+    }
+
+    public int a() {
+        return this.a;
+    }
+
+    public bl a(JSONObject jSONObject) {
+        this.b = jSONObject.getLong("cost");
+        this.e = jSONObject.getLong("size");
+        this.c = jSONObject.getLong("ts");
+        this.a = jSONObject.getInt("wt");
+        this.d = jSONObject.optString("expt");
+        return this;
+    }
+
+    public JSONObject b() {
+        JSONObject jSONObject = new JSONObject();
+        jSONObject.put("cost", this.b);
+        jSONObject.put("size", this.e);
+        jSONObject.put("ts", this.c);
+        jSONObject.put("wt", this.a);
+        jSONObject.put("expt", this.d);
+        return jSONObject;
     }
 }

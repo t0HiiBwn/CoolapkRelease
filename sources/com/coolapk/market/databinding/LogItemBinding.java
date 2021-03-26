@@ -43,7 +43,7 @@ public abstract class LogItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static LogItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (LogItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559014, viewGroup, z, obj);
+        return (LogItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559021, viewGroup, z, obj);
     }
 
     public static LogItemBinding inflate(LayoutInflater layoutInflater) {
@@ -52,7 +52,7 @@ public abstract class LogItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static LogItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (LogItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559014, null, false, obj);
+        return (LogItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559021, null, false, obj);
     }
 
     public static LogItemBinding bind(View view) {
@@ -61,6 +61,6 @@ public abstract class LogItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static LogItemBinding bind(View view, Object obj) {
-        return (LogItemBinding) bind(obj, view, 2131559014);
+        return (LogItemBinding) bind(obj, view, 2131559021);
     }
 }

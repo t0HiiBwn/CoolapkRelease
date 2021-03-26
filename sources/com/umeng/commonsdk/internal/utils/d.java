@@ -22,15 +22,13 @@ public class d {
         public String i;
         public String j;
         public String k;
-
-        /* renamed from: l  reason: collision with root package name */
-        public String f1486l;
+        public String l;
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:106:0x0122, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:106:0x0123, code lost:
         r1 = th;
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:107:0x0123, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:107:0x0124, code lost:
         r3 = null;
         r4 = null;
      */
@@ -40,7 +38,7 @@ public class d {
     /* JADX WARNING: Code restructure failed: missing block: B:115:?, code lost:
         r4.close();
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:118:0x0133, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:118:0x0134, code lost:
         r2 = null;
         r4 = null;
      */
@@ -50,16 +48,16 @@ public class d {
     /* JADX WARNING: Code restructure failed: missing block: B:126:?, code lost:
         r4.close();
      */
-    /* JADX WARNING: Code restructure failed: missing block: B:97:0x0118, code lost:
+    /* JADX WARNING: Code restructure failed: missing block: B:97:0x0119, code lost:
         r0 = th;
      */
     /* JADX WARNING: Failed to process nested try/catch */
-    /* JADX WARNING: Removed duplicated region for block: B:106:0x0122 A[ExcHandler: all (th java.lang.Throwable), Splitter:B:1:0x0002] */
-    /* JADX WARNING: Removed duplicated region for block: B:110:0x0128 A[SYNTHETIC, Splitter:B:110:0x0128] */
-    /* JADX WARNING: Removed duplicated region for block: B:114:0x012f A[SYNTHETIC, Splitter:B:114:0x012f] */
-    /* JADX WARNING: Removed duplicated region for block: B:121:0x0137 A[SYNTHETIC, Splitter:B:121:0x0137] */
-    /* JADX WARNING: Removed duplicated region for block: B:125:0x013e A[SYNTHETIC, Splitter:B:125:0x013e] */
-    /* JADX WARNING: Removed duplicated region for block: B:97:0x0118 A[ExcHandler: all (th java.lang.Throwable), Splitter:B:7:0x0013] */
+    /* JADX WARNING: Removed duplicated region for block: B:106:0x0123 A[ExcHandler: all (th java.lang.Throwable), Splitter:B:1:0x0002] */
+    /* JADX WARNING: Removed duplicated region for block: B:110:0x0129 A[SYNTHETIC, Splitter:B:110:0x0129] */
+    /* JADX WARNING: Removed duplicated region for block: B:114:0x0130 A[SYNTHETIC, Splitter:B:114:0x0130] */
+    /* JADX WARNING: Removed duplicated region for block: B:121:0x0138 A[SYNTHETIC, Splitter:B:121:0x0138] */
+    /* JADX WARNING: Removed duplicated region for block: B:125:0x013f A[SYNTHETIC, Splitter:B:125:0x013f] */
+    /* JADX WARNING: Removed duplicated region for block: B:97:0x0119 A[ExcHandler: all (th java.lang.Throwable), Splitter:B:7:0x0013] */
     public static a a() {
         int i;
         a aVar;
@@ -135,7 +133,7 @@ public class d {
                             aVar.k = split[1];
                         }
                         if (split != null && split.length > 1 && split[0].contains("Serial")) {
-                            aVar.f1486l = split[1];
+                            aVar.l = split[1];
                         }
                         if (split != null && split.length > 1 && split[0].contains("implementer")) {
                             aVar.e = split[1];

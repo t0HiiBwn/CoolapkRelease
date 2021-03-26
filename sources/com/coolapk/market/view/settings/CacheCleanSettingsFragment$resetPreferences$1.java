@@ -49,6 +49,6 @@ final class CacheCleanSettingsFragment$resetPreferences$1 implements Runnable {
         appSetting2.setDownloadDir(AppHolder.getAppMetadata().getDefaultDownloadDir().getAbsolutePath());
         FragmentActivity requireActivity = this.this$0.requireActivity();
         Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-        Toast.show(requireActivity, 2131886462);
+        Toast.show(requireActivity, 2131886522);
     }
 }

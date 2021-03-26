@@ -33,7 +33,7 @@ public final class TopicNodeLoader implements Loader {
 
     @Override // com.coolapk.market.view.node.Loader
     public int loadingPlaceHolderRes() {
-        return AppHolder.getAppTheme().isDarkTheme() ? 2131231785 : 2131231786;
+        return AppHolder.getAppTheme().isDarkTheme() ? 2131231796 : 2131231797;
     }
 
     @Override // com.coolapk.market.view.node.Loader

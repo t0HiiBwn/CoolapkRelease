@@ -70,16 +70,20 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import kotlin.Lazy;
 import kotlin.LazyKt;
+import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
+import kotlin.jvm.JvmStatic;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 import org.json.JSONObject;
 import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000x\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0003\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0017\u0018\u0000 U2\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u0001:\u0006PQRSTUB\u0005¢\u0006\u0002\u0010\u0004J\u0010\u0010\u001e\u001a\u00020\u00142\u0006\u0010\u001f\u001a\u00020 H\u0002J\b\u0010!\u001a\u0004\u0018\u00010\u000eJ\u0016\u0010\"\u001a\u00020 2\f\u0010#\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002H\u0002J\b\u0010$\u001a\u0004\u0018\u00010\u000eJ\u0018\u0010%\u001a\u0004\u0018\u00010&2\f\u0010'\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002H\u0002J\f\u0010(\u001a\b\u0012\u0004\u0012\u00020\u00030\fJ\u0012\u0010)\u001a\u00020\u00142\b\u0010*\u001a\u0004\u0018\u00010\u0003H\u0002J\u0018\u0010)\u001a\u00020\u00142\u000e\u0010'\u001a\n\u0012\u0004\u0012\u00020\u0003\u0018\u00010\u0002H\u0002J\u0010\u0010+\u001a\u00020,2\b\u0010*\u001a\u0004\u0018\u00010\u0003J\u0016\u0010-\u001a\u00020,2\u000e\u0010'\u001a\n\u0012\u0004\u0012\u00020\u0003\u0018\u00010\u0002J\u0010\u0010.\u001a\u00020,2\u0006\u0010*\u001a\u00020&H\u0002J\u0012\u0010/\u001a\u00020,2\b\u00100\u001a\u0004\u0018\u000101H\u0016J\u0012\u00102\u001a\u00020,2\b\u00100\u001a\u0004\u0018\u000101H\u0016J$\u00103\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u0002042\u0006\u00105\u001a\u00020\u00142\u0006\u00106\u001a\u00020 H\u0016J\b\u00107\u001a\u00020,H\u0016J*\u00108\u001a\u00020,2\u0006\u00105\u001a\u00020\u00142\u0006\u00109\u001a\u00020\u00142\u0006\u00106\u001a\u00020 2\b\u0010:\u001a\u0004\u0018\u00010;H\u0016J\b\u0010<\u001a\u00020,H\u0014J\u0010\u0010=\u001a\u00020,2\u0006\u0010>\u001a\u00020?H\u0007J\u000e\u0010@\u001a\u00020\u00142\u0006\u0010*\u001a\u00020&J\b\u0010A\u001a\u00020,H\u0014J\u0018\u0010B\u001a\u00020,2\u0006\u00105\u001a\u00020\u00142\u0006\u0010:\u001a\u00020;H\u0014J \u0010C\u001a\u00020\u00142\u0006\u00105\u001a\u00020\u00142\u000e\u0010D\u001a\n\u0012\u0004\u0012\u00020\u0003\u0018\u00010\u0002H\u0014J\b\u0010E\u001a\u00020,H\u0016J\u0010\u0010F\u001a\u00020,2\u0006\u0010G\u001a\u000201H\u0016J\u0010\u0010H\u001a\u00020,2\u0006\u0010I\u001a\u00020\u0003H\u0002J\b\u0010J\u001a\u00020,H\u0016J\b\u0010K\u001a\u00020\u0014H\u0014J\b\u0010L\u001a\u00020\u0014H\u0014J\b\u0010M\u001a\u00020,H\u0002J \u0010N\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002*\b\u0012\u0004\u0012\u00020\u00030\u00022\u0006\u0010O\u001a\u00020\u0003H\u0002R\u000e\u0010\u0005\u001a\u00020\u0006X.¢\u0006\u0002\n\u0000R\u0011\u0010\u0007\u001a\u00020\b¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nR\u0014\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\u00030\fX\u0004¢\u0006\u0002\n\u0000R\u001b\u0010\r\u001a\u00020\u000e8FX\u0002¢\u0006\f\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u000f\u0010\u0010R\u000e\u0010\u0013\u001a\u00020\u0014X\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0014X\u000e¢\u0006\u0002\n\u0000R\u001b\u0010\u0016\u001a\u00020\u000e8FX\u0002¢\u0006\f\n\u0004\b\u0018\u0010\u0012\u001a\u0004\b\u0017\u0010\u0010R\u0010\u0010\u0019\u001a\u0004\u0018\u00010\u001aX\u000e¢\u0006\u0002\n\u0000R\u001b\u0010\u001b\u001a\u00020\u000e8FX\u0002¢\u0006\f\n\u0004\b\u001d\u0010\u0012\u001a\u0004\b\u001c\u0010\u0010¨\u0006V"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment;", "Lcom/coolapk/market/view/base/asynclist/NewAsyncListFragment;", "", "Lcom/coolapk/market/model/Entity;", "()V", "adapter", "Lcom/coolapk/market/widget/multitype/MultiTypeAdapter;", "bindingComponent", "Lcom/coolapk/market/binding/FragmentBindingComponent;", "getBindingComponent", "()Lcom/coolapk/market/binding/FragmentBindingComponent;", "dataList", "Landroidx/databinding/ObservableArrayList;", "myId", "", "getMyId", "()Ljava/lang/String;", "myId$delegate", "Lkotlin/Lazy;", "passiveRefresh", "", "showTipView", "uKey", "getUKey", "uKey$delegate", "updateSubscription", "Lrx/Subscription;", "userId", "getUserId", "userId$delegate", "deleteTime", "index", "", "findFirstItem", "findFirstMessageIndex", "list", "findLastItem", "findMessage", "Lcom/coolapk/market/model/Message;", "messageList", "getDataList", "hasSameMessageIdWith", "message", "insertMessage", "", "insertMessageList", "loadLongMessageAndAdd", "onActivityCreated", "savedInstanceState", "Landroid/os/Bundle;", "onCreate", "onCreateRequest", "Lrx/Observable;", "isRefresh", "page", "onDestroy", "onLoadDataFailed", "showLoading", "error", "", "onLoadMore", "onMessageEvent", "event", "Lcom/coolapk/market/event/MessageEvent;", "onNewMessage", "onRefresh", "onRequestFailure", "onRequestResponse", "result", "onResume", "onSaveInstanceState", "outState", "onShowTip", "entity", "reloadData", "shouldShowEmptyView", "shouldShowList", "sort", "removeData", "item", "ChatMineCardViewHolder", "ChatMineViewHolder", "ChatTipViewHolder", "ChatUserCardViewHolder", "ChatUserViewHolder", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: ChatListFragment.kt */
 public final class ChatListFragment extends NewAsyncListFragment<List<? extends Entity>> {
     public static final Companion Companion = new Companion(null);
@@ -88,7 +92,6 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
     private MultiTypeAdapter adapter;
     private final FragmentBindingComponent bindingComponent = new FragmentBindingComponent(this);
     private final ObservableArrayList<Entity> dataList = new ObservableArrayList<>();
-    private AppNotification.PMIntercept mPMIntercept;
     private final Lazy myId$delegate = LazyKt.lazy(new ChatListFragment$myId$2(this));
     private boolean passiveRefresh;
     private boolean showTipView;
@@ -96,6 +99,7 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
     private Subscription updateSubscription;
     private final Lazy userId$delegate = LazyKt.lazy(new ChatListFragment$userId$2(this));
 
+    @JvmStatic
     public static final ChatListFragment newInstance(String str, String str2, String str3) {
         return Companion.newInstance(str, str2, str3);
     }
@@ -155,35 +159,32 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
             initData();
         }
         this.updateSubscription = Observable.interval(10, 10, TimeUnit.SECONDS, AndroidSchedulers.mainThread()).subscribe(new ChatListFragment$onActivityCreated$1(this));
-        AppNotification appNotification = AppHolder.getAppNotification();
-        AppNotification.PMIntercept pMIntercept = new AppNotification.PMIntercept(new ChatListFragment$onActivityCreated$2(this));
-        this.mPMIntercept = pMIntercept;
-        appNotification.addIntercept(pMIntercept);
+        AppHolder.getAppNotification().interceptInLifeCycle(this, AppNotification.MessageIntercept.Companion.privateMessage(new ChatListFragment$onActivityCreated$2(this)));
         MultiTypeAdapter multiTypeAdapter2 = this.adapter;
         if (multiTypeAdapter2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        multiTypeAdapter2.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558648).constructor(new ChatListFragment$onActivityCreated$3(this)).suitedMethod(ChatListFragment$onActivityCreated$4.INSTANCE).build(), -1);
+        multiTypeAdapter2.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558654).constructor(new ChatListFragment$onActivityCreated$3(this)).suitedMethod(ChatListFragment$onActivityCreated$4.INSTANCE).build(), -1);
         MultiTypeAdapter multiTypeAdapter3 = this.adapter;
         if (multiTypeAdapter3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        multiTypeAdapter3.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558649).constructor(new ChatListFragment$onActivityCreated$5(this)).suitedMethod(ChatListFragment$onActivityCreated$6.INSTANCE).build(), -1);
+        multiTypeAdapter3.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558655).constructor(new ChatListFragment$onActivityCreated$5(this)).suitedMethod(ChatListFragment$onActivityCreated$6.INSTANCE).build(), -1);
         MultiTypeAdapter multiTypeAdapter4 = this.adapter;
         if (multiTypeAdapter4 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        multiTypeAdapter4.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558651).constructor(new ChatListFragment$onActivityCreated$7(this)).suitedMethod(ChatListFragment$onActivityCreated$8.INSTANCE).build(), -1);
+        multiTypeAdapter4.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558657).constructor(new ChatListFragment$onActivityCreated$7(this)).suitedMethod(ChatListFragment$onActivityCreated$8.INSTANCE).build(), -1);
         MultiTypeAdapter multiTypeAdapter5 = this.adapter;
         if (multiTypeAdapter5 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        multiTypeAdapter5.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558650).constructor(new ChatListFragment$onActivityCreated$9(this)).suitedMethod(ChatListFragment$onActivityCreated$10.INSTANCE).build(), -1);
+        multiTypeAdapter5.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558656).constructor(new ChatListFragment$onActivityCreated$9(this)).suitedMethod(ChatListFragment$onActivityCreated$10.INSTANCE).build(), -1);
         MultiTypeAdapter multiTypeAdapter6 = this.adapter;
         if (multiTypeAdapter6 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        multiTypeAdapter6.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558826).constructor(new ChatListFragment$onActivityCreated$11(this)).suitedMethod(ChatListFragment$onActivityCreated$12.INSTANCE).build(), -1);
+        multiTypeAdapter6.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558833).constructor(new ChatListFragment$onActivityCreated$11(this)).suitedMethod(ChatListFragment$onActivityCreated$12.INSTANCE).build(), -1);
         ObservableArrayList<Entity> observableArrayList = this.dataList;
         MultiTypeAdapter multiTypeAdapter7 = this.adapter;
         if (multiTypeAdapter7 == null) {
@@ -204,9 +205,6 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
                 Intrinsics.checkNotNull(subscription2);
                 subscription2.unsubscribe();
             }
-        }
-        if (this.mPMIntercept != null) {
-            AppHolder.getAppNotification().removeIntercept(this.mPMIntercept);
         }
         EventBus.getDefault().unregister(this);
     }
@@ -283,6 +281,7 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
         }
     }
 
+    @Subscribe
     public final void onMessageEvent(MessageEvent messageEvent) {
         Intrinsics.checkNotNullParameter(messageEvent, "event");
         Message build = Message.builder(messageEvent.getMessage()).setEntityTemplate("").build();
@@ -413,6 +412,7 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
         }
     }
 
+    /* access modifiers changed from: protected */
     public boolean onRequestResponse(boolean z, List<? extends Entity> list) {
         T t;
         boolean z2;
@@ -466,13 +466,12 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
     }
 
     private final void onShowTip(Entity entity) {
-        View view = getView();
-        Intrinsics.checkNotNull(view);
-        Intrinsics.checkNotNullExpressionValue(view, "view!!");
-        ViewParent parent = view.getParent();
+        View requireView = requireView();
+        Intrinsics.checkNotNullExpressionValue(requireView, "requireView()");
+        ViewParent parent = requireView.getParent();
         Objects.requireNonNull(parent, "null cannot be cast to non-null type android.widget.FrameLayout");
         FrameLayout frameLayout = (FrameLayout) parent;
-        MessageTopTipBinding messageTopTipBinding = (MessageTopTipBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559020, frameLayout, true);
+        MessageTopTipBinding messageTopTipBinding = (MessageTopTipBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559027, frameLayout, true);
         Intrinsics.checkNotNullExpressionValue(messageTopTipBinding, "binding");
         messageTopTipBinding.getRoot().setOnClickListener(new ChatListFragment$onShowTip$1(this, frameLayout, messageTopTipBinding));
         if (!this.showTipView) {
@@ -576,10 +575,11 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
         bundle.putParcelableArrayList(KEY_DATA, this.dataList);
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\b\u0002\u0018\u0000 \u00122\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0001\u0012B\u001f\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\b\u0010\b\u001a\u0004\u0018\u00010\t¢\u0006\u0002\u0010\nJ\u0010\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u0003H\u0016J\u0010\u0010\u0010\u001a\u00020\u000e2\u0006\u0010\u0011\u001a\u00020\u0005H\u0016R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\fX\u0004¢\u0006\u0002\n\u0000¨\u0006\u0013"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment$ChatMineViewHolder;", "Lcom/coolapk/market/viewholder/GenericBindHolder;", "Lcom/coolapk/market/databinding/ItemChatingMineBinding;", "Lcom/coolapk/market/model/Message;", "itemView", "Landroid/view/View;", "component", "Landroidx/databinding/DataBindingComponent;", "onItemClick", "Lcom/coolapk/market/viewholder/ItemActionHandler;", "(Landroid/view/View;Landroidx/databinding/DataBindingComponent;Lcom/coolapk/market/viewholder/ItemActionHandler;)V", "activity", "Landroid/app/Activity;", "bindToContent", "", "message", "onClick", "view", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: ChatListFragment.kt */
     private static final class ChatMineViewHolder extends GenericBindHolder<ItemChatingMineBinding, Message> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558648;
+        public static final int LAYOUT_ID = 2131558654;
         private final Activity activity;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -653,6 +653,7 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
             messageContentBindHelp.messageClickAction(view, model, activity2, shapedImageView);
         }
 
+        @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment$ChatMineViewHolder$Companion;", "", "()V", "LAYOUT_ID", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
         /* compiled from: ChatListFragment.kt */
         public static final class Companion {
             private Companion() {
@@ -664,10 +665,11 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\b\u0002\u0018\u0000 \u00142\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0001\u0014B\u001f\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\b\u0010\b\u001a\u0004\u0018\u00010\t¢\u0006\u0002\u0010\nJ\u0010\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u0003H\u0016J\u0010\u0010\u0012\u001a\u00020\u00102\u0006\u0010\u0013\u001a\u00020\u0005H\u0016R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\fX\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u000e¢\u0006\u0002\n\u0000¨\u0006\u0015"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment$ChatUserViewHolder;", "Lcom/coolapk/market/viewholder/GenericBindHolder;", "Lcom/coolapk/market/databinding/ItemChatingUserBinding;", "Lcom/coolapk/market/model/Message;", "itemView", "Landroid/view/View;", "component", "Landroidx/databinding/DataBindingComponent;", "onItemClick", "Lcom/coolapk/market/viewholder/ItemActionHandler;", "(Landroid/view/View;Landroidx/databinding/DataBindingComponent;Lcom/coolapk/market/viewholder/ItemActionHandler;)V", "activity", "Landroid/app/Activity;", "imageShowType", "", "bindToContent", "", "message", "onClick", "view", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: ChatListFragment.kt */
     private static final class ChatUserViewHolder extends GenericBindHolder<ItemChatingUserBinding, Message> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558650;
+        public static final int LAYOUT_ID = 2131558656;
         private final Activity activity;
         private String imageShowType = "m";
 
@@ -752,6 +754,7 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
             messageContentBindHelp.messageClickAction(view, model, activity2, shapedImageView);
         }
 
+        @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment$ChatUserViewHolder$Companion;", "", "()V", "LAYOUT_ID", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
         /* compiled from: ChatListFragment.kt */
         public static final class Companion {
             private Companion() {
@@ -763,10 +766,11 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\b\u0002\u0018\u0000 \u00122\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0001\u0012B\u001f\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\b\u0010\b\u001a\u0004\u0018\u00010\t¢\u0006\u0002\u0010\nJ\u0010\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u0003H\u0016J\u0010\u0010\u0010\u001a\u00020\u000e2\u0006\u0010\u0011\u001a\u00020\u0005H\u0016R\u000e\u0010\u000b\u001a\u00020\fX\u000e¢\u0006\u0002\n\u0000¨\u0006\u0013"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment$ChatUserCardViewHolder;", "Lcom/coolapk/market/viewholder/GenericBindHolder;", "Lcom/coolapk/market/databinding/ItemChatingUserCardBinding;", "Lcom/coolapk/market/model/Message;", "itemView", "Landroid/view/View;", "component", "Landroidx/databinding/DataBindingComponent;", "onItemClick", "Lcom/coolapk/market/viewholder/ItemActionHandler;", "(Landroid/view/View;Landroidx/databinding/DataBindingComponent;Lcom/coolapk/market/viewholder/ItemActionHandler;)V", "url", "", "bindToContent", "", "message", "onClick", "view", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: ChatListFragment.kt */
     private static final class ChatUserCardViewHolder extends GenericBindHolder<ItemChatingUserCardBinding, Message> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558651;
+        public static final int LAYOUT_ID = 2131558657;
         private String url = "";
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -845,11 +849,11 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
             Intrinsics.checkNotNullParameter(view, "view");
             super.onClick(view);
             int id = view.getId();
-            if (id == 2131362312) {
+            if (id == 2131362317) {
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");
                 ActionManagerCompat.startActivityByUrl$default(context, this.url, null, null, 12, null);
-            } else if (id == 2131363877) {
+            } else if (id == 2131363900) {
                 ItemChatingUserCardBinding itemChatingUserCardBinding = (ItemChatingUserCardBinding) getBinding();
                 Intrinsics.checkNotNullExpressionValue(itemChatingUserCardBinding, "binding");
                 Message model = itemChatingUserCardBinding.getModel();
@@ -865,6 +869,7 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
             }
         }
 
+        @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment$ChatUserCardViewHolder$Companion;", "", "()V", "LAYOUT_ID", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
         /* compiled from: ChatListFragment.kt */
         public static final class Companion {
             private Companion() {
@@ -876,10 +881,11 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\b\u0002\u0018\u0000 \u00122\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0001\u0012B\u001f\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\b\u0010\b\u001a\u0004\u0018\u00010\t¢\u0006\u0002\u0010\nJ\u0010\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u0003H\u0016J\u0010\u0010\u0010\u001a\u00020\u000e2\u0006\u0010\u0011\u001a\u00020\u0005H\u0016R\u000e\u0010\u000b\u001a\u00020\fX\u000e¢\u0006\u0002\n\u0000¨\u0006\u0013"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment$ChatMineCardViewHolder;", "Lcom/coolapk/market/viewholder/GenericBindHolder;", "Lcom/coolapk/market/databinding/ItemChatingMineCardBinding;", "Lcom/coolapk/market/model/Message;", "itemView", "Landroid/view/View;", "component", "Landroidx/databinding/DataBindingComponent;", "onItemClick", "Lcom/coolapk/market/viewholder/ItemActionHandler;", "(Landroid/view/View;Landroidx/databinding/DataBindingComponent;Lcom/coolapk/market/viewholder/ItemActionHandler;)V", "url", "", "bindToContent", "", "message", "onClick", "view", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: ChatListFragment.kt */
     private static final class ChatMineCardViewHolder extends GenericBindHolder<ItemChatingMineCardBinding, Message> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558649;
+        public static final int LAYOUT_ID = 2131558655;
         private String url = "";
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -958,11 +964,11 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
             Intrinsics.checkNotNullParameter(view, "view");
             super.onClick(view);
             int id = view.getId();
-            if (id == 2131362312) {
+            if (id == 2131362317) {
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");
                 ActionManagerCompat.startActivityByUrl$default(context, this.url, null, null, 12, null);
-            } else if (id == 2131363877) {
+            } else if (id == 2131363900) {
                 ItemChatingMineCardBinding itemChatingMineCardBinding = (ItemChatingMineCardBinding) getBinding();
                 Intrinsics.checkNotNullExpressionValue(itemChatingMineCardBinding, "binding");
                 Message model = itemChatingMineCardBinding.getModel();
@@ -978,6 +984,7 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
             }
         }
 
+        @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment$ChatMineCardViewHolder$Companion;", "", "()V", "LAYOUT_ID", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
         /* compiled from: ChatListFragment.kt */
         public static final class Companion {
             private Companion() {
@@ -989,10 +996,11 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\b\u0002\u0018\u0000 \u000e2\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0001\u000eB\u001f\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\b\u0010\b\u001a\u0004\u0018\u00010\t¢\u0006\u0002\u0010\nJ\u0010\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u0003H\u0016¨\u0006\u000f"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment$ChatTipViewHolder;", "Lcom/coolapk/market/viewholder/GenericBindHolder;", "Lcom/coolapk/market/databinding/ItemMessageExtraBinding;", "Lcom/coolapk/market/model/Entity;", "itemView", "Landroid/view/View;", "component", "Landroidx/databinding/DataBindingComponent;", "onItemClick", "Lcom/coolapk/market/viewholder/ItemActionHandler;", "(Landroid/view/View;Landroidx/databinding/DataBindingComponent;Lcom/coolapk/market/viewholder/ItemActionHandler;)V", "bindToContent", "", "message", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: ChatListFragment.kt */
     private static final class ChatTipViewHolder extends GenericBindHolder<ItemMessageExtraBinding, Entity> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558826;
+        public static final int LAYOUT_ID = 2131558833;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public ChatTipViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -1018,10 +1026,10 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
                 textView.setBackground(null);
                 layoutParams.height = DisplayUtils.dp2px(getContext(), 24.0f);
             } else {
-                ((ItemMessageExtraBinding) getBinding()).titleView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099891));
+                ((ItemMessageExtraBinding) getBinding()).titleView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099896));
                 TextView textView2 = ((ItemMessageExtraBinding) getBinding()).titleView;
                 Intrinsics.checkNotNullExpressionValue(textView2, "binding.titleView");
-                textView2.setBackground(ResourceUtils.getDrawable(getContext(), 2131231754));
+                textView2.setBackground(ResourceUtils.getDrawable(getContext(), 2131231765));
                 layoutParams.height = DisplayUtils.dp2px(getContext(), 14.0f);
             }
             Space space2 = ((ItemMessageExtraBinding) getBinding()).marginView;
@@ -1030,6 +1038,7 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
             ((ItemMessageExtraBinding) getBinding()).executePendingBindings();
         }
 
+        @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment$ChatTipViewHolder$Companion;", "", "()V", "LAYOUT_ID", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
         /* compiled from: ChatListFragment.kt */
         public static final class Companion {
             private Companion() {
@@ -1041,6 +1050,7 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
         }
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J&\u0010\u0006\u001a\u00020\u00072\b\u0010\b\u001a\u0004\u0018\u00010\u00042\b\u0010\t\u001a\u0004\u0018\u00010\u00042\b\u0010\n\u001a\u0004\u0018\u00010\u0004H\u0007R\u000e\u0010\u0003\u001a\u00020\u0004XD¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u000b"}, d2 = {"Lcom/coolapk/market/view/message/ChatListFragment$Companion;", "", "()V", "KEY_DATA", "", "TYPE_TIPS", "newInstance", "Lcom/coolapk/market/view/message/ChatListFragment;", "uKey", "myId", "userId", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: ChatListFragment.kt */
     public static final class Companion {
         private Companion() {
@@ -1050,6 +1060,7 @@ public final class ChatListFragment extends NewAsyncListFragment<List<? extends 
             this();
         }
 
+        @JvmStatic
         public final ChatListFragment newInstance(String str, String str2, String str3) {
             Bundle bundle = new Bundle();
             ChatListFragment chatListFragment = new ChatListFragment();

@@ -11,7 +11,7 @@ public final class RegexConstants {
     public static final String REGEX_ID_CARD18 = "^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9Xx])$";
     public static final String REGEX_INTEGER = "^(-?[1-9]\\d*)|0$";
     public static final String REGEX_IP = "((2[0-4]\\d|25[0-5]|[01]?\\d\\d?)\\.){3}(2[0-4]\\d|25[0-5]|[01]?\\d\\d?)";
-    public static final String REGEX_MOBILE_EXACT = "^((13[0-9])|(14[57])|(15[0-35-9])|(16[2567])|(17[01235-8])|(18[0-9])|(19[189]))\\d{8}$";
+    public static final String REGEX_MOBILE_EXACT = "^((13[0-9])|(14[579])|(15[0-35-9])|(16[2567])|(17[0-35-8])|(18[0-9])|(19[0-35-9]))\\d{8}$";
     public static final String REGEX_MOBILE_SIMPLE = "^[1]\\d{10}$";
     public static final String REGEX_NEGATIVE_FLOAT = "^-[1-9]\\d*\\.\\d*|-0\\.\\d*[1-9]\\d*$";
     public static final String REGEX_NEGATIVE_INTEGER = "^-[1-9]\\d*$";

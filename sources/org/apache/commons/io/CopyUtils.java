@@ -15,19 +15,6 @@ import java.nio.charset.Charset;
 public class CopyUtils {
     private static final int DEFAULT_BUFFER_SIZE = 4096;
 
-    public static void copy(byte[] bArr, OutputStream outputStream) throws IOException {
-        outputStream.write(bArr);
-    }
-
-    @Deprecated
-    public static void copy(byte[] bArr, Writer writer) throws IOException {
-        copy(new ByteArrayInputStream(bArr), writer);
-    }
-
-    public static void copy(byte[] bArr, Writer writer, String str) throws IOException {
-        copy(new ByteArrayInputStream(bArr), writer, str);
-    }
-
     public static int copy(InputStream inputStream, OutputStream outputStream) throws IOException {
         byte[] bArr = new byte[4096];
         int i = 0;
@@ -93,5 +80,18 @@ public class CopyUtils {
 
     public static void copy(String str, Writer writer) throws IOException {
         writer.write(str);
+    }
+
+    public static void copy(byte[] bArr, OutputStream outputStream) throws IOException {
+        outputStream.write(bArr);
+    }
+
+    @Deprecated
+    public static void copy(byte[] bArr, Writer writer) throws IOException {
+        copy(new ByteArrayInputStream(bArr), writer);
+    }
+
+    public static void copy(byte[] bArr, Writer writer, String str) throws IOException {
+        copy(new ByteArrayInputStream(bArr), writer, str);
     }
 }

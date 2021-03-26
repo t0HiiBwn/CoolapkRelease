@@ -1,52 +1,38 @@
 package com.xiaomi.mipush.sdk;
 
-import com.xiaomi.push.hc;
+import android.content.Context;
+import com.xiaomi.push.gi;
+import com.xiaomi.push.go;
+import com.xiaomi.push.gs;
+import com.xiaomi.push.gv;
+import com.xiaomi.push.hb;
+import com.xiaomi.push.hi;
+import com.xiaomi.push.ht;
+import com.xiaomi.push.j;
+import com.xiaomi.push.service.l;
+import com.xiaomi.push.service.m;
 
-/* synthetic */ class af {
-    static final /* synthetic */ int[] a;
+public class af extends j.a {
+    private Context a;
 
-    static {
-        int[] iArr = new int[hc.values().length];
-        a = iArr;
-        try {
-            iArr[hc.Registration.ordinal()] = 1;
-        } catch (NoSuchFieldError unused) {
-        }
-        try {
-            a[hc.UnRegistration.ordinal()] = 2;
-        } catch (NoSuchFieldError unused2) {
-        }
-        try {
-            a[hc.Subscription.ordinal()] = 3;
-        } catch (NoSuchFieldError unused3) {
-        }
-        try {
-            a[hc.UnSubscription.ordinal()] = 4;
-        } catch (NoSuchFieldError unused4) {
-        }
-        try {
-            a[hc.SendMessage.ordinal()] = 5;
-        } catch (NoSuchFieldError unused5) {
-        }
-        try {
-            a[hc.AckMessage.ordinal()] = 6;
-        } catch (NoSuchFieldError unused6) {
-        }
-        try {
-            a[hc.SetConfig.ordinal()] = 7;
-        } catch (NoSuchFieldError unused7) {
-        }
-        try {
-            a[hc.ReportFeedback.ordinal()] = 8;
-        } catch (NoSuchFieldError unused8) {
-        }
-        try {
-            a[hc.Notification.ordinal()] = 9;
-        } catch (NoSuchFieldError unused9) {
-        }
-        try {
-            a[hc.Command.ordinal()] = 10;
-        } catch (NoSuchFieldError unused10) {
-        }
+    public af(Context context) {
+        this.a = context;
+    }
+
+    @Override // com.xiaomi.push.j.a
+    public int a() {
+        return 2;
+    }
+
+    @Override // java.lang.Runnable
+    public void run() {
+        l a2 = l.a(this.a);
+        hb hbVar = new hb();
+        hbVar.a(m.a(a2, go.MISC_CONFIG));
+        hbVar.b(m.a(a2, go.PLUGIN_CONFIG));
+        hi hiVar = new hi("-1", false);
+        hiVar.c(gs.DailyCheckClientConfig.S);
+        hiVar.a(ht.a(hbVar));
+        aq.a(this.a).a((aq) hiVar, gi.Notification, (gv) null);
     }
 }

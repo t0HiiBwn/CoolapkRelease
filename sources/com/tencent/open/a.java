@@ -18,12 +18,12 @@ public class a {
 
     /* renamed from: com.tencent.open.a$a  reason: collision with other inner class name */
     /* compiled from: ProGuard */
-    public static class C0134a {
+    public static class C0152a {
         protected WeakReference<WebView> a;
         protected long b;
         protected String c;
 
-        public C0134a(WebView webView, long j, String str) {
+        public C0152a(WebView webView, long j, String str) {
             this.a = new WeakReference<>(webView);
             this.b = j;
             this.c = str;
@@ -66,7 +66,7 @@ public class a {
             return false;
         }
 
-        public void call(String str, List<String> list, C0134a aVar) {
+        public void call(String str, List<String> list, C0152a aVar) {
             String str2;
             Method method;
             Object obj;
@@ -136,7 +136,7 @@ public class a {
         this.a.put(str, bVar);
     }
 
-    public void a(String str, String str2, List<String> list, C0134a aVar) {
+    public void a(String str, String str2, List<String> list, C0152a aVar) {
         f.a("openSDK_LOG.JsBridge", "getResult---objName = " + str + " methodName = " + str2);
         int size = list.size();
         for (int i = 0; i < size; i++) {
@@ -168,7 +168,7 @@ public class a {
             return false;
         }
         List<String> subList = arrayList.subList(4, arrayList.size() - 1);
-        C0134a aVar = new C0134a(webView, 4, str);
+        C0152a aVar = new C0152a(webView, 4, str);
         webView.getUrl();
         a((String) arrayList.get(2), (String) arrayList.get(3), subList, aVar);
         return true;

@@ -34,7 +34,7 @@ public abstract class TopicDetailHeadlineBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicDetailHeadlineBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (TopicDetailHeadlineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559201, viewGroup, z, obj);
+        return (TopicDetailHeadlineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559209, viewGroup, z, obj);
     }
 
     public static TopicDetailHeadlineBinding inflate(LayoutInflater layoutInflater) {
@@ -43,7 +43,7 @@ public abstract class TopicDetailHeadlineBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicDetailHeadlineBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (TopicDetailHeadlineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559201, null, false, obj);
+        return (TopicDetailHeadlineBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559209, null, false, obj);
     }
 
     public static TopicDetailHeadlineBinding bind(View view) {
@@ -52,6 +52,6 @@ public abstract class TopicDetailHeadlineBinding extends ViewDataBinding {
 
     @Deprecated
     public static TopicDetailHeadlineBinding bind(View view, Object obj) {
-        return (TopicDetailHeadlineBinding) bind(obj, view, 2131559201);
+        return (TopicDetailHeadlineBinding) bind(obj, view, 2131559209);
     }
 }

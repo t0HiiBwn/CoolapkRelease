@@ -24,9 +24,9 @@ public class ItemFeedRatingViewBindingImpl extends ItemFeedRatingViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363194, 3);
-        sparseIntArray.put(2131363281, 4);
-        sparseIntArray.put(2131363063, 5);
+        sparseIntArray.put(2131363208, 3);
+        sparseIntArray.put(2131363295, 4);
+        sparseIntArray.put(2131363077, 5);
     }
 
     public ItemFeedRatingViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -65,7 +65,7 @@ public class ItemFeedRatingViewBindingImpl extends ItemFeedRatingViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;

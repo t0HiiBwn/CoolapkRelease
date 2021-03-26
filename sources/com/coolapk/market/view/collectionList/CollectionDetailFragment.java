@@ -118,8 +118,8 @@ public final class CollectionDetailFragment extends EntityListFragment implement
     @Override // com.coolapk.market.view.cardlist.EntityListFragment
     protected void onRegisterCards() {
         super.onRegisterCards();
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558655).suitedMethod(CollectionDetailFragment$onRegisterCards$1.INSTANCE).constructor(new CollectionDetailFragment$onRegisterCards$2(this)).build(), 0);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558858).suitedMethod(CollectionDetailFragment$onRegisterCards$3.INSTANCE).constructor(new CollectionDetailFragment$onRegisterCards$4(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558661).suitedMethod(CollectionDetailFragment$onRegisterCards$1.INSTANCE).constructor(new CollectionDetailFragment$onRegisterCards$2(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558865).suitedMethod(CollectionDetailFragment$onRegisterCards$3.INSTANCE).constructor(new CollectionDetailFragment$onRegisterCards$4(this)).build(), 0);
     }
 
     @Override // androidx.fragment.app.Fragment
@@ -130,9 +130,9 @@ public final class CollectionDetailFragment extends EntityListFragment implement
         DataManager instance = DataManager.getInstance();
         Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
         LoginSession loginSession = instance.getLoginSession();
-        MenuItem findItem = menu.findItem(2131361891);
-        MenuItem findItem2 = menu.findItem(2131361901);
-        MenuItem findItem3 = menu.findItem(2131361892);
+        MenuItem findItem = menu.findItem(2131361892);
+        MenuItem findItem2 = menu.findItem(2131361902);
+        MenuItem findItem3 = menu.findItem(2131361893);
         if (findItem != null) {
             Intrinsics.checkNotNullExpressionValue(loginSession, "session");
             if (loginSession.isLogin()) {
@@ -177,7 +177,7 @@ public final class CollectionDetailFragment extends EntityListFragment implement
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
         switch (menuItem.getItemId()) {
-            case 2131361891:
+            case 2131361892:
                 ConfirmDialog newInstance = ConfirmDialog.newInstance("", "确定要删除此收藏单么？删除后会取消收藏内部所有的内容", "确定", "取消");
                 newInstance.setOnOkRunnable(new CollectionDetailFragment$onOptionsItemSelected$1(this));
                 FragmentActivity requireActivity = requireActivity();
@@ -186,7 +186,7 @@ public final class CollectionDetailFragment extends EntityListFragment implement
                 Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "requireActivity().requir…().supportFragmentManager");
                 newInstance.show(supportFragmentManager, (String) null);
                 return true;
-            case 2131361892:
+            case 2131361893:
                 ConfirmDialog newInstance2 = ConfirmDialog.newInstance("", "你确定要清除这个收藏单内的所有失效收藏么？约在5分钟后完成清除", "确认清除", "取消");
                 newInstance2.setOnOkRunnable(new CollectionDetailFragment$onOptionsItemSelected$2(this));
                 FragmentActivity requireActivity2 = requireActivity();
@@ -195,7 +195,7 @@ public final class CollectionDetailFragment extends EntityListFragment implement
                 Intrinsics.checkNotNullExpressionValue(supportFragmentManager2, "requireActivity().requir…().supportFragmentManager");
                 newInstance2.show(supportFragmentManager2, (String) null);
                 return true;
-            case 2131361901:
+            case 2131361902:
                 FragmentActivity activity = getActivity();
                 Collection collection2 = this.collection;
                 if (collection2 == null) {
@@ -203,7 +203,7 @@ public final class CollectionDetailFragment extends EntityListFragment implement
                 }
                 ActionManager.startCollectionEditActivity(activity, collection2);
                 break;
-            case 2131361968:
+            case 2131361969:
                 Collection collection3 = this.collection;
                 if (collection3 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("collection");

@@ -13,7 +13,7 @@ public final class MeasureTimeKt {
         Intrinsics.checkNotNullParameter(function0, "block");
         TimeMark markNow = TimeSource.Monotonic.INSTANCE.markNow();
         function0.invoke();
-        return markNow.mo1938elapsedNowUwyO8pc();
+        return markNow.mo1336elapsedNowUwyO8pc();
     }
 
     public static final double measureTime(TimeSource timeSource, Function0<Unit> function0) {
@@ -21,17 +21,17 @@ public final class MeasureTimeKt {
         Intrinsics.checkNotNullParameter(function0, "block");
         TimeMark markNow = timeSource.markNow();
         function0.invoke();
-        return markNow.mo1938elapsedNowUwyO8pc();
+        return markNow.mo1336elapsedNowUwyO8pc();
     }
 
     public static final <T> TimedValue<T> measureTimedValue(Function0<? extends T> function0) {
         Intrinsics.checkNotNullParameter(function0, "block");
-        return new TimedValue<>(function0.invoke(), TimeSource.Monotonic.INSTANCE.markNow().mo1938elapsedNowUwyO8pc(), null);
+        return new TimedValue<>(function0.invoke(), TimeSource.Monotonic.INSTANCE.markNow().mo1336elapsedNowUwyO8pc(), null);
     }
 
     public static final <T> TimedValue<T> measureTimedValue(TimeSource timeSource, Function0<? extends T> function0) {
         Intrinsics.checkNotNullParameter(timeSource, "$this$measureTimedValue");
         Intrinsics.checkNotNullParameter(function0, "block");
-        return new TimedValue<>(function0.invoke(), timeSource.markNow().mo1938elapsedNowUwyO8pc(), null);
+        return new TimedValue<>(function0.invoke(), timeSource.markNow().mo1336elapsedNowUwyO8pc(), null);
     }
 }

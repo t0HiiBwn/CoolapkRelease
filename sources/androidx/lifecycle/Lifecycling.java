@@ -23,7 +23,7 @@ public class Lifecycling {
 
             @Override // androidx.lifecycle.LifecycleEventObserver
             public void onStateChanged(LifecycleOwner lifecycleOwner, Lifecycle.Event event) {
-                lifecycleEventObserver.onStateChanged(lifecycleOwner, event);
+                LifecycleEventObserver.this.onStateChanged(lifecycleOwner, event);
             }
         };
     }

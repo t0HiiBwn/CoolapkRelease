@@ -91,7 +91,7 @@ public final class DeleteApkWorker extends Worker {
                     if (FileUtils.isFileExists(preferencesString) && (apkInfo = AppUtils.getApkInfo(preferencesString)) != null && apkInfo.getVersionCode() < AppHolder.getAppMetadata().getAppVersionCode()) {
                         FileUtils.delete(preferencesString);
                         Context context2 = this.context;
-                        Toast.show$default(context2, context2.getString(2131887187, apkInfo.getName()), 0, false, 12, null);
+                        Toast.show$default(context2, context2.getString(2131887249, apkInfo.getName()), 0, false, 12, null);
                         LogUtils.i("Already delete: " + apkInfo.getVersionCode(), new Object[0]);
                     }
                     Companion.setShouldDeleteCoolapkFilePath("");

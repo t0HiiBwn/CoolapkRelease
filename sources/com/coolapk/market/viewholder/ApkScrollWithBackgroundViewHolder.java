@@ -43,7 +43,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ApkScrollWithBackgroundViewHolder.kt */
 public final class ApkScrollWithBackgroundViewHolder extends StateViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558588;
+    public static final int LAYOUT_ID = 2131558592;
     private final MultiTypeAdapter adapter;
     private final ItemApkScrollWithBackgroundBinding binding;
     private EntityCard card;
@@ -96,8 +96,8 @@ public final class ApkScrollWithBackgroundViewHolder extends StateViewHolder {
         gravitySnapHelper.attachToRecyclerView(itemApkScrollWithBackgroundBinding.listView);
         itemApkScrollWithBackgroundBinding.listView.addOnScrollListener(myOnScrollListener);
         itemApkScrollWithBackgroundBinding.listView.addItemDecoration(new LinearEdgeDecoration(this.startPadding, 0, 0, false, 8, null));
-        BaseMultiTypeAdapter.register$default(multiTypeAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558937).suitedClass(HolderItem.class).constructor(AnonymousClass1.INSTANCE).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(multiTypeAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558935).suitedClass(ServiceApp.class).constructor(new Function1<View, RecyclerView.ViewHolder>(this) {
+        BaseMultiTypeAdapter.register$default(multiTypeAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558944).suitedClass(HolderItem.class).constructor(AnonymousClass1.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(multiTypeAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558942).suitedClass(ServiceApp.class).constructor(new Function1<View, RecyclerView.ViewHolder>(this) {
             /* class com.coolapk.market.viewholder.ApkScrollWithBackgroundViewHolder.AnonymousClass2 */
             final /* synthetic */ ApkScrollWithBackgroundViewHolder this$0;
 
@@ -231,7 +231,7 @@ public final class ApkScrollWithBackgroundViewHolder extends StateViewHolder {
     /* compiled from: ApkScrollWithBackgroundViewHolder.kt */
     private static final class SpaceViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558937;
+        public static final int LAYOUT_ID = 2131558944;
 
         @Override // com.coolapk.market.viewholder.BindingViewHolder
         public void bindTo(Object obj) {

@@ -19,6 +19,6 @@ final class ArticleFeedContentHolder2$onCreateContentView$6 extends Lambda imple
     /* Return type fixed from 'boolean' to match base method */
     @Override // kotlin.jvm.functions.Function1
     public final Boolean invoke(Object obj) {
-        return (!(obj instanceof ArticleCard) || !(this.this$0.getArticleViewModel().getUrlEntityMap().get(((ArticleCard) obj).getUrlKey()) instanceof FeedGoods)) ? null : 1;
+        return (!(obj instanceof ArticleCard) || !(this.this$0.getArticleViewModel().getEntityByUrl(((ArticleCard) obj).getUrlKey()) instanceof FeedGoods)) ? null : 1;
     }
 }

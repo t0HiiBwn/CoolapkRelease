@@ -28,7 +28,7 @@ public interface v extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.ss.android.socialbase.downloader.depend.IDownloadForbiddenAidlHandler");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof v)) {
-                return new C0110a(iBinder);
+                return new C0120a(iBinder);
             }
             return (v) queryLocalInterface;
         }
@@ -51,11 +51,11 @@ public interface v extends IInterface {
 
         /* renamed from: com.ss.android.socialbase.downloader.depend.v$a$a  reason: collision with other inner class name */
         /* compiled from: IDownloadForbiddenAidlHandler */
-        private static class C0110a implements v {
+        private static class C0120a implements v {
             public static v a;
             private IBinder b;
 
-            C0110a(IBinder iBinder) {
+            C0120a(IBinder iBinder) {
                 this.b = iBinder;
             }
 
@@ -90,7 +90,7 @@ public interface v extends IInterface {
         }
 
         public static v a() {
-            return C0110a.a;
+            return C0120a.a;
         }
     }
 }

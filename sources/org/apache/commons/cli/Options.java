@@ -16,29 +16,13 @@ public class Options implements Serializable {
     private List requiredOpts = new ArrayList();
     private Map shortOpts = new HashMap();
 
-    public Options addOptionGroup(OptionGroup optionGroup) {
-        if (optionGroup.isRequired()) {
-            this.requiredOpts.add(optionGroup);
-        }
-        for (Option option : optionGroup.getOptions()) {
-            option.setRequired(false);
-            addOption(option);
-            this.optionGroups.put(option.getKey(), optionGroup);
-        }
+    public Options addOption(String str, String str2, boolean z, String str3) {
+        addOption(new Option(str, str2, z, str3));
         return this;
-    }
-
-    Collection getOptionGroups() {
-        return new HashSet(this.optionGroups.values());
     }
 
     public Options addOption(String str, boolean z, String str2) {
         addOption(str, null, z, str2);
-        return this;
-    }
-
-    public Options addOption(String str, String str2, boolean z, String str3) {
-        addOption(new Option(str, str2, z, str3));
         return this;
     }
 
@@ -58,24 +42,37 @@ public class Options implements Serializable {
         return this;
     }
 
-    public Collection getOptions() {
-        return Collections.unmodifiableCollection(helpOptions());
-    }
-
-    List helpOptions() {
-        return new ArrayList(this.shortOpts.values());
-    }
-
-    public List getRequiredOptions() {
-        return this.requiredOpts;
+    public Options addOptionGroup(OptionGroup optionGroup) {
+        if (optionGroup.isRequired()) {
+            this.requiredOpts.add(optionGroup);
+        }
+        for (Option option : optionGroup.getOptions()) {
+            option.setRequired(false);
+            addOption(option);
+            this.optionGroups.put(option.getKey(), optionGroup);
+        }
+        return this;
     }
 
     public Option getOption(String str) {
         String stripLeadingHyphens = Util.stripLeadingHyphens(str);
-        if (this.shortOpts.containsKey(stripLeadingHyphens)) {
-            return (Option) this.shortOpts.get(stripLeadingHyphens);
-        }
-        return (Option) this.longOpts.get(stripLeadingHyphens);
+        return this.shortOpts.containsKey(stripLeadingHyphens) ? (Option) this.shortOpts.get(stripLeadingHyphens) : (Option) this.longOpts.get(stripLeadingHyphens);
+    }
+
+    public OptionGroup getOptionGroup(Option option) {
+        return (OptionGroup) this.optionGroups.get(option.getKey());
+    }
+
+    Collection getOptionGroups() {
+        return new HashSet(this.optionGroups.values());
+    }
+
+    public Collection getOptions() {
+        return Collections.unmodifiableCollection(helpOptions());
+    }
+
+    public List getRequiredOptions() {
+        return this.requiredOpts;
     }
 
     public boolean hasOption(String str) {
@@ -83,8 +80,8 @@ public class Options implements Serializable {
         return this.shortOpts.containsKey(stripLeadingHyphens) || this.longOpts.containsKey(stripLeadingHyphens);
     }
 
-    public OptionGroup getOptionGroup(Option option) {
-        return (OptionGroup) this.optionGroups.get(option.getKey());
+    List helpOptions() {
+        return new ArrayList(this.shortOpts.values());
     }
 
     @Override // java.lang.Object

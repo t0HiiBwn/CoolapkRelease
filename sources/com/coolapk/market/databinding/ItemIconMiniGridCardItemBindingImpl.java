@@ -28,7 +28,7 @@ public class ItemIconMiniGridCardItemBindingImpl extends ItemIconMiniGridCardIte
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362769, 6);
+        sparseIntArray.put(2131362780, 6);
     }
 
     public ItemIconMiniGridCardItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -194,12 +194,12 @@ public class ItemIconMiniGridCardItemBindingImpl extends ItemIconMiniGridCardIte
         }
         if (i6 != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView1, str7, AppCompatResources.getDrawable(this.imageView1.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView1, str7, AppCompatResources.getDrawable(this.imageView1.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.mboundView2, str3);
         }
         if (i5 != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView2, str6, AppCompatResources.getDrawable(this.imageView2.getContext(), 2131231363), 0, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView2, str6, AppCompatResources.getDrawable(this.imageView2.getContext(), 2131231374), 0, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, bool2, null, bool2);
             this.itemView2.setVisibility(i);
             TextViewBindingAdapter.setText(this.mboundView5, str);
         }

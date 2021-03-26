@@ -28,7 +28,7 @@ import kotlin.jvm.internal.TypeIntrinsics;
 /* compiled from: DyhIncludViewHolder.kt */
 public final class DyhIncludViewHolder extends GenericBindHolder<ItemDyhIncludBinding, DyhModel> implements CompoundButton.OnCheckedChangeListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558680;
+    public static final int LAYOUT_ID = 2131558686;
     private final TextView doneView;
     private boolean isInclud;
     private DyhViewModel mViewModel;
@@ -139,7 +139,7 @@ public final class DyhIncludViewHolder extends GenericBindHolder<ItemDyhIncludBi
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131363260) {
+        if (view.getId() == 2131363274) {
             if (this.isInclud) {
                 CheckBox checkBox = ((ItemDyhIncludBinding) getBinding()).checkBox;
                 Intrinsics.checkNotNullExpressionValue(checkBox, "binding.checkBox");

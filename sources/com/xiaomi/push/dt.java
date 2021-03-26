@@ -1,26 +1,20 @@
 package com.xiaomi.push;
 
-import android.content.Context;
+public final class dt {
+    static final int a = a(1, 3);
+    static final int b = a(1, 4);
+    static final int c = a(2, 0);
+    static final int d = a(3, 2);
 
-public class dt extends ds {
-    public dt(Context context, int i) {
-        super(context, i);
+    static int a(int i) {
+        return i & 7;
     }
 
-    @Override // com.xiaomi.push.ds, com.xiaomi.push.ai.a
-    /* renamed from: a */
-    public he mo141a() {
-        return he.Storage;
+    static int a(int i, int i2) {
+        return (i << 3) | i2;
     }
 
-    @Override // com.xiaomi.push.ds, com.xiaomi.push.ai.a
-    /* renamed from: a  reason: collision with other method in class */
-    public String mo208a() {
-        return "23";
-    }
-
-    @Override // com.xiaomi.push.ds
-    public String b() {
-        return "ram:" + i.m468a() + ",rom:" + i.m472b() + "|ramOriginal:" + i.m474c() + ",romOriginal:" + i.d();
+    public static int b(int i) {
+        return i >>> 3;
     }
 }

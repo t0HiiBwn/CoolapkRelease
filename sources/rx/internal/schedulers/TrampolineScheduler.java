@@ -88,9 +88,9 @@ public final class TrampolineScheduler extends Scheduler {
         final int count;
         final Long execTime;
 
-        TimedAction(Action0 action0, Long l2, int i) {
+        TimedAction(Action0 action0, Long l, int i) {
             this.action = action0;
-            this.execTime = l2;
+            this.execTime = l;
             this.count = i;
         }
 

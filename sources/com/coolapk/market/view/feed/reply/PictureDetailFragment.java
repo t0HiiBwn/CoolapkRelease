@@ -126,7 +126,7 @@ public final class PictureDetailFragment extends BaseFragment {
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559087, viewGroup, false, new FragmentBindingComponent(this));
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559094, viewGroup, false, new FragmentBindingComponent(this));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ntBindingComponent(this))");
         PictureDetailWrapBinding pictureDetailWrapBinding = (PictureDetailWrapBinding) inflate;
         this.binding = pictureDetailWrapBinding;
@@ -211,15 +211,15 @@ public final class PictureDetailFragment extends BaseFragment {
     private final void fillFragment() {
         FragmentManager childFragmentManager = getChildFragmentManager();
         Intrinsics.checkNotNullExpressionValue(childFragmentManager, "childFragmentManager");
-        FeedDetailFragmentV8 feedDetailFragmentV8 = (FeedDetailFragmentV8) childFragmentManager.findFragmentById(2131362325);
+        FeedDetailFragmentV8 feedDetailFragmentV8 = (FeedDetailFragmentV8) childFragmentManager.findFragmentById(2131362331);
         if (feedDetailFragmentV8 == null) {
-            childFragmentManager.beginTransaction().add(2131362325, SinglePictureFeedFragment.Companion.newInstance(getFeed())).commit();
+            childFragmentManager.beginTransaction().add(2131362331, SinglePictureFeedFragment.Companion.newInstance(getFeed())).commit();
         } else if (feedDetailFragmentV8.isAdded()) {
             childFragmentManager.beginTransaction().show(feedDetailFragmentV8).commit();
         } else {
             FeedDetailFragmentV8 feedDetailFragmentV82 = feedDetailFragmentV8;
             childFragmentManager.beginTransaction().remove(feedDetailFragmentV82).commit();
-            childFragmentManager.beginTransaction().add(2131362325, feedDetailFragmentV82).commit();
+            childFragmentManager.beginTransaction().add(2131362331, feedDetailFragmentV82).commit();
         }
         childFragmentManager.executePendingTransactions();
     }
@@ -254,7 +254,7 @@ public final class PictureDetailFragment extends BaseFragment {
         ProgressBar progressBar = pictureDetailWrapBinding3.progressBar;
         Intrinsics.checkNotNullExpressionValue(progressBar, "binding.progressBar");
         progressBar.setVisibility(0);
-        ImageLoaderOptions build = ImageLoaderOptions.newBuilder().placeHolderRes(2131231696).build();
+        ImageLoaderOptions build = ImageLoaderOptions.newBuilder().placeHolderRes(2131231707).build();
         GlideFragmentImageLoader fragmentImageLoader = AppHolder.getFragmentImageLoader();
         PictureDetailFragment pictureDetailFragment = this;
         String middleSizePic = getFeed().getMiddleSizePic();
@@ -392,7 +392,7 @@ public final class PictureDetailFragment extends BaseFragment {
             Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
             ViewExtendsKt.removeAllItemDecorations(recyclerView);
             getRecyclerView().addItemDecoration(new CustomizedItemDecoration(getAdapter$presentation_coolapkAppRelease(), new PictureDetailFragment$SinglePictureFeedFragment$onActivityCreated$1(this, getDataList())));
-            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558693).constructor(new PictureDetailFragment$SinglePictureFeedFragment$onActivityCreated$2(this)).suitedEntityType("ENTITY_TYPE_DETAIL_TOP").resetItemViewType(2131558696).build(), 0, 2, null);
+            BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558700).constructor(new PictureDetailFragment$SinglePictureFeedFragment$onActivityCreated$2(this)).suitedEntityType("ENTITY_TYPE_DETAIL_TOP").resetItemViewType(2131558703).build(), 0, 2, null);
         }
 
         @Override // com.coolapk.market.view.feed.reply.FeedDetailFragmentV8, androidx.fragment.app.Fragment
@@ -400,11 +400,11 @@ public final class PictureDetailFragment extends BaseFragment {
             Intrinsics.checkNotNullParameter(menu, "menu");
             Intrinsics.checkNotNullParameter(menuInflater, "inflater");
             menuInflater.inflate(2131623975, menu);
-            MenuItem findItem = menu.findItem(2131361932);
+            MenuItem findItem = menu.findItem(2131361933);
             if (findItem != null) {
                 findItem.setVisible(true);
             }
-            MenuItem findItem2 = menu.findItem(2131361968);
+            MenuItem findItem2 = menu.findItem(2131361969);
             if (findItem2 != null) {
                 findItem2.setVisible(false);
             }
@@ -414,13 +414,13 @@ public final class PictureDetailFragment extends BaseFragment {
         public boolean onOptionsItemSelected(MenuItem menuItem) {
             Intrinsics.checkNotNullParameter(menuItem, "item");
             int itemId = menuItem.getItemId();
-            if (itemId == 2131361959) {
+            if (itemId == 2131361960) {
                 PhotoUtils.saveImageObservable(getFeed$presentation_coolapkAppRelease().getPic(), false).subscribe((Subscriber<? super File>) new EmptySubscriber());
                 return true;
-            } else if (itemId == 2131361966) {
+            } else if (itemId == 2131361967) {
                 PhotoUtils.saveImageObservable(getFeed$presentation_coolapkAppRelease().getPic(), true).subscribe((Subscriber<? super File>) new PictureDetailFragment$SinglePictureFeedFragment$onOptionsItemSelected$1());
                 return true;
-            } else if (itemId != 2131361968) {
+            } else if (itemId != 2131361969) {
                 return false;
             } else {
                 ActionManager.startForwardEntityActivity(getActivity(), getFeed$presentation_coolapkAppRelease());

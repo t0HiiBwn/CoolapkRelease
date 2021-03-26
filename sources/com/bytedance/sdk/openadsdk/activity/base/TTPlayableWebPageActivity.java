@@ -101,9 +101,7 @@ public class TTPlayableWebPageActivity extends Activity implements d, al.a {
     private boolean i = true;
     private boolean j = true;
     private RelativeLayout k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private View f1288l;
+    private View l;
     private Context m;
     private int n;
     private ProgressBar o;
@@ -468,7 +466,7 @@ public class TTPlayableWebPageActivity extends Activity implements d, al.a {
         }
         this.o = (ProgressBar) findViewById(ac.e(this, "tt_browser_progress"));
         View findViewById = findViewById(ac.e(this, "tt_playable_ad_dislike"));
-        this.f1288l = findViewById;
+        this.l = findViewById;
         findViewById.setOnClickListener(new View.OnClickListener() {
             /* class com.bytedance.sdk.openadsdk.activity.base.TTPlayableWebPageActivity.AnonymousClass11 */
 

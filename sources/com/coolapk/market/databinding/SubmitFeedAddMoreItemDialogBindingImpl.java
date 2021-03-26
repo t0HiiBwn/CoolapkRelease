@@ -27,9 +27,9 @@ public class SubmitFeedAddMoreItemDialogBindingImpl extends SubmitFeedAddMoreIte
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363437, 2);
-        sparseIntArray.put(2131362441, 3);
-        sparseIntArray.put(2131362196, 4);
+        sparseIntArray.put(2131363455, 2);
+        sparseIntArray.put(2131362448, 3);
+        sparseIntArray.put(2131362200, 4);
     }
 
     public SubmitFeedAddMoreItemDialogBindingImpl(DataBindingComponent dataBindingComponent, View view) {

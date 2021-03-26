@@ -63,7 +63,7 @@ public class SearchResultActivity extends FakeStatusBarActivity implements View.
         int i2;
         int i3;
         super.onCreate(bundle);
-        SearchResultBinding searchResultBinding = (SearchResultBinding) DataBindingUtil.setContentView(this, 2131559129);
+        SearchResultBinding searchResultBinding = (SearchResultBinding) DataBindingUtil.setContentView(this, 2131559136);
         this.mSearchBoxLayout = searchResultBinding.searchBoxLayout;
         this.mAppBarLayout = searchResultBinding.appBar;
         this.mSearchResultTextView = searchResultBinding.searchResultTextView;
@@ -209,7 +209,7 @@ public class SearchResultActivity extends FakeStatusBarActivity implements View.
     }
 
     protected String[] onCreateTabs() {
-        return new String[]{getString(2131886971), getString(2131886975), getString(2131886737), getString(2131886970), getString(2131886973), getString(2131886976), getString(2131886977), getString(2131886974), getString(2131886972)};
+        return new String[]{getString(2131887033), getString(2131887037), getString(2131886799), getString(2131887032), getString(2131887035), getString(2131887038), getString(2131887039), getString(2131887036), getString(2131887034)};
     }
 
     protected Fragment getFragmentItem(int i) {
@@ -236,15 +236,15 @@ public class SearchResultActivity extends FakeStatusBarActivity implements View.
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         switch (view.getId()) {
-            case 2131363004:
+            case 2131363018:
                 onBackPressed();
                 return;
-            case 2131363157:
+            case 2131363171:
                 StatisticHelper.getInstance().recordEvent("V9搜索界面", "二维码");
                 ActionManager.startQrcodeActivity(getActivity());
                 return;
-            case 2131363303:
-            case 2131363304:
+            case 2131363318:
+            case 2131363319:
                 ActionManager.startSearchActivity(this, this.mKeyword, null);
                 return;
             default:

@@ -20,9 +20,7 @@ public class CoordinateConverter {
     DPoint a = null;
     private Context j;
     private CoordType k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private DPoint f1215l = null;
+    private DPoint l = null;
 
     /* renamed from: com.amap.api.location.CoordinateConverter$1  reason: invalid class name */
     static /* synthetic */ class AnonymousClass1 {
@@ -93,19 +91,19 @@ public class CoordinateConverter {
         int i3;
         DPoint dPoint;
         if (this.k != null) {
-            DPoint dPoint2 = this.f1215l;
+            DPoint dPoint2 = this.l;
             if (dPoint2 == null) {
                 throw new IllegalArgumentException("转换坐标源不能为空");
-            } else if (dPoint2.getLongitude() > 180.0d || this.f1215l.getLongitude() < -180.0d) {
+            } else if (dPoint2.getLongitude() > 180.0d || this.l.getLongitude() < -180.0d) {
                 throw new IllegalArgumentException("请传入合理经度");
-            } else if (this.f1215l.getLatitude() > 90.0d || this.f1215l.getLatitude() < -90.0d) {
+            } else if (this.l.getLatitude() > 90.0d || this.l.getLatitude() < -90.0d) {
                 throw new IllegalArgumentException("请传入合理纬度");
             } else {
                 boolean z = false;
                 String str = null;
                 switch (AnonymousClass1.a[this.k.ordinal()]) {
                     case 1:
-                        this.a = el.a(this.f1215l);
+                        this.a = el.a(this.l);
                         i3 = b;
                         i2 = c;
                         if ((i3 & i2) == 0) {
@@ -116,7 +114,7 @@ public class CoordinateConverter {
                         }
                         break;
                     case 2:
-                        this.a = el.b(this.j, this.f1215l);
+                        this.a = el.b(this.j, this.l);
                         i3 = b;
                         i2 = d;
                         if ((i3 & i2) == 0) {
@@ -134,7 +132,7 @@ public class CoordinateConverter {
                             b = i4 | i5;
                             z = true;
                         }
-                        dPoint = this.f1215l;
+                        dPoint = this.l;
                         this.a = dPoint;
                         break;
                     case 4:
@@ -145,7 +143,7 @@ public class CoordinateConverter {
                             b = i6 | i7;
                             z = true;
                         }
-                        dPoint = this.f1215l;
+                        dPoint = this.l;
                         this.a = dPoint;
                         break;
                     case 5:
@@ -156,7 +154,7 @@ public class CoordinateConverter {
                             b = i8 | i9;
                             z = true;
                         }
-                        dPoint = this.f1215l;
+                        dPoint = this.l;
                         this.a = dPoint;
                         break;
                     case 6:
@@ -167,7 +165,7 @@ public class CoordinateConverter {
                             b = i10 | i11;
                             z = true;
                         }
-                        dPoint = this.f1215l;
+                        dPoint = this.l;
                         this.a = dPoint;
                         break;
                     case 7:
@@ -178,7 +176,7 @@ public class CoordinateConverter {
                             b = i12 | i13;
                             z = true;
                         }
-                        dPoint = el.a(this.j, this.f1215l);
+                        dPoint = el.a(this.j, this.l);
                         this.a = dPoint;
                         break;
                 }
@@ -204,7 +202,7 @@ public class CoordinateConverter {
         } else if (dPoint.getLatitude() > 90.0d || dPoint.getLatitude() < -90.0d) {
             throw new IllegalArgumentException("请传入合理纬度");
         } else {
-            this.f1215l = dPoint;
+            this.l = dPoint;
         }
         return this;
     }

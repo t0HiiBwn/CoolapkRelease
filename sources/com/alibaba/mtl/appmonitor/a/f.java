@@ -59,7 +59,7 @@ public enum f {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public String m16a() {
+    public String m6a() {
         return this.t;
     }
 

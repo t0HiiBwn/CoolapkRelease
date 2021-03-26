@@ -1,147 +1,124 @@
 package com.xiaomi.push;
 
-public enum hc {
-    Registration(1),
-    UnRegistration(2),
-    Subscription(3),
-    UnSubscription(4),
-    SendMessage(5),
-    AckMessage(6),
-    SetConfig(7),
-    ReportFeedback(8),
-    Notification(9),
-    Command(10),
-    MultiConnectionBroadcast(11),
-    MultiConnectionResult(12),
-    ConnectionKick(13),
-    ApnsMessage(14),
-    IOSDeviceTokenWrite(15),
-    SaveInvalidRegId(16),
-    ApnsCertChanged(17),
-    RegisterDevice(18),
-    ExpandTopicInXmq(19),
-    SendMessageNew(22),
-    ExpandTopicInXmqNew(23),
-    DeleteInvalidMessage(24),
-    BadAction(99),
-    Presence(100),
-    FetchOfflineMessage(101),
-    SaveJob(102),
-    Broadcast(103),
-    BatchPresence(104),
-    BatchMessage(105),
-    StatCounter(107),
-    FetchTopicMessage(108),
-    DeleteAliasCache(109),
-    UpdateRegistration(110),
-    BatchMessageNew(112),
-    PublicWelfareMessage(113),
-    RevokeMessage(114),
-    SimulatorJob(200);
-    
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
-    /* renamed from: a  reason: collision with other field name */
-    private final int f539a;
+public class hc implements hu<hc, Object>, Serializable, Cloneable {
+    private static final il b = new il("XmPushActionCollectData");
+    private static final id c = new id("", (byte) 15, 1);
+    public List<gq> a;
 
-    private hc(int i) {
-        this.f539a = i;
+    public hc a(List<gq> list) {
+        this.a = list;
+        return this;
     }
 
-    public static hc a(int i) {
-        if (i == 200) {
-            return SimulatorJob;
-        }
-        switch (i) {
-            case 1:
-                return Registration;
-            case 2:
-                return UnRegistration;
-            case 3:
-                return Subscription;
-            case 4:
-                return UnSubscription;
-            case 5:
-                return SendMessage;
-            case 6:
-                return AckMessage;
-            case 7:
-                return SetConfig;
-            case 8:
-                return ReportFeedback;
-            case 9:
-                return Notification;
-            case 10:
-                return Command;
-            case 11:
-                return MultiConnectionBroadcast;
-            case 12:
-                return MultiConnectionResult;
-            case 13:
-                return ConnectionKick;
-            case 14:
-                return ApnsMessage;
-            case 15:
-                return IOSDeviceTokenWrite;
-            case 16:
-                return SaveInvalidRegId;
-            case 17:
-                return ApnsCertChanged;
-            case 18:
-                return RegisterDevice;
-            case 19:
-                return ExpandTopicInXmq;
-            default:
-                switch (i) {
-                    case 22:
-                        return SendMessageNew;
-                    case 23:
-                        return ExpandTopicInXmqNew;
-                    case 24:
-                        return DeleteInvalidMessage;
-                    default:
-                        switch (i) {
-                            case 99:
-                                return BadAction;
-                            case 100:
-                                return Presence;
-                            case 101:
-                                return FetchOfflineMessage;
-                            case 102:
-                                return SaveJob;
-                            case 103:
-                                return Broadcast;
-                            case 104:
-                                return BatchPresence;
-                            case 105:
-                                return BatchMessage;
-                            default:
-                                switch (i) {
-                                    case 107:
-                                        return StatCounter;
-                                    case 108:
-                                        return FetchTopicMessage;
-                                    case 109:
-                                        return DeleteAliasCache;
-                                    case 110:
-                                        return UpdateRegistration;
-                                    default:
-                                        switch (i) {
-                                            case 112:
-                                                return BatchMessageNew;
-                                            case 113:
-                                                return PublicWelfareMessage;
-                                            case 114:
-                                                return RevokeMessage;
-                                            default:
-                                                return null;
-                                        }
-                                }
-                        }
+    @Override // com.xiaomi.push.hu
+    public void a(ig igVar) {
+        igVar.f();
+        while (true) {
+            id h = igVar.h();
+            if (h.b == 0) {
+                igVar.g();
+                b();
+                return;
+            }
+            if (h.c == 1 && h.b == 15) {
+                ie l = igVar.l();
+                this.a = new ArrayList(l.b);
+                for (int i = 0; i < l.b; i++) {
+                    gq gqVar = new gq();
+                    gqVar.a(igVar);
+                    this.a.add(gqVar);
                 }
+                igVar.m();
+            } else {
+                ij.a(igVar, h.b);
+            }
+            igVar.i();
         }
     }
 
-    public int a() {
-        return this.f539a;
+    public boolean a() {
+        return this.a != null;
+    }
+
+    public boolean a(hc hcVar) {
+        if (hcVar == null) {
+            return false;
+        }
+        boolean a2 = a();
+        boolean a3 = hcVar.a();
+        if (a2 || a3) {
+            return a2 && a3 && this.a.equals(hcVar.a);
+        }
+        return true;
+    }
+
+    /* renamed from: b */
+    public int compareTo(hc hcVar) {
+        int a2;
+        if (!getClass().equals(hcVar.getClass())) {
+            return getClass().getName().compareTo(hcVar.getClass().getName());
+        }
+        int compareTo = Boolean.valueOf(a()).compareTo(Boolean.valueOf(hcVar.a()));
+        if (compareTo != 0) {
+            return compareTo;
+        }
+        if (!a() || (a2 = hv.a(this.a, hcVar.a)) == 0) {
+            return 0;
+        }
+        return a2;
+    }
+
+    public void b() {
+        if (this.a == null) {
+            throw new ih("Required field 'dataCollectionItems' was not present! Struct: " + toString());
+        }
+    }
+
+    @Override // com.xiaomi.push.hu
+    public void b(ig igVar) {
+        b();
+        igVar.a(b);
+        if (this.a != null) {
+            igVar.a(c);
+            igVar.a(new ie((byte) 12, this.a.size()));
+            for (gq gqVar : this.a) {
+                gqVar.b(igVar);
+            }
+            igVar.e();
+            igVar.b();
+        }
+        igVar.c();
+        igVar.a();
+    }
+
+    @Override // java.lang.Object
+    public boolean equals(Object obj) {
+        if (obj != null && (obj instanceof hc)) {
+            return a((hc) obj);
+        }
+        return false;
+    }
+
+    @Override // java.lang.Object
+    public int hashCode() {
+        return 0;
+    }
+
+    @Override // java.lang.Object
+    public String toString() {
+        StringBuilder sb = new StringBuilder("XmPushActionCollectData(");
+        sb.append("dataCollectionItems:");
+        List<gq> list = this.a;
+        if (list == null) {
+            sb.append("null");
+        } else {
+            sb.append(list);
+        }
+        sb.append(")");
+        return sb.toString();
     }
 }

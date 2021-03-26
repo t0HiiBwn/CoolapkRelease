@@ -30,10 +30,10 @@ public class DialogAlbumitemNoteBindingImpl extends DialogAlbumitemNoteBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362022, 3);
-        sparseIntArray.put(2131362400, 4);
-        sparseIntArray.put(2131362062, 5);
-        sparseIntArray.put(2131363145, 6);
+        sparseIntArray.put(2131362023, 3);
+        sparseIntArray.put(2131362406, 4);
+        sparseIntArray.put(2131362064, 5);
+        sparseIntArray.put(2131363159, 6);
     }
 
     public DialogAlbumitemNoteBindingImpl(DataBindingComponent dataBindingComponent, View view) {

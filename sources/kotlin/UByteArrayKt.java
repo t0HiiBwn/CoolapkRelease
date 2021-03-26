@@ -6,15 +6,15 @@ import kotlin.jvm.functions.Function1;
 /* compiled from: UByteArray.kt */
 public final class UByteArrayKt {
     /* renamed from: ubyteArrayOf-GBYM_sE  reason: not valid java name */
-    private static final byte[] m765ubyteArrayOfGBYM_sE(byte... bArr) {
+    private static final byte[] m163ubyteArrayOfGBYM_sE(byte... bArr) {
         return bArr;
     }
 
     private static final byte[] UByteArray(int i, Function1<? super Integer, UByte> function1) {
         byte[] bArr = new byte[i];
         for (int i2 = 0; i2 < i; i2++) {
-            bArr[i2] = function1.invoke(Integer.valueOf(i2)).m746unboximpl();
+            bArr[i2] = function1.invoke(Integer.valueOf(i2)).m144unboximpl();
         }
-        return UByteArray.m749constructorimpl(bArr);
+        return UByteArray.m147constructorimpl(bArr);
     }
 }

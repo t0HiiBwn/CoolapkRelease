@@ -43,8 +43,8 @@ public final class UserLikeListFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558898, 2131231051).create());
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558898).suitedMethod(UserLikeListFragment$onActivityCreated$1.INSTANCE).constructor(new UserLikeListFragment$onActivityCreated$2(this)).build(), -1);
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558905, 2131231061).create());
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558905).suitedMethod(UserLikeListFragment$onActivityCreated$1.INSTANCE).constructor(new UserLikeListFragment$onActivityCreated$2(this)).build(), -1);
     }
 
     @Override // com.coolapk.market.view.cardlist.EntityListFragment

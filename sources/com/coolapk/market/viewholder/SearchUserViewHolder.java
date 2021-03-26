@@ -21,7 +21,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SearchUserViewHolder.kt */
 public final class SearchUserViewHolder extends UserViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558967;
+    public static final int LAYOUT_ID = 2131558974;
     private final EntityListPresenter presenter;
     private User user;
 
@@ -100,7 +100,7 @@ public final class SearchUserViewHolder extends UserViewHolder {
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
         int id = view.getId();
-        if (id == 2131361886) {
+        if (id == 2131361887) {
             User user2 = this.user;
             if (user2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("user");
@@ -124,7 +124,7 @@ public final class SearchUserViewHolder extends UserViewHolder {
             String uid2 = user4.getUid();
             Intrinsics.checkNotNullExpressionValue(uid2, "user.uid");
             entityListPresenter2.unfollowUser(uid2);
-        } else if (id == 2131362200) {
+        } else if (id == 2131362205) {
             UserAvatarView userAvatarView = ((ItemUserBinding) getBinding()).iconView;
             User user5 = this.user;
             if (user5 == null) {

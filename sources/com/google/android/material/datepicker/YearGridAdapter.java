@@ -39,8 +39,8 @@ class YearGridAdapter extends RecyclerView.Adapter<ViewHolder> {
         CalendarStyle calendarStyle = this.materialCalendar.getCalendarStyle();
         Calendar todayCalendar = UtcDates.getTodayCalendar();
         CalendarItemStyle calendarItemStyle = todayCalendar.get(1) == yearForPosition ? calendarStyle.todayYear : calendarStyle.year;
-        for (Long l2 : this.materialCalendar.getDateSelector().getSelectedDays()) {
-            todayCalendar.setTimeInMillis(l2.longValue());
+        for (Long l : this.materialCalendar.getDateSelector().getSelectedDays()) {
+            todayCalendar.setTimeInMillis(l.longValue());
             if (todayCalendar.get(1) == yearForPosition) {
                 calendarItemStyle = calendarStyle.selectedYear;
             }

@@ -27,7 +27,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: NodeRatingSelectorViewHolder.kt */
 public final class NodeRatingSelectorViewHolder extends GenericBindHolder<ItemNodeRatingSelectorBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558840;
+    public static final int LAYOUT_ID = 2131558847;
     private boolean ignoreCheckCallback;
     private final NodeRatingPresenter presenter;
     private final SparseArray<TextView> starViewArray;
@@ -220,22 +220,22 @@ public final class NodeRatingSelectorViewHolder extends GenericBindHolder<ItemNo
         super.onClick(view);
         NodeRatingArgs args = this.presenter.getArgs();
         switch (view.getId()) {
-            case 2131363408:
+            case 2131363426:
                 updateArgs(NodeRatingArgs.copy$default(args, null, null, null, null, false, null, null, "1", 0, 0, 895, null));
                 return;
-            case 2131363409:
+            case 2131363427:
                 updateArgs(NodeRatingArgs.copy$default(args, null, null, null, null, false, null, null, "2", 0, 0, 895, null));
                 return;
-            case 2131363410:
+            case 2131363428:
                 updateArgs(NodeRatingArgs.copy$default(args, null, null, null, null, false, null, null, "3", 0, 0, 895, null));
                 return;
-            case 2131363411:
+            case 2131363429:
                 updateArgs(NodeRatingArgs.copy$default(args, null, null, null, null, false, null, null, "4", 0, 0, 895, null));
                 return;
-            case 2131363412:
+            case 2131363430:
                 updateArgs(NodeRatingArgs.copy$default(args, null, null, null, null, false, null, null, "5", 0, 0, 895, null));
                 return;
-            case 2131363413:
+            case 2131363431:
                 updateArgs(NodeRatingArgs.copy$default(args, null, null, null, null, false, null, null, NodeRatingPresenter.Companion.getSTAR_ALL(), 0, 0, 895, null));
                 return;
             default:

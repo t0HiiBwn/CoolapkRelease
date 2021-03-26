@@ -41,7 +41,7 @@ public abstract class BaseContinuationImpl implements Continuation<Object>, Coro
                 Object invokeSuspend = baseContinuationImpl.invokeSuspend(obj);
                 if (invokeSuspend != IntrinsicsKt.getCOROUTINE_SUSPENDED()) {
                     Result.Companion companion = Result.Companion;
-                    obj = Result.m687constructorimpl(invokeSuspend);
+                    obj = Result.m85constructorimpl(invokeSuspend);
                     baseContinuationImpl.releaseIntercepted();
                     if (continuation2 instanceof BaseContinuationImpl) {
                         continuation = continuation2;
@@ -54,7 +54,7 @@ public abstract class BaseContinuationImpl implements Continuation<Object>, Coro
                 }
             } catch (Throwable th) {
                 Result.Companion companion2 = Result.Companion;
-                obj = Result.m687constructorimpl(ResultKt.createFailure(th));
+                obj = Result.m85constructorimpl(ResultKt.createFailure(th));
             }
         }
     }

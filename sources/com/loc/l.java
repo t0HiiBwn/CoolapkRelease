@@ -41,9 +41,7 @@ public final class l {
     private static long i = 0;
     private static volatile ConcurrentHashMap<String, Long> j = new ConcurrentHashMap<>(8);
     private static volatile ConcurrentHashMap<String, Long> k = new ConcurrentHashMap<>(8);
-
-    /* renamed from: l  reason: collision with root package name */
-    private static volatile ConcurrentHashMap<String, d> f1379l = new ConcurrentHashMap<>(8);
+    private static volatile ConcurrentHashMap<String, d> l = new ConcurrentHashMap<>(8);
 
     /* compiled from: AuthConfigManager */
     public interface a {
@@ -61,7 +59,7 @@ public final class l {
         public long e = 0;
         public JSONObject f;
         public a g;
-        public C0075b h;
+        public C0085b h;
         private boolean i;
 
         /* compiled from: AuthConfigManager */
@@ -73,7 +71,7 @@ public final class l {
 
         /* renamed from: com.loc.l$b$b  reason: collision with other inner class name */
         /* compiled from: AuthConfigManager */
-        public static class C0075b {
+        public static class C0085b {
             public boolean a;
         }
     }
@@ -316,8 +314,8 @@ public final class l {
                     String a2 = tVar.a();
                     if (!TextUtils.isEmpty(a2)) {
                         a(tVar);
-                        if (f1379l == null) {
-                            f1379l = new ConcurrentHashMap<>(8);
+                        if (l == null) {
+                            l = new ConcurrentHashMap<>(8);
                         }
                         if (k == null) {
                             k = new ConcurrentHashMap<>(8);
@@ -325,12 +323,12 @@ public final class l {
                         if (j == null) {
                             j = new ConcurrentHashMap<>(8);
                         }
-                        if (!f1379l.containsKey(a2)) {
+                        if (!l.containsKey(a2)) {
                             d dVar = new d((byte) 0);
                             dVar.a = tVar;
                             dVar.b = str;
                             dVar.c = aVar;
-                            f1379l.put(a2, dVar);
+                            l.put(a2, dVar);
                             j.put(a2, Long.valueOf(x.c(c, "open_common", a2)));
                         }
                     }
@@ -403,7 +401,7 @@ public final class l {
         if (u.a(jSONObject, "151")) {
             try {
                 JSONObject jSONObject3 = jSONObject.getJSONObject("151");
-                b.C0075b bVar2 = new b.C0075b();
+                b.C0085b bVar2 = new b.C0085b();
                 if (jSONObject3 != null) {
                     bVar2.a = a(jSONObject3.optString("able"), false);
                 }
@@ -503,8 +501,8 @@ public final class l {
                         k = new ConcurrentHashMap<>(8);
                     }
                     k.put(str, Long.valueOf(SystemClock.elapsedRealtime()));
-                    if (f1379l != null) {
-                        if (f1379l.containsKey(str)) {
+                    if (l != null) {
+                        if (l.containsKey(str)) {
                             if (!TextUtils.isEmpty(str)) {
                                 if (z) {
                                     as.a(true, str);
@@ -514,7 +512,7 @@ public final class l {
 
                                     @Override // java.lang.Runnable
                                     public final void run() {
-                                        d dVar = (d) l.f1379l.get(str);
+                                        d dVar = (d) l.l.get(str);
                                         if (dVar != null) {
                                             a aVar = dVar.c;
                                             b a2 = l.a(l.c, dVar.a, dVar.b, str2, str3, str4);
@@ -636,13 +634,13 @@ public final class l {
                 if (TextUtils.isEmpty(str)) {
                     return false;
                 }
-                if (f1379l == null) {
+                if (l == null) {
                     return false;
                 }
                 if (k == null) {
                     k = new ConcurrentHashMap<>(8);
                 }
-                if (f1379l.containsKey(str) && !k.containsKey(str)) {
+                if (l.containsKey(str) && !k.containsKey(str)) {
                     k.put(str, Long.valueOf(SystemClock.elapsedRealtime()));
                     return true;
                 }
@@ -1172,8 +1170,8 @@ public final class l {
     private static synchronized void b(String str, long j2) {
         synchronized (l.class) {
             try {
-                if (f1379l != null) {
-                    if (f1379l.containsKey(str)) {
+                if (l != null) {
+                    if (l.containsKey(str)) {
                         if (j == null) {
                             j = new ConcurrentHashMap<>(8);
                         }

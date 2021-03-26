@@ -73,7 +73,7 @@ public abstract class ItemMobileAlbumAppNewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMobileAlbumAppNewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemMobileAlbumAppNewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558828, viewGroup, z, obj);
+        return (ItemMobileAlbumAppNewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558835, viewGroup, z, obj);
     }
 
     public static ItemMobileAlbumAppNewBinding inflate(LayoutInflater layoutInflater) {
@@ -82,7 +82,7 @@ public abstract class ItemMobileAlbumAppNewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMobileAlbumAppNewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemMobileAlbumAppNewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558828, null, false, obj);
+        return (ItemMobileAlbumAppNewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558835, null, false, obj);
     }
 
     public static ItemMobileAlbumAppNewBinding bind(View view) {
@@ -91,6 +91,6 @@ public abstract class ItemMobileAlbumAppNewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemMobileAlbumAppNewBinding bind(View view, Object obj) {
-        return (ItemMobileAlbumAppNewBinding) bind(obj, view, 2131558828);
+        return (ItemMobileAlbumAppNewBinding) bind(obj, view, 2131558835);
     }
 }

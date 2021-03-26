@@ -20,7 +20,7 @@ public abstract class DownloadState extends State {
 
         public abstract Builder currentLength(long j);
 
-        public abstract Builder dbId(Long l2);
+        public abstract Builder dbId(Long l);
 
         public abstract Builder diffLength(long j);
 

@@ -24,7 +24,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: LiveListItemViewHolder.kt */
 public final class LiveListItemViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558806;
+    public static final int LAYOUT_ID = 2131558813;
     private final ItemLiveItemCardBinding binding;
     private Live live;
     private final EntityListPresenter presenter;
@@ -160,15 +160,15 @@ public final class LiveListItemViewHolder extends BindingViewHolder {
             liveStatus = live2.getLiveStatus();
             int i3 = 0;
             if (liveStatus != -1) {
-                i = 2131231721;
+                i = 2131231732;
             } else if (liveStatus != 0) {
-                i = liveStatus != 1 ? 0 : 2131231724;
+                i = liveStatus != 1 ? 0 : 2131231735;
             } else {
                 Live live12 = this.live;
                 if (live12 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("live");
                 }
-                i = live12.isFollow() ? 2131231722 : 2131231723;
+                i = live12.isFollow() ? 2131231733 : 2131231734;
             }
             textView5.setBackgroundResource(i);
             TextView textView6 = this.binding.actionButton;
@@ -305,7 +305,7 @@ public final class LiveListItemViewHolder extends BindingViewHolder {
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131361876) {
+        if (view.getId() != 2131361877) {
             Context context = getContext();
             Live live2 = this.live;
             if (live2 == null) {

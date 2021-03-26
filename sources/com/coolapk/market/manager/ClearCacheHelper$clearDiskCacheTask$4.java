@@ -18,6 +18,6 @@ public final class ClearCacheHelper$clearDiskCacheTask$4 extends EmptySubscriber
         super.onCompleted();
         Application application = AppHolder.getApplication();
         Intrinsics.checkNotNullExpressionValue(application, "AppHolder.getApplication()");
-        Toast.show(application, 2131886491);
+        Toast.show(application, 2131886551);
     }
 }

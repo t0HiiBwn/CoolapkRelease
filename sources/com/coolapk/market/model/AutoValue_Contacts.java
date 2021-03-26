@@ -23,8 +23,8 @@ final class AutoValue_Contacts extends C$AutoValue_Contacts {
         return 0;
     }
 
-    AutoValue_Contacts(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l2, Long l3, String str13, String str14, String str15, String str16, String str17, String str18, int i, String str19, UserInfo userInfo, UserInfo userInfo2) {
-        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l2, l3, str13, str14, str15, str16, str17, str18, i, str19, userInfo, userInfo2);
+    AutoValue_Contacts(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, String str12, Long l, Long l2, String str13, String str14, String str15, String str16, String str17, String str18, int i, String str19, UserInfo userInfo, UserInfo userInfo2) {
+        super(str, str2, str3, str4, num, str5, str6, str7, str8, str9, str10, str11, str12, l, l2, str13, str14, str15, str16, str17, str18, i, str19, userInfo, userInfo2);
     }
 
     @Override // android.os.Parcelable

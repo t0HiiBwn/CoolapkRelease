@@ -7,7 +7,7 @@ public class UTMIVariables {
     private boolean S = false;
 
     /* renamed from: a  reason: collision with other field name */
-    private UTMI1010_2001Event f98a = null;
+    private UTMI1010_2001Event f97a = null;
     private String ak = null;
     private String an = null;
     private String ao = null;
@@ -21,11 +21,11 @@ public class UTMIVariables {
     }
 
     public synchronized void setUTMI1010_2001EventInstance(UTMI1010_2001Event uTMI1010_2001Event) {
-        this.f98a = uTMI1010_2001Event;
+        this.f97a = uTMI1010_2001Event;
     }
 
     public synchronized UTMI1010_2001Event getUTMI1010_2001EventInstance() {
-        return this.f98a;
+        return this.f97a;
     }
 
     public static UTMIVariables getInstance() {

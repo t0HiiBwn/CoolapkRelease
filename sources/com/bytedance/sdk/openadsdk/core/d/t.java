@@ -16,9 +16,7 @@ public class t {
     private String i;
     private String j;
     private int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1306l = 0;
+    private int l = 0;
     private int m = 0;
 
     public int a() {
@@ -141,11 +139,11 @@ public class t {
     }
 
     public int n() {
-        return this.f1306l;
+        return this.l;
     }
 
     public void d(int i2) {
-        this.f1306l = i2;
+        this.l = i2;
     }
 
     public int o() {

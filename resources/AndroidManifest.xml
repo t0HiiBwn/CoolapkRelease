@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" platformBuildVersionName="11" platformBuildVersionCode="30" package="com.coolapk.market" android:versionCode="2102251" android:versionName="11.0.2" android:compileSdkVersion="30" android:compileSdkVersionCodename="11">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" platformBuildVersionName="11" platformBuildVersionCode="30" package="com.coolapk.market" android:versionCode="2103251" android:versionName="11.1.0" android:compileSdkVersion="30" android:compileSdkVersionCodename="11">
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -22,8 +22,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
-    <permission android:name="com.coolapk.market.permission.MIPUSH_RECEIVE" android:protectionLevel="signature"/>
-    <uses-permission android:name="com.coolapk.market.permission.MIPUSH_RECEIVE"/>
     <uses-feature android:name="android.hardware.camera" android:required="true"/>
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="true"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
@@ -43,8 +41,20 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <permission android:name="com.coolapk.market.permission.XGPUSH_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.coolapk.market.permission.XGPUSH_RECEIVE"/>
+    <permission android:name="com.coolapk.market.permission.MIPUSH_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.coolapk.market.permission.MIPUSH_RECEIVE"/>
+    <permission android:name="com.coolapk.market.permission.PROCESS_PUSH_MSG" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.coolapk.market.permission.PUSH_PROVIDER" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.coolapk.market.permission.PUSH_WRITE_PROVIDER" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.coolapk.market.permission.PROCESS_PUSH_MSG"/>
+    <uses-permission android:name="com.coolapk.market.permission.PUSH_PROVIDER"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="bin.mt.apksignaturekillerplus.HookApplication" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="true" android:usesCleartextTraffic="true" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true">
+    <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.coolapk.market.CoolMarketApplication" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="true" android:usesCleartextTraffic="true" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true">
         <meta-data android:name="EasyGoClient" android:value="true"/>
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <meta-data android:name="APP_MODE" android:value="universal"/>
@@ -76,8 +86,8 @@
             </intent-filter>
             <meta-data android:name="android.app.shortcuts" android:resource="@xml/nougat_shortcuts"/>
         </activity>
-        <activity android:theme="@style/res_2131951871_baseapptheme_splash" android:name="com.coolapk.market.view.splash.SplashActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
-        <activity android:theme="@style/res_2131951871_baseapptheme_splash" android:name="com.coolapk.market.view.splash.FullScreenAdActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <activity android:theme="@style/res_2131951872_baseapptheme_splash" android:name="com.coolapk.market.view.splash.SplashActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <activity android:theme="@style/res_2131951872_baseapptheme_splash" android:name="com.coolapk.market.view.splash.FullScreenAdActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <activity android:name="com.coolapk.market.view.base.SimpleActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:windowSoftInputMode="adjustNothing"/>
         <activity android:name="com.coolapk.market.view.base.SimpleAlphaActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:windowSoftInputMode="adjustNothing"/>
         <activity android:name="com.coolapk.market.view.category.AppCategoryDetailActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
@@ -87,7 +97,7 @@
         <service android:name="com.coolapk.market.service.PackageService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
         <activity android:name="com.coolapk.market.util.RxLogin$RequireLoginActivity" android:launchMode="singleTop"/>
         <activity android:name="com.coolapk.market.view.feedv8.QuestionTitleActivity"/>
-        <activity android:theme="@style/res_2131952115_theme_appcompat_light_noactionbar" android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/res_2131952116_theme_appcompat_light_noactionbar" android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="portrait"/>
         <activity android:name="com.coolapk.market.view.contact.FriendListActivity"/>
         <activity android:label="@string/title_user_apk_comment" android:name="com.coolapk.market.view.user.UserApkCommentActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <activity android:name="com.coolapk.market.view.user.edit.EditUserInfoAcitvity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
@@ -148,7 +158,6 @@
         <activity android:label="@string/str_user_app_rating" android:name="com.coolapk.market.view.user.UserRatingActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <activity android:label="@string/title_app_manager" android:name="com.coolapk.market.view.appmanager.AppManagerActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <activity android:label="@string/title_theme" android:name="com.coolapk.market.view.theme.ThemeListActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
-        <activity android:label="@string/title_settings" android:name="com.coolapk.market.view.settings.SettingsActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <activity android:label="@string/title_my_album" android:name="com.coolapk.market.view.album.UserAlbumListActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <activity android:name="com.coolapk.market.view.album.pick.AlbumPickAppTabActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <activity android:name="com.coolapk.market.view.photo.PhotoPickerActivity" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
@@ -263,33 +272,13 @@
         <activity android:name="com.coolapk.market.view.node.DynamicNodePageActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <activity android:theme="@style/AppThemeTranslucent" android:name="com.coolapk.market.view.node.prodcut.ProductCouponActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
         <activity android:name="com.coolapk.market.view.feed.pick.NodeRecommendPickerActivity" android:configChanges="keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
-        <receiver android:name="com.coolapk.market.receiver.CoolMarketPushReceiver" android:exported="true">
+        <receiver android:name="com.coolapk.market.receiver.TencentXGTPushReceiver">
             <intent-filter>
-                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.xiaomi.mipush.ERROR"/>
+                <action android:name="com.tencent.android.xg.vip.action.PUSH_MESSAGE"/>
+                <action android:name="com.tencent.android.xg.vip.action.FEEDBACK"/>
             </intent-filter>
         </receiver>
-        <service android:name="com.xiaomi.push.service.XMPushService" android:enabled="true" android:process=":pushservice"/>
-        <service android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false" android:process=":pushservice"/>
-        <service android:name="com.xiaomi.mipush.sdk.PushMessageHandler" android:enabled="true" android:exported="true"/>
-        <service android:name="com.xiaomi.mipush.sdk.MessageHandleService" android:enabled="true"/>
         <service android:name="com.amap.api.location.APSService"/>
-        <receiver android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver" android:exported="true">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.xiaomi.push.service.receivers.PingReceiver" android:exported="false" android:process=":pushservice">
-            <intent-filter>
-                <action android:name="com.xiaomi.push.PING_TIMER"/>
-            </intent-filter>
-        </receiver>
         <activity android:name="com.tencent.tauth.AuthActivity" android:launchMode="singleTask" android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -436,6 +425,99 @@
         <activity android:theme="@android:style/Theme.Light.NoTitleBar" android:name="com.qq.e.ads.RewardvideoLandscapeADActivity" android:multiprocess="true" android:screenOrientation="landscape" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
             <meta-data android:name="android.notch_support" android:value="true"/>
         </activity>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.tencent.android.tpush.TpnsActivity">
+            <intent-filter>
+                <action android:name="com.coolapk.market.OPEN_TPNS_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="tpns" android:host="com.coolapk.market"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.tencent.android.tpush.inappmessage.InAppMessageActivity"/>
+        <receiver android:name="com.tencent.android.tpush.XGPushReceiver" android:exported="false" android:process=":xg_vip_service">
+            <intent-filter android:priority="7fffffff">
+                <action android:name="com.tencent.android.xg.vip.action.SDK"/>
+                <action android:name="com.tencent.android.xg.vip.action.INTERNAL_PUSH_MESSAGE"/>
+                <action android:name="com.tencent.android.xg.vip.action.ACTION_SDK_KEEPALIVE"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.tencent.android.tpush.service.XGVipPushService" android:persistent="true" android:exported="false" android:process=":xg_vip_service"/>
+        <service android:name="com.tencent.android.tpush.rpc.XGRemoteService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.coolapk.market.XGVIP_PUSH_ACTION"/>
+            </intent-filter>
+        </service>
+        <provider android:name="com.tencent.android.tpush.XGPushProvider" android:exported="false" android:authorities="com.coolapk.market.XGVIP_PUSH_AUTH"/>
+        <provider android:name="com.tencent.android.tpush.SettingsContentProvider" android:exported="false" android:authorities="com.coolapk.market.TPUSH_PROVIDER"/>
+        <provider android:name="com.tencent.android.tpush.XGVipPushKAProvider" android:exported="true" android:authorities="com.coolapk.market.AUTH_XGPUSH_KEEPALIVE"/>
+        <service android:name="com.tencent.tpns.mqttchannel.services.MqttService" android:exported="false" android:process=":xg_vip_service"/>
+        <provider android:name="com.tencent.tpns.baseapi.base.SettingsContentProvider" android:exported="false" android:authorities="com.coolapk.market.XG_SETTINGS_PROVIDER"/>
+        <meta-data android:name="XG_V2_ACCESS_ID" android:value="1500007668"/>
+        <meta-data android:name="XG_V2_ACCESS_KEY" android:value="AG0MMXMZ3MSU"/>
+        <service android:name="com.xiaomi.push.service.XMPushService" android:enabled="true" android:process=":pushservice"/>
+        <service android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false" android:process=":pushservice"/>
+        <service android:name="com.xiaomi.mipush.sdk.PushMessageHandler" android:enabled="true" android:exported="true"/>
+        <service android:name="com.xiaomi.mipush.sdk.MessageHandleService" android:enabled="true"/>
+        <receiver android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.xiaomi.push.service.receivers.PingReceiver" android:exported="false" android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.tencent.android.mipush.XMPushMessageReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.huawei.android.hms.tpns.HWHmsMessageService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.huawei.hms.support.api.push.PushMsgReceiver" android:permission="com.coolapk.market.permission.PROCESS_PUSH_MSG" android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY"/>
+                <action android:name="com.huawei.intent.action.PUSH"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.huawei.hms.support.api.push.PushReceiver" android:permission="com.coolapk.market.permission.PROCESS_PUSH_MSG" android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.android.push.intent.REGISTRATION"/>
+                <action android:name="com.huawei.android.push.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.huawei.hms.support.api.push.service.HmsMsgService" android:enabled="true" android:exported="true" android:process=":pushservice" android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.push.msg.NOTIFY_MSG"/>
+                <action android:name="com.huawei.push.msg.PASSBY_MSG"/>
+            </intent-filter>
+        </service>
+        <provider android:name="com.huawei.hms.support.api.push.PushProvider" android:permission="com.coolapk.market.permission.PUSH_PROVIDER" android:readPermission="com.coolapk.market.permission.PUSH_PROVIDER" android:writePermission="com.coolapk.market.permission.PUSH_WRITE_PROVIDER" android:exported="true" android:authorities="com.coolapk.market.huawei.push.provider"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:push" android:value="push:5.0.2.300"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:push:push" android:value="1"/>
         <provider android:name="androidx.work.impl.WorkManagerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.coolapk.market.workmanager-init" android:directBootAware="false"/>
         <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false"/>
         <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:directBootAware="false"/>
@@ -483,5 +565,26 @@
         </receiver>
         <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.coolapk.market.lifecycle-process"/>
         <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <provider android:name="com.huawei.hms.aaid.InitProvider" android:exported="false" android:authorities="com.coolapk.market.aaidinitprovider"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:opendevice" android:value="opendevice:5.0.2.300"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:opendevice:push" android:value="1"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:base" android:value="base:5.0.0.301"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:base:hmscore" android:value="1"/>
+        <meta-data android:name="availableLoaded" android:value="yes"/>
+        <provider android:name="com.huawei.hms.update.provider.UpdateProvider" android:exported="false" android:authorities="com.coolapk.market.hms.update.provider" android:grantUriPermissions="true"/>
+        <activity android:theme="@android:style/Theme.Translucent" android:name="com.huawei.hms.activity.BridgeActivity" android:exported="false" android:excludeFromRecents="true" android:screenOrientation="behind" android:configChanges="locale|orientation|screenLayout|screenSize|smallestScreenSize|layoutDirection|fontScale" android:hardwareAccelerated="true">
+            <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>
+        </activity>
+        <activity android:name="com.huawei.hms.activity.EnableServiceActivity" android:exported="false" android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"/>
+        <provider android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider" android:exported="false" android:authorities="com.coolapk.market.AGCInitializeProvider"/>
+        <service android:name="com.huawei.agconnect.core.ServiceDiscovery" android:exported="false"/>
+        <activity android:theme="@style/upsdkDlDialog" android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity" android:exported="false" android:configChanges="orientation|screenSize">
+            <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar"/>
+        </activity>
+        <activity android:theme="@style/upsdkDlDialog" android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity" android:exported="false" android:configChanges="keyboardHidden|orientation|screenSize">
+            <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>
+        </activity>
+        <provider android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider" android:exported="false" android:authorities="com.coolapk.market.updateSdk.fileProvider" android:grantUriPermissions="true"/>
+        <meta-data android:name="com.huawei.hms.client.appid" android:value="appid=10414599"/>
     </application>
 </manifest>

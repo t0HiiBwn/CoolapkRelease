@@ -15,10 +15,6 @@ public class FilenameUtils {
     private static final char UNIX_SEPARATOR = '/';
     private static final char WINDOWS_SEPARATOR = '\\';
 
-    private static boolean isSeparator(char c) {
-        return c == '/' || c == '\\';
-    }
-
     static {
         if (isSystemWindows()) {
             OTHER_SEPARATOR = '/';
@@ -27,24 +23,69 @@ public class FilenameUtils {
         }
     }
 
-    static boolean isSystemWindows() {
-        return SYSTEM_SEPARATOR == '\\';
+    public static String concat(String str, String str2) {
+        int prefixLength = getPrefixLength(str2);
+        if (prefixLength < 0) {
+            return null;
+        }
+        if (prefixLength > 0) {
+            return normalize(str2);
+        }
+        if (str == null) {
+            return null;
+        }
+        int length = str.length();
+        if (length == 0) {
+            return normalize(str2);
+        }
+        if (isSeparator(str.charAt(length - 1))) {
+            return normalize(str + str2);
+        }
+        return normalize(str + '/' + str2);
     }
 
-    public static String normalize(String str) {
-        return doNormalize(str, SYSTEM_SEPARATOR, true);
+    public static boolean directoryContains(String str, String str2) throws IOException {
+        if (str == null) {
+            throw new IllegalArgumentException("Directory must not be null");
+        } else if (str2 != null && !IOCase.SYSTEM.checkEquals(str, str2)) {
+            return IOCase.SYSTEM.checkStartsWith(str2, str);
+        } else {
+            return false;
+        }
     }
 
-    public static String normalize(String str, boolean z) {
-        return doNormalize(str, z ? '/' : '\\', true);
+    private static String doGetFullPath(String str, boolean z) {
+        int prefixLength;
+        if (str == null || (prefixLength = getPrefixLength(str)) < 0) {
+            return null;
+        }
+        if (prefixLength >= str.length()) {
+            return z ? getPrefix(str) : str;
+        }
+        int indexOfLastSeparator = indexOfLastSeparator(str);
+        if (indexOfLastSeparator < 0) {
+            return str.substring(0, prefixLength);
+        }
+        int i = indexOfLastSeparator + (z ? 1 : 0);
+        if (i == 0) {
+            i++;
+        }
+        return str.substring(0, i);
     }
 
-    public static String normalizeNoEndSeparator(String str) {
-        return doNormalize(str, SYSTEM_SEPARATOR, false);
-    }
-
-    public static String normalizeNoEndSeparator(String str, boolean z) {
-        return doNormalize(str, z ? '/' : '\\', false);
+    private static String doGetPath(String str, int i) {
+        int prefixLength;
+        if (str == null || (prefixLength = getPrefixLength(str)) < 0) {
+            return null;
+        }
+        int indexOfLastSeparator = indexOfLastSeparator(str);
+        int i2 = i + indexOfLastSeparator;
+        if (prefixLength >= str.length() || indexOfLastSeparator < 0 || prefixLength >= i2) {
+            return "";
+        }
+        String substring = str.substring(prefixLength, i2);
+        failIfNullBytePresent(substring);
+        return substring;
     }
 
     private static String doNormalize(String str, char c, boolean z) {
@@ -139,65 +180,99 @@ public class FilenameUtils {
             }
             i9++;
         }
-        if (length <= 0) {
-            return "";
-        }
-        if (length <= prefixLength) {
-            return new String(cArr, 0, length);
-        }
-        if (!z2 || !z) {
-            return new String(cArr, 0, length - 1);
-        }
-        return new String(cArr, 0, length);
+        return length <= 0 ? "" : length <= prefixLength ? new String(cArr, 0, length) : (!z2 || !z) ? new String(cArr, 0, length - 1) : new String(cArr, 0, length);
     }
 
-    public static String concat(String str, String str2) {
-        int prefixLength = getPrefixLength(str2);
-        if (prefixLength < 0) {
-            return null;
+    public static boolean equals(String str, String str2) {
+        return equals(str, str2, false, IOCase.SENSITIVE);
+    }
+
+    public static boolean equals(String str, String str2, boolean z, IOCase iOCase) {
+        if (str == null || str2 == null) {
+            return str == null && str2 == null;
         }
-        if (prefixLength > 0) {
-            return normalize(str2);
+        if (z) {
+            str = normalize(str);
+            str2 = normalize(str2);
+            if (str == null || str2 == null) {
+                throw new NullPointerException("Error normalizing one or both of the file names");
+            }
         }
-        if (str == null) {
-            return null;
+        if (iOCase == null) {
+            iOCase = IOCase.SENSITIVE;
         }
+        return iOCase.checkEquals(str, str2);
+    }
+
+    public static boolean equalsNormalized(String str, String str2) {
+        return equals(str, str2, true, IOCase.SENSITIVE);
+    }
+
+    public static boolean equalsNormalizedOnSystem(String str, String str2) {
+        return equals(str, str2, true, IOCase.SYSTEM);
+    }
+
+    public static boolean equalsOnSystem(String str, String str2) {
+        return equals(str, str2, false, IOCase.SYSTEM);
+    }
+
+    private static void failIfNullBytePresent(String str) {
         int length = str.length();
-        if (length == 0) {
-            return normalize(str2);
-        }
-        if (isSeparator(str.charAt(length - 1))) {
-            return normalize(str + str2);
-        }
-        return normalize(str + '/' + str2);
-    }
-
-    public static boolean directoryContains(String str, String str2) throws IOException {
-        if (str == null) {
-            throw new IllegalArgumentException("Directory must not be null");
-        } else if (str2 != null && !IOCase.SYSTEM.checkEquals(str, str2)) {
-            return IOCase.SYSTEM.checkStartsWith(str2, str);
-        } else {
-            return false;
+        for (int i = 0; i < length; i++) {
+            if (str.charAt(i) == 0) {
+                throw new IllegalArgumentException("Null byte present in file/path name. There are no known legitimate use cases for such data, but several injection attacks may use it");
+            }
         }
     }
 
-    public static String separatorsToUnix(String str) {
-        return (str == null || str.indexOf(92) == -1) ? str : str.replace('\\', '/');
+    public static String getBaseName(String str) {
+        return removeExtension(getName(str));
     }
 
-    public static String separatorsToWindows(String str) {
-        return (str == null || str.indexOf(47) == -1) ? str : str.replace('/', '\\');
-    }
-
-    public static String separatorsToSystem(String str) {
+    public static String getExtension(String str) {
         if (str == null) {
             return null;
         }
-        if (isSystemWindows()) {
-            return separatorsToWindows(str);
+        int indexOfExtension = indexOfExtension(str);
+        return indexOfExtension == -1 ? "" : str.substring(indexOfExtension + 1);
+    }
+
+    public static String getFullPath(String str) {
+        return doGetFullPath(str, true);
+    }
+
+    public static String getFullPathNoEndSeparator(String str) {
+        return doGetFullPath(str, false);
+    }
+
+    public static String getName(String str) {
+        if (str == null) {
+            return null;
         }
-        return separatorsToUnix(str);
+        failIfNullBytePresent(str);
+        return str.substring(indexOfLastSeparator(str) + 1);
+    }
+
+    public static String getPath(String str) {
+        return doGetPath(str, 1);
+    }
+
+    public static String getPathNoEndSeparator(String str) {
+        return doGetPath(str, 0);
+    }
+
+    public static String getPrefix(String str) {
+        int prefixLength;
+        if (str == null || (prefixLength = getPrefixLength(str)) < 0) {
+            return null;
+        }
+        if (prefixLength > str.length()) {
+            failIfNullBytePresent(str + '/');
+            return str + '/';
+        }
+        String substring = str.substring(0, prefixLength);
+        failIfNullBytePresent(substring);
+        return substring;
     }
 
     public static int getPrefixLength(String str) {
@@ -231,16 +306,7 @@ public class FilenameUtils {
                 char charAt2 = str.charAt(1);
                 if (charAt2 == ':') {
                     char upperCase = Character.toUpperCase(charAt);
-                    if (upperCase < 'A' || upperCase > 'Z') {
-                        if (upperCase == '/') {
-                            return 1;
-                        }
-                        return -1;
-                    } else if (length == 2 || !isSeparator(str.charAt(2))) {
-                        return 2;
-                    } else {
-                        return 3;
-                    }
+                    return (upperCase < 'A' || upperCase > 'Z') ? upperCase == '/' ? 1 : -1 : (length == 2 || !isSeparator(str.charAt(2))) ? 2 : 3;
                 } else if (!isSeparator(charAt) || !isSeparator(charAt2)) {
                     return isSeparator(charAt) ? 1 : 0;
                 } else {
@@ -266,13 +332,6 @@ public class FilenameUtils {
         }
     }
 
-    public static int indexOfLastSeparator(String str) {
-        if (str == null) {
-            return -1;
-        }
-        return Math.max(str.lastIndexOf(47), str.lastIndexOf(92));
-    }
-
     public static int indexOfExtension(String str) {
         int lastIndexOf;
         if (str != null && indexOfLastSeparator(str) <= (lastIndexOf = str.lastIndexOf(46))) {
@@ -281,145 +340,11 @@ public class FilenameUtils {
         return -1;
     }
 
-    public static String getPrefix(String str) {
-        int prefixLength;
-        if (str == null || (prefixLength = getPrefixLength(str)) < 0) {
-            return null;
-        }
-        if (prefixLength > str.length()) {
-            failIfNullBytePresent(str + '/');
-            return str + '/';
-        }
-        String substring = str.substring(0, prefixLength);
-        failIfNullBytePresent(substring);
-        return substring;
-    }
-
-    public static String getPath(String str) {
-        return doGetPath(str, 1);
-    }
-
-    public static String getPathNoEndSeparator(String str) {
-        return doGetPath(str, 0);
-    }
-
-    private static String doGetPath(String str, int i) {
-        int prefixLength;
-        if (str == null || (prefixLength = getPrefixLength(str)) < 0) {
-            return null;
-        }
-        int indexOfLastSeparator = indexOfLastSeparator(str);
-        int i2 = i + indexOfLastSeparator;
-        if (prefixLength >= str.length() || indexOfLastSeparator < 0 || prefixLength >= i2) {
-            return "";
-        }
-        String substring = str.substring(prefixLength, i2);
-        failIfNullBytePresent(substring);
-        return substring;
-    }
-
-    public static String getFullPath(String str) {
-        return doGetFullPath(str, true);
-    }
-
-    public static String getFullPathNoEndSeparator(String str) {
-        return doGetFullPath(str, false);
-    }
-
-    private static String doGetFullPath(String str, boolean z) {
-        int prefixLength;
-        if (str == null || (prefixLength = getPrefixLength(str)) < 0) {
-            return null;
-        }
-        if (prefixLength >= str.length()) {
-            return z ? getPrefix(str) : str;
-        }
-        int indexOfLastSeparator = indexOfLastSeparator(str);
-        if (indexOfLastSeparator < 0) {
-            return str.substring(0, prefixLength);
-        }
-        int i = indexOfLastSeparator + (z ? 1 : 0);
-        if (i == 0) {
-            i++;
-        }
-        return str.substring(0, i);
-    }
-
-    public static String getName(String str) {
+    public static int indexOfLastSeparator(String str) {
         if (str == null) {
-            return null;
+            return -1;
         }
-        failIfNullBytePresent(str);
-        return str.substring(indexOfLastSeparator(str) + 1);
-    }
-
-    private static void failIfNullBytePresent(String str) {
-        int length = str.length();
-        for (int i = 0; i < length; i++) {
-            if (str.charAt(i) == 0) {
-                throw new IllegalArgumentException("Null byte present in file/path name. There are no known legitimate use cases for such data, but several injection attacks may use it");
-            }
-        }
-    }
-
-    public static String getBaseName(String str) {
-        return removeExtension(getName(str));
-    }
-
-    public static String getExtension(String str) {
-        if (str == null) {
-            return null;
-        }
-        int indexOfExtension = indexOfExtension(str);
-        if (indexOfExtension == -1) {
-            return "";
-        }
-        return str.substring(indexOfExtension + 1);
-    }
-
-    public static String removeExtension(String str) {
-        if (str == null) {
-            return null;
-        }
-        failIfNullBytePresent(str);
-        int indexOfExtension = indexOfExtension(str);
-        if (indexOfExtension == -1) {
-            return str;
-        }
-        return str.substring(0, indexOfExtension);
-    }
-
-    public static boolean equals(String str, String str2) {
-        return equals(str, str2, false, IOCase.SENSITIVE);
-    }
-
-    public static boolean equalsOnSystem(String str, String str2) {
-        return equals(str, str2, false, IOCase.SYSTEM);
-    }
-
-    public static boolean equalsNormalized(String str, String str2) {
-        return equals(str, str2, true, IOCase.SENSITIVE);
-    }
-
-    public static boolean equalsNormalizedOnSystem(String str, String str2) {
-        return equals(str, str2, true, IOCase.SYSTEM);
-    }
-
-    public static boolean equals(String str, String str2, boolean z, IOCase iOCase) {
-        if (str == null || str2 == null) {
-            return str == null && str2 == null;
-        }
-        if (z) {
-            str = normalize(str);
-            str2 = normalize(str2);
-            if (str == null || str2 == null) {
-                throw new NullPointerException("Error normalizing one or both of the file names");
-            }
-        }
-        if (iOCase == null) {
-            iOCase = IOCase.SENSITIVE;
-        }
-        return iOCase.checkEquals(str, str2);
+        return Math.max(str.lastIndexOf(47), str.lastIndexOf(92));
     }
 
     public static boolean isExtension(String str, String str2) {
@@ -427,11 +352,22 @@ public class FilenameUtils {
             return false;
         }
         failIfNullBytePresent(str);
-        if (str2 != null && !str2.isEmpty()) {
-            return getExtension(str).equals(str2);
+        return (str2 == null || str2.isEmpty()) ? indexOfExtension(str) == -1 : getExtension(str).equals(str2);
+    }
+
+    public static boolean isExtension(String str, Collection<String> collection) {
+        if (str == null) {
+            return false;
         }
-        if (indexOfExtension(str) == -1) {
-            return true;
+        failIfNullBytePresent(str);
+        if (collection == null || collection.isEmpty()) {
+            return indexOfExtension(str) == -1;
+        }
+        String extension = getExtension(str);
+        for (String str2 : collection) {
+            if (extension.equals(str2)) {
+                return true;
+            }
         }
         return false;
     }
@@ -441,47 +377,102 @@ public class FilenameUtils {
             return false;
         }
         failIfNullBytePresent(str);
-        if (strArr != null && strArr.length != 0) {
-            String extension = getExtension(str);
-            for (String str2 : strArr) {
-                if (extension.equals(str2)) {
-                    return true;
-                }
-            }
-            return false;
-        } else if (indexOfExtension(str) == -1) {
-            return true;
-        } else {
-            return false;
+        if (strArr == null || strArr.length == 0) {
+            return indexOfExtension(str) == -1;
         }
+        String extension = getExtension(str);
+        for (String str2 : strArr) {
+            if (extension.equals(str2)) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    public static boolean isExtension(String str, Collection<String> collection) {
+    private static boolean isSeparator(char c) {
+        return c == '/' || c == '\\';
+    }
+
+    static boolean isSystemWindows() {
+        return SYSTEM_SEPARATOR == '\\';
+    }
+
+    public static String normalize(String str) {
+        return doNormalize(str, SYSTEM_SEPARATOR, true);
+    }
+
+    public static String normalize(String str, boolean z) {
+        return doNormalize(str, z ? '/' : '\\', true);
+    }
+
+    public static String normalizeNoEndSeparator(String str) {
+        return doNormalize(str, SYSTEM_SEPARATOR, false);
+    }
+
+    public static String normalizeNoEndSeparator(String str, boolean z) {
+        return doNormalize(str, z ? '/' : '\\', false);
+    }
+
+    public static String removeExtension(String str) {
         if (str == null) {
-            return false;
+            return null;
         }
         failIfNullBytePresent(str);
-        if (collection != null && !collection.isEmpty()) {
-            String extension = getExtension(str);
-            for (String str2 : collection) {
-                if (extension.equals(str2)) {
-                    return true;
-                }
-            }
-            return false;
-        } else if (indexOfExtension(str) == -1) {
-            return true;
-        } else {
-            return false;
+        int indexOfExtension = indexOfExtension(str);
+        return indexOfExtension == -1 ? str : str.substring(0, indexOfExtension);
+    }
+
+    public static String separatorsToSystem(String str) {
+        if (str == null) {
+            return null;
         }
+        return isSystemWindows() ? separatorsToWindows(str) : separatorsToUnix(str);
+    }
+
+    public static String separatorsToUnix(String str) {
+        return (str == null || str.indexOf(92) == -1) ? str : str.replace('\\', '/');
+    }
+
+    public static String separatorsToWindows(String str) {
+        return (str == null || str.indexOf(47) == -1) ? str : str.replace('/', '\\');
+    }
+
+    static String[] splitOnTokens(String str) {
+        if (str.indexOf(63) == -1 && str.indexOf(42) == -1) {
+            return new String[]{str};
+        }
+        char[] charArray = str.toCharArray();
+        ArrayList arrayList = new ArrayList();
+        StringBuilder sb = new StringBuilder();
+        int length = charArray.length;
+        int i = 0;
+        char c = 0;
+        while (i < length) {
+            char c2 = charArray[i];
+            if (c2 == '?' || c2 == '*') {
+                if (sb.length() != 0) {
+                    arrayList.add(sb.toString());
+                    sb.setLength(0);
+                }
+                if (c2 == '?') {
+                    arrayList.add("?");
+                } else if (c != '*') {
+                    arrayList.add("*");
+                }
+            } else {
+                sb.append(c2);
+            }
+            i++;
+            c = c2;
+        }
+        if (sb.length() != 0) {
+            arrayList.add(sb.toString());
+        }
+        return (String[]) arrayList.toArray(new String[arrayList.size()]);
     }
 
     public static boolean wildcardMatch(String str, String str2) {
         return wildcardMatch(str, str2, IOCase.SENSITIVE);
-    }
-
-    public static boolean wildcardMatchOnSystem(String str, String str2) {
-        return wildcardMatch(str, str2, IOCase.SYSTEM);
     }
 
     public static boolean wildcardMatch(String str, String str2, IOCase iOCase) {
@@ -545,37 +536,7 @@ public class FilenameUtils {
         return false;
     }
 
-    static String[] splitOnTokens(String str) {
-        if (str.indexOf(63) == -1 && str.indexOf(42) == -1) {
-            return new String[]{str};
-        }
-        char[] charArray = str.toCharArray();
-        ArrayList arrayList = new ArrayList();
-        StringBuilder sb = new StringBuilder();
-        int length = charArray.length;
-        int i = 0;
-        char c = 0;
-        while (i < length) {
-            char c2 = charArray[i];
-            if (c2 == '?' || c2 == '*') {
-                if (sb.length() != 0) {
-                    arrayList.add(sb.toString());
-                    sb.setLength(0);
-                }
-                if (c2 == '?') {
-                    arrayList.add("?");
-                } else if (c != '*') {
-                    arrayList.add("*");
-                }
-            } else {
-                sb.append(c2);
-            }
-            i++;
-            c = c2;
-        }
-        if (sb.length() != 0) {
-            arrayList.add(sb.toString());
-        }
-        return (String[]) arrayList.toArray(new String[arrayList.size()]);
+    public static boolean wildcardMatchOnSystem(String str, String str2) {
+        return wildcardMatch(str, str2, IOCase.SYSTEM);
     }
 }

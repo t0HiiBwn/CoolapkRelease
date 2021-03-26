@@ -163,7 +163,7 @@ class e {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public static final HashMap m32a(XmlPullParser xmlPullParser, String str, String[] strArr) throws XmlPullParserException, IOException {
+    public static final HashMap m22a(XmlPullParser xmlPullParser, String str, String[] strArr) throws XmlPullParserException, IOException {
         HashMap hashMap = new HashMap();
         int eventType = xmlPullParser.getEventType();
         do {
@@ -203,7 +203,7 @@ class e {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public static final int[] m33a(XmlPullParser xmlPullParser, String str, String[] strArr) throws XmlPullParserException, IOException {
+    public static final int[] m23a(XmlPullParser xmlPullParser, String str, String[] strArr) throws XmlPullParserException, IOException {
         try {
             int[] iArr = new int[Integer.parseInt(xmlPullParser.getAttributeValue(null, "num"))];
             int i = 0;
@@ -298,12 +298,12 @@ class e {
                 obj = Boolean.valueOf(xmlPullParser.getAttributeValue(null, "value"));
             } else if (name.equals("int-array")) {
                 xmlPullParser.next();
-                int[] a = m33a(xmlPullParser, "int-array", strArr);
+                int[] a = m23a(xmlPullParser, "int-array", strArr);
                 strArr[0] = attributeValue;
                 return a;
             } else if (name.equals("map")) {
                 xmlPullParser.next();
-                HashMap a2 = m32a(xmlPullParser, "map", strArr);
+                HashMap a2 = m22a(xmlPullParser, "map", strArr);
                 strArr[0] = attributeValue;
                 return a2;
             } else if (name.equals("list")) {

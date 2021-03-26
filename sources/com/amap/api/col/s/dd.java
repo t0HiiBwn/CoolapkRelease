@@ -30,13 +30,13 @@ public class dd {
             if (i == 1) {
                 try {
                     synchronized (dd.class) {
-                        String l2 = Long.toString(System.currentTimeMillis());
+                        String l = Long.toString(System.currentTimeMillis());
                         da a2 = dg.a(dd.e);
                         dg.a(this.b, a2, ce.i, dd.a, 2097152, "6");
                         if (a2.e == null) {
                             a2.e = new cl(new cn(new co(new cn())));
                         }
-                        db.a(l2, this.c.a(), a2);
+                        db.a(l, this.c.a(), a2);
                     }
                 } catch (Throwable th) {
                     cg.c(th, "ofm", "aple");

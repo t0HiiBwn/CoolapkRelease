@@ -69,7 +69,7 @@ public abstract class ItemArticleFeedPreviewTopBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemArticleFeedPreviewTopBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemArticleFeedPreviewTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558614, viewGroup, z, obj);
+        return (ItemArticleFeedPreviewTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558618, viewGroup, z, obj);
     }
 
     public static ItemArticleFeedPreviewTopBinding inflate(LayoutInflater layoutInflater) {
@@ -78,7 +78,7 @@ public abstract class ItemArticleFeedPreviewTopBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemArticleFeedPreviewTopBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemArticleFeedPreviewTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558614, null, false, obj);
+        return (ItemArticleFeedPreviewTopBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558618, null, false, obj);
     }
 
     public static ItemArticleFeedPreviewTopBinding bind(View view) {
@@ -87,6 +87,6 @@ public abstract class ItemArticleFeedPreviewTopBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemArticleFeedPreviewTopBinding bind(View view, Object obj) {
-        return (ItemArticleFeedPreviewTopBinding) bind(obj, view, 2131558614);
+        return (ItemArticleFeedPreviewTopBinding) bind(obj, view, 2131558618);
     }
 }

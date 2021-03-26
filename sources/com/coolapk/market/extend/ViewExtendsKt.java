@@ -388,23 +388,23 @@ public final class ViewExtendsKt {
 
     public static final void resetTintColor(Toolbar toolbar) {
         Intrinsics.checkNotNullParameter(toolbar, "$this$resetTintColor");
-        Object tag = toolbar.getTag(2131363492);
+        Object tag = toolbar.getTag(2131363510);
         if (!(tag instanceof Integer)) {
             tag = null;
         }
         Integer num = (Integer) tag;
         if (num != null) {
             int intValue = num.intValue();
-            toolbar.setTag(2131363492, null);
+            toolbar.setTag(2131363510, null);
             setTintColor(toolbar, intValue);
         }
     }
 
     public static final void setTintColor(Toolbar toolbar, int i) {
         Intrinsics.checkNotNullParameter(toolbar, "$this$setTintColor");
-        Object tag = toolbar.getTag(2131363492);
+        Object tag = toolbar.getTag(2131363510);
         if (!((tag instanceof Integer) && i == ((Integer) tag).intValue())) {
-            toolbar.setTag(2131363492, Integer.valueOf(i));
+            toolbar.setTag(2131363510, Integer.valueOf(i));
             toolbar.setSubtitleTextColor(ATEUtil.adjustAlpha(i, 0.6f));
             toolbar.setTitleTextColor(i);
             if (toolbar.getParent() instanceof CollapsingToolbarLayout) {
@@ -413,9 +413,9 @@ public final class ViewExtendsKt {
                 ((CollapsingToolbarLayout) parent).setCollapsedTitleTextColor(i);
             }
             if (AppHolder.getAppTheme().isDarkTheme()) {
-                toolbar.setPopupTheme(2131952196);
+                toolbar.setPopupTheme(2131952197);
             } else {
-                toolbar.setPopupTheme(2131952202);
+                toolbar.setPopupTheme(2131952203);
             }
             ViewExtendsKt$setTintColor$1 viewExtendsKt$setTintColor$1 = ViewExtendsKt$setTintColor$1.INSTANCE;
             PorterDuffColorFilter porterDuffColorFilter = new PorterDuffColorFilter(i, PorterDuff.Mode.SRC_IN);
@@ -459,7 +459,7 @@ public final class ViewExtendsKt {
             }
             return;
         }
-        setTintColor(toolbar, ResourceUtils.getColorInt(activityNullable, 2131099891));
+        setTintColor(toolbar, ResourceUtils.getColorInt(activityNullable, 2131099896));
         if (booleanPref) {
             ThemeUtils.setDarkStatusIconBar(activityNullable, true, 0);
         }
@@ -643,7 +643,7 @@ public final class ViewExtendsKt {
             return;
         }
         int colorAccent = AppHolder.getAppTheme().getColorAccent();
-        tabLayout.setTabTextColors(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099891), colorAccent);
+        tabLayout.setTabTextColors(ResourceUtils.getColorInt(AppHolder.getApplication(), 2131099896), colorAccent);
         tabLayout.setSelectedTabIndicatorColor(colorAccent);
     }
 

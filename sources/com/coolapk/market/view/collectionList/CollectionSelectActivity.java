@@ -96,7 +96,7 @@ public final class CollectionSelectActivity extends BaseActivity {
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558480);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558481);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…layout.collection_select)");
         this.binding = (CollectionSelectBinding) contentView;
         this.feedId = getIntent().getStringExtra("id");
@@ -290,7 +290,7 @@ public final class CollectionSelectActivity extends BaseActivity {
     private final void setupFragment() {
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "supportFragmentManager");
-        Fragment findFragmentById = supportFragmentManager.findFragmentById(2131362306);
+        Fragment findFragmentById = supportFragmentManager.findFragmentById(2131362311);
         if (!(findFragmentById instanceof CollectionSelectFragment)) {
             findFragmentById = null;
         }
@@ -300,7 +300,7 @@ public final class CollectionSelectActivity extends BaseActivity {
             Intrinsics.checkNotNull(str);
             String str2 = this.type;
             Intrinsics.checkNotNull(str2);
-            supportFragmentManager.beginTransaction().add(2131362306, companion.newInstance(str, str2)).commit();
+            supportFragmentManager.beginTransaction().add(2131362311, companion.newInstance(str, str2)).commit();
         }
     }
 

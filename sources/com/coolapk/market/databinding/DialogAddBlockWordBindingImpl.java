@@ -27,8 +27,8 @@ public class DialogAddBlockWordBindingImpl extends DialogAddBlockWordBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 3);
-        sparseIntArray.put(2131362441, 4);
+        sparseIntArray.put(2131363551, 3);
+        sparseIntArray.put(2131362448, 4);
     }
 
     public DialogAddBlockWordBindingImpl(DataBindingComponent dataBindingComponent, View view) {

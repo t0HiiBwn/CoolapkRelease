@@ -23,8 +23,8 @@ public class ItemGridDyhCardBindingImpl extends ItemGridDyhCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362634, 2);
-        sparseIntArray.put(2131362970, 3);
+        sparseIntArray.put(2131362642, 2);
+        sparseIntArray.put(2131362982, 3);
     }
 
     public ItemGridDyhCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -62,9 +62,9 @@ public class ItemGridDyhCardBindingImpl extends ItemGridDyhCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (271 == i) {
+        if (272 == i) {
             setSubTitle((String) obj);
-        } else if (278 != i) {
+        } else if (279 != i) {
             return false;
         } else {
             setTitle((String) obj);
@@ -83,7 +83,7 @@ public class ItemGridDyhCardBindingImpl extends ItemGridDyhCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(278);
+        notifyPropertyChanged(279);
         super.requestRebind();
     }
 

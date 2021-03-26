@@ -47,7 +47,7 @@ public final class ImageModeDialog extends BaseDialogFragment {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        LayoutImageModeBinding layoutImageModeBinding = (LayoutImageModeBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558996, null, false);
+        LayoutImageModeBinding layoutImageModeBinding = (LayoutImageModeBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131559003, null, false);
         TextView textView = layoutImageModeBinding.titleView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.titleView");
         textView.setText("图片浏览设置");
@@ -72,13 +72,13 @@ public final class ImageModeDialog extends BaseDialogFragment {
             if (hashCode != -1986416409) {
                 if (hashCode != -1843176421) {
                     if (hashCode == 2020783 && preferencesString.equals("AUTO")) {
-                        layoutImageModeBinding.radioGroup.check(2131363167);
+                        layoutImageModeBinding.radioGroup.check(2131363181);
                     }
                 } else if (preferencesString.equals("SOURCE")) {
-                    layoutImageModeBinding.radioGroup.check(2131363175);
+                    layoutImageModeBinding.radioGroup.check(2131363189);
                 }
             } else if (preferencesString.equals("NORMAL")) {
-                layoutImageModeBinding.radioGroup.check(2131363178);
+                layoutImageModeBinding.radioGroup.check(2131363192);
             }
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

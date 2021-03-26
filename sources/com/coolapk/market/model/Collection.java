@@ -19,9 +19,9 @@ public abstract class Collection implements Entity, IUser {
 
         public abstract Builder coverPic(String str);
 
-        public abstract Builder createdate(Long l2);
+        public abstract Builder createdate(Long l);
 
-        public abstract Builder dateline(Long l2);
+        public abstract Builder dateline(Long l);
 
         public abstract Builder defaultCollected(int i);
 
@@ -49,7 +49,7 @@ public abstract class Collection implements Entity, IUser {
 
         public abstract Builder itemNum(int i);
 
-        public abstract Builder lastUpdate(Long l2);
+        public abstract Builder lastUpdate(Long l);
 
         public abstract Builder likeNum(int i);
 

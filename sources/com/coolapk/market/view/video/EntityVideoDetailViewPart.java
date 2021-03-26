@@ -36,7 +36,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: EntityVideoDetailViewPart.kt */
 public final class EntityVideoDetailViewPart extends BaseVideoDetailViewPart<ItemEntityVideoDetailViewPartBinding, VideoModel> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558688;
+    public static final int LAYOUT_ID = 2131558694;
     private DetailControlCover detailControlCover;
     private Rect lastWindowsRect;
 
@@ -69,7 +69,7 @@ public final class EntityVideoDetailViewPart extends BaseVideoDetailViewPart<Ite
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemEntityVideoDetailViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558688, viewGroup, false, new ContextBindingComponent(getActivity()));
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558694, viewGroup, false, new ContextBindingComponent(getActivity()));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ndingComponent(activity))");
         return (ItemEntityVideoDetailViewPartBinding) inflate;
     }

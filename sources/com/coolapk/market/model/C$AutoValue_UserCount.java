@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_UserCount  reason: invalid class name */
 abstract class C$AutoValue_UserCount extends C$$AutoValue_UserCount {
-    C$AutoValue_UserCount(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, UserInfo userInfo, String str13, String str14, String str15, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l2, l3, str12, userInfo, str13, str14, str15, i, i2, i3, i4, i5, i6, i7, i8, i9, i10);
+    C$AutoValue_UserCount(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, UserInfo userInfo, String str13, String str14, String str15, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, str10, str11, l, l2, str12, userInfo, str13, str14, str15, i, i2, i3, i4, i5, i6, i7, i8, i9, i10);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_UserCount$GsonTypeAdapter */
@@ -166,13 +166,13 @@ abstract class C$AutoValue_UserCount extends C$$AutoValue_UserCount {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -337,8 +337,8 @@ abstract class C$AutoValue_UserCount extends C$$AutoValue_UserCount {
             String str9 = this.defaultSubTitle;
             String str10 = this.defaultId;
             String str11 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str12 = this.defaultDeprecatedUserAvatar;
             UserInfo userInfo = this.defaultUserInfo;
             String str13 = this.defaultDeprecatedUserName;
@@ -365,8 +365,8 @@ abstract class C$AutoValue_UserCount extends C$$AutoValue_UserCount {
             String str23 = str9;
             String str24 = str10;
             String str25 = str11;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str26 = str;
             String str27 = str12;
             UserInfo userInfo2 = userInfo;
@@ -585,7 +585,7 @@ abstract class C$AutoValue_UserCount extends C$$AutoValue_UserCount {
                             str29 = this.displayUserNameAdapter.read(jsonReader);
                             continue;
                         case 6:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 7:
                             i11 = this.followAppAdapter.read(jsonReader).intValue();
@@ -651,7 +651,7 @@ abstract class C$AutoValue_UserCount extends C$$AutoValue_UserCount {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 28:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -660,7 +660,7 @@ abstract class C$AutoValue_UserCount extends C$$AutoValue_UserCount {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_UserCount(str26, str16, str17, num2, str18, str19, str20, str21, str22, str23, str24, str25, l4, l5, str27, userInfo2, str28, str29, str30, i11, i12, i13, i14, i15, i16, i17, i18, i19, i10);
+            return new AutoValue_UserCount(str26, str16, str17, num2, str18, str19, str20, str21, str22, str23, str24, str25, l3, l4, str27, userInfo2, str28, str29, str30, i11, i12, i13, i14, i15, i16, i17, i18, i19, i10);
         }
     }
 }

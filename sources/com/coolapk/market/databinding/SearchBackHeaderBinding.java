@@ -50,7 +50,7 @@ public abstract class SearchBackHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchBackHeaderBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SearchBackHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559122, viewGroup, z, obj);
+        return (SearchBackHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559129, viewGroup, z, obj);
     }
 
     public static SearchBackHeaderBinding inflate(LayoutInflater layoutInflater) {
@@ -59,7 +59,7 @@ public abstract class SearchBackHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchBackHeaderBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SearchBackHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559122, null, false, obj);
+        return (SearchBackHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559129, null, false, obj);
     }
 
     public static SearchBackHeaderBinding bind(View view) {
@@ -68,6 +68,6 @@ public abstract class SearchBackHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static SearchBackHeaderBinding bind(View view, Object obj) {
-        return (SearchBackHeaderBinding) bind(obj, view, 2131559122);
+        return (SearchBackHeaderBinding) bind(obj, view, 2131559129);
     }
 }

@@ -9,7 +9,7 @@ public final class b extends a {
     private Context h = null;
     private RequestPackage i = null;
 
-    public b(Context context, String str, a.AbstractC0121a aVar) {
+    public b(Context context, String str, a.AbstractC0139a aVar) {
         super(context, str, aVar);
         this.h = context;
     }
@@ -86,9 +86,9 @@ public final class b extends a {
                     i2 = str;
                 }
                 qimeiPackage.qq = i2;
-                String l2 = a.l();
-                if (l2 != null) {
-                    str = l2;
+                String l = a.l();
+                if (l != null) {
+                    str = l;
                 }
                 qimeiPackage.cid = str;
             }

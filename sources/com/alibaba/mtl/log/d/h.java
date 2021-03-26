@@ -69,12 +69,12 @@ public class h {
         if (map == null || map.size() <= 0) {
             return null;
         }
-        m26a(map);
+        m16a(map);
         return a(map);
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public static Map<String, String> m26a(Map<String, String> map) {
+    public static Map<String, String> m16a(Map<String, String> map) {
         if (map == null) {
             map = new HashMap<>();
         }

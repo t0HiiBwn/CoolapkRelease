@@ -34,7 +34,7 @@ public class NetworkDiagnosisFragment extends BaseFragment {
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        NetworkDiagnosisBinding networkDiagnosisBinding = (NetworkDiagnosisBinding) DataBindingUtil.inflate(layoutInflater, 2131559052, viewGroup, false);
+        NetworkDiagnosisBinding networkDiagnosisBinding = (NetworkDiagnosisBinding) DataBindingUtil.inflate(layoutInflater, 2131559059, viewGroup, false);
         this.mBinding = networkDiagnosisBinding;
         return networkDiagnosisBinding.getRoot();
     }

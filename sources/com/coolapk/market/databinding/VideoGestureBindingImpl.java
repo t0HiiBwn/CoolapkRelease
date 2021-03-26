@@ -29,12 +29,12 @@ public class VideoGestureBindingImpl extends VideoGestureBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363941, 4);
-        sparseIntArray.put(2131363942, 5);
-        sparseIntArray.put(2131362152, 6);
-        sparseIntArray.put(2131362153, 7);
-        sparseIntArray.put(2131362516, 8);
-        sparseIntArray.put(2131362515, 9);
+        sparseIntArray.put(2131363967, 4);
+        sparseIntArray.put(2131363968, 5);
+        sparseIntArray.put(2131362155, 6);
+        sparseIntArray.put(2131362156, 7);
+        sparseIntArray.put(2131362524, 8);
+        sparseIntArray.put(2131362523, 9);
     }
 
     public VideoGestureBindingImpl(DataBindingComponent dataBindingComponent, View view) {

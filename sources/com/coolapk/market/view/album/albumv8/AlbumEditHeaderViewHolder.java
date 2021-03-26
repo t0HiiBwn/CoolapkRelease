@@ -19,7 +19,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: AlbumEditHeaderViewHolder.kt */
 public final class AlbumEditHeaderViewHolder extends GenericBindHolder<ItemAlbumEditHeaderBinding, Album> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558581;
+    public static final int LAYOUT_ID = 2131558585;
     private AlbumDetailViewModel viewModel = new AlbumDetailViewModel(getContext());
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -56,7 +56,7 @@ public final class AlbumEditHeaderViewHolder extends GenericBindHolder<ItemAlbum
         FragmentManager childFragmentManager;
         super.onClick(view);
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if ((valueOf != null && valueOf.intValue() == 2131363574) || ((valueOf != null && valueOf.intValue() == 2131362444) || ((valueOf != null && valueOf.intValue() == 2131362437) || (valueOf != null && valueOf.intValue() == 2131362740)))) {
+        if ((valueOf != null && valueOf.intValue() == 2131363596) || ((valueOf != null && valueOf.intValue() == 2131362451) || ((valueOf != null && valueOf.intValue() == 2131362444) || (valueOf != null && valueOf.intValue() == 2131362751)))) {
             DataBindingComponent component = getComponent();
             if (!(component instanceof FragmentBindingComponent)) {
                 component = null;

@@ -23,7 +23,7 @@ abstract class C$$AutoValue_DyhArticleCard extends DyhArticleCard {
     private final String title;
     private final String url;
 
-    C$$AutoValue_DyhArticleCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l2, String str7, String str8, String str9, List<DyhArticle> list, String str10, String str11, String str12, Long l3) {
+    C$$AutoValue_DyhArticleCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l, String str7, String str8, String str9, List<DyhArticle> list, String str10, String str11, String str12, Long l2) {
         this.entityTemplate = str;
         this.entityId = str2;
         this.entityFixed = num;
@@ -31,7 +31,7 @@ abstract class C$$AutoValue_DyhArticleCard extends DyhArticleCard {
         this.subTitle = str4;
         this.id = str5;
         this.extraData = str6;
-        this.dateline = l2;
+        this.dateline = l;
         this.description = str7;
         this.title = str8;
         this.url = str9;
@@ -41,8 +41,8 @@ abstract class C$$AutoValue_DyhArticleCard extends DyhArticleCard {
         this.entityType = str11;
         Objects.requireNonNull(str12, "Null pic");
         this.pic = str12;
-        Objects.requireNonNull(l3, "Null lastUpdate");
-        this.lastUpdate = l3;
+        Objects.requireNonNull(l2, "Null lastUpdate");
+        this.lastUpdate = l2;
     }
 
     @Override // com.coolapk.market.model.Entity
@@ -163,8 +163,8 @@ abstract class C$$AutoValue_DyhArticleCard extends DyhArticleCard {
                             if (str5 != null ? str5.equals(dyhArticleCard.getId()) : dyhArticleCard.getId() == null) {
                                 String str6 = this.extraData;
                                 if (str6 != null ? str6.equals(dyhArticleCard.getExtraData()) : dyhArticleCard.getExtraData() == null) {
-                                    Long l2 = this.dateline;
-                                    if (l2 != null ? l2.equals(dyhArticleCard.getDateline()) : dyhArticleCard.getDateline() == null) {
+                                    Long l = this.dateline;
+                                    if (l != null ? l.equals(dyhArticleCard.getDateline()) : dyhArticleCard.getDateline() == null) {
                                         String str7 = this.description;
                                         if (str7 != null ? str7.equals(dyhArticleCard.getDescription()) : dyhArticleCard.getDescription() == null) {
                                             String str8 = this.title;
@@ -211,8 +211,8 @@ abstract class C$$AutoValue_DyhArticleCard extends DyhArticleCard {
         int hashCode6 = (hashCode5 ^ (str5 == null ? 0 : str5.hashCode())) * 1000003;
         String str6 = this.extraData;
         int hashCode7 = (hashCode6 ^ (str6 == null ? 0 : str6.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode8 = (hashCode7 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode8 = (hashCode7 ^ (l == null ? 0 : l.hashCode())) * 1000003;
         String str7 = this.description;
         int hashCode9 = (hashCode8 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
         String str8 = this.title;

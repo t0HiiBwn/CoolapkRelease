@@ -53,36 +53,36 @@ public final class FeedAdminHeadlineSheetGroupFactory extends FeedAdminBaseSheet
         }
         if (!isEditorChoice()) {
             if (isHeadline()) {
-                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Headline, "下头条", 2131231672, -769226, null, 16, null);
+                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Headline, "下头条", 2131231683, -769226, null, 16, null);
             } else {
-                insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Headline, "上头条", 2131231541, -15233209, isHeadlined() ? "已上过" : "");
+                insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Headline, "上头条", 2131231552, -15233209, isHeadlined() ? "已上过" : "");
             }
         }
         if (isEditorChoice()) {
-            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.EditorChoice, "下编辑精选", 2131231505, -769226, null, 16, null);
+            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.EditorChoice, "下编辑精选", 2131231516, -769226, null, 16, null);
         } else {
-            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.EditorChoice, "上编辑精选", 2131231294, -15233209, null, 16, null);
+            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.EditorChoice, "上编辑精选", 2131231305, -15233209, null, 16, null);
         }
         if (TextUtils.isEmpty(getFeed().getSpamReason())) {
             if (isRecommend()) {
-                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Recommend, "下推荐", 2131231673, -769226, null, 16, null);
+                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Recommend, "下推荐", 2131231684, -769226, null, 16, null);
             } else {
-                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Recommend, "上推荐", 2131231542, -15233209, null, 16, null);
+                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.Recommend, "上推荐", 2131231553, -15233209, null, 16, null);
             }
         }
         if (isRecommendOrNormal()) {
-            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.NoHeadlineAnyMore, "禁止上头条", 2131231377, -769226, null, 16, null);
+            insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.NoHeadlineAnyMore, "禁止上头条", 2131231388, -769226, null, 16, null);
         }
         if (FeedUtils.isCommentType(getFeed().getFeedType())) {
             if (isPYHeadline()) {
-                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.PYHeadline, "下PY头条", 2131231498, -769226, null, 16, null);
+                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.PYHeadline, "下PY头条", 2131231509, -769226, null, 16, null);
             } else {
-                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.PYHeadline, "PY头条", 2131231498, -15233209, null, 16, null);
+                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.PYHeadline, "PY头条", 2131231509, -15233209, null, 16, null);
             }
             if (isEditorChoice()) {
-                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.PYEditorChoice, "下PY精选", 2131231497, -769226, null, 16, null);
+                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.PYEditorChoice, "下PY精选", 2131231508, -769226, null, 16, null);
             } else {
-                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.PYEditorChoice, "PY精选", 2131231497, -15233209, null, 16, null);
+                insertItem$default(this, FeedAdminBaseSheetGroupFactory.AdminAction.PYEditorChoice, "PY精选", 2131231508, -15233209, null, 16, null);
             }
         }
         return wrapAsSheetGroup();

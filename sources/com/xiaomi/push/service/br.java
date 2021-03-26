@@ -1,40 +1,36 @@
 package com.xiaomi.push.service;
 
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.ft;
+import android.content.Context;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.ey;
+import com.xiaomi.push.hf;
 import com.xiaomi.push.service.XMPushService;
 
-class br extends XMPushService.i {
+final class br extends XMPushService.i {
     final /* synthetic */ XMPushService a;
-
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ String f1006a;
-
-    /* renamed from: a  reason: collision with other field name */
-    final /* synthetic */ byte[] f1007a;
+    final /* synthetic */ hf b;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
-    br(XMPushService xMPushService, int i, String str, byte[] bArr) {
+    br(int i, XMPushService xMPushService, hf hfVar) {
         super(i);
         this.a = xMPushService;
-        this.f1006a = str;
-        this.f1007a = bArr;
+        this.b = hfVar;
     }
 
     @Override // com.xiaomi.push.service.XMPushService.i
-    /* renamed from: a */
-    public String mo344a() {
-        return "send mi push message";
-    }
-
-    @Override // com.xiaomi.push.service.XMPushService.i
-    /* renamed from: a  reason: collision with other method in class */
-    public void mo645a() {
+    public void a() {
         try {
-            x.a(this.a, this.f1006a, this.f1007a);
-        } catch (ft e) {
-            b.a(e);
+            hf a2 = bn.a((Context) this.a, this.b);
+            a2.m().a("miui_message_unrecognized", "1");
+            bu.a(this.a, a2);
+        } catch (ey e) {
+            c.a(e);
             this.a.a(10, e);
         }
+    }
+
+    @Override // com.xiaomi.push.service.XMPushService.i
+    public String b() {
+        return "send ack message for unrecognized new miui message.";
     }
 }

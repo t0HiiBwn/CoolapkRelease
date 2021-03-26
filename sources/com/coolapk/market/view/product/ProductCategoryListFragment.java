@@ -76,8 +76,8 @@ public final class ProductCategoryListFragment extends BaseLeftCategoryFragment 
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         Intrinsics.checkNotNullParameter(menu, "menu");
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
-        MenuItem add = menu.add(0, 2131361960, 100, 2131886390);
-        add.setIcon(2131231534);
+        MenuItem add = menu.add(0, 2131361961, 100, 2131886450);
+        add.setIcon(2131231545);
         add.setShowAsAction(2);
         super.onCreateOptionsMenu(menu, menuInflater);
     }
@@ -85,7 +85,7 @@ public final class ProductCategoryListFragment extends BaseLeftCategoryFragment 
     @Override // com.coolapk.market.view.product.BaseLeftCategoryFragment, androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361960) {
+        if (menuItem.getItemId() != 2131361961) {
             return super.onOptionsItemSelected(menuItem);
         }
         FragmentActivity requireActivity = requireActivity();

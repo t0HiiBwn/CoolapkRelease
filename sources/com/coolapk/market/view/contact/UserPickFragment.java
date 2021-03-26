@@ -78,7 +78,7 @@ public final class UserPickFragment extends SimpleAsyncListFragment<Result<List<
         presenter2.setKeyWord(this.keyword);
         super.onActivityCreated(bundle);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558967, 2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558974, 2131231062).create());
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         RecyclerView.ItemAnimator itemAnimator = recyclerView.getItemAnimator();
@@ -150,10 +150,10 @@ public final class UserPickFragment extends SimpleAsyncListFragment<Result<List<
             int hashCode = entityType.hashCode();
             if (hashCode != -602316283) {
                 if (hashCode == 3599307 && entityType.equals("user")) {
-                    return 2131558967;
+                    return 2131558974;
                 }
             } else if (entityType.equals("holder_title")) {
-                return 2131558954;
+                return 2131558961;
             }
         }
         throw new RuntimeException("unknown viewType");
@@ -163,10 +163,10 @@ public final class UserPickFragment extends SimpleAsyncListFragment<Result<List<
     public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
         View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(i, viewGroup, false);
-        if (i == 2131558954) {
+        if (i == 2131558961) {
             return new TitleViewHolder(inflate, null);
         }
-        if (i != 2131558967) {
+        if (i != 2131558974) {
             return null;
         }
         return new UserViewHolder(inflate, getComponent(), new UserPickFragment$onCreateViewHolder$1(this));

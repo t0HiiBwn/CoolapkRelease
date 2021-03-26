@@ -41,9 +41,7 @@ public class c {
     private ImprintHandler.a i = null;
     private ABTest j = null;
     private Defcon k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private long f1490l = 0;
+    private long l = 0;
     private int m = 0;
     private int n = 0;
     private Context r;
@@ -53,7 +51,7 @@ public class c {
         this.i = ImprintHandler.getImprintService(context).c();
         this.k = Defcon.getService(this.r);
         SharedPreferences sharedPreferences = PreferenceWrapper.getDefault(this.r);
-        this.f1490l = sharedPreferences.getLong("thtstart", 0);
+        this.l = sharedPreferences.getLong("thtstart", 0);
         this.m = sharedPreferences.getInt("gkvc", 0);
         this.n = sharedPreferences.getInt("ekvc", 0);
         this.a = UMEnvelopeBuild.imprintProperty(this.r, "track_list", null);

@@ -25,7 +25,7 @@ import kotlin.jvm.internal.TypeIntrinsics;
 /* compiled from: CollectionSelectViewHolder.kt */
 public final class CollectionSelectViewHolder extends GenericBindHolder<ItemCollectionSelectBinding, Collection> implements CompoundButton.OnCheckedChangeListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558656;
+    public static final int LAYOUT_ID = 2131558662;
     private final LinkedHashMap<String, Collection> cancelMap;
     private final TextView doneView;
     private boolean isInclud;
@@ -235,7 +235,7 @@ public final class CollectionSelectViewHolder extends GenericBindHolder<ItemColl
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131362768) {
+        if (view.getId() == 2131362779) {
             CheckBox checkBox = ((ItemCollectionSelectBinding) getBinding()).selectView;
             Intrinsics.checkNotNullExpressionValue(checkBox, "binding.selectView");
             checkBox.setChecked(!checkBox.isChecked());

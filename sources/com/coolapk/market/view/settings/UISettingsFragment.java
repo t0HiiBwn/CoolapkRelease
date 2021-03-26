@@ -195,7 +195,7 @@ public final class UISettingsFragment extends BasePreferenceFragment implements 
         Intrinsics.checkNotNullExpressionValue(instance2, "NightModeHelper.getInstance()");
         int startTime = instance2.getStartTime();
         DecimalFormat decimalFormat = new DecimalFormat("00");
-        String string = requireActivity().getString(2131886466, new Object[]{String.valueOf(startTime / 60), decimalFormat.format((long) (startTime % 60)), String.valueOf(endTime / 60), decimalFormat.format((long) (endTime % 60))});
+        String string = requireActivity().getString(2131886526, new Object[]{String.valueOf(startTime / 60), decimalFormat.format((long) (startTime % 60)), String.valueOf(endTime / 60), decimalFormat.format((long) (endTime % 60))});
         Intrinsics.checkNotNullExpressionValue(string, "requireActivity().getStr…(endTime % 60).toLong()))");
         Preference findPreference = findPreference("auto_night_mode_time");
         if (findPreference != null) {

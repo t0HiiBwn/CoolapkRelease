@@ -25,6 +25,7 @@ import com.coolapk.market.databinding.VideoControllerBinding;
 import com.coolapk.market.util.UiUtils;
 import com.coolapk.market.view.base.refresh.BasePopMenu;
 import com.coolapk.market.widget.video.util.PIPUtils;
+import com.coolapk.market.widget.view.TimeTextView;
 import com.kk.taurus.playerbase.entity.DataSource;
 import com.kk.taurus.playerbase.player.OnTimerUpdateListener;
 import com.kk.taurus.playerbase.receiver.PlayerStateGetter;
@@ -122,7 +123,7 @@ public final class ControllerCover extends ThemeableCover implements OnTimerUpda
         if (videoControllerBinding == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
-        videoControllerBinding.playView.setImageResource(2131231467);
+        videoControllerBinding.playView.setImageResource(2131231478);
         VideoControllerBinding videoControllerBinding2 = this.binding;
         if (videoControllerBinding2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -326,8 +327,8 @@ public final class ControllerCover extends ThemeableCover implements OnTimerUpda
         }
     }
 
-    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x002b: APUT  (r1v2 float[]), (0 ??[int, short, byte, char]), (r5v0 float) */
     /* access modifiers changed from: private */
+    /* JADX DEBUG: Can't convert new array creation: APUT found in different block: 0x002b: APUT  (r1v2 float[]), (0 ??[int, short, byte, char]), (r5v0 float) */
     public final void setTopContainerState(boolean z) {
         if (this.controllerTopEnable) {
             VideoControllerBinding videoControllerBinding = this.binding;
@@ -438,9 +439,9 @@ public final class ControllerCover extends ThemeableCover implements OnTimerUpda
         if (videoControllerBinding == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
-        TextView textView = videoControllerBinding.currentTimeView;
-        Intrinsics.checkNotNullExpressionValue(textView, "binding.currentTimeView");
-        textView.setText(TimeUtil.getTime(this.timeFormat, (long) i));
+        TimeTextView timeTextView = videoControllerBinding.currentTimeView;
+        Intrinsics.checkNotNullExpressionValue(timeTextView, "binding.currentTimeView");
+        timeTextView.setText(TimeUtil.getTime(this.timeFormat, (long) i));
     }
 
     private final void setTotalTime(int i) {
@@ -448,9 +449,9 @@ public final class ControllerCover extends ThemeableCover implements OnTimerUpda
         if (videoControllerBinding == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
-        TextView textView = videoControllerBinding.totalTimeView;
-        Intrinsics.checkNotNullExpressionValue(textView, "binding.totalTimeView");
-        textView.setText(TimeUtil.getTime(this.timeFormat, (long) i));
+        TimeTextView timeTextView = videoControllerBinding.totalTimeView;
+        Intrinsics.checkNotNullExpressionValue(timeTextView, "binding.totalTimeView");
+        timeTextView.setText(TimeUtil.getTime(this.timeFormat, (long) i));
     }
 
     private final void setSeekProgress(int i, int i2) {
@@ -502,9 +503,9 @@ public final class ControllerCover extends ThemeableCover implements OnTimerUpda
         if (videoControllerBinding == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
-        TextView textView = videoControllerBinding.currentTimeView;
-        Intrinsics.checkNotNullExpressionValue(textView, "binding.currentTimeView");
-        textView.setVisibility(i4);
+        TimeTextView timeTextView = videoControllerBinding.currentTimeView;
+        Intrinsics.checkNotNullExpressionValue(timeTextView, "binding.currentTimeView");
+        timeTextView.setVisibility(i4);
         VideoControllerBinding videoControllerBinding2 = this.binding;
         if (videoControllerBinding2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -516,9 +517,9 @@ public final class ControllerCover extends ThemeableCover implements OnTimerUpda
         if (videoControllerBinding3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
-        TextView textView2 = videoControllerBinding3.totalTimeView;
-        Intrinsics.checkNotNullExpressionValue(textView2, "binding.totalTimeView");
-        textView2.setVisibility(i4);
+        TimeTextView timeTextView2 = videoControllerBinding3.totalTimeView;
+        Intrinsics.checkNotNullExpressionValue(timeTextView2, "binding.totalTimeView");
+        timeTextView2.setVisibility(i4);
         VideoControllerBinding videoControllerBinding4 = this.binding;
         if (videoControllerBinding4 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -571,19 +572,19 @@ public final class ControllerCover extends ThemeableCover implements OnTimerUpda
                     if (videoControllerBinding == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("binding");
                     }
-                    videoControllerBinding.playView.setImageResource(2131231486);
+                    videoControllerBinding.playView.setImageResource(2131231497);
                 } else if (num != null && num.intValue() == 3) {
                     VideoControllerBinding videoControllerBinding2 = this.binding;
                     if (videoControllerBinding2 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("binding");
                     }
-                    videoControllerBinding2.playView.setImageResource(2131231467);
+                    videoControllerBinding2.playView.setImageResource(2131231478);
                 } else if ((num != null && num.intValue() == 0) || ((num != null && num.intValue() == -1) || ((num != null && num.intValue() == 5) || (num != null && num.intValue() == 6)))) {
                     VideoControllerBinding videoControllerBinding3 = this.binding;
                     if (videoControllerBinding3 == null) {
                         Intrinsics.throwUninitializedPropertyAccessException("binding");
                     }
-                    videoControllerBinding3.playView.setImageResource(2131231486);
+                    videoControllerBinding3.playView.setImageResource(2131231497);
                 }
                 if (num == null || num.intValue() != 6) {
                     z = false;
@@ -637,20 +638,20 @@ public final class ControllerCover extends ThemeableCover implements OnTimerUpda
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         switch (view.getId()) {
-            case 2131362600:
+            case 2131362608:
                 notifyReceiverEvent(-104, null);
                 return;
-            case 2131362970:
+            case 2131362982:
                 showMoreOptionMenu(view);
                 return;
-            case 2131363008:
+            case 2131363022:
                 notifyReceiverEvent(-100, null);
                 setControllerState(false);
                 return;
-            case 2131363113:
+            case 2131363127:
                 notifyReceiverEvent(-124, null);
                 return;
-            case 2131363129:
+            case 2131363143:
                 PlayerStateGetter playerStateGetter = getPlayerStateGetter();
                 if (playerStateGetter != null) {
                     int state = playerStateGetter.getState();
@@ -673,11 +674,11 @@ public final class ControllerCover extends ThemeableCover implements OnTimerUpda
                     return;
                 }
                 return;
-            case 2131363240:
+            case 2131363254:
                 requestReplay(null);
                 setPlayCompleteState(false);
                 return;
-            case 2131363358:
+            case 2131363374:
                 notifyReceiverEvent(-107, null);
                 return;
             default:
@@ -687,7 +688,7 @@ public final class ControllerCover extends ThemeableCover implements OnTimerUpda
 
     private final void showMoreOptionMenu(View view) {
         BasePopMenu basePopMenu = new BasePopMenu(AppHolder.getCurrentActivity(), view);
-        basePopMenu.getMenu().add(0, 2131361981, 101, 2131887153);
+        basePopMenu.getMenu().add(0, 2131361982, 101, 2131887215);
         basePopMenu.setOnMenuItemClickListener(new ControllerCover$showMoreOptionMenu$1(this));
         basePopMenu.show();
     }
@@ -740,7 +741,7 @@ public final class ControllerCover extends ThemeableCover implements OnTimerUpda
     @Override // com.kk.taurus.playerbase.receiver.BaseCover
     public View onCreateCoverView(Context context) {
         Intrinsics.checkNotNullParameter(context, "context");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559289, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559299, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…_controller, null, false)");
         VideoControllerBinding videoControllerBinding = (VideoControllerBinding) inflate;
         this.binding = videoControllerBinding;

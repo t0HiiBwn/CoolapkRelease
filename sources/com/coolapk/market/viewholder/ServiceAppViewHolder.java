@@ -51,7 +51,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ServiceAppViewHolder.kt */
 public class ServiceAppViewHolder extends StateViewHolder implements CoolapkCardView.CardStyleCallback, Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558924;
+    public static final int LAYOUT_ID = 2131558931;
     private final ServiceAppBinding binding;
     private final Function2<String, Entity, Unit> onCardChangedCallback;
     private final SceneRelatedAppsViewPartHotPlug sceneRelatedAppsViewPartHotPlug;
@@ -121,13 +121,13 @@ public class ServiceAppViewHolder extends StateViewHolder implements CoolapkCard
             if (serviceApp2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("serviceApp");
             }
-            linearLayout.setTag(2131362753, serviceApp2);
+            linearLayout.setTag(2131362764, serviceApp2);
             ActionButton actionButton = this.binding.actionContainer;
             ServiceApp serviceApp3 = this.serviceApp;
             if (serviceApp3 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("serviceApp");
             }
-            actionButton.setTag(2131362753, serviceApp3);
+            actionButton.setTag(2131362764, serviceApp3);
             ServiceAppBinding serviceAppBinding = this.binding;
             Intrinsics.checkNotNullExpressionValue(serviceAppBinding, "binding");
             ServiceApp serviceApp4 = this.serviceApp;
@@ -183,7 +183,7 @@ public class ServiceAppViewHolder extends StateViewHolder implements CoolapkCard
             }
             boolean z = true;
             objArr[1] = serviceApp10.getApkSizeFormat();
-            textView3.setText(context.getString(2131886848, objArr));
+            textView3.setText(context.getString(2131886910, objArr));
             TextView textView4 = this.binding.marketInfoView;
             Intrinsics.checkNotNullExpressionValue(textView4, "binding.marketInfoView");
             ServiceApp serviceApp11 = this.serviceApp;
@@ -206,7 +206,7 @@ public class ServiceAppViewHolder extends StateViewHolder implements CoolapkCard
                     Intrinsics.throwUninitializedPropertyAccessException("serviceApp");
                 }
                 objArr2[1] = serviceApp13.getCommentCount();
-                str = context2.getString(2131886850, objArr2);
+                str = context2.getString(2131886912, objArr2);
             }
             textView4.setText(str);
             TextView textView5 = this.binding.apkSubtitleView;
@@ -409,7 +409,7 @@ public class ServiceAppViewHolder extends StateViewHolder implements CoolapkCard
         SceneRelatedAppsHelper sceneRelatedHelper2;
         Intrinsics.checkNotNullParameter(view, "view");
         int id = view.getId();
-        if (id == 2131361886) {
+        if (id == 2131361887) {
             ActionButton actionButton = this.binding.actionContainer;
             Intrinsics.checkNotNullExpressionValue(actionButton, "binding.actionContainer");
             if (Intrinsics.areEqual(actionButton.getText(), getContext().getString(2131886128))) {
@@ -425,7 +425,7 @@ public class ServiceAppViewHolder extends StateViewHolder implements CoolapkCard
                 }
             }
             super.onClick(view);
-        } else if (id != 2131362336) {
+        } else if (id != 2131362342) {
             super.onClick(view);
         } else {
             DataManager instance = DataManager.getInstance();

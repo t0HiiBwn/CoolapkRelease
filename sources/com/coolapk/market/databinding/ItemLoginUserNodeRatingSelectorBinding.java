@@ -36,7 +36,7 @@ public abstract class ItemLoginUserNodeRatingSelectorBinding extends ViewDataBin
 
     @Deprecated
     public static ItemLoginUserNodeRatingSelectorBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemLoginUserNodeRatingSelectorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558816, viewGroup, z, obj);
+        return (ItemLoginUserNodeRatingSelectorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558823, viewGroup, z, obj);
     }
 
     public static ItemLoginUserNodeRatingSelectorBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class ItemLoginUserNodeRatingSelectorBinding extends ViewDataBin
 
     @Deprecated
     public static ItemLoginUserNodeRatingSelectorBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemLoginUserNodeRatingSelectorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558816, null, false, obj);
+        return (ItemLoginUserNodeRatingSelectorBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558823, null, false, obj);
     }
 
     public static ItemLoginUserNodeRatingSelectorBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class ItemLoginUserNodeRatingSelectorBinding extends ViewDataBin
 
     @Deprecated
     public static ItemLoginUserNodeRatingSelectorBinding bind(View view, Object obj) {
-        return (ItemLoginUserNodeRatingSelectorBinding) bind(obj, view, 2131558816);
+        return (ItemLoginUserNodeRatingSelectorBinding) bind(obj, view, 2131558823);
     }
 }

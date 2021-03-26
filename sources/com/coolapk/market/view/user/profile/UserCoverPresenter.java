@@ -197,7 +197,7 @@ public final class UserCoverPresenter {
         } else if (i == 69) {
             File file = this.cropOutFile;
             if (file == null || !file.exists() || file.length() <= 0) {
-                Toast.show(this.activity, 2131886645);
+                Toast.show(this.activity, 2131886707);
             } else {
                 checkAndUpload(file);
             }

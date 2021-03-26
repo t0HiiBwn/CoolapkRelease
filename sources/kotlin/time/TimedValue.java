@@ -13,14 +13,14 @@ public final class TimedValue<T> {
     /* JADX DEBUG: Multi-variable search result rejected for r0v0, resolved type: kotlin.time.TimedValue */
     /* JADX WARN: Multi-variable type inference failed */
     /* renamed from: copy-RFiDyg4$default  reason: not valid java name */
-    public static /* synthetic */ TimedValue m1996copyRFiDyg4$default(TimedValue timedValue, Object obj, double d, int i, Object obj2) {
+    public static /* synthetic */ TimedValue m1394copyRFiDyg4$default(TimedValue timedValue, Object obj, double d, int i, Object obj2) {
         if ((i & 1) != 0) {
             obj = timedValue.value;
         }
         if ((i & 2) != 0) {
             d = timedValue.duration;
         }
-        return timedValue.m1998copyRFiDyg4(obj, d);
+        return timedValue.m1396copyRFiDyg4(obj, d);
     }
 
     public final T component1() {
@@ -28,12 +28,12 @@ public final class TimedValue<T> {
     }
 
     /* renamed from: component2-UwyO8pc  reason: not valid java name */
-    public final double m1997component2UwyO8pc() {
+    public final double m1395component2UwyO8pc() {
         return this.duration;
     }
 
     /* renamed from: copy-RFiDyg4  reason: not valid java name */
-    public final TimedValue<T> m1998copyRFiDyg4(T t, double d) {
+    public final TimedValue<T> m1396copyRFiDyg4(T t, double d) {
         return new TimedValue<>(t, d);
     }
 
@@ -56,7 +56,7 @@ public final class TimedValue<T> {
     }
 
     public String toString() {
-        return "TimedValue(value=" + ((Object) this.value) + ", duration=" + Duration.m1983toStringimpl(this.duration) + ")";
+        return "TimedValue(value=" + ((Object) this.value) + ", duration=" + Duration.m1381toStringimpl(this.duration) + ")";
     }
 
     private TimedValue(T t, double d) {
@@ -69,7 +69,7 @@ public final class TimedValue<T> {
     }
 
     /* renamed from: getDuration-UwyO8pc  reason: not valid java name */
-    public final double m1999getDurationUwyO8pc() {
+    public final double m1397getDurationUwyO8pc() {
         return this.duration;
     }
 

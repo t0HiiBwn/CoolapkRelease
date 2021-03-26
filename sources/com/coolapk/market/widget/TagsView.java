@@ -106,7 +106,7 @@ public class TagsView extends FlowLayout {
         textView.setGravity(17);
         textView.setTextSize(14.0f);
         textView.setMinWidth(DisplayUtils.dp2px(getContext(), 48.0f));
-        textView.setBackground(ResourceUtils.getDrawable(getContext(), 2131231715));
+        textView.setBackground(ResourceUtils.getDrawable(getContext(), 2131231726));
         if (!isInEditMode()) {
             textView.setTextColor(AppHolder.getAppTheme().getTextColorPrimary());
             textView.setTag(null);
@@ -116,7 +116,7 @@ public class TagsView extends FlowLayout {
                 String str3 = split[2];
                 String str4 = split[1];
                 if (TextUtils.equals(str2, "hot")) {
-                    textView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131100035));
+                    textView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131100040));
                 }
                 textView.setTag(str3);
                 str = str4;

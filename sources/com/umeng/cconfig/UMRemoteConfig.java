@@ -41,9 +41,7 @@ public class UMRemoteConfig {
     private static Map<String, String> i = new HashMap();
     private int j;
     private RemoteConfigSettings k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private OnConfigStatusChangedListener f1476l;
+    private OnConfigStatusChangedListener l;
     private final ReadWriteLock m;
 
     public static UMRemoteConfig getInstance() {
@@ -85,7 +83,7 @@ public class UMRemoteConfig {
             return;
         }
         if (onConfigStatusChangedListener != null) {
-            this.f1476l = onConfigStatusChangedListener;
+            this.l = onConfigStatusChangedListener;
         }
     }
 
@@ -168,7 +166,7 @@ public class UMRemoteConfig {
                         RemoteConfigSettings remoteConfigSettings = this.k;
                         if (remoteConfigSettings != null) {
                             if (!remoteConfigSettings.isAutoUpdateModeEnabled()) {
-                                OnConfigStatusChangedListener onConfigStatusChangedListener2 = this.f1476l;
+                                OnConfigStatusChangedListener onConfigStatusChangedListener2 = this.l;
                                 if (onConfigStatusChangedListener2 != null) {
                                     onConfigStatusChangedListener2.onFetchComplete();
                                 }
@@ -203,7 +201,7 @@ public class UMRemoteConfig {
                     a(f, this.j);
                     a(aa.a(f).d());
                     MLog.i("ucc", "active new config success");
-                    if (!(this.k == null || (onConfigStatusChangedListener = this.f1476l) == null)) {
+                    if (!(this.k == null || (onConfigStatusChangedListener = this.l) == null)) {
                         onConfigStatusChangedListener.onActiveComplete();
                     }
                 }

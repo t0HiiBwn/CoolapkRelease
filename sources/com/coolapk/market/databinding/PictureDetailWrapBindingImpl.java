@@ -32,16 +32,16 @@ public class PictureDetailWrapBindingImpl extends PictureDetailWrapBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362338, 5);
-        sparseIntArray.put(2131362337, 6);
-        sparseIntArray.put(2131362067, 7);
-        sparseIntArray.put(2131363593, 8);
-        sparseIntArray.put(2131362150, 9);
-        sparseIntArray.put(2131361917, 10);
-        sparseIntArray.put(2131363345, 11);
-        sparseIntArray.put(2131362658, 12);
-        sparseIntArray.put(2131362325, 13);
-        sparseIntArray.put(2131362506, 14);
+        sparseIntArray.put(2131362344, 5);
+        sparseIntArray.put(2131362343, 6);
+        sparseIntArray.put(2131362069, 7);
+        sparseIntArray.put(2131363615, 8);
+        sparseIntArray.put(2131362153, 9);
+        sparseIntArray.put(2131361918, 10);
+        sparseIntArray.put(2131363361, 11);
+        sparseIntArray.put(2131362669, 12);
+        sparseIntArray.put(2131362331, 13);
+        sparseIntArray.put(2131362514, 14);
     }
 
     public PictureDetailWrapBindingImpl(DataBindingComponent dataBindingComponent, View view) {

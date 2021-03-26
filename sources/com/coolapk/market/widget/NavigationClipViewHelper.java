@@ -15,11 +15,11 @@ public class NavigationClipViewHelper {
     }
 
     private void restoreAndResetTag() {
-        NavigationClipViewHelper navigationClipViewHelper = (NavigationClipViewHelper) this.viewGroup.getTag(2131363005);
+        NavigationClipViewHelper navigationClipViewHelper = (NavigationClipViewHelper) this.viewGroup.getTag(2131363019);
         if (navigationClipViewHelper != null) {
             this.addPadding = navigationClipViewHelper.addPadding;
         }
-        this.viewGroup.setTag(2131363005, this);
+        this.viewGroup.setTag(2131363019, this);
     }
 
     public void adapterToNavigationBar() {

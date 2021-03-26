@@ -38,7 +38,7 @@ public abstract class ItemRefreshCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRefreshCardBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemRefreshCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558893, viewGroup, z, obj);
+        return (ItemRefreshCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558900, viewGroup, z, obj);
     }
 
     public static ItemRefreshCardBinding inflate(LayoutInflater layoutInflater) {
@@ -47,7 +47,7 @@ public abstract class ItemRefreshCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRefreshCardBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemRefreshCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558893, null, false, obj);
+        return (ItemRefreshCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558900, null, false, obj);
     }
 
     public static ItemRefreshCardBinding bind(View view) {
@@ -56,6 +56,6 @@ public abstract class ItemRefreshCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRefreshCardBinding bind(View view, Object obj) {
-        return (ItemRefreshCardBinding) bind(obj, view, 2131558893);
+        return (ItemRefreshCardBinding) bind(obj, view, 2131558900);
     }
 }

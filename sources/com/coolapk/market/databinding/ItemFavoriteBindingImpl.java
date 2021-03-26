@@ -71,7 +71,7 @@ public class ItemFavoriteBindingImpl extends ItemFavoriteBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((Favorite) obj);
@@ -84,7 +84,7 @@ public class ItemFavoriteBindingImpl extends ItemFavoriteBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -190,10 +190,10 @@ public class ItemFavoriteBindingImpl extends ItemFavoriteBinding {
             OnImageLoadListener onImageLoadListener = null;
             OnBitmapTransformListener onBitmapTransformListener = null;
             View.OnClickListener onClickListener = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView4, str7, drawable, 2131231363, 0, bool, bool, bool, bool, bool, str12, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView4, str7, drawable, 2131231374, 0, bool, bool, bool, bool, bool, str12, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener, bool);
             TextViewBindingAdapter.setText(this.titleView, str);
             this.titleView.setVisibility(i);
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str3, drawable, 2131231152, 0, bool, bool, bool, bool, bool, str12, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str3, drawable, 2131231162, 0, bool, bool, bool, bool, bool, str12, onImageLoadListener, onBitmapTransformListener, bool, bool, bool, onClickListener, bool);
             TextViewBindingAdapter.setText(this.userNameView, str2);
         }
     }

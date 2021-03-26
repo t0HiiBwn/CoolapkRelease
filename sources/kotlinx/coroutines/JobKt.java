@@ -56,6 +56,10 @@ public final class JobKt {
         JobKt__JobKt.ensureActive(job);
     }
 
+    public static final Job getJob(CoroutineContext coroutineContext) {
+        return JobKt__JobKt.getJob(coroutineContext);
+    }
+
     public static final boolean isActive(CoroutineContext coroutineContext) {
         return JobKt__JobKt.isActive(coroutineContext);
     }

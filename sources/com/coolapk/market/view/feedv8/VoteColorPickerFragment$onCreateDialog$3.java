@@ -20,7 +20,7 @@ final class VoteColorPickerFragment$onCreateDialog$3 implements View.OnClickList
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {
         ColorPickerDialog colorPickerDialog = new ColorPickerDialog();
-        colorPickerDialog.setInitColor(this.this$0.colorPrimary);
+        colorPickerDialog.setInitColor(VoteColorPickerFragment.access$getColorPrimary$p(this.this$0));
         colorPickerDialog.setOuterListener(new ColorPickerView.OnColorChooseListener(this) {
             /* class com.coolapk.market.view.feedv8.VoteColorPickerFragment$onCreateDialog$3.AnonymousClass1 */
             final /* synthetic */ VoteColorPickerFragment$onCreateDialog$3 this$0;
@@ -31,7 +31,7 @@ final class VoteColorPickerFragment$onCreateDialog$3 implements View.OnClickList
 
             @Override // com.coolapk.market.widget.ColorPickerView.OnColorChooseListener
             public final void onColorChoose(int i) {
-                this.this$0.this$0.colorPrimary = i;
+                VoteColorPickerFragment.access$setColorPrimary$p(this.this$0.this$0, i);
                 UiUtils.tintBackground(VoteColorPickerFragment.access$getBinding$p(this.this$0.this$0).colorView1, i);
             }
         });

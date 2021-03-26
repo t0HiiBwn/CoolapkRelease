@@ -26,7 +26,7 @@ public abstract class ItemHeadlineTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemHeadlineTitleBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemHeadlineTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558773, viewGroup, z, obj);
+        return (ItemHeadlineTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558780, viewGroup, z, obj);
     }
 
     public static ItemHeadlineTitleBinding inflate(LayoutInflater layoutInflater) {
@@ -35,7 +35,7 @@ public abstract class ItemHeadlineTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemHeadlineTitleBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemHeadlineTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558773, null, false, obj);
+        return (ItemHeadlineTitleBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558780, null, false, obj);
     }
 
     public static ItemHeadlineTitleBinding bind(View view) {
@@ -44,6 +44,6 @@ public abstract class ItemHeadlineTitleBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemHeadlineTitleBinding bind(View view, Object obj) {
-        return (ItemHeadlineTitleBinding) bind(obj, view, 2131558773);
+        return (ItemHeadlineTitleBinding) bind(obj, view, 2131558780);
     }
 }

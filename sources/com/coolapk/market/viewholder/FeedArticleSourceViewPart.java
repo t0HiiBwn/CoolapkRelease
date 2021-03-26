@@ -20,7 +20,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedArticleSourceViewPart.kt */
 public final class FeedArticleSourceViewPart extends BindingViewPart<ItemFeedNewsBottomBinding, Feed> implements View.OnClickListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558709;
+    public static final int LAYOUT_ID = 2131558716;
     private final DataBindingComponent component;
 
     public FeedArticleSourceViewPart() {
@@ -60,7 +60,7 @@ public final class FeedArticleSourceViewPart extends BindingViewPart<ItemFeedNew
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedNewsBottomBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558709, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558716, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemFeedNewsBottomBinding) inflate;
     }

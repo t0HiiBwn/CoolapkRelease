@@ -15,9 +15,7 @@ public final class br {
     private String i;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String[] f1204l;
+    private String[] l;
 
     /* synthetic */ br(a aVar, byte b2) {
         this(aVar);
@@ -25,23 +23,23 @@ public final class br {
 
     private br() {
         this.c = 1;
-        this.f1204l = null;
+        this.l = null;
     }
 
     private br(a aVar) {
         this.c = 1;
-        this.f1204l = null;
+        this.l = null;
         this.g = aVar.a;
         this.h = aVar.b;
         this.j = aVar.c;
         this.i = aVar.d;
         this.c = aVar.e ? 1 : 0;
         this.k = aVar.f;
-        this.f1204l = aVar.g;
+        this.l = aVar.g;
         this.b = bs.b(this.h);
         this.a = bs.b(this.j);
         this.d = bs.b(this.i);
-        this.e = bs.b(a(this.f1204l));
+        this.e = bs.b(a(this.l));
         this.f = bs.b(this.k);
     }
 
@@ -124,11 +122,11 @@ public final class br {
     }
 
     public final String[] g() {
-        String[] strArr = this.f1204l;
+        String[] strArr = this.l;
         if ((strArr == null || strArr.length == 0) && !TextUtils.isEmpty(this.e)) {
-            this.f1204l = a(bs.c(this.e));
+            this.l = a(bs.c(this.e));
         }
-        return (String[]) this.f1204l.clone();
+        return (String[]) this.l.clone();
     }
 
     private static String[] a(String str) {

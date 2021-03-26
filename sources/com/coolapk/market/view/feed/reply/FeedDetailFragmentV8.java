@@ -29,6 +29,7 @@ import com.coolapk.market.manager.ActionManager;
 import com.coolapk.market.manager.DataManager;
 import com.coolapk.market.model.Entity;
 import com.coolapk.market.model.Feed;
+import com.coolapk.market.model.FeedGoods;
 import com.coolapk.market.model.FeedReply;
 import com.coolapk.market.model.HolderItem;
 import com.coolapk.market.model.LikeResult;
@@ -40,6 +41,7 @@ import com.coolapk.market.view.cardlist.EntityListFragment;
 import com.coolapk.market.view.feed.FeedDetailActivityV8;
 import com.coolapk.market.view.feed.FeedEventListener;
 import com.coolapk.market.view.feed.dialog.SheetGroupModifierManager;
+import com.coolapk.market.view.feed.goods.FeedIncludeGoodsEvent;
 import com.coolapk.market.widget.RecyclerScrollHeaderListener;
 import com.coolapk.market.widget.Toast;
 import com.coolapk.market.widget.multitype.BaseMultiTypeAdapter;
@@ -54,13 +56,16 @@ import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000 \u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0003\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\b\b\u0016\u0018\u0000 R2\u00020\u00012\u00020\u0002:\u0001RB\u0005¢\u0006\u0002\u0010\u0003J\u0012\u0010)\u001a\u00020*2\b\u0010+\u001a\u0004\u0018\u00010,H\u0016J\u0012\u0010-\u001a\u00020*2\b\u0010+\u001a\u0004\u0018\u00010,H\u0016J\u0018\u0010.\u001a\u00020*2\u0006\u0010/\u001a\u0002002\u0006\u00101\u001a\u000202H\u0016J)\u00103\u001a\u00020*2\u0006\u00104\u001a\u00020$2\b\u00105\u001a\u0004\u0018\u0001062\b\u00107\u001a\u0004\u0018\u000108H\u0016¢\u0006\u0002\u00109J\u0010\u0010:\u001a\u00020*2\u0006\u0010\u000b\u001a\u00020\fH\u0016J\u001a\u0010;\u001a\u00020*2\u0006\u0010<\u001a\u00020$2\b\u00107\u001a\u0004\u0018\u000108H\u0016J$\u0010=\u001a\u00020*2\u0006\u0010>\u001a\u00020$2\b\u0010?\u001a\u0004\u0018\u00010@2\b\u00107\u001a\u0004\u0018\u000108H\u0016J\u0010\u0010A\u001a\u00020$2\u0006\u0010B\u001a\u00020CH\u0016J \u0010D\u001a\u00020$2\u0006\u0010E\u001a\u00020$2\u000e\u0010F\u001a\n\u0012\u0004\u0012\u00020H\u0018\u00010GH\u0014J\u001a\u0010I\u001a\u00020*2\u0006\u0010J\u001a\u00020K2\b\u0010+\u001a\u0004\u0018\u00010,H\u0016J\b\u0010L\u001a\u00020*H\u0016J\b\u0010M\u001a\u00020*H\u0002J\b\u0010N\u001a\u00020*H\u0002J\b\u0010O\u001a\u00020*H\u0016J\b\u0010P\u001a\u00020*H\u0016J\b\u0010Q\u001a\u00020*H\u0016R\u0010\u0010\u0004\u001a\u0004\u0018\u00010\u0005X\u000e¢\u0006\u0002\n\u0000R\u001c\u0010\u0006\u001a\n \b*\u0004\u0018\u00010\u00070\u0007X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\nR\u0014\u0010\u000b\u001a\u00020\f8@X\u0004¢\u0006\u0006\u001a\u0004\b\r\u0010\u000eR\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u000e¢\u0006\u0002\n\u0000R\u001a\u0010\u0011\u001a\u00020\u0012X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0013\u0010\u0014\"\u0004\b\u0015\u0010\u0016R\u001c\u0010\u0017\u001a\u0004\u0018\u00010\u0018X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0019\u0010\u001a\"\u0004\b\u001b\u0010\u001cR\u001c\u0010\u001d\u001a\u0004\u0018\u00010\u001eX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001f\u0010 \"\u0004\b!\u0010\"R\u000e\u0010#\u001a\u00020$X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010%\u001a\u0004\u0018\u00010&X\u000e¢\u0006\u0002\n\u0000R\u001c\u0010'\u001a\n \b*\u0004\u0018\u00010\u00070\u0007X\u0004¢\u0006\b\n\u0000\u001a\u0004\b(\u0010\n¨\u0006S"}, d2 = {"Lcom/coolapk/market/view/feed/reply/FeedDetailFragmentV8;", "Lcom/coolapk/market/view/feed/reply/FeedReplyListFragmentV8;", "Lcom/coolapk/market/view/feed/reply/FeedDetailView;", "()V", "commentBarViewPart", "Lcom/coolapk/market/view/feed/reply/FeedCommentBarViewPart;", "defaultDetailHolder", "Lcom/coolapk/market/model/HolderItem;", "kotlin.jvm.PlatformType", "getDefaultDetailHolder$presentation_coolapkAppRelease", "()Lcom/coolapk/market/model/HolderItem;", "feed", "Lcom/coolapk/market/model/Feed;", "getFeed$presentation_coolapkAppRelease", "()Lcom/coolapk/market/model/Feed;", "feedListener", "Lcom/coolapk/market/view/feed/FeedEventListener;", "feedPresenter", "Lcom/coolapk/market/view/feed/reply/FeedDetailPresenter;", "getFeedPresenter$presentation_coolapkAppRelease", "()Lcom/coolapk/market/view/feed/reply/FeedDetailPresenter;", "setFeedPresenter$presentation_coolapkAppRelease", "(Lcom/coolapk/market/view/feed/reply/FeedDetailPresenter;)V", "feedToolbarTitleView", "Landroid/widget/TextView;", "getFeedToolbarTitleView$presentation_coolapkAppRelease", "()Landroid/widget/TextView;", "setFeedToolbarTitleView$presentation_coolapkAppRelease", "(Landroid/widget/TextView;)V", "feedToolbarViewPart", "Lcom/coolapk/market/view/feed/reply/FeedToolbarViewPart;", "getFeedToolbarViewPart$presentation_coolapkAppRelease", "()Lcom/coolapk/market/view/feed/reply/FeedToolbarViewPart;", "setFeedToolbarViewPart$presentation_coolapkAppRelease", "(Lcom/coolapk/market/view/feed/reply/FeedToolbarViewPart;)V", "scrollOnNextLoad", "", "secondHandCommentBarViewPart", "Lcom/coolapk/market/view/feed/reply/SecondHandCommentBarViewPart;", "shareActionHolder", "getShareActionHolder$presentation_coolapkAppRelease", "onActivityCreated", "", "savedInstanceState", "Landroid/os/Bundle;", "onCreate", "onCreateOptionsMenu", "menu", "Landroid/view/Menu;", "inflater", "Landroid/view/MenuInflater;", "onFavoriteResult", "favorite", "favoriteNum", "", "error", "", "(ZLjava/lang/Integer;Ljava/lang/Throwable;)V", "onFeedUpdate", "onFollowAuthorResult", "following", "onLikeResult", "like", "result", "Lcom/coolapk/market/model/LikeResult;", "onOptionsItemSelected", "item", "Landroid/view/MenuItem;", "onRequestResponse", "isRefresh", "data", "", "Lcom/coolapk/market/model/Entity;", "onViewCreated", "view", "Landroid/view/View;", "setupCommentBar", "setupFeedEventHandler", "setupFeedReplyDialogInterceptor", "setupFeedToolbar", "setupSecondHandCommentBar", "updateHeaderData", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000ª\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0003\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\b\b\u0016\u0018\u0000 W2\u00020\u00012\u00020\u0002:\u0001WB\u0005¢\u0006\u0002\u0010\u0003J\u0012\u0010+\u001a\u00020,2\b\u0010-\u001a\u0004\u0018\u00010.H\u0016J\u0012\u0010/\u001a\u00020,2\b\u0010-\u001a\u0004\u0018\u00010.H\u0016J\u0018\u00100\u001a\u00020,2\u0006\u00101\u001a\u0002022\u0006\u00103\u001a\u000204H\u0016J)\u00105\u001a\u00020,2\u0006\u00106\u001a\u00020&2\b\u00107\u001a\u0004\u0018\u0001082\b\u00109\u001a\u0004\u0018\u00010:H\u0016¢\u0006\u0002\u0010;J\u0010\u0010<\u001a\u00020,2\u0006\u0010=\u001a\u00020>H\u0007J\u0010\u0010?\u001a\u00020,2\u0006\u0010\r\u001a\u00020\u000eH\u0016J\u001a\u0010@\u001a\u00020,2\u0006\u0010A\u001a\u00020&2\b\u00109\u001a\u0004\u0018\u00010:H\u0016J$\u0010B\u001a\u00020,2\u0006\u0010C\u001a\u00020&2\b\u0010D\u001a\u0004\u0018\u00010E2\b\u00109\u001a\u0004\u0018\u00010:H\u0016J\u0010\u0010F\u001a\u00020&2\u0006\u0010G\u001a\u00020HH\u0016J \u0010I\u001a\u00020&2\u0006\u0010J\u001a\u00020&2\u000e\u0010K\u001a\n\u0012\u0004\u0012\u00020M\u0018\u00010LH\u0014J\u001a\u0010N\u001a\u00020,2\u0006\u0010O\u001a\u00020P2\b\u0010-\u001a\u0004\u0018\u00010.H\u0016J\b\u0010Q\u001a\u00020,H\u0016J\b\u0010R\u001a\u00020,H\u0002J\b\u0010S\u001a\u00020,H\u0002J\b\u0010T\u001a\u00020,H\u0016J\b\u0010U\u001a\u00020,H\u0016J\b\u0010V\u001a\u00020,H\u0016R\u001c\u0010\u0004\u001a\n \u0006*\u0004\u0018\u00010\u00050\u0005X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0010\u0010\t\u001a\u0004\u0018\u00010\nX\u000e¢\u0006\u0002\n\u0000R\u001c\u0010\u000b\u001a\n \u0006*\u0004\u0018\u00010\u00050\u0005X\u0004¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\bR\u0014\u0010\r\u001a\u00020\u000e8@X\u0004¢\u0006\u0006\u001a\u0004\b\u000f\u0010\u0010R\u0010\u0010\u0011\u001a\u0004\u0018\u00010\u0012X\u000e¢\u0006\u0002\n\u0000R\u001a\u0010\u0013\u001a\u00020\u0014X.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0016\"\u0004\b\u0017\u0010\u0018R\u001c\u0010\u0019\u001a\u0004\u0018\u00010\u001aX\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001b\u0010\u001c\"\u0004\b\u001d\u0010\u001eR\u001c\u0010\u001f\u001a\u0004\u0018\u00010 X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b!\u0010\"\"\u0004\b#\u0010$R\u000e\u0010%\u001a\u00020&X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010'\u001a\u0004\u0018\u00010(X\u000e¢\u0006\u0002\n\u0000R\u001c\u0010)\u001a\n \u0006*\u0004\u0018\u00010\u00050\u0005X\u0004¢\u0006\b\n\u0000\u001a\u0004\b*\u0010\b¨\u0006X"}, d2 = {"Lcom/coolapk/market/view/feed/reply/FeedDetailFragmentV8;", "Lcom/coolapk/market/view/feed/reply/FeedReplyListFragmentV8;", "Lcom/coolapk/market/view/feed/reply/FeedDetailView;", "()V", "bindGoodsHolder", "Lcom/coolapk/market/model/HolderItem;", "kotlin.jvm.PlatformType", "getBindGoodsHolder$presentation_coolapkAppRelease", "()Lcom/coolapk/market/model/HolderItem;", "commentBarViewPart", "Lcom/coolapk/market/view/feed/reply/FeedCommentBarViewPart;", "defaultDetailHolder", "getDefaultDetailHolder$presentation_coolapkAppRelease", "feed", "Lcom/coolapk/market/model/Feed;", "getFeed$presentation_coolapkAppRelease", "()Lcom/coolapk/market/model/Feed;", "feedListener", "Lcom/coolapk/market/view/feed/FeedEventListener;", "feedPresenter", "Lcom/coolapk/market/view/feed/reply/FeedDetailPresenter;", "getFeedPresenter$presentation_coolapkAppRelease", "()Lcom/coolapk/market/view/feed/reply/FeedDetailPresenter;", "setFeedPresenter$presentation_coolapkAppRelease", "(Lcom/coolapk/market/view/feed/reply/FeedDetailPresenter;)V", "feedToolbarTitleView", "Landroid/widget/TextView;", "getFeedToolbarTitleView$presentation_coolapkAppRelease", "()Landroid/widget/TextView;", "setFeedToolbarTitleView$presentation_coolapkAppRelease", "(Landroid/widget/TextView;)V", "feedToolbarViewPart", "Lcom/coolapk/market/view/feed/reply/FeedToolbarViewPart;", "getFeedToolbarViewPart$presentation_coolapkAppRelease", "()Lcom/coolapk/market/view/feed/reply/FeedToolbarViewPart;", "setFeedToolbarViewPart$presentation_coolapkAppRelease", "(Lcom/coolapk/market/view/feed/reply/FeedToolbarViewPart;)V", "scrollOnNextLoad", "", "secondHandCommentBarViewPart", "Lcom/coolapk/market/view/feed/reply/SecondHandCommentBarViewPart;", "shareActionHolder", "getShareActionHolder$presentation_coolapkAppRelease", "onActivityCreated", "", "savedInstanceState", "Landroid/os/Bundle;", "onCreate", "onCreateOptionsMenu", "menu", "Landroid/view/Menu;", "inflater", "Landroid/view/MenuInflater;", "onFavoriteResult", "favorite", "favoriteNum", "", "error", "", "(ZLjava/lang/Integer;Ljava/lang/Throwable;)V", "onFeedIncludeGoodsEvent", "event", "Lcom/coolapk/market/view/feed/goods/FeedIncludeGoodsEvent;", "onFeedUpdate", "onFollowAuthorResult", "following", "onLikeResult", "like", "result", "Lcom/coolapk/market/model/LikeResult;", "onOptionsItemSelected", "item", "Landroid/view/MenuItem;", "onRequestResponse", "isRefresh", "data", "", "Lcom/coolapk/market/model/Entity;", "onViewCreated", "view", "Landroid/view/View;", "setupCommentBar", "setupFeedEventHandler", "setupFeedReplyDialogInterceptor", "setupFeedToolbar", "setupSecondHandCommentBar", "updateHeaderData", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: FeedDetailFragmentV8.kt */
 public class FeedDetailFragmentV8 extends FeedReplyListFragmentV8 implements FeedDetailView {
     public static final Companion Companion = new Companion(null);
+    public static final String ENTITY_TYPE_BIND_GOODS = "ENTITY_TYPE_BIND_GOODS";
     public static final String ENTITY_TYPE_DETAIL_TOP = "ENTITY_TYPE_DETAIL_TOP";
     public static final String ENTITY_TYPE_SHARE_ACTION = "ENTITY_TYPE_SHARE_ACTION";
+    private final HolderItem bindGoodsHolder = HolderItem.newBuilder().entityType("ENTITY_TYPE_BIND_GOODS").build();
     private FeedCommentBarViewPart commentBarViewPart;
     private final HolderItem defaultDetailHolder = HolderItem.newBuilder().entityType("ENTITY_TYPE_DETAIL_TOP").build();
     private FeedEventListener feedListener;
@@ -71,7 +76,7 @@ public class FeedDetailFragmentV8 extends FeedReplyListFragmentV8 implements Fee
     private SecondHandCommentBarViewPart secondHandCommentBarViewPart;
     private final HolderItem shareActionHolder = HolderItem.newBuilder().entityType("ENTITY_TYPE_SHARE_ACTION").build();
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0018\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\t2\b\b\u0002\u0010\n\u001a\u00020\u000bJ\u0018\u0010\f\u001a\u00020\r2\u0006\u0010\b\u001a\u00020\t2\b\b\u0002\u0010\n\u001a\u00020\u000bR\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u000e"}, d2 = {"Lcom/coolapk/market/view/feed/reply/FeedDetailFragmentV8$Companion;", "", "()V", "ENTITY_TYPE_DETAIL_TOP", "", "ENTITY_TYPE_SHARE_ACTION", "createArguments", "Landroid/os/Bundle;", "feed", "Lcom/coolapk/market/model/Feed;", "flag", "", "newInstance", "Lcom/coolapk/market/view/feed/reply/FeedDetailFragmentV8;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0018\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\n2\b\b\u0002\u0010\u000b\u001a\u00020\fJ\u0018\u0010\r\u001a\u00020\u000e2\u0006\u0010\t\u001a\u00020\n2\b\b\u0002\u0010\u000b\u001a\u00020\fR\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u000f"}, d2 = {"Lcom/coolapk/market/view/feed/reply/FeedDetailFragmentV8$Companion;", "", "()V", "ENTITY_TYPE_BIND_GOODS", "", "ENTITY_TYPE_DETAIL_TOP", "ENTITY_TYPE_SHARE_ACTION", "createArguments", "Landroid/os/Bundle;", "feed", "Lcom/coolapk/market/model/Feed;", "flag", "", "newInstance", "Lcom/coolapk/market/view/feed/reply/FeedDetailFragmentV8;", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: FeedDetailFragmentV8.kt */
     public static final class Companion {
         private Companion() {
@@ -125,6 +130,10 @@ public class FeedDetailFragmentV8 extends FeedReplyListFragmentV8 implements Fee
 
     public final HolderItem getShareActionHolder$presentation_coolapkAppRelease() {
         return this.shareActionHolder;
+    }
+
+    public final HolderItem getBindGoodsHolder$presentation_coolapkAppRelease() {
+        return this.bindGoodsHolder;
     }
 
     public final FeedDetailPresenter getFeedPresenter$presentation_coolapkAppRelease() {
@@ -210,8 +219,9 @@ public class FeedDetailFragmentV8 extends FeedReplyListFragmentV8 implements Fee
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         FeedDetailActivityV8 feedDetailActivityV8 = null;
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558696).constructor(new FeedDetailFragmentV8$onActivityCreated$1(this)).suitedEntityType("ENTITY_TYPE_DETAIL_TOP").build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558726).constructor(new FeedDetailFragmentV8$onActivityCreated$2(this)).suitedEntityType("ENTITY_TYPE_SHARE_ACTION").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558703).constructor(new FeedDetailFragmentV8$onActivityCreated$1(this)).suitedEntityType("ENTITY_TYPE_DETAIL_TOP").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558733).constructor(new FeedDetailFragmentV8$onActivityCreated$2(this)).suitedEntityType("ENTITY_TYPE_SHARE_ACTION").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558699).constructor(new FeedDetailFragmentV8$onActivityCreated$3(this)).suitedEntityType("ENTITY_TYPE_BIND_GOODS").build(), 0, 2, null);
         if (bundle == null && (getFlags$presentation_coolapkAppRelease() & 1) > 0) {
             fadeCommentPosition();
             if (!scrollToCommentPosition()) {
@@ -219,11 +229,11 @@ public class FeedDetailFragmentV8 extends FeedReplyListFragmentV8 implements Fee
             }
         }
         if (getViewModel().getHideAllComments()) {
-            getRecyclerView().addOnItemTouchListener(new FeedDetailFragmentV8$onActivityCreated$3(this));
+            getRecyclerView().addOnItemTouchListener(new FeedDetailFragmentV8$onActivityCreated$4(this));
             getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getMainBackgroundColor());
             Paint paint = new Paint();
             paint.setColor(AppHolder.getAppTheme().getContentBackgroundColor());
-            getRecyclerView().addItemDecoration(new FeedDetailFragmentV8$onActivityCreated$4(paint));
+            getRecyclerView().addItemDecoration(new FeedDetailFragmentV8$onActivityCreated$5(paint));
             FragmentActivity activity = getActivity();
             if (activity instanceof FeedDetailActivityV8) {
                 feedDetailActivityV8 = activity;
@@ -254,6 +264,21 @@ public class FeedDetailFragmentV8 extends FeedReplyListFragmentV8 implements Fee
             scrollToCommentPosition();
         }
         return onRequestResponse;
+    }
+
+    @Subscribe
+    public final void onFeedIncludeGoodsEvent(FeedIncludeGoodsEvent feedIncludeGoodsEvent) {
+        Intrinsics.checkNotNullParameter(feedIncludeGoodsEvent, "event");
+        if (Intrinsics.areEqual(getFeed$presentation_coolapkAppRelease().getId(), feedIncludeGoodsEvent.getId())) {
+            getFeed$presentation_coolapkAppRelease().getIncludeGoods().clear();
+            getFeed$presentation_coolapkAppRelease().getIncludeGoods().addAll(feedIncludeGoodsEvent.getGoods());
+            int findFirstEntityIndex$default = EntityListFragment.findFirstEntityIndex$default(this, "ENTITY_TYPE_BIND_GOODS", null, false, false, 6, null);
+            if (findFirstEntityIndex$default >= 0) {
+                getAdapter$presentation_coolapkAppRelease().notifyItemChanged(findFirstEntityIndex$default, 0);
+            } else {
+                updateHeaderData();
+            }
+        }
     }
 
     @Override // com.coolapk.market.view.feed.reply.FeedDetailView
@@ -347,10 +372,18 @@ public class FeedDetailFragmentV8 extends FeedReplyListFragmentV8 implements Fee
             Intrinsics.checkNotNullExpressionValue(holderItem, "defaultDetailHolder");
             dataList.add(holderItem);
             if (!getViewModel().getHideAllComments()) {
-                List<Parcelable> dataList2 = getDataList();
-                HolderItem holderItem2 = this.shareActionHolder;
-                Intrinsics.checkNotNullExpressionValue(holderItem2, "shareActionHolder");
-                dataList2.add(holderItem2);
+                List<FeedGoods> includeGoods = getFeed$presentation_coolapkAppRelease().getIncludeGoods();
+                Intrinsics.checkNotNullExpressionValue(includeGoods, "feed.includeGoods");
+                if (!includeGoods.isEmpty()) {
+                    List<Parcelable> dataList2 = getDataList();
+                    HolderItem holderItem2 = this.bindGoodsHolder;
+                    Intrinsics.checkNotNullExpressionValue(holderItem2, "bindGoodsHolder");
+                    dataList2.add(holderItem2);
+                }
+                List<Parcelable> dataList3 = getDataList();
+                HolderItem holderItem3 = this.shareActionHolder;
+                Intrinsics.checkNotNullExpressionValue(holderItem3, "shareActionHolder");
+                dataList3.add(holderItem3);
                 Entity detailSponsorCard = getFeed$presentation_coolapkAppRelease().getDetailSponsorCard();
                 if (detailSponsorCard != null) {
                     getDataList().add(detailSponsorCard);
@@ -376,13 +409,13 @@ public class FeedDetailFragmentV8 extends FeedReplyListFragmentV8 implements Fee
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() == 2131361931) {
+        if (menuItem.getItemId() == 2131361932) {
             Feed feed$presentation_coolapkAppRelease = getFeed$presentation_coolapkAppRelease();
             FragmentActivity requireActivity = requireActivity();
             Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
             EntityExtendsKt.showItemDialog(feed$presentation_coolapkAppRelease, requireActivity);
             return true;
-        } else if (menuItem.getItemId() != 2131361968) {
+        } else if (menuItem.getItemId() != 2131361969) {
             return super.onOptionsItemSelected(menuItem);
         } else {
             ActionManager.startForwardEntityActivity(getActivity(), getFeed$presentation_coolapkAppRelease());

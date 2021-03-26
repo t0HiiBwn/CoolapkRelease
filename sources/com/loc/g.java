@@ -26,9 +26,7 @@ import org.json.JSONObject;
 public final class g {
     static AMapLocation j;
     static long k;
-
-    /* renamed from: l  reason: collision with root package name */
-    static Object f1378l = new Object();
+    static Object l = new Object();
     static long q;
     static boolean t;
     static boolean u;
@@ -286,7 +284,7 @@ public final class g {
                     }
                     if (ep.a(aMapLocation)) {
                         gVar.d = ep.b();
-                        synchronized (f1378l) {
+                        synchronized (l) {
                             k = ep.b();
                             j = aMapLocation.clone();
                         }

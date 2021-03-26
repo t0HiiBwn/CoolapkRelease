@@ -20,7 +20,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemPlaceHolderViewholder.kt */
 public final class ItemPlaceHolderViewholder extends GenericBindHolder<ItemPlaceHolderBinding, ItemPlaceHolder> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558858;
+    public static final int LAYOUT_ID = 2131558865;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public ItemPlaceHolderViewholder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -49,8 +49,8 @@ public final class ItemPlaceHolderViewholder extends GenericBindHolder<ItemPlace
         super.onClick(view);
         Intrinsics.checkNotNull(view);
         int id = view.getId();
-        if (id != 2131362095) {
-            if (id == 2131362374) {
+        if (id != 2131362098) {
+            if (id == 2131362380) {
                 ItemPlaceHolderBinding itemPlaceHolderBinding = (ItemPlaceHolderBinding) getBinding();
                 Intrinsics.checkNotNullExpressionValue(itemPlaceHolderBinding, "binding");
                 ItemPlaceHolder model = itemPlaceHolderBinding.getModel();
@@ -72,7 +72,7 @@ public final class ItemPlaceHolderViewholder extends GenericBindHolder<ItemPlace
                     return;
                 }
                 return;
-            } else if (id != 2131363886) {
+            } else if (id != 2131363909) {
                 return;
             }
         }

@@ -53,7 +53,7 @@ public class WebViewActivity extends ToolbarActivity<WebViewFragment> {
         this.mFakeCloseView.setTranslationX((float) (-DisplayUtils.dp2px(getActivity(), 12.0f)));
         this.mFakeCloseView.setLayoutParams(marginLayoutParams);
         this.mFakeCloseView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-        this.mFakeCloseView.setImageResource(2131231200);
+        this.mFakeCloseView.setImageResource(2131231211);
         this.mFakeCloseView.setBackground(ResourceUtils.getDrawable(getActivity(), ResourceUtils.resolveResId(getActivity(), 16843676)));
         this.mFakeCloseView.setOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.webview.WebViewActivity.AnonymousClass1 */

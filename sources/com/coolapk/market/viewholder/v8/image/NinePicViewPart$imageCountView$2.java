@@ -25,7 +25,7 @@ final class NinePicViewPart$imageCountView$2 extends Lambda implements Function0
         TextView textView = new TextView(this.this$0.getContext());
         textView.setGravity(17);
         textView.setTextSize(12.0f);
-        textView.setTextColor(textView.getResources().getColor(2131100146));
+        textView.setTextColor(textView.getResources().getColor(2131100159));
         float dp = (float) NumberExtendsKt.getDp((Number) 2);
         float dp2 = (float) NumberExtendsKt.getDp((Number) 8);
         GradientDrawable gradientDrawable = new GradientDrawable();

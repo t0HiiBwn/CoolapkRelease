@@ -1128,7 +1128,7 @@ class StringsKt___StringsKt extends StringsKt___StringsJvmKt {
     }
 
     /* renamed from: maxOf  reason: collision with other method in class */
-    private static final float m1926maxOf(CharSequence charSequence, Function1<? super Character, Float> function1) {
+    private static final float m1324maxOf(CharSequence charSequence, Function1<? super Character, Float> function1) {
         int i = 1;
         if (!(charSequence.length() == 0)) {
             float floatValue = function1.invoke(Character.valueOf(charSequence.charAt(0))).floatValue();
@@ -1151,7 +1151,7 @@ class StringsKt___StringsKt extends StringsKt___StringsJvmKt {
     /* JADX WARN: Type inference failed for: r3v3, types: [java.lang.Comparable, java.lang.Object] */
     /* JADX WARNING: Unknown variable types count: 1 */
     /* renamed from: maxOf  reason: collision with other method in class */
-    private static final <R extends Comparable<? super R>> R m1927maxOf(CharSequence charSequence, Function1<? super Character, ? extends R> function1) {
+    private static final <R extends Comparable<? super R>> R m1325maxOf(CharSequence charSequence, Function1<? super Character, ? extends R> function1) {
         int i = 1;
         if (!(charSequence.length() == 0)) {
             R r = (R) ((Comparable) function1.invoke(Character.valueOf(charSequence.charAt(0))));
@@ -1174,7 +1174,7 @@ class StringsKt___StringsKt extends StringsKt___StringsJvmKt {
     }
 
     /* renamed from: maxOfOrNull  reason: collision with other method in class */
-    private static final Double m1928maxOfOrNull(CharSequence charSequence, Function1<? super Character, Double> function1) {
+    private static final Double m1326maxOfOrNull(CharSequence charSequence, Function1<? super Character, Double> function1) {
         int i = 1;
         if (charSequence.length() == 0) {
             return null;
@@ -1194,7 +1194,7 @@ class StringsKt___StringsKt extends StringsKt___StringsJvmKt {
     }
 
     /* renamed from: maxOfOrNull  reason: collision with other method in class */
-    private static final Float m1929maxOfOrNull(CharSequence charSequence, Function1<? super Character, Float> function1) {
+    private static final Float m1327maxOfOrNull(CharSequence charSequence, Function1<? super Character, Float> function1) {
         int i = 1;
         if (charSequence.length() == 0) {
             return null;
@@ -1394,7 +1394,7 @@ class StringsKt___StringsKt extends StringsKt___StringsJvmKt {
     }
 
     /* renamed from: minOf  reason: collision with other method in class */
-    private static final float m1930minOf(CharSequence charSequence, Function1<? super Character, Float> function1) {
+    private static final float m1328minOf(CharSequence charSequence, Function1<? super Character, Float> function1) {
         int i = 1;
         if (!(charSequence.length() == 0)) {
             float floatValue = function1.invoke(Character.valueOf(charSequence.charAt(0))).floatValue();
@@ -1417,7 +1417,7 @@ class StringsKt___StringsKt extends StringsKt___StringsJvmKt {
     /* JADX WARN: Type inference failed for: r3v3, types: [java.lang.Comparable, java.lang.Object] */
     /* JADX WARNING: Unknown variable types count: 1 */
     /* renamed from: minOf  reason: collision with other method in class */
-    private static final <R extends Comparable<? super R>> R m1931minOf(CharSequence charSequence, Function1<? super Character, ? extends R> function1) {
+    private static final <R extends Comparable<? super R>> R m1329minOf(CharSequence charSequence, Function1<? super Character, ? extends R> function1) {
         int i = 1;
         if (!(charSequence.length() == 0)) {
             R r = (R) ((Comparable) function1.invoke(Character.valueOf(charSequence.charAt(0))));
@@ -1440,7 +1440,7 @@ class StringsKt___StringsKt extends StringsKt___StringsJvmKt {
     }
 
     /* renamed from: minOfOrNull  reason: collision with other method in class */
-    private static final Double m1932minOfOrNull(CharSequence charSequence, Function1<? super Character, Double> function1) {
+    private static final Double m1330minOfOrNull(CharSequence charSequence, Function1<? super Character, Double> function1) {
         int i = 1;
         if (charSequence.length() == 0) {
             return null;
@@ -1460,7 +1460,7 @@ class StringsKt___StringsKt extends StringsKt___StringsJvmKt {
     }
 
     /* renamed from: minOfOrNull  reason: collision with other method in class */
-    private static final Float m1933minOfOrNull(CharSequence charSequence, Function1<? super Character, Float> function1) {
+    private static final Float m1331minOfOrNull(CharSequence charSequence, Function1<? super Character, Float> function1) {
         int i = 1;
         if (charSequence.length() == 0) {
             return null;
@@ -1890,17 +1890,17 @@ class StringsKt___StringsKt extends StringsKt___StringsJvmKt {
     }
 
     private static final int sumOfUInt(CharSequence charSequence, Function1<? super Character, UInt> function1) {
-        int r1 = UInt.m773constructorimpl(0);
+        int r1 = UInt.m171constructorimpl(0);
         for (int i = 0; i < charSequence.length(); i++) {
-            r1 = UInt.m773constructorimpl(r1 + function1.invoke(Character.valueOf(charSequence.charAt(i))).m816unboximpl());
+            r1 = UInt.m171constructorimpl(r1 + function1.invoke(Character.valueOf(charSequence.charAt(i))).m214unboximpl());
         }
         return r1;
     }
 
     private static final long sumOfULong(CharSequence charSequence, Function1<? super Character, ULong> function1) {
-        long r1 = ULong.m843constructorimpl((long) 0);
+        long r1 = ULong.m241constructorimpl((long) 0);
         for (int i = 0; i < charSequence.length(); i++) {
-            r1 = ULong.m843constructorimpl(r1 + function1.invoke(Character.valueOf(charSequence.charAt(i))).m886unboximpl());
+            r1 = ULong.m241constructorimpl(r1 + function1.invoke(Character.valueOf(charSequence.charAt(i))).m284unboximpl());
         }
         return r1;
     }

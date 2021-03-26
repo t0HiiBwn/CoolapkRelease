@@ -8,6 +8,7 @@ import com.coolapk.market.util.UserUtils;
 public class LoginSession {
     private int adminType = -1;
     private final PreferencesUtils preferencesUtils;
+    private String pushId;
     private String token;
     private String uid;
     private String userAvatar;
@@ -20,6 +21,7 @@ public class LoginSession {
         this.token = preferencesUtils2.getString("token", "");
         this.userAvatar = preferencesUtils2.getString("userAvatar", "");
         this.adminType = preferencesUtils2.getInt("adminType", -1);
+        this.pushId = preferencesUtils2.getString("pushId", "");
     }
 
     public String getUid() {
@@ -42,6 +44,10 @@ public class LoginSession {
         return this.adminType > 0;
     }
 
+    public String getPushId() {
+        return this.pushId;
+    }
+
     public boolean isLogin() {
         return !TextUtils.isEmpty(this.uid) && !this.uid.equals("0") && !TextUtils.isEmpty(this.userName) && !TextUtils.isEmpty(this.token);
     }
@@ -56,6 +62,7 @@ public class LoginSession {
         this.token = token2;
         this.userAvatar = loginInfo.getUserAvatar();
         this.adminType = loginInfo.getAdminType();
+        this.pushId = loginInfo.getPushId();
         return save();
     }
 
@@ -86,10 +93,10 @@ public class LoginSession {
     }
 
     private boolean save() {
-        return this.preferencesUtils.edit().putString("uid", this.uid).putString("username", this.userName).putString("token", this.token).putString("userAvatar", this.userAvatar).putInt("adminType", this.adminType).commit();
+        return this.preferencesUtils.edit().putString("uid", this.uid).putString("username", this.userName).putString("token", this.token).putString("userAvatar", this.userAvatar).putInt("adminType", this.adminType).putString("pushId", this.pushId).commit();
     }
 
     private boolean clear() {
-        return this.preferencesUtils.edit().remove("uid").remove("username").remove("token").remove("userAvatar").remove("adminType").commit();
+        return this.preferencesUtils.edit().remove("uid").remove("username").remove("token").remove("userAvatar").remove("adminType").remove("pushId").commit();
     }
 }

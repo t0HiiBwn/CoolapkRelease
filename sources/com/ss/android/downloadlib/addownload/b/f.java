@@ -218,8 +218,8 @@ public class f {
 
     public synchronized void a(List<Long> list) {
         ArrayList arrayList = new ArrayList();
-        for (Long l2 : list) {
-            long longValue = l2.longValue();
+        for (Long l : list) {
+            long longValue = l.longValue();
             arrayList.add(String.valueOf(longValue));
             this.e.remove(Long.valueOf(longValue));
         }

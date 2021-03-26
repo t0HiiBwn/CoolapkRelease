@@ -66,7 +66,7 @@ public abstract class ServiceApp implements Entity {
 
         public abstract Builder setCover(String str);
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         public abstract Builder setDescription(String str);
 
@@ -128,7 +128,7 @@ public abstract class ServiceApp implements Entity {
 
         public abstract Builder setLanguage(String str);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLoginUserRate(String str);
 

@@ -56,7 +56,7 @@ public class RootTools {
         return Observable.timer(j, TimeUnit.MILLISECONDS).map(new Func1<Long, Boolean>() {
             /* class com.coolapk.market.util.RootTools.AnonymousClass3 */
 
-            public Boolean call(Long l2) {
+            public Boolean call(Long l) {
                 return false;
             }
         }).ambWith(Observable.defer(new Func0<Observable<Boolean>>() {

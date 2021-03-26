@@ -70,9 +70,7 @@ public class x implements b, al.a {
     private String i;
     private WeakReference<View> j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1328l;
+    private int l;
     private String m;
     private l n;
     private boolean o = true;
@@ -254,7 +252,7 @@ public class x implements b, al.a {
     }
 
     public x a(int i2) {
-        this.f1328l = i2;
+        this.l = i2;
         return this;
     }
 
@@ -627,7 +625,7 @@ public class x implements b, al.a {
                 y();
                 WeakReference<Context> weakReference2 = this.g;
                 if (!(weakReference2 == null || (context = weakReference2.get()) == null)) {
-                    this.h.a(context, aVar.d, this.k, this.f1328l, this.o);
+                    this.h.a(context, aVar.d, this.k, this.l, this.o);
                     break;
                 }
             case 1:
@@ -1629,11 +1627,11 @@ public class x implements b, al.a {
     }
 
     public String l() {
-        return aj.a(this.f1328l);
+        return aj.a(this.l);
     }
 
     private String g(String str) {
-        return this.p == null ? aj.a(this.f1328l) : str;
+        return this.p == null ? aj.a(this.l) : str;
     }
 
     private void h(String str) {

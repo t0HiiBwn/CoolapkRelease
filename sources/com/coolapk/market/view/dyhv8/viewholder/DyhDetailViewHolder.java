@@ -40,7 +40,7 @@ import rx.Subscriber;
 import rx.functions.Action0;
 
 public class DyhDetailViewHolder extends GenericBindHolder<DyhHeaderViewBinding, Entity> {
-    public static final int LAYOUT_ID = 2131558543;
+    public static final int LAYOUT_ID = 2131558545;
     private boolean isCoverLoaded;
     private boolean isRequesting;
     private DyhHeaderViewBinding mBinding = ((DyhHeaderViewBinding) getBinding());

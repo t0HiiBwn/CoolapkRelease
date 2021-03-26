@@ -30,9 +30,9 @@ public class SubmitVertfiyCaptchaDialogBindingImpl extends SubmitVertfiyCaptchaD
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 5);
-        sparseIntArray.put(2131362441, 6);
-        sparseIntArray.put(2131362470, 7);
+        sparseIntArray.put(2131363551, 5);
+        sparseIntArray.put(2131362448, 6);
+        sparseIntArray.put(2131362478, 7);
     }
 
     public SubmitVertfiyCaptchaDialogBindingImpl(DataBindingComponent dataBindingComponent, View view) {

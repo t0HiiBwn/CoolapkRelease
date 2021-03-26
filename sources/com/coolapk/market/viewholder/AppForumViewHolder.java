@@ -11,7 +11,7 @@ import com.coolapk.market.util.UiUtils;
 import com.coolapk.market.view.feed.CancelFollowItemDialog;
 
 public class AppForumViewHolder extends GenericBindHolder<ItemAppForumBinding, AppForum> {
-    public static final int LAYOUT_ID = 2131558591;
+    public static final int LAYOUT_ID = 2131558595;
     private AppForum appForum;
     private boolean showCancelAction = false;
 
@@ -25,8 +25,8 @@ public class AppForumViewHolder extends GenericBindHolder<ItemAppForumBinding, A
         itemAppForumBinding.setClick(this);
         itemAppForumBinding.setModel(appForum2);
         this.showCancelAction = EntityExtendsKt.getIntExtraData(appForum2, "showCancelFollowMenu", 0) == 1;
-        itemAppForumBinding.followView.setText(getContext().getString(2131886608, appForum2.followCount()));
-        itemAppForumBinding.commentView.setText(getContext().getString(2131886607, appForum2.commentCount()));
+        itemAppForumBinding.followView.setText(getContext().getString(2131886670, appForum2.followCount()));
+        itemAppForumBinding.commentView.setText(getContext().getString(2131886669, appForum2.commentCount()));
         itemAppForumBinding.executePendingBindings();
         itemAppForumBinding.cardView.setOnLongClickListener(new View.OnLongClickListener() {
             /* class com.coolapk.market.viewholder.AppForumViewHolder.AnonymousClass1 */
@@ -45,7 +45,7 @@ public class AppForumViewHolder extends GenericBindHolder<ItemAppForumBinding, A
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         super.onClick(view);
-        if (view.getId() == 2131362200) {
+        if (view.getId() == 2131362205) {
             ActionManager.startAppForumActivity(UiUtils.getActivity(getContext()), ((ItemAppForumBinding) getBinding()).iconView, this.appForum.packageName(), this.appForum.logo(), this.appForum.title(), null);
         }
     }

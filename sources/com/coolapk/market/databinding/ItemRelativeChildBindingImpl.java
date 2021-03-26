@@ -26,8 +26,8 @@ public class ItemRelativeChildBindingImpl extends ItemRelativeChildBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362672, 1);
-        sparseIntArray.put(2131363582, 2);
+        sparseIntArray.put(2131362683, 1);
+        sparseIntArray.put(2131363604, 2);
     }
 
     public ItemRelativeChildBindingImpl(DataBindingComponent dataBindingComponent, View view) {

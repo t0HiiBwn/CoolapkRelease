@@ -25,7 +25,7 @@ public class ItemUserProfileItemBindingImpl extends ItemUserProfileItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 3);
+        sparseIntArray.put(2131362718, 3);
     }
 
     public ItemUserProfileItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {

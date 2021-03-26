@@ -52,7 +52,7 @@ public abstract class ItemUserInfoHeaderViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserInfoHeaderViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemUserInfoHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558974, viewGroup, z, obj);
+        return (ItemUserInfoHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558981, viewGroup, z, obj);
     }
 
     public static ItemUserInfoHeaderViewBinding inflate(LayoutInflater layoutInflater) {
@@ -61,7 +61,7 @@ public abstract class ItemUserInfoHeaderViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserInfoHeaderViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemUserInfoHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558974, null, false, obj);
+        return (ItemUserInfoHeaderViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558981, null, false, obj);
     }
 
     public static ItemUserInfoHeaderViewBinding bind(View view) {
@@ -70,6 +70,6 @@ public abstract class ItemUserInfoHeaderViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserInfoHeaderViewBinding bind(View view, Object obj) {
-        return (ItemUserInfoHeaderViewBinding) bind(obj, view, 2131558974);
+        return (ItemUserInfoHeaderViewBinding) bind(obj, view, 2131558981);
     }
 }

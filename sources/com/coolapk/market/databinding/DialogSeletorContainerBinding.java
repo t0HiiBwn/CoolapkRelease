@@ -33,7 +33,7 @@ public abstract class DialogSeletorContainerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSeletorContainerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogSeletorContainerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558536, viewGroup, z, obj);
+        return (DialogSeletorContainerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558538, viewGroup, z, obj);
     }
 
     public static DialogSeletorContainerBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class DialogSeletorContainerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSeletorContainerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogSeletorContainerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558536, null, false, obj);
+        return (DialogSeletorContainerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558538, null, false, obj);
     }
 
     public static DialogSeletorContainerBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class DialogSeletorContainerBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogSeletorContainerBinding bind(View view, Object obj) {
-        return (DialogSeletorContainerBinding) bind(obj, view, 2131558536);
+        return (DialogSeletorContainerBinding) bind(obj, view, 2131558538);
     }
 }

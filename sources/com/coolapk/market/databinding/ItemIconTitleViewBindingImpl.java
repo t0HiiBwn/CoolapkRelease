@@ -21,8 +21,8 @@ public class ItemIconTitleViewBindingImpl extends ItemIconTitleViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363260, 5);
-        sparseIntArray.put(2131362970, 6);
+        sparseIntArray.put(2131363274, 5);
+        sparseIntArray.put(2131362982, 6);
     }
 
     public ItemIconTitleViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -61,7 +61,7 @@ public class ItemIconTitleViewBindingImpl extends ItemIconTitleViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((EntityCard) obj);
         } else if (147 != i) {
             return false;
@@ -77,7 +77,7 @@ public class ItemIconTitleViewBindingImpl extends ItemIconTitleViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -106,12 +106,12 @@ public class ItemIconTitleViewBindingImpl extends ItemIconTitleViewBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 173) {
+        } else if (i == 174) {
             synchronized (this) {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i != 174) {
+        } else if (i != 175) {
             return false;
         } else {
             synchronized (this) {

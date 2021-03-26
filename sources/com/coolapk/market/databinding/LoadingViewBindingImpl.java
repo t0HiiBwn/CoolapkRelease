@@ -27,7 +27,7 @@ public class LoadingViewBindingImpl extends LoadingViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362656, 2);
+        sparseIntArray.put(2131362664, 2);
     }
 
     public LoadingViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

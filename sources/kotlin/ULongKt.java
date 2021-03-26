@@ -4,19 +4,19 @@ package kotlin;
 /* compiled from: ULong.kt */
 public final class ULongKt {
     private static final long toULong(byte b) {
-        return ULong.m843constructorimpl((long) b);
+        return ULong.m241constructorimpl((long) b);
     }
 
     private static final long toULong(short s) {
-        return ULong.m843constructorimpl((long) s);
+        return ULong.m241constructorimpl((long) s);
     }
 
     private static final long toULong(int i) {
-        return ULong.m843constructorimpl((long) i);
+        return ULong.m241constructorimpl((long) i);
     }
 
     private static final long toULong(long j) {
-        return ULong.m843constructorimpl(j);
+        return ULong.m241constructorimpl(j);
     }
 
     private static final long toULong(float f) {

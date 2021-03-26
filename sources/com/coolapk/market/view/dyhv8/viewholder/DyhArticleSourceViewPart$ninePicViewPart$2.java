@@ -26,7 +26,7 @@ final class DyhArticleSourceViewPart$ninePicViewPart$2 extends Lambda implements
 
     @Override // kotlin.jvm.functions.Function0
     public final NinePicViewPart invoke() {
-        NinePicViewPart ninePicViewPart = new NinePicViewPart(DyhArticleSourceViewPart.access$getComponent$p(this.this$0));
+        NinePicViewPart ninePicViewPart = new NinePicViewPart(this.this$0.component);
         LayoutInflater from = LayoutInflater.from(this.this$0.getContext());
         Intrinsics.checkNotNullExpressionValue(from, "LayoutInflater.from(context)");
         View view = this.this$0.getView();

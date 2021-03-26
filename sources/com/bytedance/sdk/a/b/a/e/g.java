@@ -34,9 +34,7 @@ public final class g implements Closeable {
     final m i;
     long j = 0;
     long k;
-
-    /* renamed from: l  reason: collision with root package name */
-    n f1271l = new n();
+    n l = new n();
     final n m;
     boolean n;
     final Socket o;
@@ -84,7 +82,7 @@ public final class g implements Closeable {
         }
         this.v = aVar.g ? 1 : i2;
         if (aVar.g) {
-            this.f1271l.a(7, 16777216);
+            this.l.a(7, 16777216);
         }
         String str = aVar.b;
         this.e = str;
@@ -346,8 +344,8 @@ public final class g implements Closeable {
     void a(boolean z) throws IOException {
         if (z) {
             this.p.a();
-            this.p.b(this.f1271l);
-            int d2 = this.f1271l.d();
+            this.p.b(this.l);
+            int d2 = this.l.d();
             if (d2 != 65535) {
                 this.p.a(0, (long) (d2 - 65535));
             }

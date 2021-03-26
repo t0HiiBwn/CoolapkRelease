@@ -69,7 +69,7 @@ public final class GoodsDataListFragment extends DataListFragment {
         View loadingView = getLoadingView();
         Objects.requireNonNull(loadingView, "null cannot be cast to non-null type android.widget.ProgressBar");
         TintHelper.setTint((ProgressBar) loadingView, -1);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558702).suitedMethod(GoodsDataListFragment$onActivityCreated$1.INSTANCE).doAfterBind(GoodsDataListFragment$onActivityCreated$2.INSTANCE).constructor(new GoodsDataListFragment$onActivityCreated$3(this)).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558709).suitedMethod(GoodsDataListFragment$onActivityCreated$1.INSTANCE).doAfterBind(GoodsDataListFragment$onActivityCreated$2.INSTANCE).constructor(new GoodsDataListFragment$onActivityCreated$3(this)).build(), -1);
     }
 
     @Override // com.coolapk.market.view.cardlist.EntityListFragment

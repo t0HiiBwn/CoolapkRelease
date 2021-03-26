@@ -6,11 +6,11 @@ import android.util.Log;
 /* compiled from: Logger */
 public class a {
     private static int a = 4;
-    private static AbstractC0095a b;
+    private static AbstractC0105a b;
 
     /* renamed from: com.ss.android.socialbase.downloader.c.a$a  reason: collision with other inner class name */
     /* compiled from: Logger */
-    public static abstract class AbstractC0095a {
+    public static abstract class AbstractC0105a {
         public void a(String str, String str2) {
         }
 
@@ -43,7 +43,7 @@ public class a {
             if (a <= 2) {
                 Log.v(str, str2);
             }
-            AbstractC0095a aVar = b;
+            AbstractC0105a aVar = b;
             if (aVar != null) {
                 aVar.a(b(str), str2);
             }
@@ -66,7 +66,7 @@ public class a {
             if (a <= 3) {
                 Log.d(b(str), str2);
             }
-            AbstractC0095a aVar = b;
+            AbstractC0105a aVar = b;
             if (aVar != null) {
                 aVar.b(b(str), str2);
             }
@@ -78,7 +78,7 @@ public class a {
             if (a <= 4) {
                 Log.i(b(str), str2);
             }
-            AbstractC0095a aVar = b;
+            AbstractC0105a aVar = b;
             if (aVar != null) {
                 aVar.c(b(str), str2);
             }
@@ -90,7 +90,7 @@ public class a {
             if (a <= 5) {
                 Log.w(b(str), str2);
             }
-            AbstractC0095a aVar = b;
+            AbstractC0105a aVar = b;
             if (aVar != null) {
                 aVar.e(b(str), str2);
             }
@@ -102,7 +102,7 @@ public class a {
             if (a <= 6) {
                 Log.e(b(str), str2);
             }
-            AbstractC0095a aVar = b;
+            AbstractC0105a aVar = b;
             if (aVar != null) {
                 aVar.d(b(str), str2);
             }
@@ -114,7 +114,7 @@ public class a {
             if (a <= 6) {
                 Log.e(b(str), str2, th);
             }
-            AbstractC0095a aVar = b;
+            AbstractC0105a aVar = b;
             if (aVar != null) {
                 aVar.a(b(str), str2, th);
             }

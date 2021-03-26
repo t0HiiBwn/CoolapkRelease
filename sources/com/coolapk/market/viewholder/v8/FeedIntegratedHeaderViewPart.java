@@ -150,7 +150,7 @@ public final class FeedIntegratedHeaderViewPart extends ViewPart implements Recy
             Intrinsics.throwUninitializedPropertyAccessException("frameLayout");
         }
         View childAt = frameLayout2.getChildAt(0);
-        if (childAt != null && (findViewById = childAt.findViewById(2131362595)) != null) {
+        if (childAt != null && (findViewById = childAt.findViewById(2131362603)) != null) {
             findViewById.setVisibility(8);
         }
     }

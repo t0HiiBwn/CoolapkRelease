@@ -25,11 +25,11 @@ public class ItemChannelTabBindingImpl extends ItemChannelTabBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362103, 2);
-        sparseIntArray.put(2131362316, 3);
-        sparseIntArray.put(2131363533, 4);
-        sparseIntArray.put(2131362374, 5);
-        sparseIntArray.put(2131362003, 6);
+        sparseIntArray.put(2131362106, 2);
+        sparseIntArray.put(2131362322, 3);
+        sparseIntArray.put(2131363551, 4);
+        sparseIntArray.put(2131362380, 5);
+        sparseIntArray.put(2131362004, 6);
     }
 
     public ItemChannelTabBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -65,7 +65,7 @@ public class ItemChannelTabBindingImpl extends ItemChannelTabBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (191 != i) {
+        if (192 != i) {
             return false;
         }
         setLogoUrl((String) obj);
@@ -78,7 +78,7 @@ public class ItemChannelTabBindingImpl extends ItemChannelTabBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(191);
+        notifyPropertyChanged(192);
         super.requestRebind();
     }
 
@@ -92,7 +92,7 @@ public class ItemChannelTabBindingImpl extends ItemChannelTabBinding {
         String str = this.mLogoUrl;
         if ((j & 3) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231363), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231374), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
         }
     }
 }

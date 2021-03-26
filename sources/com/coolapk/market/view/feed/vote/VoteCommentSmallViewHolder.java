@@ -35,7 +35,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: VoteCommentSmallViewHolder.kt */
 public final class VoteCommentSmallViewHolder extends GenericBindHolder<ItemFeedVoteCommentSmallBinding, Feed> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558738;
+    public static final int LAYOUT_ID = 2131558745;
     private final VoteCommentConfig config;
     private Feed feed;
 
@@ -95,7 +95,7 @@ public final class VoteCommentSmallViewHolder extends GenericBindHolder<ItemFeed
         Intrinsics.checkNotNull(vote);
         Intrinsics.checkNotNullExpressionValue(vote, "data.vote!!");
         int contentBackgroundColor = AppHolder.getAppTheme().getContentBackgroundColor();
-        int colorInt = ResourceUtils.getColorInt(getContext(), 2131099790);
+        int colorInt = ResourceUtils.getColorInt(getContext(), 2131099792);
         if (vote.getType() == 0) {
             colorInt = this.config.getPkOptionColor()[ArraysKt.indexOf(this.config.getPkOptionId(), feed2.getExtraKey())];
             contentBackgroundColor = ColorUtils.adjustAlpha(colorInt, 0.1f);
@@ -157,17 +157,17 @@ public final class VoteCommentSmallViewHolder extends GenericBindHolder<ItemFeed
         Feed feed2 = this.feed;
         if (feed2 != null) {
             switch (view.getId()) {
-                case 2131362200:
+                case 2131362205:
                     Context context = getContext();
                     Intrinsics.checkNotNullExpressionValue(context, "context");
                     ActionManagerCompat.startActivityByUrl$default(context, FeedUriAction.Companion.buildUrl(feed2), null, null, 12, null);
                     return;
-                case 2131362291:
+                case 2131362296:
                     Context context2 = getContext();
                     Intrinsics.checkNotNullExpressionValue(context2, "context");
                     ActionManager.startFeedCommentActivity(UiUtils.getActivityNullable(context2), feed2.getId(), feed2.getUserName());
                     return;
-                case 2131362851:
+                case 2131362862:
                     FeedEventRequester feedEventRequester = FeedEventRequester.INSTANCE;
                     String id = feed2.getId();
                     if (id == null) {
@@ -176,8 +176,8 @@ public final class VoteCommentSmallViewHolder extends GenericBindHolder<ItemFeed
                     UserAction userAction = feed2.getUserAction();
                     FeedEventRequester.requestLike$default(feedEventRequester, id, userAction == null || userAction.getLike() != 1, 0, null, null, 24, null);
                     return;
-                case 2131363877:
-                case 2131363891:
+                case 2131363900:
+                case 2131363914:
                     ActionManager.startUserSpaceActivity(getContext(), feed2.getUid());
                     return;
                 default:

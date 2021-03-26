@@ -17,7 +17,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: MeUserMenuViewHolder.kt */
 public final class MeUserMenuViewHolder extends GenericBindHolder<ItemCenterUserMenuBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558644;
+    public static final int LAYOUT_ID = 2131558650;
     private final List<UserMenu> dataList = new ArrayList();
     private final CenterPresenter presenter;
 

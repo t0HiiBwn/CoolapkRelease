@@ -23,7 +23,7 @@ import kotlin.jvm.internal.TypeIntrinsics;
 /* compiled from: ItemSelectGoodsListViewHolder.kt */
 public final class ItemSelectGoodsListViewHolder extends GenericBindHolder<ItemAddToGoodsListBinding, FunThings> implements CompoundButton.OnCheckedChangeListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558576;
+    public static final int LAYOUT_ID = 2131558580;
     private final LinkedHashMap<String, FunThings> cancelMap;
     private final TextView doneView;
     private FunThings goodsList;
@@ -67,7 +67,7 @@ public final class ItemSelectGoodsListViewHolder extends GenericBindHolder<ItemA
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131362200) {
+        if (view.getId() == 2131362205) {
             CheckBox checkBox = ((ItemAddToGoodsListBinding) getBinding()).checkView;
             Intrinsics.checkNotNullExpressionValue(checkBox, "binding.checkView");
             checkBox.setChecked(!checkBox.isChecked());

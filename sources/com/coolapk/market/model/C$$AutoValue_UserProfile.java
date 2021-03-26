@@ -78,7 +78,7 @@ abstract class C$$AutoValue_UserProfile extends UserProfile {
     private final String weibo;
     private final String zodiacSign;
 
-    C$$AutoValue_UserProfile(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, UserInfo userInfo2, String str13, String str14, String str15, int i, String str16, String str17, int i2, String str18, int i3, int i4, float f, String str19, String str20, int i5, int i6, int i7, int i8, int i9, int i10, int i11, int i12, int i13, int i14, int i15, int i16, String str21, String str22, String str23, String str24, int i17, int i18, int i19, int i20, int i21, int i22, int i23, int i24, String str25, String str26, int i25, int i26, long j, long j2, int i27, List<Entity> list, String str27, String str28, int i28, Tips tips2, int i29, String str29, String str30, String str31, List<String> list2) {
+    C$$AutoValue_UserProfile(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, UserInfo userInfo2, String str13, String str14, String str15, int i, String str16, String str17, int i2, String str18, int i3, int i4, float f, String str19, String str20, int i5, int i6, int i7, int i8, int i9, int i10, int i11, int i12, int i13, int i14, int i15, int i16, String str21, String str22, String str23, String str24, int i17, int i18, int i19, int i20, int i21, int i22, int i23, int i24, String str25, String str26, int i25, int i26, long j, long j2, int i27, List<Entity> list, String str27, String str28, int i28, Tips tips2, int i29, String str29, String str30, String str31, List<String> list2) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -91,8 +91,8 @@ abstract class C$$AutoValue_UserProfile extends UserProfile {
         this.subTitle = str9;
         this.id = str10;
         this.extraData = str11;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str12;
         this.userInfo = userInfo2;
         this.deprecatedUserName = str13;
@@ -612,10 +612,10 @@ abstract class C$$AutoValue_UserProfile extends UserProfile {
                                                 if (str26 != null ? str26.equals(userProfile.getId()) : userProfile.getId() == null) {
                                                     String str27 = this.extraData;
                                                     if (str27 != null ? str27.equals(userProfile.getExtraData()) : userProfile.getExtraData() == null) {
-                                                        Long l2 = this.dateline;
-                                                        if (l2 != null ? l2.equals(userProfile.getDateline()) : userProfile.getDateline() == null) {
-                                                            Long l3 = this.lastUpdate;
-                                                            if (l3 != null ? l3.equals(userProfile.getLastUpdate()) : userProfile.getLastUpdate() == null) {
+                                                        Long l = this.dateline;
+                                                        if (l != null ? l.equals(userProfile.getDateline()) : userProfile.getDateline() == null) {
+                                                            Long l2 = this.lastUpdate;
+                                                            if (l2 != null ? l2.equals(userProfile.getLastUpdate()) : userProfile.getLastUpdate() == null) {
                                                                 String str28 = this.deprecatedUserAvatar;
                                                                 if (str28 != null ? str28.equals(userProfile.getDeprecatedUserAvatar()) : userProfile.getDeprecatedUserAvatar() == null) {
                                                                     UserInfo userInfo2 = this.userInfo;
@@ -675,10 +675,10 @@ abstract class C$$AutoValue_UserProfile extends UserProfile {
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
         String str11 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str12 = this.deprecatedUserAvatar;
         int hashCode15 = (hashCode14 ^ (str12 == null ? 0 : str12.hashCode())) * 1000003;
         UserInfo userInfo2 = this.userInfo;
@@ -952,14 +952,14 @@ abstract class C$$AutoValue_UserProfile extends UserProfile {
         }
 
         @Override // com.coolapk.market.model.UserProfile.Builder
-        public UserProfile.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public UserProfile.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.UserProfile.Builder
-        public UserProfile.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public UserProfile.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

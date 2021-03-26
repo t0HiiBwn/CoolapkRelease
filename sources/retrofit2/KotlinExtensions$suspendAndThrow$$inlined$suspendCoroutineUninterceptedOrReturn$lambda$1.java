@@ -21,6 +21,6 @@ final class KotlinExtensions$suspendAndThrow$$inlined$suspendCoroutineUnintercep
     public final void run() {
         Continuation intercepted = IntrinsicsKt.intercepted(this.$continuation);
         Result.Companion companion = Result.Companion;
-        intercepted.resumeWith(Result.m687constructorimpl(ResultKt.createFailure(this.$this_suspendAndThrow$inlined)));
+        intercepted.resumeWith(Result.m85constructorimpl(ResultKt.createFailure(this.$this_suspendAndThrow$inlined)));
     }
 }

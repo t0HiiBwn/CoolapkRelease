@@ -20,7 +20,7 @@ import org.json.JSONObject;
 /* compiled from: SponsorViewHolder.kt */
 public final class SponsorViewHolder extends BindingViewHolder implements EntityAdHelper.AdViewHolderCallback {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558938;
+    public static final int LAYOUT_ID = 2131558945;
     private final ItemSponsorBinding binding;
     private Entity data;
     private final EntityAdHelper entityAdHelper;

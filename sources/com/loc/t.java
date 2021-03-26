@@ -22,9 +22,7 @@ public final class t {
     private String i;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String[] f1382l;
+    private String[] l;
 
     /* compiled from: SDKInfo */
     public static class a {
@@ -65,23 +63,23 @@ public final class t {
 
     private t() {
         this.c = 1;
-        this.f1382l = null;
+        this.l = null;
     }
 
     private t(a aVar) {
         this.c = 1;
-        this.f1382l = null;
+        this.l = null;
         this.g = aVar.a;
         this.h = aVar.b;
         this.j = aVar.c;
         this.i = aVar.d;
         this.c = aVar.e ? 1 : 0;
         this.k = aVar.f;
-        this.f1382l = aVar.g;
+        this.l = aVar.g;
         this.b = u.b(this.h);
         this.a = u.b(this.j);
         this.d = u.b(this.i);
-        this.e = u.b(a(this.f1382l));
+        this.e = u.b(a(this.l));
         this.f = u.b(this.k);
     }
 
@@ -168,10 +166,10 @@ public final class t {
     }
 
     public final String[] f() {
-        String[] strArr = this.f1382l;
+        String[] strArr = this.l;
         if ((strArr == null || strArr.length == 0) && !TextUtils.isEmpty(this.e)) {
-            this.f1382l = a(u.c(this.e));
+            this.l = a(u.c(this.e));
         }
-        return (String[]) this.f1382l.clone();
+        return (String[]) this.l.clone();
     }
 }

@@ -37,7 +37,7 @@ public final class TripleAvatarViewPart extends BindingViewPart<ItemTripleAvatar
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemTripleAvatarViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558963, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558970, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…        false, component)");
         return (ItemTripleAvatarViewPartBinding) inflate;
     }

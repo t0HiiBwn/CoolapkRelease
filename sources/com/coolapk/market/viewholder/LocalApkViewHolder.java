@@ -12,7 +12,7 @@ import com.coolapk.market.model.MobileApp;
 import com.coolapk.market.util.ViewUtil;
 
 public class LocalApkViewHolder extends StateViewHolder {
-    public static final int LAYOUT_ID = 2131558811;
+    public static final int LAYOUT_ID = 2131558818;
     private LocalApk localApk;
 
     @Bindable
@@ -45,17 +45,17 @@ public class LocalApkViewHolder extends StateViewHolder {
         if (installState != null) {
             switch (installState.getState()) {
                 case 1:
-                    return getContext().getString(2131886862);
+                    return getContext().getString(2131886924);
                 case 2:
-                    return getContext().getString(2131886862);
+                    return getContext().getString(2131886924);
                 case 3:
-                    return getContext().getString(2131886859);
+                    return getContext().getString(2131886921);
                 case 4:
-                    return getContext().getString(2131886860);
+                    return getContext().getString(2131886922);
                 case 5:
-                    return getContext().getString(2131886861);
+                    return getContext().getString(2131886923);
                 case 6:
-                    return getContext().getString(2131886858);
+                    return getContext().getString(2131886920);
             }
         }
         MobileApp mobileApp = DataManager.getInstance().getMobileApp(this.localApk.getPackageName());

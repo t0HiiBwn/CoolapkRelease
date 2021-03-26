@@ -22,14 +22,14 @@ public class c {
     private static final String k = (".UTSystemConfig" + File.separator + "Global");
 
     /* renamed from: a  reason: collision with other field name */
-    private com.ta.utdid2.b.a.c f92a = null;
+    private com.ta.utdid2.b.a.c f91a = null;
 
     /* renamed from: a  reason: collision with other field name */
-    private d f93a = null;
+    private d f92a = null;
     private com.ta.utdid2.b.a.c b = null;
 
     /* renamed from: b  reason: collision with other field name */
-    private Pattern f94b = Pattern.compile("[^0-9a-zA-Z=/+]+");
+    private Pattern f93b = Pattern.compile("[^0-9a-zA-Z=/+]+");
     private String h = null;
     private String i = "xx_utdid_key";
     private String j = "xx_utdid_domain";
@@ -38,8 +38,8 @@ public class c {
     private c(Context context) {
         this.mContext = context;
         this.b = new com.ta.utdid2.b.a.c(context, k, "Alvin2", false, true);
-        this.f92a = new com.ta.utdid2.b.a.c(context, ".DataStorage", "ContextData", false, true);
-        this.f93a = new d();
+        this.f91a = new com.ta.utdid2.b.a.c(context, ".DataStorage", "ContextData", false, true);
+        this.f92a = new d();
         this.i = String.format("K_%d", Integer.valueOf(g.a(this.i)));
         this.j = String.format("D_%d", Integer.valueOf(g.a(this.j)));
     }
@@ -47,23 +47,23 @@ public class c {
     private void c() {
         com.ta.utdid2.b.a.c cVar = this.b;
         if (cVar != null) {
-            if (g.m30a(cVar.getString("UTDID2"))) {
+            if (g.m20a(cVar.getString("UTDID2"))) {
                 String string = this.b.getString("UTDID");
-                if (!g.m30a(string)) {
+                if (!g.m20a(string)) {
                     f(string);
                 }
             }
             boolean z = false;
             boolean z2 = true;
-            if (!g.m30a(this.b.getString("DID"))) {
+            if (!g.m20a(this.b.getString("DID"))) {
                 this.b.remove("DID");
                 z = true;
             }
-            if (!g.m30a(this.b.getString("EI"))) {
+            if (!g.m20a(this.b.getString("EI"))) {
                 this.b.remove("EI");
                 z = true;
             }
-            if (!g.m30a(this.b.getString("SI"))) {
+            if (!g.m20a(this.b.getString("SI"))) {
                 this.b.remove("SI");
             } else {
                 z2 = z;
@@ -102,9 +102,9 @@ public class c {
 
     private void g(String str) {
         com.ta.utdid2.b.a.c cVar;
-        if (str != null && (cVar = this.f92a) != null && !str.equals(cVar.getString(this.i))) {
-            this.f92a.putString(this.i, str);
-            this.f92a.commit();
+        if (str != null && (cVar = this.f91a) != null && !str.equals(cVar.getString(this.i))) {
+            this.f91a.putString(this.i, str);
+            this.f91a.commit();
         }
     }
 
@@ -156,7 +156,7 @@ public class c {
             return null;
         }
         String string = cVar.getString("UTDID2");
-        if (g.m30a(string) || this.f93a.c(string) == null) {
+        if (g.m20a(string) || this.f92a.c(string) == null) {
             return null;
         }
         return string;
@@ -167,7 +167,7 @@ public class c {
             if (str.endsWith("\n")) {
                 str = str.substring(0, str.length() - 1);
             }
-            if (24 == str.length() && !this.f94b.matcher(str).find()) {
+            if (24 == str.length() && !this.f93b.matcher(str).find()) {
                 return true;
             }
         }
@@ -189,12 +189,12 @@ public class c {
             return this.h;
         }
         try {
-            byte[] c = m34c();
+            byte[] c = m24c();
             if (c != null) {
                 String encodeToString = b.encodeToString(c, 2);
                 this.h = encodeToString;
                 f(encodeToString);
-                String c2 = this.f93a.c(c);
+                String c2 = this.f92a.c(c);
                 if (c2 != null) {
                     j(c2);
                     g(c2);
@@ -224,7 +224,7 @@ public class c {
         } catch (Exception unused2) {
             str = null;
         }
-        if (!g.m30a(str)) {
+        if (!g.m20a(str)) {
             String e2 = eVar.e(str);
             if (b(e2)) {
                 h(e2);
@@ -232,8 +232,8 @@ public class c {
             }
             String d = eVar.d(str);
             if (b(d)) {
-                String c = this.f93a.c(d);
-                if (!g.m30a(c)) {
+                String c = this.f92a.c(d);
+                if (!g.m20a(c)) {
                     j(c);
                     try {
                         str = Settings.System.getString(this.mContext.getContentResolver(), "dxCRMxhQkdGePGnp");
@@ -241,7 +241,7 @@ public class c {
                     }
                 }
             }
-            String d2 = this.f93a.d(str);
+            String d2 = this.f92a.d(str);
             if (b(d2)) {
                 this.h = d2;
                 f(d2);
@@ -254,7 +254,7 @@ public class c {
         }
         String g = g();
         if (b(g)) {
-            String c2 = this.f93a.c(g);
+            String c2 = this.f92a.c(g);
             if (z) {
                 j(c2);
             }
@@ -263,15 +263,15 @@ public class c {
             this.h = g;
             return g;
         }
-        String string = this.f92a.getString(this.i);
-        if (!g.m30a(string)) {
+        String string = this.f91a.getString(this.i);
+        if (!g.m20a(string)) {
             String d3 = eVar.d(string);
             if (!b(d3)) {
-                d3 = this.f93a.d(string);
+                d3 = this.f92a.d(string);
             }
             if (b(d3)) {
-                String c3 = this.f93a.c(d3);
-                if (!g.m30a(d3)) {
+                String c3 = this.f92a.c(d3);
+                if (!g.m20a(d3)) {
                     this.h = d3;
                     if (z) {
                         j(c3);
@@ -285,7 +285,7 @@ public class c {
     }
 
     /* renamed from: c  reason: collision with other method in class */
-    private byte[] m34c() throws Exception {
+    private byte[] m24c() throws Exception {
         String str;
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         int currentTimeMillis = (int) (System.currentTimeMillis() / 1000);

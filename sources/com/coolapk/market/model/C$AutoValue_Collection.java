@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Collection  reason: invalid class name */
 abstract class C$AutoValue_Collection extends C$$AutoValue_Collection {
-    C$AutoValue_Collection(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l2, Long l3, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, int i, int i2, String str15, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10, String str16, int i11, Long l4, UserAction userAction, String str17) {
-        super(str, str2, str3, num, str4, str5, str6, str7, l2, l3, str8, userInfo, str9, str10, str11, str12, str13, str14, i, i2, str15, i3, i4, i5, i6, i7, i8, i9, i10, str16, i11, l4, userAction, str17);
+    C$AutoValue_Collection(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, Long l, Long l2, String str8, UserInfo userInfo, String str9, String str10, String str11, String str12, String str13, String str14, int i, int i2, String str15, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10, String str16, int i11, Long l3, UserAction userAction, String str17) {
+        super(str, str2, str3, num, str4, str5, str6, str7, l, l2, str8, userInfo, str9, str10, str11, str12, str13, str14, i, i2, str15, i3, i4, i5, i6, i7, i8, i9, i10, str16, i11, l3, userAction, str17);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Collection$GsonTypeAdapter */
@@ -161,13 +161,13 @@ abstract class C$AutoValue_Collection extends C$$AutoValue_Collection {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -276,8 +276,8 @@ abstract class C$AutoValue_Collection extends C$$AutoValue_Collection {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultCreatedate(Long l2) {
-            this.defaultCreatedate = l2;
+        public GsonTypeAdapter setDefaultCreatedate(Long l) {
+            this.defaultCreatedate = l;
             return this;
         }
 
@@ -383,8 +383,8 @@ abstract class C$AutoValue_Collection extends C$$AutoValue_Collection {
             String str5 = this.defaultPic;
             String str6 = this.defaultSubTitle;
             String str7 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str8 = this.defaultDeprecatedUserAvatar;
             UserInfo userInfo = this.defaultUserInfo;
             String str9 = this.defaultDeprecatedUserName;
@@ -406,7 +406,7 @@ abstract class C$AutoValue_Collection extends C$$AutoValue_Collection {
             int i10 = this.defaultItemNum;
             String str16 = this.defaultCoverPic;
             int i11 = this.defaultIsOpen;
-            Long l4 = this.defaultCreatedate;
+            Long l3 = this.defaultCreatedate;
             UserAction userAction = this.defaultUserAction;
             String str17 = this.defaultDescription;
             String str18 = str2;
@@ -416,8 +416,8 @@ abstract class C$AutoValue_Collection extends C$$AutoValue_Collection {
             String str21 = str5;
             String str22 = str6;
             String str23 = str7;
+            Long l4 = l;
             Long l5 = l2;
-            Long l6 = l3;
             String str24 = str8;
             UserInfo userInfo2 = userInfo;
             String str25 = str9;
@@ -440,7 +440,7 @@ abstract class C$AutoValue_Collection extends C$$AutoValue_Collection {
             int i21 = i10;
             String str33 = str16;
             int i22 = i11;
-            Long l7 = l4;
+            Long l6 = l3;
             UserAction userAction2 = userAction;
             while (jsonReader.hasNext()) {
                 String nextName = jsonReader.nextName();
@@ -681,7 +681,7 @@ abstract class C$AutoValue_Collection extends C$$AutoValue_Collection {
                             str26 = this.displayUserNameAdapter.read(jsonReader);
                             continue;
                         case '\b':
-                            l6 = this.lastUpdateAdapter.read(jsonReader);
+                            l5 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case '\t':
                             str27 = this.entityTypeNameAdapter.read(jsonReader);
@@ -747,10 +747,10 @@ abstract class C$AutoValue_Collection extends C$$AutoValue_Collection {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 30:
-                            l7 = this.createdateAdapter.read(jsonReader);
+                            l6 = this.createdateAdapter.read(jsonReader);
                             continue;
                         case 31:
-                            l5 = this.datelineAdapter.read(jsonReader);
+                            l4 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case ' ':
                             str33 = this.coverPicAdapter.read(jsonReader);
@@ -765,7 +765,7 @@ abstract class C$AutoValue_Collection extends C$$AutoValue_Collection {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Collection(str27, str18, str19, num2, str20, str21, str22, str23, l5, l6, str24, userInfo2, str25, str26, str28, str29, str30, str31, i12, i13, str32, i14, i15, i16, i17, i18, i19, i20, i21, str33, i22, l7, userAction2, str17);
+            return new AutoValue_Collection(str27, str18, str19, num2, str20, str21, str22, str23, l4, l5, str24, userInfo2, str25, str26, str28, str29, str30, str31, i12, i13, str32, i14, i15, i16, i17, i18, i19, i20, i21, str33, i22, l6, userAction2, str17);
         }
     }
 }

@@ -66,7 +66,7 @@ public abstract class SecondHandContentV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static SecondHandContentV8Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SecondHandContentV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559133, viewGroup, z, obj);
+        return (SecondHandContentV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559140, viewGroup, z, obj);
     }
 
     public static SecondHandContentV8Binding inflate(LayoutInflater layoutInflater) {
@@ -75,7 +75,7 @@ public abstract class SecondHandContentV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static SecondHandContentV8Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SecondHandContentV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559133, null, false, obj);
+        return (SecondHandContentV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559140, null, false, obj);
     }
 
     public static SecondHandContentV8Binding bind(View view) {
@@ -84,6 +84,6 @@ public abstract class SecondHandContentV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static SecondHandContentV8Binding bind(View view, Object obj) {
-        return (SecondHandContentV8Binding) bind(obj, view, 2131559133);
+        return (SecondHandContentV8Binding) bind(obj, view, 2131559140);
     }
 }

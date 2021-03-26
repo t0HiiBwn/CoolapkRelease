@@ -196,6 +196,9 @@ final class UtilsActivityLifecycleImpl implements Application.ActivityLifecycleC
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public void onActivityCreated(Activity activity, Bundle bundle) {
         Objects.requireNonNull(activity, "Argument 'activity' of type Activity (#0 out of 2, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
+        if (this.mActivityList.size() == 0) {
+            postStatus(activity, true);
+        }
         LanguageUtils.applyLanguage(activity);
         setAnimatorsEnabled();
         setTopActivity(activity);

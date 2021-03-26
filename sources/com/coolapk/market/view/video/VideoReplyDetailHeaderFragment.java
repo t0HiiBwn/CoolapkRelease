@@ -80,7 +80,7 @@ public final class VideoReplyDetailHeaderFragment extends FeedReplyDetailHeaderF
         FragmentActivity requireActivity2 = requireActivity();
         Intrinsics.checkNotNullExpressionValue(requireActivity2, "requireActivity()");
         recyclerView.addOnItemTouchListener(new RecyclerViewDropDownListener(requireActivity2, videoReplyDetailHeaderFragment$onActivityCreated$dropDownCallback$12));
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558716).suitedEntityType("feed_reply").constructor(new VideoReplyDetailHeaderFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558723).suitedEntityType("feed_reply").constructor(new VideoReplyDetailHeaderFragment$onActivityCreated$2(this)).build(), 0, 2, null);
         View view = new View(getActivity());
         view.setBackgroundColor(AppHolder.getAppTheme().getCurrencyColorDivider());
         getBinding$presentation_coolapkAppRelease().frameView.addView(view, new FrameLayout.LayoutParams(-1, NumberExtendsKt.getDp(Double.valueOf(0.5d))));

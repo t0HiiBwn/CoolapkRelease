@@ -37,15 +37,15 @@ public class ItemRatingCardBindingImpl extends ItemRatingCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363281, 12);
-        sparseIntArray.put(2131363194, 13);
-        sparseIntArray.put(2131363197, 14);
-        sparseIntArray.put(2131363213, 15);
-        sparseIntArray.put(2131363192, 16);
-        sparseIntArray.put(2131363191, 17);
-        sparseIntArray.put(2131363190, 18);
-        sparseIntArray.put(2131363189, 19);
-        sparseIntArray.put(2131363188, 20);
+        sparseIntArray.put(2131363295, 12);
+        sparseIntArray.put(2131363208, 13);
+        sparseIntArray.put(2131363211, 14);
+        sparseIntArray.put(2131363227, 15);
+        sparseIntArray.put(2131363206, 16);
+        sparseIntArray.put(2131363205, 17);
+        sparseIntArray.put(2131363204, 18);
+        sparseIntArray.put(2131363203, 19);
+        sparseIntArray.put(2131363202, 20);
     }
 
     public ItemRatingCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {

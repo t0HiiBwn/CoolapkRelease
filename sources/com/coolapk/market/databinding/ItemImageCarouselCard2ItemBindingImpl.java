@@ -24,7 +24,7 @@ public class ItemImageCarouselCard2ItemBindingImpl extends ItemImageCarouselCard
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363351, 2);
+        sparseIntArray.put(2131363367, 2);
     }
 
     public ItemImageCarouselCard2ItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -62,9 +62,9 @@ public class ItemImageCarouselCard2ItemBindingImpl extends ItemImageCarouselCard
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (291 == i) {
+        if (292 == i) {
             setUrl((String) obj);
-        } else if (286 != i) {
+        } else if (287 != i) {
             return false;
         } else {
             setTransform((OnBitmapTransformListener) obj);
@@ -78,7 +78,7 @@ public class ItemImageCarouselCard2ItemBindingImpl extends ItemImageCarouselCard
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(291);
+        notifyPropertyChanged(292);
         super.requestRebind();
     }
 
@@ -97,7 +97,7 @@ public class ItemImageCarouselCard2ItemBindingImpl extends ItemImageCarouselCard
         String str = this.mUrl;
         if ((j & 5) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, null, 2131231696, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str, null, 2131231707, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
         }
     }
 }

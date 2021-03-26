@@ -34,9 +34,7 @@ public class b {
     private static a i;
     private static IntentFilter j;
     private static boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static LinkedList<String> f1489l = new LinkedList<>();
+    private static LinkedList<String> l = new LinkedList<>();
     private static BroadcastReceiver m = new BroadcastReceiver() {
         /* class com.umeng.commonsdk.stateless.b.AnonymousClass1 */
 
@@ -188,11 +186,11 @@ public class b {
     private static void j() {
         File[] c2 = d.c(b);
         if (c2 != null) {
-            if (f1489l.size() > 0) {
-                f1489l.clear();
+            if (l.size() > 0) {
+                l.clear();
             }
             for (File file : c2) {
-                f1489l.add(file.getAbsolutePath());
+                l.add(file.getAbsolutePath());
             }
         }
     }
@@ -200,12 +198,12 @@ public class b {
     private static String k() {
         String str = null;
         try {
-            String peek = f1489l.peek();
+            String peek = l.peek();
             if (peek == null) {
                 return peek;
             }
             try {
-                f1489l.removeFirst();
+                l.removeFirst();
                 return peek;
             } catch (Throwable unused) {
                 str = peek;
@@ -217,13 +215,13 @@ public class b {
 
     private static void l() {
         String str;
-        if (f1489l.size() <= 0) {
+        if (l.size() <= 0) {
             UMRTLog.e("MobclickRT", "--->>> todoList无内容，无需处理。");
             return;
         }
         do {
             if (Build.VERSION.SDK_INT >= 9) {
-                str = f1489l.pollFirst();
+                str = l.pollFirst();
             } else {
                 str = k();
             }
@@ -254,7 +252,7 @@ public class b {
                 }
             }
         } while (str != null);
-        f1489l.clear();
+        l.clear();
     }
 
     /* access modifiers changed from: private */

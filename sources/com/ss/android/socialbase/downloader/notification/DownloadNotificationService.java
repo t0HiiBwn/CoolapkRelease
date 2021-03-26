@@ -35,9 +35,7 @@ public class DownloadNotificationService extends Service {
     private static long i = 900;
     private HandlerThread j;
     private Handler k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final SparseArray<Notification> f1420l = new SparseArray<>(2);
+    private final SparseArray<Notification> l = new SparseArray<>(2);
 
     @Override // android.app.Service
     public IBinder onBind(Intent intent) {
@@ -183,10 +181,10 @@ public class DownloadNotificationService extends Service {
 
     /* access modifiers changed from: private */
     public void a(final NotificationManager notificationManager, final int i2, Notification notification) {
-        synchronized (this.f1420l) {
-            int indexOfKey = this.f1420l.indexOfKey(i2);
-            if (indexOfKey >= 0 && indexOfKey < this.f1420l.size()) {
-                this.f1420l.setValueAt(indexOfKey, notification);
+        synchronized (this.l) {
+            int indexOfKey = this.l.indexOfKey(i2);
+            if (indexOfKey >= 0 && indexOfKey < this.l.size()) {
+                this.l.setValueAt(indexOfKey, notification);
                 return;
             }
         }
@@ -203,8 +201,8 @@ public class DownloadNotificationService extends Service {
         if (currentTimeMillis <= 0) {
             b(notificationManager, i2, notification);
         } else if (this.k != null) {
-            synchronized (this.f1420l) {
-                this.f1420l.put(i2, notification);
+            synchronized (this.l) {
+                this.l.put(i2, notification);
             }
             this.k.postDelayed(new Runnable() {
                 /* class com.ss.android.socialbase.downloader.notification.DownloadNotificationService.AnonymousClass2 */
@@ -220,9 +218,9 @@ public class DownloadNotificationService extends Service {
     /* access modifiers changed from: private */
     public void a(NotificationManager notificationManager, int i2) {
         Notification notification;
-        synchronized (this.f1420l) {
-            notification = this.f1420l.get(i2);
-            this.f1420l.remove(i2);
+        synchronized (this.l) {
+            notification = this.l.get(i2);
+            this.l.remove(i2);
         }
         if (notification != null) {
             b(notificationManager, i2, notification);
@@ -294,7 +292,7 @@ public class DownloadNotificationService extends Service {
     }
 
     /* access modifiers changed from: private */
-    /* JADX WARNING: Removed duplicated region for block: B:50:0x00c3 A[Catch:{ all -> 0x00f5 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:50:0x00c4 A[Catch:{ all -> 0x00f6 }] */
     /* JADX WARNING: Removed duplicated region for block: B:72:? A[RETURN, SYNTHETIC] */
     public void b(NotificationManager notificationManager, int i2) {
         boolean z;

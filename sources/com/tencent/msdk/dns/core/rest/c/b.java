@@ -72,7 +72,7 @@ public final class b extends AbsRestDns {
             int i = lVar.c;
             g gVar = (g) lVar.d;
             AbsRestDns.Statistics statistics = new AbsRestDns.Statistics();
-            statistics.retryTimes = lVar.f1450l;
+            statistics.retryTimes = lVar.l;
             statistics.asyncLookup = lVar.k;
             statistics.netChangeLookup = lVar.m;
             statistics.startLookup();
@@ -179,15 +179,15 @@ public final class b extends AbsRestDns {
     /* compiled from: UdpDns */
     private class a extends AbsRestDns.a {
         private DatagramChannel h = null;
-        private final f.b.a i = new AbsRestDns.a.C0132a() {
+        private final f.b.a i = new AbsRestDns.a.C0150a() {
             /* class com.tencent.msdk.dns.core.rest.c.b.a.AnonymousClass1 */
 
-            @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a.C0132a, com.tencent.msdk.dns.core.f.b.a
+            @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a.C0150a, com.tencent.msdk.dns.core.f.b.a
             public boolean c() {
                 return super.c();
             }
 
-            @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a.C0132a, com.tencent.msdk.dns.core.f.b.a
+            @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a.C0150a, com.tencent.msdk.dns.core.f.b.a
             public boolean d() {
                 return super.d();
             }

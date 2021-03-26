@@ -8,7 +8,7 @@ public class a {
     public String d;
     public String e;
 
-    public a(C0079a aVar) {
+    public a(C0089a aVar) {
         this.a = aVar.a;
         this.b = aVar.b;
         this.c = aVar.c;
@@ -18,29 +18,29 @@ public class a {
 
     /* renamed from: com.ss.android.a.a.c.a$a  reason: collision with other inner class name */
     /* compiled from: AppInfo */
-    public static class C0079a {
+    public static class C0089a {
         private String a;
         private String b;
         private String c;
         private String d;
         private String e;
 
-        public C0079a a(String str) {
+        public C0089a a(String str) {
             this.a = str;
             return this;
         }
 
-        public C0079a b(String str) {
+        public C0089a b(String str) {
             this.b = str;
             return this;
         }
 
-        public C0079a c(String str) {
+        public C0089a c(String str) {
             this.d = str;
             return this;
         }
 
-        public C0079a d(String str) {
+        public C0089a d(String str) {
             this.e = str;
             return this;
         }

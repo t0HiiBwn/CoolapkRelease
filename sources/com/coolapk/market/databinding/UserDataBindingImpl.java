@@ -25,9 +25,9 @@ public class UserDataBindingImpl extends UserDataBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362732, 1);
-        sparseIntArray.put(2131363365, 2);
-        sparseIntArray.put(2131363225, 3);
+        sparseIntArray.put(2131362743, 1);
+        sparseIntArray.put(2131363381, 2);
+        sparseIntArray.put(2131363239, 3);
     }
 
     public UserDataBindingImpl(DataBindingComponent dataBindingComponent, View view) {

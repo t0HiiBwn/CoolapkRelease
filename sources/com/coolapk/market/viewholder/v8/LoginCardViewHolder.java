@@ -16,7 +16,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: LoginCardViewHolder.kt */
 public class LoginCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558815;
+    public static final int LAYOUT_ID = 2131558822;
     private ItemLoginCardBinding binding;
     private Entity entity;
     private String title = "立即登录 更多精彩";
@@ -76,9 +76,9 @@ public class LoginCardViewHolder extends BindingViewHolder {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
         int id = view.getId();
-        if (id == 2131362888) {
+        if (id == 2131362899) {
             ActionManager.startLoginActivity(getContext());
-        } else if (id == 2131363226) {
+        } else if (id == 2131363240) {
             ActionManager.startRegisterActivity(getContext());
         }
     }

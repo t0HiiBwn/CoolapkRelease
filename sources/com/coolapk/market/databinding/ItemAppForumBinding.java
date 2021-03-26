@@ -52,7 +52,7 @@ public abstract class ItemAppForumBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppForumBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAppForumBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558591, viewGroup, z, obj);
+        return (ItemAppForumBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558595, viewGroup, z, obj);
     }
 
     public static ItemAppForumBinding inflate(LayoutInflater layoutInflater) {
@@ -61,7 +61,7 @@ public abstract class ItemAppForumBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppForumBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAppForumBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558591, null, false, obj);
+        return (ItemAppForumBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558595, null, false, obj);
     }
 
     public static ItemAppForumBinding bind(View view) {
@@ -70,6 +70,6 @@ public abstract class ItemAppForumBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppForumBinding bind(View view, Object obj) {
-        return (ItemAppForumBinding) bind(obj, view, 2131558591);
+        return (ItemAppForumBinding) bind(obj, view, 2131558595);
     }
 }

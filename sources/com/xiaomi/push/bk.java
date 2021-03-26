@@ -1,38 +1,23 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.clientreport.manager.a;
-import com.xiaomi.push.ai;
+import android.os.Build;
+import android.system.Os;
+import com.xiaomi.a.a.a.c;
+import java.io.File;
 
-public class bk extends ai.a {
-    private Context a;
-
-    public bk(Context context) {
-        this.a = context;
-    }
-
-    @Override // com.xiaomi.push.ai.a
-    /* renamed from: a */
-    private boolean mo141a() {
-        return a.a(this.a).m43a().isPerfUploadSwitchOpen();
-    }
-
-    @Override // com.xiaomi.push.ai.a
-    /* renamed from: a  reason: collision with other method in class */
-    public String mo142a() {
-        return "100887";
-    }
-
-    @Override // java.lang.Runnable
-    public void run() {
+public class bk {
+    public static long a(String str) {
+        if (Build.VERSION.SDK_INT < 21) {
+            return 0;
+        }
         try {
-            if (mo141a()) {
-                a.a(this.a).c();
-                b.c(this.a.getPackageName() + "perf  begin upload");
+            if (new File(str).exists()) {
+                return Os.stat(str).st_size;
             }
+            return 0;
         } catch (Exception e) {
-            b.d("fail to send perf data. " + e);
+            c.a(e);
+            return 0;
         }
     }
 }

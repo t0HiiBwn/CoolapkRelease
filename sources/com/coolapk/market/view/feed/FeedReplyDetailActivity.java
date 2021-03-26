@@ -46,7 +46,7 @@ public final class FeedReplyDetailActivity extends FakeStatusBarActivity impleme
     protected void onCreate(Bundle bundle) {
         setContentBarAlwaysTranslucent(true);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558560);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558563);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…layout.feed_reply_detail)");
         this.binding = (FeedReplyDetailBinding) contentView;
         setupSlideView();
@@ -82,7 +82,7 @@ public final class FeedReplyDetailActivity extends FakeStatusBarActivity impleme
         FeedReplyDetailFragment feedReplyDetailFragment;
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         Intrinsics.checkNotNullExpressionValue(supportFragmentManager, "supportFragmentManager");
-        Fragment findFragmentById = supportFragmentManager.findFragmentById(2131363592);
+        Fragment findFragmentById = supportFragmentManager.findFragmentById(2131363614);
         if (!(findFragmentById instanceof FeedReplyDetailFragment)) {
             findFragmentById = null;
         }
@@ -97,7 +97,7 @@ public final class FeedReplyDetailActivity extends FakeStatusBarActivity impleme
                 Intrinsics.checkNotNullExpressionValue(stringExtra, "intent.getStringExtra(EXTRA_FEED_REPLY_ID)!!");
                 feedReplyDetailFragment = companion.newInstance(stringExtra);
             }
-            supportFragmentManager.beginTransaction().add(2131363592, feedReplyDetailFragment).commit();
+            supportFragmentManager.beginTransaction().add(2131363614, feedReplyDetailFragment).commit();
         }
     }
 

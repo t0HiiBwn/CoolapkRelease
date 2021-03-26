@@ -24,9 +24,7 @@ public class b {
     private final com.bytedance.sdk.openadsdk.preload.geckox.a.a.a i;
     private final Long j;
     private final String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final String f1340l;
+    private final String l;
     private final String m;
     private final String n;
     private final String o;
@@ -44,13 +42,13 @@ public class b {
             this.i = aVar.j;
             Long l2 = aVar.k;
             this.j = l2;
-            if (TextUtils.isEmpty(aVar.f1341l)) {
+            if (TextUtils.isEmpty(aVar.l)) {
                 this.k = com.bytedance.sdk.openadsdk.preload.geckox.utils.a.a(context);
             } else {
-                this.k = aVar.f1341l;
+                this.k = aVar.l;
             }
             String str = aVar.m;
-            this.f1340l = str;
+            this.l = str;
             this.n = aVar.p;
             this.o = aVar.q;
             if (aVar.o == null) {
@@ -181,7 +179,7 @@ public class b {
     }
 
     public String q() {
-        return this.f1340l;
+        return this.l;
     }
 
     /* compiled from: GeckoConfig */
@@ -197,9 +195,7 @@ public class b {
         private boolean i = true;
         private com.bytedance.sdk.openadsdk.preload.geckox.a.a.a j;
         private Long k;
-
-        /* renamed from: l  reason: collision with root package name */
-        private String f1341l;
+        private String l;
         private String m;
         private String n;
         private File o;
@@ -255,7 +251,7 @@ public class b {
         }
 
         public a a(String str) {
-            this.f1341l = str;
+            this.l = str;
             return this;
         }
 

@@ -85,7 +85,7 @@ public final class FeedTitleEditDialog extends BaseDialogFragment {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558524, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558526, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…edit_submit, null, false)");
         this.binding = (DialogEditSubmitBinding) inflate;
         AlertDialog.Builder title = new AlertDialog.Builder(requireActivity()).setTitle("");

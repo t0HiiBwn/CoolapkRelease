@@ -147,7 +147,7 @@ public final class GoodsListDetailViewModel extends BaseObservable {
 
     public final void setLoading(boolean z) {
         this.loading = z;
-        notifyPropertyChanged(186);
+        notifyPropertyChanged(187);
     }
 
     @Bindable

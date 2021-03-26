@@ -24,6 +24,6 @@ final class GoodsContentHolder$categoryView$2 extends Lambda implements Function
     public final SubmitVoteExtraChildBinding invoke() {
         LinearLayout linearLayout = this.this$0.getBinding$presentation_coolapkAppRelease().contentView;
         Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.contentView");
-        return (SubmitVoteExtraChildBinding) DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559174, this.this$0.getBinding$presentation_coolapkAppRelease().contentView, true);
+        return (SubmitVoteExtraChildBinding) DataBindingUtil.inflate(LayoutInflater.from(linearLayout.getContext()), 2131559182, this.this$0.getBinding$presentation_coolapkAppRelease().contentView, true);
     }
 }

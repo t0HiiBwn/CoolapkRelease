@@ -132,13 +132,13 @@ public final class MessageContentBindHelp {
         Intrinsics.checkNotNullParameter(activity, "activity");
         Intrinsics.checkNotNullParameter(shapedImageView, "picView");
         int id = view.getId();
-        if (id != 2131362200) {
-            if (id != 2131363102) {
-                if (id == 2131363877) {
+        if (id != 2131362205) {
+            if (id != 2131363116) {
+                if (id == 2131363900) {
                     ActionManager.startUserSpaceActivity(view, message.getFromUid(), message.getFromUserAvatar());
                 }
             } else if (activity instanceof ChattingActivity) {
-                Fragment findFragmentById = ContextExtendsKt.requireAppCompatActivity(activity).getSupportFragmentManager().findFragmentById(2131363592);
+                Fragment findFragmentById = ContextExtendsKt.requireAppCompatActivity(activity).getSupportFragmentManager().findFragmentById(2131363614);
                 Objects.requireNonNull(findFragmentById, "null cannot be cast to non-null type com.coolapk.market.view.message.ChatListFragment");
                 ChatListFragment chatListFragment = (ChatListFragment) findFragmentById;
                 ChattingActivity chattingActivity = (ChattingActivity) activity;
@@ -195,7 +195,7 @@ public final class MessageContentBindHelp {
                 EmotionPanel emotionPanel2 = chattingActivity2.getBinding().emotionPanel;
                 Intrinsics.checkNotNullExpressionValue(emotionPanel2, "activity.binding.emotionPanel");
                 chattingActivity2.setEmotionPanelVisibleWithAnim(!emotionPanel2.isShown());
-                chattingActivity2.getBinding().menuEmotion.setImageResource(2131231278);
+                chattingActivity2.getBinding().menuEmotion.setImageResource(2131231289);
             }
         }
     }

@@ -28,7 +28,7 @@ public class ItemAppNodeThumbnailBindingImpl extends ItemAppNodeThumbnailBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362685, 2);
+        sparseIntArray.put(2131362696, 2);
     }
 
     public ItemAppNodeThumbnailBindingImpl(DataBindingComponent dataBindingComponent, View view) {

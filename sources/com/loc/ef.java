@@ -12,9 +12,7 @@ public final class ef extends ar {
     byte[] i = null;
     byte[] j = null;
     boolean k = false;
-
-    /* renamed from: l  reason: collision with root package name */
-    String f1373l = null;
+    String l = null;
     Map<String, String> m = null;
     boolean n = false;
     private String o = "";
@@ -81,7 +79,7 @@ public final class ef extends ar {
 
     @Override // com.loc.ar
     public final String k() {
-        return this.f1373l;
+        return this.l;
     }
 
     @Override // com.loc.ar

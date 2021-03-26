@@ -29,7 +29,7 @@ public class ItemDyhArticleHeaderBindingImpl extends ItemDyhArticleHeaderBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362436, 10);
+        sparseIntArray.put(2131362443, 10);
     }
 
     public ItemDyhArticleHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -81,15 +81,15 @@ public class ItemDyhArticleHeaderBindingImpl extends ItemDyhArticleHeaderBinding
             setEntity((Entity) obj);
         } else if (115 == i) {
             setFoldText((String) obj);
-        } else if (183 == i) {
+        } else if (184 == i) {
             setListType((String) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (263 == i) {
+        } else if (264 == i) {
             setSingleImg((String) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((DyhViewModel) obj);
@@ -123,7 +123,7 @@ public class ItemDyhArticleHeaderBindingImpl extends ItemDyhArticleHeaderBinding
         synchronized (this) {
             this.mDirtyFlags |= 16;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -149,7 +149,7 @@ public class ItemDyhArticleHeaderBindingImpl extends ItemDyhArticleHeaderBinding
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -182,7 +182,7 @@ public class ItemDyhArticleHeaderBindingImpl extends ItemDyhArticleHeaderBinding
                 this.mDirtyFlags |= 512;
             }
             return true;
-        } else if (i == 244) {
+        } else if (i == 245) {
             synchronized (this) {
                 this.mDirtyFlags |= 1024;
             }
@@ -192,7 +192,7 @@ public class ItemDyhArticleHeaderBindingImpl extends ItemDyhArticleHeaderBinding
                 this.mDirtyFlags |= 2048;
             }
             return true;
-        } else if (i == 172) {
+        } else if (i == 173) {
             synchronized (this) {
                 this.mDirtyFlags |= 4096;
             }
@@ -273,7 +273,7 @@ public class ItemDyhArticleHeaderBindingImpl extends ItemDyhArticleHeaderBinding
                         if (i8 != 0) {
                             j |= z4 ? 262144 : 131072;
                         }
-                        str4 = z4 ? this.headerActionView.getResources().getString(2131886761) : this.headerActionView.getResources().getString(2131886760);
+                        str4 = z4 ? this.headerActionView.getResources().getString(2131886823) : this.headerActionView.getResources().getString(2131886822);
                     } else {
                         str4 = null;
                     }
@@ -442,7 +442,7 @@ public class ItemDyhArticleHeaderBindingImpl extends ItemDyhArticleHeaderBinding
             Boolean bool2 = null;
             i7 = i4;
             i6 = i2;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str2, null, 2131231271, 0, bool2, bool2, bool2, bool2, bool2, null, null, onBitmapTransformListener, bool2, bool2, bool2, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.logoView, str2, null, 2131231282, 0, bool2, bool2, bool2, bool2, bool2, null, null, onBitmapTransformListener, bool2, bool2, bool2, null, bool2);
         } else {
             i7 = i4;
             i6 = i2;

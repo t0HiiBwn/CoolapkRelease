@@ -45,7 +45,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ArticleEditFeedTopHolder.kt */
 public final class ArticleEditFeedTopHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131559154;
+    public static final int LAYOUT_ID = 2131559162;
     private final ArticleFeedContentHolder2 content;
     private final ArticleViewModel viewModel;
 
@@ -238,17 +238,17 @@ public final class ArticleEditFeedTopHolder extends BindingViewHolder {
         TextView textView = ((SubmitFeedArticleTopPartBinding) getBinding()).ratingTextView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.ratingTextView");
         if (f >= ((float) 5)) {
-            textView.setText(2131886941);
+            textView.setText(2131887003);
         } else if (f >= ((float) 4)) {
-            textView.setText(2131886942);
+            textView.setText(2131887004);
         } else if (f >= ((float) 3)) {
-            textView.setText(2131886947);
+            textView.setText(2131887009);
         } else if (f >= ((float) 2)) {
-            textView.setText(2131886949);
+            textView.setText(2131887011);
         } else if (f >= ((float) 1)) {
-            textView.setText(2131886945);
+            textView.setText(2131887007);
         } else {
-            textView.setText(2131886948);
+            textView.setText(2131887010);
         }
         ArticleFeedContentHolder2 articleFeedContentHolder2 = this.content;
         FeedMultiPart build = FeedMultiPart.builder(articleFeedContentHolder2.getMultiPart()).voteScore((int) f).build();

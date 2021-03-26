@@ -70,8 +70,8 @@ public final class SearchRecommendListFragment extends EntityListFragment implem
         super.onActivityCreated(bundle);
         setRefreshEnable(false);
         setLoadMoreEnable(false);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558914).suitedMethod(SearchRecommendListFragment$onActivityCreated$1.INSTANCE).constructor(new SearchRecommendListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558924).suitedMethod(SearchRecommendListFragment$onActivityCreated$3.INSTANCE).constructor(new SearchRecommendListFragment$onActivityCreated$4(this)).build(), 0);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558921).suitedMethod(SearchRecommendListFragment$onActivityCreated$1.INSTANCE).constructor(new SearchRecommendListFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558931).suitedMethod(SearchRecommendListFragment$onActivityCreated$3.INSTANCE).constructor(new SearchRecommendListFragment$onActivityCreated$4(this)).build(), 0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         getVxDividerDecoration$presentation_coolapkAppRelease().setDefaultNoMargin();
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new SingleDividerRule(DividerData.Companion.getEMPTY()));

@@ -71,7 +71,7 @@ public final class DyhArticleCommentBarViewPart extends BindingViewPart<FeedComm
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public FeedCommentBarBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558555, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558558, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…nt_bar, viewGroup, false)");
         return (FeedCommentBarBinding) inflate;
     }

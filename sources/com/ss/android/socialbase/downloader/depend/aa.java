@@ -32,7 +32,7 @@ public interface aa extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.ss.android.socialbase.downloader.depend.IDownloadNotificationEventAidlListener");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof aa)) {
-                return new C0096a(iBinder);
+                return new C0106a(iBinder);
             }
             return (aa) queryLocalInterface;
         }
@@ -66,11 +66,11 @@ public interface aa extends IInterface {
 
         /* renamed from: com.ss.android.socialbase.downloader.depend.aa$a$a  reason: collision with other inner class name */
         /* compiled from: IDownloadNotificationEventAidlListener */
-        private static class C0096a implements aa {
+        private static class C0106a implements aa {
             public static aa a;
             private IBinder b;
 
-            C0096a(IBinder iBinder) {
+            C0106a(IBinder iBinder) {
                 this.b = iBinder;
             }
 
@@ -153,7 +153,7 @@ public interface aa extends IInterface {
         }
 
         public static aa b() {
-            return C0096a.a;
+            return C0106a.a;
         }
     }
 }

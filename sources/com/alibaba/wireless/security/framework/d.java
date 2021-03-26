@@ -44,9 +44,7 @@ public class d implements ISGPluginManager {
     private b i = null;
     private boolean j = false;
     private File k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private File f1195l = null;
+    private File l = null;
     private File m = null;
 
     private static class a {
@@ -612,12 +610,12 @@ public class d implements ISGPluginManager {
                                     b bVar = this.i;
                                     if (bVar != null) {
                                         str22 = bVar.a().toString();
-                                        this.e = iSecurityGuardPlugin.onPluginLoaded(context, null, cVar, str19, Integer.valueOf(i2), str22, this.f1195l.getAbsolutePath(), this.h);
+                                        this.e = iSecurityGuardPlugin.onPluginLoaded(context, null, cVar, str19, Integer.valueOf(i2), str22, this.l.getAbsolutePath(), this.h);
                                     }
                                 } catch (Exception unused9) {
                                 }
                                 str22 = str8;
-                                this.e = iSecurityGuardPlugin.onPluginLoaded(context, null, cVar, str19, Integer.valueOf(i2), str22, this.f1195l.getAbsolutePath(), this.h);
+                                this.e = iSecurityGuardPlugin.onPluginLoaded(context, null, cVar, str19, Integer.valueOf(i2), str22, this.l.getAbsolutePath(), this.h);
                             } else {
                                 SGPluginExtras.slot = 0;
                                 iSecurityGuardPlugin.onPluginLoaded(context, this.e, cVar, str19, new Object[0]);
@@ -715,12 +713,12 @@ public class d implements ISGPluginManager {
             }
             if (str != null) {
                 File dir = context.getDir("SGLib", 0);
-                this.f1195l = dir;
+                this.l = dir;
                 if (dir == null || !dir.exists()) {
-                    a(100038, 109, "", "" + this.f1195l, "", "", "");
+                    a(100038, 109, "", "" + this.l, "", "", "");
                     throw new SecException(109);
                 }
-                File file2 = new File(this.f1195l.getAbsolutePath(), "app_" + str);
+                File file2 = new File(this.l.getAbsolutePath(), "app_" + str);
                 if (!file2.exists()) {
                     file2.mkdirs();
                     if (!file2.exists()) {
@@ -729,7 +727,7 @@ public class d implements ISGPluginManager {
                 }
                 if (p && file2.exists()) {
                     p = false;
-                    a(this.f1195l, "app_" + str);
+                    a(this.l, "app_" + str);
                 }
                 if (file2.exists()) {
                     return file2;

@@ -31,7 +31,7 @@ public abstract class ItemUserCoverImageBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserCoverImageBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemUserCoverImageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558969, viewGroup, z, obj);
+        return (ItemUserCoverImageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558976, viewGroup, z, obj);
     }
 
     public static ItemUserCoverImageBinding inflate(LayoutInflater layoutInflater) {
@@ -40,7 +40,7 @@ public abstract class ItemUserCoverImageBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserCoverImageBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemUserCoverImageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558969, null, false, obj);
+        return (ItemUserCoverImageBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558976, null, false, obj);
     }
 
     public static ItemUserCoverImageBinding bind(View view) {
@@ -49,6 +49,6 @@ public abstract class ItemUserCoverImageBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserCoverImageBinding bind(View view, Object obj) {
-        return (ItemUserCoverImageBinding) bind(obj, view, 2131558969);
+        return (ItemUserCoverImageBinding) bind(obj, view, 2131558976);
     }
 }

@@ -39,9 +39,7 @@ public class b implements bi<b, e>, Serializable, Cloneable {
     private static final cc i = new cc("version", (byte) 8, 3);
     private static final Map<Class<? extends cp>, cq> j;
     private static final int k = 0;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final int f1493l = 1;
+    private static final int l = 1;
     public String a;
     public long b;
     public int c;
@@ -50,7 +48,7 @@ public class b implements bi<b, e>, Serializable, Cloneable {
     static {
         HashMap hashMap = new HashMap();
         j = hashMap;
-        hashMap.put(cr.class, new C0152b());
+        hashMap.put(cr.class, new C0179b());
         hashMap.put(cs.class, new d());
         EnumMap enumMap = new EnumMap(e.class);
         enumMap.put((EnumMap) e.IDENTITY, (e) new bu("identity", (byte) 1, new bv((byte) 11)));
@@ -284,8 +282,8 @@ public class b implements bi<b, e>, Serializable, Cloneable {
 
     /* renamed from: com.umeng.commonsdk.statistics.proto.b$b  reason: collision with other inner class name */
     /* compiled from: IdSnapshot */
-    private static class C0152b implements cq {
-        private C0152b() {
+    private static class C0179b implements cq {
+        private C0179b() {
         }
 
         /* renamed from: a */
@@ -303,32 +301,32 @@ public class b implements bi<b, e>, Serializable, Cloneable {
         public void b(ch chVar, b bVar) throws bo {
             chVar.j();
             while (true) {
-                cc l2 = chVar.l();
-                if (l2.b == 0) {
+                cc l = chVar.l();
+                if (l.b == 0) {
                     break;
                 }
-                short s = l2.c;
+                short s = l.c;
                 if (s != 1) {
                     if (s != 2) {
                         if (s != 3) {
-                            ck.a(chVar, l2.b);
-                        } else if (l2.b == 8) {
+                            ck.a(chVar, l.b);
+                        } else if (l.b == 8) {
                             bVar.c = chVar.w();
                             bVar.c(true);
                         } else {
-                            ck.a(chVar, l2.b);
+                            ck.a(chVar, l.b);
                         }
-                    } else if (l2.b == 10) {
+                    } else if (l.b == 10) {
                         bVar.b = chVar.x();
                         bVar.b(true);
                     } else {
-                        ck.a(chVar, l2.b);
+                        ck.a(chVar, l.b);
                     }
-                } else if (l2.b == 11) {
+                } else if (l.b == 11) {
                     bVar.a = chVar.z();
                     bVar.a(true);
                 } else {
-                    ck.a(chVar, l2.b);
+                    ck.a(chVar, l.b);
                 }
                 chVar.m();
             }

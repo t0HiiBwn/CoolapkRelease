@@ -21,7 +21,7 @@ public abstract class ItemCoolPicImageViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCoolPicImageViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemCoolPicImageViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558662, viewGroup, z, obj);
+        return (ItemCoolPicImageViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558668, viewGroup, z, obj);
     }
 
     public static ItemCoolPicImageViewBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class ItemCoolPicImageViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCoolPicImageViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemCoolPicImageViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558662, null, false, obj);
+        return (ItemCoolPicImageViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558668, null, false, obj);
     }
 
     public static ItemCoolPicImageViewBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class ItemCoolPicImageViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCoolPicImageViewBinding bind(View view, Object obj) {
-        return (ItemCoolPicImageViewBinding) bind(obj, view, 2131558662);
+        return (ItemCoolPicImageViewBinding) bind(obj, view, 2131558668);
     }
 }

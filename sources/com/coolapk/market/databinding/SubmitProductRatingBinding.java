@@ -65,7 +65,7 @@ public abstract class SubmitProductRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitProductRatingBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitProductRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559167, viewGroup, z, obj);
+        return (SubmitProductRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559175, viewGroup, z, obj);
     }
 
     public static SubmitProductRatingBinding inflate(LayoutInflater layoutInflater) {
@@ -74,7 +74,7 @@ public abstract class SubmitProductRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitProductRatingBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitProductRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559167, null, false, obj);
+        return (SubmitProductRatingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559175, null, false, obj);
     }
 
     public static SubmitProductRatingBinding bind(View view) {
@@ -83,6 +83,6 @@ public abstract class SubmitProductRatingBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitProductRatingBinding bind(View view, Object obj) {
-        return (SubmitProductRatingBinding) bind(obj, view, 2131559167);
+        return (SubmitProductRatingBinding) bind(obj, view, 2131559175);
     }
 }

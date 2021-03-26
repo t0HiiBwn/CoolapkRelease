@@ -55,8 +55,8 @@ public final class FeedHotReplyListFragment extends EntityListFragment {
         getVxDividerDecoration$presentation_coolapkAppRelease().setDefaultNoMargin();
         getVxDividerDecoration$presentation_coolapkAppRelease().addDividerRule(new FeedListDividerRule());
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
-        setEmptyData(getString(2131886764), 0);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558716).constructor(new FeedHotReplyListFragment$onActivityCreated$1(this)).suitedMethod(FeedHotReplyListFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
+        setEmptyData(getString(2131886826), 0);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558723).constructor(new FeedHotReplyListFragment$onActivityCreated$1(this)).suitedMethod(FeedHotReplyListFragment$onActivityCreated$2.INSTANCE).build(), 0, 2, null);
     }
 
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListContract.View

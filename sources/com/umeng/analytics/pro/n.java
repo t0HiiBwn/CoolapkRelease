@@ -41,9 +41,7 @@ import org.json.JSONObject;
 /* compiled from: CoreProtocolImpl */
 public class n {
     private static Context a = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static final String f1473l = "first_activate_time";
+    private static final String l = "first_activate_time";
     private static final String m = "ana_is_f";
     private static final String n = "thtstart";
     private static final String o = "dstk_last_time";
@@ -85,9 +83,7 @@ public class n {
         public static final int i = 4105;
         public static final int j = 4106;
         public static final int k = 4352;
-
-        /* renamed from: l  reason: collision with root package name */
-        public static final int f1474l = 4353;
+        public static final int l = 4353;
         public static final int m = 4354;
         public static final int n = 4355;
         public static final int o = 4356;

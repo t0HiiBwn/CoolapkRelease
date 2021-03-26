@@ -25,7 +25,7 @@ abstract class C$$AutoValue_DeviceParams extends DeviceParams {
     private final String title;
     private final String url;
 
-    C$$AutoValue_DeviceParams(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, String str12, List<String> list, int i) {
+    C$$AutoValue_DeviceParams(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, String str12, List<String> list, int i) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -37,8 +37,8 @@ abstract class C$$AutoValue_DeviceParams extends DeviceParams {
         this.subTitle = str8;
         this.id = str9;
         this.extraData = str10;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str11, "Null title");
         this.title = str11;
         this.key = str12;
@@ -182,10 +182,10 @@ abstract class C$$AutoValue_DeviceParams extends DeviceParams {
                                             if (str10 != null ? str10.equals(deviceParams.getId()) : deviceParams.getId() == null) {
                                                 String str11 = this.extraData;
                                                 if (str11 != null ? str11.equals(deviceParams.getExtraData()) : deviceParams.getExtraData() == null) {
-                                                    Long l2 = this.dateline;
-                                                    if (l2 != null ? l2.equals(deviceParams.getDateline()) : deviceParams.getDateline() == null) {
-                                                        Long l3 = this.lastUpdate;
-                                                        if (l3 != null ? l3.equals(deviceParams.getLastUpdate()) : deviceParams.getLastUpdate() == null) {
+                                                    Long l = this.dateline;
+                                                    if (l != null ? l.equals(deviceParams.getDateline()) : deviceParams.getDateline() == null) {
+                                                        Long l2 = this.lastUpdate;
+                                                        if (l2 != null ? l2.equals(deviceParams.getLastUpdate()) : deviceParams.getLastUpdate() == null) {
                                                             if (this.title.equals(deviceParams.getTitle()) && ((str = this.key) != null ? str.equals(deviceParams.getKey()) : deviceParams.getKey() == null) && ((list = this.option) != null ? list.equals(deviceParams.getOption()) : deviceParams.getOption() == null) && this.checkBox == deviceParams.getCheckBox()) {
                                                                 return true;
                                                             }
@@ -230,10 +230,10 @@ abstract class C$$AutoValue_DeviceParams extends DeviceParams {
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.extraData;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode13 = (((hashCode12 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003) ^ this.title.hashCode()) * 1000003;
+        Long l = this.dateline;
+        int hashCode12 = (hashCode11 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode13 = (((hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003) ^ this.title.hashCode()) * 1000003;
         String str11 = this.key;
         int hashCode14 = (hashCode13 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
         List<String> list = this.option;
@@ -354,14 +354,14 @@ abstract class C$$AutoValue_DeviceParams extends DeviceParams {
         }
 
         @Override // com.coolapk.market.model.DeviceParams.Builder
-        public DeviceParams.Builder dateline(Long l2) {
-            this.dateline = l2;
+        public DeviceParams.Builder dateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.DeviceParams.Builder
-        public DeviceParams.Builder lastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public DeviceParams.Builder lastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

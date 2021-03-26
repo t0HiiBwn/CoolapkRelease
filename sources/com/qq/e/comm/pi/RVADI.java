@@ -2,9 +2,10 @@ package com.qq.e.comm.pi;
 
 import android.app.Activity;
 import com.qq.e.ads.rewardvideo.ServerSideVerificationOptions;
+import com.qq.e.comm.compliance.ApkDownloadComplianceInterface;
 import com.qq.e.comm.constants.LoadAdParams;
 
-public interface RVADI {
+public interface RVADI extends ApkDownloadComplianceInterface {
     String getAdNetWorkName();
 
     int getECPM();

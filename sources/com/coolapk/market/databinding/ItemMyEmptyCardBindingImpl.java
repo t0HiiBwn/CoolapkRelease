@@ -24,7 +24,7 @@ public class ItemMyEmptyCardBindingImpl extends ItemMyEmptyCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362121, 3);
+        sparseIntArray.put(2131362124, 3);
     }
 
     public ItemMyEmptyCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -123,13 +123,13 @@ public class a {
         }
     }
 
-    public static synchronized void a(String str, Long l2) {
+    public static synchronized void a(String str, Long l) {
         synchronized (a.class) {
-            a((String) null, str, l2);
+            a((String) null, str, l);
         }
     }
 
-    public static synchronized void a(String str, String str2, Long l2) {
+    public static synchronized void a(String str, String str2, Long l) {
         synchronized (a.class) {
             if (a()) {
                 try {
@@ -137,7 +137,7 @@ public class a {
                     if (b != null) {
                         Uri parse = Uri.parse(d() + "long/" + str2 + b(str));
                         ContentValues contentValues = new ContentValues();
-                        contentValues.put("value", l2);
+                        contentValues.put("value", l);
                         b.update(parse, contentValues, null, null);
                     }
                 } catch (Throwable unused) {

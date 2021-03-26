@@ -1,15 +1,16 @@
 package com.xiaomi.mipush.sdk;
 
 import android.content.Context;
-import com.xiaomi.channel.commonutils.logger.LoggerInterface;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.dc;
-import com.xiaomi.push.dd;
+import com.xiaomi.a.a.a.a;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.cd;
+import com.xiaomi.push.ce;
+import com.xiaomi.push.j;
 import java.io.File;
 
 public class Logger {
     private static boolean sDisablePushLog;
-    private static LoggerInterface sUserLogger;
+    private static a sUserLogger;
 
     public static void disablePushFileLog(Context context) {
         sDisablePushLog = true;
@@ -21,12 +22,27 @@ public class Logger {
         setPushLog(context);
     }
 
-    @Deprecated
     public static File getLogFile(String str) {
-        return null;
+        try {
+            File file = new File(str);
+            if (file.exists()) {
+                if (file.isDirectory()) {
+                    File[] listFiles = file.listFiles();
+                    for (int i = 0; i < listFiles.length; i++) {
+                        if (listFiles[i].isFile() && !listFiles[i].getName().contains("lock") && listFiles[i].getName().contains("log")) {
+                            return listFiles[i];
+                        }
+                    }
+                    return null;
+                }
+            }
+            return null;
+        } catch (NullPointerException unused) {
+            c.d("null pointer exception while retrieve file.");
+        }
     }
 
-    protected static LoggerInterface getUserLogger() {
+    protected static a getUserLogger() {
         return sUserLogger;
     }
 
@@ -45,31 +61,40 @@ public class Logger {
         return false;
     }
 
-    public static void setLogger(Context context, LoggerInterface loggerInterface) {
-        sUserLogger = loggerInterface;
+    public static void setLogger(Context context, a aVar) {
+        sUserLogger = aVar;
         setPushLog(context);
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:7:0x0013, code lost:
-        if (hasWritePermission(r4) != false) goto L_0x0017;
-     */
+    /* JADX WARNING: Removed duplicated region for block: B:12:0x001d  */
+    /* JADX WARNING: Removed duplicated region for block: B:13:0x0020  */
+    /* JADX WARNING: Removed duplicated region for block: B:15:0x0023  */
     public static void setPushLog(Context context) {
-        boolean z = true;
+        boolean z;
         boolean z2 = false;
         boolean z3 = sUserLogger != null;
         if (!sDisablePushLog) {
             z2 = z3;
+            if (hasWritePermission(context)) {
+                z = true;
+                ce ceVar = null;
+                a aVar = !z2 ? sUserLogger : null;
+                if (z) {
+                    ceVar = new ce(context);
+                }
+                c.a(new cd(aVar, ceVar));
+            }
         }
         z = false;
-        dd ddVar = null;
-        LoggerInterface loggerInterface = z2 ? sUserLogger : null;
-        if (z) {
-            ddVar = new dd(context);
+        ce ceVar = null;
+        if (!z2) {
         }
-        b.a(new dc(loggerInterface, ddVar));
+        if (z) {
+        }
+        c.a(new cd(aVar, ceVar));
     }
 
-    @Deprecated
     public static void uploadLogFile(Context context, boolean z) {
+        j.a(context).a(new u(context, z));
     }
 }

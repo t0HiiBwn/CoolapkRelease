@@ -37,11 +37,11 @@ public final class LiveRefreshTimer {
         this.handler.removeMessages(0);
         long j = 0;
         if (!z) {
-            Long l2 = this.lastRefreshTime;
-            if (l2 == null) {
+            Long l = this.lastRefreshTime;
+            if (l == null) {
                 j = this.minDuration;
             } else {
-                j = Math.max(this.minDuration - (System.currentTimeMillis() - l2.longValue()), 0L);
+                j = Math.max(this.minDuration - (System.currentTimeMillis() - l.longValue()), 0L);
             }
         }
         Message obtain = Message.obtain();

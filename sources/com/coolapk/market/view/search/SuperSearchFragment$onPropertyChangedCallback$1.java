@@ -58,7 +58,7 @@ public final class SuperSearchFragment$onPropertyChangedCallback$1 extends Obser
                         if (i != 110) {
                             if (i != 128 && i != 129) {
                                 switch (i) {
-                                    case 237:
+                                    case 238:
                                         if (Intrinsics.areEqual(SuperSearchFragment.access$getSearchType$p(this.this$0), "ershou")) {
                                             SuperSearchFragment superSearchFragment = this.this$0;
                                             superSearchFragment.lastSecondHandSort = SuperSearchFragment.access$getViewModel$p(superSearchFragment).getSecondHandChangeSort();
@@ -96,7 +96,7 @@ public final class SuperSearchFragment$onPropertyChangedCallback$1 extends Obser
                                             return;
                                         }
                                         return;
-                                    case 238:
+                                    case 239:
                                         if (Intrinsics.areEqual(SuperSearchFragment.access$getSearchType$p(this.this$0), "ershou")) {
                                             this.this$0.updateItemSecondHandFilter();
                                             this.this$0.clearDataAndReload();
@@ -124,7 +124,7 @@ public final class SuperSearchFragment$onPropertyChangedCallback$1 extends Obser
                                             return;
                                         }
                                         return;
-                                    case 239:
+                                    case 240:
                                         if (Intrinsics.areEqual(SuperSearchFragment.access$getSearchType$p(this.this$0), "ershou")) {
                                             SuperSearchFragment superSearchFragment2 = this.this$0;
                                             superSearchFragment2.lastSecondHandFilter = SuperSearchFragment.access$getViewModel$p(superSearchFragment2).getSecondHandOther();
@@ -162,7 +162,7 @@ public final class SuperSearchFragment$onPropertyChangedCallback$1 extends Obser
                                             return;
                                         }
                                         return;
-                                    case 240:
+                                    case 241:
                                         try {
                                             if (Intrinsics.areEqual(SuperSearchFragment.access$getSearchType$p(this.this$0), "ershou")) {
                                                 SuperSearchFragment superSearchFragment3 = this.this$0;

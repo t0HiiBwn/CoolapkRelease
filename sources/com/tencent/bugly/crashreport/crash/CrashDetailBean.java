@@ -59,9 +59,7 @@ public class CrashDetailBean implements Parcelable, Comparable<CrashDetailBean> 
     public Map<String, PlugInBean> i;
     public boolean j;
     public boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    public int f1435l;
+    public int l;
     public String m;
     public String n;
     public String o;
@@ -105,7 +103,7 @@ public class CrashDetailBean implements Parcelable, Comparable<CrashDetailBean> 
         this.i = null;
         this.j = false;
         this.k = false;
-        this.f1435l = 0;
+        this.l = 0;
         this.m = "";
         this.n = "";
         this.o = "";
@@ -159,7 +157,7 @@ public class CrashDetailBean implements Parcelable, Comparable<CrashDetailBean> 
         this.i = null;
         this.j = false;
         this.k = false;
-        this.f1435l = 0;
+        this.l = 0;
         this.m = "";
         this.n = "";
         this.o = "";
@@ -206,7 +204,7 @@ public class CrashDetailBean implements Parcelable, Comparable<CrashDetailBean> 
         this.g = parcel.readString();
         this.j = parcel.readByte() == 1;
         this.k = parcel.readByte() == 1;
-        this.f1435l = parcel.readInt();
+        this.l = parcel.readInt();
         this.m = parcel.readString();
         this.n = parcel.readString();
         this.o = parcel.readString();
@@ -258,7 +256,7 @@ public class CrashDetailBean implements Parcelable, Comparable<CrashDetailBean> 
         parcel.writeString(this.g);
         parcel.writeByte(this.j ? (byte) 1 : 0);
         parcel.writeByte(this.k ? (byte) 1 : 0);
-        parcel.writeInt(this.f1435l);
+        parcel.writeInt(this.l);
         parcel.writeString(this.m);
         parcel.writeString(this.n);
         parcel.writeString(this.o);

@@ -52,9 +52,7 @@ public class b implements al.a {
     private e h;
     private e i;
     private a k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private AtomicBoolean f1296l = new AtomicBoolean(false);
+    private AtomicBoolean l = new AtomicBoolean(false);
     private AtomicBoolean m = new AtomicBoolean(false);
     private AtomicBoolean n = new AtomicBoolean(false);
     private boolean o;
@@ -235,7 +233,7 @@ public class b implements al.a {
                     if (b.this.o) {
                         b.this.a(pVar, a4, a2);
                     } else {
-                        b.this.f1296l.set(true);
+                        b.this.l.set(true);
                         u.c("splashLoadAd", "不检测直接返回缓存....splashAd=" + a4);
                         u.f("splashLoadAd", "tryDisplaySplashAdFromCache onSuccess 加载视频缓存");
                         b bVar = b.this;
@@ -312,7 +310,7 @@ public class b implements al.a {
                         str = null;
                     } else {
                         u.c("splashLoadAd", ".....不检测直接返回缓存....");
-                        b.this.f1296l.set(true);
+                        b.this.l.set(true);
                         b bVar = b.this;
                         eVar = a3;
                         str = null;
@@ -709,7 +707,7 @@ public class b implements al.a {
                     c.a(b.this.a, z, j, j2);
                     if (z && !b.this.g.get()) {
                         u.b("splashLoadAd", "check 成功回调.......");
-                        b.this.f1296l.set(true);
+                        b.this.l.set(true);
                         b bVar = b.this;
                         bVar.a(15001, new a(1, 0, null, eVar, a3), pVar, eVar, str);
                     } else if (b.this.e()) {
@@ -769,11 +767,11 @@ public class b implements al.a {
                     return;
                 }
                 u.d("splashLoadAd", "splashAdTryCallback 实时请求失败（缓存先回，实时后回）....");
-                if (this.f1296l.get() && ((this.m.get() || this.n.get()) && this.B != null)) {
+                if (this.l.get() && ((this.m.get() || this.n.get()) && this.B != null)) {
                     u.d("splashLoadAd", "splashAdTryCallback 实时请求失败（缓存先回，实时后回）....尝试回调缓存成功！");
                     a(this.B);
                     return;
-                } else if (this.f1296l.get() && !this.n.get()) {
+                } else if (this.l.get() && !this.n.get()) {
                     u.d("splashLoadAd", "splashAdTryCallback 当为模版广告，存在缓存的情况下，模版渲染还没有回来时等待模版广告渲染回来！");
                     return;
                 }
@@ -789,7 +787,7 @@ public class b implements al.a {
                     u.d("splashLoadAd", "如果实时已超时，缓存也失败直接回调，直接失败回调");
                 } else if (!this.z.get()) {
                     u.d("splashLoadAd", "如果实时已超时，实时是否渲染成功 " + this.m.get() + " 缓存渲染是否成功 " + this.n.get());
-                    if (!this.f1296l.get() || (!this.m.get() && !this.n.get())) {
+                    if (!this.l.get() || (!this.m.get() && !this.n.get())) {
                         u.d("splashLoadAd", "如果实时已超时，直接失败回调");
                     } else {
                         u.d("splashLoadAd", "如果实时已超时，缓存成功直接回调");
@@ -806,7 +804,7 @@ public class b implements al.a {
             if (this.s.get() && i2 == 15001) {
                 if (this.A.get() && !this.z.get()) {
                     u.d("splashLoadAd", "如果缓存先回来,实时还没有回来，实时是否渲染成功 " + this.m.get() + " 缓存渲染是否成功 " + this.n.get());
-                    if (this.f1296l.get() && this.n.get()) {
+                    if (this.l.get() && this.n.get()) {
                         u.d("splashLoadAd", "缓存赋值给resultTemp");
                         this.B = aVar;
                         u.d("splashLoadAd", "如果缓存先回来,实时还没有回来，等待实时回来");
@@ -824,7 +822,7 @@ public class b implements al.a {
             if (!this.s.get() || i2 != 15000 || this.m.get()) {
                 StringBuilder sb = new StringBuilder();
                 sb.append("splashAdTryCallback..（ 是否缓存已check成功：");
-                sb.append(this.f1296l.get());
+                sb.append(this.l.get());
                 sb.append(" || 是否渲染超时：");
                 sb.append(i2 == 15003);
                 sb.append(" || 是否为实时请求");
@@ -838,7 +836,7 @@ public class b implements al.a {
                 sb.append(this.n.get());
                 sb.append("）");
                 u.b("splashLoadAd", sb.toString());
-                if ((this.f1296l.get() || i2 == 15000 || i2 == 15003) && (this.m.get() || this.n.get())) {
+                if ((this.l.get() || i2 == 15000 || i2 == 15003) && (this.m.get() || this.n.get())) {
                     a(aVar);
                 }
                 return;
@@ -981,7 +979,7 @@ public class b implements al.a {
                     if (r2 != 1) {
                         if (r2 != 2) {
                             if (r2 == 3) {
-                                if (this.h == null || !this.f1296l.get()) {
+                                if (this.h == null || !this.l.get()) {
                                     eVar = null;
                                 } else {
                                     u.b("splashLoadAd", "谁回来用谁//--mCacheTTSplashAd");
@@ -999,14 +997,14 @@ public class b implements al.a {
                             if (eVar != null) {
                                 u.b("splashLoadAd", "超时使用实时--mRealNetWorkTTSplashAd");
                             } else {
-                                if (this.h != null && this.f1296l.get()) {
+                                if (this.h != null && this.l.get()) {
                                     u.b("splashLoadAd", "超时使用实时//--mCacheTTSplashAd");
                                     eVar = this.h;
                                 }
                                 eVar = null;
                             }
                         }
-                    } else if (this.h == null || !this.f1296l.get()) {
+                    } else if (this.h == null || !this.l.get()) {
                         eVar = this.i;
                     } else {
                         eVar = this.h;

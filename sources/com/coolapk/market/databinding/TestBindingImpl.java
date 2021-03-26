@@ -26,7 +26,7 @@ public class TestBindingImpl extends TestBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362449, 1);
+        sparseIntArray.put(2131362456, 1);
     }
 
     public TestBindingImpl(DataBindingComponent dataBindingComponent, View view) {

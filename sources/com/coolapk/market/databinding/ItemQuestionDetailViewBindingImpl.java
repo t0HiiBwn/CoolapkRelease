@@ -42,16 +42,16 @@ public class ItemQuestionDetailViewBindingImpl extends ItemQuestionDetailViewBin
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(23);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"item_feed_target_view"}, new int[]{15}, new int[]{2131558732});
+        includedLayouts.setIncludes(0, new String[]{"item_feed_target_view"}, new int[]{15}, new int[]{2131558739});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363539, 16);
-        sparseIntArray.put(2131363533, 17);
-        sparseIntArray.put(2131363016, 18);
-        sparseIntArray.put(2131363229, 19);
-        sparseIntArray.put(2131362580, 20);
-        sparseIntArray.put(2131362150, 21);
-        sparseIntArray.put(2131362330, 22);
+        sparseIntArray.put(2131363557, 16);
+        sparseIntArray.put(2131363551, 17);
+        sparseIntArray.put(2131363030, 18);
+        sparseIntArray.put(2131363243, 19);
+        sparseIntArray.put(2131362588, 20);
+        sparseIntArray.put(2131362153, 21);
+        sparseIntArray.put(2131362336, 22);
     }
 
     public ItemQuestionDetailViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -113,7 +113,7 @@ public class ItemQuestionDetailViewBindingImpl extends ItemQuestionDetailViewBin
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -129,7 +129,7 @@ public class ItemQuestionDetailViewBindingImpl extends ItemQuestionDetailViewBin
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -353,18 +353,18 @@ public class ItemQuestionDetailViewBindingImpl extends ItemQuestionDetailViewBin
                                     OnImageLoadListener onImageLoadListener = null;
                                     OnBitmapTransformListener onBitmapTransformListener = null;
                                     View.OnClickListener onClickListener2 = null;
-                                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView1, str9, drawable, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, str13, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
+                                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView1, str9, drawable, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, str13, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
                                     this.imageView2.setVisibility(i2);
-                                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView2, str10, drawable, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, str13, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
+                                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView2, str10, drawable, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, str13, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
                                     this.imageView3.setVisibility(i);
-                                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView3, str8, drawable, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, str13, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
+                                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView3, str8, drawable, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, str13, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
                                     this.mboundView0.setModel(feed);
                                     this.mboundView1.setVisibility(i4);
                                     this.moreFollowerView.setVisibility(i5);
                                     TextViewBindingAdapter.setText(this.nameView, str2);
                                     TextViewBindingAdapters.setDatelineByEntity(this.timeView, feed);
                                     TextViewBindingAdapter.setText(this.titleView, str4);
-                                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, drawable, 2131231152, 0, bool2, bool2, bool2, bool2, bool2, str13, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
+                                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, str, drawable, 2131231162, 0, bool2, bool2, bool2, bool2, bool2, str13, onImageLoadListener, onBitmapTransformListener, bool2, bool2, bool2, onClickListener2, bool2);
                                     ImageViewBindingAdapters.setVipSignView(this.userAvatarView, str3, bool2);
                                 }
                                 executeBindingsOn(this.mboundView0);

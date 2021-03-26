@@ -31,7 +31,7 @@ public abstract class SubmitFeedAddMoreItemDialogBinding extends ViewDataBinding
 
     @Deprecated
     public static SubmitFeedAddMoreItemDialogBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitFeedAddMoreItemDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559147, viewGroup, z, obj);
+        return (SubmitFeedAddMoreItemDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559155, viewGroup, z, obj);
     }
 
     public static SubmitFeedAddMoreItemDialogBinding inflate(LayoutInflater layoutInflater) {
@@ -40,7 +40,7 @@ public abstract class SubmitFeedAddMoreItemDialogBinding extends ViewDataBinding
 
     @Deprecated
     public static SubmitFeedAddMoreItemDialogBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitFeedAddMoreItemDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559147, null, false, obj);
+        return (SubmitFeedAddMoreItemDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559155, null, false, obj);
     }
 
     public static SubmitFeedAddMoreItemDialogBinding bind(View view) {
@@ -49,6 +49,6 @@ public abstract class SubmitFeedAddMoreItemDialogBinding extends ViewDataBinding
 
     @Deprecated
     public static SubmitFeedAddMoreItemDialogBinding bind(View view, Object obj) {
-        return (SubmitFeedAddMoreItemDialogBinding) bind(obj, view, 2131559147);
+        return (SubmitFeedAddMoreItemDialogBinding) bind(obj, view, 2131559155);
     }
 }

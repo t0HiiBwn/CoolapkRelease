@@ -25,13 +25,13 @@ public class AlbumListItemCardNonupleBindingImpl extends AlbumListItemCardNonupl
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(20);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(3, new String[]{"album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item"}, new int[]{6, 7, 8, 9}, new int[]{2131558449, 2131558449, 2131558449, 2131558449});
-        includedLayouts.setIncludes(4, new String[]{"album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item"}, new int[]{10, 11, 12, 13}, new int[]{2131558449, 2131558449, 2131558449, 2131558449});
-        includedLayouts.setIncludes(5, new String[]{"album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item"}, new int[]{14, 15, 16, 17}, new int[]{2131558449, 2131558449, 2131558449, 2131558449});
+        includedLayouts.setIncludes(3, new String[]{"album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item"}, new int[]{6, 7, 8, 9}, new int[]{2131558450, 2131558450, 2131558450, 2131558450});
+        includedLayouts.setIncludes(4, new String[]{"album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item"}, new int[]{10, 11, 12, 13}, new int[]{2131558450, 2131558450, 2131558450, 2131558450});
+        includedLayouts.setIncludes(5, new String[]{"album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item", "album_list_item_card_nonuple_item"}, new int[]{14, 15, 16, 17}, new int[]{2131558450, 2131558450, 2131558450, 2131558450});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362652, 18);
-        sparseIntArray.put(2131362644, 19);
+        sparseIntArray.put(2131362660, 18);
+        sparseIntArray.put(2131362652, 19);
     }
 
     public AlbumListItemCardNonupleBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -106,7 +106,7 @@ public class AlbumListItemCardNonupleBindingImpl extends AlbumListItemCardNonupl
     public boolean setVariable(int i, Object obj) {
         if (44 == i) {
             setCard((Card) obj);
-        } else if (307 != i) {
+        } else if (308 != i) {
             return false;
         } else {
             setViewHolder((AlbumMainCardViewHolder) obj);
@@ -131,7 +131,7 @@ public class AlbumListItemCardNonupleBindingImpl extends AlbumListItemCardNonupl
         synchronized (this) {
             this.mDirtyFlags |= 4096;
         }
-        notifyPropertyChanged(307);
+        notifyPropertyChanged(308);
         super.requestRebind();
     }
 

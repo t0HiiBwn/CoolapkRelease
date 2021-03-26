@@ -45,7 +45,7 @@ public abstract class SubmitSecondHandExtraChildBinding extends ViewDataBinding 
 
     @Deprecated
     public static SubmitSecondHandExtraChildBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitSecondHandExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559170, viewGroup, z, obj);
+        return (SubmitSecondHandExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559178, viewGroup, z, obj);
     }
 
     public static SubmitSecondHandExtraChildBinding inflate(LayoutInflater layoutInflater) {
@@ -54,7 +54,7 @@ public abstract class SubmitSecondHandExtraChildBinding extends ViewDataBinding 
 
     @Deprecated
     public static SubmitSecondHandExtraChildBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitSecondHandExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559170, null, false, obj);
+        return (SubmitSecondHandExtraChildBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559178, null, false, obj);
     }
 
     public static SubmitSecondHandExtraChildBinding bind(View view) {
@@ -63,6 +63,6 @@ public abstract class SubmitSecondHandExtraChildBinding extends ViewDataBinding 
 
     @Deprecated
     public static SubmitSecondHandExtraChildBinding bind(View view, Object obj) {
-        return (SubmitSecondHandExtraChildBinding) bind(obj, view, 2131559170);
+        return (SubmitSecondHandExtraChildBinding) bind(obj, view, 2131559178);
     }
 }

@@ -22,7 +22,7 @@ public class ItemSponsorBindingImpl extends ItemSponsorBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362768, 1);
+        sparseIntArray.put(2131362779, 1);
     }
 
     public ItemSponsorBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -63,7 +63,7 @@ public class ItemSponsorBindingImpl extends ItemSponsorBinding {
             setClick((View.OnClickListener) obj);
         } else if (46 == i) {
             setCard2((Entity) obj);
-        } else if (185 != i) {
+        } else if (186 != i) {
             return false;
         } else {
             setLoadListener((OnImageLoadListener) obj);

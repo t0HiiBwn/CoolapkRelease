@@ -1,6 +1,7 @@
 package com.coolapk.market.view.feedv8.draft;
 
 import android.app.Application;
+import android.os.Environment;
 import com.coolapk.market.AppHolder;
 import java.io.File;
 import kotlin.Metadata;
@@ -19,9 +20,16 @@ final class RoughDraftHelper$oldSavePath$2 extends Lambda implements Function0<F
 
     @Override // kotlin.jvm.functions.Function0
     public final File invoke() {
+        File externalStorageDirectory = Environment.getExternalStorageDirectory();
+        StringBuilder sb = new StringBuilder();
+        Intrinsics.checkNotNullExpressionValue(externalStorageDirectory, "sdCardDir");
+        sb.append(externalStorageDirectory.getAbsolutePath());
+        sb.append("/Android/data/");
         Application application = AppHolder.getApplication();
         Intrinsics.checkNotNullExpressionValue(application, "AppHolder.getApplication()");
-        File file = new File(application.getCacheDir(), RoughDraftHelper.Companion.getTAG());
+        sb.append(application.getPackageName());
+        sb.append("/files/");
+        File file = new File(new File(sb.toString()), RoughDraftHelper.Companion.getTAG());
         if (!file.exists()) {
             file.mkdirs();
         }

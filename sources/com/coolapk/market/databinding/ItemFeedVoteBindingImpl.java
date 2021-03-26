@@ -30,12 +30,12 @@ public class ItemFeedVoteBindingImpl extends ItemFeedVoteBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 5);
-        sparseIntArray.put(2131363568, 6);
-        sparseIntArray.put(2131363582, 7);
-        sparseIntArray.put(2131363533, 8);
-        sparseIntArray.put(2131363951, 9);
-        sparseIntArray.put(2131362330, 10);
+        sparseIntArray.put(2131362657, 5);
+        sparseIntArray.put(2131363590, 6);
+        sparseIntArray.put(2131363604, 7);
+        sparseIntArray.put(2131363551, 8);
+        sparseIntArray.put(2131363977, 9);
+        sparseIntArray.put(2131362336, 10);
     }
 
     public ItemFeedVoteBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -76,7 +76,7 @@ public class ItemFeedVoteBindingImpl extends ItemFeedVoteBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -92,7 +92,7 @@ public class ItemFeedVoteBindingImpl extends ItemFeedVoteBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

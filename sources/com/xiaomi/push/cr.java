@@ -1,14 +1,24 @@
 package com.xiaomi.push;
 
-class cr implements cp {
-    final /* synthetic */ cq a;
+import android.content.Context;
 
-    cr(cq cqVar) {
-        this.a = cqVar;
+public class cr extends cw {
+    public cr(Context context, int i) {
+        super(context, i);
     }
 
-    @Override // com.xiaomi.push.cp
-    public boolean a(String str) {
-        return true;
+    @Override // com.xiaomi.push.j.a
+    public int a() {
+        return 5;
+    }
+
+    @Override // com.xiaomi.push.cw
+    public String b() {
+        return null;
+    }
+
+    @Override // com.xiaomi.push.cw
+    public gk c() {
+        return gk.AppActiveList;
     }
 }

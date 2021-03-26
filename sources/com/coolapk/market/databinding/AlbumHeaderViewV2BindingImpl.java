@@ -27,12 +27,12 @@ public class AlbumHeaderViewV2BindingImpl extends AlbumHeaderViewV2Binding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(11);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(5, new String[]{"feed_warning"}, new int[]{7}, new int[]{2131558563});
+        includedLayouts.setIncludes(5, new String[]{"feed_warning"}, new int[]{7}, new int[]{2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362085, 8);
-        sparseIntArray.put(2131363526, 9);
-        sparseIntArray.put(2131363219, 10);
+        sparseIntArray.put(2131362088, 8);
+        sparseIntArray.put(2131363544, 9);
+        sparseIntArray.put(2131363233, 10);
     }
 
     public AlbumHeaderViewV2BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -80,7 +80,7 @@ public class AlbumHeaderViewV2BindingImpl extends AlbumHeaderViewV2Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AlbumDetailViewModel) obj);
@@ -94,7 +94,7 @@ public class AlbumHeaderViewV2BindingImpl extends AlbumHeaderViewV2Binding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 

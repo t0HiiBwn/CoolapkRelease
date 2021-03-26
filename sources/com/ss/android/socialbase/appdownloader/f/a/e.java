@@ -26,8 +26,8 @@ public class e {
     /* JADX WARN: Multi-variable type inference failed */
     /* JADX WARN: Type inference failed for: r1v3, types: [java.util.zip.ZipInputStream] */
     /* JADX WARN: Type inference failed for: r1v19 */
-    /* JADX WARNING: Removed duplicated region for block: B:115:0x0177 A[SYNTHETIC, Splitter:B:115:0x0177] */
-    /* JADX WARNING: Removed duplicated region for block: B:119:0x017e A[SYNTHETIC, Splitter:B:119:0x017e] */
+    /* JADX WARNING: Removed duplicated region for block: B:115:0x017d A[SYNTHETIC, Splitter:B:115:0x017d] */
+    /* JADX WARNING: Removed duplicated region for block: B:119:0x0184 A[SYNTHETIC, Splitter:B:119:0x0184] */
     public static PackageInfo a(File file) {
         Throwable th;
         ZipFile zipFile;
@@ -208,20 +208,20 @@ public class e {
             zipFile = null;
             throw new c("throwable: " + th.getMessage() + th.toString());
         }
-        throw th;
-        if (zipFile != null) {
-            zipFile.close();
-        }
         if (fileInputStream != null) {
             fileInputStream.close();
-        }
-        throw th;
-        if (fileInputStream != null) {
         }
         throw th;
         if (zipInputStream != null) {
             zipInputStream.close();
         }
+        if (zipFile != null) {
+            zipFile.close();
+        }
+        if (fileInputStream != null) {
+        }
+        throw th;
+        throw th;
         if (zipFile != null) {
         }
         if (fileInputStream != null) {

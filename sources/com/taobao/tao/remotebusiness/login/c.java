@@ -9,9 +9,9 @@ import mtopsdk.mtop.stat.IUploadStats;
 /* compiled from: DefaultLoginImpl */
 final class c implements Runnable {
     private /* synthetic */ IUploadStats a;
-    private /* synthetic */ a.C0119a b;
+    private /* synthetic */ a.C0129a b;
 
-    c(a aVar, IUploadStats iUploadStats, a.C0119a aVar2) {
+    c(a aVar, IUploadStats iUploadStats, a.C0129a aVar2) {
         this.a = iUploadStats;
         this.b = aVar2;
     }

@@ -34,16 +34,16 @@ public class GoodsDetailBindingImpl extends GoodsDetailBinding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(17);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"loading_view"}, new int[]{10}, new int[]{2131559013});
-        includedLayouts.setIncludes(2, new String[]{"user_toolbar"}, new int[]{9}, new int[]{2131559286});
+        includedLayouts.setIncludes(0, new String[]{"loading_view"}, new int[]{10}, new int[]{2131559020});
+        includedLayouts.setIncludes(2, new String[]{"user_toolbar"}, new int[]{9}, new int[]{2131559296});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362067, 11);
-        sparseIntArray.put(2131363396, 12);
-        sparseIntArray.put(2131362643, 13);
-        sparseIntArray.put(2131363490, 14);
-        sparseIntArray.put(2131363588, 15);
-        sparseIntArray.put(2131363934, 16);
+        sparseIntArray.put(2131362069, 11);
+        sparseIntArray.put(2131363413, 12);
+        sparseIntArray.put(2131362651, 13);
+        sparseIntArray.put(2131363508, 14);
+        sparseIntArray.put(2131363610, 15);
+        sparseIntArray.put(2131363959, 16);
     }
 
     public GoodsDetailBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -97,7 +97,7 @@ public class GoodsDetailBindingImpl extends GoodsDetailBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((FeedGoods) obj);
         } else if (50 != i) {
             return false;
@@ -113,7 +113,7 @@ public class GoodsDetailBindingImpl extends GoodsDetailBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -240,7 +240,7 @@ public class GoodsDetailBindingImpl extends GoodsDetailBinding {
         if ((j & j2) != 0) {
             this.coordinator.setVisibility(i);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str4, null, 2131231408, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, true, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str4, null, 2131231419, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, true, null, bool);
             TextViewBindingAdapter.setText(this.mboundView5, str3);
             this.mboundView5.setVisibility(i2);
             TextViewBindingAdapter.setText(this.mboundView6, str);

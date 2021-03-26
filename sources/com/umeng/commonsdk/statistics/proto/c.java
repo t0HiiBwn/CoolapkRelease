@@ -363,25 +363,25 @@ public class c implements bi<c, e>, Serializable, Cloneable {
         public void b(ch chVar, c cVar) throws bo {
             chVar.j();
             while (true) {
-                cc l2 = chVar.l();
-                if (l2.b == 0) {
+                cc l = chVar.l();
+                if (l.b == 0) {
                     chVar.k();
                     cVar.n();
                     return;
                 }
-                short s = l2.c;
+                short s = l.c;
                 int i = 0;
                 if (s != 1) {
                     if (s != 2) {
                         if (s != 3) {
-                            ck.a(chVar, l2.b);
-                        } else if (l2.b == 11) {
+                            ck.a(chVar, l.b);
+                        } else if (l.b == 11) {
                             cVar.c = chVar.z();
                             cVar.c(true);
                         } else {
-                            ck.a(chVar, l2.b);
+                            ck.a(chVar, l.b);
                         }
-                    } else if (l2.b == 15) {
+                    } else if (l.b == 15) {
                         cd p = chVar.p();
                         cVar.b = new ArrayList(p.b);
                         while (i < p.b) {
@@ -393,9 +393,9 @@ public class c implements bi<c, e>, Serializable, Cloneable {
                         chVar.q();
                         cVar.b(true);
                     } else {
-                        ck.a(chVar, l2.b);
+                        ck.a(chVar, l.b);
                     }
-                } else if (l2.b == 13) {
+                } else if (l.b == 13) {
                     ce n = chVar.n();
                     cVar.a = new HashMap(n.c * 2);
                     while (i < n.c) {
@@ -408,7 +408,7 @@ public class c implements bi<c, e>, Serializable, Cloneable {
                     chVar.o();
                     cVar.a(true);
                 } else {
-                    ck.a(chVar, l2.b);
+                    ck.a(chVar, l.b);
                 }
                 chVar.m();
             }
@@ -453,15 +453,15 @@ public class c implements bi<c, e>, Serializable, Cloneable {
         }
 
         /* renamed from: a */
-        public C0153c b() {
-            return new C0153c();
+        public C0180c b() {
+            return new C0180c();
         }
     }
 
     /* renamed from: com.umeng.commonsdk.statistics.proto.c$c  reason: collision with other inner class name */
     /* compiled from: IdTracking */
-    private static class C0153c extends cs<c> {
-        private C0153c() {
+    private static class C0180c extends cs<c> {
+        private C0180c() {
         }
 
         public void a(ch chVar, c cVar) throws bo {

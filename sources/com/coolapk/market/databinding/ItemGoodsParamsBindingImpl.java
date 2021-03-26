@@ -20,7 +20,7 @@ public class ItemGoodsParamsBindingImpl extends ItemGoodsParamsBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363576, 1);
+        sparseIntArray.put(2131363598, 1);
     }
 
     public ItemGoodsParamsBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -66,7 +66,7 @@ public abstract class NodeRatingFeedLikeViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static NodeRatingFeedLikeViewBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (NodeRatingFeedLikeViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559057, viewGroup, z, obj);
+        return (NodeRatingFeedLikeViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559064, viewGroup, z, obj);
     }
 
     public static NodeRatingFeedLikeViewBinding inflate(LayoutInflater layoutInflater) {
@@ -75,7 +75,7 @@ public abstract class NodeRatingFeedLikeViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static NodeRatingFeedLikeViewBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (NodeRatingFeedLikeViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559057, null, false, obj);
+        return (NodeRatingFeedLikeViewBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559064, null, false, obj);
     }
 
     public static NodeRatingFeedLikeViewBinding bind(View view) {
@@ -84,6 +84,6 @@ public abstract class NodeRatingFeedLikeViewBinding extends ViewDataBinding {
 
     @Deprecated
     public static NodeRatingFeedLikeViewBinding bind(View view, Object obj) {
-        return (NodeRatingFeedLikeViewBinding) bind(obj, view, 2131559057);
+        return (NodeRatingFeedLikeViewBinding) bind(obj, view, 2131559064);
     }
 }

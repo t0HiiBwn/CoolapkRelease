@@ -38,7 +38,7 @@ public abstract class DialogEditSubmitBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogEditSubmitBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogEditSubmitBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558524, viewGroup, z, obj);
+        return (DialogEditSubmitBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558526, viewGroup, z, obj);
     }
 
     public static DialogEditSubmitBinding inflate(LayoutInflater layoutInflater) {
@@ -47,7 +47,7 @@ public abstract class DialogEditSubmitBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogEditSubmitBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogEditSubmitBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558524, null, false, obj);
+        return (DialogEditSubmitBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558526, null, false, obj);
     }
 
     public static DialogEditSubmitBinding bind(View view) {
@@ -56,6 +56,6 @@ public abstract class DialogEditSubmitBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogEditSubmitBinding bind(View view, Object obj) {
-        return (DialogEditSubmitBinding) bind(obj, view, 2131558524);
+        return (DialogEditSubmitBinding) bind(obj, view, 2131558526);
     }
 }

@@ -48,9 +48,7 @@ public final class c extends g.b implements i {
     private Socket i;
     private Socket j;
     private q k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private w f1266l;
+    private w l;
     private g m;
     private e n;
     private d o;
@@ -69,7 +67,7 @@ public final class c extends g.b implements i {
     /* JADX WARNING: Removed duplicated region for block: B:56:? A[ORIG_RETURN, RETURN, SYNTHETIC] */
     public void a(int i2, int i3, int i4, boolean z, com.bytedance.sdk.a.b.e eVar, p pVar) {
         IOException e2;
-        if (this.f1266l == null) {
+        if (this.l == null) {
             List<k> f = this.h.a().f();
             b bVar = new b(f);
             if (this.h.a().i() == null) {
@@ -111,7 +109,7 @@ public final class c extends g.b implements i {
                             this.n = null;
                             this.o = null;
                             this.k = null;
-                            this.f1266l = null;
+                            this.l = null;
                             this.m = null;
                             pVar.a(eVar, this.h.c(), this.h.b(), null, e2);
                             if (eVar2 != null) {
@@ -120,7 +118,7 @@ public final class c extends g.b implements i {
                         }
                     }
                     a(bVar, eVar, pVar);
-                    pVar.a(eVar, this.h.c(), this.h.b(), this.f1266l);
+                    pVar.a(eVar, this.h.c(), this.h.b(), this.l);
                     if (!this.h.d()) {
                     }
                     if (this.m != null) {
@@ -134,7 +132,7 @@ public final class c extends g.b implements i {
                     this.n = null;
                     this.o = null;
                     this.k = null;
-                    this.f1266l = null;
+                    this.l = null;
                     this.m = null;
                     pVar.a(eVar, this.h.c(), this.h.b(), null, e2);
                     if (eVar2 != null) {
@@ -149,7 +147,7 @@ public final class c extends g.b implements i {
                         if (!this.h.d()) {
                         }
                         a(bVar, eVar, pVar);
-                        pVar.a(eVar, this.h.c(), this.h.b(), this.f1266l);
+                        pVar.a(eVar, this.h.c(), this.h.b(), this.l);
                         if (!this.h.d()) {
                         }
                         if (this.m != null) {
@@ -205,14 +203,14 @@ public final class c extends g.b implements i {
 
     private void a(b bVar, com.bytedance.sdk.a.b.e eVar, p pVar) throws IOException {
         if (this.h.a().i() == null) {
-            this.f1266l = w.HTTP_1_1;
+            this.l = w.HTTP_1_1;
             this.j = this.i;
             return;
         }
         pVar.b(eVar);
         a(bVar);
         pVar.a(eVar, this.k);
-        if (this.f1266l == w.HTTP_2) {
+        if (this.l == w.HTTP_2) {
             this.j.setSoTimeout(0);
             g a2 = new g.a(true).a(this.j, this.h.a().a().f(), this.n, this.o).a(this).a();
             this.m = a2;
@@ -247,7 +245,7 @@ public final class c extends g.b implements i {
                     this.n = l.a(l.b(sSLSocket2));
                     this.o = l.a(l.a(this.j));
                     this.k = a4;
-                    this.f1266l = str != null ? w.a(str) : w.HTTP_1_1;
+                    this.l = str != null ? w.a(str) : w.HTTP_1_1;
                     if (sSLSocket2 != null) {
                         com.bytedance.sdk.a.b.a.g.e.b().b(sSLSocket2);
                         return;
@@ -445,7 +443,7 @@ public final class c extends g.b implements i {
         q qVar = this.k;
         sb.append(qVar != null ? qVar.a() : "none");
         sb.append(" protocol=");
-        sb.append(this.f1266l);
+        sb.append(this.l);
         sb.append('}');
         return sb.toString();
     }

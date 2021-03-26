@@ -42,7 +42,7 @@ public class FullRewardExpressView extends NativeExpressView implements g {
                 try {
                     nativeExpressView.l();
                     FullRewardExpressView.this.b = new FullRewardExpressBackupView(nativeExpressView.getContext());
-                    FullRewardExpressView.this.b.a(FullRewardExpressView.this.f1315l, nativeExpressView, null);
+                    FullRewardExpressView.this.b.a(FullRewardExpressView.this.l, nativeExpressView, null);
                     return true;
                 } catch (Exception unused) {
                     return false;

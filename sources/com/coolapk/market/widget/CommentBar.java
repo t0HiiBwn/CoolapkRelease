@@ -19,12 +19,12 @@ import com.coolapk.market.model.DyhArticle;
 public class CommentBar extends FrameLayout {
     private CommentBarBinding binding;
     private CallBack callBack;
-    private final int favResrouce = 2131231559;
-    private final int favedResrouce = 2131231557;
+    private final int favResrouce = 2131231570;
+    private final int favedResrouce = 2131231568;
     private boolean isFaved;
     private boolean isLiked;
-    private final int likeResrouce = 2131231682;
-    private final int likedResrouce = 2131231246;
+    private final int likeResrouce = 2131231693;
+    private final int likedResrouce = 2131231257;
     private DyhArticle mDyhArticle;
     private boolean posting;
 
@@ -43,7 +43,7 @@ public class CommentBar extends FrameLayout {
     }
 
     private void initView() {
-        CommentBarBinding commentBarBinding = (CommentBarBinding) DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558485, this, true);
+        CommentBarBinding commentBarBinding = (CommentBarBinding) DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558486, this, true);
         this.binding = commentBarBinding;
         commentBarBinding.imageView.setColorFilter(AppHolder.getAppTheme().getTextColorTertiary(), PorterDuff.Mode.SRC_IN);
         setElevation();
@@ -56,15 +56,15 @@ public class CommentBar extends FrameLayout {
     public void addOtherView(DyhArticle dyhArticle, int i, Integer num) {
         Drawable drawable;
         this.mDyhArticle = dyhArticle;
-        View inflate = LayoutInflater.from(getContext()).inflate(2131558659, (ViewGroup) this, false);
-        ImageView imageView = (ImageView) inflate.findViewById(2131362672);
-        TextView textView = (TextView) inflate.findViewById(2131363533);
+        View inflate = LayoutInflater.from(getContext()).inflate(2131558665, (ViewGroup) this, false);
+        ImageView imageView = (ImageView) inflate.findViewById(2131362683);
+        TextView textView = (TextView) inflate.findViewById(2131363551);
         String str = "";
         if (i == 0) {
             if (this.mDyhArticle.isLiked()) {
-                drawable = ContextCompat.getDrawable(getContext(), 2131231246).mutate();
+                drawable = ContextCompat.getDrawable(getContext(), 2131231257).mutate();
             } else {
-                drawable = ContextCompat.getDrawable(getContext(), 2131231682).mutate();
+                drawable = ContextCompat.getDrawable(getContext(), 2131231693).mutate();
             }
             this.isLiked = this.mDyhArticle.isLiked();
             if (this.mDyhArticle.getLikeNum() > 0) {
@@ -73,9 +73,9 @@ public class CommentBar extends FrameLayout {
             textView.setText(str);
         } else {
             if (this.mDyhArticle.isFavorite()) {
-                drawable = ContextCompat.getDrawable(getContext(), 2131231557).mutate();
+                drawable = ContextCompat.getDrawable(getContext(), 2131231568).mutate();
             } else {
-                drawable = ContextCompat.getDrawable(getContext(), 2131231559).mutate();
+                drawable = ContextCompat.getDrawable(getContext(), 2131231570).mutate();
             }
             this.isFaved = this.mDyhArticle.isFavorite();
             if (this.mDyhArticle.getFavNum() > 0) {
@@ -128,15 +128,15 @@ public class CommentBar extends FrameLayout {
 
     public View getViewById(int i) {
         switch (i) {
-            case 2131362286:
-                return this.binding.commentCount;
-            case 2131362287:
-                return this.binding.commentIcon;
-            case 2131362290:
-                return this.binding.commentText;
             case 2131362291:
+                return this.binding.commentCount;
+            case 2131362292:
+                return this.binding.commentIcon;
+            case 2131362295:
+                return this.binding.commentText;
+            case 2131362296:
                 return this.binding.commentView;
-            case 2131363358:
+            case 2131363374:
                 return this.binding.shareView;
             default:
                 return null;

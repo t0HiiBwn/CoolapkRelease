@@ -16,7 +16,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: PermissionsItemViewHolder.kt */
 public final class PermissionsItemViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558849;
+    public static final int LAYOUT_ID = 2131558856;
     private final ItemPermissionsBinding binding = ((ItemPermissionsBinding) getBinding());
     private PermissionsAgreeActivity.PermissionsItem item;
     private final List<String> keys;
@@ -86,7 +86,7 @@ public final class PermissionsItemViewHolder extends BindingViewHolder {
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Integer valueOf = view != null ? Integer.valueOf(view.getId()) : null;
-        if (valueOf != null && valueOf.intValue() == 2131362768) {
+        if (valueOf != null && valueOf.intValue() == 2131362779) {
             List<String> list = this.keys;
             PermissionsAgreeActivity.PermissionsItem permissionsItem = this.item;
             if (permissionsItem == null) {

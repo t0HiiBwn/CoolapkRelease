@@ -8,28 +8,29 @@ import java.util.Map;
 import java.util.Set;
 import kotlin.Metadata;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000#\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001J.\u0010\u0004\u001a\u00020\u00052\b\b\u0001\u0010\u0006\u001a\u00020\u00022\b\b\u0001\u0010\u0007\u001a\u00020\b2\b\b\u0001\u0010\t\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\u0002H\u0002¨\u0006\u000b"}, d2 = {"com/coolapk/market/AppTheme$themeMap$1", "Ljava/util/HashMap;", "", "Lcom/coolapk/market/AppTheme$ThemeItem;", "put", "", "themeName", "mainStylesRes", "", "colorRes", "label", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000)\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0000*\u0001\u0000\b\n\u0018\u00002\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001J8\u0010\u0004\u001a\u00020\u00052\b\b\u0001\u0010\u0006\u001a\u00020\u00022\b\b\u0001\u0010\u0007\u001a\u00020\b2\b\b\u0001\u0010\t\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\u00022\b\b\u0002\u0010\u000b\u001a\u00020\fH\u0002¨\u0006\r"}, d2 = {"com/coolapk/market/AppTheme$themeMap$1", "Ljava/util/HashMap;", "", "Lcom/coolapk/market/AppTheme$ThemeItem;", "put", "", "themeName", "mainStylesRes", "", "colorRes", "label", "isTimeLimit", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: AppTheme.kt */
 public final class AppTheme$themeMap$1 extends HashMap<String, AppTheme.ThemeItem> {
     AppTheme$themeMap$1() {
-        put("black", 2131951630, 2131099751, "黑色");
-        put("blue", 2131951631, 2131099753, "蓝色");
-        put("blue_grey", 2131951632, 2131099754, "灰色");
-        put("brown", 2131951633, 2131099761, "棕色");
-        put("night", 2131951643, 2131099806, "黑色");
-        put("deep_purple", 2131951636, 2131099824, "紫色");
-        put("green", 2131951638, 2131099889, "绿色");
-        put("grey", 2131951639, 2131099890, "灰色");
-        put("indigo", 2131951640, 2131099898, "蓝色");
-        put("orange", 2131951645, 2131100015, "橙色");
-        put("pink", 2131951646, 2131100016, "粉色");
-        put("red", 2131951648, 2131100035, "红色");
-        put("teal", 2131951650, 2131100059, "青色");
-        put("custom_dark", 2131951635, 2131099806, "自定义");
-        put("custom", 2131951634, 2131099806, "自定义");
+        put$default(this, "black", 2131951630, 2131099753, "黑色", false, 16, null);
+        put$default(this, "blue", 2131951631, 2131099755, "蓝色", false, 16, null);
+        put$default(this, "blue_grey", 2131951632, 2131099756, "灰色", false, 16, null);
+        put$default(this, "brown", 2131951633, 2131099763, "棕色", false, 16, null);
+        put$default(this, "night", 2131951643, 2131099808, "黑色", false, 16, null);
+        put$default(this, "deep_purple", 2131951636, 2131099826, "紫色", false, 16, null);
+        put$default(this, "green", 2131951638, 2131099894, "绿色", false, 16, null);
+        put$default(this, "grey", 2131951639, 2131099895, "灰色", false, 16, null);
+        put$default(this, "indigo", 2131951640, 2131099903, "蓝色", false, 16, null);
+        put$default(this, "orange", 2131951645, 2131100020, "橙色", false, 16, null);
+        put$default(this, "pink", 2131951646, 2131100021, "粉色", false, 16, null);
+        put$default(this, "red", 2131951648, 2131100040, "红色", false, 16, null);
+        put$default(this, "teal", 2131951650, 2131100064, "青色", false, 16, null);
+        put$default(this, "custom_dark", 2131951635, 2131099808, "自定义", false, 16, null);
+        put$default(this, "custom", 2131951634, 2131099808, "自定义", false, 16, null);
         put("amoled", new AppTheme.ThemeItem("amoled", 2131951628, -16777216, "纯黑"));
-        put("white", 2131951651, 2131100146, "白色");
-        put("SMARTISAN_PRO", 2131951649, 2131100050, "深红");
+        put$default(this, "white", 2131951652, 2131100159, "白色", false, 16, null);
+        put("TIME_LIMIT_THEME", 2131951651, 2131100067, "蓝调", true);
+        put$default(this, "SMARTISAN_PRO", 2131951649, 2131100055, "深红", false, 16, null);
     }
 
     @Override // java.util.HashMap, java.util.AbstractMap, java.util.Map
@@ -137,7 +138,11 @@ public final class AppTheme$themeMap$1 extends HashMap<String, AppTheme.ThemeIte
         return getValues();
     }
 
-    private final void put(@AppTheme.ThemeIds String str, int i, int i2, String str2) {
-        put(str, new AppTheme.ThemeItem(str, i, ResourceUtils.getColorInt(AppHolder.getApplication(), i2), str2));
+    static /* synthetic */ void put$default(AppTheme$themeMap$1 appTheme$themeMap$1, String str, int i, int i2, String str2, boolean z, int i3, Object obj) {
+        appTheme$themeMap$1.put(str, i, i2, str2, (i3 & 16) != 0 ? false : z);
+    }
+
+    private final void put(@AppTheme.ThemeIds String str, int i, int i2, String str2, boolean z) {
+        put(str, new AppTheme.ThemeItem(str, i, ResourceUtils.getColorInt(AppHolder.getApplication(), i2), str2, z));
     }
 }

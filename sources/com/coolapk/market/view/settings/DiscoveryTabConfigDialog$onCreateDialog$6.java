@@ -17,20 +17,20 @@ final class DiscoveryTabConfigDialog$onCreateDialog$6 implements RadioGroup.OnCh
 
     @Override // android.widget.RadioGroup.OnCheckedChangeListener
     public final void onCheckedChanged(RadioGroup radioGroup, int i) {
-        if (i == 2131363175) {
+        if (i == 2131363189) {
             this.$value.element = "V11_FIND_GOOD_GOODS_HOME";
             this.this$0.putString(this.$value.element);
-        } else if (i != 2131363178) {
+        } else if (i != 2131363192) {
             switch (i) {
-                case 2131363167:
+                case 2131363181:
                     this.$value.element = "V11_FIND_COOLPIC";
                     this.this$0.putString(this.$value.element);
                     return;
-                case 2131363168:
+                case 2131363182:
                     this.$value.element = "V11_FIND_DYH";
                     this.this$0.putString(this.$value.element);
                     return;
-                case 2131363169:
+                case 2131363183:
                     this.$value.element = "V11_FIND_GOODS";
                     this.this$0.putString(this.$value.element);
                     return;

@@ -25,9 +25,7 @@ public final class l {
     private final String i;
     private final boolean j;
     private final boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private final boolean f1277l;
+    private final boolean l;
     private final boolean m;
 
     private l(String str, String str2, long j2, String str3, String str4, boolean z, boolean z2, boolean z3, boolean z4) {
@@ -39,7 +37,7 @@ public final class l {
         this.j = z;
         this.k = z2;
         this.m = z3;
-        this.f1277l = z4;
+        this.l = z4;
     }
 
     public String a() {
@@ -319,7 +317,7 @@ public final class l {
         sb.append(this.e);
         sb.append('=');
         sb.append(this.f);
-        if (this.f1277l) {
+        if (this.l) {
             if (this.g == Long.MIN_VALUE) {
                 sb.append("; max-age=0");
             } else {
@@ -350,7 +348,7 @@ public final class l {
             return false;
         }
         l lVar = (l) obj;
-        if (lVar.e.equals(this.e) && lVar.f.equals(this.f) && lVar.h.equals(this.h) && lVar.i.equals(this.i) && lVar.g == this.g && lVar.j == this.j && lVar.k == this.k && lVar.f1277l == this.f1277l && lVar.m == this.m) {
+        if (lVar.e.equals(this.e) && lVar.f.equals(this.f) && lVar.h.equals(this.h) && lVar.i.equals(this.i) && lVar.g == this.g && lVar.j == this.j && lVar.k == this.k && lVar.l == this.l && lVar.m == this.m) {
             return true;
         }
         return false;
@@ -358,6 +356,6 @@ public final class l {
 
     public int hashCode() {
         long j2 = this.g;
-        return ((((((((((((((((527 + this.e.hashCode()) * 31) + this.f.hashCode()) * 31) + this.h.hashCode()) * 31) + this.i.hashCode()) * 31) + ((int) (j2 ^ (j2 >>> 32)))) * 31) + (!this.j ? 1 : 0)) * 31) + (!this.k ? 1 : 0)) * 31) + (!this.f1277l ? 1 : 0)) * 31) + (!this.m ? 1 : 0);
+        return ((((((((((((((((527 + this.e.hashCode()) * 31) + this.f.hashCode()) * 31) + this.h.hashCode()) * 31) + this.i.hashCode()) * 31) + ((int) (j2 ^ (j2 >>> 32)))) * 31) + (!this.j ? 1 : 0)) * 31) + (!this.k ? 1 : 0)) * 31) + (!this.l ? 1 : 0)) * 31) + (!this.m ? 1 : 0);
     }
 }

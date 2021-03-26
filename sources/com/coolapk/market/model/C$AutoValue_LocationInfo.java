@@ -41,7 +41,7 @@ abstract class C$AutoValue_LocationInfo extends LocationInfo {
     private final String title;
     private final String url;
 
-    C$AutoValue_LocationInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, String str13, Double d, Double d2, String str14, String str15, String str16, boolean z, boolean z2, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, String str27) {
+    C$AutoValue_LocationInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, String str13, Double d, Double d2, String str14, String str15, String str16, boolean z, boolean z2, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, String str27) {
         Objects.requireNonNull(str, "Null entityType");
         this.entityType = str;
         this.entityTemplate = str2;
@@ -55,8 +55,8 @@ abstract class C$AutoValue_LocationInfo extends LocationInfo {
         this.subTitle = str9;
         this.id = str10;
         this.extraData = str11;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.feedType = str12;
         Objects.requireNonNull(str13, "Null address");
         this.address = str13;
@@ -284,8 +284,8 @@ abstract class C$AutoValue_LocationInfo extends LocationInfo {
         String str8;
         String str9;
         String str10;
+        Long l;
         Long l2;
-        Long l3;
         String str11;
         String str12;
         String str13;
@@ -307,7 +307,7 @@ abstract class C$AutoValue_LocationInfo extends LocationInfo {
             return false;
         }
         LocationInfo locationInfo = (LocationInfo) obj;
-        if (this.entityType.equals(locationInfo.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(locationInfo.getEntityTemplate()) : locationInfo.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(locationInfo.getEntityId()) : locationInfo.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(locationInfo.getEntityFixed()) : locationInfo.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(locationInfo.getTitle()) : locationInfo.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(locationInfo.getUrl()) : locationInfo.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(locationInfo.getDescription()) : locationInfo.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(locationInfo.getPic()) : locationInfo.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(locationInfo.getLogo()) : locationInfo.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(locationInfo.getSubTitle()) : locationInfo.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(locationInfo.getId()) : locationInfo.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(locationInfo.getExtraData()) : locationInfo.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(locationInfo.getDateline()) : locationInfo.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(locationInfo.getLastUpdate()) : locationInfo.getLastUpdate() == null) && ((str11 = this.feedType) != null ? str11.equals(locationInfo.getFeedType()) : locationInfo.getFeedType() == null) && this.address.equals(locationInfo.getAddress()) && this.latitude.equals(locationInfo.getLatitude()) && this.longitude.equals(locationInfo.getLongitude()) && ((str12 = this.businessArea) != null ? str12.equals(locationInfo.getBusinessArea()) : locationInfo.getBusinessArea() == null) && ((str13 = this.snippet) != null ? str13.equals(locationInfo.getSnippet()) : locationInfo.getSnippet() == null) && ((str14 = this.longAddress) != null ? str14.equals(locationInfo.getLongAddress()) : locationInfo.getLongAddress() == null) && this.isChecked == locationInfo.getIsChecked() && this.isHideLocation == locationInfo.getIsHideLocation() && ((str15 = this.city) != null ? str15.equals(locationInfo.getCity()) : locationInfo.getCity() == null) && ((str16 = this.country) != null ? str16.equals(locationInfo.getCountry()) : locationInfo.getCountry() == null) && ((str17 = this.province) != null ? str17.equals(locationInfo.getProvince()) : locationInfo.getProvince() == null) && ((str18 = this.district) != null ? str18.equals(locationInfo.getDistrict()) : locationInfo.getDistrict() == null) && ((str19 = this.cityCode) != null ? str19.equals(locationInfo.getCityCode()) : locationInfo.getCityCode() == null) && ((str20 = this.adCode) != null ? str20.equals(locationInfo.getAdCode()) : locationInfo.getAdCode() == null) && ((str21 = this.road) != null ? str21.equals(locationInfo.getRoad()) : locationInfo.getRoad() == null) && ((str22 = this.poiName) != null ? str22.equals(locationInfo.getPoiName()) : locationInfo.getPoiName() == null) && ((str23 = this.street) != null ? str23.equals(locationInfo.getStreet()) : locationInfo.getStreet() == null) && ((str24 = this.streetNum) != null ? str24.equals(locationInfo.getStreetNum()) : locationInfo.getStreetNum() == null)) {
+        if (this.entityType.equals(locationInfo.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(locationInfo.getEntityTemplate()) : locationInfo.getEntityTemplate() == null) && ((str2 = this.entityId) != null ? str2.equals(locationInfo.getEntityId()) : locationInfo.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(locationInfo.getEntityFixed()) : locationInfo.getEntityFixed() == null) && ((str3 = this.title) != null ? str3.equals(locationInfo.getTitle()) : locationInfo.getTitle() == null) && ((str4 = this.url) != null ? str4.equals(locationInfo.getUrl()) : locationInfo.getUrl() == null) && ((str5 = this.description) != null ? str5.equals(locationInfo.getDescription()) : locationInfo.getDescription() == null) && ((str6 = this.pic) != null ? str6.equals(locationInfo.getPic()) : locationInfo.getPic() == null) && ((str7 = this.logo) != null ? str7.equals(locationInfo.getLogo()) : locationInfo.getLogo() == null) && ((str8 = this.subTitle) != null ? str8.equals(locationInfo.getSubTitle()) : locationInfo.getSubTitle() == null) && ((str9 = this.id) != null ? str9.equals(locationInfo.getId()) : locationInfo.getId() == null) && ((str10 = this.extraData) != null ? str10.equals(locationInfo.getExtraData()) : locationInfo.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(locationInfo.getDateline()) : locationInfo.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(locationInfo.getLastUpdate()) : locationInfo.getLastUpdate() == null) && ((str11 = this.feedType) != null ? str11.equals(locationInfo.getFeedType()) : locationInfo.getFeedType() == null) && this.address.equals(locationInfo.getAddress()) && this.latitude.equals(locationInfo.getLatitude()) && this.longitude.equals(locationInfo.getLongitude()) && ((str12 = this.businessArea) != null ? str12.equals(locationInfo.getBusinessArea()) : locationInfo.getBusinessArea() == null) && ((str13 = this.snippet) != null ? str13.equals(locationInfo.getSnippet()) : locationInfo.getSnippet() == null) && ((str14 = this.longAddress) != null ? str14.equals(locationInfo.getLongAddress()) : locationInfo.getLongAddress() == null) && this.isChecked == locationInfo.getIsChecked() && this.isHideLocation == locationInfo.getIsHideLocation() && ((str15 = this.city) != null ? str15.equals(locationInfo.getCity()) : locationInfo.getCity() == null) && ((str16 = this.country) != null ? str16.equals(locationInfo.getCountry()) : locationInfo.getCountry() == null) && ((str17 = this.province) != null ? str17.equals(locationInfo.getProvince()) : locationInfo.getProvince() == null) && ((str18 = this.district) != null ? str18.equals(locationInfo.getDistrict()) : locationInfo.getDistrict() == null) && ((str19 = this.cityCode) != null ? str19.equals(locationInfo.getCityCode()) : locationInfo.getCityCode() == null) && ((str20 = this.adCode) != null ? str20.equals(locationInfo.getAdCode()) : locationInfo.getAdCode() == null) && ((str21 = this.road) != null ? str21.equals(locationInfo.getRoad()) : locationInfo.getRoad() == null) && ((str22 = this.poiName) != null ? str22.equals(locationInfo.getPoiName()) : locationInfo.getPoiName() == null) && ((str23 = this.street) != null ? str23.equals(locationInfo.getStreet()) : locationInfo.getStreet() == null) && ((str24 = this.streetNum) != null ? str24.equals(locationInfo.getStreetNum()) : locationInfo.getStreetNum() == null)) {
             String str25 = this.aoiName;
             if (str25 == null) {
                 if (locationInfo.getAoiName() == null) {
@@ -346,10 +346,10 @@ abstract class C$AutoValue_LocationInfo extends LocationInfo {
         int hashCode11 = (hashCode10 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.extraData;
         int hashCode12 = (hashCode11 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode13 = (hashCode12 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str11 = this.feedType;
         int hashCode15 = (((((((hashCode14 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003) ^ this.address.hashCode()) * 1000003) ^ this.latitude.hashCode()) * 1000003) ^ this.longitude.hashCode()) * 1000003;
         String str12 = this.businessArea;
@@ -540,14 +540,14 @@ abstract class C$AutoValue_LocationInfo extends LocationInfo {
         }
 
         @Override // com.coolapk.market.model.LocationInfo.Builder
-        public LocationInfo.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public LocationInfo.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.LocationInfo.Builder
-        public LocationInfo.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public LocationInfo.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

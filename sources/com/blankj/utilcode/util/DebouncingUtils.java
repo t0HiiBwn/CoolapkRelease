@@ -35,8 +35,8 @@ public class DebouncingUtils {
             long elapsedRealtime = SystemClock.elapsedRealtime();
             clearIfNecessary(elapsedRealtime);
             Map<String, Long> map = KEY_MILLIS_MAP;
-            Long l2 = map.get(str);
-            if (l2 != null && elapsedRealtime < l2.longValue()) {
+            Long l = map.get(str);
+            if (l != null && elapsedRealtime < l.longValue()) {
                 return false;
             }
             map.put(str, Long.valueOf(elapsedRealtime + j));

@@ -25,8 +25,8 @@ public class ItemFeedSmallTitleBindingImpl extends ItemFeedSmallTitleBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 1);
-        sparseIntArray.put(2131361981, 2);
+        sparseIntArray.put(2131363604, 1);
+        sparseIntArray.put(2131361982, 2);
     }
 
     public ItemFeedSmallTitleBindingImpl(DataBindingComponent dataBindingComponent, View view) {

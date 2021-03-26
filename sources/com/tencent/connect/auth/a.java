@@ -56,9 +56,7 @@ public class a extends Dialog {
     private String i;
     private com.tencent.open.c.c j;
     private Context k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private com.tencent.open.web.security.b f1446l;
+    private com.tencent.open.web.security.b l;
     private boolean m = false;
     private int n;
     private String o;
@@ -87,7 +85,7 @@ public class a extends Dialog {
         this.d = new c(this.b, context.getMainLooper());
         this.c = iUiListener;
         this.i = str;
-        this.f1446l = new com.tencent.open.web.security.b();
+        this.l = new com.tencent.open.web.security.b();
         getWindow().setSoftInputMode(32);
     }
 
@@ -212,8 +210,8 @@ public class a extends Dialog {
 
     /* renamed from: com.tencent.connect.auth.a$a  reason: collision with other inner class name */
     /* compiled from: ProGuard */
-    private class C0126a extends WebViewClient {
-        private C0126a() {
+    private class C0144a extends WebViewClient {
+        private C0144a() {
         }
 
         @Override // android.webkit.WebViewClient
@@ -294,7 +292,7 @@ public class a extends Dialog {
                 } catch (Exception unused2) {
                 }
                 return true;
-            } else if (a.this.f1446l.a(a.this.j, str)) {
+            } else if (a.this.l.a(a.this.j, str)) {
                 return true;
             } else {
                 f.c("openSDK_LOG.AuthDialog", "-->Redirect URL: return false");
@@ -317,7 +315,7 @@ public class a extends Dialog {
                 }
                 a.m(a.this);
                 a.this.d.postDelayed(new Runnable() {
-                    /* class com.tencent.connect.auth.a.C0126a.AnonymousClass1 */
+                    /* class com.tencent.connect.auth.a.C0144a.AnonymousClass1 */
 
                     @Override // java.lang.Runnable
                     public void run() {
@@ -377,7 +375,7 @@ public class a extends Dialog {
             AlertDialog.Builder builder = new AlertDialog.Builder(a.this.k);
             builder.setMessage(str2);
             builder.setPositiveButton(str, new DialogInterface.OnClickListener() {
-                /* class com.tencent.connect.auth.a.C0126a.AnonymousClass2 */
+                /* class com.tencent.connect.auth.a.C0144a.AnonymousClass2 */
 
                 @Override // android.content.DialogInterface.OnClickListener
                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -385,7 +383,7 @@ public class a extends Dialog {
                 }
             });
             builder.setNegativeButton(str3, new DialogInterface.OnClickListener() {
-                /* class com.tencent.connect.auth.a.C0126a.AnonymousClass3 */
+                /* class com.tencent.connect.auth.a.C0144a.AnonymousClass3 */
 
                 @Override // android.content.DialogInterface.OnClickListener
                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -482,7 +480,7 @@ public class a extends Dialog {
     private void d() {
         this.j.setVerticalScrollBarEnabled(false);
         this.j.setHorizontalScrollBarEnabled(false);
-        this.j.setWebViewClient(new C0126a());
+        this.j.setWebViewClient(new C0144a());
         this.j.setWebChromeClient(new WebChromeClient());
         this.j.clearFormData();
         this.j.clearSslPreferences();
@@ -525,7 +523,7 @@ public class a extends Dialog {
         this.j.loadUrl(str);
         this.j.setVisibility(4);
         this.j.getSettings().setSavePassword(false);
-        this.f1446l.a(new SecureJsInterface(), "SecureJsInterface");
+        this.l.a(new SecureJsInterface(), "SecureJsInterface");
         SecureJsInterface.isPWDEdit = false;
         super.setOnDismissListener(new DialogInterface.OnDismissListener() {
             /* class com.tencent.connect.auth.a.AnonymousClass3 */

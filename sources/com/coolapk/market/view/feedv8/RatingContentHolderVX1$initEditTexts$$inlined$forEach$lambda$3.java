@@ -22,7 +22,7 @@ final class RatingContentHolderVX1$initEditTexts$$inlined$forEach$lambda$3 imple
             if (!(view instanceof EditText)) {
                 view = null;
             }
-            RatingContentHolderVX1.access$setFocusEditText$p(ratingContentHolderVX1, (EditText) view);
+            ratingContentHolderVX1.focusEditText = (EditText) view;
         }
         FeedUIConfig uiConfig = this.this$0.getUiConfig();
         if (!uiConfig.isMenuItemEnabled() && z) {

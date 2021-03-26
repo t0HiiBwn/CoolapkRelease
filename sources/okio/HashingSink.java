@@ -122,7 +122,7 @@ public final class HashingSink extends ForwardingSink {
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "hash", imports = {}))
     /* renamed from: -deprecated_hash  reason: not valid java name */
-    public final ByteString m2349deprecated_hash() {
+    public final ByteString m1598deprecated_hash() {
         return hash();
     }
 

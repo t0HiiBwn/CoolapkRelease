@@ -50,9 +50,9 @@ public class AppPhotoThumbnailBindingImpl extends AppPhotoThumbnailBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (212 == i) {
+        if (213 == i) {
             setOnImageLoad((OnImageLoadListener) obj);
-        } else if (291 != i) {
+        } else if (292 != i) {
             return false;
         } else {
             setUrl((String) obj);
@@ -66,7 +66,7 @@ public class AppPhotoThumbnailBindingImpl extends AppPhotoThumbnailBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(212);
+        notifyPropertyChanged(213);
         super.requestRebind();
     }
 
@@ -76,7 +76,7 @@ public class AppPhotoThumbnailBindingImpl extends AppPhotoThumbnailBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(291);
+        notifyPropertyChanged(292);
         super.requestRebind();
     }
 
@@ -91,7 +91,7 @@ public class AppPhotoThumbnailBindingImpl extends AppPhotoThumbnailBinding {
         String str = this.mUrl;
         if ((j & 7) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.image, str, null, 2131231691, 2131231691, bool, bool, bool, bool, bool, null, onImageLoadListener, null, bool, true, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.image, str, null, 2131231702, 2131231702, bool, bool, bool, bool, bool, null, onImageLoadListener, null, bool, true, bool, null, bool);
         }
     }
 }

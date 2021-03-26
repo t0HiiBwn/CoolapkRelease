@@ -52,8 +52,8 @@ public class SingleDateSelector implements DateSelector<Long> {
         this.selectedItem = null;
     }
 
-    public void setSelection(Long l2) {
-        this.selectedItem = l2 == null ? null : Long.valueOf(UtcDates.canonicalYearMonthDay(l2.longValue()));
+    public void setSelection(Long l) {
+        this.selectedItem = l == null ? null : Long.valueOf(UtcDates.canonicalYearMonthDay(l.longValue()));
     }
 
     @Override // com.google.android.material.datepicker.DateSelector
@@ -69,9 +69,9 @@ public class SingleDateSelector implements DateSelector<Long> {
     @Override // com.google.android.material.datepicker.DateSelector
     public Collection<Long> getSelectedDays() {
         ArrayList arrayList = new ArrayList();
-        Long l2 = this.selectedItem;
-        if (l2 != null) {
-            arrayList.add(l2);
+        Long l = this.selectedItem;
+        if (l != null) {
+            arrayList.add(l);
         }
         return arrayList;
     }
@@ -91,19 +91,19 @@ public class SingleDateSelector implements DateSelector<Long> {
         }
         SimpleDateFormat textInputFormat = UtcDates.getTextInputFormat();
         String textInputHint = UtcDates.getTextInputHint(inflate.getResources(), textInputFormat);
-        Long l2 = this.selectedItem;
-        if (l2 != null) {
-            editText.setText(textInputFormat.format(l2));
+        Long l = this.selectedItem;
+        if (l != null) {
+            editText.setText(textInputFormat.format(l));
         }
         editText.addTextChangedListener(new DateFormatTextWatcher(textInputHint, textInputFormat, textInputLayout, calendarConstraints) {
             /* class com.google.android.material.datepicker.SingleDateSelector.AnonymousClass1 */
 
             @Override // com.google.android.material.datepicker.DateFormatTextWatcher
-            void onValidDate(Long l2) {
-                if (l2 == null) {
+            void onValidDate(Long l) {
+                if (l == null) {
                     SingleDateSelector.this.clearSelection();
                 } else {
-                    SingleDateSelector.this.select(l2.longValue());
+                    SingleDateSelector.this.select(l.longValue());
                 }
                 onSelectionChangedListener.onSelectionChanged(SingleDateSelector.this.getSelection());
             }
@@ -125,11 +125,11 @@ public class SingleDateSelector implements DateSelector<Long> {
     @Override // com.google.android.material.datepicker.DateSelector
     public String getSelectionDisplayString(Context context) {
         Resources resources = context.getResources();
-        Long l2 = this.selectedItem;
-        if (l2 == null) {
+        Long l = this.selectedItem;
+        if (l == null) {
             return resources.getString(R.string.mtrl_picker_date_header_unselected);
         }
-        return resources.getString(R.string.mtrl_picker_date_header_selected, DateStrings.getYearMonthDay(l2.longValue()));
+        return resources.getString(R.string.mtrl_picker_date_header_selected, DateStrings.getYearMonthDay(l.longValue()));
     }
 
     @Override // com.google.android.material.datepicker.DateSelector

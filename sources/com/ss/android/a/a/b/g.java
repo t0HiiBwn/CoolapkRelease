@@ -16,9 +16,7 @@ public class g implements b {
     private String i;
     private String j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private Object f1390l;
+    private Object l;
     private boolean m;
     private boolean n;
     private boolean o;
@@ -68,7 +66,7 @@ public class g implements b {
         this.i = aVar.i;
         this.j = aVar.j;
         this.k = aVar.k;
-        this.f1390l = aVar.f1391l;
+        this.l = aVar.l;
         this.m = aVar.m;
         this.n = aVar.n;
         this.o = aVar.o;
@@ -118,7 +116,7 @@ public class g implements b {
 
     @Override // com.ss.android.a.a.b.b
     public Object j() {
-        return this.f1390l;
+        return this.l;
     }
 
     @Override // com.ss.android.a.a.b.b
@@ -144,9 +142,7 @@ public class g implements b {
         private String i;
         private String j;
         private String k;
-
-        /* renamed from: l  reason: collision with root package name */
-        private Object f1391l;
+        private Object l;
         private boolean m;
         private boolean n;
         private boolean o;

@@ -25,9 +25,9 @@ public class AlbumCommentBarBindingImpl extends AlbumCommentBarBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363260, 14);
-        sparseIntArray.put(2131362707, 15);
-        sparseIntArray.put(2131362290, 16);
+        sparseIntArray.put(2131363274, 14);
+        sparseIntArray.put(2131362718, 15);
+        sparseIntArray.put(2131362295, 16);
     }
 
     public AlbumCommentBarBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -47,7 +47,7 @@ public final class ProgressDialogFragment extends BaseDialogFragment {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558531, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558533, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ograss_view, null, false)");
         DialogPrograssViewBinding dialogPrograssViewBinding = (DialogPrograssViewBinding) inflate;
         this.binding = dialogPrograssViewBinding;

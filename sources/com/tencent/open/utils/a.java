@@ -17,11 +17,11 @@ public final class a {
 
     /* renamed from: com.tencent.open.utils.a$a  reason: collision with other inner class name */
     /* compiled from: ProGuard */
-    private static class C0138a {
+    private static class C0156a {
         Properties a;
         byte[] b;
 
-        private C0138a() {
+        private C0156a() {
             this.a = new Properties();
         }
 
@@ -69,7 +69,7 @@ public final class a {
                     randomAccessFile2.close();
                     return null;
                 }
-                C0138a aVar = new C0138a();
+                C0156a aVar = new C0156a();
                 aVar.a(a2);
                 String property = aVar.a.getProperty(str);
                 randomAccessFile2.close();

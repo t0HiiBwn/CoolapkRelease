@@ -72,7 +72,7 @@ public class SubmitFeedBottomSetVisibilityBindingImpl extends SubmitFeedBottomSe
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (288 == i) {
+        if (289 == i) {
             setUiConfig((FeedUIConfig) obj);
         } else if (50 != i) {
             return false;
@@ -88,7 +88,7 @@ public class SubmitFeedBottomSetVisibilityBindingImpl extends SubmitFeedBottomSe
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(288);
+        notifyPropertyChanged(289);
         super.requestRebind();
     }
 
@@ -158,11 +158,11 @@ public class SubmitFeedBottomSetVisibilityBindingImpl extends SubmitFeedBottomSe
                 j = j3 | j2;
             }
             Context context = this.mboundView2.getContext();
-            drawable = z ? AppCompatResources.getDrawable(context, 2131231256) : AppCompatResources.getDrawable(context, 2131230850);
+            drawable = z ? AppCompatResources.getDrawable(context, 2131231267) : AppCompatResources.getDrawable(context, 2131230850);
             Context context2 = this.mboundView2.getContext();
-            drawable3 = z ? AppCompatResources.getDrawable(context2, 2131231885) : AppCompatResources.getDrawable(context2, 2131230861);
-            drawable2 = z2 ? AppCompatResources.getDrawable(this.mboundView4.getContext(), 2131231885) : AppCompatResources.getDrawable(this.mboundView4.getContext(), 2131230861);
-            drawable4 = z2 ? AppCompatResources.getDrawable(this.mboundView4.getContext(), 2131231256) : AppCompatResources.getDrawable(this.mboundView4.getContext(), 2131230850);
+            drawable3 = z ? AppCompatResources.getDrawable(context2, 2131231897) : AppCompatResources.getDrawable(context2, 2131230861);
+            drawable2 = z2 ? AppCompatResources.getDrawable(this.mboundView4.getContext(), 2131231897) : AppCompatResources.getDrawable(this.mboundView4.getContext(), 2131230861);
+            drawable4 = z2 ? AppCompatResources.getDrawable(this.mboundView4.getContext(), 2131231267) : AppCompatResources.getDrawable(this.mboundView4.getContext(), 2131230850);
         } else {
             drawable4 = null;
             z2 = false;

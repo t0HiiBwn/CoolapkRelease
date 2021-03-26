@@ -51,6 +51,7 @@ public final class ActivityUtils {
     }
 
     public static Activity getActivityByContext(Context context) {
+        Objects.requireNonNull(context, "Argument 'context' of type Context (#0 out of 1, zero-based) is marked by @androidx.annotation.NonNull but got null for it");
         Activity activityByContextInner = getActivityByContextInner(context);
         if (!isActivityAlive(activityByContextInner)) {
             return null;

@@ -26,15 +26,15 @@ public class SubmitProductArticleTopPartBindingImpl extends SubmitProductArticle
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(9);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(0, new String[]{"feed_warning"}, new int[]{2}, new int[]{2131558563});
+        includedLayouts.setIncludes(0, new String[]{"feed_warning"}, new int[]{2}, new int[]{2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363230, 3);
-        sparseIntArray.put(2131363279, 4);
-        sparseIntArray.put(2131363194, 5);
-        sparseIntArray.put(2131362188, 6);
-        sparseIntArray.put(2131362257, 7);
-        sparseIntArray.put(2131362472, 8);
+        sparseIntArray.put(2131363244, 3);
+        sparseIntArray.put(2131363293, 4);
+        sparseIntArray.put(2131363208, 5);
+        sparseIntArray.put(2131362191, 6);
+        sparseIntArray.put(2131362262, 7);
+        sparseIntArray.put(2131362480, 8);
     }
 
     public SubmitProductArticleTopPartBindingImpl(DataBindingComponent dataBindingComponent, View view) {

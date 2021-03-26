@@ -45,9 +45,7 @@ public class cu {
     private static String i = null;
     private static boolean j = false;
     private static String k = "";
-
-    /* renamed from: l  reason: collision with root package name */
-    private static String f1230l = "";
+    private static String l = "";
     private static String m = "";
     private static String n = "";
     private static String o = "";
@@ -282,8 +280,8 @@ public class cu {
         if (Build.VERSION.SDK_INT >= 29) {
             return "";
         }
-        if (!TextUtils.isEmpty(f1230l)) {
-            return f1230l;
+        if (!TextUtils.isEmpty(l)) {
+            return l;
         }
         if (!a(context, db.c("WYW5kcm9pZC5wZXJtaXNzaW9uLlJFQURfUEhPTkVfU1RBVEU="))) {
             return "";
@@ -293,9 +291,9 @@ public class cu {
                 return (String) db.a(Build.class, "MZ2V0U2VyaWFs", new Class[0]).invoke(Build.class, new Object[0]);
             }
             if (Build.VERSION.SDK_INT >= 9) {
-                f1230l = Build.SERIAL;
+                l = Build.SERIAL;
             }
-            String str = f1230l;
+            String str = l;
             if (str == null) {
                 return "";
             }

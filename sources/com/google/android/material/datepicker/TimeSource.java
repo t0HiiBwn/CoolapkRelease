@@ -8,8 +8,8 @@ class TimeSource {
     private final Long fixedTimeMs;
     private final TimeZone fixedTimeZone;
 
-    private TimeSource(Long l2, TimeZone timeZone) {
-        this.fixedTimeMs = l2;
+    private TimeSource(Long l, TimeZone timeZone) {
+        this.fixedTimeMs = l;
         this.fixedTimeZone = timeZone;
     }
 
@@ -31,9 +31,9 @@ class TimeSource {
 
     Calendar now(TimeZone timeZone) {
         Calendar instance = timeZone == null ? Calendar.getInstance() : Calendar.getInstance(timeZone);
-        Long l2 = this.fixedTimeMs;
-        if (l2 != null) {
-            instance.setTimeInMillis(l2.longValue());
+        Long l = this.fixedTimeMs;
+        if (l != null) {
+            instance.setTimeInMillis(l.longValue());
         }
         return instance;
     }

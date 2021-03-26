@@ -28,6 +28,6 @@ final class CaptchaVerifyDialog$onActivityCreated$3 extends Lambda implements Fu
 
     public final void invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "it");
-        this.this$0.requestLoadCaptcha();
+        CaptchaVerifyDialog.access$requestLoadCaptcha(this.this$0);
     }
 }

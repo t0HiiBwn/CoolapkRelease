@@ -80,7 +80,7 @@ public abstract class CoolBrowserBinding extends ViewDataBinding {
 
     @Deprecated
     public static CoolBrowserBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (CoolBrowserBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558486, viewGroup, z, obj);
+        return (CoolBrowserBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558487, viewGroup, z, obj);
     }
 
     public static CoolBrowserBinding inflate(LayoutInflater layoutInflater) {
@@ -89,7 +89,7 @@ public abstract class CoolBrowserBinding extends ViewDataBinding {
 
     @Deprecated
     public static CoolBrowserBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (CoolBrowserBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558486, null, false, obj);
+        return (CoolBrowserBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558487, null, false, obj);
     }
 
     public static CoolBrowserBinding bind(View view) {
@@ -98,6 +98,6 @@ public abstract class CoolBrowserBinding extends ViewDataBinding {
 
     @Deprecated
     public static CoolBrowserBinding bind(View view, Object obj) {
-        return (CoolBrowserBinding) bind(obj, view, 2131558486);
+        return (CoolBrowserBinding) bind(obj, view, 2131558487);
     }
 }

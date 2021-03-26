@@ -34,15 +34,15 @@ public class ItemFeedRatingBindingImpl extends ItemFeedRatingBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 8);
-        sparseIntArray.put(2131363209, 9);
-        sparseIntArray.put(2131362628, 10);
-        sparseIntArray.put(2131362110, 11);
-        sparseIntArray.put(2131362604, 12);
-        sparseIntArray.put(2131363016, 13);
-        sparseIntArray.put(2131363198, 14);
-        sparseIntArray.put(2131363229, 15);
-        sparseIntArray.put(2131362665, 16);
+        sparseIntArray.put(2131362657, 8);
+        sparseIntArray.put(2131363223, 9);
+        sparseIntArray.put(2131362636, 10);
+        sparseIntArray.put(2131362113, 11);
+        sparseIntArray.put(2131362612, 12);
+        sparseIntArray.put(2131363030, 13);
+        sparseIntArray.put(2131363212, 14);
+        sparseIntArray.put(2131363243, 15);
+        sparseIntArray.put(2131362676, 16);
     }
 
     public ItemFeedRatingBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -92,7 +92,7 @@ public class ItemFeedRatingBindingImpl extends ItemFeedRatingBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -108,7 +108,7 @@ public class ItemFeedRatingBindingImpl extends ItemFeedRatingBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

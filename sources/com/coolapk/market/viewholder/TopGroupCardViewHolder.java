@@ -22,7 +22,7 @@ import com.coolapk.market.widget.TriangleDrawable;
 import java.util.List;
 
 public class TopGroupCardViewHolder extends StateViewHolder {
-    public static final int LAYOUT_ID = 2131558959;
+    public static final int LAYOUT_ID = 2131558966;
     private final DataAdapter adapter;
     private TopGroupCard card;
     private final DataBindingComponent component;
@@ -81,7 +81,7 @@ public class TopGroupCardViewHolder extends StateViewHolder {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            View inflate = LayoutInflater.from(TopGroupCardViewHolder.this.getContext()).inflate(2131558960, viewGroup, false);
+            View inflate = LayoutInflater.from(TopGroupCardViewHolder.this.getContext()).inflate(2131558967, viewGroup, false);
             TopGroupCardViewHolder topGroupCardViewHolder = TopGroupCardViewHolder.this;
             return new DataViewHolder(topGroupCardViewHolder, inflate, topGroupCardViewHolder.component, TopGroupCardViewHolder.this.itemActionHandler);
         }
@@ -111,7 +111,7 @@ public class TopGroupCardViewHolder extends StateViewHolder {
     }
 
     public static class DataViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558960;
+        public static final int LAYOUT_ID = 2131558967;
         public int height;
         public int width;
 

@@ -27,8 +27,8 @@ public class DiscoverySubmitBindingImpl extends DiscoverySubmitBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362316, 4);
-        sparseIntArray.put(2131361922, 5);
+        sparseIntArray.put(2131362322, 4);
+        sparseIntArray.put(2131361923, 5);
     }
 
     public DiscoverySubmitBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -68,9 +68,9 @@ public class DiscoverySubmitBindingImpl extends DiscoverySubmitBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (225 == i) {
+        if (226 == i) {
             setPosting((Boolean) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -86,7 +86,7 @@ public class DiscoverySubmitBindingImpl extends DiscoverySubmitBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(225);
+        notifyPropertyChanged(226);
         super.requestRebind();
     }
 

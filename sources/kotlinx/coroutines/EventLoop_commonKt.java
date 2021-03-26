@@ -13,12 +13,6 @@ public final class EventLoop_commonKt {
     private static final int SCHEDULE_DISPOSED = 2;
     private static final int SCHEDULE_OK = 0;
 
-    private static /* synthetic */ void CLOSED_EMPTY$annotations() {
-    }
-
-    private static /* synthetic */ void DISPOSED_TASK$annotations() {
-    }
-
     public static final long delayToNanos(long j) {
         if (j <= 0) {
             return 0;
@@ -27,6 +21,12 @@ public final class EventLoop_commonKt {
             return Long.MAX_VALUE;
         }
         return 1000000 * j;
+    }
+
+    private static /* synthetic */ void getCLOSED_EMPTY$annotations() {
+    }
+
+    private static /* synthetic */ void getDISPOSED_TASK$annotations() {
     }
 
     public static final long delayNanosToMillis(long j) {

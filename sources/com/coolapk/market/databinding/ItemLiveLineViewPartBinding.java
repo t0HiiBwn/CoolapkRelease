@@ -35,7 +35,7 @@ public abstract class ItemLiveLineViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveLineViewPartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemLiveLineViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558807, viewGroup, z, obj);
+        return (ItemLiveLineViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558814, viewGroup, z, obj);
     }
 
     public static ItemLiveLineViewPartBinding inflate(LayoutInflater layoutInflater) {
@@ -44,7 +44,7 @@ public abstract class ItemLiveLineViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveLineViewPartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemLiveLineViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558807, null, false, obj);
+        return (ItemLiveLineViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558814, null, false, obj);
     }
 
     public static ItemLiveLineViewPartBinding bind(View view) {
@@ -53,6 +53,6 @@ public abstract class ItemLiveLineViewPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLiveLineViewPartBinding bind(View view, Object obj) {
-        return (ItemLiveLineViewPartBinding) bind(obj, view, 2131558807);
+        return (ItemLiveLineViewPartBinding) bind(obj, view, 2131558814);
     }
 }

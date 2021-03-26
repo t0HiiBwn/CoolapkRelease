@@ -16,17 +16,17 @@ public class AlbumPickAPKViewModel extends BaseObservable {
     }
 
     public void setPickAppName(String str) {
-        notifyPropertyChanged(222);
+        notifyPropertyChanged(223);
     }
 
     public void setCheck(boolean z) {
         this.isCheck = z;
-        notifyPropertyChanged(164);
+        notifyPropertyChanged(165);
     }
 
     public void setPickApp(MobileApp mobileApp) {
         this.pickApp = mobileApp;
-        notifyPropertyChanged(221);
+        notifyPropertyChanged(222);
     }
 
     @Bindable
@@ -51,6 +51,6 @@ public class AlbumPickAPKViewModel extends BaseObservable {
 
     public void setPickAppNote(String str) {
         this.pickAppNote = str;
-        notifyPropertyChanged(223);
+        notifyPropertyChanged(224);
     }
 }

@@ -29,19 +29,19 @@ public class ItemTitleViewBindingImpl extends ItemTitleViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362970, 2);
-        sparseIntArray.put(2131363568, 3);
-        sparseIntArray.put(2131362707, 4);
-        sparseIntArray.put(2131363582, 5);
-        sparseIntArray.put(2131362969, 6);
-        sparseIntArray.put(2131362464, 7);
-        sparseIntArray.put(2131362257, 8);
-        sparseIntArray.put(2131363605, 9);
-        sparseIntArray.put(2131363397, 10);
-        sparseIntArray.put(2131362132, 11);
-        sparseIntArray.put(2131362150, 12);
-        sparseIntArray.put(2131362148, 13);
-        sparseIntArray.put(2131362133, 14);
+        sparseIntArray.put(2131362982, 2);
+        sparseIntArray.put(2131363590, 3);
+        sparseIntArray.put(2131362718, 4);
+        sparseIntArray.put(2131363604, 5);
+        sparseIntArray.put(2131362981, 6);
+        sparseIntArray.put(2131362472, 7);
+        sparseIntArray.put(2131362262, 8);
+        sparseIntArray.put(2131363627, 9);
+        sparseIntArray.put(2131363414, 10);
+        sparseIntArray.put(2131362135, 11);
+        sparseIntArray.put(2131362153, 12);
+        sparseIntArray.put(2131362151, 13);
+        sparseIntArray.put(2131362136, 14);
     }
 
     public ItemTitleViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {

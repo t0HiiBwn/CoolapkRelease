@@ -148,12 +148,12 @@ public class AppViewViewModel extends BaseObservable {
 
     @Bindable
     public String getFollowCount() {
-        return getServiceApp() != null ? this.context.getString(2131886816, getServiceApp().getFollowCount()) : "";
+        return getServiceApp() != null ? this.context.getString(2131886878, getServiceApp().getFollowCount()) : "";
     }
 
     @Bindable
     public String getCommentCount() {
-        return getServiceApp() != null ? this.context.getString(2131886675, getServiceApp().getCommentCount()) : "";
+        return getServiceApp() != null ? this.context.getString(2131886737, getServiceApp().getCommentCount()) : "";
     }
 
     @Bindable
@@ -163,8 +163,8 @@ public class AppViewViewModel extends BaseObservable {
 
     public void setScore(String str) {
         this.score = str;
-        notifyPropertyChanged(233);
         notifyPropertyChanged(234);
+        notifyPropertyChanged(235);
     }
 
     @Bindable
@@ -223,7 +223,7 @@ public class AppViewViewModel extends BaseObservable {
 
     @Bindable
     public String getDownloadCount() {
-        return getServiceApp() != null ? this.context.getString(2131886757, getServiceApp().getDownCount()) : "";
+        return getServiceApp() != null ? this.context.getString(2131886819, getServiceApp().getDownCount()) : "";
     }
 
     @Bindable
@@ -257,7 +257,7 @@ public class AppViewViewModel extends BaseObservable {
 
     @Bindable
     public String getVoteNumString() {
-        return this.context.getString(2131886939, Integer.valueOf(this.voteNum));
+        return this.context.getString(2131887001, Integer.valueOf(this.voteNum));
     }
 
     @Bindable
@@ -303,18 +303,18 @@ public class AppViewViewModel extends BaseObservable {
         int i6 = iArr[4];
         this.voteNum5 = i6;
         this.voteNumMax = getVoteNumMax(new int[]{i2, i3, i4, i5, i6});
-        notifyPropertyChanged(309);
-        notifyPropertyChanged(315);
+        notifyPropertyChanged(310);
         notifyPropertyChanged(316);
         notifyPropertyChanged(317);
         notifyPropertyChanged(318);
         notifyPropertyChanged(319);
         notifyPropertyChanged(320);
-        notifyPropertyChanged(310);
+        notifyPropertyChanged(321);
         notifyPropertyChanged(311);
         notifyPropertyChanged(312);
         notifyPropertyChanged(313);
         notifyPropertyChanged(314);
+        notifyPropertyChanged(315);
     }
 
     @Bindable
@@ -381,13 +381,13 @@ public class AppViewViewModel extends BaseObservable {
 
     public void setMyScoreText(String str) {
         this.myScoreText = str;
-        notifyPropertyChanged(203);
+        notifyPropertyChanged(204);
     }
 
     public void setMyScore(int i) {
         this.myScore = i;
-        notifyPropertyChanged(202);
         notifyPropertyChanged(203);
+        notifyPropertyChanged(204);
     }
 
     @Bindable
@@ -405,7 +405,7 @@ public class AppViewViewModel extends BaseObservable {
 
     public void setIntroduceMaxWords(Integer num) {
         this.maxWords = num;
-        notifyPropertyChanged(162);
+        notifyPropertyChanged(163);
     }
 
     @Bindable
@@ -415,8 +415,8 @@ public class AppViewViewModel extends BaseObservable {
 
     public void setShowChangeLogAll(boolean z) {
         this.isShowChangeLogAll = z;
-        notifyPropertyChanged(245);
-        notifyPropertyChanged(262);
+        notifyPropertyChanged(246);
+        notifyPropertyChanged(263);
     }
 
     @Bindable
@@ -426,7 +426,7 @@ public class AppViewViewModel extends BaseObservable {
 
     public void setShrinkChangeLog(boolean z) {
         this.isShrinkChangeLog = z;
-        notifyPropertyChanged(262);
+        notifyPropertyChanged(263);
     }
 
     @Bindable
@@ -442,7 +442,7 @@ public class AppViewViewModel extends BaseObservable {
 
     public void setLogo(String str) {
         this.logo = str;
-        notifyPropertyChanged(189);
+        notifyPropertyChanged(190);
     }
 
     @Bindable
@@ -559,9 +559,9 @@ public class AppViewViewModel extends BaseObservable {
             return null;
         }
         if ("3".equals(getServiceApp().getDeveloperProfile().getType())) {
-            return this.context.getString(2131886702, getServiceApp().getDeveloperProfile().getTitle());
+            return this.context.getString(2131886764, getServiceApp().getDeveloperProfile().getTitle());
         }
-        return this.context.getString(2131886702, getServiceApp().getDeveloperProfile().getUserName());
+        return this.context.getString(2131886764, getServiceApp().getDeveloperProfile().getUserName());
     }
 
     @Bindable
@@ -570,7 +570,7 @@ public class AppViewViewModel extends BaseObservable {
             return null;
         }
         if (TextUtils.isEmpty(getServiceApp().getDeveloperProfile().getTitle())) {
-            return this.context.getString(2131886703, "开发者");
+            return this.context.getString(2131886765, "开发者");
         }
         if ("3".equals(getServiceApp().getDeveloperProfile().getType())) {
             return "企业认证: " + getServiceApp().getDeveloperProfile().getTitle();
@@ -596,7 +596,7 @@ public class AppViewViewModel extends BaseObservable {
         notifyPropertyChanged(2);
         notifyPropertyChanged(3);
         notifyPropertyChanged(62);
-        notifyPropertyChanged(285);
+        notifyPropertyChanged(286);
         notifyPropertyChanged(5);
     }
 
@@ -639,44 +639,44 @@ public class AppViewViewModel extends BaseObservable {
             }
             this.logo = getServiceApp().getLogo();
         }
-        notifyPropertyChanged(242);
-        notifyPropertyChanged(290);
-        notifyPropertyChanged(186);
+        notifyPropertyChanged(243);
+        notifyPropertyChanged(291);
+        notifyPropertyChanged(187);
         notifyPropertyChanged(1);
         notifyPropertyChanged(2);
         notifyPropertyChanged(3);
         notifyPropertyChanged(62);
-        notifyPropertyChanged(285);
+        notifyPropertyChanged(286);
         notifyPropertyChanged(75);
-        notifyPropertyChanged(264);
+        notifyPropertyChanged(265);
         notifyPropertyChanged(117);
         notifyPropertyChanged(52);
-        notifyPropertyChanged(233);
         notifyPropertyChanged(234);
-        notifyPropertyChanged(178);
+        notifyPropertyChanged(235);
+        notifyPropertyChanged(179);
         notifyPropertyChanged(114);
-        notifyPropertyChanged(236);
-        notifyPropertyChanged(309);
-        notifyPropertyChanged(315);
+        notifyPropertyChanged(237);
+        notifyPropertyChanged(310);
         notifyPropertyChanged(316);
         notifyPropertyChanged(317);
         notifyPropertyChanged(318);
         notifyPropertyChanged(319);
         notifyPropertyChanged(320);
-        notifyPropertyChanged(310);
+        notifyPropertyChanged(321);
         notifyPropertyChanged(311);
         notifyPropertyChanged(312);
         notifyPropertyChanged(313);
         notifyPropertyChanged(314);
-        notifyPropertyChanged(202);
+        notifyPropertyChanged(315);
         notifyPropertyChanged(203);
-        notifyPropertyChanged(161);
+        notifyPropertyChanged(204);
         notifyPropertyChanged(162);
-        notifyPropertyChanged(245);
-        notifyPropertyChanged(262);
-        notifyPropertyChanged(189);
+        notifyPropertyChanged(163);
+        notifyPropertyChanged(246);
+        notifyPropertyChanged(263);
+        notifyPropertyChanged(190);
         notifyPropertyChanged(30);
-        notifyPropertyChanged(205);
+        notifyPropertyChanged(206);
         notifyPropertyChanged(145);
         notifyPropertyChanged(116);
         notifyPropertyChanged(103);

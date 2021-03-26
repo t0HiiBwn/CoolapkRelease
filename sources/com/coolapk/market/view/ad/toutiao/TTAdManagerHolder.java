@@ -44,7 +44,7 @@ public final class TTAdManagerHolder {
     }
 
     private final TTAdConfig buildConfig(Context context, String str) {
-        TTAdConfig build = new TTAdConfig.Builder().appName(context.getString(2131886221)).appId(str).allowShowNotify(true).titleBarTheme(1).debug(false).directDownloadNetworkType(4).supportMultiProcess(false).build();
+        TTAdConfig build = new TTAdConfig.Builder().appName(context.getString(2131886251)).appId(str).allowShowNotify(true).titleBarTheme(1).debug(false).directDownloadNetworkType(4).supportMultiProcess(false).build();
         Intrinsics.checkNotNullExpressionValue(build, "TTAdConfig.Builder()\n   …\n                .build()");
         return build;
     }

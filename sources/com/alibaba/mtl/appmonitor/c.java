@@ -98,7 +98,7 @@ class c implements Runnable {
     @Override // java.lang.Runnable
     public void run() {
         i.a("CommitTask", "check&commit event:", Integer.valueOf(this.e));
-        e.a().m15a(this.e);
+        e.a().m5a(this.e);
         if (f.containsValue(this)) {
             this.startTime = System.currentTimeMillis();
             i.a("CommitTask", "next:" + this.e);
@@ -108,7 +108,7 @@ class c implements Runnable {
 
     static void d() {
         for (f fVar : f.values()) {
-            e.a().m15a(fVar.a());
+            e.a().m5a(fVar.a());
         }
     }
 }

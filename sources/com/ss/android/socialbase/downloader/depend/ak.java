@@ -27,7 +27,7 @@ public interface ak extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.ss.android.socialbase.downloader.depend.ProcessAidlCallback");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof ak)) {
-                return new C0099a(iBinder);
+                return new C0109a(iBinder);
             }
             return (ak) queryLocalInterface;
         }
@@ -49,11 +49,11 @@ public interface ak extends IInterface {
 
         /* renamed from: com.ss.android.socialbase.downloader.depend.ak$a$a  reason: collision with other inner class name */
         /* compiled from: ProcessAidlCallback */
-        private static class C0099a implements ak {
+        private static class C0109a implements ak {
             public static ak a;
             private IBinder b;
 
-            C0099a(IBinder iBinder) {
+            C0109a(IBinder iBinder) {
                 this.b = iBinder;
             }
 
@@ -85,7 +85,7 @@ public interface ak extends IInterface {
         }
 
         public static ak a() {
-            return C0099a.a;
+            return C0109a.a;
         }
     }
 }

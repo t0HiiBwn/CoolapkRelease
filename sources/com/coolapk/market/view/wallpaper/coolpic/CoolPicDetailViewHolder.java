@@ -63,7 +63,7 @@ import rx.Subscriber;
 /* compiled from: CoolPicDetailViewHolder.kt */
 public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpicDetailBinding, Feed> implements FeedDetailView {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558663;
+    public static final int LAYOUT_ID = 2131558669;
     private long activityInitTime;
     private FeedDetailPresenter feedPresenter;
     private int index;
@@ -470,7 +470,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
         ((ItemCoolpicDetailBinding) getBinding()).likeImageView.setImageResource((userAction == null || userAction.getLike() != 1) ? 2131689494 : 2131689495);
         TextView textView = ((ItemCoolpicDetailBinding) getBinding()).likeText;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.likeText");
-        textView.setText(feed.getLikeNum() > 0 ? String.valueOf(feed.getLikeNum()) : getContext().getString(2131886790));
+        textView.setText(feed.getLikeNum() > 0 ? String.valueOf(feed.getLikeNum()) : getContext().getString(2131886852));
         int i = -1;
         ((ItemCoolpicDetailBinding) getBinding()).likeImageView.setColorFilter((userAction == null || userAction.getLike() != 1) ? -1 : AppHolder.getAppTheme().getColorAccent());
         TextView textView2 = ((ItemCoolpicDetailBinding) getBinding()).likeText;
@@ -483,7 +483,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
     private final void setReplyView(Feed feed) {
         TextView textView = ((ItemCoolpicDetailBinding) getBinding()).commentText;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.commentText");
-        textView.setText(feed.getReplyNum() > 0 ? String.valueOf(feed.getReplyNum()) : getContext().getString(2131886791));
+        textView.setText(feed.getReplyNum() > 0 ? String.valueOf(feed.getReplyNum()) : getContext().getString(2131886853));
     }
 
     private final void setFavView(Feed feed) {
@@ -491,7 +491,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
         ((ItemCoolpicDetailBinding) getBinding()).favoriteImageView.setImageResource((userAction == null || userAction.getCollect() != 1) ? 2131689477 : 2131689478);
         TextView textView = ((ItemCoolpicDetailBinding) getBinding()).favoriteTextView;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.favoriteTextView");
-        textView.setText(feed.getFavoriteNum() > 0 ? String.valueOf(feed.getFavoriteNum()) : getContext().getString(2131886786));
+        textView.setText(feed.getFavoriteNum() > 0 ? String.valueOf(feed.getFavoriteNum()) : getContext().getString(2131886848));
         int i = -1;
         ((ItemCoolpicDetailBinding) getBinding()).favoriteTextView.setTextColor((userAction == null || userAction.getCollect() != 1) ? -1 : AppHolder.getAppTheme().getColorAccent());
         ImageView imageView = ((ItemCoolpicDetailBinding) getBinding()).favoriteImageView;
@@ -504,7 +504,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
     private final void setShareView(Feed feed) {
         TextView textView = ((ItemCoolpicDetailBinding) getBinding()).shareText;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.shareText");
-        textView.setText(feed.getShareNum() > 0 ? String.valueOf(feed.getShareNum()) : getContext().getString(2131886793));
+        textView.setText(feed.getShareNum() > 0 ? String.valueOf(feed.getShareNum()) : getContext().getString(2131886855));
     }
 
     private final void setActionView(Feed feed) {
@@ -551,7 +551,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
         z = false;
         ImageViewFragment imageViewFragment = null;
         switch (view.getId()) {
-            case 2131361981:
+            case 2131361982:
                 FeedDetailPresenter feedDetailPresenter = this.feedPresenter;
                 if (feedDetailPresenter == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("feedPresenter");
@@ -566,8 +566,8 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
                 }
                 feedDetailPresenter.followAuthor(z);
                 return;
-            case 2131362095:
-            case 2131363888:
+            case 2131362098:
+            case 2131363911:
                 Context context = getContext();
                 FeedDetailPresenter feedDetailPresenter3 = this.feedPresenter;
                 if (feedDetailPresenter3 == null) {
@@ -575,7 +575,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
                 }
                 ActionManager.startUserSpaceActivity(context, feedDetailPresenter3.getFeed().getUid());
                 return;
-            case 2131362291:
+            case 2131362296:
                 Activity currentActivity = AppHolder.getCurrentActivity();
                 if (currentActivity != null) {
                     Boolean checkLogin = ActionManager.checkLogin(currentActivity);
@@ -592,7 +592,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
                     return;
                 }
                 return;
-            case 2131362519:
+            case 2131362527:
                 Activity currentActivity2 = AppHolder.getCurrentActivity();
                 if (currentActivity2 != null) {
                     Boolean checkLogin2 = ActionManager.checkLogin(currentActivity2);
@@ -615,7 +615,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
                     return;
                 }
                 return;
-            case 2131362851:
+            case 2131362862:
                 Activity currentActivity3 = AppHolder.getCurrentActivity();
                 if (currentActivity3 != null) {
                     Boolean checkLogin3 = ActionManager.checkLogin(currentActivity3);
@@ -639,7 +639,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
                     return;
                 }
                 return;
-            case 2131362970:
+            case 2131362982:
                 int i2 = this.picIndex;
                 List<PhotoViewUrl> list = this.photoViewUrls;
                 Intrinsics.checkNotNull(list);
@@ -670,7 +670,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
                     return;
                 }
                 return;
-            case 2131363008:
+            case 2131363022:
                 Context context4 = getContext();
                 Intrinsics.checkNotNullExpressionValue(context4, "context");
                 Activity activityNullable = UiUtils.getActivityNullable(context4);
@@ -679,7 +679,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
                     return;
                 }
                 return;
-            case 2131363358:
+            case 2131363374:
                 Activity currentActivity4 = AppHolder.getCurrentActivity();
                 if (currentActivity4 != null) {
                     Boolean checkLogin4 = ActionManager.checkLogin(currentActivity4);
@@ -696,7 +696,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
                     return;
                 }
                 return;
-            case 2131363526:
+            case 2131363544:
                 Context context6 = getContext();
                 FeedDetailPresenter feedDetailPresenter10 = this.feedPresenter;
                 if (feedDetailPresenter10 == null) {
@@ -704,7 +704,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
                 }
                 ActionManager.startFeedDetailActivity(context6, feedDetailPresenter10.getFeed().getId(), (String) null);
                 return;
-            case 2131363953:
+            case 2131363979:
                 int i4 = this.picIndex;
                 List<PhotoViewUrl> list3 = this.photoViewUrls;
                 Intrinsics.checkNotNull(list3);
@@ -715,7 +715,7 @@ public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemCoolpic
                     return;
                 }
                 return;
-            case 2131363954:
+            case 2131363980:
                 CoolPicViewPager coolPicViewPager = ((ItemCoolpicDetailBinding) getBinding()).viewPager;
                 Intrinsics.checkNotNullExpressionValue(coolPicViewPager, "binding.viewPager");
                 PagerAdapter adapter = coolPicViewPager.getAdapter();

@@ -83,21 +83,35 @@ public class MainActivity extends FakeStatusBarActivity implements BottomBarIncl
         return false;
     }
 
+    /* JADX WARNING: Removed duplicated region for block: B:11:0x003a  */
+    /* JADX WARNING: Removed duplicated region for block: B:12:0x0047  */
     @Override // com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         boolean z;
         Drawable drawable;
+        String str;
         LogUtils.file("ACTIVITY_LOG", "Main activity on create savedInstanceState: " + bundle);
         boolean z2 = false;
-        try {
-            ((CoolMarketApplication) getApplication()).checkAdOnForeground = false;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        if (FullScreenAdUtils.shouldShowAd(this)) {
-            ActionManager.startSplashActivity(this, 1);
-            drawable = ResourceUtils.getDrawable(this, 2131231719);
+        if (!PermissionsAgreeActivity.shouldShowByFirstInstall()) {
+            CoolMarketApplication coolMarketApplication = (CoolMarketApplication) getApplication();
+            if (coolMarketApplication.isFirstVisible) {
+                str = "COLD_BOOT";
+            } else if (FullScreenAdUtils.shouldShowAd(this)) {
+                str = "HOT_BOOT";
+            } else {
+                str = null;
+                z = false;
+                if (!z) {
+                    coolMarketApplication.checkAdOnForeground = false;
+                    ActionManager.startSplashActivity(this, str, 1);
+                    drawable = ResourceUtils.getDrawable(this, 2131231730);
+                } else {
+                    drawable = null;
+                }
+            }
             z = true;
+            if (!z) {
+            }
         } else {
             drawable = null;
             z = false;
@@ -126,7 +140,7 @@ public class MainActivity extends FakeStatusBarActivity implements BottomBarIncl
         }
         if ((getIntent().getFlags() & 4194304) == 0 || z2) {
             handleIntent(getIntent());
-            this.binding = (MainBinding) DataBindingUtil.setContentView(this, 2131559015);
+            this.binding = (MainBinding) DataBindingUtil.setContentView(this, 2131559022);
             if (z && Build.VERSION.SDK_INT >= 23) {
                 getWindow().getDecorView().setForeground(drawable);
             }
@@ -136,26 +150,26 @@ public class MainActivity extends FakeStatusBarActivity implements BottomBarIncl
             }
             try {
                 checkShortCut();
-            } catch (Exception e2) {
-                e2.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
             }
             checkForUpgrade();
             boolean isComponentEnabled = SystemUtils.isComponentEnabled(this, AppService.class);
             boolean isComponentEnabled2 = SystemUtils.isComponentEnabled(this, PackageService.class);
             boolean isComponentEnabled3 = SystemUtils.isComponentEnabled(this, DownloadService.class);
             if (!isComponentEnabled || !isComponentEnabled2 || !isComponentEnabled3) {
-                String str = "检测到酷安的后台服务被禁止，酷安无法完成应用的下载安装，请检测您的手机管家类软件，给予酷安自启权限，开启以下服务";
+                String str2 = "检测到酷安的后台服务被禁止，酷安无法完成应用的下载安装，请检测您的手机管家类软件，给予酷安自启权限，开启以下服务";
                 if (!isComponentEnabled) {
-                    str = str + "\n" + AppService.class.getSimpleName();
+                    str2 = str2 + "\n" + AppService.class.getSimpleName();
                 }
                 if (!isComponentEnabled2) {
-                    str = str + "\n" + PackageService.class.getSimpleName();
+                    str2 = str2 + "\n" + PackageService.class.getSimpleName();
                 }
                 if (!isComponentEnabled3) {
-                    str = str + "\n" + DownloadService.class.getSimpleName();
+                    str2 = str2 + "\n" + DownloadService.class.getSimpleName();
                 }
                 SimpleDialog newInstance = SimpleDialog.newInstance();
-                newInstance.setMessage(str);
+                newInstance.setMessage(str2);
                 newInstance.setPositiveButton("好的", $$Lambda$MainActivity$BN8Bnky0en3rObVlei2C1Am5OU.INSTANCE);
                 newInstance.show(getSupportFragmentManager(), (String) null);
             }
@@ -222,7 +236,9 @@ public class MainActivity extends FakeStatusBarActivity implements BottomBarIncl
                 }
             });
         }
-        MainInitHelper.loadMainInitInfo();
+        if (!((CoolMarketApplication) getApplication()).isFirstVisible) {
+            MainInitHelper.updateMainInitInfo();
+        }
     }
 
     private void checkPermissions(List<String> list) {
@@ -491,7 +507,7 @@ public class MainActivity extends FakeStatusBarActivity implements BottomBarIncl
 
         @Override // androidx.fragment.app.DialogFragment
         public Dialog onCreateDialog(Bundle bundle) {
-            return new AlertDialog.Builder(getActivity()).setMessage(2131886704).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
+            return new AlertDialog.Builder(getActivity()).setMessage(2131886766).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.view.main.$$Lambda$MainActivity$AlertDownloadingDialog$Wxf6K89gYOQiTvSv1IEuE0xwlk */
 
                 @Override // android.content.DialogInterface.OnClickListener

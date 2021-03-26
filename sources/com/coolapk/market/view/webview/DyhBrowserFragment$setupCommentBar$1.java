@@ -41,13 +41,13 @@ final class DyhBrowserFragment$setupCommentBar$1 extends Lambda implements Funct
         Integer num = 0;
         String str = "";
         switch (view.getId()) {
-            case 2131362284:
+            case 2131362289:
                 ActionManager.startFeedCommentActivity(this.this$0.getActivity(), "dyh_article_comment", DyhBrowserFragment.access$getDyhArticle$p(this.this$0).getId(), DyhBrowserFragment.access$getDyhArticle$p(this.this$0).getUserName());
                 return;
-            case 2131362291:
+            case 2131362296:
                 ActionManager.startDyhArticleDetailActivity(this.this$0.getActivity(), DyhBrowserFragment.access$getDyhArticle$p(this.this$0).getId());
                 return;
-            case 2131362851:
+            case 2131362862:
                 Activity currentActivity = AppHolder.getCurrentActivity();
                 if (currentActivity != null) {
                     Boolean checkLogin = ActionManager.checkLogin(currentActivity);
@@ -88,10 +88,10 @@ final class DyhBrowserFragment$setupCommentBar$1 extends Lambda implements Funct
                     return;
                 }
                 return;
-            case 2131363358:
+            case 2131363374:
                 ActionManager.startForwardEntityActivity(this.this$0.getActivity(), DyhBrowserFragment.access$getDyhArticle$p(this.this$0));
                 return;
-            case 2131363418:
+            case 2131363436:
                 Activity currentActivity2 = AppHolder.getCurrentActivity();
                 if (currentActivity2 != null) {
                     Boolean checkLogin2 = ActionManager.checkLogin(currentActivity2);

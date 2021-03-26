@@ -149,7 +149,7 @@ public class AdvancedSettingsFragment extends BasePreferenceFragment {
                 return true;
             case 4:
                 if (!SystemUtils.isAccessibilitySettingsOn(getActivity(), getActivity().getPackageName() + "/" + AutoInstallServiceV10.class.getName())) {
-                    Toast.show(getActivity(), 2131886540);
+                    Toast.show(getActivity(), 2131886600);
                 }
                 return true;
             case 5:
@@ -180,7 +180,7 @@ public class AdvancedSettingsFragment extends BasePreferenceFragment {
         loginSession.reset();
         AppHolder.getAppSetting().setDownloadDir(AppHolder.getAppMetadata().getDefaultDownloadDir().getAbsolutePath());
         EventBus.getDefault().post(loginSession);
-        Toast.show(getActivity(), 2131886462);
+        Toast.show(getActivity(), 2131886522);
     }
 
     private static void clearCache() {
@@ -200,7 +200,7 @@ public class AdvancedSettingsFragment extends BasePreferenceFragment {
 
             @Override // rx.functions.Action0
             public void call() {
-                Toast.show(AppHolder.getApplication(), 2131886492);
+                Toast.show(AppHolder.getApplication(), 2131886552);
             }
         }).subscribe((Subscriber) new EmptySubscriber<Void>() {
             /* class com.coolapk.market.view.settings.AdvancedSettingsFragment.AnonymousClass1 */
@@ -208,7 +208,7 @@ public class AdvancedSettingsFragment extends BasePreferenceFragment {
             @Override // com.coolapk.market.app.EmptySubscriber, rx.Observer
             public void onCompleted() {
                 super.onCompleted();
-                Toast.show(AppHolder.getApplication(), 2131886491);
+                Toast.show(AppHolder.getApplication(), 2131886551);
             }
         });
     }

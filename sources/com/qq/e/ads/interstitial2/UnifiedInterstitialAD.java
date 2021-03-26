@@ -5,6 +5,8 @@ import android.os.Handler;
 import android.os.Looper;
 import com.qq.e.ads.cfg.VideoOption;
 import com.qq.e.comm.a;
+import com.qq.e.comm.compliance.ApkDownloadComplianceInterface;
+import com.qq.e.comm.compliance.DownloadConfirmListener;
 import com.qq.e.comm.managers.GDTADManager;
 import com.qq.e.comm.pi.POFactory;
 import com.qq.e.comm.pi.UIADI;
@@ -15,7 +17,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import org.json.JSONObject;
 
-public class UnifiedInterstitialAD {
+public class UnifiedInterstitialAD implements ApkDownloadComplianceInterface {
     private UIADI a;
     private boolean b;
     private boolean c;
@@ -161,6 +163,15 @@ public class UnifiedInterstitialAD {
         return 0;
     }
 
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public String getApkInfoUrl() {
+        UIADI uiadi = this.a;
+        if (uiadi != null) {
+            return uiadi.getApkInfoUrl();
+        }
+        return null;
+    }
+
     public int getECPM() {
         UIADI uiadi = this.a;
         if (uiadi != null) {
@@ -227,6 +238,14 @@ public class UnifiedInterstitialAD {
             } else {
                 GDTLogger.e("InterstitialAD Init error,See More Logs");
             }
+        }
+    }
+
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public void setDownloadConfirmListener(DownloadConfirmListener downloadConfirmListener) {
+        UIADI uiadi = this.a;
+        if (uiadi != null) {
+            uiadi.setDownloadConfirmListener(downloadConfirmListener);
         }
     }
 

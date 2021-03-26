@@ -33,9 +33,7 @@ public class d {
     private static final String a = "d";
     private static volatile d b;
     private static boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static boolean f1405l;
+    private static boolean l;
     private c c;
     private com.ss.android.socialbase.appdownloader.c.d d;
     private h e;
@@ -142,7 +140,7 @@ public class d {
     }
 
     private void p() {
-        if (!f1405l) {
+        if (!l) {
             if (this.j == null) {
                 this.j = new DownloadReceiver();
             }
@@ -161,7 +159,7 @@ public class d {
                 b.L().registerReceiver(this.j, intentFilter);
                 b.L().registerReceiver(this.j, intentFilter2);
                 b.L().registerReceiver(this.j, intentFilter3);
-                f1405l = true;
+                l = true;
             } catch (Exception e2) {
                 e2.printStackTrace();
             }

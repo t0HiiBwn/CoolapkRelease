@@ -27,9 +27,9 @@ public class SplashBindingImpl extends SplashBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362707, 5);
-        sparseIntArray.put(2131362330, 6);
-        sparseIntArray.put(2131362316, 7);
+        sparseIntArray.put(2131362718, 5);
+        sparseIntArray.put(2131362336, 6);
+        sparseIntArray.put(2131362322, 7);
     }
 
     public SplashBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -76,7 +76,7 @@ public class SplashBindingImpl extends SplashBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (274 != i) {
+        if (275 != i) {
             return false;
         }
         setTextColor((Integer) obj);
@@ -89,7 +89,7 @@ public class SplashBindingImpl extends SplashBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(274);
+        notifyPropertyChanged(275);
         super.requestRebind();
     }
 

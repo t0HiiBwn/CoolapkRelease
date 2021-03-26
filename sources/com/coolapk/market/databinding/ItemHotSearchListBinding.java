@@ -28,7 +28,7 @@ public abstract class ItemHotSearchListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemHotSearchListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemHotSearchListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558775, viewGroup, z, obj);
+        return (ItemHotSearchListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558782, viewGroup, z, obj);
     }
 
     public static ItemHotSearchListBinding inflate(LayoutInflater layoutInflater) {
@@ -37,7 +37,7 @@ public abstract class ItemHotSearchListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemHotSearchListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemHotSearchListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558775, null, false, obj);
+        return (ItemHotSearchListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558782, null, false, obj);
     }
 
     public static ItemHotSearchListBinding bind(View view) {
@@ -46,6 +46,6 @@ public abstract class ItemHotSearchListBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemHotSearchListBinding bind(View view, Object obj) {
-        return (ItemHotSearchListBinding) bind(obj, view, 2131558775);
+        return (ItemHotSearchListBinding) bind(obj, view, 2131558782);
     }
 }

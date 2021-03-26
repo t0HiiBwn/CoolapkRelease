@@ -24,8 +24,8 @@ final class AutoValue_BackupInfo extends C$AutoValue_BackupInfo {
         return 0;
     }
 
-    AutoValue_BackupInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, String str11, String str12, String str13, String str14, String str15, String str16, int i, int i2, Long l4, Long l5, List<ServiceApp> list, List<LocalApp> list2) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, l2, l3, str10, str11, str12, str13, str14, str15, str16, i, i2, l4, l5, list, list2);
+    AutoValue_BackupInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, String str11, String str12, String str13, String str14, String str15, String str16, int i, int i2, Long l3, Long l4, List<ServiceApp> list, List<LocalApp> list2) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, l, l2, str10, str11, str12, str13, str14, str15, str16, i, i2, l3, l4, list, list2);
     }
 
     @Override // android.os.Parcelable

@@ -22,8 +22,8 @@ public class ItemSearchExtendBindingImpl extends ItemSearchExtendBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362312, 2);
-        sparseIntArray.put(2131362374, 3);
+        sparseIntArray.put(2131362317, 2);
+        sparseIntArray.put(2131362380, 3);
     }
 
     public ItemSearchExtendBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -59,7 +59,7 @@ public class ItemSearchExtendBindingImpl extends ItemSearchExtendBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (273 != i) {
+        if (274 != i) {
             return false;
         }
         setText((String) obj);
@@ -72,7 +72,7 @@ public class ItemSearchExtendBindingImpl extends ItemSearchExtendBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(273);
+        notifyPropertyChanged(274);
         super.requestRebind();
     }
 

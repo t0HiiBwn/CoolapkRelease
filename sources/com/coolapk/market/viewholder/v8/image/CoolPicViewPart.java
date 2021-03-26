@@ -38,7 +38,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: CoolPicViewPart.kt */
 public final class CoolPicViewPart extends BindingViewPart<ItemCoolPicImageViewBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558662;
+    public static final int LAYOUT_ID = 2131558668;
     private static final Function1<String, String> thumbUrlProvider = new CoolPicViewPart$Companion$thumbUrlProvider$1(ImageArgs.Companion);
     private Feed bindFeed;
     private final FragmentBindingComponent component;
@@ -84,7 +84,7 @@ public final class CoolPicViewPart extends BindingViewPart<ItemCoolPicImageViewB
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemCoolPicImageViewBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558662, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558668, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemCoolPicImageViewBinding) inflate;
     }
@@ -151,14 +151,14 @@ public final class CoolPicViewPart extends BindingViewPart<ItemCoolPicImageViewB
             maxWidthFrameLayout.addView(unusedImageView.getView());
             Intrinsics.checkNotNullExpressionValue(imageArgs, "imageArg");
             unusedImageView.bindToContent(imageArgs);
-            unusedImageView.getView().setTag(2131363492, unusedImageView);
+            unusedImageView.getView().setTag(2131363510, unusedImageView);
             ViewExtendsKt.setUtilClickListener(unusedImageView.getView(), new CoolPicViewPart$measureView$1(this, imageArgs, mostSuitableImageBinder, maxWidthFrameLayout));
         }
         maxWidthFrameLayout.getLayoutParams().height = (int) mostSuitableImageBinder.getOutContainerHeight();
     }
 
     private final ImageViewPart getUnusedImageView() {
-        ImageViewPart imageViewPart = (ImageViewPart) this.viewPartPool.getRecycledViewPart(2131558661);
+        ImageViewPart imageViewPart = (ImageViewPart) this.viewPartPool.getRecycledViewPart(2131558667);
         if (imageViewPart != null) {
             return imageViewPart;
         }
@@ -177,13 +177,13 @@ public final class CoolPicViewPart extends BindingViewPart<ItemCoolPicImageViewB
         Intrinsics.checkNotNullExpressionValue(maxWidthFrameLayout, "binding.frameView");
         int childCount = maxWidthFrameLayout.getChildCount();
         for (int i = 0; i < childCount; i++) {
-            Object tag = ((ItemCoolPicImageViewBinding) getBinding()).frameView.getChildAt(i).getTag(2131363492);
+            Object tag = ((ItemCoolPicImageViewBinding) getBinding()).frameView.getChildAt(i).getTag(2131363510);
             if (!(tag instanceof ImageViewPart)) {
                 tag = null;
             }
             ImageViewPart imageViewPart = (ImageViewPart) tag;
             Intrinsics.checkNotNull(imageViewPart);
-            this.viewPartPool.putRecycledViewPart(imageViewPart, 2131558661);
+            this.viewPartPool.putRecycledViewPart(imageViewPart, 2131558667);
         }
         ((ItemCoolPicImageViewBinding) getBinding()).frameView.removeAllViews();
     }
@@ -253,7 +253,7 @@ public final class CoolPicViewPart extends BindingViewPart<ItemCoolPicImageViewB
     /* compiled from: CoolPicViewPart.kt */
     public static final class ImageViewPart extends BindingViewPart<ItemCoolPicImageBinding, ImageArgs> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558661;
+        public static final int LAYOUT_ID = 2131558667;
         private final FragmentBindingComponent component;
 
         public ImageViewPart(FragmentBindingComponent fragmentBindingComponent) {
@@ -280,7 +280,7 @@ public final class CoolPicViewPart extends BindingViewPart<ItemCoolPicImageViewB
         @Override // com.coolapk.market.viewholder.iview.BindingViewPart
         public ItemCoolPicImageBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
             Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-            ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558661, viewGroup, false, this.component);
+            ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558667, viewGroup, false, this.component);
             Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
             return (ItemCoolPicImageBinding) inflate;
         }
@@ -315,7 +315,7 @@ public final class CoolPicViewPart extends BindingViewPart<ItemCoolPicImageViewB
                 Intrinsics.checkNotNullExpressionValue(container, "component.container.elvis { return }");
                 String suitableUrl = imageArgs.getSuitableUrl(CoolPicViewPart.Companion.getThumbUrlProvider());
                 scalingImageView.setScaleType(ImageView.ScaleType.MATRIX);
-                AppHolder.getFragmentImageLoader().displayImage((Fragment) container, suitableUrl, scalingImageView, 2131231696);
+                AppHolder.getFragmentImageLoader().displayImage((Fragment) container, suitableUrl, scalingImageView, 2131231707);
                 ViewExtendsKt.darkForegroundIfNeed(scalingImageView);
             }
         }

@@ -133,18 +133,18 @@ public abstract class FeedReplyListFragmentV8 extends EntityListFragment {
         getVxDividerDecoration$presentation_coolapkAppRelease().setDefaultNoMargin();
         getVxDividerDecoration$presentation_coolapkAppRelease().setDividerColor(AppHolder.getAppTheme().getContentBackgroundDividerColor());
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558716).suitedEntityType("feed_reply").constructor(new FeedReplyListFragmentV8$onActivityCreated$1(this)).build(), 0, 2, null);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558716).suitedMethod(new FeedReplyListFragmentV8$onActivityCreated$2(this)).constructor(new FeedReplyListFragmentV8$onActivityCreated$3(this)).doAfterBind(FeedReplyListFragmentV8$onActivityCreated$4.INSTANCE).resetItemViewType(2131588103).build(), -1);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558721).suitedEntityType("COMMENT_COUNT").constructor(new FeedReplyListFragmentV8$onActivityCreated$5(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558728).suitedMethod(FeedReplyListFragmentV8$onActivityCreated$6.INSTANCE).constructor(new FeedReplyListFragmentV8$onActivityCreated$7(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558690).suitedEntityType("REPLY_HOT_ACTION").constructor(new FeedReplyListFragmentV8$onActivityCreated$8(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558723).suitedEntityType("feed_reply").constructor(new FeedReplyListFragmentV8$onActivityCreated$1(this)).build(), 0, 2, null);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558723).suitedMethod(new FeedReplyListFragmentV8$onActivityCreated$2(this)).constructor(new FeedReplyListFragmentV8$onActivityCreated$3(this)).doAfterBind(FeedReplyListFragmentV8$onActivityCreated$4.INSTANCE).resetItemViewType(2131588110).build(), -1);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558728).suitedEntityType("COMMENT_COUNT").constructor(new FeedReplyListFragmentV8$onActivityCreated$5(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558735).suitedMethod(FeedReplyListFragmentV8$onActivityCreated$6.INSTANCE).constructor(new FeedReplyListFragmentV8$onActivityCreated$7(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558696).suitedEntityType("REPLY_HOT_ACTION").constructor(new FeedReplyListFragmentV8$onActivityCreated$8(this)).build(), 0, 2, null);
         BaseMultiTypeAdapter adapter$presentation_coolapkAppRelease = getAdapter$presentation_coolapkAppRelease();
-        SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558933).suitedEntityType("user").constructor(new FeedReplyListFragmentV8$onActivityCreated$9(this));
+        SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558940).suitedEntityType("user").constructor(new FeedReplyListFragmentV8$onActivityCreated$9(this));
         Integer num = getItemViewTypeByEntityType().get("user");
         Intrinsics.checkNotNull(num);
         Intrinsics.checkNotNullExpressionValue(num, "(itemViewTypeByEntityTyp…tils.ENTITY_TYPE_USER])!!");
         BaseMultiTypeAdapter.register$default(adapter$presentation_coolapkAppRelease, constructor.resetItemViewType(num.intValue()).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558701).suitedEntityType("forwardFeed").constructor(new FeedReplyListFragmentV8$onActivityCreated$10(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558708).suitedEntityType("forwardFeed").constructor(new FeedReplyListFragmentV8$onActivityCreated$10(this)).build(), 0, 2, null);
         FeedReplyViewModel feedReplyViewModel = this.viewModel;
         if (feedReplyViewModel == null) {
             Intrinsics.throwUninitializedPropertyAccessException("viewModel");
@@ -278,7 +278,7 @@ public abstract class FeedReplyListFragmentV8 extends EntityListFragment {
         if (feedReplyViewModel == null) {
             Intrinsics.throwUninitializedPropertyAccessException("viewModel");
         }
-        builder.addArgs(key_feed_id, feedReplyViewModel.getFeedId()).fragmentClass(FeedHotReplyListFragment.class).title(getString(2131886852)).start();
+        builder.addArgs(key_feed_id, feedReplyViewModel.getFeedId()).fragmentClass(FeedHotReplyListFragment.class).title(getString(2131886914)).start();
     }
 
     public void handleFeedReply(FeedReply feedReply) {
@@ -481,7 +481,7 @@ public abstract class FeedReplyListFragmentV8 extends EntityListFragment {
                     }
                 }
                 if (findCommentCountPosition == CollectionsKt.getLastIndex(getDataList())) {
-                    String string = getString(2131886865);
+                    String string = getString(2131886927);
                     Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_left_a_comment)");
                     addHintView(string, new FeedReplyListFragmentV8$onRequestResponse$2(this));
                 }
@@ -516,7 +516,7 @@ public abstract class FeedReplyListFragmentV8 extends EntityListFragment {
     /* compiled from: FeedReplyListFragmentV8.kt */
     public static final class FeedSmallTitleViewHolder extends GenericBindHolder<ItemFeedSmallTitleBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558728;
+        public static final int LAYOUT_ID = 2131558735;
         private final FeedReplyPresenter presenter;
 
         public final FeedReplyPresenter getPresenter() {
@@ -569,7 +569,7 @@ public abstract class FeedReplyListFragmentV8 extends EntityListFragment {
     /* compiled from: FeedReplyListFragmentV8.kt */
     public static final class FeedReplyTitleViewHolder extends GenericBindHolder<ItemFeedReplyTitleBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558721;
+        public static final int LAYOUT_ID = 2131558728;
         private final CommentCountViewPart commentCountViewPart;
 
         public final CommentCountViewPart getCommentCountViewPart() {
@@ -609,7 +609,7 @@ public abstract class FeedReplyListFragmentV8 extends EntityListFragment {
     /* compiled from: FeedReplyListFragmentV8.kt */
     public static final class FeedReplyActionViewViewHolder extends GenericBindHolder<ItemFeedActionViewBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558690;
+        public static final int LAYOUT_ID = 2131558696;
         private final FeedReplyPresenter presenter;
 
         public final FeedReplyPresenter getPresenter() {
@@ -640,7 +640,7 @@ public abstract class FeedReplyListFragmentV8 extends EntityListFragment {
             ItemFeedActionViewBinding itemFeedActionViewBinding = (ItemFeedActionViewBinding) getBinding();
             TextView textView = itemFeedActionViewBinding.actionView;
             Intrinsics.checkNotNullExpressionValue(textView, "binding.actionView");
-            textView.setText(getContext().getString(2131886876));
+            textView.setText(getContext().getString(2131886938));
             itemFeedActionViewBinding.actionView.setTextColor(AppHolder.getAppTheme().getColorAccent());
             itemFeedActionViewBinding.executePendingBindings();
             Intrinsics.checkNotNullExpressionValue(itemFeedActionViewBinding, "binding");
@@ -652,7 +652,7 @@ public abstract class FeedReplyListFragmentV8 extends EntityListFragment {
     /* compiled from: FeedReplyListFragmentV8.kt */
     public static final class NoMoreDataViewHolder extends GenericBindHolder<ItemNoMoreDataViewBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558837;
+        public static final int LAYOUT_ID = 2131558844;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public NoMoreDataViewHolder(View view, ItemActionHandler itemActionHandler) {

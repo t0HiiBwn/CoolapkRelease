@@ -21,7 +21,7 @@ public abstract class ItemLogFileBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLogFileBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemLogFileBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558814, viewGroup, z, obj);
+        return (ItemLogFileBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558821, viewGroup, z, obj);
     }
 
     public static ItemLogFileBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class ItemLogFileBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLogFileBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemLogFileBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558814, null, false, obj);
+        return (ItemLogFileBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558821, null, false, obj);
     }
 
     public static ItemLogFileBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class ItemLogFileBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemLogFileBinding bind(View view, Object obj) {
-        return (ItemLogFileBinding) bind(obj, view, 2131558814);
+        return (ItemLogFileBinding) bind(obj, view, 2131558821);
     }
 }

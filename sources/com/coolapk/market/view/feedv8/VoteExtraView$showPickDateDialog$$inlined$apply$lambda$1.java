@@ -25,9 +25,9 @@ final class VoteExtraView$showPickDateDialog$$inlined$apply$lambda$1 implements 
     public final void onClick(DialogInterface dialogInterface, int i) {
         LocalDateTime of = LocalDateTime.of(LocalDate.of(this.$datePickerView$inlined.getYear(), this.$datePickerView$inlined.getMonth() + 1, this.$datePickerView$inlined.getDayOfMonth()), LocalTime.MAX);
         VoteExtraView voteExtraView = this.this$0;
-        FeedMultiPart build = voteExtraView.getMultiPart().newBuilder().voteEndTime(of.atZone(ZoneId.systemDefault()).toEpochSecond()).build();
+        FeedMultiPart build = VoteExtraView.access$getMultiPart$p(voteExtraView).newBuilder().voteEndTime(of.atZone(ZoneId.systemDefault()).toEpochSecond()).build();
         Intrinsics.checkNotNullExpressionValue(build, "multiPart.newBuilder()\n …                 .build()");
-        voteExtraView.setMultiPart(build);
+        VoteExtraView.access$setMultiPart$p(voteExtraView, build);
         this.this$0.requestUpdateDataList();
     }
 }

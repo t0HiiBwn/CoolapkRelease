@@ -67,7 +67,7 @@ public final class QuestionTitleActivity extends FakeStatusBarActivity implement
     protected void onCreate(Bundle bundle) {
         setToolbarColorEqualContentColor(true);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131559113);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131559120);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte… R.layout.question_title)");
         QuestionTitleBinding questionTitleBinding = (QuestionTitleBinding) contentView;
         this.mBinding = questionTitleBinding;
@@ -94,7 +94,7 @@ public final class QuestionTitleActivity extends FakeStatusBarActivity implement
         RecyclerView recyclerView = questionTitleBinding4.recyclerView;
         Intrinsics.checkNotNullExpressionValue(recyclerView, "mBinding.recyclerView");
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        Drawable drawable = ResourceUtils.getDrawable(getActivity(), 2131231369);
+        Drawable drawable = ResourceUtils.getDrawable(getActivity(), 2131231380);
         drawable.mutate().setTint(AppHolder.getAppTheme().getTextColorSecondary());
         Intrinsics.checkNotNullExpressionValue(drawable, "warnDrawable");
         LayerDrawable layerDrawable = Drawable_dslKt.layerDrawable(drawable);
@@ -126,8 +126,8 @@ public final class QuestionTitleActivity extends FakeStatusBarActivity implement
         MultiTypeAdapter multiTypeAdapter2 = multiTypeAdapter;
         recyclerView2.setAdapter(multiTypeAdapter2);
         this.dataList.addOnListChangedCallback(new AdapterListChangedCallback(multiTypeAdapter2));
-        BaseMultiTypeAdapter.register$default(multiTypeAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558886).suitedEntityType("feedQuestion").constructor(new QuestionTitleActivity$onCreate$2(new ContextBindingComponent(this))).build(), 0, 2, null);
-        VerticalItemDecoration create = ItemDecorations.vertical(getActivity()).type(2131558886, 2131231052).create();
+        BaseMultiTypeAdapter.register$default(multiTypeAdapter, SimpleViewHolderFactor.Companion.withLayoutId(2131558893).suitedEntityType("feedQuestion").constructor(new QuestionTitleActivity$onCreate$2(new ContextBindingComponent(this))).build(), 0, 2, null);
+        VerticalItemDecoration create = ItemDecorations.vertical(getActivity()).type(2131558893, 2131231062).create();
         QuestionTitleBinding questionTitleBinding8 = this.mBinding;
         if (questionTitleBinding8 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("mBinding");
@@ -140,9 +140,9 @@ public final class QuestionTitleActivity extends FakeStatusBarActivity implement
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
         int id = view.getId();
-        if (id == 2131362257) {
+        if (id == 2131362262) {
             finish();
-        } else if (id == 2131363457) {
+        } else if (id == 2131363475) {
             processTitle();
         }
     }

@@ -1,8 +1,8 @@
 package com.coolapk.market.view.cardlist;
 
 import android.view.View;
-import com.coolapk.market.viewholder.ApkScrollWithBackgroundViewHolder;
 import com.coolapk.market.viewholder.BindingViewHolder;
+import com.coolapk.market.viewholder.SortSelectViewHolder;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
@@ -21,6 +21,6 @@ final class EntityListFragment$onRegisterCards$98 extends Lambda implements Func
 
     public final BindingViewHolder invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "itemView");
-        return new ApkScrollWithBackgroundViewHolder(view, this.this$0.getBindingComponent());
+        return new SortSelectViewHolder(view, this.this$0.getBindingComponent(), this.this$0.getEntityRequestArgHelper());
     }
 }

@@ -116,7 +116,7 @@ public abstract class ItemCoolpicDetailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCoolpicDetailBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemCoolpicDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558663, viewGroup, z, obj);
+        return (ItemCoolpicDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558669, viewGroup, z, obj);
     }
 
     public static ItemCoolpicDetailBinding inflate(LayoutInflater layoutInflater) {
@@ -125,7 +125,7 @@ public abstract class ItemCoolpicDetailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCoolpicDetailBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemCoolpicDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558663, null, false, obj);
+        return (ItemCoolpicDetailBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558669, null, false, obj);
     }
 
     public static ItemCoolpicDetailBinding bind(View view) {
@@ -134,6 +134,6 @@ public abstract class ItemCoolpicDetailBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemCoolpicDetailBinding bind(View view, Object obj) {
-        return (ItemCoolpicDetailBinding) bind(obj, view, 2131558663);
+        return (ItemCoolpicDetailBinding) bind(obj, view, 2131558669);
     }
 }

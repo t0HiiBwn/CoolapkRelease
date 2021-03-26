@@ -61,9 +61,7 @@ public class f {
     private boolean i = true;
     private boolean j = false;
     private boolean k = true;
-
-    /* renamed from: l  reason: collision with root package name */
-    private boolean f1406l = false;
+    private boolean l = false;
     private IDownloadListener m;
     private IDownloadListener n;
     private String o;
@@ -121,7 +119,7 @@ public class f {
     }
 
     public boolean j() {
-        return this.f1406l;
+        return this.l;
     }
 
     public IDownloadListener k() {
@@ -327,7 +325,7 @@ public class f {
     }
 
     public f c(boolean z2) {
-        this.f1406l = z2;
+        this.l = z2;
         return this;
     }
 

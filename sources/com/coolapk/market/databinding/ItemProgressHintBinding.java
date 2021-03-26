@@ -27,7 +27,7 @@ public abstract class ItemProgressHintBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProgressHintBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemProgressHintBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558883, viewGroup, z, obj);
+        return (ItemProgressHintBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558890, viewGroup, z, obj);
     }
 
     public static ItemProgressHintBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class ItemProgressHintBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProgressHintBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemProgressHintBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558883, null, false, obj);
+        return (ItemProgressHintBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558890, null, false, obj);
     }
 
     public static ItemProgressHintBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class ItemProgressHintBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemProgressHintBinding bind(View view, Object obj) {
-        return (ItemProgressHintBinding) bind(obj, view, 2131558883);
+        return (ItemProgressHintBinding) bind(obj, view, 2131558890);
     }
 }

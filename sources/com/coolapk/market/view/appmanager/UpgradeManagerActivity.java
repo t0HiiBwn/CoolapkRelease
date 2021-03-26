@@ -20,7 +20,7 @@ public class UpgradeManagerActivity extends ToolbarActivity {
     }
 
     private void updateTitle() {
-        String string = getString(2131887306);
+        String string = getString(2131887368);
         int size = DataManager.getInstance().getMobileAppUpgradeListFast(false).size();
         if (size != 0) {
             string = string + "(" + size + ")";

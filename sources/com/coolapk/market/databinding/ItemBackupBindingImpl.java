@@ -55,11 +55,11 @@ public class ItemBackupBindingImpl extends ItemBackupBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((BackupInfo) obj);
-        } else if (271 == i) {
+        } else if (272 == i) {
             setSubTitle((String) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (50 != i) {
             return false;
@@ -75,7 +75,7 @@ public class ItemBackupBindingImpl extends ItemBackupBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -85,7 +85,7 @@ public class ItemBackupBindingImpl extends ItemBackupBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(271);
+        notifyPropertyChanged(272);
         super.requestRebind();
     }
 

@@ -28,21 +28,21 @@ public final class FeedTextUtils {
     }
 
     private final Drawable newLinkDrawable(int i) {
-        LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(AppHolder.getApplication(), 2131231397)});
+        LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(AppHolder.getApplication(), 2131231408)});
         layerDrawable.setLayerInset(0, NumberExtendsKt.getDp((Number) 2), NumberExtendsKt.getDp((Number) 1), NumberExtendsKt.getDp((Number) 2), 0);
         layerDrawable.setTint(i);
         return layerDrawable;
     }
 
     private final Drawable newPlayBoxDrawable(int i) {
-        LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(AppHolder.getApplication(), 2131231485)});
+        LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(AppHolder.getApplication(), 2131231496)});
         layerDrawable.setLayerInset(0, NumberExtendsKt.getDp((Number) 2), NumberExtendsKt.getDp((Number) 2), NumberExtendsKt.getDp((Number) 2), 0);
         layerDrawable.setTint(i);
         return layerDrawable;
     }
 
     private final Drawable newPhotoDrawable(int i) {
-        LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(AppHolder.getApplication(), 2131231362)});
+        LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{ResourceUtils.getDrawable(AppHolder.getApplication(), 2131231373)});
         layerDrawable.setLayerInset(0, NumberExtendsKt.getDp((Number) 2), NumberExtendsKt.getDp((Number) 1), NumberExtendsKt.getDp((Number) 2), 0);
         layerDrawable.setTint(i);
         return layerDrawable;

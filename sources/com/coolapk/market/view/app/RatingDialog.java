@@ -34,7 +34,7 @@ public class RatingDialog extends MinimumWidthDialog {
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        ItemAppViewRatingBinding itemAppViewRatingBinding = (ItemAppViewRatingBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558607, null, false);
+        ItemAppViewRatingBinding itemAppViewRatingBinding = (ItemAppViewRatingBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558611, null, false);
         itemAppViewRatingBinding.setViewModel(this.viewModel);
         ThemeUtils.setRatingBarColor(itemAppViewRatingBinding.ratingBar);
         itemAppViewRatingBinding.ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {

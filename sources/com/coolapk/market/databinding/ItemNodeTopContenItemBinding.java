@@ -42,7 +42,7 @@ public abstract class ItemNodeTopContenItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNodeTopContenItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemNodeTopContenItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558841, viewGroup, z, obj);
+        return (ItemNodeTopContenItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558848, viewGroup, z, obj);
     }
 
     public static ItemNodeTopContenItemBinding inflate(LayoutInflater layoutInflater) {
@@ -51,7 +51,7 @@ public abstract class ItemNodeTopContenItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNodeTopContenItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemNodeTopContenItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558841, null, false, obj);
+        return (ItemNodeTopContenItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558848, null, false, obj);
     }
 
     public static ItemNodeTopContenItemBinding bind(View view) {
@@ -60,6 +60,6 @@ public abstract class ItemNodeTopContenItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNodeTopContenItemBinding bind(View view, Object obj) {
-        return (ItemNodeTopContenItemBinding) bind(obj, view, 2131558841);
+        return (ItemNodeTopContenItemBinding) bind(obj, view, 2131558848);
     }
 }

@@ -47,7 +47,7 @@ public abstract class LayoutPrivacyClauseBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutPrivacyClauseBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (LayoutPrivacyClauseBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558999, viewGroup, z, obj);
+        return (LayoutPrivacyClauseBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559006, viewGroup, z, obj);
     }
 
     public static LayoutPrivacyClauseBinding inflate(LayoutInflater layoutInflater) {
@@ -56,7 +56,7 @@ public abstract class LayoutPrivacyClauseBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutPrivacyClauseBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (LayoutPrivacyClauseBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558999, null, false, obj);
+        return (LayoutPrivacyClauseBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559006, null, false, obj);
     }
 
     public static LayoutPrivacyClauseBinding bind(View view) {
@@ -65,6 +65,6 @@ public abstract class LayoutPrivacyClauseBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutPrivacyClauseBinding bind(View view, Object obj) {
-        return (LayoutPrivacyClauseBinding) bind(obj, view, 2131558999);
+        return (LayoutPrivacyClauseBinding) bind(obj, view, 2131559006);
     }
 }

@@ -30,10 +30,10 @@ public final class AppViewV8Activity$doFollowFunction$1 extends Subscriber<Boole
         if (bool.booleanValue()) {
             boolean isFollow = AppViewV8Activity.access$getViewModel$p(this.this$0).isFollow();
             boolean z = !AppViewV8Activity.access$getViewModel$p(this.this$0).isFollow();
-            AppViewContract.Presenter access$getPresenter$p = AppViewV8Activity.access$getPresenter$p(this.this$0);
-            ServiceApp access$getServiceApp = AppViewV8Activity.access$getServiceApp(this.this$0);
-            Intrinsics.checkNotNull(access$getServiceApp);
-            access$getPresenter$p.followApp(access$getServiceApp.getApkId(), isFollow, z);
+            AppViewContract.Presenter presenter = this.this$0.presenter;
+            ServiceApp serviceApp = this.this$0.getServiceApp();
+            Intrinsics.checkNotNull(serviceApp);
+            presenter.followApp(serviceApp.getApkId(), isFollow, z);
             AppViewV8Activity.access$getViewModel$p(this.this$0).setFollowApp(z);
         }
     }

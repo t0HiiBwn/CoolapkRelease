@@ -25,19 +25,19 @@ public class DialogSecondHandPriceBindingImpl extends DialogSecondHandPriceBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 4);
-        sparseIntArray.put(2131363023, 5);
-        sparseIntArray.put(2131363022, 6);
-        sparseIntArray.put(2131362441, 7);
-        sparseIntArray.put(2131362945, 8);
-        sparseIntArray.put(2131362944, 9);
-        sparseIntArray.put(2131362943, 10);
-        sparseIntArray.put(2131362949, 11);
-        sparseIntArray.put(2131362948, 12);
-        sparseIntArray.put(2131362947, 13);
-        sparseIntArray.put(2131362371, 14);
-        sparseIntArray.put(2131362369, 15);
-        sparseIntArray.put(2131362504, 16);
+        sparseIntArray.put(2131363604, 4);
+        sparseIntArray.put(2131363037, 5);
+        sparseIntArray.put(2131363036, 6);
+        sparseIntArray.put(2131362448, 7);
+        sparseIntArray.put(2131362957, 8);
+        sparseIntArray.put(2131362956, 9);
+        sparseIntArray.put(2131362955, 10);
+        sparseIntArray.put(2131362961, 11);
+        sparseIntArray.put(2131362960, 12);
+        sparseIntArray.put(2131362959, 13);
+        sparseIntArray.put(2131362377, 14);
+        sparseIntArray.put(2131362375, 15);
+        sparseIntArray.put(2131362512, 16);
     }
 
     public DialogSecondHandPriceBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -77,7 +77,7 @@ public class DialogSecondHandPriceBindingImpl extends DialogSecondHandPriceBindi
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (186 != i) {
+        if (187 != i) {
             return false;
         }
         setLoading(((Boolean) obj).booleanValue());
@@ -90,7 +90,7 @@ public class DialogSecondHandPriceBindingImpl extends DialogSecondHandPriceBindi
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(186);
+        notifyPropertyChanged(187);
         super.requestRebind();
     }
 

@@ -31,7 +31,7 @@ public abstract class LayoutImageModeBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutImageModeBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (LayoutImageModeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558996, viewGroup, z, obj);
+        return (LayoutImageModeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559003, viewGroup, z, obj);
     }
 
     public static LayoutImageModeBinding inflate(LayoutInflater layoutInflater) {
@@ -40,7 +40,7 @@ public abstract class LayoutImageModeBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutImageModeBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (LayoutImageModeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558996, null, false, obj);
+        return (LayoutImageModeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559003, null, false, obj);
     }
 
     public static LayoutImageModeBinding bind(View view) {
@@ -49,6 +49,6 @@ public abstract class LayoutImageModeBinding extends ViewDataBinding {
 
     @Deprecated
     public static LayoutImageModeBinding bind(View view, Object obj) {
-        return (LayoutImageModeBinding) bind(obj, view, 2131558996);
+        return (LayoutImageModeBinding) bind(obj, view, 2131559003);
     }
 }

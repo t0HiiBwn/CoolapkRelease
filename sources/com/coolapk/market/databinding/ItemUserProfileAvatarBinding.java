@@ -31,7 +31,7 @@ public abstract class ItemUserProfileAvatarBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserProfileAvatarBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemUserProfileAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558979, viewGroup, z, obj);
+        return (ItemUserProfileAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558986, viewGroup, z, obj);
     }
 
     public static ItemUserProfileAvatarBinding inflate(LayoutInflater layoutInflater) {
@@ -40,7 +40,7 @@ public abstract class ItemUserProfileAvatarBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserProfileAvatarBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemUserProfileAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558979, null, false, obj);
+        return (ItemUserProfileAvatarBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558986, null, false, obj);
     }
 
     public static ItemUserProfileAvatarBinding bind(View view) {
@@ -49,6 +49,6 @@ public abstract class ItemUserProfileAvatarBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemUserProfileAvatarBinding bind(View view, Object obj) {
-        return (ItemUserProfileAvatarBinding) bind(obj, view, 2131558979);
+        return (ItemUserProfileAvatarBinding) bind(obj, view, 2131558986);
     }
 }

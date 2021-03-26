@@ -25,96 +25,122 @@ public class HelpFormatter {
     public int defaultWidth = 74;
     protected Comparator optionComparator = new OptionComparator();
 
-    public void setWidth(int i) {
-        this.defaultWidth = i;
+    private static class OptionComparator implements Comparator {
+        private OptionComparator() {
+        }
+
+        @Override // java.util.Comparator
+        public int compare(Object obj, Object obj2) {
+            return ((Option) obj).getKey().compareToIgnoreCase(((Option) obj2).getKey());
+        }
     }
 
-    public int getWidth() {
-        return this.defaultWidth;
+    private static void appendOption(StringBuffer stringBuffer, Option option, boolean z) {
+        if (!z) {
+            stringBuffer.append("[");
+        }
+        if (option.getOpt() != null) {
+            stringBuffer.append("-");
+            stringBuffer.append(option.getOpt());
+        } else {
+            stringBuffer.append("--");
+            stringBuffer.append(option.getLongOpt());
+        }
+        if (option.hasArg() && option.hasArgName()) {
+            stringBuffer.append(" <");
+            stringBuffer.append(option.getArgName());
+            stringBuffer.append(">");
+        }
+        if (!z) {
+            stringBuffer.append("]");
+        }
     }
 
-    public void setLeftPadding(int i) {
-        this.defaultLeftPad = i;
+    private void appendOptionGroup(StringBuffer stringBuffer, OptionGroup optionGroup) {
+        if (!optionGroup.isRequired()) {
+            stringBuffer.append("[");
+        }
+        ArrayList arrayList = new ArrayList(optionGroup.getOptions());
+        Collections.sort(arrayList, getOptionComparator());
+        Iterator it2 = arrayList.iterator();
+        while (it2.hasNext()) {
+            appendOption(stringBuffer, (Option) it2.next(), true);
+            if (it2.hasNext()) {
+                stringBuffer.append(" | ");
+            }
+        }
+        if (!optionGroup.isRequired()) {
+            stringBuffer.append("]");
+        }
     }
 
-    public int getLeftPadding() {
-        return this.defaultLeftPad;
+    protected String createPadding(int i) {
+        StringBuffer stringBuffer = new StringBuffer(i);
+        for (int i2 = 0; i2 < i; i2++) {
+            stringBuffer.append(' ');
+        }
+        return stringBuffer.toString();
     }
 
-    public void setDescPadding(int i) {
-        this.defaultDescPad = i;
-    }
-
-    public int getDescPadding() {
-        return this.defaultDescPad;
-    }
-
-    public void setSyntaxPrefix(String str) {
-        this.defaultSyntaxPrefix = str;
-    }
-
-    public String getSyntaxPrefix() {
-        return this.defaultSyntaxPrefix;
-    }
-
-    public void setNewLine(String str) {
-        this.defaultNewLine = str;
-    }
-
-    public String getNewLine() {
-        return this.defaultNewLine;
-    }
-
-    public void setOptPrefix(String str) {
-        this.defaultOptPrefix = str;
-    }
-
-    public String getOptPrefix() {
-        return this.defaultOptPrefix;
-    }
-
-    public void setLongOptPrefix(String str) {
-        this.defaultLongOptPrefix = str;
-    }
-
-    public String getLongOptPrefix() {
-        return this.defaultLongOptPrefix;
-    }
-
-    public void setArgName(String str) {
-        this.defaultArgName = str;
+    protected int findWrapPos(String str, int i, int i2) {
+        int indexOf = str.indexOf(10, i2);
+        if ((indexOf != -1 && indexOf <= i) || ((indexOf = str.indexOf(9, i2)) != -1 && indexOf <= i)) {
+            return indexOf + 1;
+        }
+        int i3 = i + i2;
+        if (i3 >= str.length()) {
+            return -1;
+        }
+        int i4 = i3;
+        while (i4 >= i2 && (r5 = str.charAt(i4)) != ' ' && r5 != '\n' && r5 != '\r') {
+            i4--;
+        }
+        if (i4 > i2) {
+            return i4;
+        }
+        while (i3 <= str.length() && (r9 = str.charAt(i3)) != ' ' && r9 != '\n' && r9 != '\r') {
+            i3++;
+        }
+        if (i3 == str.length()) {
+            return -1;
+        }
+        return i3;
     }
 
     public String getArgName() {
         return this.defaultArgName;
     }
 
+    public int getDescPadding() {
+        return this.defaultDescPad;
+    }
+
+    public int getLeftPadding() {
+        return this.defaultLeftPad;
+    }
+
+    public String getLongOptPrefix() {
+        return this.defaultLongOptPrefix;
+    }
+
+    public String getNewLine() {
+        return this.defaultNewLine;
+    }
+
+    public String getOptPrefix() {
+        return this.defaultOptPrefix;
+    }
+
     public Comparator getOptionComparator() {
         return this.optionComparator;
     }
 
-    public void setOptionComparator(Comparator comparator) {
-        if (comparator == null) {
-            this.optionComparator = new OptionComparator();
-        } else {
-            this.optionComparator = comparator;
-        }
+    public String getSyntaxPrefix() {
+        return this.defaultSyntaxPrefix;
     }
 
-    public void printHelp(String str, Options options) {
-        printHelp(this.defaultWidth, str, null, options, null, false);
-    }
-
-    public void printHelp(String str, Options options, boolean z) {
-        printHelp(this.defaultWidth, str, null, options, null, z);
-    }
-
-    public void printHelp(String str, String str2, Options options, String str3) {
-        printHelp(str, str2, options, str3, false);
-    }
-
-    public void printHelp(String str, String str2, Options options, String str3, boolean z) {
-        printHelp(this.defaultWidth, str, str2, options, str3, z);
+    public int getWidth() {
+        return this.defaultWidth;
     }
 
     public void printHelp(int i, String str, String str2, Options options, String str3) {
@@ -149,6 +175,36 @@ public class HelpFormatter {
         }
     }
 
+    public void printHelp(String str, String str2, Options options, String str3) {
+        printHelp(str, str2, options, str3, false);
+    }
+
+    public void printHelp(String str, String str2, Options options, String str3, boolean z) {
+        printHelp(this.defaultWidth, str, str2, options, str3, z);
+    }
+
+    public void printHelp(String str, Options options) {
+        printHelp(this.defaultWidth, str, null, options, null, false);
+    }
+
+    public void printHelp(String str, Options options, boolean z) {
+        printHelp(this.defaultWidth, str, null, options, null, z);
+    }
+
+    public void printOptions(PrintWriter printWriter, int i, Options options, int i2, int i3) {
+        StringBuffer stringBuffer = new StringBuffer();
+        renderOptions(stringBuffer, i, options, i2, i3);
+        printWriter.println(stringBuffer.toString());
+    }
+
+    public void printUsage(PrintWriter printWriter, int i, String str) {
+        int length = this.defaultSyntaxPrefix.length() + str.indexOf(32) + 1;
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(this.defaultSyntaxPrefix);
+        stringBuffer.append(str);
+        printWrapped(printWriter, i, length, stringBuffer.toString());
+    }
+
     public void printUsage(PrintWriter printWriter, int i, String str, Options options) {
         StringBuffer stringBuffer = new StringBuffer(this.defaultSyntaxPrefix);
         stringBuffer.append(str);
@@ -173,67 +229,14 @@ public class HelpFormatter {
         printWrapped(printWriter, i, stringBuffer.toString().indexOf(32) + 1, stringBuffer.toString());
     }
 
-    private void appendOptionGroup(StringBuffer stringBuffer, OptionGroup optionGroup) {
-        if (!optionGroup.isRequired()) {
-            stringBuffer.append("[");
-        }
-        ArrayList arrayList = new ArrayList(optionGroup.getOptions());
-        Collections.sort(arrayList, getOptionComparator());
-        Iterator it2 = arrayList.iterator();
-        while (it2.hasNext()) {
-            appendOption(stringBuffer, (Option) it2.next(), true);
-            if (it2.hasNext()) {
-                stringBuffer.append(" | ");
-            }
-        }
-        if (!optionGroup.isRequired()) {
-            stringBuffer.append("]");
-        }
-    }
-
-    private static void appendOption(StringBuffer stringBuffer, Option option, boolean z) {
-        if (!z) {
-            stringBuffer.append("[");
-        }
-        if (option.getOpt() != null) {
-            stringBuffer.append("-");
-            stringBuffer.append(option.getOpt());
-        } else {
-            stringBuffer.append("--");
-            stringBuffer.append(option.getLongOpt());
-        }
-        if (option.hasArg() && option.hasArgName()) {
-            stringBuffer.append(" <");
-            stringBuffer.append(option.getArgName());
-            stringBuffer.append(">");
-        }
-        if (!z) {
-            stringBuffer.append("]");
-        }
-    }
-
-    public void printUsage(PrintWriter printWriter, int i, String str) {
-        int length = this.defaultSyntaxPrefix.length() + str.indexOf(32) + 1;
-        StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append(this.defaultSyntaxPrefix);
-        stringBuffer.append(str);
-        printWrapped(printWriter, i, length, stringBuffer.toString());
-    }
-
-    public void printOptions(PrintWriter printWriter, int i, Options options, int i2, int i3) {
-        StringBuffer stringBuffer = new StringBuffer();
-        renderOptions(stringBuffer, i, options, i2, i3);
+    public void printWrapped(PrintWriter printWriter, int i, int i2, String str) {
+        StringBuffer stringBuffer = new StringBuffer(str.length());
+        renderWrappedText(stringBuffer, i, i2, str);
         printWriter.println(stringBuffer.toString());
     }
 
     public void printWrapped(PrintWriter printWriter, int i, String str) {
         printWrapped(printWriter, i, 0, str);
-    }
-
-    public void printWrapped(PrintWriter printWriter, int i, int i2, String str) {
-        StringBuffer stringBuffer = new StringBuffer(str.length());
-        renderWrappedText(stringBuffer, i, i2, str);
-        printWriter.println(stringBuffer.toString());
     }
 
     protected StringBuffer renderOptions(StringBuffer stringBuffer, int i, Options options, int i2, int i3) {
@@ -329,39 +332,6 @@ public class HelpFormatter {
         }
     }
 
-    protected int findWrapPos(String str, int i, int i2) {
-        int indexOf = str.indexOf(10, i2);
-        if ((indexOf != -1 && indexOf <= i) || ((indexOf = str.indexOf(9, i2)) != -1 && indexOf <= i)) {
-            return indexOf + 1;
-        }
-        int i3 = i + i2;
-        if (i3 >= str.length()) {
-            return -1;
-        }
-        int i4 = i3;
-        while (i4 >= i2 && (r5 = str.charAt(i4)) != ' ' && r5 != '\n' && r5 != '\r') {
-            i4--;
-        }
-        if (i4 > i2) {
-            return i4;
-        }
-        while (i3 <= str.length() && (r9 = str.charAt(i3)) != ' ' && r9 != '\n' && r9 != '\r') {
-            i3++;
-        }
-        if (i3 == str.length()) {
-            return -1;
-        }
-        return i3;
-    }
-
-    protected String createPadding(int i) {
-        StringBuffer stringBuffer = new StringBuffer(i);
-        for (int i2 = 0; i2 < i; i2++) {
-            stringBuffer.append(' ');
-        }
-        return stringBuffer.toString();
-    }
-
     protected String rtrim(String str) {
         if (str == null || str.length() == 0) {
             return str;
@@ -373,13 +343,43 @@ public class HelpFormatter {
         return str.substring(0, length);
     }
 
-    private static class OptionComparator implements Comparator {
-        private OptionComparator() {
-        }
+    public void setArgName(String str) {
+        this.defaultArgName = str;
+    }
 
-        @Override // java.util.Comparator
-        public int compare(Object obj, Object obj2) {
-            return ((Option) obj).getKey().compareToIgnoreCase(((Option) obj2).getKey());
+    public void setDescPadding(int i) {
+        this.defaultDescPad = i;
+    }
+
+    public void setLeftPadding(int i) {
+        this.defaultLeftPad = i;
+    }
+
+    public void setLongOptPrefix(String str) {
+        this.defaultLongOptPrefix = str;
+    }
+
+    public void setNewLine(String str) {
+        this.defaultNewLine = str;
+    }
+
+    public void setOptPrefix(String str) {
+        this.defaultOptPrefix = str;
+    }
+
+    public void setOptionComparator(Comparator comparator) {
+        if (comparator == null) {
+            this.optionComparator = new OptionComparator();
+        } else {
+            this.optionComparator = comparator;
         }
+    }
+
+    public void setSyntaxPrefix(String str) {
+        this.defaultSyntaxPrefix = str;
+    }
+
+    public void setWidth(int i) {
+        this.defaultWidth = i;
     }
 }

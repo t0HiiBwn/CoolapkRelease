@@ -41,9 +41,7 @@ public class b extends l implements al.a {
     private al i;
     private int j;
     private TTAdDislike.DislikeInteractionCallback k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private Context f1300l;
+    private Context l;
     private String o = "banner_ad";
 
     public b(Context context, com.bytedance.sdk.openadsdk.core.d.l lVar, AdSlot adSlot) {
@@ -167,7 +165,7 @@ public class b extends l implements al.a {
         if (this.h == null) {
             this.h = new com.bytedance.sdk.openadsdk.dislike.b(activity, this.c, this.o);
         }
-        this.f1300l = activity;
+        this.l = activity;
         this.h.setDislikeInteractionCallback(dislikeInteractionCallback);
         a aVar = this.a;
         if (aVar != null && aVar.getCurView() != null) {

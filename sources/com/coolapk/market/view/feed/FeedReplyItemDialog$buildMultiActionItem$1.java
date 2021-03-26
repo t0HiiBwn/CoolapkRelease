@@ -48,9 +48,9 @@ final class FeedReplyItemDialog$buildMultiActionItem$1 extends Lambda implements
 
     public final void invoke(List<ActionItem> list) {
         Intrinsics.checkNotNullParameter(list, "it");
-        String string = this.this$0.getString(2131886712);
+        String string = this.this$0.getString(2131886774);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_dialog_copy_content)");
-        String string2 = this.this$0.getString(2131886713);
+        String string2 = this.this$0.getString(2131886775);
         Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_dialog_copy_free)");
         String allLinkAndText = StringUtils.getAllLinkAndText(this.$feedReply.getMessage());
         Intrinsics.checkNotNullExpressionValue(allLinkAndText, "StringUtils.getAllLinkAndText(feedReply.message)");
@@ -86,7 +86,7 @@ final class FeedReplyItemDialog$buildMultiActionItem$1 extends Lambda implements
         }
         for (String str2 : CollectionsKt.toList(hashSet)) {
             if (StringsKt.startsWith$default(str2, "http", false, 2, (Object) null)) {
-                String string3 = this.this$0.getString(2131886714, str2);
+                String string3 = this.this$0.getString(2131886776, str2);
                 Intrinsics.checkNotNullExpressionValue(string3, "getString(R.string.str_d…log_copy_something, span)");
                 MultiItemDialogFragmentKt.addItem(list, new CopyActionItem(string3, str2));
             }

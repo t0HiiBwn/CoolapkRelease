@@ -19,7 +19,7 @@ public final class PermissionsAgreeActivity$createRecyclerView$$inlined$apply$la
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public int getItemViewType(int i) {
-        return 2131558849;
+        return 2131558856;
     }
 
     PermissionsAgreeActivity$createRecyclerView$$inlined$apply$lambda$1(PermissionsAgreeActivity permissionsAgreeActivity) {

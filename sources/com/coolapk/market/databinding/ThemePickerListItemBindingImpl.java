@@ -22,21 +22,22 @@ public class ThemePickerListItemBindingImpl extends ThemePickerListItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362226, 3);
+        sparseIntArray.put(2131362231, 4);
     }
 
     public ThemePickerListItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
-        this(dataBindingComponent, view, mapBindings(dataBindingComponent, view, 4, sIncludes, sViewsWithIds));
+        this(dataBindingComponent, view, mapBindings(dataBindingComponent, view, 5, sIncludes, sViewsWithIds));
     }
 
     private ThemePickerListItemBindingImpl(DataBindingComponent dataBindingComponent, View view, Object[] objArr) {
-        super(dataBindingComponent, view, 1, (ImageView) objArr[3], (TextView) objArr[1], (TextView) objArr[2]);
+        super(dataBindingComponent, view, 1, (ImageView) objArr[4], (TextView) objArr[1], (TextView) objArr[3], (TextView) objArr[2]);
         this.mDirtyFlags = -1;
         this.colorText.setTag(null);
         FrameLayout frameLayout = (FrameLayout) objArr[0];
         this.mboundView0 = frameLayout;
         frameLayout.setTag(null);
         this.textView.setTag(null);
+        this.tipText.setTag(null);
         setRootTag(view);
         invalidateAll();
     }
@@ -61,9 +62,9 @@ public class ThemePickerListItemBindingImpl extends ThemePickerListItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (275 == i) {
+        if (276 == i) {
             setThemeItem((AppTheme.ThemeItem) obj);
-        } else if (307 != i) {
+        } else if (308 != i) {
             return false;
         } else {
             setViewHolder((ThemeListActivity.ThemePickerFragment.ThemeViewHolder) obj);
@@ -77,7 +78,7 @@ public class ThemePickerListItemBindingImpl extends ThemePickerListItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(275);
+        notifyPropertyChanged(276);
         super.requestRebind();
     }
 
@@ -88,7 +89,7 @@ public class ThemePickerListItemBindingImpl extends ThemePickerListItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(307);
+        notifyPropertyChanged(308);
         super.requestRebind();
     }
 
@@ -148,7 +149,7 @@ public class ThemePickerListItemBindingImpl extends ThemePickerListItemBinding {
             str = null;
         }
         int i3 = ((5 & j) > 0 ? 1 : ((5 & j) == 0 ? 0 : -1));
-        if ((j & 6) != 0) {
+        if ((6 & j) != 0) {
             TextViewBindingAdapter.setText(this.colorText, str);
             TextViewBindingAdapter.setText(this.textView, str2);
         }
@@ -156,6 +157,9 @@ public class ThemePickerListItemBindingImpl extends ThemePickerListItemBinding {
             Boolean bool = null;
             ViewBindingAdapters.clickListener(this.mboundView0, themeViewHolder, bool);
             ViewBindingAdapters.clickListener(this.textView, themeViewHolder, bool);
+        }
+        if ((j & 4) != 0) {
+            ViewBindingAdapters.clipView(this.tipText, "capsule", null);
         }
     }
 }

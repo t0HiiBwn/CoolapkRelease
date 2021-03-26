@@ -26,8 +26,8 @@ public class RvInFragmentLayoutBindingImpl extends RvInFragmentLayoutBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362067, 1);
-        sparseIntArray.put(2131362307, 2);
+        sparseIntArray.put(2131362069, 1);
+        sparseIntArray.put(2131362312, 2);
     }
 
     public RvInFragmentLayoutBindingImpl(DataBindingComponent dataBindingComponent, View view) {

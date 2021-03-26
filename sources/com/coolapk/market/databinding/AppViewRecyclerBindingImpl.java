@@ -44,7 +44,7 @@ public class AppViewRecyclerBindingImpl extends AppViewRecyclerBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppViewViewModel) obj);

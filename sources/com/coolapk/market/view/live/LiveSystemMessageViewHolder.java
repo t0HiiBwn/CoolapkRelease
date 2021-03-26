@@ -15,7 +15,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: LiveSystemMessageViewHolder.kt */
 public final class LiveSystemMessageViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558809;
+    public static final int LAYOUT_ID = 2131558816;
     private final ItemLiveSystemMessageBinding binding = ((ItemLiveSystemMessageBinding) getBinding());
     private LiveMessage liveMessage;
 

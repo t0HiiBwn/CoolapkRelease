@@ -97,7 +97,7 @@ public final class BannedUserListFragment extends NewAsyncListFragment<Result<Li
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558967, 2131231052).last(2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558974, 2131231062).last(2131231062).create());
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         RecyclerView.ItemAnimator itemAnimator = recyclerView.getItemAnimator();
@@ -182,7 +182,7 @@ public final class BannedUserListFragment extends NewAsyncListFragment<Result<Li
     private final class DataAdapter extends RecyclerView.Adapter<BindingViewHolder> {
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558967;
+            return 2131558974;
         }
 
         /* JADX WARN: Incorrect args count in method signature: ()V */
@@ -192,7 +192,7 @@ public final class BannedUserListFragment extends NewAsyncListFragment<Result<Li
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
             Intrinsics.checkNotNullParameter(viewGroup, "parent");
-            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558967, viewGroup, false);
+            View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558974, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "itemView");
             return new BannedUserViewHolder(inflate, new FragmentBindingComponent(BannedUserListFragment.this), new BannedUserListFragment$DataAdapter$onCreateViewHolder$1(this));
         }

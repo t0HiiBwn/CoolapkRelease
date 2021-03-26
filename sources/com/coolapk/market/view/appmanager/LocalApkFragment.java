@@ -56,7 +56,7 @@ public class LocalApkFragment extends AsyncListFragment<List<LocalApk>, LocalApk
     @Override // androidx.fragment.app.Fragment
     public void onViewCreated(View view, Bundle bundle) {
         super.onViewCreated(view, bundle);
-        setEmptyData(getString(2131886768), 0);
+        setEmptyData(getString(2131886830), 0);
         setLoadMoreEnable(false);
         setLayoutManager(new LinearLayoutManager(getActivity()));
         getRecyclerView().getItemAnimator().setChangeDuration(0);
@@ -95,7 +95,7 @@ public class LocalApkFragment extends AsyncListFragment<List<LocalApk>, LocalApk
       (0 ??[int, short, byte, char])
       (wrap: java.lang.String : 0x0023: INVOKE  (r0v4 java.lang.String) = 
       (r7v0 'this' com.coolapk.market.view.appmanager.LocalApkFragment A[IMMUTABLE_TYPE, THIS])
-      (2131886867 int)
+      (2131886929 int)
       (r5v0 java.lang.Object[])
      type: VIRTUAL call: com.coolapk.market.view.appmanager.LocalApkFragment.getString(int, java.lang.Object[]):java.lang.String)
      */
@@ -110,10 +110,10 @@ public class LocalApkFragment extends AsyncListFragment<List<LocalApk>, LocalApk
         String[] strArr = new String[3];
         Object[] objArr = new Object[1];
         objArr[0] = Integer.valueOf(dataList != null ? dataList.size() : 0);
-        strArr[0] = getString(2131886867, objArr);
-        strArr[1] = getString(2131886693);
+        strArr[0] = getString(2131886929, objArr);
+        strArr[1] = getString(2131886755);
         strArr[2] = null;
-        arrayList.add(new SectionedAdapter.Section(0, 2131558847, strArr));
+        arrayList.add(new SectionedAdapter.Section(0, 2131558854, strArr));
         this.adapter.setSections(arrayList);
     }
 
@@ -160,7 +160,7 @@ public class LocalApkFragment extends AsyncListFragment<List<LocalApk>, LocalApk
 
                 @Override // com.coolapk.market.viewholder.ItemActionHandler
                 public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
-                    if (view.getId() == 2131363051) {
+                    if (view.getId() == 2131363065) {
                         DeleteConfirmDialog.newInstance().show(LocalApkFragment.this.getChildFragmentManager(), (String) null);
                     }
                 }
@@ -183,7 +183,7 @@ public class LocalApkFragment extends AsyncListFragment<List<LocalApk>, LocalApk
                 getDataList().remove(size);
             }
         }
-        Toast.show(getActivity(), getString(2131887211, StringUtils.formatSize((long) i)));
+        Toast.show(getActivity(), getString(2131887273, StringUtils.formatSize((long) i)));
         getRecyclerView().getAdapter().notifyDataSetChanged();
         updateSections();
     }
@@ -193,7 +193,7 @@ public class LocalApkFragment extends AsyncListFragment<List<LocalApk>, LocalApk
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558811;
+            return 2131558818;
         }
 
         public DataAdapter(Fragment fragment) {
@@ -212,7 +212,7 @@ public class LocalApkFragment extends AsyncListFragment<List<LocalApk>, LocalApk
                     if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition())) {
                         final LocalApk localApk = (LocalApk) LocalApkFragment.this.getDataList().get(LocalApkFragment.this.adapter.sectionedPositionToPosition(viewHolder.getAdapterPosition()));
                         int id = view.getId();
-                        if (id == 2131361886) {
+                        if (id == 2131361887) {
                             InstallState installState = DataManager.getInstance().getInstallState(localApk.getFilePathMd5());
                             if (installState != null) {
                                 switch (installState.getState()) {
@@ -226,9 +226,9 @@ public class LocalApkFragment extends AsyncListFragment<List<LocalApk>, LocalApk
                                 }
                             }
                             ActionManager.install(LocalApkFragment.this.getActivity(), localApk.getFilePath(), null, null);
-                        } else if (id == 2131362768) {
+                        } else if (id == 2131362779) {
                             ActionManager.startAppViewActivity(LocalApkFragment.this.getActivity(), localApk.getPackageName());
-                        } else if (id == 2131362970) {
+                        } else if (id == 2131362982) {
                             String appName = localApk.getAppName();
                             String packageName = localApk.getPackageName();
                             String versionName = localApk.getVersionName();
@@ -239,7 +239,7 @@ public class LocalApkFragment extends AsyncListFragment<List<LocalApk>, LocalApk
 
                                 @Override // androidx.appcompat.widget.PopupMenu.OnMenuItemClickListener
                                 public boolean onMenuItemClick(MenuItem menuItem) {
-                                    if (menuItem.getItemId() != 2131361891) {
+                                    if (menuItem.getItemId() != 2131361892) {
                                         return false;
                                     }
                                     if (new File(filePath).delete()) {
@@ -257,7 +257,7 @@ public class LocalApkFragment extends AsyncListFragment<List<LocalApk>, LocalApk
                                             }
                                         }
                                     } else {
-                                        Toast.show(LocalApkFragment.this.getActivity(), 2131887193);
+                                        Toast.show(LocalApkFragment.this.getActivity(), 2131887255);
                                     }
                                     return true;
                                 }
@@ -301,7 +301,7 @@ public class LocalApkFragment extends AsyncListFragment<List<LocalApk>, LocalApk
 
         @Override // androidx.fragment.app.DialogFragment
         public Dialog onCreateDialog(Bundle bundle) {
-            return new AlertDialog.Builder(getActivity()).setMessage(2131886718).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
+            return new AlertDialog.Builder(getActivity()).setMessage(2131886780).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.view.appmanager.$$Lambda$LocalApkFragment$DeleteConfirmDialog$YuRRIbzQwbqkqbSsexLj3LREzc */
 
                 @Override // android.content.DialogInterface.OnClickListener

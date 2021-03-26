@@ -23,9 +23,7 @@ import java.util.Locale;
 
 public class BannerExpressBackupView extends BackupView {
     private static i[] k = {new i(1, 6.6666665f, 600, 90), new i(1, 6.4f, 640, 100), new i(1, 4.0f, 600, 150), new i(2, 1.2f, 600, 500), new i(3, 1, 1.5f, 600, 400), new i(3, 2, 2.0f, 600, 300), new i(3, 3, 2.3076923f, 600, 260), new i(3, 4, 1.7783505f, 690, 388)};
-
-    /* renamed from: l  reason: collision with root package name */
-    private View f1299l;
+    private View l;
     private NativeExpressView m;
     private a n;
     private int o = 1;
@@ -99,15 +97,15 @@ public class BannerExpressBackupView extends BackupView {
 
     private void a(i iVar) {
         View inflate = LayoutInflater.from(this.a).inflate(ac.f(this.a, "tt_backup_banner_layout3"), (ViewGroup) this, true);
-        this.f1299l = inflate;
+        this.l = inflate;
         FrameLayout frameLayout = (FrameLayout) inflate.findViewById(ac.e(this.a, "tt_ad_content_layout"));
-        View findViewById = this.f1299l.findViewById(ac.e(this.a, "tt_bu_close"));
-        ImageView imageView = (ImageView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_img"));
-        ImageView imageView2 = (ImageView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_icon"));
-        TextView textView = (TextView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_title"));
-        TextView textView2 = (TextView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_desc"));
-        TextView textView3 = (TextView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_name"));
-        TextView textView4 = (TextView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_download"));
+        View findViewById = this.l.findViewById(ac.e(this.a, "tt_bu_close"));
+        ImageView imageView = (ImageView) this.l.findViewById(ac.e(this.a, "tt_bu_img"));
+        ImageView imageView2 = (ImageView) this.l.findViewById(ac.e(this.a, "tt_bu_icon"));
+        TextView textView = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_title"));
+        TextView textView2 = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_desc"));
+        TextView textView3 = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_name"));
+        TextView textView4 = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_download"));
         findViewById.setOnClickListener(new View.OnClickListener() {
             /* class com.bytedance.sdk.openadsdk.core.bannerexpress.BannerExpressBackupView.AnonymousClass1 */
 
@@ -158,12 +156,12 @@ public class BannerExpressBackupView extends BackupView {
 
     private void c() {
         View inflate = LayoutInflater.from(this.a).inflate(ac.f(this.a, "tt_backup_banner_layout2"), (ViewGroup) this, true);
-        this.f1299l = inflate;
+        this.l = inflate;
         FrameLayout frameLayout = (FrameLayout) inflate.findViewById(ac.e(this.a, "tt_ad_content_layout"));
-        View findViewById = this.f1299l.findViewById(ac.e(this.a, "tt_bu_close"));
-        ImageView imageView = (ImageView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_img"));
-        ImageView imageView2 = (ImageView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_icon"));
-        TextView textView = (TextView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_download"));
+        View findViewById = this.l.findViewById(ac.e(this.a, "tt_bu_close"));
+        ImageView imageView = (ImageView) this.l.findViewById(ac.e(this.a, "tt_bu_img"));
+        ImageView imageView2 = (ImageView) this.l.findViewById(ac.e(this.a, "tt_bu_icon"));
+        TextView textView = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_download"));
         findViewById.setOnClickListener(new View.OnClickListener() {
             /* class com.bytedance.sdk.openadsdk.core.bannerexpress.BannerExpressBackupView.AnonymousClass2 */
 
@@ -174,8 +172,8 @@ public class BannerExpressBackupView extends BackupView {
         });
         int a = (int) ak.a(this.a, 15.0f);
         ak.a(findViewById, a, a, a, a);
-        ((TextView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_title"))).setText(getTitle());
-        ((TextView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_desc"))).setText(getDescription());
+        ((TextView) this.l.findViewById(ac.e(this.a, "tt_bu_title"))).setText(getTitle());
+        ((TextView) this.l.findViewById(ac.e(this.a, "tt_bu_desc"))).setText(getDescription());
         if (!TextUtils.isEmpty(this.b.af())) {
             textView.setText(this.b.af());
         }
@@ -203,11 +201,11 @@ public class BannerExpressBackupView extends BackupView {
 
     private void d() {
         View inflate = LayoutInflater.from(this.a).inflate(ac.f(this.a, "tt_backup_banner_layout1"), (ViewGroup) this, true);
-        this.f1299l = inflate;
+        this.l = inflate;
         View findViewById = inflate.findViewById(ac.e(this.a, "tt_bu_close"));
-        TextView textView = (TextView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_score"));
-        TTRatingBar tTRatingBar = (TTRatingBar) this.f1299l.findViewById(ac.e(this.a, "tt_bu_score_bar"));
-        TextView textView2 = (TextView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_download"));
+        TextView textView = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_score"));
+        TTRatingBar tTRatingBar = (TTRatingBar) this.l.findViewById(ac.e(this.a, "tt_bu_score_bar"));
+        TextView textView2 = (TextView) this.l.findViewById(ac.e(this.a, "tt_bu_download"));
         findViewById.setOnClickListener(new View.OnClickListener() {
             /* class com.bytedance.sdk.openadsdk.core.bannerexpress.BannerExpressBackupView.AnonymousClass3 */
 
@@ -216,8 +214,8 @@ public class BannerExpressBackupView extends BackupView {
                 BannerExpressBackupView.this.a();
             }
         });
-        d.a(this.a).a(this.b.U().a(), (ImageView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_icon")));
-        ((TextView) this.f1299l.findViewById(ac.e(this.a, "tt_bu_title"))).setText(getTitle());
+        d.a(this.a).a(this.b.U().a(), (ImageView) this.l.findViewById(ac.e(this.a, "tt_bu_icon")));
+        ((TextView) this.l.findViewById(ac.e(this.a, "tt_bu_title"))).setText(getTitle());
         if (!TextUtils.isEmpty(this.b.af())) {
             textView2.setText(this.b.af());
         }

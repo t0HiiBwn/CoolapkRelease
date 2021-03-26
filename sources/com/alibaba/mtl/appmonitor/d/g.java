@@ -15,17 +15,17 @@ class g extends a<JSONObject> {
     protected int q = -1;
 
     /* renamed from: q  reason: collision with other field name */
-    protected Map<String, h> f50q;
+    protected Map<String, h> f49q;
 
     public g(f fVar, int i) {
         super(i);
         this.e = fVar;
-        this.f50q = Collections.synchronizedMap(new HashMap());
+        this.f49q = Collections.synchronizedMap(new HashMap());
     }
 
     public boolean a(int i, String str, String str2, Map<String, String> map) {
         h hVar;
-        Map<String, h> map2 = this.f50q;
+        Map<String, h> map2 = this.f49q;
         if (map2 == null || (hVar = map2.get(str)) == null) {
             return i < this.n;
         }
@@ -35,7 +35,7 @@ class g extends a<JSONObject> {
     public void b(JSONObject jSONObject) {
         a((g) jSONObject);
         c(jSONObject);
-        this.f50q.clear();
+        this.f49q.clear();
         try {
             JSONArray optJSONArray = jSONObject.optJSONArray("metrics");
             if (optJSONArray != null) {
@@ -43,10 +43,10 @@ class g extends a<JSONObject> {
                     JSONObject jSONObject2 = optJSONArray.getJSONObject(i);
                     String optString = jSONObject2.optString("module");
                     if (b.c(optString)) {
-                        h hVar = this.f50q.get(optString);
+                        h hVar = this.f49q.get(optString);
                         if (hVar == null) {
                             hVar = new h(optString, this.n);
-                            this.f50q.put(optString, hVar);
+                            this.f49q.put(optString, hVar);
                         }
                         hVar.b(jSONObject2);
                     }

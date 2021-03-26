@@ -35,7 +35,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedScrollCardViewHolder.kt */
 final class FeedScrollItemViewHolder extends GenericBindHolder<ItemFeedScrollItemBinding, Feed> implements RVStateEventChangedAdapter.IStateViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558723;
+    public static final int LAYOUT_ID = 2131558730;
     private final Function0<EntityCard> callback;
     private final Lazy extraTypeViewPart$delegate;
     private Feed feed;
@@ -151,7 +151,7 @@ final class FeedScrollItemViewHolder extends GenericBindHolder<ItemFeedScrollIte
         if (feed2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("feed");
         }
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

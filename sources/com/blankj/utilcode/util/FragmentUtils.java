@@ -690,6 +690,7 @@ public final class FragmentUtils {
                 }
             }
             fragmentTransaction.commitAllowingStateLoss();
+            fragmentManager.executePendingTransactions();
             return;
         }
         Log.e("FragmentUtils", fragment.getClass().getName() + " is isRemoving");

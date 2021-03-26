@@ -20,6 +20,6 @@ final class SplashViewV9$binding$2 extends Lambda implements Function0<SplashVie
 
     @Override // kotlin.jvm.functions.Function0
     public final SplashViewBinding invoke() {
-        return (SplashViewBinding) DataBindingUtil.inflate(LayoutInflater.from(this.this$0.getContext()), 2131559146, this.this$0, true);
+        return (SplashViewBinding) DataBindingUtil.inflate(LayoutInflater.from(this.this$0.getContext()), 2131559153, this.this$0, true);
     }
 }

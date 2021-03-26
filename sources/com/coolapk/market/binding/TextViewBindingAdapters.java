@@ -68,7 +68,7 @@ public class TextViewBindingAdapters {
         SpannableStringBuilder convert = LinkTextUtils.convert(str, colorAccent, imageGetter);
         if (num != null && convert.length() > num.intValue()) {
             SpannableStringBuilder trimSpannable = LinkTextUtils.trimSpannable((SpannableStringBuilder) convert.subSequence(0, num.intValue()));
-            String string = textView.getContext().getString(2131886656);
+            String string = textView.getContext().getString(2131886718);
             if (TextUtils.isEmpty(str3)) {
                 str3 = string;
             }
@@ -115,13 +115,13 @@ public class TextViewBindingAdapters {
         textView.setVisibility(0);
     }
 
-    public static void setTime(TextView textView, Long l2) {
-        if (l2 == null || l2.longValue() == 0) {
+    public static void setTime(TextView textView, Long l) {
+        if (l == null || l.longValue() == 0) {
             textView.setText((CharSequence) null);
             textView.setVisibility(8);
             return;
         }
-        textView.setText(DateUtils.getTimeDescription(AppHolder.getApplication(), l2));
+        textView.setText(DateUtils.getTimeDescription(AppHolder.getApplication(), l));
         textView.setVisibility(0);
     }
 
@@ -157,7 +157,7 @@ public class TextViewBindingAdapters {
 
     public static void setDeviceTitle(TextView textView, String str) {
         if (!TextUtils.isEmpty(str)) {
-            setTextViewLinkable(textView, textView.getContext().getString(2131886777, String.format("<a class=\"feed-link-tag\" href=\"/t/%s?from=device_title\">%s</a>", str, str)));
+            setTextViewLinkable(textView, textView.getContext().getString(2131886839, String.format("<a class=\"feed-link-tag\" href=\"/t/%s?from=device_title\">%s</a>", str, str)));
         }
     }
 
@@ -207,7 +207,7 @@ public class TextViewBindingAdapters {
             }
         }
         if (z) {
-            return String.format(application.getString(2131886792), userSpan, UserUtils.getUserSpan(feedReply.getReplyUid(), feedReply.getReplyUserName()), feedReply.getMessage());
+            return String.format(application.getString(2131886854), userSpan, UserUtils.getUserSpan(feedReply.getReplyUid(), feedReply.getReplyUserName()), feedReply.getMessage());
         }
         return String.format("%s: %s", userSpan, feedReply.getMessage());
     }
@@ -223,7 +223,7 @@ public class TextViewBindingAdapters {
             }
             Application application = AppHolder.getApplication();
             if (feedReply.hasOtherReplyUser() && bool.booleanValue()) {
-                userSpan = String.format(application.getString(2131886800), userSpan, UserUtils.getUserSpan(feedReply.getReplyUid(), feedReply.getReplyUserName()));
+                userSpan = String.format(application.getString(2131886862), userSpan, UserUtils.getUserSpan(feedReply.getReplyUid(), feedReply.getReplyUserName()));
             }
             setTextViewLinkable(textView, userSpan, null, null, null, EmotionUtils.USER_INDICATE_GETTER, null);
         }
@@ -234,7 +234,7 @@ public class TextViewBindingAdapters {
         if (feedReply != null) {
             Application application = AppHolder.getApplication();
             if (feedReply.hasOtherReplyUser()) {
-                str = application.getString(2131887125, UserUtils.getUserSpan(feedReply.getReplyUid(), feedReply.getReplyUserName()), feedReply.getMessage());
+                str = application.getString(2131887187, UserUtils.getUserSpan(feedReply.getReplyUid(), feedReply.getReplyUserName()), feedReply.getMessage());
             } else {
                 str = feedReply.getMessage();
             }
@@ -247,7 +247,7 @@ public class TextViewBindingAdapters {
         if (feedReply != null) {
             Application application = AppHolder.getApplication();
             if (feedReply.hasOtherReplyUser()) {
-                str = application.getString(2131887124, feedReply.getMessage());
+                str = application.getString(2131887186, feedReply.getMessage());
             } else {
                 str = feedReply.getMessage();
             }

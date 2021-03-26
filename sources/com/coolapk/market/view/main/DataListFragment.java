@@ -307,7 +307,7 @@ public class DataListFragment extends EntityListFragment implements ConvertViewP
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
         if (shouldShowShareView()) {
-            MenuItem add = menu.add(0, 2131361968, 0, 2131886148);
+            MenuItem add = menu.add(0, 2131361969, 0, 2131886148);
             add.setIcon(2131689492);
             add.setShowAsAction(2);
         }
@@ -317,8 +317,8 @@ public class DataListFragment extends EntityListFragment implements ConvertViewP
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
         int itemId = menuItem.getItemId();
-        if (itemId != 2131361876) {
-            if (itemId != 2131361968) {
+        if (itemId != 2131361877) {
+            if (itemId != 2131361969) {
                 return super.onOptionsItemSelected(menuItem);
             }
             onShareActionClick();
@@ -564,7 +564,7 @@ public class DataListFragment extends EntityListFragment implements ConvertViewP
         sb.append("  ");
         sb.append(builder);
         sb.append(' ');
-        sb.append(getString(2131886685));
+        sb.append(getString(2131886747));
         ActionManager.shareText(activity, str4, sb.toString());
     }
 

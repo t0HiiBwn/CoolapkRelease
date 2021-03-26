@@ -32,7 +32,7 @@ final class BackupCreateDialog$loadDeviceInfo$1<T> implements Action1<Result<Dev
                     Intrinsics.checkNotNullExpressionValue(result, "it");
                     Object data = result.getData();
                     Intrinsics.checkNotNullExpressionValue(data, "it.data");
-                    BackupCreateDialog.access$onDeviceInfoLoaded(backupCreateDialog, (DeviceInfo) data);
+                    backupCreateDialog.onDeviceInfoLoaded((DeviceInfo) data);
                 }
             });
         }

@@ -36,13 +36,16 @@ import com.coolapk.market.widget.view.ControlGifImageView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 import rx.Observable;
 
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u0000 \u00182\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0002\u0018\u0019B\u0005¢\u0006\u0002\u0010\u0003J\u0012\u0010\u0004\u001a\u00020\u00052\b\u0010\u0006\u001a\u0004\u0018\u00010\u0007H\u0016J$\u0010\b\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00020\n0\t2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\u000eH\u0016J\b\u0010\u000f\u001a\u00020\u0005H\u0016J\u001e\u0010\u0010\u001a\u00020\u00052\u0006\u0010\u0011\u001a\u00020\u00022\u0006\u0010\u0012\u001a\u00020\u000e2\u0006\u0010\u0013\u001a\u00020\u0014J\u0010\u0010\u0015\u001a\u00020\u00052\u0006\u0010\u0016\u001a\u00020\u0017H\u0007¨\u0006\u001a"}, d2 = {"Lcom/coolapk/market/view/product/ProductMediaFragment;", "Lcom/coolapk/market/view/base/asynclist/ShortAsyncListFragment;", "Lcom/coolapk/market/model/ProductMedia;", "()V", "onActivityCreated", "", "savedInstanceState", "Landroid/os/Bundle;", "onCreateRequest", "Lrx/Observable;", "", "isRefresh", "", "page", "", "onDestroyView", "onMediaClick", "data", "position", "view", "Landroid/view/View;", "onProductEvent", "event", "Lcom/coolapk/market/event/ProductEvent;", "Companion", "ProductMediaViewHolder", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: ProductMediaFragment.kt */
 public final class ProductMediaFragment extends ShortAsyncListFragment<ProductMedia> {
     public static final Companion Companion = new Companion(null);
@@ -50,6 +53,7 @@ public final class ProductMediaFragment extends ShortAsyncListFragment<ProductMe
     public static final String EXTRA_RECOMMEND_FLAG = "extra_recommend_flag";
     public static final String EXTRA_TYPE = "extra_type";
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u001e\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u00042\u0006\u0010\u000b\u001a\u00020\fR\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\r"}, d2 = {"Lcom/coolapk/market/view/product/ProductMediaFragment$Companion;", "", "()V", "EXTRA_PRODUCT_ID", "", "EXTRA_RECOMMEND_FLAG", "EXTRA_TYPE", "newInstance", "Lcom/coolapk/market/view/product/ProductMediaFragment;", "id", "type", "isRecommend", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: ProductMediaFragment.kt */
     public static final class Companion {
         private Companion() {
@@ -83,7 +87,7 @@ public final class ProductMediaFragment extends ShortAsyncListFragment<ProductMe
         recyclerView.setPadding(NumberExtendsKt.getDp((Number) 12), NumberExtendsKt.getDp((Number) 4), NumberExtendsKt.getDp((Number) 12), NumberExtendsKt.getDp((Number) 4));
         recyclerView.setBackgroundColor(AppHolder.getAppTheme().getMainBackgroundColor());
         ViewExtendsKt.removeAllItemDecorations(recyclerView);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558868).suitedEntityType("productMedia").constructor(new ProductMediaFragment$onActivityCreated$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558875).suitedEntityType("productMedia").constructor(new ProductMediaFragment$onActivityCreated$2(this)).build(), 0, 2, null);
         setRefreshEnable(true);
         setLoadMoreEnable(true);
         initData();
@@ -187,6 +191,7 @@ public final class ProductMediaFragment extends ShortAsyncListFragment<ProductMe
         EventBusExtendsKt.safeUnregister(eventBus, this);
     }
 
+    @Subscribe
     public final void onProductEvent(ProductEvent productEvent) {
         Intrinsics.checkNotNullParameter(productEvent, "event");
         String type = productEvent.getType();
@@ -225,10 +230,11 @@ public final class ProductMediaFragment extends ShortAsyncListFragment<ProductMe
         return compose;
     }
 
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0003\u0018\u0000 \u000f2\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0001\u000fB\u001d\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nJ\u0010\u0010\f\u001a\u00020\r2\u0006\u0010\u000b\u001a\u00020\u0003H\u0016J\u0006\u0010\u000e\u001a\u00020\rR\u000e\u0010\u000b\u001a\u00020\u0003X.¢\u0006\u0002\n\u0000¨\u0006\u0010"}, d2 = {"Lcom/coolapk/market/view/product/ProductMediaFragment$ProductMediaViewHolder;", "Lcom/coolapk/market/viewholder/GenericBindHolder;", "Lcom/coolapk/market/databinding/ItemProductMediaBinding;", "Lcom/coolapk/market/model/ProductMedia;", "itemView", "Landroid/view/View;", "component", "Lcom/coolapk/market/binding/FragmentBindingComponent;", "onItemClick", "Lcom/coolapk/market/viewholder/ItemActionHandler;", "(Landroid/view/View;Lcom/coolapk/market/binding/FragmentBindingComponent;Lcom/coolapk/market/viewholder/ItemActionHandler;)V", "data", "bindToContent", "", "showProductMediaDialog", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: ProductMediaFragment.kt */
     public static final class ProductMediaViewHolder extends GenericBindHolder<ItemProductMediaBinding, ProductMedia> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558868;
+        public static final int LAYOUT_ID = 2131558875;
         private ProductMedia data;
 
         public static final /* synthetic */ ProductMedia access$getData$p(ProductMediaViewHolder productMediaViewHolder) {
@@ -306,6 +312,7 @@ public final class ProductMediaFragment extends ShortAsyncListFragment<ProductMe
             initBuilder.show(supportFragmentManager, (String) null);
         }
 
+        @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/view/product/ProductMediaFragment$ProductMediaViewHolder$Companion;", "", "()V", "LAYOUT_ID", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
         /* compiled from: ProductMediaFragment.kt */
         public static final class Companion {
             private Companion() {

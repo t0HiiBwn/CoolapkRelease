@@ -46,10 +46,10 @@ public class UTHybridHelper {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:19:0x0069  */
-    /* JADX WARNING: Removed duplicated region for block: B:22:0x0077  */
-    /* JADX WARNING: Removed duplicated region for block: B:30:0x009b  */
-    /* JADX WARNING: Removed duplicated region for block: B:31:0x00a3  */
+    /* JADX WARNING: Removed duplicated region for block: B:19:0x006c  */
+    /* JADX WARNING: Removed duplicated region for block: B:22:0x007a  */
+    /* JADX WARNING: Removed duplicated region for block: B:30:0x009e  */
+    /* JADX WARNING: Removed duplicated region for block: B:31:0x00a6  */
     private void a(Date date, Map<String, String> map, Object obj) {
         Map<String, String> map2;
         int i;
@@ -73,7 +73,7 @@ public class UTHybridHelper {
             } else {
                 map2 = null;
                 i = 2006;
-                if (UTPageHitHelper.getInstance().m38a(obj)) {
+                if (UTPageHitHelper.getInstance().m28a(obj)) {
                     i = 2001;
                 }
                 uTOriginalCustomHitBuilder = new UTOriginalCustomHitBuilder(b, i, refPage, null, null, map2);
@@ -90,11 +90,11 @@ public class UTHybridHelper {
                 } else {
                     i.a("h5Page event error", "Fatal Error,must call setRequestAuthentication method first.");
                 }
-                UTPageHitHelper.getInstance().m37a(obj);
+                UTPageHitHelper.getInstance().m27a(obj);
             }
             map2 = map3;
             i = 2006;
-            if (UTPageHitHelper.getInstance().m38a(obj)) {
+            if (UTPageHitHelper.getInstance().m28a(obj)) {
             }
             uTOriginalCustomHitBuilder = new UTOriginalCustomHitBuilder(b, i, refPage, null, null, map2);
             if (2001 == i) {
@@ -104,7 +104,7 @@ public class UTHybridHelper {
             defaultTracker = UTAnalytics.getInstance().getDefaultTracker();
             if (defaultTracker == null) {
             }
-            UTPageHitHelper.getInstance().m37a(obj);
+            UTPageHitHelper.getInstance().m27a(obj);
         }
     }
 

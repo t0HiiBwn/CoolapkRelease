@@ -195,7 +195,7 @@ public final class GestureCover extends ThemeableCover implements OnTouchGesture
     @Override // com.kk.taurus.playerbase.receiver.BaseCover
     public View onCreateCoverView(Context context) {
         Intrinsics.checkNotNullParameter(context, "context");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559293, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559303, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…deo_gesture, null, false)");
         VideoGestureBinding videoGestureBinding = (VideoGestureBinding) inflate;
         this.binding = videoGestureBinding;
@@ -352,7 +352,7 @@ public final class GestureCover extends ThemeableCover implements OnTouchGesture
         if (i3 == 0) {
             str = "OFF";
         }
-        setVolumeIcon(i3 == 0 ? 2131231642 : 2131231643);
+        setVolumeIcon(i3 == 0 ? 2131231653 : 2131231654);
         setBrightnessBoxState(false);
         setFastForwardState(false);
         setVolumeBoxState(true);

@@ -944,7 +944,7 @@ public class FeedItemDialog extends MultiItemDialogFragment {
 
         @Override // com.coolapk.market.view.base.ActionItem
         public void takeAction() {
-            String string = this.this$0.getString(2131886722);
+            String string = this.this$0.getString(2131886784);
             Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_dialog_delete_title)");
             ConfirmDeleteDialog newInstance = ConfirmDeleteDialog.newInstance(string, "删除 " + this.feed.getUserName() + " 的" + this.feed.getFeedTypeName() + "： " + this.feed.getMessage());
             newInstance.setDeleteTarget(this.feed);

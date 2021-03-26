@@ -88,7 +88,7 @@ final /* synthetic */ class BuildersKt__Builders_commonKt {
         } else {
             DispatchedCoroutine dispatchedCoroutine = new DispatchedCoroutine(plus, continuation);
             dispatchedCoroutine.initParentJob$kotlinx_coroutines_core();
-            CancellableKt.startCoroutineCancellable(function2, dispatchedCoroutine, dispatchedCoroutine);
+            CancellableKt.startCoroutineCancellable$default(function2, dispatchedCoroutine, dispatchedCoroutine, null, 4, null);
             obj = dispatchedCoroutine.getResult();
         }
         if (obj == IntrinsicsKt.getCOROUTINE_SUSPENDED()) {

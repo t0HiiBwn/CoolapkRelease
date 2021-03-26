@@ -27,7 +27,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: MainV8ListFragment.kt */
 public final class UpgradeCardViewHolder extends StateViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558966;
+    public static final int LAYOUT_ID = 2131558973;
     private List<? extends MobileApp> apps;
     private final ItemUpgradeCardBinding binding = ((ItemUpgradeCardBinding) getBinding());
 
@@ -109,8 +109,8 @@ public final class UpgradeCardViewHolder extends StateViewHolder {
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
         int id = view.getId();
-        if (id != 2131361876) {
-            if (id == 2131362374) {
+        if (id != 2131361877) {
+            if (id == 2131362380) {
                 DataBindingComponent component = getComponent();
                 if (component instanceof FragmentBindingComponent) {
                     Fragment fragment = (Fragment) ((FragmentBindingComponent) component).getContainer();
@@ -127,7 +127,7 @@ public final class UpgradeCardViewHolder extends StateViewHolder {
                     return;
                 }
                 return;
-            } else if (id != 2131362768) {
+            } else if (id != 2131362779) {
                 return;
             }
         }

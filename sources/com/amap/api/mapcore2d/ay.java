@@ -29,9 +29,7 @@ class ay implements ab {
     private String i;
     private String j;
     private float k = 0.5f;
-
-    /* renamed from: l  reason: collision with root package name */
-    private float f1219l = 1.0f;
+    private float l = 1.0f;
     private boolean m = false;
     private boolean n = true;
     private at o;
@@ -146,7 +144,7 @@ class ay implements ab {
             this.g = markerOptions.getPosition();
         }
         this.k = markerOptions.getAnchorU();
-        this.f1219l = markerOptions.getAnchorV();
+        this.l = markerOptions.getAnchorV();
         this.n = markerOptions.isVisible();
         this.j = markerOptions.getSnippet();
         this.i = markerOptions.getTitle();
@@ -204,7 +202,7 @@ class ay implements ab {
         CopyOnWriteArrayList<BitmapDescriptor> copyOnWriteArrayList = this.d;
         if (!(copyOnWriteArrayList == null || copyOnWriteArrayList.size() == 0)) {
             sVar.a = (double) (((float) getWidth()) * this.k);
-            sVar.b = (double) (((float) getHeight()) * this.f1219l);
+            sVar.b = (double) (((float) getHeight()) * this.l);
         }
         return sVar;
     }
@@ -229,18 +227,18 @@ class ay implements ab {
             Rect rect = new Rect();
             if (this.c == 0.0f) {
                 float f2 = (float) height;
-                rect.top = (int) (((float) e2.b) - (this.f1219l * f2));
+                rect.top = (int) (((float) e2.b) - (this.l * f2));
                 float f3 = (float) width;
                 rect.left = (int) (((float) e2.a) - (this.k * f3));
-                rect.bottom = (int) (((float) e2.b) + (f2 * (1.0f - this.f1219l)));
+                rect.bottom = (int) (((float) e2.b) + (f2 * (1.0f - this.l)));
                 rect.right = (int) (((float) e2.a) + ((1.0f - this.k) * f3));
             } else {
                 float f4 = (float) width;
                 float f5 = (float) height;
-                ae a2 = a((-this.k) * f4, (this.f1219l - 1.0f) * f5);
-                ae a3 = a((-this.k) * f4, this.f1219l * f5);
-                ae a4 = a((1.0f - this.k) * f4, this.f1219l * f5);
-                ae a5 = a((1.0f - this.k) * f4, (this.f1219l - 1.0f) * f5);
+                ae a2 = a((-this.k) * f4, (this.l - 1.0f) * f5);
+                ae a3 = a((-this.k) * f4, this.l * f5);
+                ae a4 = a((1.0f - this.k) * f4, this.l * f5);
+                ae a5 = a((1.0f - this.k) * f4, (this.l - 1.0f) * f5);
                 rect.top = e2.b - Math.max(a2.b, Math.max(a3.b, Math.max(a4.b, a5.b)));
                 rect.left = e2.a + Math.min(a2.a, Math.min(a3.a, Math.min(a4.a, a5.a)));
                 rect.bottom = e2.b - Math.min(a2.b, Math.min(a3.b, Math.min(a4.b, a5.b)));
@@ -420,9 +418,9 @@ class ay implements ab {
 
     @Override // com.amap.api.interfaces.IMarker
     public void setAnchor(float f2, float f3) {
-        if (this.k != f2 || this.f1219l != f3) {
+        if (this.k != f2 || this.l != f3) {
             this.k = f2;
-            this.f1219l = f3;
+            this.l = f3;
             if (isInfoWindowShown()) {
                 this.o.e(this);
                 this.o.d(this);
@@ -436,7 +434,7 @@ class ay implements ab {
     }
 
     public float h() {
-        return this.f1219l;
+        return this.l;
     }
 
     @Override // com.amap.api.interfaces.IMarker

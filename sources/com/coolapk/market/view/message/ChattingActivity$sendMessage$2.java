@@ -47,7 +47,7 @@ public final class ChattingActivity$sendMessage$2 extends EmptySubscriber<Result
     public void onNext(Result<List<Entity>> result) {
         Intrinsics.checkNotNullParameter(result, "messageResult");
         super.onNext((ChattingActivity$sendMessage$2) result);
-        Fragment findFragmentById = this.this$0.getSupportFragmentManager().findFragmentById(2131363592);
+        Fragment findFragmentById = this.this$0.getSupportFragmentManager().findFragmentById(2131363614);
         Objects.requireNonNull(findFragmentById, "null cannot be cast to non-null type com.coolapk.market.view.message.ChatListFragment");
         ((ChatListFragment) findFragmentById).insertMessageList(result.getData());
     }

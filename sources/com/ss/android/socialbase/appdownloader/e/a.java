@@ -58,27 +58,27 @@ public class a extends com.ss.android.socialbase.downloader.notification.a {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:165:0x049c  */
-    /* JADX WARNING: Removed duplicated region for block: B:166:0x04c3  */
-    /* JADX WARNING: Removed duplicated region for block: B:171:0x04f5  */
-    /* JADX WARNING: Removed duplicated region for block: B:175:0x050b  */
-    /* JADX WARNING: Removed duplicated region for block: B:178:0x054f  */
-    /* JADX WARNING: Removed duplicated region for block: B:179:0x0553  */
-    /* JADX WARNING: Removed duplicated region for block: B:182:0x055d  */
-    /* JADX WARNING: Removed duplicated region for block: B:186:0x0588  */
-    /* JADX WARNING: Removed duplicated region for block: B:187:0x058e  */
-    /* JADX WARNING: Removed duplicated region for block: B:190:0x0598  */
-    /* JADX WARNING: Removed duplicated region for block: B:194:0x05b0  */
-    /* JADX WARNING: Removed duplicated region for block: B:197:0x05b7  */
-    /* JADX WARNING: Removed duplicated region for block: B:198:0x05c1  */
+    /* JADX WARNING: Removed duplicated region for block: B:165:0x04ae  */
+    /* JADX WARNING: Removed duplicated region for block: B:166:0x04d5  */
+    /* JADX WARNING: Removed duplicated region for block: B:171:0x0507  */
+    /* JADX WARNING: Removed duplicated region for block: B:175:0x051f  */
+    /* JADX WARNING: Removed duplicated region for block: B:178:0x0565  */
+    /* JADX WARNING: Removed duplicated region for block: B:179:0x0569  */
+    /* JADX WARNING: Removed duplicated region for block: B:182:0x0573  */
+    /* JADX WARNING: Removed duplicated region for block: B:186:0x059e  */
+    /* JADX WARNING: Removed duplicated region for block: B:187:0x05a4  */
+    /* JADX WARNING: Removed duplicated region for block: B:190:0x05ae  */
+    /* JADX WARNING: Removed duplicated region for block: B:194:0x05c6  */
+    /* JADX WARNING: Removed duplicated region for block: B:197:0x05cd  */
+    /* JADX WARNING: Removed duplicated region for block: B:198:0x05d7  */
     /* JADX WARNING: Removed duplicated region for block: B:39:0x00b7  */
     /* JADX WARNING: Removed duplicated region for block: B:40:0x00bf  */
     /* JADX WARNING: Removed duplicated region for block: B:43:0x00ca  */
-    /* JADX WARNING: Removed duplicated region for block: B:46:0x00ea  */
-    /* JADX WARNING: Removed duplicated region for block: B:49:0x0103  */
-    /* JADX WARNING: Removed duplicated region for block: B:52:0x012a  */
-    /* JADX WARNING: Removed duplicated region for block: B:55:0x0137  */
-    /* JADX WARNING: Removed duplicated region for block: B:61:0x015a  */
+    /* JADX WARNING: Removed duplicated region for block: B:46:0x00eb  */
+    /* JADX WARNING: Removed duplicated region for block: B:49:0x0104  */
+    /* JADX WARNING: Removed duplicated region for block: B:52:0x012b  */
+    /* JADX WARNING: Removed duplicated region for block: B:55:0x0138  */
+    /* JADX WARNING: Removed duplicated region for block: B:61:0x015b  */
     private Notification b(BaseException baseException, boolean z) {
         boolean z2;
         String d2;
@@ -149,17 +149,17 @@ public class a extends com.ss.android.socialbase.downloader.notification.a {
                         int a5 = a(a2);
                         j.setViewVisibility(a5, 0);
                         j.setProgressBar(a5, 100, i6, z);
-                        int l2 = e.l();
+                        int l = e.l();
                         if (a4 != 0) {
-                            j.setImageViewResource(l2, a4);
+                            j.setImageViewResource(l, a4);
                         }
                         if (com.ss.android.socialbase.downloader.g.a.a(a2).b("enable_notification_ui") >= 1) {
                             Bitmap a6 = c.a().a(a2);
                             if (a6 != null) {
-                                j.setInt(l2, "setBackgroundColor", 0);
-                                j.setImageViewBitmap(l2, a6);
+                                j.setInt(l, "setBackgroundColor", 0);
+                                j.setImageViewBitmap(l, a6);
                             } else {
-                                j.setInt(l2, "setBackgroundResource", e.s());
+                                j.setInt(l, "setBackgroundResource", e.s());
                             }
                         }
                         str = "";
@@ -381,7 +381,7 @@ public class a extends com.ss.android.socialbase.downloader.notification.a {
             int a5 = a(a2);
             j.setViewVisibility(a5, 0);
             j.setProgressBar(a5, 100, i6, z);
-            int l2 = e.l();
+            int l = e.l();
             if (a4 != 0) {
             }
             if (com.ss.android.socialbase.downloader.g.a.a(a2).b("enable_notification_ui") >= 1) {
@@ -438,7 +438,7 @@ public class a extends com.ss.android.socialbase.downloader.notification.a {
         int a5 = a(a2);
         j.setViewVisibility(a5, 0);
         j.setProgressBar(a5, 100, i6, z);
-        int l2 = e.l();
+        int l = e.l();
         if (a4 != 0) {
         }
         if (com.ss.android.socialbase.downloader.g.a.a(a2).b("enable_notification_ui") >= 1) {

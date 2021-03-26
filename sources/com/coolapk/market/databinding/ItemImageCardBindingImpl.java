@@ -134,7 +134,7 @@ public class ItemImageCardBindingImpl extends ItemImageCardBinding {
         }
         if (i5 != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str4, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231696), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, true, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str4, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231707), 0, 0, bool, bool, bool, true, bool, null, null, null, bool, true, bool, null, bool);
             TextViewBindingAdapter.setText(this.mboundView2, str2);
             this.mboundView2.setVisibility(i);
         }

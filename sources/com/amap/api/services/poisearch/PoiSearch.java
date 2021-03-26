@@ -126,9 +126,7 @@ public class PoiSearch {
         private String i;
         private boolean j;
         private LatLonPoint k;
-
-        /* renamed from: l  reason: collision with root package name */
-        private boolean f1252l;
+        private boolean l;
         private String m;
 
         public Query(String str, String str2) {
@@ -142,7 +140,7 @@ public class PoiSearch {
             this.g = false;
             this.h = false;
             this.j = true;
-            this.f1252l = true;
+            this.l = true;
             this.m = "base";
             this.a = str;
             this.b = str2;
@@ -240,11 +238,11 @@ public class PoiSearch {
         }
 
         public boolean isSpecial() {
-            return this.f1252l;
+            return this.l;
         }
 
         public void setSpecial(boolean z) {
-            this.f1252l = z;
+            this.l = z;
         }
 
         public String getExtensions() {
@@ -262,7 +260,7 @@ public class PoiSearch {
             if (query == this) {
                 return true;
             }
-            return PoiSearch.a(query.a, this.a) && PoiSearch.a(query.b, this.b) && PoiSearch.a(query.f, this.f) && PoiSearch.a(query.c, this.c) && PoiSearch.a(query.m, this.m) && PoiSearch.a(query.i, this.i) && query.g == this.g && query.e == this.e && query.j == this.j && query.f1252l == this.f1252l;
+            return PoiSearch.a(query.a, this.a) && PoiSearch.a(query.b, this.b) && PoiSearch.a(query.f, this.f) && PoiSearch.a(query.c, this.c) && PoiSearch.a(query.m, this.m) && PoiSearch.a(query.i, this.i) && query.g == this.g && query.e == this.e && query.j == this.j && query.l == this.l;
         }
 
         @Override // java.lang.Object
@@ -340,7 +338,7 @@ public class PoiSearch {
             } else if (!str5.equals(query.i)) {
                 return false;
             }
-            if (this.g != query.g || this.h != query.h || this.f1252l != query.f1252l) {
+            if (this.g != query.g || this.h != query.h || this.l != query.l) {
                 return false;
             }
             String str6 = this.m;
@@ -370,7 +368,7 @@ public class PoiSearch {
             query.setBuilding(this.i);
             query.setLocation(this.k);
             query.setDistanceSort(this.j);
-            query.setSpecial(this.f1252l);
+            query.setSpecial(this.l);
             query.setExtensions(this.m);
             return query;
         }

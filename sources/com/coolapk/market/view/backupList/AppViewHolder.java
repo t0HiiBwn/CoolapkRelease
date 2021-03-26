@@ -21,7 +21,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: AppViewHolder.kt */
 public final class AppViewHolder extends StateViewHolder implements CompoundButton.OnCheckedChangeListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558812;
+    public static final int LAYOUT_ID = 2131558819;
     private MobileApp app;
     private Map<String, String> appMap;
     private ItemLocalAppBinding binding;

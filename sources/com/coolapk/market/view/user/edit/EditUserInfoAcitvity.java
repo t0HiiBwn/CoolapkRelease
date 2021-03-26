@@ -41,13 +41,13 @@ public class EditUserInfoAcitvity extends ToolbarActivity<UserProfileEditFragmen
         }
         switch (c) {
             case 0:
-                setTitle(getString(2131887233));
+                setTitle(getString(2131887295));
                 return UserProfileEditFragment.newInstance("EMAIL", userProfile);
             case 1:
-                setTitle(getString(2131887230));
+                setTitle(getString(2131887292));
                 return UserProfileEditFragment.newInstance("PHONE", userProfile);
             case 2:
-                setTitle(getString(2131887234));
+                setTitle(getString(2131887296));
                 return UserProfileEditFragment.newInstance("USERNAME", userProfile);
             default:
                 return null;

@@ -51,34 +51,34 @@ public final class FeedAdminFoldSheetGroupFactory extends FeedAdminBaseSheetGrou
             boolean z = true;
             if (!(!this.dataList.isEmpty())) {
                 if (!isFolded()) {
-                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Fold, "折叠", 2131231302, -769226);
+                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Fold, "折叠", 2131231313, -769226);
                 } else {
-                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Fold, "取消折叠", 2131231624, -15233209);
+                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Fold, "取消折叠", 2131231635, -15233209);
                 }
                 if (!isSelfVisible()) {
-                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "仅作者可见", 2131231564, -769226);
+                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "仅作者可见", 2131231575, -769226);
                 } else {
-                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "取消仅作者可见", 2131231564, -15233209);
+                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.SelfVisible, "取消仅作者可见", 2131231575, -15233209);
                 }
                 if (!isHomeVisible()) {
-                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.HomeVisible, "仅个人主页可见", 2131231351, -769226);
+                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.HomeVisible, "仅个人主页可见", 2131231362, -769226);
                 } else {
-                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.HomeVisible, "取消仅个人主页可见", 2131231351, -15233209);
+                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.HomeVisible, "取消仅个人主页可见", 2131231362, -15233209);
                 }
                 if (!isBanned()) {
-                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Ban, "手动屏蔽", 2131231554, -769226);
+                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Ban, "手动屏蔽", 2131231565, -769226);
                 } else {
-                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Ban, "解除屏蔽", 2131231554, -15233209);
+                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Ban, "解除屏蔽", 2131231565, -15233209);
                 }
                 String spamReason = getFeed().getSpamReason();
                 if (!(spamReason == null || spamReason.length() == 0)) {
                     z = false;
                 }
                 if (!z) {
-                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Reject, "驳回", 2131231510, -769226);
+                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.Reject, "驳回", 2131231521, -769226);
                 }
                 if (EntityExtendsKt.isShowCancelReportSpam(getFeed())) {
-                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.CancelReportSpam, "取消举报屏蔽", 2131231621, -15233209);
+                    insertItem(FeedAdminBaseSheetGroupFactory.AdminAction.CancelReportSpam, "取消举报屏蔽", 2131231632, -15233209);
                 }
                 return wrapAsSheetGroup();
             }

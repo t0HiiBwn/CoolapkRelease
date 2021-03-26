@@ -34,7 +34,7 @@ public abstract class DialogAlbumitemNoteBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumitemNoteBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogAlbumitemNoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558515, viewGroup, z, obj);
+        return (DialogAlbumitemNoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558517, viewGroup, z, obj);
     }
 
     public static DialogAlbumitemNoteBinding inflate(LayoutInflater layoutInflater) {
@@ -43,7 +43,7 @@ public abstract class DialogAlbumitemNoteBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumitemNoteBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogAlbumitemNoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558515, null, false, obj);
+        return (DialogAlbumitemNoteBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558517, null, false, obj);
     }
 
     public static DialogAlbumitemNoteBinding bind(View view) {
@@ -52,6 +52,6 @@ public abstract class DialogAlbumitemNoteBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogAlbumitemNoteBinding bind(View view, Object obj) {
-        return (DialogAlbumitemNoteBinding) bind(obj, view, 2131558515);
+        return (DialogAlbumitemNoteBinding) bind(obj, view, 2131558517);
     }
 }

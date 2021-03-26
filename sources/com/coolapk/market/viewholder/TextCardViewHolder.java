@@ -11,7 +11,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: TextCardViewHolder.kt */
 public final class TextCardViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558947;
+    public static final int LAYOUT_ID = 2131558954;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public TextCardViewHolder(View view, ItemActionHandler itemActionHandler) {

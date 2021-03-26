@@ -31,7 +31,7 @@ public interface j extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.ss.android.socialbase.downloader.depend.IDownloadAidlMonitorDepend");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof j)) {
-                return new C0105a(iBinder);
+                return new C0115a(iBinder);
             }
             return (j) queryLocalInterface;
         }
@@ -65,11 +65,11 @@ public interface j extends IInterface {
 
         /* renamed from: com.ss.android.socialbase.downloader.depend.j$a$a  reason: collision with other inner class name */
         /* compiled from: IDownloadAidlMonitorDepend */
-        private static class C0105a implements j {
+        private static class C0115a implements j {
             public static j a;
             private IBinder b;
 
-            C0105a(IBinder iBinder) {
+            C0115a(IBinder iBinder) {
                 this.b = iBinder;
             }
 
@@ -140,7 +140,7 @@ public interface j extends IInterface {
         }
 
         public static j c() {
-            return C0105a.a;
+            return C0115a.a;
         }
     }
 }

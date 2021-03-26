@@ -43,7 +43,7 @@ public class AMapLocation extends Location implements Parcelable, Cloneable {
             aMapLocation.n = parcel.readString();
             aMapLocation.j = parcel.readString();
             aMapLocation.d = parcel.readString();
-            aMapLocation.f1213l = parcel.readString();
+            aMapLocation.l = parcel.readString();
             aMapLocation.v = parcel.readInt();
             aMapLocation.x = parcel.readInt();
             aMapLocation.m = parcel.readString();
@@ -109,9 +109,7 @@ public class AMapLocation extends Location implements Parcelable, Cloneable {
     private String i = "";
     private String j = "";
     private String k = "";
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1213l = "";
+    private String l = "";
     private String m = "";
     private String n = "";
     private boolean o = true;
@@ -166,7 +164,7 @@ public class AMapLocation extends Location implements Parcelable, Cloneable {
             aMapLocation.setNumber(this.n);
             aMapLocation.setPoiName(this.j);
             aMapLocation.setProvince(this.d);
-            aMapLocation.setRoad(this.f1213l);
+            aMapLocation.setRoad(this.l);
             aMapLocation.setSatellites(this.v);
             aMapLocation.setGpsAccuracyStatus(this.x);
             aMapLocation.setStreet(this.m);
@@ -307,7 +305,7 @@ public class AMapLocation extends Location implements Parcelable, Cloneable {
     }
 
     public String getRoad() {
-        return this.f1213l;
+        return this.l;
     }
 
     public int getSatellites() {
@@ -464,7 +462,7 @@ public class AMapLocation extends Location implements Parcelable, Cloneable {
     }
 
     public void setRoad(String str) {
-        this.f1213l = str;
+        this.l = str;
     }
 
     public void setSatellites(int i2) {
@@ -495,7 +493,7 @@ public class AMapLocation extends Location implements Parcelable, Cloneable {
                 jSONObject.put("province", this.d);
                 jSONObject.put("city", this.e);
                 jSONObject.put("district", this.f);
-                jSONObject.put("road", this.f1213l);
+                jSONObject.put("road", this.l);
                 jSONObject.put("street", this.m);
                 jSONObject.put("number", this.n);
                 jSONObject.put("poiname", this.j);
@@ -568,7 +566,7 @@ public class AMapLocation extends Location implements Parcelable, Cloneable {
             stringBuffer.append("adCode=" + this.h + "#");
             stringBuffer.append("address=" + this.i + "#");
             stringBuffer.append("country=" + this.k + "#");
-            stringBuffer.append("road=" + this.f1213l + "#");
+            stringBuffer.append("road=" + this.l + "#");
             stringBuffer.append("poiName=" + this.j + "#");
             stringBuffer.append("street=" + this.m + "#");
             stringBuffer.append("streetNum=" + this.n + "#");
@@ -617,7 +615,7 @@ public class AMapLocation extends Location implements Parcelable, Cloneable {
             parcel.writeString(this.n);
             parcel.writeString(this.j);
             parcel.writeString(this.d);
-            parcel.writeString(this.f1213l);
+            parcel.writeString(this.l);
             parcel.writeInt(this.v);
             parcel.writeInt(this.x);
             parcel.writeString(this.m);

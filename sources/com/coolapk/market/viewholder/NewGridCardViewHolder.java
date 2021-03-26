@@ -28,7 +28,7 @@ import com.coolapk.market.util.DisplayUtils;
 import com.coolapk.market.util.ViewUtil;
 
 public class NewGridCardViewHolder extends StateViewHolder {
-    public static final int LAYOUT_ID = 2131558765;
+    public static final int LAYOUT_ID = 2131558772;
     private final DataAdapter adapter;
     private final String apkType;
     private final ItemGridCardBinding binding;
@@ -97,7 +97,7 @@ public class NewGridCardViewHolder extends StateViewHolder {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            View inflate = LayoutInflater.from(NewGridCardViewHolder.this.getContext()).inflate(2131558766, viewGroup, false);
+            View inflate = LayoutInflater.from(NewGridCardViewHolder.this.getContext()).inflate(2131558773, viewGroup, false);
             NewGridCardViewHolder newGridCardViewHolder = NewGridCardViewHolder.this;
             return new DataViewHolder(newGridCardViewHolder, inflate, newGridCardViewHolder.component, NewGridCardViewHolder.this.card.getUrl(), NewGridCardViewHolder.this.apkType, NewGridCardViewHolder.this.itemActionHandler);
         }
@@ -122,7 +122,7 @@ public class NewGridCardViewHolder extends StateViewHolder {
     }
 
     public static class DataViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558766;
+        public static final int LAYOUT_ID = 2131558773;
         private final String apkType;
         public OnBitmapTransformListener circleTransform;
         public int follow = 0;
@@ -164,7 +164,7 @@ public class NewGridCardViewHolder extends StateViewHolder {
                     if (TextUtils.equals(this.apkType, "2")) {
                         str = serviceApp2.getApkSizeFormat();
                     } else {
-                        str = getContext().getString(2131886639, serviceApp2.getDownCount());
+                        str = getContext().getString(2131886701, serviceApp2.getDownCount());
                     }
                     this.info = str;
                 }
@@ -206,7 +206,7 @@ public class NewGridCardViewHolder extends StateViewHolder {
                 AppForum appForum = (AppForum) obj;
                 this.title = appForum.title();
                 this.logo = appForum.logo();
-                this.info = getContext().getString(2131886607, appForum.commentCount());
+                this.info = getContext().getString(2131886669, appForum.commentCount());
                 this.serviceApp = null;
             }
             z = false;

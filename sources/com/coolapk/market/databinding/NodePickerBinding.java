@@ -27,7 +27,7 @@ public abstract class NodePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static NodePickerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (NodePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559056, viewGroup, z, obj);
+        return (NodePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559063, viewGroup, z, obj);
     }
 
     public static NodePickerBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class NodePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static NodePickerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (NodePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559056, null, false, obj);
+        return (NodePickerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559063, null, false, obj);
     }
 
     public static NodePickerBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class NodePickerBinding extends ViewDataBinding {
 
     @Deprecated
     public static NodePickerBinding bind(View view, Object obj) {
-        return (NodePickerBinding) bind(obj, view, 2131559056);
+        return (NodePickerBinding) bind(obj, view, 2131559063);
     }
 }

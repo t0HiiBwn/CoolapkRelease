@@ -16,8 +16,6 @@ import com.blankj.utilcode.util.LogUtils;
 import com.coolapk.market.AppHolder;
 import com.coolapk.market.app.TranslucentActivity;
 import com.coolapk.market.binding.FragmentBindingComponent;
-import com.coolapk.market.event.ActivityPauseEvent;
-import com.coolapk.market.event.ActivityResumeEvent;
 import com.coolapk.market.event.AlbumLikeEvent;
 import com.coolapk.market.event.DyhArticleEvent;
 import com.coolapk.market.event.DyhArticleRemoveHeadlineEvent;
@@ -98,6 +96,10 @@ import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.Ref;
 import kotlin.ranges.RangesKt;
 import org.greenrobot.eventbus.EventBus;
+import rx.Observable;
+import rx.Subscriber;
+import rx.Subscription;
+import rx.subjects.PublishSubject;
 
 /* compiled from: EntityListFragment.kt */
 public abstract class EntityListFragment extends NewAsyncListFragment<List<? extends Entity>> implements EntityListContract.View, FeedEventProcessor.EventInterceptor {
@@ -131,6 +133,7 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
     private boolean scrollToTopOnNextRefresh;
     private final Lazy stateEventChangedAdapter$delegate = LazyKt.lazy(new EntityListFragment$stateEventChangedAdapter$2(this));
     private String urlParams;
+    private final PublishSubject<Boolean> userVisibilityObserver;
     private boolean userVisibleHintCompat;
     private final Lazy viewPartPool$delegate = LazyKt.lazy(EntityListFragment$viewPartPool$2.INSTANCE);
     public SimpleVXDividerDecoration vxDividerDecoration;
@@ -240,6 +243,8 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         entityListFragment$itemViewTypeByEntityType$1$1.invoke("liveImageTextCard");
         entityListFragment$itemViewTypeByEntityType$1$1.invoke("articleNews");
         entityListFragment$itemViewTypeByEntityType$1$1.invoke("itemGroupListCard");
+        entityListFragment$itemViewTypeByEntityType$1$1.invoke("capsuleListCard");
+        entityListFragment$itemViewTypeByEntityType$1$1.invoke("iconGridHorizonCard");
         Unit unit = Unit.INSTANCE;
         this.itemViewTypeByEntityType = hashMap;
         EntityRefreshCardHelper entityRefreshCardHelper2 = new EntityRefreshCardHelper(this);
@@ -253,6 +258,7 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         this.configHelper = entityConfigHelper;
         EntityBlockSpamHelper entityBlockSpamHelper2 = new EntityBlockSpamHelper(this);
         this.entityBlockSpamHelper = entityBlockSpamHelper2;
+        this.userVisibilityObserver = PublishSubject.create();
         ArrayList<EntityDataFilter> arrayList = new ArrayList<>();
         arrayList.add(new EntityRemoveHelper(this));
         arrayList.add(entityConfigHelper);
@@ -455,6 +461,12 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         Intrinsics.checkNotNullExpressionValue(recyclerView3, "recyclerView");
         recyclerView3.setClipToPadding(false);
         getRecyclerView().setRecyclerListener(EntityListFragment$onActivityCreated$2.INSTANCE);
+        RecyclerView recyclerView4 = getRecyclerView();
+        Objects.requireNonNull(recyclerView4, "null cannot be cast to non-null type com.coolapk.market.widget.PreventAutoScrollRecyclerView");
+        Subscription subscribe = Observable.combineLatest(((PreventAutoScrollRecyclerView) recyclerView4).visibleObserver(), this.userVisibilityObserver, EntityListFragment$onActivityCreated$3$disposal$1.INSTANCE).distinctUntilChanged().subscribe((Subscriber) new EntityListFragment$onActivityCreated$$inlined$let$lambda$1(this));
+        Lifecycle lifecycle = getLifecycle();
+        Intrinsics.checkNotNullExpressionValue(lifecycle, "lifecycle");
+        LifeCycleExtendsKt.oneTimeOnDestroy(lifecycle, new EntityListFragment$onActivityCreated$3$1(subscribe));
         BaseMultiTypeAdapter onCreateAdapter = onCreateAdapter();
         this.adapter = onCreateAdapter;
         ObservableArrayList<Parcelable> observableArrayList = this.dataList;
@@ -507,15 +519,15 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         if (simpleVXDividerDecoration4 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("vxDividerDecoration");
         }
-        RecyclerView recyclerView4 = getRecyclerView();
-        Intrinsics.checkNotNullExpressionValue(recyclerView4, "recyclerView");
-        simpleVXDividerDecoration4.addViewMarginRule(new GridLayoutViewMarginRule(recyclerView4));
         RecyclerView recyclerView5 = getRecyclerView();
+        Intrinsics.checkNotNullExpressionValue(recyclerView5, "recyclerView");
+        simpleVXDividerDecoration4.addViewMarginRule(new GridLayoutViewMarginRule(recyclerView5));
+        RecyclerView recyclerView6 = getRecyclerView();
         SimpleVXDividerDecoration simpleVXDividerDecoration5 = this.vxDividerDecoration;
         if (simpleVXDividerDecoration5 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("vxDividerDecoration");
         }
-        recyclerView5.addItemDecoration(simpleVXDividerDecoration5);
+        recyclerView6.addItemDecoration(simpleVXDividerDecoration5);
         registerNecessaryCards();
         onRegisterCards();
         handleDataWhenLoginStateChange(bundle);
@@ -532,6 +544,10 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         if (getUserVisibleHint() || this.userVisibleHintCompat) {
             initData();
         }
+    }
+
+    protected final void onRecyclerViewVisibleChanged(boolean z) {
+        setViewHolderAnimationShow(z);
     }
 
     @Override // com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
@@ -574,12 +590,12 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         if (baseMultiTypeAdapter == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter.setMatchAllFactor(SimpleViewHolderFactor.Companion.withLayoutId(2131558929).constructor(new EntityListFragment$registerNecessaryCards$1(this)).suitedMethod(EntityListFragment$registerNecessaryCards$2.INSTANCE).build());
+        baseMultiTypeAdapter.setMatchAllFactor(SimpleViewHolderFactor.Companion.withLayoutId(2131558936).constructor(new EntityListFragment$registerNecessaryCards$1(this)).suitedMethod(EntityListFragment$registerNecessaryCards$2.INSTANCE).build());
         BaseMultiTypeAdapter baseMultiTypeAdapter2 = this.adapter;
         if (baseMultiTypeAdapter2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter2, SimpleViewHolderFactor.Companion.withLayoutId(2131558883).suitedEntityType("REFRESH_PROGRESS_BAR").constructor(new EntityListFragment$registerNecessaryCards$3(this)).doAfterBind(new EntityListFragment$registerNecessaryCards$4(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter2, SimpleViewHolderFactor.Companion.withLayoutId(2131558890).suitedEntityType("REFRESH_PROGRESS_BAR").constructor(new EntityListFragment$registerNecessaryCards$3(this)).doAfterBind(new EntityListFragment$registerNecessaryCards$4(this)).build(), 0, 2, null);
     }
 
     protected void onRegisterCards() {
@@ -587,167 +603,167 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         if (baseMultiTypeAdapter == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558587).constructor(new EntityListFragment$onRegisterCards$1(this)).suitedMethod(EntityListFragment$onRegisterCards$2.INSTANCE).build(), -1);
+        baseMultiTypeAdapter.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558591).constructor(new EntityListFragment$onRegisterCards$1(this)).suitedMethod(EntityListFragment$onRegisterCards$2.INSTANCE).build(), -1);
         BaseMultiTypeAdapter baseMultiTypeAdapter2 = this.adapter;
         if (baseMultiTypeAdapter2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter2.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558887).constructor(new EntityListFragment$onRegisterCards$3(this)).suitedMethod(EntityListFragment$onRegisterCards$4.INSTANCE).build(), -1);
+        baseMultiTypeAdapter2.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558894).constructor(new EntityListFragment$onRegisterCards$3(this)).suitedMethod(EntityListFragment$onRegisterCards$4.INSTANCE).build(), -1);
         BaseMultiTypeAdapter baseMultiTypeAdapter3 = this.adapter;
         if (baseMultiTypeAdapter3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter3.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558695).constructor(new EntityListFragment$onRegisterCards$5(this)).suitedMethod(EntityListFragment$onRegisterCards$6.INSTANCE).build(), 0);
+        baseMultiTypeAdapter3.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558702).constructor(new EntityListFragment$onRegisterCards$5(this)).suitedMethod(EntityListFragment$onRegisterCards$6.INSTANCE).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter4 = this.adapter;
         if (baseMultiTypeAdapter4 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter4.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558710).constructor(new EntityListFragment$onRegisterCards$7(this)).suitedMethod(EntityListFragment$onRegisterCards$8.INSTANCE).build(), 0);
+        baseMultiTypeAdapter4.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558717).constructor(new EntityListFragment$onRegisterCards$7(this)).suitedMethod(EntityListFragment$onRegisterCards$8.INSTANCE).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter5 = this.adapter;
         if (baseMultiTypeAdapter5 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter5.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558694).suitedMethod(EntityListFragment$onRegisterCards$9.INSTANCE).constructor(new EntityListFragment$onRegisterCards$10(this)).build(), 0);
+        baseMultiTypeAdapter5.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558701).suitedMethod(EntityListFragment$onRegisterCards$9.INSTANCE).constructor(new EntityListFragment$onRegisterCards$10(this)).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter6 = this.adapter;
         if (baseMultiTypeAdapter6 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter6.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558671).suitedMethod(EntityListFragment$onRegisterCards$11.INSTANCE).constructor(new EntityListFragment$onRegisterCards$12(this)).build(), 0);
+        baseMultiTypeAdapter6.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558677).suitedMethod(EntityListFragment$onRegisterCards$11.INSTANCE).constructor(new EntityListFragment$onRegisterCards$12(this)).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter7 = this.adapter;
         if (baseMultiTypeAdapter7 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter7.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558711).suitedMethod(EntityListFragment$onRegisterCards$13.INSTANCE).constructor(new EntityListFragment$onRegisterCards$14(this)).build(), 0);
+        baseMultiTypeAdapter7.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558718).suitedMethod(EntityListFragment$onRegisterCards$13.INSTANCE).constructor(new EntityListFragment$onRegisterCards$14(this)).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter8 = this.adapter;
         if (baseMultiTypeAdapter8 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter8.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558736).suitedMethod(EntityListFragment$onRegisterCards$15.INSTANCE).constructor(new EntityListFragment$onRegisterCards$16(this)).build(), 0);
+        baseMultiTypeAdapter8.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558743).suitedMethod(EntityListFragment$onRegisterCards$15.INSTANCE).constructor(new EntityListFragment$onRegisterCards$16(this)).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter9 = this.adapter;
         if (baseMultiTypeAdapter9 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter9.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558735).suitedMethod(EntityListFragment$onRegisterCards$17.INSTANCE).constructor(new EntityListFragment$onRegisterCards$18(this)).build(), 0);
+        baseMultiTypeAdapter9.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558742).suitedMethod(EntityListFragment$onRegisterCards$17.INSTANCE).constructor(new EntityListFragment$onRegisterCards$18(this)).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter10 = this.adapter;
         if (baseMultiTypeAdapter10 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter10.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558702).suitedMethod(EntityListFragment$onRegisterCards$19.INSTANCE).constructor(new EntityListFragment$onRegisterCards$20(this)).build(), 0);
+        baseMultiTypeAdapter10.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558709).suitedMethod(EntityListFragment$onRegisterCards$19.INSTANCE).constructor(new EntityListFragment$onRegisterCards$20(this)).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter11 = this.adapter;
         if (baseMultiTypeAdapter11 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter11, SimpleViewHolderFactor.Companion.withLayoutId(2131558708).suitedMethod(EntityListFragment$onRegisterCards$21.INSTANCE).constructor(new EntityListFragment$onRegisterCards$22(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter11, SimpleViewHolderFactor.Companion.withLayoutId(2131558715).suitedMethod(EntityListFragment$onRegisterCards$21.INSTANCE).constructor(new EntityListFragment$onRegisterCards$22(this)).build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter12 = this.adapter;
         if (baseMultiTypeAdapter12 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter12.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558684).suitedMethod(EntityListFragment$onRegisterCards$23.INSTANCE).constructor(new EntityListFragment$onRegisterCards$24(this)).build(), 0);
+        baseMultiTypeAdapter12.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558690).suitedMethod(EntityListFragment$onRegisterCards$23.INSTANCE).constructor(new EntityListFragment$onRegisterCards$24(this)).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter13 = this.adapter;
         if (baseMultiTypeAdapter13 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter13.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558582).suitedMethod(EntityListFragment$onRegisterCards$25.INSTANCE).constructor(new EntityListFragment$onRegisterCards$26(this)).build(), 0);
+        baseMultiTypeAdapter13.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558586).suitedMethod(EntityListFragment$onRegisterCards$25.INSTANCE).constructor(new EntityListFragment$onRegisterCards$26(this)).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter14 = this.adapter;
         if (baseMultiTypeAdapter14 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter14.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558585).suitedMethod(EntityListFragment$onRegisterCards$27.INSTANCE).constructor(new EntityListFragment$onRegisterCards$28(this)).build(), 0);
+        baseMultiTypeAdapter14.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558589).suitedMethod(EntityListFragment$onRegisterCards$27.INSTANCE).constructor(new EntityListFragment$onRegisterCards$28(this)).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter15 = this.adapter;
         if (baseMultiTypeAdapter15 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter15.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558924).suitedMethod(EntityListFragment$onRegisterCards$29.INSTANCE).constructor(new EntityListFragment$onRegisterCards$30(this)).resetItemViewType(2131123382).build(), 0);
+        baseMultiTypeAdapter15.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558931).suitedMethod(EntityListFragment$onRegisterCards$29.INSTANCE).constructor(new EntityListFragment$onRegisterCards$30(this)).resetItemViewType(2131123389).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter16 = this.adapter;
         if (baseMultiTypeAdapter16 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter16, SimpleViewHolderFactor.Companion.withLayoutId(2131558837).suitedEntityType("NO_MORE_DATA").constructor(EntityListFragment$onRegisterCards$31.INSTANCE).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter16, SimpleViewHolderFactor.Companion.withLayoutId(2131558844).suitedEntityType("NO_MORE_DATA").constructor(EntityListFragment$onRegisterCards$31.INSTANCE).build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter17 = this.adapter;
         if (baseMultiTypeAdapter17 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter17, SimpleViewHolderFactor.Companion.withLayoutId(2131558755).suitedEntityType("pear_goods").constructor(new EntityListFragment$onRegisterCards$32(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter17, SimpleViewHolderFactor.Companion.withLayoutId(2131558762).suitedEntityType("pear_goods").constructor(new EntityListFragment$onRegisterCards$32(this)).build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter18 = this.adapter;
         if (baseMultiTypeAdapter18 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter18.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558898).suitedMethod(EntityListFragment$onRegisterCards$33.INSTANCE).constructor(new EntityListFragment$onRegisterCards$34(this)).resetItemViewType(2131559240).build(), 0);
+        baseMultiTypeAdapter18.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558905).suitedMethod(EntityListFragment$onRegisterCards$33.INSTANCE).constructor(new EntityListFragment$onRegisterCards$34(this)).resetItemViewType(2131559247).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter19 = this.adapter;
         if (baseMultiTypeAdapter19 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter19.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558920).suitedMethod(EntityListFragment$onRegisterCards$35.INSTANCE).constructor(new EntityListFragment$onRegisterCards$36(this)).build(), 0);
+        baseMultiTypeAdapter19.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558927).suitedMethod(EntityListFragment$onRegisterCards$35.INSTANCE).constructor(new EntityListFragment$onRegisterCards$36(this)).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter20 = this.adapter;
         if (baseMultiTypeAdapter20 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter20, createFactor(new String[]{"apk"}, 2131558924, new EntityListFragment$onRegisterCards$37(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter20, createFactor(new String[]{"apk"}, 2131558931, new EntityListFragment$onRegisterCards$37(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter21 = this.adapter;
         if (baseMultiTypeAdapter21 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter21, createFactor(new String[]{"dyh"}, 2131558747, new EntityListFragment$onRegisterCards$38(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter21, createFactor(new String[]{"dyh"}, 2131558754, new EntityListFragment$onRegisterCards$38(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter22 = this.adapter;
         if (baseMultiTypeAdapter22 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter22, createFactor(new String[]{"ads"}, 2131558577, new EntityListFragment$onRegisterCards$39(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter22, createFactor(new String[]{"ads"}, 2131558581, new EntityListFragment$onRegisterCards$39(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter23 = this.adapter;
         if (baseMultiTypeAdapter23 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter23, createFactor(new String[]{"linkCard"}, 2131558802, new EntityListFragment$onRegisterCards$40(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter23, createFactor(new String[]{"linkCard"}, 2131558809, new EntityListFragment$onRegisterCards$40(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter24 = this.adapter;
         if (baseMultiTypeAdapter24 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter24, createFactor(new String[]{"docListCard"}, 2131558674, new EntityListFragment$onRegisterCards$41(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter24, createFactor(new String[]{"docListCard"}, 2131558680, new EntityListFragment$onRegisterCards$41(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter25 = this.adapter;
         if (baseMultiTypeAdapter25 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter25, createFactor(new String[]{"imageCarouselCard", "imageCard", "imageCarouselCard_1", "imageScaleCard"}, 2131558791, new EntityListFragment$onRegisterCards$42(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter25, createFactor(new String[]{"imageCarouselCard", "imageCard", "imageCarouselCard_1", "imageScaleCard"}, 2131558798, new EntityListFragment$onRegisterCards$42(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter26 = this.adapter;
         if (baseMultiTypeAdapter26 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter26, createFactor(new String[]{"album"}, 2131558578, new EntityListFragment$onRegisterCards$43(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter26, createFactor(new String[]{"album"}, 2131558582, new EntityListFragment$onRegisterCards$43(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter27 = this.adapter;
         if (baseMultiTypeAdapter27 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter27, createFactor(new String[]{"messageCard"}, 2131558825, EntityListFragment$onRegisterCards$44.INSTANCE), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter27, createFactor(new String[]{"messageCard"}, 2131558832, EntityListFragment$onRegisterCards$44.INSTANCE), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter28 = this.adapter;
         if (baseMultiTypeAdapter28 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter28, createFactor(new String[]{"textCard"}, 2131558947, EntityListFragment$onRegisterCards$45.INSTANCE), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter28, createFactor(new String[]{"textCard"}, 2131558954, EntityListFragment$onRegisterCards$45.INSTANCE), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter29 = this.adapter;
         if (baseMultiTypeAdapter29 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter29, createFactor(new String[]{"topGroupCard"}, 2131558959, new EntityListFragment$onRegisterCards$46(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter29, createFactor(new String[]{"topGroupCard"}, 2131558966, new EntityListFragment$onRegisterCards$46(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter30 = this.adapter;
         if (baseMultiTypeAdapter30 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter30, createFactor(new String[]{"tabGroupCard"}, 2131558942, new EntityListFragment$onRegisterCards$47(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter30, createFactor(new String[]{"tabGroupCard"}, 2131558949, new EntityListFragment$onRegisterCards$47(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter31 = this.adapter;
         if (baseMultiTypeAdapter31 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter31, createFactor(new String[]{"imageTextCard"}, 2131558949, new EntityListFragment$onRegisterCards$48(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter31, createFactor(new String[]{"imageTextCard"}, 2131558956, new EntityListFragment$onRegisterCards$48(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter32 = this.adapter;
         if (baseMultiTypeAdapter32 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter32, createFactor(new String[]{"titleCard"}, 2131558955, new EntityListFragment$onRegisterCards$49(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter32, createFactor(new String[]{"titleCard"}, 2131558962, new EntityListFragment$onRegisterCards$49(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter33 = this.adapter;
         if (baseMultiTypeAdapter33 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter33, createFactor(new String[]{"appForum"}, 2131558591, new EntityListFragment$onRegisterCards$50(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter33, createFactor(new String[]{"appForum"}, 2131558595, new EntityListFragment$onRegisterCards$50(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter34 = this.adapter;
         if (baseMultiTypeAdapter34 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
@@ -757,88 +773,88 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         if (baseMultiTypeAdapter35 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter35, createFactor(new String[]{"textCarouselCard"}, 2131558948, new EntityListFragment$onRegisterCards$52(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter35, createFactor(new String[]{"textCarouselCard"}, 2131558955, new EntityListFragment$onRegisterCards$52(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter36 = this.adapter;
         if (baseMultiTypeAdapter36 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter36, createFactor(new String[]{"article"}, 2131558678, new EntityListFragment$onRegisterCards$53(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter36, createFactor(new String[]{"article"}, 2131558684, new EntityListFragment$onRegisterCards$53(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter37 = this.adapter;
         if (baseMultiTypeAdapter37 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter37, createFactor(new String[]{"iconLargeScrollCard"}, 2131558956, new EntityListFragment$onRegisterCards$54(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter37, createFactor(new String[]{"iconLargeScrollCard"}, 2131558963, new EntityListFragment$onRegisterCards$54(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter38 = this.adapter;
         if (baseMultiTypeAdapter38 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter38, createFactor(new String[]{"unLoginCard"}, 2131558815, new EntityListFragment$onRegisterCards$55(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter38, createFactor(new String[]{"unLoginCard"}, 2131558822, new EntityListFragment$onRegisterCards$55(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter39 = this.adapter;
         if (baseMultiTypeAdapter39 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter39, createFactor(new String[]{"articleListCard"}, 2131558956, new EntityListFragment$onRegisterCards$56(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter39, createFactor(new String[]{"articleListCard"}, 2131558963, new EntityListFragment$onRegisterCards$56(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter40 = this.adapter;
         if (baseMultiTypeAdapter40 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter40, createFactor(new String[]{"iconThreeMoreCard"}, 2131558784, new EntityListFragment$onRegisterCards$57(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter40, createFactor(new String[]{"iconThreeMoreCard"}, 2131558791, new EntityListFragment$onRegisterCards$57(this)), 0, 2, null);
         ItemActionHandler serviceApk = EntityItemActionUtils.INSTANCE.serviceApk(this);
         BaseMultiTypeAdapter baseMultiTypeAdapter41 = this.adapter;
         if (baseMultiTypeAdapter41 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter41, createFactor(new String[]{"apkListCard"}, 2131558956, new EntityListFragment$onRegisterCards$58(this, serviceApk)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter41, createFactor(new String[]{"apkListCard"}, 2131558963, new EntityListFragment$onRegisterCards$58(this, serviceApk)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter42 = this.adapter;
         if (baseMultiTypeAdapter42 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter42, createFactor(new String[]{"feedGroupListCard"}, 2131558956, new EntityListFragment$onRegisterCards$59(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter42, createFactor(new String[]{"feedGroupListCard"}, 2131558963, new EntityListFragment$onRegisterCards$59(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter43 = this.adapter;
         if (baseMultiTypeAdapter43 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter43, createFactor(new String[]{"iconListCard", "apkExpandListCard", "listCard", "feedListCard"}, 2131558956, new EntityListFragment$onRegisterCards$60(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter43, createFactor(new String[]{"iconListCard", "apkExpandListCard", "listCard", "feedListCard"}, 2131558963, new EntityListFragment$onRegisterCards$60(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter44 = this.adapter;
         if (baseMultiTypeAdapter44 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter44, createFactor(new String[]{"iconLongTitleGridCard", "iconGridCard", "gridCard"}, 2131558956, new EntityListFragment$onRegisterCards$61(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter44, createFactor(new String[]{"iconLongTitleGridCard", "iconGridCard", "gridCard"}, 2131558963, new EntityListFragment$onRegisterCards$61(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter45 = this.adapter;
         if (baseMultiTypeAdapter45 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter45, createFactor(new String[]{"imageScrollCard"}, 2131558956, new EntityListFragment$onRegisterCards$62(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter45, createFactor(new String[]{"imageScrollCard"}, 2131558963, new EntityListFragment$onRegisterCards$62(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter46 = this.adapter;
         if (baseMultiTypeAdapter46 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter46, createFactor(new String[]{"imageSquareScrollCard"}, 2131558956, new EntityListFragment$onRegisterCards$63(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter46, createFactor(new String[]{"imageSquareScrollCard"}, 2131558963, new EntityListFragment$onRegisterCards$63(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter47 = this.adapter;
         if (baseMultiTypeAdapter47 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter47, createFactor(new String[]{"apkScrollCard", "iconScrollCard"}, 2131558956, new EntityListFragment$onRegisterCards$64(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter47, createFactor(new String[]{"apkScrollCard", "iconScrollCard"}, 2131558963, new EntityListFragment$onRegisterCards$64(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter48 = this.adapter;
         if (baseMultiTypeAdapter48 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter48, createFactor(new String[]{"iconButtonGridCard"}, 2131558777, new EntityListFragment$onRegisterCards$65(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter48, createFactor(new String[]{"iconButtonGridCard"}, 2131558784, new EntityListFragment$onRegisterCards$65(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter49 = this.adapter;
         if (baseMultiTypeAdapter49 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter49, createFactor(new String[]{"iconMiniGridCard"}, 2131558782, new EntityListFragment$onRegisterCards$66(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter49, createFactor(new String[]{"iconMiniGridCard"}, 2131558789, new EntityListFragment$onRegisterCards$66(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter50 = this.adapter;
         if (baseMultiTypeAdapter50 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter50, createFactor(new String[]{"imageCarouselCard_2"}, 2131558789, new EntityListFragment$onRegisterCards$67(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter50, createFactor(new String[]{"imageCarouselCard_2"}, 2131558796, new EntityListFragment$onRegisterCards$67(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter51 = this.adapter;
         if (baseMultiTypeAdapter51 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter51, createFactor(new String[]{"refreshCard"}, 2131558893, new EntityListFragment$onRegisterCards$68(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter51, createFactor(new String[]{"refreshCard"}, 2131558900, new EntityListFragment$onRegisterCards$68(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter52 = this.adapter;
         if (baseMultiTypeAdapter52 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
@@ -848,192 +864,197 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         if (baseMultiTypeAdapter53 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter53, createFactor(new String[]{"iconTabLinkGridCard"}, 2131558945, new EntityListFragment$onRegisterCards$70(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter53, createFactor(new String[]{"iconTabLinkGridCard"}, 2131558952, new EntityListFragment$onRegisterCards$70(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter54 = this.adapter;
         if (baseMultiTypeAdapter54 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter54, createFactor(new String[]{"topic"}, 2131558962, new EntityListFragment$onRegisterCards$71(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter54, createFactor(new String[]{"topic"}, 2131558969, new EntityListFragment$onRegisterCards$71(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter55 = this.adapter;
         if (baseMultiTypeAdapter55 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter55, createFactor(new String[]{"feedCoolPictureGridCard"}, 2131558964, new EntityListFragment$onRegisterCards$72(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter55, createFactor(new String[]{"feedCoolPictureGridCard"}, 2131558971, new EntityListFragment$onRegisterCards$72(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter56 = this.adapter;
         if (baseMultiTypeAdapter56 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter56, createFactor(new String[]{"headCard"}, 2131558772, new EntityListFragment$onRegisterCards$73(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter56, createFactor(new String[]{"headCard"}, 2131558779, new EntityListFragment$onRegisterCards$73(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter57 = this.adapter;
         if (baseMultiTypeAdapter57 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter57, createFactor(new String[]{"textLinkListCard"}, 2131558956, new EntityListFragment$onRegisterCards$74(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter57, createFactor(new String[]{"textLinkListCard"}, 2131558963, new EntityListFragment$onRegisterCards$74(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter58 = this.adapter;
         if (baseMultiTypeAdapter58 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter58, createFactor(new String[]{"feedScrollCard"}, 2131558956, new EntityListFragment$onRegisterCards$75(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter58, createFactor(new String[]{"feedScrollCard"}, 2131558963, new EntityListFragment$onRegisterCards$75(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter59 = this.adapter;
         if (baseMultiTypeAdapter59 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter59, createFactor(new String[]{"menuItem"}, 2131558823, new EntityListFragment$onRegisterCards$76(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter59, createFactor(new String[]{"menuItem"}, 2131558830, new EntityListFragment$onRegisterCards$76(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter60 = this.adapter;
         if (baseMultiTypeAdapter60 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter60, createFactor(new String[]{"imageTextScrollCard", "readMoreScrollCard"}, 2131558956, new EntityListFragment$onRegisterCards$77(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter60, createFactor(new String[]{"imageTextScrollCard", "readMoreScrollCard"}, 2131558963, new EntityListFragment$onRegisterCards$77(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter61 = this.adapter;
         if (baseMultiTypeAdapter61 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter61, createFactor(new String[]{"imageTextGridCard"}, 2131558956, new EntityListFragment$onRegisterCards$78(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter61, createFactor(new String[]{"imageTextGridCard"}, 2131558963, new EntityListFragment$onRegisterCards$78(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter62 = this.adapter;
         if (baseMultiTypeAdapter62 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter62, createFactor(new String[]{"textTitleScrollCard"}, 2131558956, new EntityListFragment$onRegisterCards$79(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter62, createFactor(new String[]{"textTitleScrollCard"}, 2131558963, new EntityListFragment$onRegisterCards$79(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter63 = this.adapter;
         if (baseMultiTypeAdapter63 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter63, createFactor(new String[]{"user"}, 2131558967, new EntityListFragment$onRegisterCards$80(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter63, createFactor(new String[]{"user"}, 2131558974, new EntityListFragment$onRegisterCards$80(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter64 = this.adapter;
         if (baseMultiTypeAdapter64 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter64, createFactor(new String[]{"feedQuestion"}, 2131558886, new EntityListFragment$onRegisterCards$81(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter64, createFactor(new String[]{"feedQuestion"}, 2131558893, new EntityListFragment$onRegisterCards$81(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter65 = this.adapter;
         if (baseMultiTypeAdapter65 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter65, createFactor(new String[]{"webViewCard"}, 2131558990, new EntityListFragment$onRegisterCards$82(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter65, SimpleViewHolderFactor.Companion.withLayoutId(2131558922).suitedMethod(EntityListFragment$onRegisterCards$82.INSTANCE).constructor(new EntityListFragment$onRegisterCards$83(this)).build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter66 = this.adapter;
         if (baseMultiTypeAdapter66 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter66, SimpleViewHolderFactor.Companion.withLayoutId(2131558915).suitedMethod(EntityListFragment$onRegisterCards$83.INSTANCE).constructor(new EntityListFragment$onRegisterCards$84(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter66, createFactor(new String[]{"videoCard"}, 2131558992, new EntityListFragment$onRegisterCards$84(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter67 = this.adapter;
         if (baseMultiTypeAdapter67 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter67, createFactor(new String[]{"videoCard"}, 2131558985, new EntityListFragment$onRegisterCards$85(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter67, createFactor(new String[]{"product"}, 2131558889, new EntityListFragment$onRegisterCards$85(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter68 = this.adapter;
         if (baseMultiTypeAdapter68 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter68, createFactor(new String[]{"product"}, 2131558882, new EntityListFragment$onRegisterCards$86(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter68, createFactor(new String[]{"selectorLinkCard"}, 2131558930, new EntityListFragment$onRegisterCards$86(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter69 = this.adapter;
         if (baseMultiTypeAdapter69 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter69, createFactor(new String[]{"selectorLinkCard"}, 2131558923, new EntityListFragment$onRegisterCards$87(this)), 0, 2, null);
+        baseMultiTypeAdapter69.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558659).suitedEntityType("collection").constructor(new EntityListFragment$onRegisterCards$87(this)).build(), 1);
         BaseMultiTypeAdapter baseMultiTypeAdapter70 = this.adapter;
         if (baseMultiTypeAdapter70 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter70.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558653).suitedEntityType("collection").constructor(new EntityListFragment$onRegisterCards$88(this)).build(), 1);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter70, createFactor(new String[]{"sponsorCard"}, 2131558945, new EntityListFragment$onRegisterCards$88(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter71 = this.adapter;
         if (baseMultiTypeAdapter71 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter71, createFactor(new String[]{"sponsorCard"}, 2131558938, new EntityListFragment$onRegisterCards$89(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter71, SimpleViewHolderFactor.Companion.withLayoutId(2131558813).suitedMethod(EntityListFragment$onRegisterCards$89.INSTANCE).constructor(new EntityListFragment$onRegisterCards$90(this)).build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter72 = this.adapter;
         if (baseMultiTypeAdapter72 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter72, SimpleViewHolderFactor.Companion.withLayoutId(2131558806).suitedMethod(EntityListFragment$onRegisterCards$90.INSTANCE).constructor(new EntityListFragment$onRegisterCards$91(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter72, SimpleViewHolderFactor.Companion.withLayoutId(2131558812).suitedMethod(EntityListFragment$onRegisterCards$91.INSTANCE).constructor(new EntityListFragment$onRegisterCards$92(this)).build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter73 = this.adapter;
         if (baseMultiTypeAdapter73 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter73, SimpleViewHolderFactor.Companion.withLayoutId(2131558805).suitedMethod(EntityListFragment$onRegisterCards$92.INSTANCE).constructor(new EntityListFragment$onRegisterCards$93(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter73, createFactor(new String[]{"liveListCard"}, 2131558963, new EntityListFragment$onRegisterCards$93(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter74 = this.adapter;
         if (baseMultiTypeAdapter74 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter74, createFactor(new String[]{"liveListCard"}, 2131558956, new EntityListFragment$onRegisterCards$94(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter74, createFactor(new String[]{"apkBigImageCard"}, 2131558792, new EntityListFragment$onRegisterCards$94(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter75 = this.adapter;
         if (baseMultiTypeAdapter75 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter75, createFactor(new String[]{"apkBigImageCard"}, 2131558785, new EntityListFragment$onRegisterCards$95(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter75, createFactor(new String[]{"apkImageCard"}, 2131558793, new EntityListFragment$onRegisterCards$95(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter76 = this.adapter;
         if (baseMultiTypeAdapter76 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter76, createFactor(new String[]{"apkImageCard"}, 2131558786, new EntityListFragment$onRegisterCards$96(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter76, SimpleViewHolderFactor.Companion.withLayoutId(2131558866).suitedEntityType("rankAwardCard").constructor(new EntityListFragment$onRegisterCards$96(this)).build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter77 = this.adapter;
         if (baseMultiTypeAdapter77 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter77, SimpleViewHolderFactor.Companion.withLayoutId(2131558859).suitedEntityType("rankAwardCard").constructor(new EntityListFragment$onRegisterCards$97(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter77, createFactor(new String[]{"apkScrollCardWithBackground"}, 2131558592, new EntityListFragment$onRegisterCards$97(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter78 = this.adapter;
         if (baseMultiTypeAdapter78 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter78, createFactor(new String[]{"apkScrollCardWithBackground"}, 2131558588, new EntityListFragment$onRegisterCards$98(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter78, createFactor(new String[]{"sortSelectCard"}, 2131558943, new EntityListFragment$onRegisterCards$98(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter79 = this.adapter;
         if (baseMultiTypeAdapter79 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter79, createFactor(new String[]{"sortSelectCard"}, 2131558936, new EntityListFragment$onRegisterCards$99(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter79, createFactor(new String[]{"colorfulScrollCard"}, 2131558963, new EntityListFragment$onRegisterCards$99(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter80 = this.adapter;
         if (baseMultiTypeAdapter80 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter80, createFactor(new String[]{"colorfulScrollCard"}, 2131558956, new EntityListFragment$onRegisterCards$100(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter80, createFactor(new String[]{"colorfulFatScrollCard"}, 2131558963, new EntityListFragment$onRegisterCards$100(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter81 = this.adapter;
         if (baseMultiTypeAdapter81 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter81, createFactor(new String[]{"colorfulFatScrollCard"}, 2131558956, new EntityListFragment$onRegisterCards$101(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter81, createFactor(new String[]{"productTimelineListCard"}, 2131558963, new EntityListFragment$onRegisterCards$101(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter82 = this.adapter;
         if (baseMultiTypeAdapter82 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter82, createFactor(new String[]{"productTimelineListCard"}, 2131558956, new EntityListFragment$onRegisterCards$102(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter82, createFactor(new String[]{"feedStackCard"}, 2131558963, new EntityListFragment$onRegisterCards$102(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter83 = this.adapter;
         if (baseMultiTypeAdapter83 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter83, createFactor(new String[]{"feedStackCard"}, 2131558956, new EntityListFragment$onRegisterCards$103(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter83, createFactor(new String[]{"itemGroupListCard"}, 2131558778, new EntityListFragment$onRegisterCards$103(this)), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter84 = this.adapter;
         if (baseMultiTypeAdapter84 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter84, createFactor(new String[]{"itemGroupListCard"}, 2131558771, new EntityListFragment$onRegisterCards$104(this)), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter84, SimpleViewHolderFactor.Companion.withLayoutId(2131558770).constructor(new EntityListFragment$onRegisterCards$104(this)).suitedEntityType("goods").build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter85 = this.adapter;
         if (baseMultiTypeAdapter85 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter85, SimpleViewHolderFactor.Companion.withLayoutId(2131558763).constructor(new EntityListFragment$onRegisterCards$105(this)).suitedEntityType("goods").build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter85, SimpleViewHolderFactor.Companion.withLayoutId(2131558757).constructor(new EntityListFragment$onRegisterCards$105(this)).suitedMethod(EntityListFragment$onRegisterCards$106.INSTANCE).build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter86 = this.adapter;
         if (baseMultiTypeAdapter86 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter86, SimpleViewHolderFactor.Companion.withLayoutId(2131558750).constructor(new EntityListFragment$onRegisterCards$106(this)).suitedMethod(EntityListFragment$onRegisterCards$107.INSTANCE).build(), 0, 2, null);
+        baseMultiTypeAdapter86.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558767).constructor(new EntityListFragment$onRegisterCards$107(this)).suitedMethod(EntityListFragment$onRegisterCards$108.INSTANCE).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter87 = this.adapter;
         if (baseMultiTypeAdapter87 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter87.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558760).constructor(new EntityListFragment$onRegisterCards$108(this)).suitedMethod(EntityListFragment$onRegisterCards$109.INSTANCE).build(), 0);
+        baseMultiTypeAdapter87.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558946).suitedMethod(EntityListFragment$onRegisterCards$109.INSTANCE).constructor(new EntityListFragment$onRegisterCards$110(this)).build(), 0);
         BaseMultiTypeAdapter baseMultiTypeAdapter88 = this.adapter;
         if (baseMultiTypeAdapter88 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        baseMultiTypeAdapter88.register(SimpleViewHolderFactor.Companion.withLayoutId(2131558939).suitedMethod(EntityListFragment$onRegisterCards$110.INSTANCE).constructor(new EntityListFragment$onRegisterCards$111(this)).build(), 0);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter88, SimpleViewHolderFactor.Companion.withLayoutId(2131558946).suitedEntityType("sponsorFeed").constructor(new EntityListFragment$onRegisterCards$111(this)).resetItemViewType(2131557946).build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter89 = this.adapter;
         if (baseMultiTypeAdapter89 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter89, SimpleViewHolderFactor.Companion.withLayoutId(2131558939).suitedEntityType("sponsorFeed").constructor(new EntityListFragment$onRegisterCards$112(this)).resetItemViewType(2131557939).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter89, SimpleViewHolderFactor.Companion.withLayoutId(2131558947).suitedEntityType("sponsorArticleNews").constructor(new EntityListFragment$onRegisterCards$112(this)).build(), 0, 2, null);
         BaseMultiTypeAdapter baseMultiTypeAdapter90 = this.adapter;
         if (baseMultiTypeAdapter90 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter90, SimpleViewHolderFactor.Companion.withLayoutId(2131558940).suitedEntityType("sponsorArticleNews").constructor(new EntityListFragment$onRegisterCards$113(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter90, createFactor(new String[]{"capsuleListCard"}, 2131558634, new EntityListFragment$onRegisterCards$113(this)), 0, 2, null);
+        BaseMultiTypeAdapter baseMultiTypeAdapter91 = this.adapter;
+        if (baseMultiTypeAdapter91 == null) {
+            Intrinsics.throwUninitializedPropertyAccessException("adapter");
+        }
+        BaseMultiTypeAdapter.register$default(baseMultiTypeAdapter91, createFactor(new String[]{"iconGridHorizonCard"}, 2131558963, new EntityListFragment$onRegisterCards$114(this)), 0, 2, null);
     }
 
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.BaseFragment, androidx.fragment.app.Fragment
@@ -1178,7 +1199,7 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         }
         if (TextUtils.isEmpty(str)) {
             FragmentActivity activity2 = getActivity();
-            str = activity2 != null ? activity2.getString(2131886356) : null;
+            str = activity2 != null ? activity2.getString(2131886416) : null;
         }
         int findFirstEntityIndex$default = findFirstEntityIndex$default(this, "REFRESH_PROGRESS_BAR", null, false, false, 6, null);
         if ((!getDataList().isEmpty()) && findFirstEntityIndex$default == -1) {
@@ -1693,6 +1714,7 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
     }
 
     public final void addRefreshView() {
+        removeNoMoreDataView();
         removeHintOrRefreshView();
         RecyclerView.ViewHolder findViewHolderForAdapterPosition = getRecyclerView().findViewHolderForAdapterPosition(CollectionsKt.getLastIndex(this.dataList));
         int i = null;
@@ -1797,26 +1819,12 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         }
     }
 
-    public final void onActivityPause(ActivityPauseEvent activityPauseEvent) {
-        Intrinsics.checkNotNullParameter(activityPauseEvent, "event");
-        if (activityPauseEvent.isSameActivity(getActivity())) {
-            setViewHolderAnimationShow(false);
-        }
-    }
-
-    public final void onActivityResume(ActivityResumeEvent activityResumeEvent) {
-        Intrinsics.checkNotNullParameter(activityResumeEvent, "event");
-        if (activityResumeEvent.isSameActivity(getActivity())) {
-            setViewHolderAnimationShow(getUserVisibleHint());
-        }
-    }
-
     @Override // androidx.fragment.app.Fragment
     public void setUserVisibleHint(boolean z) {
         super.setUserVisibleHint(z);
         this.userVisibleHintCompat = z;
+        this.userVisibilityObserver.onNext(Boolean.valueOf(z));
         if (isAdded()) {
-            setViewHolderAnimationShow(z);
             VideoAutoPlayManager.requestCheckVisible();
         }
     }
@@ -2102,7 +2110,7 @@ public abstract class EntityListFragment extends NewAsyncListFragment<List<? ext
         if (isAdded() && !isResumed()) {
             Lifecycle lifecycle = getLifecycle();
             Intrinsics.checkNotNullExpressionValue(lifecycle, "lifecycle");
-            LifeCycleExtendsKt.oneTimeOnDestroy(lifecycle, new EntityListFragment$refreshDataOnNextResumed$1(this));
+            LifeCycleExtendsKt.oneTimeOnResume(lifecycle, new EntityListFragment$refreshDataOnNextResumed$1(this));
         }
     }
 }

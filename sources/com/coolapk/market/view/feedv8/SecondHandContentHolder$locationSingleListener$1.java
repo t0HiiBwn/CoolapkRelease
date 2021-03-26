@@ -19,9 +19,9 @@ final class SecondHandContentHolder$locationSingleListener$1 implements AMapLoca
     public final void onLocationChanged(AMapLocation aMapLocation) {
         if (aMapLocation != null) {
             LocationInfo build = LocationInfo.newBuilder().setLongitude(Double.valueOf(aMapLocation.getLongitude())).setLatitude(Double.valueOf(aMapLocation.getLatitude())).setCity(aMapLocation.getCity()).setSnippet("").setBusinessArea("").setCountry(aMapLocation.getCountry()).setProvince(aMapLocation.getProvince()).setCityCode(aMapLocation.getCityCode()).setAdCode(aMapLocation.getAdCode()).setDistrict(aMapLocation.getDistrict()).setLongAddress(aMapLocation.getAddress()).setAddress(aMapLocation.getAddress()).setIsHideLocation(false).setIsChecked(false).setEntityType("location").setFeedType("ershou").build();
-            SubmitSecondHandExtraViewPart extraView = this.this$0.getExtraView();
+            SubmitSecondHandExtraViewPart access$getExtraView$p = SecondHandContentHolder.access$getExtraView$p(this.this$0);
             Intrinsics.checkNotNullExpressionValue(build, "info");
-            extraView.initLocation(build);
+            access$getExtraView$p.initLocation(build);
         }
     }
 }

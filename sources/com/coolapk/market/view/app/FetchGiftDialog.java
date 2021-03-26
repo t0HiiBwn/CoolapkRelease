@@ -55,7 +55,7 @@ public class FetchGiftDialog extends MinimumWidthDialog implements View.OnClickL
 
     @Override // androidx.fragment.app.DialogFragment
     public Dialog onCreateDialog(Bundle bundle) {
-        FetchGiftBinding fetchGiftBinding = (FetchGiftBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558564, null, false);
+        FetchGiftBinding fetchGiftBinding = (FetchGiftBinding) DataBindingUtil.inflate(LayoutInflater.from(getActivity()), 2131558567, null, false);
         this.binding = fetchGiftBinding;
         ViewUtil.clickListener(fetchGiftBinding.copyView, this);
         ViewUtil.clickListener(this.binding.myGiftView, this);
@@ -104,17 +104,17 @@ public class FetchGiftDialog extends MinimumWidthDialog implements View.OnClickL
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         int id = view.getId();
-        if (id == 2131362329) {
+        if (id == 2131362335) {
             StringUtils.copyText(getActivity(), this.binding.getKey());
-            Toast.show(getActivity(), 2131887190);
-        } else if (id != 2131362419) {
-            if (id == 2131362998) {
+            Toast.show(getActivity(), 2131887252);
+        } else if (id != 2131362425) {
+            if (id == 2131363010) {
                 ActionManager.startUserGiftCenterActivity(getActivity(), DataManager.getInstance().getLoginSession().getUid());
             }
         } else if (this.serviceApp != null) {
             if (!PackageUtils.isInstalled(getActivity(), this.serviceApp.getPackageName())) {
                 ActionManager.startDownload(getActivity(), this.serviceApp, 0);
-                Toast.show(getActivity(), getString(2131886445));
+                Toast.show(getActivity(), getString(2131886505));
                 return;
             }
             ActionManager.openApp(getActivity(), this.serviceApp.getPackageName());

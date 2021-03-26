@@ -24,8 +24,8 @@ public class ItemFeedStackItemBindingImpl extends ItemFeedStackItemBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 2);
-        sparseIntArray.put(2131363533, 3);
+        sparseIntArray.put(2131362657, 2);
+        sparseIntArray.put(2131363551, 3);
     }
 
     public ItemFeedStackItemBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -61,7 +61,7 @@ public class ItemFeedStackItemBindingImpl extends ItemFeedStackItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;

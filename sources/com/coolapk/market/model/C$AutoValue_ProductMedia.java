@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_ProductMedia  reason: invalid class name */
 abstract class C$AutoValue_ProductMedia extends C$$AutoValue_ProductMedia {
-    C$AutoValue_ProductMedia(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l2, Long l3, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, int i2) {
-        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, str11, l2, l3, str12, str13, str14, str15, str16, str17, str18, str19, i2);
+    C$AutoValue_ProductMedia(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, String str11, Long l, Long l2, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, int i2) {
+        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, str11, l, l2, str12, str13, str14, str15, str16, str17, str18, str19, i2);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_ProductMedia$GsonTypeAdapter */
@@ -156,13 +156,13 @@ abstract class C$AutoValue_ProductMedia extends C$$AutoValue_ProductMedia {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -288,8 +288,8 @@ abstract class C$AutoValue_ProductMedia extends C$$AutoValue_ProductMedia {
             String str9 = this.defaultLogo;
             String str10 = this.defaultSubTitle;
             String str11 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str12 = this.defaultId;
             String str13 = this.defaultProductId;
             String str14 = this.defaultFeedId;
@@ -311,9 +311,9 @@ abstract class C$AutoValue_ProductMedia extends C$$AutoValue_ProductMedia {
             String str27 = str9;
             String str28 = str10;
             String str29 = str11;
-            Long l4 = l2;
+            Long l3 = l;
             String str30 = str;
-            Long l5 = l3;
+            Long l4 = l2;
             String str31 = str12;
             String str32 = str13;
             String str33 = str14;
@@ -492,7 +492,7 @@ abstract class C$AutoValue_ProductMedia extends C$$AutoValue_ProductMedia {
                             str20 = this.entityTypeAdapter.read(jsonReader);
                             continue;
                         case 5:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 6:
                             str33 = this.feedIdAdapter.read(jsonReader);
@@ -543,7 +543,7 @@ abstract class C$AutoValue_ProductMedia extends C$$AutoValue_ProductMedia {
                             str32 = this.productIdAdapter.read(jsonReader);
                             continue;
                         case 22:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case 23:
                             str37 = this.mediaInfoAdapter.read(jsonReader);
@@ -555,7 +555,7 @@ abstract class C$AutoValue_ProductMedia extends C$$AutoValue_ProductMedia {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_ProductMedia(str30, str20, str21, i3, str22, num2, str23, str24, str25, str26, str27, str28, str29, l4, l5, str31, str32, str33, str34, str35, str36, str37, str38, i2);
+            return new AutoValue_ProductMedia(str30, str20, str21, i3, str22, num2, str23, str24, str25, str26, str27, str28, str29, l3, l4, str31, str32, str33, str34, str35, str36, str37, str38, i2);
         }
     }
 }

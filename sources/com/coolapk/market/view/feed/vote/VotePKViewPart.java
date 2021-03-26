@@ -34,7 +34,7 @@ import kotlin.text.StringsKt;
 /* compiled from: VotePKViewPart.kt */
 public class VotePKViewPart extends ViewPart {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558742;
+    public static final int LAYOUT_ID = 2131558749;
     public ItemFeedVotePkBinding binding;
     private final DataBindingComponent component;
     private Feed feed;
@@ -93,7 +93,7 @@ public class VotePKViewPart extends ViewPart {
     @Override // com.coolapk.market.viewholder.iview.ViewPart
     protected View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558742, viewGroup, false, this.component);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558749, viewGroup, false, this.component);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…wGroup, false, component)");
         ItemFeedVotePkBinding itemFeedVotePkBinding = (ItemFeedVotePkBinding) inflate;
         this.binding = itemFeedVotePkBinding;
@@ -139,14 +139,14 @@ public class VotePKViewPart extends ViewPart {
         Intrinsics.checkNotNullExpressionValue(voteOption, "optionLeft");
         Integer stringToColor = ColorUtils.stringToColor(voteOption.getColor());
         if (stringToColor == null) {
-            stringToColor = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099790));
+            stringToColor = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099792));
         }
         Intrinsics.checkNotNullExpressionValue(stringToColor, "ColorUtils.stringToColor…R.color.compare_view_red)");
         int intValue = stringToColor.intValue();
         Intrinsics.checkNotNullExpressionValue(voteOption2, "optionRight");
         Integer stringToColor2 = ColorUtils.stringToColor(voteOption2.getColor());
         if (stringToColor2 == null) {
-            stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099789));
+            stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099791));
         }
         Intrinsics.checkNotNullExpressionValue(stringToColor2, "ColorUtils.stringToColor….color.compare_view_blue)");
         int intValue2 = stringToColor2.intValue();
@@ -278,14 +278,14 @@ public class VotePKViewPart extends ViewPart {
         Intrinsics.checkNotNullExpressionValue(voteOption, "optionLeft");
         Integer stringToColor = ColorUtils.stringToColor(voteOption.getColor());
         if (stringToColor == null) {
-            stringToColor = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099790));
+            stringToColor = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099792));
         }
         Intrinsics.checkNotNullExpressionValue(stringToColor, "ColorUtils.stringToColor…R.color.compare_view_red)");
         int intValue = stringToColor.intValue();
         Intrinsics.checkNotNullExpressionValue(voteOption2, "optionRight");
         Integer stringToColor2 = ColorUtils.stringToColor(voteOption2.getColor());
         if (stringToColor2 == null) {
-            stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099789));
+            stringToColor2 = Integer.valueOf(ResourceUtils.getColorInt(getContext$presentation_coolapkAppRelease(), 2131099791));
         }
         Intrinsics.checkNotNullExpressionValue(stringToColor2, "ColorUtils.stringToColor….color.compare_view_blue)");
         int intValue2 = stringToColor2.intValue();
@@ -365,7 +365,7 @@ public class VotePKViewPart extends ViewPart {
     @Override // com.coolapk.market.viewholder.iview.ViewPart, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
-        if (this.feed != null && view.getId() != 2131363585) {
+        if (this.feed != null && view.getId() != 2131363607) {
             super.onClick(view);
         }
     }

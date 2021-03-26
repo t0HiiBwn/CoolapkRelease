@@ -9,8 +9,8 @@ import java.io.IOException;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_Gift  reason: invalid class name */
 abstract class C$AutoValue_Gift extends C$$AutoValue_Gift {
-    C$AutoValue_Gift(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, UserInfo userInfo, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, String str27, int i2, String str28, String str29, String str30, String str31, String str32, String str33, String str34, int i3, String str35, String str36, Integer num2, Integer num3, Integer num4, String str37) {
-        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, l2, l3, str9, userInfo, str10, str11, str12, str13, str14, str15, str16, str17, str18, str19, str20, str21, str22, str23, str24, str25, str26, str27, i2, str28, str29, str30, str31, str32, str33, str34, i3, str35, str36, num2, num3, num4, str37);
+    C$AutoValue_Gift(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, UserInfo userInfo, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, String str18, String str19, String str20, String str21, String str22, String str23, String str24, String str25, String str26, String str27, int i2, String str28, String str29, String str30, String str31, String str32, String str33, String str34, int i3, String str35, String str36, Integer num2, Integer num3, Integer num4, String str37) {
+        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, l, l2, str9, userInfo, str10, str11, str12, str13, str14, str15, str16, str17, str18, str19, str20, str21, str22, str23, str24, str25, str26, str27, i2, str28, str29, str30, str31, str32, str33, str34, i3, str35, str36, num2, num3, num4, str37);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_Gift$GsonTypeAdapter */
@@ -210,13 +210,13 @@ abstract class C$AutoValue_Gift extends C$$AutoValue_Gift {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -515,8 +515,8 @@ abstract class C$AutoValue_Gift extends C$$AutoValue_Gift {
             String str6 = this.defaultPic;
             String str7 = this.defaultLogo;
             String str8 = this.defaultSubTitle;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str9 = this.defaultDeprecatedUserAvatar;
             UserInfo userInfo = this.defaultUserInfo;
             String str10 = this.defaultDeprecatedUserName;
@@ -561,8 +561,8 @@ abstract class C$AutoValue_Gift extends C$$AutoValue_Gift {
             String str42 = str6;
             String str43 = str7;
             String str44 = str8;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str45 = str9;
             UserInfo userInfo2 = userInfo;
             String str46 = str;
@@ -921,7 +921,7 @@ abstract class C$AutoValue_Gift extends C$$AutoValue_Gift {
                             str64 = this.authorAdapter.read(jsonReader);
                             continue;
                         case '\n':
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 11:
                             str61 = this.pieIdAdapter.read(jsonReader);
@@ -1026,7 +1026,7 @@ abstract class C$AutoValue_Gift extends C$$AutoValue_Gift {
                             str59 = this.apkTitleAdapter.read(jsonReader);
                             continue;
                         case '-':
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case '.':
                             str55 = this.parentIdAdapter.read(jsonReader);
@@ -1038,7 +1038,7 @@ abstract class C$AutoValue_Gift extends C$$AutoValue_Gift {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_Gift(str46, str38, str39, i4, str40, num5, str41, str42, str43, str44, l4, l5, str45, userInfo2, str47, str48, str49, str50, str51, str52, str53, str54, str55, str56, str57, str58, str59, str60, str61, str62, str63, str64, i5, str65, str66, str67, str68, str69, str70, str71, i6, str72, str73, num6, num7, num8, str37);
+            return new AutoValue_Gift(str46, str38, str39, i4, str40, num5, str41, str42, str43, str44, l3, l4, str45, userInfo2, str47, str48, str49, str50, str51, str52, str53, str54, str55, str56, str57, str58, str59, str60, str61, str62, str63, str64, i5, str65, str66, str67, str68, str69, str70, str71, i6, str72, str73, num6, num7, num8, str37);
         }
     }
 }

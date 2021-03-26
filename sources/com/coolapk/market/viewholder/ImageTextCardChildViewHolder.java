@@ -46,7 +46,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ImageTextGridCardViewHolder.kt */
 final class ImageTextCardChildViewHolder extends GenericBindHolder<ItemImageTextCardChildBinding, Entity> implements OnImageLoadListener {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558794;
+    public static final int LAYOUT_ID = 2131558801;
     private final Lazy defaultColor$delegate = LazyKt.lazy(new ImageTextCardChildViewHolder$defaultColor$2(this));
     private Entity entity;
     private final TitleRecycleViewCardViewHolder parentHolder;
@@ -208,7 +208,7 @@ final class ImageTextCardChildViewHolder extends GenericBindHolder<ItemImageText
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

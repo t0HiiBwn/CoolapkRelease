@@ -1,186 +1,286 @@
 package com.xiaomi.push;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.BitSet;
-import java.util.List;
 
-public class hl implements in<hl, Object>, Serializable, Cloneable {
-    private static final iv a = new iv("", (byte) 8, 1);
+public class hl implements hu<hl, Object>, Serializable, Cloneable {
+    private static final il h = new il("XmPushActionSendFeedbackResult");
+    private static final id i = new id("", (byte) 11, 1);
+    private static final id j = new id("", (byte) 12, 2);
+    private static final id k = new id("", (byte) 11, 3);
+    private static final id l = new id("", (byte) 11, 4);
+    private static final id m = new id("", (byte) 10, 6);
+    private static final id n = new id("", (byte) 11, 7);
+    private static final id o = new id("", (byte) 11, 8);
+    public String a;
+    public gy b;
+    public String c;
+    public String d;
+    public long e;
+    public String f;
+    public String g;
+    private BitSet p = new BitSet(1);
 
-    /* renamed from: a  reason: collision with other field name */
-    private static final jd f570a = new jd("NormalConfig");
-    private static final iv b = new iv("", (byte) 15, 2);
-    private static final iv c = new iv("", (byte) 8, 3);
-
-    /* renamed from: a  reason: collision with other field name */
-    public int f571a;
-
-    /* renamed from: a  reason: collision with other field name */
-    public hi f572a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private BitSet f573a = new BitSet(1);
-
-    /* renamed from: a  reason: collision with other field name */
-    public List<hn> f574a;
-
-    public int a() {
-        return this.f571a;
+    @Override // com.xiaomi.push.hu
+    public void a(ig igVar) {
+        igVar.f();
+        while (true) {
+            id h2 = igVar.h();
+            if (h2.b == 0) {
+                igVar.g();
+                if (e()) {
+                    h();
+                    return;
+                }
+                throw new ih("Required field 'errorCode' was not found in serialized data! Struct: " + toString());
+            }
+            switch (h2.c) {
+                case 1:
+                    if (h2.b == 11) {
+                        this.a = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 2:
+                    if (h2.b == 12) {
+                        gy gyVar = new gy();
+                        this.b = gyVar;
+                        gyVar.a(igVar);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 3:
+                    if (h2.b == 11) {
+                        this.c = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 4:
+                    if (h2.b == 11) {
+                        this.d = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 6:
+                    if (h2.b == 10) {
+                        this.e = igVar.t();
+                        a(true);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 7:
+                    if (h2.b == 11) {
+                        this.f = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 8:
+                    if (h2.b == 11) {
+                        this.g = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+            }
+            ij.a(igVar, h2.b);
+            igVar.i();
+        }
     }
 
-    /* renamed from: a */
+    public void a(boolean z) {
+        this.p.set(0, z);
+    }
+
+    public boolean a() {
+        return this.a != null;
+    }
+
+    public boolean a(hl hlVar) {
+        if (hlVar == null) {
+            return false;
+        }
+        boolean a2 = a();
+        boolean a3 = hlVar.a();
+        if ((a2 || a3) && (!a2 || !a3 || !this.a.equals(hlVar.a))) {
+            return false;
+        }
+        boolean b2 = b();
+        boolean b3 = hlVar.b();
+        if ((b2 || b3) && (!b2 || !b3 || !this.b.a(hlVar.b))) {
+            return false;
+        }
+        boolean c2 = c();
+        boolean c3 = hlVar.c();
+        if ((c2 || c3) && (!c2 || !c3 || !this.c.equals(hlVar.c))) {
+            return false;
+        }
+        boolean d2 = d();
+        boolean d3 = hlVar.d();
+        if (((d2 || d3) && (!d2 || !d3 || !this.d.equals(hlVar.d))) || this.e != hlVar.e) {
+            return false;
+        }
+        boolean f2 = f();
+        boolean f3 = hlVar.f();
+        if ((f2 || f3) && (!f2 || !f3 || !this.f.equals(hlVar.f))) {
+            return false;
+        }
+        boolean g2 = g();
+        boolean g3 = hlVar.g();
+        if (g2 || g3) {
+            return g2 && g3 && this.g.equals(hlVar.g);
+        }
+        return true;
+    }
+
+    /* renamed from: b */
     public int compareTo(hl hlVar) {
         int a2;
         int a3;
         int a4;
+        int a5;
+        int a6;
+        int a7;
+        int a8;
         if (!getClass().equals(hlVar.getClass())) {
             return getClass().getName().compareTo(hlVar.getClass().getName());
         }
-        int compareTo = Boolean.valueOf(m405a()).compareTo(Boolean.valueOf(hlVar.m405a()));
+        int compareTo = Boolean.valueOf(a()).compareTo(Boolean.valueOf(hlVar.a()));
         if (compareTo != 0) {
             return compareTo;
         }
-        if (m405a() && (a4 = io.a(this.f571a, hlVar.f571a)) != 0) {
-            return a4;
+        if (a() && (a8 = hv.a(this.a, hlVar.a)) != 0) {
+            return a8;
         }
         int compareTo2 = Boolean.valueOf(b()).compareTo(Boolean.valueOf(hlVar.b()));
         if (compareTo2 != 0) {
             return compareTo2;
         }
-        if (b() && (a3 = io.a(this.f574a, hlVar.f574a)) != 0) {
-            return a3;
+        if (b() && (a7 = hv.a(this.b, hlVar.b)) != 0) {
+            return a7;
         }
         int compareTo3 = Boolean.valueOf(c()).compareTo(Boolean.valueOf(hlVar.c()));
         if (compareTo3 != 0) {
             return compareTo3;
         }
-        if (!c() || (a2 = io.a(this.f572a, hlVar.f572a)) == 0) {
+        if (c() && (a6 = hv.a(this.c, hlVar.c)) != 0) {
+            return a6;
+        }
+        int compareTo4 = Boolean.valueOf(d()).compareTo(Boolean.valueOf(hlVar.d()));
+        if (compareTo4 != 0) {
+            return compareTo4;
+        }
+        if (d() && (a5 = hv.a(this.d, hlVar.d)) != 0) {
+            return a5;
+        }
+        int compareTo5 = Boolean.valueOf(e()).compareTo(Boolean.valueOf(hlVar.e()));
+        if (compareTo5 != 0) {
+            return compareTo5;
+        }
+        if (e() && (a4 = hv.a(this.e, hlVar.e)) != 0) {
+            return a4;
+        }
+        int compareTo6 = Boolean.valueOf(f()).compareTo(Boolean.valueOf(hlVar.f()));
+        if (compareTo6 != 0) {
+            return compareTo6;
+        }
+        if (f() && (a3 = hv.a(this.f, hlVar.f)) != 0) {
+            return a3;
+        }
+        int compareTo7 = Boolean.valueOf(g()).compareTo(Boolean.valueOf(hlVar.g()));
+        if (compareTo7 != 0) {
+            return compareTo7;
+        }
+        if (!g() || (a2 = hv.a(this.g, hlVar.g)) == 0) {
             return 0;
         }
         return a2;
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    public hi m403a() {
-        return this.f572a;
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public void m404a() {
-        if (this.f574a == null) {
-            throw new iz("Required field 'configItems' was not present! Struct: " + toString());
+    @Override // com.xiaomi.push.hu
+    public void b(ig igVar) {
+        h();
+        igVar.a(h);
+        if (this.a != null && a()) {
+            igVar.a(i);
+            igVar.a(this.a);
+            igVar.b();
         }
-    }
-
-    @Override // com.xiaomi.push.in
-    public void a(iy iyVar) {
-        iyVar.m551a();
-        while (true) {
-            iv a2 = iyVar.m547a();
-            if (a2.a == 0) {
-                break;
-            }
-            short s = a2.f877a;
-            if (s != 1) {
-                if (s != 2) {
-                    if (s == 3 && a2.a == 8) {
-                        this.f572a = hi.a(iyVar.m545a());
-                        iyVar.g();
-                    }
-                } else if (a2.a == 15) {
-                    iw a3 = iyVar.m548a();
-                    this.f574a = new ArrayList(a3.f878a);
-                    for (int i = 0; i < a3.f878a; i++) {
-                        hn hnVar = new hn();
-                        hnVar.a(iyVar);
-                        this.f574a.add(hnVar);
-                    }
-                    iyVar.i();
-                    iyVar.g();
-                }
-            } else if (a2.a == 8) {
-                this.f571a = iyVar.m545a();
-                a(true);
-                iyVar.g();
-            }
-            jb.a(iyVar, a2.a);
-            iyVar.g();
+        if (this.b != null && b()) {
+            igVar.a(j);
+            this.b.b(igVar);
+            igVar.b();
         }
-        iyVar.f();
-        if (m405a()) {
-            m404a();
-            return;
+        if (this.c != null) {
+            igVar.a(k);
+            igVar.a(this.c);
+            igVar.b();
         }
-        throw new iz("Required field 'version' was not found in serialized data! Struct: " + toString());
-    }
-
-    public void a(boolean z) {
-        this.f573a.set(0, z);
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public boolean m405a() {
-        return this.f573a.get(0);
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public boolean m406a(hl hlVar) {
-        if (hlVar == null || this.f571a != hlVar.f571a) {
-            return false;
+        if (this.d != null) {
+            igVar.a(l);
+            igVar.a(this.d);
+            igVar.b();
         }
-        boolean b2 = b();
-        boolean b3 = hlVar.b();
-        if ((b2 || b3) && (!b2 || !b3 || !this.f574a.equals(hlVar.f574a))) {
-            return false;
+        igVar.a(m);
+        igVar.a(this.e);
+        igVar.b();
+        if (this.f != null && f()) {
+            igVar.a(n);
+            igVar.a(this.f);
+            igVar.b();
         }
-        boolean c2 = c();
-        boolean c3 = hlVar.c();
-        if (c2 || c3) {
-            return c2 && c3 && this.f572a.equals(hlVar.f572a);
+        if (this.g != null && g()) {
+            igVar.a(o);
+            igVar.a(this.g);
+            igVar.b();
         }
-        return true;
-    }
-
-    @Override // com.xiaomi.push.in
-    public void b(iy iyVar) {
-        m404a();
-        iyVar.a(f570a);
-        iyVar.a(a);
-        iyVar.mo543a(this.f571a);
-        iyVar.b();
-        if (this.f574a != null) {
-            iyVar.a(b);
-            iyVar.a(new iw((byte) 12, this.f574a.size()));
-            for (hn hnVar : this.f574a) {
-                hnVar.b(iyVar);
-            }
-            iyVar.e();
-            iyVar.b();
-        }
-        if (this.f572a != null && c()) {
-            iyVar.a(c);
-            iyVar.mo543a(this.f572a.a());
-            iyVar.b();
-        }
-        iyVar.c();
-        iyVar.m555a();
+        igVar.c();
+        igVar.a();
     }
 
     public boolean b() {
-        return this.f574a != null;
+        return this.b != null;
     }
 
     public boolean c() {
-        return this.f572a != null;
+        return this.c != null;
+    }
+
+    public boolean d() {
+        return this.d != null;
+    }
+
+    public boolean e() {
+        return this.p.get(0);
     }
 
     @Override // java.lang.Object
     public boolean equals(Object obj) {
         if (obj != null && (obj instanceof hl)) {
-            return m406a((hl) obj);
+            return a((hl) obj);
         }
         return false;
+    }
+
+    public boolean f() {
+        return this.f != null;
+    }
+
+    public boolean g() {
+        return this.g != null;
+    }
+
+    public void h() {
+        if (this.c == null) {
+            throw new ih("Required field 'id' was not present! Struct: " + toString());
+        } else if (this.d == null) {
+            throw new ih("Required field 'appId' was not present! Struct: " + toString());
+        }
     }
 
     @Override // java.lang.Object
@@ -190,25 +290,74 @@ public class hl implements in<hl, Object>, Serializable, Cloneable {
 
     @Override // java.lang.Object
     public String toString() {
-        StringBuilder sb = new StringBuilder("NormalConfig(");
-        sb.append("version:");
-        sb.append(this.f571a);
-        sb.append(", ");
-        sb.append("configItems:");
-        List<hn> list = this.f574a;
-        if (list == null) {
-            sb.append("null");
-        } else {
-            sb.append(list);
-        }
-        if (c()) {
-            sb.append(", ");
-            sb.append("type:");
-            hi hiVar = this.f572a;
-            if (hiVar == null) {
+        boolean z;
+        StringBuilder sb = new StringBuilder("XmPushActionSendFeedbackResult(");
+        boolean z2 = false;
+        if (a()) {
+            sb.append("debug:");
+            String str = this.a;
+            if (str == null) {
                 sb.append("null");
             } else {
-                sb.append(hiVar);
+                sb.append(str);
+            }
+            z = false;
+        } else {
+            z = true;
+        }
+        if (b()) {
+            if (!z) {
+                sb.append(", ");
+            }
+            sb.append("target:");
+            gy gyVar = this.b;
+            if (gyVar == null) {
+                sb.append("null");
+            } else {
+                sb.append(gyVar);
+            }
+        } else {
+            z2 = z;
+        }
+        if (!z2) {
+            sb.append(", ");
+        }
+        sb.append("id:");
+        String str2 = this.c;
+        if (str2 == null) {
+            sb.append("null");
+        } else {
+            sb.append(str2);
+        }
+        sb.append(", ");
+        sb.append("appId:");
+        String str3 = this.d;
+        if (str3 == null) {
+            sb.append("null");
+        } else {
+            sb.append(str3);
+        }
+        sb.append(", ");
+        sb.append("errorCode:");
+        sb.append(this.e);
+        if (f()) {
+            sb.append(", ");
+            sb.append("reason:");
+            String str4 = this.f;
+            if (str4 == null) {
+                sb.append("null");
+            } else {
+                sb.append(str4);
+            }
+        }
+        if (g()) {
+            sb.append(", ");
+            sb.append("category:");
+            String str5 = this.g;
+            if (str5 == null) {
+                sb.append("null");
+            } else {
+                sb.append(str5);
             }
         }
         sb.append(")");

@@ -45,13 +45,13 @@ public final class EntityItemActionUtils$serviceApk$1 extends ItemActionHandler 
     public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
         Intrinsics.checkNotNullParameter(viewHolder, "holder");
         Intrinsics.checkNotNullParameter(view, "view");
-        ServiceApp serviceApp = (ServiceApp) view.getTag(2131362753);
+        ServiceApp serviceApp = (ServiceApp) view.getTag(2131362764);
         if (serviceApp == null) {
             LogUtils.w("Item data is null", new Object[0]);
             return;
         }
         int id = view.getId();
-        if (id == 2131361886) {
+        if (id == 2131361887) {
             String str = null;
             UpgradeInfo upgradeInfo = null;
             MobileApp mobileAppExistFast = DataManager.getInstance().getMobileAppExistFast(serviceApp.getPackageName());
@@ -68,7 +68,7 @@ public final class EntityItemActionUtils$serviceApk$1 extends ItemActionHandler 
             }
             strArr[3] = str;
             StateUtils.handleClick(this.$activity, targetUrl.downloadKeys(strArr).build(), view);
-        } else if (id == 2131362323 || id == 2131362768) {
+        } else if (id == 2131362329 || id == 2131362779) {
             BindingViewHolder bindingViewHolder = (BindingViewHolder) viewHolder;
             ImageView imageView = ((ServiceAppBinding) bindingViewHolder.getBinding()).iconView;
             Intrinsics.checkNotNullExpressionValue(imageView, "((holder as BindingViewH…ceAppBinding>()).iconView");
@@ -81,11 +81,11 @@ public final class EntityItemActionUtils$serviceApk$1 extends ItemActionHandler 
     public boolean onItemLongClick(RecyclerView.ViewHolder viewHolder, View view) {
         Intrinsics.checkNotNullParameter(viewHolder, "holder");
         Intrinsics.checkNotNullParameter(view, "view");
-        ServiceApp serviceApp = (ServiceApp) view.getTag(2131362753);
+        ServiceApp serviceApp = (ServiceApp) view.getTag(2131362764);
         if (serviceApp == null) {
             LogUtils.w("Item data is null", new Object[0]);
             return false;
-        } else if (view.getId() != 2131362768) {
+        } else if (view.getId() != 2131362779) {
             return super.onItemLongClick(viewHolder, view);
         } else {
             ServiceApp serviceApp2 = serviceApp;

@@ -1,34 +1,49 @@
 package com.xiaomi.push;
 
-import android.content.Context;
-import android.content.IntentFilter;
-import com.xiaomi.channel.commonutils.logger.b;
-import com.xiaomi.push.mpcd.receivers.BroadcastActionsReceiver;
-
 public class di {
-    private static IntentFilter a() {
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction("android.intent.action.PACKAGE_ADDED");
-        intentFilter.addAction("android.intent.action.PACKAGE_CHANGED");
-        intentFilter.addAction("android.intent.action.PACKAGE_DATA_CLEARED");
-        intentFilter.addAction("android.intent.action.PACKAGE_REPLACED");
-        intentFilter.addAction("android.intent.action.PACKAGE_RESTARTED");
-        intentFilter.addAction("android.intent.action.PACKAGE_REMOVED");
-        intentFilter.addDataScheme("package");
-        return intentFilter;
+    private String a;
+    private String b;
+    private String c;
+    private String d;
+    private int e;
+
+    public String a() {
+        return this.a;
     }
 
-    /* renamed from: a  reason: collision with other method in class */
-    private static dn m200a() {
-        return new dj();
+    public void a(int i) {
+        this.e = i;
     }
 
-    public static void a(Context context) {
-        Cdo.a(context).m201a();
-        try {
-            context.registerReceiver(new BroadcastActionsReceiver(m200a()), a());
-        } catch (Throwable th) {
-            b.a(th);
-        }
+    public void a(String str) {
+        this.a = str;
+    }
+
+    public String b() {
+        return this.b;
+    }
+
+    public void b(String str) {
+        this.b = str;
+    }
+
+    public String c() {
+        return this.c;
+    }
+
+    public void c(String str) {
+        this.c = str;
+    }
+
+    public String d() {
+        return this.d;
+    }
+
+    public void d(String str) {
+        this.d = str;
+    }
+
+    public int e() {
+        return this.e;
     }
 }

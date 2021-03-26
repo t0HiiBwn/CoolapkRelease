@@ -535,15 +535,15 @@ public final class CacheDiskUtils implements CacheConstants {
             if (this.lastUsageDates.isEmpty()) {
                 return 0;
             }
-            Long l2 = Long.MAX_VALUE;
+            Long l = Long.MAX_VALUE;
             File file = null;
             Set<Map.Entry<File, Long>> entrySet = this.lastUsageDates.entrySet();
             synchronized (this.lastUsageDates) {
                 for (Map.Entry<File, Long> entry : entrySet) {
                     Long value = entry.getValue();
-                    if (value.longValue() < l2.longValue()) {
+                    if (value.longValue() < l.longValue()) {
                         file = entry.getKey();
-                        l2 = value;
+                        l = value;
                     }
                 }
             }

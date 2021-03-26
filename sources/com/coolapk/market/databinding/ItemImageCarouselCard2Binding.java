@@ -27,7 +27,7 @@ public abstract class ItemImageCarouselCard2Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemImageCarouselCard2Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemImageCarouselCard2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558789, viewGroup, z, obj);
+        return (ItemImageCarouselCard2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558796, viewGroup, z, obj);
     }
 
     public static ItemImageCarouselCard2Binding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class ItemImageCarouselCard2Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemImageCarouselCard2Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemImageCarouselCard2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558789, null, false, obj);
+        return (ItemImageCarouselCard2Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558796, null, false, obj);
     }
 
     public static ItemImageCarouselCard2Binding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class ItemImageCarouselCard2Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemImageCarouselCard2Binding bind(View view, Object obj) {
-        return (ItemImageCarouselCard2Binding) bind(obj, view, 2131558789);
+        return (ItemImageCarouselCard2Binding) bind(obj, view, 2131558796);
     }
 }

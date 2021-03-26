@@ -91,7 +91,7 @@ public final class ProductViewModel extends BaseObservable implements SavedState
 
     public final void setRatingScore(int i) {
         this.ratingScore = i;
-        notifyPropertyChanged(228);
+        notifyPropertyChanged(229);
     }
 
     public final boolean getFollowState() {
@@ -112,7 +112,7 @@ public final class ProductViewModel extends BaseObservable implements SavedState
     public final void setWishState(boolean z) {
         if (this.wishState != z) {
             this.wishState = z;
-            notifyPropertyChanged(321);
+            notifyPropertyChanged(322);
         }
     }
 

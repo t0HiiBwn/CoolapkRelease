@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="res_2131951822_base_widget_appcompat_drawerarrowtoggle" parent="@style/res_2131951823_base_widget_appcompat_drawerarrowtoggle_common">
+    <style name="res_2131951823_base_widget_appcompat_drawerarrowtoggle" parent="@style/res_2131951824_base_widget_appcompat_drawerarrowtoggle_common">
         <item name="barLength">18.66dp</item>
         <item name="drawableSize">24dp</item>
         <item name="gapBetweenBars">3.33dp</item>

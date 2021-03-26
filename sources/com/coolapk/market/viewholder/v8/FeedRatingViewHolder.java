@@ -26,7 +26,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedRatingViewHolder.kt */
 public final class FeedRatingViewHolder extends GenericBindHolder<ItemFeedRatingBinding, Feed> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558711;
+    public static final int LAYOUT_ID = 2131558718;
     private Feed feed;
     private final Lazy headerViewPart$delegate;
     private final BaseHotReplyHotPlug hotReplyHotPlug;
@@ -145,7 +145,7 @@ public final class FeedRatingViewHolder extends GenericBindHolder<ItemFeedRating
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

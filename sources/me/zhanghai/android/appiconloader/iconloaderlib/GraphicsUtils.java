@@ -10,6 +10,10 @@ import java.io.IOException;
 
 public class GraphicsUtils {
     private static final String TAG = "GraphicsUtils";
+    public static Runnable sOnNewBitmapRunnable = $$Lambda$GraphicsUtils$1cTbtDSr4OUNgM4lkisaZzYVTZY.INSTANCE;
+
+    static /* synthetic */ void lambda$static$0() {
+    }
 
     public static int setColorAlphaBound(int i, int i2) {
         if (i2 < 0) {
@@ -41,5 +45,9 @@ public class GraphicsUtils {
             i += rect.width() * rect.height();
         }
         return i;
+    }
+
+    public static void noteNewBitmapCreated() {
+        sOnNewBitmapRunnable.run();
     }
 }

@@ -9,7 +9,7 @@ import com.coolapk.market.util.ViewUtil;
 
 public class SwitchPictureViewHolder extends BindingViewHolder {
     public static final String HOT = "hot";
-    public static final int LAYOUT_ID = 2131558857;
+    public static final int LAYOUT_ID = 2131558864;
     public static final String NEWEST = "newest";
     public static final String RECOMMEND = "recommend";
     public static final String SPLASH = "splash";

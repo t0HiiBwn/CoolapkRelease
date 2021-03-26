@@ -348,7 +348,7 @@ public class g extends h {
             }
             ak.a((View) this.n, 0);
             ak.a((View) this.k, 8);
-            ak.a((View) this.f1322l, 8);
+            ak.a((View) this.l, 8);
             ak.a((View) this.m, 8);
             ak.a(this.n, ac.a(this.z, "tt_video_dial_replay"));
             ak.a(this.n, new View.OnClickListener() {
@@ -392,7 +392,7 @@ public class g extends h {
         ak.a((View) this.i, 8);
         ak.a(this.j, 8);
         ak.a((View) this.k, 8);
-        ak.a((View) this.f1322l, 8);
+        ak.a((View) this.l, 8);
         ak.a((View) this.m, 8);
         if (this.A != null) {
             this.A.a(true);

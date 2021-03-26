@@ -32,7 +32,7 @@ public abstract class ItemRankHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRankHeaderBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemRankHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558888, viewGroup, z, obj);
+        return (ItemRankHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558895, viewGroup, z, obj);
     }
 
     public static ItemRankHeaderBinding inflate(LayoutInflater layoutInflater) {
@@ -41,7 +41,7 @@ public abstract class ItemRankHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRankHeaderBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemRankHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558888, null, false, obj);
+        return (ItemRankHeaderBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558895, null, false, obj);
     }
 
     public static ItemRankHeaderBinding bind(View view) {
@@ -50,6 +50,6 @@ public abstract class ItemRankHeaderBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRankHeaderBinding bind(View view, Object obj) {
-        return (ItemRankHeaderBinding) bind(obj, view, 2131558888);
+        return (ItemRankHeaderBinding) bind(obj, view, 2131558895);
     }
 }

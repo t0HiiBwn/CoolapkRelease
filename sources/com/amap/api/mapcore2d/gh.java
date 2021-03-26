@@ -26,9 +26,7 @@ public final class gh {
     Inner_3dMap_locationOption i = null;
     final int j = 500;
     final int k = 30;
-
-    /* renamed from: l  reason: collision with root package name */
-    Object f1233l = new Object();
+    Object l = new Object();
     private JSONArray o = null;
 
     /* compiled from: MapLocationService */
@@ -161,7 +159,7 @@ public final class gh {
     }
 
     private void i() {
-        synchronized (this.f1233l) {
+        synchronized (this.l) {
             Handler handler = this.e;
             if (handler != null) {
                 handler.removeCallbacksAndMessages(null);
@@ -171,7 +169,7 @@ public final class gh {
     }
 
     private void j() {
-        synchronized (this.f1233l) {
+        synchronized (this.l) {
             Handler handler = this.e;
             if (handler != null) {
                 handler.removeMessages(1);

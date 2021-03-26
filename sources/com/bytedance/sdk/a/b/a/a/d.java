@@ -21,9 +21,7 @@ public final class d implements Closeable, Flushable {
     boolean h;
     boolean i;
     private long k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private long f1265l;
+    private long l;
     private long m;
     private final Executor n;
     private final Runnable o;
@@ -52,7 +50,7 @@ public final class d implements Closeable, Flushable {
                     long j2 = bVar.b[i3];
                     long c2 = this.b.c(file2);
                     bVar.b[i3] = c2;
-                    this.f1265l = (this.f1265l - j2) + c2;
+                    this.l = (this.l - j2) + c2;
                 }
             }
             this.f++;
@@ -75,7 +73,7 @@ public final class d implements Closeable, Flushable {
                 this.d.i(10);
             }
             this.d.flush();
-            if (this.f1265l > this.k || a()) {
+            if (this.l > this.k || a()) {
                 this.n.execute(this.o);
             }
             return;
@@ -94,7 +92,7 @@ public final class d implements Closeable, Flushable {
         }
         for (int i2 = 0; i2 < this.c; i2++) {
             this.b.a(bVar.c[i2]);
-            this.f1265l -= bVar.b[i2];
+            this.l -= bVar.b[i2];
             bVar.b[i2] = 0;
         }
         this.f++;
@@ -146,7 +144,7 @@ public final class d implements Closeable, Flushable {
     }
 
     void c() throws IOException {
-        while (this.f1265l > this.k) {
+        while (this.l > this.k) {
             a(this.e.values().iterator().next());
         }
         this.i = false;

@@ -25,7 +25,7 @@ public final class FeedEntranceV8Activity$onCreate$4 extends RecyclerView.Adapte
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public FeedEntranceV8Activity.EntranceViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         Intrinsics.checkNotNullParameter(viewGroup, "parent");
-        FeedEntranceItemsBinding feedEntranceItemsBinding = (FeedEntranceItemsBinding) DataBindingUtil.inflate(LayoutInflater.from(this.this$0.getActivity()), 2131558557, viewGroup, false);
+        FeedEntranceItemsBinding feedEntranceItemsBinding = (FeedEntranceItemsBinding) DataBindingUtil.inflate(LayoutInflater.from(this.this$0.getActivity()), 2131558560, viewGroup, false);
         FeedEntranceV8Activity feedEntranceV8Activity = this.this$0;
         Intrinsics.checkNotNullExpressionValue(feedEntranceItemsBinding, "binding");
         View root = feedEntranceItemsBinding.getRoot();

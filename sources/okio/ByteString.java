@@ -265,12 +265,12 @@ public class ByteString implements Serializable, Comparable<ByteString> {
     }
 
     /* renamed from: -deprecated_getByte */
-    public final byte m2337deprecated_getByte(int i) {
+    public final byte m1586deprecated_getByte(int i) {
         return getByte(i);
     }
 
     /* renamed from: -deprecated_size */
-    public final int m2338deprecated_size() {
+    public final int m1587deprecated_size() {
         return size();
     }
 
@@ -334,44 +334,44 @@ public class ByteString implements Serializable, Comparable<ByteString> {
         }
 
         /* renamed from: -deprecated_decodeBase64 */
-        public final ByteString m2339deprecated_decodeBase64(String str) {
+        public final ByteString m1588deprecated_decodeBase64(String str) {
             Intrinsics.checkNotNullParameter(str, "string");
             return decodeBase64(str);
         }
 
         /* renamed from: -deprecated_decodeHex */
-        public final ByteString m2340deprecated_decodeHex(String str) {
+        public final ByteString m1589deprecated_decodeHex(String str) {
             Intrinsics.checkNotNullParameter(str, "string");
             return decodeHex(str);
         }
 
         /* renamed from: -deprecated_encodeString */
-        public final ByteString m2341deprecated_encodeString(String str, Charset charset) {
+        public final ByteString m1590deprecated_encodeString(String str, Charset charset) {
             Intrinsics.checkNotNullParameter(str, "string");
             Intrinsics.checkNotNullParameter(charset, "charset");
             return encodeString(str, charset);
         }
 
         /* renamed from: -deprecated_encodeUtf8 */
-        public final ByteString m2342deprecated_encodeUtf8(String str) {
+        public final ByteString m1591deprecated_encodeUtf8(String str) {
             Intrinsics.checkNotNullParameter(str, "string");
             return encodeUtf8(str);
         }
 
         /* renamed from: -deprecated_of */
-        public final ByteString m2343deprecated_of(ByteBuffer byteBuffer) {
+        public final ByteString m1592deprecated_of(ByteBuffer byteBuffer) {
             Intrinsics.checkNotNullParameter(byteBuffer, "buffer");
             return of(byteBuffer);
         }
 
         /* renamed from: -deprecated_of */
-        public final ByteString m2344deprecated_of(byte[] bArr, int i, int i2) {
+        public final ByteString m1593deprecated_of(byte[] bArr, int i, int i2) {
             Intrinsics.checkNotNullParameter(bArr, "array");
             return of(bArr, i, i2);
         }
 
         /* renamed from: -deprecated_read */
-        public final ByteString m2345deprecated_read(InputStream inputStream, int i) {
+        public final ByteString m1594deprecated_read(InputStream inputStream, int i) {
             Intrinsics.checkNotNullParameter(inputStream, "inputstream");
             return read(inputStream, i);
         }

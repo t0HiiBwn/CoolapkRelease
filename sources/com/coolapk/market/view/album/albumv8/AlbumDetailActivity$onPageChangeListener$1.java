@@ -57,7 +57,7 @@ public final class AlbumDetailActivity$onPageChangeListener$1 implements ViewPag
             } else {
                 Toolbar toolbar2 = AlbumDetailActivity.access$getBinding$p(this.this$0).toolbar;
                 Intrinsics.checkNotNullExpressionValue(toolbar2, "binding.toolbar");
-                toolbar2.setTitle(this.this$0.getString(2131886667));
+                toolbar2.setTitle(this.this$0.getString(2131886729));
             }
         } else if (!(this.this$0.verticalTop)) {
             Toolbar toolbar3 = AlbumDetailActivity.access$getBinding$p(this.this$0).toolbar;

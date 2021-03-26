@@ -15,8 +15,8 @@ final class Tooltip$predrawListener$1 implements ViewTreeObserver.OnPreDrawListe
         this.this$0 = tooltip;
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:31:0x00b3, code lost:
-        if (r0[1] != r6.this$0.mNewLocation[1]) goto L_0x00b5;
+    /* JADX WARNING: Code restructure failed: missing block: B:31:0x00b4, code lost:
+        if (r0[1] != r6.this$0.mNewLocation[1]) goto L_0x00b6;
      */
     @Override // android.view.ViewTreeObserver.OnPreDrawListener
     public final boolean onPreDraw() {

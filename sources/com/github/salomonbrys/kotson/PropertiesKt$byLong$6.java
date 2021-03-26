@@ -17,8 +17,8 @@ final class PropertiesKt$byLong$6 extends Lambda implements Function1<Long, Json
     /* Return type fixed from 'java.lang.Object' to match base method */
     /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object] */
     @Override // kotlin.jvm.functions.Function1
-    public /* bridge */ /* synthetic */ JsonPrimitive invoke(Long l2) {
-        return invoke(l2.longValue());
+    public /* bridge */ /* synthetic */ JsonPrimitive invoke(Long l) {
+        return invoke(l.longValue());
     }
 
     public final JsonPrimitive invoke(long j) {

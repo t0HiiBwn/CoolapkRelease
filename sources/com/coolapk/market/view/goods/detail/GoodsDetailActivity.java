@@ -88,7 +88,7 @@ public final class GoodsDetailActivity extends FakeStatusBarActivity implements 
     protected void onCreate(Bundle bundle) {
         setContentBarAlwaysTranslucent(true);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558568, new ContextBindingComponent(this));
+        ViewDataBinding contentView = DataBindingUtil.setContentView(getActivity(), 2131558571, new ContextBindingComponent(this));
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte….goods_detail, component)");
         GoodsDetailBinding goodsDetailBinding = (GoodsDetailBinding) contentView;
         this.binding = goodsDetailBinding;
@@ -112,7 +112,7 @@ public final class GoodsDetailActivity extends FakeStatusBarActivity implements 
         if (goodsDetailBinding4 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
         }
-        goodsDetailBinding4.toolbar.setNavigationIcon(2131231156);
+        goodsDetailBinding4.toolbar.setNavigationIcon(2131231166);
         GoodsDetailBinding goodsDetailBinding5 = this.binding;
         if (goodsDetailBinding5 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("binding");
@@ -161,7 +161,7 @@ public final class GoodsDetailActivity extends FakeStatusBarActivity implements 
     @Override // android.app.Activity
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361855) {
+        if (menuItem.getItemId() != 2131361856) {
             return super.onOptionsItemSelected(menuItem);
         }
         BaseActivity activity = getActivity();
@@ -261,8 +261,8 @@ public final class GoodsDetailActivity extends FakeStatusBarActivity implements 
         Objects.requireNonNull(array, "null cannot be cast to non-null type kotlin.Array<T>");
         ViewExtendsKt.setDefaultSubTabConfigListener(tabLayout, baseActivity, scrollStateViewPager5, (ConfigPage[]) array);
         tabLayout.setTabIndicatorMarginBottom(NumberExtendsKt.getDp(Double.valueOf(7.5d)));
-        int colorInt = ResourceUtils.getColorInt(tabLayout.getContext(), 2131100146);
-        tabLayout.setTabTextColors(ResourceUtils.getColorInt(tabLayout.getContext(), 2131099928), colorInt);
+        int colorInt = ResourceUtils.getColorInt(tabLayout.getContext(), 2131100159);
+        tabLayout.setTabTextColors(ResourceUtils.getColorInt(tabLayout.getContext(), 2131099933), colorInt);
         tabLayout.setSelectedTabIndicatorColor(colorInt);
         GoodsDetailBinding goodsDetailBinding8 = this.binding;
         if (goodsDetailBinding8 == null) {

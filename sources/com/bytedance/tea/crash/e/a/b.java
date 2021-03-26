@@ -25,9 +25,7 @@ public class b {
     private String i;
     private long j;
     private String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private long f1344l;
+    private long l;
     private String m;
     private long n;
     private String o;
@@ -57,7 +55,7 @@ public class b {
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityResumed(Activity activity) {
             b.this.k = activity.getClass().getName();
-            b.this.f1344l = System.currentTimeMillis();
+            b.this.l = System.currentTimeMillis();
             b.e(b.this);
         }
 
@@ -158,7 +156,7 @@ public class b {
         try {
             jSONObject.put("last_create_activity", a(this.g, this.h));
             jSONObject.put("last_start_activity", a(this.i, this.j));
-            jSONObject.put("last_resume_activity", a(this.k, this.f1344l));
+            jSONObject.put("last_resume_activity", a(this.k, this.l));
             jSONObject.put("last_pause_activity", a(this.m, this.n));
             jSONObject.put("last_stop_activity", a(this.o, this.p));
             jSONObject.put("alive_activities", d());

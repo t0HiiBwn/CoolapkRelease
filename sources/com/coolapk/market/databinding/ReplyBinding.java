@@ -90,7 +90,7 @@ public abstract class ReplyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ReplyBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ReplyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559116, viewGroup, z, obj);
+        return (ReplyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559123, viewGroup, z, obj);
     }
 
     public static ReplyBinding inflate(LayoutInflater layoutInflater) {
@@ -99,7 +99,7 @@ public abstract class ReplyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ReplyBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ReplyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559116, null, false, obj);
+        return (ReplyBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559123, null, false, obj);
     }
 
     public static ReplyBinding bind(View view) {
@@ -108,6 +108,6 @@ public abstract class ReplyBinding extends ViewDataBinding {
 
     @Deprecated
     public static ReplyBinding bind(View view, Object obj) {
-        return (ReplyBinding) bind(obj, view, 2131559116);
+        return (ReplyBinding) bind(obj, view, 2131559123);
     }
 }

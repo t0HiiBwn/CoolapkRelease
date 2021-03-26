@@ -204,7 +204,7 @@ public class e {
             dVar.i = jSONObject.optInt("req_err_api_cnt", dVar.i);
             dVar.j = jSONObject.optInt("req_err_ip_cnt", dVar.j);
             dVar.k = jSONObject.optInt("update_interval", dVar.k);
-            dVar.f1280l = jSONObject.optInt("update_random_range", dVar.f1280l);
+            dVar.l = jSONObject.optInt("update_random_range", dVar.l);
             dVar.m = jSONObject.optString("http_code_black", dVar.m);
             return dVar;
         } catch (Throwable th) {

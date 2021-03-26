@@ -15,7 +15,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: SimpleUserViewHolder.kt */
 public final class SimpleUserViewHolder extends GenericBindHolder<ItemSimpleUserViewBinding, User> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558933;
+    public static final int LAYOUT_ID = 2131558940;
     private User user;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -52,7 +52,7 @@ public final class SimpleUserViewHolder extends GenericBindHolder<ItemSimpleUser
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
-        if (view.getId() == 2131362200) {
+        if (view.getId() == 2131362205) {
             UserAvatarView userAvatarView = ((ItemSimpleUserViewBinding) getBinding()).iconView;
             User user2 = this.user;
             if (user2 == null) {

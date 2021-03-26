@@ -47,10 +47,10 @@ public class MorePanel extends FrameLayout implements View.OnClickListener, Adap
         this.mLayoutInflater = LayoutInflater.from(getContext());
         this.mActionItems = new ArrayList();
         if (isInEditMode()) {
-            this.mLayoutInflater.inflate(2131559090, (ViewGroup) this, true);
+            this.mLayoutInflater.inflate(2131559097, (ViewGroup) this, true);
             return;
         }
-        PostMorePanelBinding postMorePanelBinding = (PostMorePanelBinding) DataBindingUtil.inflate(this.mLayoutInflater, 2131559090, this, true);
+        PostMorePanelBinding postMorePanelBinding = (PostMorePanelBinding) DataBindingUtil.inflate(this.mLayoutInflater, 2131559097, this, true);
         this.mBinding = postMorePanelBinding;
         postMorePanelBinding.morePanelViewPager.setAdapter(new GridViewPageAdapter());
         this.mBinding.morePanelViewPager.addOnPageChangeListener(new IndicatorPageListener());
@@ -89,7 +89,7 @@ public class MorePanel extends FrameLayout implements View.OnClickListener, Adap
                 ImageView imageView = new ImageView(getContext());
                 imageView.setLayoutParams(layoutParams);
                 imageView.setPadding(dp2px, dp2px, dp2px, dp2px);
-                imageView.setImageDrawable(ResourceUtils.getDrawable(getContext(), 2131231279));
+                imageView.setImageDrawable(ResourceUtils.getDrawable(getContext(), 2131231290));
                 linearLayout.addView(imageView);
                 childCount++;
             }
@@ -129,8 +129,8 @@ public class MorePanel extends FrameLayout implements View.OnClickListener, Adap
     /* access modifiers changed from: private */
     public List<HolderItem> createListByPageIndex() {
         ArrayList arrayList = new ArrayList();
-        arrayList.add(HolderItem.newBuilder().entityType("more_action").string("话题").intValue(2131231495).value("#2196F3").build());
-        arrayList.add(HolderItem.newBuilder().entityType("more_action").string("应用").intValue(2131231654).value("#4CAF50").build());
+        arrayList.add(HolderItem.newBuilder().entityType("more_action").string("话题").intValue(2131231506).value("#2196F3").build());
+        arrayList.add(HolderItem.newBuilder().entityType("more_action").string("应用").intValue(2131231665).value("#4CAF50").build());
         return arrayList;
     }
 
@@ -192,7 +192,7 @@ public class MorePanel extends FrameLayout implements View.OnClickListener, Adap
         @Override // android.widget.ArrayAdapter, android.widget.Adapter
         public View getView(int i, View view, ViewGroup viewGroup) {
             HolderItem holderItem = (HolderItem) getItem(i);
-            ItemMoreActionBinding itemMoreActionBinding = (ItemMoreActionBinding) DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558831, null, true);
+            ItemMoreActionBinding itemMoreActionBinding = (ItemMoreActionBinding) DataBindingUtil.inflate(LayoutInflater.from(getContext()), 2131558838, null, true);
             itemMoreActionBinding.actionTitle.setText(holderItem.getString());
             itemMoreActionBinding.actionIcon.setImageResource(holderItem.getIntValue().intValue());
             itemMoreActionBinding.actionIcon.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor(holderItem.getValue())));

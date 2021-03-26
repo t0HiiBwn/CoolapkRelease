@@ -110,7 +110,7 @@ public final class GoodsContentHolder extends BaseFeedContentHolder implements V
     public View onCreateContentView$presentation_coolapkAppRelease(LayoutInflater layoutInflater) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
         int i = 0;
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559159, null, false, new ContextBindingComponent(getActivity()));
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559167, null, false, new ContextBindingComponent(getActivity()));
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…ndingComponent(activity))");
         SubmitFeedGoodsBinding submitFeedGoodsBinding = (SubmitFeedGoodsBinding) inflate;
         this.binding = submitFeedGoodsBinding;
@@ -320,7 +320,7 @@ public final class GoodsContentHolder extends BaseFeedContentHolder implements V
             TextView textView2 = getCategoryView().titleView;
             Intrinsics.checkNotNullExpressionValue(textView2, "categoryView.titleView");
             textView2.setText("选择分类");
-            getCategoryView().imageView.setImageResource(2131231170);
+            getCategoryView().imageView.setImageResource(2131231181);
             List<FeedGoodsCategory> categoryRows = feedGoods.getCategoryRows();
             Intrinsics.checkNotNullExpressionValue(categoryRows, "feedGoods.categoryRows");
             List<FeedGoodsCategory> list = categoryRows;
@@ -589,9 +589,9 @@ public final class GoodsContentHolder extends BaseFeedContentHolder implements V
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         int id = view.getId();
-        if (id == 2131361999) {
+        if (id == 2131362000) {
             ActionManager.startGoodsSearchActivity(getActivity(), 349);
-        } else if (id == 2131362257) {
+        } else if (id == 2131362262) {
             updateGoodsUI(null);
         }
     }

@@ -15,7 +15,7 @@ class b implements ServiceConnection {
 
     @Override // android.content.ServiceConnection
     public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-        this.a.a = a.AbstractBinderC0180a.a(iBinder);
+        this.a.a = a.AbstractBinderC0188a.a(iBinder);
         synchronized (this.a.d) {
             this.a.d.notify();
         }

@@ -29,7 +29,7 @@ public class ItemFeedExtraTypePartBindingImpl extends ItemFeedExtraTypePartBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362484, 5);
+        sparseIntArray.put(2131362492, 5);
     }
 
     public ItemFeedExtraTypePartBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -68,11 +68,11 @@ public class ItemFeedExtraTypePartBindingImpl extends ItemFeedExtraTypePartBindi
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (263 == i) {
+        } else if (264 == i) {
             setSingleImg((String) obj);
         } else if (130 == i) {
             setGifImage((String) obj);
@@ -90,7 +90,7 @@ public class ItemFeedExtraTypePartBindingImpl extends ItemFeedExtraTypePartBindi
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -162,7 +162,7 @@ public class ItemFeedExtraTypePartBindingImpl extends ItemFeedExtraTypePartBindi
             ActionButtonBindingAdapters.setActionText(this.actionButton, feed);
             ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, feed, false);
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extendIcon, str, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extendIcon, str, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             this.extendTitle.setMaxLines(i);
             TextViewBindingAdapter.setText(this.extendTitle, str2);
         }

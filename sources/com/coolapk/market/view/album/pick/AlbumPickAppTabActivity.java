@@ -5,6 +5,8 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import androidx.fragment.app.Fragment;
@@ -66,12 +68,12 @@ public class AlbumPickAppTabActivity extends TabActivity {
 
     @Override // com.coolapk.market.view.base.TabActivity
     protected String[] onCreateTabs() {
-        return new String[]{getString(2131887289), getString(2131887288), getString(2131887287), getString(2131887290)};
+        return new String[]{getString(2131887351), getString(2131887350), getString(2131887349), getString(2131887352)};
     }
 
     public void onDone() {
         if (this.commitApps.isEmpty()) {
-            Toast.show(getActivity(), getString(2131887013));
+            Toast.show(getActivity(), getString(2131887075));
             return;
         }
         ProgressDialog progressDialog = new ProgressDialog(getActivity());
@@ -83,7 +85,7 @@ public class AlbumPickAppTabActivity extends TabActivity {
             this.result.add(this.commitApps.get(entry.getKey()));
         }
         Collections.sort(this.result, $$Lambda$AlbumPickAppTabActivity$lf6IevDKRhY9NHnpDBO24LgTHXI.INSTANCE);
-        this.dialog.setMessage(getString(2131886578, new Object[]{1}));
+        this.dialog.setMessage(getString(2131886640, new Object[]{1}));
         checkLogoFile(this.result, getActivity(), this.mAlbum.getAlbumId()).onBackpressureBuffer((long) this.result.size()).flatMap(new Func1() {
             /* class com.coolapk.market.view.album.pick.$$Lambda$AlbumPickAppTabActivity$upbJUc7fjW0T2mUKRIK9ZXyHfig */
 
@@ -132,12 +134,12 @@ public class AlbumPickAppTabActivity extends TabActivity {
             return Observable.error(new ClientException(-1, "无法获取logo，暂时不能添加到应用集"));
         }
         if (!albumItem.isHttpLogo()) {
-            return DataManager.getInstance().uploadAlbumLogoImage(albumItem).map(new Func1() {
-                /* class com.coolapk.market.view.album.pick.$$Lambda$AlbumPickAppTabActivity$HtEjYEQgT4qFbHwD0gO6vuKdwnE */
+            return DataManager.getInstance().uploadAlbumLogoImage(albumItem).first().flatMap(new Func1() {
+                /* class com.coolapk.market.view.album.pick.$$Lambda$AlbumPickAppTabActivity$UdcoEmaDbaOKbQZlR_D7QqzgJF8 */
 
                 @Override // rx.functions.Func1
                 public final Object call(Object obj) {
-                    return AlbumItem.newBuilder(AlbumItem.this).setLogoUrl((String) ((Result) obj).getData()).build();
+                    return Observable.just(AlbumItem.newBuilder(AlbumItem.this).setLogoUrl((String) ((Pair) obj).second).build());
                 }
             });
         }
@@ -157,7 +159,7 @@ public class AlbumPickAppTabActivity extends TabActivity {
             i = this.pageCounter.get();
         }
         objArr[0] = Integer.valueOf(i);
-        progressDialog.setMessage(getString(2131886578, objArr));
+        progressDialog.setMessage(getString(2131886640, objArr));
         this.pageCounter.incrementAndGet();
     }
 
@@ -186,6 +188,7 @@ public class AlbumPickAppTabActivity extends TabActivity {
     }
 
     private Observable<Result<String>> addApk(AlbumItem albumItem, String str) {
+        Log.d("hfl", albumItem.getLogoUrl());
         return DataManager.getInstance().addApkToAlbum(str, albumItem.getPackageName(), albumItem.getTitle(), albumItem.getUrl(), albumItem.getNote(), albumItem.getDisplayOrder(), albumItem.getLogoUrl());
     }
 
@@ -275,7 +278,7 @@ public class AlbumPickAppTabActivity extends TabActivity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         getViewPager().setCurrentItem(getIntent().getIntExtra("PAGE_INDEX", 0));
-        getToolbar().setTitle(2131887286);
+        getToolbar().setTitle(2131887348);
         if (bundle != null) {
             for (int i = 0; i < getTabTitles().length; i++) {
                 Fragment findFragmentByTag = getSupportFragmentManager().findFragmentByTag(getTabTitles()[i]);
@@ -294,7 +297,7 @@ public class AlbumPickAppTabActivity extends TabActivity {
 
     @Override // android.app.Activity
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        if (menuItem.getItemId() == 2131361899) {
+        if (menuItem.getItemId() == 2131361900) {
             onDone();
         }
         return super.onOptionsItemSelected(menuItem);

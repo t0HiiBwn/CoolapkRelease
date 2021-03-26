@@ -16,7 +16,7 @@ final class VoteColorPickerFragment$onCreateDialog$4 implements View.OnLongClick
 
     @Override // android.view.View.OnLongClickListener
     public final boolean onLongClick(View view) {
-        Toast.show$default(this.this$0.getActivity(), ColorUtils.toColorString(this.this$0.colorPrimary), 0, false, 12, null);
+        Toast.show$default(this.this$0.getActivity(), ColorUtils.toColorString(VoteColorPickerFragment.access$getColorPrimary$p(this.this$0)), 0, false, 12, null);
         return true;
     }
 }

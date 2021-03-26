@@ -24,9 +24,9 @@ public class ItemGridAlbumCardBindingImpl extends ItemGridAlbumCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362754, 2);
-        sparseIntArray.put(2131362970, 3);
-        sparseIntArray.put(2131362634, 4);
+        sparseIntArray.put(2131362765, 2);
+        sparseIntArray.put(2131362982, 3);
+        sparseIntArray.put(2131362642, 4);
     }
 
     public ItemGridAlbumCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -66,7 +66,7 @@ public class ItemGridAlbumCardBindingImpl extends ItemGridAlbumCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (278 != i) {
+        if (279 != i) {
             return false;
         }
         setTitle((String) obj);
@@ -79,7 +79,7 @@ public class ItemGridAlbumCardBindingImpl extends ItemGridAlbumCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(278);
+        notifyPropertyChanged(279);
         super.requestRebind();
     }
 

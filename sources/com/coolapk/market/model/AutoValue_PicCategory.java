@@ -18,8 +18,8 @@ final class AutoValue_PicCategory extends C$AutoValue_PicCategory {
         }
     };
 
-    AutoValue_PicCategory(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, String str12) {
-        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, l2, l3, str11, str12);
+    AutoValue_PicCategory(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, String str12) {
+        super(str, str2, str3, i, str4, num, str5, str6, str7, str8, str9, str10, l, l2, str11, str12);
     }
 
     @Override // android.os.Parcelable

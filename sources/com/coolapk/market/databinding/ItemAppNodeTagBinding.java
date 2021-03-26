@@ -27,7 +27,7 @@ public abstract class ItemAppNodeTagBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppNodeTagBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAppNodeTagBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558595, viewGroup, z, obj);
+        return (ItemAppNodeTagBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558599, viewGroup, z, obj);
     }
 
     public static ItemAppNodeTagBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class ItemAppNodeTagBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppNodeTagBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAppNodeTagBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558595, null, false, obj);
+        return (ItemAppNodeTagBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558599, null, false, obj);
     }
 
     public static ItemAppNodeTagBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class ItemAppNodeTagBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAppNodeTagBinding bind(View view, Object obj) {
-        return (ItemAppNodeTagBinding) bind(obj, view, 2131558595);
+        return (ItemAppNodeTagBinding) bind(obj, view, 2131558599);
     }
 }

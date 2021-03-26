@@ -66,7 +66,7 @@ abstract class C$$AutoValue_DyhArticle extends DyhArticle {
     private final UserInfo userInfo;
     private final String videoUrl;
 
-    C$$AutoValue_DyhArticle(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, Long l2, Long l3, String str8, UserInfo userInfo2, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, int i2, String str18, String str19, String str20, int i3, String str21, String str22, String str23, String str24, int i4, String str25, List<String> list, String str26, String str27, int i5, int i6, int i7, int i8, int i9, int i10, int i11, DyhModel dyhModel2, List<FeedReply> list2, int i12, String str28, String str29, String str30, int i13, String str31, String str32, int i14, UserAction userAction2, int i15, Long l4, Collection collection, CollectionItem collectionItem2) {
+    C$$AutoValue_DyhArticle(String str, String str2, String str3, int i, String str4, Integer num, String str5, String str6, String str7, Long l, Long l2, String str8, UserInfo userInfo2, String str9, String str10, String str11, String str12, String str13, String str14, String str15, String str16, String str17, int i2, String str18, String str19, String str20, int i3, String str21, String str22, String str23, String str24, int i4, String str25, List<String> list, String str26, String str27, int i5, int i6, int i7, int i8, int i9, int i10, int i11, DyhModel dyhModel2, List<FeedReply> list2, int i12, String str28, String str29, String str30, int i13, String str31, String str32, int i14, UserAction userAction2, int i15, Long l3, Collection collection, CollectionItem collectionItem2) {
         this.entityTypeName = str;
         Objects.requireNonNull(str2, "Null entityType");
         this.entityType = str2;
@@ -77,8 +77,8 @@ abstract class C$$AutoValue_DyhArticle extends DyhArticle {
         this.logo = str5;
         this.subTitle = str6;
         this.extraData = str7;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.deprecatedUserAvatar = str8;
         this.userInfo = userInfo2;
         this.deprecatedUserName = str9;
@@ -125,7 +125,7 @@ abstract class C$$AutoValue_DyhArticle extends DyhArticle {
         this.isHeadlineV8 = i14;
         this.userAction = userAction2;
         this.status = i15;
-        this.creatDate = l4;
+        this.creatDate = l3;
         this.collectionInfo = collection;
         this.collectionItem = collectionItem2;
     }
@@ -485,8 +485,8 @@ abstract class C$$AutoValue_DyhArticle extends DyhArticle {
         String str3;
         String str4;
         String str5;
+        Long l;
         Long l2;
-        Long l3;
         String str6;
         UserInfo userInfo2;
         String str7;
@@ -515,7 +515,7 @@ abstract class C$$AutoValue_DyhArticle extends DyhArticle {
         String str28;
         String str29;
         UserAction userAction2;
-        Long l4;
+        Long l3;
         Collection collection;
         if (obj == this) {
             return true;
@@ -526,7 +526,7 @@ abstract class C$$AutoValue_DyhArticle extends DyhArticle {
         DyhArticle dyhArticle = (DyhArticle) obj;
         String str30 = this.entityTypeName;
         if (str30 != null ? str30.equals(dyhArticle.getEntityTypeName()) : dyhArticle.getEntityTypeName() == null) {
-            if (this.entityType.equals(dyhArticle.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(dyhArticle.getEntityTemplate()) : dyhArticle.getEntityTemplate() == null) && this.entityTypeId == dyhArticle.getEntityTypeId() && ((str2 = this.entityId) != null ? str2.equals(dyhArticle.getEntityId()) : dyhArticle.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(dyhArticle.getEntityFixed()) : dyhArticle.getEntityFixed() == null) && ((str3 = this.logo) != null ? str3.equals(dyhArticle.getLogo()) : dyhArticle.getLogo() == null) && ((str4 = this.subTitle) != null ? str4.equals(dyhArticle.getSubTitle()) : dyhArticle.getSubTitle() == null) && ((str5 = this.extraData) != null ? str5.equals(dyhArticle.getExtraData()) : dyhArticle.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(dyhArticle.getDateline()) : dyhArticle.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(dyhArticle.getLastUpdate()) : dyhArticle.getLastUpdate() == null) && ((str6 = this.deprecatedUserAvatar) != null ? str6.equals(dyhArticle.getDeprecatedUserAvatar()) : dyhArticle.getDeprecatedUserAvatar() == null) && ((userInfo2 = this.userInfo) != null ? userInfo2.equals(dyhArticle.getUserInfo()) : dyhArticle.getUserInfo() == null) && ((str7 = this.deprecatedUserName) != null ? str7.equals(dyhArticle.getDeprecatedUserName()) : dyhArticle.getDeprecatedUserName() == null) && ((str8 = this.displayUserName) != null ? str8.equals(dyhArticle.getDisplayUserName()) : dyhArticle.getDisplayUserName() == null) && this.id.equals(dyhArticle.getId()) && ((str9 = this.dyhId) != null ? str9.equals(dyhArticle.getDyhId()) : dyhArticle.getDyhId() == null) && ((str10 = this.dyhName) != null ? str10.equals(dyhArticle.getDyhName()) : dyhArticle.getDyhName() == null) && ((str11 = this.feedId) != null ? str11.equals(dyhArticle.getFeedId()) : dyhArticle.getFeedId() == null) && ((str12 = this.uid) != null ? str12.equals(dyhArticle.getUid()) : dyhArticle.getUid() == null) && ((str13 = this.author) != null ? str13.equals(dyhArticle.getAuthor()) : dyhArticle.getAuthor() == null) && ((str14 = this.title) != null ? str14.equals(dyhArticle.getTitle()) : dyhArticle.getTitle() == null) && this.forwardNum == dyhArticle.getForwardNum() && ((str15 = this.keywords) != null ? str15.equals(dyhArticle.getKeywords()) : dyhArticle.getKeywords() == null) && ((str16 = this.message) != null ? str16.equals(dyhArticle.getMessage()) : dyhArticle.getMessage() == null) && ((str17 = this.description) != null ? str17.equals(dyhArticle.getDescription()) : dyhArticle.getDescription() == null) && this.shareNum == dyhArticle.getShareNum() && ((str18 = this.url) != null ? str18.equals(dyhArticle.getUrl()) : dyhArticle.getUrl() == null) && ((str19 = this.urlMD5) != null ? str19.equals(dyhArticle.getUrlMD5()) : dyhArticle.getUrlMD5() == null) && ((str20 = this.videoUrl) != null ? str20.equals(dyhArticle.getVideoUrl()) : dyhArticle.getVideoUrl() == null) && ((str21 = this.redirectUrl) != null ? str21.equals(dyhArticle.getRedirectUrl()) : dyhArticle.getRedirectUrl() == null) && this.isStickTop == dyhArticle.getIsStickTop() && ((str22 = this.rawUrl) != null ? str22.equals(dyhArticle.getRawUrl()) : dyhArticle.getRawUrl() == null) && ((list = this.picArr) != null ? list.equals(dyhArticle.getPicArr()) : dyhArticle.getPicArr() == null) && ((str23 = this.pic) != null ? str23.equals(dyhArticle.getPic()) : dyhArticle.getPic() == null) && ((str24 = this.content) != null ? str24.equals(dyhArticle.getContent()) : dyhArticle.getContent() == null) && this.isHtmlArticle == dyhArticle.getIsHtmlArticle() && this.commentNum == dyhArticle.getCommentNum() && this.replyNum == dyhArticle.getReplyNum() && this.likeNum == dyhArticle.getLikeNum() && this.favNum == dyhArticle.getFavNum() && this.blockStatus == dyhArticle.getBlockStatus() && this.recommend == dyhArticle.getRecommend() && ((dyhModel2 = this.dyhModel) != null ? dyhModel2.equals(dyhArticle.getDyhModel()) : dyhArticle.getDyhModel() == null) && this.replyMeRows.equals(dyhArticle.getReplyMeRows()) && this.isHeadline == dyhArticle.getIsHeadline() && ((str25 = this.adminInfo) != null ? str25.equals(dyhArticle.getAdminInfo()) : dyhArticle.getAdminInfo() == null) && ((str26 = this.statusText) != null ? str26.equals(dyhArticle.getStatusText()) : dyhArticle.getStatusText() == null) && ((str27 = this.messageStatusText) != null ? str27.equals(dyhArticle.getMessageStatusText()) : dyhArticle.getMessageStatusText() == null) && this.messageStatus == dyhArticle.getMessageStatus() && ((str28 = this.blockStatusText) != null ? str28.equals(dyhArticle.getBlockStatusText()) : dyhArticle.getBlockStatusText() == null) && ((str29 = this.fromInfo) != null ? str29.equals(dyhArticle.getFromInfo()) : dyhArticle.getFromInfo() == null) && this.isHeadlineV8 == dyhArticle.getIsHeadlineV8() && ((userAction2 = this.userAction) != null ? userAction2.equals(dyhArticle.getUserAction()) : dyhArticle.getUserAction() == null) && this.status == dyhArticle.getStatus() && ((l4 = this.creatDate) != null ? l4.equals(dyhArticle.getCreatDate()) : dyhArticle.getCreatDate() == null) && ((collection = this.collectionInfo) != null ? collection.equals(dyhArticle.getCollectionInfo()) : dyhArticle.getCollectionInfo() == null)) {
+            if (this.entityType.equals(dyhArticle.getEntityType()) && ((str = this.entityTemplate) != null ? str.equals(dyhArticle.getEntityTemplate()) : dyhArticle.getEntityTemplate() == null) && this.entityTypeId == dyhArticle.getEntityTypeId() && ((str2 = this.entityId) != null ? str2.equals(dyhArticle.getEntityId()) : dyhArticle.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(dyhArticle.getEntityFixed()) : dyhArticle.getEntityFixed() == null) && ((str3 = this.logo) != null ? str3.equals(dyhArticle.getLogo()) : dyhArticle.getLogo() == null) && ((str4 = this.subTitle) != null ? str4.equals(dyhArticle.getSubTitle()) : dyhArticle.getSubTitle() == null) && ((str5 = this.extraData) != null ? str5.equals(dyhArticle.getExtraData()) : dyhArticle.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(dyhArticle.getDateline()) : dyhArticle.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(dyhArticle.getLastUpdate()) : dyhArticle.getLastUpdate() == null) && ((str6 = this.deprecatedUserAvatar) != null ? str6.equals(dyhArticle.getDeprecatedUserAvatar()) : dyhArticle.getDeprecatedUserAvatar() == null) && ((userInfo2 = this.userInfo) != null ? userInfo2.equals(dyhArticle.getUserInfo()) : dyhArticle.getUserInfo() == null) && ((str7 = this.deprecatedUserName) != null ? str7.equals(dyhArticle.getDeprecatedUserName()) : dyhArticle.getDeprecatedUserName() == null) && ((str8 = this.displayUserName) != null ? str8.equals(dyhArticle.getDisplayUserName()) : dyhArticle.getDisplayUserName() == null) && this.id.equals(dyhArticle.getId()) && ((str9 = this.dyhId) != null ? str9.equals(dyhArticle.getDyhId()) : dyhArticle.getDyhId() == null) && ((str10 = this.dyhName) != null ? str10.equals(dyhArticle.getDyhName()) : dyhArticle.getDyhName() == null) && ((str11 = this.feedId) != null ? str11.equals(dyhArticle.getFeedId()) : dyhArticle.getFeedId() == null) && ((str12 = this.uid) != null ? str12.equals(dyhArticle.getUid()) : dyhArticle.getUid() == null) && ((str13 = this.author) != null ? str13.equals(dyhArticle.getAuthor()) : dyhArticle.getAuthor() == null) && ((str14 = this.title) != null ? str14.equals(dyhArticle.getTitle()) : dyhArticle.getTitle() == null) && this.forwardNum == dyhArticle.getForwardNum() && ((str15 = this.keywords) != null ? str15.equals(dyhArticle.getKeywords()) : dyhArticle.getKeywords() == null) && ((str16 = this.message) != null ? str16.equals(dyhArticle.getMessage()) : dyhArticle.getMessage() == null) && ((str17 = this.description) != null ? str17.equals(dyhArticle.getDescription()) : dyhArticle.getDescription() == null) && this.shareNum == dyhArticle.getShareNum() && ((str18 = this.url) != null ? str18.equals(dyhArticle.getUrl()) : dyhArticle.getUrl() == null) && ((str19 = this.urlMD5) != null ? str19.equals(dyhArticle.getUrlMD5()) : dyhArticle.getUrlMD5() == null) && ((str20 = this.videoUrl) != null ? str20.equals(dyhArticle.getVideoUrl()) : dyhArticle.getVideoUrl() == null) && ((str21 = this.redirectUrl) != null ? str21.equals(dyhArticle.getRedirectUrl()) : dyhArticle.getRedirectUrl() == null) && this.isStickTop == dyhArticle.getIsStickTop() && ((str22 = this.rawUrl) != null ? str22.equals(dyhArticle.getRawUrl()) : dyhArticle.getRawUrl() == null) && ((list = this.picArr) != null ? list.equals(dyhArticle.getPicArr()) : dyhArticle.getPicArr() == null) && ((str23 = this.pic) != null ? str23.equals(dyhArticle.getPic()) : dyhArticle.getPic() == null) && ((str24 = this.content) != null ? str24.equals(dyhArticle.getContent()) : dyhArticle.getContent() == null) && this.isHtmlArticle == dyhArticle.getIsHtmlArticle() && this.commentNum == dyhArticle.getCommentNum() && this.replyNum == dyhArticle.getReplyNum() && this.likeNum == dyhArticle.getLikeNum() && this.favNum == dyhArticle.getFavNum() && this.blockStatus == dyhArticle.getBlockStatus() && this.recommend == dyhArticle.getRecommend() && ((dyhModel2 = this.dyhModel) != null ? dyhModel2.equals(dyhArticle.getDyhModel()) : dyhArticle.getDyhModel() == null) && this.replyMeRows.equals(dyhArticle.getReplyMeRows()) && this.isHeadline == dyhArticle.getIsHeadline() && ((str25 = this.adminInfo) != null ? str25.equals(dyhArticle.getAdminInfo()) : dyhArticle.getAdminInfo() == null) && ((str26 = this.statusText) != null ? str26.equals(dyhArticle.getStatusText()) : dyhArticle.getStatusText() == null) && ((str27 = this.messageStatusText) != null ? str27.equals(dyhArticle.getMessageStatusText()) : dyhArticle.getMessageStatusText() == null) && this.messageStatus == dyhArticle.getMessageStatus() && ((str28 = this.blockStatusText) != null ? str28.equals(dyhArticle.getBlockStatusText()) : dyhArticle.getBlockStatusText() == null) && ((str29 = this.fromInfo) != null ? str29.equals(dyhArticle.getFromInfo()) : dyhArticle.getFromInfo() == null) && this.isHeadlineV8 == dyhArticle.getIsHeadlineV8() && ((userAction2 = this.userAction) != null ? userAction2.equals(dyhArticle.getUserAction()) : dyhArticle.getUserAction() == null) && this.status == dyhArticle.getStatus() && ((l3 = this.creatDate) != null ? l3.equals(dyhArticle.getCreatDate()) : dyhArticle.getCreatDate() == null) && ((collection = this.collectionInfo) != null ? collection.equals(dyhArticle.getCollectionInfo()) : dyhArticle.getCollectionInfo() == null)) {
                 CollectionItem collectionItem2 = this.collectionItem;
                 if (collectionItem2 == null) {
                     if (dyhArticle.getCollectionItem() == null) {
@@ -557,10 +557,10 @@ abstract class C$$AutoValue_DyhArticle extends DyhArticle {
         int hashCode6 = (hashCode5 ^ (str5 == null ? 0 : str5.hashCode())) * 1000003;
         String str6 = this.extraData;
         int hashCode7 = (hashCode6 ^ (str6 == null ? 0 : str6.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode8 = (hashCode7 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode9 = (hashCode8 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode8 = (hashCode7 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode9 = (hashCode8 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str7 = this.deprecatedUserAvatar;
         int hashCode10 = (hashCode9 ^ (str7 == null ? 0 : str7.hashCode())) * 1000003;
         UserInfo userInfo2 = this.userInfo;
@@ -617,8 +617,8 @@ abstract class C$$AutoValue_DyhArticle extends DyhArticle {
         int hashCode36 = (((hashCode35 ^ (str30 == null ? 0 : str30.hashCode())) * 1000003) ^ this.isHeadlineV8) * 1000003;
         UserAction userAction2 = this.userAction;
         int hashCode37 = (((hashCode36 ^ (userAction2 == null ? 0 : userAction2.hashCode())) * 1000003) ^ this.status) * 1000003;
-        Long l4 = this.creatDate;
-        int hashCode38 = (hashCode37 ^ (l4 == null ? 0 : l4.hashCode())) * 1000003;
+        Long l3 = this.creatDate;
+        int hashCode38 = (hashCode37 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
         Collection collection = this.collectionInfo;
         int hashCode39 = (hashCode38 ^ (collection == null ? 0 : collection.hashCode())) * 1000003;
         CollectionItem collectionItem2 = this.collectionItem;
@@ -809,14 +809,14 @@ abstract class C$$AutoValue_DyhArticle extends DyhArticle {
         }
 
         @Override // com.coolapk.market.model.DyhArticle.Builder
-        public DyhArticle.Builder dateline(Long l2) {
-            this.dateline = l2;
+        public DyhArticle.Builder dateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.DyhArticle.Builder
-        public DyhArticle.Builder lastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public DyhArticle.Builder lastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 
@@ -1085,8 +1085,8 @@ abstract class C$$AutoValue_DyhArticle extends DyhArticle {
         }
 
         @Override // com.coolapk.market.model.DyhArticle.Builder
-        public DyhArticle.Builder creatDate(Long l2) {
-            this.creatDate = l2;
+        public DyhArticle.Builder creatDate(Long l) {
+            this.creatDate = l;
             return this;
         }
 

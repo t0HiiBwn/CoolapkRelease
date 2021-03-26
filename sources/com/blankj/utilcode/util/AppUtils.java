@@ -81,11 +81,18 @@ public final class AppUtils {
     }
 
     public static boolean isAppDebug(String str) {
-        ApplicationInfo applicationInfo;
-        if (UtilsBridge.isSpace(str) || (applicationInfo = Utils.getApp().getApplicationInfo()) == null || (applicationInfo.flags & 2) == 0) {
+        if (UtilsBridge.isSpace(str)) {
             return false;
         }
-        return true;
+        try {
+            if ((Utils.getApp().getPackageManager().getApplicationInfo(str, 0).flags & 2) != 0) {
+                return true;
+            }
+            return false;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public static boolean isAppSystem() {
@@ -97,11 +104,10 @@ public final class AppUtils {
             return false;
         }
         try {
-            ApplicationInfo applicationInfo = Utils.getApp().getPackageManager().getApplicationInfo(str, 0);
-            if (applicationInfo == null || (applicationInfo.flags & 1) == 0) {
-                return false;
+            if ((Utils.getApp().getPackageManager().getApplicationInfo(str, 0).flags & 1) != 0) {
+                return true;
             }
-            return true;
+            return false;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
             return false;
@@ -118,12 +124,8 @@ public final class AppUtils {
     }
 
     public static boolean isAppRunning(String str) {
-        if (UtilsBridge.isSpace(str)) {
-            return false;
-        }
-        int i = Utils.getApp().getApplicationInfo().uid;
-        ActivityManager activityManager = (ActivityManager) Utils.getApp().getSystemService("activity");
-        if (activityManager != null) {
+        ActivityManager activityManager;
+        if (!UtilsBridge.isSpace(str) && (activityManager = (ActivityManager) Utils.getApp().getSystemService("activity")) != null) {
             List<ActivityManager.RunningTaskInfo> runningTasks = activityManager.getRunningTasks(Integer.MAX_VALUE);
             if (runningTasks != null && runningTasks.size() > 0) {
                 for (ActivityManager.RunningTaskInfo runningTaskInfo : runningTasks) {
@@ -135,7 +137,7 @@ public final class AppUtils {
             List<ActivityManager.RunningServiceInfo> runningServices = activityManager.getRunningServices(Integer.MAX_VALUE);
             if (runningServices != null && runningServices.size() > 0) {
                 for (ActivityManager.RunningServiceInfo runningServiceInfo : runningServices) {
-                    if (i == runningServiceInfo.uid) {
+                    if (str.equals(runningServiceInfo.service.getPackageName())) {
                         return true;
                     }
                 }
@@ -246,14 +248,19 @@ public final class AppUtils {
     }
 
     public static String getAppPackageName() {
-        return Utils.getApp().getPackageName();
+        String packageName = Utils.getApp().getPackageName();
+        Objects.requireNonNull(packageName, "Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppPackageName() marked by @androidx.annotation.NonNull");
+        return packageName;
     }
 
     public static String getAppName() {
-        return getAppName(Utils.getApp().getPackageName());
+        String appName = getAppName(Utils.getApp().getPackageName());
+        Objects.requireNonNull(appName, "Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppName() marked by @androidx.annotation.NonNull");
+        return appName;
     }
 
     public static String getAppName(String str) {
+        String str2;
         if (UtilsBridge.isSpace(str)) {
             return "";
         }
@@ -261,9 +268,14 @@ public final class AppUtils {
             PackageManager packageManager = Utils.getApp().getPackageManager();
             PackageInfo packageInfo = packageManager.getPackageInfo(str, 0);
             if (packageInfo == null) {
-                return null;
+                str2 = "";
+            } else {
+                str2 = packageInfo.applicationInfo.loadLabel(packageManager).toString();
             }
-            return packageInfo.applicationInfo.loadLabel(packageManager).toString();
+            if (str2 != null) {
+                return str2;
+            }
+            throw new NullPointerException("Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppName() marked by @androidx.annotation.NonNull");
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
             return "";
@@ -271,19 +283,27 @@ public final class AppUtils {
     }
 
     public static String getAppPath() {
-        return getAppPath(Utils.getApp().getPackageName());
+        String appPath = getAppPath(Utils.getApp().getPackageName());
+        Objects.requireNonNull(appPath, "Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppPath() marked by @androidx.annotation.NonNull");
+        return appPath;
     }
 
     public static String getAppPath(String str) {
+        String str2;
         if (UtilsBridge.isSpace(str)) {
             return "";
         }
         try {
             PackageInfo packageInfo = Utils.getApp().getPackageManager().getPackageInfo(str, 0);
             if (packageInfo == null) {
-                return null;
+                str2 = "";
+            } else {
+                str2 = packageInfo.applicationInfo.sourceDir;
             }
-            return packageInfo.applicationInfo.sourceDir;
+            if (str2 != null) {
+                return str2;
+            }
+            throw new NullPointerException("Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppPath() marked by @androidx.annotation.NonNull");
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
             return "";
@@ -291,19 +311,27 @@ public final class AppUtils {
     }
 
     public static String getAppVersionName() {
-        return getAppVersionName(Utils.getApp().getPackageName());
+        String appVersionName = getAppVersionName(Utils.getApp().getPackageName());
+        Objects.requireNonNull(appVersionName, "Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppVersionName() marked by @androidx.annotation.NonNull");
+        return appVersionName;
     }
 
     public static String getAppVersionName(String str) {
+        String str2;
         if (UtilsBridge.isSpace(str)) {
             return "";
         }
         try {
             PackageInfo packageInfo = Utils.getApp().getPackageManager().getPackageInfo(str, 0);
             if (packageInfo == null) {
-                return null;
+                str2 = "";
+            } else {
+                str2 = packageInfo.versionName;
             }
-            return packageInfo.versionName;
+            if (str2 != null) {
+                return str2;
+            }
+            throw new NullPointerException("Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppVersionName() marked by @androidx.annotation.NonNull");
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
             return "";
@@ -386,27 +414,39 @@ public final class AppUtils {
     }
 
     public static List<String> getAppSignaturesSHA1() {
-        return getAppSignaturesSHA1(Utils.getApp().getPackageName());
+        List<String> appSignaturesSHA1 = getAppSignaturesSHA1(Utils.getApp().getPackageName());
+        Objects.requireNonNull(appSignaturesSHA1, "Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppSignaturesSHA1() marked by @androidx.annotation.NonNull");
+        return appSignaturesSHA1;
     }
 
     public static List<String> getAppSignaturesSHA1(String str) {
-        return getAppSignaturesHash(str, "SHA1");
+        List<String> appSignaturesHash = getAppSignaturesHash(str, "SHA1");
+        Objects.requireNonNull(appSignaturesHash, "Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppSignaturesSHA1() marked by @androidx.annotation.NonNull");
+        return appSignaturesHash;
     }
 
     public static List<String> getAppSignaturesSHA256() {
-        return getAppSignaturesSHA256(Utils.getApp().getPackageName());
+        List<String> appSignaturesSHA256 = getAppSignaturesSHA256(Utils.getApp().getPackageName());
+        Objects.requireNonNull(appSignaturesSHA256, "Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppSignaturesSHA256() marked by @androidx.annotation.NonNull");
+        return appSignaturesSHA256;
     }
 
     public static List<String> getAppSignaturesSHA256(String str) {
-        return getAppSignaturesHash(str, "SHA256");
+        List<String> appSignaturesHash = getAppSignaturesHash(str, "SHA256");
+        Objects.requireNonNull(appSignaturesHash, "Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppSignaturesSHA256() marked by @androidx.annotation.NonNull");
+        return appSignaturesHash;
     }
 
     public static List<String> getAppSignaturesMD5() {
-        return getAppSignaturesMD5(Utils.getApp().getPackageName());
+        List<String> appSignaturesMD5 = getAppSignaturesMD5(Utils.getApp().getPackageName());
+        Objects.requireNonNull(appSignaturesMD5, "Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppSignaturesMD5() marked by @androidx.annotation.NonNull");
+        return appSignaturesMD5;
     }
 
     public static List<String> getAppSignaturesMD5(String str) {
-        return getAppSignaturesHash(str, "MD5");
+        List<String> appSignaturesHash = getAppSignaturesHash(str, "MD5");
+        Objects.requireNonNull(appSignaturesHash, "Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.getAppSignaturesMD5() marked by @androidx.annotation.NonNull");
+        return appSignaturesHash;
     }
 
     public static int getAppUid() {
@@ -488,8 +528,14 @@ public final class AppUtils {
         if (packageInfo == null) {
             return null;
         }
+        String str = packageInfo.versionName;
+        int i = packageInfo.versionCode;
+        String str2 = packageInfo.packageName;
         ApplicationInfo applicationInfo = packageInfo.applicationInfo;
-        return new AppInfo(packageInfo.packageName, applicationInfo.loadLabel(packageManager).toString(), applicationInfo.loadIcon(packageManager), applicationInfo.sourceDir, packageInfo.versionName, packageInfo.versionCode, (applicationInfo.flags & 1) != 0);
+        if (applicationInfo == null) {
+            return new AppInfo(str2, "", null, "", str, i, false);
+        }
+        return new AppInfo(str2, applicationInfo.loadLabel(packageManager).toString(), applicationInfo.loadIcon(packageManager), applicationInfo.sourceDir, str, i, (applicationInfo.flags & 1) != 0);
     }
 
     public static class AppInfo {
@@ -568,7 +614,9 @@ public final class AppUtils {
         }
 
         public String toString() {
-            return "{\n    pkg name: " + getPackageName() + "\n    app icon: " + getIcon() + "\n    app name: " + getName() + "\n    app path: " + getPackagePath() + "\n    app v name: " + getVersionName() + "\n    app v code: " + getVersionCode() + "\n    is system: " + isSystem() + "\n}";
+            String str = "{\n    pkg name: " + getPackageName() + "\n    app icon: " + getIcon() + "\n    app name: " + getName() + "\n    app path: " + getPackagePath() + "\n    app v name: " + getVersionName() + "\n    app v code: " + getVersionCode() + "\n    is system: " + isSystem() + "\n}";
+            Objects.requireNonNull(str, "Detected an attempt to return null from a method com.blankj.utilcode.util.AppUtils.AppInfo.toString() marked by @androidx.annotation.NonNull");
+            return str;
         }
     }
 }

@@ -35,9 +35,9 @@ public final class RecentHistoryFragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment
     protected void onRegisterCards() {
         super.onRegisterCards();
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558891).suitedEntityType("recentHistory").constructor(new RecentHistoryFragment$onRegisterCards$1(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558892).suitedEntityType("recent_login").constructor(new RecentHistoryFragment$onRegisterCards$2(this)).build(), 0, 2, null);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558837).suitedEntityType("NO_MORE_DATA").constructor(RecentHistoryFragment$onRegisterCards$3.INSTANCE).build(), 0);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558898).suitedEntityType("recentHistory").constructor(new RecentHistoryFragment$onRegisterCards$1(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558899).suitedEntityType("recent_login").constructor(new RecentHistoryFragment$onRegisterCards$2(this)).build(), 0, 2, null);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558844).suitedEntityType("NO_MORE_DATA").constructor(RecentHistoryFragment$onRegisterCards$3.INSTANCE).build(), 0);
     }
 
     @Subscribe
@@ -200,7 +200,7 @@ public final class RecentHistoryFragment extends EntityListFragment {
     /* compiled from: RecentHistoryFragment.kt */
     private static final class NoMoreDataViewHolder extends GenericBindHolder<ItemNoMoreDataViewBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558837;
+        public static final int LAYOUT_ID = 2131558844;
 
         public void bindToContent(HolderItem holderItem) {
             Intrinsics.checkNotNullParameter(holderItem, "holderItem");

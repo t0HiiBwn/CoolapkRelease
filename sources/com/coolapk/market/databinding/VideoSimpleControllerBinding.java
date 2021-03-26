@@ -50,7 +50,7 @@ public abstract class VideoSimpleControllerBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoSimpleControllerBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (VideoSimpleControllerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559295, viewGroup, z, obj);
+        return (VideoSimpleControllerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559305, viewGroup, z, obj);
     }
 
     public static VideoSimpleControllerBinding inflate(LayoutInflater layoutInflater) {
@@ -59,7 +59,7 @@ public abstract class VideoSimpleControllerBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoSimpleControllerBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (VideoSimpleControllerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559295, null, false, obj);
+        return (VideoSimpleControllerBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559305, null, false, obj);
     }
 
     public static VideoSimpleControllerBinding bind(View view) {
@@ -68,6 +68,6 @@ public abstract class VideoSimpleControllerBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoSimpleControllerBinding bind(View view, Object obj) {
-        return (VideoSimpleControllerBinding) bind(obj, view, 2131559295);
+        return (VideoSimpleControllerBinding) bind(obj, view, 2131559305);
     }
 }

@@ -35,9 +35,9 @@ public class ItemTopGroupCardBindingImpl extends ItemTopGroupCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362783, 7);
-        sparseIntArray.put(2131362784, 8);
-        sparseIntArray.put(2131362634, 9);
+        sparseIntArray.put(2131362794, 7);
+        sparseIntArray.put(2131362795, 8);
+        sparseIntArray.put(2131362642, 9);
     }
 
     public ItemTopGroupCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -88,7 +88,7 @@ public class ItemTopGroupCardBindingImpl extends ItemTopGroupCardBinding {
     public boolean setVariable(int i, Object obj) {
         if (44 == i) {
             setCard((TopGroupCard) obj);
-        } else if (210 != i) {
+        } else if (211 != i) {
             return false;
         } else {
             setOnBitmapTransform((CircleTransform) obj);
@@ -112,7 +112,7 @@ public class ItemTopGroupCardBindingImpl extends ItemTopGroupCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(210);
+        notifyPropertyChanged(211);
         super.requestRebind();
     }
 

@@ -266,10 +266,6 @@ import com.coolapk.market.widget.MultiMarketDialog;
 import com.coolapk.market.widget.Toast;
 import com.coolapk.market.widget.video.VideoModel;
 import com.hjq.permissions.XXPermissions;
-import com.xiaomi.mipush.sdk.MessageHandleService;
-import com.xiaomi.mipush.sdk.PushMessageHandler;
-import com.xiaomi.push.service.XMJobService;
-import com.xiaomi.push.service.XMPushService;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -286,6 +282,9 @@ public class ActionManager {
     public static final int DOWNLOAD_FLAG_WITH_AUTO = 3;
     public static final int DOWNLOAD_FLAG_WITH_DELETE = 2;
     public static final int DOWNLOAD_FLAG_WITH_WIFI_RESTART = 4;
+
+    public static void closePushService(Context context) {
+    }
 
     public static boolean shouldAskUserDownloadIntent() {
         return AppHolder.getAppSetting().getBooleanPref("download_only_when_wifi") && !AppHolder.getAppSetting().isWifiAvailable();
@@ -480,13 +479,6 @@ public class ActionManager {
 
     public static void closeAppService(Context context) {
         context.stopService(new Intent(context, AppService.class));
-    }
-
-    public static void closeMiPushService(Context context) {
-        context.stopService(new Intent(context, XMPushService.class));
-        context.stopService(new Intent(context, XMJobService.class));
-        context.stopService(new Intent(context, PushMessageHandler.class));
-        context.stopService(new Intent(context, MessageHandleService.class));
     }
 
     public static void install(Context context, String str, String str2, Extra extra) {
@@ -712,8 +704,8 @@ public class ActionManager {
         activity.startActivityForResult(new Intent(activity, GoodsSearchActivity.class), i);
     }
 
-    public static void startGoodsCouponSearchActivity(Activity activity) {
-        activity.startActivity(new Intent(activity, GoodsCouponSearchActivity.class));
+    public static void startGoodsCouponSearchActivity(Activity activity, String str) {
+        activity.startActivity(new Intent(activity, GoodsCouponSearchActivity.class).putExtra("extra_key_word", str));
     }
 
     public static void startLoginActivity(Context context) {
@@ -737,7 +729,7 @@ public class ActionManager {
     }
 
     public static void startBlockTagFeedListActivity(Context context, String str, String str2) {
-        SimpleActivity.builder(context).title(context.getString(2131887022)).fragmentClass(BlockFeedListFragment.class).addArgs("tag", str).addArgs("listType", str2).start();
+        SimpleActivity.builder(context).title(context.getString(2131887084)).fragmentClass(BlockFeedListFragment.class).addArgs("tag", str).addArgs("listType", str2).start();
     }
 
     public static void starRegisterActivity(Context context) {
@@ -816,7 +808,7 @@ public class ActionManager {
         bundle.putString("external_url", str);
         bundle.putParcelable("GIFT", gift);
         bundle.putParcelable("APP", serviceApp);
-        context.startActivity(new Intent(context, WebViewActivity.class).putExtra("extra_class_name", GiftWebViewFragment.class.getName()).putExtra("extra_title", context.getString(2131887263)).putExtra("extra_bundle", bundle));
+        context.startActivity(new Intent(context, WebViewActivity.class).putExtra("extra_class_name", GiftWebViewFragment.class.getName()).putExtra("extra_title", context.getString(2131887325)).putExtra("extra_bundle", bundle));
     }
 
     public static void startWebHookViewActivity(Context context, String str) {
@@ -830,7 +822,7 @@ public class ActionManager {
     }
 
     public static void startAdvancedSettingsActivity(Context context) {
-        SimpleActivity.builder(context).fragmentClass(AdvancedSettingsFragment.class).title(context.getString(2131886501)).start();
+        SimpleActivity.builder(context).fragmentClass(AdvancedSettingsFragment.class).title(context.getString(2131886561)).start();
     }
 
     public static void startNotificationSettingsActivity(Context context) {
@@ -850,7 +842,7 @@ public class ActionManager {
     }
 
     public static void startFlowSettingsActivity(Context context) {
-        SimpleActivity.builder(context).fragmentClass(FlowSettingsFragment.class).title(context.getString(2131886514)).start();
+        SimpleActivity.builder(context).fragmentClass(FlowSettingsFragment.class).title(context.getString(2131886574)).start();
     }
 
     public static void startBetaSettingsActivity(Context context) {
@@ -916,11 +908,11 @@ public class ActionManager {
     }
 
     public static void startTestSettingsActivity(Context context) {
-        SimpleActivity.builder(context).fragmentClass(TestSettingFragment.class).title(context.getString(2131886534)).start();
+        SimpleActivity.builder(context).fragmentClass(TestSettingFragment.class).title(context.getString(2131886594)).start();
     }
 
     public static void startNetworkDiagnosisActivity(Context context) {
-        SimpleActivity.builder(context).fragmentClass(NetworkDiagnosisFragment.class).title(context.getString(2131886553)).start();
+        SimpleActivity.builder(context).fragmentClass(NetworkDiagnosisFragment.class).title(context.getString(2131886615)).start();
     }
 
     public static void startHttpInfoActivity(Context context) {
@@ -944,7 +936,7 @@ public class ActionManager {
     }
 
     public static void startNightTimeSettingActivity(Context context) {
-        SimpleActivity.builder(context).title(context.getString(2131887283)).fragmentClass(NightTimeFragment.class).start();
+        SimpleActivity.builder(context).title(context.getString(2131887345)).fragmentClass(NightTimeFragment.class).start();
     }
 
     public static void startAccessibilitySettingsActivity(Context context) {
@@ -1294,7 +1286,7 @@ public class ActionManager {
 
             @Override // java.lang.Runnable
             public void run() {
-                SimpleActivity.builder(context).title(context.getString(2131887103)).fragmentClass(UserReplyListFragment.class).addArgs("uid", str).start();
+                SimpleActivity.builder(context).title(context.getString(2131887165)).fragmentClass(UserReplyListFragment.class).addArgs("uid", str).start();
             }
         });
     }
@@ -1305,7 +1297,7 @@ public class ActionManager {
 
             @Override // java.lang.Runnable
             public void run() {
-                SimpleActivity.builder(context).fragmentClass(UserReceivedReplyListFragment.class).title(context.getString(2131887126)).start();
+                SimpleActivity.builder(context).fragmentClass(UserReceivedReplyListFragment.class).title(context.getString(2131887188)).start();
             }
         });
     }
@@ -1352,13 +1344,13 @@ public class ActionManager {
 
             @Override // java.lang.Runnable
             public void run() {
-                SimpleActivity.builder(context).fragmentClass(UserBlackListFragment.class).title(context.getString(2131887067)).start();
+                SimpleActivity.builder(context).fragmentClass(UserBlackListFragment.class).title(context.getString(2131887129)).start();
             }
         });
     }
 
     public static void startUserCenterMoreFragment(Context context) {
-        SimpleActivity.builder(context).fragmentClass(CenterMoreFragment.class).title(context.getString(2131886592)).start();
+        SimpleActivity.builder(context).fragmentClass(CenterMoreFragment.class).title(context.getString(2131886654)).start();
     }
 
     public static void startIgnoreUserListFragment(final Context context) {
@@ -1367,7 +1359,7 @@ public class ActionManager {
 
             @Override // java.lang.Runnable
             public void run() {
-                SimpleActivity.builder(context).fragmentClass(IgnoredUserListFragment.class).title(context.getString(2131887097)).start();
+                SimpleActivity.builder(context).fragmentClass(IgnoredUserListFragment.class).title(context.getString(2131887159)).start();
             }
         });
     }
@@ -1378,7 +1370,7 @@ public class ActionManager {
 
             @Override // java.lang.Runnable
             public void run() {
-                SimpleActivity.builder(context).fragmentClass(LimitedUserListFragment.class).title(context.getString(2131887099)).start();
+                SimpleActivity.builder(context).fragmentClass(LimitedUserListFragment.class).title(context.getString(2131887161)).start();
             }
         });
     }
@@ -1476,13 +1468,13 @@ public class ActionManager {
 
             @Override // java.lang.Runnable
             public void run() {
-                SimpleActivity.builder(context).title(context.getString(2131887232)).fragmentClass(UserAvatarFragment.class).start();
+                SimpleActivity.builder(context).title(context.getString(2131887294)).fragmentClass(UserAvatarFragment.class).start();
             }
         });
     }
 
     public static void startChangeUserCover(Context context, UserProfile userProfile) {
-        SimpleActivity.builder(context).title(context.getString(2131887109)).fragmentClass(UserCoverFragment.class).addArgs("extra_entity", userProfile).start();
+        SimpleActivity.builder(context).title(context.getString(2131887171)).fragmentClass(UserCoverFragment.class).addArgs("extra_entity", userProfile).start();
     }
 
     public static void startUserNavigation(final Context context) {
@@ -1517,7 +1509,7 @@ public class ActionManager {
     }
 
     public static void startUserLikeListActivity(Context context, String str) {
-        SimpleActivity.builder(context).fragmentClass(UserLikeListFragment.class).addArgs("uid", str).title(context.getString(2131887310)).start();
+        SimpleActivity.builder(context).fragmentClass(UserLikeListFragment.class).addArgs("uid", str).title(context.getString(2131887372)).start();
     }
 
     public static void startUserApkCommentActivity(Context context, String str) {
@@ -1545,15 +1537,15 @@ public class ActionManager {
     }
 
     public static void startFeedRoughDraftListFragment(Context context) {
-        SimpleActivity.builder(context).fragmentClass(DraftListFragment.class).title(context.getString(2131887127)).start();
+        SimpleActivity.builder(context).fragmentClass(DraftListFragment.class).title(context.getString(2131887189)).start();
     }
 
     public static void startProductConfigDataActivity(Context context, String str) {
-        SimpleActivity.builder(context).fragmentClass(ProductConfigsFragment.class).addArgs("product_config_id", str).title(context.getString(2131886935)).start();
+        SimpleActivity.builder(context).fragmentClass(ProductConfigsFragment.class).addArgs("product_config_id", str).title(context.getString(2131886997)).start();
     }
 
     public static void startProductFansListActivity(Context context, String str) {
-        SimpleActivity.builder(context).fragmentClass(ProductFansListFragment.class).addArgs("extra_id", str).title(context.getString(2131887021)).start();
+        SimpleActivity.builder(context).fragmentClass(ProductFansListFragment.class).addArgs("extra_id", str).title(context.getString(2131887083)).start();
     }
 
     public static void startProductBuyAndWishListActivity(Context context, String str, int i) {
@@ -1568,11 +1560,11 @@ public class ActionManager {
     }
 
     public static void startTopicFollowerListActivity(Context context, String str) {
-        SimpleActivity.builder(context).fragmentClass(TopicFollowerListFragment.class).addArgs("TAG", str).title(context.getString(2131887021)).start();
+        SimpleActivity.builder(context).fragmentClass(TopicFollowerListFragment.class).addArgs("TAG", str).title(context.getString(2131887083)).start();
     }
 
     public static void startAppFollowerListActivity(Context context, String str) {
-        SimpleActivity.builder(context).fragmentClass(AppFollowerListFragment.class).addArgs("ID", str).title(context.getString(2131887021)).start();
+        SimpleActivity.builder(context).fragmentClass(AppFollowerListFragment.class).addArgs("ID", str).title(context.getString(2131887083)).start();
     }
 
     public static void startProductMediaTabActivity(Context context, String str, String str2, boolean z, int i) {
@@ -1589,11 +1581,11 @@ public class ActionManager {
     }
 
     public static void startBlackListSettingActivity(Context context, UserProfile userProfile) {
-        SimpleActivity.builder(context).addArgs("data", userProfile).fragmentClass(BlackListSettingFragment.class).title(context.getString(2131886373)).start();
+        SimpleActivity.builder(context).addArgs("data", userProfile).fragmentClass(BlackListSettingFragment.class).title(context.getString(2131886433)).start();
     }
 
     public static void startBlackListSettingActivity(Context context, String str, String str2) {
-        SimpleActivity.builder(context).addArgs("uid", str).addArgs("username", str2).fragmentClass(BlackListSettingFragment.class).title(context.getString(2131886373)).start();
+        SimpleActivity.builder(context).addArgs("uid", str).addArgs("username", str2).fragmentClass(BlackListSettingFragment.class).title(context.getString(2131886433)).start();
     }
 
     public static void startPhotoViewActivity(View view, String str, String str2) {
@@ -1680,7 +1672,7 @@ public class ActionManager {
         });
     }
 
-    public static void startLivePostMessageActivity(final Activity activity, final String str, final String str2, final LiveMessage liveMessage, final boolean z) {
+    public static void startLivePostMessageActivity(final Activity activity, final String str, final String str2, final String str3, final LiveMessage liveMessage, final boolean z) {
         doOnLogin(activity, new Runnable() {
             /* class com.coolapk.market.manager.ActionManager.AnonymousClass24 */
 
@@ -1696,6 +1688,7 @@ public class ActionManager {
                         jSONObject.put("source_user_name", liveMessage.getUserName());
                         jSONObject.put("source_message", liveMessage.getMessage());
                     }
+                    jSONObject.put("relation_group_id", str3);
                     jSONObject.put("is_presenter", z);
                     str = jSONObject.toString();
                 } catch (JSONException e) {
@@ -1997,8 +1990,8 @@ public class ActionManager {
         }
     }
 
-    public static void startSplashActivity(Activity activity, int i) {
-        activity.startActivityForResult(new Intent(activity, SplashActivity.class).putExtra("MODE", "COUNTDOWN"), i);
+    public static void startSplashActivity(Activity activity, String str, int i) {
+        activity.startActivityForResult(new Intent(activity, SplashActivity.class).putExtra("MODE", "COUNTDOWN").putExtra("MODE", str), i);
         activity.overridePendingTransition(0, 0);
     }
 
@@ -2009,7 +2002,7 @@ public class ActionManager {
     }
 
     public static void startProjectLibraryListActivity(Context context) {
-        SimpleActivity.builder(context).fragmentClass(LibrariesFragment.class).title(context.getString(2131886956)).start();
+        SimpleActivity.builder(context).fragmentClass(LibrariesFragment.class).title(context.getString(2131887018)).start();
     }
 
     public static void startNewDiscoveryV8Activity(Activity activity, MobileApp mobileApp) {
@@ -2056,7 +2049,7 @@ public class ActionManager {
     }
 
     public static void startRankActivity(Context context) {
-        SimpleActivity.builder(context).fragmentClass(RankFragment.class).title(context.getString(2131887294)).start();
+        SimpleActivity.builder(context).fragmentClass(RankFragment.class).title(context.getString(2131887356)).start();
     }
 
     public static void startRecommendAlbumListActivity(Context context, String str, String str2) {
@@ -2132,15 +2125,15 @@ public class ActionManager {
     }
 
     public static void startRelatedAppsActivity(Context context, String str) {
-        SimpleActivity.builder(context).fragmentClass(RelatedAppsFragment.class).addArgs("KEYWORD", str).title(context.getString(2131886954)).start();
+        SimpleActivity.builder(context).fragmentClass(RelatedAppsFragment.class).addArgs("KEYWORD", str).title(context.getString(2131887016)).start();
     }
 
     public static void startRelatedAlbumsActivity(Context context, String str) {
-        SimpleActivity.builder(context).fragmentClass(RelatedAlbumsFragment.class).addArgs("KEYWORD", str).title(context.getString(2131886955)).start();
+        SimpleActivity.builder(context).fragmentClass(RelatedAlbumsFragment.class).addArgs("KEYWORD", str).title(context.getString(2131887017)).start();
     }
 
     public static void startFeedFollowerListActivity(Activity activity, String str) {
-        SimpleActivity.builder(activity).title(activity.getString(2131887021)).addArgs("FEED_ID", str).fragmentClass(FeedFollowerListFragment.class).start();
+        SimpleActivity.builder(activity).title(activity.getString(2131887083)).addArgs("FEED_ID", str).fragmentClass(FeedFollowerListFragment.class).start();
     }
 
     public static void startShareImageListActivity(Context context, String str) {
@@ -2173,7 +2166,7 @@ public class ActionManager {
             intent.addFlags(1);
             intent.putExtra("android.intent.extra.STREAM", safeFileShareUrl);
             CoolFileUtils.grantUriPermission(context, intent, safeFileShareUrl);
-            context.startActivity(Intent.createChooser(intent, context.getString(2131886982)));
+            context.startActivity(Intent.createChooser(intent, context.getString(2131887044)));
         } catch (Exception e) {
             Toast.error(context, e);
         }
@@ -2236,19 +2229,19 @@ public class ActionManager {
     }
 
     public static void startPermissionActivity(Context context, ArrayList<String> arrayList) {
-        SimpleActivity.builder(context).fragmentClass(PermissionFragment.class).addArgs("PERMISSION_LIST", arrayList).title(StringUtils.titleWithNum(context.getString(2131886923), arrayList)).start();
+        SimpleActivity.builder(context).fragmentClass(PermissionFragment.class).addArgs("PERMISSION_LIST", arrayList).title(StringUtils.titleWithNum(context.getString(2131886985), arrayList)).start();
     }
 
     public static void startGiftCenterActivity(Context context) {
-        SimpleActivity.builder(context).fragmentClass(GiftListFragment.class).title(context.getString(2131887264)).start();
+        SimpleActivity.builder(context).fragmentClass(GiftListFragment.class).title(context.getString(2131887326)).start();
     }
 
     public static void startUserGiftCenterActivity(Context context, String str) {
-        SimpleActivity.builder(context).fragmentClass(GiftListFragment.class).title(context.getString(2131886878)).addArgs("UID", str).addArgs("USER_SIGN", str).start();
+        SimpleActivity.builder(context).fragmentClass(GiftListFragment.class).title(context.getString(2131886940)).addArgs("UID", str).addArgs("USER_SIGN", str).start();
     }
 
     public static void startUserBlockContentActivity(Context context) {
-        SimpleActivity.builder(context).fragmentClass(BlockCategoryFragment.class).title(context.getString(2131887069)).start();
+        SimpleActivity.builder(context).fragmentClass(BlockCategoryFragment.class).title(context.getString(2131887131)).start();
     }
 
     public static void startUserBlockWordListActivity(Context context) {
@@ -2264,7 +2257,7 @@ public class ActionManager {
     }
 
     public static void startGiftListActivity(Context context, String str, String str2) {
-        SimpleActivity.builder(context).fragmentClass(GiftListFragment.class).title(context.getString(2131887225, str2)).addArgs("APK_ID", str).start();
+        SimpleActivity.builder(context).fragmentClass(GiftListFragment.class).title(context.getString(2131887287, str2)).addArgs("APK_ID", str).start();
     }
 
     public static void startQuestionDetailActivity(Context context, String str) {
@@ -2398,7 +2391,7 @@ public class ActionManager {
         if (DataManager.getInstance().getLoginSession().isLogin()) {
             return true;
         }
-        Toast.show(context, 2131886960);
+        Toast.show(context, 2131887022);
         startLoginActivity(context);
         return false;
     }
@@ -2471,7 +2464,7 @@ public class ActionManager {
 
         @Override // androidx.fragment.app.DialogFragment
         public Dialog onCreateDialog(Bundle bundle) {
-            return new AlertDialog.Builder(getActivity()).setMessage(2131886891).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
+            return new AlertDialog.Builder(getActivity()).setMessage(2131886953).setPositiveButton(2131886162, new DialogInterface.OnClickListener() {
                 /* class com.coolapk.market.manager.ActionManager.WifiDownloadIntentDialog.AnonymousClass3 */
 
                 @Override // android.content.DialogInterface.OnClickListener

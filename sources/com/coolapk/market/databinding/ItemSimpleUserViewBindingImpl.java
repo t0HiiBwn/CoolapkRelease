@@ -57,7 +57,7 @@ public class ItemSimpleUserViewBindingImpl extends ItemSimpleUserViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((User) obj);
         } else if (50 != i) {
             return false;
@@ -73,7 +73,7 @@ public class ItemSimpleUserViewBindingImpl extends ItemSimpleUserViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -129,7 +129,7 @@ public class ItemSimpleUserViewBindingImpl extends ItemSimpleUserViewBinding {
         }
         if (i != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             ImageViewBindingAdapters.setVipSignView(this.iconView, str3, bool);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }

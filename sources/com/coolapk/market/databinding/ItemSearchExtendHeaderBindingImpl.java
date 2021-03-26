@@ -26,7 +26,7 @@ public class ItemSearchExtendHeaderBindingImpl extends ItemSearchExtendHeaderBin
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362816, 1);
+        sparseIntArray.put(2131362827, 1);
     }
 
     public ItemSearchExtendHeaderBindingImpl(DataBindingComponent dataBindingComponent, View view) {

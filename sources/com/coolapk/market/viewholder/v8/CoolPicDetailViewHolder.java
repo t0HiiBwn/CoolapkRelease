@@ -22,7 +22,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: CoolPicDetailViewHolder.kt */
 public final class CoolPicDetailViewHolder extends GenericBindHolder<ItemFeedCoolPicDetailBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558693;
+    public static final int LAYOUT_ID = 2131558700;
     private Feed feed;
     private final int flags;
     private final Lazy headerViewPart$delegate;

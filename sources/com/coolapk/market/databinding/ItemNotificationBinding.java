@@ -56,7 +56,7 @@ public abstract class ItemNotificationBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNotificationBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemNotificationBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558842, viewGroup, z, obj);
+        return (ItemNotificationBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558849, viewGroup, z, obj);
     }
 
     public static ItemNotificationBinding inflate(LayoutInflater layoutInflater) {
@@ -65,7 +65,7 @@ public abstract class ItemNotificationBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNotificationBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemNotificationBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558842, null, false, obj);
+        return (ItemNotificationBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558849, null, false, obj);
     }
 
     public static ItemNotificationBinding bind(View view) {
@@ -74,6 +74,6 @@ public abstract class ItemNotificationBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNotificationBinding bind(View view, Object obj) {
-        return (ItemNotificationBinding) bind(obj, view, 2131558842);
+        return (ItemNotificationBinding) bind(obj, view, 2131558849);
     }
 }

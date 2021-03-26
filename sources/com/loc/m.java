@@ -22,9 +22,7 @@ public final class m {
         String i;
         String j;
         String k;
-
-        /* renamed from: l  reason: collision with root package name */
-        String f1380l;
+        String l;
         String m;
         String n;
         String o;
@@ -100,7 +98,7 @@ public final class m {
             aVar.i = k.d(context);
             aVar.j = String.valueOf(Build.VERSION.SDK_INT);
             aVar.k = n.A(context);
-            aVar.f1380l = n.t(context);
+            aVar.l = n.t(context);
             StringBuilder sb = new StringBuilder();
             sb.append(n.q(context));
             aVar.m = sb.toString();
@@ -181,7 +179,7 @@ public final class m {
                 a(byteArrayOutputStream, aVar.i);
                 a(byteArrayOutputStream, aVar.j);
                 a(byteArrayOutputStream, aVar.k);
-                a(byteArrayOutputStream, aVar.f1380l);
+                a(byteArrayOutputStream, aVar.l);
                 a(byteArrayOutputStream, aVar.m);
                 a(byteArrayOutputStream, aVar.n);
                 a(byteArrayOutputStream, aVar.o);

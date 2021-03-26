@@ -67,14 +67,14 @@ public final class FloatingCover extends ThemeableCover implements OnTimerUpdate
         Intrinsics.checkNotNullParameter(view, "v");
         super.onClick(view);
         int id = view.getId();
-        if (id == 2131362257) {
+        if (id == 2131362262) {
             notifyReceiverEvent(-101, null);
-        } else if (id == 2131363240) {
+        } else if (id == 2131363254) {
             requestReplay(null);
             setReplayViewVisible(false);
             setProgressBarUI(0, 0);
             setErrorViewVisible$default(this, false, 0, 2, null);
-        } else if (id == 2131363245) {
+        } else if (id == 2131363259) {
             Bundle obtain = BundlePool.obtain();
             obtain.putInt("int_data", this.currentPosition);
             requestResume(obtain);
@@ -179,7 +179,7 @@ public final class FloatingCover extends ThemeableCover implements OnTimerUpdate
     @Override // com.kk.taurus.playerbase.receiver.BaseCover
     public View onCreateCoverView(Context context) {
         Intrinsics.checkNotNullParameter(context, "context");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559291, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559301, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…eo_floating, null, false)");
         VideoFloatingBinding videoFloatingBinding = (VideoFloatingBinding) inflate;
         this.binding = videoFloatingBinding;

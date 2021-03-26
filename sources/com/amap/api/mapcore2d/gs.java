@@ -40,9 +40,7 @@ public final class gs {
     public String i = null;
     protected String j = null;
     protected String k = null;
-
-    /* renamed from: l  reason: collision with root package name */
-    protected String f1239l = null;
+    protected String l = null;
     protected String m = null;
     protected String n = null;
     protected String o = null;
@@ -161,8 +159,8 @@ public final class gs {
         if (TextUtils.isEmpty(this.k) || (!"0".equals(this.k) && !"1".equals(this.k))) {
             this.k = "0";
         }
-        if (TextUtils.isEmpty(this.f1239l)) {
-            this.f1239l = "";
+        if (TextUtils.isEmpty(this.l)) {
+            this.l = "";
         }
         if (TextUtils.isEmpty(this.m)) {
             this.m = "";
@@ -441,7 +439,7 @@ public final class gs {
         this.i = str12;
         this.j = str9;
         this.k = str9;
-        this.f1239l = str9;
+        this.l = str9;
         this.m = str9;
         this.n = str9;
         this.o = str10;
@@ -722,7 +720,7 @@ public final class gs {
                                     }
                                     bArr7[i6] = (byte) i18;
                                     int i31 = i6 + 1;
-                                    byte[] a13 = gy.a(gmVar.f1235l, bArr4);
+                                    byte[] a13 = gy.a(gmVar.l, bArr4);
                                     System.arraycopy(a13, 0, bArr7, i31, a13.length);
                                     i6 = i31 + a13.length;
                                     if (Double.valueOf("5.1").doubleValue() >= 5.0d) {
@@ -748,7 +746,7 @@ public final class gs {
                                 i18 = 99;
                                 bArr7[i6] = (byte) i18;
                                 int i31 = i6 + 1;
-                                byte[] a13 = gy.a(gmVar.f1235l, bArr4);
+                                byte[] a13 = gy.a(gmVar.l, bArr4);
                                 System.arraycopy(a13, 0, bArr7, i31, a13.length);
                                 i6 = i31 + a13.length;
                                 if (Double.valueOf("5.1").doubleValue() >= 5.0d) {

@@ -94,7 +94,7 @@ public final class ProductCouponListFragment extends NewAsyncListFragment<List<?
         if (dataAdapter2 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("adapter");
         }
-        BaseMultiTypeAdapter.register$default(dataAdapter2, SimpleViewHolderFactor.Companion.withLayoutId(2131558864).suitedMethod(ProductCouponListFragment$onActivityCreated$1.INSTANCE).constructor(new ProductCouponListFragment$onActivityCreated$2(this)).doAfterBind(new ProductCouponListFragment$onActivityCreated$3(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(dataAdapter2, SimpleViewHolderFactor.Companion.withLayoutId(2131558871).suitedMethod(ProductCouponListFragment$onActivityCreated$1.INSTANCE).constructor(new ProductCouponListFragment$onActivityCreated$2(this)).doAfterBind(new ProductCouponListFragment$onActivityCreated$3(this)).build(), 0, 2, null);
         setRefreshEnable(false);
         setLoadMoreEnable(false);
         RecyclerView recyclerView3 = getRecyclerView();

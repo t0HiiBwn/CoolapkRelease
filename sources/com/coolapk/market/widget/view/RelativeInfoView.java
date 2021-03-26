@@ -34,10 +34,10 @@ import kotlin.text.Regex;
 public final class RelativeInfoView extends ViewGroup {
     public static final Companion Companion = new Companion(null);
     private static final int minAcceptedWidth = NumberExtendsKt.getDp((Number) 56);
-    private static final RelativeItem moreItem = new RelativeItem("", String.valueOf(2131231435), null, false, false, null, 60, null);
+    private static final RelativeItem moreItem = new RelativeItem("", String.valueOf(2131231446), null, false, false, null, 60, null);
     private List<RelativeItem> dataItems;
     private int dividerHeight = ConvertUtils.dp2px(8.0f);
-    private int goodsItemBackgroundColor = ResourceUtils.getColorInt(getContext(), 2131099705);
+    private int goodsItemBackgroundColor = ResourceUtils.getColorInt(getContext(), 2131099706);
     private int itemBackgroundColor = ResourceUtils.resolveData(getContext(), 2130968793);
     private int itemDividerWidth = ConvertUtils.dp2px(6.0f);
     private int maxLines = 2;
@@ -175,7 +175,7 @@ public final class RelativeInfoView extends ViewGroup {
             if (i2 >= childCount) {
                 break;
             }
-            Object tag = getChildAt(i2).getTag(2131363492);
+            Object tag = getChildAt(i2).getTag(2131363510);
             if (tag instanceof RelateInfoChildViewPart) {
                 list = tag;
             }
@@ -185,7 +185,7 @@ public final class RelativeInfoView extends ViewGroup {
                 if (viewPartPool2 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("viewPartPool");
                 }
-                viewPartPool2.putRecycledViewPart(relateInfoChildViewPart, 2131558896);
+                viewPartPool2.putRecycledViewPart(relateInfoChildViewPart, 2131558903);
             }
             i2++;
         }
@@ -208,7 +208,7 @@ public final class RelativeInfoView extends ViewGroup {
                 if (viewPartPool3 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("viewPartPool");
                 }
-                ItemRelativeChildBinding bindChildViewPart = bindChildViewPart((RelateInfoChildViewPart) viewPartPool3.getRecycledViewPart(2131558896), t2);
+                ItemRelativeChildBinding bindChildViewPart = bindChildViewPart((RelateInfoChildViewPart) viewPartPool3.getRecycledViewPart(2131558903), t2);
                 View root = bindChildViewPart.getRoot();
                 Intrinsics.checkNotNullExpressionValue(root, "binding.root");
                 ViewGroup.LayoutParams layoutParams = root.getLayoutParams();
@@ -241,7 +241,7 @@ public final class RelativeInfoView extends ViewGroup {
             LayoutInflater from = LayoutInflater.from(relativeParent.getContext());
             Intrinsics.checkNotNullExpressionValue(from, "LayoutInflater.from(relativeParent!!.context)");
             relateInfoChildViewPart.createView(from, relateInfoChildViewPart.getRelativeParent());
-            ((ItemRelativeChildBinding) relateInfoChildViewPart.getBinding()).getRoot().setTag(2131363492, relateInfoChildViewPart);
+            ((ItemRelativeChildBinding) relateInfoChildViewPart.getBinding()).getRoot().setTag(2131363510, relateInfoChildViewPart);
         }
         relateInfoChildViewPart.bindToContent(relativeItem);
         return (ItemRelativeChildBinding) relateInfoChildViewPart.getBinding();
@@ -597,7 +597,7 @@ public final class RelativeInfoView extends ViewGroup {
     /* compiled from: RelativeInfoView.kt */
     public static final class RelateInfoChildViewPart extends BindingViewPart<ItemRelativeChildBinding, RelativeItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558896;
+        public static final int LAYOUT_ID = 2131558903;
         private static final Regex NUMS_REGEX = new Regex("^\\d+$");
         private float bgRadius = 3.0f;
         private Runnable displayImageRunnable;
@@ -639,7 +639,7 @@ public final class RelativeInfoView extends ViewGroup {
         @Override // com.coolapk.market.viewholder.iview.BindingViewPart
         public ItemRelativeChildBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
             Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-            ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558896, viewGroup, false);
+            ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558903, viewGroup, false);
             Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
             return (ItemRelativeChildBinding) inflate;
         }
@@ -690,7 +690,7 @@ public final class RelativeInfoView extends ViewGroup {
                     }
                     background.setAlpha(i);
                     TextView textView = ((ItemRelativeChildBinding) getBinding()).titleView;
-                    int colorInt = ResourceUtils.getColorInt(getContext(), 2131100035);
+                    int colorInt = ResourceUtils.getColorInt(getContext(), 2131100040);
                     int textColorSecondary = AppHolder.getAppTheme().getTextColorSecondary();
                     if (!equals2) {
                         colorInt = textColorSecondary;

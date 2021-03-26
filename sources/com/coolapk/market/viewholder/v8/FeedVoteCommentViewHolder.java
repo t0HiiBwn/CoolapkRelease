@@ -33,7 +33,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedVoteCommentViewHolder.kt */
 public final class FeedVoteCommentViewHolder extends GenericBindHolder<ItemFeedVoteCommentBinding, Feed> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558736;
+    public static final int LAYOUT_ID = 2131558743;
     private Feed feed;
     private final Lazy headerViewPart$delegate;
     private final BaseFeedRelativeHotPlug relativeInfoHotPlug;
@@ -142,7 +142,7 @@ public final class FeedVoteCommentViewHolder extends GenericBindHolder<ItemFeedV
                 Intrinsics.throwUninitializedPropertyAccessException("feed");
             }
             String message = feed4.getMessage();
-            SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886656));
+            SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(getContext().getString(2131886718));
             spannableStringBuilder.setSpan(new ForegroundColorSpan(AppHolder.getAppTheme().getColorAccent()), 0, spannableStringBuilder.length(), 33);
             Unit unit = Unit.INSTANCE;
             ViewExtendsKt.setBriefMessage(textView3, 90, message, spannableStringBuilder);
@@ -160,7 +160,7 @@ public final class FeedVoteCommentViewHolder extends GenericBindHolder<ItemFeedV
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() != 2131362200) {
+        if (view.getId() != 2131362205) {
             super.onClick(view);
             return;
         }

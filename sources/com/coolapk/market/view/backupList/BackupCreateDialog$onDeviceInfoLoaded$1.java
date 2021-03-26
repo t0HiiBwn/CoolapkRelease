@@ -25,7 +25,7 @@ final class BackupCreateDialog$onDeviceInfoLoaded$1 implements View.OnClickListe
             BackupCreateDialog backupCreateDialog = this.this$0;
             EditText editText2 = BackupCreateDialog.access$getBinding$p(backupCreateDialog).titleEditText;
             Intrinsics.checkNotNullExpressionValue(editText2, "binding.titleEditText");
-            BackupCreateDialog.access$setBackupTitle$p(backupCreateDialog, editText2.getText().toString());
+            backupCreateDialog.backupTitle = editText2.getText().toString();
         }
         SimpleActivity.builder(this.this$0.getActivity()).fragmentClass(BackupMobileAppFragment.class).addArgs("TITLE_BACKUP", BackupCreateDialog.access$getBackupTitle$p(this.this$0)).setRequestCode(424).title("选择应用").start();
         Dialog dialog = this.this$0.getDialog();

@@ -76,7 +76,7 @@ public class a {
             declaredField.setAccessible(true);
             Object obj2 = declaredField.get(obj);
             if (obj2 != null && (cls = Class.forName("android.app.IActivityManager")) != null) {
-                declaredField.set(obj, Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), new Class[]{cls}, new C0087a(obj2)));
+                declaredField.set(obj, Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), new Class[]{cls}, new C0097a(obj2)));
             }
         } catch (Throwable unused) {
         }
@@ -128,10 +128,10 @@ public class a {
 
     /* renamed from: com.ss.android.downloadlib.h.a$a  reason: collision with other inner class name */
     /* compiled from: AntiHijackUtils */
-    private static class C0087a implements InvocationHandler {
+    private static class C0097a implements InvocationHandler {
         private Object a;
 
-        private C0087a(Object obj) {
+        private C0097a(Object obj) {
             this.a = obj;
         }
 

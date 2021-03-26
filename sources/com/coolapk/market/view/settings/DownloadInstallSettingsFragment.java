@@ -108,7 +108,7 @@ public final class DownloadInstallSettingsFragment extends BasePreferenceFragmen
                         if (!SystemUtils.isAccessibilitySettingsOn(getActivity(), sb2)) {
                             FragmentActivity requireActivity2 = requireActivity();
                             Intrinsics.checkNotNullExpressionValue(requireActivity2, "requireActivity()");
-                            Toast.show(requireActivity2, 2131886540);
+                            Toast.show(requireActivity2, 2131886600);
                         }
                         return true;
                     }
@@ -165,7 +165,7 @@ public final class DownloadInstallSettingsFragment extends BasePreferenceFragmen
         if (isAccessibilitySettingsOn && isAccessibilitySettingsOn2) {
             FragmentActivity requireActivity2 = requireActivity();
             Intrinsics.checkNotNullExpressionValue(requireActivity2, "requireActivity()");
-            Toast.show(requireActivity2, 2131886539);
+            Toast.show(requireActivity2, 2131886599);
         }
     }
 

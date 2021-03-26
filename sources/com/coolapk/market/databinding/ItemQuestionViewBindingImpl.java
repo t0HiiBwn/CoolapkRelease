@@ -30,12 +30,12 @@ public class ItemQuestionViewBindingImpl extends ItemQuestionViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 5);
-        sparseIntArray.put(2131363582, 6);
-        sparseIntArray.put(2131363016, 7);
-        sparseIntArray.put(2131363229, 8);
-        sparseIntArray.put(2131362642, 9);
-        sparseIntArray.put(2131362330, 10);
+        sparseIntArray.put(2131362657, 5);
+        sparseIntArray.put(2131363604, 6);
+        sparseIntArray.put(2131363030, 7);
+        sparseIntArray.put(2131363243, 8);
+        sparseIntArray.put(2131362650, 9);
+        sparseIntArray.put(2131362336, 10);
     }
 
     public ItemQuestionViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -78,7 +78,7 @@ public class ItemQuestionViewBindingImpl extends ItemQuestionViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -94,7 +94,7 @@ public class ItemQuestionViewBindingImpl extends ItemQuestionViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

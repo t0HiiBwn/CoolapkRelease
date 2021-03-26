@@ -19,7 +19,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ProductSingleRatingViewHolder.kt */
 public final class ProductSingleRatingViewHolder extends BaseSingleRatingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558934;
+    public static final int LAYOUT_ID = 2131558941;
     private final ProductPresenter presenter;
     private final ProductViewModel viewModel;
 
@@ -43,7 +43,7 @@ public final class ProductSingleRatingViewHolder extends BaseSingleRatingViewHol
 
             @Override // androidx.databinding.Observable.OnPropertyChangedCallback
             public void onPropertyChanged(Observable observable, int i) {
-                if (i == 228) {
+                if (i == 229) {
                     this.this$0.requestStarCountChanged();
                 }
             }

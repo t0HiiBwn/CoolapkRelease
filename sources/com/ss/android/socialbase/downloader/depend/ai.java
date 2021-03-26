@@ -27,7 +27,7 @@ public interface ai extends IInterface {
             }
             IInterface queryLocalInterface = iBinder.queryLocalInterface("com.ss.android.socialbase.downloader.depend.IRetryDelayTimeAidlCalculator");
             if (queryLocalInterface == null || !(queryLocalInterface instanceof ai)) {
-                return new C0098a(iBinder);
+                return new C0108a(iBinder);
             }
             return (ai) queryLocalInterface;
         }
@@ -50,11 +50,11 @@ public interface ai extends IInterface {
 
         /* renamed from: com.ss.android.socialbase.downloader.depend.ai$a$a  reason: collision with other inner class name */
         /* compiled from: IRetryDelayTimeAidlCalculator */
-        private static class C0098a implements ai {
+        private static class C0108a implements ai {
             public static ai a;
             private IBinder b;
 
-            C0098a(IBinder iBinder) {
+            C0108a(IBinder iBinder) {
                 this.b = iBinder;
             }
 
@@ -87,7 +87,7 @@ public interface ai extends IInterface {
         }
 
         public static ai a() {
-            return C0098a.a;
+            return C0108a.a;
         }
     }
 }

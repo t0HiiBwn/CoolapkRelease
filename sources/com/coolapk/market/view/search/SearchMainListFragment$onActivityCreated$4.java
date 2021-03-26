@@ -37,7 +37,7 @@ final class SearchMainListFragment$onActivityCreated$4 extends Lambda implements
             public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
-                if (view.getId() == 2131363223) {
+                if (view.getId() == 2131363237) {
                     this.this$0.this$0.shouldRefresh = true;
                     this.this$0.this$0.setPage(1);
                     this.this$0.this$0.reloadData();

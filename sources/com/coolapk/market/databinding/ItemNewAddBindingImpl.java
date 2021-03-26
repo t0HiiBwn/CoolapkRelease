@@ -56,11 +56,11 @@ public class ItemNewAddBindingImpl extends ItemNewAddBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (279 == i) {
+        if (280 == i) {
             setTitleText((String) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
-        } else if (171 == i) {
+        } else if (172 == i) {
             setIsMyAlbum(((Boolean) obj).booleanValue());
         } else if (3 != i) {
             return false;
@@ -76,7 +76,7 @@ public class ItemNewAddBindingImpl extends ItemNewAddBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(279);
+        notifyPropertyChanged(280);
         super.requestRebind();
     }
 
@@ -96,7 +96,7 @@ public class ItemNewAddBindingImpl extends ItemNewAddBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(171);
+        notifyPropertyChanged(172);
         super.requestRebind();
     }
 

@@ -69,17 +69,17 @@ public final class ContactPickActivityV9 extends FakeStatusBarActivity implement
     @Override // com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559283);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559293);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…this, R.layout.user_pick)");
         this.binding = (UserPickBinding) contentView;
         setupHeader();
         fixFabLayout();
         setupAutoInputKeyword();
         FragmentManager supportFragmentManager = getSupportFragmentManager();
-        ContactPickFragment findFragmentById = supportFragmentManager.findFragmentById(2131363307);
+        ContactPickFragment findFragmentById = supportFragmentManager.findFragmentById(2131363322);
         if (findFragmentById == null) {
             findFragmentById = ContactPickFragment.newInstance(getIntent().getIntExtra("EXTRA_MAX_COUNT", Integer.MAX_VALUE), getIntent().getStringExtra("EXTRA_ERROR_TEXT"));
-            supportFragmentManager.beginTransaction().add(2131363307, findFragmentById).commit();
+            supportFragmentManager.beginTransaction().add(2131363322, findFragmentById).commit();
             supportFragmentManager.executePendingTransactions();
         }
         if (findFragmentById instanceof ContactPickFragment) {
@@ -278,12 +278,12 @@ public final class ContactPickActivityV9 extends FakeStatusBarActivity implement
     }
 
     private final Fragment findContentFragment() {
-        return getSupportFragmentManager().findFragmentById(2131363307);
+        return getSupportFragmentManager().findFragmentById(2131363322);
     }
 
     /* access modifiers changed from: private */
     public final PopLayoutBehavior findPopupFragment() {
-        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131363314);
+        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131363330);
         if (!(findFragmentById instanceof PopLayoutBehavior)) {
             findFragmentById = null;
         }
@@ -303,7 +303,7 @@ public final class ContactPickActivityV9 extends FakeStatusBarActivity implement
         }
         UserPickFragment newInstance = UserPickFragment.Companion.newInstance(str);
         newInstance.setPresenter(new UserPresenter(newInstance));
-        supportFragmentManager.beginTransaction().replace(2131363314, newInstance).commit();
+        supportFragmentManager.beginTransaction().replace(2131363330, newInstance).commit();
     }
 
     public final FloatingActionButton getFab() {

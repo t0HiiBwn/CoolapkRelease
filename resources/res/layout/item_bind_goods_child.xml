@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/item_view" android:tag="layout/item_bind_goods_child_0" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/container_view" android:tag="binding_1" android:background="?attr/commentLayoutBackground" android:layout_width="232dp" android:layout_height="wrap_content" android:layout_margin="8dp" android:foreground="?attr/selectableItemBackground">
+        <ImageView android:id="@+id/icon_view" android:tag="binding_2" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="centerCrop"/>
+        <TextView android:textSize="12sp" android:textColor="?android:attr/textColorPrimary" android:ellipsize="end" android:id="@+id/title_view" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:maxLines="2"/>
+    </LinearLayout>
+    <ImageView android:layout_gravity="end" android:id="@+id/close_view" android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_qujing_outline" android:scaleType="centerCrop" android:tint="@color/grey_600"/>
+</FrameLayout>

@@ -31,8 +31,8 @@ public class ItemArticleViewImageBindingImpl extends ItemArticleViewImageBinding
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363146, 4);
-        sparseIntArray.put(2131362376, 5);
+        sparseIntArray.put(2131363160, 4);
+        sparseIntArray.put(2131362382, 5);
     }
 
     public ItemArticleViewImageBindingImpl(DataBindingComponent dataBindingComponent, View view) {

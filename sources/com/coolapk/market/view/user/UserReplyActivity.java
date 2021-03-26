@@ -34,14 +34,14 @@ public final class UserReplyActivity extends TabActivity {
     @Override // com.coolapk.market.view.base.TabActivity, com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        getToolbar().setTitle(2131887103);
+        getToolbar().setTitle(2131887165);
     }
 
     @Override // com.coolapk.market.view.base.TabActivity
     protected String[] onCreateTabs() {
-        String string = getString(2131887103);
+        String string = getString(2131887165);
         Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_user_my_replys)");
-        String string2 = getString(2131887126);
+        String string2 = getString(2131887188);
         Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_user_replys)");
         return new String[]{string, string2};
     }

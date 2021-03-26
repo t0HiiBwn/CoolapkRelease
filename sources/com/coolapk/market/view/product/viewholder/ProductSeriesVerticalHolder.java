@@ -20,7 +20,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ProductSeriesVerticalHolder.kt */
 public final class ProductSeriesVerticalHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558878;
+    public static final int LAYOUT_ID = 2131558885;
     private final ItemProductSeriesVerticalBinding binding;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -83,7 +83,7 @@ public final class ProductSeriesVerticalHolder extends BindingViewHolder {
         if (model != null) {
             Intrinsics.checkNotNullExpressionValue(model, "binding.model ?: return");
             int id = view.getId();
-            if (id == 2131361876) {
+            if (id == 2131361877) {
                 UserAction userAction = model.getUserAction();
                 Intrinsics.checkNotNullExpressionValue(userAction, "product.userAction");
                 boolean z = userAction.getFollow() == 1;
@@ -95,7 +95,7 @@ public final class ProductSeriesVerticalHolder extends BindingViewHolder {
                 if (ProductEventRequester.requestFollow$default(productEventRequester, id2, !z, new ProductSeriesVerticalHolder$onClick$accepted$1(this, model), null, 8, null)) {
                     setFollowText(!z);
                 }
-            } else if (id != 2131362768) {
+            } else if (id != 2131362779) {
                 super.onClick(view);
             } else {
                 ActionManager.startProductActivity(getContext(), model.getId());

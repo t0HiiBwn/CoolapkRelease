@@ -22,30 +22,6 @@ public class Tailer implements Runnable {
     private final boolean reOpen;
     private volatile boolean run;
 
-    public Tailer(File file2, TailerListener tailerListener) {
-        this(file2, tailerListener, 1000);
-    }
-
-    public Tailer(File file2, TailerListener tailerListener, long j) {
-        this(file2, tailerListener, j, false);
-    }
-
-    public Tailer(File file2, TailerListener tailerListener, long j, boolean z) {
-        this(file2, tailerListener, j, z, 4096);
-    }
-
-    public Tailer(File file2, TailerListener tailerListener, long j, boolean z, boolean z2) {
-        this(file2, tailerListener, j, z, z2, 4096);
-    }
-
-    public Tailer(File file2, TailerListener tailerListener, long j, boolean z, int i) {
-        this(file2, tailerListener, j, z, false, i);
-    }
-
-    public Tailer(File file2, TailerListener tailerListener, long j, boolean z, boolean z2, int i) {
-        this(file2, DEFAULT_CHARSET, tailerListener, j, z, z2, i);
-    }
-
     public Tailer(File file2, Charset charset, TailerListener tailerListener, long j, boolean z, boolean z2, int i) {
         this.run = true;
         this.file = file2;
@@ -58,12 +34,28 @@ public class Tailer implements Runnable {
         this.cset = charset;
     }
 
-    public static Tailer create(File file2, TailerListener tailerListener, long j, boolean z, int i) {
-        return create(file2, tailerListener, j, z, false, i);
+    public Tailer(File file2, TailerListener tailerListener) {
+        this(file2, tailerListener, 1000);
     }
 
-    public static Tailer create(File file2, TailerListener tailerListener, long j, boolean z, boolean z2, int i) {
-        return create(file2, DEFAULT_CHARSET, tailerListener, j, z, z2, i);
+    public Tailer(File file2, TailerListener tailerListener, long j) {
+        this(file2, tailerListener, j, false);
+    }
+
+    public Tailer(File file2, TailerListener tailerListener, long j, boolean z) {
+        this(file2, tailerListener, j, z, 4096);
+    }
+
+    public Tailer(File file2, TailerListener tailerListener, long j, boolean z, int i) {
+        this(file2, tailerListener, j, z, false, i);
+    }
+
+    public Tailer(File file2, TailerListener tailerListener, long j, boolean z, boolean z2) {
+        this(file2, tailerListener, j, z, z2, 4096);
+    }
+
+    public Tailer(File file2, TailerListener tailerListener, long j, boolean z, boolean z2, int i) {
+        this(file2, DEFAULT_CHARSET, tailerListener, j, z, z2, i);
     }
 
     public static Tailer create(File file2, Charset charset, TailerListener tailerListener, long j, boolean z, boolean z2, int i) {
@@ -74,20 +66,86 @@ public class Tailer implements Runnable {
         return tailer;
     }
 
-    public static Tailer create(File file2, TailerListener tailerListener, long j, boolean z) {
-        return create(file2, tailerListener, j, z, 4096);
-    }
-
-    public static Tailer create(File file2, TailerListener tailerListener, long j, boolean z, boolean z2) {
-        return create(file2, tailerListener, j, z, z2, 4096);
+    public static Tailer create(File file2, TailerListener tailerListener) {
+        return create(file2, tailerListener, 1000, false);
     }
 
     public static Tailer create(File file2, TailerListener tailerListener, long j) {
         return create(file2, tailerListener, j, false);
     }
 
-    public static Tailer create(File file2, TailerListener tailerListener) {
-        return create(file2, tailerListener, 1000, false);
+    public static Tailer create(File file2, TailerListener tailerListener, long j, boolean z) {
+        return create(file2, tailerListener, j, z, 4096);
+    }
+
+    public static Tailer create(File file2, TailerListener tailerListener, long j, boolean z, int i) {
+        return create(file2, tailerListener, j, z, false, i);
+    }
+
+    public static Tailer create(File file2, TailerListener tailerListener, long j, boolean z, boolean z2) {
+        return create(file2, tailerListener, j, z, z2, 4096);
+    }
+
+    public static Tailer create(File file2, TailerListener tailerListener, long j, boolean z, boolean z2, int i) {
+        return create(file2, DEFAULT_CHARSET, tailerListener, j, z, z2, i);
+    }
+
+    /* JADX WARNING: Code restructure failed: missing block: B:30:0x0087, code lost:
+        r1 = move-exception;
+     */
+    /* JADX WARNING: Code restructure failed: missing block: B:32:?, code lost:
+        r0.close();
+     */
+    /* JADX WARNING: Code restructure failed: missing block: B:33:0x008c, code lost:
+        r0 = move-exception;
+     */
+    /* JADX WARNING: Code restructure failed: missing block: B:34:0x008d, code lost:
+        r14.addSuppressed(r0);
+     */
+    /* JADX WARNING: Code restructure failed: missing block: B:35:0x0090, code lost:
+        throw r1;
+     */
+    private long readLines(RandomAccessFile randomAccessFile) throws IOException {
+        int read;
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(64);
+        long filePointer = randomAccessFile.getFilePointer();
+        long j = filePointer;
+        boolean z = false;
+        while (getRun() && (read = randomAccessFile.read(this.inbuf)) != -1) {
+            for (int i = 0; i < read; i++) {
+                byte b = this.inbuf[i];
+                if (b == 10) {
+                    this.listener.handle(new String(byteArrayOutputStream.toByteArray(), this.cset));
+                    byteArrayOutputStream.reset();
+                    filePointer = ((long) i) + j + 1;
+                    z = false;
+                } else if (b != 13) {
+                    if (z) {
+                        this.listener.handle(new String(byteArrayOutputStream.toByteArray(), this.cset));
+                        byteArrayOutputStream.reset();
+                        filePointer = ((long) i) + j + 1;
+                        z = false;
+                    }
+                    byteArrayOutputStream.write(b);
+                } else {
+                    if (z) {
+                        byteArrayOutputStream.write(13);
+                    }
+                    z = true;
+                }
+            }
+            j = randomAccessFile.getFilePointer();
+        }
+        randomAccessFile.seek(filePointer);
+        if (this.listener instanceof TailerListenerAdapter) {
+            ((TailerListenerAdapter) this.listener).endOfFileReached();
+        }
+        byteArrayOutputStream.close();
+        return filePointer;
+    }
+
+    public long getDelay() {
+        return this.delayMillis;
     }
 
     public File getFile() {
@@ -96,10 +154,6 @@ public class Tailer implements Runnable {
 
     protected boolean getRun() {
         return this.run;
-    }
-
-    public long getDelay() {
-        return this.delayMillis;
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:83:0x00f1 A[SYNTHETIC, Splitter:B:83:0x00f1] */
@@ -266,60 +320,5 @@ public class Tailer implements Runnable {
 
     public void stop() {
         this.run = false;
-    }
-
-    /* JADX WARNING: Code restructure failed: missing block: B:30:0x0085, code lost:
-        r1 = move-exception;
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:32:?, code lost:
-        r0.close();
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:33:0x008a, code lost:
-        r0 = move-exception;
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:34:0x008b, code lost:
-        r14.addSuppressed(r0);
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:35:0x008e, code lost:
-        throw r1;
-     */
-    private long readLines(RandomAccessFile randomAccessFile) throws IOException {
-        int read;
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(64);
-        long filePointer = randomAccessFile.getFilePointer();
-        long j = filePointer;
-        boolean z = false;
-        while (getRun() && (read = randomAccessFile.read(this.inbuf)) != -1) {
-            for (int i = 0; i < read; i++) {
-                byte b = this.inbuf[i];
-                if (b == 10) {
-                    this.listener.handle(new String(byteArrayOutputStream.toByteArray(), this.cset));
-                    byteArrayOutputStream.reset();
-                    filePointer = ((long) i) + j + 1;
-                    z = false;
-                } else if (b != 13) {
-                    if (z) {
-                        this.listener.handle(new String(byteArrayOutputStream.toByteArray(), this.cset));
-                        byteArrayOutputStream.reset();
-                        filePointer = ((long) i) + j + 1;
-                        z = false;
-                    }
-                    byteArrayOutputStream.write(b);
-                } else {
-                    if (z) {
-                        byteArrayOutputStream.write(13);
-                    }
-                    z = true;
-                }
-            }
-            j = randomAccessFile.getFilePointer();
-        }
-        randomAccessFile.seek(filePointer);
-        TailerListener tailerListener = this.listener;
-        if (tailerListener instanceof TailerListenerAdapter) {
-            ((TailerListenerAdapter) tailerListener).endOfFileReached();
-        }
-        byteArrayOutputStream.close();
-        return filePointer;
     }
 }

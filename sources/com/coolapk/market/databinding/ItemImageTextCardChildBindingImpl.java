@@ -59,7 +59,7 @@ public class ItemImageTextCardChildBindingImpl extends ItemImageTextCardChildBin
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Entity) obj);
         } else if (60 != i) {
             return false;
@@ -75,7 +75,7 @@ public class ItemImageTextCardChildBindingImpl extends ItemImageTextCardChildBin
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -145,7 +145,7 @@ public class ItemImageTextCardChildBindingImpl extends ItemImageTextCardChildBin
                 }
                 if (i3 != 0) {
                     Boolean bool = null;
-                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str3, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231696), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
+                    ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.imageView, str3, AppCompatResources.getDrawable(this.imageView.getContext(), 2131231707), 0, 0, bool, bool, bool, bool, bool, null, null, null, bool, true, bool, null, bool);
                 }
                 if ((j & 5) == 0) {
                     this.titleContainer.setVisibility(i);

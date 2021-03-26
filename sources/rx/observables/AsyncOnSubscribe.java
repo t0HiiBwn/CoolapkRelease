@@ -40,12 +40,12 @@ public abstract class AsyncOnSubscribe<S, T> implements Observable.OnSubscribe<T
 
             /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object, java.lang.Object, java.lang.Object] */
             @Override // rx.functions.Func3
-            public /* bridge */ /* synthetic */ Object call(Object obj, Long l2, Object obj2) {
-                return call((AnonymousClass1) obj, l2, (Observer) ((Observer) obj2));
+            public /* bridge */ /* synthetic */ Object call(Object obj, Long l, Object obj2) {
+                return call((AnonymousClass1) obj, l, (Observer) ((Observer) obj2));
             }
 
-            public S call(S s, Long l2, Observer<Observable<? extends T>> observer) {
-                action3.call(s, l2, observer);
+            public S call(S s, Long l, Observer<Observable<? extends T>> observer) {
+                action3.call(s, l, observer);
                 return s;
             }
         });
@@ -57,12 +57,12 @@ public abstract class AsyncOnSubscribe<S, T> implements Observable.OnSubscribe<T
 
             /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object, java.lang.Object, java.lang.Object] */
             @Override // rx.functions.Func3
-            public /* bridge */ /* synthetic */ Object call(Object obj, Long l2, Object obj2) {
-                return call((AnonymousClass2) obj, l2, (Observer) ((Observer) obj2));
+            public /* bridge */ /* synthetic */ Object call(Object obj, Long l, Object obj2) {
+                return call((AnonymousClass2) obj, l, (Observer) ((Observer) obj2));
             }
 
-            public S call(S s, Long l2, Observer<Observable<? extends T>> observer) {
-                action3.call(s, l2, observer);
+            public S call(S s, Long l, Observer<Observable<? extends T>> observer) {
+                action3.call(s, l, observer);
                 return s;
             }
         }, action1);
@@ -83,12 +83,12 @@ public abstract class AsyncOnSubscribe<S, T> implements Observable.OnSubscribe<T
             /* Return type fixed from 'java.lang.Object' to match base method */
             /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object, java.lang.Object, java.lang.Object] */
             @Override // rx.functions.Func3
-            public /* bridge */ /* synthetic */ Void call(Void r1, Long l2, Object obj) {
-                return call(r1, l2, (Observer) ((Observer) obj));
+            public /* bridge */ /* synthetic */ Void call(Void r1, Long l, Object obj) {
+                return call(r1, l, (Observer) ((Observer) obj));
             }
 
-            public Void call(Void r2, Long l2, Observer<Observable<? extends T>> observer) {
-                action2.call(l2, observer);
+            public Void call(Void r2, Long l, Observer<Observable<? extends T>> observer) {
+                action2.call(l, observer);
                 return r2;
             }
         });
@@ -101,12 +101,12 @@ public abstract class AsyncOnSubscribe<S, T> implements Observable.OnSubscribe<T
             /* Return type fixed from 'java.lang.Object' to match base method */
             /* JADX DEBUG: Method arguments types fixed to match base method, original types: [java.lang.Object, java.lang.Object, java.lang.Object] */
             @Override // rx.functions.Func3
-            public /* bridge */ /* synthetic */ Void call(Void r1, Long l2, Object obj) {
-                return call(r1, l2, (Observer) ((Observer) obj));
+            public /* bridge */ /* synthetic */ Void call(Void r1, Long l, Object obj) {
+                return call(r1, l, (Observer) ((Observer) obj));
             }
 
-            public Void call(Void r1, Long l2, Observer<Observable<? extends T>> observer) {
-                action2.call(l2, observer);
+            public Void call(Void r1, Long l, Observer<Observable<? extends T>> observer) {
+                action2.call(l, observer);
                 return null;
             }
         }, new Action1<Void>() {

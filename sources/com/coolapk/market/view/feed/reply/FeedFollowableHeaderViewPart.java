@@ -31,7 +31,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedFollowableHeaderViewPart.kt */
 public final class FeedFollowableHeaderViewPart extends BindingViewPart<ItemFeedFollowableHeaderViewBinding, Feed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558700;
+    public static final int LAYOUT_ID = 2131558707;
     private final DataBindingComponent dataBindingComponent;
     private Feed feed;
     private final FeedDetailPresenter presenter;
@@ -66,7 +66,7 @@ public final class FeedFollowableHeaderViewPart extends BindingViewPart<ItemFeed
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedFollowableHeaderViewBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558700, viewGroup, false, this.dataBindingComponent);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558707, viewGroup, false, this.dataBindingComponent);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…se, dataBindingComponent)");
         return (ItemFeedFollowableHeaderViewBinding) inflate;
     }
@@ -118,8 +118,8 @@ public final class FeedFollowableHeaderViewPart extends BindingViewPart<ItemFeed
             textView.setText(getContext().getString(2131886114));
             TextView textView2 = ((ItemFeedFollowableHeaderViewBinding) getBinding()).followView;
             Intrinsics.checkNotNullExpressionValue(textView2, "binding.followView");
-            textView2.setBackgroundTintList(ColorStateList.valueOf(ResourceUtils.getColorInt(getContext(), 2131099911)));
-            ((ItemFeedFollowableHeaderViewBinding) getBinding()).followView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099891));
+            textView2.setBackgroundTintList(ColorStateList.valueOf(ResourceUtils.getColorInt(getContext(), 2131099916)));
+            ((ItemFeedFollowableHeaderViewBinding) getBinding()).followView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099896));
             return;
         }
         TextView textView3 = ((ItemFeedFollowableHeaderViewBinding) getBinding()).followView;
@@ -128,7 +128,7 @@ public final class FeedFollowableHeaderViewPart extends BindingViewPart<ItemFeed
         TextView textView4 = ((ItemFeedFollowableHeaderViewBinding) getBinding()).followView;
         Intrinsics.checkNotNullExpressionValue(textView4, "binding.followView");
         textView4.setBackgroundTintList(ColorStateList.valueOf(AppHolder.getAppTheme().getColorAccent()));
-        ((ItemFeedFollowableHeaderViewBinding) getBinding()).followView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099912));
+        ((ItemFeedFollowableHeaderViewBinding) getBinding()).followView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131099917));
     }
 
     @Override // com.coolapk.market.viewholder.iview.ViewPart, android.view.View.OnClickListener
@@ -137,7 +137,7 @@ public final class FeedFollowableHeaderViewPart extends BindingViewPart<ItemFeed
         Feed feed2 = this.feed;
         if (feed2 != null) {
             int id = view.getId();
-            if (id == 2131362582) {
+            if (id == 2131362590) {
                 Activity currentActivity = AppHolder.getCurrentActivity();
                 if (currentActivity != null) {
                     Boolean checkLogin = ActionManager.checkLogin(currentActivity);
@@ -149,8 +149,8 @@ public final class FeedFollowableHeaderViewPart extends BindingViewPart<ItemFeed
                         setFollowState(!z);
                     }
                 }
-            } else if (id != 2131362942) {
-                if (id != 2131363877) {
+            } else if (id != 2131362954) {
+                if (id != 2131363900) {
                     super.onClick(view);
                 } else {
                     ActionManager.startUserSpaceActivity(view, feed2.getUid(), feed2.getUserAvatar());

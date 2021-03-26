@@ -258,23 +258,23 @@ class az {
             if (wVar == null) {
                 return null;
             }
-            PointF b2 = az.this.h.b(wVar, az.this.h.f1218l, az.this.h.n, az.this.h.k);
-            bb l2 = az.this.c.c.l();
+            PointF b2 = az.this.h.b(wVar, az.this.h.l, az.this.h.n, az.this.h.k);
+            bb l = az.this.c.c.l();
             Point point2 = az.this.c.c.a().h.n;
-            if (l2.m) {
+            if (l.m) {
                 try {
                     z = az.this.g.h.isZoomGesturesEnabled();
                 } catch (RemoteException e) {
                     e.printStackTrace();
                     z = true;
                 }
-                if (!l2.f1222l || !z) {
+                if (!l.l || !z) {
                     int i3 = (int) b2.x;
                     i2 = (int) b2.y;
                     i = i3;
                 } else {
-                    float f = (bb.j * (((float) ((int) b2.x)) - l2.f.x)) + l2.f.x + (l2.g.x - l2.f.x);
-                    float f2 = (bb.j * (((float) ((int) b2.y)) - l2.f.y)) + l2.f.y + (l2.g.y - l2.f.y);
+                    float f = (bb.j * (((float) ((int) b2.x)) - l.f.x)) + l.f.x + (l.g.x - l.f.x);
+                    float f2 = (bb.j * (((float) ((int) b2.y)) - l.f.y)) + l.f.y + (l.g.y - l.f.y);
                     i = (int) f;
                     i2 = (int) f2;
                     if (((double) f) >= ((double) i) + 0.5d) {
@@ -304,7 +304,7 @@ class az {
 
         @Override // com.amap.api.mapcore2d.bh
         public w a(int i, int i2) {
-            return az.this.h.a(new PointF((float) i, (float) i2), az.this.h.f1218l, az.this.h.n, az.this.h.k, az.this.h.o);
+            return az.this.h.a(new PointF((float) i, (float) i2), az.this.h.l, az.this.h.n, az.this.h.k, az.this.h.o);
         }
 
         public float a(float f) {
@@ -359,9 +359,7 @@ class az {
         String h;
         String i;
         String j;
-
-        /* renamed from: l  reason: collision with root package name */
-        private boolean f1220l;
+        private boolean l;
         private boolean m;
         private Context n;
         private boolean o;
@@ -387,7 +385,7 @@ class az {
         }
 
         private a(Context context) {
-            this.f1220l = false;
+            this.l = false;
             this.m = true;
             this.a = null;
             this.b = false;
@@ -594,7 +592,7 @@ class az {
             for (int i2 = 0; i2 < size; i2++) {
                 an anVar = this.a.get(i2);
                 if (anVar != null) {
-                    anVar.f1216l = i2;
+                    anVar.l = i2;
                 }
             }
         }
@@ -634,12 +632,12 @@ class az {
         }
 
         public void a(boolean z) {
-            this.f1220l = z;
+            this.l = z;
         }
 
         public void a(Canvas canvas, Matrix matrix, float f2, float f3) {
             try {
-                if (this.f1220l) {
+                if (this.l) {
                     canvas.save();
                     canvas.translate(f2, f3);
                     canvas.concat(matrix);
@@ -740,7 +738,7 @@ class az {
         public void a(w wVar) {
             if (wVar != null) {
                 if (q.s) {
-                    az.this.h.f1218l = az.this.h.a(wVar);
+                    az.this.h.l = az.this.h.a(wVar);
                 }
                 a(false, false);
             }
@@ -750,7 +748,7 @@ class az {
             w f = az.this.c.f();
             if (wVar != null && !wVar.equals(f)) {
                 if (q.s) {
-                    az.this.h.f1218l = az.this.h.a(wVar);
+                    az.this.h.l = az.this.h.a(wVar);
                 }
                 a(false, true);
             }
@@ -814,7 +812,7 @@ class az {
         }
 
         public w f() {
-            w b2 = az.this.h.b(az.this.h.f1218l);
+            w b2 = az.this.h.b(az.this.h.l);
             return (az.this.d == null || !az.this.d.a) ? b2 : az.this.h.m;
         }
 

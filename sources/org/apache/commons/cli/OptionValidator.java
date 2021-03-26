@@ -4,6 +4,14 @@ class OptionValidator {
     OptionValidator() {
     }
 
+    private static boolean isValidChar(char c) {
+        return Character.isJavaIdentifierPart(c);
+    }
+
+    private static boolean isValidOpt(char c) {
+        return isValidChar(c) || c == ' ' || c == '?' || c == '@';
+    }
+
     static void validateOption(String str) throws IllegalArgumentException {
         if (str != null) {
             if (str.length() == 1) {
@@ -28,13 +36,5 @@ class OptionValidator {
                 }
             }
         }
-    }
-
-    private static boolean isValidOpt(char c) {
-        return isValidChar(c) || c == ' ' || c == '?' || c == '@';
-    }
-
-    private static boolean isValidChar(char c) {
-        return Character.isJavaIdentifierPart(c);
     }
 }

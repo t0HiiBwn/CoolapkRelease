@@ -15,7 +15,7 @@ import com.coolapk.market.util.CollectionUtils;
 import com.coolapk.market.util.ViewUtil;
 
 public class ListCardViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558803;
+    public static final int LAYOUT_ID = 2131558810;
     private final DataAdapter adapter;
     private EntityCard card;
     private TitleViewPart viewPart;

@@ -34,7 +34,9 @@ import org.json.JSONObject;
 public final class QQShareActivity extends BaseActivity implements IUiListener {
     public static final Companion Companion = new Companion(null);
     public static final String EXTRA_SHARE_ENTITY = "extra_share_entity";
-    private final Tencent tencent = Tencent.createInstance("100336226", AppHolder.getApplication());
+
+    /* renamed from: tencent  reason: collision with root package name */
+    private final Tencent f196tencent = Tencent.createInstance("100336226", AppHolder.getApplication());
 
     @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\u0005"}, d2 = {"Lcom/coolapk/market/wxapi/QQShareActivity$Companion;", "", "()V", "EXTRA_SHARE_ENTITY", "", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: QQShareActivity.kt */
@@ -65,7 +67,7 @@ public final class QQShareActivity extends BaseActivity implements IUiListener {
         bundle.putString("targetUrl", obtainQQShareInfo.getUrl());
         bundle.putString("imageUrl", obtainQQShareInfo.getLogo());
         bundle.putString("appName", "酷安");
-        this.tencent.shareToQQ(this, bundle, this);
+        this.f196tencent.shareToQQ(this, bundle, this);
     }
 
     /* JADX INFO: Can't fix incorrect switch cases order, some code will duplicate */

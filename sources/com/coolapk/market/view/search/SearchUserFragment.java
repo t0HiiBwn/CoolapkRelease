@@ -36,7 +36,7 @@ public class SearchUserFragment extends SimpleAsyncListFragment<Result<List<Enti
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         setLayoutManager(new LinearLayoutManager(getActivity()));
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558967, 2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558974, 2131231062).create());
         getRecyclerView().getItemAnimator().setChangeDuration(0);
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         if (getUserVisibleHint()) {
@@ -62,7 +62,7 @@ public class SearchUserFragment extends SimpleAsyncListFragment<Result<List<Enti
             } else {
                 z2 = false;
             }
-            setEmptyData(getString(2131886765), 0);
+            setEmptyData(getString(2131886827), 0);
             z3 = z2;
         } else {
             setEmptyData(result.getMessage(), 0);
@@ -81,10 +81,10 @@ public class SearchUserFragment extends SimpleAsyncListFragment<Result<List<Enti
         String entityType = ((Entity) getDataList().get(i)).getEntityType();
         entityType.hashCode();
         if (entityType.equals("holder_title")) {
-            return 2131558954;
+            return 2131558961;
         }
         if (entityType.equals("user")) {
-            return 2131558967;
+            return 2131558974;
         }
         throw new RuntimeException("unknown viewType");
     }
@@ -92,10 +92,10 @@ public class SearchUserFragment extends SimpleAsyncListFragment<Result<List<Enti
     @Override // com.coolapk.market.view.base.asynclist.SimpleAsyncListFragment
     public BindingViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View inflate = LayoutInflater.from(getActivity()).inflate(i, viewGroup, false);
-        if (i == 2131558954) {
+        if (i == 2131558961) {
             return new TitleViewHolder(inflate, null);
         }
-        if (i != 2131558967) {
+        if (i != 2131558974) {
             return null;
         }
         return new UserViewHolder(inflate, getComponent(), new ItemActionHandler() {
@@ -104,9 +104,9 @@ public class SearchUserFragment extends SimpleAsyncListFragment<Result<List<Enti
             @Override // com.coolapk.market.viewholder.ItemActionHandler
             public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                 super.onItemClick(viewHolder, view);
-                if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition()) && view.getId() == 2131362200) {
+                if (!UiUtils.isInvalidPosition(viewHolder.getAdapterPosition()) && view.getId() == 2131362205) {
                     User user = (User) SearchUserFragment.this.getDataList().get(viewHolder.getAdapterPosition());
-                    ActionManager.startUserSpaceActivity(viewHolder.itemView.findViewById(2131362672), user.getUid(), user.getUserAvatar());
+                    ActionManager.startUserSpaceActivity(viewHolder.itemView.findViewById(2131362683), user.getUid(), user.getUserAvatar());
                 }
             }
         });

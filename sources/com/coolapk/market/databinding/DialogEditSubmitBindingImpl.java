@@ -28,9 +28,9 @@ public class DialogEditSubmitBindingImpl extends DialogEditSubmitBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363582, 5);
-        sparseIntArray.put(2131362441, 6);
-        sparseIntArray.put(2131362470, 7);
+        sparseIntArray.put(2131363604, 5);
+        sparseIntArray.put(2131362448, 6);
+        sparseIntArray.put(2131362478, 7);
     }
 
     public DialogEditSubmitBindingImpl(DataBindingComponent dataBindingComponent, View view) {

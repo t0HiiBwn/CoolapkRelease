@@ -30,7 +30,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ImageAppViewHolder.kt */
 public final class ImageAppViewHolder extends StateViewHolder implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558786;
+    public static final int LAYOUT_ID = 2131558793;
     private final ItemImageAppCardBinding binding;
     private EntityCard card;
     private EntityItemModel model;

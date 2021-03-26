@@ -23,9 +23,7 @@ public class UserTrackMethodJniBridge {
     private static Class i;
     private static Constructor j;
     private static Method k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private static Method f1196l;
+    private static Method l;
     private static Method m;
     private static Method n;
     private static final char[] o = "0123456789abcdef".toCharArray();
@@ -81,7 +79,7 @@ public class UserTrackMethodJniBridge {
                     Map map = (Map) k.invoke(newInstance, new Object[0]);
                     if (map != null) {
                         if (map.size() != 0) {
-                            Object invoke = f1196l.invoke(h, new Object[0]);
+                            Object invoke = l.invoke(h, new Object[0]);
                             if (invoke != null) {
                                 Object invoke2 = m.invoke(invoke, new Object[0]);
                                 if (invoke2 != null) {
@@ -156,7 +154,7 @@ public class UserTrackMethodJniBridge {
                         i = Class.forName("com.ut.mini.UTTracker");
                         j = g.getConstructor(String.class, Integer.TYPE, String.class, String.class, String.class, Map.class);
                         k = g.getMethod("build", new Class[0]);
-                        f1196l = h.getMethod("getInstance", new Class[0]);
+                        l = h.getMethod("getInstance", new Class[0]);
                         m = h.getMethod("getDefaultTracker", new Class[0]);
                         n = i.getMethod("send", Map.class);
                         e = 1;

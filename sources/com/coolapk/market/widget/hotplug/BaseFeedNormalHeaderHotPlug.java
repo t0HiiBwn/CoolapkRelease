@@ -28,7 +28,7 @@ public class BaseFeedNormalHeaderHotPlug extends ViewPartHotPlug<FeedHeaderViewP
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public BaseFeedNormalHeaderHotPlug(DataBindingComponent dataBindingComponent, FrameLayout frameLayout, ViewPartPool viewPartPool) {
-        super(2131558706, viewPartPool, false);
+        super(2131558713, viewPartPool, false);
         Intrinsics.checkNotNullParameter(dataBindingComponent, "component");
         Intrinsics.checkNotNullParameter(frameLayout, "container");
         Intrinsics.checkNotNullParameter(viewPartPool, "viewPartPool");

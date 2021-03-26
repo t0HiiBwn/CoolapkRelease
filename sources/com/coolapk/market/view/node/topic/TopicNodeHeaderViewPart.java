@@ -102,7 +102,7 @@ public final class TopicNodeHeaderViewPart extends BindingViewPart<TopicNodeHead
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public TopicNodeHeaderBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559202, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559210, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…header, viewGroup, false)");
         return (TopicNodeHeaderBinding) inflate;
     }
@@ -209,9 +209,9 @@ public final class TopicNodeHeaderViewPart extends BindingViewPart<TopicNodeHead
         Intrinsics.checkNotNullExpressionValue(textView, "binding.actionView");
         textView.setSelected(followState);
         if (followState) {
-            ((TopicNodeHeaderBinding) getBinding()).actionView.setText(2131887142);
+            ((TopicNodeHeaderBinding) getBinding()).actionView.setText(2131887204);
         } else {
-            ((TopicNodeHeaderBinding) getBinding()).actionView.setText(2131887143);
+            ((TopicNodeHeaderBinding) getBinding()).actionView.setText(2131887205);
         }
         TextView textView2 = ((TopicNodeHeaderBinding) getBinding()).followNumView;
         Intrinsics.checkNotNullExpressionValue(textView2, "binding.followNumView");
@@ -223,9 +223,9 @@ public final class TopicNodeHeaderViewPart extends BindingViewPart<TopicNodeHead
         Intrinsics.checkNotNullParameter(view, "v");
         super.onClick(view);
         int id = view.getId();
-        if (id == 2131361981) {
+        if (id == 2131361982) {
             this.presenter.followTag(this.viewModel.getFollowState(), !this.viewModel.getFollowState());
-        } else if (id == 2131362961) {
+        } else if (id == 2131362973) {
             Context context = getContext();
             String title = this.viewModel.getModel().getTitle();
             if (title == null) {
@@ -245,9 +245,9 @@ public final class TopicNodeHeaderViewPart extends BindingViewPart<TopicNodeHead
         String str = logo;
         boolean z = false;
         if (str == null || str.length() == 0) {
-            GlideApp.with(this.activity).load((Integer) 2131231617).into(((TopicNodeHeaderBinding) getBinding()).logoView);
+            GlideApp.with(this.activity).load((Integer) 2131231628).into(((TopicNodeHeaderBinding) getBinding()).logoView);
         } else {
-            GlideApp.with(this.activity).load(logo).placeholder(2131231617).diskCacheStrategy(DiskCacheStrategy.DATA).into(((TopicNodeHeaderBinding) getBinding()).logoView);
+            GlideApp.with(this.activity).load(logo).placeholder(2131231628).diskCacheStrategy(DiskCacheStrategy.DATA).into(((TopicNodeHeaderBinding) getBinding()).logoView);
         }
         String cover = topic.getCover();
         String str2 = cover;

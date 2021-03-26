@@ -23,9 +23,7 @@ public final class gi {
     private ConnectivityManager i = null;
     private gs j = null;
     private StringBuilder k = new StringBuilder();
-
-    /* renamed from: l  reason: collision with root package name */
-    private Inner_3dMap_locationOption f1234l = null;
+    private Inner_3dMap_locationOption l = null;
     private gg m = null;
     private final String n = "\"status\":\"0\"";
     private final String o = "</body></html>";
@@ -66,7 +64,7 @@ public final class gi {
             this.a = applicationContext;
             gy.b(applicationContext);
             a(this.a);
-            this.f1234l = new Inner_3dMap_locationOption();
+            this.l = new Inner_3dMap_locationOption();
             if (this.e == null) {
                 go goVar = new go(this.a, (WifiManager) gy.a(this.a, "wifi"));
                 this.e = goVar;
@@ -151,7 +149,7 @@ public final class gi {
                 if (this.j == null) {
                     this.j = new gs();
                 }
-                this.j.a(this.a, this.f1234l.isNeedAddress(), this.f1234l.isOffset(), this.f, this.e, this.i, this.c);
+                this.j.a(this.a, this.l.isNeedAddress(), this.l.isOffset(), this.f, this.e, this.i, this.c);
                 gj gjVar = new gj();
                 byte[] bArr = null;
                 try {
@@ -325,18 +323,18 @@ public final class gi {
     }
 
     public final void a(Inner_3dMap_locationOption inner_3dMap_locationOption) {
-        this.f1234l = inner_3dMap_locationOption;
+        this.l = inner_3dMap_locationOption;
         if (inner_3dMap_locationOption == null) {
-            this.f1234l = new Inner_3dMap_locationOption();
+            this.l = new Inner_3dMap_locationOption();
         }
         try {
             go goVar = this.e;
-            this.f1234l.isWifiActiveScan();
-            goVar.c(this.f1234l.isWifiScan());
+            this.l.isWifiActiveScan();
+            goVar.c(this.l.isWifiScan());
         } catch (Throwable unused) {
         }
         try {
-            this.h.a(this.f1234l.getHttpTimeOut(), this.f1234l.getLocationProtocol().equals(Inner_3dMap_locationOption.Inner_3dMap_Enum_LocationProtocol.HTTPS));
+            this.h.a(this.l.getHttpTimeOut(), this.l.getLocationProtocol().equals(Inner_3dMap_locationOption.Inner_3dMap_Enum_LocationProtocol.HTTPS));
         } catch (Throwable unused2) {
         }
     }

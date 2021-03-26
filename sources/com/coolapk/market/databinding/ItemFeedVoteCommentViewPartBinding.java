@@ -44,7 +44,7 @@ public abstract class ItemFeedVoteCommentViewPartBinding extends ViewDataBinding
 
     @Deprecated
     public static ItemFeedVoteCommentViewPartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedVoteCommentViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558739, viewGroup, z, obj);
+        return (ItemFeedVoteCommentViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558746, viewGroup, z, obj);
     }
 
     public static ItemFeedVoteCommentViewPartBinding inflate(LayoutInflater layoutInflater) {
@@ -53,7 +53,7 @@ public abstract class ItemFeedVoteCommentViewPartBinding extends ViewDataBinding
 
     @Deprecated
     public static ItemFeedVoteCommentViewPartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedVoteCommentViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558739, null, false, obj);
+        return (ItemFeedVoteCommentViewPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558746, null, false, obj);
     }
 
     public static ItemFeedVoteCommentViewPartBinding bind(View view) {
@@ -62,6 +62,6 @@ public abstract class ItemFeedVoteCommentViewPartBinding extends ViewDataBinding
 
     @Deprecated
     public static ItemFeedVoteCommentViewPartBinding bind(View view, Object obj) {
-        return (ItemFeedVoteCommentViewPartBinding) bind(obj, view, 2131558739);
+        return (ItemFeedVoteCommentViewPartBinding) bind(obj, view, 2131558746);
     }
 }

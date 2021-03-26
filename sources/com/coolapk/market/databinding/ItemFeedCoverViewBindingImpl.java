@@ -34,15 +34,15 @@ public class ItemFeedCoverViewBindingImpl extends ItemFeedCoverViewBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 7);
-        sparseIntArray.put(2131363209, 8);
-        sparseIntArray.put(2131362417, 9);
-        sparseIntArray.put(2131363582, 10);
-        sparseIntArray.put(2131363016, 11);
-        sparseIntArray.put(2131363533, 12);
-        sparseIntArray.put(2131363198, 13);
-        sparseIntArray.put(2131363229, 14);
-        sparseIntArray.put(2131362665, 15);
+        sparseIntArray.put(2131362657, 7);
+        sparseIntArray.put(2131363223, 8);
+        sparseIntArray.put(2131362423, 9);
+        sparseIntArray.put(2131363604, 10);
+        sparseIntArray.put(2131363030, 11);
+        sparseIntArray.put(2131363551, 12);
+        sparseIntArray.put(2131363212, 13);
+        sparseIntArray.put(2131363243, 14);
+        sparseIntArray.put(2131362676, 15);
     }
 
     public ItemFeedCoverViewBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -85,9 +85,9 @@ public class ItemFeedCoverViewBindingImpl extends ItemFeedCoverViewBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
-        } else if (157 == i) {
+        } else if (158 == i) {
             setImageUrl((String) obj);
         } else if (50 != i) {
             return false;
@@ -103,7 +103,7 @@ public class ItemFeedCoverViewBindingImpl extends ItemFeedCoverViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -113,7 +113,7 @@ public class ItemFeedCoverViewBindingImpl extends ItemFeedCoverViewBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(157);
+        notifyPropertyChanged(158);
         super.requestRebind();
     }
 
@@ -174,7 +174,7 @@ public class ItemFeedCoverViewBindingImpl extends ItemFeedCoverViewBinding {
         if ((j & 10) != 0) {
             Boolean bool = null;
             i3 = i;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extraImageView, str2, null, 2131231691, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.extraImageView, str2, null, 2131231702, 0, bool, bool, bool, bool, bool, null, null, null, bool, bool, bool, null, bool);
             this.imageCardView.setVisibility(i2);
         } else {
             i3 = i;

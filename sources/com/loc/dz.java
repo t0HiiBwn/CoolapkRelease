@@ -25,9 +25,7 @@ public final class dz {
     private long i = 0;
     private boolean j = false;
     private String k = "2.0.201501131131".replace(".", "");
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1370l = null;
+    private String l = null;
     private String m = null;
     private long n = 0;
 
@@ -270,8 +268,8 @@ public final class dz {
             return null;
         }
         JSONObject jSONObject = new JSONObject();
-        if (this.f1370l == null) {
-            this.f1370l = dy.a("MD5", k.c(context));
+        if (this.l == null) {
+            this.l = dy.a("MD5", k.c(context));
         }
         if (str.contains("&")) {
             str = str.substring(0, str.indexOf("&"));
@@ -285,7 +283,7 @@ public final class dz {
             jSONObject.put("mmac", split[0].contains("#") ? split[0].substring(split[0].lastIndexOf("#") + 1) : split[0]);
         }
         try {
-            return o.b(dy.a(jSONObject.toString().getBytes("UTF-8"), this.f1370l));
+            return o.b(dy.a(jSONObject.toString().getBytes("UTF-8"), this.l));
         } catch (Throwable unused) {
             return null;
         }
@@ -325,9 +323,9 @@ public final class dz {
                         cursor = openOrCreateDatabase.query("hist" + this.k, new String[]{"feature", " nb", "loc"}, sb3.toString(), null, null, null, "time ASC", null);
                         try {
                             StringBuilder sb5 = new StringBuilder();
-                            if (this.f1370l == null) {
+                            if (this.l == null) {
                                 try {
-                                    this.f1370l = dy.a("MD5", k.c(context));
+                                    this.l = dy.a("MD5", k.c(context));
                                 } catch (Throwable th2) {
                                     th = th2;
                                 }
@@ -357,23 +355,23 @@ public final class dz {
                                         if (ep.a(jSONObject, "type")) {
                                         }
                                     } else {
-                                        JSONObject jSONObject3 = new JSONObject(new String(dy.b(o.b(cursor.getString(i2)), this.f1370l), "UTF-8"));
+                                        JSONObject jSONObject3 = new JSONObject(new String(dy.b(o.b(cursor.getString(i2)), this.l), "UTF-8"));
                                         sb5.delete(0, sb5.length());
                                         if (!TextUtils.isEmpty(cursor.getString(1))) {
-                                            str3 = new String(dy.b(o.b(cursor.getString(1)), this.f1370l), "UTF-8");
+                                            str3 = new String(dy.b(o.b(cursor.getString(1)), this.l), "UTF-8");
                                         } else {
                                             if (ep.a(jSONObject3, "mmac")) {
                                                 sb5.append("#");
                                                 sb5.append(jSONObject3.getString("mmac"));
                                             }
-                                            jSONObject = new JSONObject(new String(dy.b(o.b(cursor.getString(2)), this.f1370l), "UTF-8"));
+                                            jSONObject = new JSONObject(new String(dy.b(o.b(cursor.getString(2)), this.l), "UTF-8"));
                                             if (ep.a(jSONObject, "type")) {
                                                 jSONObject.put("type", "new");
                                             }
                                             jSONObject2 = jSONObject3;
                                         }
                                         sb5.append(str3);
-                                        jSONObject = new JSONObject(new String(dy.b(o.b(cursor.getString(2)), this.f1370l), "UTF-8"));
+                                        jSONObject = new JSONObject(new String(dy.b(o.b(cursor.getString(2)), this.l), "UTF-8"));
                                         if (ep.a(jSONObject, "type")) {
                                         }
                                         jSONObject2 = jSONObject3;
@@ -476,8 +474,8 @@ public final class dz {
 
     private void a(String str, AMapLocation aMapLocation, StringBuilder sb, Context context) throws Exception {
         if (context != null) {
-            if (this.f1370l == null) {
-                this.f1370l = dy.a("MD5", k.c(context));
+            if (this.l == null) {
+                this.l = dy.a("MD5", k.c(context));
             }
             String a2 = a(str, sb, context);
             StringBuilder sb2 = new StringBuilder();
@@ -493,8 +491,8 @@ public final class dz {
                 sb2.append("hist");
                 sb2.append(this.k);
                 sb2.append(" VALUES (?, ?, ?, ?)");
-                byte[] a3 = dy.a(sb.toString().getBytes("UTF-8"), this.f1370l);
-                Object[] objArr = {a2, a3, dy.a(aMapLocation.toStr().getBytes("UTF-8"), this.f1370l), Long.valueOf(aMapLocation.getTime())};
+                byte[] a3 = dy.a(sb.toString().getBytes("UTF-8"), this.l);
+                Object[] objArr = {a2, a3, dy.a(aMapLocation.toStr().getBytes("UTF-8"), this.l), Long.valueOf(aMapLocation.getTime())};
                 for (int i2 = 1; i2 < 3; i2++) {
                     objArr[i2] = o.b((byte[]) objArr[i2]);
                 }

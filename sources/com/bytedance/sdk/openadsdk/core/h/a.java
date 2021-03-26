@@ -17,9 +17,7 @@ public class a {
     public int i = 2;
     public int j = 1;
     public int k = 3;
-
-    /* renamed from: l  reason: collision with root package name */
-    public int f1311l = -1;
+    public int l = -1;
     public int m = -1;
     public int n = -1;
     public int o = 2;
@@ -98,7 +96,7 @@ public class a {
     }
 
     public a l(int i2) {
-        this.f1311l = i2;
+        this.l = i2;
         return this;
     }
 

@@ -41,26 +41,19 @@ public class ValidatingObjectInputStream extends ObjectInputStream {
         }
     }
 
-    protected void invalidClassNameFound(String str) throws InvalidClassException {
-        throw new InvalidClassException("Class name not accepted: " + str);
+    public ValidatingObjectInputStream accept(Pattern pattern) {
+        this.acceptMatchers.add(new RegexpClassNameMatcher(pattern));
+        return this;
     }
 
-    @Override // java.io.ObjectInputStream
-    protected Class<?> resolveClass(ObjectStreamClass objectStreamClass) throws IOException, ClassNotFoundException {
-        validateClassName(objectStreamClass.getName());
-        return super.resolveClass(objectStreamClass);
+    public ValidatingObjectInputStream accept(ClassNameMatcher classNameMatcher) {
+        this.acceptMatchers.add(classNameMatcher);
+        return this;
     }
 
     public ValidatingObjectInputStream accept(Class<?>... clsArr) {
         for (Class<?> cls : clsArr) {
             this.acceptMatchers.add(new FullClassNameMatcher(cls.getName()));
-        }
-        return this;
-    }
-
-    public ValidatingObjectInputStream reject(Class<?>... clsArr) {
-        for (Class<?> cls : clsArr) {
-            this.rejectMatchers.add(new FullClassNameMatcher(cls.getName()));
         }
         return this;
     }
@@ -72,16 +65,8 @@ public class ValidatingObjectInputStream extends ObjectInputStream {
         return this;
     }
 
-    public ValidatingObjectInputStream reject(String... strArr) {
-        for (String str : strArr) {
-            this.rejectMatchers.add(new WildcardClassNameMatcher(str));
-        }
-        return this;
-    }
-
-    public ValidatingObjectInputStream accept(Pattern pattern) {
-        this.acceptMatchers.add(new RegexpClassNameMatcher(pattern));
-        return this;
+    protected void invalidClassNameFound(String str) throws InvalidClassException {
+        throw new InvalidClassException("Class name not accepted: " + str);
     }
 
     public ValidatingObjectInputStream reject(Pattern pattern) {
@@ -89,13 +74,28 @@ public class ValidatingObjectInputStream extends ObjectInputStream {
         return this;
     }
 
-    public ValidatingObjectInputStream accept(ClassNameMatcher classNameMatcher) {
-        this.acceptMatchers.add(classNameMatcher);
-        return this;
-    }
-
     public ValidatingObjectInputStream reject(ClassNameMatcher classNameMatcher) {
         this.rejectMatchers.add(classNameMatcher);
         return this;
+    }
+
+    public ValidatingObjectInputStream reject(Class<?>... clsArr) {
+        for (Class<?> cls : clsArr) {
+            this.rejectMatchers.add(new FullClassNameMatcher(cls.getName()));
+        }
+        return this;
+    }
+
+    public ValidatingObjectInputStream reject(String... strArr) {
+        for (String str : strArr) {
+            this.rejectMatchers.add(new WildcardClassNameMatcher(str));
+        }
+        return this;
+    }
+
+    @Override // java.io.ObjectInputStream
+    protected Class<?> resolveClass(ObjectStreamClass objectStreamClass) throws IOException, ClassNotFoundException {
+        validateClassName(objectStreamClass.getName());
+        return super.resolveClass(objectStreamClass);
     }
 }

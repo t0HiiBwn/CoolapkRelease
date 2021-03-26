@@ -11,7 +11,7 @@ final class WXEntryActivity$loadBitmapAndShare$1<T, R> implements Func1<Long, by
     WXEntryActivity$loadBitmapAndShare$1() {
     }
 
-    public final byte[] call(Long l2) {
+    public final byte[] call(Long l) {
         return null;
     }
 }

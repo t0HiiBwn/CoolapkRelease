@@ -25,10 +25,10 @@ public class ItemPickServiceAppBindingImpl extends ItemPickServiceAppBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362652, 3);
-        sparseIntArray.put(2131362061, 4);
-        sparseIntArray.put(2131362905, 5);
-        sparseIntArray.put(2131362072, 6);
+        sparseIntArray.put(2131362660, 3);
+        sparseIntArray.put(2131362063, 4);
+        sparseIntArray.put(2131362917, 5);
+        sparseIntArray.put(2131362074, 6);
     }
 
     public ItemPickServiceAppBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -103,7 +103,7 @@ public class ItemPickServiceAppBindingImpl extends ItemPickServiceAppBinding {
         }
         if (i != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231363, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str, null, 2131231374, 0, bool, bool, bool, true, bool, null, null, null, true, bool, bool, null, bool);
             TextViewBindingAdapter.setText(this.titleView, str2);
         }
     }

@@ -38,7 +38,7 @@ final class NodePickDataListFragment$onActivityCreated$2 extends Lambda implemen
                 Intrinsics.checkNotNullParameter(viewHolder, "holder");
                 Intrinsics.checkNotNullParameter(view, "view");
                 super.onItemClick(viewHolder, view);
-                Object tag = view.getTag(2131362753);
+                Object tag = view.getTag(2131362764);
                 Objects.requireNonNull(tag, "null cannot be cast to non-null type com.coolapk.market.model.ServiceApp");
                 this.this$0.this$0.pickAndFinish((ServiceApp) tag);
             }

@@ -1,59 +1,56 @@
 package com.xiaomi.push;
 
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
+import android.content.ComponentName;
 import android.content.Context;
-import android.text.TextUtils;
-import com.xiaomi.channel.commonutils.logger.b;
-import java.util.HashMap;
+import android.os.SystemClock;
+import com.xiaomi.a.a.a.c;
+import com.xiaomi.push.dw;
+import com.xiaomi.push.service.XMJobService;
 
-public class dy {
-    public static void a(Context context, String str, int i, String str2) {
-        ai.a(context).a(new dz(context, str, i, str2));
+public class dy implements dw.a {
+    Context a;
+    JobScheduler b;
+    private boolean c = false;
+
+    dy(Context context) {
+        this.a = context;
+        this.b = (JobScheduler) context.getSystemService("jobscheduler");
     }
 
-    private static void a(Context context, HashMap<String, String> hashMap) {
-        eg a = ec.a(context).m289a();
-        if (a != null) {
-            a.a(context, hashMap);
-        }
+    @Override // com.xiaomi.push.dw.a
+    public void a() {
+        this.c = false;
+        this.b.cancel(1);
     }
 
-    private static void b(Context context, HashMap<String, String> hashMap) {
-        eg a = ec.a(context).m289a();
-        if (a != null) {
-            a.c(context, hashMap);
-        }
+    void a(long j) {
+        JobInfo.Builder builder = new JobInfo.Builder(1, new ComponentName(this.a.getPackageName(), XMJobService.class.getName()));
+        builder.setMinimumLatency(j);
+        builder.setOverrideDeadline(j);
+        builder.setRequiredNetworkType(1);
+        builder.setPersisted(false);
+        JobInfo build = builder.build();
+        c.c("schedule Job = " + build.getId() + " in " + j);
+        this.b.schedule(builder.build());
     }
 
-    /* access modifiers changed from: private */
-    public static void c(Context context, String str, int i, String str2) {
-        if (context != null && !TextUtils.isEmpty(str)) {
-            try {
-                HashMap hashMap = new HashMap();
-                hashMap.put("awake_info", str);
-                hashMap.put("event_type", String.valueOf(i));
-                hashMap.put("description", str2);
-                int a = ec.a(context).a();
-                if (a != 1) {
-                    if (a != 2) {
-                        if (a == 3) {
-                            a(context, hashMap);
-                        }
-                    }
-                    c(context, hashMap);
-                } else {
-                    a(context, hashMap);
-                }
-                b(context, hashMap);
-            } catch (Exception e) {
-                b.a(e);
+    @Override // com.xiaomi.push.dw.a
+    public void a(boolean z) {
+        if (z || this.c) {
+            long c2 = (long) es.c();
+            if (z) {
+                a();
+                c2 -= SystemClock.elapsedRealtime() % c2;
             }
+            this.c = true;
+            a(c2);
         }
     }
 
-    private static void c(Context context, HashMap<String, String> hashMap) {
-        eg a = ec.a(context).m289a();
-        if (a != null) {
-            a.b(context, hashMap);
-        }
+    @Override // com.xiaomi.push.dw.a
+    public boolean b() {
+        return this.c;
     }
 }

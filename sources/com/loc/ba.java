@@ -36,13 +36,13 @@ public class ba {
             if (i == 1) {
                 try {
                     synchronized (ba.class) {
-                        String l2 = Long.toString(System.currentTimeMillis());
+                        String l = Long.toString(System.currentTimeMillis());
                         ax a2 = bd.a(ba.e);
                         bd.a(this.b, a2, z.i, ba.a, 2097152, "6");
                         if (a2.e == null) {
                             a2.e = new aj(new al(new an(new al())));
                         }
-                        ay.a(l2, this.c.a(), a2);
+                        ay.a(l, this.c.a(), a2);
                     }
                 } catch (Throwable th) {
                     ab.b(th, "ofm", "aple");

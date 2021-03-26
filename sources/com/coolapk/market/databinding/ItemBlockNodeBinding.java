@@ -41,7 +41,7 @@ public abstract class ItemBlockNodeBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBlockNodeBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemBlockNodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558626, viewGroup, z, obj);
+        return (ItemBlockNodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558631, viewGroup, z, obj);
     }
 
     public static ItemBlockNodeBinding inflate(LayoutInflater layoutInflater) {
@@ -50,7 +50,7 @@ public abstract class ItemBlockNodeBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBlockNodeBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemBlockNodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558626, null, false, obj);
+        return (ItemBlockNodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558631, null, false, obj);
     }
 
     public static ItemBlockNodeBinding bind(View view) {
@@ -59,6 +59,6 @@ public abstract class ItemBlockNodeBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemBlockNodeBinding bind(View view, Object obj) {
-        return (ItemBlockNodeBinding) bind(obj, view, 2131558626);
+        return (ItemBlockNodeBinding) bind(obj, view, 2131558631);
     }
 }

@@ -114,7 +114,7 @@ public class PhotoPickerActivity extends BaseActivity {
     @Override // com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.mBinding = (PhotoPickerBinding) DataBindingUtil.setContentView(this, 2131559080);
+        this.mBinding = (PhotoPickerBinding) DataBindingUtil.setContentView(this, 2131559087);
         this.mComponent = new ContextBindingComponent(this);
         this.mInflater = LayoutInflater.from(getActivity());
         this.inMessage = getIntent().getBooleanExtra("action_message", false);
@@ -125,14 +125,14 @@ public class PhotoPickerActivity extends BaseActivity {
             @Override // androidx.appcompat.widget.Toolbar.OnMenuItemClickListener
             public boolean onMenuItemClick(MenuItem menuItem) {
                 int itemId = menuItem.getItemId();
-                if (itemId != 2131361885) {
-                    if (itemId == 2131361943) {
+                if (itemId != 2131361886) {
+                    if (itemId == 2131361944) {
                         PhotoPickerActivity.this.setPickResultAndFinishActivity();
-                    } else if (itemId == 2131361945 && !PhotoPickerActivity.this.mPickedPhotoPath.isEmpty()) {
+                    } else if (itemId == 2131361946 && !PhotoPickerActivity.this.mPickedPhotoPath.isEmpty()) {
                         ActionManager.startPhotoViewActivity(PhotoPickerActivity.this.getActivity(), (String[]) PhotoPickerActivity.this.mPickedPhotoPath.toArray(new String[PhotoPickerActivity.this.mPickedPhotoPath.size()]), (String[]) null, 0);
                     }
                 } else if (PhotoPickerActivity.this.mPickedPhotoPath.size() == 0 && PhotoPickerActivity.this.maxPickCount == 1) {
-                    Toast.show(PhotoPickerActivity.this.getActivity(), 2131886924);
+                    Toast.show(PhotoPickerActivity.this.getActivity(), 2131886986);
                 } else {
                     PhotoPickerActivity.this.setPickResultAndFinishActivity();
                 }
@@ -254,7 +254,7 @@ public class PhotoPickerActivity extends BaseActivity {
             TransitionManager.beginDelayedTransition(this.mBinding.directoryView, new Slide());
             this.mBinding.directoryView.setBackgroundColor(855638016);
             this.mBinding.listView.setVisibility(0);
-            this.mBinding.listView.setDivider(ResourceUtils.getDrawable(getActivity(), 2131231052));
+            this.mBinding.listView.setDivider(ResourceUtils.getDrawable(getActivity(), 2131231062));
             this.mBinding.textView.setTextColor(AppHolder.getAppTheme().getTextColorPrimary());
             this.mBinding.imageView.setImageTintList(ColorStateList.valueOf(AppHolder.getAppTheme().getTextColorPrimary()));
             this.mBinding.externalImage.setImageTintList(ColorStateList.valueOf(AppHolder.getAppTheme().getTextColorPrimary()));
@@ -320,7 +320,7 @@ public class PhotoPickerActivity extends BaseActivity {
     }
 
     private void updateTitle() {
-        setTitle(getString(2131886926, new Object[]{String.format(Locale.getDefault(), "(%d/%d)", Integer.valueOf(this.mPickedPhotoPath.size()), Integer.valueOf(this.maxPickCount))}));
+        setTitle(getString(2131886988, new Object[]{String.format(Locale.getDefault(), "(%d/%d)", Integer.valueOf(this.mPickedPhotoPath.size()), Integer.valueOf(this.maxPickCount))}));
     }
 
     @Override // android.app.Activity
@@ -354,7 +354,7 @@ public class PhotoPickerActivity extends BaseActivity {
             updateTitle();
             return false;
         } else if (PhotoGalleryUtils.checkImgCorrupted(str)) {
-            Toast.show(getActivity(), 2131886631);
+            Toast.show(getActivity(), 2131886693);
             return false;
         } else if (str.endsWith(".gif") && new File(str).length() > 20971520) {
             Toast.show(getActivity(), "抱歉，图片大小不能大于20M");
@@ -381,20 +381,20 @@ public class PhotoPickerActivity extends BaseActivity {
             }
             return true;
         } else {
-            Toast.show(getActivity(), getString(2131886925, new Object[]{Integer.valueOf(this.maxPickCount)}));
+            Toast.show(getActivity(), getString(2131886987, new Object[]{Integer.valueOf(this.maxPickCount)}));
             return false;
         }
     }
 
     private void setPreviewMenuVisible() {
-        MenuItem findItem = this.mBinding.toolbar.getMenu().findItem(2131361945);
+        MenuItem findItem = this.mBinding.toolbar.getMenu().findItem(2131361946);
         if (findItem != null) {
             findItem.setVisible(!this.mPickedPhotoPath.isEmpty());
         }
     }
 
     private void setPostMenuVisible() {
-        MenuItem findItem = this.mBinding.toolbar.getMenu().findItem(2131361943);
+        MenuItem findItem = this.mBinding.toolbar.getMenu().findItem(2131361944);
         if (findItem != null) {
             findItem.setVisible(!this.mPickedPhotoPath.isEmpty() && this.inMessage);
             if (this.inMessage) {
@@ -403,7 +403,7 @@ public class PhotoPickerActivity extends BaseActivity {
                 findItem.setTitle("发布");
             }
         }
-        MenuItem findItem2 = this.mBinding.toolbar.getMenu().findItem(2131361885);
+        MenuItem findItem2 = this.mBinding.toolbar.getMenu().findItem(2131361886);
         if (findItem2 != null) {
             findItem2.setVisible(true ^ this.inMessage);
         }
@@ -481,7 +481,7 @@ public class PhotoPickerActivity extends BaseActivity {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public int getItemViewType(int i) {
-            return 2131558851;
+            return 2131558858;
         }
 
         private PhotoPickerAdapter() {
@@ -506,7 +506,7 @@ public class PhotoPickerActivity extends BaseActivity {
 
         @Override // androidx.recyclerview.widget.RecyclerView.Adapter
         public PhotoViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-            View inflate = PhotoPickerActivity.this.mInflater.inflate(2131558851, viewGroup, false);
+            View inflate = PhotoPickerActivity.this.mInflater.inflate(2131558858, viewGroup, false);
             PhotoPickerActivity photoPickerActivity = PhotoPickerActivity.this;
             return new PhotoViewHolder(inflate, photoPickerActivity.mComponent, new ItemActionHandler() {
                 /* class com.coolapk.market.view.photo.PhotoPickerActivity.PhotoPickerAdapter.AnonymousClass1 */
@@ -515,7 +515,7 @@ public class PhotoPickerActivity extends BaseActivity {
                 public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
                     int adapterPosition;
                     super.onItemClick(viewHolder, view);
-                    if (view.getId() == 2131363139 && (adapterPosition = viewHolder.getAdapterPosition()) >= 0) {
+                    if (view.getId() == 2131363153 && (adapterPosition = viewHolder.getAdapterPosition()) >= 0) {
                         List list = PhotoPickerAdapter.this.dataList;
                         if (list.size() > 1024) {
                             list = PhotoPickerAdapter.this.dataList.subList(adapterPosition > 512 ? adapterPosition - 512 : 0, (list.size() + -1) - adapterPosition > 512 ? adapterPosition + 512 : list.size());
@@ -553,7 +553,7 @@ public class PhotoPickerActivity extends BaseActivity {
     }
 
     private class PhotoViewHolder extends BindingViewHolder {
-        public static final int LAYOUT_ID = 2131558851;
+        public static final int LAYOUT_ID = 2131558858;
         private Photo photo;
 
         public PhotoViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -580,7 +580,7 @@ public class PhotoPickerActivity extends BaseActivity {
             boolean onImagePick;
             super.onClick(view);
             int id = view.getId();
-            if (id == 2131362200 || id == 2131362222) {
+            if (id == 2131362205 || id == 2131362227) {
                 ItemPhotoPickerBinding itemPhotoPickerBinding = (ItemPhotoPickerBinding) getBinding();
                 Photo photo2 = this.photo;
                 if (photo2 != null && itemPhotoPickerBinding.getSelected().booleanValue() != (onImagePick = PhotoPickerActivity.this.onImagePick(photo2.getPath()))) {
@@ -623,7 +623,7 @@ public class PhotoPickerActivity extends BaseActivity {
                     e.printStackTrace();
                 }
                 if (itemPhotoDirectoryBinding == null) {
-                    itemPhotoDirectoryBinding = (ItemPhotoDirectoryBinding) DataBindingUtil.inflate(PhotoPickerActivity.this.mInflater, 2131558850, viewGroup, false, PhotoPickerActivity.this.mComponent);
+                    itemPhotoDirectoryBinding = (ItemPhotoDirectoryBinding) DataBindingUtil.inflate(PhotoPickerActivity.this.mInflater, 2131558857, viewGroup, false, PhotoPickerActivity.this.mComponent);
                 }
                 PhotoDirectory photoDirectory = (PhotoDirectory) getItem(i);
                 itemPhotoDirectoryBinding.setPath(photoDirectory.getCoverPath() != null ? "" : CoolFileUtils.wrap(photoDirectory.getCoverPath()));

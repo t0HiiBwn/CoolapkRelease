@@ -9,7 +9,7 @@ import com.coolapk.market.viewholder.BindingViewHolder;
 import java.util.ArrayList;
 
 public class AppDetailViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558590;
+    public static final int LAYOUT_ID = 2131558594;
     private AppDetailViewModel viewModel;
 
     public AppDetailViewHolder(View view, AppDetailViewModel appDetailViewModel) {
@@ -31,10 +31,10 @@ public class AppDetailViewHolder extends BindingViewHolder {
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         int id = view.getId();
-        if (id == 2131362387) {
+        if (id == 2131362393) {
             ActionManager.startDeveloperAppsActivity(getContext(), this.viewModel.getServiceApp().getDeveloperName());
-        } else if (id != 2131363089) {
-            if (id == 2131363905) {
+        } else if (id != 2131363103) {
+            if (id == 2131363928) {
                 ActionManager.startHistoryVersionActivity(getContext(), this.viewModel.getServiceApp().getAppName(), this.viewModel.getServiceApp().getApkId(), this.viewModel.getServiceApp().getLogo());
             }
         } else if (!CollectionUtils.isEmpty(this.viewModel.getServiceApp().getPermissions())) {

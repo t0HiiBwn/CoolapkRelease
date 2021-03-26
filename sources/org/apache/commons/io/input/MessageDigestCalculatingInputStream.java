@@ -27,18 +27,18 @@ public class MessageDigestCalculatingInputStream extends ObservableInputStream {
         }
     }
 
-    public MessageDigestCalculatingInputStream(InputStream inputStream, MessageDigest messageDigest2) {
-        super(inputStream);
-        this.messageDigest = messageDigest2;
-        add(new MessageDigestMaintainingObserver(messageDigest2));
+    public MessageDigestCalculatingInputStream(InputStream inputStream) throws NoSuchAlgorithmException {
+        this(inputStream, MessageDigest.getInstance("MD5"));
     }
 
     public MessageDigestCalculatingInputStream(InputStream inputStream, String str) throws NoSuchAlgorithmException {
         this(inputStream, MessageDigest.getInstance(str));
     }
 
-    public MessageDigestCalculatingInputStream(InputStream inputStream) throws NoSuchAlgorithmException {
-        this(inputStream, MessageDigest.getInstance("MD5"));
+    public MessageDigestCalculatingInputStream(InputStream inputStream, MessageDigest messageDigest2) {
+        super(inputStream);
+        this.messageDigest = messageDigest2;
+        add(new MessageDigestMaintainingObserver(messageDigest2));
     }
 
     public MessageDigest getMessageDigest() {

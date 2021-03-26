@@ -121,8 +121,8 @@ public class EnumDeserializer implements ObjectDeserializer {
         }
         this.enumNameHashCodes = new long[hashMap.size()];
         int i5 = 0;
-        for (Long l2 : hashMap.keySet()) {
-            this.enumNameHashCodes[i5] = l2.longValue();
+        for (Long l : hashMap.keySet()) {
+            this.enumNameHashCodes[i5] = l.longValue();
             i5++;
         }
         Arrays.sort(this.enumNameHashCodes);

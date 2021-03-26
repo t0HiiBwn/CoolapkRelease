@@ -16,6 +16,22 @@ public class WindowsLineEndingInputStream extends InputStream {
         this.ensureLineFeedAtEndOfFile = z;
     }
 
+    private int eofGame() {
+        if (!this.ensureLineFeedAtEndOfFile) {
+            return -1;
+        }
+        if (!this.slashNSeen && !this.slashRSeen) {
+            this.slashRSeen = true;
+            return 13;
+        } else if (this.slashNSeen) {
+            return -1;
+        } else {
+            this.slashRSeen = false;
+            this.slashNSeen = true;
+            return 10;
+        }
+    }
+
     private int readWithUpdate() throws IOException {
         int read = this.target.read();
         boolean z = true;
@@ -30,6 +46,17 @@ public class WindowsLineEndingInputStream extends InputStream {
         }
         this.slashNSeen = z;
         return read;
+    }
+
+    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
+    public void close() throws IOException {
+        super.close();
+        this.target.close();
+    }
+
+    @Override // java.io.InputStream
+    public synchronized void mark(int i) {
+        throw new UnsupportedOperationException("Mark not supported");
     }
 
     @Override // java.io.InputStream
@@ -51,33 +78,5 @@ public class WindowsLineEndingInputStream extends InputStream {
         }
         this.injectSlashN = true;
         return 13;
-    }
-
-    private int eofGame() {
-        if (!this.ensureLineFeedAtEndOfFile) {
-            return -1;
-        }
-        boolean z = this.slashNSeen;
-        if (!z && !this.slashRSeen) {
-            this.slashRSeen = true;
-            return 13;
-        } else if (z) {
-            return -1;
-        } else {
-            this.slashRSeen = false;
-            this.slashNSeen = true;
-            return 10;
-        }
-    }
-
-    @Override // java.io.InputStream, java.io.Closeable, java.lang.AutoCloseable
-    public void close() throws IOException {
-        super.close();
-        this.target.close();
-    }
-
-    @Override // java.io.InputStream
-    public synchronized void mark(int i) {
-        throw new UnsupportedOperationException("Mark not supported");
     }
 }

@@ -74,8 +74,8 @@ class MonthAdapter extends BaseAdapter {
         }
         if (this.calendarConstraints.getDateValidator().isValid(item.longValue())) {
             textView.setEnabled(true);
-            for (Long l2 : this.dateSelector.getSelectedDays()) {
-                if (UtcDates.canonicalYearMonthDay(item.longValue()) == UtcDates.canonicalYearMonthDay(l2.longValue())) {
+            for (Long l : this.dateSelector.getSelectedDays()) {
+                if (UtcDates.canonicalYearMonthDay(item.longValue()) == UtcDates.canonicalYearMonthDay(l.longValue())) {
                     this.calendarStyle.selectedDay.styleItem(textView);
                     return textView;
                 }

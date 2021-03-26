@@ -70,7 +70,7 @@ public final class bl {
                 a(byteArrayOutputStream, aVar.i);
                 a(byteArrayOutputStream, aVar.j);
                 a(byteArrayOutputStream, aVar.k);
-                a(byteArrayOutputStream, aVar.f1202l);
+                a(byteArrayOutputStream, aVar.l);
                 a(byteArrayOutputStream, aVar.m);
                 a(byteArrayOutputStream, aVar.n);
                 a(byteArrayOutputStream, aVar.o);
@@ -162,7 +162,7 @@ public final class bl {
         aVar.i = bi.d(context);
         aVar.j = String.valueOf(Build.VERSION.SDK_INT);
         aVar.k = bm.v(context);
-        aVar.f1202l = bm.q(context);
+        aVar.l = bm.q(context);
         StringBuilder sb = new StringBuilder();
         sb.append(bm.p(context));
         aVar.m = sb.toString();
@@ -220,9 +220,7 @@ public final class bl {
         String i;
         String j;
         String k;
-
-        /* renamed from: l  reason: collision with root package name */
-        String f1202l;
+        String l;
         String m;
         String n;
         String o;

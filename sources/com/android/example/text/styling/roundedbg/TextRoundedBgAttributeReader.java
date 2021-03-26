@@ -21,7 +21,7 @@ public final class TextRoundedBgAttributeReader {
 
     public TextRoundedBgAttributeReader(Context context, AttributeSet attributeSet) {
         Intrinsics.checkNotNullParameter(context, "context");
-        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.TextRoundedBgHelper, 0, 2131951954);
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.TextRoundedBgHelper, 0, 2131951955);
         Intrinsics.checkNotNullExpressionValue(obtainStyledAttributes, "context.obtainStyledAttr…undedBgTextView\n        )");
         this.horizontalPadding = obtainStyledAttributes.getDimensionPixelSize(4, 0);
         this.verticalPadding = obtainStyledAttributes.getDimensionPixelSize(5, 0);

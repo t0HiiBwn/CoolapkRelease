@@ -14,7 +14,7 @@ public abstract class MainSecondHandType implements Entity {
 
         public abstract Builder setConfigType(int i);
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         public abstract Builder setDescription(String str);
 
@@ -32,7 +32,7 @@ public abstract class MainSecondHandType implements Entity {
 
         public abstract Builder setId(String str);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLogo(String str);
 

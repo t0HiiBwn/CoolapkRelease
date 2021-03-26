@@ -46,9 +46,7 @@ public class a implements TTNativeAd {
     protected final Context i;
     protected TTAdDislike j;
     protected DownloadStatusController k;
-
-    /* renamed from: l  reason: collision with root package name */
-    protected int f1310l;
+    protected int l;
     protected AdSlot m;
     private AtomicBoolean n = new AtomicBoolean(false);
     private AtomicBoolean o = new AtomicBoolean(false);
@@ -68,7 +66,7 @@ public class a implements TTNativeAd {
         z.a(lVar, "materialMeta不能为null");
         this.h = lVar;
         this.i = context;
-        this.f1310l = i2;
+        this.l = i2;
         this.m = adSlot;
         this.g = new o(context, this, lVar, a(i2));
         this.b = a(lVar);
@@ -131,7 +129,7 @@ public class a implements TTNativeAd {
         if (a()) {
             list3 = a(list2, list3);
         }
-        if (this.o.get() && ((i2 = this.f1310l) == 5 || i2 == 1)) {
+        if (this.o.get() && ((i2 = this.l) == 5 || i2 == 1)) {
             c();
         }
         if (!this.o.get()) {
@@ -430,11 +428,11 @@ public class a implements TTNativeAd {
                 activity2 = this.i;
             }
         }
-        this.j = new b(activity2, this.h, a(this.f1310l));
+        this.j = new b(activity2, this.h, a(this.l));
     }
 
     private void a(boolean z) {
-        c c2 = c.b().a(this.f1310l).c(String.valueOf(aj.d(this.h.aj())));
+        c c2 = c.b().a(this.l).c(String.valueOf(aj.d(this.h.aj())));
         if (z) {
             com.bytedance.sdk.openadsdk.g.a.a().i(c2);
         } else {
@@ -461,7 +459,7 @@ public class a implements TTNativeAd {
         if (lVar2 == null || lVar2.d() != 2) {
             return null;
         }
-        int i2 = this.f1310l;
+        int i2 = this.l;
         if (i2 != 1) {
             if (i2 != 2) {
                 if (i2 != 5) {

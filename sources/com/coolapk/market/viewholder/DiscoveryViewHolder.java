@@ -31,7 +31,7 @@ import kotlin.text.Regex;
 /* compiled from: DiscoveryViewHolder.kt */
 public final class DiscoveryViewHolder extends GenericBindHolder<ItemDiscoveryViewBinding, Feed> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558671;
+    public static final int LAYOUT_ID = 2131558677;
     private Feed feed;
     private final Lazy headerViewPart$delegate;
     private final DiscoveryViewHolder$imageHotPlug$1 imageHotPlug;
@@ -124,7 +124,7 @@ public final class DiscoveryViewHolder extends GenericBindHolder<ItemDiscoveryVi
         Feed feed2 = this.feed;
         if (feed2 != null) {
             switch (view.getId()) {
-                case 2131361876:
+                case 2131361877:
                     if (!FeedUtils.isDiscoveryType(feed2.getFeedType())) {
                         return;
                     }
@@ -143,12 +143,12 @@ public final class DiscoveryViewHolder extends GenericBindHolder<ItemDiscoveryVi
                     sb.append(extraLinkUrl);
                     ActionManager.startExternalMarketByName(context2, sb.toString(), feed2.getExtraInfo(), feed2.getExtraKey());
                     return;
-                case 2131362200:
+                case 2131362205:
                     Context context3 = getContext();
                     Intrinsics.checkNotNullExpressionValue(context3, "context");
                     ActionManagerCompat.startActivityByUrl$default(context3, FeedUriAction.Companion.buildUrl(feed2), null, null, 12, null);
                     return;
-                case 2131362595:
+                case 2131362603:
                     CharSequence text = ((TextView) view).getText();
                     if (text instanceof SpannableString) {
                         URLSpan[] uRLSpanArr = (URLSpan[]) ((SpannableString) text).getSpans(0, text.length(), URLSpan.class);
@@ -160,13 +160,13 @@ public final class DiscoveryViewHolder extends GenericBindHolder<ItemDiscoveryVi
                         return;
                     }
                     return;
-                case 2131362707:
+                case 2131362718:
                     ActionManager.startPhotoViewActivity(view, feed2.getPic(), feed2.getMiddleSizePic());
                     return;
-                case 2131362970:
+                case 2131362982:
                     showItemDialog();
                     return;
-                case 2131363877:
+                case 2131363900:
                     ActionManager.startUserSpaceActivity(view, feed2.getUid(), feed2.getUserAvatar());
                     return;
                 default:

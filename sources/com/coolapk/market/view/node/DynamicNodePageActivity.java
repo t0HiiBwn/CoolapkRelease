@@ -147,7 +147,7 @@ public final class DynamicNodePageActivity extends BaseNodePageActivity {
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
         int itemId = menuItem.getItemId();
-        if (itemId == 16908332 || itemId == 2131362659) {
+        if (itemId == 16908332 || itemId == 2131362670) {
             supportFinishAfterTransition();
         }
         return super.onOptionsItemSelected(menuItem);

@@ -1,20 +1,20 @@
 package com.xiaomi.mipush.sdk;
 
 import android.content.Context;
-import com.xiaomi.push.hc;
-import com.xiaomi.push.hm;
-import com.xiaomi.push.hp;
-import com.xiaomi.push.ib;
-import com.xiaomi.push.service.aq;
+import com.xiaomi.push.gi;
+import com.xiaomi.push.gs;
+import com.xiaomi.push.gv;
+import com.xiaomi.push.hi;
+import com.xiaomi.push.service.o;
 
 public class MiPushClient4VR {
     public static void uploadData(Context context, String str) {
-        ib ibVar = new ib();
-        ibVar.c(hm.VRUpload.f576a);
-        ibVar.b(b.m75a(context).m76a());
-        ibVar.d(context.getPackageName());
-        ibVar.a("data", str);
-        ibVar.a(aq.a());
-        ak.a(context).a((ak) ibVar, hc.Notification, (hp) null);
+        hi hiVar = new hi();
+        hiVar.c(gs.VRUpload.S);
+        hiVar.b(b.m54a(context).m55a());
+        hiVar.d(context.getPackageName());
+        hiVar.a("data", str);
+        hiVar.a(o.a());
+        aq.a(context).a((aq) hiVar, gi.Notification, (gv) null);
     }
 }

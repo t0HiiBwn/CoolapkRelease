@@ -20,6 +20,6 @@ public class UserPictureListActivity extends AlphaToolbarActivity {
     @Override // com.coolapk.market.view.base.AlphaToolbarActivity
     protected void onFragmentCreated(Fragment fragment) {
         super.onFragmentCreated(fragment);
-        setToolbarTitle(getString(2131887082));
+        setToolbarTitle(getString(2131887144));
     }
 }

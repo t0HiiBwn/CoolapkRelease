@@ -40,7 +40,7 @@ public abstract class SubmitVerifyMobileCodeDialogBinding extends ViewDataBindin
 
     @Deprecated
     public static SubmitVerifyMobileCodeDialogBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitVerifyMobileCodeDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559171, viewGroup, z, obj);
+        return (SubmitVerifyMobileCodeDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559179, viewGroup, z, obj);
     }
 
     public static SubmitVerifyMobileCodeDialogBinding inflate(LayoutInflater layoutInflater) {
@@ -49,7 +49,7 @@ public abstract class SubmitVerifyMobileCodeDialogBinding extends ViewDataBindin
 
     @Deprecated
     public static SubmitVerifyMobileCodeDialogBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitVerifyMobileCodeDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559171, null, false, obj);
+        return (SubmitVerifyMobileCodeDialogBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559179, null, false, obj);
     }
 
     public static SubmitVerifyMobileCodeDialogBinding bind(View view) {
@@ -58,6 +58,6 @@ public abstract class SubmitVerifyMobileCodeDialogBinding extends ViewDataBindin
 
     @Deprecated
     public static SubmitVerifyMobileCodeDialogBinding bind(View view, Object obj) {
-        return (SubmitVerifyMobileCodeDialogBinding) bind(obj, view, 2131559171);
+        return (SubmitVerifyMobileCodeDialogBinding) bind(obj, view, 2131559179);
     }
 }

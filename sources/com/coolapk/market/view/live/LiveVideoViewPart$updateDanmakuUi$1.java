@@ -57,7 +57,7 @@ final class LiveVideoViewPart$updateDanmakuUi$1 extends Lambda implements Functi
             i = 0;
         }
         imageView4.setVisibility(i);
-        ((ItemLiveVideoViewPartBinding) this.this$0.getBinding()).danmakuOpenView.setImageResource(this.this$0.isDanmakuFrameShow ? 2131231165 : 2131231164);
+        ((ItemLiveVideoViewPartBinding) this.this$0.getBinding()).danmakuOpenView.setImageResource(this.this$0.isDanmakuFrameShow ? 2131231176 : 2131231175);
         EditText editText = ((ItemLiveVideoViewPartBinding) this.this$0.getBinding()).danmakuSendEdit;
         Intrinsics.checkNotNullExpressionValue(editText, "binding.danmakuSendEdit");
         editText.setHint(this.this$0.isLandscape() ? "发送弹幕，参与讨论" : "发送弹幕");

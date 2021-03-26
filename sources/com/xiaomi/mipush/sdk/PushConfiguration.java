@@ -1,6 +1,6 @@
 package com.xiaomi.mipush.sdk;
 
-import com.xiaomi.push.service.module.PushChannelRegion;
+import com.xiaomi.push.service.a.a;
 
 public class PushConfiguration {
     private boolean mGeoEnable;
@@ -8,7 +8,7 @@ public class PushConfiguration {
     private boolean mOpenFCMPush;
     private boolean mOpenFTOSPush;
     private boolean mOpenHmsPush;
-    private PushChannelRegion mRegion;
+    private a mRegion;
 
     public static class PushConfigurationBuilder {
         private boolean mGeoEnable;
@@ -16,7 +16,7 @@ public class PushConfiguration {
         private boolean mOpenFCMPush;
         private boolean mOpenFTOSPush;
         private boolean mOpenHmsPush;
-        private PushChannelRegion mRegion;
+        private a mRegion;
 
         public PushConfiguration build() {
             return new PushConfiguration(this);
@@ -42,14 +42,14 @@ public class PushConfiguration {
             return this;
         }
 
-        public PushConfigurationBuilder region(PushChannelRegion pushChannelRegion) {
-            this.mRegion = pushChannelRegion;
+        public PushConfigurationBuilder region(a aVar) {
+            this.mRegion = aVar;
             return this;
         }
     }
 
     public PushConfiguration() {
-        this.mRegion = PushChannelRegion.China;
+        this.mRegion = a.China;
         this.mOpenHmsPush = false;
         this.mOpenFCMPush = false;
         this.mOpenCOSPush = false;
@@ -57,7 +57,7 @@ public class PushConfiguration {
     }
 
     private PushConfiguration(PushConfigurationBuilder pushConfigurationBuilder) {
-        this.mRegion = pushConfigurationBuilder.mRegion == null ? PushChannelRegion.China : pushConfigurationBuilder.mRegion;
+        this.mRegion = pushConfigurationBuilder.mRegion == null ? a.China : pushConfigurationBuilder.mRegion;
         this.mOpenHmsPush = pushConfigurationBuilder.mOpenHmsPush;
         this.mOpenFCMPush = pushConfigurationBuilder.mOpenFCMPush;
         this.mOpenCOSPush = pushConfigurationBuilder.mOpenCOSPush;
@@ -80,7 +80,7 @@ public class PushConfiguration {
         return this.mOpenHmsPush;
     }
 
-    public PushChannelRegion getRegion() {
+    public a getRegion() {
         return this.mRegion;
     }
 
@@ -100,15 +100,15 @@ public class PushConfiguration {
         this.mOpenHmsPush = z;
     }
 
-    public void setRegion(PushChannelRegion pushChannelRegion) {
-        this.mRegion = pushChannelRegion;
+    public void setRegion(a aVar) {
+        this.mRegion = aVar;
     }
 
     public String toString() {
         StringBuffer stringBuffer = new StringBuffer("PushConfiguration{");
         stringBuffer.append("Region:");
-        PushChannelRegion pushChannelRegion = this.mRegion;
-        stringBuffer.append(pushChannelRegion == null ? "null" : pushChannelRegion.name());
+        a aVar = this.mRegion;
+        stringBuffer.append(aVar == null ? "null" : aVar.name());
         stringBuffer.append(",mOpenHmsPush:" + this.mOpenHmsPush);
         stringBuffer.append(",mOpenFCMPush:" + this.mOpenFCMPush);
         stringBuffer.append(",mOpenCOSPush:" + this.mOpenCOSPush);

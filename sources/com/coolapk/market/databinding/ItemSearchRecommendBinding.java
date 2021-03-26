@@ -33,7 +33,7 @@ public abstract class ItemSearchRecommendBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchRecommendBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemSearchRecommendBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558914, viewGroup, z, obj);
+        return (ItemSearchRecommendBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558921, viewGroup, z, obj);
     }
 
     public static ItemSearchRecommendBinding inflate(LayoutInflater layoutInflater) {
@@ -42,7 +42,7 @@ public abstract class ItemSearchRecommendBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchRecommendBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemSearchRecommendBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558914, null, false, obj);
+        return (ItemSearchRecommendBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558921, null, false, obj);
     }
 
     public static ItemSearchRecommendBinding bind(View view) {
@@ -51,6 +51,6 @@ public abstract class ItemSearchRecommendBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemSearchRecommendBinding bind(View view, Object obj) {
-        return (ItemSearchRecommendBinding) bind(obj, view, 2131558914);
+        return (ItemSearchRecommendBinding) bind(obj, view, 2131558921);
     }
 }

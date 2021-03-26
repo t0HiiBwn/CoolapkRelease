@@ -97,7 +97,7 @@ public abstract class ItemFeedLayoutV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedLayoutV8Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedLayoutV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558708, viewGroup, z, obj);
+        return (ItemFeedLayoutV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558715, viewGroup, z, obj);
     }
 
     public static ItemFeedLayoutV8Binding inflate(LayoutInflater layoutInflater) {
@@ -106,7 +106,7 @@ public abstract class ItemFeedLayoutV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedLayoutV8Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedLayoutV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558708, null, false, obj);
+        return (ItemFeedLayoutV8Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131558715, null, false, obj);
     }
 
     public static ItemFeedLayoutV8Binding bind(View view) {
@@ -115,6 +115,6 @@ public abstract class ItemFeedLayoutV8Binding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedLayoutV8Binding bind(View view, Object obj) {
-        return (ItemFeedLayoutV8Binding) bind(obj, view, 2131558708);
+        return (ItemFeedLayoutV8Binding) bind(obj, view, 2131558715);
     }
 }

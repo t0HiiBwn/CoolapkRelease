@@ -27,14 +27,14 @@ public class SecondHandContentV8BindingImpl extends SecondHandContentV8Binding {
     static {
         ViewDataBinding.IncludedLayouts includedLayouts = new ViewDataBinding.IncludedLayouts(15);
         sIncludes = includedLayouts;
-        includedLayouts.setIncludes(1, new String[]{"feed_warning"}, new int[]{9}, new int[]{2131558563});
+        includedLayouts.setIncludes(1, new String[]{"feed_warning"}, new int[]{9}, new int[]{2131558566});
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362443, 10);
-        sparseIntArray.put(2131363955, 11);
-        sparseIntArray.put(2131363221, 12);
-        sparseIntArray.put(2131363397, 13);
-        sparseIntArray.put(2131363054, 14);
+        sparseIntArray.put(2131362450, 10);
+        sparseIntArray.put(2131363981, 11);
+        sparseIntArray.put(2131363235, 12);
+        sparseIntArray.put(2131363414, 13);
+        sparseIntArray.put(2131363068, 14);
     }
 
     public SecondHandContentV8BindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -88,7 +88,7 @@ public class SecondHandContentV8BindingImpl extends SecondHandContentV8Binding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (288 == i) {
+        if (289 == i) {
             setUiConfig((FeedUIConfig) obj);
         } else if (50 != i) {
             return false;
@@ -104,7 +104,7 @@ public class SecondHandContentV8BindingImpl extends SecondHandContentV8Binding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(288);
+        notifyPropertyChanged(289);
         super.requestRebind();
     }
 

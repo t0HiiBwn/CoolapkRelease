@@ -27,7 +27,7 @@ public abstract class PoiListBinding extends ViewDataBinding {
 
     @Deprecated
     public static PoiListBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (PoiListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559088, viewGroup, z, obj);
+        return (PoiListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559095, viewGroup, z, obj);
     }
 
     public static PoiListBinding inflate(LayoutInflater layoutInflater) {
@@ -36,7 +36,7 @@ public abstract class PoiListBinding extends ViewDataBinding {
 
     @Deprecated
     public static PoiListBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (PoiListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559088, null, false, obj);
+        return (PoiListBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559095, null, false, obj);
     }
 
     public static PoiListBinding bind(View view) {
@@ -45,6 +45,6 @@ public abstract class PoiListBinding extends ViewDataBinding {
 
     @Deprecated
     public static PoiListBinding bind(View view, Object obj) {
-        return (PoiListBinding) bind(obj, view, 2131559088);
+        return (PoiListBinding) bind(obj, view, 2131559095);
     }
 }

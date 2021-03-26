@@ -61,11 +61,11 @@ public final class CenterMoreFragment extends LocalMultiTypeFragment<HolderItem>
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         setHasOptionsMenu(true);
-        setEmptyData(getString(2131886765), 0);
+        setEmptyData(getString(2131886827), 0);
         FragmentBindingComponent fragmentBindingComponent = new FragmentBindingComponent(this);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558642).suitedEntityType("entity_type_title").constructor(new CenterMoreFragment$onActivityCreated$1(fragmentBindingComponent)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558641).suitedEntityType("entity_type_menu").constructor(new CenterMoreFragment$onActivityCreated$2(this, fragmentBindingComponent)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558639).suitedEntityType("entity_type_entrance").constructor(new CenterMoreFragment$onActivityCreated$3(this, fragmentBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558648).suitedEntityType("entity_type_title").constructor(new CenterMoreFragment$onActivityCreated$1(fragmentBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558647).suitedEntityType("entity_type_menu").constructor(new CenterMoreFragment$onActivityCreated$2(this, fragmentBindingComponent)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter(), SimpleViewHolderFactor.Companion.withLayoutId(2131558645).suitedEntityType("entity_type_entrance").constructor(new CenterMoreFragment$onActivityCreated$3(this, fragmentBindingComponent)).build(), 0, 2, null);
         RecyclerView recyclerView = getRecyclerView();
         Intrinsics.checkNotNullExpressionValue(recyclerView, "recyclerView");
         recyclerView.setClipChildren(false);
@@ -113,13 +113,13 @@ public final class CenterMoreFragment extends LocalMultiTypeFragment<HolderItem>
         Intrinsics.checkNotNullParameter(menu, "menu");
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         super.onCreateOptionsMenu(menu, menuInflater);
-        menu.add(1, 2131361931, 100, "恢复默认").setShowAsAction(8);
+        menu.add(1, 2131361932, 100, "恢复默认").setShowAsAction(8);
     }
 
     @Override // androidx.fragment.app.Fragment
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
-        if (menuItem.getItemId() != 2131361931) {
+        if (menuItem.getItemId() != 2131361932) {
             return super.onOptionsItemSelected(menuItem);
         }
         this.centerMorePresenter.requestRestoreDefaultMenuList();
@@ -198,7 +198,7 @@ public final class CenterMoreFragment extends LocalMultiTypeFragment<HolderItem>
     /* compiled from: CenterMoreFragment.kt */
     private static final class CenterMoreTitleViewHolder extends GenericBindHolder<ItemCenterMoreTitleBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558642;
+        public static final int LAYOUT_ID = 2131558648;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public CenterMoreTitleViewHolder(View view, DataBindingComponent dataBindingComponent) {
@@ -238,7 +238,7 @@ public final class CenterMoreFragment extends LocalMultiTypeFragment<HolderItem>
     /* compiled from: CenterMoreFragment.kt */
     private static final class CenterMoreMenuViewHolder extends GenericBindHolder<ItemCenterMoreMenuBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558641;
+        public static final int LAYOUT_ID = 2131558647;
         private final CenterMorePresenter presenter;
 
         public final CenterMorePresenter getPresenter() {

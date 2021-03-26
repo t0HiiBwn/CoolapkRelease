@@ -1,41 +1,165 @@
 package com.xiaomi.push;
 
 import java.io.Serializable;
-import java.util.BitSet;
+import java.util.ArrayList;
+import java.util.List;
 
-public class hr implements in<hr, Object>, Serializable, Cloneable {
-    private static final iv a = new iv("", (byte) 10, 1);
+public class hr implements hu<hr, Object>, Serializable, Cloneable {
+    private static final il i = new il("XmPushActionUnSubscription");
+    private static final id j = new id("", (byte) 11, 1);
+    private static final id k = new id("", (byte) 12, 2);
+    private static final id l = new id("", (byte) 11, 3);
+    private static final id m = new id("", (byte) 11, 4);
+    private static final id n = new id("", (byte) 11, 5);
+    private static final id o = new id("", (byte) 11, 6);
+    private static final id p = new id("", (byte) 11, 7);
+    private static final id q = new id("", (byte) 15, 8);
+    public String a;
+    public gy b;
+    public String c;
+    public String d;
+    public String e;
+    public String f;
+    public String g;
+    public List<String> h;
 
-    /* renamed from: a  reason: collision with other field name */
-    private static final jd f623a = new jd("Target");
-    private static final iv b = new iv("", (byte) 11, 2);
-    private static final iv c = new iv("", (byte) 11, 3);
-    private static final iv d = new iv("", (byte) 11, 4);
-    private static final iv e = new iv("", (byte) 2, 5);
-    private static final iv f = new iv("", (byte) 11, 7);
+    public hr a(String str) {
+        this.c = str;
+        return this;
+    }
 
-    /* renamed from: a  reason: collision with other field name */
-    public long f624a = 5;
+    @Override // com.xiaomi.push.hu
+    public void a(ig igVar) {
+        igVar.f();
+        while (true) {
+            id h2 = igVar.h();
+            if (h2.b == 0) {
+                igVar.g();
+                i();
+                return;
+            }
+            switch (h2.c) {
+                case 1:
+                    if (h2.b == 11) {
+                        this.a = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 2:
+                    if (h2.b == 12) {
+                        gy gyVar = new gy();
+                        this.b = gyVar;
+                        gyVar.a(igVar);
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 3:
+                    if (h2.b == 11) {
+                        this.c = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 4:
+                    if (h2.b == 11) {
+                        this.d = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 5:
+                    if (h2.b == 11) {
+                        this.e = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 6:
+                    if (h2.b == 11) {
+                        this.f = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 7:
+                    if (h2.b == 11) {
+                        this.g = igVar.v();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+                case 8:
+                    if (h2.b == 15) {
+                        ie l2 = igVar.l();
+                        this.h = new ArrayList(l2.b);
+                        for (int i2 = 0; i2 < l2.b; i2++) {
+                            this.h.add(igVar.v());
+                        }
+                        igVar.m();
+                        continue;
+                        igVar.i();
+                    }
+                    break;
+            }
+            ij.a(igVar, h2.b);
+            igVar.i();
+        }
+    }
 
-    /* renamed from: a  reason: collision with other field name */
-    public String f625a;
+    public boolean a() {
+        return this.a != null;
+    }
 
-    /* renamed from: a  reason: collision with other field name */
-    private BitSet f626a = new BitSet(2);
+    public boolean a(hr hrVar) {
+        if (hrVar == null) {
+            return false;
+        }
+        boolean a2 = a();
+        boolean a3 = hrVar.a();
+        if ((a2 || a3) && (!a2 || !a3 || !this.a.equals(hrVar.a))) {
+            return false;
+        }
+        boolean b2 = b();
+        boolean b3 = hrVar.b();
+        if ((b2 || b3) && (!b2 || !b3 || !this.b.a(hrVar.b))) {
+            return false;
+        }
+        boolean c2 = c();
+        boolean c3 = hrVar.c();
+        if ((c2 || c3) && (!c2 || !c3 || !this.c.equals(hrVar.c))) {
+            return false;
+        }
+        boolean d2 = d();
+        boolean d3 = hrVar.d();
+        if ((d2 || d3) && (!d2 || !d3 || !this.d.equals(hrVar.d))) {
+            return false;
+        }
+        boolean e2 = e();
+        boolean e3 = hrVar.e();
+        if ((e2 || e3) && (!e2 || !e3 || !this.e.equals(hrVar.e))) {
+            return false;
+        }
+        boolean f2 = f();
+        boolean f3 = hrVar.f();
+        if ((f2 || f3) && (!f2 || !f3 || !this.f.equals(hrVar.f))) {
+            return false;
+        }
+        boolean g2 = g();
+        boolean g3 = hrVar.g();
+        if ((g2 || g3) && (!g2 || !g3 || !this.g.equals(hrVar.g))) {
+            return false;
+        }
+        boolean h2 = h();
+        boolean h3 = hrVar.h();
+        if (h2 || h3) {
+            return h2 && h3 && this.h.equals(hrVar.h);
+        }
+        return true;
+    }
 
-    /* renamed from: a  reason: collision with other field name */
-    public boolean f627a = false;
-
-    /* renamed from: b  reason: collision with other field name */
-    public String f628b = "xiaomi.com";
-
-    /* renamed from: c  reason: collision with other field name */
-    public String f629c = "";
-
-    /* renamed from: d  reason: collision with other field name */
-    public String f630d;
-
-    /* renamed from: a */
+    /* renamed from: b */
     public int compareTo(hr hrVar) {
         int a2;
         int a3;
@@ -43,219 +167,176 @@ public class hr implements in<hr, Object>, Serializable, Cloneable {
         int a5;
         int a6;
         int a7;
+        int a8;
+        int a9;
         if (!getClass().equals(hrVar.getClass())) {
             return getClass().getName().compareTo(hrVar.getClass().getName());
         }
-        int compareTo = Boolean.valueOf(m433a()).compareTo(Boolean.valueOf(hrVar.m433a()));
+        int compareTo = Boolean.valueOf(a()).compareTo(Boolean.valueOf(hrVar.a()));
         if (compareTo != 0) {
             return compareTo;
         }
-        if (m433a() && (a7 = io.a(this.f624a, hrVar.f624a)) != 0) {
-            return a7;
+        if (a() && (a9 = hv.a(this.a, hrVar.a)) != 0) {
+            return a9;
         }
         int compareTo2 = Boolean.valueOf(b()).compareTo(Boolean.valueOf(hrVar.b()));
         if (compareTo2 != 0) {
             return compareTo2;
         }
-        if (b() && (a6 = io.a(this.f625a, hrVar.f625a)) != 0) {
-            return a6;
+        if (b() && (a8 = hv.a(this.b, hrVar.b)) != 0) {
+            return a8;
         }
         int compareTo3 = Boolean.valueOf(c()).compareTo(Boolean.valueOf(hrVar.c()));
         if (compareTo3 != 0) {
             return compareTo3;
         }
-        if (c() && (a5 = io.a(this.f628b, hrVar.f628b)) != 0) {
-            return a5;
+        if (c() && (a7 = hv.a(this.c, hrVar.c)) != 0) {
+            return a7;
         }
         int compareTo4 = Boolean.valueOf(d()).compareTo(Boolean.valueOf(hrVar.d()));
         if (compareTo4 != 0) {
             return compareTo4;
         }
-        if (d() && (a4 = io.a(this.f629c, hrVar.f629c)) != 0) {
-            return a4;
+        if (d() && (a6 = hv.a(this.d, hrVar.d)) != 0) {
+            return a6;
         }
         int compareTo5 = Boolean.valueOf(e()).compareTo(Boolean.valueOf(hrVar.e()));
         if (compareTo5 != 0) {
             return compareTo5;
         }
-        if (e() && (a3 = io.a(this.f627a, hrVar.f627a)) != 0) {
-            return a3;
+        if (e() && (a5 = hv.a(this.e, hrVar.e)) != 0) {
+            return a5;
         }
         int compareTo6 = Boolean.valueOf(f()).compareTo(Boolean.valueOf(hrVar.f()));
         if (compareTo6 != 0) {
             return compareTo6;
         }
-        if (!f() || (a2 = io.a(this.f630d, hrVar.f630d)) == 0) {
+        if (f() && (a4 = hv.a(this.f, hrVar.f)) != 0) {
+            return a4;
+        }
+        int compareTo7 = Boolean.valueOf(g()).compareTo(Boolean.valueOf(hrVar.g()));
+        if (compareTo7 != 0) {
+            return compareTo7;
+        }
+        if (g() && (a3 = hv.a(this.g, hrVar.g)) != 0) {
+            return a3;
+        }
+        int compareTo8 = Boolean.valueOf(h()).compareTo(Boolean.valueOf(hrVar.h()));
+        if (compareTo8 != 0) {
+            return compareTo8;
+        }
+        if (!h() || (a2 = hv.a(this.h, hrVar.h)) == 0) {
             return 0;
         }
         return a2;
     }
 
-    public void a() {
-        if (this.f625a == null) {
-            throw new iz("Required field 'userId' was not present! Struct: " + toString());
-        }
+    public hr b(String str) {
+        this.d = str;
+        return this;
     }
 
-    @Override // com.xiaomi.push.in
-    public void a(iy iyVar) {
-        iyVar.m551a();
-        while (true) {
-            iv a2 = iyVar.m547a();
-            if (a2.a == 0) {
-                break;
+    @Override // com.xiaomi.push.hu
+    public void b(ig igVar) {
+        i();
+        igVar.a(i);
+        if (this.a != null && a()) {
+            igVar.a(j);
+            igVar.a(this.a);
+            igVar.b();
+        }
+        if (this.b != null && b()) {
+            igVar.a(k);
+            this.b.b(igVar);
+            igVar.b();
+        }
+        if (this.c != null) {
+            igVar.a(l);
+            igVar.a(this.c);
+            igVar.b();
+        }
+        if (this.d != null) {
+            igVar.a(m);
+            igVar.a(this.d);
+            igVar.b();
+        }
+        if (this.e != null) {
+            igVar.a(n);
+            igVar.a(this.e);
+            igVar.b();
+        }
+        if (this.f != null && f()) {
+            igVar.a(o);
+            igVar.a(this.f);
+            igVar.b();
+        }
+        if (this.g != null && g()) {
+            igVar.a(p);
+            igVar.a(this.g);
+            igVar.b();
+        }
+        if (this.h != null && h()) {
+            igVar.a(q);
+            igVar.a(new ie((byte) 11, this.h.size()));
+            for (String str : this.h) {
+                igVar.a(str);
             }
-            short s = a2.f877a;
-            if (s != 1) {
-                if (s != 2) {
-                    if (s != 3) {
-                        if (s != 4) {
-                            if (s != 5) {
-                                if (s == 7 && a2.a == 11) {
-                                    this.f630d = iyVar.m552a();
-                                    iyVar.g();
-                                }
-                            } else if (a2.a == 2) {
-                                this.f627a = iyVar.m556a();
-                                b(true);
-                                iyVar.g();
-                            }
-                        } else if (a2.a == 11) {
-                            this.f629c = iyVar.m552a();
-                            iyVar.g();
-                        }
-                    } else if (a2.a == 11) {
-                        this.f628b = iyVar.m552a();
-                        iyVar.g();
-                    }
-                } else if (a2.a == 11) {
-                    this.f625a = iyVar.m552a();
-                    iyVar.g();
-                }
-            } else if (a2.a == 10) {
-                this.f624a = iyVar.m546a();
-                a(true);
-                iyVar.g();
-            }
-            jb.a(iyVar, a2.a);
-            iyVar.g();
+            igVar.e();
+            igVar.b();
         }
-        iyVar.f();
-        if (m433a()) {
-            a();
-            return;
-        }
-        throw new iz("Required field 'channelId' was not found in serialized data! Struct: " + toString());
-    }
-
-    public void a(boolean z) {
-        this.f626a.set(0, z);
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public boolean m433a() {
-        return this.f626a.get(0);
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public boolean m434a(hr hrVar) {
-        if (hrVar == null || this.f624a != hrVar.f624a) {
-            return false;
-        }
-        boolean b2 = b();
-        boolean b3 = hrVar.b();
-        if ((b2 || b3) && (!b2 || !b3 || !this.f625a.equals(hrVar.f625a))) {
-            return false;
-        }
-        boolean c2 = c();
-        boolean c3 = hrVar.c();
-        if ((c2 || c3) && (!c2 || !c3 || !this.f628b.equals(hrVar.f628b))) {
-            return false;
-        }
-        boolean d2 = d();
-        boolean d3 = hrVar.d();
-        if ((d2 || d3) && (!d2 || !d3 || !this.f629c.equals(hrVar.f629c))) {
-            return false;
-        }
-        boolean e2 = e();
-        boolean e3 = hrVar.e();
-        if ((e2 || e3) && (!e2 || !e3 || this.f627a != hrVar.f627a)) {
-            return false;
-        }
-        boolean f2 = f();
-        boolean f3 = hrVar.f();
-        if (f2 || f3) {
-            return f2 && f3 && this.f630d.equals(hrVar.f630d);
-        }
-        return true;
-    }
-
-    @Override // com.xiaomi.push.in
-    public void b(iy iyVar) {
-        a();
-        iyVar.a(f623a);
-        iyVar.a(a);
-        iyVar.a(this.f624a);
-        iyVar.b();
-        if (this.f625a != null) {
-            iyVar.a(b);
-            iyVar.a(this.f625a);
-            iyVar.b();
-        }
-        if (this.f628b != null && c()) {
-            iyVar.a(c);
-            iyVar.a(this.f628b);
-            iyVar.b();
-        }
-        if (this.f629c != null && d()) {
-            iyVar.a(d);
-            iyVar.a(this.f629c);
-            iyVar.b();
-        }
-        if (e()) {
-            iyVar.a(e);
-            iyVar.a(this.f627a);
-            iyVar.b();
-        }
-        if (this.f630d != null && f()) {
-            iyVar.a(f);
-            iyVar.a(this.f630d);
-            iyVar.b();
-        }
-        iyVar.c();
-        iyVar.m555a();
-    }
-
-    public void b(boolean z) {
-        this.f626a.set(1, z);
+        igVar.c();
+        igVar.a();
     }
 
     public boolean b() {
-        return this.f625a != null;
+        return this.b != null;
+    }
+
+    public hr c(String str) {
+        this.e = str;
+        return this;
     }
 
     public boolean c() {
-        return this.f628b != null;
+        return this.c != null;
+    }
+
+    public hr d(String str) {
+        this.f = str;
+        return this;
     }
 
     public boolean d() {
-        return this.f629c != null;
+        return this.d != null;
+    }
+
+    public hr e(String str) {
+        this.g = str;
+        return this;
     }
 
     public boolean e() {
-        return this.f626a.get(1);
+        return this.e != null;
     }
 
     @Override // java.lang.Object
     public boolean equals(Object obj) {
         if (obj != null && (obj instanceof hr)) {
-            return m434a((hr) obj);
+            return a((hr) obj);
         }
         return false;
     }
 
     public boolean f() {
-        return this.f630d != null;
+        return this.f != null;
+    }
+
+    public boolean g() {
+        return this.g != null;
+    }
+
+    public boolean h() {
+        return this.h != null;
     }
 
     @Override // java.lang.Object
@@ -263,52 +344,101 @@ public class hr implements in<hr, Object>, Serializable, Cloneable {
         return 0;
     }
 
+    public void i() {
+        if (this.c == null) {
+            throw new ih("Required field 'id' was not present! Struct: " + toString());
+        } else if (this.d == null) {
+            throw new ih("Required field 'appId' was not present! Struct: " + toString());
+        } else if (this.e == null) {
+            throw new ih("Required field 'topic' was not present! Struct: " + toString());
+        }
+    }
+
     @Override // java.lang.Object
     public String toString() {
-        StringBuilder sb = new StringBuilder("Target(");
-        sb.append("channelId:");
-        sb.append(this.f624a);
-        sb.append(", ");
-        sb.append("userId:");
-        String str = this.f625a;
-        if (str == null) {
+        boolean z;
+        StringBuilder sb = new StringBuilder("XmPushActionUnSubscription(");
+        boolean z2 = false;
+        if (a()) {
+            sb.append("debug:");
+            String str = this.a;
+            if (str == null) {
+                sb.append("null");
+            } else {
+                sb.append(str);
+            }
+            z = false;
+        } else {
+            z = true;
+        }
+        if (b()) {
+            if (!z) {
+                sb.append(", ");
+            }
+            sb.append("target:");
+            gy gyVar = this.b;
+            if (gyVar == null) {
+                sb.append("null");
+            } else {
+                sb.append(gyVar);
+            }
+        } else {
+            z2 = z;
+        }
+        if (!z2) {
+            sb.append(", ");
+        }
+        sb.append("id:");
+        String str2 = this.c;
+        if (str2 == null) {
             sb.append("null");
         } else {
-            sb.append(str);
+            sb.append(str2);
         }
-        if (c()) {
-            sb.append(", ");
-            sb.append("server:");
-            String str2 = this.f628b;
-            if (str2 == null) {
-                sb.append("null");
-            } else {
-                sb.append(str2);
-            }
+        sb.append(", ");
+        sb.append("appId:");
+        String str3 = this.d;
+        if (str3 == null) {
+            sb.append("null");
+        } else {
+            sb.append(str3);
         }
-        if (d()) {
-            sb.append(", ");
-            sb.append("resource:");
-            String str3 = this.f629c;
-            if (str3 == null) {
-                sb.append("null");
-            } else {
-                sb.append(str3);
-            }
-        }
-        if (e()) {
-            sb.append(", ");
-            sb.append("isPreview:");
-            sb.append(this.f627a);
+        sb.append(", ");
+        sb.append("topic:");
+        String str4 = this.e;
+        if (str4 == null) {
+            sb.append("null");
+        } else {
+            sb.append(str4);
         }
         if (f()) {
             sb.append(", ");
-            sb.append("token:");
-            String str4 = this.f630d;
-            if (str4 == null) {
+            sb.append("packageName:");
+            String str5 = this.f;
+            if (str5 == null) {
                 sb.append("null");
             } else {
-                sb.append(str4);
+                sb.append(str5);
+            }
+        }
+        if (g()) {
+            sb.append(", ");
+            sb.append("category:");
+            String str6 = this.g;
+            if (str6 == null) {
+                sb.append("null");
+            } else {
+                sb.append(str6);
+            }
+        }
+        if (h()) {
+            sb.append(", ");
+            sb.append("aliases:");
+            List<String> list = this.h;
+            if (list == null) {
+                sb.append("null");
+            } else {
+                sb.append(list);
             }
         }
         sb.append(")");

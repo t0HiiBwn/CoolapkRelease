@@ -10,7 +10,7 @@ import com.coolapk.market.view.product.ProductGlobalData;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class RankViewHolder extends ServiceAppViewHolder {
-    public static final int LAYOUT_ID = 2131558924;
+    public static final int LAYOUT_ID = 2131558931;
     private ServiceAppBinding binding;
     private final AtomicInteger podiumCardIndex;
 

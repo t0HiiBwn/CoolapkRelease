@@ -24,21 +24,21 @@ abstract class C$$AutoValue_EntityCard extends EntityCard {
     private final String title;
     private final String url;
 
-    C$$AutoValue_EntityCard(String str, String str2, Integer num, String str3, String str4, String str5, Long l2, String str6, String str7, String str8, String str9, List<Entity> list, String str10, Long l3, String str11, String str12) {
+    C$$AutoValue_EntityCard(String str, String str2, Integer num, String str3, String str4, String str5, Long l, String str6, String str7, String str8, String str9, List<Entity> list, String str10, Long l2, String str11, String str12) {
         this.entityTemplate = str;
         this.entityId = str2;
         this.entityFixed = num;
         this.logo = str3;
         this.id = str4;
         this.extraData = str5;
-        this.dateline = l2;
+        this.dateline = l;
         this.title = str6;
         this.subTitle = str7;
         this.url = str8;
         this.description = str9;
         this.entities = list;
         this.entityTypeName = str10;
-        this.lastUpdate = l3;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str11, "Null entityType");
         this.entityType = str11;
         this.pic = str12;
@@ -158,8 +158,8 @@ abstract class C$$AutoValue_EntityCard extends EntityCard {
                         if (str4 != null ? str4.equals(entityCard.getId()) : entityCard.getId() == null) {
                             String str5 = this.extraData;
                             if (str5 != null ? str5.equals(entityCard.getExtraData()) : entityCard.getExtraData() == null) {
-                                Long l2 = this.dateline;
-                                if (l2 != null ? l2.equals(entityCard.getDateline()) : entityCard.getDateline() == null) {
+                                Long l = this.dateline;
+                                if (l != null ? l.equals(entityCard.getDateline()) : entityCard.getDateline() == null) {
                                     String str6 = this.title;
                                     if (str6 != null ? str6.equals(entityCard.getTitle()) : entityCard.getTitle() == null) {
                                         String str7 = this.subTitle;
@@ -172,8 +172,8 @@ abstract class C$$AutoValue_EntityCard extends EntityCard {
                                                     if (list != null ? list.equals(entityCard.getEntities()) : entityCard.getEntities() == null) {
                                                         String str10 = this.entityTypeName;
                                                         if (str10 != null ? str10.equals(entityCard.getEntityTypeName()) : entityCard.getEntityTypeName() == null) {
-                                                            Long l3 = this.lastUpdate;
-                                                            if (l3 != null ? l3.equals(entityCard.getLastUpdate()) : entityCard.getLastUpdate() == null) {
+                                                            Long l2 = this.lastUpdate;
+                                                            if (l2 != null ? l2.equals(entityCard.getLastUpdate()) : entityCard.getLastUpdate() == null) {
                                                                 if (this.entityType.equals(entityCard.getEntityType())) {
                                                                     String str11 = this.pic;
                                                                     if (str11 == null) {
@@ -216,8 +216,8 @@ abstract class C$$AutoValue_EntityCard extends EntityCard {
         int hashCode5 = (hashCode4 ^ (str4 == null ? 0 : str4.hashCode())) * 1000003;
         String str5 = this.extraData;
         int hashCode6 = (hashCode5 ^ (str5 == null ? 0 : str5.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode7 = (hashCode6 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode7 = (hashCode6 ^ (l == null ? 0 : l.hashCode())) * 1000003;
         String str6 = this.title;
         int hashCode8 = (hashCode7 ^ (str6 == null ? 0 : str6.hashCode())) * 1000003;
         String str7 = this.subTitle;
@@ -230,8 +230,8 @@ abstract class C$$AutoValue_EntityCard extends EntityCard {
         int hashCode12 = (hashCode11 ^ (list == null ? 0 : list.hashCode())) * 1000003;
         String str10 = this.entityTypeName;
         int hashCode13 = (hashCode12 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode14 = (((hashCode13 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003) ^ this.entityType.hashCode()) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode14 = (((hashCode13 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003) ^ this.entityType.hashCode()) * 1000003;
         String str11 = this.pic;
         if (str11 != null) {
             i = str11.hashCode();
@@ -318,8 +318,8 @@ abstract class C$$AutoValue_EntityCard extends EntityCard {
         }
 
         @Override // com.coolapk.market.model.EntityCard.Builder
-        public EntityCard.Builder setDateline(Long l2) {
-            this.dateline = l2;
+        public EntityCard.Builder setDateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
@@ -360,8 +360,8 @@ abstract class C$$AutoValue_EntityCard extends EntityCard {
         }
 
         @Override // com.coolapk.market.model.EntityCard.Builder
-        public EntityCard.Builder setLastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public EntityCard.Builder setLastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

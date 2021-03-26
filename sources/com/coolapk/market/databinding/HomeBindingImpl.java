@@ -26,8 +26,8 @@ public class HomeBindingImpl extends HomeBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363934, 1);
-        sparseIntArray.put(2131362878, 2);
+        sparseIntArray.put(2131363959, 1);
+        sparseIntArray.put(2131362889, 2);
     }
 
     public HomeBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -18,10 +18,10 @@ final class ControllerCover$showMoreOptionMenu$1 implements PopupMenu.OnMenuItem
     public final boolean onMenuItemClick(MenuItem menuItem) {
         Intrinsics.checkNotNullExpressionValue(menuItem, "item");
         int itemId = menuItem.getItemId();
-        if (itemId == 2131361884) {
+        if (itemId == 2131361885) {
             this.this$0.notifyReceiverEvent(-123, null);
             return true;
-        } else if (itemId != 2131361981) {
+        } else if (itemId != 2131361982) {
             return true;
         } else {
             this.this$0.notifyReceiverEvent(-122, null);

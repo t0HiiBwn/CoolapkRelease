@@ -30,9 +30,9 @@ public class xo extends BroadcastReceiver {
                     String stringExtra = intent.getStringExtra("openIdType");
                     CA XI2 = CA.XI();
                     XI2.getClass();
-                    XI xi = "oaid".equals(stringExtra) ? XI2.K0 : "vaid".equals(stringExtra) ? XI2.xo : "aaid".equals(stringExtra) ? XI2.kM : "udid".equals(stringExtra) ? XI2.f1181XI : null;
+                    XI xi = "oaid".equals(stringExtra) ? XI2.K0 : "vaid".equals(stringExtra) ? XI2.xo : "aaid".equals(stringExtra) ? XI2.kM : "udid".equals(stringExtra) ? XI2.f187XI : null;
                     if (xi != null) {
-                        xi.f1183XI = 0;
+                        xi.f189XI = 0;
                         return;
                     }
                     return;

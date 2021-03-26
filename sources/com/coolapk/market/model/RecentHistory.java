@@ -17,7 +17,7 @@ public abstract class RecentHistory implements Entity {
 
         public abstract Builder setCount(int i);
 
-        public abstract Builder setDateline(Long l2);
+        public abstract Builder setDateline(Long l);
 
         public abstract Builder setDescription(String str);
 
@@ -39,7 +39,7 @@ public abstract class RecentHistory implements Entity {
 
         public abstract Builder setIsTop(int i);
 
-        public abstract Builder setLastUpdate(Long l2);
+        public abstract Builder setLastUpdate(Long l);
 
         public abstract Builder setLogo(String str);
 

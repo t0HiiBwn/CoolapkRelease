@@ -194,9 +194,9 @@ public class FallsListFragment extends DataListFragment implements FlexList {
 
     @Override // com.coolapk.market.view.cardlist.EntityListFragment
     protected void onRegisterCards() {
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558664).suitedMethod(FallsListFragment$onRegisterCards$1.INSTANCE).constructor(new FallsListFragment$onRegisterCards$2(this)).build(), -1);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558919).suitedMethod(FallsListFragment$onRegisterCards$3.INSTANCE).constructor(new FallsListFragment$onRegisterCards$4(this)).build(), 0);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558756).suitedMethod(FallsListFragment$onRegisterCards$5.INSTANCE).constructor(new FallsListFragment$onRegisterCards$6(this)).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558670).suitedMethod(FallsListFragment$onRegisterCards$1.INSTANCE).constructor(new FallsListFragment$onRegisterCards$2(this)).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558926).suitedMethod(FallsListFragment$onRegisterCards$3.INSTANCE).constructor(new FallsListFragment$onRegisterCards$4(this)).build(), 0);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558763).suitedMethod(FallsListFragment$onRegisterCards$5.INSTANCE).constructor(new FallsListFragment$onRegisterCards$6(this)).build(), -1);
     }
 
     @Override // com.coolapk.market.view.main.DataListFragment, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.BaseFragment, androidx.fragment.app.Fragment

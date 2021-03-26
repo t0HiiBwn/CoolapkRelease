@@ -231,26 +231,26 @@ public final class AppNodeFragment extends BaseFragment implements NodeFragmentB
         Intrinsics.checkNotNullParameter(menuInflater, "inflater");
         menuInflater.inflate(2131623940, menu);
         ServiceApp serviceApp = getViewModel().getServiceApp().get();
-        MenuItem findItem = menu.findItem(2131361960);
+        MenuItem findItem = menu.findItem(2131361961);
         Intrinsics.checkNotNullExpressionValue(findItem, "menu.findItem(R.id.action_search)");
         boolean z = true;
         findItem.setVisible(serviceApp != null);
         MobileApp mobileAppExistFast = serviceApp != null ? DataManager.getInstance().getMobileAppExistFast(serviceApp.getPackageName()) : null;
-        MenuItem findItem2 = menu.findItem(2131361938);
+        MenuItem findItem2 = menu.findItem(2131361939);
         Intrinsics.checkNotNullExpressionValue(findItem2, "menu.findItem(R.id.action_open)");
         findItem2.setVisible(mobileAppExistFast != null);
-        MenuItem findItem3 = menu.findItem(2131361980);
+        MenuItem findItem3 = menu.findItem(2131361981);
         Intrinsics.checkNotNullExpressionValue(findItem3, "menu.findItem(R.id.action_uninstall)");
         findItem3.setVisible(mobileAppExistFast != null);
-        MenuItem findItem4 = menu.findItem(2131361858);
+        MenuItem findItem4 = menu.findItem(2131361859);
         Intrinsics.checkNotNullExpressionValue(findItem4, "menu.findItem(R.id.action_apk_manage)");
         DataManager instance = DataManager.getInstance();
         Intrinsics.checkNotNullExpressionValue(instance, "DataManager.getInstance()");
         LoginSession loginSession = instance.getLoginSession();
         Intrinsics.checkNotNullExpressionValue(loginSession, "DataManager.getInstance().loginSession");
         findItem4.setVisible(loginSession.isAdmin());
-        menu.findItem(2131361904).setTitle(getViewModel().isFavor().get() ? 2131886113 : 2131886131);
-        MenuItem findItem5 = menu.findItem(2131361932);
+        menu.findItem(2131361905).setTitle(getViewModel().isFavor().get() ? 2131886113 : 2131886131);
+        MenuItem findItem5 = menu.findItem(2131361933);
         Intrinsics.checkNotNullExpressionValue(findItem5, "menu.findItem(R.id.action_more_item)");
         if (serviceApp == null) {
             z = false;
@@ -263,40 +263,40 @@ public final class AppNodeFragment extends BaseFragment implements NodeFragmentB
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         Intrinsics.checkNotNullParameter(menuItem, "item");
         switch (menuItem.getItemId()) {
-            case 2131361854:
+            case 2131361855:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$11(this));
                 break;
-            case 2131361858:
+            case 2131361859:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$9(this));
                 break;
-            case 2131361861:
+            case 2131361862:
                 doActionFunction$default(this, null, 1, null);
                 break;
-            case 2131361875:
+            case 2131361876:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$13(this));
                 break;
-            case 2131361888:
+            case 2131361889:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$3(this));
                 break;
-            case 2131361900:
+            case 2131361901:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$6(this));
                 break;
-            case 2131361904:
+            case 2131361905:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$10(this, this));
                 break;
-            case 2131361912:
+            case 2131361913:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$12(this));
                 break;
-            case 2131361938:
+            case 2131361939:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$4(this));
                 break;
-            case 2131361940:
+            case 2131361941:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$5(this));
                 break;
-            case 2131361957:
+            case 2131361958:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$8(this));
                 break;
-            case 2131361960:
+            case 2131361961:
                 ServiceApp serviceApp = getViewModel().getServiceApp().get();
                 if (serviceApp != null) {
                     Intrinsics.checkNotNullExpressionValue(serviceApp, "it");
@@ -304,10 +304,10 @@ public final class AppNodeFragment extends BaseFragment implements NodeFragmentB
                     break;
                 }
                 break;
-            case 2131361968:
+            case 2131361969:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$2(this));
                 break;
-            case 2131361980:
+            case 2131361981:
                 runIfAppExist(new AppNodeFragment$onOptionsItemSelected$7(this));
                 break;
             default:
@@ -378,7 +378,7 @@ public final class AppNodeFragment extends BaseFragment implements NodeFragmentB
             } else if (findValueFromUrlClientConfig.equals("download_or_open")) {
                 FragmentActivity requireActivity = requireActivity();
                 Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-                Toast.show(requireActivity, 2131887194);
+                Toast.show(requireActivity, 2131887256);
                 doActionFunction$default(this, null, 1, null);
             }
         }
@@ -437,7 +437,7 @@ public final class AppNodeFragment extends BaseFragment implements NodeFragmentB
             appScore.set(Float.parseFloat(str));
             FragmentActivity requireActivity = requireActivity();
             Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-            Toast.show(requireActivity, 2131886946);
+            Toast.show(requireActivity, 2131887008);
         }
     }
 
@@ -453,7 +453,7 @@ public final class AppNodeFragment extends BaseFragment implements NodeFragmentB
             appScore.set(Float.parseFloat(str));
             FragmentActivity requireActivity = requireActivity();
             Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-            Toast.show(requireActivity, 2131887052);
+            Toast.show(requireActivity, 2131887114);
         }
     }
 
@@ -468,11 +468,11 @@ public final class AppNodeFragment extends BaseFragment implements NodeFragmentB
         if (z2) {
             FragmentActivity requireActivity = requireActivity();
             Intrinsics.checkNotNullExpressionValue(requireActivity, "requireActivity()");
-            Toast.show(requireActivity, 2131886815);
+            Toast.show(requireActivity, 2131886877);
         } else {
             FragmentActivity requireActivity2 = requireActivity();
             Intrinsics.checkNotNullExpressionValue(requireActivity2, "requireActivity()");
-            Toast.show(requireActivity2, 2131887047);
+            Toast.show(requireActivity2, 2131887109);
         }
         if (getViewModel().getServiceApp().get() != null) {
             EventBus eventBus = EventBus.getDefault();

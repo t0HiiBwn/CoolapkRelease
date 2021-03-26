@@ -23,9 +23,7 @@ public class a {
     public boolean i;
     public boolean j;
     public boolean k;
-
-    /* renamed from: l  reason: collision with root package name */
-    public long f1342l;
+    public long l;
     public long m;
     public long n;
     public long o;

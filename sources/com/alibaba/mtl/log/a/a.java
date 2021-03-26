@@ -51,7 +51,7 @@ public class a {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public static List<String> m20a(String str) {
+    public static List<String> m10a(String str) {
         int i2;
         try {
             i2 = Integer.parseInt(str);
@@ -208,7 +208,7 @@ public class a {
     }
 
     /* renamed from: b  reason: collision with other method in class */
-    public static String m21b(String str) {
+    public static String m11b(String str) {
         SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(com.alibaba.mtl.log.a.getContext());
         return defaultSharedPreferences.getString("ut_" + str + "_timestamp", "0");
     }

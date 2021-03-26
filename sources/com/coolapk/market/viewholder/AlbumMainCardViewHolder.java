@@ -13,7 +13,7 @@ import com.coolapk.market.model.Entity;
 import java.util.List;
 
 public class AlbumMainCardViewHolder extends GenericBindHolder<AlbumListItemCardNonupleBinding, Card> {
-    public static final int LAYOUT_ID = 2131558448;
+    public static final int LAYOUT_ID = 2131558449;
     private View childView;
 
     public AlbumMainCardViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
@@ -27,7 +27,7 @@ public class AlbumMainCardViewHolder extends GenericBindHolder<AlbumListItemCard
         albumListItemCardNonupleBinding.setViewHolder(this);
         int size = entities.size();
         for (final int i = 0; i < 12; i++) {
-            View findViewById = this.itemView.findViewById(2131362769 + i);
+            View findViewById = this.itemView.findViewById(2131362780 + i);
             this.childView = findViewById;
             AlbumListItemCardNonupleItemBinding albumListItemCardNonupleItemBinding = (AlbumListItemCardNonupleItemBinding) DataBindingUtil.bind(findViewById);
             if (size < 7) {

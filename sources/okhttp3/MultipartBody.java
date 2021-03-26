@@ -75,25 +75,25 @@ public final class MultipartBody extends RequestBody {
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "type", imports = {}))
     /* renamed from: -deprecated_type  reason: not valid java name */
-    public final MediaType m2280deprecated_type() {
+    public final MediaType m1529deprecated_type() {
         return this.type;
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "boundary", imports = {}))
     /* renamed from: -deprecated_boundary  reason: not valid java name */
-    public final String m2277deprecated_boundary() {
+    public final String m1526deprecated_boundary() {
         return boundary();
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "size", imports = {}))
     /* renamed from: -deprecated_size  reason: not valid java name */
-    public final int m2279deprecated_size() {
+    public final int m1528deprecated_size() {
         return size();
     }
 
     @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "parts", imports = {}))
     /* renamed from: -deprecated_parts  reason: not valid java name */
-    public final List<Part> m2278deprecated_parts() {
+    public final List<Part> m1527deprecated_parts() {
         return this.parts;
     }
 
@@ -218,13 +218,13 @@ public final class MultipartBody extends RequestBody {
 
         @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "headers", imports = {}))
         /* renamed from: -deprecated_headers  reason: not valid java name */
-        public final Headers m2282deprecated_headers() {
+        public final Headers m1531deprecated_headers() {
             return this.headers;
         }
 
         @Deprecated(level = DeprecationLevel.ERROR, message = "moved to val", replaceWith = @ReplaceWith(expression = "body", imports = {}))
         /* renamed from: -deprecated_body  reason: not valid java name */
-        public final RequestBody m2281deprecated_body() {
+        public final RequestBody m1530deprecated_body() {
             return this.body;
         }
 

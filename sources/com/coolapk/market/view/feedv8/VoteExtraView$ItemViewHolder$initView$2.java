@@ -17,11 +17,11 @@ final class VoteExtraView$ItemViewHolder$initView$2 implements View.OnFocusChang
 
     @Override // android.view.View.OnFocusChangeListener
     public final void onFocusChange(View view, boolean z) {
-        if (z && this.this$0.this$0.getUiConfig().isMenuItemEnabled()) {
+        if (z && VoteExtraView.access$getUiConfig$p(this.this$0.this$0).isMenuItemEnabled()) {
             VoteExtraView voteExtraView = this.this$0.this$0;
-            FeedUIConfig build = FeedUIConfig.builder(this.this$0.this$0.getUiConfig()).isMenuItemEnabled(false).build();
+            FeedUIConfig build = FeedUIConfig.builder(VoteExtraView.access$getUiConfig$p(this.this$0.this$0)).isMenuItemEnabled(false).build();
             Intrinsics.checkNotNullExpressionValue(build, "FeedUIConfig.builder(uiC…                 .build()");
-            voteExtraView.setUiConfig(build);
+            VoteExtraView.access$setUiConfig$p(voteExtraView, build);
         }
     }
 }

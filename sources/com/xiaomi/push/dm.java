@@ -1,9 +1,10 @@
 package com.xiaomi.push;
 
-public class dm {
-    public static final Object a = new Object();
+import android.content.Context;
+import android.content.Intent;
 
-    /* renamed from: a  reason: collision with other field name */
-    public static final String f319a = String.valueOf(he.BroadcastActionRestarted.a());
-    public static final String b = String.valueOf(he.BroadcastActionChanged.a());
+public interface dm {
+    void a(Context context, Intent intent, String str);
+
+    void a(Context context, di diVar);
 }

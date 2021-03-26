@@ -6,15 +6,15 @@ import kotlin.jvm.functions.Function1;
 /* compiled from: UIntArray.kt */
 public final class UIntArrayKt {
     /* renamed from: uintArrayOf--ajY-9A  reason: not valid java name */
-    private static final int[] m835uintArrayOfajY9A(int... iArr) {
+    private static final int[] m233uintArrayOfajY9A(int... iArr) {
         return iArr;
     }
 
     private static final int[] UIntArray(int i, Function1<? super Integer, UInt> function1) {
         int[] iArr = new int[i];
         for (int i2 = 0; i2 < i; i2++) {
-            iArr[i2] = function1.invoke(Integer.valueOf(i2)).m816unboximpl();
+            iArr[i2] = function1.invoke(Integer.valueOf(i2)).m214unboximpl();
         }
-        return UIntArray.m819constructorimpl(iArr);
+        return UIntArray.m217constructorimpl(iArr);
     }
 }

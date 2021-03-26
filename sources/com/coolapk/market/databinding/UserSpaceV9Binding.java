@@ -111,7 +111,7 @@ public abstract class UserSpaceV9Binding extends ViewDataBinding {
 
     @Deprecated
     public static UserSpaceV9Binding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (UserSpaceV9Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559285, viewGroup, z, obj);
+        return (UserSpaceV9Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559295, viewGroup, z, obj);
     }
 
     public static UserSpaceV9Binding inflate(LayoutInflater layoutInflater) {
@@ -120,7 +120,7 @@ public abstract class UserSpaceV9Binding extends ViewDataBinding {
 
     @Deprecated
     public static UserSpaceV9Binding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (UserSpaceV9Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559285, null, false, obj);
+        return (UserSpaceV9Binding) ViewDataBinding.inflateInternal(layoutInflater, 2131559295, null, false, obj);
     }
 
     public static UserSpaceV9Binding bind(View view) {
@@ -129,6 +129,6 @@ public abstract class UserSpaceV9Binding extends ViewDataBinding {
 
     @Deprecated
     public static UserSpaceV9Binding bind(View view, Object obj) {
-        return (UserSpaceV9Binding) bind(obj, view, 2131559285);
+        return (UserSpaceV9Binding) bind(obj, view, 2131559295);
     }
 }

@@ -140,7 +140,7 @@ public class CoolBrowserData {
             if (i > 0) {
                 return context.getDrawable(i);
             }
-            return context.getDrawable(2131231588);
+            return context.getDrawable(2131231599);
         }
 
         public String getName() {
@@ -182,7 +182,7 @@ public class CoolBrowserData {
             Bitmap icon;
             CoolBrowserFragment coolBrowserFragment = this.fragment;
             if (coolBrowserFragment == null || (icon = coolBrowserFragment.getIcon()) == null) {
-                return context.getDrawable(2131231350);
+                return context.getDrawable(2131231361);
             }
             return new BitmapDrawable(context.getResources(), icon);
         }

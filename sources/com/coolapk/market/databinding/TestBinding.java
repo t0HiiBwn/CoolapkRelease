@@ -21,7 +21,7 @@ public abstract class TestBinding extends ViewDataBinding {
 
     @Deprecated
     public static TestBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (TestBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559178, viewGroup, z, obj);
+        return (TestBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559186, viewGroup, z, obj);
     }
 
     public static TestBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class TestBinding extends ViewDataBinding {
 
     @Deprecated
     public static TestBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (TestBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559178, null, false, obj);
+        return (TestBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559186, null, false, obj);
     }
 
     public static TestBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class TestBinding extends ViewDataBinding {
 
     @Deprecated
     public static TestBinding bind(View view, Object obj) {
-        return (TestBinding) bind(obj, view, 2131559178);
+        return (TestBinding) bind(obj, view, 2131559186);
     }
 }

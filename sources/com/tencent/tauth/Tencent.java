@@ -47,10 +47,10 @@ public class Tencent {
         synchronized (Tencent.class) {
             e.a(context.getApplicationContext());
             f.c("openSDK_LOG.Tencent", "createInstance()  -- start, appId = " + str);
-            Tencent tencent = b;
-            if (tencent == null) {
+            Tencent tencent2 = b;
+            if (tencent2 == null) {
                 b = new Tencent(str, context);
-            } else if (!str.equals(tencent.getAppId())) {
+            } else if (!str.equals(tencent2.getAppId())) {
                 b.logout(context);
                 b = new Tencent(str, context);
             }

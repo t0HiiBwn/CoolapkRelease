@@ -197,8 +197,8 @@ public class AssistActivity extends Activity {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:10:0x0043  */
-    /* JADX WARNING: Removed duplicated region for block: B:14:0x006e  */
+    /* JADX WARNING: Removed duplicated region for block: B:10:0x0045  */
+    /* JADX WARNING: Removed duplicated region for block: B:14:0x0071  */
     private void a(Bundle bundle) {
         String str;
         String str2;

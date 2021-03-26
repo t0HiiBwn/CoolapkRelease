@@ -11,8 +11,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_EntityCard  reason: invalid class name */
 abstract class C$AutoValue_EntityCard extends C$$AutoValue_EntityCard {
-    C$AutoValue_EntityCard(String str, String str2, Integer num, String str3, String str4, String str5, Long l2, String str6, String str7, String str8, String str9, List<Entity> list, String str10, Long l3, String str11, String str12) {
-        super(str, str2, num, str3, str4, str5, l2, str6, str7, str8, str9, list, str10, l3, str11, str12);
+    C$AutoValue_EntityCard(String str, String str2, Integer num, String str3, String str4, String str5, Long l, String str6, String str7, String str8, String str9, List<Entity> list, String str10, Long l2, String str11, String str12) {
+        super(str, str2, num, str3, str4, str5, l, str6, str7, str8, str9, list, str10, l2, str11, str12);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_EntityCard$GsonTypeAdapter */
@@ -99,8 +99,8 @@ abstract class C$AutoValue_EntityCard extends C$$AutoValue_EntityCard {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
@@ -134,8 +134,8 @@ abstract class C$AutoValue_EntityCard extends C$$AutoValue_EntityCard {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -203,14 +203,14 @@ abstract class C$AutoValue_EntityCard extends C$$AutoValue_EntityCard {
             String str3 = this.defaultLogo;
             String str4 = this.defaultId;
             String str5 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
+            Long l = this.defaultDateline;
             String str6 = this.defaultTitle;
             String str7 = this.defaultSubTitle;
             String str8 = this.defaultUrl;
             String str9 = this.defaultDescription;
             List<Entity> list = this.defaultEntities;
             String str10 = this.defaultEntityTypeName;
-            Long l3 = this.defaultLastUpdate;
+            Long l2 = this.defaultLastUpdate;
             String str11 = this.defaultEntityType;
             String str12 = this.defaultPic;
             String str13 = str2;
@@ -218,14 +218,14 @@ abstract class C$AutoValue_EntityCard extends C$$AutoValue_EntityCard {
             String str14 = str3;
             String str15 = str4;
             String str16 = str5;
-            Long l4 = l2;
+            Long l3 = l;
             String str17 = str6;
             String str18 = str7;
             String str19 = str8;
             String str20 = str9;
             List<Entity> list2 = list;
             String str21 = str10;
-            Long l5 = l3;
+            Long l4 = l2;
             String str22 = str;
             String str23 = str11;
             while (jsonReader.hasNext()) {
@@ -353,7 +353,7 @@ abstract class C$AutoValue_EntityCard extends C$$AutoValue_EntityCard {
                             str23 = this.entityTypeAdapter.read(jsonReader);
                             continue;
                         case 6:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 7:
                             str21 = this.entityTypeNameAdapter.read(jsonReader);
@@ -380,7 +380,7 @@ abstract class C$AutoValue_EntityCard extends C$$AutoValue_EntityCard {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 15:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -389,7 +389,7 @@ abstract class C$AutoValue_EntityCard extends C$$AutoValue_EntityCard {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_EntityCard(str22, str13, num2, str14, str15, str16, l4, str17, str18, str19, str20, list2, str21, l5, str23, str12);
+            return new AutoValue_EntityCard(str22, str13, num2, str14, str15, str16, l3, str17, str18, str19, str20, list2, str21, l4, str23, str12);
         }
     }
 }

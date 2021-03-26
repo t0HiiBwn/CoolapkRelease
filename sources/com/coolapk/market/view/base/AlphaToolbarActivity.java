@@ -101,7 +101,7 @@ public abstract class AlphaToolbarActivity extends FakeStatusBarActivity impleme
         boolean z = true;
         setContentBarAlwaysTranslucent(true);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558456);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558457);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…, R.layout.alpha_toolbar)");
         AlphaToolbarBinding alphaToolbarBinding = (AlphaToolbarBinding) contentView;
         this.binding = alphaToolbarBinding;
@@ -166,12 +166,12 @@ public abstract class AlphaToolbarActivity extends FakeStatusBarActivity impleme
     }
 
     public final void requestCreateFragment() {
-        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362316);
+        Fragment findFragmentById = getSupportFragmentManager().findFragmentById(2131362322);
         if (findFragmentById == null) {
             findFragmentById = onCreateFragment();
         }
         if (findFragmentById != null && !findFragmentById.isAdded()) {
-            getSupportFragmentManager().beginTransaction().add(2131362316, findFragmentById).commitAllowingStateLoss();
+            getSupportFragmentManager().beginTransaction().add(2131362322, findFragmentById).commitAllowingStateLoss();
             getSupportFragmentManager().executePendingTransactions();
             setupFastReturnView(findFragmentById);
             onFragmentCreated(findFragmentById);
@@ -192,7 +192,7 @@ public abstract class AlphaToolbarActivity extends FakeStatusBarActivity impleme
     }
 
     public final Fragment getFragment() {
-        return getSupportFragmentManager().findFragmentById(2131362316);
+        return getSupportFragmentManager().findFragmentById(2131362322);
     }
 
     public final Toolbar getToolbar() {

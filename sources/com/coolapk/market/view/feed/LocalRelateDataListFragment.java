@@ -16,7 +16,7 @@ public class LocalRelateDataListFragment extends LocalDataFragment<RelatedData> 
 
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment
     public int getItemViewType(int i) {
-        return 2131558895;
+        return 2131558902;
     }
 
     public static LocalRelateDataListFragment newInstance(ArrayList<RelatedData> arrayList) {
@@ -30,7 +30,7 @@ public class LocalRelateDataListFragment extends LocalDataFragment<RelatedData> 
     @Override // com.coolapk.market.view.base.refresh.LocalDataFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558895, 2131231052).create());
+        getRecyclerView().addItemDecoration(ItemDecorations.vertical(getActivity()).type(2131558902, 2131231062).create());
         getRecyclerView().setBackgroundColor(AppHolder.getAppTheme().getContentBackgroundColor());
         initData();
     }

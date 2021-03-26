@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import com.coolapk.market.manager.DataManager;
 import com.coolapk.market.util.ColorUtils;
+import com.coolapk.market.util.DateUtils;
 import com.coolapk.market.util.LogUtils;
 import com.coolapk.market.util.NightModeHelper;
 import com.coolapk.market.util.PreferencesUtils;
@@ -230,6 +231,9 @@ public final class AppTheme {
     public final List<ThemeItem> getColorPickerThemeList() {
         ArrayList arrayList = new ArrayList();
         arrayList.add(getThemItemById("white"));
+        if (DateUtils.isTimeLimit()) {
+            arrayList.add(getThemItemById("TIME_LIMIT_THEME"));
+        }
         arrayList.add(getThemItemById("green"));
         if (SystemUtils.isSmartisanPro()) {
             arrayList.add(getThemItemById("SMARTISAN_PRO"));
@@ -339,7 +343,7 @@ public final class AppTheme {
 
     public final int[] getCustomThemeColor(Context context) {
         Intrinsics.checkNotNullParameter(context, "context");
-        return new int[]{DataManager.getInstance().getPreferencesInt("theme_custom_color", ResourceUtils.getColorInt(context, 2131099889)), DataManager.getInstance().getPreferencesInt("theme_custom_color_accent", ResourceUtils.getColorInt(context, 2131099889))};
+        return new int[]{DataManager.getInstance().getPreferencesInt("theme_custom_color", ResourceUtils.getColorInt(context, 2131099894)), DataManager.getInstance().getPreferencesInt("theme_custom_color_accent", ResourceUtils.getColorInt(context, 2131099894))};
     }
 
     public final void loadResource(Context context) {
@@ -387,12 +391,13 @@ public final class AppTheme {
         return ResourceUtils.resolveData(context, 2130969532);
     }
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u000f\n\u0002\u0010\u0002\n\u0002\b\u0004\u0018\u0000 !2\u00020\u0001:\u0001!B-\b\u0010\u0012\b\b\u0001\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0003¢\u0006\u0002\u0010\bB%\b\u0010\u0012\b\b\u0001\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0005¢\u0006\u0002\u0010\tB\u000f\b\u0016\u0012\u0006\u0010\n\u001a\u00020\u000b¢\u0006\u0002\u0010\fJ\b\u0010\u001b\u001a\u00020\u0005H\u0016J\b\u0010\u001c\u001a\u00020\u0005H\u0007J\u0018\u0010\u001d\u001a\u00020\u001e2\u0006\u0010\u001f\u001a\u00020\u000b2\u0006\u0010 \u001a\u00020\u0005H\u0016R\u0012\u0010\u0006\u001a\u00020\u00058\u0002@\u0002X\u000e¢\u0006\u0002\n\u0000R\u0011\u0010\r\u001a\u00020\u000e8F¢\u0006\u0006\u001a\u0004\b\r\u0010\u000fR\u0011\u0010\u0010\u001a\u00020\u000e8F¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u000fR\u0011\u0010\u0011\u001a\u00020\u000e8F¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u000fR\u0011\u0010\u0012\u001a\u00020\u000e8F¢\u0006\u0006\u001a\u0004\b\u0012\u0010\u000fR\"\u0010\u0007\u001a\u0004\u0018\u00010\u00032\b\u0010\u0013\u001a\u0004\u0018\u00010\u0003@BX\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u0014\u0010\u0015R \u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0013\u001a\u00020\u00058G@BX\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\u0017R&\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0013\u001a\u00020\u00038G@BX\u000e¢\u0006\u000e\n\u0000\u0012\u0004\b\u0018\u0010\u0019\u001a\u0004\b\u001a\u0010\u0015¨\u0006\""}, d2 = {"Lcom/coolapk/market/AppTheme$ThemeItem;", "Landroid/os/Parcelable;", "themeId", "", "mainStylesRes", "", "color", "label", "(Ljava/lang/String;IILjava/lang/String;)V", "(Ljava/lang/String;II)V", "parcel", "Landroid/os/Parcel;", "(Landroid/os/Parcel;)V", "isCurrentTheme", "", "()Z", "isCustomTheme", "isDarkTheme", "isLightTheme", "<set-?>", "getLabel", "()Ljava/lang/String;", "getMainStylesRes", "()I", "getThemeId$annotations", "()V", "getThemeId", "describeContents", "getColor", "writeToParcel", "", "dest", "flags", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+    @Metadata(bv = {1, 0, 3}, d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0011\n\u0002\u0010\u0002\n\u0002\b\u0004\u0018\u0000 #2\u00020\u0001:\u0001#B-\b\u0010\u0012\b\b\u0001\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0003¢\u0006\u0002\u0010\bB5\b\u0010\u0012\b\b\u0001\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0003\u0012\u0006\u0010\t\u001a\u00020\n¢\u0006\u0002\u0010\u000bB%\b\u0010\u0012\b\b\u0001\u0010\u0002\u001a\u00020\u0003\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0005\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0005¢\u0006\u0002\u0010\fB\u000f\b\u0016\u0012\u0006\u0010\r\u001a\u00020\u000e¢\u0006\u0002\u0010\u000fJ\b\u0010\u001d\u001a\u00020\u0005H\u0016J\b\u0010\u001e\u001a\u00020\u0005H\u0007J\u0018\u0010\u001f\u001a\u00020 2\u0006\u0010!\u001a\u00020\u000e2\u0006\u0010\"\u001a\u00020\u0005H\u0016R\u0012\u0010\u0006\u001a\u00020\u00058\u0002@\u0002X\u000e¢\u0006\u0002\n\u0000R\u0011\u0010\u0010\u001a\u00020\n8F¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u0011R\u0011\u0010\u0012\u001a\u00020\n8F¢\u0006\u0006\u001a\u0004\b\u0012\u0010\u0011R\u0011\u0010\u0013\u001a\u00020\n8F¢\u0006\u0006\u001a\u0004\b\u0013\u0010\u0011R\u0011\u0010\u0014\u001a\u00020\n8F¢\u0006\u0006\u001a\u0004\b\u0014\u0010\u0011R\u001e\u0010\t\u001a\u00020\n2\u0006\u0010\u0015\u001a\u00020\n@BX\u000e¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\u0011R\"\u0010\u0007\u001a\u0004\u0018\u00010\u00032\b\u0010\u0015\u001a\u0004\u0018\u00010\u0003@BX\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u0016\u0010\u0017R \u0010\u0004\u001a\u00020\u00052\u0006\u0010\u0015\u001a\u00020\u00058G@BX\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u0018\u0010\u0019R&\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0015\u001a\u00020\u00038G@BX\u000e¢\u0006\u000e\n\u0000\u0012\u0004\b\u001a\u0010\u001b\u001a\u0004\b\u001c\u0010\u0017¨\u0006$"}, d2 = {"Lcom/coolapk/market/AppTheme$ThemeItem;", "Landroid/os/Parcelable;", "themeId", "", "mainStylesRes", "", "color", "label", "(Ljava/lang/String;IILjava/lang/String;)V", "isTimeLimit", "", "(Ljava/lang/String;IILjava/lang/String;Z)V", "(Ljava/lang/String;II)V", "parcel", "Landroid/os/Parcel;", "(Landroid/os/Parcel;)V", "isCurrentTheme", "()Z", "isCustomTheme", "isDarkTheme", "isLightTheme", "<set-?>", "getLabel", "()Ljava/lang/String;", "getMainStylesRes", "()I", "getThemeId$annotations", "()V", "getThemeId", "describeContents", "getColor", "writeToParcel", "", "dest", "flags", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: AppTheme.kt */
     public static final class ThemeItem implements Parcelable {
         public static final Parcelable.Creator<ThemeItem> CREATOR = new AppTheme$ThemeItem$Companion$CREATOR$1();
         public static final Companion Companion = new Companion(null);
         private int color;
+        private boolean isTimeLimit;
         private String label;
         private int mainStylesRes;
         private String themeId;
@@ -404,6 +409,10 @@ public final class AppTheme {
         @Override // android.os.Parcelable
         public int describeContents() {
             return 0;
+        }
+
+        public final boolean isTimeLimit() {
+            return this.isTimeLimit;
         }
 
         public final String getLabel() {
@@ -446,6 +455,16 @@ public final class AppTheme {
             this.mainStylesRes = i;
             this.color = i2;
             this.label = str2;
+        }
+
+        public ThemeItem(@ThemeIds String str, int i, int i2, String str2, boolean z) {
+            Intrinsics.checkNotNullParameter(str, "themeId");
+            Intrinsics.checkNotNullParameter(str2, "label");
+            this.themeId = str;
+            this.mainStylesRes = i;
+            this.color = i2;
+            this.label = str2;
+            this.isTimeLimit = z;
         }
 
         public ThemeItem(@ThemeIds String str, int i, int i2) {

@@ -70,7 +70,7 @@ public abstract class ItemHeadCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemHeadCardBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemHeadCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558772, viewGroup, z, obj);
+        return (ItemHeadCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558779, viewGroup, z, obj);
     }
 
     public static ItemHeadCardBinding inflate(LayoutInflater layoutInflater) {
@@ -79,7 +79,7 @@ public abstract class ItemHeadCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemHeadCardBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemHeadCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558772, null, false, obj);
+        return (ItemHeadCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558779, null, false, obj);
     }
 
     public static ItemHeadCardBinding bind(View view) {
@@ -88,6 +88,6 @@ public abstract class ItemHeadCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemHeadCardBinding bind(View view, Object obj) {
-        return (ItemHeadCardBinding) bind(obj, view, 2131558772);
+        return (ItemHeadCardBinding) bind(obj, view, 2131558779);
     }
 }

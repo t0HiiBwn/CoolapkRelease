@@ -30,7 +30,7 @@ public abstract class PhotoBinding extends ViewDataBinding {
 
     @Deprecated
     public static PhotoBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (PhotoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559079, viewGroup, z, obj);
+        return (PhotoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559086, viewGroup, z, obj);
     }
 
     public static PhotoBinding inflate(LayoutInflater layoutInflater) {
@@ -39,7 +39,7 @@ public abstract class PhotoBinding extends ViewDataBinding {
 
     @Deprecated
     public static PhotoBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (PhotoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559079, null, false, obj);
+        return (PhotoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559086, null, false, obj);
     }
 
     public static PhotoBinding bind(View view) {
@@ -48,6 +48,6 @@ public abstract class PhotoBinding extends ViewDataBinding {
 
     @Deprecated
     public static PhotoBinding bind(View view, Object obj) {
-        return (PhotoBinding) bind(obj, view, 2131559079);
+        return (PhotoBinding) bind(obj, view, 2131559086);
     }
 }

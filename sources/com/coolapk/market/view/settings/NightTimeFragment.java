@@ -21,7 +21,7 @@ public class NightTimeFragment extends BaseFragment implements View.OnClickListe
 
     @Override // androidx.fragment.app.Fragment
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        NightTimePickerBinding nightTimePickerBinding = (NightTimePickerBinding) DataBindingUtil.inflate(layoutInflater, 2131559055, viewGroup, false);
+        NightTimePickerBinding nightTimePickerBinding = (NightTimePickerBinding) DataBindingUtil.inflate(layoutInflater, 2131559062, viewGroup, false);
         this.binding = nightTimePickerBinding;
         return nightTimePickerBinding.getRoot();
     }
@@ -55,7 +55,7 @@ public class NightTimeFragment extends BaseFragment implements View.OnClickListe
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         if (Math.abs(getTime(this.binding.startTimePicker) - getTime(this.binding.endTimePicker)) < 60) {
-            Toast.show(getActivity(), 2131886488);
+            Toast.show(getActivity(), 2131886548);
         } else {
             saveDataAndExit();
         }
@@ -67,7 +67,7 @@ public class NightTimeFragment extends BaseFragment implements View.OnClickListe
 
     private void saveDataAndExit() {
         NightModeHelper.getInstance().modifyNightModeTime(getTime(this.binding.startTimePicker), getTime(this.binding.endTimePicker));
-        Toast.show(getActivity(), 2131886489);
+        Toast.show(getActivity(), 2131886549);
         this.binding.getRoot().postDelayed(new Runnable() {
             /* class com.coolapk.market.view.settings.NightTimeFragment.AnonymousClass1 */
 

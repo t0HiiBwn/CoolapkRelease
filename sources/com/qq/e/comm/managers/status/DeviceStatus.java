@@ -36,9 +36,7 @@ public class DeviceStatus {
     private String i;
     private String j;
     private volatile String k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private volatile String f1389l;
+    private volatile String l;
     private volatile float m;
     public final String model = Build.MODEL;
     private Context n;
@@ -56,12 +54,15 @@ public class DeviceStatus {
         return (this.n.getApplicationInfo().flags & 8192) != 0 ? (int) (((float) i2) / f2) : i2;
     }
 
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: double : 0x0034: INVOKE  (r2v4 double) = (r0v3 android.location.Location) type: VIRTUAL call: android.location.Location.getLatitude():double)] */
-    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: double : 0x0046: INVOKE  (r2v5 double) = (r0v3 android.location.Location) type: VIRTUAL call: android.location.Location.getLongitude():double)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: double : 0x003b: INVOKE  (r2v4 double) = (r0v4 android.location.Location) type: VIRTUAL call: android.location.Location.getLatitude():double)] */
+    /* JADX DEBUG: TODO: convert one arg to string using `String.valueOf()`, args: [(wrap: double : 0x004d: INVOKE  (r2v5 double) = (r0v4 android.location.Location) type: VIRTUAL call: android.location.Location.getLongitude():double)] */
+    /* JADX WARNING: Code restructure failed: missing block: B:4:0x0007, code lost:
+        r1 = (android.location.LocationManager) r7.n.getSystemService("location");
+     */
     private void a() {
+        final LocationManager locationManager;
         try {
-            final LocationManager locationManager = (LocationManager) this.n.getSystemService("location");
-            if (locationManager != null) {
+            if (GlobalSetting.isAgreePrivacyStrategyNonNull() && locationManager != null) {
                 Criteria criteria = new Criteria();
                 criteria.setAccuracy(2);
                 criteria.setAltitudeRequired(false);
@@ -76,7 +77,7 @@ public class DeviceStatus {
                     this.k = sb.toString();
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append(lastKnownLocation.getLongitude());
-                    this.f1389l = sb2.toString();
+                    this.l = sb2.toString();
                     this.m = lastKnownLocation.getAccuracy();
                     return;
                 }
@@ -95,7 +96,7 @@ public class DeviceStatus {
                             DeviceStatus deviceStatus2 = DeviceStatus.this;
                             StringBuilder sb2 = new StringBuilder();
                             sb2.append(location.getLongitude());
-                            deviceStatus2.f1389l = sb2.toString();
+                            deviceStatus2.l = sb2.toString();
                             locationManager.removeUpdates(this);
                         } catch (Throwable unused) {
                         }
@@ -220,7 +221,7 @@ public class DeviceStatus {
     }
 
     public String getLng() {
-        return this.f1389l;
+        return this.l;
     }
 
     public float getLocationAccuracy() {

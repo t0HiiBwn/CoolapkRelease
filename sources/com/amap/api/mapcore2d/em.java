@@ -46,9 +46,7 @@ public final class em implements Closeable {
     private final int i;
     private long j = 0;
     private Writer k;
-
-    /* renamed from: l  reason: collision with root package name */
-    private int f1232l = 1000;
+    private int l = 1000;
     private final LinkedHashMap<String, c> m = new LinkedHashMap<>(0, 0.75f, true);
     private int n;
     private en o;
@@ -92,7 +90,7 @@ public final class em implements Closeable {
         } else if (i2 > 10000) {
             i2 = 10000;
         }
-        this.f1232l = i2;
+        this.l = i2;
     }
 
     public static void a() {
@@ -470,7 +468,7 @@ public final class em implements Closeable {
     /* access modifiers changed from: private */
     public void l() throws IOException {
         while (true) {
-            if (this.j > this.h || this.m.size() > this.f1232l) {
+            if (this.j > this.h || this.m.size() > this.l) {
                 String key = this.m.entrySet().iterator().next().getKey();
                 c(key);
                 en enVar = this.o;

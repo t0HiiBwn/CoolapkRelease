@@ -1,10 +1,14 @@
 package com.qq.e.ads.nativ;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.FrameLayout;
 import com.qq.e.ads.nativ.NativeExpressAD;
+import com.qq.e.comm.compliance.ApkDownloadComplianceInterface;
+import com.qq.e.comm.compliance.DownloadConfirmCallBack;
+import com.qq.e.comm.compliance.DownloadConfirmListener;
 import com.qq.e.comm.managers.GDTADManager;
 import com.qq.e.comm.pi.AdData;
 import com.qq.e.comm.pi.NEADI;
@@ -16,7 +20,7 @@ import java.util.Map;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class NativeExpressADView extends FrameLayout {
+public class NativeExpressADView extends FrameLayout implements ApkDownloadComplianceInterface, DownloadConfirmListener {
     private NEADVI a;
     private boolean b = false;
     private volatile boolean c = false;
@@ -26,6 +30,7 @@ public class NativeExpressADView extends FrameLayout {
     private AdData f;
     private volatile boolean g = false;
     private ViewBindStatusListener h;
+    private DownloadConfirmListener i;
 
     public interface ViewBindStatusListener {
         void onAttachedToWindow();
@@ -119,6 +124,15 @@ public class NativeExpressADView extends FrameLayout {
         }
     }
 
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public String getApkInfoUrl() {
+        NEADVI neadvi = this.a;
+        if (neadvi != null) {
+            return neadvi.getApkInfoUrl();
+        }
+        return null;
+    }
+
     public AdData getBoundData() {
         return this.f;
     }
@@ -152,6 +166,14 @@ public class NativeExpressADView extends FrameLayout {
         ViewBindStatusListener viewBindStatusListener = this.h;
         if (viewBindStatusListener != null) {
             viewBindStatusListener.onDetachedFromWindow();
+        }
+    }
+
+    @Override // com.qq.e.comm.compliance.DownloadConfirmListener
+    public void onDownloadConfirm(Activity activity, int i2, String str, DownloadConfirmCallBack downloadConfirmCallBack) {
+        DownloadConfirmListener downloadConfirmListener = this.i;
+        if (downloadConfirmListener != null) {
+            downloadConfirmListener.onDownloadConfirm(activity, i2, str, downloadConfirmCallBack);
         }
     }
 
@@ -203,6 +225,15 @@ public class NativeExpressADView extends FrameLayout {
         NEADVI neadvi = this.a;
         if (neadvi != null) {
             neadvi.setAdSize(aDSize);
+        }
+    }
+
+    @Override // com.qq.e.comm.compliance.ApkDownloadComplianceInterface
+    public void setDownloadConfirmListener(DownloadConfirmListener downloadConfirmListener) {
+        this.i = downloadConfirmListener;
+        NEADVI neadvi = this.a;
+        if (neadvi != null) {
+            neadvi.setDownloadConfirmListener(this);
         }
     }
 

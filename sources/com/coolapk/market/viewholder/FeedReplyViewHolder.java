@@ -43,7 +43,7 @@ import rx.Subscriber;
 /* compiled from: FeedReplyViewHolder.kt */
 public class FeedReplyViewHolder extends GenericBindHolder<ItemFeedReplyBinding, FeedReply> implements Recyclable {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558716;
+    public static final int LAYOUT_ID = 2131558723;
     public FeedReply feedReply;
     private boolean isPosting;
     private final Lazy ninePicViewPart$delegate;
@@ -195,7 +195,7 @@ public class FeedReplyViewHolder extends GenericBindHolder<ItemFeedReplyBinding,
         Intrinsics.checkNotNullParameter(view, "view");
         super.onClick(view);
         switch (view.getId()) {
-            case 2131362200:
+            case 2131362205:
                 Activity activity = UiUtils.getActivity(getContext());
                 FeedReply feedReply2 = this.feedReply;
                 if (feedReply2 == null) {
@@ -203,8 +203,8 @@ public class FeedReplyViewHolder extends GenericBindHolder<ItemFeedReplyBinding,
                 }
                 ActionManager.startReplyActivity(activity, feedReply2);
                 return;
-            case 2131362289:
-            case 2131362291:
+            case 2131362294:
+            case 2131362296:
                 if (DataManager.getInstance().getLoginSession().isLogin()) {
                     Activity activity2 = UiUtils.getActivity(getContext());
                     FeedReply feedReply3 = this.feedReply;
@@ -217,7 +217,7 @@ public class FeedReplyViewHolder extends GenericBindHolder<ItemFeedReplyBinding,
                 StatisticHelper.Companion.getInstance().recordLoginClickEvent("回复");
                 ActionManager.startLoginActivity(getContext());
                 return;
-            case 2131362707:
+            case 2131362718:
                 FeedReply feedReply4 = this.feedReply;
                 if (feedReply4 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("feedReply");
@@ -229,7 +229,7 @@ public class FeedReplyViewHolder extends GenericBindHolder<ItemFeedReplyBinding,
                 }
                 ActionManager.startPhotoViewActivity(view, pic, feedReply5.getMiddleSizePic());
                 return;
-            case 2131362851:
+            case 2131362862:
                 Boolean checkLogin = ActionManager.checkLogin(getContext());
                 Intrinsics.checkNotNullExpressionValue(checkLogin, "ActionManager.checkLogin(context)");
                 if (checkLogin.booleanValue()) {
@@ -239,7 +239,7 @@ public class FeedReplyViewHolder extends GenericBindHolder<ItemFeedReplyBinding,
                     StatisticHelper.Companion.getInstance().recordLoginClickEvent("点赞");
                     return;
                 }
-            case 2131363877:
+            case 2131363900:
                 FeedReply feedReply6 = this.feedReply;
                 if (feedReply6 == null) {
                     Intrinsics.throwUninitializedPropertyAccessException("feedReply");
@@ -296,9 +296,9 @@ public class FeedReplyViewHolder extends GenericBindHolder<ItemFeedReplyBinding,
         TextView textView = ((ItemFeedReplyBinding) getBinding()).likeNum;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.likeNum");
         textView.setText(i > 0 ? String.valueOf(i) : "");
-        ((ItemFeedReplyBinding) getBinding()).likeNum.setTextColor(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099893));
+        ((ItemFeedReplyBinding) getBinding()).likeNum.setTextColor(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099898));
         ((ItemFeedReplyBinding) getBinding()).likeIcon.setImageResource(z ? 2131689495 : 2131689494);
-        ((ItemFeedReplyBinding) getBinding()).likeIcon.setColorFilter(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099893));
+        ((ItemFeedReplyBinding) getBinding()).likeIcon.setColorFilter(z ? AppHolder.getAppTheme().getColorAccent() : ResourceUtils.getColorInt(getContext(), 2131099898));
     }
 
     @Override // com.coolapk.market.viewholder.iview.Recyclable

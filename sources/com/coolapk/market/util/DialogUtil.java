@@ -13,6 +13,7 @@ import android.view.ViewParent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -27,6 +28,7 @@ import com.coolapk.market.AppHolder;
 import com.coolapk.market.databinding.DialogListItemViewBinding;
 import com.coolapk.market.databinding.DialogSelectItemBinding;
 import com.coolapk.market.databinding.DialogSeletorContainerBinding;
+import com.coolapk.market.databinding.StaticDialogViewBinding;
 import com.coolapk.market.databinding.SubmitFeedAddMoreItemDialogBinding;
 import com.coolapk.market.extend.ContextExtendsKt;
 import com.coolapk.market.extend.NumberExtendsKt;
@@ -35,6 +37,8 @@ import com.coolapk.market.view.base.WrapDialogFragmentKt;
 import com.coolapk.market.view.feed.ConfirmDialog;
 import com.coolapk.market.view.user.UserProfileFragment;
 import com.coolapk.market.viewholder.BindingViewHolder;
+import com.coolapk.market.widget.DrawSystemBarFrameLayout;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import java.util.Collection;
@@ -49,7 +53,7 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.Ref;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\bÆ\u0002\u0018\u00002\u00020\u0001:\u0003%&'B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J0\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u00042\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\t2\b\b\u0002\u0010\n\u001a\u00020\u000b2\b\b\u0002\u0010\f\u001a\u00020\u000bJ2\u0010\r\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u000f2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00050\u0012J0\u0010\u0013\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\f\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00160\u00152\u0012\u0010\u0017\u001a\u000e\u0012\u0004\u0012\u00020\u0016\u0012\u0004\u0012\u00020\u00050\u0012JF\u0010\u0018\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0019\u001a\u00020\u000f2\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u000f2\u0012\u0010\u001a\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00050\u00122\n\b\u0002\u0010\u001b\u001a\u0004\u0018\u00010\u000fJ,\u0010\u001c\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0019\u001a\u00020\u000f2\u0006\u0010\u000e\u001a\u00020\u000f2\f\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004JB\u0010\u001d\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0019\u001a\u00020\u000f2\f\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00160\u00152\b\b\u0002\u0010\u001e\u001a\u00020\u000b2\u0012\u0010\u0017\u001a\u000e\u0012\u0004\u0012\u00020\u0016\u0012\u0004\u0012\u00020\u00050\u0012J \u0010\u001f\u001a\u00020 2\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010!\u001a\u00020\u000f2\b\b\u0002\u0010\"\u001a\u00020\u000bJ\f\u0010#\u001a\u00020\u0005*\u00020$H\u0002¨\u0006("}, d2 = {"Lcom/coolapk/market/util/DialogUtil;", "", "()V", "showBottomSheetDialog", "Lkotlin/Function0;", "", "activity", "Landroid/app/Activity;", "view", "Landroid/view/View;", "drawSystemBar", "", "removeDefaultBg", "showBottomSheetEditDialog", "content", "", "hint", "onDone", "Lkotlin/Function1;", "showBottomSheetListDialog", "itemData", "", "Lcom/coolapk/market/util/DialogUtil$DialogItemData;", "onItemCheck", "showCenterEditTextDialog", "title", "onClick", "subTitle", "showConfigDialog", "showItemSelectDialog", "showConfirm", "showProgressDialog", "Landroid/app/Dialog;", "message", "cancelable", "hackItsWindowsToDrawSystemBar", "Lcom/google/android/material/bottomsheet/BottomSheetDialog;", "DialogItemData", "ListItemViewHolder", "SelectItemViewHolder", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\bÆ\u0002\u0018\u00002\u00020\u0001:\u0003&'(B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J0\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u00042\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\t2\b\b\u0002\u0010\n\u001a\u00020\u000b2\b\b\u0002\u0010\f\u001a\u00020\u000bJ2\u0010\r\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u000f2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00050\u0012J0\u0010\u0013\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\f\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00160\u00152\u0012\u0010\u0017\u001a\u000e\u0012\u0004\u0012\u00020\u0016\u0012\u0004\u0012\u00020\u00050\u0012JF\u0010\u0018\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0019\u001a\u00020\u000f2\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u000f2\u0012\u0010\u001a\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00050\u00122\n\b\u0002\u0010\u001b\u001a\u0004\u0018\u00010\u000fJ,\u0010\u001c\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0019\u001a\u00020\u000f2\u0006\u0010\u000e\u001a\u00020\u000f2\f\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004J\u001c\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u00050\u00042\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\tJB\u0010\u001e\u001a\u00020\u00052\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\u0019\u001a\u00020\u000f2\f\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00160\u00152\b\b\u0002\u0010\u001f\u001a\u00020\u000b2\u0012\u0010\u0017\u001a\u000e\u0012\u0004\u0012\u00020\u0016\u0012\u0004\u0012\u00020\u00050\u0012J \u0010 \u001a\u00020!2\u0006\u0010\u0006\u001a\u00020\u00072\u0006\u0010\"\u001a\u00020\u000f2\b\b\u0002\u0010#\u001a\u00020\u000bJ\f\u0010$\u001a\u00020\u0005*\u00020%H\u0002¨\u0006)"}, d2 = {"Lcom/coolapk/market/util/DialogUtil;", "", "()V", "showBottomSheetDialog", "Lkotlin/Function0;", "", "activity", "Landroid/app/Activity;", "view", "Landroid/view/View;", "drawSystemBar", "", "removeDefaultBg", "showBottomSheetEditDialog", "content", "", "hint", "onDone", "Lkotlin/Function1;", "showBottomSheetListDialog", "itemData", "", "Lcom/coolapk/market/util/DialogUtil$DialogItemData;", "onItemCheck", "showCenterEditTextDialog", "title", "onClick", "subTitle", "showConfigDialog", "showFullScreenDialog", "showItemSelectDialog", "showConfirm", "showProgressDialog", "Landroid/app/Dialog;", "message", "cancelable", "hackItsWindowsToDrawSystemBar", "Lcom/google/android/material/bottomsheet/BottomSheetDialog;", "DialogItemData", "ListItemViewHolder", "SelectItemViewHolder", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: DialogUtil.kt */
 public final class DialogUtil {
     public static final DialogUtil INSTANCE = new DialogUtil();
@@ -107,7 +111,7 @@ public final class DialogUtil {
         Intrinsics.checkNotNullParameter(function1, "onClick");
         Activity activity2 = activity;
         int i = 0;
-        SubmitFeedAddMoreItemDialogBinding submitFeedAddMoreItemDialogBinding = (SubmitFeedAddMoreItemDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131559147, null, false);
+        SubmitFeedAddMoreItemDialogBinding submitFeedAddMoreItemDialogBinding = (SubmitFeedAddMoreItemDialogBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131559155, null, false);
         AlertDialog.Builder title = new AlertDialog.Builder(activity2).setTitle(str);
         Intrinsics.checkNotNullExpressionValue(submitFeedAddMoreItemDialogBinding, "binding");
         AlertDialog create = title.setView(submitFeedAddMoreItemDialogBinding.getRoot()).create();
@@ -253,12 +257,12 @@ public final class DialogUtil {
         RecyclerView recyclerView = new RecyclerView(activity2);
         recyclerView.setLayoutManager(new LinearLayoutManager(activity2));
         recyclerView.addItemDecoration(((HorizontalDividerItemDecoration.Builder) ((HorizontalDividerItemDecoration.Builder) new HorizontalDividerItemDecoration.Builder(activity2).color(AppHolder.getAppTheme().getContentBackgroundDividerColor())).size(SizeUtils.dp2px(0.5f))).build());
-        recyclerView.setAdapter(new DialogUtil$showBottomSheetListDialog$1(list, function1, showBottomSheetDialog$default(this, activity, recyclerView, true, false, 8, null)));
+        recyclerView.setAdapter(new DialogUtil$showBottomSheetListDialog$1(list, function1, showBottomSheetDialog$default(this, activity, recyclerView, false, false, 12, null)));
     }
 
     public static /* synthetic */ Function0 showBottomSheetDialog$default(DialogUtil dialogUtil, Activity activity, View view, boolean z, boolean z2, int i, Object obj) {
         if ((i & 4) != 0) {
-            z = false;
+            z = true;
         }
         if ((i & 8) != 0) {
             z2 = false;
@@ -272,7 +276,13 @@ public final class DialogUtil {
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(activity);
         bottomSheetDialog.setContentView(view);
         bottomSheetDialog.show();
-        view.post(new DialogUtil$showBottomSheetDialog$1(view, bottomSheetDialog, activity));
+        BottomSheetBehavior<FrameLayout> behavior = bottomSheetDialog.getBehavior();
+        Intrinsics.checkNotNullExpressionValue(behavior, "dialog.behavior");
+        behavior.setSkipCollapsed(true);
+        BottomSheetBehavior<FrameLayout> behavior2 = bottomSheetDialog.getBehavior();
+        Intrinsics.checkNotNullExpressionValue(behavior2, "dialog.behavior");
+        behavior2.setState(3);
+        view.addOnLayoutChangeListener(new DialogUtil$showBottomSheetDialog$1(view));
         if (z) {
             hackItsWindowsToDrawSystemBar(bottomSheetDialog);
         }
@@ -320,7 +330,7 @@ public final class DialogUtil {
                     gradientDrawable2.setShape(1);
                     gradientDrawable2.setColor(AppHolder.getAppTheme().getColorAccent());
                     Unit unit = Unit.INSTANCE;
-                    LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{gradientDrawable2, ResourceUtils.getDrawable(getContext(), 2131231256)});
+                    LayerDrawable layerDrawable = new LayerDrawable(new Drawable[]{gradientDrawable2, ResourceUtils.getDrawable(getContext(), 2131231267)});
                     layerDrawable.setLayerInset(1, NumberExtendsKt.getDp((Number) 4), NumberExtendsKt.getDp((Number) 4), NumberExtendsKt.getDp((Number) 4), NumberExtendsKt.getDp((Number) 4));
                     gradientDrawable = layerDrawable;
                 } else {
@@ -354,7 +364,7 @@ public final class DialogUtil {
         Intrinsics.checkNotNullParameter(list, "itemData");
         Intrinsics.checkNotNullParameter(function1, "onItemCheck");
         Activity activity2 = activity;
-        DialogSeletorContainerBinding dialogSeletorContainerBinding = (DialogSeletorContainerBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131558536, null, false);
+        DialogSeletorContainerBinding dialogSeletorContainerBinding = (DialogSeletorContainerBinding) DataBindingUtil.inflate(LayoutInflater.from(activity2), 2131558538, null, false);
         if (!z) {
             LinearLayout linearLayout = dialogSeletorContainerBinding.actionContainer;
             Intrinsics.checkNotNullExpressionValue(linearLayout, "binding.actionContainer");
@@ -449,5 +459,38 @@ public final class DialogUtil {
                 ViewUtil.replaceView((ViewGroup) parent, coordinatorLayout2);
             }
         }
+    }
+
+    public final Function0<Unit> showFullScreenDialog(Activity activity, View view) {
+        Intrinsics.checkNotNullParameter(activity, "activity");
+        Intrinsics.checkNotNullParameter(view, "view");
+        Activity activity2 = activity;
+        StaticDialogViewBinding inflate = StaticDialogViewBinding.inflate(LayoutInflater.from(activity2));
+        Intrinsics.checkNotNullExpressionValue(inflate, "StaticDialogViewBinding.…tInflater.from(activity))");
+        Dialog dialog = new Dialog(activity2);
+        DrawSystemBarFrameLayout drawSystemBarFrameLayout = inflate.contentView;
+        DrawSystemBarFrameLayout.LayoutParams layoutParams = new DrawSystemBarFrameLayout.LayoutParams(-1, -2);
+        layoutParams.gravity = 80;
+        layoutParams.drawNavigationBar = true;
+        Unit unit = Unit.INSTANCE;
+        drawSystemBarFrameLayout.addView(view, layoutParams);
+        dialog.setContentView(inflate.getRoot());
+        dialog.show();
+        inflate.contentView.setOnClickListener(new DialogUtil$showFullScreenDialog$2(dialog));
+        Window window = dialog.getWindow();
+        if (window != null) {
+            window.addFlags(Integer.MIN_VALUE);
+            window.addFlags(134217728);
+            Intrinsics.checkNotNullExpressionValue(window, "window");
+            window.getDecorView().setPadding(0, 0, 0, 0);
+            WindowManager.LayoutParams attributes = window.getAttributes();
+            attributes.height = -1;
+            attributes.width = -1;
+            Unit unit2 = Unit.INSTANCE;
+            window.setAttributes(attributes);
+            window.setSoftInputMode(16);
+            window.getDecorView().setBackgroundColor(0);
+        }
+        return new DialogUtil$showFullScreenDialog$4(dialog);
     }
 }

@@ -23,7 +23,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: DyhArticleMiniHeaderViewPart.kt */
 public final class DyhArticleMiniHeaderViewPart extends BindingViewPart<ItemDyhMiniHeaderBinding, DyhArticle> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558681;
+    public static final int LAYOUT_ID = 2131558687;
     private final DataBindingComponent dataBindingComponent;
     private DyhArticle mDyhArticle;
     private final DyhViewModel mDyhViewModel;
@@ -67,7 +67,7 @@ public final class DyhArticleMiniHeaderViewPart extends BindingViewPart<ItemDyhM
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemDyhMiniHeaderBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558681, viewGroup, false, this.dataBindingComponent);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558687, viewGroup, false, this.dataBindingComponent);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…se, dataBindingComponent)");
         return (ItemDyhMiniHeaderBinding) inflate;
     }
@@ -92,7 +92,7 @@ public final class DyhArticleMiniHeaderViewPart extends BindingViewPart<ItemDyhM
         Intrinsics.checkNotNullParameter(view, "view");
         if (this.mDyhArticle != null) {
             super.onClick(view);
-            if (view.getId() == 2131362090) {
+            if (view.getId() == 2131362093) {
                 Context context = getContext();
                 DyhArticle dyhArticle = this.mDyhArticle;
                 Intrinsics.checkNotNull(dyhArticle);

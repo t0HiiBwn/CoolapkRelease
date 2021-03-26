@@ -11,8 +11,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_BackupInfo  reason: invalid class name */
 abstract class C$AutoValue_BackupInfo extends C$$AutoValue_BackupInfo {
-    C$AutoValue_BackupInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l2, Long l3, String str10, String str11, String str12, String str13, String str14, String str15, String str16, int i, int i2, Long l4, Long l5, List<ServiceApp> list, List<LocalApp> list2) {
-        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, l2, l3, str10, str11, str12, str13, str14, str15, str16, i, i2, l4, l5, list, list2);
+    C$AutoValue_BackupInfo(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, Long l, Long l2, String str10, String str11, String str12, String str13, String str14, String str15, String str16, int i, int i2, Long l3, Long l4, List<ServiceApp> list, List<LocalApp> list2) {
+        super(str, str2, str3, num, str4, str5, str6, str7, str8, str9, l, l2, str10, str11, str12, str13, str14, str15, str16, i, i2, l3, l4, list, list2);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_BackupInfo$GsonTypeAdapter */
@@ -146,13 +146,13 @@ abstract class C$AutoValue_BackupInfo extends C$$AutoValue_BackupInfo {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -201,13 +201,13 @@ abstract class C$AutoValue_BackupInfo extends C$$AutoValue_BackupInfo {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultRecoveryTime(Long l2) {
-            this.defaultRecoveryTime = l2;
+        public GsonTypeAdapter setDefaultRecoveryTime(Long l) {
+            this.defaultRecoveryTime = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultCreateTime(Long l2) {
-            this.defaultCreateTime = l2;
+        public GsonTypeAdapter setDefaultCreateTime(Long l) {
+            this.defaultCreateTime = l;
             return this;
         }
 
@@ -297,8 +297,8 @@ abstract class C$AutoValue_BackupInfo extends C$$AutoValue_BackupInfo {
             String str7 = this.defaultLogo;
             String str8 = this.defaultSubTitle;
             String str9 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str10 = this.defaultId;
             String str11 = this.defaultTitle;
             String str12 = this.defaultUid;
@@ -308,8 +308,8 @@ abstract class C$AutoValue_BackupInfo extends C$$AutoValue_BackupInfo {
             String str16 = this.defaultDeviceTitle;
             int i = this.defaultApkNum;
             int i2 = this.defaultBackNum;
-            Long l4 = this.defaultRecoveryTime;
-            Long l5 = this.defaultCreateTime;
+            Long l3 = this.defaultRecoveryTime;
+            Long l4 = this.defaultCreateTime;
             List<ServiceApp> list = this.defaultServiceApps;
             List<LocalApp> list2 = this.defaultLocalApps;
             String str17 = str2;
@@ -321,8 +321,8 @@ abstract class C$AutoValue_BackupInfo extends C$$AutoValue_BackupInfo {
             String str22 = str7;
             String str23 = str8;
             String str24 = str9;
+            Long l5 = l;
             Long l6 = l2;
-            Long l7 = l3;
             String str25 = str10;
             String str26 = str11;
             String str27 = str;
@@ -333,8 +333,8 @@ abstract class C$AutoValue_BackupInfo extends C$$AutoValue_BackupInfo {
             String str32 = str16;
             int i3 = i;
             int i4 = i2;
+            Long l7 = l3;
             Long l8 = l4;
-            Long l9 = l5;
             List<ServiceApp> list3 = list;
             while (jsonReader.hasNext()) {
                 String nextName = jsonReader.nextName();
@@ -512,7 +512,7 @@ abstract class C$AutoValue_BackupInfo extends C$$AutoValue_BackupInfo {
                             str31 = this.deviceNameAdapter.read(jsonReader);
                             continue;
                         case 5:
-                            l7 = this.lastUpdateAdapter.read(jsonReader);
+                            l6 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 6:
                             str27 = this.entityTypeNameAdapter.read(jsonReader);
@@ -560,13 +560,13 @@ abstract class C$AutoValue_BackupInfo extends C$$AutoValue_BackupInfo {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 21:
-                            l9 = this.createTimeAdapter.read(jsonReader);
+                            l8 = this.createTimeAdapter.read(jsonReader);
                             continue;
                         case 22:
-                            l6 = this.datelineAdapter.read(jsonReader);
+                            l5 = this.datelineAdapter.read(jsonReader);
                             continue;
                         case 23:
-                            l8 = this.recoveryTimeAdapter.read(jsonReader);
+                            l7 = this.recoveryTimeAdapter.read(jsonReader);
                             continue;
                         case 24:
                             list2 = this.localAppsAdapter.read(jsonReader);
@@ -578,7 +578,7 @@ abstract class C$AutoValue_BackupInfo extends C$$AutoValue_BackupInfo {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_BackupInfo(str27, str17, str18, num2, str19, str20, str21, str22, str23, str24, l6, l7, str25, str26, str28, str29, str30, str31, str32, i3, i4, l8, l9, list3, list2);
+            return new AutoValue_BackupInfo(str27, str17, str18, num2, str19, str20, str21, str22, str23, str24, l5, l6, str25, str26, str28, str29, str30, str31, str32, i3, i4, l7, l8, list3, list2);
         }
     }
 }

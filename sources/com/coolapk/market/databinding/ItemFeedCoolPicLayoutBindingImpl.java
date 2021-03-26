@@ -30,11 +30,11 @@ public class ItemFeedCoolPicLayoutBindingImpl extends ItemFeedCoolPicLayoutBindi
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362649, 5);
-        sparseIntArray.put(2131362320, 6);
-        sparseIntArray.put(2131363533, 7);
-        sparseIntArray.put(2131363229, 8);
-        sparseIntArray.put(2131362665, 9);
+        sparseIntArray.put(2131362657, 5);
+        sparseIntArray.put(2131362326, 6);
+        sparseIntArray.put(2131363551, 7);
+        sparseIntArray.put(2131363243, 8);
+        sparseIntArray.put(2131362676, 9);
     }
 
     public ItemFeedCoolPicLayoutBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -75,7 +75,7 @@ public class ItemFeedCoolPicLayoutBindingImpl extends ItemFeedCoolPicLayoutBindi
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Feed) obj);
         } else if (50 != i) {
             return false;
@@ -91,7 +91,7 @@ public class ItemFeedCoolPicLayoutBindingImpl extends ItemFeedCoolPicLayoutBindi
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 

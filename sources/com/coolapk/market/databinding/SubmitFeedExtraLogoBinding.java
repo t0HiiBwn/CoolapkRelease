@@ -36,7 +36,7 @@ public abstract class SubmitFeedExtraLogoBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedExtraLogoBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (SubmitFeedExtraLogoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559158, viewGroup, z, obj);
+        return (SubmitFeedExtraLogoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559166, viewGroup, z, obj);
     }
 
     public static SubmitFeedExtraLogoBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class SubmitFeedExtraLogoBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedExtraLogoBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (SubmitFeedExtraLogoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559158, null, false, obj);
+        return (SubmitFeedExtraLogoBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559166, null, false, obj);
     }
 
     public static SubmitFeedExtraLogoBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class SubmitFeedExtraLogoBinding extends ViewDataBinding {
 
     @Deprecated
     public static SubmitFeedExtraLogoBinding bind(View view, Object obj) {
-        return (SubmitFeedExtraLogoBinding) bind(obj, view, 2131559158);
+        return (SubmitFeedExtraLogoBinding) bind(obj, view, 2131559166);
     }
 }

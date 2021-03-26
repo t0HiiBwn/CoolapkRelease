@@ -23,9 +23,7 @@ public class er {
     int i;
     int[] j;
     int k;
-
-    /* renamed from: l  reason: collision with root package name */
-    int f1377l;
+    int l;
     boolean m;
     CharsetEncoder n;
     ByteBuffer o;
@@ -38,7 +36,7 @@ public class er {
         this.h = false;
         this.j = new int[16];
         this.k = 0;
-        this.f1377l = 0;
+        this.l = 0;
         this.m = false;
         this.n = c.newEncoder();
         this.b = 1024;
@@ -53,7 +51,7 @@ public class er {
         this.h = false;
         this.j = new int[16];
         this.k = 0;
-        this.f1377l = 0;
+        this.l = 0;
         this.m = false;
         this.n = c.newEncoder();
         a(byteBuffer);
@@ -135,7 +133,7 @@ public class er {
     public final int a() {
         if (this.g) {
             this.g = false;
-            f(this.f1377l);
+            f(this.l);
             return d();
         }
         throw new AssertionError("FlatBuffers: endVector called without startVector");
@@ -180,7 +178,7 @@ public class er {
         this.h = false;
         this.i = 0;
         this.k = 0;
-        this.f1377l = 0;
+        this.l = 0;
         return this;
     }
 
@@ -217,7 +215,7 @@ public class er {
 
     public final void a(int i2, int i3, int i4) {
         e();
-        this.f1377l = i3;
+        this.l = i3;
         int i5 = i2 * i3;
         c(4, i5);
         c(i4, i5);

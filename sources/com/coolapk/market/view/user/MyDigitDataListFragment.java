@@ -42,7 +42,7 @@ public final class MyDigitDataListFragment extends DataListFragment {
     @Override // com.coolapk.market.view.main.DataListFragment, com.coolapk.market.view.cardlist.EntityListFragment, com.coolapk.market.view.base.asynclist.NewAsyncListFragment, com.coolapk.market.view.base.refresh.RefreshRecyclerFragment, androidx.fragment.app.Fragment
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558882).constructor(new MyDigitDataListFragment$onActivityCreated$1(this)).suitedMethod(MyDigitDataListFragment$onActivityCreated$2.INSTANCE).doAfterBind(new MyDigitDataListFragment$onActivityCreated$3(this)).build(), -1);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558889).constructor(new MyDigitDataListFragment$onActivityCreated$1(this)).suitedMethod(MyDigitDataListFragment$onActivityCreated$2.INSTANCE).doAfterBind(new MyDigitDataListFragment$onActivityCreated$3(this)).build(), -1);
     }
 
     public final void showCancelDialog(Product product) {

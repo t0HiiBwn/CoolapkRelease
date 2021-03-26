@@ -8,7 +8,7 @@ import com.coolapk.market.util.CircleTransform;
 import com.coolapk.market.util.StringUtils;
 
 public class UserViewHolder extends GenericBindHolder<ItemUserBinding, User> {
-    public static final int LAYOUT_ID = 2131558967;
+    public static final int LAYOUT_ID = 2131558974;
 
     public UserViewHolder(View view, DataBindingComponent dataBindingComponent, ItemActionHandler itemActionHandler) {
         super(view, dataBindingComponent, itemActionHandler);
@@ -18,8 +18,8 @@ public class UserViewHolder extends GenericBindHolder<ItemUserBinding, User> {
         ((ItemUserBinding) getBinding()).setModel(user);
         ((ItemUserBinding) getBinding()).setOnClick(this);
         ((ItemUserBinding) getBinding()).setTransformer(new CircleTransform());
-        ((ItemUserBinding) getBinding()).setFans(StringUtils.emptyIfNull(getContext().getString(2131887088, user.getFans())));
-        ((ItemUserBinding) getBinding()).setFollow(StringUtils.emptyIfNull(getContext().getString(2131887092, user.getFollow())));
+        ((ItemUserBinding) getBinding()).setFans(StringUtils.emptyIfNull(getContext().getString(2131887150, user.getFans())));
+        ((ItemUserBinding) getBinding()).setFollow(StringUtils.emptyIfNull(getContext().getString(2131887154, user.getFollow())));
         ((ItemUserBinding) getBinding()).executePendingBindings();
     }
 }

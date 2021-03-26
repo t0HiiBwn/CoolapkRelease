@@ -27,7 +27,7 @@ abstract class C$$AutoValue_Video extends Video {
     private final String subTitle;
     private final String url;
 
-    C$$AutoValue_Video(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, String str12, int i2, boolean z, String str13, String str14, String str15, boolean z2) {
+    C$$AutoValue_Video(String str, String str2, int i, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, String str12, int i2, boolean z, String str13, String str14, String str15, boolean z2) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityTypeId = i;
@@ -40,8 +40,8 @@ abstract class C$$AutoValue_Video extends Video {
         this.subTitle = str8;
         this.id = str9;
         this.extraData = str10;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         this.name = str11;
         this.cover = str12;
         this.duration = i2;
@@ -192,8 +192,8 @@ abstract class C$$AutoValue_Video extends Video {
         String str6;
         String str7;
         String str8;
+        Long l;
         Long l2;
-        Long l3;
         String str9;
         String str10;
         String str11;
@@ -210,7 +210,7 @@ abstract class C$$AutoValue_Video extends Video {
         if (str14 != null ? str14.equals(video.getEntityTypeName()) : video.getEntityTypeName() == null) {
             String str15 = this.entityTemplate;
             if (str15 != null ? str15.equals(video.getEntityTemplate()) : video.getEntityTemplate() == null) {
-                if (this.entityTypeId == video.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(video.getEntityId()) : video.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(video.getEntityFixed()) : video.getEntityFixed() == null) && ((str2 = this.url) != null ? str2.equals(video.getUrl()) : video.getUrl() == null) && ((str3 = this.description) != null ? str3.equals(video.getDescription()) : video.getDescription() == null) && ((str4 = this.pic) != null ? str4.equals(video.getPic()) : video.getPic() == null) && ((str5 = this.logo) != null ? str5.equals(video.getLogo()) : video.getLogo() == null) && ((str6 = this.subTitle) != null ? str6.equals(video.getSubTitle()) : video.getSubTitle() == null) && ((str7 = this.id) != null ? str7.equals(video.getId()) : video.getId() == null) && ((str8 = this.extraData) != null ? str8.equals(video.getExtraData()) : video.getExtraData() == null) && ((l2 = this.dateline) != null ? l2.equals(video.getDateline()) : video.getDateline() == null) && ((l3 = this.lastUpdate) != null ? l3.equals(video.getLastUpdate()) : video.getLastUpdate() == null) && ((str9 = this.name) != null ? str9.equals(video.getName()) : video.getName() == null) && ((str10 = this.cover) != null ? str10.equals(video.getCover()) : video.getCover() == null) && this.duration == video.getDuration() && this.isLive == video.getIsLive() && ((str11 = this.mediaType) != null ? str11.equals(video.getMediaType()) : video.getMediaType() == null) && ((str12 = this.requestParams) != null ? str12.equals(video.getRequestParams()) : video.getRequestParams() == null) && ((str13 = this.playHeaders) != null ? str13.equals(video.getPlayHeaders()) : video.getPlayHeaders() == null) && this.redirectSource == video.isRedirectSource()) {
+                if (this.entityTypeId == video.getEntityTypeId() && ((str = this.entityId) != null ? str.equals(video.getEntityId()) : video.getEntityId() == null) && ((num = this.entityFixed) != null ? num.equals(video.getEntityFixed()) : video.getEntityFixed() == null) && ((str2 = this.url) != null ? str2.equals(video.getUrl()) : video.getUrl() == null) && ((str3 = this.description) != null ? str3.equals(video.getDescription()) : video.getDescription() == null) && ((str4 = this.pic) != null ? str4.equals(video.getPic()) : video.getPic() == null) && ((str5 = this.logo) != null ? str5.equals(video.getLogo()) : video.getLogo() == null) && ((str6 = this.subTitle) != null ? str6.equals(video.getSubTitle()) : video.getSubTitle() == null) && ((str7 = this.id) != null ? str7.equals(video.getId()) : video.getId() == null) && ((str8 = this.extraData) != null ? str8.equals(video.getExtraData()) : video.getExtraData() == null) && ((l = this.dateline) != null ? l.equals(video.getDateline()) : video.getDateline() == null) && ((l2 = this.lastUpdate) != null ? l2.equals(video.getLastUpdate()) : video.getLastUpdate() == null) && ((str9 = this.name) != null ? str9.equals(video.getName()) : video.getName() == null) && ((str10 = this.cover) != null ? str10.equals(video.getCover()) : video.getCover() == null) && this.duration == video.getDuration() && this.isLive == video.getIsLive() && ((str11 = this.mediaType) != null ? str11.equals(video.getMediaType()) : video.getMediaType() == null) && ((str12 = this.requestParams) != null ? str12.equals(video.getRequestParams()) : video.getRequestParams() == null) && ((str13 = this.playHeaders) != null ? str13.equals(video.getPlayHeaders()) : video.getPlayHeaders() == null) && this.redirectSource == video.isRedirectSource()) {
                     return true;
                 }
             }
@@ -243,10 +243,10 @@ abstract class C$$AutoValue_Video extends Video {
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.extraData;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        int hashCode13 = (hashCode12 ^ (l3 == null ? 0 : l3.hashCode())) * 1000003;
+        Long l = this.dateline;
+        int hashCode12 = (hashCode11 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        int hashCode13 = (hashCode12 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
         String str11 = this.name;
         int hashCode14 = (hashCode13 ^ (str11 == null ? 0 : str11.hashCode())) * 1000003;
         String str12 = this.cover;

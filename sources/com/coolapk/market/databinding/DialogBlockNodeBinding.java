@@ -36,7 +36,7 @@ public abstract class DialogBlockNodeBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogBlockNodeBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (DialogBlockNodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558519, viewGroup, z, obj);
+        return (DialogBlockNodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558521, viewGroup, z, obj);
     }
 
     public static DialogBlockNodeBinding inflate(LayoutInflater layoutInflater) {
@@ -45,7 +45,7 @@ public abstract class DialogBlockNodeBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogBlockNodeBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (DialogBlockNodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558519, null, false, obj);
+        return (DialogBlockNodeBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558521, null, false, obj);
     }
 
     public static DialogBlockNodeBinding bind(View view) {
@@ -54,6 +54,6 @@ public abstract class DialogBlockNodeBinding extends ViewDataBinding {
 
     @Deprecated
     public static DialogBlockNodeBinding bind(View view, Object obj) {
-        return (DialogBlockNodeBinding) bind(obj, view, 2131558519);
+        return (DialogBlockNodeBinding) bind(obj, view, 2131558521);
     }
 }

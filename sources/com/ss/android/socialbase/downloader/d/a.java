@@ -244,8 +244,8 @@ public class a {
         }
     }
 
-    /* JADX WARNING: Removed duplicated region for block: B:30:0x0056 A[Catch:{ all -> 0x002a, all -> 0x0129 }] */
-    /* JADX WARNING: Removed duplicated region for block: B:50:0x00d8 A[Catch:{ JSONException -> 0x0103 }] */
+    /* JADX WARNING: Removed duplicated region for block: B:30:0x0056 A[Catch:{ all -> 0x002a, all -> 0x012c }] */
+    /* JADX WARNING: Removed duplicated region for block: B:50:0x00db A[Catch:{ JSONException -> 0x0106 }] */
     public static void a(g gVar, String str, String str2, long j, String str3, int i, IOException iOException, DownloadInfo downloadInfo) {
         com.ss.android.socialbase.downloader.g.a a;
         int a2;
@@ -371,11 +371,11 @@ public class a {
     /* JADX WARN: Type inference failed for: r16v4 */
     /* JADX WARNING: Removed duplicated region for block: B:26:0x006e  */
     /* JADX WARNING: Removed duplicated region for block: B:41:0x00a6  */
-    /* JADX WARNING: Removed duplicated region for block: B:44:0x00f2  */
-    /* JADX WARNING: Removed duplicated region for block: B:47:0x0115  */
-    /* JADX WARNING: Removed duplicated region for block: B:49:0x011e  */
-    /* JADX WARNING: Removed duplicated region for block: B:56:0x015c  */
-    /* JADX WARNING: Removed duplicated region for block: B:57:0x0163  */
+    /* JADX WARNING: Removed duplicated region for block: B:44:0x00f5  */
+    /* JADX WARNING: Removed duplicated region for block: B:47:0x0118  */
+    /* JADX WARNING: Removed duplicated region for block: B:49:0x0121  */
+    /* JADX WARNING: Removed duplicated region for block: B:56:0x015f  */
+    /* JADX WARNING: Removed duplicated region for block: B:57:0x0166  */
     /* JADX WARNING: Unknown variable types count: 1 */
     private static void a(String str, int i, com.ss.android.socialbase.downloader.g.a aVar, DownloadInfo downloadInfo, String str2, String str3, String str4, i iVar, boolean z, boolean z2, BaseException baseException, long j, long j2, boolean z3, long j3, long j4, long j5, JSONObject jSONObject) {
         String str5;

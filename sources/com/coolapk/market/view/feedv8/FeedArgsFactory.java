@@ -114,7 +114,7 @@ public final class FeedArgsFactory {
         } else if (Intrinsics.areEqual("article", forwardSourceType)) {
             dyhArticle = feed.getForwardSourceArticle();
         }
-        FeedUIConfig build = FeedUIConfig.builder().title(activity.getString(2131886317)).submitText(activity.getString(2131886370)).editTextHint(activity.getString(2131887259)).isForward(true).isPickPhotoContainerVisible(false).isPickPhotoItemVisible(true).maxPickPhotoCount(1).isAddExtraItemVisible(false).isLocationViewVisible(false).isForwardAndReplyChecked(false).isForwardAndCommentViewVisible(true).forwardEntity(dyhArticle).build();
+        FeedUIConfig build = FeedUIConfig.builder().title(activity.getString(2131886347)).submitText(activity.getString(2131886430)).editTextHint(activity.getString(2131887321)).isForward(true).isPickPhotoContainerVisible(false).isPickPhotoItemVisible(true).maxPickPhotoCount(1).isAddExtraItemVisible(false).isLocationViewVisible(false).isForwardAndReplyChecked(false).isForwardAndCommentViewVisible(true).forwardEntity(dyhArticle).build();
         Intrinsics.checkNotNullExpressionValue(build, "FeedUIConfig.builder()\n …\n                .build()");
         return build;
     }
@@ -132,7 +132,7 @@ public final class FeedArgsFactory {
     public static final FeedUIConfig uiConfigForForwardDyhArticle(Activity activity, DyhArticle dyhArticle) {
         Intrinsics.checkNotNullParameter(activity, "activity");
         Intrinsics.checkNotNullParameter(dyhArticle, "dyhArticle");
-        FeedUIConfig build = FeedUIConfig.builder().title(activity.getString(2131887258)).submitText(activity.getString(2131886370)).editTextHint("分享你此刻的想法...").isForward(true).isPickPhotoContainerVisible(false).isPickPhotoItemVisible(true).maxPickPhotoCount(1).isAddExtraItemVisible(false).isLocationViewVisible(false).isForwardAndReplyChecked(false).isForwardAndCommentViewVisible(true).forwardEntity(dyhArticle).build();
+        FeedUIConfig build = FeedUIConfig.builder().title(activity.getString(2131887320)).submitText(activity.getString(2131886430)).editTextHint("分享你此刻的想法...").isForward(true).isPickPhotoContainerVisible(false).isPickPhotoItemVisible(true).maxPickPhotoCount(1).isAddExtraItemVisible(false).isLocationViewVisible(false).isForwardAndReplyChecked(false).isForwardAndCommentViewVisible(true).forwardEntity(dyhArticle).build();
         Intrinsics.checkNotNullExpressionValue(build, "FeedUIConfig.builder()\n …\n                .build()");
         return build;
     }
@@ -369,7 +369,7 @@ public final class FeedArgsFactory {
             builder.title("提问");
         }
         if (TextUtils.isEmpty(feedUIConfig.submitText())) {
-            builder.submitText(activity.getString(2131886370));
+            builder.submitText(activity.getString(2131886430));
         }
         if (TextUtils.isEmpty(feedUIConfig.editTitleHint())) {
             builder.editTitleHint("请填下你的问题并以问号结尾");
@@ -448,7 +448,7 @@ public final class FeedArgsFactory {
     @JvmStatic
     public static final FeedUIConfig uiConfigForForwardGoods(Activity activity, FeedGoods feedGoods) {
         Intrinsics.checkNotNullParameter(activity, "activity");
-        FeedUIConfig build = FeedUIConfig.builder().title("分享好物").submitText(activity.getString(2131886370)).commentBoardTip1("添加真实详细的好物照片").commentBoardTip2("首图会作为动态封面").editTextHint("分享你推荐的理由（至少50字）").isShareAppItemVisible(false).isAddExtraItemVisible(false).feedGoods(feedGoods).build();
+        FeedUIConfig build = FeedUIConfig.builder().title("分享好物").submitText(activity.getString(2131886430)).commentBoardTip1("添加真实详细的好物照片").commentBoardTip2("首图会作为动态封面").editTextHint("分享你推荐的理由（至少50字）").isShareAppItemVisible(false).isAddExtraItemVisible(false).feedGoods(feedGoods).build();
         Intrinsics.checkNotNullExpressionValue(build, "FeedUIConfig.builder()\n …\n                .build()");
         return build;
     }

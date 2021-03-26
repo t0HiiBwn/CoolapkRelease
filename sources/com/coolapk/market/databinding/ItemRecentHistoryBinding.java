@@ -53,7 +53,7 @@ public abstract class ItemRecentHistoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRecentHistoryBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemRecentHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558891, viewGroup, z, obj);
+        return (ItemRecentHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558898, viewGroup, z, obj);
     }
 
     public static ItemRecentHistoryBinding inflate(LayoutInflater layoutInflater) {
@@ -62,7 +62,7 @@ public abstract class ItemRecentHistoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRecentHistoryBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemRecentHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558891, null, false, obj);
+        return (ItemRecentHistoryBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558898, null, false, obj);
     }
 
     public static ItemRecentHistoryBinding bind(View view) {
@@ -71,6 +71,6 @@ public abstract class ItemRecentHistoryBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemRecentHistoryBinding bind(View view, Object obj) {
-        return (ItemRecentHistoryBinding) bind(obj, view, 2131558891);
+        return (ItemRecentHistoryBinding) bind(obj, view, 2131558898);
     }
 }

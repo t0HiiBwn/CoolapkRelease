@@ -37,7 +37,7 @@ public class c {
     }
 
     /* renamed from: a  reason: collision with other method in class */
-    public synchronized Map<String, String> m23a() {
+    public synchronized Map<String, String> m13a() {
         return this.t;
     }
 }

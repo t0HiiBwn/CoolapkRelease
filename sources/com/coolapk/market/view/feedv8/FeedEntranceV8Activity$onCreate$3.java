@@ -23,18 +23,18 @@ final class FeedEntranceV8Activity$onCreate$3 extends Lambda implements Function
     @Override // kotlin.jvm.functions.Function0
     public final List<? extends FeedEntranceV8Activity.EntranceItem> invoke() {
         ArrayList arrayList = new ArrayList();
-        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.CoolPic, "酷图", Color.parseColor("#FFA726"), 2131231388, false, 16, null));
-        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Question, "提问", Color.parseColor("#BE6ACC"), 2131231613, false, 16, null));
-        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.SecondHand, "二手", Color.parseColor("#EC407A"), 2131231535, false, 16, null));
-        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Scan, "扫一扫", Color.parseColor("#FF6433"), 2131231524, false, 16, null));
+        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.CoolPic, "酷图", Color.parseColor("#FFA726"), 2131231399, false, 16, null));
+        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Question, "提问", Color.parseColor("#BE6ACC"), 2131231624, false, 16, null));
+        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.SecondHand, "二手", Color.parseColor("#EC407A"), 2131231546, false, 16, null));
+        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Scan, "扫一扫", Color.parseColor("#FF6433"), 2131231535, false, 16, null));
         AppMetadataKt.runOnAppMode$default(arrayList, null, FeedEntranceV8Activity$onCreate$3$1$1.INSTANCE, null, new FeedEntranceV8Activity$onCreate$3$1$2(arrayList), 5, null);
         if (UserPermissionChecker.INSTANCE.getCanCreateNewVote()) {
-            arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Vote, "投票", Color.parseColor("#2296F3"), 2131231644, false, 16, null));
+            arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Vote, "投票", Color.parseColor("#2296F3"), 2131231655, false, 16, null));
         } else {
-            arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Topic, "话题", Color.parseColor("#42A5F5"), 2131231355, false, 16, null));
+            arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Topic, "话题", Color.parseColor("#42A5F5"), 2131231366, false, 16, null));
         }
-        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Goods, "好物", Color.parseColor("#FA70E1"), 2131231331, true));
-        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.GoodsList, "好物单", Color.parseColor("#66BB6A"), 2131231333, true));
+        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.Goods, "好物", Color.parseColor("#FA70E1"), 2131231342, true));
+        arrayList.add(new FeedEntranceV8Activity.EntranceItem(FeedEntranceV8Activity.EntranceType.GoodsList, "好物单", Color.parseColor("#66BB6A"), 2131231344, true));
         return arrayList;
     }
 }

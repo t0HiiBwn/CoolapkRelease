@@ -44,14 +44,14 @@ final class AddGoodsDialogFragment$onCreateDialog$1 extends Lambda implements Fu
         TextView textView = AddGoodsDialogFragment.access$getBinding$p(this.this$0).okButton;
         Intrinsics.checkNotNullExpressionValue(textView, "binding.okButton");
         textView.setVisibility(4);
-        if (this.this$0.isAddGoods) {
+        if (AddGoodsDialogFragment.access$isAddGoods$p(this.this$0)) {
             EditText editText = AddGoodsDialogFragment.access$getBinding$p(this.this$0).editText;
             Intrinsics.checkNotNullExpressionValue(editText, "binding.editText");
             final String obj = editText.getText().toString();
-            if (this.this$0.isEditNote) {
+            if (AddGoodsDialogFragment.access$isEditNote$p(this.this$0)) {
                 AddGoodsDialogFragment.access$getMGoodsListItemViewModel$p(this.this$0).setItemNote(obj);
             }
-            DataManager.getInstance().addGoodsOrNote(this.this$0.feedId, this.this$0.goodsId, obj, this.this$0.isEditNote).compose(RxUtils.apiCommonToData()).subscribe(new Action1<String>(this) {
+            DataManager.getInstance().addGoodsOrNote(AddGoodsDialogFragment.access$getFeedId$p(this.this$0), AddGoodsDialogFragment.access$getGoodsId$p(this.this$0), obj, AddGoodsDialogFragment.access$isEditNote$p(this.this$0)).compose(RxUtils.apiCommonToData()).subscribe(new Action1<String>(this) {
                 /* class com.coolapk.market.view.goodsList.AddGoodsDialogFragment$onCreateDialog$1.AnonymousClass1 */
                 final /* synthetic */ AddGoodsDialogFragment$onCreateDialog$1 this$0;
 
@@ -67,11 +67,11 @@ final class AddGoodsDialogFragment$onCreateDialog$1 extends Lambda implements Fu
                     Intrinsics.checkNotNullExpressionValue(textView, "binding.okButton");
                     textView.setVisibility(0);
                     if (AddGoodsDialogFragment.access$getMGoodsListItemViewModel$p(this.this$0.this$0).getGoodsListItem() != null) {
-                        this.this$0.this$0.goodsListItem = AddGoodsDialogFragment.access$getMGoodsListItemViewModel$p(this.this$0.this$0).getGoodsListItem();
+                        AddGoodsDialogFragment.access$setGoodsListItem$p(this.this$0.this$0, AddGoodsDialogFragment.access$getMGoodsListItemViewModel$p(this.this$0.this$0).getGoodsListItem());
                     }
-                    if (this.this$0.this$0.goodsListItem != null) {
-                        this.this$0.this$0.goodsListItem = GoodsListItem.newBuilder(this.this$0.this$0.goodsListItem).id(str).note(obj).build();
-                        EventBus.getDefault().post(new GoodsAddedEvent(this.this$0.this$0.goodsListItem));
+                    if (AddGoodsDialogFragment.access$getGoodsListItem$p(this.this$0.this$0) != null) {
+                        AddGoodsDialogFragment.access$setGoodsListItem$p(this.this$0.this$0, GoodsListItem.newBuilder(AddGoodsDialogFragment.access$getGoodsListItem$p(this.this$0.this$0)).id(str).note(obj).build());
+                        EventBus.getDefault().post(new GoodsAddedEvent(AddGoodsDialogFragment.access$getGoodsListItem$p(this.this$0.this$0)));
                     }
                     this.this$0.this$0.dismiss();
                 }

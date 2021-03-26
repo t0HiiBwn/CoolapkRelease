@@ -319,9 +319,9 @@ public final class FeedReplyItemDialog extends MultiItemDialogFragment {
 
         @Override // com.coolapk.market.view.base.ActionItem
         public void takeAction() {
-            String string = this.this$0.getString(2131886722);
+            String string = this.this$0.getString(2131886784);
             Intrinsics.checkNotNullExpressionValue(string, "getString(R.string.str_dialog_delete_title)");
-            String string2 = this.this$0.getString(2131886719, this.mFeedReply.getUserName(), this.mFeedReply.getMessage());
+            String string2 = this.this$0.getString(2131886781, this.mFeedReply.getUserName(), this.mFeedReply.getMessage());
             Intrinsics.checkNotNullExpressionValue(string2, "getString(R.string.str_d…Name, mFeedReply.message)");
             ConfirmDeleteDialog newInstance = ConfirmDeleteDialog.newInstance(string, string2);
             newInstance.setDeleteTarget(this.mFeedReply);

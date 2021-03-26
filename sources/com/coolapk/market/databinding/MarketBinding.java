@@ -54,7 +54,7 @@ public abstract class MarketBinding extends ViewDataBinding {
 
     @Deprecated
     public static MarketBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (MarketBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559019, viewGroup, z, obj);
+        return (MarketBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559026, viewGroup, z, obj);
     }
 
     public static MarketBinding inflate(LayoutInflater layoutInflater) {
@@ -63,7 +63,7 @@ public abstract class MarketBinding extends ViewDataBinding {
 
     @Deprecated
     public static MarketBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (MarketBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559019, null, false, obj);
+        return (MarketBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559026, null, false, obj);
     }
 
     public static MarketBinding bind(View view) {
@@ -72,6 +72,6 @@ public abstract class MarketBinding extends ViewDataBinding {
 
     @Deprecated
     public static MarketBinding bind(View view, Object obj) {
-        return (MarketBinding) bind(obj, view, 2131559019);
+        return (MarketBinding) bind(obj, view, 2131559026);
     }
 }

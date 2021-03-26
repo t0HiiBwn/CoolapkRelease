@@ -55,10 +55,10 @@ public final class HistoryTimeV9Fragment extends EntityListFragment {
     @Override // com.coolapk.market.view.cardlist.EntityListFragment
     protected void onRegisterCards() {
         super.onRegisterCards();
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558973).suitedEntityType("history").constructor(new HistoryTimeV9Fragment$onRegisterCards$1(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558892).suitedEntityType("recent_login").constructor(new HistoryTimeV9Fragment$onRegisterCards$2(this)).build(), 0, 2, null);
-        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558925).suitedEntityType("entity_type_time").constructor(HistoryTimeV9Fragment$onRegisterCards$3.INSTANCE).build(), 0, 2, null);
-        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558837).suitedEntityType("NO_MORE_DATA").constructor(HistoryTimeV9Fragment$onRegisterCards$4.INSTANCE).build(), 0);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558980).suitedEntityType("history").constructor(new HistoryTimeV9Fragment$onRegisterCards$1(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558899).suitedEntityType("recent_login").constructor(new HistoryTimeV9Fragment$onRegisterCards$2(this)).build(), 0, 2, null);
+        BaseMultiTypeAdapter.register$default(getAdapter$presentation_coolapkAppRelease(), SimpleViewHolderFactor.Companion.withLayoutId(2131558932).suitedEntityType("entity_type_time").constructor(HistoryTimeV9Fragment$onRegisterCards$3.INSTANCE).build(), 0, 2, null);
+        getAdapter$presentation_coolapkAppRelease().register(SimpleViewHolderFactor.Companion.withLayoutId(2131558844).suitedEntityType("NO_MORE_DATA").constructor(HistoryTimeV9Fragment$onRegisterCards$4.INSTANCE).build(), 0);
     }
 
     @Override // com.coolapk.market.view.base.asynclist.NewAsyncListContract.View
@@ -164,7 +164,7 @@ public final class HistoryTimeV9Fragment extends EntityListFragment {
     /* compiled from: HistoryTimeV9Fragment.kt */
     private static final class NoMoreDataViewHolder extends GenericBindHolder<ItemNoMoreDataViewBinding, HolderItem> {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558837;
+        public static final int LAYOUT_ID = 2131558844;
 
         public void bindToContent(HolderItem holderItem) {
             Intrinsics.checkNotNullParameter(holderItem, "holderItem");
@@ -182,7 +182,7 @@ public final class HistoryTimeV9Fragment extends EntityListFragment {
             textView.setTextSize(12.0f);
             TextView textView2 = itemNoMoreDataViewBinding.textView;
             Intrinsics.checkNotNullExpressionValue(textView2, "binding.textView");
-            textView2.setText(getContext().getString(2131887012));
+            textView2.setText(getContext().getString(2131887074));
             TextView textView3 = itemNoMoreDataViewBinding.textView;
             Intrinsics.checkNotNullExpressionValue(textView3, "binding.textView");
             textView3.getLayoutParams().height = -2;
@@ -204,7 +204,7 @@ public final class HistoryTimeV9Fragment extends EntityListFragment {
     /* compiled from: HistoryTimeV9Fragment.kt */
     private static final class TimeViewHolder extends BindingViewHolder {
         public static final Companion Companion = new Companion(null);
-        public static final int LAYOUT_ID = 2131558925;
+        public static final int LAYOUT_ID = 2131558932;
 
         /* JADX INFO: super call moved to the top of the method (can break code semantics) */
         public TimeViewHolder(View view) {

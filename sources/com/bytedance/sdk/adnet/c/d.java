@@ -15,9 +15,7 @@ public class d {
     public int i = 1;
     public int j = 1;
     public int k = 900;
-
-    /* renamed from: l  reason: collision with root package name */
-    public int f1280l = 120;
+    public int l = 120;
     public String m = null;
     public int n = 0;
     public long o = 0;
@@ -53,7 +51,7 @@ public class d {
         sb.append(" updateInterval: ");
         sb.append(this.k);
         sb.append(" updateRandom: ");
-        sb.append(this.f1280l);
+        sb.append(this.l);
         sb.append(" httpBlack: ");
         sb.append(this.m);
         return sb.toString();

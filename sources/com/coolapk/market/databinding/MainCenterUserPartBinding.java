@@ -44,7 +44,7 @@ public abstract class MainCenterUserPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static MainCenterUserPartBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (MainCenterUserPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559017, viewGroup, z, obj);
+        return (MainCenterUserPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559024, viewGroup, z, obj);
     }
 
     public static MainCenterUserPartBinding inflate(LayoutInflater layoutInflater) {
@@ -53,7 +53,7 @@ public abstract class MainCenterUserPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static MainCenterUserPartBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (MainCenterUserPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559017, null, false, obj);
+        return (MainCenterUserPartBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559024, null, false, obj);
     }
 
     public static MainCenterUserPartBinding bind(View view) {
@@ -62,6 +62,6 @@ public abstract class MainCenterUserPartBinding extends ViewDataBinding {
 
     @Deprecated
     public static MainCenterUserPartBinding bind(View view, Object obj) {
-        return (MainCenterUserPartBinding) bind(obj, view, 2131559017);
+        return (MainCenterUserPartBinding) bind(obj, view, 2131559024);
     }
 }

@@ -12,12 +12,13 @@ public abstract class Parser implements CommandLineParser {
     private Options options;
     private List requiredOptions;
 
-    protected abstract String[] flatten(Options options2, String[] strArr, boolean z);
-
-    protected void setOptions(Options options2) {
-        this.options = options2;
-        this.requiredOptions = new ArrayList(options2.getRequiredOptions());
+    protected void checkRequiredOptions() throws MissingOptionException {
+        if (!getRequiredOptions().isEmpty()) {
+            throw new MissingOptionException(getRequiredOptions());
+        }
     }
+
+    protected abstract String[] flatten(Options options2, String[] strArr, boolean z);
 
     protected Options getOptions() {
         return this.options;
@@ -34,11 +35,6 @@ public abstract class Parser implements CommandLineParser {
 
     public CommandLine parse(Options options2, String[] strArr, Properties properties) throws ParseException {
         return parse(options2, strArr, properties, false);
-    }
-
-    @Override // org.apache.commons.cli.CommandLineParser
-    public CommandLine parse(Options options2, String[] strArr, boolean z) throws ParseException {
-        return parse(options2, strArr, null, z);
     }
 
     /* JADX WARNING: Code restructure failed: missing block: B:25:0x0080, code lost:
@@ -91,34 +87,9 @@ public abstract class Parser implements CommandLineParser {
         return this.cmd;
     }
 
-    protected void processProperties(Properties properties) {
-        if (properties != null) {
-            Enumeration<?> propertyNames = properties.propertyNames();
-            while (propertyNames.hasMoreElements()) {
-                String obj = propertyNames.nextElement().toString();
-                if (!this.cmd.hasOption(obj)) {
-                    Option option = getOptions().getOption(obj);
-                    String property = properties.getProperty(obj);
-                    if (option.hasArg()) {
-                        if (option.getValues() == null || option.getValues().length == 0) {
-                            try {
-                                option.addValueForProcessing(property);
-                            } catch (RuntimeException unused) {
-                            }
-                        }
-                    } else if (!"yes".equalsIgnoreCase(property) && !"true".equalsIgnoreCase(property) && !"1".equalsIgnoreCase(property)) {
-                        return;
-                    }
-                    this.cmd.addOption(option);
-                }
-            }
-        }
-    }
-
-    protected void checkRequiredOptions() throws MissingOptionException {
-        if (!getRequiredOptions().isEmpty()) {
-            throw new MissingOptionException(getRequiredOptions());
-        }
+    @Override // org.apache.commons.cli.CommandLineParser
+    public CommandLine parse(Options options2, String[] strArr, boolean z) throws ParseException {
+        return parse(options2, strArr, null, z);
     }
 
     public void processArgs(Option option, ListIterator listIterator) throws ParseException {
@@ -166,5 +137,34 @@ public abstract class Parser implements CommandLineParser {
         stringBuffer.append("Unrecognized option: ");
         stringBuffer.append(str);
         throw new UnrecognizedOptionException(stringBuffer.toString(), str);
+    }
+
+    protected void processProperties(Properties properties) {
+        if (properties != null) {
+            Enumeration<?> propertyNames = properties.propertyNames();
+            while (propertyNames.hasMoreElements()) {
+                String obj = propertyNames.nextElement().toString();
+                if (!this.cmd.hasOption(obj)) {
+                    Option option = getOptions().getOption(obj);
+                    String property = properties.getProperty(obj);
+                    if (option.hasArg()) {
+                        if (option.getValues() == null || option.getValues().length == 0) {
+                            try {
+                                option.addValueForProcessing(property);
+                            } catch (RuntimeException unused) {
+                            }
+                        }
+                    } else if (!"yes".equalsIgnoreCase(property) && !"true".equalsIgnoreCase(property) && !"1".equalsIgnoreCase(property)) {
+                        return;
+                    }
+                    this.cmd.addOption(option);
+                }
+            }
+        }
+    }
+
+    protected void setOptions(Options options2) {
+        this.options = options2;
+        this.requiredOptions = new ArrayList(options2.getRequiredOptions());
     }
 }

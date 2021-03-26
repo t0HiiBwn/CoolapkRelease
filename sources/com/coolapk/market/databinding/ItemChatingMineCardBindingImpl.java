@@ -32,7 +32,7 @@ public class ItemChatingMineCardBindingImpl extends ItemChatingMineCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362305, 9);
+        sparseIntArray.put(2131362310, 9);
     }
 
     public ItemChatingMineCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -75,25 +75,25 @@ public class ItemChatingMineCardBindingImpl extends ItemChatingMineCardBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((Message) obj);
         } else if (56 == i) {
             setContentPic((String) obj);
-        } else if (220 == i) {
+        } else if (221 == i) {
             setPic((String) obj);
         } else if (55 == i) {
             setContent((String) obj);
-        } else if (254 == i) {
+        } else if (255 == i) {
             setShowPic((Boolean) obj);
         } else if (39 == i) {
             setAvatar((String) obj);
-        } else if (272 == i) {
+        } else if (273 == i) {
             setSubtitle((String) obj);
-        } else if (249 == i) {
+        } else if (250 == i) {
             setShowError((Boolean) obj);
-        } else if (287 == i) {
+        } else if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
-        } else if (278 == i) {
+        } else if (279 == i) {
             setTitle((String) obj);
         } else if (50 != i) {
             return false;
@@ -109,7 +109,7 @@ public class ItemChatingMineCardBindingImpl extends ItemChatingMineCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -159,7 +159,7 @@ public class ItemChatingMineCardBindingImpl extends ItemChatingMineCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 64;
         }
-        notifyPropertyChanged(272);
+        notifyPropertyChanged(273);
         super.requestRebind();
     }
 
@@ -174,7 +174,7 @@ public class ItemChatingMineCardBindingImpl extends ItemChatingMineCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 256;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -184,7 +184,7 @@ public class ItemChatingMineCardBindingImpl extends ItemChatingMineCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 512;
         }
-        notifyPropertyChanged(278);
+        notifyPropertyChanged(279);
         super.requestRebind();
     }
 
@@ -335,13 +335,13 @@ public class ItemChatingMineCardBindingImpl extends ItemChatingMineCardBinding {
             this.contentPicView.setVisibility(i5);
             onBitmapTransformListener2 = onBitmapTransformListener;
             Boolean bool3 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.contentPicView, str3, AppCompatResources.getDrawable(this.contentPicView.getContext(), 2131231691), 0, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.contentPicView, str3, AppCompatResources.getDrawable(this.contentPicView.getContext(), 2131231702), 0, 0, bool3, bool3, bool3, bool3, bool3, null, null, null, bool3, bool3, bool3, null, bool3);
         } else {
             onBitmapTransformListener2 = onBitmapTransformListener;
         }
         if ((j & 2305) != 0) {
             Boolean bool4 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, fromUserAvatar, null, 2131231152, 0, bool4, bool4, bool4, bool4, bool4, null, null, onBitmapTransformListener2, bool4, bool4, bool4, null, bool4);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.userAvatarView, fromUserAvatar, null, 2131231162, 0, bool4, bool4, bool4, bool4, bool4, null, null, onBitmapTransformListener2, bool4, bool4, bool4, null, bool4);
         }
     }
 }

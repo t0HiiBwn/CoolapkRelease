@@ -4,7 +4,7 @@ public class kM {
     public int K0;
 
     /* renamed from: XI  reason: collision with root package name */
-    public String f1184XI = null;
+    public String f190XI = null;
     public long kM;
 
     public kM(String str, int i) {
@@ -13,6 +13,6 @@ public class kM {
     }
 
     public String toString() {
-        return "ValueData{value='" + this.f1184XI + "', code=" + this.K0 + ", expired=" + this.kM + '}';
+        return "ValueData{value='" + this.f190XI + "', code=" + this.K0 + ", expired=" + this.kM + '}';
     }
 }

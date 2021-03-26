@@ -76,7 +76,7 @@ public final class AppNodeLoader implements Loader {
                                 this.activity.finish();
                                 return false;
                             } else if (TextUtils.isEmpty(stringExtra)) {
-                                Toast.show(this.activity, 2131887188);
+                                Toast.show(this.activity, 2131887250);
                                 this.activity.finish();
                                 return false;
                             }

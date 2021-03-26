@@ -12,8 +12,8 @@ import java.util.List;
 
 /* renamed from: com.coolapk.market.model.$AutoValue_AppCategory  reason: invalid class name */
 abstract class C$AutoValue_AppCategory extends C$$AutoValue_AppCategory {
-    C$AutoValue_AppCategory(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, Long l2, Long l3, String str9, String str10, String str11, String str12, String str13, List<String> list, String str14) {
-        super(str, str2, str3, str4, num, str5, str6, str7, str8, l2, l3, str9, str10, str11, str12, str13, list, str14);
+    C$AutoValue_AppCategory(String str, String str2, String str3, String str4, Integer num, String str5, String str6, String str7, String str8, Long l, Long l2, String str9, String str10, String str11, String str12, String str13, List<String> list, String str14) {
+        super(str, str2, str3, str4, num, str5, str6, str7, str8, l, l2, str9, str10, str11, str12, str13, list, str14);
     }
 
     /* renamed from: com.coolapk.market.model.$AutoValue_AppCategory$GsonTypeAdapter */
@@ -121,13 +121,13 @@ abstract class C$AutoValue_AppCategory extends C$$AutoValue_AppCategory {
             return this;
         }
 
-        public GsonTypeAdapter setDefaultDateline(Long l2) {
-            this.defaultDateline = l2;
+        public GsonTypeAdapter setDefaultDateline(Long l) {
+            this.defaultDateline = l;
             return this;
         }
 
-        public GsonTypeAdapter setDefaultLastUpdate(Long l2) {
-            this.defaultLastUpdate = l2;
+        public GsonTypeAdapter setDefaultLastUpdate(Long l) {
+            this.defaultLastUpdate = l;
             return this;
         }
 
@@ -227,8 +227,8 @@ abstract class C$AutoValue_AppCategory extends C$$AutoValue_AppCategory {
             String str6 = this.defaultPic;
             String str7 = this.defaultSubTitle;
             String str8 = this.defaultExtraData;
-            Long l2 = this.defaultDateline;
-            Long l3 = this.defaultLastUpdate;
+            Long l = this.defaultDateline;
+            Long l2 = this.defaultLastUpdate;
             String str9 = this.defaultId;
             String str10 = this.defaultTitle;
             String str11 = this.defaultLogo;
@@ -244,8 +244,8 @@ abstract class C$AutoValue_AppCategory extends C$$AutoValue_AppCategory {
             String str19 = str6;
             String str20 = str7;
             String str21 = str8;
+            Long l3 = l;
             Long l4 = l2;
-            Long l5 = l3;
             String str22 = str9;
             String str23 = str10;
             String str24 = str11;
@@ -390,7 +390,7 @@ abstract class C$AutoValue_AppCategory extends C$$AutoValue_AppCategory {
                             str15 = this.entityTypeAdapter.read(jsonReader);
                             continue;
                         case 6:
-                            l5 = this.lastUpdateAdapter.read(jsonReader);
+                            l4 = this.lastUpdateAdapter.read(jsonReader);
                             continue;
                         case 7:
                             str25 = this.entityTypeNameAdapter.read(jsonReader);
@@ -423,7 +423,7 @@ abstract class C$AutoValue_AppCategory extends C$$AutoValue_AppCategory {
                             num2 = this.entityFixedAdapter.read(jsonReader);
                             continue;
                         case 17:
-                            l4 = this.datelineAdapter.read(jsonReader);
+                            l3 = this.datelineAdapter.read(jsonReader);
                             continue;
                         default:
                             jsonReader.skipValue();
@@ -432,7 +432,7 @@ abstract class C$AutoValue_AppCategory extends C$$AutoValue_AppCategory {
                 }
             }
             jsonReader.endObject();
-            return new AutoValue_AppCategory(str25, str15, str16, str17, num2, str18, str19, str20, str21, l4, l5, str22, str23, str24, str26, str27, list2, str14);
+            return new AutoValue_AppCategory(str25, str15, str16, str17, num2, str18, str19, str20, str21, l3, l4, str22, str23, str24, str26, str27, list2, str14);
         }
     }
 }

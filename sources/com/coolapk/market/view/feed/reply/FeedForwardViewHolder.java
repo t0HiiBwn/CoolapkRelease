@@ -17,7 +17,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: FeedForwardViewHolder.kt */
 public final class FeedForwardViewHolder extends GenericBindHolder<ItemFeedForwardViewBinding, ForwardFeed> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558701;
+    public static final int LAYOUT_ID = 2131558708;
     private ForwardFeed data;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -56,14 +56,14 @@ public final class FeedForwardViewHolder extends GenericBindHolder<ItemFeedForwa
         super.onClick(view);
         int id = view.getId();
         String str = null;
-        if (id == 2131362200) {
+        if (id == 2131362205) {
             Context context = getContext();
             ForwardFeed forwardFeed = this.data;
             if (forwardFeed == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("data");
             }
             ActionManager.startFeedDetailActivity(context, forwardFeed.getId(), (String) null);
-        } else if (id == 2131362672 || id == 2131363582) {
+        } else if (id == 2131362683 || id == 2131363604) {
             ForwardFeed forwardFeed2 = this.data;
             if (forwardFeed2 == null) {
                 Intrinsics.throwUninitializedPropertyAccessException("data");

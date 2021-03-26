@@ -52,7 +52,7 @@ public class ItemBackupHeaderTitleBindingImpl extends ItemBackupHeaderTitleBindi
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (287 == i) {
+        if (288 == i) {
             setTransformer((OnBitmapTransformListener) obj);
         } else if (58 == i) {
             setCount((String) obj);

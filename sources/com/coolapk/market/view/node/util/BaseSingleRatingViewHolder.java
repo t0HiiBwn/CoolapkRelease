@@ -21,7 +21,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: BaseSingleRatingViewHolder.kt */
 public abstract class BaseSingleRatingViewHolder extends GenericBindHolder<ItemSingleRatingBinding, Entity> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558934;
+    public static final int LAYOUT_ID = 2131558941;
 
     public abstract String getRatingFeedUrl();
 
@@ -89,7 +89,7 @@ public abstract class BaseSingleRatingViewHolder extends GenericBindHolder<ItemS
     @Override // com.coolapk.market.viewholder.BindingViewHolder, android.view.View.OnClickListener
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() == 2131362768) {
+        if (view.getId() == 2131362779) {
             String ratingFeedUrl = getRatingFeedUrl();
             if (getStarCount() > 0) {
                 if (ratingFeedUrl.length() > 0) {

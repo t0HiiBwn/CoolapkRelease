@@ -21,7 +21,7 @@ public abstract class VideoLoadingBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoLoadingBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (VideoLoadingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559294, viewGroup, z, obj);
+        return (VideoLoadingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559304, viewGroup, z, obj);
     }
 
     public static VideoLoadingBinding inflate(LayoutInflater layoutInflater) {
@@ -30,7 +30,7 @@ public abstract class VideoLoadingBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoLoadingBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (VideoLoadingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559294, null, false, obj);
+        return (VideoLoadingBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131559304, null, false, obj);
     }
 
     public static VideoLoadingBinding bind(View view) {
@@ -39,6 +39,6 @@ public abstract class VideoLoadingBinding extends ViewDataBinding {
 
     @Deprecated
     public static VideoLoadingBinding bind(View view, Object obj) {
-        return (VideoLoadingBinding) bind(obj, view, 2131559294);
+        return (VideoLoadingBinding) bind(obj, view, 2131559304);
     }
 }

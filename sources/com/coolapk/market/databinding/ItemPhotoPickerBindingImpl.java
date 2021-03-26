@@ -27,8 +27,8 @@ public class ItemPhotoPickerBindingImpl extends ItemPhotoPickerBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363139, 3);
-        sparseIntArray.put(2131362222, 4);
+        sparseIntArray.put(2131363153, 3);
+        sparseIntArray.put(2131362227, 4);
     }
 
     public ItemPhotoPickerBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -67,9 +67,9 @@ public class ItemPhotoPickerBindingImpl extends ItemPhotoPickerBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (216 == i) {
+        if (217 == i) {
             setPath((String) obj);
-        } else if (241 != i) {
+        } else if (242 != i) {
             return false;
         } else {
             setSelected((Boolean) obj);
@@ -83,7 +83,7 @@ public class ItemPhotoPickerBindingImpl extends ItemPhotoPickerBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(216);
+        notifyPropertyChanged(217);
         super.requestRebind();
     }
 
@@ -93,7 +93,7 @@ public class ItemPhotoPickerBindingImpl extends ItemPhotoPickerBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(241);
+        notifyPropertyChanged(242);
         super.requestRebind();
     }
 
@@ -123,7 +123,7 @@ public class ItemPhotoPickerBindingImpl extends ItemPhotoPickerBinding {
                 }
                 j = j3 | j2;
             }
-            drawable = AppCompatResources.getDrawable(this.pickView.getContext(), safeUnbox ? 2131231808 : 2131231809);
+            drawable = AppCompatResources.getDrawable(this.pickView.getContext(), safeUnbox ? 2131231820 : 2131231821);
             i = safeUnbox ? 1711276032 : 570425344;
         } else {
             drawable = null;
@@ -136,7 +136,7 @@ public class ItemPhotoPickerBindingImpl extends ItemPhotoPickerBinding {
         }
         if ((j & 5) != 0) {
             Boolean bool2 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str, null, 2131231691, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, true, null, bool2);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.mboundView1, str, null, 2131231702, 0, bool2, bool2, bool2, bool2, bool2, null, null, null, bool2, bool2, true, null, bool2);
         }
     }
 }

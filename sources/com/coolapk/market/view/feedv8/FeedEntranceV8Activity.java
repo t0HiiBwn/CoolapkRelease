@@ -143,7 +143,7 @@ public final class FeedEntranceV8Activity extends BaseActivity implements View.O
         if (optSharePlayer != null) {
             optSharePlayer.detachPlayerBridge();
         }
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558559);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131558562);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte….layout.feed_entrance_v8)");
         FeedEntranceV8Binding feedEntranceV8Binding = (FeedEntranceV8Binding) contentView;
         this.binding = feedEntranceV8Binding;
@@ -480,18 +480,18 @@ public final class FeedEntranceV8Activity extends BaseActivity implements View.O
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         switch (view.getId()) {
-            case 2131362257:
-            case 2131362908:
+            case 2131362262:
+            case 2131362920:
                 playHideAnimationAndFinish();
                 return;
-            case 2131362769:
+            case 2131362780:
                 onEntranceItemClick(EntranceType.Feed);
                 return;
-            case 2131362773:
+            case 2131362784:
                 onEntranceItemClick(EntranceType.Article);
                 return;
-            case 2131363321:
-            case 2131363588:
+            case 2131363337:
+            case 2131363610:
                 ActionManager.startSearchActivity(getActivity());
                 return;
             default:
@@ -640,7 +640,7 @@ public final class FeedEntranceV8Activity extends BaseActivity implements View.O
             if (i == 3925) {
                 ArrayList<String> stringArrayListExtra = intent.getStringArrayListExtra("PICKED_PHOTO_PATHS");
                 if (stringArrayListExtra == null || stringArrayListExtra.isEmpty()) {
-                    Toast.show$default(getActivity(), getString(2131886934), 0, false, 12, null);
+                    Toast.show$default(getActivity(), getString(2131886996), 0, false, 12, null);
                     return;
                 }
                 BaseActivity activity = getActivity();

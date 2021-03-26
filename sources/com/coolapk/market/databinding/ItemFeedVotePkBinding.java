@@ -44,7 +44,7 @@ public abstract class ItemFeedVotePkBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVotePkBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemFeedVotePkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558742, viewGroup, z, obj);
+        return (ItemFeedVotePkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558749, viewGroup, z, obj);
     }
 
     public static ItemFeedVotePkBinding inflate(LayoutInflater layoutInflater) {
@@ -53,7 +53,7 @@ public abstract class ItemFeedVotePkBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVotePkBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemFeedVotePkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558742, null, false, obj);
+        return (ItemFeedVotePkBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558749, null, false, obj);
     }
 
     public static ItemFeedVotePkBinding bind(View view) {
@@ -62,6 +62,6 @@ public abstract class ItemFeedVotePkBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemFeedVotePkBinding bind(View view, Object obj) {
-        return (ItemFeedVotePkBinding) bind(obj, view, 2131558742);
+        return (ItemFeedVotePkBinding) bind(obj, view, 2131558749);
     }
 }

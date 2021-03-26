@@ -36,10 +36,10 @@ public class ItemUserBindingImpl extends ItemUserBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362385, 10);
-        sparseIntArray.put(2131362887, 11);
-        sparseIntArray.put(2131362933, 12);
-        sparseIntArray.put(2131362222, 13);
+        sparseIntArray.put(2131362391, 10);
+        sparseIntArray.put(2131362898, 11);
+        sparseIntArray.put(2131362945, 12);
+        sparseIntArray.put(2131362227, 13);
     }
 
     public ItemUserBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -87,15 +87,15 @@ public class ItemUserBindingImpl extends ItemUserBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 == i) {
+        if (198 == i) {
             setModel((User) obj);
         } else if (102 == i) {
             setFans((String) obj);
-        } else if (211 == i) {
+        } else if (212 == i) {
             setOnClick((View.OnClickListener) obj);
         } else if (116 == i) {
             setFollow((String) obj);
-        } else if (287 != i) {
+        } else if (288 != i) {
             return false;
         } else {
             setTransformer((OnBitmapTransformListener) obj);
@@ -109,7 +109,7 @@ public class ItemUserBindingImpl extends ItemUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(197);
+        notifyPropertyChanged(198);
         super.requestRebind();
     }
 
@@ -129,7 +129,7 @@ public class ItemUserBindingImpl extends ItemUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(211);
+        notifyPropertyChanged(212);
         super.requestRebind();
     }
 
@@ -149,7 +149,7 @@ public class ItemUserBindingImpl extends ItemUserBinding {
         synchronized (this) {
             this.mDirtyFlags |= 16;
         }
-        notifyPropertyChanged(287);
+        notifyPropertyChanged(288);
         super.requestRebind();
     }
 
@@ -208,7 +208,7 @@ public class ItemUserBindingImpl extends ItemUserBinding {
                 if (i6 != 0) {
                     j |= z ? 2048 : 1024;
                 }
-                i = z ? 2131887093 : 2131887089;
+                i = z ? 2131887155 : 2131887151;
             } else {
                 str3 = null;
                 str9 = null;
@@ -269,15 +269,15 @@ public class ItemUserBindingImpl extends ItemUserBinding {
         }
         if ((32 & j) != 0) {
             ThemeBindingAdapters.setTextColor(this.actionButton, "colorAccent");
-            Long l2 = null;
-            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "reveal", l2, l2);
+            Long l = null;
+            ActionButtonBindingAdapters.setActionButtonBackground(this.actionContainer, "reveal", l, l);
         }
         if ((36 & j) != 0) {
             ViewBindingAdapters.clickListener(this.cardView, onClickListener, null);
         }
         if ((49 & j) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str5, null, 2131231152, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str5, null, 2131231162, 0, bool, bool, bool, bool, bool, null, null, onBitmapTransformListener, bool, bool, bool, null, bool);
         }
         if ((j & 40) != 0) {
             TextViewBindingAdapter.setText(this.mboundView4, str11);

@@ -23,7 +23,7 @@ public final class BannedUserListFragment$DataAdapter$onCreateViewHolder$1 exten
     public void onItemClick(RecyclerView.ViewHolder viewHolder, View view) {
         Intrinsics.checkNotNullParameter(viewHolder, "holder");
         Intrinsics.checkNotNullParameter(view, "view");
-        if (view.getId() == 2131361886) {
+        if (view.getId() == 2131361887) {
             SimpleDialog newInstance = SimpleDialog.newInstance();
             newInstance.setMessage("确定解除？");
             newInstance.setPositiveButton("确定", new BannedUserListFragment$DataAdapter$onCreateViewHolder$1$onItemClick$1(this, view));

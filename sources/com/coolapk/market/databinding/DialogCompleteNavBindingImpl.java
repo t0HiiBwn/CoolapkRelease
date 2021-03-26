@@ -23,7 +23,7 @@ public class DialogCompleteNavBindingImpl extends DialogCompleteNavBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362727, 3);
+        sparseIntArray.put(2131362738, 3);
     }
 
     public DialogCompleteNavBindingImpl(DataBindingComponent dataBindingComponent, View view) {

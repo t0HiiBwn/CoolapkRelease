@@ -25,12 +25,12 @@ public class ItemAppDetailBindingImpl extends ItemAppDetailBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363089, 14);
-        sparseIntArray.put(2131363094, 15);
-        sparseIntArray.put(2131363095, 16);
-        sparseIntArray.put(2131363091, 17);
-        sparseIntArray.put(2131362213, 18);
-        sparseIntArray.put(2131362214, 19);
+        sparseIntArray.put(2131363103, 14);
+        sparseIntArray.put(2131363108, 15);
+        sparseIntArray.put(2131363109, 16);
+        sparseIntArray.put(2131363105, 17);
+        sparseIntArray.put(2131362218, 18);
+        sparseIntArray.put(2131362219, 19);
     }
 
     public ItemAppDetailBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -80,7 +80,7 @@ public class ItemAppDetailBindingImpl extends ItemAppDetailBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((AppDetailViewModel) obj);
@@ -94,7 +94,7 @@ public class ItemAppDetailBindingImpl extends ItemAppDetailBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -112,17 +112,17 @@ public class ItemAppDetailBindingImpl extends ItemAppDetailBinding {
                 this.mDirtyFlags |= 1;
             }
             return true;
-        } else if (i == 242) {
+        } else if (i == 243) {
             synchronized (this) {
                 this.mDirtyFlags |= 2;
             }
             return true;
-        } else if (i == 179) {
+        } else if (i == 180) {
             synchronized (this) {
                 this.mDirtyFlags |= 4;
             }
             return true;
-        } else if (i != 219) {
+        } else if (i != 220) {
             return false;
         } else {
             synchronized (this) {
@@ -188,7 +188,7 @@ public class ItemAppDetailBindingImpl extends ItemAppDetailBinding {
                     str12 = null;
                     str11 = null;
                 }
-                str17 = StringUtils.titleWithNum(this.permissionTitleTextView.getResources().getString(2131886923), list);
+                str17 = StringUtils.titleWithNum(this.permissionTitleTextView.getResources().getString(2131886985), list);
                 boolean isEmpty = TextUtils.isEmpty(str13);
                 if (i2 != 0) {
                     j |= isEmpty ? 64 : 32;

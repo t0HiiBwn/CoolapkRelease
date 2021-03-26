@@ -22,7 +22,7 @@ abstract class C$$AutoValue_CardTitleItem extends CardTitleItem {
     private final String title;
     private final String url;
 
-    C$$AutoValue_CardTitleItem(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l2, Long l3, String str11, int i) {
+    C$$AutoValue_CardTitleItem(String str, String str2, String str3, Integer num, String str4, String str5, String str6, String str7, String str8, String str9, String str10, Long l, Long l2, String str11, int i) {
         this.entityTypeName = str;
         this.entityTemplate = str2;
         this.entityId = str3;
@@ -34,8 +34,8 @@ abstract class C$$AutoValue_CardTitleItem extends CardTitleItem {
         this.subTitle = str8;
         this.id = str9;
         this.extraData = str10;
-        this.dateline = l2;
-        this.lastUpdate = l3;
+        this.dateline = l;
+        this.lastUpdate = l2;
         Objects.requireNonNull(str11, "Null title");
         this.title = str11;
         this.pageVisibility = i;
@@ -166,10 +166,10 @@ abstract class C$$AutoValue_CardTitleItem extends CardTitleItem {
                                             if (str9 != null ? str9.equals(cardTitleItem.getId()) : cardTitleItem.getId() == null) {
                                                 String str10 = this.extraData;
                                                 if (str10 != null ? str10.equals(cardTitleItem.getExtraData()) : cardTitleItem.getExtraData() == null) {
-                                                    Long l2 = this.dateline;
-                                                    if (l2 != null ? l2.equals(cardTitleItem.getDateline()) : cardTitleItem.getDateline() == null) {
-                                                        Long l3 = this.lastUpdate;
-                                                        if (l3 != null ? l3.equals(cardTitleItem.getLastUpdate()) : cardTitleItem.getLastUpdate() == null) {
+                                                    Long l = this.dateline;
+                                                    if (l != null ? l.equals(cardTitleItem.getDateline()) : cardTitleItem.getDateline() == null) {
+                                                        Long l2 = this.lastUpdate;
+                                                        if (l2 != null ? l2.equals(cardTitleItem.getLastUpdate()) : cardTitleItem.getLastUpdate() == null) {
                                                             if (this.title.equals(cardTitleItem.getTitle()) && this.pageVisibility == cardTitleItem.getPageVisibility()) {
                                                                 return true;
                                                             }
@@ -214,11 +214,11 @@ abstract class C$$AutoValue_CardTitleItem extends CardTitleItem {
         int hashCode10 = (hashCode9 ^ (str9 == null ? 0 : str9.hashCode())) * 1000003;
         String str10 = this.extraData;
         int hashCode11 = (hashCode10 ^ (str10 == null ? 0 : str10.hashCode())) * 1000003;
-        Long l2 = this.dateline;
-        int hashCode12 = (hashCode11 ^ (l2 == null ? 0 : l2.hashCode())) * 1000003;
-        Long l3 = this.lastUpdate;
-        if (l3 != null) {
-            i = l3.hashCode();
+        Long l = this.dateline;
+        int hashCode12 = (hashCode11 ^ (l == null ? 0 : l.hashCode())) * 1000003;
+        Long l2 = this.lastUpdate;
+        if (l2 != null) {
+            i = l2.hashCode();
         }
         return ((((hashCode12 ^ i) * 1000003) ^ this.title.hashCode()) * 1000003) ^ this.pageVisibility;
     }
@@ -330,14 +330,14 @@ abstract class C$$AutoValue_CardTitleItem extends CardTitleItem {
         }
 
         @Override // com.coolapk.market.model.CardTitleItem.Builder
-        public CardTitleItem.Builder dateline(Long l2) {
-            this.dateline = l2;
+        public CardTitleItem.Builder dateline(Long l) {
+            this.dateline = l;
             return this;
         }
 
         @Override // com.coolapk.market.model.CardTitleItem.Builder
-        public CardTitleItem.Builder lastUpdate(Long l2) {
-            this.lastUpdate = l2;
+        public CardTitleItem.Builder lastUpdate(Long l) {
+            this.lastUpdate = l;
             return this;
         }
 

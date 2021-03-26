@@ -15,7 +15,7 @@ import kotlin.jvm.internal.Intrinsics;
 public final class UserSpaceCountViewHolder extends GenericBindHolder<ItemUserSpaceCountBinding, HolderItem> {
     public static final Companion Companion = new Companion(null);
     public static final String ENTITY_TYPE = "USER_SPACE_COUNT";
-    public static final int LAYOUT_ID = 2131558982;
+    public static final int LAYOUT_ID = 2131558989;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
     public UserSpaceCountViewHolder(View view, FragmentBindingComponent fragmentBindingComponent) {

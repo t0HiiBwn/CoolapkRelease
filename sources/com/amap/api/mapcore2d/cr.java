@@ -50,9 +50,7 @@ public class cr {
         @Deprecated
         public JSONObject k;
         @Deprecated
-
-        /* renamed from: l  reason: collision with root package name */
-        public JSONObject f1228l;
+        public JSONObject l;
         @Deprecated
         public JSONObject m;
         @Deprecated
@@ -721,7 +719,7 @@ public class cr {
                 aVar.k = jSONObject.getJSONObject("11C");
             }
             if (db.a(jSONObject, "11I")) {
-                aVar.f1228l = jSONObject.getJSONObject("11I");
+                aVar.l = jSONObject.getJSONObject("11I");
             }
             if (db.a(jSONObject, "11H")) {
                 aVar.m = jSONObject.getJSONObject("11H");

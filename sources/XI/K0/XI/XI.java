@@ -23,7 +23,7 @@ public interface XI extends IInterface {
         public String K0 = null;
 
         /* renamed from: XI  reason: collision with root package name */
-        public XI f1168XI = null;
+        public XI f174XI = null;
         public String kM = null;
         public final Object xo = new Object();
 
@@ -31,7 +31,7 @@ public interface XI extends IInterface {
         public static class C0000K0 {
 
             /* renamed from: XI  reason: collision with root package name */
-            public static final K0 f1169XI = new K0();
+            public static final K0 f175XI = new K0();
         }
 
         /* renamed from: XI.K0.XI.XI$K0$XI  reason: collision with other inner class name */
@@ -43,14 +43,14 @@ public interface XI extends IInterface {
             public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
                 XI xi;
                 K0 k0 = K0.this;
-                int i = AbstractBinderC0002XI.f1171XI;
+                int i = AbstractBinderC0002XI.f177XI;
                 if (iBinder == null) {
                     xi = null;
                 } else {
                     IInterface queryLocalInterface = iBinder.queryLocalInterface("com.heytap.openid.IOpenID");
                     xi = (queryLocalInterface == null || !(queryLocalInterface instanceof XI)) ? new AbstractBinderC0002XI.C0003XI(iBinder) : (XI) queryLocalInterface;
                 }
-                k0.f1168XI = xi;
+                k0.f174XI = xi;
                 synchronized (K0.this.xo) {
                     K0.this.xo.notify();
                 }
@@ -58,7 +58,7 @@ public interface XI extends IInterface {
 
             @Override // android.content.ServiceConnection
             public void onServiceDisconnected(ComponentName componentName) {
-                K0.this.f1168XI = null;
+                K0.this.f174XI = null;
             }
         }
 
@@ -94,7 +94,7 @@ public interface XI extends IInterface {
                 }
                 this.kM = str2;
             }
-            XI xi = this.f1168XI;
+            XI xi = this.f174XI;
             if (xi == null) {
                 context.getPackageName();
                 return "";
@@ -109,7 +109,7 @@ public interface XI extends IInterface {
                 obtain.writeString(str3);
                 obtain.writeString(str4);
                 obtain.writeString(str);
-                xi2.f1172XI.transact(1, obtain, obtain2, 0);
+                xi2.f178XI.transact(1, obtain, obtain2, 0);
                 obtain2.readException();
                 String readString = obtain2.readString();
                 obtain2.recycle();
@@ -129,7 +129,7 @@ public interface XI extends IInterface {
             if (Looper.myLooper() == Looper.getMainLooper()) {
                 return "";
             }
-            if (this.f1168XI == null) {
+            if (this.f174XI == null) {
                 Intent intent = new Intent();
                 intent.setComponent(new ComponentName("com.heytap.openid", "com.heytap.openid.IdentifyService"));
                 intent.setAction("action.com.heytap.openid.OPEN_ID_SERVICE");
@@ -141,7 +141,7 @@ public interface XI extends IInterface {
                         }
                     }
                 }
-                if (this.f1168XI == null) {
+                if (this.f174XI == null) {
                     return "";
                 }
                 try {
@@ -163,21 +163,21 @@ public interface XI extends IInterface {
     public static abstract class AbstractBinderC0002XI extends Binder implements XI {
 
         /* renamed from: XI  reason: collision with root package name */
-        public static final /* synthetic */ int f1171XI = 0;
+        public static final /* synthetic */ int f177XI = 0;
 
         /* renamed from: XI.K0.XI.XI$XI$XI  reason: collision with other inner class name */
         public static class C0003XI implements XI {
 
             /* renamed from: XI  reason: collision with root package name */
-            public IBinder f1172XI;
+            public IBinder f178XI;
 
             public C0003XI(IBinder iBinder) {
-                this.f1172XI = iBinder;
+                this.f178XI = iBinder;
             }
 
             @Override // android.os.IInterface
             public IBinder asBinder() {
-                return this.f1172XI;
+                return this.f178XI;
             }
         }
     }

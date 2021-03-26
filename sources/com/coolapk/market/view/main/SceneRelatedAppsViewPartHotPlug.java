@@ -39,7 +39,7 @@ public final class SceneRelatedAppsViewPartHotPlug extends ViewPartHotPlug<Scene
 
     /* JADX WARNING: Illegal instructions before constructor call */
     public SceneRelatedAppsViewPartHotPlug(ServiceAppViewHolder serviceAppViewHolder2, SceneRelatedAppsHelper sceneRelatedAppsHelper2, DataBindingComponent dataBindingComponent) {
-        super(2131558903, r9 == null ? new ViewPartPool() : r9, false, 4, null);
+        super(2131558910, r9 == null ? new ViewPartPool() : r9, false, 4, null);
         Intrinsics.checkNotNullParameter(serviceAppViewHolder2, "serviceAppViewHolder");
         Intrinsics.checkNotNullParameter(dataBindingComponent, "component");
         ViewPartPool viewPartPool = KotlinExtendKt.getViewPartPool(dataBindingComponent);

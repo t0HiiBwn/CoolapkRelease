@@ -61,7 +61,7 @@ import org.greenrobot.eventbus.EventBus;
 /* compiled from: FeedVideoDetailViewPart.kt */
 public final class FeedVideoDetailViewPart extends BaseVideoDetailViewPart<ItemFeedVideoDetailViewPartBinding, VideoModel> implements FeedDetailView {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558734;
+    public static final int LAYOUT_ID = 2131558741;
     private final FeedVideoDetailViewPart$callback$1 callback = new FeedVideoDetailViewPart$callback$1(this);
     private DetailControlCover detailControlCover;
     private FeedDetailPresenter feedPresenter;
@@ -101,7 +101,7 @@ public final class FeedVideoDetailViewPart extends BaseVideoDetailViewPart<ItemF
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemFeedVideoDetailViewPartBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558734, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131558741, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…OUT_ID, viewGroup, false)");
         return (ItemFeedVideoDetailViewPartBinding) inflate;
     }
@@ -207,16 +207,16 @@ public final class FeedVideoDetailViewPart extends BaseVideoDetailViewPart<ItemF
         textView.setText(LinkTextUtils.convert(feed.getMessage(), -1, null).toString());
         TextView textView2 = ((ItemFeedVideoDetailViewPartBinding) getBinding()).likeText;
         Intrinsics.checkNotNullExpressionValue(textView2, "binding.likeText");
-        textView2.setText(feed.getLikeNum() > 0 ? String.valueOf(feed.getLikeNum()) : getActivity().getString(2131886790));
+        textView2.setText(feed.getLikeNum() > 0 ? String.valueOf(feed.getLikeNum()) : getActivity().getString(2131886852));
         TextView textView3 = ((ItemFeedVideoDetailViewPartBinding) getBinding()).commentText;
         Intrinsics.checkNotNullExpressionValue(textView3, "binding.commentText");
-        textView3.setText(feed.getReplyNum() > 0 ? String.valueOf(feed.getReplyNum()) : getActivity().getString(2131886791));
+        textView3.setText(feed.getReplyNum() > 0 ? String.valueOf(feed.getReplyNum()) : getActivity().getString(2131886853));
         TextView textView4 = ((ItemFeedVideoDetailViewPartBinding) getBinding()).favoriteTextView;
         Intrinsics.checkNotNullExpressionValue(textView4, "binding.favoriteTextView");
-        textView4.setText(feed.getFavoriteNum() > 0 ? String.valueOf(feed.getFavoriteNum()) : getActivity().getString(2131886786));
+        textView4.setText(feed.getFavoriteNum() > 0 ? String.valueOf(feed.getFavoriteNum()) : getActivity().getString(2131886848));
         TextView textView5 = ((ItemFeedVideoDetailViewPartBinding) getBinding()).shareText;
         Intrinsics.checkNotNullExpressionValue(textView5, "binding.shareText");
-        textView5.setText(feed.getShareNum() > 0 ? String.valueOf(feed.getShareNum()) : getActivity().getString(2131886793));
+        textView5.setText(feed.getShareNum() > 0 ? String.valueOf(feed.getShareNum()) : getActivity().getString(2131886855));
         ((ItemFeedVideoDetailViewPartBinding) getBinding()).likeImageView.setColorFilter((userAction == null || userAction.getLike() != 1) ? -1 : AppHolder.getAppTheme().getColorAccent());
         ((ItemFeedVideoDetailViewPartBinding) getBinding()).likeText.setTextColor((userAction == null || userAction.getLike() != 1) ? -1 : AppHolder.getAppTheme().getColorAccent());
         ((ItemFeedVideoDetailViewPartBinding) getBinding()).favoriteTextView.setTextColor((userAction == null || userAction.getFavorite() != 1) ? -1 : AppHolder.getAppTheme().getColorAccent());
@@ -237,7 +237,7 @@ public final class FeedVideoDetailViewPart extends BaseVideoDetailViewPart<ItemF
         TextView textView8 = ((ItemFeedVideoDetailViewPartBinding) getBinding()).feedTimeView;
         Intrinsics.checkNotNullExpressionValue(textView8, "binding.feedTimeView");
         textView8.setText(DateUtils.getTimeDescription(getActivity(), feed.getDateline()));
-        AppHolder.getContextImageLoader().displayImage(getActivity(), feed.getUserAvatar(), ((ItemFeedVideoDetailViewPartBinding) getBinding()).userAvatarView, 2131231152);
+        AppHolder.getContextImageLoader().displayImage(getActivity(), feed.getUserAvatar(), ((ItemFeedVideoDetailViewPartBinding) getBinding()).userAvatarView, 2131231162);
         UserAvatarView userAvatarView = ((ItemFeedVideoDetailViewPartBinding) getBinding()).userAvatarView;
         UserInfo userInfo = feed.getUserInfo();
         UserAvatarView.bind$default(userAvatarView, userInfo != null ? userInfo.getVerifyStatusIcon() : null, false, 2, null);

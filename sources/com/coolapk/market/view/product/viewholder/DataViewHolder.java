@@ -22,7 +22,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: IconGridHorizonCardViewHolder.kt */
 final class DataViewHolder extends BindingViewHolder {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558780;
+    public static final int LAYOUT_ID = 2131558787;
     private final ItemIconLinkGridCardItemBinding binding;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -86,7 +86,7 @@ final class DataViewHolder extends BindingViewHolder {
         Entity entity = itemIconLinkGridCardItemBinding.getEntity();
         if (entity != null) {
             Intrinsics.checkNotNullExpressionValue(entity, "binding.entity ?: return");
-            if (view.getId() == 2131362768) {
+            if (view.getId() == 2131362779) {
                 Context context = getContext();
                 Intrinsics.checkNotNullExpressionValue(context, "context");
                 ActionManagerCompat.startActivityByUrl(context, entity.getUrl(), entity.getTitle(), entity.getSubTitle());

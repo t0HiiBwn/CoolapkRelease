@@ -21,7 +21,7 @@ public final class CoolPicDetailActivity$onCreate$5 implements SwipeScaleView.On
 
     @Override // com.coolapk.market.widget.view.SwipeScaleView.OnCanSwipeListener
     public boolean canSwipe() {
-        Fragment findFragmentById = this.this$0.getSupportFragmentManager().findFragmentById(2131362318);
+        Fragment findFragmentById = this.this$0.getSupportFragmentManager().findFragmentById(2131362324);
         Boolean bool = null;
         if (!(findFragmentById instanceof CoolPicListFragment)) {
             findFragmentById = null;

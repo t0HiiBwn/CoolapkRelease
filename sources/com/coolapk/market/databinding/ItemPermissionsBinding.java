@@ -38,7 +38,7 @@ public abstract class ItemPermissionsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPermissionsBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemPermissionsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558849, viewGroup, z, obj);
+        return (ItemPermissionsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558856, viewGroup, z, obj);
     }
 
     public static ItemPermissionsBinding inflate(LayoutInflater layoutInflater) {
@@ -47,7 +47,7 @@ public abstract class ItemPermissionsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPermissionsBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemPermissionsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558849, null, false, obj);
+        return (ItemPermissionsBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558856, null, false, obj);
     }
 
     public static ItemPermissionsBinding bind(View view) {
@@ -56,6 +56,6 @@ public abstract class ItemPermissionsBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemPermissionsBinding bind(View view, Object obj) {
-        return (ItemPermissionsBinding) bind(obj, view, 2131558849);
+        return (ItemPermissionsBinding) bind(obj, view, 2131558856);
     }
 }

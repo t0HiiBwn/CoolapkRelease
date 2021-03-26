@@ -23,6 +23,19 @@ public class SuffixFileFilter extends AbstractFileFilter implements Serializable
         throw new IllegalArgumentException("The suffix must not be null");
     }
 
+    public SuffixFileFilter(List<String> list) {
+        this(list, IOCase.SENSITIVE);
+    }
+
+    public SuffixFileFilter(List<String> list, IOCase iOCase) {
+        if (list != null) {
+            this.suffixes = (String[]) list.toArray(new String[list.size()]);
+            this.caseSensitivity = iOCase == null ? IOCase.SENSITIVE : iOCase;
+            return;
+        }
+        throw new IllegalArgumentException("The list of suffixes must not be null");
+    }
+
     public SuffixFileFilter(String[] strArr) {
         this(strArr, IOCase.SENSITIVE);
     }
@@ -36,19 +49,6 @@ public class SuffixFileFilter extends AbstractFileFilter implements Serializable
             return;
         }
         throw new IllegalArgumentException("The array of suffixes must not be null");
-    }
-
-    public SuffixFileFilter(List<String> list) {
-        this(list, IOCase.SENSITIVE);
-    }
-
-    public SuffixFileFilter(List<String> list, IOCase iOCase) {
-        if (list != null) {
-            this.suffixes = (String[]) list.toArray(new String[list.size()]);
-            this.caseSensitivity = iOCase == null ? IOCase.SENSITIVE : iOCase;
-            return;
-        }
-        throw new IllegalArgumentException("The list of suffixes must not be null");
     }
 
     @Override // org.apache.commons.io.filefilter.AbstractFileFilter, org.apache.commons.io.filefilter.IOFileFilter, java.io.FileFilter

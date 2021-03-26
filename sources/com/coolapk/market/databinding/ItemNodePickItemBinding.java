@@ -44,7 +44,7 @@ public abstract class ItemNodePickItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNodePickItemBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemNodePickItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558838, viewGroup, z, obj);
+        return (ItemNodePickItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558845, viewGroup, z, obj);
     }
 
     public static ItemNodePickItemBinding inflate(LayoutInflater layoutInflater) {
@@ -53,7 +53,7 @@ public abstract class ItemNodePickItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNodePickItemBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemNodePickItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558838, null, false, obj);
+        return (ItemNodePickItemBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558845, null, false, obj);
     }
 
     public static ItemNodePickItemBinding bind(View view) {
@@ -62,6 +62,6 @@ public abstract class ItemNodePickItemBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemNodePickItemBinding bind(View view, Object obj) {
-        return (ItemNodePickItemBinding) bind(obj, view, 2131558838);
+        return (ItemNodePickItemBinding) bind(obj, view, 2131558845);
     }
 }

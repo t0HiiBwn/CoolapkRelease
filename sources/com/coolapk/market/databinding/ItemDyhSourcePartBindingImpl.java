@@ -17,9 +17,9 @@ public class ItemDyhSourcePartBindingImpl extends ItemDyhSourcePartBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362643, 1);
-        sparseIntArray.put(2131362306, 2);
-        sparseIntArray.put(2131363397, 3);
+        sparseIntArray.put(2131362651, 1);
+        sparseIntArray.put(2131362311, 2);
+        sparseIntArray.put(2131363414, 3);
     }
 
     public ItemDyhSourcePartBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -54,7 +54,7 @@ public class ItemDyhSourcePartBindingImpl extends ItemDyhSourcePartBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (197 != i) {
+        if (198 != i) {
             return false;
         }
         setModel((DyhViewModel) obj);

@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import com.xiaomi.channel.commonutils.logger.b;
+import com.xiaomi.a.a.a.c;
 import java.lang.ref.WeakReference;
 
 public abstract class BaseService extends Service {
@@ -30,19 +30,19 @@ public abstract class BaseService extends Service {
             WeakReference<BaseService> weakReference;
             BaseService baseService;
             if (message.what == 1001 && (weakReference = this.a) != null && (baseService = weakReference.get()) != null) {
-                b.c("TimeoutHandler" + baseService.toString() + "  kill self");
-                if (!baseService.mo56a()) {
+                c.c("TimeoutHandler" + baseService.toString() + "  kill self");
+                if (!baseService.mo35a()) {
                     baseService.stopSelf();
                     return;
                 }
-                b.c("TimeoutHandler has job");
+                c.c("TimeoutHandler has job");
                 sendEmptyMessageDelayed(1001, 1000);
             }
         }
     }
 
     /* renamed from: a */
-    protected abstract boolean mo56a();
+    protected abstract boolean mo35a();
 
     @Override // android.app.Service
     public IBinder onBind(Intent intent) {

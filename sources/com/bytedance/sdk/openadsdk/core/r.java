@@ -295,16 +295,16 @@ public class r implements q<com.bytedance.sdk.openadsdk.c.a> {
                         bVar.a(-9, h.a(-9));
                         return;
                     }
-                    String l2 = aj.l("/api/ad/union/sdk/get_ads/");
+                    String l = aj.l("/api/ad/union/sdk/get_ads/");
                     try {
                         if (b(adSlot.getExtraSmartLookParam()) && !TextUtils.isEmpty(a)) {
                             if (i != 4) {
-                                l2 = a;
+                                l = a;
                             } else {
                                 return;
                             }
                         }
-                        str = l2;
+                        str = l;
                     } catch (Throwable unused) {
                         str = aj.l("/api/ad/union/sdk/get_ads/");
                     }

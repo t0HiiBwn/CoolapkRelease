@@ -19,8 +19,8 @@ final class AlbumItemDialog$RecommendActionItem$takeAction$1<T, R> implements Fu
     public final Observable<? extends Result<String>> call(Boolean bool) {
         Intrinsics.checkNotNullExpressionValue(bool, "aBoolean");
         if (bool.booleanValue()) {
-            return this.this$0.this$0.mPresenter.cancelRecommendAlbum(this.this$0.getMFeed());
+            return AlbumItemDialog.access$getMPresenter$p(this.this$0.this$0).cancelRecommendAlbum(this.this$0.getMFeed());
         }
-        return this.this$0.this$0.mPresenter.recommendAlbum(this.this$0.getMFeed());
+        return AlbumItemDialog.access$getMPresenter$p(this.this$0.this$0).recommendAlbum(this.this$0.getMFeed());
     }
 }

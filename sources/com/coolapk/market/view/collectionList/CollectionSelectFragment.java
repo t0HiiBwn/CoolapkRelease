@@ -23,14 +23,11 @@ import com.coolapk.market.widget.view.SlideUpView;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Objects;
-import kotlin.Metadata;
 import kotlin.Unit;
-import kotlin.jvm.JvmStatic;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import rx.Observable;
 
-@Metadata(bv = {1, 0, 3}, d1 = {"\u0000l\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u0003\n\u0002\b\u0003\u0018\u0000 '2\u00020\u0001:\u0001'B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u0011\u001a\u00020\u00122\b\u0010\u0013\u001a\u0004\u0018\u00010\u0014H\u0016J\"\u0010\u0015\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u00172\b\u0010\u0019\u001a\u0004\u0018\u00010\u001aH\u0016J\u0012\u0010\u001b\u001a\u00020\u00122\b\u0010\u0013\u001a\u0004\u0018\u00010\u0014H\u0016J$\u0010\u001c\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u001f0\u001e0\u001d2\u0006\u0010 \u001a\u00020!2\u0006\u0010\"\u001a\u00020\u0017H\u0016J\u0018\u0010#\u001a\u00020\u00122\u0006\u0010 \u001a\u00020!2\u0006\u0010$\u001a\u00020%H\u0014J \u0010&\u001a\u00020!2\u0006\u0010 \u001a\u00020!2\u000e\u0010\u0019\u001a\n\u0012\u0004\u0012\u00020\u001f\u0018\u00010\u001eH\u0014R\u0010\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u000e¢\u0006\u0002\n\u0000R\u001c\u0010\u0005\u001a\u0010\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\b\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\t\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u001c\u0010\n\u001a\u0010\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\b\u0018\u00010\u0006X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\fX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0007X\u000e¢\u0006\u0002\n\u0000¨\u0006("}, d2 = {"Lcom/coolapk/market/view/collectionList/CollectionSelectFragment;", "Lcom/coolapk/market/view/cardlist/EntityListFragment;", "()V", "bottomSheet", "Lcom/coolapk/market/widget/view/SlideUpView;", "cancelMap", "Ljava/util/LinkedHashMap;", "", "Lcom/coolapk/market/model/Collection;", "colId", "collectionMap", "component", "Lcom/coolapk/market/binding/FragmentBindingComponent;", "doneView", "Landroid/widget/TextView;", "feedId", "type", "onActivityCreated", "", "savedInstanceState", "Landroid/os/Bundle;", "onActivityResult", "requestCode", "", "resultCode", "data", "Landroid/content/Intent;", "onCreate", "onCreateRequest", "Lrx/Observable;", "", "Lcom/coolapk/market/model/Entity;", "isRefresh", "", "page", "onRequestFailure", "error", "", "onRequestResponse", "Companion", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
 /* compiled from: CollectionSelectFragment.kt */
 public final class CollectionSelectFragment extends EntityListFragment {
     public static final Companion Companion = new Companion(null);
@@ -44,12 +41,10 @@ public final class CollectionSelectFragment extends EntityListFragment {
     private String feedId;
     private String type;
 
-    @JvmStatic
     public static final CollectionSelectFragment newInstance(String str, String str2) {
         return Companion.newInstance(str, str2);
     }
 
-    @Metadata(bv = {1, 0, 3}, d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0018\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\u00042\u0006\u0010\b\u001a\u00020\u0004H\u0007R\u000e\u0010\u0003\u001a\u00020\u0004XT¢\u0006\u0002\n\u0000¨\u0006\t"}, d2 = {"Lcom/coolapk/market/view/collectionList/CollectionSelectFragment$Companion;", "", "()V", "KEY_DATA", "", "newInstance", "Lcom/coolapk/market/view/collectionList/CollectionSelectFragment;", "feedId", "type", "presentation_coolapkAppRelease"}, k = 1, mv = {1, 4, 2})
     /* compiled from: CollectionSelectFragment.kt */
     public static final class Companion {
         private Companion() {
@@ -59,7 +54,6 @@ public final class CollectionSelectFragment extends EntityListFragment {
             this();
         }
 
-        @JvmStatic
         public final CollectionSelectFragment newInstance(String str, String str2) {
             Intrinsics.checkNotNullParameter(str, "feedId");
             Intrinsics.checkNotNullParameter(str2, "type");
@@ -77,9 +71,9 @@ public final class CollectionSelectFragment extends EntityListFragment {
     public void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
         this.component = new FragmentBindingComponent(this);
-        setEmptyData(getString(2131886765), 0);
+        setEmptyData(getString(2131886827), 0);
         BaseMultiTypeAdapter adapter$presentation_coolapkAppRelease = getAdapter$presentation_coolapkAppRelease();
-        SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558656).suitedMethod(CollectionSelectFragment$onActivityCreated$1.INSTANCE).constructor(new CollectionSelectFragment$onActivityCreated$2(this));
+        SimpleHolderFactorBuilder constructor = SimpleViewHolderFactor.Companion.withLayoutId(2131558662).suitedMethod(CollectionSelectFragment$onActivityCreated$1.INSTANCE).constructor(new CollectionSelectFragment$onActivityCreated$2(this));
         Integer num = getItemViewTypeByEntityType().get("dyh");
         Intrinsics.checkNotNull(num);
         Intrinsics.checkNotNullExpressionValue(num, "itemViewTypeByEntityType…yUtils.ENTITY_TYPE_DYH]!!");
@@ -161,12 +155,11 @@ public final class CollectionSelectFragment extends EntityListFragment {
         return map;
     }
 
-    /* access modifiers changed from: protected */
     @Override // com.coolapk.market.view.cardlist.EntityListFragment
     public boolean onRequestResponse(boolean z, List<? extends Entity> list) {
         boolean onRequestResponse = super.onRequestResponse(z, list);
         if (z && CollectionUtils.isEmpty(list)) {
-            setEmptyData(getString(2131886765), 0);
+            setEmptyData(getString(2131886827), 0);
         }
         getAdapter$presentation_coolapkAppRelease().notifyDataSetChanged();
         Intrinsics.checkNotNull(list);

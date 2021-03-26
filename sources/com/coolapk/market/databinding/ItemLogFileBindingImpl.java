@@ -29,7 +29,7 @@ public class ItemLogFileBindingImpl extends ItemLogFileBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131363533, 2);
+        sparseIntArray.put(2131363551, 2);
     }
 
     public ItemLogFileBindingImpl(DataBindingComponent dataBindingComponent, View view) {

@@ -65,9 +65,9 @@ public class AlbumAppBindingImpl extends AlbumAppBinding {
     public boolean setVariable(int i, Object obj) {
         if (27 == i) {
             setApp((AlbumItem) obj);
-        } else if (307 == i) {
+        } else if (308 == i) {
             setViewHolder((AlbumItemViewHolder) obj);
-        } else if (308 != i) {
+        } else if (309 != i) {
             return false;
         } else {
             setViewModel((AlbumItemViewModel) obj);
@@ -87,7 +87,7 @@ public class AlbumAppBindingImpl extends AlbumAppBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(307);
+        notifyPropertyChanged(308);
         super.requestRebind();
     }
 
@@ -98,7 +98,7 @@ public class AlbumAppBindingImpl extends AlbumAppBinding {
         synchronized (this) {
             this.mDirtyFlags |= 2;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 
@@ -129,17 +129,17 @@ public class AlbumAppBindingImpl extends AlbumAppBinding {
                 this.mDirtyFlags |= 2;
             }
             return true;
-        } else if (i == 191) {
+        } else if (i == 192) {
             synchronized (this) {
                 this.mDirtyFlags |= 8;
             }
             return true;
-        } else if (i == 278) {
+        } else if (i == 279) {
             synchronized (this) {
                 this.mDirtyFlags |= 16;
             }
             return true;
-        } else if (i == 266) {
+        } else if (i == 267) {
             synchronized (this) {
                 this.mDirtyFlags |= 32;
             }
@@ -154,7 +154,7 @@ public class AlbumAppBindingImpl extends AlbumAppBinding {
                 this.mDirtyFlags |= 128;
             }
             return true;
-        } else if (i != 207) {
+        } else if (i != 208) {
             return false;
         } else {
             synchronized (this) {
@@ -290,7 +290,7 @@ public class AlbumAppBindingImpl extends AlbumAppBinding {
         }
         if ((j & 522) != 0) {
             Boolean bool = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str2, null, 2131231363, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.iconView, str2, null, 2131231374, 0, bool, bool, bool, bool, bool, null, null, null, true, bool, bool, null, bool);
         }
         if ((770 & j) != 0) {
             this.introductionView.setVisibility(i2);

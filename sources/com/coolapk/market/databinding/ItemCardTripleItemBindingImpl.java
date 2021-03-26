@@ -58,7 +58,7 @@ public class ItemCardTripleItemBindingImpl extends ItemCardTripleItemBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (308 != i) {
+        if (309 != i) {
             return false;
         }
         setViewModel((CardTripleViewHolder.ChildItemViewModel) obj);
@@ -72,7 +72,7 @@ public class ItemCardTripleItemBindingImpl extends ItemCardTripleItemBinding {
         synchronized (this) {
             this.mDirtyFlags |= 16;
         }
-        notifyPropertyChanged(308);
+        notifyPropertyChanged(309);
         super.requestRebind();
     }
 

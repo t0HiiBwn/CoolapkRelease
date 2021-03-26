@@ -112,18 +112,18 @@ public class a {
                                     arrayList.add(new C0063a(key, str3, i, 0, file9));
                                 }
                             } else if (!(list3 == null || (b2 = k.b(file7)) == null || b2.isEmpty())) {
-                                for (Long l2 : b2) {
-                                    if (list3.get(0).longValue() > l2.longValue()) {
-                                        File file10 = new File(file7, l2 + str5);
+                                for (Long l : b2) {
+                                    if (list3.get(0).longValue() > l.longValue()) {
+                                        File file10 = new File(file7, l + str5);
                                         it5 = it7;
-                                        new File(file7, l2 + str4).renameTo(file10);
+                                        new File(file7, l + str4).renameTo(file10);
                                         it6 = it8;
                                         str2 = str5;
                                         file5 = file7;
                                         file4 = file6;
                                         str = str4;
                                         list = list3;
-                                        arrayList.add(new C0063a(key, str3, i, l2.longValue(), file10));
+                                        arrayList.add(new C0063a(key, str3, i, l.longValue(), file10));
                                     } else {
                                         it5 = it7;
                                         it6 = it8;

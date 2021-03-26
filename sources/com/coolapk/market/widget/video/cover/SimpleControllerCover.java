@@ -109,7 +109,7 @@ public final class SimpleControllerCover extends ThemeableCover implements OnTim
     public void onClick(View view) {
         Intrinsics.checkNotNullParameter(view, "v");
         super.onClick(view);
-        if (view.getId() == 2131363943) {
+        if (view.getId() == 2131363969) {
             getGroupValue().putBoolean("need_mute", !getGroupValue().getBoolean("need_mute"));
         }
     }
@@ -222,7 +222,7 @@ public final class SimpleControllerCover extends ThemeableCover implements OnTim
     @Override // com.kk.taurus.playerbase.receiver.BaseCover
     public View onCreateCoverView(Context context) {
         Intrinsics.checkNotNullParameter(context, "context");
-        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559295, null, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(LayoutInflater.from(context), 2131559305, null, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…_controller, null, false)");
         VideoSimpleControllerBinding videoSimpleControllerBinding = (VideoSimpleControllerBinding) inflate;
         this.binding = videoSimpleControllerBinding;

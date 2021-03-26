@@ -54,7 +54,7 @@ public final class CoolApkVXNestBaseActivity extends FakeStatusBarActivity {
     protected void onCreate(Bundle bundle) {
         setContentBarAlwaysTranslucent(true);
         super.onCreate(bundle);
-        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559300);
+        ViewDataBinding contentView = DataBindingUtil.setContentView(this, 2131559310);
         Intrinsics.checkNotNullExpressionValue(contentView, "DataBindingUtil.setConte…this, R.layout.vx_layout)");
         VxLayoutBinding vxLayoutBinding = (VxLayoutBinding) contentView;
         this.binding = vxLayoutBinding;

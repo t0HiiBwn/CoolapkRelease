@@ -2,6 +2,7 @@ package com.coolapk.market.view.goodsList;
 
 import android.content.Context;
 import android.view.View;
+import android.widget.TextView;
 import androidx.databinding.DataBindingComponent;
 import com.coolapk.market.databinding.ItemGoodsListSimpleBinding;
 import com.coolapk.market.manager.ActionManager;
@@ -16,7 +17,7 @@ import kotlin.jvm.internal.Intrinsics;
 /* compiled from: ItemGoodsListViewHolder.kt */
 public final class ItemGoodsListViewHolder extends GenericBindHolder<ItemGoodsListSimpleBinding, FunThings> {
     public static final Companion Companion = new Companion(null);
-    public static final int LAYOUT_ID = 2131558761;
+    public static final int LAYOUT_ID = 2131558768;
     private FunThings goodsList;
 
     /* JADX INFO: super call moved to the top of the method (can break code semantics) */
@@ -34,6 +35,9 @@ public final class ItemGoodsListViewHolder extends GenericBindHolder<ItemGoodsLi
         ItemGoodsListSimpleBinding itemGoodsListSimpleBinding2 = (ItemGoodsListSimpleBinding) getBinding();
         Intrinsics.checkNotNullExpressionValue(itemGoodsListSimpleBinding2, "binding");
         itemGoodsListSimpleBinding2.setUserInfo(funThings.getDeprecatedUserName() + " 共" + funThings.getItemNum() + "个好物");
+        TextView textView = ((ItemGoodsListSimpleBinding) getBinding()).recommendView;
+        Intrinsics.checkNotNullExpressionValue(textView, "binding.recommendView");
+        textView.setVisibility(funThings.isRecommend() ? 0 : 8);
         ItemGoodsListSimpleBinding itemGoodsListSimpleBinding3 = (ItemGoodsListSimpleBinding) getBinding();
         Intrinsics.checkNotNullExpressionValue(itemGoodsListSimpleBinding3, "binding");
         itemGoodsListSimpleBinding3.setClick(this);
@@ -44,7 +48,7 @@ public final class ItemGoodsListViewHolder extends GenericBindHolder<ItemGoodsLi
     public void onClick(View view) {
         super.onClick(view);
         Intrinsics.checkNotNull(view);
-        if (view.getId() == 2131362200) {
+        if (view.getId() == 2131362205) {
             Context context = getContext();
             FunThings funThings = this.goodsList;
             if (funThings == null) {

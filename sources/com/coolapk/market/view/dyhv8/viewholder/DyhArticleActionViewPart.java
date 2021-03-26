@@ -24,12 +24,12 @@ import org.greenrobot.eventbus.EventBus;
 import rx.Subscriber;
 
 public class DyhArticleActionViewPart extends BindingViewPart<ItemDyharticleActionBinding, DyhArticle> {
-    public static final int LAYOUT_ID = 2131558685;
+    public static final int LAYOUT_ID = 2131558691;
     private ClickCallBack clickCallBack;
     private boolean fromDetail;
     private boolean hasLiked;
-    private final int likeResrouce = 2131231682;
-    private final int likedResrouce = 2131231246;
+    private final int likeResrouce = 2131231693;
+    private final int likedResrouce = 2131231257;
     private final DataBindingComponent mComponent;
     private DyhArticle mDyhArticle;
     private boolean posting;
@@ -69,21 +69,21 @@ public class DyhArticleActionViewPart extends BindingViewPart<ItemDyharticleActi
     /* access modifiers changed from: protected */
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public ItemDyharticleActionBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
-        return (ItemDyharticleActionBinding) DataBindingUtil.inflate(layoutInflater, 2131558685, viewGroup, false, this.mComponent);
+        return (ItemDyharticleActionBinding) DataBindingUtil.inflate(layoutInflater, 2131558691, viewGroup, false, this.mComponent);
     }
 
     @Override // com.coolapk.market.viewholder.iview.ViewPart, android.view.View.OnClickListener
     public void onClick(View view) {
         super.onClick(view);
         int id = view.getId();
-        if (id == 2131362291) {
+        if (id == 2131362296) {
             ClickCallBack clickCallBack2 = this.clickCallBack;
             if (clickCallBack2 != null) {
                 clickCallBack2.actionClick(view);
             }
-        } else if (id == 2131362592) {
+        } else if (id == 2131362600) {
             ActionManager.startNewFeedForDyhActivity(UiUtils.getActivity(getContext()), this.mDyhArticle);
-        } else if (id == 2131362851) {
+        } else if (id == 2131362862) {
             RxLogin.getInstance(getContext()).requestLogin().subscribe((Subscriber<? super Boolean>) new Subscriber<Boolean>() {
                 /* class com.coolapk.market.view.dyhv8.viewholder.DyhArticleActionViewPart.AnonymousClass1 */
 
@@ -123,7 +123,7 @@ public class DyhArticleActionViewPart extends BindingViewPart<ItemDyharticleActi
                             });
                             DyhArticleActionViewPart.this.hasLiked = false;
                             ((ItemDyharticleActionBinding) DyhArticleActionViewPart.this.getBinding()).likeNum.setText(DyhArticleActionViewPart.this.mDyhArticle.getLikeNum() - 1 > 0 ? String.valueOf(DyhArticleActionViewPart.this.mDyhArticle.getLikeNum() - 1) : "赞");
-                            Drawable mutate = ContextCompat.getDrawable(DyhArticleActionViewPart.this.getContext(), 2131231682).mutate();
+                            Drawable mutate = ContextCompat.getDrawable(DyhArticleActionViewPart.this.getContext(), 2131231693).mutate();
                             mutate.setTint(Color.parseColor("#9E9E9E"));
                             ((ItemDyharticleActionBinding) DyhArticleActionViewPart.this.getBinding()).likeIcon.setImageDrawable(mutate);
                             return;
@@ -152,7 +152,7 @@ public class DyhArticleActionViewPart extends BindingViewPart<ItemDyharticleActi
                         });
                         DyhArticleActionViewPart.this.hasLiked = true;
                         ((ItemDyharticleActionBinding) DyhArticleActionViewPart.this.getBinding()).likeNum.setText(String.valueOf(DyhArticleActionViewPart.this.mDyhArticle.getLikeNum() + 1));
-                        Drawable mutate2 = ContextCompat.getDrawable(DyhArticleActionViewPart.this.getContext(), 2131231246).mutate();
+                        Drawable mutate2 = ContextCompat.getDrawable(DyhArticleActionViewPart.this.getContext(), 2131231257).mutate();
                         mutate2.setTint(Color.parseColor("#9E9E9E"));
                         ((ItemDyharticleActionBinding) DyhArticleActionViewPart.this.getBinding()).likeIcon.setImageDrawable(mutate2);
                     }
@@ -166,7 +166,7 @@ public class DyhArticleActionViewPart extends BindingViewPart<ItemDyharticleActi
         int likeNum = dyhArticle.getLikeNum();
         boolean isLiked = dyhArticle.isLiked();
         ((ItemDyharticleActionBinding) getBinding()).likeNum.setText(likeNum > 0 ? String.valueOf(likeNum) : "赞");
-        Drawable mutate = ContextCompat.getDrawable(getContext(), isLiked ? 2131231246 : 2131231682).mutate();
+        Drawable mutate = ContextCompat.getDrawable(getContext(), isLiked ? 2131231257 : 2131231693).mutate();
         mutate.setTint(Color.parseColor("#9E9E9E"));
         ((ItemDyharticleActionBinding) getBinding()).likeIcon.setImageDrawable(mutate);
         this.posting = false;

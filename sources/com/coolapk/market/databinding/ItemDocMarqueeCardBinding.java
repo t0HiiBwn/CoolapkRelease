@@ -24,7 +24,7 @@ public abstract class ItemDocMarqueeCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDocMarqueeCardBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemDocMarqueeCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558674, viewGroup, z, obj);
+        return (ItemDocMarqueeCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558680, viewGroup, z, obj);
     }
 
     public static ItemDocMarqueeCardBinding inflate(LayoutInflater layoutInflater) {
@@ -33,7 +33,7 @@ public abstract class ItemDocMarqueeCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDocMarqueeCardBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemDocMarqueeCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558674, null, false, obj);
+        return (ItemDocMarqueeCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558680, null, false, obj);
     }
 
     public static ItemDocMarqueeCardBinding bind(View view) {
@@ -42,6 +42,6 @@ public abstract class ItemDocMarqueeCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemDocMarqueeCardBinding bind(View view, Object obj) {
-        return (ItemDocMarqueeCardBinding) bind(obj, view, 2131558674);
+        return (ItemDocMarqueeCardBinding) bind(obj, view, 2131558680);
     }
 }

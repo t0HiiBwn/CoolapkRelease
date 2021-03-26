@@ -77,7 +77,7 @@ public final class SecondHandCommentBarViewPart extends BindingViewPart<SecondHa
     @Override // com.coolapk.market.viewholder.iview.BindingViewPart
     public SecondHandCommentBarBinding onCreateBinding(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(layoutInflater, "inflater");
-        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559132, viewGroup, false);
+        ViewDataBinding inflate = DataBindingUtil.inflate(layoutInflater, 2131559139, viewGroup, false);
         Intrinsics.checkNotNullExpressionValue(inflate, "DataBindingUtil.inflate(…nt_bar, viewGroup, false)");
         return (SecondHandCommentBarBinding) inflate;
     }

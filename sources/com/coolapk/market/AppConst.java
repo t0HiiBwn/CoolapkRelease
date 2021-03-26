@@ -155,6 +155,7 @@ public class AppConst {
         public static final String PREF_TIP_SIGN_SUBMIT_BUTTON = "TIP_TAB_SUBMIT_BUTTON";
         public static final String PREF_TIP_SIGN_TAB_COOLPIC = "TIP_TAB_COOLPIC_SHOW";
         public static final String PREF_TIP_SIGN_TAB_HEADLINE = "TIP_TAB_HEADLINE";
+        public static final String PREF_TPNS_KEEP_ALIVE = "tpns_keep_alive";
         public static final String PREF_TRANSPARENT_STATUS_BAR = "transparent_status_bar";
         public static final String PREF_URL_SIGN = "PREF_URL_SIGN";
         public static final String PREF_USER_PRIVACY_INTENT = "USER_PRIVACY_INTENT";
@@ -211,6 +212,7 @@ public class AppConst {
         public static final String RED = "red";
         public static final String SMARTISAN_PRO = "SMARTISAN_PRO";
         public static final String TEAL = "teal";
+        public static final String TIME_LIMIT_THEME = "TIME_LIMIT_THEME";
         public static final String WHITE = "white";
     }
 

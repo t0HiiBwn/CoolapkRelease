@@ -13,13 +13,6 @@ public class NullInputStream extends InputStream {
     private final long size;
     private final boolean throwEofException;
 
-    protected int processByte() {
-        return 0;
-    }
-
-    protected void processBytes(byte[] bArr, int i, int i2) {
-    }
-
     public NullInputStream(long j) {
         this(j, true, false);
     }
@@ -31,12 +24,12 @@ public class NullInputStream extends InputStream {
         this.throwEofException = z2;
     }
 
-    public long getPosition() {
-        return this.position;
-    }
-
-    public long getSize() {
-        return this.size;
+    private int doEndOfFile() throws EOFException {
+        this.eof = true;
+        if (!this.throwEofException) {
+            return -1;
+        }
+        throw new EOFException();
     }
 
     @Override // java.io.InputStream
@@ -58,6 +51,14 @@ public class NullInputStream extends InputStream {
         this.mark = -1;
     }
 
+    public long getPosition() {
+        return this.position;
+    }
+
+    public long getSize() {
+        return this.size;
+    }
+
     @Override // java.io.InputStream
     public synchronized void mark(int i) {
         if (this.markSupported) {
@@ -71,6 +72,13 @@ public class NullInputStream extends InputStream {
     @Override // java.io.InputStream
     public boolean markSupported() {
         return this.markSupported;
+    }
+
+    protected int processByte() {
+        return 0;
+    }
+
+    protected void processBytes(byte[] bArr, int i, int i2) {
     }
 
     @Override // java.io.InputStream
@@ -113,18 +121,15 @@ public class NullInputStream extends InputStream {
 
     @Override // java.io.InputStream
     public synchronized void reset() throws IOException {
-        if (this.markSupported) {
-            long j = this.mark;
-            if (j < 0) {
-                throw new IOException("No position has been marked");
-            } else if (this.position <= this.readlimit + j) {
-                this.position = j;
-                this.eof = false;
-            } else {
-                throw new IOException("Marked position [" + this.mark + "] is no longer valid - passed the read limit [" + this.readlimit + "]");
-            }
-        } else {
+        if (!this.markSupported) {
             throw new UnsupportedOperationException("Mark not supported");
+        } else if (this.mark < 0) {
+            throw new IOException("No position has been marked");
+        } else if (this.position <= this.mark + this.readlimit) {
+            this.position = this.mark;
+            this.eof = false;
+        } else {
+            throw new IOException("Marked position [" + this.mark + "] is no longer valid - passed the read limit [" + this.readlimit + "]");
         }
     }
 
@@ -146,13 +151,5 @@ public class NullInputStream extends InputStream {
             return j5;
         }
         throw new IOException("Skip after end of file");
-    }
-
-    private int doEndOfFile() throws EOFException {
-        this.eof = true;
-        if (!this.throwEofException) {
-            return -1;
-        }
-        throw new EOFException();
     }
 }

@@ -8,9 +8,7 @@ import com.tencent.beacon.core.event.o;
 
 /* compiled from: QimeiInfo */
 public final class a {
-
-    /* renamed from: l  reason: collision with root package name */
-    private static a f1429l;
+    private static a l;
     private String a = "";
     private String b = "";
     private String c = "";
@@ -52,10 +50,10 @@ public final class a {
     public static synchronized a a(Context context) {
         a aVar;
         synchronized (a.class) {
-            if (f1429l == null) {
-                f1429l = new a(context);
+            if (l == null) {
+                l = new a(context);
             }
-            aVar = f1429l;
+            aVar = l;
         }
         return aVar;
     }

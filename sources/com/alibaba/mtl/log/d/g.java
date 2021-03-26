@@ -9,10 +9,10 @@ public class g {
     private static g a = new g();
 
     /* renamed from: a  reason: collision with other field name */
-    private a f61a = new a();
+    private a f60a = new a();
 
     /* renamed from: a  reason: collision with other field name */
-    private b f62a = new b();
+    private b f61a = new b();
 
     private g() {
     }
@@ -24,9 +24,9 @@ public class g {
     public String[] a(String[] strArr, boolean z) {
         Comparator comparator;
         if (z) {
-            comparator = this.f61a;
+            comparator = this.f60a;
         } else {
-            comparator = this.f62a;
+            comparator = this.f61a;
         }
         if (comparator == null || strArr == null || strArr.length <= 0) {
             return null;

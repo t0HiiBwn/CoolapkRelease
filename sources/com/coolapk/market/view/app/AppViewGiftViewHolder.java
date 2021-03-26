@@ -6,7 +6,7 @@ import com.coolapk.market.viewholder.BindingViewHolder;
 import com.coolapk.market.viewholder.ItemActionHandler;
 
 public class AppViewGiftViewHolder extends BindingViewHolder {
-    public static final int LAYOUT_ID = 2131558604;
+    public static final int LAYOUT_ID = 2131558608;
     private final AppViewViewModel viewModel;
 
     public AppViewGiftViewHolder(View view, AppViewViewModel appViewViewModel, ItemActionHandler itemActionHandler) {

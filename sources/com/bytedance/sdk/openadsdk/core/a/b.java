@@ -30,9 +30,7 @@ public class b extends c {
     protected f i;
     protected a j;
     protected TTNativeAd k;
-
-    /* renamed from: l  reason: collision with root package name */
-    protected c f1298l;
+    protected c l;
     protected boolean m = false;
     protected com.bytedance.sdk.openadsdk.downloadnew.core.a n;
     protected Map<String, Object> o;
@@ -74,7 +72,7 @@ public class b extends c {
     }
 
     public void a(c cVar) {
-        this.f1298l = cVar;
+        this.l = cVar;
     }
 
     public b(Context context, l lVar, String str, int i2) {

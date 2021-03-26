@@ -57,7 +57,7 @@ public class ItemPermissionBindingImpl extends ItemPermissionBinding {
 
     @Override // androidx.databinding.ViewDataBinding
     public boolean setVariable(int i, Object obj) {
-        if (217 != i) {
+        if (218 != i) {
             return false;
         }
         setPermission((PermissionItem) obj);
@@ -70,7 +70,7 @@ public class ItemPermissionBindingImpl extends ItemPermissionBinding {
         synchronized (this) {
             this.mDirtyFlags |= 1;
         }
-        notifyPropertyChanged(217);
+        notifyPropertyChanged(218);
         super.requestRebind();
     }
 

@@ -55,7 +55,7 @@ public abstract class TabActivity extends FakeStatusBarActivity implements Trans
     @Override // com.coolapk.market.view.feedv8.FakeStatusBarActivity, com.coolapk.market.view.base.BaseActivity, androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        TabLayoutBinding tabLayoutBinding = (TabLayoutBinding) DataBindingUtil.setContentView(this, 2131559176);
+        TabLayoutBinding tabLayoutBinding = (TabLayoutBinding) DataBindingUtil.setContentView(this, 2131559184);
         this.binding = tabLayoutBinding;
         this.toolbar = tabLayoutBinding.toolbar;
         setupTabLayout();
@@ -99,9 +99,9 @@ public abstract class TabActivity extends FakeStatusBarActivity implements Trans
     private void setupTabLayout() {
         int tabStyle = getTabStyle();
         if (tabStyle == 0) {
-            this.tabLayout = (TabLayout) LayoutInflater.from(this).inflate(2131559119, (ViewGroup) this.binding.appBar, false);
+            this.tabLayout = (TabLayout) LayoutInflater.from(this).inflate(2131559126, (ViewGroup) this.binding.appBar, false);
         } else if (tabStyle == 1) {
-            this.tabLayout = (TabLayout) LayoutInflater.from(this).inflate(2131558565, (ViewGroup) this.binding.appBar, false);
+            this.tabLayout = (TabLayout) LayoutInflater.from(this).inflate(2131558568, (ViewGroup) this.binding.appBar, false);
         }
         int indexOfChild = this.binding.appBar.indexOfChild(this.binding.tabs);
         this.binding.appBar.removeViewAt(indexOfChild);
@@ -113,7 +113,7 @@ public abstract class TabActivity extends FakeStatusBarActivity implements Trans
     protected void setupToolbar() {
         setSupportActionBar(getToolbar());
         setTitle(getTitle());
-        getToolbar().setNavigationIcon(2131231156);
+        getToolbar().setNavigationIcon(2131231166);
         getToolbar().setNavigationOnClickListener(new View.OnClickListener() {
             /* class com.coolapk.market.view.base.TabActivity.AnonymousClass1 */
 

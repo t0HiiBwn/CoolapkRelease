@@ -40,9 +40,7 @@ class i implements TTFullScreenVideoAd {
     private String i;
     private AtomicBoolean j = new AtomicBoolean(false);
     private boolean k = false;
-
-    /* renamed from: l  reason: collision with root package name */
-    private String f1294l;
+    private String l;
 
     i(Context context, l lVar, AdSlot adSlot) {
         this.a = context;
@@ -52,7 +50,7 @@ class i implements TTFullScreenVideoAd {
             this.e = com.bytedance.sdk.openadsdk.downloadnew.a.a(context, lVar, "fullscreen_interstitial_ad");
         }
         this.g = false;
-        this.f1294l = j.a(lVar.hashCode() + lVar.aF().toString());
+        this.l = j.a(lVar.hashCode() + lVar.aF().toString());
     }
 
     public void a(boolean z) {
@@ -125,7 +123,7 @@ class i implements TTFullScreenVideoAd {
                 k.e(this.b.aF().toString());
                 if (b.b()) {
                     intent.putExtra("multi_process_materialmeta", this.b.aF().toString());
-                    intent.putExtra("multi_process_meta_md5", this.f1294l);
+                    intent.putExtra("multi_process_meta_md5", this.l);
                 } else {
                     com.bytedance.sdk.openadsdk.core.u.a().g();
                     com.bytedance.sdk.openadsdk.core.u.a().a(this.b);
@@ -234,7 +232,7 @@ class i implements TTFullScreenVideoAd {
                         IListenerManager asInterface = com.bytedance.sdk.openadsdk.multipro.aidl.a.e.asInterface(a2.a(1));
                         if (asInterface != null) {
                             try {
-                                asInterface.registerFullVideoListener(i.this.f1294l, cVar);
+                                asInterface.registerFullVideoListener(i.this.l, cVar);
                                 u.b("MultiProcess", "end registerFullScreenVideoListener ! ");
                             } catch (RemoteException e) {
                                 e.printStackTrace();

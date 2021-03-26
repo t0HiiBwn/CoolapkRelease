@@ -33,7 +33,7 @@ public class DialogMessageCardBindingImpl extends DialogMessageCardBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362093, 13);
+        sparseIntArray.put(2131362096, 13);
     }
 
     public DialogMessageCardBindingImpl(DataBindingComponent dataBindingComponent, View view) {
@@ -86,15 +86,15 @@ public class DialogMessageCardBindingImpl extends DialogMessageCardBinding {
             setFromAvatar((String) obj);
         } else if (54 == i) {
             setContact((Contacts) obj);
-        } else if (220 == i) {
+        } else if (221 == i) {
             setPic((String) obj);
-        } else if (282 == i) {
+        } else if (283 == i) {
             setToTitle((String) obj);
         } else if (127 == i) {
             setFromTitle((String) obj);
         } else if (55 == i) {
             setContent((String) obj);
-        } else if (281 == i) {
+        } else if (282 == i) {
             setToAvatar((String) obj);
         } else if (50 == i) {
             setClick((View.OnClickListener) obj);
@@ -127,7 +127,7 @@ public class DialogMessageCardBindingImpl extends DialogMessageCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 4;
         }
-        notifyPropertyChanged(220);
+        notifyPropertyChanged(221);
         super.requestRebind();
     }
 
@@ -137,7 +137,7 @@ public class DialogMessageCardBindingImpl extends DialogMessageCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 8;
         }
-        notifyPropertyChanged(282);
+        notifyPropertyChanged(283);
         super.requestRebind();
     }
 
@@ -167,7 +167,7 @@ public class DialogMessageCardBindingImpl extends DialogMessageCardBinding {
         synchronized (this) {
             this.mDirtyFlags |= 64;
         }
-        notifyPropertyChanged(281);
+        notifyPropertyChanged(282);
         super.requestRebind();
     }
 
@@ -306,7 +306,7 @@ public class DialogMessageCardBindingImpl extends DialogMessageCardBinding {
         if ((j & 516) != 0) {
             this.contentPicView.setVisibility(i2);
             Boolean bool4 = null;
-            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.contentPicView, str7, AppCompatResources.getDrawable(this.contentPicView.getContext(), 2131231691), 0, 0, bool4, bool4, bool4, bool4, bool4, null, null, null, bool4, bool4, bool4, null, bool4);
+            ImageViewBindingAdapters.setImageUriWithContext(this.mBindingComponent, this.contentPicView, str7, AppCompatResources.getDrawable(this.contentPicView.getContext(), 2131231702), 0, 0, bool4, bool4, bool4, bool4, bool4, null, null, null, bool4, bool4, bool4, null, bool4);
         }
         if ((j & 768) != 0) {
             this.titleMessage.setVisibility(i4);

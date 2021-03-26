@@ -19,8 +19,8 @@ final class AutoValue_MenuCard extends C$AutoValue_MenuCard {
         }
     };
 
-    AutoValue_MenuCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l2, Long l3, String str7, String str8, String str9, String str10, List<MenuCard> list, String str11, String str12, int i) {
-        super(str, str2, num, str3, str4, str5, str6, l2, l3, str7, str8, str9, str10, list, str11, str12, i);
+    AutoValue_MenuCard(String str, String str2, Integer num, String str3, String str4, String str5, String str6, Long l, Long l2, String str7, String str8, String str9, String str10, List<MenuCard> list, String str11, String str12, int i) {
+        super(str, str2, num, str3, str4, str5, str6, l, l2, str7, str8, str9, str10, list, str11, str12, i);
     }
 
     @Override // android.os.Parcelable

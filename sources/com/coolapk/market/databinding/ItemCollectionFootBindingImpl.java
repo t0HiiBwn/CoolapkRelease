@@ -24,13 +24,13 @@ public class ItemCollectionFootBindingImpl extends ItemCollectionFootBinding {
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
         sViewsWithIds = sparseIntArray;
-        sparseIntArray.put(2131362316, 4);
-        sparseIntArray.put(2131362579, 5);
-        sparseIntArray.put(2131362581, 6);
-        sparseIntArray.put(2131362843, 7);
-        sparseIntArray.put(2131362849, 8);
-        sparseIntArray.put(2131363355, 9);
-        sparseIntArray.put(2131363357, 10);
+        sparseIntArray.put(2131362322, 4);
+        sparseIntArray.put(2131362587, 5);
+        sparseIntArray.put(2131362589, 6);
+        sparseIntArray.put(2131362854, 7);
+        sparseIntArray.put(2131362860, 8);
+        sparseIntArray.put(2131363371, 9);
+        sparseIntArray.put(2131363373, 10);
     }
 
     public ItemCollectionFootBindingImpl(DataBindingComponent dataBindingComponent, View view) {

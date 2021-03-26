@@ -2,7 +2,7 @@ package com.coolapk.market.view.cardlist;
 
 import android.view.View;
 import com.coolapk.market.viewholder.BindingViewHolder;
-import com.coolapk.market.viewholder.ColorfulFatScrollCardViewHolder;
+import com.coolapk.market.viewholder.ProductTimelineViewHolder;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
@@ -21,6 +21,6 @@ final class EntityListFragment$onRegisterCards$101 extends Lambda implements Fun
 
     public final BindingViewHolder invoke(View view) {
         Intrinsics.checkNotNullParameter(view, "itemView");
-        return new ColorfulFatScrollCardViewHolder(view, this.this$0.getBindingComponent());
+        return new ProductTimelineViewHolder(view, this.this$0.getBindingComponent());
     }
 }

@@ -110,7 +110,7 @@ public abstract class ItemAlbumExpandCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAlbumExpandCardBinding inflate(LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z, Object obj) {
-        return (ItemAlbumExpandCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558582, viewGroup, z, obj);
+        return (ItemAlbumExpandCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558586, viewGroup, z, obj);
     }
 
     public static ItemAlbumExpandCardBinding inflate(LayoutInflater layoutInflater) {
@@ -119,7 +119,7 @@ public abstract class ItemAlbumExpandCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAlbumExpandCardBinding inflate(LayoutInflater layoutInflater, Object obj) {
-        return (ItemAlbumExpandCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558582, null, false, obj);
+        return (ItemAlbumExpandCardBinding) ViewDataBinding.inflateInternal(layoutInflater, 2131558586, null, false, obj);
     }
 
     public static ItemAlbumExpandCardBinding bind(View view) {
@@ -128,6 +128,6 @@ public abstract class ItemAlbumExpandCardBinding extends ViewDataBinding {
 
     @Deprecated
     public static ItemAlbumExpandCardBinding bind(View view, Object obj) {
-        return (ItemAlbumExpandCardBinding) bind(obj, view, 2131558582);
+        return (ItemAlbumExpandCardBinding) bind(obj, view, 2131558586);
     }
 }

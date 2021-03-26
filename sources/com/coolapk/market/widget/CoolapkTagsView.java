@@ -89,7 +89,7 @@ public final class CoolapkTagsView extends FlexboxLayout {
         textView.setGravity(17);
         textView.setTextSize(14.0f);
         textView.setMinWidth(NumberExtendsKt.getDp((Number) 48));
-        textView.setBackground(ResourceUtils.getDrawable(getContext(), 2131231716));
+        textView.setBackground(ResourceUtils.getDrawable(getContext(), 2131231727));
         UiUtils.setDrawableSolidColors(textView.getBackground(), new int[]{0}, AppHolder.getAppTheme().getColorAccent());
         textView.setLayoutParams(new ViewGroup.MarginLayoutParams(-2, -2));
         textView.setPadding(NumberExtendsKt.getDp((Number) 10), 0, NumberExtendsKt.getDp((Number) 10), 0);
@@ -109,7 +109,7 @@ public final class CoolapkTagsView extends FlexboxLayout {
                     String str2 = (String) split$default.get(2);
                     String str3 = (String) split$default.get(1);
                     if (TextUtils.equals((String) split$default.get(0), "hot")) {
-                        textView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131100035));
+                        textView.setTextColor(ResourceUtils.getColorInt(getContext(), 2131100040));
                     }
                     textView.setTag(str2);
                     str = str3;

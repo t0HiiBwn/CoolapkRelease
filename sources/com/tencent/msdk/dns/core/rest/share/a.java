@@ -65,7 +65,7 @@ public abstract class a extends AbsRestDns {
             int i = lVar.c;
             g gVar = (g) lVar.d;
             AbsRestDns.Statistics statistics = new AbsRestDns.Statistics();
-            statistics.retryTimes = lVar.f1450l;
+            statistics.retryTimes = lVar.l;
             statistics.asyncLookup = lVar.k;
             statistics.netChangeLookup = lVar.m;
             statistics.startLookup();
@@ -148,54 +148,52 @@ public abstract class a extends AbsRestDns {
 
     @Override // com.tencent.msdk.dns.core.f
     public f.b a(j<g> jVar) {
-        return new C0133a(jVar, this, null);
+        return new C0151a(jVar, this, null);
     }
 
     /* renamed from: com.tencent.msdk.dns.core.rest.share.a$a  reason: collision with other inner class name */
     /* compiled from: AbsHttpDns */
-    private class C0133a extends AbsRestDns.a {
+    private class C0151a extends AbsRestDns.a {
         private SocketChannel h = null;
         private SocketAddress i = null;
         private ByteBuffer j = null;
         private StringBuilder k = null;
+        private ByteBuffer l = null;
+        private final f.b.a m = new AbsRestDns.a.C0150a() {
+            /* class com.tencent.msdk.dns.core.rest.share.a.C0151a.AnonymousClass1 */
 
-        /* renamed from: l  reason: collision with root package name */
-        private ByteBuffer f1452l = null;
-        private final f.b.a m = new AbsRestDns.a.C0132a() {
-            /* class com.tencent.msdk.dns.core.rest.share.a.C0133a.AnonymousClass1 */
-
-            @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a.C0132a, com.tencent.msdk.dns.core.f.b.a
+            @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a.C0150a, com.tencent.msdk.dns.core.f.b.a
             public boolean b() {
-                if (C0133a.this.h != null) {
+                if (C0151a.this.h != null) {
                     try {
-                        boolean finishConnect = C0133a.this.h.finishConnect();
-                        C0133a.this.e.interestOps(4);
+                        boolean finishConnect = C0151a.this.h.finishConnect();
+                        C0151a.this.e.interestOps(4);
                         return finishConnect;
                     } catch (Exception e) {
                         b.b(e, a.this.b() + "connect failed", new Object[0]);
-                        C0133a.this.d();
-                        C0133a.this.f.errorCode = 11001;
-                        C0133a.this.f.errorMsg = e.getMessage();
+                        C0151a.this.d();
+                        C0151a.this.f.errorCode = 11001;
+                        C0151a.this.f.errorMsg = e.getMessage();
                     }
                 }
                 return false;
             }
 
-            @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a.C0132a, com.tencent.msdk.dns.core.f.b.a
+            @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a.C0150a, com.tencent.msdk.dns.core.f.b.a
             public boolean c() {
-                if (C0133a.this.h != null) {
-                    return C0133a.this.h.isConnected() && super.c();
+                if (C0151a.this.h != null) {
+                    return C0151a.this.h.isConnected() && super.c();
                 }
                 return super.c();
             }
 
-            @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a.C0132a, com.tencent.msdk.dns.core.f.b.a
+            @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a.C0150a, com.tencent.msdk.dns.core.f.b.a
             public boolean d() {
-                if (C0133a.this.h == null) {
+                if (C0151a.this.h == null) {
                     return super.d();
                 }
-                b.b(a.this.b() + ", channel isConnected:" + C0133a.this.h.isConnected(), new Object[0]);
-                if (!C0133a.this.h.isConnected() || !super.d()) {
+                b.b(a.this.b() + ", channel isConnected:" + C0151a.this.h.isConnected(), new Object[0]);
+                if (!C0151a.this.h.isConnected() || !super.d()) {
                     return false;
                 }
                 return true;
@@ -207,7 +205,7 @@ public abstract class a extends AbsRestDns {
             return this.m;
         }
 
-        C0133a(j<g> jVar, f fVar, AbsRestDns.a aVar) {
+        C0151a(j<g> jVar, f fVar, AbsRestDns.a aVar) {
             super(jVar, fVar, aVar);
             if (3 != this.b) {
                 Selector p = this.c.p();
@@ -285,10 +283,10 @@ public abstract class a extends AbsRestDns {
             try {
                 b.a(a.this.b() + "send httpReq:{\n%s}", a3);
                 b.b(a.this.b() + "lookup send byUrl: %s", a2);
-                if (this.f1452l == null) {
-                    this.f1452l = ByteBuffer.wrap(a3.getBytes("UTF-8"));
+                if (this.l == null) {
+                    this.l = ByteBuffer.wrap(a3.getBytes("UTF-8"));
                 }
-                ByteBuffer byteBuffer = this.f1452l;
+                ByteBuffer byteBuffer = this.l;
                 int i2 = 0;
                 while (byteBuffer.hasRemaining()) {
                     int write = this.h.write(byteBuffer);
@@ -308,7 +306,7 @@ public abstract class a extends AbsRestDns {
                     b.b(a.this.b() + "send request has remaining, try again", new Object[0]);
                     return 2;
                 }
-                this.f1452l = null;
+                this.l = null;
                 this.e.interestOps(1);
                 b.b(a.this.b() + "send request finish", new Object[0]);
                 return 0;
@@ -396,14 +394,14 @@ public abstract class a extends AbsRestDns {
         @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a
         protected void m() {
             com.tencent.msdk.dns.base.e.a.a((Closeable) this.h);
-            this.f1452l = null;
+            this.l = null;
             this.j = null;
             this.k = null;
         }
 
         @Override // com.tencent.msdk.dns.core.rest.share.AbsRestDns.a
         protected AbsRestDns.a n() {
-            return new C0133a(this.c, this.d, this);
+            return new C0151a(this.c, this.d, this);
         }
     }
 }

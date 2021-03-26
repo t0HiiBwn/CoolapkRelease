@@ -1,374 +1,220 @@
 package com.xiaomi.push;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
-import com.xiaomi.push.service.an;
+import android.util.Log;
+import android.util.Pair;
+import com.xiaomi.a.a.a.a;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.lang.ref.WeakReference;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.RandomAccessFile;
+import java.nio.channels.FileLock;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.Collections;
+import java.util.Date;
 import java.util.List;
-import java.util.Random;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
-public class ce {
-    private static volatile ce a;
+public class ce implements a {
+    public static String a = "/MiPushLog";
+    private static final SimpleDateFormat b = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss aaa");
+    private static m c = new m(true);
+    private static List<Pair<String, Throwable>> g = Collections.synchronizedList(new ArrayList());
+    private String d;
+    private Context e;
+    private String f = "";
 
-    /* renamed from: a  reason: collision with other field name */
-    private Context f251a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private cd f252a;
-
-    /* renamed from: a  reason: collision with other field name */
-    private final ArrayList<a> f253a = new ArrayList<>();
-
-    /* renamed from: a  reason: collision with other field name */
-    private final HashMap<String, cc> f254a = new HashMap<>();
-
-    /* renamed from: a  reason: collision with other field name */
-    private ThreadPoolExecutor f255a = new ThreadPoolExecutor(1, 1, 15, TimeUnit.SECONDS, new LinkedBlockingQueue());
-
-    public static abstract class a implements Runnable {
-        private int a = 0;
-
-        /* renamed from: a  reason: collision with other field name */
-        protected cc f256a = null;
-
-        /* renamed from: a  reason: collision with other field name */
-        private a f257a;
-
-        /* renamed from: a  reason: collision with other field name */
-        private String f258a;
-
-        /* renamed from: a  reason: collision with other field name */
-        private WeakReference<Context> f259a;
-
-        /* renamed from: a  reason: collision with other field name */
-        private Random f260a = new Random();
-        protected String b;
-
-        public a(String str) {
-            this.f258a = str;
+    public ce(Context context) {
+        this.e = context;
+        if (context.getApplicationContext() != null) {
+            this.e = context.getApplicationContext();
         }
-
-        public SQLiteDatabase a() {
-            return this.f256a.getWritableDatabase();
-        }
-
-        /* renamed from: a  reason: collision with other method in class */
-        public Object m172a() {
-            return null;
-        }
-
-        /* renamed from: a  reason: collision with other method in class */
-        public String m173a() {
-            return this.f258a;
-        }
-
-        void a(Context context) {
-            a aVar = this.f257a;
-            if (aVar != null) {
-                aVar.a(context, m172a());
-            }
-            b(context);
-        }
-
-        public abstract void a(Context context, SQLiteDatabase sQLiteDatabase);
-
-        public void a(Context context, Object obj) {
-            ce.a(context).a(this);
-        }
-
-        void a(cc ccVar, Context context) {
-            this.f256a = ccVar;
-            this.b = ccVar.a();
-            this.f259a = new WeakReference<>(context);
-        }
-
-        public void a(a aVar) {
-            this.f257a = aVar;
-        }
-
-        /* renamed from: a  reason: collision with other method in class */
-        public boolean m174a() {
-            return this.f256a == null || TextUtils.isEmpty(this.b) || this.f259a == null;
-        }
-
-        public void b(Context context) {
-        }
-
-        @Override // java.lang.Runnable
-        public final void run() {
-            Context context;
-            WeakReference<Context> weakReference = this.f259a;
-            if (weakReference != null && (context = weakReference.get()) != null && context.getFilesDir() != null && this.f256a != null && !TextUtils.isEmpty(this.f258a)) {
-                File file = new File(this.f258a);
-                v.a(context, new File(file.getParentFile(), bh.b(file.getAbsolutePath())), new cg(this, context));
-            }
-        }
+        this.d = this.e.getPackageName();
     }
 
-    public static abstract class b<T> extends a {
-        private int a;
-
-        /* renamed from: a  reason: collision with other field name */
-        private String f261a;
-
-        /* renamed from: a  reason: collision with other field name */
-        private List<String> f262a;
-
-        /* renamed from: a  reason: collision with other field name */
-        private String[] f263a;
-        private List<T> b = new ArrayList();
-        private String c;
-        private String d;
-        private String e;
-
-        public b(String str, List<String> list, String str2, String[] strArr, String str3, String str4, String str5, int i) {
-            super(str);
-            this.f262a = list;
-            this.f261a = str2;
-            this.f263a = strArr;
-            this.c = str3;
-            this.d = str4;
-            this.e = str5;
-            this.a = i;
-        }
-
-        @Override // com.xiaomi.push.ce.a
-        public SQLiteDatabase a() {
-            return this.f256a.getReadableDatabase();
-        }
-
-        public abstract T a(Context context, Cursor cursor);
-
-        @Override // com.xiaomi.push.ce.a
-        public void a(Context context, SQLiteDatabase sQLiteDatabase) {
-            String[] strArr;
-            this.b.clear();
-            List<String> list = this.f262a;
-            String str = null;
-            if (list == null || list.size() <= 0) {
-                strArr = null;
-            } else {
-                String[] strArr2 = new String[this.f262a.size()];
-                this.f262a.toArray(strArr2);
-                strArr = strArr2;
+    /* access modifiers changed from: private */
+    /* JADX WARNING: Removed duplicated region for block: B:104:? A[RETURN, SYNTHETIC] */
+    /* JADX WARNING: Removed duplicated region for block: B:66:0x014b A[SYNTHETIC, Splitter:B:66:0x014b] */
+    /* JADX WARNING: Removed duplicated region for block: B:78:0x0169  */
+    /* JADX WARNING: Removed duplicated region for block: B:83:0x0177 A[SYNTHETIC, Splitter:B:83:0x0177] */
+    /* JADX WARNING: Removed duplicated region for block: B:95:0x0195 A[SYNTHETIC, Splitter:B:95:0x0195] */
+    public void b() {
+        RandomAccessFile randomAccessFile;
+        FileLock fileLock;
+        Throwable th;
+        Exception e2;
+        File externalFilesDir;
+        BufferedWriter bufferedWriter = null;
+        try {
+            if (TextUtils.isEmpty(this.f) && (externalFilesDir = this.e.getExternalFilesDir(null)) != null) {
+                this.f = externalFilesDir.getAbsolutePath() + "";
             }
-            int i = this.a;
-            if (i > 0) {
-                str = String.valueOf(i);
+            File file = new File(this.f + a);
+            if ((!file.exists() || !file.isDirectory()) && !file.mkdirs()) {
+                Log.w(this.d, "Create mipushlog directory fail.");
+                return;
             }
-            Cursor query = sQLiteDatabase.query(this.b, strArr, this.f261a, this.f263a, this.c, this.d, this.e, str);
-            if (query != null && query.moveToFirst()) {
-                do {
-                    T a2 = a(context, query);
-                    if (a2 != null) {
-                        this.b.add(a2);
+            File file2 = new File(file, "log.lock");
+            if (!file2.exists() || file2.isDirectory()) {
+                file2.createNewFile();
+            }
+            randomAccessFile = new RandomAccessFile(file2, "rw");
+            try {
+                fileLock = randomAccessFile.getChannel().lock();
+            } catch (Exception e3) {
+                e2 = e3;
+                fileLock = null;
+                try {
+                    Log.e(this.d, "", e2);
+                    if (bufferedWriter != null) {
+                        try {
+                            bufferedWriter.close();
+                        } catch (IOException e4) {
+                            Log.e(this.d, "", e4);
+                        }
                     }
-                } while (query.moveToNext());
-                query.close();
-            }
-            a(context, (List) this.b);
-        }
-
-        public abstract void a(Context context, List<T> list);
-    }
-
-    public static class c extends a {
-        private ArrayList<a> a;
-
-        public c(String str, ArrayList<a> arrayList) {
-            super(str);
-            ArrayList<a> arrayList2 = new ArrayList<>();
-            this.a = arrayList2;
-            arrayList2.addAll(arrayList);
-        }
-
-        @Override // com.xiaomi.push.ce.a
-        public final void a(Context context) {
-            super.a(context);
-            Iterator<a> it2 = this.a.iterator();
-            while (it2.hasNext()) {
-                a next = it2.next();
-                if (next != null) {
-                    next.a(context);
-                }
-            }
-        }
-
-        @Override // com.xiaomi.push.ce.a
-        public void a(Context context, SQLiteDatabase sQLiteDatabase) {
-            Iterator<a> it2 = this.a.iterator();
-            while (it2.hasNext()) {
-                a next = it2.next();
-                if (next != null) {
-                    next.a(context, sQLiteDatabase);
-                }
-            }
-        }
-    }
-
-    public static class d extends a {
-        private String a;
-
-        /* renamed from: a  reason: collision with other field name */
-        protected String[] f264a;
-
-        public d(String str, String str2, String[] strArr) {
-            super(str);
-            this.a = str2;
-            this.f264a = strArr;
-        }
-
-        @Override // com.xiaomi.push.ce.a
-        public void a(Context context, SQLiteDatabase sQLiteDatabase) {
-            sQLiteDatabase.delete(this.b, this.a, this.f264a);
-        }
-    }
-
-    public static class e extends a {
-        private ContentValues a;
-
-        public e(String str, ContentValues contentValues) {
-            super(str);
-            this.a = contentValues;
-        }
-
-        @Override // com.xiaomi.push.ce.a
-        public void a(Context context, SQLiteDatabase sQLiteDatabase) {
-            sQLiteDatabase.insert(this.b, null, this.a);
-        }
-    }
-
-    private ce(Context context) {
-        this.f251a = context;
-    }
-
-    private cc a(String str) {
-        cc ccVar = this.f254a.get(str);
-        if (ccVar == null) {
-            synchronized (this.f254a) {
-                if (ccVar == null) {
-                    ccVar = this.f252a.a(this.f251a, str);
-                    this.f254a.put(str, ccVar);
-                }
-            }
-        }
-        return ccVar;
-    }
-
-    public static ce a(Context context) {
-        if (a == null) {
-            synchronized (ce.class) {
-                if (a == null) {
-                    a = new ce(context);
-                }
-            }
-        }
-        return a;
-    }
-
-    private void a() {
-        ai.a(this.f251a).b(new cf(this), an.a(this.f251a).a(hh.StatDataProcessFrequency.a(), 5));
-    }
-
-    /* renamed from: a  reason: collision with other method in class */
-    public String m171a(String str) {
-        return a(str).a();
-    }
-
-    public void a(a aVar) {
-        cc ccVar;
-        if (aVar != null) {
-            if (this.f252a != null) {
-                String a2 = aVar.m173a();
-                synchronized (this.f254a) {
-                    ccVar = this.f254a.get(a2);
-                    if (ccVar == null) {
-                        ccVar = this.f252a.a(this.f251a, a2);
-                        this.f254a.put(a2, ccVar);
+                    if (fileLock != null && fileLock.isValid()) {
+                        try {
+                            fileLock.release();
+                        } catch (IOException e5) {
+                            Log.e(this.d, "", e5);
+                        }
                     }
-                }
-                if (!this.f255a.isShutdown()) {
-                    aVar.a(ccVar, this.f251a);
-                    synchronized (this.f253a) {
-                        this.f253a.add(aVar);
-                        a();
+                    if (randomAccessFile == null) {
+                        randomAccessFile.close();
+                        return;
                     }
                     return;
+                } catch (Throwable th2) {
+                    th = th2;
+                    if (bufferedWriter != null) {
+                        try {
+                            bufferedWriter.close();
+                        } catch (IOException e6) {
+                            Log.e(this.d, "", e6);
+                        }
+                    }
+                    if (fileLock != null && fileLock.isValid()) {
+                        try {
+                            fileLock.release();
+                        } catch (IOException e7) {
+                            Log.e(this.d, "", e7);
+                        }
+                    }
+                    if (randomAccessFile != null) {
+                        try {
+                            randomAccessFile.close();
+                        } catch (IOException e8) {
+                            Log.e(this.d, "", e8);
+                        }
+                    }
+                    throw th;
                 }
-                return;
+            } catch (Throwable th3) {
+                th = th3;
+                fileLock = null;
+                if (bufferedWriter != null) {
+                }
+                fileLock.release();
+                if (randomAccessFile != null) {
+                }
+                throw th;
             }
-            throw new IllegalStateException("should exec init method first!");
+            try {
+                BufferedWriter bufferedWriter2 = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File(file, "log1.txt"), true)));
+                while (!g.isEmpty()) {
+                    try {
+                        Pair<String, Throwable> remove = g.remove(0);
+                        String str = (String) remove.first;
+                        if (remove.second != null) {
+                            str = (str + "\n") + Log.getStackTraceString((Throwable) remove.second);
+                        }
+                        bufferedWriter2.write(str + "\n");
+                    } catch (Exception e9) {
+                        e2 = e9;
+                        bufferedWriter = bufferedWriter2;
+                        Log.e(this.d, "", e2);
+                        if (bufferedWriter != null) {
+                        }
+                        fileLock.release();
+                        if (randomAccessFile == null) {
+                        }
+                    } catch (Throwable th4) {
+                        th = th4;
+                        bufferedWriter = bufferedWriter2;
+                        if (bufferedWriter != null) {
+                        }
+                        fileLock.release();
+                        if (randomAccessFile != null) {
+                        }
+                        throw th;
+                    }
+                }
+                bufferedWriter2.flush();
+                bufferedWriter2.close();
+                File file3 = new File(file, "log1.txt");
+                if (file3.length() >= 1048576) {
+                    File file4 = new File(file, "log0.txt");
+                    if (file4.exists() && file4.isFile()) {
+                        file4.delete();
+                    }
+                    file3.renameTo(file4);
+                }
+                if (fileLock != null && fileLock.isValid()) {
+                    try {
+                        fileLock.release();
+                    } catch (IOException e10) {
+                        Log.e(this.d, "", e10);
+                    }
+                }
+                try {
+                    randomAccessFile.close();
+                } catch (IOException e11) {
+                    Log.e(this.d, "", e11);
+                }
+            } catch (Exception e12) {
+                e2 = e12;
+                Log.e(this.d, "", e2);
+                if (bufferedWriter != null) {
+                }
+                fileLock.release();
+                if (randomAccessFile == null) {
+                }
+            }
+        } catch (Exception e13) {
+            e2 = e13;
+            fileLock = null;
+            randomAccessFile = null;
+            Log.e(this.d, "", e2);
+            if (bufferedWriter != null) {
+            }
+            fileLock.release();
+            if (randomAccessFile == null) {
+            }
+        } catch (Throwable th5) {
+            th = th5;
+            fileLock = null;
+            randomAccessFile = null;
+            if (bufferedWriter != null) {
+            }
+            fileLock.release();
+            if (randomAccessFile != null) {
+            }
+            throw th;
         }
     }
 
-    public void a(Runnable runnable) {
-        if (!this.f255a.isShutdown()) {
-            this.f255a.execute(runnable);
-        }
+    @Override // com.xiaomi.a.a.a.a
+    public final void a(String str) {
+        a(str, null);
     }
 
-    public void a(ArrayList<a> arrayList) {
-        if (this.f252a != null) {
-            HashMap hashMap = new HashMap();
-            if (!this.f255a.isShutdown()) {
-                Iterator<a> it2 = arrayList.iterator();
-                while (it2.hasNext()) {
-                    a next = it2.next();
-                    if (next.m174a()) {
-                        next.a(a(next.m173a()), this.f251a);
-                    }
-                    ArrayList arrayList2 = (ArrayList) hashMap.get(next.m173a());
-                    if (arrayList2 == null) {
-                        arrayList2 = new ArrayList();
-                        hashMap.put(next.m173a(), arrayList2);
-                    }
-                    arrayList2.add(next);
-                }
-                for (String str : hashMap.keySet()) {
-                    ArrayList arrayList3 = (ArrayList) hashMap.get(str);
-                    if (arrayList3 != null && arrayList3.size() > 0) {
-                        c cVar = new c(str, arrayList3);
-                        cVar.a(((a) arrayList3.get(0)).f256a, this.f251a);
-                        this.f255a.execute(cVar);
-                    }
-                }
-                return;
-            }
-            return;
-        }
-        throw new IllegalStateException("should exec setDbHelperFactory method first!");
-    }
-
-    public void b(a aVar) {
-        cc ccVar;
-        if (aVar != null) {
-            if (this.f252a != null) {
-                String a2 = aVar.m173a();
-                synchronized (this.f254a) {
-                    ccVar = this.f254a.get(a2);
-                    if (ccVar == null) {
-                        ccVar = this.f252a.a(this.f251a, a2);
-                        this.f254a.put(a2, ccVar);
-                    }
-                }
-                if (!this.f255a.isShutdown()) {
-                    aVar.a(ccVar, this.f251a);
-                    a((Runnable) aVar);
-                    return;
-                }
-                return;
-            }
-            throw new IllegalStateException("should exec init method first!");
-        }
+    @Override // com.xiaomi.a.a.a.a
+    public final void a(String str, Throwable th) {
+        g.add(new Pair<>(String.format("%1$s %2$s %3$s ", b.format(new Date()), this.d, str), th));
+        c.a(new cf(this));
     }
 }

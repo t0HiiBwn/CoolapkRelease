@@ -92,8 +92,8 @@ public class Slidr {
         View childAt = viewGroup.getChildAt(0);
         viewGroup.removeViewAt(0);
         SliderPanel sliderPanel = new SliderPanel(activity, childAt, slidrConfig);
-        sliderPanel.setId(2131363371);
-        childAt.setId(2131363370);
+        sliderPanel.setId(2131363388);
+        childAt.setId(2131363387);
         sliderPanel.addView(childAt);
         viewGroup.addView(sliderPanel, 0);
         return sliderPanel;

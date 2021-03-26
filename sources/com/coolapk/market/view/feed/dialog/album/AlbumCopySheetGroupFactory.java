@@ -46,12 +46,12 @@ public final class AlbumCopySheetGroupFactory implements SheetCallback {
         if (!this.dataList.isEmpty()) {
             return wrapAsSheetGroup();
         }
-        insertItem(new CopyTextAction(null, false, new AlbumCopySheetGroupFactory$create$1(this), 3, null), "复制全部内容", 2131231232);
+        insertItem(new CopyTextAction(null, false, new AlbumCopySheetGroupFactory$create$1(this), 3, null), "复制全部内容", 2131231243);
         CopyTextAction copyTextAction = new CopyTextAction(null, true, new AlbumCopySheetGroupFactory$create$2(this), 1, null);
-        String string = this.activity.getString(2131886713);
+        String string = this.activity.getString(2131886775);
         Intrinsics.checkNotNullExpressionValue(string, "activity.getString(R.string.str_dialog_copy_free)");
-        insertItem(copyTextAction, string, 2131231325);
-        insertItem(new CopyTextAction('@' + this.data.getUserName() + ' ', false, null, 6, null), "复制用户名", 2131231236);
+        insertItem(copyTextAction, string, 2131231336);
+        insertItem(new CopyTextAction('@' + this.data.getUserName() + ' ', false, null, 6, null), "复制用户名", 2131231247);
         return wrapAsSheetGroup();
     }
 
@@ -73,7 +73,7 @@ public final class AlbumCopySheetGroupFactory implements SheetCallback {
             StringUtils.copyText(this.activity, str);
             Application application = AppHolder.getApplication();
             Intrinsics.checkNotNullExpressionValue(application, "AppHolder.getApplication()");
-            Toast.show(application, 2131887190);
+            Toast.show(application, 2131887252);
         }
         return SheetResult.Companion.getClose();
     }

@@ -43,7 +43,7 @@ public final class ImageXScrollCardViewHolder extends TitleRecycleViewCardViewHo
             public BindingViewHolder onCreateViewHolder(TitleRecycleViewCardViewHolder titleRecycleViewCardViewHolder, ViewGroup viewGroup, int i) {
                 Intrinsics.checkNotNullParameter(titleRecycleViewCardViewHolder, "holder");
                 Intrinsics.checkNotNullParameter(viewGroup, "parent");
-                View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558793, viewGroup, false);
+                View inflate = LayoutInflater.from(viewGroup.getContext()).inflate(2131558800, viewGroup, false);
                 Intrinsics.checkNotNullExpressionValue(inflate, "view");
                 DataBindingComponent component = titleRecycleViewCardViewHolder.getComponent();
                 Intrinsics.checkNotNullExpressionValue(component, "holder.component");
